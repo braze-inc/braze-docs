@@ -7,7 +7,7 @@ This is where you can contribute to the [Braze Documentation site](www.braze.com
 - This is a Jekyll site.
 - This branch is merged to our master branch and the production site at least weekly on Tuesdays.
 
-If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs Github Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at http://ab-success-pr-2417.herokuapp.com/docs/cla.”
+If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs Github Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at http://www.braze.com/docs/cla.
 
 ## Table of Contents
 - [About Braze](#about-braze)
@@ -22,7 +22,7 @@ Any Copyright information on Braze, Braze logos, etc..
 ### Braze CLA
 Before you get started, Braze requires that a Braze Contributor License Agreement (CLA) be filled out by every contributor to the Braze Docs open source project.
 
-Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. Sign a CLA here.
+Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](http://www.braze.com/docs/cla).
 
 ### Open Source License
 
