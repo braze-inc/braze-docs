@@ -4,7 +4,7 @@ This is where you can contribute to the [Braze Documentation site](www.braze.com
 
 ## What You Need to Know
 
-- This is a Jekyll site.
+- This is a [Jekyll](https://github.com/Appboy/braze-docs/wiki/Jekyll-Overview) site.
 - This branch is merged to our master branch and the production site at least weekly on Tuesdays.
 
 If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs Github Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at http://www.braze.com/docs/cla.
