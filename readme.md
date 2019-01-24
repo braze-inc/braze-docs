@@ -1,3 +1,5 @@
+![Licence Icon](https://github.com/Appboy/braze-docs/blob/master/assets/img/github/ccimg.png)
+
 # Welcome to Braze Docs!
 
 This is where you can contribute to the [Braze Documentation site](www.braze.com/docs).
@@ -26,7 +28,9 @@ Braze will not merge a pull request made against a Braze Docs open source projec
 
 ### Open Source License
 
-Braze Documentation is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+![Licence Icon](https://github.com/Appboy/braze-docs/blob/master/assets/img/github/ccimg.png)
+
+Braze Documentation is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ### Before You Contribute
 1. Complete our a CLA.
