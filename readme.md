@@ -2,6 +2,8 @@
 
 This is where you can contribute to the [Braze Documentation site](www.braze.com/docs).
 
+## What You Need to Know
+
 - This is a Jekyll site.
 - This branch is merged to our master branch and the production site at least weekly on Tuesdays.
 
