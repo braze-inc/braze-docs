@@ -31,11 +31,11 @@ Braze will not merge a pull request made against a Braze Docs open source projec
 Braze Documentation is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ### Before You Contribute
-1. Complete our a CLA.
+1. Complete our [CLA](http://www.braze.com/docs/cla).
 2. Take the [Braze Docs Tour](www.braze.com/docs/tour).
 3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
   - the [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide),
-  - Set Up Your Local Environment,
-  - the Writing Style Guide,  
-  - the Markdown Formatting Style Guide, and
-  - the Media Style Guide.
+  - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment),
+  - [the Writing Style Guide](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices),  
+  - [the Markdown Formatting Style Guide](https://github.com/Appboy/braze-docs/wiki/Special-Formatting), and
+  - [the Media Style Guide](https://github.com/Appboy/braze-docs/wiki/Media-Formatting-Guide).
