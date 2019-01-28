@@ -17,7 +17,8 @@ If you would like us to incorporate your changes into the official version of th
 
 
 ### About Braze
-Any Copyright information on Braze, Braze logos, etc..
+[Braze Home Site](https://www.braze.com/)
+[Braze Legal Information](https://www.braze.com/legal)
 
 ### Braze CLA
 Before you get started, Braze requires that a Braze Contributor License Agreement (CLA) be filled out by every contributor to the Braze Docs open source project.
