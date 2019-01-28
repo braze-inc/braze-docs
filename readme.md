@@ -18,6 +18,7 @@ If you would like us to incorporate your changes into the official version of th
 
 ### About Braze
 [Braze Home Site](https://www.braze.com/)
+
 [Braze Legal Information](https://www.braze.com/legal)
 
 ### Braze CLA
