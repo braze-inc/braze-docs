@@ -1,0 +1,10 @@
+tip: '<div class="alert alert-tip" role="alert"><div class="alert-msg"> <b>Tip: </b>'
+note: '<div class="alert alert-note" role="alert"><div class="alert-msg"><b>Note: </b>'
+important: '<div class="alert alert-important" role="alert"><div class="alert-msg"><b>Important: </b>'
+warning: '<div class="alert alert-warning" role="alert"><div class="alert-msg"><b>Warning: </b>'
+update: '<div class="alert alert-update" role="alert"><div class="alert-msg"><b>Update: </b>'
+end: '</div></div>'
+
+
+hr_faded: '<hr class="faded"/>'
+hr_shaded: '<hr class="shaded"/>'

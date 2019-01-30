@@ -1,0 +1,11 @@
+_algolia_api_key
+.gem/
+/_site
+.sass-cache
+.DS_Store
+.tags
+.tags1
+.ruby-version
+jekyll-algolia-*
+**/.asset_pipeline
+/_docs/_hidden/private_betas/*

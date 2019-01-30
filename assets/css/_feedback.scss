@@ -1,0 +1,97 @@
+#feedback {
+  @media print {
+    display: none;
+  }
+
+  font-size: 14px;
+  #feedback_comment_div {
+    display: none;
+  }
+
+  padding-bottom: 1rem;
+  color: $black-shark;
+  #feedback_title {
+
+    font-family: $braze-black;
+    display: inline;
+
+  }
+  #feedback_answer {
+    display: inline-block;
+  }
+  #feedback_comment {
+    height: 6rem;
+    width: 100%;
+  }
+  #feedback_helpful_yes {
+    color: $black-shark;
+    &:hover {
+      color: $green-grass;
+    }
+  }
+  #feedback_helpful_but {
+    color: $black-shark;
+    &:hover {
+      color: $navy-bay;
+    }
+  }
+  #feedback_helpful_no {
+    color: $black-shark;
+    &:hover {
+      color: $red-rose;
+    }
+  }
+  a {
+    margin-left: 36px;
+    @media (max-width: $window-mobile-px){
+      margin-left: 16px;
+    }
+    font-family: $braze-regular;
+    color: $black-shark;
+    &:hover {
+      color: $black-shark;
+      text-decoration: none;
+    }
+  }
+
+  button[type=submit] {
+    font-family: $braze-regular;
+    cursor: pointer;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1.25rem 1.5rem 1rem;
+    display: inline-block;
+    background-color: #202024;
+    color: #fff;
+    font-size: .875rem;
+    letter-spacing: .15em;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 0px;
+  }
+
+  @media (min-width: $window-medium-px) {
+    button[type=submit] {
+      padding: 1rem 3rem
+    }
+  }
+
+
+
+  button[type=submit]:focus, button[type=submit]:hover {
+    color: #fff;
+    background-color: $blue-scooter;
+  }
+
+
+
+}

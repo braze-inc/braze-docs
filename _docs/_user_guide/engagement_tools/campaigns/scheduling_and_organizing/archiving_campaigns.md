@@ -1,0 +1,41 @@
+---
+nav_title: Archiving Campaigns
+platform: Campaigns
+subplatform: Scheduling and Organizing
+page_order: 2
+---
+# Archiving Campaigns
+
+If you'd like to stop a campaign from sending or clear it from your Dashboard, you can archive it. Go to the Campaigns page, click the gear icon next to the campaign's name and click "Archive":
+
+![Archiving][1]
+
+Archiving a campaign will accomplish the following:
+
+- No further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
+- The campaign's indicators will be removed from:
+	- The Detailed Statistics graph on the App Usage page
+	- The Detailed Statistics graph on the Revenue page
+	- The Custom Events Over Time graph
+
+There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the buttons:
+
+![Archive selected][3]
+
+To view archived messages from the Campaigns page, click the "Archived" button:
+
+![Include archived][2]
+
+While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. In order to unarchive a campaign, you must select the campaign within the Archived folder and click "Unarchive Selected":
+
+![Unarchive Campaign][4]
+
+Unarchiving a campaign does not make it live. This action will simply move your campaign to the "Active" campaign folder where you can make edits and review how the campaign is set up. At this point, your campaign will be stopped and won't send any messages. If you wish to resume the campaign and begin sending messages, click the gear icon next to the campaign and select "Resume":
+
+![Resume Campaign][5]
+
+[1]: {% image_buster /assets/img_archive/Archiving.png %}
+[2]: {% image_buster /assets/img_archive/Include_archived.png %}
+[3]: {% image_buster /assets/img_archive/Archive_pause_selected.png %}
+[4]: {% image_buster /assets/img_archive/unarchive_selected.png %}
+[5]: {% image_buster /assets/img_archive/resume_unarchived.png %}

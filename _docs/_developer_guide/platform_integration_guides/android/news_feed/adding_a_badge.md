@@ -1,0 +1,19 @@
+---
+nav_title: Adding a Badge
+page_order: 6
+search_rank: 5
+platform: Android
+---
+
+# Adding a Badge
+
+You can request the number of unread cards at any time by calling:
+
+```java
+getUnreadCardCount()
+```
+
+See the [Javadoc][17] for more information.
+
+
+[17]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/FeedUpdatedEvent.html#getUnreadCardCount()

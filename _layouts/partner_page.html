@@ -1,0 +1,325 @@
+---
+layout: default
+hide_toc: true
+hide_bottom_nav: true
+hide_breadcrumb: true
+---
+
+
+
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+
+
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+
+
+
+{% unless hide_nav %}
+<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
+   <i class="fas"></i>
+</button -->
+
+<script type="text/javascript">
+{%- if site.partner_api -%}
+var alloy_partners = {%- alloy_partner {{ page.partner_api }}  -%};
+{%- else -%}
+var alloy_partners = {};
+{%- endif -%}
+
+{%- assign vp = '' -%}
+
+{%- for valid_partner in page.valid_partner_list  -%}
+  {%- if vp != '' -%}
+    {%- assign vp = vp | append: ','  -%}
+  {%- endif -%}
+
+  {%- capture vp -%}
+  {{vp}}
+  "{{ valid_partner['name'] | downcase }}": [["{{ valid_partner['name'] }}","{{ valid_partner['url'] }}","{{ valid_partner['title'] }}"]
+  {%- endcapture -%}
+
+  {%- assign alt_vp = '' -%}
+  {%- if valid_partner['alt'] -%}
+    {%- for valid_alt in valid_partner['alt']   -%}
+        {%- capture alt_vp -%}
+        {{alt_vp}} ,["{{ valid_partner['name'] }}","{{ valid_alt['url'] }}","{{ valid_alt['title'] }}"]
+        {%- endcapture -%}
+    {%- endfor -%}
+
+  {%- endif -%}
+
+  {%- capture vp -%}
+    {{vp}}{{alt_vp}}]
+  {%- endcapture -%}
+
+
+{% endfor %}
+
+
+var valid_partners = {
+  {{ vp }}
+}
+
+var alloy_data;
+if ('data' in alloy_partners) {
+    alloy_data = alloy_partners['data']
+}
+
+
+$(document).ready(function() {
+  function string_to_slug (str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // trim
+    str = str.toLowerCase();
+
+    // remove accents, swap ñ for n, etc
+    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+    var to   = "aaaaeeeeiiiioooouuuunc------";
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    str = str.replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-'); // collapse dashes
+
+    return str;
+  }
+  var partner_div = $('#partner_list');
+  var basehref = 'https://homeslice.braze.com/product/alloys/partners/';
+  // category, speciality, solution
+  var filter_map = ['partner_categories','partner_specialties','partner_solutions'];
+  var partner_selects = [{},{},{}];
+  var filter_select = ['partner_category','partner_specialty','partner_solutions'];
+
+
+  function generate_card(cur_partner,doc_url,title = '',appendid_title = false){
+    var card_id = string_to_slug(cur_partner['partner_name']);
+
+    var card_url = doc_url;
+
+    if (!card_url) {
+      card_url = basehref + card_id
+    }
+    var card_img = $('<img>').attr('src',cur_partner['partner_logo_url']).addClass('logo');
+    var card_title = '';
+    if (title) {
+      card_title = $('<h5>').html('(' + title + ')');
+        if (appendid_title) {
+          card_id += '_' + string_to_slug(title);
+        }
+    }
+
+    var card_speciality =  $('<h6>').html(cur_partner['partner_specialties'].join(' '));
+    var card_content =  $('<div>').addClass('hover_content').append($('<p>').html(cur_partner['partner_description']));
+
+    var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_speciality).append(card_content);
+    var append_html = $('<a>').attr('id','card_' + card_id).attr('href',card_url).addClass('card').append(card_div);
+    return append_html;
+  }
+
+  function set_filters () {
+    if (alloy_data) {
+      for (var i = 0; i < alloy_data.length;i++){
+        var cur_partner = alloy_data[i];
+         if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
+           for (var j = 0; j < filter_map.length; j++) {
+             var fil = cur_partner[filter_map[j]];
+             for (var q = 0; q < fil.length; q++ ) {
+               partner_selects[j][ fil[q]] = fil[q];
+             }
+           }
+         }
+      }
+    }
+    for (var j = 0; j < filter_map.length; j++) {
+      var par_sel = $('#' + filter_select[j]);
+      var par_sorted = [];
+
+      $.each(partner_selects[j],function(k,v){
+        par_sorted.push(k);
+      });
+      par_sorted.sort();
+      for (var i = 0; i < par_sorted.length;i++ ){
+        par_sel.append($("<option>").attr("value",par_sorted[i]).text(partner_selects[j][par_sorted[i]]));
+      }
+    }
+  };
+
+
+
+    function generate_partners(partner_hash,initialize) {
+      var result_cnt = 0;
+      $('#results_msg').hide();
+      for (var i = 0; i < partner_hash['sorted'].length;i++){
+        var cur_partner = partner_hash['data'][partner_hash['sorted'][i]];
+        var cur_filter_text = partner_hash['search'][partner_hash['sorted'][i]];
+         if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
+           if (initialize) {
+             var vp = valid_partners[cur_partner['partner_name'].toLowerCase()]
+             partner_div.append(generate_card(cur_partner,vp[0][1],vp[0][2],false));
+
+             // append alternative partner links
+
+             if (vp.length > 1) {
+               for (var ap = 1; ap < vp.length; ap++) {
+                 partner_div.append(generate_card(cur_partner,vp[ap][1],vp[ap][2],true));
+               }
+             }
+
+             result_cnt++;
+           }
+           else {
+             var toappend = true;
+             var filtered = true;
+             for (var k = 0 ; k < filter_select.length; k++ ) {
+               var selected_val = $('#' + filter_select[k] +  " option:selected").val();
+               if (selected_val) {
+                 toappend = false;
+                 if (cur_partner[filter_map[k]].indexOf(selected_val) < 0 ) {
+                   filtered = false;
+                 }
+               }
+             }
+             var search_str = $('#partner_search').val().toLowerCase();
+             if (search_str.length ) {
+               toappend = false;
+               if (cur_filter_text.indexOf(search_str) < 0) {
+                 filtered = false;
+               }
+             }
+             if (filtered) {
+               toappend = true;
+             }
+             if (toappend ) {
+               $('#card_' + string_to_slug(cur_partner['partner_name'])).show();
+               if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
+                 var vp = valid_partners[cur_partner['partner_name'].toLowerCase()];
+                 // show alternative partner links
+                 if (vp.length > 1) {
+                    for (var ap = 1; ap < vp.length; ap++) {
+                      $('#card_' + string_to_slug(cur_partner['partner_name']) + '_' + string_to_slug(vp[ap][2])).show();
+                    }
+                 }
+               }
+               result_cnt++;
+             }
+             else {
+               $('#card_' + string_to_slug(cur_partner['partner_name'])).hide();
+               if (valid_partners[cur_partner['partner_name'].toLowerCase()]) {
+                 var vp = valid_partners[cur_partner['partner_name'].toLowerCase()];
+                 // filter alternative partner links
+                 if (vp.length > 1) {
+                    for (var ap = 1; ap < vp.length; ap++) {
+                      $('#card_' + string_to_slug(cur_partner['partner_name']) + '_' + string_to_slug(vp[ap][2])).hide();
+                    }
+                 }
+               }
+             }
+           }
+         }
+      }
+      if (!result_cnt) {
+        $('#results_msg').html('<p>No Partners matching these filters</p>');
+        $('#results_msg').show();
+      }
+
+    };
+    var partner_hash = {'data':{},'search': {}, 'sorted': []};
+    if (alloy_data) {
+
+      for (var i = 0; i < alloy_data.length; i++ ) {
+        var partner_key = alloy_data[i]['partner_name'].toLowerCase();
+        partner_hash['data'][partner_key] = alloy_data[i];
+        partner_hash['search'][partner_key] = partner_key +
+          alloy_data[i]['partner_description'].toLowerCase() +
+          alloy_data[i]['partner_specialties'].join(' ').toLowerCase() +
+          alloy_data[i]['partner_categories'].join(' ').toLowerCase() +
+          alloy_data[i]['partner_solutions'].join(' ').toLowerCase() ;
+        partner_hash['sorted'].push(partner_key);
+      }
+      partner_hash['sorted'].sort();
+      set_filters();
+
+      generate_partners(partner_hash,true);
+
+      for (var i = 0 ; i < filter_select.length; i++ ) {
+        $('#' + filter_select[i]).on('change',function(e){
+          generate_partners(partner_hash,false);
+        });
+      }
+
+      $('#partner_search').on('keyup',function(e){
+        generate_partners(partner_hash,false);
+      });
+    }
+  });
+</script>
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html  %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+
+    <div id="partner-main">
+
+
+    <h1> {{ page.partner_top_header }} </h1>
+    <p class="partner_text">  {{ page.partner_top_text }} </p>
+
+    <div id="partner_filter">
+      <div class="partner_filter_div">
+        <input id="partner_search" type="search" placeholder="Search"></div>
+      <div class="partner_filter_div"><select id="partner_category" class="select">
+        <option value="">All Categories</option>
+      </select>
+
+  </div>
+      <div class="partner_filter_div"><select id="partner_specialty" class="select">
+        <option value="">All Specialties</option>
+      </select>
+  </div>
+      <div class="partner_filter_div"><select id="partner_solutions" class="select">
+        <option value="">All Solutions</option>
+      </select>
+  </div>
+
+    </div>
+
+    <div id="partner_list" class="flex mx-auto">
+
+    </div>
+    <div id="results_msg"></div>
+
+
+  </div>
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+      <!-- div class="gradient-line" ></div -->
+    </div>
+
+    {%- endunless -%}
+
+    {% include footer.html class="footer_partner" %}
+</div>

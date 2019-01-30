@@ -1,0 +1,101 @@
+#bottom_nav {
+  padding: 0;
+
+  @media (min-width: $window-xlarge-px) {
+    max-width: $main_max_width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #bottom_page_nav {
+
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display:none;
+    color: $grey-dust;
+    letter-spacing: 0px;
+    line-height: 26px;
+    font-family: $braze-regular;
+    font-size: 16px;
+    transition: all ease $nav_transition_time;
+    -webkit-transition:  all ease $nav_transition_time;
+    -moz-transition:  all ease $nav_transition_time;
+    &.flex {
+      display: flex;
+      display: -webkit-flex; /* Safari */
+    }
+    .nav_indicator {
+      font-family: $braze-black;
+      color: $black-shark;
+      font-size: 12px;
+      line-height: 20px;
+      vertical-align: top;
+      letter-spacing: 0.75px;
+      i {
+        font-size: 18px;
+        vertical-align: top;
+      }
+    }
+    @media print {
+      display: none !important;
+    }
+    a {
+      color: $grey-dust;
+      display: flex;
+      display: -webkit-flex; /* Safari */
+    }
+    a:hover div {
+      color: $grey-dust;
+      background-color: $blue-scooter;
+      .nav_indicator {
+        color: $black-shark;
+      }
+    }
+    div.gradient-line {
+      width: 100%;
+      height: 3px;
+      margin: 0 auto 30px auto;
+    }
+    %bottom_nav_box {
+      width: 100%;
+      border: 1px solid black;
+      min-height: 90px;
+      padding: 10px;
+      line-height: 1;
+      display: none;
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+      @media (max-width: $window-mobile-px){
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+      }
+      overflow: hidden;
+    }
+
+    #page_prev {
+       @extend %bottom_nav_box;
+       //left: 4%;
+       clear: left;
+       float: left;
+       @media (max-width: $window-mobile-px){
+         padding-right: 0.5rem;
+       }
+    }
+    #page_next {
+       @extend %bottom_nav_box;
+       //right: 4%;
+       clear: right;
+       text-align: right;
+       float: right;
+       @media (max-width: $window-mobile-px){
+         padding-left: 0.5rem;
+       }
+    }
+
+    #page_next_link , #page_prev_link {
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      text-decoration: none;
+      flex: 50%;
+    }
+  }
+
+
+}

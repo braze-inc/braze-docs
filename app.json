@@ -1,0 +1,41 @@
+{
+  "name": "success",
+  "scripts": {
+  },
+  "env": {
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "SITE_URL": {
+      "required": true
+    },
+    "ALGOLIA_API_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/dpiddy/heroku-buildpack-runit.git"
+    },
+    {
+      "url": "https://github.com/beanieboi/nginx-buildpack.git"
+    },
+    {
+      "url": "https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/ruby.tgz"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-jvm-common.git"
+    }
+  ]
+}

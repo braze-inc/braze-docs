@@ -1,0 +1,3 @@
+web: bin/start-nginx bundle exec rake docs:puma
+documentation: bundle exec rake documentation:puma
+academy: bundle exec rake academy:puma

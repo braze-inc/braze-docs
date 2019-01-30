@@ -1,0 +1,195 @@
+$search_padding: 20px;
+$search_font_size: 14px;
+$base_url : '/docs';
+
+// Core palate (colors)
+$white: #ffffff;
+$black: #000000;
+$black-shark: #212123;
+$navy-bay: #27368f;
+// Lighter versions of navy-bay
+$navy-cove: #7c86bc;
+
+
+$blue-scooter: #3accdd;
+
+$braze-link-color: $blue-scooter;
+
+// Lighter versions of blue-scooter
+$blue-blizzard: #a6e8f0;
+$blue-ice: #def6f9;
+
+
+$orange-coral: #ff9349;
+// Lighter versiosn of orange-coral
+$orange-peach: #ffc298;
+$orange-linen: #ffe9db;
+
+$pink-oyster: #f7918e;
+// Lighter versions of pink-oyster
+$pink-apricot: #fbc3c2;
+$pink-cinderella: #feecec;
+
+$gradient-main: linear-gradient(30deg, $blue-scooter, $pink-oyster 64%, $orange-coral 90%);
+
+$grey-metal: #333335;
+$grey-dust: #5b5b5e;
+$grey-boulder: #6d6d70;
+$grey-manatee: #828284;
+$grey-stardust: #99999b;
+$grey-french: #c6c6cc;
+$grey-ghost: #dddde2;
+$grey-athens: #f4f4f7;
+
+$search_font_color: $black-shark;
+//Font Variables
+$braze-light: 'Sailec W00 Light', Arial, Helvetica, sans-serif;
+$braze-light-oblique: 'Sailec W00 Light Italic', Arial, Helvetica, sans-serif;
+$braze-thin: 'Sailec W00 Thin', Arial, Helvetica, sans-serif;
+$braze-regular: 'Sailec W00 Regular', Arial, Helvetica, sans-serif;
+$braze-regular-oblique: 'Sailec W00 Italic', Arial, Helvetica, sans-serif;
+$braze-heavy: 'Sailec W00 Demi', Arial, Helvetica, sans-serif;
+$braze-heavy-oblique:'Sailec W00 Demi Italic', Arial, Helvetica, sans-serif;
+$braze-medium: 'Sailec W00 Medium', Arial, Helvetica, sans-serif;
+$braze-medium-oblique: 'Sailec W00 Medium Italic', Arial, Helvetica, sans-serif;
+$braze-black: 'Sailec W00 Bold', Arial, Helvetica, sans-serif;
+$braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
+
+
+
+#search_page{
+  font-size: $search_font_size;
+  font-family: $braze-regular;
+  .ais-current-refined-values--link, .ais-geo-search--toggle-label,
+  .ais-hierarchical-menu--link, .ais-menu--link, .ais-price-ranges--link,
+  .ais-refinement-list--label, .ais-star-rating--link, .ais-toggle--label {
+
+  }
+  .ais-current-refined-values--count, .ais-hierarchical-menu--count,
+  .ais-menu--count, .ais-refinement-list--count, .ais-star-rating--count, .ais-toggle--count {
+
+  }
+  .ais-refinement-list--header {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    font-family: $braze-black;
+    color: $black-shark;
+  }
+  .ais-search-box--input {
+    border-radius: 0;
+    border-color: $navy-bay;
+    box-shadow: 0 1px 1px 0 rgba($navy-bay,.2);
+  }
+  .ais-refinement-list--list {
+    .ais-refinement-list--item {
+      padding: $search_padding/4 $search_padding/4 0px 0px;
+      color: $black-shark;
+
+
+      .ais-refinement-list--count {
+        color: $black-shark;
+        border-radius: 5px;
+        padding: 2px 5px;
+      }
+
+    }
+    .ais-refinement-list--item__active {
+      font-family: $braze-black;
+    }
+  }
+  .ais-search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ais-refinement-list--label {
+    margin-bottom: 0px;
+    color: $grey-dust;
+  }
+  .ais-stats {
+    opacity: 0.8;
+  }
+  #clear-all {
+    padding: $search_padding $search_padding 0px $search_padding;
+  }
+
+  #search_type {
+    padding: $search_padding $search_padding 0px $search_padding;
+  }
+  #search_category {
+    padding: $search_padding $search_padding 0px $search_padding;
+  }
+  #search_form {
+    padding: $search_padding $search_padding 0px 0px;
+  }
+  #search_stats {
+    padding: $search_padding $search_padding 0px 0px;
+  }
+  #search_pagination {
+    .ais-pagination {
+      box-shadow: none;
+      border: none;
+      padding: $search_padding/2 0px;
+    }
+    .ais-pagination--item__active {
+      background-color: $blue-scooter;
+    }
+  }
+
+
+  .algolia-docsearch-footer {
+      height: 30px;
+      font-size: 0;
+      line-height: 0;
+  }
+  .algolia-docsearch-footer--logo {
+      background-image: url(#{$base_url}/assets/img/algolia.svg);
+      background-repeat: no-repeat;
+      background-position: 100%;
+      overflow: hidden;
+      text-indent: -9000px;
+      padding: 0!important;
+      width: 150px;
+      height: 100%;
+      display: block;
+
+  }
+
+  .hit {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+    &:hover {
+      background-color: $grey-athens;
+    }
+    .hit-name {
+      font-family: $braze-medium;
+      display: inline-block;
+      color: $navy-bay;
+    }
+    .hit-subname {
+      display: inline-block;
+    }
+    .hit-category {
+      display: inline-block;
+    }
+    .hit-description{
+      color: $grey-dust;
+      font-family: $braze-regular;
+      em {
+        color: $search_font_color;
+        font-family: $braze-black;
+      }
+    }
+    .hit-content {
+      padding: $search_padding/4;
+      margin-bottom: $search_padding/2;
+    }
+  }
+
+}

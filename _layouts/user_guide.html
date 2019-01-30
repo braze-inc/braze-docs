@@ -1,0 +1,107 @@
+---
+layout: default
+hide_toc: true
+hide_bottom_nav: true
+hide_breadcrumb: true
+---
+
+
+
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+
+
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+
+
+
+{% unless hide_nav %}
+<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
+   <i class="fas"></i>
+</button -->
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html  %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+
+  <div id="user-main">
+
+
+    <h1> {{ page.user_top_header }} </h1>
+    <p>  {{ page.user_top_text }} </p>
+
+
+
+    <div id="user_list" >
+
+      {%- for user_list in page.user_menu_list  -%}
+        {%- if user_list.link -%}
+        <a href="{{ user_list.link }}">
+          {%- endif %}
+      <div id="{{ user_list.name | handle }}" class="user_item">
+        <div class="user_img" style="background-color: {{ user_list.bg_color}}">
+        {%- if user_list.image -%}
+        <img src="{{site.baseurl}}{{ user_list.image}} " />
+        {%- endif -%}
+        </div>
+        <div class="user_info">
+          <div class="user_name">
+              {{ user_list.name }}
+          </div>
+          <div class="user_description">
+              {{ user_list.description }}
+          </div>
+        </div>
+      </div>
+        {%- if user_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    <div id="user_bottom">
+        <div id="user_popular" class="user_info">
+          <div class="user_name">Popular Topics</div>
+            <div class="user_description">
+            {%- for user_list in page.popular_topic_list  -%}
+              <div>
+              <a href="{{ user_list.link }}">{{ user_list.name }}</a>
+              </div>
+            {%- endfor -%}
+          </div>
+
+        </div>
+    </div>
+
+  </div>
+
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+
+    </div>
+
+    {%- endunless -%}
+
+    {% include footer.html class="footer_user" %}
+</div>

@@ -1,0 +1,84 @@
+# Site settings
+title: Braze Academy
+email: success@braze.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to Braze Academy! Learn how to become a marketing expert and
+  effectively use Braze's tools. Braze Academy gives you the knowledge, skills
+  and best practices to engage your users beyond the download.
+baseurl: "/academy" # the subpath of your site, e.g. /blog/
+url: "https://www.braze.com" # the base hostname & protocol for your site
+twitter_username: Braze
+github_username:  Appboy
+permalink: /:title/
+index_url: /Home/
+api_key: "bef30adf-6179-4b26-a3b5-42268996ad95"
+
+# Allows the DocSearch element to be inspected. Set to true locally, but don't
+# check in in that state, or it will cause undesirable behavior in prod.
+search_debug: false
+
+# Jekyll won't go into nested folders so you need to list them. I should submit a
+# PR to Jekyll to fix that...
+plugins_dir: ["_plugins", "_plugins/shared"]
+
+# Pages directory
+include: ["_pages"]
+
+# Don't serve non-jekyll files
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'README.md', 'Procfile', 'Rakefile', 'vendor', 'config']
+
+# Build settings
+markdown: kramdown
+
+image_buster:
+  dev: false
+  paths:
+    - '/assets/shared/img/*.*'
+
+kramdown:
+  input: GFM
+
+# Collections
+collections:
+  Getting_Started:
+    relative_directory: _collections/Getting_Started
+  Segments_and_User_Targeting:
+    relative_directory: _collections/Segments_and_User_Targeting
+  Message_Building_and_Personalization:
+    relative_directory: _collections/Message_Building_and_Personalization
+  Campaigns:
+    relative_directory: _collections/Campaigns
+  Canvas:
+    relative_directory: _collections/Canvas
+  Data_and_Analytics:
+    relative_directory: _collections/Data_and_Analytics
+  Best_Practices:
+    relative_directory: _collections/Best_Practices
+  Release_Notes:
+    relative_directory: _collections/Release_Notes
+  Troubleshooting_Guide:
+    relative_directory: _collections/Troubleshooting_Guide
+  Webinars:
+    relative_directory: _collections/Webinars
+  GDPR:
+    relative_directory: _collections/GDPR
+  App_Settings:
+    relative_directory: _collections/App_Settings
+  Locations_and_Geofences:
+    relative_directory: _collections/Locations_and_Geofences
+  Manage_Your_Users:
+    relative_directory: _collections/Manage_Your_Users
+  News_Feed:
+    relative_directory: _collections/News_Feed
+  Templates_and_Media:
+    relative_directory: _collections/Templates_and_Media
+  Home:
+    relative_directory: _collections/Home
+
+
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: academy/assets
+  gzip: true

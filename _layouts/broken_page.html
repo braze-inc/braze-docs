@@ -1,0 +1,203 @@
+---
+layout: default
+hide_toc: true
+hide_bottom_nav: true
+hide_breadcrumb: true
+---
+
+
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/broken_redirect_list.js" ></script>
+<script type="text/javascript">
+
+  function removeleadingslash(str){
+    var rstr = str;
+    if (rstr.slice(-1) === "/") {
+      rstr = rstr.slice(0, -1);
+    }
+    return rstr;
+  }
+
+var validurls = (typeof validurls === "undefined")  ? {} : validurls;
+
+
+(function(){
+  //lower case name => path name
+
+  var urlpath = removeleadingslash(window.location.pathname);
+
+  var pagetype = urlpath.split('/');
+
+  function redirecturl(ky,uh,redirect) {
+    var val_urls = validurls[ky];
+    var hashes = val_urls.split('#');
+    var returl = hashes[0] + redirect;
+    if (hashes[1]) {
+      returl += '#' + hashes[1];
+    }
+    else if (uh ) {
+      returl += uh;
+    }
+    return returl;
+  }
+
+  var siteurl = '';
+
+  {%- for page in site.documents -%}
+    {%- assign hide_url = page.hidden -%}
+    {%- if page.collection == 'site_pages' -%}
+    {%- assign hide_url = false -%}
+    {%- endif -%}
+    {%- if hide_url == nil -%}
+      {%- assign col_info = site.collections | where:"label", page.collection | first -%}
+      {%- if col_info.hidden -%}
+        {%- assign hide_url = col_info.hidden -%}
+      {%- endif -%}
+    {%- endif -%}
+    {% unless hide_url %}
+    siteurl = removeleadingslash("{{ page.url }}");
+    validurls['{{ site.baseurl }}' + siteurl.toLowerCase()] = '{{ site.baseurl }}' + siteurl + '/';
+    {% endunless %}
+  {%- endfor -%}
+
+  var urlhash = window.location.hash;
+  var urlsearch = window.location.search;
+
+  if (window.location.href.indexOf('redirected=true') == -1) {
+    var redirected  = '?redirected=true' ;
+    if (urlsearch.indexOf('?') > -1 ) {
+      redirected = urlsearch + '&redirected=true';
+    }
+    if (validurls[urlpath.toLowerCase() + '/' + urlhash] ) {
+      window.location  =  redirecturl(urlpath.toLowerCase() + '/' + urlhash,urlhash,redirected);
+    }
+    else if (validurls[urlpath.toLowerCase() + urlhash] ) {
+      window.location  =  redirecturl(urlpath.toLowerCase() + urlhash,urlhash,redirected);
+    }
+    else if (validurls[urlpath.toLowerCase() + '/'] ) {
+      window.location  =  redirecturl(urlpath.toLowerCase() + '/',urlhash,redirected);
+    }
+    else if (validurls[urlpath.toLowerCase()] ) {
+      window.location  =  redirecturl(urlpath.toLowerCase(),urlhash,redirected);
+    }
+  }
+
+
+
+}  )();
+
+$(document).ready(function(k){
+  var search_strings = removeleadingslash(window.location.pathname).split('/');
+  var search_string = search_strings[search_strings.length -1].replace(/(\W|_|-)+/g,' ');
+  var urlhash = window.location.hash;
+  if (urlhash) {
+      search_string += ' ' + urlhash.replace(/(\W|_|-)+/g,' ');
+  }
+  $('#help-menu_search').val(search_string)
+});
+</script>
+
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+
+
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+
+
+
+{% unless hide_nav %}
+<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
+   <i class="fas"></i>
+</button -->
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html  %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+
+    <div id="broken-main">
+      <div id="broken_banner">
+        <div id="broken_banner_img"><img src="{{ page.broken_image }}" /></div>
+        <div id="broken_banner_info" class="broken_info">
+          <div class="broken_name">
+              {{ page.broken_top_header }}
+          </div>
+          <div class="broken_description">
+            {{ page.broken_top_text }}
+          </div>
+
+        </div>
+
+      </div>
+
+    <div id="broken_bottom">
+      <div id="broken_bottom_left">
+
+
+        <div id="broken_popular" class="broken_info">
+          <div class="broken_name">Try one of these</div>
+          <div class="broken_description">
+          {%- for broken_list in page.recommend_list  -%}
+            <div>
+            <a href="{{ broken_list.link }}">{{ broken_list.name }}</a>
+            </div>
+          {%- endfor -%}
+        </div>
+        </div>
+
+      </div>
+      <div id="broken_bottom_right">
+
+        <div id="broken_help" class="broken_info">
+          <div class="broken_name">
+            Search
+          </div>
+          <div class="broken_description">
+            Can't find what you're looking for? Search below, or visit our <a href="{{site.baseurl}}/help/">Help page</a>.
+          </div>
+          <form id="help-search-form"  action="{{site.baseurl}}/search/" method="get" class="form-inline">
+            <div class="input-group ">
+              <input type="text" class="form-control" id="help-menu_search"  name="q" placeholder="Search Braze Documentation" aria-label="Search">
+              <button class="btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+        </form>
+        </div>
+
+
+
+      </div>
+  </div>
+
+  </div>
+
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+      <!-- div class="gradient-line" ></div -->
+    </div>
+
+    {%- endunless -%}
+
+    {% include footer.html %}
+</div>

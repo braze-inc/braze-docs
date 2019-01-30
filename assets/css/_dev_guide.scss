@@ -1,0 +1,126 @@
+$guide_transition_time : 0.25s;
+#dev-main {
+  padding-top: 15px;
+  margin-top: 15px;
+
+  @media (min-width: $window-large-px) {
+    margin-top:30px;
+  }
+  @media (min-width: $window-xlarge-px) {
+    max-width: $main_max_width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  h1 {
+    color: $black-shark;
+    font-family: $braze-medium;
+  }
+  .guide_menu_title {
+    margin-top: 40px;
+    color: $navy-bay;
+  }
+
+  #guide_list, #guide_featured_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .guide_item {
+
+      width: 100%;
+      padding: 20px;
+
+      display: inline-flex;
+      vertical-align: top;
+      text-align: left;
+      font-size: 16px;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-family: $braze-regular;
+      height: 80px;
+      overflow: hidden;
+      align-items: center;
+      img {
+       max-height: 80%;
+       vertical-align: middle;
+       display: flex;
+       display: -webkit-flex; /* Safari */
+       margin-right: 20px;
+       margin: auto 15px auto 0;
+       max-width: 40px;
+      }
+      i {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 24px;
+        margin: auto 20px auto 0;
+        max-width: 30px;
+      }
+      .menu_description {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        vertical-align: middle;
+        color: $text-color;
+
+        line-height: 1.8;
+        display: inline-block;
+      }
+
+    }
+
+    a {
+      border: 1px solid $grey-ghost;
+      box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
+      border-radius: 2px;
+      margin-bottom: 2%;
+
+      flex: 0 0 100%;
+
+      @media (min-width:  $window-medium-px) {
+        flex: 0 0 46%;
+        margin-right: 2%;
+      }
+      @media (min-width:  $window-large-px) {
+        flex: 0 1 30.3%;
+        margin-right: 3%;
+      }
+      color: $black-shark;
+      text-decoration: none;
+      background-color: inherit;
+      &:hover {
+        background-color: transparent;
+        border-color: $braze-link-color;
+      }
+    }
+
+  }
+
+  *,
+  *::before,
+  *::after {
+    border-width: 0;
+    border-style: solid;
+  }
+  a {
+    display: inline;
+    color: $black-shark;
+    border-bottom-width: 2px;
+    border-color: $braze-link-color;
+    text-decoration: none;
+    transition: all ease $guide_transition_time;
+    -webkit-transition:  all ease $guide_transition_time;
+    -moz-transition:  all ease $guide_transition_time;
+    &:hover {
+      background-color: $braze-link-color;
+    }
+  }
+}
+.footer_dev {
+  @media (min-width:  $window-medium-px) {
+    width: 94%;
+  }
+  @media (min-width:  $window-large-px) {
+    width: 97%;
+  }
+}

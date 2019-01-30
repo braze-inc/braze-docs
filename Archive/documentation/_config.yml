@@ -1,0 +1,75 @@
+# Site settings
+title: Braze Documentation
+email: success@braze.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
+baseurl: "/documentation" # the subpath of your site, e.g. /blog/
+# If you change the url you need to update default.html.
+url: "https://www.braze.com" # the base hostname & protocol for your site
+twitter_username: Braze
+github_username:  Appboy
+permalink: /:title/
+index_url: /Platform_Wide/
+api_key: "bef30adf-6179-4b26-a3b5-42268996ad95"
+
+# Allows the DocSearch element to be inspected. Set to true locally, but don't
+# check in in that state, or it will cause undesirable behavior in prod.
+search_debug: false
+
+# Jekyll won't go into nested folders so you need to list them. I should submit a
+# PR to Jekyll to fix that...
+plugins_dir: ["_plugins", "_plugins/shared"]
+
+# Pages directory
+include: ["_pages"]
+
+# Don't serve non-jekyll files
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'README.md', 'Procfile', 'Rakefile', 'vendor', 'config']
+
+# Build settings
+markdown: kramdown
+
+image_buster:
+  dev: false
+  paths:
+    - '/assets/shared/img/*.*'
+
+kramdown:
+  input: GFM
+
+# Collections
+collections:
+  Partner_Integrations:
+    relative_directory: _collections/Partner_Integrations
+  REST_API:
+    relative_directory: _collections/REST_API
+  iOS:
+    relative_directory: _collections/iOS
+  Android_and_FireOS:
+    relative_directory: _collections/Android_and_FireOS
+  Windows_Universal:
+    relative_directory: _collections/Windows_Universal
+  Xamarin:
+    relative_directory: _collections/Xamarin
+  Unity:
+    relative_directory: _collections/Unity
+  Web:
+    relative_directory: _collections/Web
+  Cordova:
+    relative_directory: _collections/Cordova
+  React_Native:
+    relative_directory: _collections/React_Native
+  tvOS:
+    relative_directory: _collections/tvOS
+  Platform_Wide:
+    relative_directory: _collections/Platform_Wide
+
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: documentation/assets
+  gzip: true
+
+algolia:
+  vars: ["title", "excerpt", "date", "url", "categories", "tags","rank"]

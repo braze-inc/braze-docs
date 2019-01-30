@@ -1,0 +1,3534 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Braze API Endpoints",
+    "description": "The collection below list interactive documentation with prewritten examples for all of Braze's API endpoints. For more detailed explanations of our API, please read <a href=\"/docs/developer_guide/rest_api/basics\">our API overview</a>. You can also check out <a href=\"/docs/developer_guide/rest_api/postman_collection/#what-is-postman\">our Postman Collection</a>.",
+    "version": "1.0"
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "description": "For get request. For post, place inline in body",
+        "type": "apiKey",
+        "in": "query",
+        "name": "api_key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rest.iad-01.braze.com",
+      "variables": {}
+    },
+    {
+      "url": "https://rest.iad-02.braze.com",
+      "variables": {}
+    },
+    {
+      "url": "https://rest.iad-03.braze.com",
+      "variables": {}
+    },
+    {
+      "url": "https://rest.iad-04.braze.com",
+      "variables": {}
+    },
+    {
+      "url": "https://rest.iad-06.braze.com",
+      "variables": {}
+    },
+    {
+      "url": "https://rest.fra-01.braze.eu",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/users/export/ids": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "User Export - User IDs Example",
+        "description": "Example of exporting user data documents by specifying individual user IDs using the /users/export/ids endpoint. This endpoint allows you to export data from any user profile by specifying a form of user identifier. Up to 75 external_ids or user_aliases can be included in a single request. Should you want to specify device_id or email_address, only one of either identifier can be included per request.",
+        "operationId": "User export  user ids example",
+        "requestBody": {
+          "description": "Exports the details about the user with the specified exterenal ID",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/User_Export"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/export/segment": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "User Export - Segment ID Example",
+        "description": "Example of exporting all users in a segment for a particular app group using the /users/export/segment endpoint. This example request includes the optional \"fields_to_export\" field which allows you to specify what specific data fields should be returned instead of all user data. Individual custom attributes cannot be exported. However, all custom attributes can be exported by including ‘custom_attributes’ in the “fields_to_export” array (e.g. [‘first_name’, ‘email’, ‘custom_attributes’]).",
+        "operationId": "User export  segment id example",
+        "requestBody": {
+          "description": "Exports the users within the specified segment",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Segment_Export"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/segments/list": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Segment Export - List Example",
+        "description": "Example request to return a list of segments from the /segments/list endpoint. There are two optional parameters in this request: \"page\", which determines the set of segments returned (up to 100 per response), and \"sort_direction\", which can take the value \"desc\" to sort by creation time from newest to oldest, or \"asc\" to sort from oldest to newest.",
+        "operationId": "Segment export  list example",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of segments to return, defaults to 0 (returns the first set of up to 100)",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 0
+            },
+            "example": 0
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc",
+                "asc"
+              ]
+            },
+            "example": "desc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/segments/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Segment Export - Analytics Example",
+        "description": "Example of using the /segments/data_series endpoint to return daily time-series data about the membership size of a given segment. The parameters \"api_key\" and \"segment_id\" (segment api identifier) are required. Length is the max number of days before ending_at to include in the returned series; must be between 1 and 100 inclusive, and \"ending_at\" must be in DateTime ISO 8601 string format.",
+        "operationId": "Segment export  analytics example",
+        "parameters": [
+          {
+            "name": "segment_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 14
+            },
+            "example": 14
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/segments/details": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Segment Export - Details Example",
+        "description": "Example of using the /segments/details endpoint to return details about a given segment. Details that will be returned are \"created_at\", \"updated_at\", \"name\", \"description\" (human-readable description of filters), and \"tags\" (dashboard user-created tags applied to this segment).",
+        "operationId": "Segment export  details example",
+        "parameters": [
+          {
+            "name": "segment_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/list": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Campaign Export - List Example",
+        "description": "Example of using the /campaigns/list endpoint to retrieve a list of all campaigns set up in the Braze dashboard for a given app group. Each response returns data for up to 100 campaigns that are sorted by time of creation (oldest to newest by default). The \"page\" parameter can be used to retrieve additional sets of campaigns (up to 100 per page). By default, archived campaigns are not included unless the \"include_archived\" parameter is set to true. Paused campaigns are returned by default. The \"sort_direction\" parameter can be set to \"desc\" to sort by creation time from newest to oldest, or \"asc\" to sort by creation from oldest to newest.",
+        "operationId": "Campaign export  list example",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 0
+            },
+            "example": 0
+          },
+          {
+            "name": "include_archived",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": false
+            },
+            "example": false
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc",
+                "asc"
+              ]
+            },
+            "example": "desc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Campaign Export - Analytics Example",
+        "description": "Example of using the /campaigns/data_series endpoint to retrieve daily time-series data for a given campaign. Data returned includes how many messages were sent, opened, clicked, converted, etc., broken down by message channel. The parameters \"length\" and \"ending_at\" determine the range of time that we will return data for. The parameter \"length\" controls how many days of data will be returned (maximum of 100). \"ending_at\" (DateTime ISO 8601 string) controls what the last day returned ought to be.",
+        "operationId": "Campaign export  analytics example",
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "campaign identifier"
+            },
+            "example": "campaign identifier"
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 7
+            },
+            "example": 7
+          },
+          {
+            "name": "ending at",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/details": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Campaign Export - Details Example",
+        "description": "Example of using the /campaigns/details endpoint to request details for a given campaign. Data returned includes \"created_at\", \"updated_at\", \"name\", \"schedule_type\" (triggered, time-based, etc.), \"channels\" (message types included in the campaign), \"first_sent\", \"last_sent\", & \"tags\" (dashboard user-specified tags applied to this campaign).",
+        "operationId": "Campaign export  details example",
+        "parameters": [
+          {
+            "name": "campaign_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "campaign identifier"
+            },
+            "example": "campaign identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/list": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Canvas Export - List Example",
+        "description": "Example of using the /canvas/list endpoint to retrieve a list of Canvases set up in the Braze dashboard for a given app group. Responses will include up to 100 Canvases per page. The \"page\" parameter can be set to return additional sets of up to 100 Canvases. Archived Canvases will not be included by default unless \"include_archived\" is set to true. Stopped Canvases will be included. The \"sort_direction\" parameter can be set to \"desc\" to return the list sorted by time of creation from newest to oldest, or \"asc\" to sort from oldest to newest (default).",
+        "operationId": "Canvas export  list example",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "include_archived",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": false
+            },
+            "example": false
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc",
+                "asc"
+              ]
+            },
+            "example": "desc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/details": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Canvas Export - Details Example",
+        "description": "Example of using the /canvas/details endpoint to return details about a given Canvas. Data returned includes \"created_at\", \"updated_at\", \"name\", and other fields.",
+        "operationId": "Canvas export  details example",
+        "parameters": [
+          {
+            "name": "canvas_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "canvas identifier"
+            },
+            "example": "canvas identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Canvas Export - Data Series Example",
+        "description": "Example request for using the /canvas/data_series endpoint to retrieve daily time-series data for a given Canvas. The time frame of data that should be returned is specified by including the required \"ending_at\" parameter and either \"length\" (1-14, denotes how many days of data should be returned) or \"starting_at\" (a date on which we should start the time series) in DateTime ISO 8601 format. There are three other parameters which default to false that determine what type of data should be returned: \"include_variant_breakdown\" (controls whether we should return aggregated stats for an entire Canvas variant), \"include_step_breakdown\" (controls if we return per-step breakdowns), and \"include_deleted_step_data\" (controls if we return data for steps that have been deleted).",
+        "operationId": "Canvas export  data series example",
+        "parameters": [
+          {
+            "name": "canvas_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "canvas identifier"
+            },
+            "example": "canvas identifier"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2018-06-28T23:59:59-5:00",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 10
+            },
+            "example": 10
+          },
+          {
+            "name": "include_variant_breakdown",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          },
+          {
+            "name": "include_step_breakdown",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          },
+          {
+            "name": "include_deleted_step_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/data_summary": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Canvas Export - Data Summary Example",
+        "description": "Example request to the /canvas/data_summary endpoint that returns rollups of time-series data for a given Canvas, providing a concise summary of a Canvas' results. The time frame of data that should be returned is specified by including the required \"ending_at\" parameter and either \"length\" (1-14, denotes how many days of data should be returned) or \"starting_at\" in the format DateTime ISO 8601 (a date on which we should start the time series). There are three other parameters which default to false that determine what type of data should be returned: \"include_variant_breakdown\" (controls whether we should return aggregated stats for an entire Canvas variant), \"include_step_breakdown\" (controls if we return per-step breakdowns), and \"include_deleted_step_data\" (controls if we return data for steps that have been deleted).",
+        "operationId": "Canvas export  data summary example",
+        "parameters": [
+          {
+            "name": "canvas_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "canvas identifier"
+            },
+            "example": "canvas identifier"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2018-06-28T23:59:59-5:00",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 5
+            },
+            "example": 5
+          },
+          {
+            "name": "include_variant_breakdown",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          },
+          {
+            "name": "include_step_breakdown",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          },
+          {
+            "name": "include_deleted_step_data",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            },
+            "example": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/kpi/mau/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "KPI Export - MAU Example",
+        "description": "Example request to the /kpi/mau/data_series endpoint which returns daily time-series data on the number of MAU for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return MAU stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Kpi export  mau example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 7
+            },
+            "example": 7
+          },
+          {
+            "name": "ending at",
+            "in": "query",
+            "description": "Example: 2018-06-29T04:59:59.0000000+00:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/kpi/dau/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "KPI Export - DAU Example",
+        "description": "Example request to the /kpi/dau/data_series endpoint which returns daily time-series data on the number of DAU for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return DAU stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Kpi export  dau example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 10
+            },
+            "example": 10
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "example: 2018-06-28T23:59:59-5:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/kpi/new_users/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "KPI Export - New Users Example",
+        "description": "Example request to the /kpi/new_users/data_series endpoint which returns daily time-series data on the number of new users for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return new users' stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Kpi export  new users example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 14
+            },
+            "example": 14
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2018-06-28T23:59:59-5:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/kpi/uninstalls/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "KPI Export - Uninstalls Example",
+        "description": "Example request to the /kpi/uninstalls/data_series endpoint which returns daily time-series data on the number of uninstalls for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return uninstall stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Kpi export  uninstalls example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 14
+            },
+            "example": 14
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/sessions/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Session Analytics Export - Session Series Example",
+        "description": "Example request to the /sessions/data_series endpoint which returns daily time-series data on the number of sessions for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return session stats for that particular app. The \"segment_id\" parameter can be specified using a segment's API identifier to return session stats for a users in a particular segment. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Session analytics export  session series example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "format": "int32",
+              "example": 14
+            },
+            "example": 14
+          },
+          {
+            "name": "unit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "day",
+                "hour"
+              ],
+              "example": "day"
+            },
+            "example": "day"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2018-06-28T23:59:59-5:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "segment_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/events/list": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Custom Events Analytics Export - List Example",
+        "description": "Example request to the /events/list endpoint which returns a list of custom events that have been recorded for a particular app group. Returns up to 250 events per page. The \"page\" parameter can be used to iterate through all events in groups of 250 events.",
+        "operationId": "Custom events analytics export  list example",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 1
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": null
+        }
+      }
+    },
+    "/events/data_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Custom Events Analytics Export - Series Example",
+        "description": "Example request to the /events/data_series endpoint which returns daily time-series data for how many times a custom event was recorded for a given app group. The parameters \"app_id\" and \"segment_id\" can be specified to pull data just for custom event records that occurred for a particular app or by members of a particular segment. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the format DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Custom events analytics export  series example",
+        "parameters": [
+          {
+            "name": "event",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "custom event name"
+            },
+            "example": "custom event name"
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 10
+            },
+            "example": 10
+          },
+          {
+            "name": "unit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "hour"
+            },
+            "example": "hour"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2018-06-28T23:59:59-5:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "segment_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/purchases/product_list": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Revenue Analytics Export - List Example",
+        "description": "Example request to the /purchases/product_list endpoint which returns a list of products that have been recorded for a particular app group. Returns up to 250 products per page. The \"page\" parameter can be used to iterate through all products in groups of 250 products, sorted alphabetically.",
+        "operationId": "Revenue analytics export  list example",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 1
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/purchases/revenue_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Revenue Analytics Export - Series Example",
+        "description": "Example request to the /purchases/revenue_series endpoint which returns daily time-series data for how much revenue was recorded for a given app group. The parameter \"app_id\" can be specified to pull data just for revenue that was recorded for a particular app. The \"product\" parameter can be specified to return revenue data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The ending_at parameter is the point in time in which the data series should end in DateTime ISO 8601 format (defaults to time of the request).",
+        "operationId": "Revenue analytics export  series example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 24
+            },
+            "example": 24
+          },
+          {
+            "name": "product",
+            "in": "query",
+            "description": "Example: 20A",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "unit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "hour"
+            },
+            "example": "hour"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/purchases/quantity_series": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Revenue Analytics Export - Purchase Quantity Example",
+        "description": "Example request to the /purchases/quantity_series endpoint which returns daily time-series data for how many purchases were recorded for a given app group. The parameter \"app_id\" can be specified to pull data just for purchase quantities that were recorded for a particular app. The \"product\" parameter can be specified to return purchase quantity data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "operationId": "Revenue analytics export  purchase quantity example",
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 24
+            },
+            "example": 24
+          },
+          {
+            "name": "product",
+            "in": "query",
+            "description": "Example: 20A",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "unit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "hour"
+            },
+            "example": "hour"
+          },
+          {
+            "name": "ending_at",
+            "in": "query",
+            "description": "Example: 2014-12-10T23:59:59-5:00",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          },
+          "AccessDenied": {
+            "description": "AWS Error: Your exported file does not exist yet and is currently being constructed. Try the link again later."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/track": {
+      "post": {
+        "tags": [
+          "User Data"
+        ],
+        "summary": "User Track - Attributes Example",
+        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_id and user_alias, cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array, use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}. The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
+        "operationId": "User track – attributes example",
+        "requestBody": {
+          "description": "This endpoint can be used to record custom events, user attributes, and purchases for users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/User_Track_Attributes"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/track#events": {
+      "post": {
+        "tags": [
+          "User Data"
+        ],
+        "summary": "User Track - Events Example",
+        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_id and user_alias cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}.The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
+        "operationId": "User track – events example",
+        "requestBody": {
+          "description": "This endpoint can be used to record custom events, user attributes, and purchases for users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/User_Track_Events"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/delete": {
+      "post": {
+        "tags": [
+          "User Data"
+        ],
+        "summary": "User Delete Example",
+        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_id\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
+        "operationId": "UserDeleteExample",
+        "requestBody": {
+          "description": "Exports the details about the user with the specified external ID",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/User_Delete"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/alias/new": {
+      "post": {
+        "tags": [
+          "User Data"
+        ],
+        "summary": "New User Alias Request Example",
+        "description": "Example of creating a new user alias for an existing identified user. You can add up to 50 user aliases per request. The parameters api_key and user_aliases are required. User_aliases are an array of New User Alias Object.",
+        "operationId": "NewUserAliasRequestExample",
+        "requestBody": {
+          "description": "Use this endpoint to create new user aliases for existing identified users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/User_Alias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/subscription/user": {
+      "get": {
+        "tags": [
+          "Subscription Groups"
+        ],
+        "summary": "Get Users' Subscription Groups",
+        "description": "Use this to list and get the current subscription groups of a certain user.",
+        "operationId": "GetUsersSubscriptionGroups",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "description": "Your App Group REST API key as found in your Developer Console.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+            },
+            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+          },
+          {
+            "name": "external_id",
+            "in": "query",
+            "description": "The External Id (`external_id`) of the user.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "external_user_id"
+            },
+            "example": "external_user_id"
+          },
+          {
+            "name": "email_address",
+            "in": "query",
+            "description": "The email address of the user; must include at least one address and at most 50 addresses.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "your.user@email.com"
+            },
+            "example": "your.user@email.com"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/subscription/status/get": {
+      "get": {
+        "tags": [
+          "Subscription Groups"
+        ],
+        "summary": "Get Users' Subscription Status",
+        "description": "Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the Subscription Group page. The response from this endpoint will include a 0 (subscribed), 1 (unsubscribed), or null value for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.",
+        "operationId": "GetUsersSubscriptionStatus",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "description": "Your App Group REST API key as found in your Developer Console.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+            },
+            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+          },
+          {
+            "name": "external_id",
+            "in": "query",
+            "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email_address` is required.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "external_user_id"
+            },
+            "example": "external_user_id"
+          },
+          {
+            "name": "email_address",
+            "in": "query",
+            "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email_address` is required.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "your.user@email.com"
+            },
+            "example": "your.user@email.com"
+          },
+          {
+            "name": "subscription_group_id",
+            "in": "query",
+            "description": "The ID of your Subscription Group. Copied from the Subscription Groups page of your Braze account.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "pto81fff-734f-80e5-b7b2-b880562888ww"
+            },
+            "example": "pto81fff-734f-80e5-b7b2-b880562888ww"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/subscription/status/set": {
+      "post": {
+        "tags": [
+          "Subscription Groups"
+        ],
+        "summary": "Updating Users' Subscription State",
+        "description": "Use the endpoints below to update the subscription state of a user in your Braze account. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.",
+        "operationId": "SetUsersSubscriptionStatus",
+        "requestBody": {
+          "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
+          "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+          "subscription_group_state": "unsubscribed",
+          "external_id": "external_user_id",
+          "email_address": "your.user@email.com",
+        "description": "Use the following request body below to set user subscruption statuses. Be sure to adhere to the defined parameters outlined in the Modal tab.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Update_Subscription_State"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/email/spam/remove": {
+      "post": {
+        "tags": [
+          "Email Sync"
+        ],
+        "summary": "Removing Spam List Email Example",
+        "description": "Use to remove email addresses from the spam report lists maintained by Braze and your email provider. \"email\" can be a string, or an array of up to 50 email addresses to modify.",
+        "operationId": "RemovingSpamListEmailExample",
+        "requestBody": {
+          "description": "This endpoint allows you to remove email addresses from your Braze spam list. We will also remove them from the spam list maintained by your email provider.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Email_Spam_Remove"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/email/bounce/remove": {
+      "post": {
+        "tags": [
+          "Email Sync"
+        ],
+        "summary": "Removing Hard Bounced Email Example",
+        "description": "Example of using the /email/bounce/remove endpoint to remove email addresses from the hard bounce list maintained by Braze and your email provider. Email addresses can be included on the hard bounce list if they were previously invalid while we tried to send them a message.",
+        "operationId": "RemovingHardBouncedEmailExample",
+        "requestBody": {
+          "description": "This endpoint allows you to remove email addresses from your Braze bounce list. We will also remove them from the bounce list maintained by your email provider.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Email_Bounce_Remove"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/email/status": {
+      "post": {
+        "tags": [
+          "Email Sync"
+        ],
+        "summary": "Changing Email Subscription Status Example",
+        "description": "Example of using the /email/status endpoint to change user email subscription state. The body of the request needs to include your \"api_key\", the \"email\" address to be changed, and a valid \"subscription_state\": either \"subscribed\", \"unsubscribed\", or \"opted_in\".",
+        "operationId": "ChangingEmailSubscriptionStatusExample",
+        "requestBody": {
+          "description": "This endpoint allows you to set the email subscription state for your users. Users can be “opted_in”, “unsubscribed”, or “subscribed” (not specifically opted in or out).",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Email_Status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/email/unsubscribes": {
+      "get": {
+        "tags": [
+          "Email Sync"
+        ],
+        "summary": "Querying All Email Unsubscribes Example",
+        "description": "Example of using the /email/unsubscribed endpoint to return emails that have unsubscribed during the time period from \"start_date\" to \"end_date\". You must provide either an email or a start_date and an end_date. Additional parameters can be passed to determine how many records should be returned (\"limit\") or where we should begin the list of unsubscribed (\"offset\"). If there are more than \"limit\" number of records to return, you should call this endpoint again, adding to the \"offset\" parameter until you are returned less than \"limit\" number of unsubscribe records (\"limit\"defaults at 100 and can be no higher than 500).",
+        "operationId": "QueryingAllEmailUnsubscribesExample",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "description": "Your App Group REST API key as found in your Developer Console.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+            },
+            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. YYYY-MM-DD format",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "2018-06-01T00:00:00.000Z"
+            },
+            "example": "2018-06-01T00:00:00.000Z"
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "description": "End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. YYYY-MM-DD format",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "2018-06-26T00:00:00.000Z"
+            },
+            "example": "2018-06-26T00:00:00.000Z"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc",
+                "asc"
+              ]
+            },
+            "example": "desc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/templates/email/create": {
+      "post": {
+        "tags": [
+          "Email Templates"
+        ],
+        "summary": "Create an Email Template",
+        "description": "Use the endpoints below to create email templates in your Braze account. These templates will be available on the Templates and Media page. The response from this endpoint will include a field for email_template_id, which can be used to update the template in subsequent API calls.",
+        "operationId": "CreateEmailTemplate",
+        "requestBody": {
+          "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
+          "template_name": "descriptive_email_template_name_here",
+          "subject": "Your eye-catching email template subject here.",
+          "body": "This is where you'll put the body of your email template - you can even include HTML!",
+          "plaintext_body": "Your wonderful plaintext email here.",
+          "preheader": "Your awesome preheader here.",
+        "description": "Use the following request body below to set create an email template to use in your Braze account.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Create_Email_Template",
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/templates/email/update": {
+      "post": {
+        "tags": [
+          "Email Templates"
+        ],
+        "summary": "Update an Email Template",
+        "description": "Use the endpoints below to update email templates on the Braze dashboard. You can access an email template’s `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference. All fields other than the `api_key` and `email_template_id` are optional, but you must specify at least one field to update.",
+        "operationId": "UpdateEmailTemplate",
+        "requestBody": {
+            "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
+            "email_template_id": "ab1cde55-fg47-4h3i-8297-158jk3l2466m",
+            "template_name": "email_template_name",
+            "subject": "Welcome to my updated email template!",
+            "body": "This is the updated text within my email body and https://www.braze.com/ here is a link to Braze.com.",
+            "plaintext_body": "This is the updated text within my email body and here is a link to https://www.braze.com/.",
+            "preheader": "My updated preheader is pretty cool.",
+          "description": "This endpoint allows you to set the email subscription state for your users. Users can be `opted_in`, `unsubscribed`, or `subscribed`.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Update_Email_Template"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/templates/email/list": {
+      "get": {
+        "tags": [
+          "Email Templates"
+        ],
+        "summary": "List Available Email Template",
+        "description": "Use the endpoints below to get a list of available templates in your Braze account.",
+        "operationId": "ListEmailTemplates",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "description": "Your App Group REST API key as found in your Developer Console.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+            },
+            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+          },
+          {
+            "name": "modified_after",
+            "in": "query",
+            "description": "Filters to retrieve only those templates updated at or after the given time.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string in ISO 8601",
+              "example": "YYYY-MM-DD"
+            },
+            "example": "YYYY-MM-DD"
+          },
+          {
+            "name": "modified_before",
+            "in": "query",
+            "description": "Filters to retrieve only those templates updated at or before the given time.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string in ISO 8601",
+              "example": "YYYY-MM-DD"
+            },
+            "example": "YYYY-MM-DD"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of templates to retrieve, default to 100. If not provided, maximum acceptable value is 1000. Must be a positive number.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "The number of templates to skip before returning rest of the templates that fit the search criteria. Must be a positive number.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": null
+            },
+            "example": null
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/templates/email/info": {
+      "get": {
+        "tags": [
+          "Email Templates"
+        ],
+        "summary": "See Email Template Information",
+        "description": "Use to get information on your available email templates.",
+        "operationId": "SeeEmailTemplateInformation",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "description": "Your App Group REST API key as found in your Developer Console.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+            },
+            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+          },
+          {
+            "name": "email_template_id",
+            "in": "query",
+            "description": "The ID of your already existing email template.",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "ab1cde55-fg47-4h3i-8297-158jk3l2466m"
+            },
+            "example": "ab1cde55-fg47-4h3i-8297-158jk3l2466m"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/messages/send": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Send Message Immediately Example",
+        "description": "Example of sending a message using Braze's API that is not associated with any campaign. This uses the /messages/send endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics.",
+        "operationId": "SendMessageImmediatelyExample",
+        "requestBody": {
+          "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/MessagesSend"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/messages/schedule/create": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Create Scheduled Message Example",
+        "description": "Example of scheduling a message using Braze's API that is not associated with any campaign and will be sent at some point in the future. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This uses the /messages/schedule/create endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics. The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format).",
+        "operationId": "CreateScheduledMessageExample",
+        "requestBody": {
+          "description": "Use this endpoint to send messages directly from the API.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/MessagesSchedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/messages/schedule/update": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Update Scheduled Message Example",
+        "description": "Example of updating a messsage that was scheduled to be sent using our /messages/schedule/create endpoint. Successful requests to /messages/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /messages/schedule/update endpoint or the /messages/schedule/delete endpoint. The /messages/schedule/update endpoint can be used to update the scheduled time for a message, the data contained in the message, or both (seen in the example below).",
+        "operationId": "UpdateScheduledMessageExample",
+        "requestBody": {
+          "description": "The update schedule endpoint allows you to change the schedule or message contents of a scheduled message you previously created.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/MessagesScheduleUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/trigger/send": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Send API Triggered Delivery Campaign Example",
+        "description": "Example of sending a campaign set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one.",
+        "operationId": "SendApiTriggeredDeliveryCampaignExample",
+        "requestBody": {
+          "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CampaignTriggerSend"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/trigger/schedule/create": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Create Scheduled API Triggered Campaign Example",
+        "description": "Example of scheduling a future send of a campaign set up in the dashboard with API-Triggered Delivery. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/schedule/create endpoint.The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format). When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users. In this example, there is a specific recipient and therefore broadcast does not have to be stated as it will default to false.",
+        "operationId": "CreateScheduledApiTriggeredCampaignExample",
+        "requestBody": {
+          "description": "Use this endpoint to send messages directly from the API.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CampaignTriggerCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/campaigns/trigger/schedule/update": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Update Scheduled API Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /campaigns/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /campaigns/trigger/schedule/delete endpoint. The /campaigns/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "operationId": "UpdateScheduledApiTriggeredCampaignSendExample",
+        "requestBody": {
+          "description": "Use this endpoint to send messages directly from the API.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CampaignTriggerUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/trigger/send": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Send API Triggered Delivery Canvas Example",
+        "description": "Example of sending a canvas set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /canvas/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one. The recipient array may contain up to 75 objects, with each one containing a single \"external_user_id\" string and \"canvas_entry_properties\" object.",
+        "operationId": "SendApiTriggeredDeliveryCanvasExample",
+        "requestBody": {
+          "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CanvasTriggerSend"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/trigger/schedule/create": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Create Scheduled API Triggered Canvas Example",
+        "description": "Example of scheduling a future send of a canvas set up in the dashboard with API-Triggered Delivery.The paramters \"api_key\" and \"canvas_id\" are required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
+        "operationId": "CreateScheduledApiTriggeredCanvasExample",
+        "requestBody": {
+          "description": "Use this endpoint to send messages directly from the API.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CanvasTriggerCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/canvas/trigger/schedule/update": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Update Scheduled API Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /canvas/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /canvas/trigger/schedule/delete endpoint. The /canvas/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "operationId": "UpdateScheduledApiTriggeredCanvasSendExample",
+        "requestBody": {
+          "description": "Use this endpoint to send messages directly from the API.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/CanvasTriggerUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/sends/id/create": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Create Send IDs for Message Send Tracking",
+        "description": "An example of Braze’s Send Identifier, which  adds the ability to send messages and track message performance entirely programmatically, without campaign creation for each send. Using the Send Identifier to track and send messages is useful if you are planning to programmatically generate and send content. The daily maximum number of custom send identifiers that can be created via this endpoint for a given app group is 100. Each send id - campaign id combination that you create will count towards your daily limit.",
+        "operationId": "CreateSendIdsForMessageSendTracking",
+        "requestBody": {
+          "description": "Exports the details about the user with the specified external ID",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/SendID"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/messages/scheduled_broadcasts": {
+      "get": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Get Upcoming Scheduled Campaigns and Canvases",
+        "description": "You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.",
+        "operationId": "GetUpcomingScheduledCampaignsAndCanvases",
+        "parameters": [
+          {
+            "name": "end_time",
+            "in": "query",
+            "description": "example: 2018-09-01T04:00:00.0000000+00:00",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sometimes seen as `success`, this code indicates that the request was successfully made."
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Update_Email_Template": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "email_template_id",
+        "subject",
+        "body"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "description": "Your App Group REST API key as found in your Developer Console.",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+          "email_template_id": {
+          "type": "string",
+          "format": "int64",
+          "description": "The ID of your already existing email template.",
+          "example": "ab1cde55-fg47-4h3i-8297-158jk3l2466m"
+        },
+        "template_name": {
+          "type": "string",
+          "format": "int64",
+          "description": "The updated name of your email template.",
+          "example": "email_template_name"
+        },
+        "subject": {
+          "type": "string",
+          "format": "int64",
+          "description": "The email template's default subject line.",
+          "example": "Welcome to my updated email template!"
+        },
+        "body": {
+          "type": "string",
+          "description": "The body of the email. This may include HTML.",
+          "example": "This is the updated text within my email body and https://www.braze.com/ here is a link to Braze.com."
+        },
+        "plaintext_body": {
+          "type": "string",
+          "description": "Write a plaintext version of your email in the event of load errors on your user's end.",
+          "example": "This is the updated text within my email body and here is a link to https://www.braze.com/."
+        },
+        "preheader": {
+          "type": "string",
+          "description": "This is an email preheader used to generate previews for some customers.",
+          "example": "My updated preheader is pretty cool."
+        }
+      }
+    },
+    "Create_Email_Template": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "template_name",
+        "subject",
+        "body"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "description": "Your App Group REST API key as found in your Developer Console.",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "template_name": {
+          "type": "string",
+          "format": "int64",
+          "description": "The name of your email template.",
+          "example": "email_template_name"
+        },
+        "subject": {
+          "type": "string",
+          "format": "int64",
+          "description": "The email template's default subject line.",
+          "example": "Welcome to my email template!"
+        },
+        "body": {
+          "type": "string",
+          "description": "The body of the email. This may include HTML.",
+          "example": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com."
+        },
+        "plaintext_body": {
+          "type": "string",
+          "description": "Write a plaintext version of your email in the event of load errors on your user's end.",
+          "example": "This is the text within my email body and here is a link to https://www.braze.com/."
+        },
+        "preheader": {
+          "type": "string",
+          "description": "This is an email preheader used to generate previews for some customers.",
+          "example": "My preheader is pretty cool."
+        }
+      }
+    },
+    "Update_Subscription_State": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "subscription_group_id",
+        "subscription_group_state",
+        "external_id",
+        "email_address"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "description": "Your App Group REST API key as found in your Developer Console.",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "subscription_group_id": {
+          "type": "string",
+          "format": "int64",
+          "description": "The ID of your Subscription Group. Copied from the Subscription Groups page of your Braze account.",
+          "example": "pto81fff-734f-80e5-b7b2-b880562888ww"
+        },
+        "subscription_group_state": {
+          "type": "string",
+          "format": "int64",
+          "description": "Choose from available values: `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).",
+          "example": "unsubscribed"
+        },
+        "external_ids": {
+          "type": "string",
+          "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email_address` is required.",
+          "example": "user123"
+        },
+        "email_address": {
+          "type": "string",
+          "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email_address` is required.",
+          "example": "your.user@email.com"
+        }
+      }
+    },
+    "User_Export": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "external_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "user123"
+          }
+        }
+      }
+    },
+    "Segment_Export": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "segment_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your segment api id here"
+        }
+      }
+    },
+    "User_Track_Attributes": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomAttribute"
+          }
+        }
+      }
+    },
+    "CustomAttribute": {
+      "type": "object",
+      "properties": {
+        "external_id": {
+          "type": "string"
+        },
+        "favorite_color": {
+          "type": "string"
+        }
+      }
+    },
+    "User_Track_Events": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomEvent"
+          }
+        }
+      }
+    },
+    "CustomEvent": {
+      "type": "object",
+      "properties": {
+        "external_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        }
+      }
+    },
+    "User_Delete": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "external_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "user123"
+          }
+        }
+      }
+    },
+    "User_Alias": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "user_aliases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AliasObject"
+          }
+        }
+      }
+    },
+    "AliasObject": {
+      "type": "object",
+      "properties": {
+        "external_id": {
+          "type": "string"
+        },
+        "alias_name": {
+          "type": "string"
+        },
+        "alias_label": {
+          "type": "string"
+        }
+      }
+    },
+    "Email_Spam_Remove": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "email": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "name@email.com"
+          }
+        }
+      }
+    },
+    "Email_Bounce_Remove": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "email": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "name@email.com"
+          }
+        }
+      }
+    },
+    "Email_Status": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "email": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "name@email.com"
+          }
+        },
+        "subscription_state": {
+          "type": "string",
+          "format": "int64",
+          "example": "Either “subscribed”, “unsubscribed”, or “opted_in”."
+        }
+      }
+    },
+    "MessagesSend": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "external_user_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "messages": {
+          "type": "object",
+          "properties": {
+            "apple_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            },
+            "android_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MessagesSchedule": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "external_user_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        },
+        "messages": {
+          "type": "object",
+          "properties": {
+            "apple_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            },
+            "android_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MessagesScheduleUpdate": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "schedule_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your schedule id here"
+        },
+        "external_user_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        },
+        "messages": {
+          "type": "object",
+          "properties": {
+            "apple_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            },
+            "android_push": {
+              "type": "object",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "CampaignTriggerSend": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "campaign_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert campaign id here"
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Recipients"
+          }
+        }
+      }
+    },
+    "Recipients": {
+      "type": "object",
+      "properties": {
+        "external_user_id": {
+          "type": "string"
+        }
+      }
+    },
+    "CampaignTriggerCreate": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "campaign_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your campaign id here"
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Recipients"
+          }
+        }
+      }
+    },
+    "CampaignTriggerUpdate": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "campaign_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your campaign id here"
+        },
+        "schedule_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your schedule id here"
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "CanvasTriggerSend": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "canvas_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert canvas id here"
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Recipients"
+          }
+        }
+      }
+    },
+    "CanvasTriggerCreate": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "canvas_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your canvas id here"
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Recipients"
+          }
+        }
+      }
+    },
+    "CanvasTriggerUpdate": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "canvas_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your canvas id here"
+        },
+        "schedule_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your schedule id here"
+        },
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "string"
+            },
+            "in_local_time": {
+              "type": "boolean",
+              "properties": {
+                "alert": {
+                  "type": "string",
+                  "example": "insert message here!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SendID": {
+      "type": "object",
+      "required": [
+        "api_key",
+        "name"
+      ],
+      "properties": {
+        "api_key": {
+          "type": "string",
+          "format": "int64",
+          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
+        },
+        "campaign_id": {
+          "type": "string",
+          "format": "int64",
+          "example": "insert your campaign id here"
+        },
+        "send_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

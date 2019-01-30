@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{site.language}}">
+{% include html_include.html %}
+<body data-spy="scroll" data-target="#toc" >
+  {% comment %} Google Tag Manager (noscript) {% endcomment %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8DKT4D"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% comment %} End Google Tag Manager (noscript) {% endcomment %}
+
+{% include header.html %}
+{% unless page.config_only %}
+<div class="container-fluid" >
+  <div class="row flex-xl-nowrap d-print-block ">
+    {{ content }}
+  </div>
+</div>
+{% include contentcards.html %}
+{% endunless %}
+
+{% if page.local_redirect %}
+<script type="text/javascript">
+  var validurls = (typeof validurls === "undefined")  ? {} : validurls;
+  {%- assign valid_url_list = page.local_redirect -%}
+  {% for urlhash in valid_url_list %}
+    validurls['{{ urlhash[0] }}'.replace('#','').toLowerCase()] = '{{ urlhash[1] }}';
+  {%- endfor -%}
+</script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/hash_redirect.js' ></script>
+{% endif %}
+</body>
+</html>

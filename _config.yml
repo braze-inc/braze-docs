@@ -1,0 +1,229 @@
+# Site settings
+title: Braze Documentation
+email: success@braze.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
+baseurl: "/docs" # the subpath of your site, e.g. /blog
+homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Braze
+github_username:  Appboy
+
+language: en
+
+# Braze Web SDK Key
+api_key: "5b26b83b-aa4e-4bd1-b9fa-81880aa8ac83"
+
+# statuspage.io Key
+status_io_key: "c947v6z63ltm"
+
+
+# Source dir
+source: '.'
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+
+plugins:
+  - jekyll-algolia
+
+pwa:
+  sw_src_filepath: assets/js/service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
+  dest_js_directory: assets/js # Required
+  precache_recent_posts_num: 20 # Optional
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "assets/{js,css,fonts}/*.{js,css,eot,svg,ttf,woff,woff2}"
+    - "assets/*.{css,js}"
+    - index.html
+  precache_glob_ignores: # Optional
+    - sw-register.js
+    - "fonts/**/*"
+
+
+# Allows the DocSearch element to be inspected. Set to true locally, but don't
+# check in in that state, or it will cause undesirable behavior in prod.
+search_debug: false
+
+# For local testing, set to false to increase build time by not pulling partner api
+# data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
+partner_api: true
+
+# CLA Endpoint
+cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
+
+
+
+plugins_dir: ["./_plugins"]
+
+
+# Collections directory
+collections_dir: _docs
+
+# variable for page ordering
+page_order: page_order
+
+collections:
+  home:
+    title: Documentation
+    output: true
+    default_nav_url: ''
+    page_order: 1
+  user_guide:
+    title: User Guide
+    output: true
+    default_nav_url: introduction/
+    page_order: 2
+  developer_guide:
+    title: Developer Guide
+    output: true
+    default_nav_url: home/
+    page_order: 3
+  partners:
+    title: Technology Partners
+    output: true
+    default_nav_url: home/
+    page_order: 4
+  help:
+    title: Help
+    output: true
+    default_nav_url: home/
+    page_order: 5
+  hidden: # Hidden pages not directly linked via navigation
+    title: Braze
+    output: true
+    hidden: true
+  site_pages: # Site specific pages. ie main redirects and search
+    title: Braze
+    output: true
+    hidden: true
+
+
+# default collections layout
+# Note using path glub cause increase build time.
+# Use type = collection for better performance
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "documents"
+      default_nav_url: home/
+      search_rank: 0
+      toc_minheaders: 2
+  -
+    scope:
+      path: ""
+      type: "home"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "user_guide"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "developer_guide"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "partners"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "help"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "hidden"
+    values:
+      hide_feedback: true
+      hide_nav: true
+  -
+    scope:
+      path: ""
+      type: "site_pages"
+    values:
+      layout: "bare"
+      hide_nav: true
+      hide_nav_filter: true
+      hide_feedback: true
+
+
+# same as permalink: pretty
+permalink: ./:collection/:path/
+#permalink: /:platform/:nav_title/
+permalink_custom_vars: ['nav_title']
+
+# Don't serve non-jekyll files
+exclude: ['app','bin','db','lib','log','test','tmp','vendor','config.ru', 'Gemfile', 'Gemfile.lock', 'Readme.md', 'Procfile', 'Rakefile', 'vendor', 'config','404.html','public', 'proxy.rb','*.log','MigrationTool','Archive','documentation','academy']
+
+# Setting for image buster
+image_buster:
+  dev: false
+  paths:
+    - '/assets/img/*.*'
+
+# Image asset pipeline setting for japr
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: docs/assets
+  gzip: false
+
+# Algolia Search index
+algolia:
+  algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
+  application_id: "1T770XQJ1A"
+  index_name: "DocSearch" # You can replace that with whatever name you want
+  nodes_to_index: "p,h1,h2,h3,h4,h5,h6,tr,pre,details"
+  settings:
+    attributesForFaceting:
+      - searchable(collection)
+      - searchable(type)
+      - searchable(category)
+      - searchable(platform)
+      - searchable(url)
+      - searchable(nav_title)
+    searchableAttributes:
+      - search_rank
+      - platform
+      - headings
+      - unordered(content)
+      - url
+      - collection,tags
+      - nav_title
+  extensions_to_index:
+    - html
+    - md
+    - markdown
+  files_to_exclude:
+    - _docs/_hidden/*
+    - _docs/_hidden/*/* #exclude hidden subdirectories from indexing
+    - _docs/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
+    - _docs/_site_pages/*
+    - _docs/_site_pages/*/* #exclude hidden subdirectories from indexing
+    - _docs/_site_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _docs/_home/Styling_Test_Page.md
