@@ -12,7 +12,7 @@ Closes #**ISSUE_NUMBER_HERE**
 
 ## PR Checklist
 - [ ] Ensure you have completed our CLA.
-- [ ] Tag @EmilyNecciai as a reviewer when the your work is done and ready to be reviewed for merge.
+- [ ] Tag @EmilyNecciai as a reviewer when the your work is done and ready to be reviewed for merge. 
 - [ ] Consult the [Docs Text Formatting Guide](https://github.com/Appboy/success/wiki/Docs-Text-Formatting-Guide) to be sure you're utilizing the proper markdown formatting.
 - [ ] Consult the [Docs Writing Style Guide & Best Practices](https://github.com/Appboy/success/wiki/Writing-Style-Guide-&-Best-Practices) to be sure you're aligning with our voice and other style best practices.
 - [ ] [Preview your deployed changes](https://homeslice.braze.com/docs) to confirm that none of your changes break production. Pay close attention to links and images.
