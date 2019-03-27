@@ -4,6 +4,11 @@ platform: iOS
 page_order: 0
 search_rank: 5
 ---
+
+{% alert tip %}
+We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/#manual-integration-options).
+{% endalert %}
+
 ## Integration {#push-integration}
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
@@ -20,7 +25,7 @@ For more information and best practices on push, visit our [Braze Academy][0] pa
 
 #### Recommended Option: Using a .p8 File (Authentication Tokens)
 
-As described on [this page](http://help.apple.com/xcode/mac/current/#/dev54d690a66),
+As described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3),
 
 1. In your developer account, go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate).
 2. Under Keys, select All and click the Add button (+) in the upper-right corner.
@@ -65,7 +70,7 @@ Alternately, you may utilize Apple's older authentication scheme (.p12 SSL certi
 
 ### Step 2: Enable Push Capabilities
 
-In your project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](http://help.apple.com/xcode/mac/current/#/devdfd3d04a1).
+In your project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
 ![enable push notification][24]
 
@@ -411,11 +416,11 @@ Use the following code to register for Braze's default push categories when you 
 {% tab OBJECTIVE-C %}
 
 ```objc
-// For UserNotification.framework
+// For UserNotification.framework (iOS 10+ only)
 NSSet *appboyCategories = [ABKPushUtils getAppboyUNNotificationCategorySet];
 [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:appboyCategories];
 
-// For UIUserNotificationSettings
+// For UIUserNotificationSettings (before iOS 10)
 NSSet *appboyCategories = [ABKPushUtils getAppboyUIUserNotificationCategorySet];
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
                                                                          categories:appboyCategories];
@@ -426,11 +431,11 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 {% tab swift %}
 
 ```swift
-// For UserNotification.framework
+// For UserNotification.framework (iOS 10+ only)
 let appboyCategories = ABKPushUtils.getAppboyUNNotificationCategorySet()
 UNUserNotificationCenter.current().setNotificationCategories(appboyCategories)
 
-// For UIUserNotificationSettings
+// For UIUserNotificationSettings (before iOS 10)
 let appboyCategories = ABKPushUtils.getAppboyUIUserNotificationCategorySet()
 let settings = UIUserNotificationSettings.init(types: .badge, categories: appboyCategories)
 UIApplication.shared.registerUserNotificationSettings(settings)

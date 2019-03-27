@@ -16,7 +16,7 @@ If your impressions are lower than you'd like them to be, we recommend you...
 
 It’s important to ensure that your Segment size in the Campaign reflects your intended audience. Perhaps there are filters applied limiting your audience and causing your campaign to have fewer impressions.
 
-## Segment Changelogs 
+## Segment Changelogs
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the Segment or Campaign since launch. Our Segment and Campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
@@ -39,10 +39,10 @@ If the campaign is triggered by a Session Start or a Custom Event, you will want
 Customization of the In-App Message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log In-App message impressions. Check with your developers to see if you use In-App message customization.
 
 You can read more about this:
-  * [iOS][12] In-App message documentation
-  * [Android][13] In-App message documentation
+  * [iOS][12] In-app message documentation
+  * [Android][13] In-app message documentation
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 
 [10]: {% image_buster /assets/img_archive/trouble4.png %}

@@ -21,9 +21,9 @@ The following events and attributes are captured and updated automatically by th
 - Last Received Push Campaign (Date)
 - Last Viewed News Feed (Date)
 - Clicked Card (Integer)
-- Received Campaign
+- Received Message from Campaign
   - This filter allows you to target users based on their having (not) received a previous campaign.
-- Received Campaign with Tag
+- Received Message from Campaign with Tag
   - This filter allows you to target users based on their having (not) received a campaign that currently has a tag.
 - Retarget Campaign
   - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or slide up in the past

@@ -18,7 +18,7 @@ If your campaign is triggering off of a custom event, you will want to make sure
 
 For example, if the Segment includes the event Session Start “Has Used App more than once” and the event the campaign triggers off of is Session Start, the user will receive the message, it just won’t necessarily be for the first session. This is because the first step when checking to see if a user should receive a campaign is reviewing the segment target audience. 
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab

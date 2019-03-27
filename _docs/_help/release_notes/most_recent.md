@@ -7,6 +7,53 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]._
 
+## March 2019
+
+### In-App Messages - Generation 3
+
+Braze is proud to announce that we have made improvements to the look and feel of our in-app messages to adhere to the latest UX and UI best practices. In the newest in-app messages, you can expect your users to interact with messages with
+- larger font sizes,
+- refined spacing,
+- a new close `x` asset,
+- improved responsive behavior for all message types to better fit viewports of all sizes, and
+- button borders to help you create custom contrasts between buttons.
+
+Our [new in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
+
+![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+
+#### What You Need to Do
+
+We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/), and [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+
+After that, you're good to go!
+
+### Content Blocks Archive Update
+
+You can now archive and unarchive Content Blocks. Learn more in our main [Content Blocks documentation]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks).
+
+### Inkit Partner Addition
+
+You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Webhook Template or create a new Webhook Campaign.
+
+### Google Cloud Storage
+
+Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
+
+## February 2019
+
+### Email Subscription Groups
+
+[Subscription Groups]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) are segment filters that can further narrow your audience from the [Global Subscription States]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) above. These Groups offer the ability to present more granular subscription options to end users.
+
+For example, if you send out multiple categories of email campaigns, you can offer your customers the option to subscribe or unsubscribe from those groups in bulk from a single page, using our [Email Preference Center](#email-preference-center).
+
+Use the [Subscription Group REST APIs]({{ site.baseurl }}/developer_guide/rest_api/subscription_group_api/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the Subscription Group page.
+
+### Email Preference Center
+
+The [Email Preference Center]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+
 ## January 2019
 
 Welcome to a new year!
@@ -23,7 +70,7 @@ Braze is pleased to announce that due to a number of infrastructure upgrades mad
 
 We have added the option for any Canvas step to be sent __immediately__.
 
-![Canvas Delay][canvas_delay]
+![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
 ### Adjust (Technology Partner) REST Endpoint Field Update
 
@@ -31,35 +78,4 @@ With our updated integration with [Adjust]({{ site.baseurl }}/partners/adjust/),
 
 This will make it easier for customers wanting to pass attribution data into Braze.
 
-
-## December 2018
-
-### Content Blocks
-
-[Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/) allow you to manage your reusable, cross-channel content in a single, centralized location. To access this feature please go into the __Content Blocks Library__ tab in the __Templates & Media__ section of your Braze account. With Content Blocks, you can:
- - Create a consistent look and feel to your Email campaigns using Content Blocks as Headers and Footers.
- - Distribute the same offer codes through different channels.
- - Create pre-defined assets that can be used to build messages with consistent information and assets.
- - Copy entire message bodies to other messages.
-
-### Gmail Promotional Tool
-
-Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a ‘card’, rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product. [Learn how to use it here!]({{ site.baseurl }}/user_guide/message_building_by_channel/email/gmail_promotions_tab/)
-
-## November 2018
-
-### Canvas Entry Settings Wizard
-
-The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the Campaigns wizard. See the [updated Canvas documentation here]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)!
-
-Want more on this new feature? [Check out our LAB course on the Entry Wizard here](https://lab.braze.com/the-new-canvas-entry-step/264889/scorm/20z5ij5ublxbk)!
-
-
-### In-App Message Web Modal CSS
-
-The [Web Modal CSS editor]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#web-modal-css) has been updated and allows you more control over the look of your In-App Messages with our new [CSS Templates]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/#css-template).
-
-
-
 [support]: {{ site.baseurl }}/support_contact/
-[canvas_delay]: {% image_buster /assets/img/canvas_delay_immediate.png %}

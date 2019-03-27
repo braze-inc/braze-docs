@@ -13,7 +13,7 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 Braze is in the process of sunsetting formal support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin][43]. If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to the [Braze Academy][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
+The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to the [User Guide][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
@@ -112,27 +112,27 @@ The second argument instructs the listener to handle `registerInAppMessageManage
 
 See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
-### Step 5: Optional Custom Endpoint Setup
+### Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
 
-If you have been set up with a custom endpoint your Customer Success Manager will advise you of the correct address. To update the default endpoint in your integration of the Braze SDKs please add the following code:
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-**Android**
-
-Add the following code to your `appboy.xml`:
+To update the default endpoint in your integration of the Braze SDKs please add the following code to your `appboy.xml`:
 
 ```
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
->  SDK Endpoint configuration via `appboy.xml` is available starting with Braze Android SDK v2.1.1.
+SDK Endpoint configuration via `appboy.xml` is available starting with Braze Android SDK v2.1.1.
 
 ### SDK Integration Complete
-Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
+Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
-## Test your Basic Integration
+Please see the following sections in order to enable [custom event tracking](/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging](/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed](/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite](/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
-### Confirm Session Tracking is Working
-At this point you shoud have session tracking working in your Braze integration.  To test this, go to the `App Usage` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.  Then open your app and refresh the page - your main metrics should all have increased by 1.
+## Test Your Basic Integration
+
+### Confirm Session Tracking Is Working
+At this point you should have session tracking working in your Braze integration.  To test this, go to the `App Usage` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.  Then open your app and refresh the page - your main metrics should all have increased by 1.
 
 ![Sessions working][55]
 

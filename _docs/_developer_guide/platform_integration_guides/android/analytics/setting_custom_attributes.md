@@ -124,7 +124,10 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttributeTo
 );
 );
 ```
->  Dates passed to Braze with this method must either be in the [ISO 8601][3] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+
+{% alert warning %}
+  Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
+{% endalert %}
 
 #### Setting a Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
@@ -168,7 +171,9 @@ To set up a subscription for your users (either email or push), call the functio
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
 
->  No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic on [Braze Academy][10].
+{% alert important %}
+No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in our [User Guide]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
+{% endalert %}
 
 #### Sample Code
 
@@ -190,8 +195,6 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setPushNotificationSubsc
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
-[3]: http://en.wikipedia.org/wiki/ISO_8601
 [4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
 [6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

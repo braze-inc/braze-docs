@@ -89,6 +89,7 @@ The following data types can be stored as a custom attribute:
 
 - Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format)
   - Date attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
+  - Events and Attributes with timestamps in the future will default to the current time
 - Strings
 - Floats
 - Booleans
@@ -445,6 +446,8 @@ Content-Type: application/json
   "alias_label" : (required, string)
 }
 ```
+
+For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
 [1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays

@@ -35,7 +35,7 @@ Braze does not currently support 100% of Shopify's Liquid, only certain portions
 | Object | A denotation of a variable and location of intended variable name that tells Liquid where to show content in the message. | `{{${first_name}}}` will insert a user's first name into a message. |
 | Conditional Logic Tag | Tags create logic and control the flow for templates. In Braze's case, Conditional Logic Tags are Liquid used to consider intelligent or programming logic to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
 | Filters | Used to change, narrow, or reformat the output of the Liquid Object. It is often used to create mathematical operations. |  ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
-| Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | Is a user meets the defined criteria in a messaged tagged with `{% customer_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
+| Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | Is a user meets the defined criteria in a messaged tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
 
 {% endraw %}
 

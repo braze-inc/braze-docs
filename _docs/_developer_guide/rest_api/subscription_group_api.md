@@ -20,22 +20,29 @@ US-04 | `https://rest.iad-04.braze.com/subscription/user/status`
 US-06 | `https://rest.iad-06.braze.com/subscription/user/status`
 EU-01 | `https://rest.fra-01.braze.eu/subscription/user/status`
 
-```json
-GET https://YOUR_REST_API_URL/subscription/user/status
-Content-Type: application/json
-{
-   "api_key": (required, string) your App Group REST API Key,
-   "external_id": (required, string) the external_id of the user,
-   "email_address": (required, string) the email address of the user (must include at least one address and at most 50 addresses)
-   "limit": (optional, integer) limit on the maximum number of results returned. Default (and max) limit is 100
-   "offset": (optional, integer) offset of returned result list. Default offset is 0. For example, if there are 230 users that matches API query, limit is set to 50, and offset is 0, the first 50 users will be returned in response. If offset is changed to 50, the next 50 users will be returned.
- }
+### Request Parameters
+
 ```
+GET https://YOUR_REST_API_URL/subscription/user/status
+```
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `api_key`  | Yes | String | Your App Group REST API Key. |
+| `external_id`  | Yes | String | The external_id of the user. |
+| `email`  |  Yes | String | The email address of the user (must include at least one address and at most 50 addresses). |
+| `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
+| `offset`  |  No | Integer | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 
 {% alert tip %}
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
+### Example Request
+
+```
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com&subscription_group_id=14386d4a-60dd-42e2-9c94-5f2423b91d9f
+```
 
 ## Getting the Subscription Status
 
@@ -50,60 +57,21 @@ US-04 | `https://rest.iad-04.braze.com/subscription/status/get`
 US-06 | `https://rest.iad-06.braze.com/subscription/status/get`
 EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 
-```json
-GET https://YOUR_REST_API_URL/subscription/status/get
-Content-Type: application/json
-{
-   "api_key": (required, string) your App Group REST API Key,
-   "subscription_group_id": (required, string) the id of your subscription group,
-   "external_id": (required*, string) the external_id of the user,
-   "email_address": (required*, string) the email address of the user
-   //one of eternal_id or email_address is required
-   //can be passed as an array of string with a max of 100
- }
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `api_key`  | Yes | String | Your App Group REST API Key. |
+| `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
+| `external_id`  |  Yes* | String | The `external_id` of the user. |
+| `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 100. |
+
+_/* Either `external_id` or `email` are required._
+
+### Example Request
+
 ```
-
-_Example of API call request based on email_address (shown broken out for documentation purposes only)_
-
-```json
-GET https://YOUR_REST_API_URL/subscription/status/get?
-api_key=12345&
-subscription_group_id=111-222-333&
-email=bob%40bigburgers.com
-```
-
- _Example Response_
-
-```json
-Response: (status 200)
-{
-  "status": {
-    "bob@bigburgers.com": "unsubscribed"
-  },
-  "message": "success"
-}
-```
-
-_Example of API call request based on external_id (shown broken out for documentation purposes only)_
-
-```json
-Request:
-GET https://YOUR_REST_API_URL/subscription/status/get?
-api_key=12345&
-subscription_group_id=111-222-333&
-external_id=external-user-id-bob&
-external_id=external-user-id-john
-```
-
-```json
-Response: (status 200)
-{
-  "status": {
-    "external-user-id-bob": "subscribed",
-    "external-user-id-john": "unknown"
-  },
-  "message": "success"
-}
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com
 ```
 
 ## Updating a Subscription State
@@ -125,10 +93,10 @@ Content-Type: application/json
 {
    "api_key": (required, string) your App Group REST API Key,
    "subscription_group_id": (required, string) the id of your subscription group,
-   "subscription_group_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
+   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
-   "email_address": (required*, string) the email address of the user
-   //one of eternal_id or email_address is required
+   "email": (required*, string) the email address of the user
+   //one of eternal_id or email is required
    //can be passed as an array of string with a max of 100
  }
 ```

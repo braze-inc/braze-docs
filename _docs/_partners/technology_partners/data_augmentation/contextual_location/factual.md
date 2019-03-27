@@ -7,7 +7,7 @@ alias: /partners/factual/
 
 [Factual](https://www.factual.com/) is a location data company powering innovation in product development, mobile marketing, and real-world analytics.
 
-Leverage Factual to better understand and uplevel mobile experiences through location data. Obtain a comprehensive picture of your customers' online interests and real-world behaviors with Factual's [Engine SDK](https://www.factual.com/products/engine/) and gain greater insight on end-user journeys and places visited. With this integration, available for both iOS and Android, developers are able to implement location intelligence and build personalized user engagement. This can by made possible by allowing Braze to receive custom events when the user is at a known factual place or when an engine circumstance with the actionId ```push-to-braze``` is met.
+Leverage Factual to better understand and uplevel mobile experiences through location data. Obtain a comprehensive picture of your customers' online interests and behaviors with Factual's [Engine SDK](https://www.factual.com/products/engine/) and gain greater insight on end-user journeys and places visited. With this integration, available for both iOS and Android, developers are able to implement location intelligence and build personalized user engagement. This can by made possible by allowing Braze to receive custom events when the user is at a known Factual place or when an engine circumstance with the actionId ```push-to-braze``` is met.
 
 # Pre-Requisites
 {% tabs %}
@@ -103,7 +103,6 @@ From there, we will need to specify an ID name for our action as shown below.
 ![Circumstance Custom Action ID Name]({% image_buster /assets/img_archive/factual_circumstance_action_idname.png %})
 
 Once it is completed, our updates will happen **over the air to any Engine live instance matching your ENGINE/GARAGE API key**. Copy your ENGINE/GARAGE API as a reference then click on the **Next** button and lastly the **Push Changes** button found on the next screen. Our updates will occur typically in 30 minutes, but this time can also be set programmatically to whatever is needed by your teams.
-
 
 {% alert important %}
 After setting our conditions, be sure to note the ID name you created for your action. This will be found in the Braze Dashboard later when you select it as your delivery trigger as an action-based event.

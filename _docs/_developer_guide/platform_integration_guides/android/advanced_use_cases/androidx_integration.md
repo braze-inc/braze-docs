@@ -19,7 +19,9 @@ dependencies {
 }
 ```
 
->  If including `android-sdk-ui-x` in your `build.gradle`, you can remove `android-sdk-ui` from your `build.gradle`.
+{% alert important %}
+If including `android-sdk-ui-x` in your `build.gradle`, you can remove `android-sdk-ui` from your `build.gradle`.
+{% endalert %}
 
 ## Gradle Changes
 The following gradle properties are required when using AndroidX libraries with the Braze SDK:
@@ -30,7 +32,7 @@ android.useAndroidX=true
 ```
 
 ## SDK Migration
-Braze SDK imports should be migrated from the `android-sdk-ui` package to their `android-sdk-ui-x` package counterparts, where applicable. Only a subset of packages required AndroidX compatibility. For example, `com.appboy.ui.push` classes should be moved to `com.appboy.uix.push`. See the [Braze SDK Changelog][3] for a complete list of packages. 
+Braze SDK imports should be migrated from the `android-sdk-ui` package to their `android-sdk-ui-x` package counterparts, where applicable. Only a subset of packages required AndroidX compatibility. For example, `com.appboy.ui.push` classes should be moved to `com.appboy.uix.push`. See the [Braze SDK Changelog][3] for a complete list of packages.
 
 [1]: https://developer.android.com/jetpack/androidx/
 [2]: https://developer.android.com/jetpack/

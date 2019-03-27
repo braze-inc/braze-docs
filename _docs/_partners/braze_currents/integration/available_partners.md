@@ -35,7 +35,7 @@ These partners specialize in product analytics and business intelligence and can
 
 
 
-[1]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents/
+[1]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
 [2]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
 [3]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
 [4]: {{ site.baseurl }}/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/

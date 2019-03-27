@@ -17,9 +17,11 @@ Or:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-> With the release of Android M, Android switched from an install-time to a runtime permissions model. To enable location tracking on devices running M and above, the app must explicitly receive permission to use location from the user (Braze will not do this). Once location permissions are obtained, Braze will automatically begin tracking location on the next session start. Devices running earlier versions of Android only require location permissions to be declared in the `AndroidManifest.xml`. For more information, visit Android's [permission documentation][2].
+{% alert important %}
+  With the release of Android M, Android switched from an install-time to a runtime permissions model. To enable location tracking on devices running M and above, the app must explicitly receive permission to use location from the user (Braze will not do this). Once location permissions are obtained, Braze will automatically begin tracking location on the next session start. Devices running earlier versions of Android only require location permissions to be declared in the `AndroidManifest.xml`. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
+{% endalert %}
 
-> `ACCESS_FINE_LOCATION` includes GPS data in reporting user location while `ACCESS_COARSE_LOCATION` includes data from the most battery-efficient non-GPS provider available (e.g. the network). Coarse location location will likely be sufficient for the majority of location data use-cases; however, under the runtime permissions model, receiving location permission from the user implicitly authorizes the collection of fine location data. You can read more about the differences between these location permissions and how you ought to utilize them [here][1].
+`ACCESS_FINE_LOCATION` includes GPS data in reporting user location while `ACCESS_COARSE_LOCATION` includes data from the most battery-efficient non-GPS provider available (e.g. the network). Coarse location location will likely be sufficient for the majority of location data use-cases; however, under the runtime permissions model, receiving location permission from the user implicitly authorizes the collection of fine location data. You can read more about the differences between these location permissions and how you ought to utilize them [here][1].
 
 ### Disabling Automatic Location Tracking
 
@@ -35,9 +37,8 @@ Then you can manually log single location data points via the setLastKnownLocati
 Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
 ```
 
-See [here][3] for an implementation example of the above in our Droidboy sample app and [here in our Javadocs][4] for more information on the `setLastKnownLocation` method.
+See [our Android SDK repo][3] for an implementation example of the above in our Droidboy sample app and [here in our Javadocs][4] for more information on the `setLastKnownLocation` method.
 
 [1]: http://developer.android.com/guide/topics/location/strategies.html
-[2]: https://developer.android.com/training/permissions/index.html
-[3]: https://github.com/Appboy/android-sdk/blob/18ea58f58f84018022b107d42a648f638b137fca/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L73
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L129
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-

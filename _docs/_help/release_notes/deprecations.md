@@ -8,6 +8,28 @@ Technology is always moving - inside Braze and outside it! And we do our best to
 
 You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry.
 
+
+## Original In-App Messages
+
+_Replaced by: [In-App Messaging]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)_
+
+_Braze Feature_
+
+_Support completely withdrawn: February 2019_
+
+Braze has improved the look and feel of In-App Messages to adhere to the latest UX and UI best practices and no longer supports original in-app messages.
+
+Braze moved over to a new form of in-app messages with the following SDK releases:
+
+- iOS: 2.19.0
+- Android: 1.13.0
+- Web: 1.3.0
+
+Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the "Create Campaign" button on the campaign screen.
+
+![Choices][15]
+
+
 ## Feedback
 
 _Braze Feature_
@@ -22,9 +44,9 @@ _Replaced by: [Firebase Cloud Messaging (FCM)]({{ site.baseurl }}/developer_guid
 
 _Integration_
 
-_Support to be completely withdrawn between July 2018 and April 2019._
+_Support to be completely withdrawn between July 2018 (Braze removal of support) and April 2019 (Google removal of support)._
 
-[Google will be removing support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as early as April 11, 2019. Braze may remove support for GCM from the Android SDKs at any point after July 31, 2018, which will be noted within [our Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
+[Google will be removing support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as early as April 11, 2019. Braze will remove support for GCM from the Android SDKs in July 2018, which will be noted within [our Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
 
 Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration) may be affected by this change.
 
@@ -43,13 +65,13 @@ Braze has deprecated support for the Eclipse IDE as [Google is sunsetting suppor
 
 ## The Raw Event Stream (RES)
 
-_Replaced by: [Currents]({{ site.baseurl }}/technology_partners/currents/about/)_
+_Replaced by: [Currents]({{ site.baseurl }}/partners/braze_currents/about/)_
 
 _Braze Feature_
 
 _Support withdrawn: July 2018_
 
-The Raw Event Stream was the predecessor to [Currents]({{ site.baseurl }}/technology_partners/currents/about/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{ site.baseurl }}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
 
 ## Delay While Idle
 
@@ -63,3 +85,4 @@ The Delay While Idle parameter was previously a part of the [GCM push options](h
 
 
 [11]: {% image_buster /assets/img_archive/feedback_dashboard_example.png %} "Feedback Response Dashboard"
+[15]: {% image_buster /assets/img_archive/in-app-choices.png %}

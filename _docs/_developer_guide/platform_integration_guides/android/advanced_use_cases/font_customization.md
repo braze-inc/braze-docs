@@ -52,7 +52,9 @@ For example, the following styles override would use the `bungee` font family fr
 </style>
 ```
 
->  Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
+{% alert warning %}
+  Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
+{% endalert %}
 
 [1]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html
 [2]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family

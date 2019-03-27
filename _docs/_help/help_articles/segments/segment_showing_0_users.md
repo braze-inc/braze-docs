@@ -25,7 +25,7 @@ It is possible that the data you are filtering on is not being sent to Braze. To
 The data that you see in the Braze dashboard might not have the identical syntax as what you are sending to Braze. Ensure that these two match exactly.
 {% endalert %}
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}

@@ -16,6 +16,10 @@ To use TeleSign’s SMS web service to send a request, you’ll need to use the 
 https://rest-api.telesign.com/v1/messaging
 ```
 
+{% alert important %}
+Customers using Telesign's SMS product will need to [purchase a number](https://standard.telesign.com/api-reference/additional-features/inbound-sms#buy-a-phone-number-sender-id) from them.
+{% endalert %}
+
 ### Step 1: Set Up Your Request Body
 
 The TeleSign API expects the request body to be URL-encoded, so you must change the request type in the Braze Webhook composer to Raw Text. The required parameters for the body of the request are Phone Number (phone_number), Message (message), and Message Type (message_type). You’ll need to have _valid_ phone numbers on each user profile in your target audience. TeleSign defines a valid phone number as the end user's phone number _with country code included._

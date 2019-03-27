@@ -10,7 +10,11 @@ Integrating the Braze SDK will provide you with basic analytics functionality as
 
 ## Step 1: Integrate the Braze Library
 
-To integrate the Braze Web SDK, simply follow the instructions in the "Getting Started" section of the [Braze Web SDK Github Repository][2]. Be sure to substitute the API key found within the "App Settings" page of the Braze dashboard for `YOUR-API-KEY-HERE`. For more detailed technical documentation, refer to [the complete JSDocs][9].
+To integrate the Braze Web SDK, follow the instructions in the "Getting Started" section of the [Braze Web SDK Github Repository][2].
+
+Substitute the API key found within the "App Settings" page (labeled "API Key" in the "Settings for ..." block) of your Braze account for `YOUR-API-KEY-HERE`. For more detailed technical documentation, refer to [the complete JSDocs][9].
+
+![API Key Location][14]
 
 If you have been provided a custom SDK endpoint, please include this in addition to your API key:
 
@@ -90,3 +94,4 @@ These files must be updated in coordination with each other to ensure proper fun
 [11]: {% image_buster /assets/img_archive/gtm_trigger.png %}
 [12]: {% image_buster /assets/img_archive/gtm_example.png %}
 [13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
+[14]: {% image_buster /assets/img/api_key_location.png %}

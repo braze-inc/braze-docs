@@ -44,7 +44,7 @@ If this is a single channel Campaign or a Canvas with a control group, it’s po
   * Check the [distribution][6] to see if there is a control group.
   * Additionally, create a segment [using this filter][7], and [export the segment][8] and see if your user ID is on this list.
 
-  Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+  Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab

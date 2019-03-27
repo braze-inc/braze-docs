@@ -60,6 +60,12 @@ valid_partner_list:
   url: /docs/partners/technology_partners/insights/business_intelligence/looker/
 - name: Apteligent
   url: /docs/partners/technology_partners/insights/crash_analytics/apteligent/
+- name: Taxi for Email
+  url: /docs/partners/technology_partners/channel_extensions/email_orchestration/taxi_for_email/
+- name: Stripo
+  url: /docs/partners/technology_partners/channel_extensions/email_orchestration/Stripo/
+- name: Stensul
+  url: /docs/partners/technology_partners/channel_extensions/email_orchestration/stensul/
 - name: Segment
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/
   alt:
@@ -79,14 +85,14 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
 - name: Amazon S3
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
-  alt:
-    - title: Currents
-      url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents/
 - name: Amplitude
   url: /docs/partners/braze_currents/data_partner_integrations/amplitude/about/
 - name: Google Cloud Storage
   title: Currents
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
+- name: Zapier
+  url: /docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/
+
 
 
 ---

@@ -78,14 +78,18 @@ EU-01 | `https://rest.fra-01.braze.eu/templates/email/list`
 
 ### Request Parameters
 
-```json
-{
-  “api_key”: (required, string) your App Group REST API Key
-  “modified_after”: (optional, string in ISO 8601), retrieve only templates updated at or after the given time
-  “modified_before”: (optional, string in ISO 8601), retrieve only templates updated at or before the given time
-  “limit”: (optional, positive number), maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000
-  “offset”: (optional, positive number), number of templates to skip before returning rest of the templates that fit the search criteria
-}
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `api_key`  | Yes | String | Your App Group REST API Key. |
+| `modified_after`  | No | String in ISO 8601 | Retrieve only templates updated at or after the given time. |
+| `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
+| `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
+| `offset`  |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+
+### Example Request
+
+```
+https://rest.iad-01.braze.com/templates/email/list?api_key=123abc-def5-3729-owod-23f9f3j30
 ```
 
 ### Successful Response Properties
@@ -118,11 +122,15 @@ EU-01 | `https://rest.fra-01.braze.eu/templates/email/info`
 
 ### Request Parameters
 
-```json
-{
-  “api_key”: (required, string) your App Group REST API Key
-  “email_template_id”: (required, string) your email template’s API Identifier
-}
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `api_key`  | Yes | String | Your App Group REST API Key. |
+| `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+
+### Example Request
+
+```
+https://rest.iad-01.braze.com/templates/email/info?api_key=123abc-def5-3729-owod-23f9f3j30& email_template_id=759c2ad9-eefc-4af1-bde4-602630644935
 ```
 
 ### Successful Response Properties

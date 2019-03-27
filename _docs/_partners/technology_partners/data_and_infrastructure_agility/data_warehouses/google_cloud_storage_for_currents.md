@@ -6,10 +6,6 @@ alias: /partners/google_cloud_storage_for_currents/
 
 # Google Cloud Storage
 
-{% alert note %}
-Google Cloud Storage for Currents is currently rolling out slowly and availability is temporarily limited. Please contact your Account Manager if you are interested in using this feature.
-{% endalert %}
-
 [Google Cloud Storage](https://cloud.google.com/storage/) is a massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite. After streaming data into Google Cloud Storage Storage, you can use ETL processes (Extract, Transform, Load) to transfer your data to other locations, such as Google Bigquery.
 
 ## Integration

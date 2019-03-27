@@ -7,7 +7,7 @@ search_rank: 4
 
 ## Locations & Geofences
 
-Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in the [Braze Academy]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
+Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
 
 To support geofences for Android:
 
@@ -47,6 +47,15 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
   </intent-filter>
 </receiver>
 ```
+
+{% alert note %}
+If you are using a version of the Android SDK less than `2.3.0`, the following manifest
+declaration is also required:
+
+```
+<service android:name="com.appboy.services.AppboyGeofenceService"/>
+```
+{% endalert %}
 
 ### Step 3: Obtain Location Permissions from the End User
 

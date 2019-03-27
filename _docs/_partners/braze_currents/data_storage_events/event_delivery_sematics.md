@@ -35,7 +35,7 @@ Currents will create a file for each event type using the format below:
 <your-bucket-prefix>/dataexport.<cluster-identifier>.S3.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.S3.integration.<integration-id>+<partition>+<offset>.avro
 ```
 
-_Can't see the code because of the scroll bar? See how to fix that [here]({{ site.baseurl }}/help/help_articles_docs/scroll_bar_overlap/)._
+_Can't see the code because of the scroll bar? See how to fix that [here]({{ site.baseurl }}/help/help_articles/docs/scroll_bar_overlap/)._
 
 |Filename Segment |Definition|
 |---|---|
@@ -50,7 +50,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{ sit
 | `<offset>`| For internal use by Braze. Integer. |
 
 {% alert tip %}
-File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of <your-bucket-prefix>.
+File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
 {% endalert %}
 
 Data files will be written to your storage bucket at set thresholds:

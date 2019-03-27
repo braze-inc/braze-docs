@@ -12,7 +12,7 @@ Sample push notification:
 
 ![Sample Push][27]
 
-Check out [Braze Academy][7] for additional best practices.
+Check out [Braze Docs][7] for additional best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
 
@@ -22,16 +22,12 @@ For devices without Google services installed, Braze offers the option to send p
 
 ## Registering for Push
 
-Use Firebase to register for push.
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
 
 > Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
 
 
 ### Firebase Integration
-
-We recommend using [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) for push.
-
-Apps already using any of the Firebase SDKs must use the Firebase Messaging SDK to receive Braze pushes. This is because Firebase is not guaranteed to be compatible with GCM in all versions of Google Play Services.
 
 For a full sample of using Firebase with the Braze Android SDK, see our [Firebase Push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
 
@@ -42,16 +38,15 @@ To get started, follow the instructions at [Add Firebase to Your Android Project
 Next, add the Firebase Messaging dependency to your module's `build.gradle`:
 
 ```gradle
-compile "com.google.firebase:firebase-messaging:<YOUR_PLAY_SERVICES_VERSION>"
+implementation "com.google.firebase:firebase-core:${FIREBASE_CORE_VERSION}"
+implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING_VERSION}"
 ```
-
-> Firebase Messaging is the only Firebase dependency that Braze requires for push messaging.
 
 #### Step 2: Configure Token Registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token is registered. Firebase tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method either directly or using a Firebase Instance ID Service.
+Braze push notifications won't work until a Firebase Cloud Messaging token is registered. Firebase tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
 
-> Make sure to use your [project number][11], not the project ID. The project number is also known as the Firebase sender ID.
+> Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
 ##### Option 1: Automatic Registration
 
@@ -93,7 +88,7 @@ Appboy.configure(this, appboyConfig)
 
 If using a Firebase automatic registration, you can skip the manual options below.
 
-##### Option 2: Manual Application onCreate() Registration
+##### Option 2: Manual Registration
 
 We recommended you call [`Appboy.registerAppboyPushMessages()`][35] from within your application [`onCreate()`][67] method to ensure that push tokens are reliably delivered to Braze.
 
@@ -189,28 +184,72 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 
 After completing this section, you should be able to receive and display push notifications sent by Braze.
 
-### Step 1: Register Braze FCM Receiver
+### Step 1: Register Braze Firebase Messaging Service
+Braze includes a service to handle push receipt and open intents. Our `AppboyFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
-Braze includes a `FcmReceiver` to handle push receipt and open intents.  Our `FcmReceiver` class will need to be registered in your `AndroidManifest.xml`.
+```xml
+<service android:name="com.appboy.AppboyFirebaseMessagingService">
+  <intent-filter>
+    <action android:name="com.google.firebase.MESSAGING_EVENT" />
+  </intent-filter>
+</service>
+```
 
-- Add `AppboyFcmReceiver` to your `AndroidManifest.xml`. The category should be set to your [application package name][13]:
+Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` in order for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately in order to render notifications sent from other FCM services.
 
-  ```xml
-  <receiver android:name="com.appboy.AppboyFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
-   <intent-filter>
-     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-     <category android:name="YOUR-APPLICATION-PACKAGE-NAME" />
-   </intent-filter>
-  </receiver>
-  ```
+{% alert important %}
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there. 
+{% endalert %}
 
-Braze's notification code also uses `AppboyFcmReceiver` to handle open and click action tracking. This receiver must be registered in the `AndroidManifest.xml` in order for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key and ensures that our broadcast receivers only render notifications sent from Braze's systems. You may register additional receivers separately in order to render notifications sent from other FCM services.
+##### Using Your Own Firebase Messaging Service
 
-**Note** Before Braze Android SDK `2.7.0`, `AppboyFcmReceiver` is known as `AppboyGcmReceiver`. Their functionality is equivalent and integration instructions remain the same, however, all references to `AppboyFcmReceiver` in your `AndroidManifest.xml` and code will need to be replaced by references to `AppboyGcmReceiver`.
+If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [AppboyFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+  @Override
+  public void onMessageReceived(RemoteMessage remoteMessage) {
+    super.onMessageReceived(remoteMessage);
+    if (AppboyFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+      // This Remote Message originated from Braze and a push notification was displayed.
+      // No further action is needed.
+    } else {
+      // This Remote Message did not originate from Braze.
+      // No action was taken and you can safely pass this Remote Message to other handlers.
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+  override fun onMessageReceived(remoteMessage: RemoteMessage?) {
+    super.onMessageReceived(remoteMessage)
+    if (AppboyFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+      // This Remote Message originated from Braze and a push notification was displayed.
+      // No further action is needed.
+    } else {
+      // This Remote Message did not originate from Braze.
+      // No action was taken and you can safely pass this Remote Message to other handlers.
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+> Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
 
 **Implementation Example**
 
-- See [`AndroidManifest.xml`][10] in the Droidboy sample app.
+- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
 
 ### Step 2: Configure Notification Icons
 
@@ -251,7 +290,7 @@ The icons pictured below are examples of properly designed icons:
 
 To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `appboy.xml`:
 
-```
+```xml
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
 ```
 
@@ -336,9 +375,9 @@ Back stack configuration is only available on SDK 2.1.4 and above.
 
 Braze SDKs 2.1.0 and above support [Android O Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
-To set the user facing name of the default Braze notification channel, please use `AppboyConfig.setDefaultNotificationChannelName().`
+To set the user facing name of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelName()`][72].
 
-To set the user facing description of the default Braze notification channel, please use `AppboyConfig.setDefaultNotificationChannelDescription()`.
+To set the user facing description of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelDescription()`][73].
 
 If you are an existing customer who is transitioning to Android O, you should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
@@ -366,7 +405,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Academy Page][56] on creating a push campaign.  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs][56] on creating a push campaign.  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -443,7 +482,7 @@ Braze broadcasts custom intents when push notifications are received, opened, or
 
 #### Step 1: Register your BroadcastReceiver
 
-Register your custom `BroadcastReceiver` to listen for Braze push opened and received intents in your [`AndroidManifest.xml`][10].
+Register your custom `BroadcastReceiver` to listen for Braze push opened and received intents in your [`AndroidManifest.xml`][71].
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -558,3 +597,9 @@ val myExtra = extras.getString("my_key")
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [69]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration
+[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
+[73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
+[74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
+[75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage

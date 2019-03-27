@@ -1215,9 +1215,9 @@ $( document ).ready(function() {
             <legend>Useful Resources</legend>
 
             <div id="ticket_usefulresources">
-              <a target="" href="{{ site.baseurl }}/user_guide/introduction/">Marketer documentation</a><br />
-              <a target="" href="{{ site.baseurl }}/developer_guide/platform_wide/platform_features/">Developer documentation</a><br />
-              <a target="" href="{{ site.baseurl }}/help/home/">Marketer troubleshooting guide</a><br />
+              <a target="" href="{{ site.baseurl }}/user_guide/introduction/">User Guide</a><br />
+              <a target="" href="{{ site.baseurl }}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
+              <a target="" href="{{ site.baseurl }}/help/home/">Help & Troubleshooting Guides</a><br />
               <a target="" href="{{ site.baseurl }}/help/faqs/">FAQs</a><br />
               <a target="" href="https://lab.braze.com/">LAB</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />

@@ -4,9 +4,10 @@ platform: FireOS
 page_order: 2
 search_rank: 4
 ---
+
 # In-App Messaging
 
-In-App Messages are great for creating unobtrusive calls to action, notifying people of new content in the News Feed and driving them toward it or communicating with users who have push turned off. They are also effective for other content that isn't time-sensitive enough to warrant a push notification, or permanent enough to warrant a News Feed item. You can find a detailed explanation of in-app message behavior in [Braze Academy][4].
+In-App Messages are great for creating unobtrusive calls to action, notifying people of new content in the News Feed and driving them toward it or communicating with users who have push turned off. They are also effective for other content that isn't time-sensitive enough to warrant a push notification, or permanent enough to warrant a News Feed item. You can find a detailed explanation of in-app message behavior in [Braze Docs][4].
 
 ## Integration {#in-app-messaging-integration}
 
@@ -174,7 +175,7 @@ Create a class that implements [`IInAppMessageManagerListener`][21]
 
 The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
 
-For example, if you set a custom manager listener, when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If this method returns true, that signals to `AppboyInAppMessageManager` that the in-app message will be handled by the host app and that it should not be displayed by Braze.  If false is returned, the `AppboyInAppMessageManager` attempts to display the in-app message.  This method should be used if you choose to display the in-app message in a customized manner.
+For example, if you set a custom manager listener, when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
@@ -305,7 +306,7 @@ For further details on custom handling push receipts, opens, and key-value pairs
 
 ### Step 3: Create a Push Campaign
 
-Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign please review this section of our [Academy][73].
+Create a silent push campaign which is triggered via the server sent event. You can learn how to to this with our page on [how to create a silent push campaign][73].
 
 ![serverEventTrigger][75]
 
@@ -409,3 +410,4 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
 [81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
+[83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/InAppMessageOperation.java

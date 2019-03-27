@@ -8,4 +8,3 @@ _algolia_api_key
 .ruby-version
 jekyll-algolia-*
 **/.asset_pipeline
-/_docs/_hidden/private_betas/*

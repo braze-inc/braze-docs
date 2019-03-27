@@ -1706,7 +1706,7 @@
         }
       }
     },
-    "/subscription/user": {
+    "/subscription/user/status": {
       "get": {
         "tags": [
           "Subscription Groups"
@@ -1742,7 +1742,7 @@
             "example": "external_user_id"
           },
           {
-            "name": "email_address",
+            "name": "email",
             "in": "query",
             "description": "The email address of the user; must include at least one address and at most 50 addresses.",
             "required": true,
@@ -1827,7 +1827,7 @@
           {
             "name": "external_id",
             "in": "query",
-            "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email_address` is required.",
+            "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email` is required.",
             "required": false,
             "style": "form",
             "explode": true,
@@ -1838,9 +1838,9 @@
             "example": "external_user_id"
           },
           {
-            "name": "email_address",
+            "name": "email",
             "in": "query",
-            "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email_address` is required.",
+            "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email` is required.",
             "required": false,
             "style": "form",
             "explode": true,
@@ -1854,7 +1854,7 @@
             "name": "subscription_group_id",
             "in": "query",
             "description": "The ID of your Subscription Group. Copied from the Subscription Groups page of your Braze account.",
-            "required": false,
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -1894,9 +1894,9 @@
         "requestBody": {
           "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
           "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
-          "subscription_group_state": "unsubscribed",
+          "subscription_state": "unsubscribed",
           "external_id": "external_user_id",
-          "email_address": "your.user@email.com",
+          "email": "your.user@email.com",
         "description": "Use the following request body below to set user subscruption statuses. Be sure to adhere to the defined parameters outlined in the Modal tab.",
           "required": true,
           "content": {
@@ -2853,9 +2853,9 @@
       "required": [
         "api_key",
         "subscription_group_id",
-        "subscription_group_state",
+        "subscription_state",
         "external_id",
-        "email_address"
+        "email"
       ],
       "properties": {
         "api_key": {
@@ -2870,20 +2870,20 @@
           "description": "The ID of your Subscription Group. Copied from the Subscription Groups page of your Braze account.",
           "example": "pto81fff-734f-80e5-b7b2-b880562888ww"
         },
-        "subscription_group_state": {
+        "subscription_state": {
           "type": "string",
           "format": "int64",
           "description": "Choose from available values: `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).",
           "example": "unsubscribed"
         },
-        "external_ids": {
+        "external_id": {
           "type": "string",
-          "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email_address` is required.",
+          "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email` is required.",
           "example": "user123"
         },
-        "email_address": {
+        "email": {
           "type": "string",
-          "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email_address` is required.",
+          "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email` is required.",
           "example": "your.user@email.com"
         }
       }
@@ -2900,7 +2900,7 @@
           "format": "int64",
           "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
         },
-        "external_ids": {
+        "external_id": {
           "type": "array",
           "items": {
             "type": "string",
@@ -3005,7 +3005,7 @@
           "format": "int64",
           "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
         },
-        "external_ids": {
+        "external_id": {
           "type": "array",
           "items": {
             "type": "string",

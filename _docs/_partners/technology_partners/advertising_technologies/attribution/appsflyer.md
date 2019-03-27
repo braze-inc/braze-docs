@@ -13,6 +13,10 @@ Build more holistic marketing campaigns by leveraging mobile install attribution
 
 __Step 1: Integration Requirements__
 
+{% alert important %}
+As of March 4th, 2019, AppsFlyer requires that the Activate Partner toggle be switched to "on" for every integrated partner, including Braze. Please be sure that your toggle is flipped on from your AppsFlyer dashboard.
+{% endalert %}
+
 * This integration supports iOS and Android apps.
 * If you expect more than 100 attributed installs per hour, you will need a Braze Enterprise account. See [API Restrictions][5] for more information.
 * Your app will need Braze's SDK and AppsFlyer's SDK installed.
@@ -28,7 +32,7 @@ AppsFlyerLib.setAdditionalData(customData);
 
 __Step 2: Getting the Braze API Key__
 
-In Braze's Dashboard, navigate to ["Technology Partners" , then "Attribution"][14] and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in Appsflyer's dashboard.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in Appsflyer's dashboard.
 
 __Step 3: Configure Braze in Appsflyer's Dashboard__
 
@@ -56,7 +60,6 @@ Once Braze receives attribution data from AppsFlyer, the status connection indic
 
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
-[14]: https://dashboard-01.braze.com/integrations/third_party_integrations/attribution "Attribution Integrations"
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

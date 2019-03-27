@@ -6,6 +6,11 @@ search_rank: 5
 ---
 
 # Initial SDK Setup
+
+{% alert important %}
+The iOS SDK file size is _1MB to 2MB_ for the IPA, in addition to App File, and 30MB for the Framework.
+{% endalert %}
+
 {% include archive/apple/initial_setup.md platform="iOS" %}
 
 

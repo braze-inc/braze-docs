@@ -124,7 +124,7 @@ Content-Type: application/json
 }
 ```
 
-The `segment_id` for a given segment can be found on our [Developer Console][13] within your dashboard or you can use the [Segment List Endpoint][5].
+The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).
 
 {% alert warning %}
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
@@ -346,7 +346,7 @@ This endpoint allows you to retrieve a daily series of the size of a segment ove
 | `length`     | Yes      | Integer                    | Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `ending_at`  | No       | DateTime (ISO 8601 string) | Point in time when the data series should end - defaults to time of the request                             |
 
-The `segment_id` for a given segment can be found on our [Developer Console][13] within your dashboard or you can use the [Segment List Endpoint][5].
+The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).
 
 **Example URL:**
 `https://rest.iad-01.braze.com/segments/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2014-12-10T23:59:59-05:00`
@@ -388,7 +388,7 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 | `segment_id` | Yes      | String    | Segment API Identifier |
 
 {% alert tip %}
-    The `segment_id` for a given segment can be found on our [Developer Console][13] within your dashboard or you can use the [Segment List Endpoint][5].
+The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).
 {% endalert %}
 
 **Example URL:**
@@ -480,7 +480,7 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 | `ending_at`   | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request                                  |
 
 {% alert tip %}
-The `campaign_id` for API campaigns can be found on the [Developer Console][13] page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint][8].
+The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 {% endalert %}
 
 **Example URL:**
@@ -737,7 +737,7 @@ This endpoint allows you to retrieve relevant information on the campaign, which
 | `campaign_id` | Yes      | String    | Campaign API Identifier |
 
 {% alert tip %}
-The `campaign_id` for API campaigns can be found on the [Developer Console][13] page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint][8].
+The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 {% endalert %}
 
 **Example URL:**
@@ -1222,7 +1222,7 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 | `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request                                                   |
 
 {% alert tip %}
-The `card_id` for a given card can be found in the [Developer Console][13] page and on the card details page within your dashboard or you can use the [News Feed List Endpoint][11].
+The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 {% endalert %}
 
 **Example URL:**
@@ -1268,7 +1268,7 @@ This endpoint allows you to retrieve relevant information on the card, which can
 | `card_id` | Yes      | String    | Card API Identifier    |
 
 {% alert tip %}
-The `card_id` for a given card can be found in the [Developer Console][13] page and on the card details page within your dashboard or you can use the [News Feed List Endpoint][11].
+The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 {% endalert %}
 
 **Example URL:**
@@ -1613,7 +1613,6 @@ The following status codes and associated error messages will be returned if you
 [10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [11]: #news-feed-list
 [12]: #news-feed-analytics
-[13]: https://dashboard-01.braze.com/app_settings/developer_console/
 [14]: #sample-user-export-file-output
 [15]: #kpi
 [16]: #kpi-mau

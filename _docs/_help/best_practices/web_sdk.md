@@ -45,7 +45,7 @@ This will allow you to target users based on their behavior on the web only. If 
 [1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility
 [2]: https://developer.microsoft.com/en-us/microsoft-edge/platform/status/pushapi/
 [3]: https://developer.apple.com/notifications/safari-push-notifications/
-[6]: {{ site.baseurl }}/help/best_practices/web_sdk/
+[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [7]: {% image_buster /assets/img_archive/web-app-group.png %}
 [8]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
 [9]: {% image_buster /assets/img_archive/appboy-web-inapp-message.png %}

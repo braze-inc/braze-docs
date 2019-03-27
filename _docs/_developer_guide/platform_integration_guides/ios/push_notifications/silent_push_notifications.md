@@ -41,7 +41,6 @@ Braze has several features which rely on iOS Silent Push Notifications:
 |---|---|
 |Uninstall Tracking | User receives a silent, nightly uninstall tracking push.|
 |Geofences | Silent syncing of geofences from server to device.|
-|Push Stories | User receives a push story.|
 
 For more information, check out Apple's developer site on the [Instance Method][7] and [Unreceived Notifications][8].
 

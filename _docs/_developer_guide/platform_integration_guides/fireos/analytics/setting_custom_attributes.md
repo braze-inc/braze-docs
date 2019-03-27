@@ -168,7 +168,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
 
->  No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic on [Braze Academy][10].
+>  No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic on [Braze Docs][10].
 
 #### Sample Code
 

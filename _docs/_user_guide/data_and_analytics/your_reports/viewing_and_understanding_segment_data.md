@@ -71,7 +71,7 @@ On this page, you can view a number of user-specific attributes as shown below:
 [7]: {% image_buster /assets/img_archive/Preview_Users.png %}
 [8]: {% image_buster /assets/img_archive/User_Preview.png %}
 [11]: #segment-statistics
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#app-usage-data
+[13]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
 [14]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
