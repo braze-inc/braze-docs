@@ -27,9 +27,9 @@ The following events and attributes are captured and updated automatically by th
 - Last Received Push Campaign (Date)
 - Last Viewed News Feed (Date)
 - Clicked Card (Integer)
-- Received Campaign
+- Received Message from Campaign
   - This filter allows you to target users based on their having (not) received a previous campaign.
-- Received Campaign with Tag
+- Received Message from Campaign with Tag
   - This filter allows you to target users based on their having (not) received a campaign that currently has a tag.
 - Retarget Campaign
   - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or slideup in the past
@@ -105,7 +105,14 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 | Check if the string attribute __does not exist__ on a user's profile | __IS BLANK__ | __N/A__ |
 
->  We use [Perl compatible regular expressions (PCRE)][11].
+{% alert tip %}
+For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+<br>
+More resources on RegEx:
+- [RegEx Tester and Debugger](https://regex101.com/)
+- [RegEx: Learn More](https://regexr.com/)
+- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+{% endalert %}
 
 #### Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
@@ -260,7 +267,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We __strongly recommend__ providing this identifier as it will allow you to:
 
-- Track your users across devices and platforms, improving the quality of your behaviorial and demographic data.
+- Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [User Data API][9].
 - Target specific users with our [Messaging API][10] for both general and transactional messages.
 

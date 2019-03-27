@@ -38,6 +38,6 @@ To whitelist Braze's API endpoint through your firewall, our CDN provides
 access to the list of assigned IP ranges via a JSON dump. You can access the public list of Fastly IP ranges [here][3].
 
 
-[1]: https://helpdesk.privateinternetaccess.com/hc/en-us/articles/219333928-What-is-an-MTR-test-and-how-do-I-run-it
+[1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-it
 [2]: http://www.fastly-debug.com/
 [3]: https://api.fastly.com/public-ip-list

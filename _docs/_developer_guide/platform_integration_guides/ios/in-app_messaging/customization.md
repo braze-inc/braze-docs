@@ -1,17 +1,13 @@
 ---
 nav_title: Customization
 platform: iOS
-page_order: 3
+page_order: 1
 search_rank: 5
 ---
 
 # Customization {#in-app-message-customization}
 
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
-
-![Foodo In-App Message Customization Example][21]
-
-_An example of in-app message customization from a Braze client._
 
 ## Key-Value Pair Extras
 
@@ -420,7 +416,7 @@ This will be called when a notification is received whilst the application is in
 
 ### Step 2: Create a Push Campaign
 
-Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign please review this section of our [Academy][39].
+Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign please review this section of our [Docs][39].
 
 ![serverEventTrigger][40]
 

@@ -48,7 +48,7 @@ end
 
 namespace :docs do
   task :index do
-    if  ENV["SITE_URL"] == 'https://www.braze.com'
+    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
       puts `bundle exec jekyll algolia`
     end
   end

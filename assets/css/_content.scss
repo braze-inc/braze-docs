@@ -13,10 +13,11 @@
   }
   @media print {
     display: block !important;
-    strong, b {
-      font-weight: normal;
-      font-family: $braze-black;
-    }
+  }
+
+  strong, b {
+    font-weight: normal;
+    font-family: $braze-black;
   }
 
   .fa-external-link-alt {
@@ -174,12 +175,32 @@
         border-width: 1px;
         border-style: solid;
       }
-      .media_embed {
-        margin-bottom: 15px;
-        margin-right: 15px;
-        border: 1px solid $grey-ghost;
-        max-width: 100%;
+      iframe {
+        &.media_embed {
+          margin-bottom: 15px;
+          margin-right: 15px;
+          border: 1px solid $grey-ghost;
+          max-width: 100%;
+          @media (min-width: $window-xlarge-px) {
+            &.right {
+              margin-left: 45px;
+              margin-right: 0px;
+              margin-bottom: 30px;
+              max-width: 50%;
+              float: right;
+            }
+            &.left {
+              margin-left: 0px;
+              margin-right: 45px;
+              margin-bottom: 30px;
+              max-width: 50%;
+              float: left;
+            }
+          }
+        }
+
       }
+
       details {
         summary {
             display: list-item;
@@ -231,11 +252,6 @@
           padding: 5px 0 0 18px;
           font-size: 14px;
           color: $text-color;
-        }
-      }
-      td {
-        code {
-          word-break: normal;
         }
       }
   }
@@ -412,7 +428,12 @@ table {
   td {
     border: 1px solid $grey-ghost !important;
     font-size: 14px;
-
+    @media (max-width: $window-large-px) {
+      word-break: break-word;
+      a {
+        word-break: initial;
+      }
+    }
   }
   >tbody>tr>td, >tbody>tr>th, >tfoot>tr>td, >tfoot>tr>th, >thead>tr>td, >thead>tr>th {
       padding: 10px;

@@ -100,7 +100,7 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 ![Target Segment][5]
 
-Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to recieve the same message twice upon a recurrence of the campaign as well.
+Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign as well.
 
 ## Step 6: Review and Deploy
 
@@ -115,6 +115,10 @@ Braze will show you the number of emails sent, opened, clicked through, sent to 
 ![email_analytics][17]
 
 When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique). Braze also gives you the ability to visualize where users are clicking within a given email campaign.
+
+{% alert note %}
+Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}

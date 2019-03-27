@@ -9,8 +9,8 @@ All persistent data associated to a user will be stored against a user profile.
 
 Once a user profile is created, either following a user being recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile in order to identify or reference that user. These are the:
 
-* braze_id
-* external_ id; and
+* `braze_id`
+* `external_ id`; and
 * any number of aliases that you choose to set for your user base.
 
 ## Anonymous User Profiles
@@ -57,13 +57,13 @@ For information on how to set a user alias please see our [documentation][25] fo
 
 ![User_Profile_Lifecycle][26]
 
-## Advanced Use Case information
+## Advanced Use Case Information
 
 For existing identified user profiles you are able to set a new user alias via the SDK and [the API][27]. User aliases cannot be set via the API on an unknown user profile.  For more information on how to reference a user via the API please refer to our documentation.
 
-If you attempt to set a pre-existing`external_id`on a anonymous user profile which share a matching alias name but with different labels, only the alias label on the pre-existing known user profile will be maintained.
+If you attempt to set a pre-existing `external_id` on a anonymous user profile which share a matching alias name but with different labels, only the alias label on the pre-existing known user profile will be maintained.
 
-## How to troubleshoot with Braze's IDs
+## How to Troubleshoot with Braze's IDs
 
 Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. In order to find your user in the Braze dashboard please see our [Adding Test Users][28] section.
 

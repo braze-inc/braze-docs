@@ -39,7 +39,7 @@ Finally, look at the example below where we are using both the **AND** and **OR*
 
 Another way to ensure you’re building the right logic, is to create your segment and [preview the users][35] who are falling into it based on your filters. This way, you can make sure that their attributes, App version, or any other segmentation matches what you are seeing.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}

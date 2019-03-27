@@ -12,7 +12,7 @@ Braze provides a high performance REST API to allow you to track users, send mes
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints with specific requirements that will perform various actions and/or return various data. API access is done using HTTPS web requests to your company's REST API endpoint. Typically this is `https://rest.iad-01.braze.com`, but your Success Manager will provide an alternative endpoint URL if necessary.
 
 {% alert note %}
-Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [FAQs]({{ site.baseurl }}/developer_guide/rest_api/basics/#what-is-a-rest-api).
+Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
 {% endalert %}
 
 ## API Definitions
@@ -105,12 +105,13 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API.
 
-|Initial API Rate Limit | Value|
+|Default API Rate Limit | Value|
 |---|---|
-|Requests of any kind (this does not include the `/users/track` endpoint)|250,000 per hour|
-|Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute|
-|Users modified per User Track request|75 Events, 75 Purchases, and 75 Attributes per API call|
-|Send Identifier Creation|100 per day|
+|Requests to the `/users/track` endpoint|Unlimited, though this is subject to change as noted below. |
+|Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
+|Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
+|Send Identifier Creation|100 per day. |
+|Requests of any other kind|250,000 per hour. |
 
 {% alert warning %}
 API Rate Limits and their Values (limited or unlimited) are subject to change depending on proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
@@ -118,7 +119,7 @@ API Rate Limits and their Values (limited or unlimited) are subject to change de
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- A single request to the User Track endpoint can contain Purchases, Custom Events and/or Custom Attribute updates for up to 75 users, specified by `external_id`
+- Each `/users/track` request can contain up to 75 Purchases, 75 Events and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`

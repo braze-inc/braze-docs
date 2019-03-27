@@ -20,4 +20,4 @@ If you're using Intelligent Delivery, Braze recommends that your campaign's segm
 
 It is also important to be aware of the limitations of using Intelligent Delivery within the first week of a user's lifecycle. A new user will have limited data for Intelligent Delivery to use in determining the optimal time to send a message. It can, however, still be valuable.  Consider a user that has recorded only one session. The time in which that user recorded their session could very well be the best time to attempt to engage them. Intelligent Delivery would only use data from the user's first session, and as such would engage the user at that time.  In general, Intelligent Delivery can more effectively calculate the optimal send time later in a user's lifecycle.
 
-[1]: {% image_buster /assets/img_archive/optimal_send_time.png %}
+[1]: {% image_buster /assets/img/optimal-send-time.png %}

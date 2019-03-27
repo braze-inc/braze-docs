@@ -41,7 +41,7 @@ Because there are no valid use cases for using "Or" operands with two or more ne
 
 If you received this warning message and aren't sure how to correct your campaign, canvas or segment, please get in touch with your Customer Success Manager or write to our support team.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}

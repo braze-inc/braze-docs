@@ -22,8 +22,6 @@ Then, create your Content Block!
 
 ![create-content-blocks][1]
 
-- You can save a content block without content in it.
-
 Content Blocks currently have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  
 
 {% comment %}
@@ -42,7 +40,7 @@ If you choose to update a Content Block, it will update in all messages the Cont
 
 If you want to update a Content Block for a single message or make a copy of a Content Block to use in other messages, you can either copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
 
-![copy-content-block][2]
+![copy-content-block][2]{: height="70%" width="70%"}
 
 ## Nesting Content Blocks
 
@@ -54,11 +52,31 @@ Nothing will prevent you from nesting a third level of Content Block, but you wi
 
 Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
 
+## Archiving Content Blocks
+
+Once you have finished using a Content Block, you can archive it from the __Templates & Media__ page.
+
+![Archive_CB][3]{: height="80%" width="80%"}
+
+Messages using the archived Block will still perform as though it was there, though we do recommend several best practices to ensure that outdated information is not included accidentally in your emails.
+
+1. When your Block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
+2. When your Block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!
+3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
+
+{% alert tip %}
+  You can save a content block without content in it.
+{% endalert %}
+
+If you made a mistake in archiving a Content Block, you can unarchive it.  
+
+![Unarchive_CB][4]
+
 ## Content Block Specifications
 
 | Content Block Attribute | Specifications |
 |---|---|
-| Name | Required field limited to 100 characters. Cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been deleted. |
+| Name | Required field limited to 100 characters. Cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
 | Content Size | Limited to 50kb. |
 | Placement | Content Blocks cannot be used within an email footer. |
@@ -66,3 +84,5 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 [1]: {% image_buster /assets/img/create-content-blocks.gif %}
 [2]: {% image_buster /assets/img/copy-content-block.png %}
+[3]: {% image_buster /assets/img/archive-content-block.png %}
+[4]: {% image_buster /assets/img/unarchive-content-block.png %}

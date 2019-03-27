@@ -34,6 +34,10 @@ Unarchiving a campaign does not make it live. This action will simply move your 
 
 ![Resume Campaign][5]
 
+{% alert warning %}
+When you archive a Segment, any Campaigns using it will __also be archived__.
+{% endalert %}
+
 [1]: {% image_buster /assets/img_archive/Archiving.png %}
 [2]: {% image_buster /assets/img_archive/Include_archived.png %}
 [3]: {% image_buster /assets/img_archive/Archive_pause_selected.png %}

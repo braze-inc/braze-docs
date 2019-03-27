@@ -65,7 +65,7 @@ The right to erasure is also known as 'the right to be forgotten'.
 
 Braze offers two solutions to stop additional processing of data by Braze:
 
-* The Braze SDKs allow customers to disable all Braze operations. This will prevent all data from being sent to Braze from that website or application. The Braze Documentation provides detailed instructions on how to disable the SDK on the platform-specific documentation pages ([iOS]({{ site.baseurl }}/developer_guide/Platform_Integration_Guides/iOS/Initial_SDK_Setup/), [Android]({{ site.baseurl }}/developer_guide/Platform_Integration_Guides/Android/Initial_SDK_Setup/), and [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)).
+* The Braze SDKs allow customers to disable all Braze operations. This will prevent all data from being sent to Braze from that website or application. The Braze Documentation provides detailed instructions on how to disable the SDK on the platform-specific documentation pages ([iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/), [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/), and [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)).
 * Alternatively, you can recommend that your Users uninstall or logout from any and all of your Applications that use the Braze SDK.
 
 Once you have halted data collection, you can use Braze’s [User Deletion REST API endpoint]({{ site.baseurl }}/developer_guide/rest_api/user_data/#user-delete-endpoint) to delete an end user, which will remove all records of such end user from the Braze’s Services:

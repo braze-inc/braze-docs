@@ -9,7 +9,7 @@ page_order: 7
 
 “Exception events” are used to create powerful logic within action-based campaigns. They are used to remove end users from receiving a message; for example, “send users who abandon their shopping carts a push notification, unless they checkout.” By triggering off of an exception event, customers can direct additional messages and attention to the users who did checkout after abandoning their carts, creating a seamless and cohesive experience.
 
-## "Received Campaign with Tag" Segment Filter
+## "Received Message from Campaign with Tag" Segment Filter
 
 Customers can now exclude users who have received groups of campaigns by the same "Tag" functionality they have already been using.
 

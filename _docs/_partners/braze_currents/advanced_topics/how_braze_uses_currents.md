@@ -27,7 +27,7 @@ Snowflake isn't your only warehouse option. You can also choose [Redshift](https
 
 ## Step 4: Use a BI Tool to Manipulate Your Data
 
-Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using Looker and Looker Blocks so we don't have to ETL/ELT data every time it moves from Currents.
+Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://looker.com/platform/blocks/directory#braze) so we don't have to ETL/ELT data every time it moves from Currents.
 
 Check out the docs below to get more information on these and how you can use them to build your database!
 

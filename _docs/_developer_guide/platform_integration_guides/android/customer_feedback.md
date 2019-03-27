@@ -6,7 +6,9 @@ search_rank: 5
 ---
 # Customer Feedback
 
-_The Customer Feedback module has been deprecated and is not available to new integrations._
+{% alert warning %}
+The Customer Feedback module has been deprecated and is not available to new integrations.
+{% endalert %}
 
 The Braze feedback form allows users to submit feedback about your app that is immediately sent to your company's dashboard.
 
@@ -14,7 +16,9 @@ The Braze feedback form allows users to submit feedback about your app that is i
 
 In Android, the News Feed and feedback form are implemented as [Fragments][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 
->  The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened (learn more about [tracking user sessions][6]).
+{% alert important %}
+The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened. Learn more about [tracking user sessions]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/).
+{% endalert %}
 
 ## Braze Feedback Form
 

@@ -2,6 +2,16 @@
 
 var query_str = window.location.search;
 $(document).ready(function() {
+
+  function string_to_slug(str) {
+    if (str) {
+      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
+    }
+    return str;
+  }
+
+
+
   $('#toc').toc({
     headers: 'h1, h2, h3',
     minimumHeaders: toc_minheaders
@@ -103,6 +113,17 @@ $(document).ready(function() {
   scrollHandler();
   $(window).scroll(scrollHandler);
 
+  // see if a details tag should be auto-opened
+  var details_list = $('details');
+  var url_hash = window.location.hash.replace('#','')
+  details_list.each(function(k,v) {
+    var $this = $(this);
+    if (url_hash == string_to_slug($this.find('summary')[0].innerText)) {
+      $this.attr('open',true);
+    }
+  });
+
+
   // Footer navigation
   var parent_top = 'nav_top';
 
@@ -182,11 +203,7 @@ $(document).ready(function() {
   $('.ab-tab-content .ab-tab-pane:first-child').addClass('active')
 
 
-  function string_to_slug (str) {
-    str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
 
-    return str;
-  }
   String.prototype.upCaseWord = function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
   };
@@ -323,5 +340,9 @@ $(document).ready(function() {
      }
      return tofilter
   }).after(' <i class="fas fa-external-link-alt"></i>')
-
+  $('.highlight .highlight .rouge-code pre').each(function(k) {
+    if ($(this).html().length > 120) {
+      $(this).css('min-height','36px');
+    }
+  });
 });

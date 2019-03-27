@@ -12,7 +12,7 @@ Braze provides support for retargeting users based on messages they have receive
 
 Each of these retargeting filters provides you with several options after you add them.
 
-For more on targeting users, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)! 
+For more on targeting users, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
 ## Retargeting Filters
 
@@ -76,25 +76,25 @@ Use this filter to find users who Are/Are Not in the control group of your targe
 
 Use this filter to find users who Are/Are Not in the control group of your target Canvas, which can be selected in the drop-down.
 
-### Last Received Specific Campaign Filter
+### Last Received Message from Specific Campaign Filter
 
 ![lastreceivedspecificcamp][14]
 
 Use this filter to find users who last received a specific Campaign before or after a specified date or number of days.
 
-### Last Received Specific Campaign or Canvas with Tag Filter
+### Last Received Message from Specific Campaign or Canvas with Tag Filter
 
 ![lastreceivedcampwithtag][17]
 
 Use this filter to find users who last received a specific Campaign or Canvas with a given tag before or after a specified date or number of days.
 
-### Received Campaign Filter
+### Received Message from Campaign Filter
 
 ![receivedcamp][4]
 
 \" this filter to find users who Have/Have Not received your target Campaign, which you select in the drop-down.
 
-### Received Campaign or Canvas with Tag Filter
+### Received Message from Campaign or Canvas with Tag Filter
 
 ![receivedcampwithtag][15]
 

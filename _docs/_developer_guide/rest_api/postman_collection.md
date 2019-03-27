@@ -15,7 +15,7 @@ Postman is a free-to-use visual editing tool for building and testing API reques
 
 ## Downloading Postman
 
-Postman has MacOS, Windows and Linux versions can be downloaded from their website located [here][1].
+Postman has MacOS, Windows, and Linux versions can be downloaded from their website located [here][1].
 
 ## Getting the Braze Postman Collection
 
@@ -29,13 +29,10 @@ The Braze Postman Collection can be added to your local Postman app by doing the
 
 The Braze Postman Collection uses a templating variable, `{{instanceURL}}`, to substitute the REST API URL of your Braze instance into the pre-built requests. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. To do so, please follow the steps below:
 
-1. Click on the gear icon in the top right corner of the Postman app:
-
-![Managing Environments][2]
-
+1. Click on the gear icon in the top right corner of the Postman app. ![Managing Environments][2]{: height="40%" width="40%"}
 2. Select "Manage Environments" to open a modal window which displays your active environments.
 3. In the bottom right corner of the modal window, click "Add" to create a new environment.
-4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your Braze REST API URL and Braze REST API Key as pictured below. __Please note__ The `api_key` should be encapsulated in quotes.
+4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your Braze REST API URL and Braze REST API Key as pictured below. The `api_key` should __not__ be encapsulated in quotes.
   - The value that you need to add for `instance_url` is dependent on your Braze instance. For more information, please see our [Rest API "Endpoint" documentation.][7]
   - For more information on your `api_key` please see our ["App Group REST API Key" documentation.][8]
 

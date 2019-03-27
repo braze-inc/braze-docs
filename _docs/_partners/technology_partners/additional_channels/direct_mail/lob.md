@@ -17,7 +17,7 @@ The HTTP URL to request in the webhook is different for each action you can make
 
 ## Request Body
 
-To specify an address in the webhook body requires nested objects, and as such it must be entered as "Raw Text" in JSON format.  If you are unfamiliar with the [JSON format][41], an easy way to generate a sample request body is to copy the example CURL requests given on the Lob.com documentation and run it in your terminal (replacing their test API key with yours).  Once you run the code in terminal, go to the Lob.com dashboard and check the "Logs" tab found under the "Requests" title.  If the API request worked, you will be able to click on the request and copy the request body into the dashboard.  You can then replace the data in the file to fit your desires.
+To specify an address in the webhook body requires nested objects, and as such it must be entered as "Raw Text" in JSON format.  If you are unfamiliar with the JSON format, an easy way to generate a sample request body is to copy the example CURL requests given on the Lob.com documentation and run it in your terminal (replacing their test API key with yours).  Once you run the code in terminal, go to the Lob.com dashboard and check the "Logs" tab found under the "Requests" title.  If the API request worked, you will be able to click on the request and copy the request body into the dashboard.  You can then replace the data in the file to fit your desires.
 
 ![Lob Success Response][34]
 

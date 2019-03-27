@@ -132,7 +132,7 @@ Selecting at least one conversion event will give you the ability to understand 
 
 ### Build the Experience: The “How” and “Where”
 
-1. __Setting up variants:__ A variant is the trail each customer follows on their journey. Canvas supports up to four variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
+1. __Setting up variants:__ A variant is the trail each customer follows on their journey. Canvas supports up to eight variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
 
 2. __Building steps:__ A step is a marketing decision point—what is the experience you’re creating? Within a step you can set triggers or schedule delivery, refine targeting by adding filters or marking exception events, and add channels from email to push to webhooks.
 

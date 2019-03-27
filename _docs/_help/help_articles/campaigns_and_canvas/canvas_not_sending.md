@@ -34,4 +34,4 @@ The [Entry Settings]({{ site.baseurl }}/user_guide/engagement_tools/canvas/creat
 Users may also drop out of a Canvas if they are no longer eligible to receive messages. For example, if the Canvas only contained push notifications, and a user opted out of push after receiving the First Step - that user would drop out of the Canvas. Consider preempting this by using branching to add in alternative user journeys.
 
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/) or review our comprehensive [Canvas documentation]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/) or review our comprehensive [Canvas documentation]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).

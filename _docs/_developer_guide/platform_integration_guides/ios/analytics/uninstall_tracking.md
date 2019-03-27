@@ -40,7 +40,7 @@ To ensure that your app does not take any unwanted automatic actions upon receiv
 
 #### Step 4: Enable Uninstall Tracking
 
-Follow the instructions for enabling [Uninstall Tracking][6] on Braze Academy.
+Follow the instructions for enabling uninstall tracking using our [article on Uninstall Tracking][6].
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m

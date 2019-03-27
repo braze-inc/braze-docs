@@ -12,7 +12,7 @@ Sample push notification:
 
 ![Sample Push][23]
 
-Check out [Braze Academy][8] for additional best practices.
+Check out [our troubleshooting section][8] for additional best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][9].
 

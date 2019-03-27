@@ -5,12 +5,12 @@ alias: /partners/gimbal/
 
 # About Gimbal
 
-Originally started out of Qualcomm, Gimbal enables you to perfect your marketing relevance using physical-world location data. Their always-on location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
+Originally started out of Qualcomm, Gimbal enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
 Combine your beacon or geofence support with Braze’s targeting and messaging features to learn more about your user’s physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
-- __Marketing:__ Send contextually relevant messaging and build experiential consumer journeys utilizing location intelligence.
-- __Competitive Analysis:__ Set up triggers around competitive locations to understand your user’s activity with competitors.
-- __Audience Insights:__ Understand how your users move about the world, track visitation behaviors, and further segment them based on location learnings.
+- __Marketing:__ Send contextually relevant messaging and build experiential consumer journeys.
+- __Competitive Analysis:__ Set up triggers around competitive locations to understand consumer trends and patterns.
+- __Audience Insights:__ Understand your users' visitation behaviors and further segment based on those learnings.
 
 # Pre-Requisites
 

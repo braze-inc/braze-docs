@@ -150,7 +150,7 @@ In your `NotificationViewController.m`, remove the default implementation and ad
 
 Open the Info.plist file of the Notification Content Extension and add/change following keys under `NSExtension \ NSExtensionAttributes`:
 
-`UNNotificationExtensionCategory` = `ab_cat_push_story` (`String` type)
+`UNNotificationExtensionCategory` = `ab_cat_push_story_v2` (`String` type)
 `UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` type)
 `UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` type)
 
