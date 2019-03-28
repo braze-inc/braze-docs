@@ -1,6 +1,8 @@
 ---
 nav_title: Engagement Reports
 page_order: 22
+local_redirect: #report-glossary
+hashtag-name-here: '/docs/user_guide/data_and_analytics/report_metrics/'
 ---
 # Engagement Reports
 With Engagement Reports, customers can now extract data across multiple Campaigns and/or Canvases.  Customers have the ability to:
@@ -79,41 +81,9 @@ There are two options when scheduling your report.
 - The report, when opened, will contain all the statistics selected in the ‘Add Stats’ section of the setup process.
 - Certain data is aggregated at the ‘Campaign’ or 'Canvas' level versus at the individual 'variant' or 'step' level.
 
-> Reports are not saved, and re-running the report can result in updated statistics.
-
-### Report Glossary
-
-| *Statistic*| *Description*|
-| Date | Represents the date of the data shown. This will coordinate to your company timezone |
-| id | Canvas API identifier. You can retrieve a list of Canvas id's through [this API][6] or utilize that identifier to further query [details][7], [time series data][8], and [rollups][9] |
-| name | Name of the Canvas as written in the dashboard |
-| variant_name | Name of the Canvas path as written in the dashboard |
-| step_name | Name of the Canvas step as written in the dashboard |
-| unique_recipients | Integer count of the number of users who have received Campaign or Canvas messages |
-| type | Indicates whether the data in the row are specific to a variant, step, or specific message within a step |
-| sent | Integer count of the number of push, email and or webhook messages successfully fired from the platform |
-| delivered | Integer count of the number of emails that did not bounce and made it to a user's inbox |
-| opens (Email) | Integer count of all the times users open an email. For the equivalent metric for push, please find total_opens and direct_opens |
-| unique_opens (Email) | Integer count of the unique instances users open an email |
-| clicks | Integer count of all of the clicks tracked on an Email or In-App Message. Please note that for In-App Messages, this metric only populates for those that do not have buttons |
-| unique_clicks (Email) | Integer count of all unique clicks tracked on an email message|
-| reported_spam | Integer count of the number of times users clicked on the spam button in their inbox. This metric does not track the number of times an email went directly into a user's spam folder. |
-| bounces | Indicates whether the Email or Push message failed to reach to user. Email-related data will indicate a hard bounce |
-| unsubscribes | Integer count of the number of users who unsubscribed from an email message |
-| direct_opens | Integer count of all the times users directly clicks/tapped on a push notification |
-| total_opens | Integer count of al the time users logged a direct_open or [influenced open][10] |
-| entries | Integer count of all the users who entered into a Canvas. This number does not always equal the number of users who received messages from Canvas steps, as segmentation and or triggering criteria can affect this |
-| errors | Integer count of non-200 error responses from wehook campaigns and Canvases |
-| revenue | Any purchase event logged by a user who entered the canvas and is still within the primary conversion event window will be attributed here. The amount is converted into dollars. Users can multiple purchases within this period and all amounts will be attributed back to the day of purchase |
-| conversions | Number of users who have performed the primary conversion event, or "conversion event A," on that particular day |
-| conversions_by_entry_time | Number of users who have entered into a Canvas on that particular day and also performed "conversion event A" by the end of the conversion deadline |
-| conversions1 | Number of users who have performed "conversion event B" on that particular day |
-| conversions1_by_entry_time | Number of users who have entered into a Canvas on that particular day and also performed "conversion event B" by the end of the conversion deadline |
-| conversions2 | Number of users who have performed "conversion event C" on that particular day |
-| conversions2_by_entry_time | Number of users who have entered into a Canvas on that particular day and also performed "conversion event C" by the end of the conversion deadline |
-| conversions3 | Number of users who have performed "conversion event D" on that particular day |
-| conversions3_by_entry_time | Number of users who have entered into a Canvas on that particular day and also performed "conversion event D" by the end of the conversion deadline |
-
+{% alert tip %}
+Reports are not saved, and re-running the report can result in updated statistics.
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/engagement_report_menuoption.png %}
 [2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
