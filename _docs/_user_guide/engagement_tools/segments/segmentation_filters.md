@@ -9,23 +9,14 @@ glossary_tag_name: Filter Categories
 # category to icon/fa or image mapping
 glossary_tags:
   - name: Custom Data
-    icon: fas fa-table
   - name: User Activity
-    icon: fas fa-user
   - name: Retargeting
-    icon: fas fa-bullseye
   - name: Marketing Activity
-    icon: fas fa-share
   - name: User Attributes
-    icon: fas fa-user-tag
   - name: Install Attribution
-    icon: fas fa-arrow-circle-down
   - name: Social Activity
-    icon: fas fa-user-friends
   - name: Testing
-    icon: fas fa-tasks
   - name: Other
-    icon: fas fa-circle
 
 glossaries:
   - name: Custom Attributes

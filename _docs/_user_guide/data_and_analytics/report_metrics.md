@@ -9,21 +9,12 @@ glossary_tag_name: Channels
 # channel to icon/fa or image mapping
 glossary_tags:
   - name: Email
-    icon: fas fa-envelope-square
   - name: In-App Message
-    icon: fas fa-mobile-alt
   - name: Web Push
-    icon: fas fa-arrow-right
   - name: iOS Push
-    icon: fab fa-apple
   - name: Android Push
-    icon: fab fa-android
-  - name: All Push
-    icon: fas fa-comment-alt
   - name: Webhook
-    icon: fas fa-anchor
   - name: News Feed
-    icon: fas fa-address-card
 
 glossaries:
   - name: Variation
