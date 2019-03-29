@@ -6,6 +6,8 @@ glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need, or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
 
 glossary_tag_name: Channels
+glossary_filter_text: "Select Channels below to narrow the glossary:"
+
 # channel to icon/fa or image mapping
 glossary_tags:
   - name: Email

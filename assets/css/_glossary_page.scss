@@ -2,6 +2,7 @@
   padding-top: 15px;
   margin-top: 15px;
   margin-bottom: 30px;
+
   @media (min-width: $window-large-px) {
     margin-top:30px;
   }
@@ -12,6 +13,7 @@
   }
   color: $black-shark;
   .title {
+    color: $navy-bay;
     font-family: $braze-black;
     font-size: 16px;
   }
@@ -21,19 +23,13 @@
   .tag {
     display: inline-block;
     font-family: $braze-light-oblique;
-    font-size: 10px;
+    font-size: 12px;
   }
-  .metric {
-    margin-top: 14px;
+  .metric, .caclulation {
     font-family: $braze-regular;
     font-size: 14px;
-    color: $grey-manatee;
-  }
-  .caclulation {
-    margin-top: 14px;
-    font-family: $braze-regular;
-    font-size: 14px;
-    color: $grey-manatee;
+    color: $grey-stardust;
+    margin-bottom: 5px;
   }
 
   .tag_img {
@@ -42,9 +38,11 @@
   }
 
   .desc {
+    margin-top: 5px;
     font-family: $braze-regular;
-    margin-top: 14px;
     font-size: 14px;
+    color: $black-shark;
+    margin-bottom: 10px;
   }
   .glossary_text {
     *,
@@ -117,7 +115,6 @@
 
   }
 
-
   #glossary_filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -125,15 +122,15 @@
     margin-bottom: 15px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     @media (min-width: $window-medium-px) {
     }
     @media (min-width: $window-large-px) {
       margin-bottom: 30px;
     }
     #glossary_search {
+      flex: 1 0 100%;
       width: 100%;
-      padding: 14px 14px 14px 30px;
+      padding: 5px 14px 5px 30px;
       font-size: 14px;
       line-height: 1.15;
       margin: 0;
@@ -141,10 +138,15 @@
       outline-offset: -2px;
       touch-action: manipulation;
       background-image: url(/docs/assets/img/search_black_shark.svg);
-      background-position: left 10px top 14px;
+      background-position: left 10px top 5px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
       background-color: transparent;
+    }
+    #glossary_filter_title {
+      width: 100%;
+      flex: 1 0 100%;
+      margin-top: 15px;
     }
 
     .select {
@@ -171,14 +173,12 @@
     }
 
     .glossary_filter_div {
-      flex: 1 0 100%;
-
-      margin: 7px 0 7px 0px;
+      flex: 1 0 50%;
       @media (min-width: $window-medium-px) {
-        flex: 0 0 100%;
+        flex: 0 0 33%;
       }
       @media (min-width: $window-large-px) {
-        flex: 0 0 48%;
+        flex: 0 0 25%;
       }
     }
   }
@@ -205,7 +205,7 @@
       transition: all .2s ease-in-out
   }
 
-  .card {
+  .term {
     flex: 1 0 100%;
     position: relative;
 
@@ -215,7 +215,37 @@
     text-decoration: none;
     margin-right: 15px;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 10px 0 10px 0;
+    border-top: 2px solid $grey-manatee;
+
+
+    // Hack the sticky header
+    > h1[id],
+    > h2[id],
+    > h3[id],
+    > h4[id],
+    > h5[id],
+    > h6[id] {
+      pointer-events: none;
+
+      > div,
+      > a {
+        pointer-events: auto;
+      }
+
+      &::before {
+        display: block;
+        height: $calc_offset_top;
+        margin-top: -$calc_offset_top;
+        visibility: hidden;
+        content: "";
+      }
+      @media print {
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 
 
