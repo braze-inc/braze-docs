@@ -88,7 +88,7 @@ var glossary_map = {
   'glossary_tags': 4
 }
 $(document).ready(function() {
-  function string_to_slug (str) {
+  function string_to_slug(str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
     str = str.toLowerCase();
 
@@ -265,7 +265,7 @@ $(document).ready(function() {
   $('#glossary_search').on('keyup',function(e){
     generate_glossarys(glossary_hash,false);
   });
-  if (location.hash && $(location.hash).offset()) {
+  if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
     // Scroll to generated hash
     $('html, body').animate({
       scrollTop: $(location.hash).offset().top
