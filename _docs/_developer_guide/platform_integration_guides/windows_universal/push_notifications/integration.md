@@ -27,9 +27,21 @@ Within the "Application" tab, ensure that `Toast Capable` is set to `YES`.
 
 2. Within the "App Settings page" of the Braze dashboard, add the SID and Client Secret in your app settings.
 
+### Step 3: Update for background open logging
+
+In your `OnLaunched` method, after your have called `OpenSession` add the following code snippet.
+
+```
+string campaignId = e.Arguments.Split(new[] { "_ab_pn_cid" }, StringSplitOptions.None)[0];
+if (!string.IsNullOrEmpty(campaignId))
+{
+Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);          
+}
+```
+
 ![Windows SID Dashboard][6]
 
-### Step 3: Creating Event Handlers
+### Step 4: Creating Event Handlers
 
 To listen to events that are fired when the push is received and activated (clicked by user), create event handlers and add them to the `PushManager` events:
 
@@ -41,7 +53,7 @@ Your event handlers should have the signatures:
 - `void YourPushReceivedEventHandler(PushNotificationChannel sender, AppboyPushNotificationReceivedEventArgs args);`
 - `void YourToastActivatedEventHandler(ToastNotification sender, AppboyToastActivatedEventArgs args);`
 
-### Step 4: Deep Linking From Push Into Your App
+### Step 5: Deep Linking From Push Into Your App
 
 #### Part 1: Creating deep links for your app
 
