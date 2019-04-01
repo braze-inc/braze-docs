@@ -13,9 +13,13 @@ Your delegate object should implement the `IAppboyNavigator` interface and be se
 
 See [`CustomAppboyNavigator.java`][1] for an example implementation.
 
->  You must also provide instructions for Braze to navigate to your app's (optional) News Feed implementation. To use Braze's default handling, call `AppboyNavigator.executeNewsFeedAction(context, uriAction)`.
+{% alert important %}  
+You must also provide instructions for Braze to navigate to your app's (optional) News Feed implementation. To use Braze's default handling, call `AppboyNavigator.executeNewsFeedAction(context, uriAction)`.
+{% endalert %}
 
->  Prior to v2.0.0, Braze Navigator was only used when opening in-app messages.
+{% alert note %}
+  Prior to v2.0.0, Braze Navigator was only used when opening in-app messages.
+{% endalert %}
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomAppboyNavigator.java
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#200

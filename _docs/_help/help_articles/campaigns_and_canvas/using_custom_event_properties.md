@@ -36,7 +36,7 @@ To confirm that the event properties are successfully tracked, you can view all 
 
 To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the Custom Event within the App, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 [22]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [23]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/

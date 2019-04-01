@@ -33,7 +33,7 @@ Depending on your ESP, additional customization is required in order to support 
 
 [1]: https://branch.io/
 [2]: {{ site.baseurl }}/partners/branch_for_attribution/
-[3]: https://dev.branch.io/getting-started/universal-app-links/overview/
+[3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
-[5]: https://dev.branch.io/marketing-channels/sendgrid/overview/
-[6]: https://dev.branch.io/marketing-channels/mailjet/overview/
+[5]: https://docs.branch.io/pages/emails/braze/
+[6]: https://docs.branch.io/pages/emails/braze-mailjet/

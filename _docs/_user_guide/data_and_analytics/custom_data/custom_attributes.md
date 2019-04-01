@@ -24,9 +24,13 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
 {% alert tip %}
-We use [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+<br>
+More resources on RegEx:
+- [RegEx Tester and Debugger](https://regex101.com/)
+- [RegEx: Learn More](https://regexr.com/)
+- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
-
 
 ## Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
@@ -40,7 +44,13 @@ Array attributes are good for storing related lists of information about your us
 | Check if the array attribute __is empty__ | __IS EMPTY__ | __N/A__ |
 
 {% alert tip %}
-We use [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+<br>
+
+More resources on RegEx:
+- [RegEx Tester and Debugger](https://regex101.com/)
+- [RegEx: Learn More](https://regexr.com/)
+- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ## Dates
@@ -58,8 +68,8 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 | Check if the date attribute __is after__ a __selected date__| __AFTER__ | __CALENDAR DATE SELECTOR__ |
 | Check if the date attribute is __more than X number__ of __days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ |
 | Check if the date attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the date attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE |
-| Check if the date attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE  |
+| Check if the date attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
+| Check if the date attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
 | Check if the date attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 

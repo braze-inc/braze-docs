@@ -12,7 +12,7 @@ If your filter options have changed, this is an indication that your data is bei
 
 Please note that changing the data type of a Custom Attribute in the dashboard will reject data that is being sent to Braze in a different format.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab

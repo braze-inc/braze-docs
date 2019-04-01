@@ -15,7 +15,7 @@ Before you start sending emails, there are some things you need. Refer to the ba
 |---|---|---|
 | A Dedicated IP (Internet Protocol)| A dedicated IP is a unique Internet address provided exclusively to a single hosting account. | Braze gives its customers dedicated IPs, to ensure control of your email sender reputation. We will set this up for you.|
 | Whitelabeled Domains | These consist of a domain and a subdomain. Whitelabling ensures you pass email authentication checks for DKIM and SPF. | We will generate these domains for you, but you must choose their names. |
-|Subdomains | This is a subdivision of a domain and typically looks like: `@news.company.com` within your email address. Having a subdomain will prevent your any errors that could damage your company's official email reputation. | We will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
+|Subdomains | This is a subdivision of a domain and typically looks like: `@news.company.com` within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation. | We will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
 |IP Pools | These are an optional configuration used to separate out the reputation of different types of email (for example: "promotional" vs. "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | We will set up the pools for you; then, when composing your email, choose your email's IP pool from the IP Pool dropdown on the Target Users page.|
 
 ## IP Warming

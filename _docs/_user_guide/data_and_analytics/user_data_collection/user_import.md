@@ -7,13 +7,13 @@ page_order: 13
 Braze's User Import feature allows users to upload and update user profiles via CSV files. This feature supports updating default and custom user profile attributes.
 
 ## Formatting
-Braze accepts user data in the standard CSV format from files up to 100MB in size. The particulars of how to construct your file are described below.
+Braze accepts user data in the standard CSV format from files up to 100MB in size. The particulars of how to construct your file are described below. Or, you can [download our User Import template <i class="far fa-arrow-alt-circle-down"></i>][template]. Just download the `.xlsx` file, fill in the information, then convert it to a `.csv` and import it to Braze as instructed [below](#importing).
 
 ### Column Headers
 
 Braze expects that the first row in your CSV file will contain the headers for each column in the file. The number of columns in each row must match the number of headers.
 
-Users imported to Braze via CSV *must* be identified -- Braze does not support creating entirely anonymous users via User Import. You must specify either a 'braze_id' or an 'external_id', but not both, allowing Braze to match an existing user.
+Users imported to Braze via CSV *must* be identified -- Braze does not support creating entirely anonymous users via User Import. You must specify either a `braze_id` or an `external_id`, but not both, allowing Braze to match an existing user.
 
 * If you provide an `external_id`, we will update any existing user with the same `external_id` or create a new identified user with that `external_id` set if one is not found.
 
@@ -99,11 +99,17 @@ The filter used to create the segment selects users who were created or updated 
 
 ![Edit the Segment][9]
 
+## External IDs
+
+__Do not__ use email addresses or incrementing count for your External IDs, as these can pose security risks.
+
+Instead, you should opt for a [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) to prevent these risks and the chance of you requesting a costly and inefficient an external ID migration down the line.
+
 ## Common Errors
 
-  - No external_id: To connect data from User Import to user profiles, Braze requires an external_id in each row. Rows without a value in the external_id column will be excluded from the import. User profiles that lack an external_id cannot be created or updated via the User Import.
+  - No `external_id`: To connect data from User Import to user profiles, Braze requires an `external_id` in each row. Rows without a value in the `external_id` column will be excluded from the import. User profiles that lack an `external_id` cannot be created or updated via the User Import.
   - Malformed Row: There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length that have more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be [UTF-8][utf8] encoded.
-  - Multiple Data Types: Braze expects each value in a column to be of the same data type. Values which do not match their atttribute's data type will cause errors in segmenting.
+  - Multiple Data Types: Braze expects each value in a column to be of the same data type. Values which do not match their attribute's data type will cause errors in segmenting.
     - Incorrectly Formatted Dates: Dates not in the [ISO 8601][date] format will not be read as datetimes on import.
     - String Quotation: Values encapsulated in single ('') or double ("") quotation marks will be read as strings on import.
 
@@ -124,3 +130,4 @@ The filter used to create the segment selects users who were created or updated 
 [utf8]: https://en.wikipedia.org/wiki/UTF-8
 [CAO]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [filtering]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}

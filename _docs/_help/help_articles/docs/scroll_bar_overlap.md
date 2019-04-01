@@ -30,7 +30,7 @@ It might help you on other sites, too!
 
 {% comment %}
 Insert this where there is a single line of long code that might cause issues:
-_Can't see the code because of the scroll bar? See how to fix that [here]({{ site.baseurl }}/help/help_articles_docs/scroll_bar_overlap/)._
+_Can't see the code because of the scroll bar? See how to fix that [here]({{ site.baseurl }}/help/help_articles/docs/scroll_bar_overlap/)._
 {% endcomment %}
 
 [1]: {% image_buster /assets/img/scroll-overlap.png %}

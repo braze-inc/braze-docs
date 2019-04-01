@@ -7,7 +7,7 @@ page_order: 0
 
 A user ID should be set for each of your users. These should be unchanging and accessible when a user opens the app. Something like a username, or a unique identifier from your database is usually a good reference to use. We __strongly recommend__ providing this identifier. It will allow you to:
 
-- Track your users across devices and platforms, improving the quality of your behaviorial and demographic data.
+- Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [User API][1] from any source.
 - Target specific users with our [Messaging API][2] for both general and transactional messages.
 

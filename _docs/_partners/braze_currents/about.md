@@ -14,7 +14,7 @@ To access this data for analysis, we recommend our Currents tool, a simple way t
 Currents allows you to…
 * Send Braze event data into a data warehouse or to one of [our analytics partners]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/) for detailed analysis.
 * Export Braze event data in a continuous stream to power business intelligence tools, machine learning algorithms, and more.
-* Route Braze event data to a variety of other systems using [Segment]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/) or [mPartcle]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
+* Route Braze event data to a variety of other systems using [Segment]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/) or [mParticle]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
 * There’s so much more you can do with event data, accessed by Currents. Trust us - [we use Currents, too]({{ site.baseurl }}/partners/braze_currents/advanced_topics/how_braze_uses_currents/)!
 
 ## Access Currents

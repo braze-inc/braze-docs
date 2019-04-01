@@ -47,7 +47,7 @@ mobileAppTracker.setUserId(Appboy.getInstance(MyActivity.this).getInstallTrackin
 
 __Step 2: Getting the Postback URL__
 
-In Braze's Dashboard, navigate to ["Technology Partners" , then "Attribution"][14] and find the Postback URL in the MobileAppTracking section. This url represents the api endpoint that an attribution partner will send data to. You will need this url in the next step when setting up a callback in Tune's dashboard.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the Postback URL in the MobileAppTracking section. This url represents the api endpoint that an attribution partner will send data to. You will need this url in the next step when setting up a callback in Tune's dashboard.
 
 __Step 3: Setting Up A Postback from Tune__
 
@@ -68,7 +68,6 @@ Once Braze receives attribution data from Tune, the status connection indicator 
 
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
-[14]: https://dashboard-01.braze.com/integrations/third_party_integrations/attribution "Attribution Integrations"
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

@@ -6,9 +6,17 @@ page_order: 0
 ---
 # Initial SDK Setup
 
-Download the SDK from [github][1] and run `cordova plugin add path_to_repo/appboy-cordova-sdk` from the root your project.
+Download the SDK from [Github][1] and run the following from the root your project:
 
-Alternatively, if you are running Cordova 6 or earlier, you could install directly from github, like `cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master`.
+```
+cordova plugin add path_to_repo/appboy-cordova-sdk
+```
+
+Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
+
+```
+cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
+```
 
 ### Configure the plugin
 

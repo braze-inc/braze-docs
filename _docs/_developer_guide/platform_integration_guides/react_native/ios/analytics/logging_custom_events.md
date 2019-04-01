@@ -11,7 +11,7 @@ See [the iOS integration instructions][1] for in depth discussion of event track
 ```javascript
 var properties = {};
 properties["KeyOne"] = "Val1";
-ReactAppboy.logCustomEvent("cordovaCustomEventWithProperties", properties);
+ReactAppboy.logCustomEvent("reactNativeCustomEventWithProperties", properties);
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/

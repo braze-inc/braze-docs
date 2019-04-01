@@ -1,7 +1,7 @@
 ---
 nav_title: Baidu Integration
 platform: Android
-page_order: 0
+page_order: 1
 search_rank: 5
 ---
 ## Baidu Integration

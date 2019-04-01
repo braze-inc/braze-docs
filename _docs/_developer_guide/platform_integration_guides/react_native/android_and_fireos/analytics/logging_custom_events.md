@@ -11,7 +11,7 @@ See [the Android integration instructions][1] for in depth discussion of event t
 ```javascript
 var properties = {};
 properties["KeyOne"] = "Val1";
-ReactAppboy.logCustomEvent("cordovaCustomEventWithProperties", properties);
+ReactAppboy.logCustomEvent("reactNativeCustomEventWithProperties", properties);
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/

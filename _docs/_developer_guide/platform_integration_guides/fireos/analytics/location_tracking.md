@@ -39,5 +39,5 @@ See [here][3] for an implementation example of the above in our Droidboy sample 
 
 [1]: http://developer.android.com/guide/topics/location/strategies.html
 [2]: https://developer.android.com/training/permissions/index.html
-[3]: https://github.com/Appboy/android-sdk/blob/18ea58f58f84018022b107d42a648f638b137fca/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L73
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L129
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-

@@ -60,20 +60,20 @@ Retargeting filters allow you to segment your users whom you have already attemp
 |Clicked/Opened Campaign|Segments your users by whether or not they have interacted with a specific campaign.|
 |Clicked/Opened Campaign or Canvas With Tag|Segments your users by whether or not they have interacted with a specific campaign or Canvas with a specific tag.|
 |Clicked/Opened Step| Segments your users by whether or not they have interacted with a specific Canvas step.|
-|Converted From Campaign|Segments your users by whether or not they have converted on a specific campaign.
-|Converted From Canvas|Segments your users by whether or not they have converted on a specific Canvas.
+|Converted from Campaign|Segments your users by whether or not they have converted on a specific campaign.
+|Converted from Canvas|Segments your users by whether or not they have converted on a specific Canvas.
 |Entered Canvas Variation|Segments your users by whether or not they have entered a variation path of a specific Canvas.
-|Has Never Received A Campaign or Canvas Step| Segments your users by whether or not they have received a designated campaign or canvas step.|
+|Has Never Received a Message from a Campaign or Canvas Step| Segments your users by whether or not they have received a designated campaign or canvas step.|
 |In Campaign Control Group|Segments your users by whether or not they were in the control group for a specific multivariate campaign.
 |In Canvas Control Group|Segments your users by whether or not they were in the control group for a specific Canvas.
 |Is Not In Segment| Segments your users by whether or not they are included in an already existing segment.|
-|Last Received Campaign or Canvas With Tag|Segments your users by when they received a specific campaign or Canvas with a specific tag.
-|Last Received Specific Campaign|Segments your users by when they last received a specific campaign.
-|Last Received Specific Canvas Step|Segments your users by selecting those who received a specific, designated Canvas Step.|
-|Received Campaign|Segments your users by whether or not they have received a specific campaign.
+|Last Received Message from Campaign or Canvas With Tag|Segments your users by when they received a specific campaign or Canvas with a specific tag.
+|Last Received Message from Specific Campaign|Segments your users by when they last received a specific campaign.
+|Last Received Message from Specific Canvas Step|Segments your users by selecting those who received a specific, designated Canvas Step.|
+|Received Message from Campaign|Segments your users by whether or not they have received a specific campaign.
 |Received Campaign Variant|Segments your users by which variant of a multivariate campaign they have received.
-|Received Campaign or Canvas with Tag|Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
-|Received Canvas Step|Segments your users by whether or not they have received a specific Canvas step.|
+|Received Message from Campaign or Canvas with Tag|Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
+|Received Message from Canvas Step|Segments your users by whether or not they have received a specific Canvas step.|
 
 ## Marketing Activity
 Marketing filters segment your users based on their previous interactions with your campaigns. These filters are effective for reaching out to large numbers of your users without spamming them.
@@ -107,7 +107,7 @@ User attribute filters segment your users by their constant attributes and chara
 |Device Count|Segments your users by how many devices they have used your app on.
 |Device Model|Segments your users by their mobile phone's model version.
 |Device OS|Segments your users by their mobile phone's operating system.
-|Email Available|Segments your users by whether or not they have reported their respective email addresses.
+|Email Available|Segments your users by whether or not they have reported their respective email addresses, and if they are subscribed/opted-in to email.
 |Email Opt In Date|Segments your users by the date on which they opted into email.
 |Email Subscription Status|Segments your users by their subscription status for email.
 |Email Unsubscribed Date|Segments your users by the date on which they unsubscribed from future emails.

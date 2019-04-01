@@ -316,12 +316,42 @@ Link here: [Braze.com](https://www.braze.com)
 # Embedded video test
 {% include youtube.html id="XY5uXoKIvFY" %}
 
+
+# Embedded video right align test
+{% include youtube.html id="XY5uXoKIvFY" align="right" %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue tortor sed tincidunt cursus. Sed iaculis molestie ligula, vel aliquam ante ultrices vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec risus velit. Curabitur urna tellus, dictum non convallis ac, porta vel neque. Ut egestas magna et turpis ullamcorper ultricies. Cras dolor lacus, fringilla sed enim ut, porttitor convallis arcu. Nam placerat neque vitae vestibulum dictum. Nam in pulvinar neque. Quisque eget sodales est. Mauris mattis porta felis scelerisque convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sodales nibh vitae felis ultrices consectetur. Etiam efficitur elementum ante.
+
+Vivamus ac commodo massa. Donec maximus, arcu nec aliquet malesuada, augue nibh venenatis elit, nec egestas libero turpis nec est. Aliquam condimentum molestie massa in finibus. Nulla sit amet pretium lectus, ut pulvinar mi. Fusce eget sapien ac diam mollis aliquam. Sed tellus est, tristique sed turpis vel, aliquet mattis nunc. Vestibulum maximus, dolor et luctus malesuada, leo sapien facilisis turpis, tincidunt suscipit turpis massa condimentum tortor. Nulla molestie at ex placerat vulputate. Integer sed tortor vel mauris rutrum consectetur a nec sapien.
+
+Proin sed commodo mi, non bibendum metus. Praesent non justo lacus. Curabitur non feugiat nisl. Nam commodo tortor quis urna auctor consectetur. Duis at nisl eu tellus consectetur laoreet. Integer id orci congue, elementum ex non, lacinia neque. Aenean dictum tempus nibh ac fringilla. Vestibulum condimentum vel lectus ac lobortis. Nulla vehicula semper nisi, sed sodales metus ornare nec. Cras leo urna, finibus vitae nisi sit amet, mattis aliquam mi.
+
+
+# Embedded video left align test
+{% include youtube.html id="XY5uXoKIvFY" align="left" %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium elit non pulvinar tristique. Sed tellus dolor, commodo id laoreet non, pretium id velit. Donec tristique egestas felis, quis sagittis nibh sodales quis. Ut ut urna faucibus, sagittis justo dictum, efficitur arcu. Phasellus consequat nunc mollis, convallis eros at, euismod ex. Morbi id finibus velit, eu sollicitudin sem. Cras feugiat quis nibh non convallis.
+
+Donec urna odio, gravida eu arcu sit amet, placerat aliquam erat. In sit amet nulla fermentum, tempor nulla nec, eleifend urna. Proin condimentum ipsum arcu, et venenatis elit luctus nec. Vestibulum risus lacus, cursus eget lacus eu, aliquam malesuada justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc porttitor rutrum molestie. Aenean in ligula at odio dignissim sodales. Nunc consequat enim id odio varius aliquam. Maecenas tempus ipsum id ligula bibendum congue. Praesent sed urna vitae velit dapibus scelerisque vel a magna. Phasellus molestie lobortis sem eu malesuada.
+
+
 ## Usage:
 {% raw  %}
 ```html
 {% include youtube.html id="[youtubeid]" %}
 ```
 {% endraw  %}
+
+To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
+{% raw  %}
+```html
+{% include youtube.html id="[youtubeid]" align="left" %}
+
+{% include youtube.html id="[youtubeid]" align="right" %}
+
+```
+{% endraw  %}
+
 
 # List Test
 

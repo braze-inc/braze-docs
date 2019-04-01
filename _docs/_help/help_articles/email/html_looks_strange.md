@@ -36,7 +36,7 @@ Emails render differently on different browsers and email clients. Record which 
 
 There are times when the preview in Email on Acid or Litmus still does not match what is sent via the Braze dashboard. One possible cause for this is the CSS in-lining that is performed by Braze may differ from the CSS in-lining performed by other tools. If you suspect that this is the case, contact your BRaze account manager to ask for CSS in-lining to be turned off.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/), or leave feedback below.
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/), or leave feedback below.
 
 [1]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#overview-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}

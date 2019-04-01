@@ -8,13 +8,23 @@ page_order: 0
 
 Installing the Braze SDK will provide you with analytics functionality, as well as push and in-app messages.
 
-{{ site.data.alerts.update }}  As of SDK version 2.1.0, use of the iOS SDK requires XCode 8 or above.{{ site.data.alerts.end }}
+{% alert update %}
+As of SDK version 2.1.0, use of the iOS SDK requires XCode 8 or above.
+{% endalert %}
 
 ### Step 1: Get the SDK
 
-Download the SDK from [github][1] and run `cordova plugin add path_to_repo/appboy-cordova-sdk/` from the root your project.
+Download the SDK from [Github][1] and run the following from the root your project:
 
-Alternatively, if you are running Cordova 6 or earlier, you could install directly from github, like `cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master`.
+```
+cordova plugin add path_to_repo/appboy-cordova-sdk/
+```
+
+Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
+
+```
+cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
+```
 
 ### Configure the plugin
 
@@ -29,7 +39,7 @@ In your config.xml, add a `preference` element under the iOS `platform` element 
 
 Set up your applications to have the appropriate certificates for push, via the [iOS push documentation][2].
 
-#### Removing automatic push setup (iOS)
+#### Removing Automatic Push Setup (iOS)
 
 If you want to turn off iOS automatic push registration, add the preference `com.appboy.ios_disable_automatic_push_registration` with a value of `true`.
 

@@ -28,7 +28,7 @@ Choose which apps or platforms you'd like to target by either selecting "Include
 
 ![Segment App Selection][5]
 
-## Step 4: Add Filters to your Segment
+## Step 4: Add Filters to Your Segment
 
 Add at least one filter to your segment as depicted in the image below. You can combine as many filters as you want in order to make your segmentation more specific.
 
@@ -38,11 +38,21 @@ Choosing "OR" for your filters means that your segment will contain users satisf
 
 Notice that the statistics on your segment are changing in real time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
 
-## Step 5: Save your Segment
+## Step 5: Save Your Segment
 
 ![Segment4][4]
 
 Once you've clicked "Save" you're ready to start sending messages to your users!
+
+## Archiving Segments
+
+If you no longer need or wish to retire a specific segment, you can archive it by going to the __Segments__ page, clicking on the appropriate gear, then selecting "Archive" from the drop down that appears.
+
+{% alert warning %}
+When you archive a segment, any Campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will __also be archived__. You will get a warning listing which Campaigns and Canvases are about to be archived by archiving the associated segment.
+{% endalert %}
+
+You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of it's page.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}

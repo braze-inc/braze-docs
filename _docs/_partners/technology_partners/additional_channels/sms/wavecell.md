@@ -5,7 +5,7 @@ hidden: true
 ---
 
 # Wavecell
-With Wavecell's cloud communication platform, businesses and developers alike can incorporate SMS functionality into their user engagement strategies. Utilizing SMS and Wavecell, not only is two factor authentication feasible, but with the help of [Key-Value Pairs]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/) and [Webhooks]({{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/), so are interactive stories and endless possibilities.
+With Wavecell's cloud communication platform, businesses and developers alike can incorporate SMS functionality into their user engagement strategies. Utilizing SMS and Wavecell, not only is two factor authentication feasible, but with the help of [Key-Value Pairs]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/) and [Webhooks]({{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/), so are interactive stories and endless possibilities. 
 
 # Pre-Requisites
 

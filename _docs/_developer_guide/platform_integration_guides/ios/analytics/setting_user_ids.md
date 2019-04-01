@@ -8,7 +8,7 @@ search_rank: 5
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. A database ID or a hashed email address/username is usually a good reference to use. We __strongly recommend__ providing this identifier as it will allow you to:
 
-- Track your users across devices and platforms, improving the quality of your behaviorial and demographic data.
+- Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [User Data API][1].
 - Target specific users with our [Messaging API][2] for both general and transactional messages.
 

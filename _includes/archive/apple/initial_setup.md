@@ -103,7 +103,7 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 
 ### Step 5: Specify Your Custom Endpoint or Data Cluster
 
-If you are an EU-based client, have a custom endpoint or are on a specific [data cluster][apple_initial_setup_31], you will need to direct the SDK to use that endpoint for your integration to work correctly. EU clients should refer to this [documentation][apple_initial_setup_30] to implement their iOS integration.
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).]
 
 Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url's authority (e.g. `sdk.iad-01.braze.com`, *not* `https://sdk.iad-01.braze.com`).
 

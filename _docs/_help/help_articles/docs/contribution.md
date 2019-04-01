@@ -15,5 +15,5 @@ You, too can contribute to this documentation. If you have a unique perspective 
 You can find the Braze Docs repo [here](https://github.com/Appboy/braze-docs/).
 
 {% alert important %}
-Before making changes to Braze Docs, you will be asked to sign our [Consumer License Agreement (CLA)]({{ site.baseurl }}/cla)
+Before making changes to Braze Docs, you will be asked to sign our [Contributor License Agreement (CLA)]({{ site.baseurl }}/cla)
 {% endalert %}

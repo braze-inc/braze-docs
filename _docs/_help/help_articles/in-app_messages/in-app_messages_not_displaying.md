@@ -1,5 +1,5 @@
 ---
-nav_title: In-App messages not displaying
+nav_title: In-App Messages Not Displaying
 page_order: 2
 ---
 
@@ -33,7 +33,7 @@ Alternatively try using a different type of In-App message template or size of i
 
 ## Session Timeout
 
-Find out if you have customized your session timeout. By default, Braze retrieves In-App messages at the start of a session from the server. 
+Find out if you have customized your session timeout. By default, Braze retrieves In-App messages at the start of a session from the server.
 
 If you have an extended the session timeout it will extended the period of time from which we can refresh the potential In-App messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the App in less than 30 seconds you will not be eligible to receive another In-App message triggered on session start. You can read more about that for:
 
@@ -46,11 +46,11 @@ If you have an extended the session timeout it will extended the period of time 
 There is a minimum interval at which we’ll allow In-App messages to be consecutively triggered. You might be trying to trigger them too quickly. Review our documentation for more information on this:
 * [iOS][19]
 * [Android][20]
-* [Web][21] 
+* [Web][21]
 
 These are customizable, however we have them in place to avoid over-messaging your users.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/docs/support_contact/).
+Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 
 [14]: {% image_buster /assets/img_archive/trouble6.png %}
 [15]: {{ site.baseurl }}help/best_practices/in-app_messages/in-app_message_specs/

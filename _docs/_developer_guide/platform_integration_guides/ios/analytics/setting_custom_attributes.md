@@ -255,7 +255,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 Users who grant permission for an app to send them push notifications are defaulted to the status of `ABKOptedin` as iOS requires an explicit opt in.
 
-> Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][12].
+> Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See the User Guide for details][12].
 
 #### Setting Email Subscriptions
 
@@ -297,7 +297,7 @@ Appboy.sharedInstance().user.setPushNotificationSubscriptionType(ABKNotification
 
 >  Users who grant permission for an app to send them push notifications are defaulted to the status of `ABKOptedin` as iOS requires an explicit optin.
 
-For more information on implementing subscriptions, visit the topic on [Braze Academy][10].
+For more information on implementing subscriptions, visit our page on [managing user subscriptions][10].
 
 [1]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601

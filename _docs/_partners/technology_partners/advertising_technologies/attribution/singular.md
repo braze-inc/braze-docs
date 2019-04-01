@@ -7,7 +7,7 @@ alias: /partners/singular/
 
 Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, creative reporting, and workflow automation.
 
-Singular allows you to import paid install attribution data to segment more intelligently within your lifecycle campaigns. 
+Singular allows you to import paid install attribution data to segment more intelligently within your lifecycle campaigns.
 
 
 
@@ -36,7 +36,7 @@ protected void onCreate(Bundle savedInstanceState)
 
 __Step 2: Getting the Braze API Key__
 
-In Braze's Dashboard, navigate to ["Technology Partners" , then "Attribution"][14] and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
 
 __Step 3: Confirming the Integration__
 
@@ -54,7 +54,7 @@ __Step 1: Integration Requirements__
 
 __Step 2: Getting the Attribution ID__
 
-In Braze's Dashboard, navigate to ["Technology Partners" , then "Attribution"][14] and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
 
 __Step 3: Setting Up A Postback from Kochava__
 
@@ -81,7 +81,7 @@ mobileAppTracker.setUserId(Appboy.getInstance(MyActivity.this).getInstallTrackin
 
 __Step 2: Getting the Postback URL__
 
-In Braze's Dashboard, navigate to ["Technology Partners" , then "Attribution"][14] and find the Postback URL in the MobileAppTracking section. This url represents the api endpoint that an attribution partner will send data to. You will need this url in the next step when setting up a callback in Tune's dashboard.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the Postback URL in the MobileAppTracking section. This url represents the api endpoint that an attribution partner will send data to. You will need this url in the next step when setting up a callback in Tune's dashboard.
 
 __Step 3: Setting Up A Postback from Tune__
 
@@ -102,7 +102,6 @@ Once Braze receives attribution data from Tune, the status connection indicator 
 
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
-[14]: https://dashboard-01.braze.com/integrations/third_party_integrations/attribution "Attribution Integrations"
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

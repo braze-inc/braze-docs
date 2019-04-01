@@ -15,6 +15,10 @@ You can now create segments using the following filters:
 - Opened/ Clicked Canvas Step
 - Last Received Specific Canvas Step
 
+{% alert update %}
+As of March 2019, `Received Canvas Step` has been renamed to `Received Message from Canvas Step`, and `Last Received Specific Canvas Step` has been renamed to `Last Received Message from Specific Canvas Step`.
+{% endalert %}
+
 ## Exporting Users Using Device ID
 
 This endpoint now accepts a device identifier as a parameter, which lets you to [export profiles of anonymous users][82].
