@@ -405,7 +405,7 @@ Content-Type: application/json
 ```json
 Content-Type: application/json
 {
-  "deleted" : (required, integer) number of user ids successfully parsed and queued for deletion; if the IDs map to users in Braze's systems, those users will be deleted
+  "deleted" : (required, integer) number of user ids queued for deletion
 }
 ```
 
