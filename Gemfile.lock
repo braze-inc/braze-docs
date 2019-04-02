@@ -118,7 +118,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.8.3)
+  jekyll (~> 3.8.5)
   jekyll-algolia (~> 1.0)
   jekyll_asset_pipeline
   kramdown
