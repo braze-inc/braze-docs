@@ -34,7 +34,7 @@ Braze Documentation is licensed under a [Creative Commons Attribution-NonCommerc
 
 ### Before You Contribute
 1. Complete our [CLA](http://www.braze.com/docs/cla).
-2. Take the [Braze Docs Tour](www.braze.com/docs/tour).
+2. Take the [Braze Docs Tour](https://www.braze.com/docs/tour).
 3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
   - the [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide),
   - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment),
