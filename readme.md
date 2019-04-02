@@ -28,9 +28,9 @@ Braze will not merge a pull request made against a Braze Docs open source projec
 
 ### Open Source License
 
-![Licence Icon](https://github.com/Appboy/braze-docs/blob/master/assets/img/github/ccimg.png) 
+![Licence Icon](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-Braze Documentation is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Braze Documentation is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ### Before You Contribute
 1. Complete our [CLA](http://www.braze.com/docs/cla).
