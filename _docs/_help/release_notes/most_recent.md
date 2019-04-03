@@ -7,6 +7,14 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]._
 
+## April 2019
+
+### Subscription Groups Archiving
+
+You can now [archive Subscription Groups]({{ site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
+
+More updates to come for April! Come back again in a few weeks!
+
 ## March 2019
 
 ### In-App Messages - Generation 3
@@ -53,29 +61,5 @@ Use the [Subscription Group REST APIs]({{ site.baseurl }}/developer_guide/rest_a
 ### Email Preference Center
 
 The [Email Preference Center]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
-
-## January 2019
-
-Welcome to a new year!
-
-### Push Time to Live (TTL)
-
-In your account, within __Manage App Group__, click the [Push TTL Settings]({{ site.baseurl }}/user_guide/administrative/app_settings/push_ttl_settings/) tab to manage the time duration for attempted resends in the event that a device is offline.
-
-### Connected Content IP Whitelisting
-
-Braze is pleased to announce that due to a number of infrastructure upgrades made by our internal teams, we can now offer IP whitelisting for Connected Content on all clusters. In the future, we plan to add additional IPs for the non-EU clusters.
-
-### Canvas Delay
-
-We have added the option for any Canvas step to be sent __immediately__.
-
-![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
-
-### Adjust (Technology Partner) REST Endpoint Field Update
-
-With our updated integration with [Adjust]({{ site.baseurl }}/partners/adjust/), Braze customers will only need to add their rest endpoint from the Adjust partner spotlight page.
-
-This will make it easier for customers wanting to pass attribution data into Braze.
 
 [support]: {{ site.baseurl }}/support_contact/
