@@ -7,6 +7,16 @@ page_order: 4
 
 Data points are Braze's way was of defining a pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
 
+## Management & Usage
+
+You can view your Data Points Usage on the __Subscriptions and Usage__ section in any of the tabs. Just go to your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__.
+
+{% alert tip %}
+To prevent using up your allocated data points, we recommend setting up a program that will to prevent sending the same, unchanging data from your app to Braze over and over.
+
+__Only update your deltas (changing data)!__
+{% endalert %}
+
 
 ## Consumption Count
 
@@ -96,14 +106,3 @@ Data points are Braze's way was of defining a pricing structure, based on pieces
 
  {% endtab %}
 {% endtabs %}
-
-
-## Data Point Management & Usage
-
-You can view your Data Points Usage on the __Subscriptions and Usage__ section in any of the tabs. Just go to your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__.
-
-{% alert tip %}
-To prevent using up your allocated data points, we recommend setting up a program that will to prevent sending the same, unchanging data from your app to Braze over and over.
-
-__Only update your deltas (changing data)!__
-{% endalert %}
