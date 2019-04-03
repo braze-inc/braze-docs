@@ -1,6 +1,7 @@
 ---
 nav_title: SDK Primer
 page_order: 0
+hidden: true
 ---
 
 # SDK Primer
