@@ -1,8 +1,8 @@
 ---
 nav_title: Engagement Reports
 page_order: 22
-local_redirect: #report-glossary
-hashtag-name-here: '/docs/user_guide/data_and_analytics/report_metrics/'
+local_redirect: 
+  report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
 ---
 # Engagement Reports
 With Engagement Reports, customers can now extract data across multiple Campaigns and/or Canvases.  Customers have the ability to:
