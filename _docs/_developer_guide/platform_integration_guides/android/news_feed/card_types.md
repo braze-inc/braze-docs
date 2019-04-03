@@ -54,23 +54,8 @@ The [Base Card][29] model provides foundational behavior for all cards.
 - `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `getDomain()` - returns the link text for the property url.
 
-## Cross Promotion Small Card
-[Cross-Promotion Small Cards][34] link to items in the Google Play Store or Kindle Store. In addition to the base card properties:
-
-- `getTitle()` - returns the title text for the card. This will be the promoted item’s name.
-- `getSubtitle()` - returns the text of the category of the promoted item
-- `getImageUrl()` - returns property is the URL of the card’s image.
-- `getPackage()` - reutrns the package name of the promoted item.
-- `getRating()` - returns the rating of the promoted app. This property will be 0.0 unless the promoted item is an app, in which case the rating will be in the range of [0.0, 5.0];
-- `getPrice()` - returns the price of the promoted app.
-- `getReviewCount()` - returns the number of reviews of the promoted app. This property will be 0 unless the promoted item is an app.
-- `getCaption()` - returns the text that will be displayed in the tag on the top of the small cross promotion card.
-- `getUrl()` - returns the url of the promoted item which leads to the item’s App Store page.
-
-
 [29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
 [30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
 [31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
 [32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
 [33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CrossPromotionSmallCard.html

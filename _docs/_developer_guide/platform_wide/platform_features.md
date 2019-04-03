@@ -41,7 +41,7 @@ Once you have defined a segment, Braze's messaging tools allow for multi-channel
 
 ### News Feed {#platform-features-news-feed}
 
-When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items and Cross-Promotions cards that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
+When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
 
 - Braze will track how many clicks and impressions each card in the News Feed receives
 - You can schedule a specific time-frame when cards will display, allowing for deep [dayparting][4]
@@ -50,14 +50,6 @@ When your app opens, the Braze SDK automatically pulls down the user's News Feed
 - News Feed Items can ["Deeply Link"][5] to in-app content enabling the marketer to provide individualized content navigation for each user. Every process from onboarding, to the surfacing of rich in-app content can be behaviorially targeted and customized using the News Feed and ["Deep Links"][5]
 
 ![News Feed Dashboard][6]
-
-#### Cross Promotion Cards
-
-Cross-Promotions are a type of News Feed card which display content from the App Store or Google Play that you have recommended to users.  Cross-promotions are a wonderful way to leverage your user data to accelerate the adoption of other content within your network by moving audiences from one of your apps to another.
-
-- Touching a Cross-Promotion will bring users to the relevant store so that they can download the content
-- Users will only see Cross-Promotions for their device's platform in the News Feed
-- In iOS, you may recommend books, music, or other content available in the App Store in addition to apps
 
 ### Push Notifications {#platform-features-push}
 

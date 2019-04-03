@@ -105,8 +105,6 @@ Optionally, you can also override any of the following Key / String pairs within
 "Appboy.feedback.label.contack-info-or" = "or";
 "Appboy.feedback.email-text-field-place-hold" = "Email (Required)";
 /*News Feed Default Labels*/
-"Appboy.feed.card.cross-promotion.price.free" = "FREE";
-"Appboy.feed.card.cross-promotion.price.format" = "$%.2f";
 "Appboy.feed.done-button.title" = "Done";
 "Appboy.feed.no-card.text" = "We have no updates.\nPlease check again later.";
 "Appboy.feed.no-connection.title" = "Connection Error";
