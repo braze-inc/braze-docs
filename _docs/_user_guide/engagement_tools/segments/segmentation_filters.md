@@ -314,9 +314,9 @@ glossaries:
     tags:
       - User Attributes
   - name: Subscription Groups
-      description: Segments your users by their Subscription Group for email. Archived Groups will not appear and cannot be used.
-      tags:
-        - Other
+    description: Segments your users by their Subscription Group for email. Archived Groups will not appear and cannot be used.
+    tags:
+      - Other
   - name: Email Unsubscribed Date
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
