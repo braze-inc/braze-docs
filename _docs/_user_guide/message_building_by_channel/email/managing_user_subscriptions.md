@@ -34,7 +34,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a Group
 
-Create a Subscription Group by going to Subscription Groups in the left navigation, then clicking the `+ Create Subscription Group` button. Then, name and describe your group.
+Create a Subscription Group by going to __Subscription Groups__ in the left navigation, then clicking the `+ Create Subscription Group` button. Then, name and describe your group.
 
 ![Create a Subscription Group][26]{: height="50%" width="50%"}
 
@@ -42,9 +42,11 @@ Use that name as a filter when creating your segments to ensure that only those 
 
 ![Use a Subscription Group][27]{: height="70%" width="70%"}
 
-{% alert warning %}
-You cannot delete or archive subscription groups.
-{% endalert %}
+#### Archiving Groups
+
+Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
+
+Archive your Group by going to __Subscription Groups__ in the left navigation; then, find your group in the list. Then, click the gear and select `Archive` from the dropdown menu.
 
 #### Export User Subscription State Changes
 
