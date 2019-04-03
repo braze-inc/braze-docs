@@ -313,6 +313,10 @@ glossaries:
     description: Segments your users by their subscription status for email.
     tags:
       - User Attributes
+  - name: Subscription Groups
+      description: Segments your users by their Subscription Group for email.
+      tags:
+        - Other
   - name: Email Unsubscribed Date
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
