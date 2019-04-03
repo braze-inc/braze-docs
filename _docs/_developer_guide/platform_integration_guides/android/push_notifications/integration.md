@@ -180,6 +180,10 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
+#### Step 6: Remove Automatic Actions from your Application Class
+
+If you have a custom [Application][76] subclass, ensure you do not have automatic logic that pings your servers in your class's `Application.onCreate()` lifecycle method. This will ensure that silent push notifications from Braze don't cause unnecessary requests to your servers.
+
 ## Displaying Push
 
 After completing this section, you should be able to receive and display push notifications sent by Braze.
@@ -603,3 +607,4 @@ val myExtra = extras.getString("my_key")
 [73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
+[76]: https://developer.android.com/reference/android/app/Application
