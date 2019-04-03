@@ -54,16 +54,14 @@ http {
     root /app/public;
 
     # old site redirects
-    rewrite ^/docs/delayed_initialization_ios/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/delayed-braze-initialization-for-ios permanent;
-    rewrite ^/docs/triggered_vs_original/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/triggered-vs-original-in-app-messages permanent;
-    rewrite ^/docs/users_identify/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/use-identify-endpoints permanent;
-    rewrite ^/docs/programmatic_message_sending/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/programmatic-message-sending permanent;
-    rewrite ^/docs/email/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/email-configuration permanent;
-    rewrite ^/docs/email_open_tracking/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/email-open-tracking-pixel permanent;
-    rewrite ^/docs/email_spam_testing/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/email-spam-testing permanent;
-    rewrite ^/docs/link_templates/(.*)$ <%= ENV['SITE_URL'] || ''%>https://lab.braze.com/creating-link-templates permanent;
-
-
+    rewrite ^/docs/delayed_initialization_ios/(.*)$ https://lab.braze.com/delayed-braze-initialization-for-ios permanent;
+    rewrite ^/docs/triggered_vs_original/(.*)$ https://lab.braze.com/triggered-vs-original-in-app-messages permanent;
+    rewrite ^/docs/users_identify/(.*)$ https://lab.braze.com/use-identify-endpoints permanent;
+    rewrite ^/docs/programmatic_message_sending/(.*)$ https://lab.braze.com/programmatic-message-sending permanent;
+    rewrite ^/docs/email/(.*)$ https://lab.braze.com/email-configuration permanent;
+    rewrite ^/docs/email_open_tracking/(.*)$ https://lab.braze.com/email-open-tracking-pixel permanent;
+    rewrite ^/docs/email_spam_testing/(.*)$ https://lab.braze.com/email-spam-testing permanent;
+    rewrite ^/docs/link_templates/(.*)$ https://lab.braze.com/creating-link-templates permanent;
 
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/amplitude/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/ permanent;
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/mixpanel/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/ permanent;
