@@ -24,7 +24,7 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
       returl += '#' + hashes[1];
     }
     else if (uh ) {
-      returl += uh;
+      returl += '#' + uh;
     }
     return returl;
   }

@@ -405,8 +405,7 @@ Content-Type: application/json
 ```json
 Content-Type: application/json
 {
-  "deleted" : (required, integer) number of users successfully deleted,
-  "invalid_user_ids" : (optional, array of string) each of the identifiers provided in the request that did not correspond to a known user
+  "deleted" : (required, integer) number of user ids queued for deletion
 }
 ```
 
