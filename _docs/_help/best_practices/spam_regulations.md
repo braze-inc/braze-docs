@@ -11,7 +11,7 @@ There are a number of laws that regulate senders of electronic communications, i
 
 ## CAN-SPAM
 
-The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electronic mail message, the primary purpose of which is the commerical advertisment or promotion of a commercial product or service." You can read more details on the [FTC site][5].
+The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electronic mail message, the primary purpose of which is the commercial advertisement or promotion of a commercial product or service." You can read more details on the [FTC site][5].
 
 There are 7 key requirements for CAN-SPAM:
 
