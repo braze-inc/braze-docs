@@ -4,23 +4,18 @@ permalink: /most_engaged_channel/
 ---
 
 # Most Engaged Channel Filter
-The Most Engaged Channel filter allows you to select users for whom the selected messaging channel is their "best" channel ("best" meaning "has the highest likelihood of engagement, given the user's history"). You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
-
+The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel. 
 ![most_engaged_channel_filter][1]{: height="50%" width="50%"}
 
 The Most Engaged Channel computes the engagement rate for each user for each of the three channels by taking the ratio of # of opens or interactions to the number of messages received over the last 3 months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user.
 
-{% alert note %}
-If you have requested access to the Channel Optimization (Most Engaged Channel) beta feature, Braze agrees to grant you access to this Beta feature, and by your use of this Beta feature, you agree that such use shall be subject in full to the language in the MSA between you and Braze relating to Beta features.
-{% endalert %}
-
 ## The "Not Enough Data" Option
 
-For Braze to determine which channel is "best", there needs to be adequate data. This means that you should have sent at least three (3) or more messages on at least two (2) of the three (3) available channels (these messages need not necessarily be opened). 
+For Braze to determine which channel is "best", there needs to be adequate data. This means that a user must have received at least three (3) or more messages on at least two (2) of the three (3) available channels. The messages do not necessarily need to have been opened.
 
 So, if a user only has data for one (1) channel, or less than three (3) messages received on two (2) or three (3) channels, that user will then fall under the "Not Enough Data" option of this filter. This will allow you to choose to use whichever messaging channel you wish for the users that do not have a "Most Engaged Channel" reliably calculated.
 
-For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Most Engaged Channel" filter as "Mobile" and use __OR__ to add a second "Most Engaged Channel" filter set to "Not Enough Data".
+For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Most Engaged Channel" filter as "Mobile" and use __OR__ to add a second "Most Engaged Channel" filter set to "Not Enough Data". This way users who prefer push will receive one as well as users for whom there isn't enough data to know. A separate campaign with the Most Engaged filter set to "Email" could address users who prefer email.
 
 ## The "Mobile Push" Option
 
@@ -34,6 +29,11 @@ Because some users will have low numbers of messages received, it is not unusual
 
 ### Unreachable Channels
 
-When the user has sufficient data for a ranking to be determined, but becomes unreachable on their "Most Engaged Channel", the user will "fall out" and not receive any messages. Braze plans to modify this behavior so that the user will be considered "Most Engaged" on the next most engaged (and reachable) channel.
+When the user has sufficient data for a ranking to be determined, but becomes unreachable on their "Most Engaged Channel", the user will "fall out" and not receive any messages. Users who are unreachable on specific channels should be targeted separately.
+
+### Audience Sizing
+
+Most Engaged Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel. 
+
 
 [1]: {% image_buster /assets/img/most_engaged_channel.png %} "Most Engaged Channel Filter"
