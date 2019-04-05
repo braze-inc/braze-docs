@@ -48,7 +48,7 @@ While there are no limits to how many characters of text you can include in an i
 
 #### Text
 
-**Message Tyoe** | **Max Message Length**
+**Message Type** | **Max Message Length**
 --- | ---
 (iOS) Lock Screen | 110 Characters
 (iOS) Notification Center | 110 Characters
