@@ -182,7 +182,7 @@ $(document).ready(function() {
 
     var card_div = $('<div>').addClass('content').append(card_title).append(card_desc).append(card_metric).append(card_calc).append(card_tag);
 
-    var append_html = $('<span>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);
+    var append_html = $('<p>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);
     return append_html;
   }
 

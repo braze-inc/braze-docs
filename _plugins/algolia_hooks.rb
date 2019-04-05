@@ -37,10 +37,12 @@ module Jekyll
             record[:content].gsub!(/^\d+\n/,'')
             record[:content] = record[:content][0 ... 4400]
           end
-          # @@logs << record.to_s + "\n"
+          # fix glossary generating algolia record that's too big
+          if record[:glossaries]
+            record.delete(:glossaries)
+          end
           record
         else
-          # @@logs << record.to_s + "\n"
           nil
         end
       end
