@@ -27,7 +27,7 @@ Within the "Application" tab, ensure that `Toast Capable` is set to `YES`.
 
 2. Within the "App Settings page" of the Braze dashboard, add the SID and Client Secret in your app settings.
 
-### Step 3: Update for background open logging
+### Step 3: Update for Background Open Logging
 
 In your `OnLaunched` method, after your have called `OpenSession` add the following code snippet.
 
