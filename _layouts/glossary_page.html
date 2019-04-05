@@ -158,7 +158,7 @@ $(document).ready(function() {
 
   function generate_card(cur_glossary){
     var card_id = string_to_slug(cur_glossary[glossary_map['name']]);
-    var card_title = $('<div>').addClass('title').html(cur_glossary[glossary_map['name']]);
+    var card_title = $('<p>').addClass('title').html(cur_glossary[glossary_map['name']]);
     var tags = cur_glossary[glossary_map['tags']];
 
     if (matchterms('all', tags)) {
@@ -169,7 +169,7 @@ $(document).ready(function() {
       card_tag.append($('<div>').addClass('tag').html('Filter Category: ' + tags.join(', ')));
     }
 
-    var card_desc = $('<div>').addClass('desc').html(cur_glossary[glossary_map['description']]);
+    var card_desc = $('<p>').addClass('desc').html(cur_glossary[glossary_map['description']]);
 
     var card_metric = '';
     if  (cur_glossary[glossary_map['metric']]) {
@@ -182,7 +182,7 @@ $(document).ready(function() {
 
     var card_div = $('<div>').addClass('content').append(card_title).append(card_desc).append(card_metric).append(card_calc).append(card_tag);
 
-    var append_html = $('<p>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);
+    var append_html = $('<span>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);
     return append_html;
   }
 
