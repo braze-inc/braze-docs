@@ -82,6 +82,14 @@ Devices should not report more than 60 events/second under normal circumstances,
 ### Session Events
 
 ```json
+// First Session
+{
+  "session_id": (string) id of the session,
+  "app_id": (string) id for the app on which the user action occurred,
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "os_version": (string) os version of device used for the action,
+  "device_model": (string) hardware model of the device
+}
 // Session Start
 {
   "session_id": (string) id of the session,
@@ -117,6 +125,16 @@ Devices should not report more than 60 events/second under normal circumstances,
   "device_model": (string) hardware model of the device
 }
 ```
+
+### Install Attribution Events
+
+```json
+// Install Attribution
+{
+  "source": (string) the source of the attribution
+}
+```
+
 ## Message Engagement Events
 
 ### Push Notification Events
@@ -150,6 +168,19 @@ Devices should not report more than 60 events/second under normal circumstances,
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
 }
+// Push Notification iOS Foreground Open
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "app_id": (string) id for the app on which the user action occurred,
+  "platform": (string) platform of the device (iOS, Android, web, etc.)
+}
 // Push Notification Bounce
 {
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -173,6 +204,7 @@ Devices should not report more than 60 events/second under normal circumstances,
 // Email Open
 // Email Click
 // Email Bounce
+// Email Soft Bounce
 // Email Mark As Spam
 // Email Unsubscribe
 {
@@ -186,6 +218,25 @@ Devices should not report more than 60 events/second under normal circumstances,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "email_address": (string) email address for this event,
   "url": (string) the URL that was clicked (Email Click events only)
+}
+```
+
+### Subscription Events
+
+```json
+// Subscription Group State Change
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "email_address": (string) email address for this event,
+  "subscription_group_id": (string) id of the subscription group,
+  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }
 ```
 
