@@ -200,7 +200,7 @@ Please note that this is not fired when the user actually uninstalls the app - t
 Data accumulates when an app installation is attributed to a source. Use this to track where your app installs are coming from.
 
 ```json
-// Location Event: users.behaviors.InstallAttribution
+// Install Attribution Event: users.behaviors.InstallAttribution
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
