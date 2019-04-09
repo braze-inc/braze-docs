@@ -205,7 +205,11 @@ $(document).ready(function() {
          })
          if (selected_vals.length) {
            toappend = false;
-           if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
+           // Don't filter if item is set to all tags
+           if (matchterms('all',cur_glossary[glossary_map['tags']])) {
+             filter = false;
+           }
+           else if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
              filtered = false;
            }
          }
@@ -242,7 +246,7 @@ $(document).ready(function() {
     glossary_hash['data'][k] = v;
     glossary_hash['search'][k] = v.join(' ').toLowerCase();
     if (matchterms('all', v[glossary_map['tags']]) ) {
-      glossary_hash['search'][k] += alltags.join(' ');
+      glossary_hash['search'][k] += ' ' + alltags.join(' ');
     }
     glossary_hash['sorted'].push(k);
   })
