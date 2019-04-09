@@ -153,7 +153,7 @@ If you choose to `DISCARD` the in-app message and replace it with your own in-ap
 On Android, this is done by calling `logClick` and `logImpression` on in-app messages, and `logButtonClick` on immersive in-app messages.
 
 {% alert tip %}
-Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
+Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
 
 ## Setting a Custom View Factory
@@ -168,7 +168,7 @@ Create a class that implements [`IInAppMessageViewFactory`][42]
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
 {% alert tip %}
@@ -197,7 +197,7 @@ Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
 We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
