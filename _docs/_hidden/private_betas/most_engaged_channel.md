@@ -7,7 +7,7 @@ permalink: /most_engaged_channel/
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel. 
 ![most_engaged_channel_filter][1]{: height="50%" width="50%"}
 
-The Most Engaged Channel computes the engagement rate for each user for each of the three channels by taking the ratio of # of opens or interactions to the number of messages received over the last 3 months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user.
+The Most Engaged Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last 3 months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. Every time a message is sent to a user and every time they interact with a message, the Most Engaged Channel is refreshed within seconds. Any interaction with a message causes it to be considered "interacted with" only once, e.g. an open and click on the same email will cause that message to be marked as having been engaged with only once, not twice.
 
 ## The "Not Enough Data" Option
 
