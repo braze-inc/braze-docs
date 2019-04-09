@@ -183,7 +183,7 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 ##### Step 2: Instruct Braze to use your In-App Message Manager Listener
 
-Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
 
 >  We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
