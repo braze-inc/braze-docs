@@ -23,7 +23,7 @@ The Braze Postman Collection can be added to your local Postman app by doing the
 
 1. Open the app and click the the "Import" button in the upper left corner.
 2. Within the modal window that opens, select the "Import from Link" option
-3. Copy and paste this URL `https://www.getpostman.com/collections/94d02cde897232440df7` and click "Import".
+3. Copy and paste this URL `https://www.getpostman.com/collections/5a6394e1ba47f013cdc9` and click "Import".
 
 ## Setting up your Postman Environment
 

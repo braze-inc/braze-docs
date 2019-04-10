@@ -125,7 +125,7 @@ SDK Endpoint configuration via `appboy.xml` is available starting with Braze And
 ### SDK Integration Complete
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
-Please see the following sections in order to enable [custom event tracking](/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging](/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed](/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite](/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Please see the following sections in order to enable [custom event tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
 ## Test Your Basic Integration
 

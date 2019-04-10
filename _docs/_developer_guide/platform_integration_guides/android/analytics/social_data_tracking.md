@@ -56,4 +56,4 @@ AppboyUser.setTwitterData(twitterUser);
 
 
 [1]: https://developers.facebook.com/docs/howtos/androidsdk/3.0/login-with-facebook/#step1
-[2]: https://dev.twitter.com/docs/auth
+[2]: 
