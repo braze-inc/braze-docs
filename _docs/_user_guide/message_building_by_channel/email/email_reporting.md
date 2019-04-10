@@ -1,6 +1,6 @@
 ---
-nav_title: Email Reporting
-page_order: 2
+nav_title: Reporting & Analytics
+page_order: 20
 ---
 
 # Email Reporting
@@ -11,7 +11,7 @@ Additionally, Braze allows you to see how successful different links are within 
 
 ![email_analytics][63]
 
-## Email Analytics Glossary
+# Email Analytics Glossary
 
 |Metric |Calculation |Description
 |---|---|---|
@@ -22,7 +22,7 @@ Additionally, Braze allows you to see how successful different links are within 
 |Sends <br> _A.K.A. Messages Sent_ |Count. Number received from Braze. |Number of messages sent.
 |Deliveries |Sends - Bounces |The total number of messages sent and received by emailable parties.
 |Deliveries % |(Sends - Bounces) / Sends |Percentage of Sends received by emailable parties.
-|Bounces |Count. Number received from email delivery partner. |Number of messages designated as “returned” or “not received” (etc.) from send services used. These messages are not received by the intended Emailable users. This count includes both hard (permanent) bounces and soft (temporary) bounces, which will attempt another send at a different time.
+|Bounces |Count. Number received from email delivery partner. |Number of messages designated as “returned” or “not received” (etc.) from send services used. These messages are not received by the intended Emailable users. This count only includes hard (permanent) bounces. It does not include soft (temporary) bounces, which will attempt another send at a different time.
 |Bounces % <br> _A.K.A. Bounce Rate_ |Bounces / Sends |Percentage of Sends designated as “returned” or “not received” (etc.) from send services used. These messages are not received by the intended Emailable users.
 |Spam |Count. Number received from email delivery partner. |Number of messages marked or otherwise designated as spam. Braze [automatically unsubscribes][64] users that marked an email as spam, and those users won’t be targeted by future emails.
 |Spam % |Spam / Sends |Percentage of Sends marked or otherwise designated as spam.
