@@ -48,13 +48,13 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 ## Step 5: Link the Braze Push Story Framework
 
-Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Inside the new phase, change the destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
 
 ![New Copy File Phase][ios_pushstory_01]
 
 ![Add Framework][ios_pushstory_02]
 
-To verify that this was successful, go to the `General` tab of the main application target. Under "Embedded Binaries" check that `AppboyPushStory.framework` has been added.
+To verify that this was successful, go to the `General` tab of the main application target. Under `Embedded Binaries` check that `AppboyPushStory.framework` has been added.
 
 ![Embedded Binaries][ios_pushstory_05]
 
