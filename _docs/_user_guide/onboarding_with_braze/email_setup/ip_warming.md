@@ -83,42 +83,13 @@ As a last issue deterrent, Braze will automatically email a select number of ind
 
 Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation.  This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. We recommend segmenting your domains such that corporate mail is sent through your top level domain, and marketing and transactional mail are sent through different domains or subdomains.
 
->  Subdomain segmentation is especially important for large-volume senders. These senders should work with their Customer Success Manager while setting up their account to ensure they are adhering to this practice.
+{% alert important %}
+  Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to ensure they are adhering to this practice.
+{% endalert %}
 
 [18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
-[19]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[20]: {% image_buster /assets/img_archive/Email_Sunset_Policies_new.png %}
-[21]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns
-[22]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[23]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
-[24]: http://tools.ietf.org/html/rfc2822
-[25]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-[33]: {% image_buster /assets/img_archive/Multiple_click_tracking_screen_3a.png %}
-[34]: {% image_buster /assets/img_archive/Email_HeatMap_new.png %}
-[35]: {% image_buster /assets/img_archive/campaign_data_2.png %}
-[36]: #deep-linking
-[37]: http://googlewebmastercentral.blogspot.com/2015/05/app-deep-linking-with-googl.html
-[38]: {{ site.baseurl }}/help/best_practices/email/#unsubscribed-email-addresses
-[39]: {{ site.baseurl }}/help/best_practices/email/#bounces--invalid-emails
 [40]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
-[42]: https://returnpath.com/
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/
 [45]: http://www.senderbase.org/
 [46]: {{ site.baseurl }}/help/best_practices/email/sunset_policies/
-[47]: {% image_buster /assets/img_archive/appusage_ipwarming_main.png %}
-[48]: {% image_buster /assets/img_archive/campaign_confirmation_ipwarming.png %}
-[49]: {% image_buster /assets/img_archive/canvas_ip_warming.png %}
-[50]: {% image_buster /assets/img_archive/targeting_campaign_ipwarming.png %}
-[60]: {{ site.baseurl }}/help/best_practices/email/#email-sunset-policies
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}
-[62]: https://www.emailonacid.com/blog/article/email-development/tips-for-coding-email-preheaders
-[63]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
-[64]: {{ site.baseurl }}/help/best_practices/email/#unsubscribed-email-addresses
-[65]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event
