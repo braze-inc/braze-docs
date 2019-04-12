@@ -168,7 +168,7 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
 [10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#sounds
-[11]: https://sendgrid.com/docs/api_reference/smtp_api/unique_arguments.html
+[11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
 [12]: https://sendgrid.com/docs/API_Reference/Event_Webhook/event.html
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
 [14]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#external-user-id
