@@ -2,7 +2,7 @@
 nav_title: Managing Email Subscriptions
 page_order: 7
 ---
-
+   
 # Managing Email Subscriptions
 
 Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions and targeting campaigns at users with particular subscription states][22]. These tools are critical for compliance with [anti-spam laws][23].

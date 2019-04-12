@@ -48,17 +48,17 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 ## Step 5: Link the Braze Push Story Framework
 
-Click on `+` button and add `New Copy Files Phase`.	Inside the new phase, change the destination to "Frameworks". Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
 
 ![New Copy File Phase][ios_pushstory_01]
 
 ![Add Framework][ios_pushstory_02]
 
-Go to the "Embedded Binaries" of the main application target and verify that `AppboyPushStory.framework` has been added.
+To verify that this was successful, go to the `General` tab of the main application target. Under `Embedded Binaries` check that `AppboyPushStory.framework` has been added.
 
 ![Embedded Binaries][ios_pushstory_05]
 
-Click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.	Add this text into the Script body:
+Back in `Build Phases`, click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.  Add this text into the Script body:
 
 ```
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -92,7 +92,7 @@ done
 
 ![Run Script][ios_pushstory_03]
 
-Go to the `General` tab of the content extension and add `AppboyPushStory.framework` in the `Linked Frameworks and Libraries` section.
+Go to the `General` tab of the Content Extension target and add `AppboyPushStory.framework` in the `Linked Frameworks and Libraries` section.
 
 ![Linked Frameworks][ios_pushstory_04]
 

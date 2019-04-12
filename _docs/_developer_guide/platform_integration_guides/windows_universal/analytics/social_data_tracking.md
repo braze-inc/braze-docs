@@ -104,4 +104,4 @@ Appboy.SharedInstance.AppboyUser.SetFacebookData(facebookUser);
 ```
 
 [1]: https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/ "facebook"
-[2]: https://dev.twitter.com/docs/auth "twitter"
+[2]: https://developer.twitter.com/en/docs "twitter"
