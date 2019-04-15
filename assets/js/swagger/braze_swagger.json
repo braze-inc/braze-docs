@@ -1644,10 +1644,10 @@
           "User Data"
         ],
         "summary": "User Delete Example",
-        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_id\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
+        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
         "operationId": "UserDeleteExample",
         "requestBody": {
-          "description": "Exports the details about the user with the specified external ID",
+          "description": "Exports the details about the user with the specified external ID.",
           "required": true,
           "content": {
             "application/json": {
