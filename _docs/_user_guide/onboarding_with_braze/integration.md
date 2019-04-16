@@ -57,7 +57,7 @@ So, what do you need to do to get them this information?
 3. From there, discuss [how that data should be tracked]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
 4. Define how many [App Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{ site.baseurl }}/developer_guide/platform_wide/app_group_configuration/) these.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/).
 
 ### Step 4: They Customize Based on What You Want
 

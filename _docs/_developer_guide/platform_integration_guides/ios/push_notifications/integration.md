@@ -125,7 +125,7 @@ if #available(iOS 10, *) {
   center.delegate = self
   var options: UNAuthorizationOptions = [.alert, .sound, .badge]
   if #available(iOS 12.0, *) {
-    options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptionProvisional)
+    options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
   }
   center.requestAuthorization(options: options) { (granted, error) in
     Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
