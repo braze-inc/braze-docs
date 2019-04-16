@@ -305,7 +305,10 @@ Successful messages will be met with the following response:
 
 ```json
 {
-  "message" : "success"
+  "message" : "success",
+  "attributes_processed" : <if attributes are included in the request, this will return an integer of the number of attributes that were processed>,
+  "events_processed" : <if events are included in the request, this will return an integer of the number of events that were processed>,
+  "purchases_processed" : <if purchases are included in the request, this will return an integer of the number of purchases that were processed>,
 }
 ```
 
