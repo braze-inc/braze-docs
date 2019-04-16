@@ -6,3 +6,4 @@ validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/da
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';
 validurls['/docs/help/best_practices/email/import_your_email_list'] = '/docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list';
+validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
