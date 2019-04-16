@@ -50,7 +50,7 @@ Be aware of different naming conventions! Custom names can cause incongruences i
 __Looker Actions__ allows you to flag users within Braze via the REST API Endpoint from a Looker Look. __Actions__ requires that a dimension is tagged with `braze_id`. The Action will append the flagged value to the users `looker_export` custom attribute.
 
 {% alert important %}
-Only existing users will be flagged. You cannot sent pivoted data back to Braze.
+Only existing users will be flagged. You cannot use pivoted Looks when flagging data in Braze.
 {% endalert %}
 
 [You can also find these instructions and sample code on Github.](https://github.com/Appboy/growth-looker-action/tree/master/src/actions/braze)
@@ -91,7 +91,7 @@ dimension: external_id {
 
 ![Send Looker Action][13]
 
-If the export was correctly sent, then `looker_export` (or whatever you titled the export) should appear in the user's profile as a Custom Attribute.
+If the export was correctly sent, then `looker_export` should appear in the user's profile as a Custom Attribute with the value you entered in the Action.
 
 ![Custom Attribute in Braze from Looker][14]
 
