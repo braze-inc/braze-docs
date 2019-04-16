@@ -11,7 +11,7 @@ Looker and Braze empower you to transform customer experiences with live custome
 
 ## Integration
 
-Braze partners with Looker through [first-party Looker Blocks](#implementing-the-looker-blocks) and [sending data to Braze via REST API](#send-data-to-braze). To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze Currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
+Braze partners with Looker through [first-party Looker Blocks](#implementing-the-looker-blocks) and [flagging users within Braze via REST API](#flagging-users-wihtin-braze). To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze Currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 Braze's Looker Blocks can reduce the burden of modeling data and enable marketers to quickly access and visualize data.
 
@@ -45,7 +45,7 @@ Both integrations assume that your [initial Braze integration][4], as well as yo
 Be aware of different naming conventions! Custom names can cause incongruences in data unless you take care to change all corresponding names. If you've customized any View/table or model names, rename each in the LookML to the name you've selected.
 {% endalert %}
 
-## Send Data to Braze
+## Flagging Users within Braze
 
 __Looker Actions__ allows you to flag users within Braze via the REST API Endpoint from a Looker Look. __Actions__ requires that a dimension is tagged with `braze_id`. The Action will append the flagged value to the users `looker_export` custom attribute.
 
