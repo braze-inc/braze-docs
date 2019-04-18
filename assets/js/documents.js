@@ -253,7 +253,7 @@ $(document).ready(function() {
 
           if ('content' in suggestion._highlightResult){
             if ('value' in suggestion._highlightResult.content){
-              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ');
+              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ').replace(/<(.|\n)*?>/g, '');
             }
           }
           if (content.length > 400) {
