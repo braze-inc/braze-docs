@@ -26,6 +26,8 @@ Local timezone scheduling requires that users stay in segments for 24 hours. In 
 The change will make the filter more intuitive and more consistent with the behavior of our other calendar functionality, such as our send “in 1 day” scheduling options.
 {% enddetails %}
 
+<br>
+
 ### Example
 
 The campaign shown below sends at 9:00PM on April 16th. It's audience's segmentation is “Made More than 2 Purchases in the past 3 days”.
