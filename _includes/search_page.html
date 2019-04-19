@@ -134,7 +134,7 @@
 
       if ('content' in hit._highlightResult) {
         if ('value' in hit._highlightResult.content) {
-          content = hit._highlightResult.content.value;
+          content = hit._highlightResult.content.value.replace(/<(.|\n)*?>/g, '');
         }
       }
 
