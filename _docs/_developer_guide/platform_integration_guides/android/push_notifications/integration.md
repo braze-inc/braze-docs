@@ -202,7 +202,7 @@ Braze includes a service to handle push receipt and open intents. Our `AppboyFir
 Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` in order for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately in order to render notifications sent from other FCM services.
 
 {% alert important %}
-If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there. 
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
 ##### Using Your Own Firebase Messaging Service
@@ -409,7 +409,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs][56] on creating a push campaign.  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -588,7 +588,7 @@ val myExtra = extras.getString("my_key")
 [54]: {% image_buster /assets/img_archive/android_push_reg.png %} "Android Push Registration"
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/troubleshooting/#troubleshooting
+[57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [60]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push
