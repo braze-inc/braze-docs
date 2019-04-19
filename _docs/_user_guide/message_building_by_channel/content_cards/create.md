@@ -13,8 +13,7 @@ You can create a Content Card using the Braze platform using Campaigns.
 
   Click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
 
-![createyouriam]({% image_buster /assets/img/create_iam.gif %}){: height="70%" width="70%"}
-
+![Create Your Content Card]({% image_buster /assets/img/create_cc.gif %}){: height="70%" width="70%"}
 
 1. Name your Campaign something clear and meaningful.
 2. Add __Teams__ and __Tags__, as necessary.
@@ -37,11 +36,11 @@ These Content Card types are accepted by both mobile apps and web applications.
 
 #### Message Options
 
-| Message Type | Type Description | Available Layouts| Other Options |
+| Message Type | Type Description |
 |---|---|---|
-|[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
-|[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
-|[Banner]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
+|[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional Image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card. |
+|[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image)| This Card  |
+|[Banner]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  Messages that slide into view in a designated place without blocking the rest of the screen. |
 
 ## Step 2: Compose a Content Card
 
