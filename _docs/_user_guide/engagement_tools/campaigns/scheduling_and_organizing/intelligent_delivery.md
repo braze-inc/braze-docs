@@ -24,11 +24,8 @@ For users who have insufficient data to calculate an optimal send time, Braze in
 
 So, it's important to be aware of the limitations of using Intelligent Delivery early in a user's lifecycle when limited data for Intelligent Delivery is available. It can, however, still be valuable.  Consider a user that has recorded only one session. The time in which that user recorded their session could very well be the best time to attempt to engage them. Intelligent Delivery would only use data from the user's first session, and as such would engage the user at that time.  In general, Intelligent Delivery can more effectively calculate the optimal send time later in a user's lifecycle.
 
-### Intelligent Delivery Preview
+### Triggered Campaigns and Canvases
 
-You can get a preview of times chosen for users by Intelligent Delivery with the Preview function. This will show you a distribution of optimal times calculated for a sample of users from your audience, as well as the number of users for whom the group average session start time was used in place of a personalized optimal time.
-
-![Send Time Preview][2]
+If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Delivery, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will be sent the following day at the user's optimal time.
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}
-[2]: {% image_buster /assets/img/optimal-time-preview.png %}
