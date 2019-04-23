@@ -12,7 +12,7 @@ When scheduling a campaign, you have the option of using Braze's Intelligent Del
 
 To use this feature, simply select __Intelligent Delivery__ when scheduling a campaign. The only difference between this option and "Send at a designated time" is that the time of day each user receives your message will be determined by Braze. You can still choose the day(s) on which your message will send and create a recurring campaign.
 
-You also have the option of specifying a certain time range during which your message should send. This is useful if your campaign pertains to a specific event, sale or promotion. If a user's optimal time is calculated as being outside this range, the closest edge of the sending window to the optimal time will be chosen as the new optimal time. 
+With Quiet Hours, you can designate a span of the day during which Intelligent Delivery should not allow messages to be sent. This is useful if your campaign pertains to a specific event, sale or promotion. If a user's optimal time is calculated as being inside Quiet Hours, the edge of Quiet Hours closest to the optimal time will be chosen as the new optimal time. 
 
 ![Optimal Send Time][1]
 
@@ -26,6 +26,6 @@ So, it's important to be aware of the limitations of using Intelligent Delivery 
 
 ### Triggered Campaigns and Canvases
 
-If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Delivery, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will be sent the following day at the user's optimal time.
+If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Delivery, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will be sent the following day at the user's optimal time. For this reason, we encourage using Intelligent Delivery well in advance of the day of sending to ensure all users can receive the campaign on the required day at their optimal time.
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}
