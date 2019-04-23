@@ -26,6 +26,6 @@ So, it's important to be aware of the limitations of using Intelligent Delivery 
 
 ### Triggered Campaigns and Canvases
 
-If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Delivery, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will be sent the following day at the user's optimal time. For this reason, we encourage using Intelligent Delivery well in advance of the day of sending to ensure all users can receive the campaign on the required day at their optimal time.
+If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Delivery, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will send immediately.
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}
