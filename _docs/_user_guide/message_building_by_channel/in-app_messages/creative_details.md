@@ -30,6 +30,10 @@ Braze in-app messages have both global and individual creative specifications. F
 
 ## Character and Image Limits
 
+There are no true "limits" on the number of characters in in-app messages, though there is a general threshold on the number of lines of text a message can hold before it triggers a scroll function in the message to show any content that has overflowed the content block. The threshold can vary depending on the end user’s device size, custom handling, or presence of images within messages
+
+We recommend at most 3 lines of message/body text, but you should __always__ [test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) before sending to prevent the need for the message to scroll.
+
 | Type                               | Aspect Ratio | Recommended Image Size | Max Image Size |   File Types  |
 |------------------------------------|:------------:|:----------------------:|:--------------:|:-------------:|
 | Portrait Full Screen (With Text)   |      5:4     |          500KB         |       5MB      | PNG, JPG, GIF |
