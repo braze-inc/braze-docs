@@ -22,7 +22,7 @@ For devices without Google services installed, Braze offers the option to send p
 
 ## Registering for Push
 
-Use [Firebase Cloud Messaging](https://firebase.google.coinim/docs/cloud-messaging/) (FCM) to register for push.
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
 
 > Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
 
