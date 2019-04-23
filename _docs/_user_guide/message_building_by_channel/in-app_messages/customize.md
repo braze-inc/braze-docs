@@ -37,7 +37,42 @@ Additionally, for analytics tracking, any `<a>` or `<button>` elements in your H
   To enable HTML in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
-#### HTML In App-Message Templates
+#### Link-Based Actions
+
+HTML in-app messages can trigger custom Braze actions when users click on elements with links. The supported link schemes are:
+
+Supported Scheme | Corresponding Action | Supported Query Strings
+--- | --- |---
+Normal Web URL or Deep Linking | For web URLs, Braze will open the new content of the link in a webview within your app by default, or in an external browser when query `abExternalOpen` is true. The HTML5 in-app message will be dismissed before opening the link. For deep linking, Braze will open your URL regardless of the value of `abExternalOpen`. | `abExternalOpen` and `abButtonId`
+`appboy://close` | Braze will dismiss the HTML in-app message. | None
+`appboy://feed` | Braze will dismiss the HTML in-app message and display a modal News Feed. | `abButtonId`
+`appboy://customEvent` | Braze will log a custom event and will NOT dismiss the HTML in-app message. | `name`<br>All additional queries will be set as properties of the custom event.
+
+#### Supported Query Strings
+
+You can customize your link actions by appending the optional URL query strings below to your HTTP(S) link:
+
+Query String Name | Value | Action
+-----------|-------|-------
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.picsart.com?abButtonID=0](https://www.picsart.com?abButtonID=0)) *
+`name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` (e.g., `appboy://customEvent?name=eventName`).
+`abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
+`abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
+
+Analytics tracking is enabled by default for all links that have the `abButtonId` query (see above). A link with `abButtonId=0` will be represented as Button 1 on the Dashboard, while a link with `abButtonId=1` will be represented as Button 2.
+
+
+Examples:
+
+- `appboy://close`
+	- sample close button: `<a href="appboy://close">Close</a>`
+- `appboy://feed?abButtonId=0`
+- `appboy://customEvent?name=eventName&property1=value1&property2=value2`
+	- This would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
+
+If you are interested in customizing your in-app messages, please make sure your design or development team is aware of these parameters.
+
+#### HTML In-App Message Templates
 
 We've designed a set of HTML5 in-app messages templates to help you get started. Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize these templates for your needs.
 

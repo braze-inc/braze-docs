@@ -37,7 +37,7 @@ You can override this value via the `ABKMinimumTriggerTimeIntervalKey` inside th
       withAppboyOptions:@{ ABKMinimumTriggerTimeIntervalKey : @(5) }];
 ```
 
-An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`][https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m] file.
+An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) file.
 
 ## Local In-App Message Delivery
 
