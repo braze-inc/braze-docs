@@ -12,7 +12,7 @@ When scheduling a campaign, you have the option of using Braze's Intelligent Del
 
 To use this feature, simply select __Intelligent Delivery__ when scheduling a campaign. The only difference between this option and "Send at a designated time" is that the time of day each user receives your message will be determined by Braze. You can still choose the day(s) on which your message will send and create a recurring campaign.
 
-With Quiet Hours, you can designate a span of the day during which Intelligent Delivery should not allow messages to be sent. This is useful if your campaign pertains to a specific event, sale or promotion. If a user's optimal time is calculated as being inside Quiet Hours, the edge of Quiet Hours closest to the optimal time will be chosen as the new optimal time. 
+With Quiet Hours, you can designate a span of the day during which Intelligent Delivery will not send messages. This is useful if your campaign pertains to a specific event, sale or promotion. If a user's optimal time is calculated as being inside Quiet Hours, the edge of Quiet Hours closest to the optimal time will be chosen as the new optimal time. 
 
 ![Optimal Send Time][1]
 
