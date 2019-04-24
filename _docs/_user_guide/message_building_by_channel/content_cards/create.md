@@ -55,37 +55,15 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
 |Image | __Upload Image__ or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have it's own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
 |Pinning | Check pin a card, which will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Cards cannot be retroactively pinned or unpinned - you must select the pin option you’d like to use before they are sent to users.  |
-|Expiration | Set the expiration date or the time until a Card expires. | All variants have identical expiration dates. |
-| On Click Behavior | ? | ? |
-|Title & Message Text | ? | ? |
+|Expiration | Set the specific expiration date or the days until a Card expires. | All variants have identical expiration dates. |
+| On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
+|Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
-Badge count
-
-## Step 3: Style Your Content Card
-
-The Style tab allows you to adjust all visual aspects of your message. Upload an image or badge, or pick a pre-designed badge icon. Change the colors of the header and body text, buttons and background by selecting from a palette or entering a hex, RGB or HSB code.
-
-The content of the Style tab vary based on your chosen Message Options in the last step, but may include any of the options below:
-
-| Formatting | Input | Description |
-|---|---|---|
-|Color Profile | Apply from In-App Message Templates Gallery. | Click __Apply Template__ and select from gallery. Then, click __Save__. |
-|Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
-|Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
-|Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
-|Buttons | HEX color code. | Your desired HEX colors will display. You will also be able to choose the opacity of the colors. You can choose colors for: the message's Close Button Background as well as each button's Background, Text, and Border. |
-| Button Border | HEX color code. | New! This will allow you to set your primary and secondary buttons apart from one another. We suggest outlining buttons with contrasting colors. |
-|Background Color | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. This is the background of the entire message and will clearly display behind your text body. |
-|Screen Overlay | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. Only available for newer Braze SDK versions. This is the frame around the entire message. |
-|Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
-
-Always [preview and test]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/) your message before sending.
-
-## Step 4: Configure Additional Settings
+## Step 3: Configure Additional Settings
 
 Add [key-value pairs][19] to your message if needed.
 
-## Step 5: Build the Remainder of Your Campaign or Canvas
+## Step 4: Build the Remainder of Your Campaign or Canvas
 
 Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages.
 
@@ -103,7 +81,7 @@ In-app message delivery is entirely based off of of the following action trigger
 
 A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+__Frequency Capping does not apply to Content Cards.__
 
 {% enddetails %}
 

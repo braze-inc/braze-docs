@@ -5,7 +5,7 @@ page_order: 7
 
 # Reporting & Analytics {#IAM-Reporting}
 
-To see the meanings of all Content Cards metrics, check the Metrics Glossary.
+To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1].
 
 ## Reporting in Campaigns
 
@@ -43,3 +43,5 @@ This block allows you to see the message's performance over a set time period on
 
 {% endtab %}
 {% endtabs %}
+
+[1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
