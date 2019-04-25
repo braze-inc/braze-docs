@@ -10,7 +10,6 @@ Braze has a specific category of Segmentation Filters called "X in Y Filters". T
 - Run by setting Calendar Days (ending at midnight).
 - "Days" are defined as in UTC.
 - The current UTC day is defined as "1".
-- There is a bug where days are sometimes defined as a 24-hour period, rather than as Calendar Days.
 
 ## Future X in Y Filter Behavior
 
