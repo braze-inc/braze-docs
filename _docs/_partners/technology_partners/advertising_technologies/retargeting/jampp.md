@@ -24,7 +24,8 @@ This integration supports iOS and Android apps.
 
 Requirement   | Source | Description
 --------------|--------| -----
-Android or iOS App ID | Braze | Your unique application identifier (i.e. “012345678”).
+Android App ID | Braze | Your unique application identifier for Android (i.e. “com.example”).
+iOS App ID | Braze | Your unique application identifier for iOS (i.e. “012345678”).
 Enable IDFA Collection in Braze SDK | Braze | [IDFA Collection][4] is optional within the Braze SDK and disabled by default.
 Collection of Google Advertising ID via Custom Attribute | Google | Google Advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
 
