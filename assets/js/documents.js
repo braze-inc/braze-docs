@@ -341,8 +341,13 @@ $(document).ready(function() {
      return tofilter
   }).after(' <i class="fas fa-external-link-alt"></i>')
   $('.highlight .highlight .rouge-code pre').each(function(k) {
-    if ($(this).html().length > 120) {
-      $(this).css('min-height','36px');
+    $this = $(this);
+    if ($this.html().length > 120) {
+      $this.css('min-height','36px');
+    }
+    var lines = $this.text().split("\n");
+    if (lines.length <= 2) {
+      $this.addClass('prewrap');
     }
   });
 });
