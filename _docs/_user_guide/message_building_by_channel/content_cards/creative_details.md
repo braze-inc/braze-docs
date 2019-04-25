@@ -20,7 +20,7 @@ guide_featured_list:
 
 # Creative Details {#general}
 
-More on customizing Content Cards
+More on customizing Content Cards can be found on our [Customization page][4].
 
 ## Character and Image Limits
 
@@ -29,7 +29,7 @@ More on customizing Content Cards
 | Portrait Full Screen (With Text)   |      5:4     |          500KB         |       5MB      | PNG, JPG, GIF |
 | Portrait Full Screen (Image Only)  |     10:16    |          500KB         |       5MB      | PNG, JPG, GIF |
 | Landscape Full Screen (With Text)  |     16:5     |          500KB         |       5MB      | PNG, JPG, GIF |
-| Landscape Full Screen (Image Only) |     16:10    |          500KB         |       5MB      | PNG, JPG, GIF |
+| Landscape Full Screen (Image Only) |     16:10    |          500KB         |       5MB      | PNG, JPG, GIF |git a
 | Slideup                            |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |
 | Modal (Image Only)                 |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |
 | Modal (With Text)                  |     29:10    |          500KB         |       5MB      | PNG, JPG, GIF |
@@ -51,89 +51,6 @@ If you are using the newest generation of in-app messages (Generation 3), you'll
 
 Braze currently supports gifs for Web (included), [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/gifs/), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
-# Creative Specs
-
-In-app messages aren't just messaging, they're an extension of your app, directly to your customer. We understand that they're a work of art and these things require precision. To ease the guesswork, we've provided maps of our specs for each of our message types ([Modal](#modal), [Slideup](#slideup), [Full-Screen](#full-screen)). Check them out and get messaging!
-
-## Modal
-
-Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
-
-<br>
-
-![Modal Specs][1a]{: style="max-width: 80%;" }
-
-<br>
-
-| Element | Specification | Details |
-|---|---|---|
-| Modal Size |450px Maximum Width <br> 720px Maximum Height | There is a 720px maximum height, at which point the message scrolls vertically.|
-| Image Size | 29:10 Aspect Ratio <br> 450px by 155px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
-| Copy | 20px Header Text - Bolded <br> 14px Message Text - Regular Weight | We cannot recommend character or word limits.|
-| Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
-| Screen Overlay | Transparent | This is a customizable, transparent film that lays between your app and the message.
-| Device Safe Zone | 15px Margin | This margin is additional padding around the edges of the device. |
-
-### Modal Viewport
-
-On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
-
-<br>
-
-![Modal Viewport][1b]{: style="max-width: 80%;" }
-
-<br>
-
-## Slideup
-
-Our Slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information.
-
-<br>
-
-![Slideup Specs][2a]{: style="max-width: 50%;" }
-
-<br>
-
-| Element | Specification | Details |
-|---|---|---|
-| Slideup Size | 450px Maximum Width | 3-Line maximum height, at which point the message is truncated with an ellipsis. |
-| Image/Icon Size | 50px by 50px | These images are optional, but always appear on the left side of the message. |
-| Copy | 14px - Bolded | Three lines of text will appear before being truncated with an ellipsis. |
-| Device Safe Zone | 10px Margin | This margin is additional padding around the edges of the device. |
-
-### Slideup Viewport
-
-On a tablet or desktop browser, a slideup in-app message will sit in the corner of the app screen as shown below (unless designated otherwise when creating the in-app message).
-
-<br>
-![Slideup Viewport][2b]{: style="max-width: 80%;" }
-<br>
-
-## Full-Screen
-
-Full-Screen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
-
-<br>
-
-![Full-Screen Specs][3a]{: style="max-width: 80%;" }
-
-<br>
-
-| Element | Specification | Details |
-|---|---|---|
-| Text & Image - Image Size | 5:4 Aspect Ratio <br> 450px by 360px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
-| Image Only - Image Size | 10:16 Aspect Ratio <br> 450px by 720px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
-| Image Safe Zone | 10% Top & Bottom Safe Zone <br> 14% Left & Right Safe Zone | These safe zones act as recommended boundaries. You should keep the most important parts of your image to it's center.
-| Copy | 20px Header Text - Bolded <br> 14px Message Text - Regular Weight | We cannot recommend character or word limits.|
-| Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
-
-### Full-Screen Viewport
-
-On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen as shown below.
-
-<br>
-![Full-Screen Viewport][3b]{: style="max-width: 80%;" }
-<br>
 
 [1a]: {% image_buster /assets/img/modal-spec.png %}
 [1b]: {% image_buster /assets/img/modal-large-viewport.png %}
@@ -141,3 +58,4 @@ On a tablet or desktop browser, a full-screen in-app message will sit in the cen
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}
 [3a]: {% image_buster /assets/img/full-screen-spec.png %}
 [3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
+[4]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/customize/

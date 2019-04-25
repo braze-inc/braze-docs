@@ -38,7 +38,7 @@ glossaries:
       - Web Push
       - iOS Push
       - Android Push
-      - All Push
+      - In-App Message
       - News Feed
   - name: Total Impressions
     description: The number of users whose devices reported that the in-app message has been delivered (if a user receives a message twice, they will be counted twice). This number is a sum of number of impression events that Braze receives from the SDKs.
@@ -55,7 +55,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Sends
-    description: The total number of messages sent in a campaign. This number is received from Braze. May also be seen as `Messages Sent` in Content Cards
+    description: The total number of messages sent in a campaign. This number is received from Braze. May also be seen as `Messages Sent` in Content Cards.
     calculation: Count
     tags:
       - All
@@ -149,7 +149,7 @@ glossaries:
     description: The total revenue in dollars from campaign recipients within the set primary conversion window.
     tags:
       - All
-  - name: Primary Conversions (A)
+  - name: Primary Conversions (A) or Primary Conversion Event
     description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Content Cards, this count is based on daily sends and begins when they view a Content Card for the first time.
     tags:
       - All
@@ -185,32 +185,8 @@ glossaries:
     calculation: Count
     tags:
       - Content Cards
-
-
-  - name: Revenue
-    description: The total revenue in dollars from campaign recipients within the set primary conversion window.
+  - name: Total Conversions
+    description: The number of times all defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
     tags:
-      - All
-  - name: Primary Conversions (A)
-    description: The number of times a defined event occurred. This defined event is determined by the marketer when building the campaign.
-    tags:
-      - All
-  - name: Conversion Rate
-    description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
-    calculation: (Primary Conversions) / (Unique Recipients)
-    tags:
-      - All
-  - name: Conversions (B, C, D)
-    description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
-    tags:
-      - All
-  - name: Confidence
-    description: The percentage of confidence that a certain variant of a message is outperforming the control group.
-    tags:
-      - All
-  - name: Pending Retry
-    description: The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
-    tags:
-      - Email
-
+      - In-App Message
 ---

@@ -5,25 +5,15 @@ page_order: 6
 
 # Testing
 
-It is __extremely important__ to __always__ test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to a your or a specific user's device. We recommend you take advantage of __both__.
+It is __extremely important__ to __always__ test your Content Cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your Content Cards. You can preview your message, to help you visualize as you compose it, as well as send a test message to a your or a specific user's device. We recommend you take advantage of __both__.
 
 ## Preview
 
-You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
+You can preview your Card as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
 {% alert warning %}
 In __Preview__, the view of your message might not be identical to it's actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
-
-### IAM Generation Preview
-
-Preview what your message will look like to a random user, a specific user or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
-
-![In-App_Message_Preview][1]
-
-Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
-
-![In-App_Messages_Generations][2]{: height="50%" width="50%"}
 
 ## Test
 
@@ -42,7 +32,7 @@ You can also preview messages from the Test tab, as though you were a user. You 
 - Do the images and media show up and act as expected?
 - Does the liquid function as expected? Have you accounted for a [default attribute value]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the liquid returns no information?
 - Is your copy clear, concise, and correct?
-- Do your buttons direct the user where they should go?
+- Do your links direct the user where they should go?
 
 [1]: {%image_buster /assets/img/in-app-message-preview.png %}
 [2]: {% image_buster /assets/img/iam-generations.gif %}

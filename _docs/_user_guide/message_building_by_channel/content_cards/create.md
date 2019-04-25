@@ -13,7 +13,7 @@ You can create a Content Card using the Braze platform using Campaigns.
 
   Click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
 
-![Create Your Content Card]({% image_buster /assets/img/create_cc.gif %}){: height="70%" width="70%"}
+![Create Your Content Card](){: height="70%" width="70%"}
 
 1. Name your Campaign something clear and meaningful.
 2. Add __Teams__ and __Tags__, as necessary.
