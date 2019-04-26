@@ -80,39 +80,37 @@ Select a segment to send the campaign to. For best practices around choosing a s
 
 ![AB_4_segments][180]
 
-#### Step 5: Distribute users among your variants and the Holdout Group
+#### Step 5: Distribute users among your variants and the Winning Variant
 
-Decide what percentage of your target segment should receive each of your variants, be in the Control Group (if any), and what percentage should be in the Holdout group. Users in the Holdout Group will receive only the winning message when the test is complete.
+Decide what percentage of your target segment should receive each of your variants, be in the Control Group (if any), and what percentage should receive the Winning Variant once the A/B Test is complete. Note that sending to the Winning Variant is only available for campaigns scheduled to send once.
 
 ![AB_control][200]
 
-#### Step 5: Pick the action that determines the winner
+#### Step 6: Pick the action that determines the winner
 
-The winning message can be decided based upon Opens, Clicks, or Primary Conversion Rate, depending on what channel you're using. Selecting Opens or Clicks to determine the winner will not affect what you choose for the campaign's [Conversion Events][205].
+The Winning Variant can be measured by Unique Opens, Clicks, or Primary Conversion Rate, depending on what channel you're using. Selecting Opens or Clicks to determine the winner will not affect what you choose for the campaign's [Conversion Events][205]. Keep in mind that if you're using a Control Group, users in the Control Group cannot perform Opens or Clicks, so the "performance" of the Control Group is guaranteed to be 0. As a result, the Control Group cannot "win" the A/B test, however you still may want to use a Control Group to track other metrics for users who do not receive a message.
 
-#### Step 6: Schedule when to send the winning variant
+#### Step 7: Schedule when to send the Winning Wariant
 
-Choose a date and time when the best performing variant should be sent out out to the Holdout Group.
+Choose a date and time when the Winning Variant should be sent out. Note that when sending in users' local time or with Intelligent Delivery, the Winning Variant must be sent at least 24 hours after the A/B Test to ensure delivery to all users in the Winning Variant group. In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a [statistically significant][140] margin. 
 
-#### Step 6: Designate a Conversion Event (optional)
+#### Designate a Conversion Event (optional)
 
 Setting a conversion event for a campaign allows you to see how many of the recipients of that campaign performed a particular action after receiving it.  This will only affect the test if you chose "Primary Conversion Rate" in Step 5. You can read more about our Conversion Events feature [here][205].
 
-#### Step 7: Review and launch
+#### Step 8: Review and launch
 
 On the confirmation page, review the details of your testing campaign and launch the test!
 
-#### Step 8: View results {#view-results}
+#### Step 9: View results {#view-results}
 
-Once your campaign has launched, you can check how each variant is performing by selecting clicking on your campaign from the Campaigns section of the dashboard. When the testing campaign is complete, you can see a summary of how all the variants performed and whether or not there was a winner during the test. If one variant outperformed all the others with better than [95% confidence][120], Braze will mark that variant with a "Winner" banner. If there is no variant that beats all the others with 95% confidence, the apparent best performing variant will still be sent out and indicated with a label that reads "Sent to Holdout Group". This ensures that even if your test did not differentiate between the variants' performance, one message did go out to the Holdout Group.
+Once your campaign has launched, you can check how each variant is performing by selecting clicking on your campaign from the Campaigns section of the dashboard. When the testing campaign is complete, you can see a summary of how all the variants performed and whether or not there was a winner during the test. If one variant outperformed all the others with better than [95% confidence][120], Braze will mark that variant with a "Winner" banner. If there is no variant that beats all the others with 95% confidence and you chose to send the best performing variant anyway, the "best" performing variant will still be sent out and indicated with a label that reads "Sent as Winning Variant". 
 
-On the analytics page, you can also see the performance of the variant that was sent to the Holdout group throughout the campaign (including the test sends).
+On the analytics page, you can also see the performance of the Winning Variant throughout the campaign (including the A/B test sends).
 
 ![AB_8_view_results][210]
 
 Braze tests all the variants against each other with [Pearson's chai-squared][275] tests. It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the "Winner" label. This is a separate test from the [confidence score][120], which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%. [See this section for more details on how to understand Confidence][120]. Zero, one, or more variants can do better than control, but the chai-squared testing checks if one variant is better than all of the rest. [Follow-up tests][140] may yield more details.
-
-If no variant is statistically significantly better than the others according to this testing, the apparently best variant is still sent out to the Holdout Group to ensure that messaging goes out appropriately.
 
 ![AB_winner][220]
 
@@ -140,7 +138,7 @@ Additionally, when choosing which segment to run your test on, be sure to consid
 
 ### Intelligent Selection {#intelligent-selection}
 
-Intelligent Selection is a feature that analyzes the performance of a campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. A variant that appears to be performing better than others will go to more users, while variants that are underperforming will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
+Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. A variant that appears to be performing better than others will go to more users, while variants that are underperforming will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
 By looking at performance data in real-time and shifting campaign traffic toward winning variants gradually, Intelligent Selection ensures that more users receive your best performing variant, without any sacrifice in statistical confidence. Intelligent Selection will also rule out underperforming variants and identify high performing variants faster than a traditional A/B test. With Intelligent Selection, you can test more frequently and with greater confidence that your users will see your best message.
 
