@@ -227,11 +227,9 @@ Use the intuitions you gather from past tests to guide your future ones. Does a 
 [170]: {% image_buster /assets/img_archive/multivariate-screen-2.png %}
 [175]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign
 [180]: {% image_buster /assets/img_archive/multivariate-screen-3.png %}
-[190]: {% image_buster /assets/img_archive/multivariate-screen-4.png %}
 [200]: {% image_buster /assets/img_archive/multivariate-screen-5.png %}
 [205]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [210]: {% image_buster /assets/img_archive/UpdatedMVBreakdown.png %}
-[220]: {% image_buster /assets/img_archive/multivariate-screen-7.png %}
 [225]: https://www.optimizely.com/resources/sample-size-calculator/
 [227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
 [230]: {% image_buster /assets/img_archive/UpdatedMVWinner.png %}
