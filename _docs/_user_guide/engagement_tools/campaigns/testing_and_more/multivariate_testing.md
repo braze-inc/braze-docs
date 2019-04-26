@@ -82,17 +82,17 @@ Select a segment to send the campaign to. For best practices around choosing a s
 
 #### Step 5: Distribute users among your variants and the Winning Variant
 
-Decide what percentage of your target segment should receive each of your variants, be in the Control Group (if any), and what percentage should receive the Winning Variant once the A/B Test is complete. Note that sending to the Winning Variant is only available for campaigns scheduled to send once.
+Decide what percentage of your target segment should receive each of your variants, be in the Control Group (if any), and what percentage should receive the Winning Variant once the A/B Test is complete. Note that sending the Winning Variant automatically is only available for Email, Push, and Webhook campaigns scheduled to send once.
 
 ![AB_control][200]
 
 #### Step 6: Pick the action that determines the winner
 
-The Winning Variant can be measured by Unique Opens, Clicks, or Primary Conversion Rate, depending on what channel you're using. Selecting Opens or Clicks to determine the winner will not affect what you choose for the campaign's [Conversion Events][205]. Keep in mind that if you're using a Control Group, users in the Control Group cannot perform Opens or Clicks, so the "performance" of the Control Group is guaranteed to be 0. As a result, the Control Group cannot "win" the A/B test, however you still may want to use a Control Group to track other metrics for users who do not receive a message.
+The Winning Variant can be measured by Unique Opens or Clicks for email, Opens for Push, or Primary Conversion Rate for all channels. Selecting Opens or Clicks to determine the winner will not affect what you choose for the campaign's [Conversion Events][205]. Keep in mind that if you're using a Control Group, users in the Control Group cannot perform Opens or Clicks, so the "performance" of the Control Group is guaranteed to be 0. As a result, the Control Group cannot "win" the A/B test, however you still may want to use a Control Group to track other metrics for users who do not receive a message.
 
 #### Step 7: Schedule when to send the Winning Wariant
 
-Choose a date and time when the Winning Variant should be sent out. Note that when sending in users' local time or with Intelligent Delivery, the Winning Variant must be sent at least 24 hours after the A/B Test to ensure delivery to all users in the Winning Variant group. In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a [statistically significant][140] margin. 
+Choose a date and time when the Winning Variant should be sent out. Note that when sending in users' local time or with Intelligent Delivery, the Winning Variant must be sent at least 24 hours after the A/B Test to ensure delivery to all users in the Winning Variant group. In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a [statistically significant][120] margin. 
 
 #### Designate a Conversion Event (optional)
 
@@ -111,8 +111,6 @@ On the analytics page, you can also see the performance of the Winning Variant t
 ![AB_8_view_results][210]
 
 Braze tests all the variants against each other with [Pearson's chai-squared][275] tests. It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the "Winner" label. This is a separate test from the [confidence score][120], which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%. [See this section for more details on how to understand Confidence][120]. Zero, one, or more variants can do better than control, but the chai-squared testing checks if one variant is better than all of the rest. [Follow-up tests][140] may yield more details.
-
-![AB_winner][220]
 
 ### Tips For Different Channels {#tips-different-channels}
 
