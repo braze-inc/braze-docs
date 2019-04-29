@@ -8,7 +8,7 @@ page_order: 1
 
 For more on Campaign Delivery, check out our [Campaign Set Up course on LAB](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-When scheduling a campaign, you have the option of using Braze's Intelligent Delivery feature, delivers your message to each user at the time which Braze determines that individual is most likely to engage. We calculate the optimal send time based on a statistical analysis of the user's past interactions with your app.
+When scheduling a campaign, you can use Intelligent Delivery to deliver your message to each user at the time which Braze determines that individual is most likely to engage. We calculate the optimal send time based on a statistical analysis of the user's past interactions with your app.
 
 To use this feature, simply select __Intelligent Delivery__ when scheduling a campaign. The only difference between this option and "Send at a designated time" is that the time of day each user receives your message will be determined by Braze. You can still choose the day(s) on which your message will send and create a recurring campaign.
 
