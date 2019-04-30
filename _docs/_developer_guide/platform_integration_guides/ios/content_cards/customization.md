@@ -1,27 +1,35 @@
 ---
-nav_title: Customizing the News Feed
+nav_title: Customization
 platform: iOS
-page_order: 5
+page_order: 1
 search_rank: 5
 ---
 
-# Customizing the News Feed
+## Content Cards View Controller Integration
 
-You can create your own News Feed interface by extending `ABKNewsFeedTableViewController`. You can customize all UI elements and News Feed behavior in this way.
+Content Cards can be integrated with two view controller contexts: Navigation or Modal.
 
-For an example, see the [News Feed sample app][11].
+### Navigation Context
 
+Set the instance's title and navigation items before pushing it into a navigation controller:
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/#setting-delegates
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Example/Stopwatch
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
-[10]: {% image_buster /assets/img_archive/UONewsFeed.png %} "Urban Outfitters News Feed"
-[11]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h "Appboy.h Header File"
-[28]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[40]: {{ site.baseurl }}/help/best_practices/news_feed/
-[42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
-[43]: {% image_buster /assets/img_archive/sample_news_feed.png %}
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
-[45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}
+```objc
+ABKContentCardsTableViewController *contentCards = [ABKContentCardsTableViewController getNavigationFeedViewController];
+[self.navigationController pushViewController:contentCards animated:YES];
+```
+
+### Modal Context
+
+This modal is used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar.
+
+Set the modal's title via the `navigationBarTitle` property:
+
+```objc
+ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController alloc] init];
+[self.navigationController presentViewController:contentCards animated:YES completion:nil];
+```
+For examples of these view controllers, check out the [Stopwatch Sample Project](https://github.com/Appboy/appboy-ios-sdk/tree/master/Example/Stopwatch).
+
+## Customizing the Content Cards Feed
+
+You can create your own Content Cards interface by extending `ABKContentCardsTableViewController`. You can customize all UI elements and Content Cards behavior in this way. Or you can create a completely custom view controller and subscribe for data updates. In this case you would need to log all view and dismissed events and clicks manually.

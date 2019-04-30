@@ -1,72 +1,54 @@
 ---
-nav_title: Requesting Unread Card Count
+nav_title: Badges
 platform: iOS
-page_order: 3
+page_order: 4
 search_rank: 5
 ---
 
-# Requesting Unread Card Count
+## Requesting Unread Content Card Counts
 
-![News Feed Badge Example][45]
+If you would like to display the number of unread content cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, the Braze SDK provides methods to query the following:
 
-Badges are a great way to call attention to new content awaiting your users in the News Feed. If you'd like to add a badge to your News Feed, the Braze SDK provides methods to query the following:
+- Unviewed Content Cards for the current user
+- Total Viewable Content Cards for the current user
 
-- Unread News Feed Cards for the current user
-- Total Viewable News Feed Cards for the current user
+The method declarations in [ABKContentCardsController](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html) below describe this in detail:
 
-The method declarations in [ABKFeedController][44] below describe this in detail:
-
-```objc
+```
 /*!
- * This method returns the number of currently active cards which have not been viewed in the given categories.
- * A "view" happens when a card becomes visible in the feed view.  This differentiates
+ * This method returns the number of currently active content cards which have not been viewed.
+ * A "view" happens when a card becomes visible in the Content Cards view.  This differentiates
  * between cards which are off-screen in the scrolling view, and those which
  * are on-screen; when a card scrolls onto the screen, it's counted as viewed.
  *
  * Cards are counted as viewed only once -- if a card scrolls off the screen and
  * back on, it's not re-counted.
  *
- * Cards are counted only once even if they appear in multiple feed views or across multiple devices.
+ * Cards are counted only once even if they appear in multiple Content Cards views or across multiple devices.
  */
-- (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
-
+- (NSInteger)unviewedContentCardCount;
 /*!
- * This method returns the total number of currently active cards belongs to given categories. Cards are
- * counted only once even if they appear in multiple feed views.
+ * This method returns the total number of currently active content cards. Cards are
+ * counted only once even if they appear in multiple Content Cards views.
  */
-- (NSInteger)cardCountForCategories:(ABKCardCategory)categories;
+- (NSInteger)contentCardCount;
 ```
 
-## Displaying Number of Unread News Feed Items on App Badge Count
 
-![Badge Example][42]
+### Displaying Number of Unviewed Content Cards on App Badge Count
 
-In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's News Feed. Updating the badge count based off unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
+In addition to serving as push notification reminders for an app, Badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based off unviewed Content Cards updates can be a valuable tool in attracting users back to your app and increasing sessions.
 
-Call this method which records the badge count once the app is closed and the user's session ends.
+This method records the badge count once the app is closed and the user's session ends:
 
 ```objc
 (void)applicationDidEnterBackground:(UIApplication *)application
 ```
 
-Within the above method, implement the following code which actively updates the badge count while the user views cards during a given session.
+Within the above method, implement the following code which actively updates the badge count while the user views cards during a given session:
 
 ```objc
-[UIApplication sharedApplication].applicationIconBadgeNumber = [[Appboy sharedInstance].feedController unreadCardCountForCategories:ABKCardCategoryAll];
+[UIApplication sharedApplication].applicationIconBadgeNumber = [[Appboy sharedInstance].contentCardsController unviewedContentCardCount];
 ```
 
-For more information see the [`Appboy.h` header file][15]. The Stopwatch sample application also has a sample implementation of a badge in [FeedAndFeedbackUIViewController.m][4], as well as code clearing the badge count in [`AppDelegate.m`][28].
-
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/#setting-delegates
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Example/Stopwatch
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
-[10]: {% image_buster /assets/img_archive/UONewsFeed.png %} "Urban Outfitters News Feed"
-[11]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h "Appboy.h Header File"
-[28]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[40]: {{ site.baseurl }}/help/best_practices/news_feed/
-[42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
-[43]: {% image_buster /assets/img_archive/sample_news_feed.png %}
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
-[45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}
+For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h).
