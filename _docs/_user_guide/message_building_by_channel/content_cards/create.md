@@ -13,7 +13,7 @@ You can create a Content Card using the Braze platform using Campaigns.
 
 Click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
 
-![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %}){: height="70%" width="70%"}
+![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %})
 
 1. Name your Campaign something clear and meaningful.
 2. Add __Teams__ and __Tags__, as necessary.
@@ -39,7 +39,7 @@ These Content Card types are accepted by both mobile apps and web applications.
 | Message Type | Type Description |
 |---|---|---|
 |[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card, or the image will stretch and become disproportioned. |
-|[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image)| This Card allows you to show off  |
+|[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image)| This Card allows you to showcase your content with copy and an attention-grabbing image! |
 |[Banner]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content. |
 
 ## Step 2: Compose a Content Card
@@ -59,9 +59,15 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
+{% alert note %}
+
+Braze will store up to 100 non-expired Content Cards in their feed. The oldest card will be removed from the feed, even if unread, once more than 100 cards have entered the feed.
+
+{% endalert %}
+
 ## Step 3: Configure Additional Settings
 
-Add [key-value pairs][19] to your message if needed.
+Add [key-value pairs][19] to your message, if needed.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas
 
@@ -97,7 +103,11 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 <br>
 
-After you've finished building the last of your campaign, review it's details, then send it!
+After you've finished building the last of your campaign, review it's details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
+
+{% alert warning %}
+Once a Content Card is launched, it cannot be edited. It can only stopped from sending to new users and removed from users' feeds.
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}

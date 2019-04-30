@@ -25,42 +25,8 @@ Content Cards typically sit in a feed of sorts (but not necessarily), and help y
 - Trigger order confirmations or other personalized communication with your customer.
 - Develop and deliver and onboarding schedule.
 
-## Expected Behaviors by Message Types
+## Content Cards & Feed
 
-These are what it looks like for your users to open one of our out-of-the-box Content Card types.
+This is what it looks like for your users to open a basic Content Card feed. As you can see, there are three basic types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
-{% tabs %}
-  {% tab Classic %}
-
-  Our Classic Cards .... (appearence)....(use case).
-
-  <br>
-
-  ![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
-
-  <br>
-
-{% endtab %}
-{% tab Captioned Image %}
-
-  Captioned Image Cards .... (appearence)....(use case).
-
-  <br>
-
-  ![Modal Behavior]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-  <br>
-
-{% endtab %}
-{% tab Banner %}
-
-Banner Cards .... (appearence)....(use case).
-
-<br>
-
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-
-<br>
-
-{% endtab %}
-{% endtabs %}
+![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"} 
