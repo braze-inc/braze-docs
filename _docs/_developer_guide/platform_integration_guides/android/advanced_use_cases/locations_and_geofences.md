@@ -55,6 +55,14 @@ Add the Braze boot receiver to the `application` element of your `AndroidManifes
 </receiver>
 ```
 
+{% alert note %}
+If you are using a version of the Android SDK less than `2.3.0`, the following manifest declaration is also required:
+
+```
+<service android:name="com.appboy.services.AppboyGeofenceService"/>
+```
+{% endalert %}
+
 ### Step 3: Obtain Location Permissions from the End User
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
