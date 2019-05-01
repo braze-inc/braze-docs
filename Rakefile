@@ -23,7 +23,7 @@ namespace :academy do
   task :puma do
     Dir.chdir 'Archive' do
       Dir.chdir 'academy' do
-        puts `bundle exec puma -t 8:32 -p 5000`
+        puts `bundle exec puma -t 0:4 -p 5000`
       end
     end
   end
@@ -36,7 +36,7 @@ namespace :documentation do
   task :puma do
     Dir.chdir 'Archive' do
       Dir.chdir 'documentation' do
-        puts `bundle exec puma -t 8:32 -p 5004`
+        puts `bundle exec puma -t 0:4 -p 5004`
       end
     end
   end

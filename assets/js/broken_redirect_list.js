@@ -18,3 +18,4 @@ validurls['/docs/developer_guide/rest_api/api_campaigns'] = '/docs/api/api_campa
 validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/docs/api/network_connectivity_issues';
 validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/api/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
+validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';

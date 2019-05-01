@@ -55,6 +55,9 @@ guide_menu_list:
   - name: Xamarin iOS
     link: /docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/
     fa_icon: fab fa-apple
+  - name: Flutter Android and iOS
+    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
+    fa_icon: fas fa-mobile
 
 
 guide_footer_header: " "

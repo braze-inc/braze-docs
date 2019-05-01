@@ -305,7 +305,10 @@ Successful messages will be met with the following response:
 
 ```json
 {
-  "message" : "success"
+  "message" : "success",
+  "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of attributes that were queued to be processed,
+  "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,,
+  "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,,
 }
 ```
 
@@ -374,7 +377,7 @@ The segmentation tool will include these users regardless of whether they have e
 Deleting user profiles CANNOT be undone. It will PERMANENTLY remove users which may cause discrepancies in your data.
 {% endalert %}
 
-This endpoint allows you to delete any user profile by specifying their external identifier (User ID). Up to 50 `external_ids` or `braze_ids` can be included in a single request. Only one of `external_ids` or `braze_ids` can be included in a single request. Please note that their associated event data will still exist in the dashboard after you delete the user.
+This endpoint allows you to delete any user profile by specifying a known user identifier. Up to 50 `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request. Only one of `external_ids`, `user_aliases`, or `braze_ids` can be included in a single request. Please note that users' associated event data will still exist in the dashboard after you delete the user(s).
 
 Your Endpoint will correspond to your [Braze Instance][1].
 
@@ -396,6 +399,7 @@ Content-Type: application/json
 {
   "api_key" : (required, string) App Group REST API Key,
   "external_ids" : (optional, array of string) external ids for the users to delete,
+  "user_aliases" : (optional, array of User Alias objects) User Aliases for the users to delete,
   "braze_ids" : (optional, array of string) Braze User Identifiers for the users to delete
 }
 ```

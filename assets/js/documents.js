@@ -253,7 +253,7 @@ $(document).ready(function() {
 
           if ('content' in suggestion._highlightResult){
             if ('value' in suggestion._highlightResult.content){
-              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ');
+              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ').replace(/<(.|\n)*?>/g, '');
             }
           }
           if (content.length > 400) {
@@ -341,8 +341,13 @@ $(document).ready(function() {
      return tofilter
   }).after(' <i class="fas fa-external-link-alt"></i>')
   $('.highlight .highlight .rouge-code pre').each(function(k) {
-    if ($(this).html().length > 120) {
-      $(this).css('min-height','36px');
+    $this = $(this);
+    if ($this.html().length > 120) {
+      $this.css('min-height','36px');
+    }
+    var lines = $this.text().split("\n");
+    if (lines.length <= 2) {
+      $this.addClass('prewrap');
     }
   });
 });
