@@ -25,13 +25,13 @@ In order to comply with the PCI DSS Council’s recommendations, Braze will be r
 
 Braze will remove the ability to use the following ciphers from Braze's Web Dashboard and REST APIs:
 
-TLS_RSA_WITH_AES_256_CBC_SHA
-TLS_RSA_WITH_AES_128_CBC_SHA
-TLS_RSA_WITH_AES_256_CBC_SHA256
-TLS_RSA_WITH_AES_256_GCM_SHA384
-TLS_RSA_WITH_AES_128_CBC_SHA256
-TLS_RSA_WITH_AES_128_GCM_SHA256
-TLS_RSA_WITH_3DES_EDE_CBC_SHA
+- `TLS_RSA_WITH_AES_256_CBC_SHA`
+- `TLS_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_RSA_WITH_AES_256_CBC_SHA256`
+- `TLS_RSA_WITH_AES_256_GCM_SHA384`
+- `TLS_RSA_WITH_AES_128_CBC_SHA256`
+- `TLS_RSA_WITH_AES_128_GCM_SHA256`
+- `TLS_RSA_WITH_3DES_EDE_CBC_SHA`
 
 This change should not impact customers accessing the Braze Dashboard, as all modern web browsers support more secure ciphers. However, if you do experience a SSL encryption error when accessing the web dashboard after October 1, you will be able to fix the issue by simply upgrading to the latest version of your web browser.
 
