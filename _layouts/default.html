@@ -27,7 +27,7 @@
     validurls['{{ urlhash[0] }}'.replace('#','').toLowerCase()] = '{{ urlhash[1] }}';
   {%- endfor -%}
 </script>
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/hash_redirect.js' ></script>
+<script type='text/javascript' src='{% image_buster /assets/js/hash_redirect.js %}'></script>
 {% endif %}
 </body>
 </html>
