@@ -105,6 +105,16 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 After you've finished building the last of your campaign, review it's details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
+# Things to Know
+
+The following capabilities are not yet supported for Content Cards:
+
+- Connected Content
+- Vouchers
+- Frequency Capping
+- Re-ordering Content Cards from Your Braze account
+- Post-launch Edits
+
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only stopped from sending to new users and removed from users' feeds.
 {% endalert %}

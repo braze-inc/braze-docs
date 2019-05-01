@@ -3,29 +3,18 @@ nav_title: Customize
 page_order: 4
 layout: featured
 guide_top_header: "Customize Your Content Cards"
-guide_top_text: "Customizing your Content Card and feed take some work, but it is worth it! Choose the platform below t"
+guide_top_text: "Customizing Content Cards and the feed they'll sit in cannot be done during the campaign creation process - you must work with your engineers and developers to build and customize your cards. It's easy and completely customizable this way!"
 
-guide_featured_title: "Customization"
+guide_featured_title: "Customize Content Cards for..."
 guide_featured_list:
 - name: Android
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
-  image: /assets/img/icon_modal.png
+  link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/
+  fa_icon: fab fa-android
 - name: iOS
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image
-  image: /assets/img/icon_slideup.png
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/
+  fa_icon: fab fa-apple
 - name: Web
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
-  image: /assets/img/icon_full_screen.png
+  link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/
+  fa_icon: fas fa-globe
 ---
-
-Customizing Content Cards and the feed they'll sit in cannot be done during the campaign creation process - you must work with your engineers and developers to build and customize your cards.
-
-Customizable Elements| | | |
-|---|---|---|---|
-|Font Family | Android | iOS | Web |
-|Displayed Card Order |  Android | | Web |
-| Click Listener | Android || Web |
-| Full Display/Feed Customization |  Android | iOS | Web |
-| Read/Unread Indicators |  Android || Web |
-|
-         
+<br>
