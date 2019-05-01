@@ -11,10 +11,6 @@ All API endpoints have a data payload limit of 4MB. Attempts to post more data t
 
 The examples below contain the URL https://rest.iad-01.braze.com, but some customers will need to use a different endpoint URL, for example if you are hosted in Braze's EU data center or have a dedicated Braze installation. Your Success Manager will inform you if you should use a different endpoint URL.
 
-{% alert note %}
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
-{% endalert %}
-
 ## User Track Endpoint
 
 This endpoint can be used to record custom events, user attributes, and purchases for users. You can include up to 75 Attributes, Event, and Purchase Objects per request. That is, you can only post attributes for up to 75 users at a time, but in the same API call you can also provide up to 75 events and up to 75 purchases.
