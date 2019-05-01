@@ -1,6 +1,6 @@
 ---
-nav_title: Subscription Group REST APIs
-page_order: 3.2
+nav_title: Subscription Groups
+page_order: 4
 ---
 
 # Subscription Group REST APIs

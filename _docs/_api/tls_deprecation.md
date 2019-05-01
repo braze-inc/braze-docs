@@ -1,8 +1,8 @@
 ---
 nav_title: TLS 1.0 & 1.1 Deprecation
 platform: REST APIs
-page_order: 10
-search_rank: 5
+page_order: 6
+search_rank: 6
 ---
 # TLS 1.0 & 1.1 Deprecation
 
@@ -10,7 +10,7 @@ search_rank: 5
 
 Braze is deprecating known weak Transport Layer Security (TLS) ciphers in both TLS 1.0 and 1.1, in accordance with recommendations made by the PCI Security Standards Council in two phases concluding in May 2018.
 
-This change is not being made in response to any breach or issue related to Braze’s platform, but as a precautionary measure to maintain our best-in-class security and data standards, and to proactively safeguard our clients and their customers. 
+This change is not being made in response to any breach or issue related to Braze’s platform, but as a precautionary measure to maintain our best-in-class security and data standards, and to proactively safeguard our clients and their customers.
 
 In recent years, a number of systematic security issues associated with both TLS and its predecessor, Secure Sockets Layer (SSL), including [POODLE][1], [Heartbleed][2], [LOGJAM][3], and others, threatened encrypted web traffic and exposed portions of the internet to security breaches. Along with other technology companies, Braze has previously taken action to disable weak encryption protocols and ciphers as attacks are discovered—for instance, by removing support for SSLv3 in 2014.
 
@@ -25,13 +25,13 @@ In order to comply with the PCI DSS Council’s recommendations, Braze will be r
 
 Braze will remove the ability to use the following ciphers from Braze's Web Dashboard and REST APIs:
 
-TLS_RSA_WITH_AES_256_CBC_SHA
-TLS_RSA_WITH_AES_128_CBC_SHA
-TLS_RSA_WITH_AES_256_CBC_SHA256
-TLS_RSA_WITH_AES_256_GCM_SHA384
-TLS_RSA_WITH_AES_128_CBC_SHA256
-TLS_RSA_WITH_AES_128_GCM_SHA256
-TLS_RSA_WITH_3DES_EDE_CBC_SHA
+- `TLS_RSA_WITH_AES_256_CBC_SHA`
+- `TLS_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_RSA_WITH_AES_256_CBC_SHA256`
+- `TLS_RSA_WITH_AES_256_GCM_SHA384`
+- `TLS_RSA_WITH_AES_128_CBC_SHA256`
+- `TLS_RSA_WITH_AES_128_GCM_SHA256`
+- `TLS_RSA_WITH_3DES_EDE_CBC_SHA`
 
 This change should not impact customers accessing the Braze Dashboard, as all modern web browsers support more secure ciphers. However, if you do experience a SSL encryption error when accessing the web dashboard after October 1, you will be able to fix the issue by simply upgrading to the latest version of your web browser.
 

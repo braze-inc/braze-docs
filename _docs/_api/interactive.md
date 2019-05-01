@@ -1,8 +1,7 @@
 ---
-title: Interactive API Tester
 platform: REST APIs
-nav_title: Interactive REST API Endpoints
-page_order: 0.1
+nav_title: Interactive Endpoints
+page_order: 2
 noindex: true
 ---
 

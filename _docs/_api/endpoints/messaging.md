@@ -1,6 +1,6 @@
 ---
 nav_title: Messaging
-page_order: 2
+page_order: 3
 search_rank: 5
 ---
 # Messaging

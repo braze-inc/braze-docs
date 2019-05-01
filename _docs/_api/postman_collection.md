@@ -1,7 +1,7 @@
 ---
-nav_title: Sample API Requests
+nav_title: Sample Requests
 platform: REST APIs
-page_order: 11
+page_order: 3
 search_rank: 5
 ---
 
