@@ -1,21 +1,25 @@
 ---
-nav_title: Customization
-page_order: 1
+nav_title: Integration
+page_order: 0.1
 search_rank: 3
 platform: Web
 ---
 
-# Content Cards Customization
+# Content Cards for Web Integration
 
-Braze UI elements come with a default look and feel that matches the composers within the Braze Dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.
+To toggle display of Content Cards through the Braze Web SDK, call:
 
-By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800px wide:
+`appboy.display.toggleContentCards();`
 
-``` css
-body .ab-feed {
-  width: 800px;
-}
-```
+
+This will show the Content Cards if they are not shown, and hide them if they are. If no parameters are defined (null), all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
+
+|Parameters | Description |
+|---|---|
+|`parentNode` | The HTML node to render the content cards into. If the parent node already has a Braze content cards view as a direct descendant, the existing content cards will be replaced. |
+|`filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed. |
+
+[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
 ## Other Methods to Note
 
