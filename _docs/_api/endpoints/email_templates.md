@@ -1,7 +1,7 @@
 ---
 nav_title: Email Templates
-page_order: 3.1
-search_rank: 5
+page_order: 1
+search_rank: 3
 ---
 
 # Email Templates

@@ -1,7 +1,7 @@
 ---
 nav_title: API Campaigns
 platform: REST APIs
-page_order: 7
+page_order: 5
 search_rank: 5
 ---
 # API Campaigns

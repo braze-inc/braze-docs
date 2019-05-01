@@ -1,9 +1,9 @@
 ---
-nav_title: Basics
+nav_title: Overview
 page_order: 0
 search_rank: 5
 ---
-# Basics
+# API Overview
 
 Braze provides a high performance REST API to allow you to track users, send messages, export data, and more.
 

@@ -91,16 +91,21 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 3
+  api:
+    title: API
+    output: true
+    default_nav_url: basics/
+    page_order: 4
   partners:
     title: Technology Partners
     output: true
     default_nav_url: home/
-    page_order: 4
+    page_order: 5
   help:
     title: Help
     output: true
     default_nav_url: home/
-    page_order: 5
+    page_order: 6
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -139,6 +144,12 @@ defaults:
     scope:
       path: ""
       type: "developer_guide"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "api"
     values:
       nav_level: 1
   -
