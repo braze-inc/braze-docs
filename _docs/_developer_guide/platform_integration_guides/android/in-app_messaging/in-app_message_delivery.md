@@ -29,7 +29,7 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
 
 To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `appboy.xml`. An example can be found in our sample application's [`appboy.xml`][85].
 
-### Server-side Event Triggering
+## Server-side Event Triggering
 
 By default in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
 
