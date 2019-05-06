@@ -115,5 +115,3 @@ When displaying the Content Cards in your own user interface, you can manually r
 ```objc
 [[Appboy sharedInstance] logContentCardsDisplayed];
 ```
-
-[1]:{% image_buster /assets/img_archive/contentcard.png %}

@@ -7,7 +7,7 @@ search_rank: 5
 
 ## Refreshing Content Cards
 
-You can manually request Braze to refresh the user's Content Cards in `Appboy.h` using `- (void)requestContentCardsRefresh;`. For example:
+You can manually request Braze to refresh the user's Content Cards using the `requestContentCardsRefresh:` method on the `Appboy` interface. For example:
 
 ```objc
 [[Appboy sharedInstance] requestContentCardsRefresh];
