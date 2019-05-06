@@ -99,7 +99,7 @@ With IP whitelisting, you can verify that Webhooks requests are actually coming 
 
 Braze will send Webhooks from the IP ranges below.
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, and `US-06`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`
