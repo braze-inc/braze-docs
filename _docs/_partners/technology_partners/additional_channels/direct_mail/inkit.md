@@ -35,22 +35,23 @@ Once you have selected the Inkit webhook template, you should see the following:
 
 ### Step 2: Fill Out Your Template
 
-Insert the following text into the new field. Each of these fields are required.
+Please ensure that your liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
 
 ```json
 {% raw %}
 {
   "api_token": "INKIT_API_TOKEN",
   "template_id": "INKIT_TEMPLATE_ID",
+  "company (optional)": "{{custom_attribute.${company_name}}}",
   "email": "{{${email_address}}}",
   "first_name": "{{${first_name}}}",
   "last_name": "{{${last_name}}}",
   "street": "{{custom_attribute.${address}}}",
-  "unit": "{{custom_attribute.${address2}}}",
+  "unit (optional)": "{{custom_attribute.${address2}}}",
   "city": "{{${city}}}",
-  "country": "{{${country}}}",
   "state": "{{custom_attribute.${state}}}",
-  "zip": "{{custom_attribute.${zip}}}"
+  "zip": "{{custom_attribute.${zip}}}",
+  "country": "{{${country}}}"
 }
 {% endraw %}
 ```
@@ -60,8 +61,8 @@ Replace the necessary fields with the correct information - specifically `INKIT_
 
 Inkit also requires a `HTTP Header` for authorization that includes your Inkit API key. The following will already be included within the template as a key-value pair, but you will need to replace `INKIT_API_TOKEN` with your Inkit API key.
 
-- `Header Name`: authorization
-- `Header Value`: Basic {{ 'INKIT_API_TOKEN' | base64_encode }} 
+- `Header Name`: Authorization
+- `Header Value`: ```json { Basic {{ 'INKIT_API_TOKEN' | base64_encode }} } ```
 
 ### Step 3: Preview Your Request
 
