@@ -10,8 +10,6 @@ platform: Android
 Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/style.xml`](42) file in the Braze SDK distribution.
 
 ```xml
-  <style name="Appboy"/>
-
   <!-- Content Cards Example -->
   <style name="Appboy.ContentCards.CaptionedImage.Description">
     <item name="android:textColor">@color/com_appboy_description</item>
@@ -369,7 +367,6 @@ See the [Javadoc][36] for more information.
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 
-[1]:{% image_buster /assets/img_archive/contentcard.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
