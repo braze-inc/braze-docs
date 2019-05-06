@@ -4,11 +4,10 @@ page_order: 1
 search_rank: 5
 platform: Android
 ---
-## Content Cards Customization {#content-cards-customization-for-android}
 
 ### Default Styling {#default-styling-for-android}
 
-Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/style.xml`](42) file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>
@@ -219,15 +218,15 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 {% endtab %}
 {% endtabs %}
 
-There are additional relevant resources on this topic available here (https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
+There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
 ### Setting a Custom Content Cards Click Listener
 
-You can handle Content Cards clicks manually by setting a custom Content Cards click listener. This enables use cases such as selectively using the native web browser to open web links.
+You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
 #### Step 1: Implement a Content Cards Click Listener
 
-Create a class that implements IContentCardsActionListener and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()`` method, which will be called when the user clicks a content card.
+Create a class that implements [IContentCardsActionListener](43) and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
 
 #### Step 2: Instruct Braze to Use Your Content Card Click Listener
 
@@ -402,3 +401,5 @@ See the [Javadoc][36] for more information.
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
+[42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
+[43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
