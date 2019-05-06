@@ -32,7 +32,7 @@ The Braze Currents data storage integrations output data in the `.avro` format. 
 Currents will create a file for each event type using the format below:
 
 ```
-<your-bucket-prefix>/dataexport.<cluster-identifier>.S3.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.S3.integration.<integration-id>+<partition>+<offset>.avro
+<your-bucket-prefix>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>/event_type=<event-type>/date=<date>/<schema-id>/<zone>/dataexport.<cluster-identifier>.<connection-type-identifier>.integration.<integration-id>+<partition>+<offset>.avro
 ```
 
 _Can't see the code because of the scroll bar? See how to fix that [here]({{ site.baseurl }}/help/help_articles/docs/scroll_bar_overlap/)._
@@ -41,6 +41,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{ sit
 |---|---|
 | `<your-bucket-prefix>` | The prefix set for this Currents integration. |
 | `<cluster-identifier>` | For internal use by Braze. Will be a string such as "prod-01", "prod-02", "prod-03", or "prod-04". All files will have the same cluster identifier.|
+| `<connection-type-identifier>` | The identifier for type of connection. Options are "S3", "AzureBlob", or "GCS". |
 | `<integration-id>` | The unique ID for this Currents integration. |
 | `<event-type>` | The type of the event in the file (see event list below). |
 | `<date>` | The hour that events are queued in our system for processing. Formatted YYYY-MM-DD-HH. |

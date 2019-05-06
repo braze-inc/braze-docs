@@ -17,5 +17,8 @@ You can export the following CSVs:
     - (Optional) Custom Events for Different Segments
 - Custom Events per MAU
 
+## Custom Event Storage 
+
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
 
 [14]: {% image_buster /assets/img_archive/Export_events.png %}

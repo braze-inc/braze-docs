@@ -53,6 +53,32 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 
 {% endraw %}
 
+## Connected Content IP Whitelisting
+
+When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers’ or third parties’ servers to pull back data.  
+
+With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
+
+Braze will send Connected Content requests from the IP ranges below.
+
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, and `US-06`: |
+|---|
+| `23.21.118.191`
+| `34.206.23.173`
+| `50.16.249.9`
+| `52.4.160.214`
+| `54.87.8.34`
+| `54.156.35.251`
+| `52.54.89.238`
+| `18.205.178.15`
+
+| For Instance `EU-01`: |
+|---|
+| `52.58.142.242`
+| `52.29.193.121`
+| `35.158.29.228`
+
+
 
 [1]: #aborting-connected-content
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"

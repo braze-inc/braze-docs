@@ -37,6 +37,7 @@ You can export the following data from Braze to mParticle:
 | Email Bounced                        | Unbound Feed           | Braze attempted to send an email, but the User’s receiving mail server did not accept it. |
 | Email Marked As Spam                 | Unbound Feed           | User marked an email as spam.                                                             |
 | Email Unsubscribed                   | Unbound Feed           | User clicked the unsubscribe link in an email.                                            |
+| Subscription Group State Change      | Unbound Feed           | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'                 |
 | In-App Message Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            |
 | In-App Message Clicked               | Platform-specific Feed | User tapped or clicked a button in an In-App Message.                                     |
 | News Feed Viewed                     | Platform-specific Feed | User viewed the native Braze News Feed.                                                   |

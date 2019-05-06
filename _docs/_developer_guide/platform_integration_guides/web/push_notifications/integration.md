@@ -36,40 +36,18 @@ This is a security requirement in the open standards specification that Braze We
 
 While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Braze has prepared an [example of this approach][4].
 
-### Step 1: To Support browsers based on Chromium 51 and earlier, create a Firebase Cloud Messaging Project
+### Step 1: Configure your Site
 
-1. [In the Firebase console](https://console.firebase.google.com/), Create New Project
-2. Select the gear icon next to your project name at top left, and select **Project Settings**
-3. Select the "Cloud Messaging" tab, and note the "Server Key" and "Sender ID". You will need these.
-
-![Firebase Console Server Key and Sender ID Location][40]
-
->  Please ensure that you do not restrict access to your Cloud Messaging Server Key to specific IP ranges. This will allow any IP to utilize your Server Key so that Braze can send push notifications appropriately.
-
-### Step 2: Configure your Site
-
-- Add `<link rel="manifest" href="/manifest.json" />` to the `<head>` section of your website.
-- Create a `manifest.json` file with the content below, and place it in the root directory of your website:
-
-  ```json
-  {
-    "gcm_sender_id": "YOUR_CLOUD_MESSAGING_SENDER_ID"
-  }
-  ```
 - Create a `service-worker.js` file with the content below, and place it in the root directory of your website:
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 
-### Step 3: Set your Cloud Messaging Server Key on the Braze Dashboard
 
-1. On [the app settings tab of the Manage App Group page][15] (where your API keys are located), select your Web app.
-2. Enter your Cloud Messaging Server Key in the appropriate field under the Push Notifications section.
-
-### Step 4: Browser Registration
+### Step 2: Browser Registration
 
 In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. Note that this will immediately request push permission from the user. Refer to [Chrome's best practices][2] for user experience guidance on when to call this method. If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), note that you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See below for a soft push prompt example using Braze In-App Messages. If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
 
-### Step 5: Configure Safari Push
+### Step 3: Configure Safari Push
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
@@ -148,6 +126,4 @@ appboy.openSession(function() {
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
 [4]: http://abbeybond.com/modal-test.html
 [7]: {{ site.baseurl }}/help/best_practices/web_sdk/#web-push
-[15]: https://dashboard-01.braze.com/app_settings/app_settings "App Settings Page"
 [27]: {{ site.baseurl }}/assets/img_archive/web_push2.png
-[40]: {% image_buster /assets/img_archive/firebase_console.png %}

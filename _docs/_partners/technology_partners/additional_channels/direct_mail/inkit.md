@@ -27,9 +27,11 @@ You can create this from the `Templates & Media` section, or create a new Webhoo
 
 ![Inkit_Webhook_Template][7]
 
-Click on `New Template`. Then, add your `HTTP Header` into the `Webhook URL` field.
+Once you have selected the Inkit webhook template, you should see the following:
 
-Choose "Raw Text" from the `Request Body` drop down. A new field should appear.
+- `Webhook URL`: https://internal.inkit.io/integrations/webhook
+- `Request Body`: Raw Text
+- `HTTP Method`: POST
 
 ### Step 2: Fill Out Your Template
 
@@ -43,8 +45,8 @@ Insert the following text into the new field. Each of these fields are required.
   "email": "{{${email_address}}}",
   "first_name": "{{${first_name}}}",
   "last_name": "{{${last_name}}}",
-  "address": "{{custom_attribute.${address}}}",
-  "address2": "{{custom_attribute.${address2}}}",
+  "street": "{{custom_attribute.${address}}}",
+  "unit": "{{custom_attribute.${address2}}}",
   "city": "{{${city}}}",
   "country": "{{${country}}}",
   "state": "{{custom_attribute.${state}}}",
@@ -56,10 +58,14 @@ Replace the necessary fields with the correct information - specifically `INKIT_
 
 ![Inkit Integration][5]{: height="70%" width="70%"}
 
+Inkit also requires a `HTTP Header` for authorization that includes your Inkit API key. The following will already be included within the template as a key-value pair, but you will need to replace `INKIT_API_TOKEN` with your Inkit API key.
+
+- `Header Name`: authorization
+- `Header Value`: Basic {{ 'INKIT_API_TOKEN' | base64_encode }} 
 
 ### Step 3: Preview Your Request
 
-You will see that your raw text automatically highlights if it is an applicable Braze tag. You must have `address`, `address2`, `state`, and `zip` set up as [custom attributes][3] to send this Webhook.
+You will see that your raw text automatically highlights if it is an applicable Braze tag. You must have `street`, `unit`, `state`, and `zip` set up as [custom attributes][3] to send this Webhook.
 
 You should be able to preview your request in the left-hand panel, or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 

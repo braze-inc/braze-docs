@@ -20,7 +20,6 @@ To learn about the different types of News Feed cards, how to create them, as we
   - When a user completes a noteworthy task or takes a desired action after being targeted by a marketing campaign, you can isolate that segment in order to recognize their accomplishment with a News Feed card.
     - You might even want to tie a specific reward to this acknowledgement such as an in-app discount.
 - Prompting users to share to various social networks.
-- Highlighting other apps or content your company has created via cross-promotion cards.
 - ["Deep-linking"][8]
   - You can use protocol URLs to point users at any resource housed within your app.
   - For example, a video messaging app might want to have a News Feed card point at a video that is elsewhere within the app.

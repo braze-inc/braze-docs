@@ -28,6 +28,11 @@ Braze notes the number of times these events have occurred as well as the last t
 [Incrementing Custom Attributes]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions which do not need to be analyzed in time-series should be recorded via this method.
 {% endalert %}
 
+## Custom Event Storage
+
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
+
+
 # Custom Event Properties
 
 With Custom Event Properties, you can set properties on custom events and purchases. These properties can than be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, numeric, boolean, or Date objects. However, property values cannot be array objects.
