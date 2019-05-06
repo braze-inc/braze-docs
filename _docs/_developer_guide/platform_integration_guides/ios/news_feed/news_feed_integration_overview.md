@@ -23,7 +23,7 @@ ABKNewsFeedTableViewController *newsFeed = [ABKNewsFeedTableViewController getNa
 [self.navigationController pushViewController:newsFeed animated:YES];
 ```
 
-Note: To customize the header, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
+Note: To customize the navigation bar's title, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
 
 ## Modal Context -- ABKFeedViewControllerModalContext
 
