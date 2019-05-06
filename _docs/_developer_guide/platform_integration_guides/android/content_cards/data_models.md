@@ -6,9 +6,9 @@ platform: Android
 ---
 
 ## Card Types {#card-types-for-android}
-Braze has 5 unique Content Cards card types which share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has 3 unique Content Cards card types which share a base model. Each card type also has additional card-specific properties which are listed below.
 
-#### Base Card {#base-card-for-android}
+### Base Card {#base-card-for-android}
 
 The [Base Card][29] model provides foundational behavior for all cards.  
 
@@ -24,7 +24,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
 
-#### Banner Image Card {#banner-image-card-for-android}
+### Banner Image Card {#banner-image-card-for-android}
 [Banner Image Cards][30] are clickable full-sized images. In addition to the base card properties:
 
 |Property | Description |
@@ -33,7 +33,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
 
-#### Captioned Image Card {#captioned-image-card-for-android}
+### Captioned Image Card {#captioned-image-card-for-android}
 [Captioned Image Cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
 
 |Property | Description |
@@ -44,22 +44,11 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
 
-#### Text Announcement Card (Captioned Image without Image) {#text-Announcement-card-for-android}
+### Classic Card {#text-Announcement-card-for-android}
 [Text Announcement Cards][32] are clickable cards containing descriptive text. In addition to the base card properties:
 
 |Property | Description |
 |---|---|
-|`getTitle()` | Returns the title text for the card.
-|`getDescription()` | Returns the body text for the card.
-|`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
-|`getDomain()` | Returns the link text for the property URL.
-
-#### Short News Card
-[Short News Cards][33] are clickable cards with images and accompanying descriptive text.  In addition to the base card properties:
-
-|Property | Description |
-|---|---|
-|`getImageUrl()` | Returns the URL of the card’s image.
 |`getTitle()` | Returns the title text for the card.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.

@@ -357,11 +357,11 @@ Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber
 
 When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
 
-To log a display of the Content Cards, call Appboy.logContentCardsDisplayed()
+To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`](41).
 
-To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
+To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 
-## Key-Value Pairs
+## Key-Value Pair.
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
@@ -401,3 +401,4 @@ See the [Javadoc][36] for more information.
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--

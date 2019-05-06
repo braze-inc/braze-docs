@@ -12,7 +12,7 @@ You can queue a manual refresh of the Braze Content Cards at any time by calling
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).requestContentCardsRefresh()
+Appboy.getInstance(context).requestContentCardsRefresh();
 ```
 
 {% endtab %}
