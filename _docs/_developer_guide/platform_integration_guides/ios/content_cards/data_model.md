@@ -27,8 +27,9 @@ To access the Content Cards data model, subscribe to Content Cards update events
 // Called when content cards are refreshed (via `requestContentCardsRefresh`)
 - (void)contentCardsUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
-  // check for success
-  // get the cards using [[Appboy sharedInstance].contentCardsController getContentCards];
+  if (updateIsSuccessful) {
+    // get the cards using [[Appboy sharedInstance].contentCardsController getContentCards];
+  }
 }
 ```
 {% endtab %}
@@ -45,7 +46,7 @@ NotificationCenter.default.addObserver(self, selector:
 // Called when the content cards are refreshed (via `requestContentCardsRefresh`)
 private func contentCardsUpdated(_ notification: Notification) {
   if let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
-    // check for success
+  if (updateIsSuccessful) {
     // get the cards using Appboy.sharedInstance()?.contentCardsController.getContentCards();
   }
 }
@@ -53,7 +54,7 @@ private func contentCardsUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKContentCardsController].
+If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKContentCardsController](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
 
 ### Base Card Model
 
@@ -110,7 +111,7 @@ Braze has three unique card types that share a base model. Each type of card als
 
 ## Log Content Cards Display
 
-When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via `- (void)logContentCardsDisplayed;`. For example:
+When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
 
 ```objc
 [[Appboy sharedInstance] logContentCardsDisplayed];

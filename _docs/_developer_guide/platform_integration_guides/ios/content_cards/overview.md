@@ -12,8 +12,6 @@ search_rank: 5
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
- [Create a Content Card]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/create/) now!
-
 ## When to Use Content Cards
 
  Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
@@ -22,12 +20,12 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
-- Give customers without push enabled access to promotions.
+- Give customers access to promotions without needing push enabled.
 - Trigger order confirmations or other personalized communication with your customer.
-- Develop and deliver and onboarding schedule.
+- Develop and deliver an onboarding schedule.
 
 ## Content Cards & Feed
 
- This is what it looks like for your users to open a basic Content Card feed. As you can see, there are three basic types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
+ This is what it looks like for your users to open a basic Content Card feed. There are three basic types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
  ![Content Cards Feed]({% image_buster /assets/img/sample-torchy-feed-content-cards-braze.png %}){: height="50%" width="50%"}
