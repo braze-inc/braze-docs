@@ -57,6 +57,7 @@ The following properties will be included with all Braze events sent to Segment:
 | Property Name          | Type     | Description                                                                                                    |
 | `app_id`               | `String` | The API Identifier of the App on which a user received a message or performed an action, if applicable.        |
 | `send_id`              | `String` | The id of the message if specified for the campaign, if applicable.                                            |
+| `dispatch_id`          | `String` | The id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user. |
 | `campaign_id`          | `String` | The API Identifier of the Campaign associated with the event, if applicable.                                   |
 | `campaign_name`        | `String` | The name of the Campaign associated with the event, if applicable.                                             |
 | `message_variation_id` | `String` | The API Identifier of the Message Variation for the Campaign associated with the event, if applicable.         |
