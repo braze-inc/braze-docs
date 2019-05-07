@@ -16,6 +16,7 @@ Braze API Key    |[Braze Settings](https://dashboard.braze.com/sign_in)| A REST 
 # Integration
 ## Publish Vouchers via Connected Content
 To publish a voucher through Braze's connected content, add the following code snippet to your email template:
+{% raw %}
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
@@ -30,6 +31,7 @@ To publish a voucher through Braze's connected content, add the following code s
      :save publication
 %}
 ```
+{% endraw %}
 Where ```${user_id}``` is the **external_id** of the user in Braze and will be set as the **source_id** for the customer in Voucherify.
 
 To display the voucher code, also add the following code snippet as needed within the email template:
