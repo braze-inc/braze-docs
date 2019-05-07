@@ -97,9 +97,9 @@ You can also use our REST API to set user attributes. To do so refer to the [use
 
 Custom attribute values have a maximum length of 255 characters.
 
-### Managing Notification Subscription Statuses
+### Managing Email Subscription Status
 
-To set up a subscription for your users (either email or push), you can set the subscription statuses below. Subscription statuses in Braze have three different states for both Email and Push:
+You can set the following email subscription statuses for your users programmatically through the SDK.
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
@@ -107,17 +107,13 @@ To set up a subscription for your users (either email or push), you can set the 
 | `Subscribed` | Subscribed, but not explicitly opted in |
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
 
-- `EmailNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon reciept of explicit consent from your user. [See Braze Academy for details][10].
-- `PushNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon valid push registration, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon reciept of explicit consent from your user. [See Braze Academy for details][10].
-
 >  These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
+
+The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon reciept of explicit consent from your user. [See Braze Academy for details][10].
 
 Example usage:
 ```
 m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
-m.Braze.setPushNotificationSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/roku/analytics/setting_user_ids/#user-id-integration-best-practices--notes
