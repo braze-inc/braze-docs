@@ -92,7 +92,7 @@ glossaries:
       - Web Push
       - All Push
   - name: Unique Opens
-    description: The total number of delivered emails that have been opened by a single user at least once.
+    description: The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
     calculation: (Unique Opens) / (Deliveries)
     tags:
       - Email
@@ -115,7 +115,7 @@ glossaries:
       - Email
       - News Feed
   - name: Unique Clicks
-    description: Distinct number of recipients who have clicked within a message at least once.
+    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
     calculation: (Unique Clicks) / (Deliveries)
     tags:
       - Email
