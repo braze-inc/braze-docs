@@ -9,9 +9,11 @@ alias: /partners/voucherify/
 
 
 # Prerequisites
+{% raw %}
 Requirement   |Origin| Description
 --------------|------|-------------
 Braze API Key    |[Braze Settings](https://dashboard.braze.com/sign_in)| A REST API Key linked to your Braze account with the **users.track** permission enabled (**only** needed to publish via custom attributes)
+{% endraw %}
 
 # Integration
 ## Publish Vouchers via Connected Content
