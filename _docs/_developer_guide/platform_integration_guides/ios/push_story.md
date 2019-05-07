@@ -1,7 +1,7 @@
 ---
 nav_title: Push Story
 platform: iOS
-page_order: 4
+page_order: 5
 search_rank: 5
 ---
 
