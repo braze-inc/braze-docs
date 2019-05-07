@@ -1,6 +1,5 @@
 ---
 nav_title: Voucherify
-page_order: 0
 alias: /partners/voucherify/
 ---
 
