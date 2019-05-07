@@ -21,31 +21,30 @@ hide_toc: true
   font-size: 18px;
 }
 
-
 .container {
   margin-top: 40px;
 }
 
-
 .popover{
-  max-width: 95%;
+  max-width: 65%;
   min-width: 350px;
+  top: -15px !important;
 }
-
 
 .container-fluid {
   max-width: 1280px;
 }
+
 .header {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .header .navbar-brand img {
     max-width: none;
     width: 112px;
     height: 51px;
 }
-
 
 #ticket_resources {
   border-left: solid 1px #c9c9c9;
@@ -58,13 +57,14 @@ hide_toc: true
     border: none;
   }
 }
+
 .algolia-autocomplete-listbox-2 {
     display: inline !important;
 }
+
 #algolia-autocomplete-listbox-2 {
   position: relative !important;
 }
-
 
 .algolia-autocomplete {
   line-height: normal;
@@ -73,7 +73,6 @@ hide_toc: true
 #search-input {
     padding: 0 0 20px;
     position: relative;
-
 }
 
 #search-input input[type="text"] {
@@ -96,16 +95,19 @@ hide_toc: true
   top: 15px;
   left: 5px;
 }
+
 .aa-suggestion {
   margin-top: 5px;
   line-height: 25px;
 }
+
 #ticket_search div.aa-suggestion {
   color: #6d6d70;
   cursor: pointer;
   display: inline;
   border-bottom-width: 0px;
 }
+
 #ticket_search aa-suggestions:hover div {
   text-decoration: none;
   color: #6d6d70;
@@ -1032,9 +1034,6 @@ $( document ).ready(function() {
       };
     });
 
-
-
-
     sf_submit.addParameter('external','1');
     sf_submit.send();
 
@@ -1046,6 +1045,10 @@ $( document ).ready(function() {
   });
   $('#ticket_issue').popover();
   $('#ticket_comment').popover();
+  $('#ticket_priority_info').popover({
+    html: true
+  });
+
   $("#submit_ticket").trigger("change");
 
 
@@ -1173,7 +1176,22 @@ $( document ).ready(function() {
                       <div class="form-group" >
                           <label for="ticket_subject" id="ticket_subject_label">   Subject *</label>
                           <input type="text" class="form-control" id="ticket_subject"  maxlength="80" name="Subject" placeholder="What's your question about?" required="required" value="" />
+                      </div>
 
+                      <div class="form-group" id="ticket_priority_div">
+                        <label for="ticket_priority" id="ticket_priority_label"> * Issue Severity </label>
+                        <a id="ticket_priority_info" title="Issue Severity Description"
+                          data-toggle="popover" data-placement="top" data-trigger="click"
+                          data-content="A <b>Critical Severity</b> issue has a critical business impact on use of the Braze Services that impact all Users. Examples include complete system unavailability or data integrity issues, with no workaround available at the time the issue is logged with Braze Technical Support.<br />
+                          A <b>High Severity</b> issue is causing a significant loss or reductions of functionality to the customer’s use of the platform causing a serious impact to the customer’s operational activities.<br />
+                          A <b>Medium Severity</b> issue causes a material loss or reduction of functionality which has an impact on the customer’s normal use of the platform.<br />
+                          A <b>Low Severity</b> issue is any question about the use of Braze Services and Analytics or a minor loss or disruption of normal platform functionality."><span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-question-circle" ></span></a>
+                        <select id="ticket_priority" name="priority"  class="form-control" >
+                          <option value="Critical">Critical: System is Down or Severe Data Integrity Issues</option>
+                          <option value="High">High: Severe Loss of Functionality or a Campaign Will Not Send</option>
+                          <option value="Medium">Medium: Degraded Performance or Issue Causing Significant Business Impact</option>
+                          <option value="Low" selected="selected">Low: Question About Braze Functionality or Analytics</option>
+                        </select>
                       </div>
 
                       <div class="form-group" >
@@ -1196,8 +1214,11 @@ $( document ).ready(function() {
                           <label style="font-size: 12px;">
                          In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.
                           </label>
+                          <label style="font-size: 12px;">
+                          Braze Technical Support Hours of Operation are from 9am-5pm GMT and 8am-8pm ET, Monday - Friday, excluding Braze Recognized Holidays. For issues logged outside of these hours, you should anticipate a response on the next business day.
+                          </label>
                       </div>
-                      <button type="submit" name="Submit Question" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>
+                      <button type="submit" name="Submit Ticket" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>
                       </div>
                   </div>
               </div>
