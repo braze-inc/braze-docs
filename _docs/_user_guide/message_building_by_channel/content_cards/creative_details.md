@@ -9,13 +9,13 @@ guide_featured_title: "Message Type Creative Specs"
 guide_featured_list:
 - name: Classic
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
-  image: /assets/img/icon_modal.png
+  image: /assets/img/icon-classic-cc.png
 - name: Captioned Image
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image
-  image: /assets/img/icon_slideup.png
+  image: /assets/img/captioned-cc.png
 - name: Banner
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
-  image: /assets/img/icon_full_screen.png
+  image: /assets/img/icon-banner-cc.png
 ---
 
 ## Content Card Types
