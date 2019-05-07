@@ -11,15 +11,11 @@ It is __extremely important__ to __always__ test your Content Cards before sendi
 
 You can preview your Card as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
-{% alert warning %}
 In __Preview__, the view of your message might not be identical to it's actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
-{% endalert %}
 
 ## Test
 
-{% alert warning %}
-  To send a test to either [Content Test Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
-{% endalert %}
+To send a test to either [Content Test Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
 
 ### Preview Message As User
 

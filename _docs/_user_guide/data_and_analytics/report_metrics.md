@@ -165,7 +165,13 @@ glossaries:
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
     tags:
-      - All
+      - Email
+      - In-App Message
+      - News Feed
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
   - name: Pending Retry
     description: The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
     tags:

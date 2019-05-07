@@ -30,15 +30,13 @@ Choose a __Platform__, __Message Type__, __Layout__, and __Enforced Device Orien
 
 ### Message Types
 
-Click on your desired Platform tab to learn more about the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
+Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
 
 These Content Card types are accepted by both mobile apps and web applications.
 
-#### Message Options
-
 | Message Type | Type Description |
 |---|---|---|
-|[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card, or the image will stretch and become disproportioned. |
+|[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card. |
 |[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image)| This Card allows you to showcase your content with copy and an attention-grabbing image! |
 |[Banner]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content. |
 
@@ -53,7 +51,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
-|Image | __Upload Image__ or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have it's own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
+|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have it's own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
 |Pinning | Check pin a card, which will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Cards cannot be retroactively pinned or unpinned - you must select the pin option you’d like to use before they are sent to users.  |
 |Expiration | Set the specific expiration date or the days until a Card expires. | All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
@@ -68,6 +66,8 @@ Braze will store up to 100 non-expired Content Cards in their feed. The oldest c
 ## Step 3: Configure Additional Settings
 
 Add [key-value pairs][19] to your message, if needed.
+
+You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds, and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas
 
@@ -105,14 +105,14 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 After you've finished building the last of your campaign, review it's details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
-# Things to Know
+## Things to Know
 
 The following capabilities are not yet supported for Content Cards:
 
 - Connected Content
 - Vouchers
 - Frequency Capping
-- Re-ordering Content Cards from Your Braze account
+- Re-ordering Content Cards from the Braze UI
 - Post-launch Edits
 
 {% alert warning %}
