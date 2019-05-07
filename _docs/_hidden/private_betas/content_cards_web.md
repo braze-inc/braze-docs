@@ -89,5 +89,5 @@ This is often used to power badges signifying how many unread content cards ther
 
 
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
-[2]:{% image_buster /assets/img_archive/braze-content-cards-seen-unseen-behavior.png %}
+[2]:{% image_buster /assets/img_archive/content-cards-seen-unseen-behavior.png %}
 [3]:{% image_buster /assets/img_archive/unreadcontentcard.png %}
