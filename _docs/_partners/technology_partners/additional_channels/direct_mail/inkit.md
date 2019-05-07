@@ -61,8 +61,12 @@ Replace the necessary fields with the correct information - specifically `INKIT_
 
 Inkit also requires a `HTTP Header` for authorization that includes your Inkit API key. The following will already be included within the template as a key-value pair, but you will need to replace `INKIT_API_TOKEN` with your Inkit API key.
 
+{% raw %}
+
 - `Header Name`: Authorization
 - `Header Value`: ``` { Basic {{ 'INKIT_API_TOKEN' | base64_encode }} } ```
+
+{% endraw %}
 
 ### Step 3: Preview Your Request
 
