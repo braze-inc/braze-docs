@@ -12,9 +12,7 @@ With Content Cards, you can send a highly targeted, dynamic stream of rich conte
 
 ## Example Content Card
 
-
 ![Content Card Example][1]
-
 
 ## Content Cards for Web Integration
 
@@ -89,5 +87,5 @@ This is often used to power badges signifying how many unread content cards ther
 
 
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
-[2]:{% image_buster /assets/img_archive/content-cards-seen-unseen-behavior.png %}
+[2]:{% image_buster /assets/img/content-cards-seen-unseen-behavior.png %}
 [3]:{% image_buster /assets/img_archive/unreadcontentcard.png %}
