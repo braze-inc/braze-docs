@@ -46,22 +46,22 @@ To display the voucher code, also add the following code snippet as needed withi
 ## Publish Vouchers via Custom Attributes
 To begin publishing vouchers via Custom Attributes, navigate to the **Integration Directory** from you Voucherify dashboard.
 
-![VOUCHERIFY INTEGRATION DIRECTORY]({% image_buster /assets/img_archive/voucherify_integration_directory.png %})
+![VOUCHERIFY INTEGRATION DIRECTORY]({% image_buster /assets/img/voucherify_integration_directory.png %})
 
 After clicking the checkbox to enable the **Braze** integration, input the API KEY collected previously, with the **users.track** permission enabled, in the **App Group ID** field and click the connect button to establish a connection.
 
-![VOUCHERIFY ESTABLISH CONNECTION]({% image_buster /assets/img_archive/voucherify_establish_connection.png %})
+![VOUCHERIFY ESTABLISH CONNECTION]({% image_buster /assets/img/voucherify_establish_connection.png %})
 
 After a connection has been established, navigate to **Distributions** from the left-hand menu and click the red **plus icon** to start a new Braze distribution from the dashboard.
 
-![VOUCHERIFY NEW DISTRIBUTION]({% image_buster /assets/img_archive/voucherify_new_distribution.png %})
+![VOUCHERIFY NEW DISTRIBUTION]({% image_buster /assets/img/voucherify_new_distribution.png %})
 
 ### Setting Distribution Details
 From the distribution manager, go through first 6 stages to set distribution details:
 #### Step One: Setting the Distribution Mode
 The first decision to be made is whether the Braze distribution should be set to **manual**, i.e if the message should be sent to the chosen customer/customers right after you confirm the distribution, or **automatic**, i.e if messages should be sent everytime a customer meets specific criteria defined in the Distribution Manager by using customer segments.
 
-![VOUCHERIFY DISTRIBUTION MODE]({% image_buster /assets/img_archive/voucherify_distribution_mode.png %})
+![VOUCHERIFY DISTRIBUTION MODE]({% image_buster /assets/img/voucherify_distribution_mode.png %})
 
 #### Step Two: Distribution Purpose
 Next, decide on the distribution's purpose and what type of message you would like to send. Voucherify supplies three options to choose from:
@@ -69,12 +69,12 @@ Next, decide on the distribution's purpose and what type of message you would li
 * A message with unique codes from a campaign
 * A message without codes sent in your customized template
 
-![VOUCHERIFY DISTRIBUTION PURPOSE]({% image_buster /assets/img_archive/voucherify_distribution_purpose.png %})
+![VOUCHERIFY DISTRIBUTION PURPOSE]({% image_buster /assets/img/voucherify_distribution_purpose.png %})
 
 #### Step Three: Choosing Your Audience
 Now, determine your audience, or who will be receiving messages from this distribution. 
 
-![VOUCHERIFY DISTRIBUTION AUDIENCE]({% image_buster /assets/img_archive/voucherify_distribution_audience.png %})
+![VOUCHERIFY DISTRIBUTION AUDIENCE]({% image_buster /assets/img/voucherify_distribution_audience.png %})
 
 If you chose an **automatic** distribution mode, you can choose your receivers by specifying [customer segments](https://support.voucherify.io/article/51-customer-segments), in which the app will push out a message every time a new customer meets a certain criteria and enters a chosen segment.
 
@@ -87,17 +87,17 @@ If you chose a **manual** distribution mode, you must choose either a single cus
 #### Step Four: Message Title
 After specifying your audience, add a subject line for your message/messages as shown below.
 
-![VOUCHERIFY DISTRIBUTION TITLE]({% image_buster /assets/img_archive/voucherify_distribution_title.png %})
+![VOUCHERIFY DISTRIBUTION TITLE]({% image_buster /assets/img/voucherify_distribution_title.png %})
 
 #### Step Five: Setting the Distribution Channel
 Fianlly, select **Braze** as the distribution channel, as shown below, and select a custom attribute name that will later be used for putting code in the Braze message.
 
-![VOUCHERIFY DISTRIBUTION CHANNEL]({% image_buster /assets/img_archive/voucherify_distribution_channel.png %})
+![VOUCHERIFY DISTRIBUTION CHANNEL]({% image_buster /assets/img/voucherify_distribution_channel.png %})
 
 
 Now, select **SEND** to test your distribution - as a result, you should see a user with a Voucherify code along with an assigned QR/barcode. 
 
-![VOUCHERIFY TEST]({% image_buster /assets/img_archive/voucherify_test.png %})
+![VOUCHERIFY TEST]({% image_buster /assets/img/voucherify_test.png %})
 
 Voucherify users can also be found from within Braze by supplying the specified **UserID (source_id)**, found on the Voucherify user profile page, to Braze's user search tool.
 
@@ -106,16 +106,16 @@ In order to send an email in Braze with an embeded code, you must first create a
 
 From your Braze Dashboard, navigate to **Campaign** and click **Create Campaign** and choose **email** from the drop down menu as shown below.
 
-![VOUCHERIFY BRAZE CAMPAIGN]({% image_buster /assets/img_archive/voucherify_braze_campaign.png %})
+![VOUCHERIFY BRAZE CAMPAIGN]({% image_buster /assets/img/voucherify_braze_campaign.png %})
 
 Afterwords, select **Blank Template** and navigate to **Edit Email Body** and switch to the **Body** tab.
 
 Now, customize your template and add the `Custom Attributes` defined in the Voucherify distribution.
 
-![VOUCHERIFY CUSTOM ATTRIBUTES]({% image_buster /assets/img_archive/voucherify_custom_attributes.png %})
+![VOUCHERIFY CUSTOM ATTRIBUTES]({% image_buster /assets/img/voucherify_custom_attributes.png %})
 
 If the custom attributes were properly configured, you should now see the embeded code displayed in the message preview.
 
-![VOUCHERIFY BRAZE CAMPAIGN PREVIEW]({% image_buster /assets/img_archive/voucherify_braze_campaign_preview.png %})
+![VOUCHERIFY BRAZE CAMPAIGN PREVIEW]({% image_buster /assets/img/voucherify_braze_campaign_preview.png %})
 
 Lastly, if everything is in order, confirm your template by selecting **DONE**, followed by **FORWARD** to finish editing your campaign.

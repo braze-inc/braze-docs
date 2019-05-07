@@ -19,13 +19,13 @@ Endpoint    |[Braze Settings](https://dashboard.braze.com/sign_in)| A fully cust
 ## Accessing the Integrations page
 After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu found at the top right corner of the screen as shown below.
 
-![NPAW DROP DOWN]({% image_buster /assets/img_archive/npaw_dropdown.png %})
+![NPAW DROP DOWN]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## Configuring Your Integration
 Once you have accessed the Integration page, scroll down until you
 see the **Braze** integration option. After clicking on this, it will expand and offer a number of required parameters to fill out as shown below:
 
-![NPAW INTEGRATION]({% image_buster /assets/img_archive/npaw_integration.png %})
+![NPAW INTEGRATION]({% image_buster /assets/img/npaw_integration.png %})
 
 Fill in the details with the appropriate information gathered from the prequisites section, where:
 * **Connector Name** is an **alphanumeric** string that will be used to reffer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
@@ -39,13 +39,13 @@ Once all the fields have been filled out, simply click on the **Connect** button
 Once you have finished configuring your integration with Braze, navivate to the **Users**
 product and select the **Sample Manager** within the **Sections Manager**.
 
-![NPAW SECTIONS MANAGER]({% image_buster /assets/img_archive/npaw_sections_manager.png %})
+![NPAW SECTIONS MANAGER]({% image_buster /assets/img/npaw_sections_manager.png %})
 
 After creating a sample within the **Sample Manger**, you will now be able to click on
 the triple dot icon on the right-hand side to send all users within your sample to
 Braze.
 
-![NPAW SAMPLE MANAGER]({% image_buster /assets/img_archive/npaw_sample_manager.png %})
+![NPAW SAMPLE MANAGER]({% image_buster /assets/img/npaw_sample_manager.png %})
 
 Now, once you send your users to Braze, you can take action and focus campaigns on user
 segments to re-engage inactive users, contact your most loyal users or any action on any
