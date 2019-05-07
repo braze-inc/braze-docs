@@ -42,9 +42,14 @@ To publish a voucher through Braze's connected content, add the following code s
 Where ```${user_id}``` is the **external_id** of the user in Braze and will be set as the **source_id** for the customer in Voucherify.
 
 To display the voucher code, also add the following code snippet as needed within the email template:
+
+{% raw %}
+
 ```
 {{publication.voucher.code}}
 ```
+
+{% endraw %}
 
 {% alert important %}
 * Assigning the **campaign_name** variable is a workaround to pass campaign names which include spaces and can alternatively be replaced by passing a campaign id directly in the :body
