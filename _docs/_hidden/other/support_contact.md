@@ -30,7 +30,11 @@ hide_toc: true
   min-width: 350px;
   top: -15px !important;
 }
-
+@media (max-width:600px)  {
+  .popover{
+    max-width: 95%;
+  }
+}
 .container-fluid {
   max-width: 1280px;
 }
