@@ -46,8 +46,9 @@ NotificationCenter.default.addObserver(self, selector:
 // Called when the content cards are refreshed (via `requestContentCardsRefresh`)
 private func contentCardsUpdated(_ notification: Notification) {
   if let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
-  if (updateIsSuccessful) {
-    // get the cards using Appboy.sharedInstance()?.contentCardsController.getContentCards();
+    if (updateIsSuccessful) {
+      // get the cards using Appboy.sharedInstance()?.contentCardsController.getContentCards();
+    }
   }
 }
 ```
