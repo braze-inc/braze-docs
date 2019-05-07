@@ -54,7 +54,6 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
 
-
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"

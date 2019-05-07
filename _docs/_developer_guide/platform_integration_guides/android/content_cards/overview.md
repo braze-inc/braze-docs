@@ -18,7 +18,7 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 
 ### Great Use Cases
 
- - Showcase new content.
+- Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
 - Give customers without push enabled access to promotions.
 - Trigger order confirmations or other personalized communication with your customer.
@@ -32,9 +32,9 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 
 ## Content Cards Integration Overview {#content-cards-integration-for-android}
 
- In Android, Content Cards and the feedback form are implemented as [Fragments][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+ In Android, the Content Cards feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 
- The [`AppboyContentCardsFragment`](3) class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's ContentCards are set on the Braze dashboard.
+ The [`AppboyContentCardsFragment`](3) class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's ContentCards are created on the Braze dashboard.
 
  [2]: http://developer.android.com/guide/components/fragments.html
  [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
