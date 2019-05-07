@@ -64,12 +64,12 @@ Braze has five unique card types that share a base model. Each type of card also
 
 ## Base Card Model Properties
 
-- idString (read only) - The card's ID set by Braze
-- viewed - This property reflects if the card is read or unread by the user
-- created (read only) - The property is the unix timestamp of the card's creation time from Braze dashboard
-- updated (read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard
-- categories - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`
-- extras - An optional NSDictionary of NSString values.
+- `idString` (read only) - The card's ID set by Braze
+- `viewed` - This property reflects if the card is read or unread by the user
+- `created` (read only) - The property is the unix timestamp of the card's creation time from Braze dashboard
+- `updated` (read only) - The property is the unix timestamp of the card's latest update time from Braze dashboard
+- `categories` - The list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`
+- `extras` - An optional NSDictionary of NSString values.
 
 ### Categories
 
