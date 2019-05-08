@@ -15,7 +15,7 @@ Content Cards are persistent content that appear within customers’ app and web
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
 
-![Content Cards Feed][CCFeed]
+![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
 
 In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
 
@@ -68,7 +68,7 @@ While all customers who are sent a scheduled message get the same `dispatch_id`,
 
 When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
-![Created by Me][cbm]
+![Created by Me][cbm]{: height="50%" width="50%"}
 
 Also, the Campaign grid sidebar is now resizable!
 
