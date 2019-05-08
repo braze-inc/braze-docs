@@ -441,7 +441,8 @@ glossaries:
     description: Allows you to find users who are provisionally authorized on iOS 12 for a given app.
     tags:
       - Other
-
-
-
+  - name: Most Engaged Channel
+    description: Filters the portion of your audience whose most active channel (the channel which has the highest likelihood of engagement given the user's past three months or activity) is the one you select in the subsequent dropdown (Email, Mobile push, or Web push). <br> You can also elect to filter by Not Enough Data, which only sends to users who have received messages from at least two of the three available channels in the drop down but have not had enough distinct channel activity to determine a most engaged channel. <br> <a href="/docs/most_engaged_channel/">Learn more about this filter here.</a>
+    tags:
+      - User Activity
 ---

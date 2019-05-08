@@ -16,8 +16,7 @@ You can create an in-app message using the Braze platform using Campaigns, Canva
   {% tab Campaigns %}
   Click __Create Campaign__ to open a new messaging wizard for in-app message campaigns. Then, follow the flow of the messaging wizard to quickly create and launch your in-app message campaign.
 
-![createyouriam]({% image_buster /assets/img/create_iam.gif %}){: height="70%" width="70%"}
-
+  ![Platform Picker]({% image_buster /assets/img/iam_platforms.gif %})
 
 1. Name your Campaign something clear and meaningful.
 2. Add __Teams__ and __Tags__, as necessary.
