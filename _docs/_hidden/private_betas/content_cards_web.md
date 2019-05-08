@@ -12,9 +12,7 @@ With Content Cards, you can send a highly targeted, dynamic stream of rich conte
 
 ## Example Content Card
 
-
 ![Content Card Example][1]
-
 
 ## Content Cards for Web Integration
 
@@ -57,12 +55,7 @@ body .ab-feed {
 
 Braze provides indicators on Content Cards as pictured below:
 
-
-|Indicator|Example |
-|---|---|
-|Read | ![ReadContentCard][2] |
-| Unread | ![UnreadContentCard][3] |
-
+![Read and Unread Behavior][2]
 
 ### Disabling the Indicators
 
@@ -94,5 +87,5 @@ This is often used to power badges signifying how many unread content cards ther
 
 
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
-[2]:{% image_buster /assets/img_archive/readcontentcard.png %}
+[2]:{% image_buster /assets/img/content-cards-seen-unseen-behavior.png %}
 [3]:{% image_buster /assets/img_archive/unreadcontentcard.png %}

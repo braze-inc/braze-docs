@@ -10,13 +10,14 @@ glossary_filter_text: "Select Channels below to narrow the glossary:"
 
 # channel to icon/fa or image mapping
 glossary_tags:
+  - name: Content Cards
   - name: Email
   - name: In-App Message
+  - name: News Feed
   - name: Web Push
   - name: iOS Push
   - name: Android Push
   - name: Webhook
-  - name: News Feed
 
 glossaries:
   - name: Variation
@@ -37,7 +38,7 @@ glossaries:
       - Web Push
       - iOS Push
       - Android Push
-      - All Push
+      - In-App Message
       - News Feed
   - name: Total Impressions
     description: The number of users whose devices reported that the in-app message has been delivered (if a user receives a message twice, they will be counted twice). This number is a sum of number of impression events that Braze receives from the SDKs.
@@ -45,14 +46,16 @@ glossaries:
     tags:
       - In-App Message
       - News Feed
+      - Content Cards
   - name: Unique Impressions
     description: The total number of people who actually received and viewed the in-app message (if a user receives a message twice, they will be only counted once). This number is a sum of number of impression events that Braze receives from the SDKs.
     calculation: Count
     tags:
       - In-App Message
       - News Feed
+      - Content Cards
   - name: Sends
-    description: The total number of messages sent in a campaign. This number is received from Braze.
+    description: The total number of messages sent in a campaign. This number is received from Braze. May also be seen as `Messages Sent` in Content Cards.
     calculation: Count
     tags:
       - All
@@ -114,12 +117,14 @@ glossaries:
     tags:
       - Email
       - News Feed
+      - Content Cards
   - name: Unique Clicks
     description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
     calculation: (Unique Clicks) / (Deliveries)
     tags:
       - Email
       - News Feed
+      - Content Cards
   - name: Body Clicks
     description: Occurs when someone clicks on a slideup, modal, or full-screen in-app message that has no buttons.
     calculation: (Body Clicks) / (Impressions)
@@ -144,8 +149,8 @@ glossaries:
     description: The total revenue in dollars from campaign recipients within the set primary conversion window.
     tags:
       - All
-  - name: Primary Conversions (A)
-    description: The number of times a defined event occurred. This defined event is determined by the marketer when building the campaign.
+  - name: Primary Conversions (A) or Primary Conversion Event
+    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Content Cards, this count is based on daily sends and begins when they view a Content Card for the first time.
     tags:
       - All
   - name: Conversion Rate
@@ -160,10 +165,34 @@ glossaries:
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
     tags:
-      - All
+      - Email
+      - In-App Message
+      - News Feed
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
   - name: Pending Retry
     description: The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
     tags:
       - Email
-
+  - name: Total Dismissals
+    description: The number of times Content Cards from a campaign have been dismissed. If a user dismisses a message twice, they will be only counted once.
+    calculation:
+    tags:
+      - Content Cards
+  - name: Unique Dismissals
+    description: The number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
+    calculation:
+    tags:
+      - Content Cards    
+  - name: Unique Recipients (Content Cards)
+    description: The number of users who have viewed Content Cards from a campaign (based on daily sends). A user viewing a Content Card from a campaign multiple times represents one unique recipient. However, due to campaign re-eligibility, a user receiving and viewing multiple Content Cards from a campaign on different days represents multiple unique recipients.
+    calculation: Count
+    tags:
+      - Content Cards
+  - name: Total Conversions
+    description: The number of times all defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
+    tags:
+      - In-App Message
 ---

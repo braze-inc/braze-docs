@@ -5,18 +5,7 @@ page_order: 7
 
 # Reporting & Analytics {#IAM-Reporting}
 
-## In-App Message Analytics Glossary
-
-To see the meanings of all in-app message metrics, check the [Metrics Glossary][1].
-
-{% comment %}
-Reporting in Canvas
-
-In Canvas, you'll see in-app message performance mapped onto the Canvas you've created. You can use the control panel at the top of the page to uncheck other messaging types and only view the in-app messages in your Canvas.
-
-![In-App_Message_Canvas_Reporting]({% image_buster /assets/img/in-app-message-canvas-reporting.png %})
-
-{% endcomment %}
+To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1].
 
 ## Reporting in Campaigns
 
@@ -30,7 +19,7 @@ __Campaign Details__
 
 The Campaign Details analytics block will give you a high-level overview of the entire in-app message campaign.
 
-![In-App_Message_Campaign_Details]({% image_buster /assets/img/in-app-message-campaign-details.png %})
+![CC_Campaign_Details]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% endtab %}
 
@@ -40,7 +29,7 @@ __Message Performance__
 
 This block will define the messages performance on multiple levels (by Variant, Audience %, Unique Impressions, Impressions, Body Clicks, Button Clicks, Revenue, Primary Conversions, and more!). Click on the <i class="fa fa-eye preview-icon"></i> to view your message.
 
-![In-App_Message_Message_Performance]({% image_buster /assets/img/in-app-message-message-performance.png %})
+![CC_Message_Performance]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% endtab %}
 
@@ -50,13 +39,20 @@ __Historical Performance__
 
 This block allows you to see the message's performance over a set time period on a timeline.
 
-![In-App_Message_Historical_Performance]({% image_buster /assets/img/in-app-message-historical-performance.png %})
+![CC_Historical_Performance]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% endtab %}
-{% endtabs %}
 
-{% comment %}
-If you select to only sent to users who can see the latest Braze version of in-app messages (Generation 3), your Target Audience will not adjust to reflect your choice.
-{% endcomment %}
+{% tab Conversion Event Details %}
+
+__Conversion Event Details__
+
+This block will show you the performance of your conversion events for an individual Content Card.
+
+![CC_Conversion]({% image_buster /assets/img/cc-conversion.png %})
+
+{% endtab %}
+
+{% endtabs %}
 
 [1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
