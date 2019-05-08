@@ -11,7 +11,7 @@ Content Cards are persistent content that appear within customers’ app and web
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
 
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %})
+![Content Cards Feed][CCFeed]
 
 In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
 
@@ -50,7 +50,7 @@ Jampp is a performance marketing platform for acquiring and retargeting mobile c
 
 We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
 
-![Platform Picker]({% image_buster /assets/img/iam_platforms.gif %})
+![Platform Picker][plat_p]
 
 ## Dispatch ID Currents Field for Email
 
@@ -64,9 +64,9 @@ While all customers who are sent a scheduled message get the same `dispatch_id`,
 
 When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
-![Created by Me]({% image_buster /assets/created_by_me.png %})
+![Created by Me][cbm]
 
-Also, the sidebar is now resizable!
+Also, the Campaign grid sidebar is now resizable!
 
 ## Delete Users by Alias
 
@@ -87,3 +87,7 @@ You can search for these updated terms in our [Report Metrics Glossary]({{site.b
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
+
+[CCFeed]: {% image_buster /assets/img/cc-feed.png %}
+[cbm]: {% image_buster /assets/created_by_me.png %}
+[plat_p]: {% image_buster /assets/img/iam_platforms.gif %}
