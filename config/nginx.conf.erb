@@ -62,6 +62,8 @@ http {
     rewrite ^/docs/email_open_tracking/(.*)$ https://lab.braze.com/email-open-tracking-pixel permanent;
     rewrite ^/docs/email_spam_testing/(.*)$ https://lab.braze.com/email-spam-testing permanent;
     rewrite ^/docs/link_templates/(.*)$ https://lab.braze.com/creating-link-templates permanent;
+    rewrite ^/docs/multivariate-ab-testing/(.*)$ https://lab.braze.com/multivariate-ab-testing permanent;
+
 
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/amplitude/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/ permanent;
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/mixpanel/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/ permanent;
