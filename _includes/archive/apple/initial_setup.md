@@ -76,10 +76,10 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
-{% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
+{% if include.platform == 'iOS' %}import Appboy_iOS_SDK{% else %}import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
