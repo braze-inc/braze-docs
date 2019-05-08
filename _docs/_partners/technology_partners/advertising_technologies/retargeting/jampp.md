@@ -46,11 +46,11 @@ Below is an example of what your Webhook URL might look like:
 
 {% raw %}
 ```
-{% assign event_name = "your_jampp_event_name" %}
-{% assign android_app_id = "your_android_app_id" %}
-{% assign iOS_app_id = "your_iOS_app_id" %}
+{% assign event_name = 'your_jampp_event_name' %}
+{% assign android_app_id = 'your_android_app_id' %}
+{% assign iOS_app_id = 'your_iOS_app_id' %}
 
-{% capture json %}{"name":"{{event_name}}","active":true,"joined":{{"now" | date: "%s" }}}{% endcapture %}
+{% capture json %}{'name':'{{event_name}}','active':true,'joined':{{'now' | date: '%s' }}}{% endcapture %}
 
 http://tracking.jampp.com/event?kind={{event_name}}&rnd={rnd}&app={% if {{most_recently_used_device.${idfa}}} == blank %}{{android_app_id}}{% else %}{{iOS_app_id}}{% endif %}}&apple_ifa={{most_recently_used_device.${idfa}}}&google_advertising_id={{custom_attribute.${aaid}}}&user_agent={user-agent}&prtnr=braze
 
@@ -60,11 +60,13 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={rnd}&app={% if {{most_r
 ```
 
 Elements (from sample above) to modify before sending the campaign:
-1. `{% assign event_name = "your_jampp_event_name" %}`
-2. `{% assign android_app_id = "your_android_app_id" %}`
-3. `{% assign iOS_app_id = "your_iOS_app_id" %}`
-4. `&google_advertising_id={{custom_attribute.${aaid}}}`
+1. `{% assign event_name = 'your_jampp_event_name' %}`
+2. `{% assign android_app_id = 'your_android_app_id' %}`
+3. `{% assign iOS_app_id = 'your_iOS_app_id' %}`
+4. `&google_advertising_id={{custom_attribute.${aaid}}`
 {% endraw %}
+
+Please note that in this example the Google Advertising ID is listed as `aaid` but you will need to replace it with the custom attribute name your developers set.
 
 After defining the parameters above, insert this liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
 

@@ -55,10 +55,12 @@ guide_menu_list:
   - name: Xamarin iOS
     link: /docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/
     fa_icon: fab fa-apple
+  - name: Roku
+    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    fa_icon: fas fa-tv
   - name: Flutter Android and iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/preview/
     fa_icon: fas fa-mobile
-
 
 guide_footer_header: " "
 guide_footer_text: " "

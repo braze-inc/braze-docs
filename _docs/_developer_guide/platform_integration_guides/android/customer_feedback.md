@@ -1,7 +1,7 @@
 ---
 nav_title: Customer Feedback
 platform: Android
-page_order: 6
+page_order: 7
 search_rank: 5
 ---
 # Customer Feedback

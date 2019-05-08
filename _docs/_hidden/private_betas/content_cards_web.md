@@ -12,9 +12,7 @@ With Content Cards, you can send a highly targeted, dynamic stream of rich conte
 
 ## Example Content Card
 
-
 ![Content Card Example][1]
-
 
 ## Content Cards for Web Integration
 
@@ -37,7 +35,7 @@ This will show the Content Cards if they are not shown, and hide them if they ar
 |---|---|---|
 |`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)|
 |`hideContentCards`| Hide any Braze content cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
-|`showContentCards`| Display the user's content cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)
+|`toggleContentCards`| Display the user's content cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
 |`getCachedContentCards()`|Get all currently available cards from the last content cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
 |`subscribeToContentCardsUpdates(subscriber)`| Subscribe to content cards updates. The subscriber callback will be called whenever content cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
 
@@ -57,12 +55,7 @@ body .ab-feed {
 
 Braze provides indicators on Content Cards as pictured below:
 
-
-|Indicator|Example |
-|---|---|
-|Read | ![ReadContentCard][2] |
-| Unread | ![UnreadContentCard][3] |
-
+![Read and Unread Behavior][2]
 
 ### Disabling the Indicators
 
@@ -85,7 +78,9 @@ appboy.getCachedContentCards().getUnviewedCardCount();
 
 This is often used to power badges signifying how many unread content cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
 
-> Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
+{% comment %}
+Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
+{% endcomment %}
 
 ### Key-Value Pairs
 `ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call `card.extras` to access these values.
@@ -94,5 +89,5 @@ This is often used to power badges signifying how many unread content cards ther
 
 
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
-[2]:{% image_buster /assets/img_archive/readcontentcard.png %}
+[2]:{% image_buster /assets/img/content-cards-seen-unseen-behavior.png %}
 [3]:{% image_buster /assets/img_archive/unreadcontentcard.png %}

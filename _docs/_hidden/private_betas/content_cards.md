@@ -98,23 +98,6 @@ Analytics for Content Cards include sends, impressions, clicks, and dismissals. 
 |Unique Recipients|The number of users who have viewed Content Cards from a campaign. This is based on daily sends.|A user viewing a Content Card(s) from a campaign multiple times represents one unique recipient. However, due to campaign re-eligibility, a user receiving and viewing multiple Content Cards from a campaign on different days represents multiple unique recipients (this is the difference between unique recipients and unique impressions).|
 |Conversions|The number of users who, after viewing Content Cards from a campaign, perform the campaign's conversion event within the conversion window. This is based on daily sends.|The conversion window for a user begins when they view a given Content Card for the first time.|
 
-## Migrating From News Feed to Content Cards
-
-### Features and Functionality
-
-Content Cards offers many capabilities that are not supported by Braze's current News Feed such as additional delivery options like action-based, API delivery, and enhanced analytics like conversion tracking.
-
-As you plan your migration from the News Feed to Content Cards, it will be important to note the main differences between Content Cards and the News Feed:
-
-- Content Cards segmentation is evaluated at the time messages are sent, News Feed segmentation is evaluated at the time that News Feed Cards are viewed
-- Content Cards personalization is templated at the time messages are sent, News Feed card personalization is templated at the time that News Feed Cards are viewed
-
-### Implementation
-
-- Content Cards and the News Feed are separate products so a simple integration in your apps or website is necessary in order to use Content Cards
-- If desired, existing News Feed Cards will need to be manually migrated to Content Card Campaigns when you switch from News Feed to Content Cards
-- Content Cards is not intended to be used at the same time as the News Feed as it's a replacement for the News Feed
-- Content Cards does not currently support categories, use cases for categories can be achieved via customization and key value pairs
 
 
 [1]:{% image_buster /assets/img_archive/content_cards.png %}

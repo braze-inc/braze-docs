@@ -26,9 +26,9 @@ Additionally, Braze allows you to see how successful different links are within 
 |Bounces % <br> _A.K.A. Bounce Rate_ |Bounces / Sends |Percentage of Sends designated as “returned” or “not received” (etc.) from send services used. These messages are not received by the intended Emailable users.
 |Spam |Count. Number received from email delivery partner. |Number of messages marked or otherwise designated as spam. Braze [automatically unsubscribes][64] users that marked an email as spam, and those users won’t be targeted by future emails.
 |Spam % |Spam / Sends |Percentage of Sends marked or otherwise designated as spam.
-|Unique Opens |Count. Number received from email delivery partner. |The number of users who opened a sent message at least once. Note: Unique calculation is tracked over a 7 day (Sendgrid) or 30 day (Mailjet users) period.
+|Unique Opens |Count. Number received from email delivery partner. |The number of users who opened a sent message at least once. Note: Unique calculation is tracked over a 7 day period.
 |Unique Opens % <br> _A.K.A. Open Rate_ |Unique Opens / Deliveries |The percentage people who open a sent message at least once compared to all who have received the sent message.
-|Unique Clicks |Count. Number received from email delivery partner. |The number of users who have clicked within a sent message. Unsubscribe clicks are included as clicks in this count. Note: Unique calculation is tracked over a 7 day (Sendgrid) or 30 day (Mailjet users) period.
+|Unique Clicks |Count. Number received from email delivery partner. |The number of users who have clicked within a sent message. Unsubscribe clicks are included as clicks in this count. Note: Unique calculation is tracked over a 7 day period.
 |Unique Clicks % <br> _A.K.A. Click Rate_ |Unique Clicks / Deliveries |The percentage of users who have clicked within a sent message compared to all messages delivered.
 |Unsubscribers <br> _A.K.A. Unsub_ |Count. Number received from email delivery partner. |Number of messages resulting in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
 |Unsubscribers % <br> _A.K.A. Unsub Rate_ |Unsubscribes / Deliveries |Percentage of Sends resulting in an unsubscription. Unsubscribe clicks are included as clicks in this count.
