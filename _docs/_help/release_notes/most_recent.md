@@ -9,13 +9,13 @@ _Braze releases information on it’s product updates on a monthly cadence. For 
 
 ## May 2019
 
-### Content Cards
+## Content Cards
 
 Content Cards are persistent content that appear within customers’ app and web experiences.
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
 
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %})
+![Content Cards Feed][CCFeed]
 
 In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
 
@@ -54,7 +54,7 @@ Jampp is a performance marketing platform for acquiring and retargeting mobile c
 
 We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
 
-![Platform Picker]({% image_buster /assets/img/iam_platforms.gif %})
+![Platform Picker][plat_p]
 
 ### Dispatch ID Currents Field for Email
 
@@ -68,9 +68,9 @@ While all customers who are sent a scheduled message get the same `dispatch_id`,
 
 When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
-![Created by Me]({% image_buster /assets/created_by_me.png %})
+![Created by Me][cbm]
 
-Also, the sidebar is now resizable!
+Also, the Campaign grid sidebar is now resizable!
 
 ### Delete Users by Alias
 
@@ -142,3 +142,6 @@ You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Web
 Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
 
 [support]: {{ site.baseurl }}/support_contact/
+[CCFeed]: {% image_buster /assets/img/cc-feed.png %}
+[cbm]: {% image_buster /assets/created_by_me.png %}
+[plat_p]: {% image_buster /assets/img/iam_platforms.gif %}
