@@ -15,4 +15,6 @@ appboy.getCachedContentCards().getUnviewedCardCount();
 
 This is often used to power badges signifying how many unread content cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
 
+{% comment %}
 Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
+{% endcomment %}
