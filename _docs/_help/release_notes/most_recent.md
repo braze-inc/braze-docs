@@ -143,5 +143,5 @@ Google Cloud Storage is no longer in Beta! Braze is proud to announce that Googl
 
 [support]: {{ site.baseurl }}/support_contact/
 [CCFeed]: {% image_buster /assets/img/cc-feed.png %}
-[cbm]: {% image_buster /assets/created_by_me2.png %}
+[cbm]: {% image_buster /assets/img/created_by_me2.png %}
 [plat_p]: {% image_buster /assets/img/iam_platforms.gif %}
