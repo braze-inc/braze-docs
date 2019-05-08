@@ -11,7 +11,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
   image: /assets/img/icon-classic-cc.png
 - name: Captioned Image
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned_image
+  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image
   image: /assets/img/captioned-cc.png
 - name: Banner
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
