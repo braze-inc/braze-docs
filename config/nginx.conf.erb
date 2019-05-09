@@ -64,7 +64,6 @@ http {
     rewrite ^/docs/link_templates(.*)$ https://lab.braze.com/creating-link-templates permanent;
     rewrite ^/docs/multivariate-ab-testing(.*)$ https://lab.braze.com/multivariate-ab-testing permanent;
 
-
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/amplitude/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/ permanent;
     rewrite ^/docs/partners/braze_currents/data_partner_integrations/mixpanel/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/ permanent;
     rewrite ^/docs/partners/braze_currents/how_it_works/(.*)$ <%= ENV['SITE_URL'] || ''%>/docs/partners/braze_currents/about/ permanent;
@@ -77,6 +76,7 @@ http {
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/message_engagement_events/$ <%= ENV['SITE_URL'] || ''%>/docs/partners/braze_currents/data_storage_events/message_engagement_events/ permanent;
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/customer_behavior_events/$ <%= ENV['SITE_URL'] || ''%>/docs/partners/braze_currents/data_storage_events/customer_behavior_events/ permanent;
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/transferring_data_to_redshift/$ <%= ENV['SITE_URL'] || ''%>/docs/partners/braze_currents/advanced_topics/transferring_data_to_redshift/ permanent;
+    rewrite ^/docs/developer_guide/platform_integration_guides/web/in_app_messaging/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/ permanent;
 
     rewrite ^/documentation$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
     rewrite ^/documentation/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
