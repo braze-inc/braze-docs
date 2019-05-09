@@ -17,21 +17,25 @@ module Jekyll
       puts 'Fetching content of url: ' + url
 
       if url =~ URI::regexp
-        @content = fetchContent(url)
+        @results = fetchContent(url)
       else
         puts 'Error fetching: ' + url
       end
 
-      if @content
-        @content
-      else
-        puts 'Empty content from : ' + url
+      if @results.code != '200'
         '{}'
+      else
+        if @results.body
+          @results.body.force_encoding('UTF-8')
+        else
+          puts 'Empty content from : ' + url
+          '{}'
+        end
       end
     end
 
     def fetchContent(url)
-      Net::HTTP.get(URI.parse(URI.encode(url.strip))).force_encoding('UTF-8')
+      Net::HTTP.get_response(URI.parse(URI.encode(url.strip)))
     end
   end
 end

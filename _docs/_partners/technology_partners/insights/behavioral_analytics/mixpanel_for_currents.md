@@ -278,6 +278,44 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
+### Content Card Events
+
+```json
+// Content Card Send
+{
+  "card_id": (string) id of the content card that was sent,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+}
+```
+
+```json
+// Content Card Impression
+// Content Card Click
+// Content Card Dismiss
+{
+  "card_id": (string) id of the content card that was viewed/clicked/dismissed,
+  "app_id": (string) id for the app on which the user action occurred,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "os_version": (string) os version of device used for the action,
+  "device_model": (string) hardware model of the device
+}
+```
+
 ### News Feed Events
 
 ```json

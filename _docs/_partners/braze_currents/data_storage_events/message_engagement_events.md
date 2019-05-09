@@ -249,6 +249,61 @@ Data accumulates when a Webhook is sent. Use this data to track when webhooks ar
 {% enddetails %}
 
 
+{% details CONTENT CARD EVENTS %}
+
+Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+
+```json
+// Content Card Send: users.messages.contentcard.Send
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "content_card_id": (string) id of the content card that was sent,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "device_id": (string) id of the device on which the event occurred
+}
+```
+
+```json
+// Content Card Impression: users.messages.contentcard.Impression
+// Content Card Click: users.messages.contentcard.Click
+// Content Card Dismiss: users.messages.contentcard.Dismiss
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "app_id": (string) id for the app on which the user action occurred,
+  "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "os_version": (string) os version of device used for the action,
+  "device_model": (string) hardware model of the device,
+  "device_id": (string) id of the device on which the event occurred
+}
+```
+
+{% enddetails %}
+
+
 {% details NEWS FEED EVENTS %}
 
 Data accumulates when a user engages with the News Feed. Use this data to track all events related to News Feed engagement.

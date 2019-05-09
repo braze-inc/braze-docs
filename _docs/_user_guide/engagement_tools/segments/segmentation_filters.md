@@ -38,11 +38,11 @@ glossaries:
     tags:
       - Custom Data
   - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 days.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 days. <br> <em>Please note that Custom Event Properties must be turned on by Braze for specific custom events. Contact your Account Manager or <a href="/docs/support_contact/">open a support ticket</a> if you don’t see the filters you need.</em>
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <em>Please note that Custom Event Properties must be turned on by Braze for specific custom events. </em> <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - Custom Data
   - name: First Made Purchase
@@ -126,23 +126,23 @@ glossaries:
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last 1, 3, 7, 14, 21, and 30 days. This amount will only include the sum of the last 50 purchases.
+    description: Segments your users by the amount of money that they have spent in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Product Purchased in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last 1, 3, 7, 14, 21, and 30 days (special membership, gift certificate, etc…).
+    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last 1, 3, 7, 14, 21, and 30 calendar days (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchase Property in Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last 1, 3, 7, 14, 21, and 30 days.
+    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last 1, 3, 7, 14, 21, and 30 days.
+    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Sessions in Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last 1, 3, 7, 14, 21, and 30 days.
+    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: Clicked Card

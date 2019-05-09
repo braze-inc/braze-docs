@@ -26,8 +26,8 @@ In the in-app message composer, you have the option to choose when the in-app me
 
 | Option | Description |
 |---|---|---|
-| Message Expires ... After | The first option allows you to expire the in-app message relative to when the step becomes available to the user. <br> <br> _For example, an in-app message with a two day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days users may see the in-app message if they open the app._ |
-| Message Expires By ... | The second option allows you choose a specific date and time when the in-app message will longer be available. <br> <br> _For example, if you have a sale that ended at a specific date and time, you might select this option so that once the sale ends users no longer see the associated in-app message._ |
+| `Message Expires ... After` | The first option allows you to expire the in-app message relative to when the step becomes available to the user. <br> <br> _For example, an in-app message with a two day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days users may see the in-app message if they open the app._ |
+| `Message Expires By ...` | The second option allows you choose a specific date and time when the in-app message will longer be available. <br> <br> _For example, if you have a sale that ended at a specific date and time, you might select this option so that once the sale ends users no longer see the associated in-app message._ |
 
 ### Use Cases
 
@@ -69,12 +69,13 @@ As you can see, the push messages are spaced around an in-app message to ensure 
 
 Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. [Steps with only in-app messages](#steps-with-in-app-messages-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
 
+Action-based delivery is __not available for Canvas steps with in-app messages__. Canvas steps with in-app messages __must be scheduled__. Instead, Canvas in-app messages will appear the first time that your user opens the app after the scheduled message in the Canvas step has been sent to them.
+
 ### Steps with In-App Messages Only
 
-Steps with in-app messages have specific advancement options that allow you to specify the exact situation when
+Steps with in-app messages have specific advancement options that allow you to specify the exact situation when your message would be sent.
 
 ![iamlive.png][2]
-
 
 | Option | Description |
 |---|---|---|

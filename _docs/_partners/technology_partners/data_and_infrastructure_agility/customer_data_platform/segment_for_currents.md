@@ -35,12 +35,16 @@ You can export the following data from Braze to Segment:
 | Email Opened                   | User opened an email.                                                                                         |
 | Email Link Clicked             | User clicked a link in an email. Email click tracking must be enabled.                                        |
 | Email Bounced                  | Braze attempted to send an email, but the User’s receiving mail server did not accept it.                     |
-| Email Soft Bounced             | Braze attempted to send an email, but the User’s receiving mail server temporarily bounced it. (Reasons may include: inbox full, server down, etc.)               |
+| Email Soft Bounced             | Braze attempted to send an email, but the User’s receiving mail server temporarily bounced it. (Reasons may include: inbox full, server down, etc.) |
 | Email Marked As Spam           | User marked an email as spam.                                                                                 |
 | Email Unsubscribed             | User clicked the unsubscribe link in an email.                                                                |
 | Subscription Group State Changed | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'                                   |
 | In-App Message Viewed          | User viewed an In-App Message.                                                                                |
 | In-App Message Clicked         | User tapped or clicked a button in an In-App Message.                                                         |
+| Content Card Sent              | A Content Card was sent to a user's device                                                                    |
+| Content Card Viewed            | User viewed a Content Card                                                                                    |
+| Content Card Clicked           | User clicked a Content Card                                                                                   |
+| Content Card Dismissed         | User dismissed a Content Card                                                                                 |
 | News Feed Viewed               | User viewed the native Braze News Feed.                                                                       |
 | News Feed Card Viewed          | User viewed a Card within the native Braze News Feed.                                                         |
 | News Feed Card Clicked         | User clicked on a Card within the native Braze News Feed.                                                     |
@@ -68,6 +72,6 @@ The following properties will be included with all Braze events sent to Segment:
 | `context.traits.email` | `String` | For Email events, the email address that the email was sent to.                                                |
 | `link_url`             | `String` | For Email Clicked events, the URL of the link that the user clicked on.                                        |
 | `button_id`            | `String` | For In-App Message Clicked events, the index of the button the user clicked on.                                |
-| `card_id`              | `String` | For News Feed Card Viewed and News Feed Card Clicked events, the API Identifier of the News Feed Card.         |
-| `subscription_group_id` | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group.         |
-| `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'.         |
+| `card_id`              | `String` | For News Feed Card and Content Card events, the API Identifier of the Card.                                    |
+| `subscription_group_id` | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group.                    |
+| `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'. |
