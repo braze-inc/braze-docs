@@ -36,7 +36,7 @@ AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(con
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context);
+AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context)
 ```
 
 {% endtab %}
