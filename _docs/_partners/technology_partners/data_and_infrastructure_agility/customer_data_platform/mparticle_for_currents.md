@@ -40,6 +40,10 @@ You can export the following data from Braze to mParticle:
 | Subscription Group State Change      | Unbound Feed           | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'                 |
 | In-App Message Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            |
 | In-App Message Clicked               | Platform-specific Feed | User tapped or clicked a button in an In-App Message.                                     |
+| Content Card Sent                    | Platform-specific Feed | A Content Card was sent to a user's device                                                |
+| Content Card Viewed                  | Platform-specific Feed | User viewed a Content Card                                                                |
+| Content Card Clicked                 | Platform-specific Feed | User clicked a Content Card                                                               |
+| Content Card Dismissed               | Platform-specific Feed | User dismissed a Content Card                                                             |
 | News Feed Viewed                     | Platform-specific Feed | User viewed the native Braze News Feed.                                                   |
 | News Feed Card Viewed                | Platform-specific Feed | User viewed a Card within the native Braze News Feed.                                     |
 | News Feed Card Clicked               | Platform-specific Feed | User clicked on a Card within the native Braze News Feed.                                 |
