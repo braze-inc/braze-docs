@@ -1,7 +1,7 @@
 ---
 nav_title: Email Sync
 page_order: 3
-search_rank: 0
+search_rank: 2
 ---
 # Email Sync
 
