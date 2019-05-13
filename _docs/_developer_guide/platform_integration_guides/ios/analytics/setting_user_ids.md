@@ -31,7 +31,7 @@ You should make the following call as soon as the user is identified (generally 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().changeUser("YOUR_USER_ID")
+Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 ```
 
 {% endtab %}

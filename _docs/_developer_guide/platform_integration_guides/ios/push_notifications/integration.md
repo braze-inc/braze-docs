@@ -195,7 +195,7 @@ Add the following code to your app's `application(_:didRegisterForRemoteNotifica
 
 ```swift
 let deviceTokenString = String(format: "%@", deviceToken as CVarArg)
-Appboy.sharedInstance().registerPushToken(deviceTokenString)
+Appboy.sharedInstance()?.registerPushToken(deviceTokenString)
 ```
 
 {% endtab %}
@@ -252,7 +252,7 @@ In this case, if the user clicks the displayed foreground push, the new iOS 10 p
 Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.registerApplication(application,
                                             didReceiveRemoteNotification: userInfo,
                                             fetchCompletionHandler: completionHandler)
 ```
@@ -260,7 +260,7 @@ Appboy.sharedInstance().registerApplication(application,
 Next, add the following code to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().userNotificationCenter(center,
+Appboy.sharedInstance()?.userNotificationCenter(center,
                                                didReceiveNotificationResponse: response,
                                                withCompletionHandler: completionHandler)
 ```
@@ -310,7 +310,7 @@ To support push analytics on iOS 10, you must also add the following code to you
 To enable open tracking on push notifications, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.registerApplication(application,
   didReceiveRemoteNotification: userInfo,
   fetchCompletionHandler: completionHandler)
 ```
@@ -318,7 +318,7 @@ Appboy.sharedInstance().registerApplication(application,
 To support push analytics on iOS 10, you must also add the following code to your app's `application(_:didReceiveRemoteNotification:)` delegate method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.registerApplication(application,
   didReceiveRemoteNotification: userInfo)
 ```
 
@@ -467,7 +467,7 @@ To enable Braze's push action button handling, including click analytics and URL
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().getActionWithIdentifier(identifier,
+Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
                          forRemoteNotification: userInfo,
                              completionHandler: completionHandler)
 ```

@@ -34,7 +34,7 @@ Set the `delegate` on `ABKInAppMessageController` by calling:
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.delegate = self
+Appboy.sharedInstance()?.inAppMessageController.delegate = self
 ```
 
 {% endtab %}
@@ -80,7 +80,7 @@ Set this delegate by calling:
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
 ```
 
 {% endtab %}
@@ -103,7 +103,7 @@ To migrate from version 3.2.3 or earlier, change the code with your delegate met
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
 ```
 
 {% endtab %}
@@ -129,7 +129,7 @@ To set a fixed orientation for all in-app messages, you can set the `supportedOr
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance().inAppMessageController.supportedOrientationMasks = portrait;
+Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
 // Use landscape to display in-app messages in landscape
 ```
 
