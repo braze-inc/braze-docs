@@ -148,6 +148,7 @@ Data accumulates when a user's performs a subscription event. You can use this d
 
 ```json
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
+// Note that subscription groups are only available for email at this time.
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
