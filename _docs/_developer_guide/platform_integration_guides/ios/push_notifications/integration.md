@@ -261,7 +261,7 @@ Next, add the following code to your app's `userNotificationCenter(_:didReceive:
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
-                                               didReceiveNotificationResponse: response,
+                                               didReceive: response,
                                                withCompletionHandler: completionHandler)
 ```
 
