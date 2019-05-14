@@ -7,7 +7,7 @@ platform: Android
 
 ### Default Styling {#default-styling-for-android}
 
-Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/style.xml`](42) file in the Braze SDK distribution.
+Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
 ```xml
   <!-- Content Cards Example -->
@@ -224,7 +224,7 @@ You can handle Content Cards clicks manually by setting a custom click listener.
 
 #### Step 1: Implement a Content Cards Click Listener
 
-Create a class that implements [IContentCardsActionListener](43) and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
+Create a class that implements [IContentCardsActionListener][43] and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
 
 #### Step 2: Instruct Braze to Use Your Content Card Click Listener
 
@@ -354,7 +354,7 @@ Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber
 
 When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
 
-To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`](41).
+To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 

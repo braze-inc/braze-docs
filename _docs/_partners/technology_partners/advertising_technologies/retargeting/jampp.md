@@ -34,7 +34,14 @@ Braze does not automatically collect the device IDFA/AAID so you must store thes
 {% endalert %}
 
 # Integration
-## Request URL and Body
+
+### Step 1: Create a Webhook Template in Braze
+
+You can create this from the `Templates & Media` section, or create a new Webhook Campaign in Braze.
+
+![Jampp_Webhook_Template][6]
+
+### Step 2: Fill Out Your Template
 
 For this webhook, all data is passed on alongside the HTTP URL as query string parameters. The following parameters that need to be defined:
 
@@ -52,7 +59,7 @@ Below is an example of what your Webhook URL might look like:
 
 {% capture json %}{'name':'{{event_name}}','active':true,'joined':{{'now' | date: '%s' }}}{% endcapture %}
 
-http://tracking.jampp.com/event?kind={{event_name}}&rnd={rnd}&app={% if {{most_recently_used_device.${idfa}}} == blank %}{{android_app_id}}{% else %}{{iOS_app_id}}{% endif %}}&apple_ifa={{most_recently_used_device.${idfa}}}&google_advertising_id={{custom_attribute.${aaid}}}&user_agent={user-agent}&prtnr=braze
+http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most_recently_used_device.${idfa}}} == blank %}{{android_app_id}}{% else %}{{iOS_app_id}}{% endif %}&apple_ifa={{most_recently_used_device.${idfa}}}&google_advertising_id={{custom_attribute.${aaid}}}&user_agent={user-agent}&prtnr=braze
 
 {% if {{most_recently_used_device.${idfa}}} == blank and {{custom_attribute.${aaid}}} == blank %}
 {% abort_message('No IDFA or AAID available') %}
@@ -72,16 +79,23 @@ After defining the parameters above, insert this liquid code template into the W
 
 ![Webhook Template Jampp][2]
 
-## Request Headers and Method
+#### Request Headers and Method
+
+The `Content-Type` should be pre-populated as a key-value pair within the webhook template. 
 
 ![Jampp Method][3]
 
-## Preview Your Request
+### Step 3: Preview Your Request
 
 To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
+
+{% alert important %}
+Remember to save your template before leaving the page!
+{% endalert %}
 
 [1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
 [2]: {% image_buster /assets/img/jampp_webhook.png %}
 [3]: {% image_buster /assets/img/jampp_method.png %}
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
 [5]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
+[6]: {% image_buster /assets/img/jampp_webhook_template.png %}

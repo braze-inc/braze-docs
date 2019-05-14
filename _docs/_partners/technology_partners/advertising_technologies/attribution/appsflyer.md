@@ -58,6 +58,12 @@ __Step 4: Confirming the Integration__
 
 Once Braze receives attribution data from AppsFlyer, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
+## Facebook, Snapchat, and Twitter Attribution Data
+
+Attribution data for Facebook, Snapchat, and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+
+For more information, please see Appsflyer's [documentation][31].
+
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
@@ -76,3 +82,4 @@ Once Braze receives attribution data from AppsFlyer, the status connection indic
 [28]:{% image_buster /assets/img_archive/tune.png %}
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
+[31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration

@@ -55,7 +55,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% tabs %}
   {% tab Slideup %}
 
-  [`Slideup`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_slideup.html)in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
+  [`Slideup`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
   <br>
 
@@ -66,7 +66,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Modal %}
 
-[`Modal`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_modal.html)in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
+[`Modal`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_modal.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
 
  <br>
 
@@ -77,7 +77,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Full Screen %}
 
-[`Full`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_full.html)in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
+[`Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_full.html) in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
 
 <br>
 
@@ -88,7 +88,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML Full`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `UIWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+[`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `UIWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 The following example shows a paginated HTML Full in-app message:
 
