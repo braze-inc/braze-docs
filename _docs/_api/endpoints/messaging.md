@@ -827,7 +827,7 @@ You must include an Android Push Object in `messages` if you want users you have
   "image_url": (optional, string) the card's image URL. Required for "CAPTIONED_IMAGE" and "BANNER",
   "time_to_live": (optional, integer) the number of seconds before the card expires. You must include either "time_to_live" or "expire_at",
   "expire_at": (optional, string) ISO 8601 date when the card expires. You must include either "time_to_live" or "expire_at",
-  "expire_in_local_time": (optional, boolean) whether the card should expire in users' local time if using "expire_at". Defaults to false,
+  "expire_in_local_time": (optional, boolean) if using "expire_at", determines whether the card should expire in users' local time. Defaults to false,
   "ios_uri": (optional, string) a web URL, or Deep Link URI,
   "android_uri": (optional, string) a web URL, or Deep Link URI,
   "web_uri": (optional, string) a web URL, or Deep Link URI,
