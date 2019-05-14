@@ -58,7 +58,7 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 
 
 {% alert important %}
-  At this time, Braze only receives non-organic attribution data from these attribution partners. This means that organic data will **not** appear as an attributed source within Braze.
+  At this time, Braze only receives non-organic install attribution data from these attribution partners. This means that organic data will **not** appear as an attributed source within Braze.
 {% endalert %}
 
 ## Facebook and Twitter Attribution Data
