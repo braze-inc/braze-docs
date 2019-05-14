@@ -6,7 +6,7 @@ platform: Android
 ---
 ## Adding a Badge
 
-You can [request the number of unread cards](1) at any time by calling:
+You can [request the number of unread cards][1] at any time by calling:
 
 {% tabs %}
 {% tab JAVA %}
