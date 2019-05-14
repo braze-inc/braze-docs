@@ -252,7 +252,7 @@ In this case, if the user clicks the displayed foreground push, the new iOS 10 p
 Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance()?.registerApplication(application,
+Appboy.sharedInstance()?.register(application,
                                             didReceiveRemoteNotification: userInfo,
                                             fetchCompletionHandler: completionHandler)
 ```
@@ -310,7 +310,7 @@ To support push analytics on iOS 10, you must also add the following code to you
 To enable open tracking on push notifications, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance()?.registerApplication(application,
+Appboy.sharedInstance()?.register(application,
   didReceiveRemoteNotification: userInfo,
   fetchCompletionHandler: completionHandler)
 ```
@@ -318,7 +318,7 @@ Appboy.sharedInstance()?.registerApplication(application,
 To support push analytics on iOS 10, you must also add the following code to your app's `application(_:didReceiveRemoteNotification:)` delegate method:
 
 ```swift
-Appboy.sharedInstance()?.registerApplication(application,
+Appboy.sharedInstance()?.register(application,
   didReceiveRemoteNotification: userInfo)
 ```
 
