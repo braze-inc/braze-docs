@@ -38,6 +38,10 @@ Follow [these instructions][22] to add a webhook in Branch's dashboard. You will
 
 Once Braze receives attribution data from Branch, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
 
+## Facebook and Twitter Attribution Data
+
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+
 [5]: {{ site.baseurl }}/developer_guide/rest_api/basics/#api-limits
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"

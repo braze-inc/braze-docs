@@ -44,6 +44,11 @@ __Step 4: Confirming the Integration__
 
 Once Braze receives attribution data from Tune, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Tune postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
+## Facebook and Twitter Attribution Data
+
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+
+
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
