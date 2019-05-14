@@ -267,12 +267,15 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler`:
+In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler` in the appropriate view controller class:
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
                 willPresent notification: UNNotification,
-      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    completionHandler([.alert, .badge, .sound])
+}
+
 ```
 
 In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a click for that push.
