@@ -73,7 +73,7 @@ When rules conflict, the most restrictive, applicable frequency capping rule wil
 In this example, your user will not receive more than one (1) push notification Campaign/Canvas steps with the tag "promotional" in a given week, because you've specified that users should not receive more than one (1) push notification Campaign/Canvas step from all Campaign/Canvas steps. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
 
 ### Tag Count
-Frequency Capping by Tag rules compute at the time a message send. This means that Frequency Capping by Tag only counts tags that are currently on the Campaigns/Canvases that a user received in the past. It does not count the tags that were on the Campaigns/Canvases during the time they were sent, but have since been removed. It will count if a Tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
+Frequency Capping by Tag rules compute at the time a message sends. This means that Frequency Capping by Tag only counts tags that are currently on the Campaigns/Canvases that a user received in the past. It does not count the tags that were on the Campaigns/Canvases during the time they were sent, but have since been removed. It will count if a Tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
 #### Example
 
