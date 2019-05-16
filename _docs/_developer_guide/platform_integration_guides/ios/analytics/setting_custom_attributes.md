@@ -25,7 +25,7 @@ To assign user attributes, you need to set the appropriate field on the shared `
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.firstName = "Jeff"
+Appboy.sharedInstance()?.user.firstName = "Jeff"
 ```
 
 {% endtab %}
@@ -67,7 +67,7 @@ For more information regarding the segmentation options each of these attributes
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", andBOOLValue: yourBoolValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andBOOLValue: yourBoolValue)
 ```
 
 {% endtab %}
@@ -86,7 +86,7 @@ Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", andIntegerValue: yourIntegerValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andIntegerValue: yourIntegerValue)
 ```
 
 {% endtab %}
@@ -105,7 +105,7 @@ Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", andDoubleValue: yourDoubleValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andDoubleValue: yourDoubleValue)
 ```
 
 {% endtab %}
@@ -126,7 +126,7 @@ Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", andStringValue: "Your String")
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andStringValue: "Your String")
 ```
 
 {% endtab %}
@@ -145,7 +145,7 @@ Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setCustomAttributeWithKey("your-attribute-string", andDateValue:yourDateValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andDateValue:yourDateValue)
 ```
 
 {% endtab %}
@@ -175,11 +175,11 @@ The maximum number of elements in Custom Attribute Arrays defaults to 25. The ma
 
 ```swift
 // Setting a custom attribute with an array value
-Appboy.sharedInstance().user.setCustomAttributeArrayWithKey("array_name", array: ["value1",  "value2"])
+Appboy.sharedInstance()?.user.setCustomAttributeArrayWithKey("array_name", array: ["value1",  "value2"])
 // Adding to a custom attribute with an array value
-Appboy.sharedInstance().user.addToCustomAttributeArrayWithKey("array_name", value: "value3")
+Appboy.sharedInstance()?.user.addToCustomAttributeArrayWithKey("array_name", value: "value3")
 // Removing a value from an array type custom attribute
-Appboy.sharedInstance().user.removeFromCustomAttributeArrayWithKey("array_name", value: "value2")
+Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name", value: "value2")
 ```
 
 {% endtab %}
@@ -200,7 +200,7 @@ Custom Attributes can also be unset using the following method:
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.unsetCustomAttributeWithKey("your-attribute-string")
+Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your-attribute-string")
 ```
 
 {% endtab %}
@@ -221,7 +221,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.incrementCustomUserAttribute("Attribute Key", by: incrementIntegerValue)
+Appboy.sharedInstance()?.user.incrementCustomUserAttribute("Attribute Key", by: incrementIntegerValue)
 ```
 
 {% endtab %}
@@ -270,7 +270,7 @@ Users who grant permission for an app to send them push notifications are defaul
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setEmailNotificationSubscriptionType(ABKNotificationSubscriptionType)
+Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificationSubscriptionType)
 ```
 
 {% endtab %}
@@ -289,7 +289,7 @@ Appboy.sharedInstance().user.setEmailNotificationSubscriptionType(ABKNotificatio
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.setPushNotificationSubscriptionType(ABKNotificationSubscriptionType)
+Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificationSubscriptionType)
 ```
 
 {% endtab %}

@@ -7,7 +7,7 @@ alias: /partners/adjust/
 
 [Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
 
-Adjust allows you to import paid install attribution data to segment more intelligently within your lifecycle campaigns.
+Adjust allows you to import non-organic install attribution data to segment more intelligently within your lifecycle campaigns.
 
 ## Requirements
 
@@ -58,7 +58,7 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 
 
 {% alert important %}
-  At this time, Braze only receives paid install attribution data from these attribution partners. This means that organic data will not appear as an attributed source.
+  At this time, Braze only receives non-organic install attribution data from these attribution partners. This means that organic data will **not** appear as an attributed source within Braze.
 {% endalert %}
 
 ## Facebook and Twitter Attribution Data
