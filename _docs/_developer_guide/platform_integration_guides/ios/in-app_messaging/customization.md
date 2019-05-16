@@ -34,7 +34,7 @@ Set the `delegate` on `ABKInAppMessageController` by calling:
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.delegate = self
+Appboy.sharedInstance()?.inAppMessageController.delegate = self
 ```
 
 {% endtab %}
@@ -58,7 +58,7 @@ In some cases (e.g., on session start), the in-app message may be triggered and 
 Appboy.startWithApiKey("YOUR-API-KEY",
                        inApplication:application,
                        withLaunchOptions:launchOptions,
-                       withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ]])
+                       withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
 ```
 {% endtab %}
 {% endtabs %}
@@ -80,7 +80,7 @@ Set this delegate by calling:
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
 ```
 
 {% endtab %}
@@ -103,7 +103,7 @@ To migrate from version 3.2.3 or earlier, change the code with your delegate met
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
 ```
 
 {% endtab %}
@@ -129,7 +129,7 @@ To set a fixed orientation for all in-app messages, you can set the `supportedOr
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance().inAppMessageController.supportedOrientationMasks = portrait;
+Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
 // Use landscape to display in-app messages in landscape
 ```
 
@@ -481,7 +481,7 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [31]: #customizing-appboy-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/InAppMessage/ABKInAppMessageUIDelegate.h
+[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
 [37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/InAppMessage/ViewControllers

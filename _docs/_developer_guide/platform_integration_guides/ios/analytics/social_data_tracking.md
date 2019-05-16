@@ -31,7 +31,7 @@ ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDic
 
 ```swift
 var facebookUser : ABKFacebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes);
-Appboy.sharedInstance().user.facebookUser = facebookUser;
+Appboy.sharedInstance()?.user.facebookUser = facebookUser;
 ```
 
 {% endtab %}
@@ -74,7 +74,7 @@ twitterUser.twitterID = self.twitterID;
 var twitterUser : ABKTwitterUser = ABKTwitterUser();
 twitterUser.userDescription = twitterDserDescription;
 twitterUser.twitterID = twitterID;
-Appboy.sharedInstance().user.twitterUser = twitterUser;
+Appboy.sharedInstance()?.user.twitterUser = twitterUser;
 ```
 
 {% endtab %}

@@ -195,7 +195,7 @@ Add the following code to your app's `application(_:didRegisterForRemoteNotifica
 
 ```swift
 let deviceTokenString = String(format: "%@", deviceToken as CVarArg)
-Appboy.sharedInstance().registerPushToken(deviceTokenString)
+Appboy.sharedInstance()?.registerPushToken(deviceTokenString)
 ```
 
 {% endtab %}
@@ -252,7 +252,7 @@ In this case, if the user clicks the displayed foreground push, the new iOS 10 p
 Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.register(application,
                                             didReceiveRemoteNotification: userInfo,
                                             fetchCompletionHandler: completionHandler)
 ```
@@ -260,19 +260,22 @@ Appboy.sharedInstance().registerApplication(application,
 Next, add the following code to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().userNotificationCenter(center,
-                                               didReceiveNotificationResponse: response,
+Appboy.sharedInstance()?.userNotificationCenter(center,
+                                               didReceive: response,
                                                withCompletionHandler: completionHandler)
 ```
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler`:
+In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler` in the appropriate view controller class:
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
                 willPresent notification: UNNotification,
-      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    completionHandler([.alert, .badge, .sound])
+}
+
 ```
 
 In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a click for that push.
@@ -310,7 +313,7 @@ To support push analytics on iOS 10, you must also add the following code to you
 To enable open tracking on push notifications, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.register(application,
   didReceiveRemoteNotification: userInfo,
   fetchCompletionHandler: completionHandler)
 ```
@@ -318,7 +321,7 @@ Appboy.sharedInstance().registerApplication(application,
 To support push analytics on iOS 10, you must also add the following code to your app's `application(_:didReceiveRemoteNotification:)` delegate method:
 
 ```swift
-Appboy.sharedInstance().registerApplication(application,
+Appboy.sharedInstance()?.register(application,
   didReceiveRemoteNotification: userInfo)
 ```
 
@@ -467,7 +470,7 @@ To enable Braze's push action button handling, including click analytics and URL
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().getActionWithIdentifier(identifier,
+Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
                          forRemoteNotification: userInfo,
                              completionHandler: completionHandler)
 ```

@@ -22,7 +22,7 @@ The `allowRequestWhenInUseLocationPermission` method gives Braze permission to r
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().locationManager.allowRequestWhenInUseLocationPermission()
+Appboy.sharedInstance()?.locationManager.allowRequestWhenInUseLocationPermission()
 ```
 
 {% endtab %}
@@ -42,7 +42,7 @@ To log a single location using Braze's location manager, use the following metho
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().locationManager.logSingleLocation()
+Appboy.sharedInstance()?.locationManager.logSingleLocation()
 ```
 
 {% endtab %}
