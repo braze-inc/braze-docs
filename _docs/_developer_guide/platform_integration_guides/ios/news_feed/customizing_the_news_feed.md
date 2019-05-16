@@ -9,7 +9,7 @@ search_rank: 5
 
 ## Overriding Default Images in the News Feed
 
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new. `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. The image names for the Read icon and Placeholder image for News Feed are:
+Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. The image names for the Read icon and Placeholder image (when a user has a poor connection) for News Feed are:
 * Read icon indicator: “Icons_Read"
 * Placeholder image: "img-noimage-lrg"
 
