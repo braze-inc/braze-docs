@@ -13,7 +13,7 @@ Braze allows clients to replace existing default images with their own custom im
 * Read icon indicator: `Icons_Read`
 * Placeholder image: `img-noimage-lrg`
 
-{{site.data.alerts.note}} Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. {{site.data.alerts.end}}
+{% alert note %} Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. {% endalert %}
 
 ## Creating a Custom News Feed
 

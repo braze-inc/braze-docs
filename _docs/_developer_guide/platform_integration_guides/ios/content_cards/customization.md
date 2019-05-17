@@ -18,7 +18,7 @@ ABKContentCardsTableViewController *contentCards = [ABKContentCardsTableViewCont
 [self.navigationController pushViewController:contentCards animated:YES];
 ```
 
-{{site.data.alerts.note}} To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`. {{site.data.alerts.end}}
+{% alert note %} To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`. {% endalert %}
 
 ### Modal Context
 
