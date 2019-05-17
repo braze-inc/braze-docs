@@ -25,7 +25,7 @@ Hi, here are some articles that you might find interesting:
 
 If the URL is unavailable, Braze will render an empty string in its place. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so we do not overload your server when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 
-If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Additionally, Connected Content messages are processed with lower priority in our systems as not to roadblock other messaging campaigns due to long response times from servers. As a result, you may notice that delivery on Connected Content messages are slightly slower than other messages you send normally. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 
 >  Attribute values must be surrounded by `${}` in order to operate properly within Braze's version of Liquid Syntax.
 
