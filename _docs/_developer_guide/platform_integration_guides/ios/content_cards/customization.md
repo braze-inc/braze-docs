@@ -32,9 +32,10 @@ For examples of these view controllers, check out our [Content Cards sample app]
 
 {{site.data.alerts.note}} To customize the header, set the title property of the `navigationItem` belonging to the `ABKContentCardsTableViewController` instance embedded in the parent `ABKContentCardsViewController` instance. {{site.data.alerts.end}}
 
-## Overriding Default Images in Content Cards
+## Overriding Default Images
 
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. To override the default placeholder image displayed when a user has a poor connection, name your custom image `appboy_cc_noimage_lrg`.
+Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in Content Cards include:
+* Placeholder image: `appboy_cc_noimage_lrg`.
 
 {{site.data.alerts.note}} Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. {{site.data.alerts.end}}
 
