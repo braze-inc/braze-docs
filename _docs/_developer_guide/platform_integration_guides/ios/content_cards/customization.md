@@ -25,14 +25,10 @@ ABKContentCardsTableViewController *contentCards = [ABKContentCardsTableViewCont
 {% tab swift %}
 
 ```swift
-// Initialize out-of-the-box content cards table view controller
-let contentCardsTVC = ABKContentCardsTableViewController()
-// Modify title of table view controller
-contentCardsTVC.title = "TVC Title"
-// Disable unread card indicator (the default value is false)
-contentCardsTVC.disableUnreadIndicator = true
-// Display content cards in navigation controller
-navigationController?.pushViewController(contentCardsTVC, animated: true)
+let contentCards = ABKContentCardsTableViewController()
+contentCards.title = "TVC Title"
+contentCards.disableUnreadIndicator = true
+navigationController?.pushViewController(contentCards, animated: true)
 ```
 
 {% endtab %}
@@ -56,14 +52,10 @@ ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController al
 {% tab swift %}
 
 ```swift
-// Initialize out-of-the-box view controller
-let contentCardsVC = ABKContentCardsViewController()
-// Modify title view controller
-contentCardsVC.contentCardsViewController.title = "VC Title"
-// Disable unread card indicator (the default value is false)
-contentCardsVC.contentCardsViewController.disableUnreadIndicator = true
-// Display content cards in modal
-self.present(contentCardsVC, animated: true, completion: nil)
+let contentCards = ABKContentCardsViewController()
+contentCards.contentCardsViewController.title = "VC Title"
+contentCards.contentCardsViewController.disableUnreadIndicator = true
+self.present(contentCards, animated: true, completion: nil)
 ```
 
 {% endtab %}
