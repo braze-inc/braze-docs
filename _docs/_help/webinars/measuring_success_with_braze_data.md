@@ -5,7 +5,7 @@ page_order: 8
 
 # Measuring Success with Braze Data
 
-{% include youtube.html id="Jf9zOKW0o2o" %}
+{% include video.html id="Jf9zOKW0o2o" %}
 
 
 _Just creating segments and notifications isn't enough to increase ROI— to measure effectively and improve your marketing's impact, you need to understand each campaign's results. This onboarding webinar will help to better understand how to measure the success of your marketing efforts using Braze data._

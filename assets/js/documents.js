@@ -92,11 +92,13 @@ $(document).ready(function() {
       $('#header_nav').addClass('scrollnav');
       $('#nav_bar' ).addClass('scrollnav');
       $('#contentcards' ).addClass('scrollnav');
+      $('#main_content' ).addClass('scrollnav');
       //$('#nav_bottom').height(nav_bottom_height);
     } else {
       $('#header_nav').removeClass('scrollnav');
       $('#nav_bar' ).removeClass('scrollnav');
       $('#contentcards' ).removeClass('scrollnav');
+      $('#main_content' ).removeClass('scrollnav');
       //$('#nav_bottom').height($('#nav_bottom').height() + delta_scroll);
 
       if ($('#toc nav').length) {

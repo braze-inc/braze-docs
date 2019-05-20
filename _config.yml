@@ -59,7 +59,7 @@ search_debug: false
 
 # For local testing, set to false to increase build time by not pulling partner api
 # data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
-partner_api: true
+partner_api: false
 
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
@@ -198,8 +198,8 @@ image_buster:
 
 # Image asset pipeline setting for japr
 asset_pipeline:
-  bundle: true
-  compress: true
+  bundle: false
+  compress: false
   output_path: assets
   display_path: docs/assets
   gzip: false

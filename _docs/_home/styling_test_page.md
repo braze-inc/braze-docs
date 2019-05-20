@@ -231,7 +231,9 @@ class Foo:
 
 {{site.data.alerts.note}} This is a note {{site.data.alerts.end}}
 
-{{site.data.alerts.important}}This is a important {{site.data.alerts.end}}
+{% alert important %}
+This is a important `adsadasd`
+ {%endalert%}
 
 {{site.data.alerts.warning}}This is a warning {{site.data.alerts.end}}
 
@@ -313,12 +315,13 @@ Link here: [Braze.com](https://www.braze.com)
 
  {% endalert %}
 
-# Embedded video test
-{% include youtube.html id="XY5uXoKIvFY" %}
+# Embedded video/youtube test
+Defaults to youtube embedded.
+{% include video.html id="XY5uXoKIvFY" %}
 
 
 # Embedded video right align test
-{% include youtube.html id="XY5uXoKIvFY" align="right" %}
+{% include video.html id="XY5uXoKIvFY" align="right" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue tortor sed tincidunt cursus. Sed iaculis molestie ligula, vel aliquam ante ultrices vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nec risus velit. Curabitur urna tellus, dictum non convallis ac, porta vel neque. Ut egestas magna et turpis ullamcorper ultricies. Cras dolor lacus, fringilla sed enim ut, porttitor convallis arcu. Nam placerat neque vitae vestibulum dictum. Nam in pulvinar neque. Quisque eget sodales est. Mauris mattis porta felis scelerisque convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc sodales nibh vitae felis ultrices consectetur. Etiam efficitur elementum ante.
 
@@ -328,7 +331,7 @@ Proin sed commodo mi, non bibendum metus. Praesent non justo lacus. Curabitur no
 
 
 # Embedded video left align test
-{% include youtube.html id="XY5uXoKIvFY" align="left" %}
+{% include video.html id="XY5uXoKIvFY" align="left" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium elit non pulvinar tristique. Sed tellus dolor, commodo id laoreet non, pretium id velit. Donec tristique egestas felis, quis sagittis nibh sodales quis. Ut ut urna faucibus, sagittis justo dictum, efficitur arcu. Phasellus consequat nunc mollis, convallis eros at, euismod ex. Morbi id finibus velit, eu sollicitudin sem. Cras feugiat quis nibh non convallis.
 
@@ -338,20 +341,33 @@ Donec urna odio, gravida eu arcu sit amet, placerat aliquam erat. In sit amet nu
 ## Usage:
 {% raw  %}
 ```html
-{% include youtube.html id="[youtubeid]" %}
+{% include video.html id="[youtubeid]" %}
 ```
 {% endraw  %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
 {% raw  %}
 ```html
-{% include youtube.html id="[youtubeid]" align="left" %}
+{% include video.html id="[youtubeid]" align="left" %}
 
-{% include youtube.html id="[youtubeid]" align="right" %}
+{% include video.html id="[youtubeid]" align="right" %}
 
 ```
 {% endraw  %}
 
+# Featured video layout with static placement for higher resolution
+To use the featured video layout which places a static video on the left side
+for higher resolution display, add a video_id and a video_type ie `youtube` to
+the yaml header for the page.
+video_source defaults to `youtube`
+
+{% raw  %}
+```yaml
+layout: featured_video
+video_id: [video_id]
+video_source: youtube
+```
+{% endraw  %}
 
 # List Test
 

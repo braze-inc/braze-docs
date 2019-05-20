@@ -27,12 +27,12 @@ glossaries:
       - All
   - name: Audience
     description: Percentage of users who received a particular message. This number is received from Braze.
-    calculation: (Number of Recipients in Variant) / (Unique Recipients)
+    fields: (Number of Recipients in Variant) / (Unique Recipients)
     tags:
       - All
   - name: Unique Recipients
     description: Exact number of users who received a particular message. This number is received from Braze.
-    calculation: Count
+    fields: Count
     tags:
       - Email
       - Web Push

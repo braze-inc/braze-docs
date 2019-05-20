@@ -5,7 +5,7 @@ permalink: "/canvas_in-app_messages/"
 
 # In-App Messages In Canvas
 
-{% include youtube.html id="6X8E20BlblI" align="right" %}
+{% include video.html id="6X8E20BlblI" align="right" %}
 
 Once you've set up delay and audience options, you can add an in-app message to your Canvas by selecting in-app message from "messaging channels."  Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app.
 
