@@ -41,7 +41,7 @@ search_rank: 5
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
-[37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/InAppMessage/ViewControllers
+[37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
 [38]: #in-app-mssage-ui-delegate
 [39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
