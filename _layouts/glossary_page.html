@@ -53,7 +53,7 @@ var glossary_tags = {
   {{ glossary_tags }}
 };
 
-{%- comment -%} Data order: 0 name, 1 description,2 metric,3 calculation,4 tags {%- endcomment -%}
+{%- comment -%} Data order: 0 name, 1 description,2 metric,3 calculation,4 field, 5 tags {%- endcomment -%}
 {%- assign glossary_list = '' -%}
 {%- for glossary in page.glossaries -%}
   {%- if glossary_list != '' -%}
@@ -61,7 +61,7 @@ var glossary_tags = {
   {%- endif -%}
   {%- capture glossary_list -%}
   {{ glossary_list }}
-  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}","{{ glossary['metric'] | replace: '"', '\\"' }}","{{ glossary['calculation'] | replace: '"', '\\"' }}",
+  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}","{{ glossary['metric'] | replace: '"', '\\"' }}","{{ glossary['calculation'] | replace: '"', '\\"' }}","{{ glossary['field'] | replace: '"', '\\"' }}",
   {%- endcapture -%}
   {%- assign glossary_tag = '' -%}
   {%- assign glossary_list = glossary_list | append: '['  -%}
@@ -84,8 +84,9 @@ var glossary_map = {
   'description': 1,
   'metric': 2,
   'calculation': 3,
-  'tags': 4,
-  'glossary_tags': 4
+  'field': 4,
+  'tags': 5,
+  'glossary_tags': 5,
 }
 $(document).ready(function() {
   function string_to_slug(str) {
@@ -179,7 +180,9 @@ $(document).ready(function() {
     if  (cur_glossary[glossary_map['calculation']]) {
       card_calc = $('<div>').addClass('caclulation').html('Calculation: ' + cur_glossary[glossary_map['calculation']]);
     }
-
+    if  (cur_glossary[glossary_map['field']]) {
+      card_calc = $('<div>').addClass('field').html('Field: ' + cur_glossary[glossary_map['field']]);
+    }
     var card_div = $('<div>').addClass('content').append(card_title).append(card_desc).append(card_metric).append(card_calc).append(card_tag);
 
     var append_html = $('<span>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);

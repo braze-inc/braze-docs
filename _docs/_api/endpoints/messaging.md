@@ -2,6 +2,36 @@
 nav_title: Messaging
 page_order: 3
 search_rank: 5
+local_redirect: #parameter-definitions
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #app-group-rest-api-key
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #app-identifier
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #external-user-id
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #segment-identifier
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #campaign-identifier
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #canvas-identifier
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #send-identifier
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #trigger-properties
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #canvas-entry-properties
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #broadcast
+  hashtag-name-here: '/docs/api/parameters/'
+local_redirect: #server-responses
+  hashtag-name-here: '/docs/api/errors/'
+local_redirect: #messaging-queued
+  hashtag-name-here: '/docs/api/errors/'
+local_redirect: #responses-for-tracked-send-ids
+  hashtag-name-here: '/docs/api/errors/'
+local_redirect: #fatal-errors
+  hashtag-name-here: '/docs/api/errors/'
 ---
 # Messaging
 
@@ -474,23 +504,13 @@ Example Response:
 }
 ```
 
-##  Parameter Definitions
+{% endraw %}
 
-###  App Group REST API Key
-
-The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the [Developer Console][18] section of the Braze dashboard.
-
-###  App Identifier
-
-If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the [Developer Console][18] section of the Braze dashboard.
-
-### External User ID
-
-A unique identifier for sending a message to specific users. This identifier should be the same as the one you [set in the Braze SDK][19]. You can only target users for messaging who have already been identified through the SDK or the User API. If you need to send messages to specific users who have not yet been identified to Braze, consider attaching a Tokens Object (explained below) to your message. A maximum of 75 External User IDs are allowed in a request.
-
-For campaign trigger endpoints, if you provide this field, the criteria will be layered with the campaign's segments and only users who are in the list of External User IDs _and_ the campaign's segment will receive the message.
+##  Messaging Objects & Filters
 
 ### User Alias Object
+
+{% raw %}
 
 The User Alias Object consists of two parts: an `alias_name` for the identifier itself, and an `alias_label` indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one `alias_name` per `alias_label`.
 
@@ -500,36 +520,6 @@ The User Alias Object consists of two parts: an `alias_name` for the identifier 
   "alias_label" : (required, string)
 }
 ```
-
-### Segment Identifier
-
-The `segment_id` indicates the segment to which the message should be sent. A Segment Identifier for each of the segments you have created can be found in the [Developer Console][18] section of the Braze dashboard. For message endpoints, if you provide both a Segment Identifier _and_ a list of External User IDs in a single messaging request, the criteria will be layered and only users who are in the list of External User IDs _and_ the provided segment will receive the message.
-
-### Campaign Identifier
-
-For messaging endpoints, the `campaign_id` indicates the [API Campaign][26] under which the analytics for a message should be tracked. A Campaign Identifier for each of the campaigns you have created can be found in the [Developer Console][18] section of the Braze dashboard. If you provide a Campaign Identifier in the request body, you must provide a `message_variation_id` in each of the message objects indicating the represented variant of your campaign.
-
-For campaign trigger endpoints, the `campaign_id` indicates the API ID of the campaign to be triggered. This field is required for all trigger endpoint requests.
-
-### Canvas Identifier
-
-For Canvas triggering endpoints, the `canvas_id` indicates the identifier of the Canvas to be triggered or scheduled. This field is required for all trigger endpoint requests.
-
-### Send Identifier
-
-For messaging endpoints, the `send_id` indicates the send under which the analytics for a message should be tracked. The `send_id` allows you to pull back analytics for a specific instance of a campaign send via the `sends/data_series` endpoint. API and API trigger campaigns that are sent as a broadcast will automatically generate a send identifier if a send identifier is not provided. If you want to specify your own `send_id`, you'd have to first create one via the `sends/id/create` endpoint. The `send_id` must be all ASCII characters and at most 64 characters long.  You can reuse a send identifier across multiple sends of a same campaign if you want to group analytics of those sends together.
-
-**Note** `send_id` tracking is not available for emails sent via Mailjet.
-
-**Note** Campaign conversions are attributed to the last tracked `send_id` that the user received from that campaign unless the last send the user received was untracked.
-
-### Trigger Properties
-
-When using one of the endpoints for sending a campaign with API Triggered Delivery, you may provide a map of keys and values to customize your message. If you make an API request that contains an object in `"trigger_properties"`, the values in that object can then be referenced in your message template under the `api_trigger_properties` namespace. For example, a request with `"trigger_properties" : {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to the message by adding `{{api_trigger_properties.${product_name}}}`.
-
-### Canvas Entry Properties
-
-When using one of the endpoints for triggering or scheduling a Canvas via the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the `canvas_entry_properties` namespace. For example, a request with `"canvas_entry_properties" : {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to a message by adding `{{canvas_entry_properties.${product_name}}}`.
 
 ### Recipient Object
 ```json
@@ -541,14 +531,6 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }
 ```
-
-### Broadcast
-
-When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a "broadcast" to a large group of users by including a "broadcast" boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include "broadcast: true" in your API call. If the "broadcast" flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including "broadcast: true" and providing a recipient list will return an error. The "broadcast" flag is required in order to protect against accidental sends to large groups of users.
-
-{% alert update %}
-  Please note that for backwards-compatibility, this field is only required for API calls made for campaigns and Canvases created after August 15, 2017 that intend to send to the entire audience. It will be mandatory on August 31, 2017 for all campaigns and Canvases for API calls that intend to send to the entire audience. The behavior for API calls to deliver campaigns and canvases created prior to these dates is: if an explicit list of recipients is not provided, the message will send to the entire targeted audience of the campaign or Canvas. That is, until 8/15/17, the "broadcast" field does not have a default value, so you may wish to explicitly set "broadcast: false" in existing API calls. On 8/15/17, it will default to false for newly created Campaigns and Canvases. On 8/31/17, it will default to false for all API calls.
-{% endalert %}
 
 ### Connected Audience Object
 
@@ -715,7 +697,7 @@ This filter allows you to segment based on when was the last time user used the 
 
 >  You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object, and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
-#### Apple Push Alert Object
+##### Apple Push Alert Object
 
 >  In most cases, `alert` can just be specified in an `apple_push` object as a string. You should specify `alert` as an object only in cases where you need specific localization or Apple Watch customization.
 
@@ -732,7 +714,8 @@ This filter allows you to segment based on when was the last time user used the 
 ```
 
 #### Apple Push Action Button Object
->  You _must_ include the `category` field in the Apple Push Object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use (see the table below). You can also use your own buttons if they have been registered in your app.
+
+You _must_ include the `category` field in the Apple Push Object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use (see the table below). You can also use your own buttons if they have been registered in your app.
 
 ##### Apple Push Action Button Object for Braze Default Buttons
 
@@ -934,7 +917,9 @@ See the Windows Universal [toast template catalog][32] for details on the option
   "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
   "should_inline_css": (optional, boolean), whether to inline css on the body. If not provided, falls back to the default css inlining value for the App Group,
-  "attachments": (optional, array), array of json objects like [{"file_name","url"}] that define the files you need attached. Your file name's extension will be detected automatically from the URL, which should return the appropriate `Content-Type` as a response header.
+  "attachments": (optional, array), array of json objects that define the files you need attached, defined by "file_name" and "url" below,
+    "file_name": (required, string) the name of the file you would like to attach to your email. You can attach any number of files up to 1MB. This is required if you use "attachments",
+    "url": (required, string) the corresponding url of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined below, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments".
 }
 ```
 
@@ -955,81 +940,6 @@ See the Windows Universal [toast template catalog][32] for details on the option
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under
 }
 ```
-
-##  Server Responses
-
-If your POST payload was accepted by our servers, then successful messages will be met with the following response:
-
-```json
-{
-  "message" : "success"
-}
-```
-
-Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (e.g., a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID, etc.)
-
-If your message is successful but has non-fatal errors you will receive the following response:
-
-```json
-{
-  "message" : "success", "errors" : [<minor error message>]
-}
-```
-
-In the case of a success, any messages that were not affected by an error in the `errors` array will still be delivered. If your message has a fatal error you will receive the following response:
-
-```json
-{
-  "message" : <fatal error message>, "errors" : [<minor error message>]
-}
-```
-
-### Queued Responses {#messaging-queued}
-
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
-
-```json
-{
-  "message" : "queued"
-}
-```
-
-### Responses For Tracked Send Ids
-
-Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance  when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
-
-```json
-{
-  "message": "success", "send_id" : "example_send_id"
-}
-```
-
-The provided send id can be used as a parameter for the send/data_series endpoint to pull back send specific analytics.
-
-### Fatal Errors
-
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no messages will be sent.
-
-- 400 Bad Request - Bad syntax.
-- 400 No Recipients - There are no external IDs or segment IDs or no push tokens in the request
-- 400 Invalid Campaign ID - No Messaging API Campaign was found for the campaign ID you provided
-- 400 Message Variant Unspecified - You provide a campaign ID but no message variation ID
-- 400 Invalid Message Variant - You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages
-- 400 Mismatched Message Type - You provided a message variation of the wrong message type for at least one of your messages
-- 400 Invalid Extra Push Payload - You provide the "extra" key for either "apple_push" or "android_push" but it is not a dictionary
-- 400 Max input length exceeded - Caused by:
-  - More than 50 external ids
-- 400 No message to send - No payload is specified for the message
-- 400 Slideup Message Length Exceeded - Slideup message > 140 characters
-- 400 Apple Push Length Exceeded - JSON payload > 1912 bytes
-- 400 Android Push Length Exceeded - JSON payload > 4000 bytes
-- 400 Bad Request - Cannot parse send_at datetime
-- 400 Bad Request - `in_local_time` is true but `time` has passed in your company’s time zone
-- 401 Unauthorized - Unknown or missing REST API Key
-- 403 Forbidden - Rate plan doesn't support or account is otherwise inactivated
-- 404 Not Found - Unknown REST API Key
-- 429 Rate limited - Over rate limit
-- 5XX - Internal server error, you should retry your request with exponential backoff
 
 {% endraw %}
 
