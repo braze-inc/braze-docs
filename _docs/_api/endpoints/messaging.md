@@ -806,6 +806,7 @@ You must include an Android Push Object in `messages` if you want users you have
   "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",
   "title": (required, string) the card's title,
   "description": (required, string) the card's description,
+  "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be a Content Card Message),
   "pinned": (optional, boolean) whether the card is pinned. Defaults to false,
   "image_url": (optional, string) the card's image URL. Required for "CAPTIONED_IMAGE" and "BANNER",
   "time_to_live": (optional, integer) the number of seconds before the card expires. You must include either "time_to_live" or "expire_at",
@@ -916,7 +917,9 @@ See the Windows Universal [toast template catalog][32] for details on the option
   "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
   "should_inline_css": (optional, boolean), whether to inline css on the body. If not provided, falls back to the default css inlining value for the App Group,
-  "attachments": (optional, array), array of json objects like [{"file_name","url"}] that define the files you need attached. Your file name's extension will be detected automatically from the URL, which should return the appropriate `Content-Type` as a response header.
+  "attachments": (optional, array), array of json objects that define the files you need attached, defined by "file_name" and "url" below,
+    "file_name": (optional, string) the name of the file you would like to attach to your email. You can attach any number of files up to 1MB,
+    "url": (optional, string) the corresponding url of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined below, which should return the appropriate "Content-Type" as a response header.
 }
 ```
 
