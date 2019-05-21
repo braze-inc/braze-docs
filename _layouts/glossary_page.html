@@ -168,8 +168,7 @@ $(document).ready(function() {
     if (tags.length){
       card_tag.append($('<div>').addClass('tag').html('Filter Category: ' + tags.join(', ')));
     }
-
-    var card_desc = $('<p>').addClass('desc').html(cur_glossary[glossary_map['description']]);
+    var card_desc = $('<p>').addClass('desc').html(cur_glossary[glossary_map['description']].replace(/`([^`]+)`/g,"<code class=\"highlighter-rouge\">\$1</code>"));
 
     var card_metric = '';
     if  (cur_glossary[glossary_map['metric']]) {
