@@ -823,6 +823,7 @@ You must include an Android Push Object in `messages` if you want users you have
   "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",
   "title": (required, string) the card's title,
   "description": (required, string) the card's description,
+  "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be a Content Card Message),
   "pinned": (optional, boolean) whether the card is pinned. Defaults to false,
   "image_url": (optional, string) the card's image URL. Required for "CAPTIONED_IMAGE" and "BANNER",
   "time_to_live": (optional, integer) the number of seconds before the card expires. You must include either "time_to_live" or "expire_at",
