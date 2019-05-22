@@ -94,7 +94,9 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 {% endif %}
 ```
 
->  Be aware that this key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
+{% alert important %}
+This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
+{% endalert %}
 
 ### Configurable Caching
 Connected Content will cache the value it returns from non POST endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is also 5 minutes. However, this cache time can be configured to be longer. For example:
