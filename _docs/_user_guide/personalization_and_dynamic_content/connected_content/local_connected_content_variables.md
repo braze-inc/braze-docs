@@ -99,14 +99,18 @@ This key will only be automatically added to the Connected Content object if the
 {% endalert %}
 
 ### Configurable Caching
-Connected Content will cache the value it returns from non POST endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is also 5 minutes. However, this cache time can be configured to be longer. For example:
+Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
+
+If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below.
 
 ```
 #  Will cache for 900 seconds (15 minutes)
-{% connected_content https://example.com/webservice.json :cache 900 %}
+{% connected_content https://example.com/webservice.json :cache_max_value 900 %}
 ```
 
 {% endraw %}
+
+If you don't want to cache a value at all, to create a cache bust, use a POST endpoint with a timeframe stamp or `braze_id`. 
 
 
 [1]: #aborting-connected-content
