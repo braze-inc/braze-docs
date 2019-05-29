@@ -107,23 +107,6 @@ Your Braze representative should have already advised you of the [correct endpoi
 
 Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url's authority (e.g. `sdk.iad-01.braze.com`, *not* `https://sdk.iad-01.braze.com`).
 
-In versions prior to 3.0.2, add the following class to your application, and then instantiate it and pass it in the `appboyOptions` dictionary you pass to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` with the key: `ABKAppboyEndpointDelegateKey`
-
-```
-#import "Foundation/Foundation.h"
-#import "ABKAppboyEndpointDelegate.h"
-
-@interface AppboyEndpointDelegate : NSObject <ABKAppboyEndpointDelegate>
-@end
-
-@implementation AppboyEndpointDelegate
-- (NSString *) getApiEndpoint:(NSString *)appboyApiEndpoint {
-    return [appboyApiEndpoint stringByReplacingOccurrencesOfString:@"dev.appboy.com" withString:@"YOUR_CUSTOM_ENDPOINT_OR_DATA_CLUSTER"];
-}
-
-@end
-```
-
 {% alert important %}
 To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
