@@ -3,35 +3,51 @@ nav_title: Snowflake
 alias: /partners/snowflake/
 ---
 
-# Snowflake
+# Snowflake Secure Data Sharing
 
-Summary of what Snowflake is and how we work together. Data-sharing!
+Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-## Use Cases
-Similar to Currents, you can use your Snowflake
-- Complex File Reports
-- Attribution modeling
-- Mapping raw event or user data to a CRM like Salesforce
+Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
 
-## Requirements
+{% comment %}
+Learn more about this partnership [here]()!
+{% endcomment %}
 
-|Requirement | Description |
-|---|---|
-| Snowflake Account |
-| Braze App Group ID |
+### Data Sharing?
+
+Data Sharing allows Braze to allow you secure access to data on our Snowflake portal by sharing view without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
 ## Integration
 
-If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask to consult the Braze Business Intelligence Team on data-sharing with Snowflake. This will get the cogs going inside Braze. It will involve and update to your MSA.
+If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult the Braze Business Intelligence Team on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
 
+{% alert important %}
+You must have an account with Snowflake to use the Data Sharing and Braze Benchmark Services.
+{% endalert %}
 
-## Usage/Visualization
+## Usage & Visualization
 
-Braze will send you some views.
+Similar to Currents, you can use your Secure Snowflake Data Sharing to...
+- Create complex rile reports,
+- Perform attribution modeling,
+- Map raw event or user data to a CRM (like Salesforce)...
 
-You'll have access to historical, current, and future data dating from the beginning of when data was sent to Snowflake up until you choose not to utilize Snowflake anymore.
+And so much more!
 
-You can do whatever you want with it, but we recommend using it in conjunction with our Looker Blocks.
+After Braze sets up your views on Snowflake and grants you the access you need, we will send you some views. This data is similar to what you'd see in [Currents]({{ site.baseurl }}/partners/braze_currents/about/).  
+
+You'll have access to historical, current, and future data dating from the beginning of when that data was sent to Snowflake up until you choose not to utilize Snowflake anymore.
+
+You can do whatever you want with the data, but we recommend using it in conjunction with our Looker Blocks.
+
+### Query Samples
+
+Below, you can see query samples for two possible use cases.
+
+{% tabs %}
+  {% tab Push Funnel %}
+
+  You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined, since each raw event typically has a separate table.
 
 ```json
 SELECT
@@ -56,11 +72,14 @@ LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE  AS users_messages_pushnotifica
 
 LIMIT 500
 ```
+  {% endtab %}
+  {% tab Email Open Rate %}
+You can use this Email Open Rate query to analyze the time between emails that a user receives.
 
-Or this example, for Raw Events Data for open rate based on the spacing between emails that a user is sent.
+For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
 ```json
-```WITH email_messaging_cadence AS (with deliveries as
+WITH email_messaging_cadence AS (with deliveries as
       (select TO_TIMESTAMP(time) AS delivered_timestamp,
       email_address AS delivered_address,
       message_variation_id as d_message_variation_id,
@@ -102,26 +121,17 @@ FROM email_messaging_cadence
 
 GROUP BY 1
 ORDER BY 1
-LIMIT 500```
+LIMIT 500
 ```
+{% endtab %}
+{% endtabs %}
 
+## Braze Benchmarks
 
-## Benchmarks
+Braze Benchmarks will allow Braze prospects and  customers alike to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
 
-Braze also offers data sharing for our Benchmark data.
+We created a corresponding Looker Block so you can use Snowflake or Looker to join that data to your data to perform what-if analyses and other, more flexible analytics.
 
-We will create a corresponding Looker Block so you can use Snowflake or Looker to join that data to their own data, perform what-if analysis, and other more flexible analytics.
+The initial set of top-level categories are: Financial, Health, Weather, Media, Transportation, Business, Cyber, Sports, Government, Lookup Tables, Demographics, Advertising, and Local.
 
-“Sample_query”: <query_string> }],  //at least one required. Recommend 3-4
-
-The initial set of top-level categories are: Financial, Health, Weather, Media, Transportation, Business, Cyber, Sports, Government, Lookup Tables, Demographics, Advertising, Local
-For customer specific shares:
-
-Email address to contact when a customer requests a share
-
-In addition, please also provide us a high-res image of your logo. (Is this for benchmarks or for snowflake in general?)
-
-
-## Data
-
-The data you'll see in Snowflake is similar to what you'd see in currents.  
+Our benchmarking data will also be available directly in the Snowflake Data Exchange.
