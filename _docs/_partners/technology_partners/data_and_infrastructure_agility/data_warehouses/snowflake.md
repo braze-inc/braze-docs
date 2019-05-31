@@ -28,7 +28,7 @@ You must have an account with Snowflake to use the Data Sharing Services.
 ## Usage & Visualization
 
 Similar to Currents, you can use your Secure Snowflake Data Sharing to...
-- Create complex rile reports,
+- Create complex reports,
 - Perform attribution modeling,
 - Map raw event or user data to a CRM (like Salesforce)...
 
