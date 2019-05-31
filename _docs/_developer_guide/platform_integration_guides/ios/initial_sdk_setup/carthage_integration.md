@@ -12,7 +12,7 @@ You can integrate the Braze SDK using Carthage by including the following in you
 github "Appboy/Appboy-iOS-SDK" "3.4.0"
 ```
 
-Once you've synced the Braze SDK release artifacts (we support Carthage via a zip of release artifacts attached to our Github releases), integrate the `Appboy_iOS_SDK.framework`, `SDWebImage.framework` and `FLAnimatedImage.framework` into your project. Then, in your Application delegate do:
+Once you've synced the Braze SDK release artifacts (we support Carthage via a zip of release artifacts attached to our Github releases), integrate the `Appboy_iOS_SDK.framework` and `SDWebImage.framework` into your project. Then, in your Application delegate do:
 
 ```objc
 #import <Appboy_iOS_SDK/AppboyKit.h>
@@ -31,7 +31,6 @@ If you want to use SDWebImage and/or FLAnimatedImage in your project along with 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk.json"
 github "rs/SDWebImage"
-github "Flipboard/FLAnimatedImage"
 ```
 
 ## Core Only Integration
