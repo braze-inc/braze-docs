@@ -9,9 +9,7 @@ Snowflake is a purpose-built SQL cloud data warehouse for all of your data and a
 
 Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
 
-{% comment %}
-Learn more about this partnership [here]()!
-{% endcomment %}
+Learn more about this partnership [here](braze.com/perspectives/article/snowflake-partner-announcement)!
 
 ### Data Sharing?
 
