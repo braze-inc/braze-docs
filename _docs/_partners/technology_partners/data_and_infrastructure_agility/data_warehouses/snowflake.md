@@ -15,7 +15,7 @@ Learn more about this partnership [here]()!
 
 ### Data Sharing?
 
-Data Sharing allows Braze to allow you secure access to data on our Snowflake portal by sharing view without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
+Data Sharing allows Braze to allow you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
 ## Integration
 
