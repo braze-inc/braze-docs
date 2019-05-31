@@ -132,6 +132,6 @@ Braze Benchmarks will allow Braze prospects and  customers alike to see how they
 
 We created a corresponding Looker Block so you can use Snowflake or Looker to join that data to your data to perform what-if analyses and other, more flexible analytics.
 
-The initial set of top-level categories are: Financial, Health, Weather, Media, Transportation, Business, Cyber, Sports, Government, Lookup Tables, Demographics, Advertising, and Local.
+The initial industries are: Delivery Services, Ecommerce, Education, Entertainment, Finance, Gaming, Health, Lifestyle, Restaurants, Retail, Technology, Transportation, and Travel.
 
 Our benchmarking data will also be available directly in the Snowflake Data Exchange.
