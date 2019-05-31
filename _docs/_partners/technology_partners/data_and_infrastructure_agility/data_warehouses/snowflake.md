@@ -130,7 +130,7 @@ LIMIT 500
 
 Braze Benchmarks will allow Braze prospects and  customers alike to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
 
-We created a corresponding Looker Block so you can use Snowflake or Looker to join that data to your data to perform what-if analyses and other, more flexible analytics.
+We created a [Data Tool for Braze Benchmarks](https://www.braze.com/perspectives/benchmarks) so you can view a selection of the data, outside the Snowflake interface.
 
 The initial industries are: Delivery Services, Ecommerce, Education, Entertainment, Finance, Gaming, Health, Lifestyle, Restaurants, Retail, Technology, Transportation, and Travel.
 
