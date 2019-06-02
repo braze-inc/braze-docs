@@ -1,13 +1,40 @@
 ---
-nav_title: AMPHTML
-permalink: "/amphtml/"
+nav_title: AMP for Email
+alias: /partners/amphtml
 ---
 
-# AMPHTML
+# AMP for Email
 
 With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails elevate your communications with your customers to a whole new level.
 
-## AMPHTML Email via API
+
+## Requirements
+
+Requirement   | Description
+--------------| -----
+Braze API Key | The API key must have the *Template's* permission enabled before use.
+
+Must have plaintext_body and HTML body as backups. Gmail Supports.
+
+## Writing Your AMP Email
+
+
+### Elements
+
+{% tabs %}
+  {% tabs Essentials %}
+
+  {% endtab %}
+
+  {% tabs Dynamic %}
+
+  {% endtab %}
+
+  {% tabs Creative %}
+
+  {% endtab %}
+{% endtab %}
+## API Usage
 
 When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
