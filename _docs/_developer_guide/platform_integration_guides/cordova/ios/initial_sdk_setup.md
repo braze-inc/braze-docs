@@ -41,7 +41,7 @@ Set up your applications to have the appropriate certificates for push, via the 
 
 #### Removing Automatic Push Setup (iOS)
 
-If you want to turn off iOS automatic push registration, add the preference `com.appboy.ios_disable_automatic_push_registration` with a value of `true`.
+If you want to turn off iOS automatic push registration, add the preference `com.appboy.ios_disable_automatic_push_registration` with a value of `YES`.
 
 ### Initial Setup Complete
 
