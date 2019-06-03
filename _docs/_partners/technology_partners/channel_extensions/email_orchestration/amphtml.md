@@ -7,36 +7,21 @@ alias: /partners/amphtml
 
 With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails elevate your communications with your customers to a whole new level.
 
-
 ## Requirements
+
+Braze is not responsible for the customer registering with Braze or meeting the necessary security requirements.
 
 Requirement   | Description
 --------------| -----
 Braze API Key | The API key must have the *Template's* permission enabled before use.
 
-Must have plaintext_body and HTML body as backups. Gmail Supports.
+{% alert important %}
+At this time, only Gmail provides support for AMP for Email.
 
-## Writing Your AMP Email
 
-
-### Elements
-
-{% tabs %}
-  {% tabs Essentials %}
-
-  {% endtab %}
-
-  {% tabs Dynamic %}
-
-  {% endtab %}
-
-  {% tabs Creative %}
-
-  {% endtab %}
-{% endtab %}
 ## API Usage
 
-When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
 ### Email Object Specification
 
@@ -58,3 +43,25 @@ When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/m
   "attachments": (optional, array), array of json objects like [{"file_name","url"}] that define the files you need attached. Your file name's extension will be detected automatically from the URL, which should return the appropriate `Content-Type` as a response header,
 }
 ```
+
+## Writing Your AMP Email
+
+Construct your AMP Email using the [elements](#elements) below, then use [our API](#api-usage) to send. Be sure to use `amp_body` for your AMP HTML! You can also check out [AMP's tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email) or [sample code](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73) to see how the final product should look.
+
+We highly recommend having a `plaintext_body` version, as well as require a regular HTML `body` version of your email, in the event that your email is sent to a provider who does not yet support AMP for Email.
+
+### Elements
+
+{% tabs %}
+  {% tabs Essentials %}
+
+  {% endtab %}
+
+  {% tabs Dynamic %}
+
+  {% endtab %}
+
+  {% tabs Creative %}
+
+  {% endtab %}
+{% endtab %}
