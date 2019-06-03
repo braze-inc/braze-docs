@@ -34,8 +34,8 @@ The embedded SDK integration allows you to take advantage of our full suite of f
 Integrate the appropriate mParticle SDKs into your app based on your platform needs:
 
 * [mParticle for Android](https://docs.mparticle.com/developers/sdk/android/getting-started/)
-* [mParicle for iOS](https://docs.mparticle.com/developers/sdk/ios/getting-started/)
-* [mParicle for Web](https://docs.mparticle.com/developers/sdk/web/getting-started/)
+* [mParticle for iOS](https://docs.mparticle.com/developers/sdk/ios/getting-started/)
+* [mParticle for Web](https://docs.mparticle.com/developers/sdk/web/getting-started/)
 
 ## 2. Complete mParticle's Braze Event Kit Integration
 
