@@ -17,11 +17,11 @@ All of Braze's in-app message types are highly customizable across messages, ima
 
 In-app message display and delivery customizations can be accomplished in code by setting delegates. All of these customizations are entirely optional.
 
-### In-App Message Controller Delegate
+### Core In-App Message Controller Delegate
 
-This delegate contains one method [`beforeInAppMessageDisplayed:`][32] and is part of our [`Core` subspec][33].
+The [`ABKInAppMessageControllerDelegate`][16] delegate contains one method, [`beforeInAppMessageDisplayed:`][32], and is part of our [`Core`][33] subspec.
 
-Set the `delegate` on `ABKInAppMessageController` by calling:
+Set your `ABKInAppMessageControllerDelegate` delegate instance on the Braze `ABKInAppMessageController` by calling:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -63,11 +63,12 @@ Appboy.startWithApiKey("YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-### In-App Message UI Delegate
+### In-App Message UI Controller Delegate
 
-This [delegate][34] can be used with our `UI` and `InAppMessage` subspecs.
+The [`ABKInAppMessageUIDelegate`][34] delegate can be used with our `UI` and `InAppMessage` subspecs.
 
-Set this delegate by calling:
+Set your `ABKInAppMessageUIDelegate` delegate instance on the Braze `ABKInAppMessageUIController` by calling:
+
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -90,7 +91,7 @@ See our [in-app message sample app][35] for an example.
 
 ### Migrate from Version 3.2.3 and Earlier
 
-To migrate from version 3.2.3 or earlier, change the code with your delegate methods to conform to the ABKInAppMessageUIDelegate protocol instead of the ABKInAppMessageControllerDelegate and set the delegate by calling:
+To migrate from version 3.2.3 or earlier, change the code with your delegate methods to conform to the `ABKInAppMessageUIDelegate` protocol instead of `ABKInAppMessageControllerDelegate` and set the delegate by calling:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -109,7 +110,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 {% endtab %}
 {% endtabs %}
 
-## Customizing Fixed Orientation
+## Customizing Orientation
 
 ### Setting Orientation For All In-App Messages
 
@@ -140,7 +141,7 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 ### Setting Orientation Per In-App Message
 
-You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in the `beforeInAppMessageDisplayed:` delegate method or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` UI delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
+You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
 
 ```objc
 // Set inAppMessage orientation to portrait
@@ -152,9 +153,9 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
 
-## Customizing In-App Message Display Behavior
+## Custom Handling In-App Message Display
 
-The following delegate method is called each time right before an in-app message is displayed:
+When the [`ABKInAppMessageControllerDelegate`][16] is set, the following delegate method will be called before in-app messages are displayed:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -173,7 +174,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 {% endtab %}
 {% endtabs %}
 
-If you have only implemented the UI delegate, the following UI delegate method will be called instead:
+If you have only implemented [`ABKInAppMessageUIDelegate`][34], the following UI delegate method will be called instead:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -208,11 +209,11 @@ For an implementation example, see our [In-App Message Sample Application][36].
 
 ### Overriding In-App Messages Before Display
 
-If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to the `beforeInAppMessageDisplayed:` delegate method or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` UI delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
+If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
 ### Logging Impressions and Clicks
 
-Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in the `beforeInAppMessageDisplayed:` delegate method or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` UI delegate method). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
+Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
