@@ -5,7 +5,7 @@ permalink: /amphtml/
 
 # AMP for Email
 
-With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails elevate your communications with your customers to a whole new level.
+With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers to a whole new level.
 
 ## Requirements
 
@@ -13,7 +13,6 @@ Braze is not responsible for the customer registering with Braze or meeting the 
 
 Requirement   | Description
 --------------| -----------
-AMP Account   | You must have an account with AMP for Email to utilize their programs with Braze.
 Gmail Account Enablement | [See below.](#enabling-gmail-account)
 Google Sender Authentication | Gmail authenticates the sender of AMP emails with [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail), [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework), and [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC). <br> Learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication).
 AMP Email Elements | Check out the Essentials tab in the [Components](#components) section below. |
