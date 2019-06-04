@@ -7,6 +7,18 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]._
 
+## June 2019
+
+### Snowflake Partnership
+
+Braze is proud to announce our partnership with Snowflake!
+
+Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
+
+Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
+
+Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement) or in [our documentation]({{ site.baseurl }}/partners/snowflake/).
+
 ## May 2019
 
 ## Content Cards
@@ -108,38 +120,6 @@ To take advantage of these updates, you will need to edit your Currents connecto
 
 You can now [archive Subscription Groups]({{ site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
 
-## March 2019
-
-### In-App Messages - Generation 3
-
-Braze is proud to announce that we have made improvements to the look and feel of our in-app messages to adhere to the latest UX and UI best practices. In the newest in-app messages, you can expect your users to interact with messages with
-- larger font sizes,
-- refined spacing,
-- a new close `x` asset,
-- improved responsive behavior for all message types to better fit viewports of all sizes, and
-- button borders to help you create custom contrasts between buttons.
-
-Our [new in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
-
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-
-#### What You Need to Do
-
-We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/), and [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
-
-After that, you're good to go!
-
-### Content Blocks Archive Update
-
-You can now archive and unarchive Content Blocks. Learn more in our main [Content Blocks documentation]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks).
-
-### Inkit Partner Addition
-
-You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Webhook Template or create a new Webhook Campaign.
-
-### Google Cloud Storage
-
-Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
 
 [support]: {{ site.baseurl }}/support_contact/
 [CCFeed]: {% image_buster /assets/img/cc-feed.png %}
