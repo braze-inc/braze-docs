@@ -26,6 +26,8 @@ At this time, only Gmail provides support for AMP for Email. [Register with Goog
 
 Go into your Gmail Settings and select `Enable Dynamic Content`.
 
+![Dynamic Content][1]
+
 ## API Usage
 
 You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
@@ -114,7 +116,17 @@ Any component that requires authenticating the user must use [Google Access Toke
   {% endtab %}
 {% endtabs %}
 
-### Testing
+### Testing & Troubleshooting
 
-https://developers.google.com/gmail/ampemail/testing-dynamic-email
- - What about with Braze?
+Before your send your AMP email, we recommend that you test according to [Gmail's guidelines here](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
+
+For your AMP email to be delivered to any Gmail account, the email must meet the following conditions:
+- The AMP for Email security requirements must be met (see table above).
+- The AMP MIME part must contain a valid AMP document.
+- The email should include the AMP MIME part before the HTML MIME part.
+- The AMP MIME part must be smaller than 100KB.
+
+If none of these conditions are causing error, reach out to [support][support].
+
+ [1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"
+ [support]: {{ site.baseurl }}/support_contact/
