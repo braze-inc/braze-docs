@@ -217,22 +217,22 @@ $(document).ready(function() {
   })
   glossary_hash['sorted'].sort();
 
-  generate_glossarys(glossary_hash, false);
+  generate_glossarys(glossary_hash);
   var query_str = getUrlParameter('tags').toLowerCase().split(',');
   $('.glossary_filter_div input[type="checkbox"]').each(function(e){
     $(this).on('click', function(e){
-      generate_glossarys(glossary_hash,false);
+      generate_glossarys(glossary_hash);
     });
     if (matchterms($(this).val(), query_str)) {
       $(this).prop('checked',true);
     }
   });
   if (query_str.length) {
-    generate_glossarys(glossary_hash,false);
+    generate_glossarys(glossary_hash);
   }
 
   $('#glossary_search').on('keyup',function(e){
-    generate_glossarys(glossary_hash,false);
+    generate_glossarys(glossary_hash);
   });
   if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
     // Scroll to generated hash
