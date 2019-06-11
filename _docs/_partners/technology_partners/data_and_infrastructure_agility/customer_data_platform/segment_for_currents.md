@@ -69,6 +69,7 @@ The following properties will be included with all Braze events sent to Segment:
 | `canvas_name`          | `String` | The name of the Canvas associated with the event, if applicable.                                               |
 | `canvas_variation_id`  | `String` | The API Identifier of the Canvas Variation associated with the event, if applicable.                           |
 | `canvas_step_id`       | `String` | The API Identifier of the Canvas Step associated with the event, if applicable.                                |
+| `in_control_group`     | `String` | For Canvas Entered events, whether or not the user was enrolled in the control group - always either `true` or `false` |
 | `context.traits.email` | `String` | For Email events, the email address that the email was sent to.                                                |
 | `link_url`             | `String` | For Email Clicked events, the URL of the link that the user clicked on.                                        |
 | `button_id`            | `String` | For In-App Message Clicked events, the index of the button the user clicked on.                                |

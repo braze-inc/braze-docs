@@ -434,6 +434,9 @@ table {
         word-break: initial;
       }
     }
+    code.highlighter-rouge {
+      word-break: initial;
+    }
   }
   >tbody>tr>td, >tbody>tr>th, >tfoot>tr>td, >tfoot>tr>th, >thead>tr>td, >thead>tr>th {
       padding: 10px;
