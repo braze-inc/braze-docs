@@ -11,7 +11,7 @@ The Google Advertising ID is a user-specific, unique, resettable ID for advertis
 
 # Passing the Google Advertising ID to Braze
 
-The Google Advertising ID is not automatically collected by the Braze SDK via the [`Appboy.setGoogleAdvertisingId()`][1] method. Note that Google requires the Advertising ID to be collected on a non-UI thread.
+The Google Advertising ID is not automatically collected by the Braze SDK and must be set manually via the [`Appboy.setGoogleAdvertisingId()`][1] method. Note that Google requires the Advertising ID to be collected on a non-UI thread.
 
 {% tabs %}
 {% tab JAVA %}
