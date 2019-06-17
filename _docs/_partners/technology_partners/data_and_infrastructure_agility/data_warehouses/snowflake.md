@@ -11,7 +11,7 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement)!
 
-### Data Sharing?
+### What is Data Sharing?
 
 Data Sharing allows Braze to allow you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
@@ -71,8 +71,8 @@ LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE  AS users_messages_pushnotifica
 LIMIT 500
 ```
   {% endtab %}
-  {% tab Email Open Rate %}
-You can use this Email Open Rate query to analyze the time between emails that a user receives.
+  {% tab Email Cadence %}
+You can use this Email Messaging Cadence query to analyze the time between emails that a user receives.
 
 For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
