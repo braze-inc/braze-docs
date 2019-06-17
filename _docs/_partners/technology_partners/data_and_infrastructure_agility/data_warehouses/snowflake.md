@@ -17,7 +17,7 @@ Data Sharing allows Braze to allow you secure access to data on our Snowflake po
 
 ## Integration
 
-If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult the Braze Business Intelligence Team on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
+If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult the Braze Data Strategy Team on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
 
 {% alert important %}
 You must have an account with Snowflake to use the Data Sharing Services.
