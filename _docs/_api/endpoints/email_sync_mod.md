@@ -39,12 +39,22 @@ endpoint: unsubscribed emails
 endpoint_url: /email/unsubscribes
 method: get
 description: get emails that have unsubscribed during the time period from `start_date` to `end_date`.
-parameters: api_key(string), start_date(string), end_date(string), limit(integer), offset(integer), sort_direction(string), email(string)
-request_body_example: 
+
+parameters: 
+  api_key: (required, string) Your App Group REST API key,
+  start_date: (required, string) Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. YYYY-MM-DD format,
+  end_date: (required, string) End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. YYYY-MM-DD format,
+  limit: (integer) use to limit the number of results returned (Defaults to 100, maximum is 500),
+  offset: (integer) beginning point in the retrieved list,
+  sort_direction: (string) Pass in the value asc to sort unsubscribes from oldest to newest. Pass in desc to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest,
+  email: (string) If provided, we will return whether or not the user has unsubscribed
+
+request_body_example: https://rest.iad-01.braze.com/email/unsubscribes?api_key=123a45b6-cd78-9e01-g234-hi56j7k8l9m0&start_date=2018-06-01T00%3A00%3A00.000Z&end_date=2018-06-26T00%3A00%3A00.000Z&sort_direction=desc
+
 response_body_parameters:
 link_to_swagger: 'https://www.braze.com/docs/api/interactive/#/Email%20Sync/QueryingAllEmailUnsubscribesExample'
 errors: 401
-glossary_tags: email,user_data,get_method
+glossary_tags: email, user_data, get_method
 ```
 
 
@@ -91,7 +101,7 @@ Entries are listed in descending order.
 ## Querying Hard Bounced Emails
 
 ```yaml
-GET https://YOUR_REST_API_URL/email/hard_bounces
+GET https://YOUR_REST_API_URL/email/hard_bounces  //??endpoint not found in swagger..deprecated?
 Content-Type: application/json
 
 endpoint: query hard bounced emails
@@ -99,7 +109,14 @@ endpoint_url: /email/hard_bounces
 method: get
 description: remove email addresses from the hard bounce list maintained by Braze and your email provider.
 response_details: providing an email, or `start_date` and `end_date`, should respond with a list of invalid emails.
-query_parameters: api_key(string), start_date(string), end_date(string), limit(integer), offset(integer), email(string)
+query_parameters:
+  api_key: (required, string) Your App Group REST API key,
+  start_date: (required, string) Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. YYYY-MM-DD format,
+  end_date: (required, string) End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. YYYY-MM-DD format,
+  limit: (integer) use to limit the number of results returned (Defaults to 100, maximum is 500),
+  offset: (integer) beginning point in the retrieved list,
+  email: (string) If provided, we will return whether or not the user has unsubscribed
+
 query_example: 
 response_body_parameters:
 link_to_swagger:
@@ -156,13 +173,18 @@ endpoint_url: /email/status
 method: post
 description: user email subscription status can be updated and retrieved via Braze using a RESTful API
 response_details: use to change user email subscription state.
-query_parameters: api_key(required,string),email(string or array),subscription_state(string)
+
+query_parameters:
+  api_key: (required, string) Your App Group REST API key,
+  email: (string or array) string or array of up to 50 email addresses to modify,
+  subscription_state: (string) either 'subscribed', 'unsubscribed', or 'opted_in'
+
 query_example: {
   "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
   "email": [
     "name@email.com"
   ],
-  "subscription_state": "Either “subscribed”, “unsubscribed”, or “opted_in”."
+  "subscription_state": "Either 'subscribed', 'unsubscribed', or 'opted_in'."
 }
 response_body_parameters: 
 link_to_swagger: 'https://www.braze.com/docs/api/interactive/#/Email%20Sync/ChangingEmailSubscriptionStatusExample'
@@ -194,10 +216,15 @@ endpoint_url: /email/bounce/remove
 method: post
 description: use to remove email addresses from your Braze bounce list and your email provider.
 response_details: success message when a given email is successfully removed from bounce list.
-query_parameters: api_key(sring), email(string)
-query_example:
+
+query_parameters: 
+  api_key: (required, string) Your App Group REST API key,
+  email: (string) string or array of up to 50 email addresses to modify.
+
+query_example: https://rest.iad-01.braze.com/email/bounce/remove?api_key=123a45b6-cd78-9e01-g234-hi56j7k8l9m0&email=name@email.com
+
 response_body_parameters:
-link_to_swagger: 'https://www.braze.com/docs/api/interactive/#/operations/Email%20Sync/RemovingHardBouncedEmailExample'
+link_to_swagger: https://www.braze.com/docs/api/interactive/#/operations/Email%20Sync/RemovingHardBouncedEmailExample
 errors: 401
 glossary_tags: email 
 ```
@@ -222,8 +249,12 @@ endpoint_url: /email/spam/remove
 method: post
 description: use to remove spam email addresses from your Braze spam list and your email provider.
 response_details: success message when a given spam email is successfully removed from list.
-query_parameters: api_key(string), email(string)
-query_example:
+query_parameters:
+  api_key: (required, string) Your App Group REST API key,
+  email: (string) string or array of up to 50 email addresses to modify.
+
+query_example: https://rest.iad-01.braze.com/email/spam/remove?api_key=123a45b6-cd78-9e01-g234-hi56j7k8l9m0&email=name@email.com
+
 response_body_parameters: 
 link_to_swagger: 'https://www.braze.com/docs/api/interactive/#/operations/Email%20Sync/RemovingSpamListEmailExample'
 errors: 401
