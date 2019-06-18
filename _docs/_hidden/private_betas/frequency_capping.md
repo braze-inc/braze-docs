@@ -9,7 +9,7 @@ Frequency Capping can be set up for each app group by selecting Global Campaign 
 
 - Which [messaging channel](#rules-by-channel) you would like to cap.
 - How many times each user should receive Campaign/Canvas step sends from channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
-- How many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
+- Beta users can choose how many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months. __Note:__ This feature is in beta - if you'd like beta access please reach out to your CSM or support@braze.com.
 
 Each line of frequency caps will be connected using an “AND,” and you’re able to add as many as you wish. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
 
@@ -29,6 +29,8 @@ __Then, the expected behavior is that:__
 - This user will receive the Campaign sends that triggered on Monday and Wednesday.
 - This user will not receive the third Campaign send on Thursday because the user has already received two push Campaign sends that week.
 
+Prior to July 9, 2019, frequency capping was applied at the Campaign level, which meant that receiving the same Campaign twice would only count once towards the frequency capping rule.
+
 {% alert important %}
 You can add up to ten (10) frequency capping rules per app group.
 {% endalert %}
@@ -39,6 +41,8 @@ You can add up to ten (10) frequency capping rules per app group.
 Additionally, only emails, webhooks, and push notifications will count towards "Campaigns/Canvas Steps of any type" rules.
 
 In-App Messages and Content Cards are not counted __as__ or __towards__ "Campaigns/Canvas Steps of any type".
+
+Prior to July 9, 2019, In-App Messages counted towards "Campaigns/Canvas Steps of any type" rules when they were received but could not be frequency capped. 
 
 ### Example
 
