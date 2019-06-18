@@ -9,7 +9,7 @@ With [AMP for Email](https://amp.dev/about/email), you can add interactive eleme
 
 ## Requirements
 
-Braze is not responsible for the customer registering with Braze or meeting the necessary security requirements.
+Braze is not responsible for the customer registering with Google or meeting the necessary security requirements.
 
 Requirement   | Description
 --------------| -----------
