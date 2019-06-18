@@ -11,13 +11,13 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement)!
 
-### Data Sharing?
+### What is Data Sharing?
 
 Data Sharing allows Braze to allow you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
 ## Integration
 
-If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult the Braze Business Intelligence Team on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
+If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult Braze Data Strategy Services on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
 
 {% alert important %}
 You must have an account with Snowflake to use the Data Sharing Services.
@@ -28,6 +28,7 @@ You must have an account with Snowflake to use the Data Sharing Services.
 Similar to Currents, you can use your Secure Snowflake Data Sharing to...
 - Create complex reports,
 - Perform attribution modeling,
+- Secure sharing within your own company,
 - Map raw event or user data to a CRM (like Salesforce)...
 
 And so much more!
@@ -71,8 +72,8 @@ LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE  AS users_messages_pushnotifica
 LIMIT 500
 ```
   {% endtab %}
-  {% tab Email Open Rate %}
-You can use this Email Open Rate query to analyze the time between emails that a user receives.
+  {% tab Email Cadence %}
+You can use this daily Email Messaging Cadence query to analyze the time between emails that a user receives.
 
 For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
