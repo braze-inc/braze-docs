@@ -72,6 +72,125 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
+The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47]. 
+
+Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+
+The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
+  @Override
+  public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
+    List<Card> sortedCards = event.getAllCards();
+    // Sort by pinned, then by the 'updated' timestamp descending
+    // Pinned before non-pinned
+    Collections.sort(sortedCards, new Comparator<Card>() {
+      @Override
+      public int compare(Card cardA, Card cardB) {
+        // A displays above B
+        if (cardA.getIsPinned() && !cardB.getIsPinned()) {
+          return -1;
+        }
+
+        // B displays above A
+        if (!cardA.getIsPinned() && cardB.getIsPinned()) {
+          return 1;
+        }
+
+        // At this point, both A & B are pinned or both A & B are non-pinned
+        // A displays above B since A is newer
+        if (cardA.getUpdated() > cardB.getUpdated()) {
+          return -1;
+        }
+
+        // B displays above A since A is newer
+        if (cardA.getUpdated() < cardB.getUpdated()) {
+          return 1;
+        }
+
+        // At this point, every sortable field matches so keep the natural ordering
+        return 0;
+      }
+    });
+
+    return sortedCards;
+  }
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
+  override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
+    val sortedCards = event.allCards
+    // Sort by pinned, then by the 'updated' timestamp descending
+    // Pinned before non-pinned
+    Collections.sort(sortedCards, Comparator { cardA, cardB ->
+      // A displays above B
+      if (cardA.isPinned && !cardB.isPinned) {
+        return@Comparator -1
+      }
+
+      // B displays above A
+      if (!cardA.isPinned && cardB.isPinned) {
+        return@Comparator 1
+      }
+
+      // At this point, both A & B are pinned or both A & B are non-pinned
+      // A displays above B since A is newer
+      if (cardA.updated > cardB.updated) {
+        return@Comparator -1
+      }
+
+      // B displays above A since A is newer
+      if (cardA.updated < cardB.updated) {
+        1
+      } else 0
+
+      // At this point, every sortable field matches so keep the natural ordering
+    })
+
+    return sortedCards
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+> This code can also be found here, [DefaultContentCardsUpdateHandler][46].
+
+And here's how to use the above class:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+IContentCardsUpdateHandler cardUpdateHandler = new DefaultContentCardsUpdateHandler();
+
+AppboyContentCardsFragment fragment = getMyCustomFragment();
+fragment.setContentCardUpdateHandler(cardUpdateHandler);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val cardUpdateHandler = DefaultContentCardsUpdateHandler()
+
+val fragment = getMyCustomFragment()
+fragment.setContentCardUpdateHandler(cardUpdateHandler)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Customizing Card Rendering {#customizing-card-rendering-for-android}
+
 Here's information on how to change how any card is rendered in the recyclerView. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want.
 
 {% tabs %}
@@ -197,7 +316,7 @@ And here's how to use the above class:
 {% tab JAVA %}
 
 ```java
-IContentCardsViewBindingHandler viewBindingHandler = DefaultContentCardsViewBindingHandler();
+IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
 
 AppboyContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardsViewBindingHandler(viewBindingHandler);
@@ -400,3 +519,7 @@ See the [Javadoc][36] for more information.
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
+[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
+[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
+[46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
+[47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
