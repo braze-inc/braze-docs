@@ -9,9 +9,13 @@ search_rank: 5
 
 The Google Advertising ID is a user-specific, unique, resettable ID for advertising, provided by Google Play services. It gives users better controls and provides developers with a simple, standard system to continue to monetize your apps. It is an anonymous identifier for advertising purposes and enables users to reset their identifier or opt out of interest-based ads within Google Play apps. See [here][2] for more information.
 
-# Passing the Google Advertising ID to Braze
+## Passing the Google Advertising ID to Braze
 
-The Google Advertising ID is not automatically collected by the Braze SDK and must be set manually via the [`Appboy.setGoogleAdvertisingId()`][1] method. Note that Google requires the Advertising ID to be collected on a non-UI thread.
+The Google Advertising ID is not automatically collected by the Braze SDK and must be set manually via the [`Appboy.setGoogleAdvertisingId()`][1] method. 
+
+{% alert important %}
+Google requires the Advertising ID to be collected on a non-UI thread.
+{% endalert %}
 
 {% tabs %}
 {% tab JAVA %}
