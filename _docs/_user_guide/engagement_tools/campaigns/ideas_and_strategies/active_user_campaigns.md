@@ -23,7 +23,9 @@ Additionally, you will not have to continue updating this segment, as users who 
 ## Step 2: Reach Out to Your Top Users
 
 ### Make Your Users Feel Appreciated
-Make your users feel appreciated by thanking them for their loyalty and dedication to your app. To encourage further activity, give your users more reasons to keep coming back to your app. This can take the form of special deals or bonuses exclusively for your top users. Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
+Make your users feel appreciated by thanking them for their loyalty and dedication to your app. Give your users more reasons to keep coming back to your app to encourage further activity. This can take the form of special deals or bonuses exclusively for your top users. 
+
+Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
 
 ![Congrats Push][2]
 
