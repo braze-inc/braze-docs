@@ -20,12 +20,12 @@ All events sent to Segment will include the user's `external_user_id` as the `us
 
 Segment's documentation is available [here](https://segment.com/docs/sources/cloud-apps/appboy/).
 
-# Integration Details
+## Integration Details
 
 You can export the following data from Braze to Segment:
 
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | Event Name                     | Description                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | Push Notification Sent         | A push notification was successfully sent.                                                                    |
 | Push Notification Tapped       | User opened a push notification.                                                                              |
 | Push Notification Bounced      | Braze was not able to send a push notification to this User.                                                  |
