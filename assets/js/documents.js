@@ -333,10 +333,14 @@ $(document).ready(function() {
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+
      if ($(this).has('img').length > 0) {
        if ($(this).has('img')[0].childNodes.length > 0) {
-         tofilter = false
+         tofilter = false;
        }
+     }
+     else if ($(this).has('div').length >0 ) {
+        tofilter = false;
      }
      return tofilter
   }).after(' <i class="fas fa-external-link-alt"></i>')
