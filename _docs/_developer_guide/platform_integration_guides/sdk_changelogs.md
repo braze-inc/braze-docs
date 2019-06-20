@@ -1,5 +1,6 @@
 ---
 page_order: 20
+nav_title: SDK Changelogs
 layout: dev_guide
 guide_top_header: "SDK Changelogs"
 guide_top_text: "The changelogs for each individual SDK are available within their individual Github repositories linked below."
