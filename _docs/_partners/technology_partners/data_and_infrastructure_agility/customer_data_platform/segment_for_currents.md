@@ -20,12 +20,12 @@ All events sent to Segment will include the user's `external_user_id` as the `us
 
 Segment's documentation is available [here](https://segment.com/docs/sources/cloud-apps/appboy/).
 
-# Integration Details
+## Integration Details
 
 You can export the following data from Braze to Segment:
 
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | Event Name                     | Description                                                                                                   |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | Push Notification Sent         | A push notification was successfully sent.                                                                    |
 | Push Notification Tapped       | User opened a push notification.                                                                              |
 | Push Notification Bounced      | Braze was not able to send a push notification to this User.                                                  |
@@ -57,8 +57,8 @@ You can export the following data from Braze to Segment:
 
 The following properties will be included with all Braze events sent to Segment:
 
-| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------        |
 | Property Name          | Type     | Description                                                                                                    |
+| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------        |
 | `app_id`               | `String` | The API Identifier of the App on which a user received a message or performed an action, if applicable.        |
 | `send_id`              | `String` | The id of the message if specified for the campaign, if applicable.                                            |
 | `dispatch_id`          | `String` | The id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user. |

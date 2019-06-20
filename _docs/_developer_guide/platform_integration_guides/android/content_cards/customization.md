@@ -4,8 +4,9 @@ page_order: 1
 search_rank: 5
 platform: Android
 ---
+# Customization 
 
-### Default Styling {#default-styling-for-android}
+## Default Styling {#default-styling-for-android}
 
 Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
@@ -24,11 +25,11 @@ Braze In App Messages and Content Cards come with a default look and feel that m
   </style>
 ```
 
-### Overriding Styles {#overriding-styles-for-android}
+## Overriding Styles {#overriding-styles-for-android}
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-#### Correct Style Override {#correct-style-override-for-android}
+### Correct Style Override {#correct-style-override-for-android}
 
 ```xml
 <style name="Appboy.ContentCardsDisplay">
@@ -42,7 +43,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-#### Incorrect Style Override {#incorrect-style-override-for-android}
+### Incorrect Style Override {#incorrect-style-override-for-android}
 
 ```xml
 <style name="Appboy.ContentCardsDisplay">

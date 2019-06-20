@@ -66,6 +66,8 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
+For example, to build a segment that targets users with a date attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the date attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
