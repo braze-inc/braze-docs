@@ -92,6 +92,8 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
 - name: Zapier
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/
+- name: Snowflake
+  url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 
 
 
