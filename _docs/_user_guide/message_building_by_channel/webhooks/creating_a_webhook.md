@@ -89,7 +89,7 @@ Like other campaigns, Braze tracks the delivery of your webhook campaigns and co
 
 When retrying, Braze will make 5 attempts using exponential backoff for a period of approximately 30 minutes before aborting the individual webhook call.
 
-Each webhook, or batch of webhooks, is allowed 90 seconds before it times out.
+Each webhook is allowed 90 seconds before it times out.
 
 ## IP Whitelisting
 
