@@ -32,7 +32,7 @@ The Braze Postman Collection uses a templating variable, `{{instanceURL}}`, to s
 1. Click on the gear icon in the top right corner of the Postman app. ![Managing Environments][2]{: height="40%" width="40%"}
 2. Select "Manage Environments" to open a modal window which displays your active environments.
 3. In the bottom right corner of the modal window, click "Add" to create a new environment.
-4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your Braze REST API URL and Braze REST API Key as pictured below. The `api_key` should __not__ be encapsulated in quotes.
+4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to your Braze REST API URL and Braze REST API Key as pictured below. The `api_key` should be encapsulated in quotes.
   - The value that you need to add for `instance_url` is dependent on your Braze instance. For more information, please see our [Rest API "Endpoint" documentation.][7]
   - For more information on your `api_key` please see our ["App Group REST API Key" documentation.][8]
 
