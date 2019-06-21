@@ -26,8 +26,8 @@ In order to configure your Facebook App’s settings, ensure the following:
 - Your organization’s administrator has granted you either Developer or Admin access through the Facebook App Dashboard
 - You have admin access to the Facebook Ad Account you’d like to export audiences to
   - You will need to have full admin access and will not be able to test this functionality as a [Test User][32].
-- You have set up [Facebook Login][31]
-- You have submitted and received approval for an [App Review][45] with [`ads_management`][46] access
+- You have set up [Facebook Login][31].
+- You have submitted and received approval for an [App Review][45] with [`ads_management`][46] access.
 
 ## Configuring Facebook App Settings
 
