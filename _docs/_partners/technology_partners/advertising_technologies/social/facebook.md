@@ -11,7 +11,7 @@ Facebook Custom Audiences enable you to export your Braze segments into your Fac
 
 ## Exporting to Facebook Audiences
 
-Braze provides Facebook marketing integration, allowing you to export segments as Facebook marketing audiences and target those users for ad campaigns. Here are instructions on setting up this feature.
+Braze provides Facebook marketing integration, allowing you to export segments as Facebook marketing audiences and target those users for ad campaigns.
 
 In order to export custom audiences from the dashboard, your Facebook App must be configured to allow Braze to make requests to Facebook through the [Facebook Marketing API][29] on behalf of the members of your team. Common use cases for exporting custom audiences include:
 
@@ -24,9 +24,10 @@ In order to configure your Facebook App’s settings, ensure the following:
 
 - Your organization has connected your app or apps within the [Facebook App Dashboard][30]
 - Your organization’s administrator has granted you either Developer or Admin access through the Facebook App Dashboard
-- You have set up [Facebook Login][31]
 - You have admin access to the Facebook Ad Account you’d like to export audiences to
   - You will need to have full admin access and will not be able to test this functionality as a [Test User][32].
+- You have set up [Facebook Login][31]
+- You have submitted and received approval for an [App Review][45] with [`ads_management`][46] access
 
 ## Configuring Facebook App Settings
 
@@ -85,8 +86,6 @@ Why can't I see the Custom Audience size?
 
 - Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting][42].
 
-Why can’t I select Google Advertising IDs or Android IDs data types?
-
 - Due to Google Play’s Terms of Service, we do not collect and store an Android identifier in a way that allows you to link the ID to PII. For more see [here][44].
 
 ### Lookalike Audiences
@@ -112,3 +111,5 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [42]: https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923
 [43]: https://www.facebook.com/business/help/112061095610075
 [44]: https://developer.android.com/training/articles/user-data-ids.html
+[45]: https://developers.facebook.com/docs/apps/review#app-review
+[46]: https://developers.facebook.com/docs/marketing-api/access
