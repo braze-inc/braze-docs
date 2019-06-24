@@ -26,6 +26,12 @@ Before you get started, Braze requires that a Braze Contributor License Agreemen
 
 Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](http://www.braze.com/docs/cla).
 
+### Code of Conduct
+
+We expect respectful behavior from our administrators and contributors as defined in the [Contributor Covenent](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md). 
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
+
 ### Open Source License
 
 ![Licence Icon](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
@@ -35,7 +41,8 @@ Braze Documentation is licensed under a [Creative Commons Attribution-NonCommerc
 ### Before You Contribute
 1. Complete our [CLA](http://www.braze.com/docs/cla).
 2. Take the [Braze Docs Tour](https://www.braze.com/docs/tour).
-3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
+3. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
+4. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
   - the [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide),
   - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment),
   - [the Writing Style Guide](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices),  
