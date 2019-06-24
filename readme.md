@@ -26,6 +26,12 @@ Before you get started, Braze requires that a Braze Contributor License Agreemen
 
 Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](http://www.braze.com/docs/cla).
 
+### Code of Conduct
+
+We expect respectful behavior from our administrators and contributors as defined in the [Contributor Covenent](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md). 
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](code-of-conduct.md)
+
 ### Open Source License
 
 ![Licence Icon](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
