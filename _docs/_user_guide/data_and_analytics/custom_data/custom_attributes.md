@@ -10,10 +10,12 @@ We get that Custom Attributes can be confusing, so read closely and check out ou
 
 ### Custom Attribute Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager. 
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 # Custom Attribute Data Types
-Custom Attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
+Custom Attributes are extraordinarily flexible tools that allow for great targeting.
+
+The following data types may be stored as custom attributes:
 
 ## Strings (Alpha-Numeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application.
@@ -124,3 +126,5 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/#incrementingdecrementing-custom-attributes).
 {% endalert %}
+
+You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
