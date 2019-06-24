@@ -5,9 +5,8 @@ page_order: 0
 
 # New Users Do Not Have Cards in Their Feed
 
-If brand new users, in their first session, do not have any cards in their feed you should...
+You cannot send cards to users who do not exist. Therefore, by definition, new users will not have any cards in their feed on their first session.
 
-- Create triggered campaigns (with no re-eligibility) that send to users on their Session start.
-Or...
+To ensure a new user receives cards, [create a Content Cards campaign]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/#content-cards) that is triggered on session start events (with no re-eligibility, so that users only receive the campaign once).
 
-- After a short time (a second or two) after the user opens the session, call `requestImmediateDataFlush`, then `requestContentCardsRefresh` explicitly.
+They will receive this card on their next session. Alternatively, to send the card in their first session, call `requestContentCardsRefresh` on the SDK during that session, a few seconds after calling `requestImmediateDataFlush`.
