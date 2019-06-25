@@ -21,6 +21,10 @@ The following values can be substituted into a message, depending on their avail
 You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
 {% endraw %}
 
+{% alert important %}
+Braze currently supports liquid up to and including Liquid 3 from Shopify. We do not currently support Liquid 4 and beyond.
+{% endalert %}
+
 ## Terms to Know
 
 These terms are reinterpreted from [Shopify's documentation][3] based on our level of support.

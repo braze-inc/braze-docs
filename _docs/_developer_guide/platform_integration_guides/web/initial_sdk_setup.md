@@ -8,7 +8,7 @@ search_rank: 5
 
 Integrating the Braze SDK will provide you with basic analytics functionality as well as in-app messages with which you can engage your users. Note that the web SDK file size is 32.3 KB.
 
-## Step 1: Integrate the Braze Library
+## Integrate the Braze Library
 
 To integrate the Braze Web SDK, follow the instructions in the "Getting Started" section of the [Braze Web SDK Github Repository][2].
 
@@ -26,15 +26,15 @@ EU Cluster:
 
 `appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'https://customer.fra-01.braze.eu/api/v3'})`
 
-## Error Logging
+## Enable Error Logging {#error-logging}
 
 To enable logging, you can pass the option `enableLogging: true` to your initialize function (or call `appboy.toggleAppboyLogging()` after initialization), which will cause Braze to log to the javascript console. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` before you release your page to production.
 
-## Tag Managers
+## Initialize Tag Managers
 
 ### Google Tag Manager
 
-#### Initializing the SDK ####
+#### Initializing the SDK
 
 Braze's SDK can be initialized and controlled within tags configured from Google Tag Manager.
 
@@ -71,7 +71,7 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 ### Other Tag Managers
 
-Braze may also be compatible with other tag management solutions. Please reach out to the Success Squad if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions. Please reach out to the a Braze representative if you need help evaluating these solutions.
 
 ## Upgrading The SDK
 
@@ -83,7 +83,6 @@ You can keep up-to-date with our latest release [following our release feed](htt
 * If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at the root of your site, but the location may be customized in some integrations.
 
 These files must be updated in coordination with each other to ensure proper functionality.
-
 
 [1]: {{ site.baseurl }}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"

@@ -48,7 +48,7 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | Messaging Need | Details |
 |---|---|
 | In-App Messaging | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
-| News Feed / Content Cards | Call Braze code directly (using REST API?)
+| News Feed / Content Cards | Implemented directly via Braze SDK ([iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/content_cards/overview/), [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/overview/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/overview/)).
 | Push for Android | Follow the [mParticle Android Push Notification Integration Documentation](https://docs.mparticle.com/developers/sdk/android/push-notifications). |
 | Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
 |Push for Web | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
