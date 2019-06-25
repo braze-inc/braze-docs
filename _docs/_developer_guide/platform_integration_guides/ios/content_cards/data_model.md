@@ -48,8 +48,6 @@ NotificationCenter.default.addObserver(self, selector:
   if let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
     if (updateIsSuccessful) {
       // get the cards using Appboy.sharedInstance()?.contentCardsController.contentCards
-      self.cards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKClassicContentCard]
-      tableView.reloadData()
     }
   }
 }
