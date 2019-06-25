@@ -347,7 +347,7 @@ Content-Type: application/json
 
 ### Segment Analytics Endpoint
 
-This endpoint allows you to retrieve a daily series of the size of a segment over time for a segment with analytics tracking enabled.
+This endpoint allows you to retrieve a daily series of the size of a segment over time for a segment.
 
 `GET https://YOUR_REST_API_URL/segments/data_series`
 
