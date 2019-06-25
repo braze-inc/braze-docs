@@ -5,8 +5,6 @@ layout: glossary_page
 glossary_top_header: "Terms to Know"
 glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze! Give this a read before you begin your onboarding."
 
-glossary_tag_name: Terms About...
-
 glossaries:
   - name: Active User
     description: Braze defines an active user for a given time period as any users who has a session in that time period.
@@ -26,5 +24,6 @@ glossaries:
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: Webhooks
     description: Braze’s webhooks allow you to trigger non-app actions such as SMS text message delivery. You can use webhooks to provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
-
+  - name: Push Token
+    description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. Push Token migration is the importing of those already-generated keys into Braze’s platform.
 ---
