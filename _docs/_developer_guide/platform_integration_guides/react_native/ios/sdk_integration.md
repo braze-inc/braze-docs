@@ -25,11 +25,19 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 6. Update the 'Header Search Paths' in the AppboyReactBridge Xcode project to reference the headers directory of your installation of the Braze iOS SDK.
 
 #### iOS completing the integration
-1.  Follow the directions at https://www.braze.com/documentation/ to finish your integration. In particular, you will need to pass your Braze API key to the SDK in `startWithApiKey` in your App delegate's `didFinishLaunchingWithOptions:` method and set up your custom endpoint in your `Info.plist` file.
+1.  Follow the directions at https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/ to finish your integration. In particular, you will need to pass your Braze API key to the SDK in `startWithApiKey` in your App delegate's `didFinishLaunchingWithOptions:` method and set up your custom endpoint in your `Info.plist` file.
 2.  When you need to make Braze calls from javascript, use the following declaration to import the javascript module:
 
 ```
 const ReactAppboy = require('react-native-appboy-sdk');
+```
+
+#### Note on Deep Links on iOS
+
+For deep links to work on iOS from a cold start, you will need to add the following to your App delegate file's `didFinishLaunchingWithOptions` method:
+
+```
+[[AppboyReactUtils sharedInstance] populateInitialUrlFromLaunchOptions:launchOptions];
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
