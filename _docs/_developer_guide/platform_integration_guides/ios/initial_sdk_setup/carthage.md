@@ -1,5 +1,5 @@
 ---
-nav_title: Carthage Integration
+nav_title: Add Braze with Carthage
 platform: iOS
 page_order: 1
 search_rank: 5

@@ -1,11 +1,11 @@
 ---
-nav_title: Set Up
+nav_title: Add Braze with CocoaPod
 platform: iOS
 page_order: 0
 search_rank: 5
 ---
 
-# Initial SDK Setup
+# CocoaPod
 
 {% alert important %}
 The iOS SDK file size is _1MB to 2MB_ for the IPA, in addition to App File, and 30MB for the Framework.

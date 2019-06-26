@@ -1,5 +1,5 @@
 ---
-nav_title: Manual Integration Options
+nav_title: Add Braze Manually
 platform: iOS
 page_order: 2
 search_rank: 5
@@ -62,7 +62,7 @@ From version 2.26.0, Braze iOS SDK only supports 4.x version of SDWebImage. If y
 
 #### SDWebImage Integration
 
-1. Inside of your project folder, clone SDWebImage repository recursively: 
+1. Inside of your project folder, clone SDWebImage repository recursively:
 ```
 git clone --recursive https://github.com/rs/SDWebImage.git
 ```
