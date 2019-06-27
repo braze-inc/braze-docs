@@ -1,6 +1,6 @@
 ---
 nav_title: Logging In
-page_order: 1
+page_order: 3
 ---
 
 # Logging In

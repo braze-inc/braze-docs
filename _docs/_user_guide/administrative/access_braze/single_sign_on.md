@@ -1,6 +1,6 @@
 ---
-nav_title: Single Sign On
+nav_title: SAML & Single Sign On
 config_only: true
 layout: blank_config
-page_order: 3
+page_order: 5
 ---
