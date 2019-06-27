@@ -122,7 +122,7 @@ if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
-  center.delegate = self
+  center.delegate = self as? UNUserNotificationCenterDelegate
   var options: UNAuthorizationOptions = [.alert, .sound, .badge]
   if #available(iOS 12.0, *) {
     options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
@@ -134,7 +134,7 @@ if #available(iOS 10, *) {
   UIApplication.shared.registerForRemoteNotifications()
 } else {
   let types : UIUserNotificationType = [.alert, .badge, .sound]
-  var setting : UIUserNotificationSettings = UIUserNotificationSettings(types:types, categories:nil)
+  let setting : UIUserNotificationSettings = UIUserNotificationSettings(types:types, categories:nil)
   UIApplication.shared.registerUserNotificationSettings(setting)
   UIApplication.shared.registerForRemoteNotifications()
 }
