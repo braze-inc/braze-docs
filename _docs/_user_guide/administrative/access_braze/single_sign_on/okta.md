@@ -49,7 +49,7 @@ Click _View Setup Instructions_ and copy the target URL and certificate that is 
 
 ### Step 5
 
-_Setup the Braze Dashboard._
+_Set up the Braze Dashboard._
 
 * Log on to Braze Dashboard using an admin account.
 * Click on the drop down from your user name in the upper right corner, select _Company Settings._
@@ -67,8 +67,10 @@ Back on the Okta Admin page, you can now assign people or groups to the Braze ap
 
 ![okta_assignusers][82]
 
-#### Optional: Okta-Only Log In
-Go to Company Settings on the Braze app, then the Security Settings tab to utilize _Restrict Single Sign-On(SSO)_ and force all users to log in via Okta only. This will prevent users from logging in via password.  Leaving this unchecked will allow your users to login via Okta or their password. This method can be used to help test when first implementing Okta.
+{% alert note %}
+__SAML SSO-Only Login__
+Go to `Company Settings` in Braze, then the `Security Settings` tab to utilize _Restrict Single Sign-On(SSO)_ and force all users to log in via your chosen SAML SSO method. This will prevent users from logging in via password.  Leaving this unchecked will allow your users to login via your chosen SAML SSO method __or__ their password. This method can be used to help test when first implementing your chosen SAML SSO method.
+{% endalert %}
 
 
 [77]: {% image_buster /assets/img_archive/okta_addapplication1.png %}
