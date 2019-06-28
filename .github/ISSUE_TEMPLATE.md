@@ -14,7 +14,7 @@
 ## Before You Submit
 
 - [ ] Fill out the relevant items under __Submit an Issue__ above.
-- [ ] [Label](https://github.com/Appboy/braze-docs/wiki/Labels) this issue.
+- [ ] [Label](https://github.com/Appboy/braze-docs/issues/labels) this issue.
 - [ ] Assign this issue to either yourself, the Technical Writer (@EmilyNecciai), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed._
 
 ---
