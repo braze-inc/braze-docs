@@ -24,10 +24,10 @@ The first step of a Canvas must be a `Full Step`.
 {% endalert %}
 
 {% tabs %}
-  {% tab Delay until "After"... %}
+  {% tab Delay until _After_... %}
 The “after” option allows you to delay users for a set number of seconds, minutes, hours or weeks  - for example, you can delay users for 4 hours or for 1 day.
   {% endtab %}
-  {% tab Delay "Until Exact Date"... %}
+  {% tab Delay _Until Exact Date_... %}
   The “Until Exact Date” option allows you to hold users in a step until a specific date and time.
 
   Note: That if the selected date and time has already passed by the time users proceed to the delay step, users will exit the Canvas.
