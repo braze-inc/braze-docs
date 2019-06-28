@@ -19,15 +19,17 @@ You can also use Canvas Delay Steps to delay a step until an exact date, rather 
 
 To create a Delay Step, add a step to your Canvas. Then, use the drop down at the top of the new step to select `Delay Step`.
 
+### Delay Options
+
 {% alert important %}
 The first step of a Canvas must be a `Full Step`.
 {% endalert %}
 
 {% tabs %}
-  {% tab Delay until _After_... %}
+  {% tab After... %}
 The “after” option allows you to delay users for a set number of seconds, minutes, hours or weeks  - for example, you can delay users for 4 hours or for 1 day.
   {% endtab %}
-  {% tab Delay _Until Exact Date_... %}
+  {% tab Until Exact Date... %}
   The “Until Exact Date” option allows you to hold users in a step until a specific date and time.
 
   Note: That if the selected date and time has already passed by the time users proceed to the delay step, users will exit the Canvas.
