@@ -5,7 +5,7 @@ layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/partners/braze_currents/about/'>here</a>."
+partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/user_guide/data_and_analytics/braze_currents/'>here</a>."
 
 valid_partner_list:
 - name: Messenger
