@@ -1,6 +1,6 @@
 ---
-nav_title: About Braze Currents
-page_order: 0
+page_order: 8
+nav_title: Braze Currents
 ---
 
 # About Braze Currents
