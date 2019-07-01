@@ -7,7 +7,7 @@ alias: /partners/segment/
 
 Braze is dedicated to creating partner integrations that allow you to send data from multiple sources to your Dashboard. [Segment][10] is an analytics data hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze. We offer both a side-by-side SDK integration for your Android, iOS and web applications and a server-to-server [integration][11] for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/).
+If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/segment_for_currents/).
 
 # Pre-Requisites
 

@@ -15,7 +15,7 @@ Add a partner by clicking the dropdown at the top right of the screen.
 
 ![Adding an Integration]({% image_buster /assets/img/new_current.png %})
 
-Each partner requires a different set of configuration steps. To enable each integration, [see the instructions in their respective pages]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/).
+Each partner requires a different set of configuration steps. To enable each integration, [see the instructions in their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 ## Integrating Currents
 

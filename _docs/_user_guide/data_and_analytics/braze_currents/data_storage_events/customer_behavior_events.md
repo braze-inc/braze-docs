@@ -12,7 +12,7 @@ Please contact your Account Manager or [open a support ticket][support] if you n
 
 
 {% alert important %}
-Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/).
+Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
 
