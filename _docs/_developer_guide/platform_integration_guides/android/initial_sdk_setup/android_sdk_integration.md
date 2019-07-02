@@ -70,6 +70,10 @@ Now that the libraries have been integrated, you have to create an `appboy.xml` 
 </resources>
 ```
 
+**Implementation Example**
+
+See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+
 ### Step 3: Add Required Permissions to Android Manifest
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml`:
 
@@ -82,7 +86,7 @@ Now that you've added your API key, you need to add the following permissions to
 
 **Implementation Example**
 
-See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementation example.
 
 ### Step 4: Tracking User Sessions in Android
 
@@ -184,3 +188,4 @@ Please see the following sections in order to enable [custom event tracking]({{ 
 [66]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/
 [67]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{ site.baseurl }}/support_contact/
+[69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
