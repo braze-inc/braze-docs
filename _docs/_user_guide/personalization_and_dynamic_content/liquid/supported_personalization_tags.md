@@ -17,6 +17,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 | Campaign Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${name}}}` |
 | Canvas Attributes | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
+| Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
 | Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
 
