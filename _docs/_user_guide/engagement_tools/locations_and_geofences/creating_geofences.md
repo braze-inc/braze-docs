@@ -59,9 +59,11 @@ To use geofence data as part of campaign and canvas triggers, choose "Action-bas
 
 To use geofence data to personalize a message, you may use the following Liquid personalization syntax:
 
+{% raw %}
 * `{{event_properties.${geofence_name}}}`
 
 * `{{event_properties.${geofence_set_name}}}`
+{% endraw %}
 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
