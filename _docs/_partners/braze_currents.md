@@ -12,7 +12,7 @@ valid_partner_list:
   link: /docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
 - name: Google Cloud Storage
   link: /docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
-- name: Microsoft Azure Blob Storage
+- name: Microsoft Azure
   link: /docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
 - name: mParticle
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
