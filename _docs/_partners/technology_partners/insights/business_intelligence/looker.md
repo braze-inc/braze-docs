@@ -53,7 +53,7 @@ __Looker Actions__ allows you to flag users within Braze via the REST API Endpoi
 Only existing users will be flagged. You cannot use pivoted Looks when flagging data in Braze.
 {% endalert %}
 
-[You can also find these instructions and sample code on Github.](https://github.com/Appboy/growth-looker-action/tree/master/src/actions/braze)
+[You can also find these instructions and sample code on Github.](https://github.com/looker/actions/tree/master/src/actions/braze)
 
 ### Step 1: Create a REST API Key
 
