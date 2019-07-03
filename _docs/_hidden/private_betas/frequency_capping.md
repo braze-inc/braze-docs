@@ -38,7 +38,7 @@ You can add up to ten (10) frequency capping rules per app group.
 {% endalert %}
 
 {% alert update %}
-Prior to July 9, 2019, frequency capping was applied at the Campaign level, which meant that receiving the same Campaign twice would only count once towards the frequency capping rule.
+Prior to July 30, 2019, frequency capping was applied at the Campaign level, which meant that receiving the same Campaign twice would only count once towards the frequency capping rule.
 {% endalert %}
 
 ## Rules by Channel
@@ -49,7 +49,7 @@ Additionally, only emails, webhooks, and push notifications will count towards "
 In-App Messages and Content Cards are not counted __as__ or __towards__ "Campaigns/Canvas Steps of any type".
 
 {% alert update %}
-Prior to July 9, 2019, In-App Messages counted towards "Campaigns/Canvas Steps of any type" rules when they were received but could not be frequency capped. 
+Prior to July 30, 2019, In-App Messages counted towards "Campaigns/Canvas Steps of any type" rules when they were received but could not be frequency capped. 
 {% endalert %}
 
 ### Example
