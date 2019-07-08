@@ -4,11 +4,11 @@ platform: Campaigns
 subplatform: Testing and More
 page_order: 5
 ---
-# Multivariate Testing
+# Multivariate & A/B Testing
 
-##  Introduction to Multivariate Testing
+##  Introduction
 
-### What is Multivariate Testing?
+### What are Multivariate & A/B Testing?
 
 An A/B test is an experiment that compares users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals, but differ in wording and style.
 
