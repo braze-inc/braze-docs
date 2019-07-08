@@ -29,14 +29,14 @@ The above test only examines the effect of one variable-- the copy in the push n
 For the purposes of this documentation, a "multivariate test" should be considered interchangeable with an "A/B test".
 
 
-### The Benefits of Multivariate Testing {#the-benefits-of}
+### The Benefits of Multivariate & A/B Testing {#the-benefits-of}
 
-Multivariate testing gives you an easy, clear way to learn about your audience. You no longer have to guess what users will respond to - every campaign becomes an opportunity to try different variants of a message and gauge audience response.
+Multivariate and A/B testing gives you an easy, clear way to learn about your audience. You no longer have to guess what users will respond to - every campaign becomes an opportunity to try different variants of a message and gauge audience response.
 
-Specific scenarios in which multivariate testing could come in handy include:
+Specific scenarios in which multivariate and A/B testing could come in handy include:
 
 {% details The first time you’re trying out a messaging type. %}
-  Worried about getting in-app messaging right the first time? Multivariate testing allows you to experiment and learn what resonates with your users.
+  Worried about getting in-app messaging right the first time? Multivariate and A/B testing allows you to experiment and learn what resonates with your users.
 {% enddetails %}
 
 {% details The creation of onboarding campaigns and other campaigns that are constantly being sent out. %}
@@ -44,18 +44,18 @@ Specific scenarios in which multivariate testing could come in handy include:
 {% enddetails %}
 
 {% details Cases in which you have multiple ideas for messages to send. %}
- If you are unsure of which to choose, run a multivariate test and then make a data-driven decision.
+ If you are unsure of which to choose, run a test and then make a data-driven decision.
 {% enddetails %}
 
 {% details Investigating whether your users respond to “tried and true” marketing techniques. %}
- Marketers often stick to conventional tactics to engage with users, but every product’s user base is different. Sometimes, repeating your call to action and using social proof won’t get you the results you desired. Multivariate testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+ Marketers often stick to conventional tactics to engage with users, but every product’s user base is different. Sometimes, repeating your call to action and using social proof won’t get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
 {% enddetails %}
 
 <br>
 
-### Five Rules for Multivariate and A/B Testing {#five-rules-for}
+### Five Rules for Multivariate & A/B Testing {#five-rules-for}
 
-Multivariate testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, you need to:
+Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, you need to:
 
 {% details Run the test on a large number of users. %}
 Large samples ensure that your results reflect the preferences of your average user and are less likely to be swayed by outliers.
@@ -64,13 +64,13 @@ Larger sample sizes also allow you to identify winning variants that have smalle
 {% enddetails %}
 
 {% details Randomly sort users into different test groups. %}
-Braze’s multivariate testing feature allows you to create up to eight randomly selected test groups.
+Braze’s multivariate and A/B testing feature allows you to create up to eight randomly selected test groups.
 
 Randomizing is designed to remove bias in the test set and increase the odds of the test groups being similar in composition. This ensures that differing response rates are due to differences in your messages rather than your samples.
 {% enddetails %}
 
 {% details Know what elements you are trying to test. %}
-Multivariate testing allows you to test differences between several versions of a message. In some cases, a simple test may be most effective, since isolating changes allows you to identify which elements had the greatest impact on response.
+Multivariate and A/B testing allows you to test differences between several versions of a message. In some cases, a simple test may be most effective, since isolating changes allows you to identify which elements had the greatest impact on response.
 
 Other times, presenting more differences between variants will let you examine outliers and compare different sets of elements. Neither method is necessarily wrong, provided you are clear from the beginning what you are trying to test for.
 {% enddetails %}
@@ -87,13 +87,13 @@ Including a control group lets you know whether your messages have a greater imp
 
 <br>
 
-## Creating Multivariate Tests with Braze {#creating-tests}
+## Creating Multivariate and A/B Tests with Braze {#creating-tests}
 
-### How To Create a Multivariate Test {#how-to-create}
+### Create a Test {#how-to-create}
 
 #### Step 1: Create Your Campaign
 
-Click “Create Campaign” and select a channel for the campaign from the section that allows multivariate testing.
+Click “Create Campaign” and select a channel for the campaign from the section that allows multivariate and A/B testing.
 
 ![Create Your Campaign][160]
 
@@ -125,9 +125,9 @@ For best practices around choosing a segment to test with, see [here][80].
 
 #### Step 5: Pick the Action the Determines the Winner
 
-The Winning Variant can be measured by Unique Opens or Clicks for email, Opens for Push, or Primary Conversion Rate for all channels. Selecting Opens or Clicks to determine the winner will not affect what you choose for the campaign’s [Conversion Events][2].
+The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner will not affect what you choose for the campaign’s [Conversion Events][2].
 
-Keep in mind that if you’re using a Control Group, users in the Control Group cannot perform Opens or Clicks, so the “performance” of the Control Group is guaranteed to be `0`. As a result, the Control Group cannot “win” the A/B test; however, you still may want to use a Control Group to track other metrics for users who do not receive a message.
+Keep in mind that if you’re using a Control Group, users in the Control Group cannot perform `Opens` or `Clicks`, so the “performance” of the Control Group is guaranteed to be `0`. As a result, the Control Group cannot “win” the A/B test; however, you still may want to use a Control Group to track other metrics for users who do not receive a message.
 
 #### Step 6: Schedule When to Send the Winning Variant
 
@@ -168,7 +168,7 @@ Zero, one, or more variants can do better than control, but the chai-squared tes
 
 Depending on which channel you select, you’ll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
 
-What levers do you have to pull and what are the desired effects? While there are millions of possibilities that you can investigate using a multivariate test, we have some suggestions to get you started:
+What levers do you have to pull and what are the desired effects? While there are millions of possibilities that you can investigate using a multivariate and A/B test, we have some suggestions to get you started:
 
 | Channel | Aspects of Message You Can Change | Results To Look For |
 | ---------------------| --------------- | ------------- |
@@ -188,7 +188,7 @@ Since different segments of your users may respond differently to messaging, the
 
 For instance, while active users may have equal response rates to “This deal expires tomorrow!” and “This deal expires in 24 hours!”, users who haven’t opened the app for a week may be more responsive toward the latter wording since it creates a greater sense of urgency.
 
-Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate tests with more variants require a larger test group to achieve [statistically significant results][120]. This is because more variants will result in fewer users seeing each individual variant.
+Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve [statistically significant results][120]. This is because more variants will result in fewer users seeing each individual variant.
 
 As a crude guide, you will likely need __around 15,000 users per variant__ (including the control) to achieve __95% confidence__ in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator][225].
 
@@ -212,9 +212,9 @@ The size of the control group for a campaign with Intelligent Selection will be 
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate will be 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
-## Understanding Your Multivariate Test Results {#understanding-your}
+## Understanding Your Results {#understanding-your}
 
-Congratulations on getting to this stage! Receiving your multivariate test results is, however, not the last step of the testing process. Now you need to understand what your results mean and apply these insights to your engagement strategy.
+Congratulations on getting to this stage! However, receiving results is not the last step of the testing process. Now you need to understand what your results mean and apply these insights to your engagement strategy.
 
 ### Understanding Confidence {#understanding-confidence}
 
@@ -234,24 +234,24 @@ A test that doesn’t have a confidence of 95% can still hold important insights
 
 - Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.
 
-- While multivariate testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
+- While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
 
-Whether or not your multivariate test has a clear winner, it can be helpful to run [follow-up test][140] to confirm your results or apply your findings to a slightly different scenario.
+Whether or not your test has a clear winner, it can be helpful to run [follow-up test][140] to confirm your results or apply your findings to a slightly different scenario.
 
 ## Recommended Follow-ups {#recommended-follow-ups}
 
-One multivariate test can (and should!) inspire ideas for future multivariate tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include:
+One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include:
 
 {% details Changing your messaging strategy based on test results. %}
   Your multivariate results may lead you to change the way you word or format your messaging.
 {% enddetails %}
 
 {% details Changing the way you understand your users. %}
-  Each multivariate test will shed light on your users’ behaviors, how users respond to different messaging channels, and the differences (and similarities) among your segments.
+  Each test will shed light on your users’ behaviors, how users respond to different messaging channels, and the differences (and similarities) among your segments.
 {% enddetails %}
 
-{% details Improving the way you structure future multivariate tests. %}
-  Was your sample size too small? Were the differences between your variants too subtle? Each multivariate test provides an opportunity to learn how to improve future tests.  If your confidence is low, your sample size is too small and should be enlarged for future tests.  If you find no clear difference between how your variants performed, it’s possible that their differences were too subtle to have a discernible effect on users' responses.
+{% details Improving the way you structure future tests. %}
+  Was your sample size too small? Were the differences between your variants too subtle? Each test provides an opportunity to learn how to improve future tests.  If your confidence is low, your sample size is too small and should be enlarged for future tests.  If you find no clear difference between how your variants performed, it’s possible that their differences were too subtle to have a discernible effect on users' responses.
 {% enddetails %}
 
 {% details Running a follow-up test with a larger sample size. %}
