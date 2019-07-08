@@ -7,10 +7,6 @@ page_order: 7
 
 # Comparing Campaigns
 
-{% alert important %}
-The Campaign Comparison feature is currently in limited release. Please contact your Account Manager or Customer Success Manager if you are interested in using this feature.
-{% endalert %}
-
 Braze allows you to view high-level details from multiple campaigns in a single view, allowing you to compare overall performance for up to 10 campaigns.
 
 Get started by visiting the Campaigns page in the Dashboard. From there, click the "Compare" button in the top right of the campaign grid.
