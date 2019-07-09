@@ -23,7 +23,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 {% endraw %}
 
 {% alert important %}
-Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates. (i.e. - `dispatch_id` is not available in In-App Message campaigns)
+Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` is not available in in-app message campaigns).
 {% endalert %}
 
 
