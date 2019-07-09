@@ -109,7 +109,6 @@ After you've finished building the last of your campaign, review it's details, [
 
 The following capabilities are not yet supported for Content Cards:
 
-- Connected Content
 - Vouchers
 - Frequency Capping
 - Re-ordering Content Cards from the Braze UI
