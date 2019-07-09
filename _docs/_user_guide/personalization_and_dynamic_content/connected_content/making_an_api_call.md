@@ -26,13 +26,16 @@ Hi, here are some articles that you might find interesting:
 If the URL is unavailable, Braze will render an empty string in its place. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so we do not overload your server when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 
 If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+{% endraw %}
 
->  Attribute values must be surrounded by `${}` in order to operate properly within Braze's version of Liquid Syntax.
+{% alert note %}
+* Attribute values must be surrounded by `${}` in order to operate properly within Braze's version of Liquid Syntax.
+* Connected Content calls will happen at the time the message is sent, with the exception of In-App Messages, which will make this call at the time the message is viewed.
+* Connected Content calls do not follow redirects.
+* Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for the purposes of validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
+{% endalert %}
 
->  Connected Content calls do not follow redirects.
-
->  Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for the purposes of validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
-
+{% raw %}
 ### Using Basic Authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.

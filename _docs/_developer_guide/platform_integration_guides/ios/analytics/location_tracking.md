@@ -49,7 +49,10 @@ Appboy.sharedInstance()?.locationManager.logSingleLocation()
 {% endtabs %}
 
 ### Disabling Automatic Location Tracking
-You can disable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticLocationCollectionKey` to `YES`. For example:
+Starting with Braze iOS SDK `v3.14.1`, you can disable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `DisableAutomaticLocation` boolean subentry and set the value to `YES`.
+
+ In versions prior to `v3.14.1`, you can disable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticLocationCollectionKey` to `YES`. For example:
+
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
