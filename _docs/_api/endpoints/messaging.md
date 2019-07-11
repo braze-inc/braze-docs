@@ -908,7 +908,7 @@ See the Windows Universal [toast template catalog][32] for details on the option
   "app_id": (required, string) see App Identifier above,
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
-  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set),
+  "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your app group's default reply to if not set) - use "NO_REPLY_TO" to set reply-to address to null,
   "body": (required unless email_template_id is given, valid HTML),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
   "preheader"*: (optional, string) Recommended length 50-100 characters.

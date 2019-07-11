@@ -5,7 +5,49 @@ page_order: 0
 
 # Most Recent Braze Release Notes
 
-_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/)._
+_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
+
+## July 2019
+
+### User Profile Image Removal
+
+We are removing the user profile pictures displayed in Braze User Profiles and User Searches.
+
+### Connected Content in Content Cards
+
+You can now use [Connected Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/).
+
+Connected Content calls to external servers will happen when a Card is actually sent, __not__ when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
+
+### Null 'Reply-To' Address
+
+Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{ site.baseurl }}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
+
+To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage App Group` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
+
+![Email Settings Reply-To]({% image_buster /assets/img/null_reply-to.png %})
+
+### Campaign Comparisons
+
+Look at [multiple campaigns at one time to compare their relative performance]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), side-by-side in Braze - in one window!
+
+### Template Dispatch ID into Messages with Liquid
+
+If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
+This behaves just like `api_id`, in that since the `api_id` isn't available at Campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The id is generated before the message is sent, and will be included in as send time.
+
+{% alert warning %}
+Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app messages, since in-app messages don't have a `dispatch_id`.
+{% endalert %}
+
+### "Show Only Mine" Setting Persists
+
+The "Show Only Mine" filter on the Campaign grid will remain "on" any time you visit the Campaigns page.
+
+### A/B Testing Updates
+
+You can send a one-time [A/B test]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a Campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
 
 ## June 2019
 
@@ -104,21 +146,6 @@ The Most Engaged Channel filter selects the portion of your audience for whom th
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-## April 2019
-
-### New Currents Events & Fields
-
-In addition to some corrections to the section, a new [Subscription Event]({{ site.baseurl}}/partners/braze_currents/data_storage_events/message_engagement_events/#subscription-events) has been added to the Message Engagement Events page. You can now export Subscription Group State Change data from Braze to [Segment]({{ site.baseurl}}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) and [mParticle]({{ site.baseurl}}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/#integration-details), as well as that and Install Attribution Events in [Mixpanel]({{ site.baseurl}}/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents).
-
-Additionally, the property `canvas_step_id` has been added to available [Conversion Events]({{ site.baseurl}}/partners/braze_currents/data_storage_events/message_engagement_events/#conversion-events).
-
-{% alert important %}
-To take advantage of these updates, you will need to edit your Currents connector settings and enable the events you want to use. Reach out to your account manager if you have any questions.
-{% endalert %}
-
-### Subscription Groups Archiving
-
-You can now [archive Subscription Groups]({{ site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
 
 
 [support]: {{ site.baseurl }}/support_contact/
