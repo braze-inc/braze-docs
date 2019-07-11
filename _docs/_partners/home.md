@@ -96,5 +96,7 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 - name: Inkit
   url: /docs/partners/technology_partners/additional_channels/direct_mail/inkit/
+- name: Fivetran
+  url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/fivetran/
 
 ---
