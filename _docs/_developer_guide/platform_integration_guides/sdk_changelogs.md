@@ -1,12 +1,12 @@
 ---
 page_order: 20
 nav_title: SDK Changelogs
-layout: dev_guide
+layout: featured
 guide_top_header: "SDK Changelogs"
 guide_top_text: "The changelogs for each individual SDK are available within their individual Github repositories linked below."
 
-guide_menu_title: "Changelogs"
-guide_menu_list:
+guide_featured_title: "Changelogs"
+guide_featured_list:
   - name: Android SDK Changelog
     link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-android
@@ -21,8 +21,8 @@ guide_menu_list:
     fa_icon: fab fa-windows
   - name: Unity SDK Changelog
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-android
+    image:: /assets/img/unity-icon.png
   - name: Cordova SDK Changelog
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-apple  
+    image:: /braze-docs/assets/img/cordova-icon.png
 ---
