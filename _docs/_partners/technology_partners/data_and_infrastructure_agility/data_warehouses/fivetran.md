@@ -2,7 +2,6 @@
 nav_title: Fivetran
 alias: /partners/fivetran/
 layout: blank_config
-page_order: 0
 ---
 
 # Fivetran
