@@ -21,8 +21,8 @@ guide_featured_list:
     fa_icon: fab fa-windows
   - name: Unity SDK Changelog
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
-    image: /docs/assets/img/unity-icon.png
+    image: /assets/img/unity-icon.png
   - name: Cordova SDK Changelog
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
-    image: /docs/assets/img/cordova-icon.png
+    image: /assets/img/cordova-icon.png
 ---
