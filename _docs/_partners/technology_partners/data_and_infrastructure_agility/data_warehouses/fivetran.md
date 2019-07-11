@@ -1,6 +1,6 @@
 ---
 nav_title: Fivetran
-alias: /partners/Fivetran/
+alias: /partners/fivetran/
 ---
 
 # Fivetran
