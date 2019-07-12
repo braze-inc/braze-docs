@@ -24,12 +24,12 @@ Braze API Key    | [Braze](https://dashboard.braze.com/sign_in) | Found within y
 {% tabs %}
 {% tab Amazon S3 %}
 
-### Step 1: Locating your External ID
+### Step 1: Locate your External ID
 
 Locate your External ID in the Fivetran setup form for Braze.
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
-{% alert note %} Note: Simply take note of the **External ID** as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
+{% alert note %} Simply take note of the **External ID** as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
 
 ### Step 2: Create a Braze API Key For Amazon S3 Storage
 
@@ -61,7 +61,7 @@ From here, [create an API Key](https://www.braze.com/docs/developer_guide/rest_a
 
 Lastly, take note of the created API key before proceeding because it will be required in Step 4.
 
-### Step 3: Give Fivetran Access to Your S3 Bucket
+### Step 3: Give Fivetran Access to a Specified S3 Bucket
 
 #### Creating an IAM policy
 
@@ -100,9 +100,11 @@ Copy the policy below, replacing **{your-bucket-name}** with the name of your s3
 ```
 
 Now, click the **Review Policy** button to make any final changes before setup.
+
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_review.png %})
 
 Here, give policy a unique name (i.e "Fivetran-S3-Access") and an optional descripion before clicking the **Create Policy** button.
+
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 #### Create an IAM role
@@ -112,12 +114,15 @@ Navigate to **Roles**, then selet **Create New Role**.
 ![Amazon S3 IAM New Role]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
 Select **Another AWS Account**, then click the check box for **Require external ID**.
+
 ![Amazon S3 Require External ID]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
 Here, enter the Fivetran account ID, ``834469178297``, and the ``External ID`` which was found in the  Fivetran Braze S3 connection setup form during Step 1.
+
 ![Amazon S3 Input External ID]({% image_buster /assets/img/fivetran_as3_external_id.png %})
 
 Click **Next: Permissions**, and now select the policy that you created earlier (ie, "Fivetran-S3-Access").
+
 ![Amazon S3 Select Policy]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
 Lastly, click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**.
@@ -127,21 +132,27 @@ Lastly, click **Next: Review**, name your new role (i.e., Fivetran), and click *
 Click on the role you just created, or navigate to **Roles** from your [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home).
 ![Amazon S3 IAM Role ARN]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
-{% alert note %} Note: You can specify permissions for the Role ARN that you designate for Fivetran. Giving selective permissions to this Role will allow Fivetran to only sync what it has permissions to see. {% endalert %}
+{% alert note %} You can specify permissions for the Role ARN that you designate for Fivetran. Giving selective permissions to this Role will allow Fivetran to only sync what it has permissions to see. {% endalert %}
 
 {% endtab %}
-{% tab Azure Cloud Storage %}
+{% tab Azure Blob Storage %}
 
-### Step 1: Retrieve Your Fivetran email from Google Cloud Storage
+### Step 1: Retrieve Your Fivetran email from Azure Blob Storage
 
-Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Azure Cloud storage** as the ``Cloud Storage`` option.
+Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Azure Blob storage** as the ``Cloud Storage`` option.
 
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
-{% alert note %} Note: Simply take note of the Fivetran Email as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
+{% alert note %} Simply take note of the Fivetran Email as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
 
 {% endtab %}
 {% tab Google Cloud Storage %}
+
+### Step 1: Retrieve Your Fivetran email from Google Cloud Storage
+
+Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Azure Blob storage** as the ``Cloud Storage`` option.
+
+![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 ### Step 2: Create a Braze API Key For Google Cloud Storage
 
@@ -205,15 +216,17 @@ After logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), cl
 
 ``Role ARN``: See Step 3 of the Braze Current setup process
 
-{% alert note %} Note: Do not forget to select **Choose Amazon S3** as the ``Cloud Storage``! {% endalert %}
+{% alert important %} Ensure **Amazon S3** is selected as the ``Cloud Storage`` choice. {% endalert %}
 
 {% endtab %}
-{% tab Azure Cloud Storage %}
+{% tab Azure Blob Storage %}
 ``Destination schema``: Choose a unique schema name
 
 ``API URL``: Your assigned API URL found during the Braze Current setup process
 
 ``API Key``: The API Key noted during the Braze Current setup process
+
+{% alert important %} Ensure **Azure Blob Storage** is selected as the ``Cloud Storage`` choice. {% endalert %}
 {% endtab %}
 {% tab Google Cloud Storage %}
 
@@ -227,7 +240,7 @@ After logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), cl
 
 ``Folder``: Get it from Braze dashboard->Integration->Current->your-current-name->Prefix
 
-{% alert note %} Note: Do not forget to select **Google Cloud Storage** as the ``Cloud Storage``! {% endalert %}
+{% alert imortant %} Ensure **Google Cloud Storage** is selected as the ``Cloud Storage`` choice. {% endalert %}
 {% endtab %} {% endtabs %}
 
 Lastly, click **Save & Test** and Fivetran will do the rest by syncing with the data from your Braze account!
