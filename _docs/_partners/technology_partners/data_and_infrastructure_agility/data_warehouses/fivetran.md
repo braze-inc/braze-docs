@@ -21,7 +21,8 @@ Braze API Key    | [Braze](https://dashboard.braze.com/sign_in) | Found within y
 
 ## Setting Up Braze Current
 
-{% tabs %} {% tab Amazon S3 %}
+{% tabs %}
+{% tab Amazon S3 %}
 
 ### Step 1: Locating your External ID
 
@@ -189,7 +190,8 @@ Lastly, navivate to your [Google Cloud Storage Consle](https://console.cloud.goo
 
 After logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), click on **+ Connector** found at the top right corner of the screen and select the **Braze** connector to launch the setup form. Within the form, fill the given fields with the appropriare values:
 
-{% tabs %} {% tab Amazon S3 %}
+{% tabs %}
+{% tab Amazon S3 %}
 
 ``Destination schema``: Choose a unique schema name
 
@@ -205,7 +207,15 @@ After logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), cl
 
 {% alert note %} Note: Do not forget to select **Choose Amazon S3** as the ``Cloud Storage``! {% endalert %}
 
-{% endtab %} {% tab Google Cloud Storage %}
+{% endtab %}
+{% tab Azure Cloud Storage %}
+``Destination schema``: Choose a unique schema name
+
+``API URL``: Your assigned API URL found during the Braze Current setup process
+
+``API Key``: The API Key noted during the Braze Current setup process
+{% endtab %}
+{% tab Google Cloud Storage %}
 
 ``Destination schema``: A unique schema name
 
