@@ -1,7 +1,6 @@
 ---
 nav_title: Fivetran
 alias: /partners/fivetran/
-layout: blank_config
 ---
 
 # Fivetran
@@ -125,20 +124,23 @@ Lastly, click **Next: Review**, name your new role (i.e., Fivetran), and click *
 #### Locating the IAM Role ARN
 
 Click on the role you just created, or navigate to **Roles** from your [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home).
-![Amazon S3 IAM Role ARN]({% image_buster /assets/img/fivetran_iam_role_arn.png %)}
+![Amazon S3 IAM Role ARN]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %} Note: You can specify permissions for the Role ARN that you designate for Fivetran. Giving selective permissions to this Role will allow Fivetran to only sync what it has permissions to see. {% endalert %}
-{% endtab %} {% tab Google Cloud Storage %}
+
+{% endtab %}
+{% tab Azure Cloud Storage %}
 
 ### Step 1: Retrieve Your Fivetran email from Google Cloud Storage
 
-Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Google Cloud storage** as the ``Cloud Storage`` option.
+Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Azure Cloud storage** as the ``Cloud Storage`` option.
 
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
 {% alert note %} Note: Simply take note of the Fivetran Email as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
 
-{% endtab %} {% tab Google Cloud Storage %}
+{% endtab %}
+{% tab Google Cloud Storage %}
 
 ### Step 2: Create a Braze API Key For Google Cloud Storage
 
