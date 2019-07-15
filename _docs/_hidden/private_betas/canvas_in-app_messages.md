@@ -103,5 +103,5 @@ Steps with an in-app message and another channel have the following advancement 
 {% endalert %}
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
-[2]: {% image_buster /assets/img/iamlive.png %} "IAM Live"
-[3]: {% image_buster /assets/img/iampush.png %} "IAM Live"
+[2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
+[3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
