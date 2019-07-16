@@ -4,7 +4,6 @@ page_order: 1
 ---
 
 # SDK Endpoints
-If your company was set up with a custom endpoint, please reach out to your Customer Onboarding Manager or [open a support ticket][support]. If not, please follow the table below.
 
 |Instance | SDK Endpoint
 |---|---|
