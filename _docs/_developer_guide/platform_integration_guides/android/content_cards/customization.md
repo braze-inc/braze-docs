@@ -73,9 +73,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 ### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
 
-To set a custom pinned icon, create a `png` image asset named `icon_pinned` and place it in your `drawable` folders. You will need to place an image in each `drawable` resolution you support, e.g. `drawable-hdpi`.
-
-Unlike on iOS, the pinned icon image is not constrained to a specific area. You should ensure your pinned icon image displays at an appropriate size.
+To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
