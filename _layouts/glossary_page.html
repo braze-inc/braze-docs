@@ -279,6 +279,9 @@ $(document).ready(function() {
         <span id="filter_{{ glossary_id }}" class="term">
           <h2 id="{{ glossary_id }}"></h2>
           <div class="content"><p class="title">{{ glossary['name'] }}</p>
+            {%- if glossary['image'] -%}
+            <img src="{{ glossary['image'] }}" />
+            {%- endif -%}
             <p class="desc">{{ glossary['description'] }}</p>
             {%- if glossary['metric'] -%}
             <div class="metric">Metric: {{ glossary['metric'] }}</div>
