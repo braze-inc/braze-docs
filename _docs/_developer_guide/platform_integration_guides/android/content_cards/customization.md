@@ -71,6 +71,12 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
+### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+
+To set a custom pinned icon, create a `png` image asset named `icon_pinned` and place it in your `drawable` folders. You will need to place an image in reach `drawable` resolution you support, e.g. `drawable-hdpi`.
+
+Unlike on iOS, the pinned icon image is not constrained to a specific area. You should ensure your pinned icon image displays at an appropriate size.
+
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
 The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47]. 
