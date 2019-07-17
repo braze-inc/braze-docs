@@ -60,4 +60,4 @@ For action-based steps, users must perform the trigger action and meet the audie
 
 When sending a multichannel step with intelligent delivery, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png.png %} "Advancement Behavior"
+[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"
