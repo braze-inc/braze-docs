@@ -28,7 +28,6 @@ Braze's Advancement Behavior feature allows you to choose the criteria for advan
 
 ![auto2.png][1]
 
-
 When __Message Sent__ is selected, customers will only be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - An email message is sent
