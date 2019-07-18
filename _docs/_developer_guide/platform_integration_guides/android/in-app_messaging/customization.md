@@ -222,7 +222,6 @@ The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever 
 {% tabs %}
 {% tab JAVA %}
 
-
 ```java
 public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageActionListener {
   private final Context mContext;
@@ -300,7 +299,6 @@ We recommend setting your `IHtmlInAppMessageActionListener` in your [`Applicatio
 
 {% tabs %}
 {% tab JAVA %}
-
 
 ```java
 AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(new CustomHtmlInAppMessageActionListener(context));
