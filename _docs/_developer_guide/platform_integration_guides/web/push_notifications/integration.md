@@ -52,7 +52,7 @@ In order for a browser to receive push notifications, you must register it for p
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
 * [Generate a Safari Push Certificate following these "Registering with Apple" instructions][3]
-* In the Braze dashboard, on [the app settings page][15] (where your API keys are located), select your Web app. Click "Configure Safari Push" and follow the instructions, uploading the push certificate you just generated.
+* In the Braze dashboard, on the App Settings page (where your API keys are located), select your Web app. Click "Configure Safari Push" and follow the instructions, uploading the push certificate you just generated.
 * When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate, for example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
 ### Common Issues
