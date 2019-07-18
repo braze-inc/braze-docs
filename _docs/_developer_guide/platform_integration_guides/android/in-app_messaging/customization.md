@@ -80,6 +80,7 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IInAppMessageManagerListener`][21] - Implement to [custom manage in-app message display and behavior](#setting-a-custom-manager-listener).
 - [`IInAppMessageViewFactory`][42] - Implement to [build custom in-app message views](#setting-a-custom-view-factory).
 - [`IInAppMessageAnimationFactory`][20] - Implement to [define custom in-app message animations](#setting-a-custom-animation-factory).
+- [`IHtmlInAppMessageActionListener`][86] - Implement to [custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener).
 
 ### Setting a Custom Manager Listener
 
@@ -204,6 +205,30 @@ We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.
 
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
+## Setting a Custom HTML In-App Message Action Listener
+
+Braze's SDK have a default `AppboyDefaultHtmlInAppMessageActionListener` class which is used if no custom listener is defined and logs the events. If you require more control over how user interacts with different buttons inside a HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
+
+### Step 1: Implement a HTML In-App Message Action Listener
+
+Create a class that implements [`IHtmlInAppMessageActionListener`][86]
+
+The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever user initiates any of the following actions inside HTML in-app message:
+- Clicks on close button.
+- Clicks on news feed button.
+- Fires a custom event.
+- Clicks on a URL inside HTML in-app message.
+
+See [`CustomHtmlInAppMessageActionListener.java`][87] in our Droidboy sample app for an implementation example.
+
+### Step 2: Instruct Braze to use your HTML In-App Message Action Listener
+
+Once your `IHtmlInAppMessageActionListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` to instruct `AppboyInAppMessageManager` to use your custom `IHtmlInAppMessageActionListener` instead of the default action listener.
+
+We recommend setting your `IHtmlInAppMessageActionListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom action listener is set before any in-app message is displayed.
+
+See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
+
 ## Setting Fixed Orientation
 
 To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener][19]. Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method.
@@ -311,3 +336,5 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [85]: https://developer.android.com/guide/topics/ui/dialogs.html
+[86]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.java
+[87]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomHtmlInAppMessageActionListener.java
