@@ -207,9 +207,9 @@ See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an exa
 
 ## Setting a Custom HTML In-App Message Action Listener
 
-The Braze SDK has a default `AppboyDefaultHtmlInAppMessageActionListener` class which is used if no custom listener is defined and logs the events. If you require more control over how user interacts with different buttons inside a HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
+The Braze SDK has a default `AppboyDefaultHtmlInAppMessageActionListener` class that is used if no custom listener is defined and takes appropriate action automatically. If you require more control over how a user interacts with different buttons inside a custom HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
 
-### Step 1: Implement a HTML In-App Message Action Listener
+### Step 1: Implement a Custom HTML In-App Message Action Listener
 
 Create a class that implements [`IHtmlInAppMessageActionListener`][86].
 
