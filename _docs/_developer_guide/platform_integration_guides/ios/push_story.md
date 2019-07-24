@@ -58,6 +58,10 @@ To verify that this was successful, go to the `General` tab of the main applicat
 
 ![Embedded Binaries][ios_pushstory_05]
 
+{% alert important %}
+If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do the previous step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
+{% endalert %}
+
 Back in `Build Phases`, click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.  Add this text into the Script body:
 
 ```
