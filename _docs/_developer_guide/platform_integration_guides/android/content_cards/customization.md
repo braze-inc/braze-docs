@@ -71,6 +71,10 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
+### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+
+To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
 The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47]. 

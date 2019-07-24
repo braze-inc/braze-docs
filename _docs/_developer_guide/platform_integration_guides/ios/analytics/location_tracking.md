@@ -8,26 +8,6 @@ search_rank: 5
 
 By default, Braze enables location tracking after the host application has gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
 
-### Requesting Location Tracking Permissions
-The `allowRequestWhenInUseLocationPermission` method gives Braze permission to request WhenInUse authorization on your behalf the next time the application attempts to collect location in the foreground:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].locationManager allowRequestWhenInUseLocationPermission];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.locationManager.allowRequestWhenInUseLocationPermission()
-```
-
-{% endtab %}
-{% endtabs %}
-
 ### Logging A Single Location
 To log a single location using Braze's location manager, use the following method:
 
@@ -169,24 +149,8 @@ For more information, see [`ABKUser.h`][5].
 
 [`AppDelegate.m`][1] in the Stopwatch sample application shows how to authorize Braze to request location authorization on your behalf, and [`MiscViewController.m`][3] gives an example of logging location data.
 
-### Not Compiling Location Request Authorization Code {#not-compiling-location-services-code}
-
-If you don't use location services in your application, you can opt to instruct Braze not to compile location request authorization code in order to comply with recent Apple Store review policies. This flag removes all references to methods that request location-related authorization from the end user.
-
-To do this, open your application main target's `Build Settings` in Xcode and add the `ABK_DISABLE_LOCATION_SERVICES=1` Preprocessor Macro to all relevant configurations.
-
-![Disable Location][6]
-
-If you have a Cocoapods integration, select the `Appboy-iOS-SDK` target from your Pods project in Xcode, open the `Build Settings` tab, and add the `ABK_DISABLE_LOCATION_SERVICES=1` Preprocessor Macro to all relevant configurations.
-
-![Disable Location][7]
-
-This feature is not available for Carthage integration yet.
-
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [2]: http://nevan.net/2014/09/core-location-manager-changes-in-ios-8/
 [3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/MiscViewController.m
 [4]: #customizing-appboy-on-startup
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKUser.h
-[6]: {% image_buster /assets/img_archive/ios_disable_location_01.png %}
-[7]: {% image_buster /assets/img_archive/ios_disable_location_02.png %}
