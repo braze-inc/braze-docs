@@ -62,7 +62,7 @@ When a message using Connected Content is sent from Braze, the Braze servers aut
 
 With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send Connected Content requests from the IP ranges below. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests. 
+Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests. 
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|
