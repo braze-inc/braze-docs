@@ -174,12 +174,9 @@
     }
 
     .glossary_filter_div {
-      flex: 1 0 50%;
-      @media (min-width: $window-medium-px) {
-        flex: 0 0 33%;
-      }
+      flex: 1 0 100%;
       @media (min-width: $window-large-px) {
-        flex: 0 0 25%;
+        flex: 0 0 50%;
       }
     }
   }
