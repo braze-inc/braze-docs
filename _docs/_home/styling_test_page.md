@@ -157,15 +157,29 @@ Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 # Image Test
 Image: ![Logo](https://www.braze.com/images/logos/logo-braze-stroked-monogram.svg){: height="36px" width="36px"}
 
-# Linked Image Test
+## Linked Image Test
 Linked Image: [![Braze](https://www.braze.com/images/logos/logo-braze-stroked-monogram.svg){: height="36px" width="36px"}](https://www.braze.com)
 
+## Gallery Test
+
+{% gallery %}
+{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
+{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> This is another `comment`.
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> This is yet another __comment__.
+{% endgallery %}
+
+Other content
+
+{% gallery %}
+{{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **IMAGE TITLE** <br> This is a test to see if it will line break.
+{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
+{% endgallery %}
 
 # Code Test Objective C
 ```objc
 - (void)submitFeedback:(ABKFeedback * )feedback
  withCompletionHandler:(nullable void (^)(ABKFeedbackSentResult feedbackSentResult))completionHandler;
-```
+
 
 # Code Test Swift
 ```swift

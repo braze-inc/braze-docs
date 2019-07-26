@@ -138,7 +138,7 @@ POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
   "api_key" : "your App Group REST API Key",
-  "attributes" : [
+  "attributes" : [
     {
       "external_id" : "user1",
       "first_name" : "Jon",
@@ -146,7 +146,7 @@ Content-Type: application/json
       "dob": "1988-02-14",
       "music_videos_favorited" : { "add" : [ "calvinharris-summer" ], "remove" : ["nickiminaj-anaconda"] }
     },
-    {
+    {
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
@@ -194,7 +194,7 @@ POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
   "api_key" : "your App Group REST API Key",
-  "events" : [
+  "events" : [
     {
       "external_id" : "user1",
       "app_id" : "your-app-id",
@@ -250,7 +250,7 @@ POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
   "api_key" : "your App Group REST API Key",
-  "purchases" : [
+  "purchases" : [
     {
       "external_id" : "user1",
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",

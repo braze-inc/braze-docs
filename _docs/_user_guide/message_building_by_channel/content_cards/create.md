@@ -57,6 +57,10 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
+{% alert warning %}
+The combined size of all fields in a Content Card message (header, image, and body message) should not exceed 2Kb in total.
+{% endalert %}
+
 {% alert note %}
 
 Braze will store up to 100 non-expired Content Cards in their feed. The oldest card will be removed from the feed, even if unread, once more than 100 cards have entered the feed.
