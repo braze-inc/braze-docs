@@ -19,7 +19,7 @@ glossary_tags:
 glossaries:
   - name: "Re-Engage Lapsed Users with a Personalized Push to a Wide Audience"
     image: /docs/assets/img/1800-flowers_alerts_push.jpg
-    description: "[1800-Flowers](https://www.1800flowers.com/) <br> <br> This push message reminds your user that, after a few weeks of no purchases or between holidays, there are still flowers just waiting to be bought! Who cares who they're for - there is no need for a special occasion! Treat your self. <br> As you can see, this message uses personalization and emojis to really connect with customers."
+    description: "<a href='https://www.1800flowers.com/'>1800 Flowers</a> <br> <br> This push message reminds your user that, after a few weeks of no purchases or between holidays, there are still flowers just waiting to be bought! Who cares who they're for - there is no need for a special occasion! Treat your self. <br> As you can see, this message uses personalization and emojis to really connect with customers."
     tags:
       - Retail & eCommerce
       - Miscellaneous & Other
