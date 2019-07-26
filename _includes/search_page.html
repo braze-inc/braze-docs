@@ -45,7 +45,8 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function() {
-    var searchbox = '#search_box'
+    var searchbox = '#search_box';
+
     $.urlParam = function(name) {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
       if (results == null) {
@@ -82,7 +83,7 @@
         urlsearch += ' ' + currenturl.hash.replace('#', '');
       }
       if (urlsearch) {
-        $(searchbox).val(urlsearch.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,''));
+        $(searchbox).val(urlsearch.sanitize());
       }
       {% endif %}
 
@@ -153,6 +154,10 @@
       }
       return mstr;
     };
+    String.prototype.sanitize = function() {
+      return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/,'').replace(/\"/,'');
+    };
+
     String.prototype.upCaseWord = function() {
       return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
     };
@@ -185,7 +190,7 @@
         stateMapping: {
           stateToRoute(uiState) {
             return {
-              query: uiState.query.replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,''),
+              query: uiState.query.sanitize(),
               // we use the character ~ as it is one that is rarely present in data and renders well in urls
               types: uiState.refinementList && uiState.refinementList.type && uiState.refinementList.type.join('~'),
               categories: uiState.refinementList && uiState.refinementList.category && uiState.refinementList.category.join('~'),
@@ -194,7 +199,7 @@
           },
           routeToState(routeState) {
             return {
-              query: routeState.query.replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,''),
+              query: routeState.query.sanitize(),
               refinementList: {
                 type: routeState.types && routeState.types.split('~'),
                 category: routeState.categorys && routeState.categories.split('~')
@@ -250,9 +255,6 @@
       })
     );
     function adjustlabel(data) {
-      // data.customData = 'test';
-      // data.highlighted += ' aaa '
-
       data.highlighted = data.label.replace(/\_/g,' ').replace(/\%20/g, ' ').replace(/_/g, ' ').upCaseWord().mapReplace(wordmap);
       return data;
     }
