@@ -40,7 +40,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 - If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.
 
-- Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and ensure that you specify its location using the [```serviceWorkerLocation``` initialization option](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
+- Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
 
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
