@@ -135,7 +135,7 @@ Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dyn
 
 ### Code snippet
 
-```handlebars
+{% raw %}
 {% connected_content https://[YOUR_SUBDOMAIN].talon.farm/v1/braze/createcoupon
 
 :headers {
@@ -148,7 +148,7 @@ Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dyn
 %}
 
 {{result.value}}
-```
+{% endraw %}
 
 {% alert tip %}
 While you can acess the coupon code with `{{result.value}}` as shown above, which will return the generated value similar to `44D4-U4PL` you can also access
