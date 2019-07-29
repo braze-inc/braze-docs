@@ -52,7 +52,7 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 }'
 ```
 
-### Example Two: All Built in Properties
+### Example Two: All Built-In Properties
 
 ```bash
 curl https://demo.talon.one/v1/braze/createcoupon \
@@ -85,9 +85,11 @@ curl https://demo.talon.one/v1/braze/createcoupon \
     }'
 ```
 
-## Configuring Connected Content
+## Using This Integration
 
-To trigger the Talon.One coupon creation event, you will have to use Braze's [Connected Content Feature](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event cann still be used in any campaign message body or any canvas message body.
+To trigger the Talon.One coupon creation event, you will have to use Braze's [Connected Content Feature](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any campaign message body or any canvas message body.
+
+## Configuring Connected Content Feature
 
 ### Step One: Add the connected content tag to the body of your message
 
