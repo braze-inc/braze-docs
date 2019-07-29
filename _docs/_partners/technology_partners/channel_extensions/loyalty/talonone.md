@@ -23,13 +23,13 @@ Details on how to modify your rate-limit can be found [here](https://www.braze.c
 
 ## API Integration
 
-## Coupon Setup
+### Coupon Setup
 
 You can modify the form of generated codes for any campaign by navigating to the Coupon Code Generator for that campaign found under **Campaign -> Settings -> Coupon Code Generator**
 
 ![Talon.One Coupon Settings]({% image_buster /assets/img/talonone_coupon_settings.png %})
 
-## Endpoint Usage
+### Endpoint Usage
 
 Because Braze-connected content only supports **string** data types, a custom endpoint has to be used that will convert everything to the correct data type.
 This endpoint contains the following built-in properties ((\*) Required):
@@ -41,7 +41,7 @@ This endpoint contains the following built-in properties ((\*) Required):
 - startDate
 - expiryDate
 
-### Exaple One: Required Properties
+#### Exaple One: Required Properties
 
 ```bash
 curl https://demo.talon.one/v1/braze/createcoupon \
@@ -54,7 +54,7 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 }'
 ```
 
-### Example Two: All Built-In Properties
+#### Example Two: All Built-In Properties
 
 ```bash
 curl https://demo.talon.one/v1/braze/createcoupon \
@@ -70,7 +70,7 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 }'
 ```
 
-### Example Three: Custom Attributes
+#### Example Three: Custom Attributes
 
 Custom attributes can also be passed directly as long as they are notated with a dot prefix and still wrapped in a string as shown below.
 
@@ -91,9 +91,9 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 
 To trigger the Talon.One coupon creation event, you will have to use Braze's [Connected Content Feature](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any campaign message body or any canvas message body.
 
-## Configuring Connected Content Feature
+### Configuring Connected Content Feature
 
-### Step One: Add the connected content tag to the body of your message
+#### Step One: Add the connected content tag to the body of your message
 
 ![Talon.One Connected Content Tag]({% image_buster /assets/img/talonone_connected_content.png %})
 
@@ -101,11 +101,11 @@ To trigger the Talon.One coupon creation event, you will have to use Braze's [Co
 You can access Braze attributes by using liquid tags (e.g. {{${user_id}}} to pass the user id)
 {% endalert %}
 
-### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
+#### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
 
 ![Talon.One Creat Coupon URL ]({% image_buster /assets/img/talonone_createcoupon_url.png %})
 
-### Step Three: Add the authorization header and the method _(POST)_ of the request
+#### Step Three: Add the authorization header and the method _(POST)_ of the request
 
 ![Talon.One Authorization Header]({% image_buster /assets/img/talonone_auth_header.png %})
 
@@ -113,7 +113,7 @@ You can access Braze attributes by using liquid tags (e.g. {{${user_id}}} to pas
 Further details on how to generate a session token can be found [here](https://developers.talon.one/Management-API/Authentication).
 {% endalert %}
 
-### Step Four: Add the body of the request containing the coupon code specs mentioned above
+#### Step Four: Add the body of the request containing the coupon code specs mentioned above
 
 ![Talon.One Request Parameters]({% image_buster /assets/img/talonone_request_params.png %})
 
@@ -121,13 +121,13 @@ Further details on how to generate a session token can be found [here](https://d
 The **identifier** parameter is necessary to prevent the creation of multiple coupons for one message, and each paramter should be separated with an "&" as shown above.
 {% endalert %}
 
-### Step Five: Storing the Talon.One result
+#### Step Five: Storing the Talon.One result
 
 Add the "save" parameter at the end to store the Talon.One response as a Braze variable. In the example below, the Talon.One response is being saved in a variable name _result_.
 
 ![Talon.One Save Response]({% image_buster /assets/img/talonone_save_response.png %})
 
-### Step Six: Usage
+#### Step Six: Usage
 
 Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
 
