@@ -58,6 +58,10 @@ Prior to the release of Advancement Behavior, Braze advanced users through a Can
 
 If the user wasn't sent the email or the push, they would not advance to subsequent steps in the Canvas.
 
+Braze customers who did not participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps created prior to July 30th, 2019. Prior to the Advancement Behavior release, user advancement occurred when messages were sent from Canvas steps. 
+
+Braze customers who did participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps without in-app messages created prior to July 30th, 2019 and "Advance Audience After Delay" applied to all Canvas steps with in-app messages created prior to July 30th, 2019. Prior to the release of Advancement Behavior, user advancement occurred when Canvas in-app messages became live. 
+
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"
