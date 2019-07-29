@@ -25,7 +25,7 @@ Details on how to modify your rate-limit can be found [here](https://www.braze.c
 
 ### Coupon Setup
 
-You can modify the form of generated codes for any campaign by navigating to the Coupon Code Generator for that campaign found under **Campaign -> Settings -> Coupon Code Generator**
+You can modify the form of generated codes for any campaign by navigating to the Coupon Code Generator for that campaign found within you Talon.One dashboard under **Campaign -> Settings -> Coupon Code Generator**.
 
 ![Talon.One Coupon Settings]({% image_buster /assets/img/talonone_coupon_settings.png %})
 
@@ -98,7 +98,7 @@ To trigger the Talon.One coupon creation event, you will have to use Braze's [Co
 ![Talon.One Connected Content Tag]({% image_buster /assets/img/talonone_connected_content.png %})
 
 {% alert tip %}
-You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}}} {% endraw %} to pass the user id)
+You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
 {% endalert %}
 
 #### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
@@ -123,7 +123,7 @@ The **identifier** parameter is necessary to prevent the creation of multiple co
 
 #### Step Five: Storing the Talon.One result
 
-Add the "save" parameter at the end to store the Talon.One response as a Braze variable. In the example below, the Talon.One response is being saved in a variable name _result_.
+Add the **save** parameter at the end to store the Talon.One response as a Braze variable. In the example below, the Talon.One response is being saved in a variable name _result_.
 
 ![Talon.One Save Response]({% image_buster /assets/img/talonone_save_response.png %})
 
@@ -158,7 +158,7 @@ Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dyn
 {% endraw %}
 
 {% alert tip %}
-While you can acess the coupon code with **result.value** as shown above, which will return the generated value similar to `44D4-U4PL` you can also access the entire response from Talon.One by accessing **result** directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
+While you can acess the coupon code with {% raw %} {{result.value}} {% endraw %} as shown above, which will return the generated value similar to `44D4-U4PL` you can also access the entire response from Talon.One by accessing {% raw %} {{result}} {% endraw %} directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
 {% endalert %}
 
 # Troubleshooting
