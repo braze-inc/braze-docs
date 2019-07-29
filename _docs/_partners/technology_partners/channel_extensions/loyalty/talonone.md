@@ -98,7 +98,11 @@ To trigger the Talon.One coupon creation event, you will have to use Braze's [Co
 ![Talon.One Connected Content Tag]({% image_buster /assets/img/talonone_connected_content.png %})
 
 {% alert tip %}
-You can access Braze attributes by using liquid tags (e.g. **{{${user_id}}}** to pass the user id)
+You can access Braze attributes by using liquid tags (e.g.
+{% raw %}
+{{${user_id}}}
+{% endraw %}
+to pass the user id)
 {% endalert %}
 
 #### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
@@ -139,19 +143,26 @@ Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dyn
 {% connected_content https://[YOUR_SUBDOMAIN].talon.farm/v1/braze/createcoupon
 
 :headers {
+
 "authorization": "Bearer [sessionToken]"
+
 }
+
 :method post
+
 :body applicationID=1&campaignID=1488&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
+
 :content_type application/json
+
 :save result
+
 %}
 
 {{result.value}}
 {% endraw %}
 
 {% alert tip %}
-While you can acess the coupon code with **{{result.value}}** as shown above, which will return the generated value similar to `44D4-U4PL` you can also access the entire response from Talon.One with **{{result}}** which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
+While you can acess the coupon code with **result.value** as shown above, which will return the generated value similar to `44D4-U4PL` you can also access the entire response from Talon.One by accessing **result** directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
 {% endalert %}
 
 # Troubleshooting
