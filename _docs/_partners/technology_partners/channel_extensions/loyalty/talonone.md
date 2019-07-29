@@ -98,11 +98,7 @@ To trigger the Talon.One coupon creation event, you will have to use Braze's [Co
 ![Talon.One Connected Content Tag]({% image_buster /assets/img/talonone_connected_content.png %})
 
 {% alert tip %}
-You can access Braze attributes by using liquid tags (e.g.
-{% raw %}
-{{${user_id}}}
-{% endraw %}
-to pass the user id)
+You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}}} {% endraw %} to pass the user id)
 {% endalert %}
 
 #### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
