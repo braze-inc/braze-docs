@@ -8,14 +8,14 @@ guide_top_text: "Do you want to ensure a secure login for your company's Braze u
 guide_featured_title: "Which secure sign on option would you like to use?"
 guide_featured_list:
 - name: Azure AD
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
-  image: /assets/img/icon-classic-cc.png
+  link: /docs/user_guide/administrative/access_braze/single-sign-on/azure_ad/
+  image: /assets/img/azure_ad.png
 - name: Okta IdF
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image
-  image: /assets/img/captioned-cc.png
+  link: /docs/user_guide/administrative/access_braze/single-sign-on/okta/
+  image: /assets/img/okta.png
 - name: OneLogin
-  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
-  image: /assets/img/icon-banner-cc.png
+  link: /docs/user_guide/administrative/access_braze/single-sign-on/onelogin/
+  image: /assets/img/onelogin.png
 
 ---
 
