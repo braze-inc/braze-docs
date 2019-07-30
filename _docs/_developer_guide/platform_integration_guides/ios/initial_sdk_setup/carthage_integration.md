@@ -9,7 +9,7 @@ search_rank: 5
 You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 
 ```
-github "Appboy/Appboy-iOS-SDK" "3.4.0"
+github "Appboy/Appboy-iOS-SDK" "3.15.0"
 ```
 
 For further instructions using Carthage, please refer to their [user guide][9] on Github.
@@ -49,7 +49,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtabs %}
 
 ## Dependency-Free Integration
-If you want to use SDWebImage and/or FLAnimatedImage in your project along with the Braze SDK, you can install a thin version of the Braze Carthage framework. To do so, include the following lines in your Cartfile:
+If you want to use SDWebImage in your project along with the Braze SDK, you can install a thin version of the Braze Carthage framework. To do so, include the following lines in your Cartfile:
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk.json"
