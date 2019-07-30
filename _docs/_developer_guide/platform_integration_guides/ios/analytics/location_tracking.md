@@ -6,7 +6,35 @@ search_rank: 5
 ---
 ## Location Tracking
 
-By default, Braze enables location tracking after the host application has gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
+By default, Braze disables location tracking. We enable location tracking after the host application has gained permission from the user if the app has opted in to location tracking. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
+
+### Enabling Automatic Location Tracking
+Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableAutomaticLocation` boolean subentry and set the value to `YES`.
+
+ You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[Appboy startWithApiKey:@"YOUR-API_KEY"
+          inApplication:application
+      withLaunchOptions:options
+      withAppboyOptions:@{ ABKEnableAutomaticLocationCollectionKey : @(YES) }];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.startWithApiKey("YOUR-API-KEY",
+inApplication:application,
+withLaunchOptions:launchOptions,
+withAppboyOptions:[ ABKEnableAutomaticLocationCollectionKey : true ]])
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Logging A Single Location
 To log a single location using Braze's location manager, use the following method:
@@ -23,34 +51,6 @@ To log a single location using Braze's location manager, use the following metho
 
 ```swift
 Appboy.sharedInstance()?.locationManager.logSingleLocation()
-```
-
-{% endtab %}
-{% endtabs %}
-
-### Disabling Automatic Location Tracking
-Starting with Braze iOS SDK `v3.14.1`, you can disable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `DisableAutomaticLocation` boolean subentry and set the value to `YES`.
-
- In versions prior to `v3.14.1`, you can disable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticLocationCollectionKey` to `YES`. For example:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy startWithApiKey:@"YOUR-API_KEY"
-          inApplication:application
-      withLaunchOptions:options
-      withAppboyOptions:@{ ABKDisableAutomaticLocationCollectionKey : @(YES) }];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.startWithApiKey("YOUR-API-KEY",
-inApplication:application,
-withLaunchOptions:launchOptions,
-withAppboyOptions:[ ABKDisableAutomaticLocationCollectionKey : true ]])
 ```
 
 {% endtab %}
@@ -125,7 +125,7 @@ For additional details please see this [helpful blog post][2].
 
 #### Passing Location Data to Braze
 
-The following two methods can be used to set the last known location for the user. Keep in mind that these methods are intended for use only where Braze's automatic location tracking has been disabled (i.e., `ABKDisableAutomaticLocationCollectionKey` has been set to `YES`).
+The following two methods can be used to set the last known location for the user. Keep in mind that these methods are intended for use only where Braze's automatic location tracking is disabled.
 
 ```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
