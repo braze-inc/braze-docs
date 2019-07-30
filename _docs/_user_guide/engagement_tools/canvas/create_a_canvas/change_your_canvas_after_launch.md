@@ -2,7 +2,7 @@
 nav_title: Change Your Canvas After Launch
 platform: Canvas
 subplatform: Create a Canvas
-page_order: 1
+page_order: 3
 ---
 
 # Changing Your Canvas After Launch
