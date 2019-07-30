@@ -1,64 +1,50 @@
 ---
 nav_title: Azure Active Directory
-page_order: 1
+page_order: 0
 ---
 
 # Azure Active Directory
-Azure Active Directory, through Microsoft........
 
-## Setting up Azure AD with Braze
-Summary
-_Prerequisites:_
+[Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
 
-- You must have admin privileges for both Azure AD and Braze.
+## Requirements
 
+- An Azure AD account.
+- A Braze account with SAML SSO enabled.
+- You must have admin privileges for both Azure and Braze.
 
-### Step 1
-Login to Azure.  Click _Add Applications._
+## Step 1: Add Braze from the Gallery
 
-![okta_addapplication1][77]
+1. Go to the Azure Portal and click `Azure Active Directory` in the left navigation panel.
+2. Navigate to `Enterprise Applications`, then select `All applications`.
+3. Add a new application by clicking `+ New application` in the top of the dialog.
+4. Search for `Braze` in the search box, then select it from the result panel, then click `Add`.
 
+## Step 2: Configure Azure AD Single Sign-On
 
-### Step 2
-Find the Braze app.
+1. In your `Azure Portal`, go to the Braze Application Integration page and select `Single Sign-On`.
+2. Select `SAML/WS-Fed` as your method from the `Single Sign-On method` dialog to open the `Set up Single Sign-On with SAML` page.
+3. From there, click the `Edit` icon to open the `Basic SAML Configuration` dialog.
+4. If you wish to configure the application in IDP initiated mode, enter a URL that combines [your Braze instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
+5. If you wish to configure the application in SP initiated mode, click `Set additional URLs` and enter a URL that combines [your Braze instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
+6. Braze expects the SAML assertions in a [specific format](#user-claims-configuration-format). You can manage the values of these attributes from the User Attributes section on the `Application Integration` page. On the `Set up Single Sign-On with SAML` page, click `Edit` to open the `User Attributes` dialog. Then, edit the claims [according to the proper format, shown below](#user-claims-configuration-format).
+7. Go to the `Set up Single Sign-On with SAML` page, then scroll to the `SAML Signing Certificate` section and download the appropriate `Certificate (Base64)` based on your requirements.
+8. Go to the `Set up Braze` section and copy the appropriate URLs for use in the [Braze configuration](#step-3-configure-braze-single-sign-on).
 
-![okta_addapplication2][78]
+### User Claims Configuration Format
+Click `+ Add new claim` to open the `Manage user claims` dialog and enter each of these as an `Attribute`.
 
-### Step 3
-Enter the appropriate domain based on [your cluster][1].
+| Claim Name | Value |
+|---|---|
+|`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email`	| `user.userprincipalname`|
+|`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name`	|`user.givenname`|
+|`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name`	|`user.surname`|
+|`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/login`|	`user.mail`|
 
-![okta_entersetup1][79]
+## Step 3: Configure Braze Single Sign-On
 
-### Step 4
-Select SAML as your sign on option.
+Send the downloaded `Certificate (Base64)` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection.  
 
-![okta_entersetup2][80]
+## Step 4: Test Azure AD Single Sign-On
 
-
-Click _View Setup Instructions_ and copy the target URL and certificate that is generated.
-
-
-### Step 5
-
-_Setup the Braze Dashboard._
-
-![okta_companysettings][81]
-
-
-### Step 6
-Back on the Okta Admin page, you can now assign people or groups to the Braze app.
-
-![okta_assignusers][82]
-
-{% alert note %}
-__SAML SSO-Only Login__
-Go to `Company Settings` in Braze, then the `Security Settings` tab to utilize _Restrict Single Sign-On(SSO)_ and force all users to log in via your chosen SAML SSO method. This will prevent users from logging in via password.  Leaving this unchecked will allow your users to login via your chosen SAML SSO method __or__ their password. This method can be used to help test when first implementing your chosen SAML SSO method.
-{% endalert %}
-
-[1]: {{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/
-[77]: {% image_buster /assets/img_archive/okta_addapplication1.png %}
-[78]: {% image_buster /assets/img_archive/okta_addapplication2.png %}
-[79]: {% image_buster /assets/img_archive/okta_entersetup1.png %}
-[80]: {% image_buster /assets/img_archive/okta_entersetup2.png %}
-[81]: {% image_buster /assets/img_archive/okta_companysettings.png %}
-[82]: {% image_buster /assets/img_archive/okta_assignusers.png %}
+Test Azure Single Sign-On as described in [Azure's instructions here](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial#create-an-azure-ad-test-user).

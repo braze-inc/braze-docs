@@ -1,64 +1,48 @@
 ---
 nav_title: OneLogin
-page_order: 1
+page_order: 2
 ---
 
 # OneLogin
-Azure Active Directory, through Microsoft........
 
-## Setting up Azure AD with Braze
-Summary
-_Prerequisites:_
+## Requirements
 
-- You must have admin privileges for both Azure AD and Braze.
+- Braze account.
+- OneLogin account.
 
+## Step 1: Configure OneLogin
 
-### Step 1
-Login to Azure.  Click _Add Applications._
+1. Log into [OneLogin](https://www.onelogin.com/learn/saml). Click on `Administration`.
+2. Go to `Apps` > `Add Apps` in the top navigation bar. Search for “saml test connector” and select `SAML Test Connector (Advanced)`.
+3. Name your app (include "Braze" in the Display name for easier distinction) and save it. The SSO configuration steps do not show until you save the app.
+4. Go to `Apps` > `Company Apps`. You should see your app listed.
+5. Click on your app to configure it.
+6. Go to the `Configuration` tab first and fill out the appropriate information. The `RelayState` field should be [your Braze API Key that you can create in the Braze dashboard](#braze-api-key). _This is the only field specific to IdP initiated login._
+5. Set the [attributes on the parameter](#attribute-requirements) page.
+6. Copy the `Certificate` and `URL` needed to set up the Braze dashboard from under the `SSO` tab.
 
-![okta_addapplication1][77]
+### Braze API Key
 
+Create your Braze API Key with `sso.saml.login` permission enabled.
 
-### Step 2
-Find the Braze app.
+![SSO Set Up]({% image_buster /assets/img/sso2.png %})
 
-![okta_addapplication2][78]
+{% alert important %}
+If you do not already have a Braze API Key, go to the `Developer Console` in `App Settings`, then click `Create New API Key`.
 
-### Step 3
-Enter the appropriate domain based on [your cluster][1].
-
-![okta_entersetup1][79]
-
-### Step 4
-Select SAML as your sign on option.
-
-![okta_entersetup2][80]
-
-
-Click _View Setup Instructions_ and copy the target URL and certificate that is generated.
-
-
-### Step 5
-
-_Setup the Braze Dashboard._
-
-![okta_companysettings][81]
-
-
-### Step 6
-Back on the Okta Admin page, you can now assign people or groups to the Braze app.
-
-![okta_assignusers][82]
-
-{% alert note %}
-__SAML SSO-Only Login__
-Go to `Company Settings` in Braze, then the `Security Settings` tab to utilize _Restrict Single Sign-On(SSO)_ and force all users to log in via your chosen SAML SSO method. This will prevent users from logging in via password.  Leaving this unchecked will allow your users to login via your chosen SAML SSO method __or__ their password. This method can be used to help test when first implementing your chosen SAML SSO method.
+Then, scroll down to the SSO section and check the `sso.saml.login` option and then save the API Key.
 {% endalert %}
 
-[1]: {{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/
-[77]: {% image_buster /assets/img_archive/okta_addapplication1.png %}
-[78]: {% image_buster /assets/img_archive/okta_addapplication2.png %}
-[79]: {% image_buster /assets/img_archive/okta_entersetup1.png %}
-[80]: {% image_buster /assets/img_archive/okta_entersetup2.png %}
-[81]: {% image_buster /assets/img_archive/okta_companysettings.png %}
-[82]: {% image_buster /assets/img_archive/okta_assignusers.png %}
+
+### Attribute Requirements
+
+| SAML Attribute | Required? | Accepted SAML Attributes |
+|---|---|---|
+|`emailAddress` | Required | `email` <br> `mail` <br> `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email` |
+| `first_name` | Optional | `first_name` <br> `firstname` <br> `firstName`<br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name` |
+| `last_name` | Optional | `last_name` <br> `lastname` <br> `lastName` <br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name` |
+
+
+## Step 2: Configure Braze
+
+Send the `Certificate` and `URL` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection. 
