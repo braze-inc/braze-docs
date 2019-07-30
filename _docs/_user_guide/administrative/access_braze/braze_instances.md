@@ -11,13 +11,13 @@ Braze manages a number of different instances for our dashboard, SDK, and REST E
 
 |Instance|URL|REST Endpoint|SDK Endpoint|
 |---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `https://sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `https://sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `https://sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `https://sdk.iad-04.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `https://sdk.iad-06.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `https://sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `https://sdk.fra-01.braze.eu` |
+|US-01| https://dashboard-01.braze.com | https://rest.iad-01.braze.com | https://sdk.iad-01.braze.com |
+|US-02| https://dashboard-02.braze.com | https://rest.iad-02.braze.com | https://sdk.iad-02.braze.com |
+|US-03| https://dashboard-03.braze.com | https://rest.iad-03.braze.com | https://sdk.iad-03.braze.com |
+|US-04| https://dashboard-04.braze.com | https://rest.iad-04.braze.com | https://sdk.iad-04.braze.com |
+|US-06| https://dashboard-06.braze.com | https://rest.iad-06.braze.com | https://sdk.iad-06.braze.com |
+|US-08| https://dashboard-08.braze.com | https://rest.iad-08.braze.com | https://sdk.iad-08.braze.com |
+|EU-01| https://dashboard-01.braze.eu | https://rest.fra-01.braze.eu | https://sdk.fra-01.braze.eu |
 
 {% alert important %}
 When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
