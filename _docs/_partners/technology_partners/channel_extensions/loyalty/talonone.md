@@ -107,7 +107,7 @@ You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app
 #### Step One: Add the Connected Content Tag to the Body of Your Message
 
 {% raw %}
-```
+```liquid
 {% connected_content %}
 
 ```
@@ -120,7 +120,7 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 #### Step Two: Add the URL to the createCoupon Endpoint of Your Talon.One Deployment
 
 {% raw %}
-```json
+```liquid
 {% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon %}
 
 ```
@@ -129,7 +129,7 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 #### Step Three: Add the Authorization Header and the POST Method of the Request
 
 {% raw %}
-```json
+```liquid
 {% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
 
 :headers {
@@ -146,7 +146,7 @@ Further details on how to generate a session token can be found [here](https://d
 #### Step Four: Add the Body of the Request Containing the Coupon Code Specs Mentioned Above
 
 {% raw %}
-```json
+```liquid
 {% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
 
 :headers {
@@ -168,7 +168,7 @@ The **identifier** parameter is necessary to prevent the creation of multiple co
 Add the **save** parameter at the end to store the Talon.One response as a Braze variable. In the example below, the Talon.One response is being saved in a variable name _result_.
 
 {% raw %}
-```json
+```liquid
 {% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
 
 :headers {
