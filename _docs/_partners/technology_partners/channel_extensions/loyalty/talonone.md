@@ -13,35 +13,38 @@ Coupled with the use of a flexible rules engine to boost your conversion and ret
 
 | Requirement    | Origin                                                | Description                                                             |
 | -------------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
-| Braze Campaign | [Braze Settings](https://dashboard.braze.com/sign_in) | An active Braze campaign that vouchers and codes will be generated for. |
+| Braze Account | [Braze Settings](https://dashboard.braze.com/sign_in) | You will need an account with Braze, as well as an active Braze campaign that vouchers and codes will be generated for. |
 
-{% alert important %}
-While the integration is straightforward with any api calls and Braze liquid variables needed outlined below, the one gotcha that stands out is around the rate-limiting that is required, and how this may impact the approach a client takes towards orchestrating an engagement. Talon.One **_requires_** a rate-limit of 500 messages per minute.
+{% alert warning %}
+Talon.One **_requires_** a rate-limit of 500 messages per minute.
 
-Details on how to modify your rate-limit can be found [here](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
+You can modify your rate-limit using Braze. Find out how [here]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
 {% endalert %}
 
 ## API Integration
 
-### Coupon Setup
+### Set Up Coupons in Talon.One
 
-You can modify the form of generated codes for any campaign by navigating to the Coupon Code Generator for that campaign found within you Talon.One dashboard under **Campaign -> Settings -> Coupon Code Generator**.
+You can modify the form of generated codes for any campaign by navigating to the Coupon Code Generator for that campaign found within the Talon.One dashboard under **Campaign > Settings > Coupon Code Generator**.
 
 ![Talon.One Coupon Settings]({% image_buster /assets/img/talonone_coupon_settings.png %})
 
 ### Endpoint Usage
 
-Because Braze-connected content only supports **string** data types, a custom endpoint has to be used that will convert everything to the correct data type.
-This endpoint contains the following built-in properties ((\*) Required):
+Because Braze's connected content only supports **string** data types, a custom endpoint must be used to convert everything to the correct data type.
+This endpoint contains the following built-in properties:
 
-- applicationID (\*)
-- campaignID (\*)
-- identifier (\*)
-- integrationID
-- startDate
-- expiryDate
+- `applicationID` (required)
+- `campaignID` (required)
+- `identifier` (required)
+- `integrationID`
+- `startDate`
+- `expiryDate`
 
-#### Exaple One: Required Properties
+#### Endpoint Use Examples
+{% tabs %}
+{% tab Only Required Properties %}
+##### Example One: Only Required Properties
 
 ```bash
 curl https://demo.talon.one/v1/braze/createcoupon \
@@ -53,8 +56,9 @@ curl https://demo.talon.one/v1/braze/createcoupon \
         "identifier": "an-example-identifier"
 }'
 ```
-
-#### Example Two: All Built-In Properties
+{% endtab %}
+{% tab All Built-In Properties %}
+##### Example Two: All Built-In Properties
 
 ```bash
 curl https://demo.talon.one/v1/braze/createcoupon \
@@ -69,8 +73,9 @@ curl https://demo.talon.one/v1/braze/createcoupon \
         "expiryDate": "2019-06-13T09:00:00Z"
 }'
 ```
-
-#### Example Three: Custom Attributes
+{% endtab %}
+{% tab Custom Attributes %}
+##### Example Three: Custom Attributes
 
 Custom attributes can also be passed directly as long as they are notated with a dot prefix and still wrapped in a string as shown below.
 
@@ -86,83 +91,126 @@ curl https://demo.talon.one/v1/braze/createcoupon \
         ".listOfNumbers": "[1,2,3,4,5,6,7,8,9,10]",
     }'
 ```
+{% endtab %}
+{% endtabs %}
 
-## Using This Integration
+## Using Talon.One in Your Braze Campaign
 
-To trigger the Talon.One coupon creation event, you will have to use Braze's [Connected Content Feature](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any campaign message body or any canvas message body.
+To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any canvas message body.
 
-### Configuring Connected Content Feature
+Place the code snippets below in your message body to configure your Campaign or Canvas to call Talon.One coupons into your message. 
 
-#### Step One: Add the connected content tag to the body of your message
+{% alert tip %}
+You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app message, push, Content Cards, News Feed) using any of our tools (Canvas or Campaigns). Get creative!
+{% endalert %}
 
-![Talon.One Connected Content Tag]({% image_buster /assets/img/talonone_connected_content.png %})
+#### Step One: Add the Connected Content Tag to the Body of Your Message
+
+{% raw %}
+```
+{% connected_content %}
+
+```
+{% endraw %}
 
 {% alert tip %}
 You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
 {% endalert %}
 
-#### Step Two: Add the URL to the createCoupon endpoint of your Talon.One deployment
+#### Step Two: Add the URL to the createCoupon Endpoint of Your Talon.One Deployment
 
-![Talon.One Creat Coupon URL ]({% image_buster /assets/img/talonone_createcoupon_url.png %})
+{% raw %}
+```json
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon %}
 
-#### Step Three: Add the authorization header and the method _(POST)_ of the request
+```
+{% endraw %}
 
-![Talon.One Authorization Header]({% image_buster /assets/img/talonone_auth_header.png %})
+#### Step Three: Add the Authorization Header and the POST Method of the Request
+
+{% raw %}
+```json
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+
+:headers {
+  "authorization": "Bearer [sessionToken]"
+ } 
+:method post %}
+```
+{% endraw %}
 
 {% alert important %}
 Further details on how to generate a session token can be found [here](https://developers.talon.one/Management-API/Authentication).
 {% endalert %}
 
-#### Step Four: Add the body of the request containing the coupon code specs mentioned above
+#### Step Four: Add the Body of the Request Containing the Coupon Code Specs Mentioned Above
 
-![Talon.One Request Parameters]({% image_buster /assets/img/talonone_request_params.png %})
+{% raw %}
+```json
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+
+:headers {
+  "authorization": "Bearer [sessionToken]"
+ } 
+:method post 
+:body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
+:content_type application/json 
+%}
+```
+{% endraw %}
 
 {% alert important %}
 The **identifier** parameter is necessary to prevent the creation of multiple coupons for one message, and each paramter should be separated with an "&" as shown above.
 {% endalert %}
 
-#### Step Five: Storing the Talon.One result
+#### Step Five: Storing the Talon.One Result
 
 Add the **save** parameter at the end to store the Talon.One response as a Braze variable. In the example below, the Talon.One response is being saved in a variable name _result_.
 
-![Talon.One Save Response]({% image_buster /assets/img/talonone_save_response.png %})
-
-#### Step Six: Usage
-
-Use a [liquid tag](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
-
-![Talon.One Liquid Tags]({% image_buster /assets/img/talonone_liquid_tag.png %})
-
-### Code snippet
-
 {% raw %}
-{% connected_content https://[YOUR_SUBDOMAIN].talon.farm/v1/braze/createcoupon
+```json
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
 
 :headers {
-
-"authorization": "Bearer [sessionToken]"
-
-}
-
-:method post
-
-:body applicationID=1&campaignID=1488&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
-
-:content_type application/json
-
+  "authorization": "Bearer [sessionToken]"
+ } 
+:method post 
+:body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
+:content_type application/json 
 :save result
+%}
+```
+{% endraw %}
 
+#### Step Six: Show the Value of the Code in the Message
+
+Use a [liquid tag]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
+
+{% raw %}
+```liquid
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+
+:headers {
+  "authorization": "Bearer [sessionToken]"
+ } 
+:method post 
+:body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
+:content_type application/json 
+:save result
 %}
 
 {{result.value}}
+```
 {% endraw %}
 
 {% alert tip %}
-While you can acess the coupon code with {% raw %} {{result.value}} {% endraw %} as shown above, which will return the generated value similar to `44D4-U4PL` you can also access the entire response from Talon.One by accessing {% raw %} {{result}} {% endraw %} directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
+You can acess the coupon code with `{% raw %} {{result.value}} {% endraw %}` as shown above, which will return the generated value similar to `44D4-U4PL`. 
+
+You can also access the entire response from Talon.One by accessing `{% raw %} {{result}} {% endraw %}` directly, which will look similar to `{"id"=>1548040, "value"=>"44D4-U4PL", "__http_status_code__"=>200}`.
 {% endalert %}
 
 # Troubleshooting
 
-As with other Connected Content integrations, much of the troubleshooting will be centered around ensuring syntax is correct (e.g. the right liquid tags are used depending on if it is a canvas or campaign, referencing the right value in the json response).
+Ensure your Connected Content syntax is correct (as in, using the right liquid tags for either a Canvas or Campaign, as well as referencing the right value in the `json` response).
 
-Outside of syntax and setting up the call right, another potential area of troubleshooting to be aware of is the rate limit that you would want to implement in to the Braze campaign/Canvas. As per Felix's note, if the rate limit is not respects, "...(Talon.One) can not guarantee, neither that every code will be generated nor that the response will be there in time".
+Be aware of the 500 messages/minute rate limit that you would want to implement in to the Braze Campaign/Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.
