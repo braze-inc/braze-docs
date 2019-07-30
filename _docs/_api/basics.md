@@ -23,14 +23,21 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
-Instance    | Dashboard URL   | REST Endpoint
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
-US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
-US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
-US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
-EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+|Instance|URL|REST Endpoint|SDK Endpoint|
+|---|---|---|
+|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `https://sdk.iad-01.braze.com` |
+|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `https://sdk.iad-02.braze.com` |
+|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `https://sdk.iad-03.braze.com` |
+|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `https://sdk.iad-04.braze.com` |
+|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `https://sdk.iad-06.braze.com` |
+|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `https://sdk.iad-08.braze.com` |
+|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `https://sdk.fra-01.braze.eu` |
+
+{% alert important %}
+When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
+
+When using endpoints for API calls, use the "REST Enpoint".
+{% endalert %}
 
 ### Company Secret Explanation
 
