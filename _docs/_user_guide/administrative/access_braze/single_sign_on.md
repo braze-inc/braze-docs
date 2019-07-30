@@ -49,7 +49,7 @@ Braze’s SAML SSO support allows you to use any SAML-based Identity Provider (I
 Even if your IdP is not listed, Braze should work with any SAML 2.0 compliant provider. We are planning to add more popular IdPs in the future.
 
 {% tabs %}
-  {% tab Service Provider %}
+{% tab Service Provider %}
 ### Service Provider (SP) Initiated Login
 
 You will need to create an application for Braze within your IdP. Braze currently has seamless integrations with Okta and Azure Active Directory, but you can simply create a custom SAML application for all other IdPs.
@@ -90,8 +90,8 @@ When you save your Security Settings and logout, you should now be able to sign 
 
 If you want your dashboard users to only sign in with SAML SSO, you can restrict single sign-on authentication within Company Settings.
 
-  {% endtab %}
-  {% tab Identity Provider %}
+{% endtab %}
+{% tab Identity Provider %}
 ### Service Provider (SP) Initiated Login
 
 To enable IdP initiated login, you will first need to create an API key in Developer Settings > API Settings.
@@ -99,7 +99,7 @@ To enable IdP initiated login, you will first need to create an API key in Devel
 Input the generated API Key as the RelayState parameter within your IdP which will be used to identity which company the user is trying to log into.
 
 
-  {% endtab %}
+{% endtab %}
 {% endtabs %}
 
 ## Restriction
