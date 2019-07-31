@@ -1,6 +1,6 @@
 ---
 nav_title: Azure Active Directory
-page_order: 0
+page_order: 3
 ---
 
 # Azure Active Directory

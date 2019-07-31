@@ -1,6 +1,6 @@
 ---
 nav_title: OneLogin
-page_order: 2
+page_order: 5
 ---
 
 # OneLogin
@@ -45,4 +45,4 @@ Then, scroll down to the SSO section and check the `sso.saml.login` option and t
 
 ## Step 2: Configure Braze
 
-Send the `Certificate` and `URL` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection. 
+Send the `Certificate` and `URL` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection.
