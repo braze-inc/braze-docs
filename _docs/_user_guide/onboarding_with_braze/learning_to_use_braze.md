@@ -39,7 +39,7 @@ _These reading paths assume that you've already completed your integration and s
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
 | 1 | [Braze Instances]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) | The URLs used to access Braze. |
-| 2 | [Okta Single Sign On]({{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/) | How to set up and use Okta Single Sign on for your company's Braze Account. |
+| 2 | [Okta Single Sign-On]({{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/) | How to set up and use Okta Single Sign-On for your company's Braze Account. |
 | 3 | [Adding Braze Users]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/) | Add company users to the company Braze account. |
 | 4 | [Braze Account User Permissions]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/user_permissions/) | Learn about and set Braze account user permissions for your company users. |
 | 5 | [Company Wide Settings]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) | Learn about and set settings for your entire company's Braze account. |

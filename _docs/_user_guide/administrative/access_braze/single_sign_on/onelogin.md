@@ -46,3 +46,7 @@ Then, scroll down to the SSO section and check the `sso.saml.login` option and t
 ## Step 2: Configure Braze
 
 Send the `Certificate` and `URL` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection.
+
+{% alert tip %}
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
+{% endalert %}

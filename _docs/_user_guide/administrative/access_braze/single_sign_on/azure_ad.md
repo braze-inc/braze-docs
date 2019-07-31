@@ -48,3 +48,7 @@ Send the downloaded `Certificate (Base64)` to [Braze support]({{ site.baseurl }}
 ## Step 4: Test Azure AD Single Sign-On
 
 Test Azure Single Sign-On as described in [Azure's instructions here](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial#create-an-azure-ad-test-user).
+
+{% alert tip %}
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
+{% endalert %}

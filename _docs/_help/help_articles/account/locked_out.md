@@ -18,7 +18,7 @@ Your account's security is important to us - so passwords are required to log in
 
 - Check that you are logging into the incorrect dashboard [instance][1] (check with your account administrator or Braze Account Manager to be sure).
 - Your password may have expired and [you'll need to reset it][2].
-- If you use a [Single Sign On][3] service, you should check with your account administrator that the set up has been completed properly.
+- If you use a [Single Sign-On][3] service, you should check with your account administrator that the set up has been completed properly.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.  
 
 When in doubt, you can always [reset your password][2].
@@ -38,4 +38,4 @@ This doesn't happen very often; we take account suspension and deletions very se
 [support]: {{ site.baseurl }}/support_contact/
 [1]: {{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances
 [2]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/resetting_your_password/
-[3]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/
+[3]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/

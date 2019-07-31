@@ -13,15 +13,6 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 |---|---|
 | **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br> *For some IdPs, this can also be referred to as the Reply URL, Entity ID, Audience URL, or Audience URI.* |
-| SAML SSO Enabled Braze account and API Key | [See instructions below.](#create-and-enable-a-braze-api-key-for-idp-login) |
-
-### Create and Enable a Braze API Key for IdP Login
-
-To enable IdP initiated login, you will first need to create an API Key in `Developer Settings` > `API Settings`.
-
-![SSO Set Up]({% image_buster /assets/img/sso2.png %})
-
-Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identity which company the user is trying to log into.
 
 ## Configure Your Identity Provider
 
@@ -38,7 +29,6 @@ In addition, you’ll need to setup SAML attribute mapping.
 {% alert note %}
 Braze only requires `email` in the SAML Assertion.
 {% endalert %}
-
 
 ## Configure Braze
 
@@ -60,6 +50,14 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ![Login Page with SSO]({% image_buster /assets/img/sso1.png %})
 
+## Create and Enable a Braze API Key for IdP Login (Optional)
+
+To enable IdP initiated login, you will first need to create an API Key in `Developer Settings` > `API Settings`.
+
+![SSO Set Up]({% image_buster /assets/img/sso2.png %})
+
+Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identity which company the user is trying to log into.
+
 {% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single-sign-on/restriction/) from the `Company Settings` page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
 {% endalert %}
