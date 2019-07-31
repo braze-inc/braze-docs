@@ -7,11 +7,8 @@ guide_top_text: "Single Sign-On (SSO) provides companies a secure and centralize
 
 guide_featured_title: "SAML SSO Topics"
 guide_featured_list:
-- name: Service Provider (SP) Set Up
-  link: /docs/user_guide/administrative/access_braze/single-sign-on/sp/
-  fa_icon: fas fa-sign-in-alt
-- name: Identity Provider (IdP) Set Up
-  link: /docs/user_guide/administrative/access_braze/single-sign-on/idp/
+- name: Custom SAML SSO Set Up
+  link: /docs/user_guide/administrative/access_braze/single-sign-on/set_up/
   fa_icon: fas fa-fingerprint
 - name: Restrict to SAML SSO Only
   link: /docs/user_guide/administrative/access_braze/single-sign-on/restriction/
