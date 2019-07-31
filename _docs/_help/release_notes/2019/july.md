@@ -43,14 +43,14 @@ Expanded Campaign details are now shown in the ... wait for it ... Campaign Deta
 
 The "Only Show Mine" check filter on the Campaigns page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
 
-## Advancement Behavior
-You can now choose [when a user advances]() from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
+### Advancement Behavior
+You can now choose [when a user advances]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
 
 ![Advancement Behavior]({% image_buster /assets/img/advancement_behavior_rn.png %})
 
-## In-App Messages in Canvas
+### In-App Messages in Canvas
 
-[In-app messages are now available to use with Canvas!]() Add a Canvas step and browse available channels to add an in-app message.
+[In-app messages are now available to use with Canvas!]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) Add a Canvas step and browse available channels to add an in-app message.
 
 ![In-App Messages in Canvas]({% image_buster /assets/img/iam-in-canvas.png %})
 

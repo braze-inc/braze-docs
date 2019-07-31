@@ -1,6 +1,6 @@
 ---
 nav_title: Getting Your Account
-page_order: 0
+page_order: 2
 ---
 
 ## Getting Your Account
