@@ -3,7 +3,7 @@ nav_title: Okta
 page_order: 1
 ---
 
-# Okta IdP
+# Okta 
 Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
 
 ## Requirements

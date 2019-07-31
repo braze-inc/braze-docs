@@ -10,7 +10,7 @@ guide_featured_list:
 - name: Azure AD
   link: /docs/user_guide/administrative/access_braze/single-sign-on/azure_ad/
   image: /assets/img/azure_ad.png
-- name: Okta IdF
+- name: Okta
   link: /docs/user_guide/administrative/access_braze/single-sign-on/okta/
   image: /assets/img/okta.png
 - name: OneLogin
@@ -69,12 +69,12 @@ In addition, you’ll need to setup SAML attribute mapping.
 
 | SAML Attribute | Required? | Accepted SAML Attributes |
 |---|---|---|
-|`emailAddress` | Required | `email` <br> `mail` <br> `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email` |
+|`email` | Required | `email` <br> `mail` <br> `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email` |
 | `first_name` | Optional | `first_name` <br> `firstname` <br> `firstName`<br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name` |
 | `last_name` | Optional | `last_name` <br> `lastname` <br> `lastName` <br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name` |
 
 {% alert note %}
-Braze only requires `emailAddress` in the SAML Assertion.
+Braze only requires `email` in the SAML Assertion.
 {% endalert %}
 
 Once you have setup Braze within your IdP, the IdP will provide a Target URL and `x.509` certificate which you will input into the Braze dashboard.
@@ -97,7 +97,7 @@ If you want your Braze account users to only sign in with SAML SSO, you can rest
 
 {% endtab %}
 {% tab Identity Provider %}
-### Service Provider (SP) Initiated Login
+### Identity Provider (IdP) Initiated Login
 
 To enable IdP initiated login, you will first need to create an API key in `Developer Settings` > `API Settings`.
 
