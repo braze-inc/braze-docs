@@ -103,7 +103,7 @@ By default new Campaigns/Canvases that do not obey Frequency Caps will also not 
 
 - Different channels within a multi-channel campaign will individually count towards the frequency cap. For instance, if you create a multi-channel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multi-channel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
 
-- Triggered in-app messages will count towards global frequency cap, however they cannot be frequency capped.  For instance, an in-app message confirming a purchase will appear after every purchase regardless of frequency capping.
+- In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
 {% alert update %}
 Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.
