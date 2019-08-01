@@ -2,6 +2,7 @@
 page_order: 0
 nav_title: Glossary Test Page
 layout: glossary_page
+hidden: true
 glossary_top_header: "Glossary Test Page"
 glossary_top_text: "This is a test Glossary Page."
 

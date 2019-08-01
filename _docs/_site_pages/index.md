@@ -11,7 +11,7 @@ nav_title: "Documentation"
 doc_top_header: "Braze Documentation"
 doc_top_text: "Meet us at the intersection of art and science. Find us in the moment, or light years ahead.
 Upon arrival, expect lifecycle engagement at its best.
-At Braze, we aim to create strong bonds between you and your customers or users."
+At Braze, we aim to create strong bonds between you and your customers or users. <br> <a href='/docs/help/map/' target='_blank'>Not sure where to find what you need?</a>"
 
 doc_menu_list:
   - name: User Guide
