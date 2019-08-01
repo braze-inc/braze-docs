@@ -86,8 +86,8 @@ As your user base continues to grow and your messaging scales to include life cy
 
 Frequency Capping can be set up for each app group by selecting Global Campaign Settings found underneath the Campaigns tab. From here, you can choose:
 
-- What message channel you’d like to cap - push, email, webhook or any of those three
-- How many times each user should receive that channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months
+- Which message channel you’d like to cap - push, email, webhook or any of those three.
+- How many times each user should receive that channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
 
 Each line of frequency caps will be connected using an "AND," and you're able to add as many as you wish. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than 1 push per day and no more than 3 pushes per week.
 
@@ -105,7 +105,9 @@ By default new Campaigns/Canvases that do not obey Frequency Caps will also not 
 
 - Triggered in-app messages will count towards global frequency cap, however they cannot be frequency capped.  For instance, an in-app message confirming a purchase will appear after every purchase regardless of frequency capping.
 
-- Keep in mind that Frequency Capping applies to the campaigns a user receives, and not to individual messages. That is, if you have a recurring campaign that users are re-eligible to receive, each recurring message of each channel will be counted as just one campaign. For instance, if a user receives a recurring push campaign that delivers every day, and she is capped to 2 push campaigns per week, the recurring push messages will collectively count towards 1 push campaign for frequency capping purposes, and for that week, this user will still be eligible to receive a different campaign that contains push.
+{% alert update %}
+Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
 [2]: {% image_buster /assets/img_archive/total_limit.png %}
