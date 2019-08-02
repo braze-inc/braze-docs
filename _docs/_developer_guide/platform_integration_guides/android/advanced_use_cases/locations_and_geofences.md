@@ -59,8 +59,8 @@ If you are using a version of the Android SDK less than `2.3.0`, the following m
 ```
 {% endalert %}
 
-### Step 3: Update the appboy.xml
-To enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure it's value is set to true.
+### Step 3: Enable Braze Location Collection
+To enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
