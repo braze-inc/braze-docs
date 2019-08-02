@@ -15,10 +15,6 @@ To support geofences for Android:
 
 2. Braze location collection must not be disabled.
 
-{% alert important %}
-Braze location collection is enabled by default. To verify your location collection status on Android, ensure that `com_appboy_disable_location_collection` is not set to `true` in your `appboy.xml`.
-{% endalert %}
-
 ### Step 1: Update build.gradle
 
 Add the [Google Play Services Location package][3] to your app level `build.gradle` using the [Google Play Services setup guide][10]:
@@ -63,7 +59,18 @@ If you are using a version of the Android SDK less than `2.3.0`, the following m
 ```
 {% endalert %}
 
-### Step 3: Obtain Location Permissions from the End User
+### Step 3: Update the appboy.xml
+To enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure it's value is set to true.
+
+```xml
+<bool name="com_appboy_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Braze location collection is disabled by default.
+{% endalert %}
+
+### Step 4: Obtain Location Permissions from the End User
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
 
@@ -90,7 +97,7 @@ This will cause the SDK to request geofences from Braze's servers and initialize
 
 See [`RuntimePermissionUtils.java`][4] in our sample application for an example implementation.
 
-### Step 4: Enable Geofences on the Dashboard
+### Step 5: Enable Geofences on the Dashboard
 
 Android only allows up to 100 geofences to be stored for a given app. Braze's Locations product will use up to 20 of these geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the Dashboard.
 
