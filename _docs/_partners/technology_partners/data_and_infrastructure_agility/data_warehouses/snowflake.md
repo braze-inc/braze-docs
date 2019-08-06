@@ -48,7 +48,7 @@ Below, you can see query samples for two possible use cases.
 
   You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined, since each raw event typically has a separate table.
 
-```js
+```sql
 SELECT
     COUNT(DISTINCT users_messages_pushnotification_send."ID" ) AS "users_messages_pushnotification_send.push_sent",
     COALESCE((COUNT(DISTINCT users_messages_pushnotification_send."ID" )),0)-COALESCE((COUNT(DISTINCT users_messages_pushnotification_bounce."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
@@ -77,7 +77,7 @@ You can use this daily Email Messaging Cadence query to analyze the time between
 
 For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
-```js
+```sql
 WITH email_messaging_cadence AS (with deliveries as
       (select TO_TIMESTAMP(time) AS delivered_timestamp,
       email_address AS delivered_address,
@@ -130,7 +130,7 @@ You can use this Email Clicks query to analyze the interactions with specific em
 __Set Up this Query__
 Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
 
-```js
+```sql
 use schema BRAZE_CURRENTS.public;
 
 create or replace stage braze_currents.public.braze_data
@@ -145,7 +145,7 @@ show stages;
 ```
 
 
-```js
+```sql
 create table braze_currents.public.USERS_MESSAGES_EMAIL_CLICK (
 id STRING,
 user_id STRING,
@@ -196,17 +196,17 @@ __Do More with this Query Example__
 Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
 
 Manually sync from S3 to Snowflake for the pipe name given below:
-```js
+```sql
 alter pipe PIPE_USERS_MESSAGES_EMAIL_CLICK refresh ;
 ```
 
 Check the pipe status, which will show when the message was forwarded from S3 into Snowflake.
-```js
+```sql
 select SYSTEM$PIPE_STATUS( 'PIPE_USERS_MESSAGES_EMAIL_CLICK' )
 ```
 
 Finally, show the copy history for the table by selecting `*` from
-```js
+```sql
 table(braze_currents.information_schema.copy_history(table_name=>'USERS_MESSAGES_EMAIL_CLICK', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
 {% endtab %}

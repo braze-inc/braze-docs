@@ -31,7 +31,7 @@ In AWS, create a new __public-private key pair__ with grants according to your o
 
 Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as followis:
 
-```js
+```sql
 create or replace stage currents.public.braze_data
     url='s3://snowpipe-demo/'
     credentials = (AWS_KEY_ID = '...' AWS_SECRET_KEY = '...' );
@@ -40,11 +40,11 @@ show pipes;
 
 Next, define the AVRO file format for our stage.
 
-```js
+```sql
 create file format currents.public.currents_avro type = 'avro' compression = 'auto';
 ```
 
-```js
+```sql
 alter stage currents.public.braze_data set file_format = currents.public.currents_avro;
 ```
 
@@ -77,7 +77,7 @@ It is critical that your tables are structured in accordance to the Braze Curren
 
 First, create a table INTO which we will continuously load using the following structure:
 
-```js
+```sql
 CREATE TABLE USERS_BEHAVIORS_APP_FIRSTSESSION
     (
         id               STRING,
@@ -102,7 +102,7 @@ Then, create the AUTO continuous load pipe and specify
 1. which table to load and
 2. how to load the following table.
 
-```js
+```sql
 CREATE OR REPLACE PIPE PIPE_USERS_BEHAVIORS_APP_FIRSTSESSION
                             auto_ingest=true AS
 COPY INTO USERS_BEHAVIORS_APP_FIRSTSESSION
@@ -133,7 +133,7 @@ You must repeat the CREATE TABLE and CREATE PIPE commands for every event type.
 
 First, create a table INTO which we will continuously load using the following structure:
 
-```js
+```sql
 CREATE TABLE "CURRENTS_PM"."PUBLIC".PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN (
         id STRING,
         user_id STRING,
@@ -163,7 +163,7 @@ Then, create the AUTO continuous load pipe and specify
 1. which table to load and
 2. how to load the following table.
 
-```js
+```sql
 CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_PUSHNOTIFICATION_OPEN
                             auto_ingest=true AS
 COPY INTO "CURRENTS_PM"."PUBLIC".USERS_MESSAGES_PUSHNOTIFICATION_OPEN
