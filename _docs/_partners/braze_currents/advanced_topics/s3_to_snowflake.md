@@ -35,7 +35,7 @@ Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as followi
 create or replace stage currents.public.braze_data
     url='s3://snowpipe-demo/'
     credentials = (AWS_KEY_ID = '...' AWS_SECRET_KEY = '...' );
-show stages;
+show pipes;
 ```
 
 Next, define the AVRO file format for our stage.
@@ -48,7 +48,7 @@ create file format currents.public.currents_avro type = 'avro' compression = 'au
 alter stage currents.public.braze_data set file_format = currents.public.currents_avro;
 ```
 
-Finally, use the `show stages;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
+Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
 
 #### Create Bucket Events
 In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the __Properties__ tab, go to __Events__.
@@ -106,7 +106,7 @@ Then, create the AUTO continuous load pipe and specify
 CREATE OR REPLACE PIPE PIPE_USERS_BEHAVIORS_APP_FIRSTSESSION
                             auto_ingest=true AS
 COPY INTO USERS_BEHAVIORS_APP_FIRSTSESSION
-          FROM 
+          FROM
             (select $1:id::STRING,
             $1:user_id::STRING,
             $1:external_user_id::STRING,
@@ -165,9 +165,9 @@ Then, create the AUTO continuous load pipe and specify
 
 ```js
 CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_PUSHNOTIFICATION_OPEN
-                            auto_ingest=true
+                            auto_ingest=true AS
 COPY INTO "CURRENTS_PM"."PUBLIC".USERS_MESSAGES_PUSHNOTIFICATION_OPEN
-          FROM 
+          FROM
            (select $1:id::STRING,
             $1:user_id::STRING,
             $1:external_user_id::STRING,

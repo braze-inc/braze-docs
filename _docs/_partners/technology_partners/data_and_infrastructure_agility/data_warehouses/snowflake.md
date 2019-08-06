@@ -48,7 +48,7 @@ Below, you can see query samples for two possible use cases.
 
   You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined, since each raw event typically has a separate table.
 
-```json
+```js
 SELECT
     COUNT(DISTINCT users_messages_pushnotification_send."ID" ) AS "users_messages_pushnotification_send.push_sent",
     COALESCE((COUNT(DISTINCT users_messages_pushnotification_send."ID" )),0)-COALESCE((COUNT(DISTINCT users_messages_pushnotification_bounce."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
@@ -77,7 +77,7 @@ You can use this daily Email Messaging Cadence query to analyze the time between
 
 For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
-```json
+```js
 WITH email_messaging_cadence AS (with deliveries as
       (select TO_TIMESTAMP(time) AS delivered_timestamp,
       email_address AS delivered_address,
@@ -121,6 +121,93 @@ FROM email_messaging_cadence
 GROUP BY 1
 ORDER BY 1
 LIMIT 500
+```
+{% endtab %}
+{% tab Email Clicks %}
+
+You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
+
+__Set Up this Query__
+Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
+
+```js
+use schema BRAZE_CURRENTS.public;
+
+create or replace stage braze_currents.public.braze_data
+url='s3://tl-braze/'
+credentials = (AWS_KEY_ID = 'XXXXXXXXX' AWS_SECRET_KEY = 'YYYYYY' );
+
+create file format braze_currents.public.currents_avro type = 'avro' compression = 'auto';
+
+alter stage braze_currents.public.braze_data set file_format = braze_currents.public.currents_avro;
+
+show stages;
+```
+
+
+```js
+create table braze_currents.public.USERS_MESSAGES_EMAIL_CLICK (
+id STRING,
+user_id STRING,
+external_user_id STRING,
+time INT,
+timezone STRING,
+campaign_id STRING,
+campaign_name STRING,
+message_variation_id STRING,
+canvas_id STRING,
+canvas_name STRING,
+canvas_variation_id STRING,
+canvas_step_id STRING,
+send_id STRING,
+dispatch_id STRING,
+email_address STRING,
+url STRING,
+sending_ip STRING,
+user_agent STRING
+);
+
+CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_EMAIL_CLICK auto_ingest=true AS
+COPY INTO braze_currents.public.USERS_MESSAGES_EMAIL_CLICK
+FROM
+(select $1:id::STRING,
+$1:user_id::STRING,
+$1:external_user_id::STRING,
+$1:time::INT,
+$1:timezone::STRING,
+$1:campaign_id::STRING,
+$1:campaign_name::STRING,
+$1:message_variation_id::STRING,
+$1:canvas_id::STRING,
+$1:canvas_name::STRING,
+$1:canvas_variation_id::STRING,
+$1:canvas_step_id::STRING,
+$1:send_id::STRING,
+$1:dispatch_id::STRING,
+$1:email_address::STRING,
+$1:url::STRING,
+$1:sending_ip::STRING,
+$1:user_agent::STRING from @braze_currents.public.braze_data/currents/dataexport.prod-03.S3.integration.ZZZZZZZZZ_YOUR_INTEGRATION_ID_HERE/event_type=users.messages.email.Click/);
+
+show pipes;
+```
+
+__Do More with this Query Example__
+Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
+
+Manually sync from S3 to Snowflake for the pipe name given below:
+```js
+alter pipe PIPE_USERS_MESSAGES_EMAIL_CLICK refresh ;
+```
+
+Check the pipe status, which will show when the message was forwarded from S3 into Snowflake.
+```js
+select SYSTEM$PIPE_STATUS( 'PIPE_USERS_MESSAGES_EMAIL_CLICK' )
+```
+
+Finally, show the copy history for the table by selecting `*` from
+```js
+table(braze_currents.information_schema.copy_history(table_name=>'USERS_MESSAGES_EMAIL_CLICK', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
 {% endtab %}
 {% endtabs %}
