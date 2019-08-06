@@ -29,7 +29,7 @@ Tables in your database are created from this stage.
 
 In AWS, create a new __public-private key pair__ with grants according to your organization’s security requirements.
 
-Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as followis:
+Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as follows:
 
 ```sql
 create or replace stage currents.public.braze_data
