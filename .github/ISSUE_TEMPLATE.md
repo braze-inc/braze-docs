@@ -1,12 +1,17 @@
 # Submit an Issue
 **Describe the Problem:**
+> I would like to see the following changes..... (could be a link, a new image, a new section, etc.)... because.....
 
-**Related Links, Resources, and Images:**
 
-**Code Samples:**
+**Related Links, Resources, Code Samples, and Images:**
 
-**Recommended Change Date:**
 
+
+### Is this change associated with a Braze feature/product release?
+- [ ] Yes (__Feature Release Date:__)
+- [ ] No
+
+> If yes, please note the date of the feature release.
 
 ---
 ---
@@ -15,7 +20,7 @@
 
 - [ ] Fill out the relevant items under __Submit an Issue__ above.
 - [ ] [Label](https://github.com/Appboy/braze-docs/issues/labels) this issue.
-- [ ] Assign this issue to either yourself, the Technical Writer (@EmilyNecciai), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed._
+- [ ] Assign this issue to either yourself, the Technical Writer (@EmilyNecciai), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed or left uncompleted._
 
 ---
 ---
