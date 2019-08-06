@@ -15,8 +15,6 @@ Geofence-triggered campaigns are available on iOS and Android. To support geofen
 
 >  Braze location collection is enabled by default. To verify your location collection status on Android, ensure that `com_appboy_disable_location_collection` is not set to `true` in your `appboy.xml`.
 
->  On iOS, we are not strictly enforcing the Braze request processing policy for geofences. When geofences are enabled, the requests will automatically be sent up even if the processing policy is manual processing.
-
 ## Geofence Configuration
 
 ### Latitude/Longitude
