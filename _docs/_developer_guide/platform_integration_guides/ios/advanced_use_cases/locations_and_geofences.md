@@ -14,8 +14,6 @@ To support geofences for iOS:
 
 2. Braze location collection must not be disabled.
 
->  On iOS, we are not strictly enforcing the Braze request processing policy for geofences. When geofences are enabled, the requests will automatically be sent up even if the processing policy is manual processing.
-
 ### Step 1: Enable Background Push
 
 To fully utilize our geofence syncing strategy you must have [Background Push][6] enabled in addition to completing the standard push integration.
