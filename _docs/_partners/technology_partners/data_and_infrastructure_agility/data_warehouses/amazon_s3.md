@@ -21,7 +21,7 @@ Follow the instructions on this page to get started with your AWS S3 integration
 2.  Once signed in, select "S3" from the "Storage & Content Delivery" category.
 3.  Select "Create Bucket" on the next screen and you"ll be prompted to create your bucket and select a region.
 
-## AWS Secret Key auth method
+## AWS Secret Key Auth Method
 
 This authentication method generates a **Secret Key** and an **Access Key ID** that enables Braze to authenticate as a user on your AWS account for the purposes of writing data to your bucket.
 
@@ -129,7 +129,7 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% endtabs %}
 
-## AWS Role ARN auth method
+## AWS Role ARN Auth Method
 
 This authentication method generates a Role ARN (Amazon Resource Name) that enables Braze's Amazon account to authenticate as a member of the Role you created for the purposes of writing data to your bucket.
 
