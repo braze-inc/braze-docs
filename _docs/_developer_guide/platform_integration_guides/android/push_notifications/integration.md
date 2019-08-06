@@ -480,6 +480,12 @@ The recommended place to set your custom `IAppboyNotificationFactory` is in the 
 
 > Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
 
+To unset your custom [`IAppboyNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
+
+```
+setCustomAppboyNotificationFactory(null);
+```
+
 ### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
 
 Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
