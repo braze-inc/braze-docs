@@ -48,7 +48,7 @@ create file format currents.public.currents_avro type = 'avro' compression = 'au
 alter stage currents.public.braze_data set file_format = currents.public.currents_avro;
 ```
 
-Finally, use the `show stages;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
+Finally, use the `show stages;` or `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
 
 #### Create Bucket Events
 In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the __Properties__ tab, go to __Events__.
@@ -134,7 +134,7 @@ You must repeat the CREATE TABLE and CREATE PIPE commands for every event type.
 First, create a table INTO which we will continuously load using the following structure:
 
 ```sql
-CREATE TABLE "CURRENTS_PM"."PUBLIC".PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN (
+CREATE TABLE PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN (
         id STRING,
         user_id STRING,
         external_user_id STRING,
@@ -166,7 +166,7 @@ Then, create the AUTO continuous load pipe and specify
 ```sql
 CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_PUSHNOTIFICATION_OPEN
                             auto_ingest=true AS
-COPY INTO "CURRENTS_PM"."PUBLIC".USERS_MESSAGES_PUSHNOTIFICATION_OPEN
+COPY INTO USERS_MESSAGES_PUSHNOTIFICATION_OPEN
           FROM
            (select $1:id::STRING,
             $1:user_id::STRING,
