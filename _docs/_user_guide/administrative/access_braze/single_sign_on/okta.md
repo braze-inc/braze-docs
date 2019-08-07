@@ -16,10 +16,11 @@ Okta connects any person with any application on any device. It's an enterprise-
 1. Log into your Braze account using an admin account.
 2. Click on the drop down from your user name in the upper right corner, select `Company Settings`.
 3. Select the `Security Settings` tab.
-4. Turn on the `Okta Single Sign-On (SSO)` switch.
-5. Enter the `Target URL` with the `Embed Link` from the Okta Admin Dashboard.
-6. Enter the Certificate with the Certificate you downloaded from the Okta Admin Dashboard (open the file, copy, and paste).
-7. Click `Save Changes` at the bottom of the page.
+4. Turn on the `SAML SSO` switch.
+5. Enter the `SAML Name` which will appear as the button text on the login screen. This is typically your IdP name.
+6. Enter the `Target URL` with the `Embed Link` from the Okta Admin Dashboard.
+7. Enter the Certificate with the Certificate you downloaded from the Okta Admin Dashboard (open the file, copy, and paste).
+8. Click `Save Changes` at the bottom of the page.
 
 ## Step 2: Enable the IdP-initiated Flow
 

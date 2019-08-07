@@ -42,10 +42,16 @@ Then, scroll down to the SSO section and check the `sso.saml.login` option and t
 | `first_name` | Optional | `first_name` <br> `firstname` <br> `firstName`<br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name` |
 | `last_name` | Optional | `last_name` <br> `lastname` <br> `lastName` <br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name` |
 
-
 ## Step 2: Configure Braze
 
-Send the `Certificate` and `URL` to [Braze support]({{ site.baseurl }}/support_contact) so they can turn on your SAML SSO connection.
+1. Log into your Braze account using an admin account.
+2. Click on the drop down from your user name in the upper right corner, select `Company Settings`.
+3. Select the `Security Settings` tab.
+4. Turn on the `SAML SSO` switch.
+5. Enter the `SAML Name` which will appear as the button text on the login screen. This is typically your IdP name.
+6. Enter the `Target URL` from the OneLogin Admin Dashboard.
+7. Enter the Certificate with the x.509 Certificate you downloaded from the OneLogin Admin Dashboard (open the file, copy, and paste).
+8. Click `Save Changes` at the bottom of the page.
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
