@@ -13,7 +13,7 @@ Braze allows you to generate sample API requests for all of our endpoints via ou
 
 Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g. using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
-You can check out our Postman Collection and documentation [here](https://postman.braze.com).
+You can check out our Postman Collection and documentation [here](https://www.getpostman.com/collections/5a6394e1ba47f013cdc9).
 
 # Using Braze's Postman Collection
 
