@@ -188,7 +188,9 @@ COPY INTO USERS_MESSAGES_PUSHNOTIFICATION_OPEN
             $1:send_id::STRING,
             $1:device_id::STRING,
             $1:button_action_type::STRING,
-            $1:button_string::STRING from @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+            $1:button_string::STRING 
+            
+            from @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 {% alert warning %}
 You must repeat the CREATE TABLE and CREATE PIPE commands for every event type in your Currents Integration.
