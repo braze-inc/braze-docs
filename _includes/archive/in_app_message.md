@@ -50,7 +50,7 @@ Our in-app message product allows you to trigger in-app message display as a res
 
 #### Delivery Semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation][in_app_message_15]. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation]{% if include.platform == "iOS" %}[in_app_message_15]{% elsif include.platform == "Android" %}. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
