@@ -187,7 +187,9 @@ $1:dispatch_id::STRING,
 $1:email_address::STRING,
 $1:url::STRING,
 $1:sending_ip::STRING,
-$1:user_agent::STRING from @braze_currents.public.braze_data/currents/dataexport.prod-03.S3.integration.ZZZZZZZZZ_YOUR_INTEGRATION_ID_HERE/event_type=users.messages.email.Click/);
+$1:user_agent::STRING 
+
+from @braze_currents.public.braze_data/currents/dataexport.prod-03.S3.integration.YOUR_INTEGRATION_ID_HERE/event_type=users.messages.email.Click/);
 
 show pipes;
 ```
