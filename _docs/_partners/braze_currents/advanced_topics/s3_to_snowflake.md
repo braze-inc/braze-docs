@@ -32,20 +32,27 @@ In AWS, create a new __public-private key pair__ with grants according to your o
 Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as follows:
 
 ```sql
-create or replace stage currents.public.braze_data
+create or replace stage 
+    currents.public.braze_data
     url='s3://snowpipe-demo/'
     credentials = (AWS_KEY_ID = '...' AWS_SECRET_KEY = '...' );
 show stages;
 ```
 
-Next, define the AVRO file format for our stage.
+Next, define the AVRO file format for your stage.
 
 ```sql
-create file format currents.public.currents_avro type = 'avro' compression = 'auto';
+create file format
+    currents.public.currents_avro
+    type = 'avro'
+    compression = 'auto';
 ```
 
 ```sql
-alter stage currents.public.braze_data set file_format = currents.public.currents_avro;
+alter stage 
+    currents.public.braze_data 
+set 
+    file_format = currents.public.currents_avro;
 ```
 
 Finally, use the `show stages;` or `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
@@ -78,7 +85,7 @@ It is critical that your tables are structured in accordance to the Braze Curren
 First, create a table INTO which we will continuously load using the following structure:
 
 ```sql
-CREATE TABLE USERS_BEHAVIORS_APP_FIRSTSESSION
+create table users_behaviors_app_firstsession
     (
         id               STRING,
         user_id          STRING,
@@ -134,7 +141,8 @@ You must repeat the CREATE TABLE and CREATE PIPE commands for every event type.
 First, create a table INTO which we will continuously load using the following structure:
 
 ```sql
-CREATE TABLE PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN (
+create table
+    public_users_messages_pushnotification_open (
         id STRING,
         user_id STRING,
         external_user_id STRING,
