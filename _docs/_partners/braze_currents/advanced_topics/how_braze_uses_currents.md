@@ -27,12 +27,12 @@ Snowflake isn't your only warehouse option. You can also choose [Redshift](https
 
 ## Step 4: Use a BI Tool to Manipulate Your Data
 
-Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://looker.com/platform/blocks/directory#braze) so we don't have to ETL/ELT data every time it moves from Currents.
+Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://looker.com/platform/blocks/directory#braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) so we don't have to ETL/ELT data every time it moves from Currents.
 
 Check out the docs below to get more information on these and how you can use them to build your database!
 
-- [User Behavior Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze)
-- [Message Engagement Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze)
+- [User Behavior Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
+- [Message Engagement Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
 
 

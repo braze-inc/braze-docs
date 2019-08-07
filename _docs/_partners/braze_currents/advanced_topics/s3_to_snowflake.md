@@ -11,7 +11,7 @@ If you have more specific use cases and would like Braze to service your Current
 {% endalert %}
 
 ## Automated Load Process
-This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory#braze) to visualize that data in Looker to help drive insights and feedback into your Campaigns, Canvases, and Segments.
+This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory#braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) to visualize that data in Looker to help drive insights and feedback into your Campaigns, Canvases, and Segments.
 
 Once you have a Currents to S3 export set up and are receiving live events data, it is time to configure your live ELT pipeline in Snowflake by configuring the following components:
 - [AWS SQS Queues](#aws-sqs-queues)
@@ -106,7 +106,7 @@ Then, create the AUTO continuous load pipe and specify
 CREATE OR REPLACE PIPE PIPE_USERS_BEHAVIORS_APP_FIRSTSESSION
                             auto_ingest=true AS
 COPY INTO USERS_BEHAVIORS_APP_FIRSTSESSION
-          FROM 
+          FROM
             (select $1:id::STRING,
             $1:user_id::STRING,
             $1:external_user_id::STRING,
@@ -167,7 +167,7 @@ Then, create the AUTO continuous load pipe and specify
 CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_PUSHNOTIFICATION_OPEN
                             auto_ingest=true
 COPY INTO "CURRENTS_PM"."PUBLIC".USERS_MESSAGES_PUSHNOTIFICATION_OPEN
-          FROM 
+          FROM
            (select $1:id::STRING,
             $1:user_id::STRING,
             $1:external_user_id::STRING,
