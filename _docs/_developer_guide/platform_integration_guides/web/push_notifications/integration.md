@@ -78,33 +78,31 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 
 ```javascript
 appboy.subscribeToInAppMessage(function(inAppMessage) {
-  if (inAppMessage != null) {
-    var shouldDisplay = true;
+  var shouldDisplay = true;
 
-    if (inAppMessage instanceof appboy.ab.InAppMessage) {
-      // Read the key-value pair for msg-id
-      var msgId = inAppMessage.extras["msg-id"];
+  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+    // Read the key-value pair for msg-id
+    var msgId = inAppMessage.extras["msg-id"];
 
-      // If this is our push primer message
-      if (msgId == "push-primer") {
-        // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
-        // has already granted/blocked permission
-        if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
-          shouldDisplay = false;
-        }
-        if (inAppMessage.buttons[0] != null) {
-          // Prompt the user when the first button is clicked
-          inAppMessage.buttons[0].subscribeToClickedEvent(function() {
-            appboy.registerAppboyPushMessages();
-          });
-        }
+    // If this is our push primer message
+    if (msgId == "push-primer") {
+      // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
+      // has already granted/blocked permission
+      if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
+        shouldDisplay = false;
+      }
+      if (inAppMessage.buttons[0] != null) {
+        // Prompt the user when the first button is clicked
+        inAppMessage.buttons[0].subscribeToClickedEvent(function() {
+          appboy.registerAppboyPushMessages();
+        });
       }
     }
+  }
 
-    // Display the message
-    if (shouldDisplay) {
-      appboy.display.showInAppMessage(message);
-    }
+  // Display the message
+  if (shouldDisplay) {
+    appboy.display.showInAppMessage(message);
   }
 });
 ```

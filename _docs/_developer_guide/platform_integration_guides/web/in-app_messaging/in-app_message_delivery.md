@@ -23,7 +23,7 @@ appboy.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSecond
 
 ### Manual In-App Message Display
 
-If you don't want your site to immediately display new in-app messages when they're received, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own subscriber:
+If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own subscriber:
 
 ```javascript
 appboy.subscribeToInAppMessage(function(inAppMessage) {
