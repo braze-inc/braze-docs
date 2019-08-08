@@ -15,9 +15,13 @@ Braze makes a standard GET request to the endpoint specified within the `connect
 
 You can also specify `:save your_variable_name` after the url in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 
+{% raw %}
+
 ```
 {% connected_content https://www.metaweather.com/api/location/2459115/ :save localweather %}
 ```
+{% endraw %}
+
 Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing / learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
 
 >  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache and will make a second request to the destination server.
@@ -26,7 +30,7 @@ Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weat
 
 Connected Content will interpret any JSON-formatted results into a local variable, when you specify `:save`. For example, a weather-related Connected Content endpoint returns the following JSON object, which you store into a local variable `localweather` by specifying `:save localweather`.
 
-```json
+```js
 {
   "consolidated_weather": [
     {
@@ -46,15 +50,15 @@ Connected Content will interpret any JSON-formatted results into a local variabl
       "visibility": 14.945530601288,
       "predictability": 68
     },
-	.
-	.
-	.
-  "title": "New York",
-  "location_type": "City",
-  "woeid": 2459115,
-  "latt_long": "40.71455,-74.007118",
-  "timezone": "US\/Eastern"
-}
+    .
+    .
+    .
+    "title": "New York",
+    "location_type": "City",
+    "woeid": 2459115,
+    "latt_long": "40.71455,-74.007118",
+    "timezone": "US\/Eastern"
+  }
 ```
 
 You can test whether or not it's raining by referencing `{{localweather.consolidated_weather[0].weather_state_name}}`, which if used on the object above would return `Clear`. If you want to also personalize with the resulting location name, `{{localweather.title}}` returns `New York`.
@@ -69,9 +73,11 @@ If the API responded with `{{localweather.consolidated_weather[0].weather_state_
 
 By default, Connected Content does not set a Content-Type or Accept header on the HTTP GET request that it makes. By adding `:content_type application/json` to the tag, Braze will set both the Content-Type and Accept header to the type you specify.
 
+{% raw %}
 ```
 {% connected_content http://numbersapi.com/random/trivia :content_type application/json %}
 ```
+{% endraw %}
 
 ### HTTP POST
 
@@ -87,7 +93,7 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 
 You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
-```html
+```js
 {% connected_content https://example.com/api/endpoint :save result %}
 {% if result.__http_status_code__ != 200 %}
   {% abort_message('Connected Content returned a non-200 status code') %}
@@ -103,14 +109,27 @@ Connected Content will cache the value it returns from GET endpoints for a minim
 
 If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below.
 
+#### Cache for Specified Seconds
+
+This example will cache for 900 seconds (or 15 minutes).
+{% raw %}
 ```
-#  Will cache for 900 seconds (15 minutes)
 {% connected_content https://example.com/webservice.json :cache_max_value 900 %}
 ```
-
 {% endraw %}
 
-If you don't want to cache a value at all, to create a cache bust, use a POST endpoint with a timeframe stamp or `braze_id`. 
+
+#### Cache Busting
+
+To prevent a browser from reusing an ad it has already seen and cached, or saved, to a temporary memory file, use something like the snippet below, keeping your own needs in mind:
+
+```js
+{% assign timestamp = 'now' | date: '%Y%m%d%H%m%s' %}
+{% connected_content https://example.com/webservice.json?user_id={{${braze_id}}}&timestamp={{timestamp}} %}
+```
+
+With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
+
 
 
 [1]: #aborting-connected-content
