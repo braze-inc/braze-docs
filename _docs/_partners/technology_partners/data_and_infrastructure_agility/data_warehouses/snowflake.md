@@ -26,10 +26,11 @@ You must have an account with Snowflake to use the Data Sharing Services.
 ## Usage & Visualization
 
 Similar to Currents, you can use your Secure Snowflake Data Sharing to...
-- Create complex reports,
-- Perform attribution modeling,
-- Secure sharing within your own company,
-- Map raw event or user data to a CRM (like Salesforce)...
+
+-   Create complex reports,
+-   Perform attribution modeling,
+-   Secure sharing within your own company,
+-   Map raw event or user data to a CRM (like Salesforce)...
 
 And so much more!
 
@@ -71,6 +72,7 @@ LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE  AS users_messages_pushnotifica
 
 LIMIT 500
 ```
+
   {% endtab %}
   {% tab Email Cadence %}
 You can use this daily Email Messaging Cadence query to analyze the time between emails that a user receives.
@@ -122,12 +124,13 @@ GROUP BY 1
 ORDER BY 1
 LIMIT 500
 ```
+
 {% endtab %}
 {% tab Email Clicks %}
 
 You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
 
-__Set Up this Query__
+**Set Up this Query**
 Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
 
 ```sql
@@ -144,73 +147,94 @@ alter stage braze_currents.public.braze_data set file_format = braze_currents.pu
 show stages;
 ```
 
+_Use the following command to create your table:_
 
 ```sql
-create table braze_currents.public.USERS_MESSAGES_EMAIL_CLICK (
-id STRING,
-user_id STRING,
-external_user_id STRING,
-time INT,
-timezone STRING,
-campaign_id STRING,
-campaign_name STRING,
-message_variation_id STRING,
-canvas_id STRING,
-canvas_name STRING,
-canvas_variation_id STRING,
-canvas_step_id STRING,
-send_id STRING,
-dispatch_id STRING,
-email_address STRING,
-url STRING,
-sending_ip STRING,
-user_agent STRING
-);
+CREATE TABLE
+  braze_currents.public.users_messages_email_click (
+    id STRING,
+    user_id STRING,
+    external_user_id STRING,
+    time INT,
+    timezone STRING,
+    campaign_id STRING,
+    campaign_name STRING,
+    message_variation_id STRING,
+    canvas_id STRING,
+    canvas_name STRING,
+    canvas_variation_id STRING,
+    canvas_step_id STRING,
+    send_id STRING,
+    dispatch_id STRING,
+    email_address STRING,
+    url STRING,
+    sending_ip STRING,
+    user_agent STRING
+  );
+```
 
-CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_EMAIL_CLICK auto_ingest=true AS
-COPY INTO braze_currents.public.USERS_MESSAGES_EMAIL_CLICK
-FROM
-(select $1:id::STRING,
-$1:user_id::STRING,
-$1:external_user_id::STRING,
-$1:time::INT,
-$1:timezone::STRING,
-$1:campaign_id::STRING,
-$1:campaign_name::STRING,
-$1:message_variation_id::STRING,
-$1:canvas_id::STRING,
-$1:canvas_name::STRING,
-$1:canvas_variation_id::STRING,
-$1:canvas_step_id::STRING,
-$1:send_id::STRING,
-$1:dispatch_id::STRING,
-$1:email_address::STRING,
-$1:url::STRING,
-$1:sending_ip::STRING,
-$1:user_agent::STRING 
+_Use the following command to create or replace your pipe:_
 
-from @braze_currents.public.braze_data/currents/dataexport.prod-03.S3.integration.YOUR_INTEGRATION_ID_HERE/event_type=users.messages.email.Click/);
+```sql
+CREATE OR REPLACE PIPE
+  pipe_users_messages_email_click
+    auto_ingest=true AS
+
+COPY INTO
+  braze_currents.public.users_messages_email_click
+  FROM
+  (select
+    $1:id::STRING,
+    $1:user_id::STRING,
+    $1:external_user_id::STRING,
+    $1:time::INT,
+    $1:timezone::STRING,
+    $1:campaign_id::STRING,
+    $1:campaign_name::STRING,
+    $1:message_variation_id::STRING,
+    $1:canvas_id::STRING,
+    $1:canvas_name::STRING,
+    $1:canvas_variation_id::STRING,
+    $1:canvas_step_id::STRING,
+    $1:send_id::STRING,
+    $1:dispatch_id::STRING,
+    $1:email_address::STRING,
+    $1:url::STRING,
+    $1:sending_ip::STRING,
+    $1:user_agent::STRING
+
+    FROM
+    @braze_currents.public.braze_data/currents/dataexport.prod-03.S3.integration.YOUR_INTEGRATION_ID_HERE/event_type=users.messages.email.click/);
 
 show pipes;
 ```
 
-__Do More with this Query Example__
+**Do More with this Query Example**
 Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
 
 Manually sync from S3 to Snowflake for the pipe name given below:
+
 ```sql
-alter pipe PIPE_USERS_MESSAGES_EMAIL_CLICK refresh ;
+ALTER PIPE
+  pipe_users_messages_email_click
+  refresh ;
 ```
 
 Check the pipe status, which will show when the message was forwarded from S3 into Snowflake.
+
 ```sql
-select SYSTEM$PIPE_STATUS( 'PIPE_USERS_MESSAGES_EMAIL_CLICK' )
+SELECT
+  SYSTEM$PIPE_STATUS(
+    'pipe_users_messages_email_click'
+  )
 ```
 
 Finally, show the copy history for the table by selecting `*` from
+
 ```sql
-table(braze_currents.information_schema.copy_history(table_name=>'USERS_MESSAGES_EMAIL_CLICK', start_time=> dateadd(hours, -1, current_timestamp())));
+table(braze_currents.information_schema.copy_history(table_name=>'users_messages_email_click', start_time=> dateadd(hours, -1, current_timestamp())));
 ```
+
 {% endtab %}
 {% endtabs %}
 

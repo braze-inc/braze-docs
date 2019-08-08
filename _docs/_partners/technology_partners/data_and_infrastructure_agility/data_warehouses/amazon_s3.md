@@ -50,9 +50,15 @@ Input the code below when creating your own policy. (Note that there are differe
 {
   "Version": "2012-10-17",
   "Statement": [
-    { "Effect": "Allow", "Action": ["s3:GetBucketLocation"], "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"] }
+    { "Effect": "Allow",
+      "Action": ["s3:GetBucketLocation"],
+      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
+    }
     ,
-    { "Effect": "Allow", "Action": ["s3:PutObject", "s3:ListBucket"], "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"] }
+    { "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::INSERTBUCKETNAME*", "arn:aws:s3:::INSERTBUCKETNAME/", "arn:aws:s3:::INSERTBUCKETNAME"]
+    }
   ]
 }
 ```
