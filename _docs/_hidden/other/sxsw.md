@@ -4,9 +4,9 @@ permalink: /sxsw/
 hide_toc: true
 ---
 
-# Braze @ SXSW - We need your help!
+![Braze at SXSW][1]{: width:"100%"}
 
-![Braze at SXSW]({% image_buster /assets/img/sxsw.jpg %})
+# Braze @ SXSW - We need your help!
 
 Want to see Braze take the stage at SXSW? We do, and we need your help to make it happen! Before you vote, you have to [create a SXSW account](https://id.sxsw.com/sign_up) (it only takes a minute!). You can also see some [FAQs](#faqs) below.
 
@@ -68,3 +68,5 @@ You can only vote once, which is a new rule this year.
 Held every March in Austin, TX, SXSW is a major conference that brings together thought leaders and decision-makers from the tech, media, creative and interactive industries. The world's biggest brands and cutting-edge tech leaders attend SXSW — a key audience for raising Braze's visibility.
 {% enddetails %}
 <br>
+
+[1]:{% image_buster /assets/img/sxsw-vote.png %}
