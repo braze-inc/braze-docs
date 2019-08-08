@@ -23,23 +23,19 @@ appboy.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSecond
 
 ### Manual In-App Message Display
 
-If you don't want your site to immediately display new in-app messages when they're received, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet.  Then, create your own subscriber:
+If you don't want your site to immediately display new in-app messages when they're received, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own subscriber:
 
 ```javascript
-appboy.subscribeToNewInAppMessages(function(inAppMessages) {
-  // Display the first in-app message. You could defer display here by pushing this message to code within in your own application.
+appboy.subscribeToInAppMessage(function(inAppMessage) {
+  // Display the in-app message. You could defer display here by pushing this message to code within your own application.
   // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
-  appboy.display.showInAppMessage(inAppMessages[0]);
-
-  // Return an array with any remaining, unhandled messages to Braze's internal queue.
-  // These will be part of the inAppMessages param the next time this subscriber is invoked.
-  return inAppMessages.slice(1);
+  appboy.display.showInAppMessage(inAppMessage);
 });
 ```
 
-The `inAppMessages` parameter will be an array of [`appboy.ab.InAppMessage`][2] subclass or [`appboy.ab.ControlMessage`][8] objects, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
+The `inAppMessage` parameter will be an [`appboy.ab.InAppMessage`][2] subclass or an [`appboy.ab.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
 
->  Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second Modal or Full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the message will automatically be returned to Braze's internal queue, where it will part of the `inAppMessages` array parameter the next time your subscriber is invoked.
+>  Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second Modal or Full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the second message will not display.
 
 #### Local In-App Messages
 

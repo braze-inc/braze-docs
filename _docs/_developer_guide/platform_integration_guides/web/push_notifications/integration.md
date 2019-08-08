@@ -77,14 +77,13 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 3. Replace the removed call with the following snippet:
 
 ```javascript
-appboy.subscribeToNewInAppMessages(function(inAppMessages) {
-  var message = inAppMessages[0];
-  if (message != null) {
+appboy.subscribeToInAppMessage(function(inAppMessage) {
+  if (inAppMessage != null) {
     var shouldDisplay = true;
 
-    if (message instanceof appboy.ab.InAppMessage) {
+    if (inAppMessage instanceof appboy.ab.InAppMessage) {
       // Read the key-value pair for msg-id
-      var msgId = message.extras["msg-id"];
+      var msgId = inAppMessage.extras["msg-id"];
 
       // If this is our push primer message
       if (msgId == "push-primer") {
@@ -93,9 +92,9 @@ appboy.subscribeToNewInAppMessages(function(inAppMessages) {
         if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
           shouldDisplay = false;
         }
-        if (message.buttons[0] != null) {
+        if (inAppMessage.buttons[0] != null) {
           // Prompt the user when the first button is clicked
-          message.buttons[0].subscribeToClickedEvent(function() {
+          inAppMessage.buttons[0].subscribeToClickedEvent(function() {
             appboy.registerAppboyPushMessages();
           });
         }
@@ -107,9 +106,6 @@ appboy.subscribeToNewInAppMessages(function(inAppMessages) {
       appboy.display.showInAppMessage(message);
     }
   }
-
-  // Remove this message from the array of IAMs and return whatever's left
-  return inAppMessages.slice(1);
 });
 ```
 
