@@ -471,9 +471,23 @@ You can return `null` from your custom `createNotification()` method to not show
 
 To instruct Braze to use your custom notification factory, use the [method on the Braze interface][5] to set your [`IAppboyNotificationFactory`][6]:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+
+```java
 setCustomAppboyNotificationFactory(IAppboyNotificationFactory appboyNotificationFactory);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificationFactory)
+```
+
+{% endtab %}
+{% endtabs %}
 
 The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.  See [`DroidboyApplication.java`][36] for an example.
 
@@ -482,9 +496,23 @@ The recommended place to set your custom `IAppboyNotificationFactory` is in the 
 
 To unset your custom [`IAppboyNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+
+```java
 setCustomAppboyNotificationFactory(null);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+setCustomAppboyNotificationFactory(null)
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
 
