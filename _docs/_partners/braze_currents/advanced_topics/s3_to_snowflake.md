@@ -85,7 +85,7 @@ It is critical that your tables are structured in accordance to the Braze Curren
 {% tabs %}
   {% tab User Behavior Events %}
 
-First, create a table `into` which we will continuously load using the following structure:
+First, create a table `INTO` which we will continuously load using the following structure:
 
 ```sql
 CREATE TABLE
@@ -148,7 +148,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
  {% endtab %}
  {% tab Messaging Events %}
 
-First, create a table `into` which we will continuously load using the following structure:
+First, create a table `INTO` which we will continuously load using the following structure:
 
 ```sql
 CREATE TABLE
