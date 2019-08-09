@@ -67,7 +67,7 @@ To enable Braze location collection, update your `appboy.xml` file to include `c
 ```
 
 {% alert important %}
-Braze location collection is disabled by default.
+Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
 ### Step 4: Obtain Location Permissions from the End User
