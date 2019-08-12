@@ -36,7 +36,7 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 {% alert important %}
 When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
 
-When using endpoints for API calls, use the "REST Enpoint".
+When using endpoints for API calls, use the "REST Endpoint".
 {% endalert %}
 
 ### Company Secret Explanation
