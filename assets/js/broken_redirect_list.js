@@ -7,6 +7,7 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_you
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';

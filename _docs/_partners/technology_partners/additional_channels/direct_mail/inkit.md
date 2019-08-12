@@ -12,7 +12,7 @@ alias: /partners/inkit/
 
 |Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Inkit API Key | Inkit | [Inkit Dashboard](https://app.inkit.io/#/account/api) | This key will enable you to connect your Braze and Inkit accounts.|
+| Inkit API Key | Inkit | [Inkit Dashboard](https://app.inkit.io/#/account/integrations) | This key will enable you to connect your Braze and Inkit accounts.|
 | Inkit Template ID | Inkit | Found within the URL for each template. | This key will enable you to send your template to Braze. <br> Within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
 | HTTP Header | Inkit | Inkit Account | You will combine this with your Inkit API Key to authorize the connection as a key value pair within your Braze template. |
 
@@ -87,8 +87,8 @@ If you hadn't created this in `Templates & Media`, you can go to `Campaigns`, th
 ![Inkit Usage][4]{: height="70%" width="70%"}
 
 
-[1]: https://inkit.io/
-[2]: http://support.inkit.io/integrations/braze-inkit-integration
+[1]: https://www.inkit.com
+[2]: https://support.inkit.com/en/articles/2542557-braze-inkit-integration
 [3]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes
 [4]: {% image_buster /assets/img/inkit-use.png %}
 [5]: {% image_buster /assets/img/inkit-integration.png %}

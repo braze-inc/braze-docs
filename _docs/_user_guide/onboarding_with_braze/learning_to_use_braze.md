@@ -28,7 +28,7 @@ _These reading paths assume that you've already completed your integration and s
 | 5 | [Create a Canvas]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
 | 6 | [Creating a News Feed Item]({{ site.baseurl }}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/) | How to create an item to go in an integrated news feed. |
 | 7 | [Creating an Email Campaign]({{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
-| 8 | [Creating an In-App Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/) | How to create and send an in-app message. |
+| 8 | [Creating an In-App Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) | How to create and send an in-app message. |
 | 9 | [Creating a Push Campaign]({{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/) | How to create and send an push message for web or your chosen app on iOS or Android. |
 | 10 | [Personalization Overview]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/) | How to use dynamic content in your messages. |
 | 11 | [Exporting Braze Data]({{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/overview/) | The many ways to export data from the Braze platform. |
