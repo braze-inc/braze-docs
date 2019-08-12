@@ -76,3 +76,9 @@ The following properties will be included with all Braze events sent to Segment:
 | `card_id`              | `String` | For News Feed Card and Content Card events, the API Identifier of the Card.                                    |
 | `subscription_group_id` | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group.                    |
 | `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'. |
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
