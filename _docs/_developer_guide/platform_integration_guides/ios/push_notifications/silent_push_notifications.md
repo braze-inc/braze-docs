@@ -30,7 +30,7 @@ Silent remote notifications can wake your app from a "Suspended" or "Not Running
 
 Enabling background mode for remote notifications is required for Braze's [Uninstall Tracking][6] feature.
 
-Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system. For more information, please refer to Apple's documentation on [Background Execution][4] and [`application:didReceiveRemoteNotification:fetchCompletionHandler:`][5].
+Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system. For more information, please refer to Apple's documentation on [Pushing Background Updates][4] and [`application:didReceiveRemoteNotification:fetchCompletionHandler:`][5].
 
 ### iOS Silent Notifications Limitations
 The iOS operating system may gate notifications for some features. Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
@@ -48,7 +48,7 @@ For more information, check out Apple's developer site on the [Instance Method][
 [1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
 [2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"
 [3]: {% image_buster /assets/img_archive/background_mode.png %} "background mode enabled"
-[4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW7
+[4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc
 [5]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:
 [6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/#uninstall-tracking
 [7]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application
