@@ -12,7 +12,7 @@ To support geofences for iOS:
 
 1. Your integration must support background push notifications.
 
-2. Braze geofences must be enabled through the SDK. This is not enabled by default.
+2. Braze Geofences must be enabled through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
 
 ### Step 1: Enable Background Push
 
@@ -20,9 +20,9 @@ To fully utilize our geofence syncing strategy you must have [Background Push][6
 
 ### Step 2: Enable Geofences
 
-By default, geofences are disabled in the SDK. You can enable geofences using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`.
+By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`.
 
- You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
+ You can also enable geofences at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
