@@ -22,11 +22,11 @@ Each log is broken up into multiple sections, which can include:
 * Campaign Events
 * Response Data
 
-Click the “Raw Data” button to show the raw JSON data for that specific log.
+Click the “Raw Data” button to show the raw `JSON` data for that specific log.
 
 ![Raw logs][10]
 
-Event User Logs will remain in the dashboard for 7 days after they are logged.
+Event User Logs will remain in the dashboard for thirty (30) days after they are logged.
 
 
 [1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
