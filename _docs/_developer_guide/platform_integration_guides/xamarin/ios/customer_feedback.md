@@ -3,6 +3,7 @@ nav_title: Customer Feedback
 platform: Xamarin
 subplatform: iOS
 page_order: 5
+hidden: true
 ---
 # Customer Feedback
 

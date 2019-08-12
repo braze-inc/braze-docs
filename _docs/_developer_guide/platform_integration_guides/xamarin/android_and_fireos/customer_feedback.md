@@ -3,6 +3,7 @@ nav_title: Customer Feedback
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 5
+hidden: true
 ---
 # Customer Feedback
 

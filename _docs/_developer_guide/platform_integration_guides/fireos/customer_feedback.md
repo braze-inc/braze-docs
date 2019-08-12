@@ -3,6 +3,7 @@ nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
 search_rank: 4
+hidden: true
 ---
 # Customer Feedback
 

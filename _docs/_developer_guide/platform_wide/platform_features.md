@@ -18,7 +18,7 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 
 ## Dashboard/UI
 
-The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics or feedback. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
+The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
 ## Data API
 
@@ -53,7 +53,7 @@ When your app opens, the Braze SDK automatically pulls down the user's News Feed
 
 ### Push Notifications {#platform-features-push}
 
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns, news items, and replying to user feedback.
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns, and news items.
 
 ![Example Push Dashboard][8]
 
@@ -74,15 +74,6 @@ Send your users rich HTML messages by adding your existing HTML templates or or 
 Braze's webhooks allow you to trigger non-app actions such as SMS text message delivery. You can use webhooks to provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
 
 ![Webhooks][22]
-
-### Feedback {#platform-features-feedback}
-
- The Braze SDK provides a feedback widget that can be added to your app to allow users to leave feedback. Feedback is managed on the dashboard, where you can add internal notes and respond to users via multiple messaging channels. We show the user's Braze profile side-by-side with their feedback so you can easily see the user's device, OS version, app version, and behavioral data. This minimizes the work your support team has to do to understand technical issues.
-
- {% alert warning %}
-This feature is [set to be deprecated]({{ site.baseurl }}/help/release_notes/deprecations/#feedback) on July 1, 2019.
-  {% endalert %}
-
 
 
 
