@@ -39,7 +39,7 @@ If a customer’s "Total Spend" custom attribute does not exist or is equal to `
 Buy now! Would 5% off convince you?
 ```
 
-{% details Copiable Code for this Example: %}
+{% details Copyable Code for this Example: %}
 {% raw %}
 
 ```liquid
@@ -77,7 +77,7 @@ If you haven’t played any games, or that custom attribute doesn’t exist on y
 Hey! Get in here and play this Game!
 ```
 
-{% details Copiable Code for this Example: %}
+{% details Copyable Code for this Example: %}
 
 {% raw %}
 
@@ -103,7 +103,7 @@ You can abort a message based on just about anything. The example below shows ho
 
 You can also [abort messages based on Connected Content][1].
 
-{% details Copiable Code for this Example: %}
+{% details Copyable Code for this Example: %}
 {% raw %}
 ```liquid
 {% if {{${time_zone.$}}} =='America/Los_Angeles' %}
