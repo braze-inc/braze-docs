@@ -95,4 +95,4 @@ This feature is [set to be deprecated]({{ site.baseurl }}/help/release_notes/dep
 [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
 [10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"
 [22]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
-[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message

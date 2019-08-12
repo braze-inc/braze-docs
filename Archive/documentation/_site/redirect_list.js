@@ -150,7 +150,7 @@
     validurls['/academy/locations_and_geofences/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/about/';
     validurls['/academy/manage_your_users/'] = '/docs/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/';
     validurls['/academy/message_building_and_personalization/email/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/';
-    validurls['/academy/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/';
+    validurls['/academy/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/create/';
     validurls['/academy/message_building_and_personalization/personalization/'] = '/docs/user_guide/personalization_and_dynamic_content/overview/';
     validurls['/academy/message_building_and_personalization/push/'] = '/docs/user_guide/message_building_by_channel/push/creating_a_push_message/';
     validurls['/academy/message_building_and_personalization/webhooks/'] = '/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/';
