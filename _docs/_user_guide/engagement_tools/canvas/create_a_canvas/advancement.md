@@ -17,7 +17,7 @@ When __Message Sent__ is selected, customers will only be advanced to subsequent
 - A webhook is sent
 - An in-app message is viewed
 
-When __Advance Audience After Delay__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
+When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - Any message is sent or the in-app message in the step becomes live
 - The webhook is not sent because the webhook errors
@@ -45,9 +45,9 @@ There may be times when you want users to continue to advance through a Canvas e
 
 In this scenario, you can use Braze's Advancement Behavior options to ensure that users continue down the Canvas, even if they are not sent the __Day 3__ push.
 
-If you want all users to receive the __Day 6__ email, even if they didn't get the __Day 3__ push you can select "Advance Audience After Delay" advancement behavior for the __Day 3__ push.
+If you want all users to receive the __Day 6__ email, even if they didn't get the __Day 3__ push you can select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push.
 
-When you select __Advance Audience After Delay__ advancement behavior for the __Day 3__ push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push, but will be advanced anyway.
+When you select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push, but will be advanced anyway.
 
 {% details Previous Canvas Advancement Behavior %}
 
@@ -58,9 +58,9 @@ Prior to the release of Advancement Behavior, Braze advanced users through a Can
 
 If the user wasn't sent the email or the push, they would not advance to subsequent steps in the Canvas.
 
-Braze customers who did not participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps created prior to July 30th, 2019. Prior to the Advancement Behavior release, user advancement occurred when messages were sent from Canvas steps. 
+Braze customers who did not participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps created prior to July 30th, 2019. Prior to the Advancement Behavior release, user advancement occurred when messages were sent from Canvas steps.
 
-Braze customers who did participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps without in-app messages created prior to July 30th, 2019 and "Advance Audience After Delay" applied to all Canvas steps with in-app messages created prior to July 30th, 2019. Prior to the release of Advancement Behavior, user advancement occurred when Canvas in-app messages became live. 
+Braze customers who did participate in the first round of the Canvas in-app message beta will have the "Message Sent" Advancement Behavior option applied to all Canvas steps without in-app messages created prior to July 30th, 2019 and "Advance Audience After Delay" applied to all Canvas steps with in-app messages created prior to July 30th, 2019. Prior to the release of Advancement Behavior, user advancement occurred when Canvas in-app messages became live.
 
 {% enddetails %}
 
