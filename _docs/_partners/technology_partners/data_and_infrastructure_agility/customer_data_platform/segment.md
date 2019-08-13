@@ -72,7 +72,7 @@ The server-to-server integration forwards data from Segment to Braze's REST API.
 
 ![Segment's Go Integration][43]
 
-Unlike the side-by-side integration, however, the server-to-server integration does not support any of Braze's UI features, such as in-app messaging, News Feed, Feedback or push notifications.
+Unlike the side-by-side integration, however, the server-to-server integration does not support any of Braze's UI features, such as in-app messaging, News Feed, or push notifications.
 
 ## Getting Started
 

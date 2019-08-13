@@ -3,10 +3,14 @@ nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
 search_rank: 4
+hidden: true
 ---
-# Customer Feedback
 
-_The Customer Feedback module has been deprecated and is not available to new integrations._
+{% alert Update %}
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+{% endalert %}
+
+# Customer Feedback
 
 The Braze feedback form allows users to submit feedback about your app that is immediately sent to your company's dashboard.
 

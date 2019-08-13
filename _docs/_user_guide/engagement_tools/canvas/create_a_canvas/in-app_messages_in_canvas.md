@@ -93,7 +93,7 @@ Steps with an in-app message and another channel have the following advancement 
 | Option | Description |
 |---|---|---|
 | Message Sent | When message sent is selected, users must be sent an email/webhook/push or view the in-app message in order to advance to subsequent steps in the Canvas.  <br> <br>  _If the in-app message expires and the user hasn't been sent the email/webhook/push or viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps._ |
-| Advance Entire Audience After Delay | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
+| Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
 
 {% alert important %}
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
