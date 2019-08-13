@@ -5,9 +5,11 @@ subplatform: iOS
 page_order: 5
 hidden: true
 ---
-# Customer Feedback
+{% alert Update %}
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+{% endalert %}
 
-_The Customer Feedback module has been deprecated and is not available to new integrations._
+# Customer Feedback
 
 See [the iOS integration instructions][1] for information on how to integrate the feedback form into your Xamarin iOS app.  Furthermore, you can look at the [sample application][2] for implementation samples.
 

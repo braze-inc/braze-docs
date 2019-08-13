@@ -5,6 +5,11 @@ page_order: 7
 search_rank: 5
 hidden: true
 ---
+
+{% alert Update %}
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+{% endalert %}
+
 # Customer Feedback
 
 {% alert warning %}
