@@ -268,5 +268,5 @@ To see the types of analytics you can perform using Braze Currents, please consu
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.
 {% endalert %}
 
-[1]&#x3A; {% image_buster /assets/img/aws-properties.png %}
-[2]&#x3A; {% image_buster /assets/img/aws-events.png %}
+[1]: {% image_buster /assets/img/aws-properties.png %}
+[2]: {% image_buster /assets/img/aws-events.png %}
