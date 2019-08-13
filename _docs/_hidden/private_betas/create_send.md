@@ -13,9 +13,9 @@ When requests are made to the `users/track` and `messaging` endpoints at around 
 
 This is especially useful when you want to guarantee that a user has been created or that new data has populated to a user's profile before a message is sent to a user.
 
-_For example, you might want to send an order confirmation to a customer that just registered. Because the user's email information is not yet in Braze, you'll want to make sure that Braze processes the user's email address before the order confirmation campaign is sent to them.
+_For example, you might want to send an order confirmation to a customer that just registered. Because the user's email information is not yet in Braze, you'll want to make sure that Braze processes the user's email address before the order confirmation campaign is sent to them._
 
-Another example is ensuring that user attributes needed for campaign segmentation are processed before the campaign is sent. You might have a segment on your api triggered campaign that references an attribute value like gender, which is provided by the user during the registration process. If the attribute isn't updated on the user's profile before the campaign segmentation is evaluated, the user will not get the campaign._
+_Another example is ensuring that user attributes needed for campaign segmentation are processed before the campaign is sent. You might have a segment on your api triggered campaign that references an attribute value like gender, which is provided by the user during the registration process. If the attribute isn't updated on the user's profile before the campaign segmentation is evaluated, the user will not get the campaign._
 
 Use this endpoint to guarantee that:
 
