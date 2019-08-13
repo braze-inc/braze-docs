@@ -30,13 +30,13 @@ Once you have a Currents to S3 export set up and are receiving live events data,
 Tables in your database are created from this stage.
 {% endalert %}
 
-Remember, when you set up currents in the Braze dashboard, you specify a Folder Path for your currents files to go to within your S3 bucket (screenshot optional). Here we're using ```currents``` as that is the default.
+When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-In AWS, create a new **public-private key pair** for the S3 bucket you'd like to, with grants according to your organization’s security requirements.
+In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
 
-First in Snowflake, create a database and schema of your choice (called ```currents``` and ```public``` in the example below).
+Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the example below).
 
-Then, create a Snowflake S3 Stage (called `braze_data`) as follows:
+Then, create a Snowflake S3 Stage (called `braze_data` below):
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -124,7 +124,7 @@ It is critical that your tables are structured in accordance to the Braze Curren
 {% tabs %}
   {% tab User Behavior Events %}
 
-First, create a table `INTO` which we will continuously load using the following structure from our currents schema documentation:
+First, create a table `INTO` which we will continuously load using the following structure from the Currents schema:
 
 ```sql
 CREATE TABLE
@@ -147,9 +147,9 @@ CREATE TABLE
     );
 ```
 
-Then, create the AUTO INGEST pipe and specify
-1\. which table to load and
-2\. how to load the following table.
+Then, create the `auto_ingest` pipe and specify
+1. Which table to load, and
+2. How to load the following table.
 
 ```sql
 CREATE OR REPLACE PIPE
