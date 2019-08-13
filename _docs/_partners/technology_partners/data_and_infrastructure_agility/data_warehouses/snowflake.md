@@ -210,6 +210,7 @@ show pipes;
 ```
 
 **Do More with this Query Example**
+
 Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
 
 Manually sync from S3 to Snowflake for the pipe name given below:
