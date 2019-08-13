@@ -30,9 +30,13 @@ Once you have a Currents to S3 export set up and are receiving live events data,
 Tables in your database are created from this stage.
 {% endalert %}
 
-In AWS, create a new **public-private key pair** with grants according to your organization’s security requirements.
+When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as follows:
+In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
+
+Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the example below).
+
+Then, create a Snowflake S3 Stage (called `braze_data` below):
 
 ```sql
 CREATE OR REPLACE STAGE
@@ -58,7 +62,42 @@ SET
     file_format = currents.public.currents_avro;
 ```
 
-Finally, use the `show stages;` or `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
+```sql
+CREATE OR REPLACE PIPE
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
+
+COPY INTO
+  users_messages_pushnotification_open
+          FROM
+           (SELECT
+             $1:id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
+              $1:time::INT,
+              $1:timezone::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
+              $1:campaign_name::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
+              $1:canvas_name::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
+              $1:platform::STRING,
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
+
+              FROM
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
+
+Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL` since this pipe was created as an auto-ingest pipe.
 
 #### Create Bucket Events
 
@@ -85,7 +124,7 @@ It is critical that your tables are structured in accordance to the Braze Curren
 {% tabs %}
   {% tab User Behavior Events %}
 
-First, create a table `INTO` which we will continuously load using the following structure:
+First, create a table `INTO` which we will continuously load using the following structure from the Currents schema:
 
 ```sql
 CREATE TABLE
@@ -108,9 +147,9 @@ CREATE TABLE
     );
 ```
 
-Then, create the AUTO continuous load pipe and specify
-1\. which table to load and
-2\. how to load the following table.
+Then, create the `auto_ingest` pipe and specify
+1. Which table to load, and
+2. How to load the following table.
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -138,7 +177,7 @@ COPY INTO
               $1:device_model::STRING
 
               FROM
-              @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
 ```
 
 {% alert warning %}
@@ -213,7 +252,7 @@ COPY INTO
               $1:button_string::STRING
 
               FROM
-              @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 
 {% alert warning %}
@@ -229,5 +268,5 @@ To see the types of analytics you can perform using Braze Currents, please consu
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.
 {% endalert %}
 
-[1]&#x3A; {% image_buster /assets/img/aws-properties.png %}
-[2]&#x3A; {% image_buster /assets/img/aws-events.png %}
+[1]: {% image_buster /assets/img/aws-properties.png %}
+[2]: {% image_buster /assets/img/aws-events.png %}
