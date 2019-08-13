@@ -13,7 +13,7 @@ page_order: 4
 
 ## Retrieving the News Feed
 
-To retrieve the News Feed from BRaze, call either of the following methods:
+To retrieve the News Feed from Braze, call either of the following methods:
 
 - [`AppboyBinding.RequestFeedRefresh()`][2] requests a News Feed refresh directly from BRaze's servers
 - [`AppboyBinding.RequestFeedRefreshFromCache()`][3] pulls the locally-stored News Feed

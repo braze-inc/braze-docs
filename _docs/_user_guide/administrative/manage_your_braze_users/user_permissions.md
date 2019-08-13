@@ -46,7 +46,6 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under manage app group).|
 |Manage Tags|Allows users to edit or delete tags (under manage app group). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under "manage app group").|
-|Manage Feedback|Allows user to access Feedback page.|
 |Manage Teams|Allows user to manage teams which is under "Manage App Group". The ability to select this permission depends on your contract with Braze.|
 
 ## App-by-App User Permissions
