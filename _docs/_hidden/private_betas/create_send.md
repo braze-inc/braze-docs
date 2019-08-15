@@ -26,7 +26,7 @@ Use this endpoint to guarantee that:
 This attribute object will __not__ create anonymous users by user alias.
 {% endalert %}
 
-Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` or `user_alias` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` or `user_alias` and process the associated attributes to the user profile before Braze begins to send the campaign.
+Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign.
 
 ## Sending Messages via API Triggered Delivery
 
