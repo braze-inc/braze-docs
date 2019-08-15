@@ -13,17 +13,17 @@ The Braze UI elements (the feedback form and News Feed) come with a default look
 
 ```xml
   <style name="Appboy"/>
-  <!-- Feedback -->
-  <style name="Appboy.Feedback"/>
-  <style name="Appboy.Feedback.Layout"/>
-  <style name="Appboy.Feedback.NavigationBar">
-    <item name="android:padding">4dp</item>
-    <item name="android:background">@color/com_appboy_feedback_form_navigation_bar_background</item>
+  <!-- Feed -->
+  <style name="Appboy.Feed"/>
+  <style name="Appboy.Feed.List">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:divider">@android:color/transparent</item>
+    <item name="android:dividerHeight">16.0dp</item>
+    <item name="android:paddingLeft">12.5dp</item>
+    <item name="android:paddingRight">5.0dp</item>
+    <item name="android:scrollbarStyle">outsideInset</item>
   </style>
-  <style name="Appboy.Feedback.NavigationBarCancelButton">
-    <item name="android:layout_marginRight">2dp</item>
-    <item name="android:text">@string/com_appboy_feedback_form_cancel</item>
-    <item name="android:textStyle">bold</item>
+  ...
   </style>
 ```
 
