@@ -17,7 +17,7 @@ _For example, you might want to send an order confirmation to a customer that ju
 
 _Another example is ensuring that user attributes needed for campaign segmentation are processed before the campaign is sent. You might have a segment on your api triggered campaign that references an attribute value like gender, which is provided by the user during the registration process. If the attribute isn't updated on the user's profile before the campaign segmentation is evaluated, the user will not get the campaign._
 
-Use this endpoint to guarantee that:
+Use the Attriburtes Object in this endpoint to guarantee that:
 
 - Users are created before a request to the `campaigns/trigger/send` endpoint is processed.
 - User attributes are updated before a request to the `campaign/trigger/send` endpoint is processed.
