@@ -118,6 +118,43 @@ If you're sending purchase data to Braze (see [Completed Order][4]), the [revenu
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data. Note that filters related to automatically collected session data (such as "first used app" and "last used app") will not work.
 
+# Common Issues Integrating Segment with Braze
+
+## Review Use Cases To Avoid Data Overages
+
+Segment __does not__ have a limit on the number of data elements clients send to them. Segment allows you to send all or turn on which events you will send to Braze. Rather than sending all of your events using Segment, we suggest that you review use cases with your marketing and editorial teams to determine which events you will send to Braze to avoid data overages.
+
+## Understand the Difference between ‘Customer API Endpoint’ vs ‘Custom REST API Endpoint’
+
+‘Custom API Endpoint’ corresponds to the custom endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). A ‘Custom REST API Endpoint’ does not exist as Braze does not have custom endpoints for REST API calls.
+
+## Ensure ‘Customer API Endpoint’ is Input into Segment Correctly
+
+Ensure that you input your proper Customer API Endpoint (for example, `customer.iad-03.braze.com`) into the Segment dashboard. The Braze integration will break if it has been entered as the Custom REST API Endpoint (for example, `https://sdk.iad-03.braze.com`), as Segment will automatically attempt to add `https://` for you, resulting in Braze initializing with the custom endpoint of `https://https://sdk.iad-03.braze.com`.
+
+## Ensure API Key is Input Correctly
+
+> ‘App Identifier’ vs. ‘REST API Key’
+
+The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+
+## Certain Data Not Mapping to Braze
+
+Segment allows for different data types and structures, which can lead to issues where data will not pass from Segment to Braze as expected.
+
+Scenarios where data will not pass as expected:
+1. Arrays or nested objects in event properties.
+  - Segment allows for arrays or nested objects within the properties of their track events, which map to either Braze custom or purchase event properties. Since our properties don't support those data types, we will silently reject those calls.
+2. Passing anonymous data server-to-server.
+  - Customers may use Segment's server-to-server libraries to funnel anonymous data to other systems.
+
+## Customization of Braze Initialization
+
+There are several different ways that Braze can be customized: [push]({{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/), [in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/), [Content Cards]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/), and initialization. With a side-by-side integration you can still customize push, in-app messages, and Content Cards as you would with a direct Braze integration.
+
+However, customizing when the Braze SDK is integrated or specifying initialization configurations may be difficult and sometimes not possible. This is because Segment will initialize the Braze SDK for you when the Segment initialization occurs.
+
+
 
 
 [4]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#completed-order
