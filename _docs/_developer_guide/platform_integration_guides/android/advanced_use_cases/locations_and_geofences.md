@@ -70,6 +70,12 @@ To enable Braze location collection, update your `appboy.xml` file to include `c
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
+Braze geofences are enabled if location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to true in `appboy.xml`, independent to the value of `com_appboy_enable_location_collection`. 
+
+```xml
+<bool name="com_appboy_geofences_enabled">true</bool>
+```
+
 ### Step 4: Obtain Location Permissions from the End User
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
