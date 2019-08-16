@@ -74,13 +74,13 @@ $(document).ready(function() {
       for (var i = 0; i < items.length; i++ ) {
         if (Array.isArray(searchterm)) {
           for (var j = 0; j < searchterm.length; j++ ) {
-            if (items[i].toLowerCase() == searchterm[j].toLowerCase()) {
+            if (items[i].trim().toLowerCase() == searchterm[j].trim().toLowerCase()) {
               found = true
             }
           }
         }
         else {
-          if (items[i].toLowerCase() == searchterm.toLowerCase()) {
+          if (items[i].trim().toLowerCase() == searchterm.trim().toLowerCase()) {
             found = true
           }
         }
@@ -89,13 +89,13 @@ $(document).ready(function() {
     else {
       if (Array.isArray(searchterm)) {
         for (var j = 0; j < searchterm.length; j++ ) {
-          if (items.toLowerCase() == searchterm[j].toLowerCase()) {
+          if (items.trim().toLowerCase() == searchterm[j].trim().toLowerCase()) {
             found = true
           }
         }
       }
       else {
-        if (items.toLowerCase().indexOf(searchterm.trim().toLowerCase()) > -1) {
+        if (items.trim().toLowerCase().indexOf(searchterm.trim().toLowerCase()) > -1) {
           found = true
         }
       }
@@ -165,6 +165,7 @@ $(document).ready(function() {
             // api doesn't have an all tag filter explicitly
             if (apitags.indexOf('all') == -1) {
               // check if tag
+
               if (!matchterms(selected_vals, apitags) && !filtered) {
                 filtered = true;
               }
