@@ -40,5 +40,5 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setLastKnownLocation(LAT
 See [our Android SDK repo][3] for an implementation example of the above in our Droidboy sample app and [here in our Javadocs][4] for more information on the `setLastKnownLocation` method.
 
 [1]: http://developer.android.com/guide/topics/location/strategies.html
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L129
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L146
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-

@@ -13,7 +13,7 @@ To support geofences for Android:
 
 1. Your integration must support background push notifications.
 
-2. Braze location collection must not be disabled.
+2. Braze geofences or location collection must be enabled.
 
 ### Step 1: Update build.gradle
 
