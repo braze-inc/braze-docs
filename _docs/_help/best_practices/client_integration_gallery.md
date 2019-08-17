@@ -17,12 +17,11 @@ glossary_tags:
 
 
 glossaries:
-  - name: "Re-Engage Lapsed Users with a Personalized Push to a Wide Audience"
-    image: /docs/assets/img/1800-flowers_alerts_push.jpg
-    description: "<a href='https://www.1800flowers.com/'>1800 Flowers</a> <br> <br> This push message reminds your user that, after a few weeks of no purchases or between holidays, there are still flowers just waiting to be bought! Who cares who they're for - there is no need for a special occasion! Treat your self. <br> As you can see, this message uses personalization and emojis to really connect with customers."
+  - name: "Use an Engaging Email to Share New Product Features with Your Users!"
+    image: /iHeart_Trials+NPP_Email.png
+    description: "<a href='https://www.iheart.com/'>iHeartRadio</a> <br> <br> This email makes it simple for users to start a trail with two call-to-action buttons. With one button in the header, users don't even need to scroll down to take action. It also includes buttons to take the user to the iHeartRadio website or to the Google Play or Apple App Store."
     tags:
-      - Retail & eCommerce
-      - Miscellaneous & Other
+      - Media & Entertainment
   - name: "Term 2"
     description: "Definition of Term 2."
     image: /docs/assets/img/1800-flowers_alerts_push.jpg
