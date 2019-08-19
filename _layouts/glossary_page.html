@@ -1,6 +1,6 @@
 ---
 layout: default
-hide_toc: false
+hide_toc: true
 hide_bottom_nav: false
 hide_breadcrumb: false
 ---
@@ -14,10 +14,14 @@ hide_breadcrumb: false
 {%- assign hide_bottom_nav = page.hide_bottom_nav -%}
 {%- assign hide_breadcrumb = page.hide_breadcrumb -%}
 {%- assign hide_feedback = page.hide_feedback -%}
+{%- assign hide_toc = page.hide_toc -%}
+
 {%- unless hide_nav -%}
 {%- assign hide_nav = layout.hide_nav -%}
 {%- endunless -%}
-
+{%- unless hide_toc -%}
+{%- assign hide_toc = layout.hide_toc -%}
+{%- endunless -%}
 {%- unless hide_bottom_nav -%}
 {%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
 {%- endunless -%}
