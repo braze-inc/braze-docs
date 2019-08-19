@@ -57,7 +57,8 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
 
-### Card Methods
+### Card Analytics Methods
+All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
 
 |Method | Description |
 |---|---|
