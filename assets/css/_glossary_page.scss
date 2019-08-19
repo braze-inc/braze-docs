@@ -181,6 +181,11 @@
       @media (min-width: $window-large-px) {
         flex: 0 0 25%;
       }
+      label {
+        padding-left: 1em;
+        text-indent: -1.10em;
+        padding-right: 1em;
+      }
     }
   }
   .btn {
