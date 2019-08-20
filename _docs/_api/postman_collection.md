@@ -1,5 +1,5 @@
 ---
-nav_title: Sample Requests
+nav_title: Postman & Sample Requests
 platform: REST APIs
 page_order: 3
 search_rank: 5
@@ -13,15 +13,23 @@ Braze allows you to generate sample API requests for all of our endpoints via ou
 
 Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g. using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
+[See our Postman Documentation here.](https://documenter.getpostman.com/view/4689407/SVYrsdsG)
+
 # Using Braze's Postman Collection
 
-If you have a Postman account (MacOS, Windows, and Linux versions can be downloaded from their website located [here][1]), you can go to our Postman documentation and click the orange `Run in Postman` button in the top, right corner. This will allow you to [create an environment](#setting-up-your-postman-environment), as well as edit the available   `POST` and `GET` requests to suit your own needs.
+If you have a Postman account (MacOS, Windows, and Linux versions can be downloaded from their website located [here][1]), you can open our Postman documentation in your own Postman app (click the orange `Run in Postman` button below). You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available   `POST` and `GET` requests to suit your own needs. 
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0#?env%5BBraze%20REST%20API%20Environment%20Template%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiXCJZT1VSLUFQSS1LRVktSEVSRVwiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJpbnN0YW5jZV91cmwiLCJ2YWx1ZSI6InJlc3QuaWFkLTAxLmJyYXplLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==)
 
 ## Setting Up Your Postman Environment
 
-The Braze Postman Collection uses a templating variable, `{{instanceURL}}`, to substitute the REST API URL of your Braze instance into the pre-built requests. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. To do so, please follow the steps below:
+{% raw %}
+The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to substitute the REST API URL of your Braze instance into the pre-built requests and the `{{api_key}}` variable for your API Key. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. You can either select our templated environment (Braze REST API Environment Template) from the dropdown and replace the variable values with your own, or you can set up your own environment.
+{% endraw %}
 
-1. Click on the gear icon in the top right corner of the Postman app. ![Managing Environments][2]{: height="40%" width="40%"}
+To set up your own, please follow the steps below:
+
+1. Click on the gear icon in the top right corner of your Postman app.
 2. Select "Manage Environments" to open a modal window which displays your active environments.
 3. In the bottom right corner of the modal window, click "Add" to create a new environment.
 4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to [your Braze instance][7] and [Braze REST API Key][8], as pictured below. The `api_key` should be encapsulated in quotes.
@@ -54,7 +62,7 @@ Once your API request is ready to send, click on the 'Send' button next to the U
 
 [1]: https://www.getpostman.com
 [2]: {% image_buster /assets/img_archive/postman_environments.png %}
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
+[3]: {% image_buster /assets/img/postman_variable.png %}
 [4]: {% image_buster /assets/img_archive/postman_post.png %}
 [5]: {% image_buster /assets/img_archive/postman_get.png %}
 [6]: {% image_buster /assets/img_archive/postman_response.png %}
