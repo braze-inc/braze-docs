@@ -1,5 +1,5 @@
 ---
-nav_title: Sample Requests
+nav_title: Postman & Sample Requests
 platform: REST APIs
 page_order: 3
 search_rank: 5
