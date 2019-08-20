@@ -41,6 +41,15 @@ Braze UI elements come with a default look and feel that create a neutral in-app
 
 See the [JSDocs][2] for more information.
 
+### Open Message Link in New Tab
+
+To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
+
+```javascript
+appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
+```
+
+
 
 [1]: https://github.com/Appboy/appboy-web-sdk#getting-started
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
