@@ -23,9 +23,9 @@ If you have a Postman account (MacOS, Windows, and Linux versions can be downloa
 
 ## Setting Up Your Postman Environment
 
-The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to substitute the REST API URL of your Braze instance into the pre-built requests and the `{{api_key}}` variable for your API Key. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. You can either select our templated environment from the dropdown in the corner of our API documentation or create your own.
+The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to substitute the REST API URL of your Braze instance into the pre-built requests and the `{{api_key}}` variable for your API Key. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. You can either select our templated environment (Braze REST API) from the dropdown and replace the variable values with your own, or you can set up your own environment.
 
-To create your own, please follow the steps below:
+To set up your own, please follow the steps below:
 
 1. Click on the gear icon in the top right corner of your Postman app. ![Managing Environments][2]{: height="40%" width="40%"}
 2. Select "Manage Environments" to open a modal window which displays your active environments.
