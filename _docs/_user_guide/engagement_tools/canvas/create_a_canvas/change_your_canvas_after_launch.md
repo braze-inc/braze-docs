@@ -31,7 +31,7 @@ page_order: 3
 | **Editable**                           | **Not-Editable**                                 |
 |-------------------------------------|----------------------------------------------|
 | Name                                | Schedule Type (change from delay to trigger) |
-| Message Content                     |                                              |
+| Message Content                     | Control Percentages                          |
 | Step Message Platforms (add/delete) |                                              |
 | Triggers                            |                                              |
 | Audience                            |                                              |
@@ -40,6 +40,6 @@ page_order: 3
 
 There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
 
-- Users who have not yet entered the Canvas __will__ be eligible for newly created steps
-- Users who have already passed newly created steps __will__ be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings
+- Users who have not yet entered the Canvas __will__ be eligible for newly created steps.
+- Users who have already passed newly created steps __will__ be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
 - Users who are currently in a Canvas, but have not reached the points where new steps are added __will__ be eligible to receive those new steps.

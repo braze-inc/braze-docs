@@ -48,6 +48,8 @@ Archived Subscription Groups cannot be edited and will no longer appear in Segme
 
 Archive your Group by going to __Subscription Groups__ in the left navigation; then, find your group in the list. Then, click the gear and select `Archive` from the dropdown menu.
 
+We will not process any state changes for users in these groups. If you archive the Subscription Group A while Susie is considered `subscribed` to it, she will remain "`subscribed`" to this group, even though she has clicked an unsubscribe link (this shouldn't matter to Susie, Subscription Group A is archived and you can't send any messages using it.)
+
 #### Export User Subscription State Changes
 
 You can export your users' subscription state changes via CSV. From the Preference Center page in your account, click `User Subscription Data`, then `CSV Export User Subscription Data` from the dropdown.
