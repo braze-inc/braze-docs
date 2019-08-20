@@ -103,7 +103,7 @@ The header is not added for messages targeting “all users including unsubscrib
 *Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature.*
 
 {% alert note %}
-If you use Mailjet, you do not have the flexibility to chose on/off for this feature - it will be `ON` by default.
+If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
 {% endalert %}
 
 ## Security Settings
