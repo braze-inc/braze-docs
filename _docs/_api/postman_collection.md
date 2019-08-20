@@ -27,7 +27,7 @@ The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to 
 
 To set up your own, please follow the steps below:
 
-1. Click on the gear icon in the top right corner of your Postman app. ![Managing Environments][2]{: height="40%" width="40%"}
+1. Click on the gear icon in the top right corner of your Postman app.
 2. Select "Manage Environments" to open a modal window which displays your active environments.
 3. In the bottom right corner of the modal window, click "Add" to create a new environment.
 4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to [your Braze instance][7] and [Braze REST API Key][8], as pictured below. The `api_key` should be encapsulated in quotes.
@@ -60,7 +60,7 @@ Once your API request is ready to send, click on the 'Send' button next to the U
 
 [1]: https://www.getpostman.com
 [2]: {% image_buster /assets/img_archive/postman_environments.png %}
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
+[3]: {% image_buster /assets/img/postman_variable.png %}
 [4]: {% image_buster /assets/img_archive/postman_post.png %}
 [5]: {% image_buster /assets/img_archive/postman_get.png %}
 [6]: {% image_buster /assets/img_archive/postman_response.png %}
