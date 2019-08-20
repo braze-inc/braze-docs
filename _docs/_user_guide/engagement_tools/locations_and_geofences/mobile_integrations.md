@@ -11,9 +11,11 @@ Geofence-triggered campaigns are available on iOS and Android. To support geofen
 
 1. Your integration must support background push notifications.
 
-2. Braze location collection must not be disabled.
+2. Braze geofences or location collection must be enabled.
 
->  Braze location collection is enabled by default. To verify your location collection status on Android, ensure that `com_appboy_disable_location_collection` is not set to `true` in your `appboy.xml`.
+{% alert important %}
+Starting with Braze SDK version 3.6.0 Braze location collection is disabled by default. To verify location collection is enabled on Android, ensure that `com_appboy_enable_location_collection` is set to `true` in your `appboy.xml`.
+{% endalert %}
 
 ## Geofence Configuration
 
