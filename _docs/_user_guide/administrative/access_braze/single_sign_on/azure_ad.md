@@ -80,7 +80,7 @@ On this page, you, input:
 
 ## Create and Enable a Braze API Key for IdP Login (Optional)
 
-To enable IdP initiated login, you will first need to create an API Key in `Developer Settings` > `API Settings`.
+To enable IdP initiated login, you will first need to create an API Key in `Developer Console` > `API Settings`.
 
 ![SSO Set Up]({% image_buster /assets/img/sso2.png %})
 
