@@ -9,6 +9,10 @@ alias: /partners/voucherify/
 
 Leverage the power of Voucherify and grow your mobile-first campaigns by sending vouchers through Braze's **connected content** or through Braze's **custom attributes.**
 
+{% alert important %}
+This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
+{% endalert %}
+
 # Prerequisites
 
 {% raw %}

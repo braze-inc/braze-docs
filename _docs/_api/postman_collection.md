@@ -32,7 +32,11 @@ To set up your own, please follow the steps below:
 1. Click on the gear icon in the top right corner of your Postman app.
 2. Select "Manage Environments" to open a modal window which displays your active environments.
 3. In the bottom right corner of the modal window, click "Add" to create a new environment.
-4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to [your Braze instance][7] and [Braze REST API Key][8], as pictured below. The `api_key` should be encapsulated in quotes.
+4. Give this environment a name (e.g. "Braze API Requests") and add keys for `instance_url` and `api_key` with values corresponding to [your Braze instance][7] and [Braze REST API Key][8], as pictured below.
+
+{% alert note %}
+In `POST` request bodies, the `api_key` should be encapsulated in quotes: `"MY-API-KEY-EXAMPLE"`. In `GET` URLs, it should not be. We have already provided this formatting for you in this documentation's `POST` request bodies, `GET` URLs, and environment template for `YOUR-API-KEY-HERE`.
+{% endalert %}
 
 ![Adding environment variables][3]
 
