@@ -21,11 +21,25 @@ __*`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`*__
 	- Requesting new in-app messages
 - Immediate server requests are performed when user-facing data is required for any of Braze's features, such as in-app messages.
 - To minimize server load, Braze performs periodic flushes of new user data every few seconds.
-- Data can be manually flushed to Braze's servers at any time using the following method:
 
-	```
-	[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
-	```
+Data can be manually flushed to Braze's servers at any time using the following method:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+```
+
+{% endtab %}
+{% endtabs %}
 
 #### Manual Request Processing
 
@@ -33,13 +47,27 @@ __*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
 
 - This protocol is the same as Automatic Request Processing **EXCEPT**:
 	- Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
-- Data can be manually flushed to Braze's servers at any time using the following method:
-
-	```
-	[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
-	```
-
 - Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in In-App Messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on request type.
+
+Data can be manually flushed to Braze's servers at any time using the following method:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance] flushDataAndProcessRequestQueue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+```
+
+{% endtab %}
+{% endtabs %}
+
 
 ### Setting the Request Processing Policy
 
@@ -97,19 +125,25 @@ Appboy.sharedInstance()!.requestProcessingPolicy = ABKRequestProcessingPolicy.au
 
 If at any time an "in-flight" server communication needs to be halted, you must call the following method:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance] shutdownServerCommunication];
 ```
 
-After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS if forcing you to stop background tasks or something similar.
+{% endtab %}
+{% tab swift %}
 
-### Policy Regarding Network Requests by the SDK
-
->  See the aforementioned enumeration values for more information on possible options. This value can be set at start-up as described above or at runtime.
-
-```objc
-@property (nonatomic, assign) ABKRequestProcessingPolicy requestProcessingPolicy;
+```swift
+Appboy.sharedInstance()!.shutdownServerCommunication();
 ```
+
+{% endtab %}
+{% endtabs %}
+
+After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
+
 
 ##### Implementation Examples
 [`MiscViewController.m`][2] in the Stopwatch sample application provides examples of changing the data request processing policy, as well as manually flushing data to Braze.
