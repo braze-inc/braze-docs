@@ -21,7 +21,7 @@ Did you even wonder more about the details of who is working on a Canvas in your
 
 ### New Email Content Block API Endpoints
 
-You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information](({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information))) your Email Content Blocks via API!
+You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
 
 ### Custom Email Unsubscribe Landing Page Update
 
