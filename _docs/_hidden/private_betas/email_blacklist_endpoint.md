@@ -1,12 +1,16 @@
 ---
 nav_title: Email Blacklist
-page_order: 3
-search_rank: 2
 permalink: /blacklist/
+hidden: true
 ---
+
 # Email Blacklist
 
 User email addresses can be blacklisted via Braze using a RESTful API.
+
+{% alert important %}
+Email Blacklisting via API endpoint is currently in Beta. Please reach out to your Braze Account Manager for more information. 
+{% endalert %}
 
 ## Braze Instance Endpoints
 
