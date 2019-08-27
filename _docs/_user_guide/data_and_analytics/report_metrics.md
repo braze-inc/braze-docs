@@ -33,13 +33,7 @@ glossaries:
     description: The number of users who received a particular message. This number is received from Braze.
     calculation: Count
     tags:
-      - Email
-      - Web Push
-      - iOS Push
-      - Android Push
-      - In-App Message
-      - News Feed
-      - Content Cards
+      - All
   - name: Total Impressions
     description: The number of users whose devices reported that the in-app message has been delivered, or card has been viewed (if a user receives a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
     calculation: Count
