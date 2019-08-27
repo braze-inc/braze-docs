@@ -27,7 +27,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
 ```csharp
-Appboy.SharedInstance ().RegisterDevicePushToken (deviceToken);
+Appboy.SharedInstance ().RegisterDeviceToken (deviceToken);
 ```
 
 ### Enabling Push Analytics
