@@ -184,7 +184,7 @@ Once APNs registration is complete, the following method must be altered to pass
 Add the following code to your `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
 
 ```objc
-[[Appboy sharedInstance] registerDevicePushToken:deviceToken];
+[[Appboy sharedInstance] registerDeviceToken:deviceToken];
 ```
 
 {% endtab %}
@@ -193,7 +193,7 @@ Add the following code to your `application:didRegisterForRemoteNotificationsWit
 Add the following code to your app's `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` method:
 
 ```swift
-Appboy.sharedInstance()?.registerDevicePushToken(deviceToken)
+Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 ```
 
 {% endtab %}
