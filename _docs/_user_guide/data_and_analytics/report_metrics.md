@@ -166,7 +166,7 @@ glossaries:
       - Email
   - name: Total Dismissals
     description: The number of times Content Cards from a campaign have been dismissed. If a user dismisses a message twice, they will be only counted once.
-    calculation:
+    calculation: Count
     tags:
       - Content Cards
   - name: Unique Dismissals
