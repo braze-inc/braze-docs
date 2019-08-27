@@ -12,9 +12,11 @@ To support geofences for iOS:
 
 1. Your integration must support background push notifications.
 
-2. Braze location collection must be enabled.
+2. Braze location collection [must be enabled][1].
 
->  On iOS, we are not strictly enforcing the Braze request processing policy for geofences. When geofences are enabled, the requests will automatically be sent up even if the processing policy is manual processing.
+{% alert note %}
+On iOS, we are not strictly enforcing the Braze request processing policy for geofences. When geofences are enabled, the requests will automatically be sent up even if the processing policy is manual processing.
+{% endalert %}
 
 ### Step 1: Enable Background Push
 
@@ -49,6 +51,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ![Appboy Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
+[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
 [6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
 [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
 [9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
