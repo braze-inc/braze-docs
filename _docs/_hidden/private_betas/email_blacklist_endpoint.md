@@ -2,6 +2,7 @@
 nav_title: Email Blacklist
 page_order: 3
 search_rank: 2
+permalink: /blacklist/
 ---
 # Email Blacklist
 
@@ -26,11 +27,17 @@ Blacklisting an email address will unsubscribe the user from email and mark them
 POST https://YOUR_REST_API_URL/email/blacklist
 Content-Type: application/json
 ```
-
+```
+{
+  "api_key": "YOUR-API-KEY-HERE",
+  "email": "email@address.com"
+ }
+ ```
+ 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
-| `email` | Yes | String or Array | String email address to blacklist, or an Array of up to 50 email addresses to blacklist. |
+| `api_key` | Yes | String | Your App Group REST API Key. |
+| `email` | Yes | String or Array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
 
 ### Example Email Blacklist CURL
 
