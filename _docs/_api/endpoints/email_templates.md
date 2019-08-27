@@ -277,11 +277,11 @@ POST https://YOUR_REST_API_URL/content_blocks/create
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
-| `content_block_name` |  String | Must be less than 100 characters. |
+| `content_block_name` | Yes | String | Must be less than 100 characters. |
 | `content_block_description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
 | `content_block_state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. |
-| `tags` | Optional | Array of Strings. | Tags must already exist.
+| `tags` | No | Array of Strings. | Tags must already exist.
 
 #### Successful Response Properties
 
@@ -299,10 +299,10 @@ POST https://YOUR_REST_API_URL/content_blocks/create
 
 - `Content must be a string.`
 
-- `Content must be smaller than 51200.`
+- `Content must be smaller than 50kb.`
 The content in your content block must be less than 50kb total.
 
-- `Unable to parse liquid string.`
+- `Content contains malformed liquid.`
 The liquid provided is not valid or parsable. Please try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
@@ -311,13 +311,12 @@ The liquid provided is not valid or parsable. Please try again or reach out to s
 
 - `Content Block description must be a string.`
 
-- `Content block description must be shorter than 250`
+- `Content block description must be shorter than 250 characters.`
 Your content block description must be less than 250 characters.
 
 - `Content Block name cannot be blank.`
 
-- `Content Block name must be a shorter than 100.`
-Your content block name must be shorter than 100 characters.
+- `Content Block name must be a shorter than 100 characters.`
 
 - `Content Block name can only contain alphanumeric characters.`
 Content Block names can include any of the following characters: the letters (capitalized or lowercase) `A` through `Z`, the numbers `0` through `9`, dashes `-`, and underscores `_`. It cannot contain non-alphanumeric characters like emojis, `!`, `@`, `~`, `&`, and other "special" characters.
