@@ -10,11 +10,6 @@ Your Campaign performance report will now list your campaign's details so you do
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
 
-## Canvas Changelogs
-Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
-
-![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
-
 ## New Email Content Block API Endpoints
 
 You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
