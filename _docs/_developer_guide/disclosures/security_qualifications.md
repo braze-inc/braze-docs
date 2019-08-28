@@ -15,7 +15,7 @@ For more on this, check out [Braze Perspectives](https://www.braze.com/perspecti
 
 ![ISO Certification][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018._
+_Braze has certification for compliance with [ISO 27001][3]  as of December 18, 2018, and renewed as of August 10, 2019. Expires December 17, 2021._
 
 Any third party wishing to independently verify the status of Braze's certification may query the [Schellman certificate directory][5], [read our report][7], or [see our certificate here][6].
 

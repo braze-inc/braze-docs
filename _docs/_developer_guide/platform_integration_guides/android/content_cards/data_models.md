@@ -5,6 +5,9 @@ search_rank: 5
 platform: Android
 ---
 
+# Content Cards Data Model
+The Content Cards data model is available in the Android SDK.
+
 ## Card Types {#card-types-for-android}
 Braze has 3 unique Content Cards card types which share a base model. Each card type also has additional card-specific properties which are listed below.
 
@@ -53,6 +56,15 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
+
+## Card Analytics Methods
+All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
+
+|Method | Description |
+|---|---|
+|`logImpression()` | Manually log an impression to Braze for a particular card.
+|`logClick()` | Manually log a click to Braze for a particular card. 
+|`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
 [1]:{% image_buster /assets/img_archive/contentcard.png %}
 [2]: http://developer.android.com/guide/components/fragments.html

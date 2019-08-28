@@ -5,9 +5,13 @@ alias: /partners/voucherify/
 
 # Voucherify
 
-[Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and overall retention. Now, with the Braze and Voucherify integration, users can automatically send 1-to-1 coupons, discounts, and more, all through their Braze account while tracking redemptions and campaign growth at every step. 
+[Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and overall retention. Now, with the Braze and Voucherify integration, users can automatically send 1-to-1 coupons, discounts, and more, all through their Braze account while tracking redemptions and campaign growth at every step.
 
 Leverage the power of Voucherify and grow your mobile-first campaigns by sending vouchers through Braze's **connected content** or through Braze's **custom attributes.**
+
+{% alert important %}
+This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
+{% endalert %}
 
 # Prerequisites
 
@@ -27,7 +31,7 @@ To publish a voucher through Braze's connected content, add the following code s
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://api.voucherify.io/v1/vouchers/publish
+     https://api.voucherify.io/v1/publications
      :method post
      :headers {
        "X-App-Id": "VOUCHERIFY-APP-ID",
@@ -84,7 +88,7 @@ The first decision to be made is whether the Braze distribution should be set to
 #### Step Two: Distribution Purpose
 
 Next, decide on the distribution's purpose and what type of message you would like to send. Voucherify supplies three options to choose from:
-* A message that informs eligible customers about a cart-level promotion 
+* A message that informs eligible customers about a cart-level promotion
 * A message with unique codes from a campaign
 * A message without codes sent in your customized template
 
@@ -92,7 +96,7 @@ Next, decide on the distribution's purpose and what type of message you would li
 
 #### Step Three: Choosing Your Audience
 
-Now, determine your audience, or who will be receiving messages from this distribution. 
+Now, determine your audience, or who will be receiving messages from this distribution.
 
 ![VOUCHERIFY DISTRIBUTION AUDIENCE]({% image_buster /assets/img/voucherify_distribution_audience.png %})
 
@@ -116,7 +120,7 @@ Fianlly, select **Braze** as the distribution channel, as shown below, and selec
 
 ![VOUCHERIFY DISTRIBUTION CHANNEL]({% image_buster /assets/img/voucherify_distribution_channel.png %})
 
-Now, select **SEND** to test your distribution - as a result, you should see a user with a Voucherify code along with an assigned QR/barcode. 
+Now, select **SEND** to test your distribution - as a result, you should see a user with a Voucherify code along with an assigned QR/barcode.
 
 ![VOUCHERIFY TEST]({% image_buster /assets/img/voucherify_test.png %})
 
@@ -124,7 +128,7 @@ Voucherify users can also be found from within Braze by supplying the specified 
 
 ### Testing Your Custom Attribute
 
-In order to send an email in Braze with an embeded code, you must first create a campaign if you have not already done so. 
+In order to send an email in Braze with an embeded code, you must first create a campaign if you have not already done so.
 
 From your Braze Dashboard, navigate to **Campaign** and click **Create Campaign** and choose **email** from the drop down menu as shown below.
 

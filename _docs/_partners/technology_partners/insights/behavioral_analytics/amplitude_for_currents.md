@@ -33,6 +33,8 @@ A list of the events that can be exported from Braze to Amplitude is below. All 
 
 You can export two types of events events to Amplitude: "Message Engagement Events" consisting of the Braze events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom Events, and Purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all Custom Events are prefixed with `[Appboy] [Custom Event]`. Custom Event properties and Purchase Event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
+All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "COHORT_NAME" with the `cohort_id` "cxyzz3hz" will be titled `[Amplitude] COHORT_NAME: cxyzz3hz` in Braze filters.
+
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
 ### Scheduled Cohort Syncs
@@ -221,6 +223,13 @@ Devices should not report more than 60 events/second under normal circumstances,
   "url": (string) the URL that was clicked (Email Click events only)
 }
 ```
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
 
 ### Subscription Events
 

@@ -7,7 +7,86 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
+## August 2019
+
+### Campaign Details in Reports
+Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
+
+![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
+
+### Canvas Changelogs
+Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
+
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
+
+### New Email Content Block API Endpoints
+
+You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
+
+### Custom Email Unsubscribe Landing Page Update
+
+The default [custom Email Unsubscribe page]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
+
+### iOS SDK - Notched Phone Support Improvement
+
+Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
+
+You won't see many updates in the Docs reflecting this change just yet - but they're on the way!
+
+
 ## July 2019
+
+{% alert update %}
+Braze had two (you read that right - **two**) product release cycles this month! The latest release is noted at the top, the earlier one [starts further down this page](#earlier-this-month)!
+{% endalert %}
+
+### SAML/SSO
+
+[Single Sign On (SSO)]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
+
+In addition to [Google Sign-In using OAuth 2.0 support](https://developers.google.com/identity/protocols/OAuth2), companies would like SSO with Security Assertion Markup Language (SAML) support. This enables them to seamlessly integrate with large identity providers (IdPs), including [Azure Active Directory]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) and [Okta]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/okta/), which support the latest industry standards (SAML 2.0).
+
+Braze supports:
+- [OneLogin]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
+- [Azure Active Directory]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
+- [Okta]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/okta/)
+
+### Adjust Event API Key Shows
+
+We have updated Adjust's partner page to make this API key accessible to customers.
+
+![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
+
+### New Partners
+
+Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
+- [FiveTran]({{ site.baseurl }}/partners/fivetran/)
+- [Talon.One]({{ site.baseurl }}/partners/talonone/)
+- [Voucherify]({{ site.baseurl }}/partners/voucherify/)
+
+### Campaign Details Improvement
+
+Expanded Campaign details are now shown in the ... wait for it ... Campaign Details section of the Campaign Page!
+
+![Campaign Details]({% image_buster /assets/img/campaign_details.png %})
+
+### Show Only Mine in Segments & Canvas
+
+The "Only Show Mine" check filter on the Campaigns page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
+
+### Advancement Behavior
+You can now choose [when a user advances]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
+
+![Advancement Behavior]({% image_buster /assets/img/advancement_behavior_rn.png %})
+
+### In-App Messages in Canvas
+
+[In-app messages are now available to use with Canvas!]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) Add a Canvas step and browse available channels to add an in-app message.
+
+![In-App Messages in Canvas]({% image_buster /assets/img/iam-in-canvas.png %})
+
+## Earlier This Month
+---
 
 ### User Profile Image Removal
 
@@ -32,6 +111,12 @@ To set a `null` value for an email messages's "Reply-To" address from Braze, go 
 Look at [multiple campaigns at one time to compare their relative performance]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), side-by-side in Braze - in one window!
 
 ### Template Dispatch ID into Messages with Liquid
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
 
 If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -61,90 +146,6 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement) or in [our documentation]({{ site.baseurl }}/partners/snowflake/).
 
-## May 2019
-
-## Content Cards
-
-Content Cards are persistent content that appear within customers’ app and web experiences.
-
-With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
-
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
-
-In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
-
-Use it to create notification centers, homepage feeds, and promotion feeds.
-
-You will need to update to a supported Braze SDK version:
-- __iOS__: 3.8.0 or above
-- __Android__: 2.6.0 or above
-- __Web__: 2.2.0 or above
-
-[Learn more about Content Cards here!]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/)
-
-{% alert update %}
-Content Cards for Currents, as well as our API documentation for Content Cards, will be launched later this week. Stay tuned!
-{% endalert %}
-
-### Roku Platform Addition
-
-Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
-
-You can now retrieve data from Roku devices for data enrichment and custom event tracking.
-
-[Check out the documentation here!]({{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
-
-### Notification Preferences for Canvas & Campaign Updates
-
-This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{ site.baseurl }}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
-
-### Jampp Technology Partner Documentation
-
-Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
-
-[Braze customers can integrate with Jampp]({{ site.baseurl }}/partners/technology_partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
-
-### Platform Picker for In-App Messages
-
-We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
-
-![Platform Picker][plat_p]
-
-### Dispatch ID Currents Field for Email
-
-In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
-
-The `dispatch_id` is the unique id generated for each transmission – or, dispatch – sent from the Braze platform.
-
-While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
-
-### Only Show Mine - Campaign Sorting Feature
-
-When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
-
-![Created by Me][cbm]{: height="50%" width="50%"}
-
-Also, the Campaign grid sidebar is now resizable!
-
-### Delete Users by Alias
-
-You can now use the `users/delete` endpoint to [delete users by alias]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-request)!
-
-### Unique Calculation for Email Clicks and Opens
-
-Unique Clicks and Unique Opens for Email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
-
-Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
-
-Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  Sendgrid customers should see no difference.
-
-You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
-
-### Most Engaged Channel
-
-The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
-
-Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 
 

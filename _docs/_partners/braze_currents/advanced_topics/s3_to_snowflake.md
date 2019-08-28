@@ -4,6 +4,7 @@ page_order: 2
 ---
 
 # Transfer Data from Amazon S3 to Snowflake
+
 If your data is currently sitting in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT process (Extract Load Transform).
 
 {% alert note %}
@@ -11,15 +12,17 @@ If you have more specific use cases and would like Braze to service your Current
 {% endalert %}
 
 ## Automated Load Process
-This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory#braze) to visualize that data in Looker to help drive insights and feedback into your Campaigns, Canvases, and Segments.
+
+This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) to visualize that data in Looker to help drive insights and feedback into your Campaigns, Canvases, and Segments.
 
 Once you have a Currents to S3 export set up and are receiving live events data, it is time to configure your live ELT pipeline in Snowflake by configuring the following components:
-- [AWS SQS Queues](#aws-sqs-queues)
-- [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
+
+-   [AWS SQS Queues](#aws-sqs-queues)
+-   [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
 
 ### AWS(c) SQS Queues
 
-__Auto-ingest Snowpipes__ rely on SQS queues for sending notification from S3 to Snowpipe. This process is managed by Snowflake after configuring SQS.
+**Auto-ingest Snowpipes** rely on SQS queues for sending notification from S3 to Snowpipe. This process is managed by Snowflake after configuring SQS.
 
 #### Configure the External S3 Stage
 
@@ -27,35 +30,82 @@ __Auto-ingest Snowpipes__ rely on SQS queues for sending notification from S3 to
 Tables in your database are created from this stage.
 {% endalert %}
 
-In AWS, create a new __public-private key pair__ with grants according to your organization’s security requirements.
+When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-Then, in Snowflake, create a Snowflake S3 Stage (called `braze_data`) as followis:
+In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
 
-```js
-create or replace stage currents.public.braze_data
+Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the example below).
+
+Then, create a Snowflake S3 Stage (called `braze_data` below):
+
+```sql
+CREATE OR REPLACE STAGE
+    currents.public.braze_data
     url='s3://snowpipe-demo/'
     credentials = (AWS_KEY_ID = '...' AWS_SECRET_KEY = '...' );
 show stages;
 ```
 
-Next, define the AVRO file format for our stage.
+Next, define the AVRO file format for your stage.
 
-```js
-create file format currents.public.currents_avro type = 'avro' compression = 'auto';
+```sql
+CREATE FILE FORMAT
+    currents.public.currents_avro
+    type = 'avro'
+    compression = 'auto';
 ```
 
-```js
-alter stage currents.public.braze_data set file_format = currents.public.currents_avro;
+```sql
+ALTER STAGE
+    currents.public.braze_data
+SET
+    file_format = currents.public.currents_avro;
 ```
 
-Finally, use the `show stages;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL`.
+```sql
+CREATE OR REPLACE PIPE
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
+
+COPY INTO
+  users_messages_pushnotification_open
+          FROM
+           (SELECT
+             $1:id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
+              $1:time::INT,
+              $1:timezone::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
+              $1:campaign_name::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
+              $1:canvas_name::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
+              $1:platform::STRING,
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
+
+              FROM
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
+
+Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL` since this pipe was created as an auto-ingest pipe.
 
 #### Create Bucket Events
-In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the __Properties__ tab, go to __Events__.
+
+In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
 
 ![AWS Properties][1]{: height="50%" width="50%"}
 
-In __Events__, create new events for each set of Currents Data, as needed ([Messaging]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/) and/or [User Behavior]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/)).
+In **Events**, create new events for each set of Currents Data, as needed ([Messaging]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/) and/or [User Behavior]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/)).
 
 ![AWS Events][2]{: height="50%" width="50%"}
 
@@ -71,15 +121,14 @@ It is critical that your tables are structured in accordance to the Braze Curren
   Depending on your Currents integration, you may have different events you must set up ([Message Engagement or Messaging Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/), [User or Customer Behavior Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/), or both).  You can also write a script for some or all of this process.
 {% endalert %}
 
-
 {% tabs %}
   {% tab User Behavior Events %}
 
-First, create a table INTO which we will continuously load using the following structure:
+First, create a table `INTO` which we will continuously load using the following structure from the Currents schema:
 
-```js
-CREATE TABLE USERS_BEHAVIORS_APP_FIRSTSESSION
-    (
+```sql
+CREATE TABLE
+  users_behaviors_app_firstsession (
         id               STRING,
         user_id          STRING,
         external_user_id STRING,
@@ -98,43 +147,51 @@ CREATE TABLE USERS_BEHAVIORS_APP_FIRSTSESSION
     );
 ```
 
-Then, create the AUTO continuous load pipe and specify
-1. which table to load and
-2. how to load the following table.
+Then, create the `auto_ingest` pipe and specify
+1. Which table to load, and
+2. How to load the following table.
 
-```js
-CREATE OR REPLACE PIPE PIPE_USERS_BEHAVIORS_APP_FIRSTSESSION
-                            auto_ingest=true AS
-COPY INTO USERS_BEHAVIORS_APP_FIRSTSESSION
-          FROM 
-            (select $1:id::STRING,
-            $1:user_id::STRING,
-            $1:external_user_id::STRING,
-            $1:app_id::STRING,
-            $1:time::INT,
-            $1:session_id::STRING,
-            $1:gender::STRING,
-            $1:country::STRING,
-            $1:timezone::STRING,
-            $1:language::STRING,
-            $1:device_id::STRING,
-            $1:sdk_version::STRING,
-            $1:platform::STRING,
-            $1:os_version::STRING,
-            $1:device_model::STRING from @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
+```sql
+CREATE OR REPLACE PIPE
+  pipe_users_behaviors_app_firstsession
+    auto_ingest=true AS
+
+COPY INTO
+  users_behaviors_app_firstsession
+          FROM
+            (SELECT
+              $1:id::STRING,
+              $1:user_id::STRING,
+              $1:external_user_id::STRING,
+              $1:app_id::STRING,
+              $1:time::INT,
+              $1:session_id::STRING,
+              $1:gender::STRING,
+              $1:country::STRING,
+              $1:timezone::STRING,
+              $1:language::STRING,
+              $1:device_id::STRING,
+              $1:sdk_version::STRING,
+              $1:platform::STRING,
+              $1:os_version::STRING,
+              $1:device_model::STRING
+
+              FROM
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
 ```
 
 {% alert warning %}
-You must repeat the CREATE TABLE and CREATE PIPE commands for every event type.
+You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event type.
 {% endalert %}
 
  {% endtab %}
  {% tab Messaging Events %}
 
-First, create a table INTO which we will continuously load using the following structure:
+First, create a table `INTO` which we will continuously load using the following structure:
 
-```js
-CREATE TABLE "CURRENTS_PM"."PUBLIC".PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN (
+```sql
+CREATE TABLE
+    public_users_messages_pushnotification_open (
         id STRING,
         user_id STRING,
         external_user_id STRING,
@@ -160,38 +217,46 @@ CREATE TABLE "CURRENTS_PM"."PUBLIC".PUBLIC_USERS_MESSAGES_PUSHNOTIFICATION_OPEN 
 ```
 
 Then, create the AUTO continuous load pipe and specify
-1. which table to load and
-2. how to load the following table.
+1\. which table to load and
+2\. how to load the following table.
 
-```js
-CREATE OR REPLACE PIPE PIPE_USERS_MESSAGES_PUSHNOTIFICATION_OPEN
-                            auto_ingest=true
-COPY INTO "CURRENTS_PM"."PUBLIC".USERS_MESSAGES_PUSHNOTIFICATION_OPEN
-          FROM 
-           (select $1:id::STRING,
-            $1:user_id::STRING,
-            $1:external_user_id::STRING,
-            $1:time::INT,
-            $1:timezone::STRING,
-            $1:app_id::STRING,
-            $1:campaign_id::STRING,
-            $1:campaign_name::STRING,
-            $1:message_variation_id::STRING,
-            $1:canvas_id::STRING,
-            $1:canvas_name::STRING,
-            $1:canvas_variation_id::STRING,
-            $1:canvas_step_id::STRING,
-            $1:canvas_step_message_variation_id::STRING,
-            $1:platform::STRING,
-            $1:os_version::STRING,
-            $1:device_model::STRING,
-            $1:send_id::STRING,
-            $1:device_id::STRING,
-            $1:button_action_type::STRING,
-            $1:button_string::STRING from @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```sql
+CREATE OR REPLACE PIPE
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
+
+COPY INTO
+  users_messages_pushnotification_open
+          FROM
+           (SELECT
+             $1:id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
+              $1:time::INT,
+              $1:timezone::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
+              $1:campaign_name::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
+              $1:canvas_name::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
+              $1:platform::STRING,
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
+
+              FROM
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
+
 {% alert warning %}
-You must repeat the CREATE TABLE and CREATE PIPE commands for every event type in your Currents Integration.
+You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event type.
 {% endalert %}
 
   {% endtab %}
@@ -202,7 +267,6 @@ To see the types of analytics you can perform using Braze Currents, please consu
 {% alert note %}
 Reach out to your Braze Account Manager if you have any questions or if you’re interested in having Braze guide you through this process.
 {% endalert %}
-
 
 [1]: {% image_buster /assets/img/aws-properties.png %}
 [2]: {% image_buster /assets/img/aws-events.png %}

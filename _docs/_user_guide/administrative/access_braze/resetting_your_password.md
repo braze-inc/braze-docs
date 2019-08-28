@@ -1,6 +1,6 @@
 ---
 nav_title: Resetting Your Password
-page_order: 2
+page_order: 4
 ---
 
 # Resetting Your Password

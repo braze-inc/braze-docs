@@ -67,7 +67,7 @@ There are now two News Feed card fields,{% raw %} {{card.${name}}} {% endraw %} 
 [38]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
 [39]: {{ site.baseurl }}/help/best_practices/push/
 [40]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/
-[41]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[41]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [42]: {{ site.baseurl }}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags
 [43]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/#content-test-groups
 [44]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
@@ -77,7 +77,7 @@ There are now two News Feed card fields,{% raw %} {{card.${name}}} {% endraw %} 
 [48]: {{ site.baseurl }}/help/best_practices/in-app_messages/
 [49]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#overview
 [50]: {{ site.baseurl }}/user_guide/administrative/manage_your_users/user_import/#user-import
-[51]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#step-5-preview-message
+[51]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message
 [52]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#targeting-filters
 [53]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#step-6-preview-message
 [54]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template

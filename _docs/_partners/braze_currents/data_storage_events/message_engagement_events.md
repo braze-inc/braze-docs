@@ -139,6 +139,13 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
 }
 ```
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
 {% enddetails %}
 
 
@@ -146,7 +153,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 
 Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
 
-{% alert important %} 
+{% alert important %}
 Subscription groups are only available for email at this time.
 {% endalert %}
 

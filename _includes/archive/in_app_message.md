@@ -50,7 +50,7 @@ Our in-app message product allows you to trigger in-app message display as a res
 
 #### Delivery Semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation][in_app_message_15]. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %}. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
@@ -87,11 +87,13 @@ An example of overriding the default trigger interval can be found in our sample
 [in_app_message_11]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [in_app_message_12]: {% image_buster /assets/img_archive/HTML5.gif %}
 [in_app_message_13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[in_app_message_14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#original-in-app-messages
-[in_app_message_15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[in_app_message_14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
+[in_app_message_15a]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle
+[in_app_message_15b]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle
 [in_app_message_16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [in_app_message_17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
 [in_app_message_19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
 [in_app_message_23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [in_app_message_24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
 [in_app_message_25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
+

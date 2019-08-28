@@ -13,7 +13,10 @@ module Jekyll
 
     def render(context)
       hiddenpage = Liquid::Template.parse(@hidden).render(context)
-      if (ENV['SITE_URL'].to_s.downcase != 'https://www.braze.com') || (hiddenpage.start_with? '_hidden')
+      currentpage = context.registers[:page]
+      hidepage = currentpage['hidden'].nil? ? false : currentpage['hidden']
+
+      if  (ENV['SITE_URL'].to_s.downcase != 'https://www.braze.com') || (hiddenpage.start_with? '_hidden') || (hidepage)
         "<meta name=\"robots\" content=\"noindex, nofollow\" >"
       else
         "<meta name=\"google-site-verification\" content=\"kI0o3QRqDw5zhtd9W5umZTzLTDe6X1tp-gybtFg_7bQ\" />"
