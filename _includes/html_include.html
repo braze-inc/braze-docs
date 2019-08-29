@@ -9,7 +9,7 @@
   <meta name="description" content="{{ page.id | slice: 1,page.id.size | replace: '/', ' ' | replace: '_', ' ' }} {% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
-  <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | | replace: '_', ' ' | replace: '/', ', ' }} ">
+  <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
 
 <link href="{{site.baseurl}}/assets/css/bootstrap.css" rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc.css"/>
