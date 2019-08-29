@@ -7,7 +7,7 @@ alias: /partners/voucherify/
 
 [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and overall retention. Now, with the Braze and Voucherify integration, users can automatically send 1-to-1 coupons, discounts, and more, all through their Braze account while tracking redemptions and campaign growth at every step.
 
-Leverage the power of Voucherify and grow your mobile-first campaigns by sending vouchers through Braze's **connected content** or through Braze's **custom attributes.**
+Leverage the power of Voucherify and grow your mobile-first campaigns by sending vouchers through Braze's [connected content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) or through Braze's [custom attributes]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes).
 
 {% alert important %}
 This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
