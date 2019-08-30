@@ -26,7 +26,7 @@ Braze in-app messages have both global and individual creative specifications. F
 {% endalert %}
 
 
-## Character and Image Limits
+## Character and Copy Limits
 
 There are no true "limits" on the number of characters in in-app messages, though there is a general threshold on the number of lines of text a message can hold before it triggers a scroll function in the message to show any content that has overflowed the content block. The threshold can vary depending on the end user’s device size, custom handling, or presence of images within messages
 
@@ -34,10 +34,20 @@ There are no true "limits" on the number of characters in in-app messages, thoug
 
 We recommend at most 3 lines of message/body text, but you should __always__ [test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) before sending to prevent the need for the message to scroll.
 
+
+### Font Awesome
+
+Though Braze supports using [Font Awesome](https://fontawesome.com/) in our in-app messages, we recommend testing your message before sending if you are using Font Awesome.
+
+## Image Limits
+
+We do have some limits to images in in-app messages:
+
 - __All images must be less than 5MB.__
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
+### Adaptation to Device
 Each message type is designed to adapt to a device in a certain way and, despite our attempts to recommend aspect ratios that work for every device, you may occasionally see a few pixels cropped on the side or a slideup message with more copy than image. We've outlined some expectations below so you can understand what could happen when content doesn't fit recommended ratios or if a device doesn't adhere to those ratios.
 
 - Full-screen in-app messages are designed to fill the entire height of a device.
@@ -54,16 +64,11 @@ Each message type is designed to adapt to a device in a certain way and, despite
 | Modal (Image Only)                 |      1:1                 |   |
 | Modal (with Text)                  |     29:10                |  |
 
+### Notch Support
 
-## Font Awesome
+Notched mobile devices, where parts of the screen are blocked to hold camera or speaker ports, often distort the look and expansion of in-app messages. This can result in odd overlays or distortion from status bars situated on either side of the notch.
 
-Though Braze supports using [Font Awesome](https://fontawesome.com/) in our in-app messages, we recommend testing your message before sending if you are using Font Awesome.
-
-## Notch Support and Adaptive In-App Messages
-
-
-### Application to Your Message Content
-
+In August 2019, Braze introduced improved support for notched devices. With this new behavior, our in-app messages will consider notches when expanding and filling a device. Where some fullscreen in-app messages will stop at the bottom limit of the notch and allow view of the status bar, our fullscreen messages will fill the notched negative spaces, including the status bar, and provide a fully immersive experience in your message. 
 
 #### Safe Zone
 
