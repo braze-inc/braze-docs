@@ -6,11 +6,11 @@ page_order: 0
 ---
 # Full-Screen In-App Messages
 
-Full-Screen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Full-screen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
 
 <br>
 
-![Full-Screen Specs][3a]{: style="max-width: 80%;" }
+![Full-Screen Specs][3a]{: style="max-width: 80%; border: none;"}
 
 <br>
 
@@ -26,15 +26,24 @@ Full-Screen messages take up the whole screen of the device! This message type i
 On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen as shown below.
 
 <br>
-![Full-Screen Viewport][3b]{: style="max-width: 80%;"}
+![Full-Screen Viewport][3b]{: style="max-width: 80%; border: none;"}
+<br>
 
-## Image and Copy Behavior
+## Image Behavior
 
-Full-screen in-app messages are designed to fill the entire height of a device. This can sometimes result in the cropping of the left and right sides of an image, so be aware and give yourself some extra space on the sides of your image or gif content. This may mean adding a few extra pixels in a main background color on each side of your image. 
+Full-screen in-app messages (with text) will fill the entire height of a device and stay true to aspect ratio. Image only full-screen messages will fill the entire height of a device and crop horizontally (left and right sides) as needed.
 
-- notched considerations
+- __All images must be less than 5MB.__
+- We only accept `PNG`, `JPG`, and `GIF` file types.
+- We recommend that your images be 500KB.
 
-- Copy scrolls
+You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+
+### Notch Support
+
+Notched mobile devices, where parts of the screen are blocked to hold camera or speaker ports, often distort the look and expansion of in-app messages. This can result in odd overlays or distortion from status bars situated on either side of the notch.
+
+In August 2019, Braze introduced improved support for notched devices. With this new behavior, our in-app messages will consider notches when expanding and filling a device. Where some fullscreen in-app messages will stop at the bottom limit of the notch and allow view of the status bar, our fullscreen messages will fill the notched negative spaces, including the status bar, and provide a fully immersive experience in your message.
 
 [3a]: {% image_buster /assets/img/full-screen-spec-notched.png %}
 [3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}

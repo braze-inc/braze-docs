@@ -10,7 +10,7 @@ Modals appear in the center of the device's screen with a screen overlay that he
 
 <br>
 
-![Modal Specs][1a]{: style="max-width: 80%;" }
+![Modal Specs][1a]{: style="max-width: 80%; border: none;"}
 
 <br>
 
@@ -28,16 +28,20 @@ On a tablet or desktop browser, a modal in-app message will still sit in the cen
 
 <br>
 
-![Modal Viewport][1b]{: style="max-width: 80%;"}
+![Modal Viewport][1b]{: style="max-width: 80%; border: none;"}
+
+<br>
 
 ## Image and Copy Behavior
 
-Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message. 
+Modal in-app messages are designed to fit the device at the best and most filling ratios possible, while staying true to the size and ratios of your chosen image or copy for your message.
 
-- Image adaptive to device
-  - notched considerations
+- __All images must be less than 5MB.__
+- We only accept `PNG`, `JPG`, and `GIF` file types.
+- We recommend that your images be 500KB.
 
-- Copy scrolls
+You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+
 
 
 [1a]: {% image_buster /assets/img/modal-spec.png %}
