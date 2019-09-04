@@ -294,14 +294,3 @@ glossaries:
     tags:
       - Retail & eCommerce Industry
       - Financial Services & Insurance
-
-
-- name: "Term"
-    image: IMAGE.png
-    description: "<a href='LINK'>BRAND</a> <br> <br> Definition of Term."
-    tags:
-      - Media & Entertainment
-      - Retail & eCommerce Industry
-      - Financial Services & Insurance
-      - Delivery & Transportation
-      - Miscellaneous Industry
