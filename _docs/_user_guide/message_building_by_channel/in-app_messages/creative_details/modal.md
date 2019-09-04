@@ -22,7 +22,7 @@ Modals appear in the center of the device's screen with a screen overlay that he
 | Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
 | Screen Overlay | Transparent | This is a customizable, transparent film that lays between your app and the message.
 
-### Modal Viewport
+## Modal Viewport
 
 On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
 
@@ -41,6 +41,10 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 - We recommend that your images be 500KB.
 
 You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+
+### Font Awesome
+
+Though Braze supports using [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
 
 

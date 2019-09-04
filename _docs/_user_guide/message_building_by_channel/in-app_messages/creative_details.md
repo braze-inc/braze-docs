@@ -33,10 +33,6 @@ While there are no _hard limits_ on the number of characters in in-app message b
 __Always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) before sending.
 
 
-### Font Awesome
-
-Though Braze supports using [Font Awesome](https://fontawesome.com/) in our in-app messages, we recommend testing your message before sending if you are using Font Awesome.
-
 ## Image Limits
 
 We do have some limits to images in in-app messages:
@@ -50,18 +46,12 @@ Each message type is designed to adapt to device sizes and shapes, so you may oc
 
 | Message Type | Recommended Aspect Ratio | Behavior |
 |--- | --- | --- |
-| Full Screen (with Text) | 5:4 | Image will fill the entire height of a device and stay true to aspect ratio. |
-| Full Screen (Image Only) | 10:16 | Image will fill the entire height of a device and crop horizontally (left and right sides) as needed. |
+| Full Screen (with Text) | 5:4 | Image will fill the entire height of a device, including the open space and status bars on "notched" devices, and will stay true to aspect ratio. |
+| Full Screen (Image Only) | 10:16 | Image will fill the entire height of a device, including the open space and status bars on "notched" devices, and will crop horizontally (left and right sides) as needed. |
 | Slideup | 1:1 | Can contain up to three lines of copy before truncation with ellipses. Images will never be cropped or clipped - they will always scale down to fit within the 50X50 image container. |
 | Modal (Image Only) | Any | Will adapt to fit the image to be as large as possible on any device. |
 | Modal (with Text) | Any | A modal's image container will adapt to fit the image to be as large as possible on any device. |
 
-
-### Notch Support
-
-Notched mobile devices, where parts of the screen are blocked to hold camera or speaker ports, often distort the look and expansion of in-app messages. This can result in odd overlays or distortion from status bars situated on either side of the notch.
-
-In August 2019, Braze introduced improved support for notched devices. With this new behavior, our in-app messages will consider notches when expanding and filling a device. Where some fullscreen in-app messages will stop at the bottom limit of the notch and allow view of the status bar, our fullscreen messages will fill the notched negative spaces, including the status bar, and provide a fully immersive experience in your message.
 
 #### Safe Zone
 
