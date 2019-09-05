@@ -1,6 +1,6 @@
 ---
 nav_title: Messaging
-page_order: 3
+page_order: 2
 search_rank: 5
 local_redirect: #parameter-definitions
   hashtag-name-here: '/docs/api/parameters/'
