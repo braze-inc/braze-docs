@@ -42,7 +42,7 @@ You can utilize AMP for Email using our API. When you use any of [our Messaging 
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
   "amp_body": (optional, updates the text-amp-html MIME type) the email body in AMPHTML. The MIME (Multipurpose Internet Mail Extensions) type to be referenced is "text/x-amp-html".
   "body": (required unless email_template_id is given, valid HTML),
-  "preheader"*: (optional, string) Recommended length 50-100 characters.
+  "preheader": (optional*, string) Recommended length 50-100 characters.
   "email_template_id": (optional, string) If provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
@@ -114,6 +114,15 @@ Any component that requires authenticating the user must use [Google Access Toke
 
   {% endtab %}
 {% endtabs %}
+
+### Metrics and Analytics
+
+| Metric | Details |
+|---|---|
+| Total Opens | Total opens for the HTML and plaintext versions of your AMP Email. |
+| Total Clicks | Total clicks in the HTML and plaintext versions of your AMP Email. |
+| AMP Opens | Total count for opens in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
+| AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |  
 
 ### Testing & Troubleshooting
 
