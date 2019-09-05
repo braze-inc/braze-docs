@@ -1,6 +1,6 @@
 ---
 nav_title: Email Lists & Addresses
-page_order: 3
+page_order: 0
 search_rank: 2
 ---
 # Email Lists & Addresses
