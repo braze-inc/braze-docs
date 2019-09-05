@@ -4,17 +4,20 @@ nav_title: Initial SDK Setup with Eclipse
 
 # Initial SDK Setup with Eclipse
 
-{% alert warning %}
-Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin][01]. If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
+{% alert update %}
+Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) as of 2015. If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
 {% endalert %}
 
-## Step 1: In your command line, clone the [Braze Android Github Repository][03]
+## Step 1
+In your command line, clone the [Braze Android Github Repository][03].
 
 ```bash
 $ git clone git@github.com:Appboy/appboy-android-sdk.git
 ```
 
-## Step 2: Import the Braze project into your local workspace
+## Step 2
+Import the Braze project into your local workspace
+
 In Eclipse:
 
   - Navigate to File > Import.
@@ -30,7 +33,8 @@ In Eclipse:
 
     ![Select Android UI Project][07]
 
-## Step 3: Reference Braze in your own project
+## Step 3
+Reference Braze in your own project.
 In Eclipse:
 
   - Right click your project and select "Properties."
@@ -40,8 +44,10 @@ In Eclipse:
 
     ![Braze Add][09]
 
-## Step 4: Resolve dependency errors and correct build target
-  At this time, you may see errors coming up with the Braze code, that is because its dependencies are not populated and the build target is possibly incorrect:
+## Step 4
+Resolve dependency errors and correct build target.
+
+At this time, you may see errors coming up with the Braze code, that is because its dependencies are not populated and the build target is possibly incorrect:
 
    - Right click the Braze UI project and  select Properties->Android to make sure build target is set to Braze’s current build tools version.
 
@@ -50,7 +56,10 @@ In Eclipse:
 
       ![Support][11]
 
-## Step 5: Add final pieces
+## Step 5
+
+Add final pieces.
+
   - For SDK version 1.10.0 or higher, you will need to add
   `<service android:name="com.appboy.services.AppboyDataSyncService" />`
   to your AndroidManifest.xml, as Eclipse does not support manifest merging.
