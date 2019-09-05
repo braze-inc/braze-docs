@@ -11,7 +11,7 @@ You might have gotten here from searching a term for an integration or feature t
 
 ## Apptimize
 
-_Braze Partnership
+_Braze Partnership_
 
 _Support withdrawn: August 2019_
 
