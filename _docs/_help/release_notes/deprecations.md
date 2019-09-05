@@ -9,6 +9,15 @@ Technology is always moving - inside Braze and outside it! And we do our best to
 You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry.
 
 
+## Apptimize
+
+_Braze Partnership_
+
+_Support withdrawn: August 2019_
+
+If you are currently using Apptimize with Braze, you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+
+
 ## Original In-App Messages
 
 _Replaced by: [In-App Messaging]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)_
@@ -21,9 +30,9 @@ Braze has improved the look and feel of In-App Messages to adhere to the latest 
 
 Braze moved over to a new form of in-app messages with the following SDK releases:
 
-- iOS: 2.19.0
-- Android: 1.13.0
-- Web: 1.3.0
+- iOS: `2.19.0`
+- Android: `1.13.0`
+- Web: `1.3.0`
 
 Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the "Create Campaign" button on the campaign screen.
 

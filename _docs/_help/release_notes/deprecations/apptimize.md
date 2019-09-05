@@ -1,9 +1,22 @@
 ---
-nav_title: Apptimize
+nav_title: Apptimize Partnership
 alias: /partners/apptimize/
 ---
 
 # Apptimize
+
+{% alert update %}
+Braze has deprecated support for the Apptimize partnership as of September 2019.
+
+<br>
+
+If you are currently using Apptimize with Braze, you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+
+<br>
+
+Please reach out to your Braze or Apptimize representative if you have any further questions.
+{% endalert %}
+
 
 [Apptimize](https://apptimize.com/) is a mobile app testing and growth platform
 that allows customers to rapidly iterate throughout the app development process.

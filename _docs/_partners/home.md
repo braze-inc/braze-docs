@@ -46,8 +46,6 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/wrapper_sdks/react_native/
 - name: Radar
   url: /docs/partners/technology_partners/data_augmentation/contextual_location/radar/
-- name: Apptimize
-  url: /docs/partners/technology_partners/channel_extensions/ab_testing/apptimize/
 - name: Xamarin
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
 - name: "Lob.com"
