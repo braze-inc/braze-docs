@@ -279,10 +279,10 @@ POST https://YOUR_REST_API_URL/content_blocks/create
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
-| `content_block_name` | Yes | String | Must be less than 100 characters. |
-| `content_block_description` | No | String | The description of the content block. Must be less than 250 characters. |
+| `name` | Yes | String | Must be less than 100 characters. |
+| `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `content_block_state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. |
+| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. |
 | `tags` | No | Array of Strings. | Tags must already exist.
 
 #### Successful Response Properties
@@ -290,7 +290,7 @@ POST https://YOUR_REST_API_URL/content_blocks/create
 ```json
 {
   "content_block_id": "newly-generated-block-id",
-  "content_block_liquid_tag": "generated-block-tag-from-content_block_name",
+  "liquid_tag": "generated-block-tag-from-content_block_name",
   "created_at": "time-created-in-iso",
   "message": "success"
 }
