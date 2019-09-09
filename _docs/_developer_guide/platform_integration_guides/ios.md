@@ -10,7 +10,7 @@ guide_featured_list:
 - name: Add Braze to Your Project
   fa_icon: fab fa-apple
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-- name: Push Integration
+- name: Push Notifications
   link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/
   fa_icon: far fa-bell
 - name: Analytics
@@ -19,7 +19,7 @@ guide_featured_list:
 
 guide_menu_title: "All Sections"
 guide_menu_list:
-  - name: In-App Message Integration
+  - name: In-App Messages
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/
     fa_icon: fas fa-mobile-alt
   - name: Content Cards
@@ -37,6 +37,9 @@ guide_menu_list:
   - name: Sample Apps
     link: /docs/developer_guide/platform_integration_guides/ios/sample_apps/
     fa_icon: fas fa-vials
+  - name: Braze iOS SDK Changelogs
+    link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
+    fa_icon: fab fa-github
 
 
 ---
