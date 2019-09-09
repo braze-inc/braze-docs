@@ -7,22 +7,6 @@ search_rank: 5
 
 # In-App Messages
 
-__In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
-
-To see examples of in-app messages, check out our [Client Integration Gallery][31].
-
-{% comment %}
-Embed video on the right. Demos all of the topics mentioned on this page.
-{% endcomment %}
-
-{% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/generations/)!
-{% endalert %}
-
-[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
-
-By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. Note that if you did not integrate SDWebImage, in-app messages with images will not work.
-
 ## When to Use In-App Messages
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
@@ -40,6 +24,10 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 - Product Sales
 - Encouraging and rewarding discovery
 - [Permission Requests/Push Priming][30]
+
+To see examples of in-app messages, check out our [Client Integration Gallery][31].
+
+[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
 ## In-App Message Types
 Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display and delivery.
@@ -123,4 +111,4 @@ The following example shows a paginated HTML Full in-app message:
 [25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
+[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/

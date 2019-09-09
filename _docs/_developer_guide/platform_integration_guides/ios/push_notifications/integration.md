@@ -3,29 +3,34 @@ nav_title: Integration
 platform: iOS
 page_order: 0
 search_rank: 5
+
+local_redirect:
+  ios-10-rich-notifications: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'
+local_redirect:
+  creating-a-service-extension: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/#creating-a-service-extension'
+local_redirect:
+  setting-up-the-service-extension: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/#setting-up-the-service-extension'
+local_redirect:
+  creating-a-rich-notification-in-your-dashboard: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/#creating-a-rich-notification-in-your-dashboard'
+local_redirect:
+  push-action-buttons-integration: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/'
+local_redirect:
+  step-1-adding-braze-default-push-categories: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-1-adding-braze-default-push-categories'
+local_redirect:
+  step-2-enable-interactive-push-handling: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-2-enable-interactive-push-handling'
 ---
 
-{% alert tip %}
-We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/#manual-integration-options).
-{% endalert %}
+# Push Integration
 
-## Integration {#push-integration}
+## Step 1: Configure Push Notifications
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+Before you can send an iOS push notification using Braze, you must provide your Push notification file or certificate from Apple. You may present either a `.p8` file (recommended) or a `.p12` certificate.
 
-Sample push notification:
+{% tabs %}
+  {% tab .p8 File (Recommended) %}
+__Using a .p8 File (Authentication Tokens)__
 
-![Sample Push iOS][17]
-
-For more information and best practices on push, visit our [Braze Academy][0] page.
-
-## Basic Push Integration
-
-### Step 1: Configure Push Notifications
-
-#### Recommended Option: Using a .p8 File (Authentication Tokens)
-
-As described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3),
+As described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3):
 
 1. In your developer account, go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate).
 2. Under Keys, select All and click the Add button (+) in the upper-right corner.
@@ -35,40 +40,47 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
 
 >  When you download the key, it is saved as a text file with a .p8 file extension. Save the file in a secure place because the key is **not saved in your developer account and you won’t be able to download it again**.
 
-6. Navigate to the [app settings page][5] in the dashboard and upload the .p8 file.
-7. When prompted, also enter your [app's Bundle Id](https://developer.apple.com/account/ios/identifier/bundle/), the [Key Id](https://developer.apple.com/account/ios/authkey), and your [Team Id](https://developer.apple.com/account/#/membership). Click Save.
+6. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
+7. When prompted, also enter your [app's Bundle Id](https://developer.apple.com/account/ios/identifier/bundle/), the [Key Id](https://developer.apple.com/account/ios/authkey), and your [Team Id](https://developer.apple.com/account/#/membership). Click `Save`.
 
-#### Alternate Option: Using a .p12 Certificate (Legacy)
+  {% endtab %}
+  {% tab .p12 Certificate (Legacy) %}
+__Using a .p12 Certificate (Legacy)__
 
 Alternately, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process we recommend utilizing the above-described .p8 authentication scheme instead.  However, if you still wish to, you may configure and upload .p12 certificates as described here:
 
-##### Generate Certificate Signing Request
+_Step 1: Generate Certificate Signing Request_
 
-1. Navigate to the [iOS Provisioning Portal][1]
+1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
 2. Select Identifiers > App IDs in the left sidebar
 
- ![iOSPush3][2]
+ ![iOSPush3]({% image_buster /assets/img_archive/ios_provisioning.png %})
 
 3. Select your application.
 4. If push notifications are not enabled, click Edit to update the app settings
-  ![AppleProvisioningOptions][3]
+  ![AppleProvisioningOptions]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the Enable check box and click Create Certificate under the Production SSL Certificate
   ![iOSPush3][4]
 6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
+
 >  You must update your provisioning profile for the app after you create your SSL certificates. A simple "Refresh" in the organizer will accomplish this.
 
-##### Export Certificate
+_Step 2: Export Certificate_
 
-1. Download the production push certificate that you just created and open it with the Keychain Access application
-2. In Keychain Access, click on My Certificates and locate your push certificate
-3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze)
-4. Navigate to the [app settings page][5] in the dashboard and upload your production certificate.
+1. Download the production push certificate that you just created and open it with the Keychain Access application.
+2. In Keychain Access, click on My Certificates and locate your push certificate.
+3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
+4. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload your production certificate.
 
- ![push upload example][6]
+ ![push upload example]({% image_buster /assets/img_archive/push_cert_upload.png %})
 
 >  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. As such, if you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate App Group or App for the development version of your app.
 
-### Step 2: Enable Push Capabilities
+  {% endtab %}
+{% endtabs %}
+
+
+## Step 2: Enable Push Capabilities
 
 In your project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
@@ -77,7 +89,7 @@ In your project settings, ensure that under the `Capabilities` tab your `Push No
 >  If you are using Xcode 8 and have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
 ![xcode 8 auto signing][34]
 
-### Step 3: Register for Push Notifications
+## Step 3: Register for Push Notifications
 
 The appropriate code sample below must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs.
 
@@ -89,7 +101,7 @@ Braze also provides default push categories for push action button support, whic
 Be sure to call all push integration code in your application's main thread.
 {% endalert %}
 
-##### Using UserNotification Framework (iOS 10+)
+### Using UserNotification Framework (iOS 10+)
 
 If you are using the UserNotifications framework (recommended) that was introduced in iOS 10,  use the following code:
 
@@ -145,7 +157,7 @@ if #available(iOS 10, *) {
 
 > If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet.
 
-###### iOS 8+ without UserNotifications Framework
+### iOS 8+ without UserNotifications Framework
 
 When building against iOS 8+ and not using the `UserNotifications` framework, use the following:
 
@@ -174,7 +186,7 @@ UIApplication.shared.registerForRemoteNotifications()
 {% endtabs %}
 
 
-### Step 4: Register Push Tokens With Braze
+## Step 4: Register Push Tokens With Braze
 
 Once APNs registration is complete, the following method must be altered to pass the resulting `deviceToken` to Braze so the user becomes enabled for push notifications:
 
@@ -203,7 +215,7 @@ Appboy.sharedInstance()?.registerPushToken(deviceTokenString)
 
 >  The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `[[UIApplication sharedApplication] registerForRemoteNotifications]` is called. If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
 
-### Step 5: Enable Push Handling
+## Step 5: Enable Push Handling
 
 The following code passes received push notifications along to Braze and is necessary for logging push analytics and link handling.
 
@@ -211,7 +223,7 @@ The following code passes received push notifications along to Braze and is nece
 Be sure to call all push integration code in your application's main thread.
 {% endalert %}
 
-###### iOS 10+
+### iOS 10+
 
 When building against iOS 10+ we recommend you integrate the `UserNotifications` framework and do the following:
 
@@ -283,7 +295,7 @@ In this case, if the user clicks the displayed foreground push, the new iOS 10 p
 {% endtab %}
 {% endtabs %}
 
-##### Pre-iOS 10
+### Pre-iOS 10
 
 iOS 10 updated behavior such that it no longer calls `application:didReceiveRemoteNotification:fetchCompletionHandler:` when a push is clicked.  For this reason, if you don't update to building against iOS 10+ and use the `UserNotifications` framework, you have to call Braze from both old-style delegates, which is a break from our previous integration.
 
@@ -328,156 +340,13 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-### Step 6: Verify Code Modifications
+## Step 6: Verify Code Modifications
 
 Verify the code modifications you made against this [sample AppDelegate.m file][7]. We also strongly advise looking through the below section on customization to determine if any additional changes need to be implemented.
 
-### Step 7: Deep Linking
+## Step 7: Deep Linking
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [Advanced Use Cases section on Deep Linking for iOS][10].
-
-## iOS 10 Rich Notifications
-
-iOS 10 introduces the ability to send push notifications with images, gifs, and video. To enable this functionality, clients must create a `Service Extension`, a new type of extension that enables modification of a push payload before it is displayed.
-
-### Creating A Service Extension
-To create a [Notification Service Extension][23], navigate to `File > New > Target` and select `Notification Service Extension`.
-
-![Adding a Service Extension][26]
-
-Ensure that `Embed In Application` is set to embed the extension in your application.
-
-### Setting Up The Service Extension
-A `Notification Service Extension` is its own binary that is bundled with your app. As such, it must be set up in the [Apple Developer Portal][27] with its own App ID and Provisioning Profile. Typically extensions are named with a suffix on the main application's ID (e.g., `com.appboy.stopwatch.stopwatchnotificationservice`).
-
-#### Configuring The Service Extension To Work With Braze
-Braze sends down an attachment payload in the APNS payload under the `ab` key that we use to configure, download and display rich content:
-
-For example:
-
-```json
-{
-  "ab" :
-    {
-    ...
-
-    "att" :
-      {
-       "url" : "http://mysite.com/myimage.jpg",
-       "type" : "jpg"
-       }
-    },
-  "aps" :
-    {
-    ...
-    }
-}
-```
-
-The relevant payload values are:
-
-```objc
-// The Braze dictionary key
-static NSString *const AppboyAPNSDictionaryKey = @"ab";
-
-// The attachment dictionary
-static NSString *const AppboyAPNSDictionaryAttachmentKey = @"att";
-
-// The attachment URL
-static NSString *const AppboyAPNSDictionaryAttachmentURLKey = @"url";
-
-// The type of the attachment - a suffix for the file you save
-static NSString *const AppboyAPNSDictionaryAttachmentTypeKey = @"type";
-```
-
-To manually display push with a Braze payload, download the content from the value under `AppboyAPNSDictionaryAttachmentURLKey`, save it as a file with the file type stored under the `AppboyAPNSDictionaryAttachmentTypeKey` key, and add it to the notification attachments.
-We provide sample code that you can copy into your `Notification Service Extension`. Simply changing the class name to the one you picked will automatically provide this functionality.
-
-You can write the Service Extension in either Objective-C or Swift. If you don't wish to modify our default behavior, we'd recommend using our provided sample code, which is written in Objective-C. If you want to use Swift in your Service Extension, you should create a separate file with methods for our sample code, then create a bridging header file to call those methods.
-
-For our sample code, see the [Stopwatch sample application][30]. For Swift sample code, see the [Hello Swift sample application][38].
-
-### Creating A Rich Notification In Your Dashboard
-
-To create a rich notification in your Braze dashboard, simple create an iOS push and attach an image or gif, or provide a url that hosts an image, gif, or video.  Note that assets are downloaded on the receipt of push notifications, so that if you are hosting your own content you should plan for large, synchronous spikes in requests.
-
-Also note the supported file types and sizes, listed [here][28].
-
-## Action Buttons {#push-action-buttons-integration}
-
-iOS 8+ introduces the ability for users to interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
-
-![Illustration of Notification Action][13]
-
-iOS SDK version 2.27.0 introduced default Braze push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
-
-### Step 1: Adding Braze Default Push Categories
-
-Use the following code to register for Braze's default push categories when you [register for push][36]:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-// For UserNotification.framework (iOS 10+ only)
-NSSet *appboyCategories = [ABKPushUtils getAppboyUNNotificationCategorySet];
-[[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:appboyCategories];
-
-// For UIUserNotificationSettings (before iOS 10)
-NSSet *appboyCategories = [ABKPushUtils getAppboyUIUserNotificationCategorySet];
-UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
-                                                                         categories:appboyCategories];
-[[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-// For UserNotification.framework (iOS 10+ only)
-let appboyCategories = ABKPushUtils.getAppboyUNNotificationCategorySet()
-UNUserNotificationCenter.current().setNotificationCategories(appboyCategories)
-
-// For UIUserNotificationSettings (before iOS 10)
-let appboyCategories = ABKPushUtils.getAppboyUIUserNotificationCategorySet()
-let settings = UIUserNotificationSettings.init(types: .badge, categories: appboyCategories)
-UIApplication.shared.registerUserNotificationSettings(settings)
-```
-
-{% endtab %}
-{% endtabs %}
-
->  Clicking on push action buttons with background activation mode will only dismiss the notification and will not open the app. Button click analytics for these actions will be flushed to the server the next time the user opens the app.
-
->  If you wish to create your own custom notification categories, see our [action button customization][37] documentation.
-
-See our sample code [here][33] for `UserNotification.framework` and [here][32] for `UIUserNotificationSettings`.
-
-### Step 2: Enable Interactive Push Handling
-
-To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` delegate method:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] getActionWithIdentifier:identifier
-                           forRemoteNotification:userInfo
-                               completionHandler:completionHandler];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
-                         forRemoteNotification: userInfo,
-                             completionHandler: completionHandler)
-```
-
-{% endtab %}
-{% endtabs %}
-
 
 
 [0]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/

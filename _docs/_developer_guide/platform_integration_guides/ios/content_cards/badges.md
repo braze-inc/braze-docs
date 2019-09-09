@@ -5,7 +5,7 @@ page_order: 4
 search_rank: 5
 ---
 
-## Requesting Unread Content Card Counts
+# Requesting Unread Content Card Counts
 
 If you would like to display the number of unread content cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, the Braze SDK provides methods to query the following:
 
@@ -35,7 +35,7 @@ The method declarations in [ABKContentCardsController](https://appboy.github.io/
 ```
 
 
-### Displaying Number of Unviewed Content Cards on App Badge Count
+## Displaying Number of Unviewed Content Cards on App Badge Count
 
 In addition to serving as push notification reminders for an app, Badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based off unviewed Content Cards updates can be a valuable tool in attracting users back to your app and increasing sessions.
 

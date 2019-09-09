@@ -4,13 +4,13 @@ platform: iOS
 page_order: 2
 search_rank: 5
 ---
-## Tracking Custom Events
+# Tracking Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][0], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Adding A Custom Event
+## Adding A Custom Event
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -29,7 +29,7 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME");
 {% endtab %}
 {% endtabs %}
 
-#### Adding Properties
+### Adding Properties
 
 You can add metadata about custom events by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
@@ -52,7 +52,7 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1
 
 See our [class documentation][4] for more information.
 
-#### Reserved Keys {#event-reserved-keys}
+### Reserved Keys {#event-reserved-keys}
 
 The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
 

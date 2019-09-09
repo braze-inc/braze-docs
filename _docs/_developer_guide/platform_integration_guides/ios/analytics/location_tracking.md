@@ -4,11 +4,11 @@ platform: iOS
 page_order: 6
 search_rank: 5
 ---
-## Location Tracking
+# Location Tracking
 
 By default, Braze disables location tracking. We enable location tracking after the host application has opted in to location tracking and gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
 
-### Enabling Automatic Location Tracking
+## Enabling Automatic Location Tracking
 Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`.
 
  You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
@@ -36,7 +36,7 @@ withAppboyOptions:[ ABKEnableAutomaticLocationCollectionKey : true ]])
 {% endtab %}
 {% endtabs %}
 
-### Logging A Single Location
+## Logging A Single Location
 To log a single location using Braze's location manager, use the following method:
 
 {% tabs %}
@@ -56,11 +56,11 @@ Appboy.sharedInstance()?.locationManager.logSingleLocation()
 {% endtab %}
 {% endtabs %}
 
-### Manually Enabling iOS Location Targeting
+## Manually Enabling iOS Location Targeting
 
 If you wish to use your own `CLLocationManager` instead of Braze's provided location manager, you can follow the steps below to manually enable location targeting in your iOS application. Once location tracking is enabled, you can use Braze's methods to manually pass location tracking information along to Braze.
 
-#### Setting Up Location Tracking
+### Setting Up Location Tracking
 
 1. Click on the target for your project (using the left-side navigation), and select the “Build Phases” tab.
 2. Click the button under “Link Binary With Libraries”
@@ -123,7 +123,7 @@ If you wish to use your own `CLLocationManager` instead of Braze's provided loca
 
 For additional details please see this [helpful blog post][2].
 
-#### Passing Location Data to Braze
+### Passing Location Data to Braze
 
 The following two methods can be used to set the last known location for the user. Keep in mind that these methods are intended for use only where Braze's automatic location tracking is disabled.
 

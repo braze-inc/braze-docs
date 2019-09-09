@@ -11,7 +11,7 @@ guide_featured_list:
   fa_icon: fab fa-apple
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 - name: Push Integration
-  link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+  link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/
   fa_icon: far fa-bell
 - name: Analytics
   link: /docs/developer_guide/platform_integration_guides/ios/analytics/
@@ -20,13 +20,13 @@ guide_featured_list:
 guide_menu_title: "All Sections"
 guide_menu_list:
   - name: In-App Message Integration
-    link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/
+    link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/
     fa_icon: fas fa-mobile-alt
   - name: Content Cards
-    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/overview/
+    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/
     fa_icon: fas fa-sticky-note
   - name: News Feed
-    link: /docs/developer_guide/platform_integration_guides/ios/news_feed/overview/
+    link: /docs/developer_guide/platform_integration_guides/ios/news_feed/
     fa_icon: fas fa-newspaper
   - name: Push Stories
     link: /docs/developer_guide/platform_integration_guides/ios/push_story/
