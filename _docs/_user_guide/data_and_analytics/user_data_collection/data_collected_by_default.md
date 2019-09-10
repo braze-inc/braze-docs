@@ -42,3 +42,8 @@ The following events and attributes are captured and updated automatically by th
 - Device Wireless Carrier
 - Device Time Zone
 - Uninstalled (Date and Boolean)
+
+
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager. 
+{% endalert %}

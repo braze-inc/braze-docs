@@ -213,6 +213,10 @@ Google’s terms for ADID state that the advertising identifier cannot be associ
 Yes, this is possible as long as your client code is programmed to parse the UTM parameters that are sent with the deep link and send them to Google Analytics. You should ensure that you have the appropriate Google Analytics method integrated to do this.
 {% enddetails %}
 
+{% details Why has one of my users been blocked? %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% enddetails %}
+
 {% details What are Braze Firebrands? %}
 Braze Firebrands is our customer engagement community. We're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? <a href='https://brazefirebrands.splashthat.com/'>Join now</a>.
 {% enddetails %}

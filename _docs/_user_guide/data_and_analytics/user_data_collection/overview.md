@@ -21,3 +21,7 @@ This best practice guide will help you to understand exactly what Braze consider
 {% alert tip %}
 Multiple user actions within an app can be labeled with the same custom event or attribute designation. This is useful when you want to track something generically such as "played a song" rather than recording each individual song within a music app as a separate and distinct event.
 {% endalert %}
+
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
