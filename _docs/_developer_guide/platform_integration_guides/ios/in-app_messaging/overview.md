@@ -96,7 +96,7 @@ The following example shows a paginated HTML Full in-app message:
 
 > Full in-app message content is displayed in a UIWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
 
-> Starting in iOS SDK version 3.19.0, the following javascript methods are now no-ops in HTML in-app messages: alert, confirm, prompt.
+> **Starting in iOS SDK version 3.19.0, the following javascript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.**
 
 {% endtab %}
 {% endtabs %}
