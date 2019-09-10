@@ -5,7 +5,7 @@ page_order: 2
 search_rank: 5
 ---
 
-## Disabling the Unviewed Indicator
+# Disabling the Unviewed Indicator
 
  ![Read & Unread Indicator]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: height="50%" width="50%"}
 

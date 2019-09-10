@@ -4,9 +4,9 @@ platform: iOS
 page_order: 5
 search_rank: 5
 ---
-## Social Data Tracking
+# Social Data Tracking
 
-### Collecting Social Account Data
+## Collecting Social Account Data
 
 The Braze iOS SDK no longer automatically collects Facebook user data starting with version 2.10, and does not collect Twitter user data automatically with version 2.13. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
 
@@ -14,7 +14,7 @@ You can get a user's Facebook and Twitter data from the iOS system. You can also
 
 Another way to get a user's Facebook data is from Facebook's iOS SDK. For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
 
-### Passing Facebook Data To Braze
+## Passing Facebook Data To Braze
 
 Initialize `ABKFacebookUser` objects with the Facebook data you have collected and pass it to Braze:
 
@@ -53,7 +53,7 @@ Additionally, you can tailor what Facebook data you're sending to Braze, in case
 ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:facebookUserPublicProfile numberOfFriends:-1 likes:nil];  
 ```
 
-### Passing Twitter Data To Braze
+## Passing Twitter Data To Braze
 
 Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
 
@@ -80,7 +80,7 @@ Appboy.sharedInstance()?.user.twitterUser = twitterUser;
 {% endtab %}
 {% endtabs %}
 
-#### Recording Social Network Shares
+### Recording Social Network Shares
 
 As of SDK v.2.16, `logSocialShare:` has been deprecated. If you were relying on this method to log social shares, you can use `logCustomEvent:` instead.
 

@@ -4,13 +4,7 @@ platform: iOS
 page_order: 0
 search_rank: 5
 ---
-# Content Cards
-
- With __Content Cards__, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
-
-{% alert note %}
-Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
-{% endalert %}
+# Content Cards Overview
 
 ## When to Use Content Cards
 

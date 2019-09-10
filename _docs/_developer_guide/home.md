@@ -11,7 +11,7 @@ guide_featured_list:
   fa_icon: fab fa-android
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 - name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/
+  link: /docs/developer_guide/platform_integration_guides/ios/
   fa_icon: fab fa-apple
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/

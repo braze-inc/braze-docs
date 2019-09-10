@@ -5,9 +5,9 @@ page_order: 3
 search_rank: 5
 ---
 
-## In-App Message Delivery
+# In-App Message Delivery
 
-### Trigger Types
+## Trigger Types
 
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
@@ -15,7 +15,7 @@ Our in-app message product allows you to trigger in-app message display as a res
 Triggered in-app messages only work with custom events logged through the SDK and not through the Rest APIs. If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
-### Delivery Semantics
+## Delivery Semantics
 
 All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation][45]. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
 
@@ -23,7 +23,7 @@ When a trigger event has more than one eligible in-app message associated with i
 
 For in-app messages that display immediately on delivery, (session start, push click) there can be some latency due to assets not being prefetched.
 
-### Minimum Time Interval Between Triggers
+## Minimum Time Interval Between Triggers
 
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience.
 
