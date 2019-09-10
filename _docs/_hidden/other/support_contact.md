@@ -1000,6 +1000,8 @@ $( document ).ready(function() {
     var sels = mform.find('select');
     var user_name = $('#ticket_name').val();
     var user_email = $('#ticket_email').val();
+    var user_ccemail = $('#ticket_ccemail').val();
+
     var user_subject = $('#ticket_subject').val();
 
     var user_issue = $('#ticket_issue').val();
@@ -1023,7 +1025,9 @@ $( document ).ready(function() {
     sf_submit.addParameter('name',user_name);
     sf_submit.addParameter('email',user_email);
     sf_submit.addParameter('subject',user_subject);
-
+    if (user_ccemail) {
+      sf_submit.addParameter('00N0V000008wX0Y',user_ccemail);
+    }
     sf_submit.addBodyText('description',userinfo);
     $.each(sels,function(k,v){
       var selopt = $(this);
@@ -1176,6 +1180,14 @@ $( document ).ready(function() {
                             <span class="input-group-text" id="basic-addon1">@</span>
                           </div>
                           <input type="email" class="form-control" id="ticket_email"  maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
+                      </div>
+                      <div class="form-group" >
+                        <label for="ticket_email" id="ticket_ccemail_label"> CC Email Address </label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                          </div>
+                          <input type="email" class="form-control" id="ticket_ccemail"  maxlength="80" name="CCEmail" placeholder="Enter CC email"  value="" /></div>
                       </div>
                       <div class="form-group" >
                           <label for="ticket_subject" id="ticket_subject_label">   Subject *</label>
