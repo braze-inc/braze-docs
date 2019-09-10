@@ -7,9 +7,23 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
+
+## September 2019
+
+### Canvas Changelogs
+
+Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
+
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
+
+{% alert update %}
+More updates for September to come later this month!
+{% endalert %}
+
 ## August 2019
 
 ### Campaign Details in Reports
+
 Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
@@ -133,17 +147,6 @@ The "Show Only Mine" filter on the Campaign grid will remain "on" any time you v
 
 You can send a one-time [A/B test]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a Campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
 
-## June 2019
-
-### Snowflake Partnership
-
-Braze is proud to announce our partnership with Snowflake!
-
-Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
-
-Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
-
-Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement) or in [our documentation]({{ site.baseurl }}/partners/snowflake/).
 
 
 
