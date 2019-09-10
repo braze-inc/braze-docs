@@ -173,7 +173,21 @@ $(document).ready(function() {
   // link image fix for underline
   $('#article-main a:has(> img)').css('display','inline-block');
 
+  $('#sidebar_toggle').click(function(e){
+    var nav_bar = $('#nav_bar');
+    var nav_icon = $('#sidebar_toggle i');
+    var curstate = nav_bar.hasClass('hide_sidebar');
+    if (curstate) {
+      nav_bar.removeClass('hide_sidebar');
+      nav_icon.removeClass('fa-chevron-left');
+      nav_icon.addClass('fa-bars');
 
+    } else {
+      nav_bar.addClass('hide_sidebar');
+      nav_icon.removeClass('fa-bars');
+      nav_icon.addClass('fa-chevron-left');
+    }
+  });
   // Updated Tab switcher
   $('.tab_toggle').click(function(e){
     e.preventDefault();
