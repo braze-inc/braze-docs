@@ -5,11 +5,11 @@ page_order: 1
 search_rank: 5
 ---
 
-## Content Cards View Controller Integration
+# Content Cards View Controller Integration
 
 Content Cards can be integrated with two view controller contexts: Navigation or Modal.
 
-### Navigation Context
+## Navigation Context
 
 Example of pushing a `ABKContentCardsTableViewController` instance into a navigation controller:
 
@@ -40,7 +40,7 @@ navigationController?.pushViewController(contentCards, animated: true)
 To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`.
 {% endalert %}
 
-### Modal Context
+## Modal Context
 
 This modal is used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar.
 

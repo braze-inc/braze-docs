@@ -5,7 +5,7 @@ page_order: 3
 search_rank: 5
 ---
 
-## Refreshing Content Cards
+# Refreshing Content Cards
 
 You can manually request Braze to refresh the user's Content Cards using the `requestContentCardsRefresh:` method on the `Appboy` interface. For example:
 

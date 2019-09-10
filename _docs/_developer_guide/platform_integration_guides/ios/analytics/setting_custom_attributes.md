@@ -4,13 +4,13 @@ platform: iOS
 page_order: 3
 search_rank: 5
 ---
-## Setting Custom Attributes
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Assigning Standard User Attributes
+## Assigning Standard User Attributes
 
 To assign user attributes, you need to set the appropriate field on the shared `ABKUser` object. For example, to assign the current user's first name to be "Jeff," you would use the following line of code:
 
@@ -49,12 +49,12 @@ The following attributes should be set on the `ABKUser` object:
 
 __We strongly recommend collecting email addresses__ even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
-### Assigning Custom User Attributes
+## Assigning Custom User Attributes
 
 Beyond the attributes above, Braze also allows you to define Custom Attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
-#### Custom Attribute with a Boolean Value
+### Custom Attribute with a Boolean Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -73,7 +73,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% endtab %}
 {% endtabs %}
 
-#### Custom Attribute with an Integer Value
+### Custom Attribute with an Integer Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -92,7 +92,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% endtab %}
 {% endtabs %}
 
-#### Custom Attribute with a Double Value
+### Custom Attribute with a Double Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -113,7 +113,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 
 >  Braze treats FLOAT and DOUBLE values exactly the same within our database.
 
-#### Custom Attribute with a String Value
+### Custom Attribute with a String Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -132,7 +132,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% endtab %}
 {% endtabs %}
 
-#### Custom Attribute with a Date Value
+### Custom Attribute with a Date Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -153,7 +153,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 
 >  Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
-#### Custom Attribute with an Array Value
+### Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][8].
 
 {% tabs %}
@@ -185,7 +185,7 @@ Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name"
 {% endtab %}
 {% endtabs %}
 
-#### Unsetting a Custom Attribute
+### Unsetting a Custom Attribute
 
 Custom Attributes can also be unset using the following method:
 
@@ -206,7 +206,7 @@ Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your-attribute-string
 {% endtab %}
 {% endtabs %}
 
-#### Incrementing/Decrementing Custom Attributes
+### Incrementing/Decrementing Custom Attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer or long value.
 
@@ -227,15 +227,15 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("Attribute Key", by: 
 {% endtab %}
 {% endtabs %}
 
-#### Setting a Custom Attribute via the REST API
+### Setting a Custom Attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
 
-#### Custom Attribute Value Limits
+### Custom Attribute Value Limits
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-##### Implementation Example
+#### Implementation Example
 
 User Attributes are set within the [`UserAttributesViewController.m` file][4] within the Stopwatch sample application.
 
@@ -243,7 +243,7 @@ User Attributes are set within the [`UserAttributesViewController.m` file][4] wi
 - In addition, you may refer to the [ABKUser documentation][6] for more information.
 - Additional examples of setting arrays as user attributes can be found within [`UserAttributesArrayViewController.m`][7] in the Stopwatch sample application.
 
-### Setting Up User Subscriptions
+## Setting Up User Subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType` or `setPushNotificationSubscriptionType`, respectively. Both of these functions take the enum type `ABKNotificationSubscriptionType` as arguments. This type has three different states:
 
@@ -257,7 +257,7 @@ Users who grant permission for an app to send them push notifications are defaul
 
 > Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See the User Guide for details][12].
 
-#### Setting Email Subscriptions
+### Setting Email Subscriptions
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -276,7 +276,7 @@ Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificati
 {% endtab %}
 {% endtabs %}
 
-#### Setting Push Notification Subscriptions
+### Setting Push Notification Subscriptions
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
