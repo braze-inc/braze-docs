@@ -108,6 +108,6 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 [33]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L245-L249
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: #push-action-buttons-integration
-[36]: #step-4-register-for-push-notifications
+[36]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
