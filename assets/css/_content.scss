@@ -124,7 +124,7 @@
         margin-left:20px;
         > li {
           p {
-            display: inline;
+            display: inline-block;
           }
           &::before {
             content: "■";
