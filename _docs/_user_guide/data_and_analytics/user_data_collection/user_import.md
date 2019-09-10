@@ -146,6 +146,10 @@ Values encapsulated in single (‘’) or double (“”) quotation marks will b
 If you are seeing a piece of Standard User Data (e.g. `email` or `first_name` imported as a Custom Attribute), check the case and spacing of your CSV file. `First_name` would be imported as a Custom Attribute, `first_name` would be correctly imported into the “first name” field on a user’s profile.
 
 
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
+
 [fields]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#custom-attribute-data-types
 [1]: {% image_buster /assets/img_archive/userimport_examplecsv_noerrors.png %}
 [2]: {% image_buster /assets/img_archive/userimport_nav.png %}
