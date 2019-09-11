@@ -333,8 +333,10 @@ $(document).ready(function() {
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
-
-     if ($(this).has('img').length > 0) {
+     if ($(this).hasClass('extignore')) {
+       tofilter = false;
+     }
+     else if ($(this).has('img').length > 0) {
        if ($(this).has('img')[0].childNodes.length > 0) {
          tofilter = false;
        }
