@@ -1,6 +1,6 @@
 ---
 nav_title: User Profile Lifecycle
-page_order: 4
+page_order: 2
 ---
 
 # User Profile Lifecycle

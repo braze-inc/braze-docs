@@ -1,6 +1,6 @@
 ---
 nav_title: Migrating from News Feed
-page_order: 10
+page_order: 5
 ---
 
 # Migrating From News Feed to Content Cards
@@ -26,7 +26,7 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 | API-Created Messages | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | Dismissing and Pinning Cards | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | Rich Analytics | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| Personalization and Segmentation | Templated at Impression | Templated at Send | 
+| Personalization and Segmentation | Templated at Impression | Templated at Send |
 
 ## Implementation
 

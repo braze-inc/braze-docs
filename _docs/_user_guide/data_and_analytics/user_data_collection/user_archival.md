@@ -1,6 +1,6 @@
 ---
 nav_title: User Archival Definitions
-page_order: 2
+page_order: 0
 ---
 # User Archival Definitions
 

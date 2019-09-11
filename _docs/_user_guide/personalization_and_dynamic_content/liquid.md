@@ -1,8 +1,8 @@
 ---
 nav_title: Liquid
-config_only: true
-layout: blank_config
-page_order: 1
+config_only: false
+layout: featured
+page_order: 0
 ---
 
 # Personalization Using Liquid Tags

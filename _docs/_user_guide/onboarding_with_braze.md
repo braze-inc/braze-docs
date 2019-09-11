@@ -4,7 +4,6 @@ config_only: false
 layout: featured
 page_order: 1
 ---
-
 # Welcome to Braze!
 
 We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze.

@@ -2,7 +2,7 @@
 nav_title: Customize
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
-page_order: 5
+page_order: 2
 ---
 
 # Customization

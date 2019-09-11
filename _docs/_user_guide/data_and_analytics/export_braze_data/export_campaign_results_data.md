@@ -1,6 +1,6 @@
 ---
 nav_title: Export Campaign Results Data
-page_order: 2
+page_order: 0
 ---
 
 # Campaign Results Data

@@ -1,8 +1,8 @@
 ---
 nav_title: Connected Content
-config_only: true
-layout: blank_config
-page_order: 3
+config_only: false
+layout: featured
+page_order: 1
 ---
 
 # About Connected Content

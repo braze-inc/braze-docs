@@ -1,6 +1,6 @@
 ---
 nav_title: Export Revenue & Total Revenue Data
-page_order: 5
+page_order: 4
 ---
 
 # Revenue Data
