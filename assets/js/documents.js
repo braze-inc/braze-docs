@@ -179,15 +179,19 @@ $(document).ready(function() {
     var curstate = nav_bar.hasClass('hide_sidebar');
     if (curstate) {
       nav_bar.removeClass('hide_sidebar');
-      nav_icon.removeClass('fa-chevron-left');
-      nav_icon.addClass('fa-bars');
-
-    } else {
-      nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-bars');
       nav_icon.addClass('fa-chevron-left');
+      Cookies.remove('ln');
+    } else {
+      nav_bar.addClass('hide_sidebar');
+      nav_icon.removeClass('fa-chevron-left');
+      nav_icon.addClass('fa-bars');
+      Cookies.set('ln','1');
     }
   });
+  if (Cookies.get('ln')) {
+    $('#sidebar_toggle').trigger('click');
+  }
   // Updated Tab switcher
   $('.tab_toggle').click(function(e){
     e.preventDefault();
