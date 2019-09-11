@@ -5,22 +5,30 @@ page_order: 4
 
 # Data Points
 
-Data points are Braze's way was of defining a pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
+Data points are Braze's way of defining a pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
+
+You can find a more detailed breakdown of this definition in your MSA.
+
+{% alert important %}
+This pricing structure only applies to customers using in-app or in-browser messages, push, Content Cards, webhooks, and email services.
+{% endalert %}
 
 ## Management & Usage
 
 You can view your Data Points Usage on the __Subscriptions and Usage__ section in any of the tabs. Just go to your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__.
 
 {% alert tip %}
-To prevent using up your allocated data points, we recommend setting up a program that will to prevent sending the same, unchanging data from your app to Braze over and over.
-
 __Only update your deltas (changing data)!__
+
+To prevent using up your allocated data points, we recommend setting up a program that will to prevent sending the same, unchanging data from your app to Braze over and over.
 {% endalert %}
 
 
 ## Consumption Count
 
+In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your users' `session starts`, `session ends`, `events`, and `purchases`.
 
+You can find a breakdown of how Braze accumulates data points below, but there are nuances beyond what you see here. If you ever have any questions about your billing, reach out to your Braze account manager.
 {% tabs %}
 {% tab General %}
 
