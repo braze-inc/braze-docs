@@ -1,6 +1,6 @@
 ---
 nav_title: Advanced Filters
-page_order: 5
+page_order: 4
 ---
 
 # Advanced Filters

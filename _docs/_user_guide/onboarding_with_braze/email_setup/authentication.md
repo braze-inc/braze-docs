@@ -1,6 +1,6 @@
 ---
 nav_title: Authentication
-page_order: 2
+page_order: 1
 ---
 
 # Authentication

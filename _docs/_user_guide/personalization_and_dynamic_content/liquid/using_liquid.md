@@ -1,6 +1,6 @@
 ---
 nav_title: Using Liquid
-page_order: 1
+page_order: 0
 ---
 
 # Using Liquid

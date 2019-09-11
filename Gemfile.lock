@@ -137,8 +137,5 @@ DEPENDENCIES
   therubyracer (~> 0.12.3)
   yui-compressor
 
-RUBY VERSION
-   ruby 2.5.1p57
-
 BUNDLED WITH
-   1.17.1
+   1.17.3
