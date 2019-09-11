@@ -5,7 +5,7 @@ page_order: 4
 
 # Data Points
 
-Data points are Braze's way of defining a pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
+Data points are Braze's way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
 
 You can find a more detailed breakdown of this definition in your MSA.
 
