@@ -15,9 +15,9 @@ See [the iOS integration instructions][1] for information about setting up your 
 Set up push permissions by adding the following code to the ```FinishedLaunching``` section of your ```AppDelegate.cs```:
 
 ```csharp
-UIUserNotificationSettings settings = UIUserNotificationSettings.GetSettingsForTypes (UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound, null);
-UIApplication.SharedApplication.RegisterForRemoteNotifications ();
-UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
+UIUserNotificationSettings settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound, null);
+UIApplication.SharedApplication.RegisterForRemoteNotifications();
+UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
 >  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the above code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
@@ -27,7 +27,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
 ```csharp
-Appboy.SharedInstance ().RegisterDeviceToken (deviceToken);
+Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
 ```
 
 ### Enabling Push Analytics
@@ -37,7 +37,7 @@ Enable open tracking on push notifications by adding the following code to the `
 ```csharp
 public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
   {
-    Appboy.SharedInstance ().RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
+    Appboy.SharedInstance().RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
   }
 ```
 
