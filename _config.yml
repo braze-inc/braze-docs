@@ -38,21 +38,6 @@ kramdown:
 plugins:
   - jekyll-algolia
 
-pwa:
-  sw_src_filepath: assets/js/service-worker.js # Optional
-  sw_dest_filename: service-worker.js # Optional
-  dest_js_directory: assets/js # Required
-  precache_recent_posts_num: 20 # Optional
-  precache_glob_directory: / # Optional
-  precache_glob_patterns: # Optional
-    - "assets/{js,css,fonts}/*.{js,css,eot,svg,ttf,woff,woff2}"
-    - "assets/*.{css,js}"
-    - index.html
-  precache_glob_ignores: # Optional
-    - sw-register.js
-    - "fonts/**/*"
-
-
 # Allows the DocSearch element to be inspected. Set to true locally, but don't
 # check in in that state, or it will cause undesirable behavior in prod.
 search_debug: false
