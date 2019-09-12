@@ -82,7 +82,7 @@ These are what each in-app message type will appear like for your users.
 
 {% endtab %}
 {% tab Custom HTML %}
-[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageHtml.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`UIWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageHtml.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 <br>
 
@@ -90,7 +90,7 @@ These are what each in-app message type will appear like for your users.
 
 <br>
 
-Full in-app message content is displayed in a `UIWebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 {% alert important %}
 Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
