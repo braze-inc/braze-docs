@@ -14,9 +14,9 @@ All of Braze’s in-app message types are highly customizable across messages, i
 In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under "Additional Message Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by your site. For example:
 
 ```javascript
-appboy.subscribeToNewInAppMessages(function(inAppMessages) {
-  if (inAppMessages[0] instanceof appboy.ab.InAppMessage) {
-    var extras = inAppMessages[0].extras;
+appboy.subscribeToInAppMessage(function(inAppMessage) {
+  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+    var extras = inAppMessage.extras;
     for (var key in extras) {
       if (data.hasOwnProperty(key)) {
          console.log("key: " + key + ", value: " + extras[key]);
@@ -24,8 +24,7 @@ appboy.subscribeToNewInAppMessages(function(inAppMessages) {
     }
   }
 
-  appboy.display.showInAppMessage(inAppMessages[0]);
-  return inAppMessages.slice(1);
+  appboy.display.showInAppMessage(inAppMessage);
 });
 ```
 

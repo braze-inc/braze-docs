@@ -80,39 +80,33 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 3. Replace the removed call with the following snippet:
 
 ```javascript
-appboy.subscribeToNewInAppMessages(function(inAppMessages) {
-  var message = inAppMessages[0];
-  if (message != null) {
-    var shouldDisplay = true;
+appboy.subscribeToInAppMessage(function(inAppMessage) {
+  var shouldDisplay = true;
 
-    if (message instanceof appboy.ab.InAppMessage) {
-      // Read the key-value pair for msg-id
-      var msgId = message.extras["msg-id"];
+  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+    // Read the key-value pair for msg-id
+    var msgId = inAppMessage.extras["msg-id"];
 
-      // If this is our push primer message
-      if (msgId == "push-primer") {
-        // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
-        // has already granted/blocked permission
-        if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
-          shouldDisplay = false;
-        }
-        if (message.buttons[0] != null) {
-          // Prompt the user when the first button is clicked
-          message.buttons[0].subscribeToClickedEvent(function() {
-            appboy.registerAppboyPushMessages();
-          });
-        }
+    // If this is our push primer message
+    if (msgId == "push-primer") {
+      // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
+      // has already granted/blocked permission
+      if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
+        shouldDisplay = false;
       }
-    }
-
-    // Display the message
-    if (shouldDisplay) {
-      appboy.display.showInAppMessage(message);
+      if (inAppMessage.buttons[0] != null) {
+        // Prompt the user when the first button is clicked
+        inAppMessage.buttons[0].subscribeToClickedEvent(function() {
+          appboy.registerAppboyPushMessages();
+        });
+      }
     }
   }
 
-  // Remove this message from the array of IAMs and return whatever's left
-  return inAppMessages.slice(1);
+  // Display the message
+  if (shouldDisplay) {
+    appboy.display.showInAppMessage(message);
+  }
 });
 ```
 
