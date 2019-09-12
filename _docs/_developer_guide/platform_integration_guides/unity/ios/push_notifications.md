@@ -102,8 +102,7 @@ For a sample implementation, take a look at the [`PushNotificationOpenedCallback
 - Add the code below to your `application:didRegisterForRemoteNotificationsWithDeviceToken` method
 
   ```objc
-  [[Appboy sharedInstance] registerPushToken:
-                 [NSString stringWithFormat:@"%@", deviceToken]];
+  [[Appboy sharedInstance] registerDeviceToken:deviceToken];
   ```
 - Call the registerForRemoteNotificationTypes: in your `application:didFinishLaunchingWithOptions`: method
 
