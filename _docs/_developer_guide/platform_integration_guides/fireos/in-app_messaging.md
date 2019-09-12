@@ -376,7 +376,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
 [30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [33]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
-[34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
+[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
 [40]: {{ site.baseurl }}/docs/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages

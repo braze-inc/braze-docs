@@ -61,6 +61,17 @@
   var base_url = '{{site.baseurl}}';
 
   var toc_minheaders = {{ page.toc_minheaders }};
+
+
+  navigator.serviceWorker.getRegistrations().then(
+    function(registrations) {
+      for(let registration of registrations) {
+        if (registration['scope'] == 'https://www.braze.com/docs/') {
+          registration.unregister();
+        }
+      }
+    }
+  );
 </script>
 
 

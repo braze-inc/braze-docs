@@ -797,6 +797,16 @@ You must include an Android Push Object in `messages` if you want users you have
 }
 ```
 
+### Canvas Entry Properties Object
+When using one of the endpoints for triggering or scheduling a Canvas via the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the canvas_entry_properties namespace. For example, a request with `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to a message by adding {{canvas_entry_properties.${product_name}}}.
+
+
+
+```
+  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
+```
+
+
 ### Content Card Object
 
 ```json
