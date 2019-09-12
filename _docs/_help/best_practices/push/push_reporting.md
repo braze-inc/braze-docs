@@ -1,6 +1,6 @@
 ---
 nav_title: Reporting
-page_order: 10
+page_order: 7
 ---
 
 # Push Reporting

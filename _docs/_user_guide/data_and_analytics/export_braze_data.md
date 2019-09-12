@@ -1,7 +1,7 @@
 ---
 nav_title: Export Braze Data
-config_only: true
-layout: blank_config
+config_only: false
+layout: featured
 page_order: 6
 ---
 

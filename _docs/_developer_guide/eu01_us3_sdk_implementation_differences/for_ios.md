@@ -1,6 +1,6 @@
 ---
 nav_title: For iOS
-page_order: 5
+page_order: 1
 ---
 
 # For iOS

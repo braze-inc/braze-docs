@@ -1,6 +1,6 @@
 ---
 nav_title: Creating Custom Opt-In Prompts
-page_order: 4
+page_order: 2
 ---
 
 # Creating Custom Opt-In Prompts
