@@ -196,13 +196,7 @@ http {
     }
 
     location ~* \.map$ {
-      add_header         Pragma public;
-      add_header         Cache-Control public;
-      expires            1y;
-      gzip_static        on;
-      gzip               off;
-      log_not_found      off;
-      access_log         off;
+      rewrite (.*)\.map <%= ENV['SITE_URL'] || ''%>/docs/assets/blank.map permanent;
     }
 
   }
