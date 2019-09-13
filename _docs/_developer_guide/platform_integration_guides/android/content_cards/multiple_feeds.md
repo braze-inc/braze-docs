@@ -130,7 +130,6 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 
 This custom feed can be used like any other [`AppboyContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the Dashboard. Each [`AppboyContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
 
-[0000]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/ContentCardsUpdatedEvent.html
