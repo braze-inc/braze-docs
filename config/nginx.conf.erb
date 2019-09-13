@@ -78,7 +78,8 @@ http {
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/transferring_data_to_redshift/$ <%= ENV['SITE_URL'] || ''%>/docs/partners/braze_currents/advanced_topics/transferring_data_to_redshift/ permanent;
     rewrite ^/docs/developer_guide/platform_integration_guides/web/in_app_messaging/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/ permanent;
 
-    rewrite ^/docs/*\.map$ <%= ENV['SITE_URL'] || ''%>/docs/assets/blank.map permanent;
+    rewrite ^/docs/assets/js/*\.map$ <%= ENV['SITE_URL'] || ''%>/docs/assets/blank.map permanent;
+    rewrite ^/docs/assets/css/*\.map$ <%= ENV['SITE_URL'] || ''%>/docs/assets/blank.map permanent;
 
     rewrite ^/documentation$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
     rewrite ^/documentation/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
