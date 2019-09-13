@@ -195,6 +195,9 @@ http {
       proxy_pass http://docs/;
     }
 
+    # Prevent 404 Not Found for javascript/css source maps
+    RewriteCond %{REQUEST_URI}  (\.map)$
+    RewriteRule (.*)  <%= ENV['SITE_URL'] || ''%>/assets/blank.map [QSA]
   }
 
 }
