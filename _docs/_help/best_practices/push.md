@@ -1,5 +1,4 @@
 ---
-config_only: false
 page_order: 2
 nav_title: Push
 layout: featured

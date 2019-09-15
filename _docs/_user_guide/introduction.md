@@ -12,32 +12,32 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: "Canvas: The Basics"
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-    fa_icon: fas fa-paint-brush or fas fa-palette
+    fa_icon: fas fa-paint-brush
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
     fa_icon: fas fa-envelope-open-text
   - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/about/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/
     fa_icon: fas fa-street-view
 
 user_menu_title: "More Articles"
 user_menu_list:
 -   name: Onboarding with Braze
-    link: /docs/user_guide/onboarding_with_braze/overview/
+    link: /docs/user_guide/onboarding_with_braze/
     fa_icon: fas fa-user-graduate
 -   name: Administrative
-    link:
+    link: /docs/user_guide/administrative/
     fa_icon: fas fa-user-circle
 -   name: Data & Analytics
-    link:
+    link: /docs/user_guide/data_and_analytics/
     fa_icon: fas fa-table
 -   name: Engagement Tools
-    link:
+    link: /docs/user_guide/engagement_tools/
     fa_icon: fas fa-chart-pie
 -   name: Message Building by Channel
-    link: /docs/user_guide/message_building_by_channel/overview/
+    link: /docs/user_guide/message_building_by_channel/
     fa_icon: fas fa-sticky-note
 -   name: Personalization & Dynamic Content
-    link: /docs/user_guide/personalization_and_dynamic_content/overview/
+    link: /docs/user_guide/personalization_and_dynamic_content/
     fa_icon: fas fa-palette
 ---

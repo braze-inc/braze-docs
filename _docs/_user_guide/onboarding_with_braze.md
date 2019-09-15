@@ -1,20 +1,40 @@
 ---
+page_order: 0
 nav_title: Onboarding with Braze
-config_only: false
-layout: featured
-page_order: 1
+layout: user_guide
+user_top_header: "Welcome to Braze!"
+user_top_text: "We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze. This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own."
+
+user_featured_title: "Popular Articles"
+
+user_featured_list:
+  - name: Terms to Know
+    link: /docs/user_guide/onboarding_with_braze/terms_to_know/
+    fa_icon: fas fa-sticky-note
+  - name: Integration
+    link: /docs/user_guide/onboarding_with_braze/integration/
+    fa_icon: fas fa-server
+  - name: Learning to Use Braze
+    link: docs/user_guide/onboarding_with_braze/learning_to
+    fa_icon: fas fa-user-graduate
+
+user_menu_title: "More Articles"
+
+user_menu_list:
+  - name: Web SDK
+    link: /docs/user_guide/onboarding_with_braze/web_sdk/
+    fa_icon: fas fa-laptop-code
+  - name: Email Set Up
+    link: /docs/user_guide/onboarding_with_braze/email_setup/
+    fa_icon: fas fa-envelope
+
 ---
-# Welcome to Braze!
-
-We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze.
-
-This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own. By the end of your onboarding, you should feel comfortable with:
+By the end of your onboarding, you should feel comfortable with:
 
 1. Braze terminology,
 2. Working with your engineers to integrate Braze,
 3. Using Braze as a tool to launch your campaigns, and
 4. Setting up and preparing to use email with Braze.
-
 
 You can follow along with this guide, or you can check out [LAB](https://lab.braze.com)! We have courses for you, as well as a [Technical Integration Toolkit](http://lab.braze.com/technical-integration-checklists-and-toolkits) and [Technical Integration Overview](http://lab.braze.com/quick-overview-technical-integration) available for your developers!
 
