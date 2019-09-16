@@ -31,9 +31,16 @@ You can insert tags by typing `{{` in any message, which will trigger an auto-co
 
 If you're using a custom tag, you can copy and paste the tag into whatever message you desire.
 
+{% endraw %}
+
 {% alert note %}
+
 If you choose to use Liquid in your Email messages, be sure to insert it using the HTML editor, as opposed to the classic editor. The Classic Editor may parse the liquid as plaintext.
+
 {% endalert %}
+
+{% raw %}
+
 
 ### Pre-Formatted Variables
 

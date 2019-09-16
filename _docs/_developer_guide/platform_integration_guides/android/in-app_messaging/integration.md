@@ -36,7 +36,7 @@ AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(con
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context);
+AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context)
 ```
 
 {% endtab %}
@@ -126,9 +126,9 @@ public override fun onPause() {
 [27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageBase.html
 [28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageImmersiveBase.html
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
-[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [33]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
-[34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
+[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
 [40]: {{ site.baseurl }}/docs/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
@@ -143,7 +143,7 @@ public override fun onPause() {
 [53]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [54]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#in-app-message-customization
 [55]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#gifs-iams
-[59]: {{ site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#activity-lifecycle-callback-integration-api-14
+[59]: {{ site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
 [60]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values-xlarge/styles.xml
 [65]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestInAppMessageRefresh--

@@ -34,17 +34,17 @@ The Braze UI elements (the feedback form and News Feed) come with a default look
 
 ```xml
   <style name="Appboy"/>
-  <!-- Feedback -->
-  <style name="Appboy.Feedback"/>
-  <style name="Appboy.Feedback.Layout"/>
-  <style name="Appboy.Feedback.NavigationBar">
-    <item name="android:padding">4dp</item>
-    <item name="android:background">@color/com_appboy_feedback_form_navigation_bar_background</item>
+  <!-- Feed -->
+  <style name="Appboy.Feed"/>
+  <style name="Appboy.Feed.List">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:divider">@android:color/transparent</item>
+    <item name="android:dividerHeight">16.0dp</item>
+    <item name="android:paddingLeft">12.5dp</item>
+    <item name="android:paddingRight">5.0dp</item>
+    <item name="android:scrollbarStyle">outsideInset</item>
   </style>
-  <style name="Appboy.Feedback.NavigationBarCancelButton">
-    <item name="android:layout_marginRight">2dp</item>
-    <item name="android:text">@string/com_appboy_feedback_form_cancel</item>
-    <item name="android:textStyle">bold</item>
+  ...
   </style>
 ```
 
@@ -252,19 +252,6 @@ The [Base Card][29] model provides foundational behavior for all cards.
 - `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `getDomain()` - returns the link text for the property url.
 
-#### Cross Promotion Small Card
-[Cross-Promotion Small Cards][34] link to items in the Google Play Store or Kindle Store. In addition to the base card properties:
-
-- `getTitle()` - returns the title text for the card. This will be the promoted item’s name.
-- `getSubtitle()` - returns the text of the category of the promoted item
-- `getImageUrl()` - returns property is the URL of the card’s image.
-- `getPackage()` - reutrns the package name of the promoted item.
-- `getRating()` - returns the rating of the promoted app. This property will be 0.0 unless the promoted item is an app, in which case the rating will be in the range of [0.0, 5.0];
-- `getPrice()` - returns the price of the promoted app.
-- `getReviewCount()` - returns the number of reviews of the promoted app. This property will be 0 unless the promoted item is an app.
-- `getCaption()` - returns the text that will be displayed in the tag on the top of the small cross promotion card.
-- `getUrl()` - returns the url of the promoted item which leads to the item’s App Store page.
-
 ## Adding a Badge
 
 You can request the number of unread cards at any time by calling:
@@ -327,7 +314,6 @@ See the [Javadoc][36] for more information.
 [31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
 [32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
 [33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CrossPromotionSmallCard.html
 [36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras()
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java

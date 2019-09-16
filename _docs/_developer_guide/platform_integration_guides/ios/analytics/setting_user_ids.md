@@ -4,7 +4,7 @@ platform: iOS
 page_order: 1
 search_rank: 5
 ---
-## Setting User IDs
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. A database ID or a hashed email address/username is usually a good reference to use. We __strongly recommend__ providing this identifier as it will allow you to:
 
@@ -16,7 +16,7 @@ User IDs should be set for each of your users. These should be unchanging and ac
 
 >  These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
 
-### Assigning a User ID
+## Assigning a User ID
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
@@ -31,7 +31,7 @@ You should make the following call as soon as the user is identified (generally 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().changeUser("YOUR_USER_ID")
+Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 ```
 
 {% endtab %}
@@ -46,14 +46,14 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 - Also see the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
 
-### Automatic Preservation of Anonymous User History
+## Automatic Preservation of Anonymous User History
 
 | Identification Context | Preservation Behavior |
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
 
-### Additional Notes and Best Practices
+## Additional Notes and Best Practices
 Please note the following:
 
 - __If your app is used by multiple people, you can assign each user a unique identifier to track them.__

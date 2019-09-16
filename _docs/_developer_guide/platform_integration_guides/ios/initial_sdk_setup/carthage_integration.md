@@ -1,7 +1,7 @@
 ---
 nav_title: Carthage Integration
 platform: iOS
-page_order: 1
+page_order: 0
 search_rank: 5
 ---
 
@@ -9,10 +9,16 @@ search_rank: 5
 You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 
 ```
-github "Appboy/Appboy-iOS-SDK" "3.4.0"
+github "Appboy/Appboy-iOS-SDK" "3.15.0"
 ```
 
-Once you've synced the Braze SDK release artifacts (we support Carthage via a zip of release artifacts attached to our Github releases), integrate the `Appboy_iOS_SDK.framework`, `SDWebImage.framework` and `FLAnimatedImage.framework` into your project. Then, in your Application delegate do:
+For further instructions using Carthage, please refer to their [user guide][9] on Github.
+
+Once you've synced the Braze SDK release artifacts (we support Carthage via a zip of release artifacts attached to our Github releases), integrate the `Appboy_iOS_SDK.framework` and `SDWebImage.framework` into your project. Then, in your Application delegate do:
+
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 #import <Appboy_iOS_SDK/AppboyKit.h>
@@ -22,16 +28,32 @@ Once you've synced the Braze SDK release artifacts (we support Carthage via a zi
 // In `application:didFinishLaunchingWithOptions:`
 [Appboy startWithApiKey:@"YOUR-API-KEY"
          inApplication:application
-     withLaunchOptions:launchOptions];
+         withLaunchOptions:launchOptions];
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+import Appboy_iOS_SDK
+
+...
+
+// In `application:didFinishLaunchingWithOptions:`
+Appboy.start(withApiKey: "YOUR-API-KEY",
+              in:application,
+              withLaunchOptions:launchOptions)
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Dependency-Free Integration
-If you want to use SDWebImage and/or FLAnimatedImage in your project along with the Braze SDK, you can install a thin version of the Braze Carthage framework. To do so, include the following lines in your Cartfile:
+If you want to use SDWebImage in your project along with the Braze SDK, you can install a thin version of the Braze Carthage framework. To do so, include the following lines in your Cartfile:
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk.json"
 github "rs/SDWebImage"
-github "Flipboard/FLAnimatedImage"
 ```
 
 ## Core Only Integration
@@ -48,7 +70,8 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
 [6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
+[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-
+[9]: https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos
 [12]: #appboy-podfiles-for-non-64-bit-apps
 [13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"

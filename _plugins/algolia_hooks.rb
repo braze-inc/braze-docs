@@ -30,17 +30,18 @@ module Jekyll
           if record[:html]
             html = Nokogiri::HTML.parse(record[:html])
             html.search('.lineno').remove
-            html = html.text.gsub(/\s+/,' ')[0 ... 4400]
+            html = html.text.gsub(/\s+/,' ').gsub(/[\u0080-\u00ff]/,'')[0 ... 4400]
             record[:html] = html
           end
           if record[:content]
-            record[:content].gsub!(/^\d+\n/,'')
-            record[:content] = record[:content][0 ... 4400]
+            record[:content] = record[:content].gsub(/^\d+\n/,'').gsub(/[\u0080-\u00ff]/,'')[0 ... 4400]
           end
-          # @@logs << record.to_s + "\n"
+          # fix glossary generating algolia record that's too big
+          if record[:glossaries]
+            record.delete(:glossaries)
+          end
           record
         else
-          # @@logs << record.to_s + "\n"
           nil
         end
       end

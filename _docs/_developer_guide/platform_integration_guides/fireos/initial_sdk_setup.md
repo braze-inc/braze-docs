@@ -10,8 +10,6 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 ## Android SDK Integration
 
-Braze is in the process of sunsetting formal support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin][43]. If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
-
 ### Step 1: Integrate the Braze Library
 The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to the [User Guide][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
 
@@ -127,7 +125,7 @@ SDK Endpoint configuration via `appboy.xml` is available starting with Braze And
 ### SDK Integration Complete
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
-Please see the following sections in order to enable [custom event tracking](/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging](/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed](/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite](/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Please see the following sections in order to enable [custom event tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
 ## Test Your Basic Integration
 
@@ -223,7 +221,6 @@ When the build variant is compiled, it will use the new API key.
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [42]: https://developers.google.com/android/guides/setup
-[43]: http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html "Sunsetting ADT Eclipse Plugin"
 [45]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle#L4
 [46]: https://developer.android.com/training/permissions/index.html
 [47]: https://android.googlesource.com/platform/sdk/+/master/files/proguard-android.txt

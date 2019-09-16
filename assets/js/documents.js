@@ -253,7 +253,7 @@ $(document).ready(function() {
 
           if ('content' in suggestion._highlightResult){
             if ('value' in suggestion._highlightResult.content){
-              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ');
+              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ').replace(/<(.|\n)*?>/g, '');
             }
           }
           if (content.length > 400) {
@@ -333,16 +333,25 @@ $(document).ready(function() {
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+
      if ($(this).has('img').length > 0) {
        if ($(this).has('img')[0].childNodes.length > 0) {
-         tofilter = false
+         tofilter = false;
        }
+     }
+     else if ($(this).has('div').length >0 ) {
+        tofilter = false;
      }
      return tofilter
   }).after(' <i class="fas fa-external-link-alt"></i>')
   $('.highlight .highlight .rouge-code pre').each(function(k) {
-    if ($(this).html().length > 120) {
-      $(this).css('min-height','36px');
+    $this = $(this);
+    if ($this.html().length > 120) {
+      $this.css('min-height','36px');
+    }
+    var lines = $this.text().split("\n");
+    if (lines.length <= 2) {
+      $this.addClass('prewrap');
     }
   });
 });

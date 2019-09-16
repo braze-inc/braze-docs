@@ -7,22 +7,6 @@ search_rank: 5
 
 # In-App Messages
 
-__In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
-
-To see examples of in-app messages, check out our [Client Integration Gallery][31].
-
-{% comment %}
-Embed video on the right. Demos all of the topics mentioned on this page.
-{% endcomment %}
-
-{% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/generations/)!
-{% endalert %}
-
-[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
-
-By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. Note that if you did not integrate SDWebImage, in-app messages with images will not work.
-
 ## When to Use In-App Messages
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
@@ -41,6 +25,10 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 - Encouraging and rewarding discovery
 - [Permission Requests/Push Priming][30]
 
+To see examples of in-app messages, check out our [Client Integration Gallery][31].
+
+[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
+
 ## In-App Message Types
 Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display and delivery.
 
@@ -55,7 +43,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% tabs %}
   {% tab Slideup %}
 
-  [`Slideup`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_slideup.html)in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
+  [`Slideup`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
   <br>
 
@@ -66,7 +54,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Modal %}
 
-[`Modal`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_modal.html)in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
+[`Modal`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_modal.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
 
  <br>
 
@@ -77,7 +65,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Full Screen %}
 
-[`Full`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_full.html)in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
+[`Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_full.html) in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
 
 <br>
 
@@ -88,13 +76,15 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML Full`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `UIWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+[`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 The following example shows a paginated HTML Full in-app message:
 
 ![HTML5 Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
-> Full in-app message content is displayed in a UIWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
+> Full in-app message content is displayed in a WKWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
+
+> **Starting in iOS SDK version 3.19.0, the following javascript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.**
 
 {% endtab %}
 {% endtabs %}
@@ -113,7 +103,7 @@ The following example shows a paginated HTML Full in-app message:
 [11]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [12]: {% image_buster /assets/img_archive/HTML5.gif %}
 [13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#original-in-app-messages
+[14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
 [15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
@@ -123,4 +113,4 @@ The following example shows a paginated HTML Full in-app message:
 [25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
+[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/

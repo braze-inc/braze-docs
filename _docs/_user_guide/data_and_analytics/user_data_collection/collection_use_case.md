@@ -50,4 +50,8 @@ Adding these attributes would afford you the ability to send campaigns to users 
 2. Use our [message templating and personalization features][13] to drag the unique promo code attribute into messaging directed at users.
 
 
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
+
 [13]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

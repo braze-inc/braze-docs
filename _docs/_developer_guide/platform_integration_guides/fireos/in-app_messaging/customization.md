@@ -95,7 +95,7 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 ##### Step 2: Instruct Braze to use your In-App Message Manager Listener
 
-Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
 
 >  We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
@@ -130,7 +130,7 @@ See [`InAppMessageOperation.java`][45] for more details.
 
 On Android, this is done by calling `logClick` and `logImpression` on in-app messages, and `logButtonClick` on immersive in-app messages.
 
->  Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.requestDisplayInAppMessage()`][67]. Calling this method requests Braze to display the next available in-app message from the stack.
+>  Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`][67]. Calling this method requests Braze to display the next available in-app message from the stack.
 
 #### Setting a Custom View Factory
 
@@ -144,7 +144,7 @@ Create a class that implements [`IInAppMessageViewFactory`][42]
 
 ##### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
 >  We recommend setting your `IInAppMessageViewFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
@@ -171,7 +171,7 @@ Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
 ##### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
 >  We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
@@ -231,7 +231,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageBase.html
 [28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageImmersiveBase.html
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
-[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html

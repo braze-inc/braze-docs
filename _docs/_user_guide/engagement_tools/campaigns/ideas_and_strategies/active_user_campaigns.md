@@ -18,12 +18,16 @@ Using Braze's selection of filters, create a user segment that you feel encompas
 
 Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
 
->  The example above segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
+{% alert note %}
+The example above segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
+{% endalert %}
 
 ## Step 2: Reach Out to Your Top Users
 
 ### Make Your Users Feel Appreciated
-Make your users feel appreciated by thanking them for their loyalty and dedication to your app. To encourage further activity, give your users more reasons to keep coming back to your app. This can take the form of special deals or bonuses exclusively for your top users. Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
+Make your users feel appreciated by thanking them for their loyalty and dedication to your app. Give your users more reasons to keep coming back to your app to encourage further activity. This can take the form of special deals or bonuses exclusively for your top users. 
+
+Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
 
 ![Congrats Push][2]
 

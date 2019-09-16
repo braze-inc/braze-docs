@@ -89,7 +89,38 @@ Like other campaigns, Braze tracks the delivery of your webhook campaigns and co
 
 When retrying, Braze will make 5 attempts using exponential backoff for a period of approximately 30 minutes before aborting the individual webhook call.
 
-Each webhook, or batch of webhooks, is allowed 120 seconds before it times out.
+Each webhook is allowed 90 seconds before it times out.
+
+## IP Whitelisting
+
+When a Webhook is sent from Braze, the Braze servers make network requests to our customers’ or third parties’ servers.
+
+With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
+
+Braze will send Webhooks from the IP ranges below.
+
+{% alert important %}
+  If you’re making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
+{% endalert %}
+
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
+|---|
+| `127.0.0.1`
+| `23.21.118.191`
+| `34.206.23.173`
+| `50.16.249.9`
+| `52.4.160.214`
+| `54.87.8.34`
+| `54.156.35.251`
+| `52.54.89.238`
+| `18.205.178.15`
+
+| For Instance `EU-01`: |
+|---|
+| `127.0.0.1`
+| `52.58.142.242`
+| `52.29.193.121`
+| `35.158.29.228`
 
 # Utilizing Webhooks
 

@@ -21,7 +21,10 @@ __Note:__ If a session closes while the user has the app backgrounded, that data
 {% if include.platform != "Windows" %}
 ### Customizing Session Timeout
 
-{% if include.platform == "iOS" %}To customize the session timeout, set the [`ABKSessionTimeoutKey`][session_tracking_2] so that the value is a number of seconds in the Braze initialization method [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][session_tracking_1].
+{% if include.platform == "iOS" %}
+Starting with Braze iOS SDK v3.14.1, you can set the session timeout using the Info.plist file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `SessionTimeout` number subentry and set the value to your custom session timeout.
+
+To customize the session timeout in versions prior to v3.14.1, set the [`ABKSessionTimeoutKey`][session_tracking_2] so that the value is a number of seconds in the Braze initialization method [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][session_tracking_1].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -82,4 +85,4 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
 [session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#step-4-tracking-user-sessions-in-android
+[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

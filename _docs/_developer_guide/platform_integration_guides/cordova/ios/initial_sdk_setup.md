@@ -39,9 +39,29 @@ In your config.xml, add a `preference` element under the iOS `platform` element 
 
 Set up your applications to have the appropriate certificates for push, via the [iOS push documentation][2].
 
-#### Removing Automatic Push Setup (iOS)
+#### Removing Automatic Push Setup
 
-If you want to turn off iOS automatic push registration, add the preference `com.appboy.ios_disable_automatic_push_registration` with a value of `true`.
+If you want to turn off iOS automatic push registration, set the preference `com.appboy.ios_disable_automatic_push_registration` to `YES` in your `config.xml` project file.
+
+```
+<platform name="ios">
+    <preference name="com.appboy.ios_disable_automatic_push_registration" value="YES" />
+    ...
+</platform>
+```
+
+#### Optional IDFA Collection
+
+To enable the automatic collection of the iOS IDFA, set the preference `com.appboy.ios_enable_idfa_automatic_collection` to `YES` in your `config.xml` project file.
+
+```
+<platform name="ios">
+    <preference name="com.appboy.ios_enable_idfa_automatic_collection" value="YES" />
+    ...
+</platform>
+```
+
+> Please see the [iOS IDFA][3] documentation for more information.
 
 ### Initial Setup Complete
 
@@ -49,3 +69,4 @@ Once the initial setup is complete, you can access the `AppboyPlugin` javascript
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection

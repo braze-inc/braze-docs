@@ -12,4 +12,4 @@ Want more on this new feature? [Check out our LAB course on the Entry Wizard her
 
 ### In-App Message Web Modal CSS
 
-The [Web Modal CSS editor]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#web-modal-css) has been updated and allows you more control over the look of your In-App Messages with our new [CSS Templates]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/#css-template).
+The [Web Modal CSS editor]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#web-modal-css) has been updated and allows you more control over the look of your In-App Messages with our new [CSS Templates]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/#css-template).

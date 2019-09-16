@@ -80,6 +80,7 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IInAppMessageManagerListener`][21] - Implement to [custom manage in-app message display and behavior](#setting-a-custom-manager-listener).
 - [`IInAppMessageViewFactory`][42] - Implement to [build custom in-app message views](#setting-a-custom-view-factory).
 - [`IInAppMessageAnimationFactory`][20] - Implement to [define custom in-app message animations](#setting-a-custom-animation-factory).
+- [`IHtmlInAppMessageActionListener`][86] - Implement to [custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener).
 
 ### Setting a Custom Manager Listener
 
@@ -99,7 +100,7 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 #### Step 2: Instruct Braze to use your In-App Message Manager Listener
 
-Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
 
 We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
@@ -153,7 +154,7 @@ If you choose to `DISCARD` the in-app message and replace it with your own in-ap
 On Android, this is done by calling `logClick` and `logImpression` on in-app messages, and `logButtonClick` on immersive in-app messages.
 
 {% alert tip %}
-Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
+Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
 
 ## Setting a Custom View Factory
@@ -168,7 +169,7 @@ Create a class that implements [`IInAppMessageViewFactory`][42]
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
 {% alert tip %}
@@ -197,12 +198,121 @@ Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
-Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
+Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
 We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
 
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
+
+## Setting a Custom HTML In-App Message Action Listener
+
+The Braze SDK has a default `AppboyDefaultHtmlInAppMessageActionListener` class that is used if no custom listener is defined and takes appropriate action automatically. If you require more control over how a user interacts with different buttons inside a custom HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
+
+### Step 1: Implement a Custom HTML In-App Message Action Listener
+
+Create a class that implements [`IHtmlInAppMessageActionListener`][86].
+
+The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever user initiates any of the following actions inside HTML in-app message:
+- Clicks on close button.
+- Clicks on news feed button.
+- Fires a custom event.
+- Clicks on a URL inside HTML in-app message.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageActionListener {
+  private final Context mContext;
+
+  public CustomHtmlInAppMessageActionListener(Context context) {
+    mContext = context;
+  }
+
+  @Override
+  public void onCloseClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show();
+    AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+  }
+
+  @Override
+  public boolean onCustomEventFired(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show();
+    return true;
+  }
+
+  @Override
+  public boolean onNewsfeedClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show();
+    AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+    return true;
+  }
+
+  @Override
+  public boolean onOtherUrlAction(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
+    AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+    return true;
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtmlInAppMessageActionListener {
+
+    override fun onCloseClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle) {
+        Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show()
+        AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+    }
+
+    override fun onCustomEventFired(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show()
+        return true
+    }
+
+    override fun onNewsfeedClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show()
+        AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+        return true
+    }
+
+    override fun onOtherUrlAction(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Custom url pressed: $url . Ignoring", Toast.LENGTH_LONG).show()
+        AppboyInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+        return true
+    }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Instruct Braze to use your HTML In-App Message Action Listener
+
+Once your `IHtmlInAppMessageActionListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` to instruct `AppboyInAppMessageManager` to use your custom `IHtmlInAppMessageActionListener` instead of the default action listener.
+
+We recommend setting your `IHtmlInAppMessageActionListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom action listener is set before any in-app message is displayed.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(new CustomHtmlInAppMessageActionListener(context));
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(new CustomHtmlInAppMessageActionListener(context))
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Setting Fixed Orientation
 
@@ -272,7 +382,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageBase.html
 [28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageImmersiveBase.html
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
-[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [33]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
@@ -311,3 +421,4 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [85]: https://developer.android.com/guide/topics/ui/dialogs.html
+[86]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.java

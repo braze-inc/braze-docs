@@ -1,6 +1,6 @@
 ---
 nav_title: Creating a Formula
-page_order: 1
+page_order: 1.2
 ---
 # Creating a Formula
 

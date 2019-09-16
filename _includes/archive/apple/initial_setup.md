@@ -76,10 +76,10 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
-{% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
+{% if include.platform == 'iOS' %}import Appboy_iOS_SDK{% else %}import AppboyTVOSKit{% endif %}
 ```
 
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs][apple_initial_setup_19].
+For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
@@ -103,31 +103,23 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 
 ### Step 5: Specify Your Custom Endpoint or Data Cluster
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).]
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url's authority (e.g. `sdk.iad-01.braze.com`, *not* `https://sdk.iad-01.braze.com`).
+#### Compile-time Endpoint Configuration (Recommended)
 
-In versions prior to 3.0.2, add the following class to your application, and then instantiate it and pass it in the `appboyOptions` dictionary you pass to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` with the key: `ABKAppboyEndpointDelegateKey`
+Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
-```
-#import "Foundation/Foundation.h"
-#import "ABKAppboyEndpointDelegate.h"
+#### Runtime Endpoint Configuration
 
-@interface AppboyEndpointDelegate : NSObject <ABKAppboyEndpointDelegate>
-@end
+Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
-@implementation AppboyEndpointDelegate
-- (NSString *) getApiEndpoint:(NSString *)appboyApiEndpoint {
-    return [appboyApiEndpoint stringByReplacingOccurrencesOfString:@"dev.appboy.com" withString:@"YOUR_CUSTOM_ENDPOINT_OR_DATA_CLUSTER"];
-}
-
-@end
-```
+{% alert note %}
+Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has been removed in Braze iOS SDK v3.17.0. If you already use `ABKAppboyEndpointDelegate`, note that in Braze iOS SDK versions v3.14.1 to v3.16.0, any reference to `dev.appboy.com` in your `getApiEndpoint()` method must be replaced with a reference to `sdk.iad-01.braze.com`.
+{% endalert %}
 
 {% alert important %}
 To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
-
 
 #### Implementation Example
 

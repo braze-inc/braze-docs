@@ -18,7 +18,7 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 
 ## Dashboard/UI
 
-The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics or feedback. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
+The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
 ## Data API
 
@@ -41,7 +41,7 @@ Once you have defined a segment, Braze's messaging tools allow for multi-channel
 
 ### News Feed {#platform-features-news-feed}
 
-When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items and Cross-Promotions cards that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
+When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
 
 - Braze will track how many clicks and impressions each card in the News Feed receives
 - You can schedule a specific time-frame when cards will display, allowing for deep [dayparting][4]
@@ -51,23 +51,15 @@ When your app opens, the Braze SDK automatically pulls down the user's News Feed
 
 ![News Feed Dashboard][6]
 
-#### Cross Promotion Cards
-
-Cross-Promotions are a type of News Feed card which display content from the App Store or Google Play that you have recommended to users.  Cross-promotions are a wonderful way to leverage your user data to accelerate the adoption of other content within your network by moving audiences from one of your apps to another.
-
-- Touching a Cross-Promotion will bring users to the relevant store so that they can download the content
-- Users will only see Cross-Promotions for their device's platform in the News Feed
-- In iOS, you may recommend books, music, or other content available in the App Store in addition to apps
-
 ### Push Notifications {#platform-features-push}
 
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns, news items, and replying to user feedback.
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns, and news items.
 
 ![Example Push Dashboard][8]
 
 ### In-App Messaging {#platform-features-in-app-messaging}
 
-Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. See our academy section on [creating an in-app message][13] for more details.
+Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message here][13].
 
 ![IAM Example][9]
 
@@ -83,15 +75,6 @@ Braze's webhooks allow you to trigger non-app actions such as SMS text message d
 
 ![Webhooks][22]
 
-### Feedback {#platform-features-feedback}
-
- The Braze SDK provides a feedback widget that can be added to your app to allow users to leave feedback. Feedback is managed on the dashboard, where you can add internal notes and respond to users via multiple messaging channels. We show the user's Braze profile side-by-side with their feedback so you can easily see the user's device, OS version, app version, and behavioral data. This minimizes the work your support team has to do to understand technical issues.
-
- {% alert warning %}
-This feature is [set to be deprecated]({{ site.baseurl }}/help/release_notes/deprecations/#feedback) on July 1, 2019.
-  {% endalert %}
-
-
 
 
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Segmentation Example"
@@ -103,4 +86,4 @@ This feature is [set to be deprecated]({{ site.baseurl }}/help/release_notes/dep
 [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
 [10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"
 [22]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
-[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message

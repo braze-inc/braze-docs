@@ -58,7 +58,7 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
-// Push Notification Open: users.messages.pushnotification.IosForeground
+// Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
@@ -115,7 +115,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 // Email Open: users.messages.email.Open
 // Email Click: users.messages.email.Click
 // Email Bounce: users.messages.email.Bounce
-// Email Bounce: users.messages.email.SoftBounce
+// Email Soft Bounce: users.messages.email.SoftBounce
 // Email Mark As Spam: users.messages.email.MarkAsSpam
 // Email Unsubscribe: users.messages.email.Unsubscribe
 {
@@ -132,10 +132,51 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+}
+```
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
+{% enddetails %}
+
+
+{% details SUBSCRIPTION EVENTS %}
+
+Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
+
+{% alert important %}
+Subscription groups are only available for email at this time.
+{% endalert %}
+
+```json
+// Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
+// Note that subscription groups are only available for email at this time.
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "email_address": (string) email address for this event,
+  "subscription_group_id": (string) id of the subscription group,
+  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }
 ```
 {% enddetails %}
@@ -217,6 +258,61 @@ Data accumulates when a Webhook is sent. Use this data to track when webhooks ar
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
 ```
+{% enddetails %}
+
+
+{% details CONTENT CARD EVENTS %}
+
+Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+
+```json
+// Content Card Send: users.messages.contentcard.Send
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "content_card_id": (string) id of the content card that was sent,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "device_id": (string) id of the device on which the event occurred
+}
+```
+
+```json
+// Content Card Impression: users.messages.contentcard.Impression
+// Content Card Click: users.messages.contentcard.Click
+// Content Card Dismiss: users.messages.contentcard.Dismiss
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "app_id": (string) id for the app on which the user action occurred,
+  "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "os_version": (string) os version of device used for the action,
+  "device_model": (string) hardware model of the device,
+  "device_id": (string) id of the device on which the event occurred
+}
+```
+
 {% enddetails %}
 
 
@@ -321,6 +417,7 @@ Data accumulates when your users enter a Canvas. You can use this data to track 
   "canvas_id": (string) id of the Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
+  "canvas_step_id": (string) id of the step the user entered into,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```

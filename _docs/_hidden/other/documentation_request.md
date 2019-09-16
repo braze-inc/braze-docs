@@ -357,10 +357,10 @@ hide_toc: true
                   rows="7"></textarea>
               </div>
 
-              <div class="form-group" id="doc_completion_date_div">
+              <!-- div class="form-group" id="doc_completion_date_div">
                 <label for="doc_completion_date" id="doc_completion_date_label">    * When should this be done by.</label>
                 <input type="date" name="Completion_Date" id="doc_completion_date" required="required" value="" placeholder="There is no guarantee that your request will be done by this date." class="form-control" />
-              </div>
+              </div -->
               <div class="form-group">
 
                 <label for="doc_resources" id="doc_resources_label">   * Please link to relevant sites or other resources. </label>

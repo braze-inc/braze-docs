@@ -4,16 +4,15 @@ page_order: 1
 ---
 
 # SDK Endpoints
-If your company was set up with a custom endpoint, please reach out to your Customer Onboarding Manager or [open a support ticket][support]. If not, please follow the table below.
 
 |Instance | SDK Endpoint
 |---|---|
-|US-01 | https://sdk.iad-01.braze.com |
-|US-02 | https://sdk.iad-02.braze.com |
-|US-03 | https://sdk.iad-03.braze.com |
-|US-04 | https://sdk.iad-04.braze.com |
-|US-06 | https://sdk.iad-06.braze.com |
-|EU-01 | http://sdk.fra-01.braze.eu |
+|US-01 | sdk.iad-01.braze.com |
+|US-02 | sdk.iad-02.braze.com |
+|US-03 | sdk.iad-03.braze.com |
+|US-04 | sdk.iad-04.braze.com |
+|US-06 | sdk.iad-06.braze.com |
+|EU-01 | sdk.fra-01.braze.eu |
 
 ## Software Development Kit (SDK) File Sizes
 

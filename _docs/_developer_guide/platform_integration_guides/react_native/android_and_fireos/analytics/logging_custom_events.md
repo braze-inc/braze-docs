@@ -6,7 +6,7 @@ page_order: 1
 ---
 ## Logging Custom Events
 
-See [the Android integration instructions][1] for in depth discussion of event tracking best practices and interfaces.
+See [the Android integration instructions][1] for in depth discussion of event tracking best practices and interfaces. You should also check out our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ```javascript
 var properties = {};

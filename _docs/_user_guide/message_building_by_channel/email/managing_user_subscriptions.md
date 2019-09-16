@@ -34,7 +34,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a Group
 
-Create a Subscription Group by going to Subscription Groups in the left navigation, then clicking the `+ Create Subscription Group` button. Then, name and describe your group.
+Create a Subscription Group by going to __Subscription Groups__ in the left navigation, then clicking the `+ Create Subscription Group` button. Then, name and describe your group.
 
 ![Create a Subscription Group][26]{: height="50%" width="50%"}
 
@@ -42,9 +42,13 @@ Use that name as a filter when creating your segments to ensure that only those 
 
 ![Use a Subscription Group][27]{: height="70%" width="70%"}
 
-{% alert warning %}
-You cannot delete or archive subscription groups.
-{% endalert %}
+#### Archiving Groups
+
+Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
+
+Archive your Group by going to __Subscription Groups__ in the left navigation; then, find your group in the list. Then, click the gear and select `Archive` from the dropdown menu.
+
+We will not process any state changes for users in these groups. If you archive the Subscription Group A while Susie is considered `subscribed` to it, she will remain "`subscribed`" to this group, even though she has clicked an unsubscribe link (this shouldn't matter to Susie, Subscription Group A is archived and you can't send any messages using it.)
 
 #### Export User Subscription State Changes
 
@@ -143,9 +147,11 @@ You can also choose to set a custom footer for plaintext emails, which follows t
 #### Custom Unsubscribe Landing Page
 When a user clicks on an unsubscribe url in an email, they are taken to a default landing page that confirms the change to their subscription.
 
-Optionally, you may provide HTML for your own custom landing page, which users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the ["App Settings - Email"][10] page. We recommend including a resubscribe link (i.e. {{${set_user_to_subscribed_url}}} ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+Optionally, you may provide HTML for your own custom landing page, which users will be directed to (instead of the default page) upon unsubscribing. This feature is available on the ["App Settings - Email"][10] page.
 
-![Custom ReSubscribe][11]
+We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
+
+![Custom Unsubscribe][11]
 
 ### Changing Push Subscriptions {#changing-push-subscriptions}
 Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
@@ -189,7 +195,7 @@ This can be useful - for example, if you want to target users who have neither o
 [7]: #segmenting-by-user-subscriptions
 [8]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
 [10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
-[11]: {% image_buster /assets/img_archive/custom_resubscribe.png %}
+[11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [14]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/#managing-notification-subscription-statuses

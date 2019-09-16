@@ -5,22 +5,9 @@ page_order: 7
 
 # Reporting & Analytics {#IAM-Reporting}
 
-
 ## In-App Message Analytics Glossary
 
-In reporting for in-app messages, you'll see various reports on the following metrics.
-
-| Metric | Definition |
-|---|---|
-| Sends | The total number of messages sent in this campaign.
-| Total Impressions | The number of users whose devices reported that the in-app message has been delivered (if you receive it twice, you will be counted as twice).
-| Unique Impressions | The total number of people who actually received and viewed the in-app message (if you receive it twice, you will be only counted as one user). |
-| Unique Recipients | Exact number of users who received a particular message.
-| Total Conversions | The total number of times every defined event occurred. This defined event is determined by the marketer when building the campaign. |
-| Primary Conversion Event | The number of times a defined event occurred. This defined event is determined by the marketer when building the campaign. |
-| Revenue | The total revenue in dollars from campaign recipients within the set primary conversion window. |
-| Body Clicks| Occurs when someone clicks on a slideup, modal, or full-screen in-app message that has no buttons. |
-| Button Clicks | Total number of clicks on a certain button of the message. |
+To see the meanings of all in-app message metrics, check the [Metrics Glossary][1].
 
 {% comment %}
 Reporting in Canvas
@@ -71,3 +58,5 @@ This block allows you to see the message's performance over a set time period on
 {% comment %}
 If you select to only sent to users who can see the latest Braze version of in-app messages (Generation 3), your Target Audience will not adjust to reflect your choice.
 {% endcomment %}
+
+[1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/

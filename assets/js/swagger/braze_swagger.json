@@ -1644,10 +1644,10 @@
           "User Data"
         ],
         "summary": "User Delete Example",
-        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_id\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
+        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
         "operationId": "UserDeleteExample",
         "requestBody": {
-          "description": "Exports the details about the user with the specified external ID",
+          "description": "Exports the details about the user with the specified external ID.",
           "required": true,
           "content": {
             "application/json": {
@@ -1731,7 +1731,7 @@
           {
             "name": "external_id",
             "in": "query",
-            "description": "The External Id (`external_id`) of the user.",
+            "description": "The External Id (`external_id`) of the user (must include at least one and at most 50 `external_ids`).",
             "required": true,
             "style": "form",
             "explode": true,
@@ -1827,7 +1827,7 @@
           {
             "name": "external_id",
             "in": "query",
-            "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email` is required.",
+            "description": "The External Id (`external_id`) of the user (must include at least one and at most 50 `external_ids`). Either the user's `external_id` or the `email` is required.",
             "required": false,
             "style": "form",
             "explode": true,
@@ -1840,7 +1840,7 @@
           {
             "name": "email",
             "in": "query",
-            "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email` is required.",
+            "description": "The email address of the user; must include at least one address and at most 50 addresses. Either the user's `external_id` or the `email` is required.",
             "required": false,
             "style": "form",
             "explode": true,
@@ -2883,7 +2883,7 @@
         },
         "email": {
           "type": "string",
-          "description": "The email address of the user; must include at least one address and at most 100 addresses. Either the user's `external_id` or the `email` is required.",
+          "description": "The email address of the user; must include at least one address and at most 50 addresses. Either the user's `external_id` or the `email` is required.",
           "example": "your.user@email.com"
         }
       }

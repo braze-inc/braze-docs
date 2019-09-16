@@ -6,13 +6,14 @@
    {% noindex {{ page.path }} %}
   <link rel="icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon.ico" sizes="160x160">
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{{ page.id | slice: 1,page.id.size | replace: '/', ' ' | replace: '_', ' ' }} {% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
-  <meta name="keywords" content="braze, docs, documentation, appboy, academy">
+  <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
 
 <link href="{{site.baseurl}}/assets/css/bootstrap.css" rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc.css"/>
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
 <!-- link rel="stylesheet" href="//use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" -->
@@ -25,11 +26,11 @@
 
 {% include analytics.html %}
 
+<link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css"/>
+
 {% css_asset_tag global %}
 - /assets/css/application.scss
 {% endcss_asset_tag %}
-
-
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 
@@ -50,6 +51,8 @@
 - /assets/js/contentcards.js
 {% endjavascript_asset_tag %}
 
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
+
 
 <script type="text/javascript">
   var client = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
@@ -58,6 +61,17 @@
   var base_url = '{{site.baseurl}}';
 
   var toc_minheaders = {{ page.toc_minheaders }};
+
+
+  navigator.serviceWorker.getRegistrations().then(
+    function(registrations) {
+      for(let registration of registrations) {
+        if (registration['scope'] == 'https://www.braze.com/docs/') {
+          registration.unregister();
+        }
+      }
+    }
+  );
 </script>
 
 

@@ -10,8 +10,6 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 ## Android SDK Integration
 
-Braze is in the process of sunsetting formal support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin][43]. If you need assistance with your Eclipse integration prior to migration, please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
-
 ### Step 1: Integrate the Braze Library
 The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
 
@@ -72,6 +70,10 @@ Now that the libraries have been integrated, you have to create an `appboy.xml` 
 </resources>
 ```
 
+**Implementation Example**
+
+See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+
 ### Step 3: Add Required Permissions to Android Manifest
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml`:
 
@@ -84,7 +86,7 @@ Now that you've added your API key, you need to add the following permissions to
 
 **Implementation Example**
 
-See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementation example.
 
 ### Step 4: Tracking User Sessions in Android
 
@@ -144,7 +146,7 @@ The SDK Endpoint configuration via `appboy.xml` is available starting with __Bra
 
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
-Please see the following sections in order to enable [custom event tracking](/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging](/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed](/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite](/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Please see the following sections in order to enable [custom event tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/customization/#news-feed-customization
 [2]: {{ site.baseurl }}/user_guide/introduction/
@@ -165,7 +167,6 @@ Please see the following sections in order to enable [custom event tracking](/de
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [42]: https://developers.google.com/android/guides/setup
-[43]: http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html "Sunsetting ADT Eclipse Plugin"
 [45]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle#L4
 [46]: https://developer.android.com/training/permissions/index.html
 [47]: https://android.googlesource.com/platform/sdk/+/master/files/proguard-android.txt
@@ -187,3 +188,4 @@ Please see the following sections in order to enable [custom event tracking](/de
 [66]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/
 [67]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{ site.baseurl }}/support_contact/
+[69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml

@@ -54,17 +54,17 @@ You must first define one of the custom attributes as a variable and then perfor
 
 ## E-Commerce
 
-If you're updating a user on their purchase, an account balance, or anything regarding money, you can use [money filters][11] to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end). See the example below:
+If you're updating a user on their purchase, an account balance, or anything regarding money, you can use [money filters][11] to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
 ```liquid
-${{custom_attribute.${account_balance}  | money}}
+${{custom_attribute.${account_balance} | money}}
 ```
 
-As you can see, there are risks associated with leaving these money filters out.
+In the event you are importing a custom attribute (like `account_balance`), you should always use the money filter to ensure that your decimals are in the proper place and `0`s are not dropped off the end of any numbers, as shown below.
 
 | With the Money Filter | Without the Money Filter |
 |---|---|
-|![With Filter][1] | ![Without Filter][2] |
+|![With Filter][1] <br> <br> Where `account_balance` is input as `17.8`. | ![Without Filter][2] <br> <br> Where `account_balance` is input as `17.8`.|
 
 ## String Filters
 
@@ -86,14 +86,14 @@ The filter `{{custom_attribute.${my_array} | first}}` will yield the most recent
 
 Date filters can be used to convert a timestamp into a different date format. Let's say that the value of `date_attribute` is the timestamp 2015-06-03 17:13:41 UTC.
 
-The filter `{{custom_attribute.${date_attribute} | date: "%b","%d"}}` will reformat this timestamp to "03 June". There are many other date formatting options which you can find [here][24].
+The filter `{{custom_attribute.${date_attribute} | date: '%b','d'}}` will reformat this timestamp to "03 June". There are many other date formatting options which you can find [here][24].
 
 In addition to these formatting options, we also support converting a timestamp to Unix time with the ``%s` date filter.
 
 For example, to get the `date_attribute` in Unix time, you'd input the following and get the integer `1433351621` as an output:
 
 ```liquid
-{{custom_attribute.${date_attribute} | date: "%s"  }}
+{{custom_attribute.${date_attribute} | date: '%s'  }}
 ```
 
 In addition to the filters that you'll find listed in Shopify's documentation, we also support the "time_zone" filter.

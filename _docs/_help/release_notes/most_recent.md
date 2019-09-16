@@ -5,77 +5,153 @@ page_order: 0
 
 # Most Recent Braze Release Notes
 
-_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]._
+_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
-## March 2019
 
-### In-App Messages - Generation 3
+## September 2019
 
-Braze is proud to announce that we have made improvements to the look and feel of our in-app messages to adhere to the latest UX and UI best practices. In the newest in-app messages, you can expect your users to interact with messages with
-- larger font sizes,
-- refined spacing,
-- a new close `x` asset,
-- improved responsive behavior for all message types to better fit viewports of all sizes, and
-- button borders to help you create custom contrasts between buttons.
+### Canvas Changelogs
 
-Our [new in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
+Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
 
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
 
-#### What You Need to Do
+{% alert update %}
+More updates for September to come later this month!
+{% endalert %}
 
-We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/), and [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
+## August 2019
 
-After that, you're good to go!
+### Campaign Details in Reports
 
-### Content Blocks Archive Update
+Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
-You can now archive and unarchive Content Blocks. Learn more in our main [Content Blocks documentation]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks).
+![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
 
-### Inkit Partner Addition
+### New Email Content Block API Endpoints
 
-You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Webhook Template or create a new Webhook Campaign.
+You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
 
-### Google Cloud Storage
+{% alert update %}
+This feature is temporarily in limited availability. Please reach out to your Braze account manager for more information.
+{% endalert %}
 
-Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
+### Custom Email Unsubscribe Landing Page Update
 
-## February 2019
+The default [custom Email Unsubscribe page]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
 
-### Email Subscription Groups
+### iOS SDK - Notched Phone Support Improvement
 
-[Subscription Groups]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) are segment filters that can further narrow your audience from the [Global Subscription States]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) above. These Groups offer the ability to present more granular subscription options to end users.
+Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
 
-For example, if you send out multiple categories of email campaigns, you can offer your customers the option to subscribe or unsubscribe from those groups in bulk from a single page, using our [Email Preference Center](#email-preference-center).
+You won't see many updates in the Docs reflecting this change just yet - but they're on the way!
 
-Use the [Subscription Group REST APIs]({{ site.baseurl }}/developer_guide/rest_api/subscription_group_api/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the Subscription Group page.
 
-### Email Preference Center
+## July 2019
 
-The [Email Preference Center]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
+{% alert update %}
+Braze had two (you read that right - **two**) product release cycles this month! The latest release is noted at the top, the earlier one [starts further down this page](#earlier-this-month)!
+{% endalert %}
 
-## January 2019
+### SAML/SSO
 
-Welcome to a new year!
+[Single Sign On (SSO)]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
 
-### Push Time to Live (TTL)
+In addition to [Google Sign-In using OAuth 2.0 support](https://developers.google.com/identity/protocols/OAuth2), companies would like SSO with Security Assertion Markup Language (SAML) support. This enables them to seamlessly integrate with large identity providers (IdPs), including [Azure Active Directory]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) and [Okta]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/okta/), which support the latest industry standards (SAML 2.0).
 
-In your account, within __Manage App Group__, click the [Push TTL Settings]({{ site.baseurl }}/user_guide/administrative/app_settings/push_ttl_settings/) tab to manage the time duration for attempted resends in the event that a device is offline.
+Braze supports:
+- [OneLogin]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
+- [Azure Active Directory]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
+- [Okta]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
-### Connected Content IP Whitelisting
+### Adjust Event API Key Shows
 
-Braze is pleased to announce that due to a number of infrastructure upgrades made by our internal teams, we can now offer IP whitelisting for Connected Content on all clusters. In the future, we plan to add additional IPs for the non-EU clusters.
+We have updated Adjust's partner page to make this API key accessible to customers.
 
-### Canvas Delay
+![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
 
-We have added the option for any Canvas step to be sent __immediately__.
+### New Partners
 
-![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
+Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
+- [FiveTran]({{ site.baseurl }}/partners/fivetran/)
+- [Talon.One]({{ site.baseurl }}/partners/talonone/)
+- [Voucherify]({{ site.baseurl }}/partners/voucherify/)
 
-### Adjust (Technology Partner) REST Endpoint Field Update
+### Campaign Details Improvement
 
-With our updated integration with [Adjust]({{ site.baseurl }}/partners/adjust/), Braze customers will only need to add their rest endpoint from the Adjust partner spotlight page.
+Expanded Campaign details are now shown in the ... wait for it ... Campaign Details section of the Campaign Page!
 
-This will make it easier for customers wanting to pass attribution data into Braze.
+![Campaign Details]({% image_buster /assets/img/campaign_details.png %})
+
+### Show Only Mine in Segments & Canvas
+
+The "Only Show Mine" check filter on the Campaigns page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
+
+### Advancement Behavior
+You can now choose [when a user advances]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
+
+![Advancement Behavior]({% image_buster /assets/img/advancement_behavior_rn.png %})
+
+### In-App Messages in Canvas
+
+[In-app messages are now available to use with Canvas!]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) Add a Canvas step and browse available channels to add an in-app message.
+
+![In-App Messages in Canvas]({% image_buster /assets/img/iam-in-canvas.png %})
+
+## Earlier This Month
+---
+
+### User Profile Image Removal
+
+We are removing the user profile pictures displayed in Braze User Profiles and User Searches.
+
+### Connected Content in Content Cards
+
+You can now use [Connected Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/).
+
+Connected Content calls to external servers will happen when a Card is actually sent, __not__ when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
+
+### Null 'Reply-To' Address
+
+Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{ site.baseurl }}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
+
+To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage App Group` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
+
+![Email Settings Reply-To]({% image_buster /assets/img/null_reply-to.png %})
+
+### Campaign Comparisons
+
+Look at [multiple campaigns at one time to compare their relative performance]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), side-by-side in Braze - in one window!
+
+### Template Dispatch ID into Messages with Liquid
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
+If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
+This behaves just like `api_id`, in that since the `api_id` isn't available at Campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The id is generated before the message is sent, and will be included in as send time.
+
+{% alert warning %}
+Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app messages, since in-app messages don't have a `dispatch_id`.
+{% endalert %}
+
+### "Show Only Mine" Setting Persists
+
+The "Show Only Mine" filter on the Campaign grid will remain "on" any time you visit the Campaigns page.
+
+### A/B Testing Updates
+
+You can send a one-time [A/B test]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a Campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
+
+
+
+
 
 [support]: {{ site.baseurl }}/support_contact/
+[CCFeed]: {% image_buster /assets/img/cc-feed.png %}
+[cbm]: {% image_buster /assets/img/created_by_me2.png %}
+[plat_p]: {% image_buster /assets/img/iam_platforms.gif %}

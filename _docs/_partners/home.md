@@ -5,7 +5,7 @@ layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/partners/braze_currents/about/'>here</a>."
+partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/partners/braze_currents/about/'>here</a>. <br> <br> If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
 
 valid_partner_list:
 - name: Messenger
@@ -46,8 +46,6 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/wrapper_sdks/react_native/
 - name: Radar
   url: /docs/partners/technology_partners/data_augmentation/contextual_location/radar/
-- name: Apptimize
-  url: /docs/partners/technology_partners/channel_extensions/ab_testing/apptimize/
 - name: Xamarin
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
 - name: "Lob.com"
@@ -92,7 +90,14 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
 - name: Zapier
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/
-
+- name: Snowflake
+  url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/
+- name: Inkit
+  url: /docs/partners/technology_partners/additional_channels/direct_mail/inkit/
+- name: Talon.One
+  url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
+- name: Fivetran
+  url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
 
 
 ---

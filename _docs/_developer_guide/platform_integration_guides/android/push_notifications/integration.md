@@ -4,15 +4,15 @@ platform: Android
 page_order: 0
 search_rank: 5
 ---
-## Overview
+# Overview
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
 Sample push notification:
 
-![Sample Push][27]
+![Sample Push][27]{: width="20%"}
 
-Check out [Braze Docs][7] for additional best practices.
+Check out [our help documentation][8] for push best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][45].
 
@@ -24,8 +24,9 @@ For devices without Google services installed, Braze offers the option to send p
 
 Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
 
-> Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
-
+{% alert update %}
+Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
+{% endalert %}
 
 ### Firebase Integration
 
@@ -180,6 +181,10 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
+#### Step 6: Remove Automatic Actions from your Application Class
+
+If you have a custom [Application][76] subclass, ensure you do not have automatic logic that pings your servers in your class's `Application.onCreate()` lifecycle method. This will ensure that silent push notifications from Braze don't cause unnecessary requests to your servers.
+
 ## Displaying Push
 
 After completing this section, you should be able to receive and display push notifications sent by Braze.
@@ -198,7 +203,7 @@ Braze includes a service to handle push receipt and open intents. Our `AppboyFir
 Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` in order for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately in order to render notifications sent from other FCM services.
 
 {% alert important %}
-If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there. 
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
 ##### Using Your Own Firebase Messaging Service
@@ -385,13 +390,18 @@ Other than the default notification channel, Braze will not create any channels.
 
 #### Notification Channel Creation by SDK
 
-**SDK 2.1.0 and Above**
+{% tabs %}
+{% tab 2.1.0 and Above %}
 
 The default notification channel creation will occur even if your app does not target Android O. If you would like to avoid default channel creation until your app targets Android O, **do not upgrade to this version**.
 
-**SDK Lower than 2.1.0 and Your App Targets API 25 or Lower**
+{% endtab %}
+{% tab Lower than 2.1.0 %}
 
-You do not need to define channels in your application.
+For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, you do not need to define channels in your application.
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: Test Notification Display and Analytics
 
@@ -405,7 +415,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs][56] on creating a push campaign.  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -421,8 +431,8 @@ If you'd like to test in-app and push notifications via the command-line, you ca
 ```
 curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
-> The above is an example for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
+The above is an example for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ## Customizing Your Integration
 
@@ -461,20 +471,57 @@ fun createNotification(appConfigurationProvider: AppboyConfigurationProvider, co
 
 You can return `null` from your custom `createNotification()` method to not show the notification at all, use `AppboyNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
-> Braze push data keys are documented [here][3].
+{% alert note %}
+Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
+{% endalert %}
 
 #### Step 2: Set your Custom Notification Factory
 
 To instruct Braze to use your custom notification factory, use the [method on the Braze interface][5] to set your [`IAppboyNotificationFactory`][6]:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+
+```java
 setCustomAppboyNotificationFactory(IAppboyNotificationFactory appboyNotificationFactory);
 ```
 
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificationFactory)
+```
+
+{% endtab %}
+{% endtabs %}
+
 The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.  See [`DroidboyApplication.java`][36] for an example.
 
+{% alert important %}
+Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
+{% endalert %}
 
-> Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
+To unset your custom [`IAppboyNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
+
+{% tabs %}
+{% tab JAVA %}
+
+
+```java
+setCustomAppboyNotificationFactory(null);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+setCustomAppboyNotificationFactory(null)
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
 
@@ -494,7 +541,7 @@ Register your custom `BroadcastReceiver` to listen for Braze push opened and rec
 </receiver>
 ```
 
-#### Step 2: Create your BroadcastReceiver
+#### Step 2: Create Your BroadcastReceiver
 
 Your receiver should handle intents broadcast by Braze and launch your activity with them:
 
@@ -507,7 +554,9 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
 
 For a detailed custom receiver example, please see [`AppboyBroadcastReceiver.java`][14] in our Custom Broadcast sample app. Visit this page for a basic tutorial on creating broadcast receivers: [Android Receiver Help][26]
 
-> With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
+{% alert tip %}
+With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
+{% endalert %}
 
 #### Step 3: Access Custom Key-Value Pairs
 
@@ -544,13 +593,15 @@ val myExtra = extras.getString("my_key")
 {% endtab %}
 {% endtabs %}
 
-> Braze push data keys are documented [here][3].
+{% alert note %}
+Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
+{% endalert %}
 
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html
 [4]: #displaying-push
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomAppboyNotificationFactory-com.appboy.IAppboyNotificationFactory-
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNotificationFactory.html
 [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[8]: {{ site.baseurl }}/help/best_practices/push/overview/
 [10]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [11]: https://support.google.com/cloud/answer/6158840?hl=en
 [12]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
@@ -584,7 +635,7 @@ val myExtra = extras.getString("my_key")
 [54]: {% image_buster /assets/img_archive/android_push_reg.png %} "Android Push Registration"
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/troubleshooting/#troubleshooting
+[57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [60]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push
@@ -603,3 +654,4 @@ val myExtra = extras.getString("my_key")
 [73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
+[76]: https://developer.android.com/reference/android/app/Application

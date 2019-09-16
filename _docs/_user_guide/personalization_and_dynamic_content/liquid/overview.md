@@ -19,15 +19,23 @@ The following values can be substituted into a message, depending on their avail
 - [Target Device Information][40]
 
 You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
+{% endraw %}
 
+{% alert important %}
+Braze currently supports liquid up to and including Liquid 3 from Shopify. We do not currently support Liquid 4 and beyond.
+{% endalert %}
 
 ## Terms to Know
 
 These terms are reinterpreted from [Shopify's documentation][3] based on our level of support.
 
 {% alert warning %}
+
 Braze does not currently support 100% of Shopify's Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending to reduce the risk of errors or using unsupported Liquid.
+
 {% endalert %}
+
+{% raw %}
 
 | Term | Definition | Example |  
 |---|---|---|

@@ -2,7 +2,7 @@
 nav_title: Branching
 platform: Canvas
 subplatform: Create a Canvas
-page_order: 2
+page_order: 1
 ---
 
 ## Branching

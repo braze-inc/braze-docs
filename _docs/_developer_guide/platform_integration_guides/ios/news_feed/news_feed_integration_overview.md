@@ -18,17 +18,19 @@ The News Feed can be integrated with 2 view controller contexts, either in code 
 
 ## Navigation Context -- ABKFeedViewControllerNavigationContext
 
-- You can set the instance's title and navigation items before pushing it into a navigation controller
-
 ```objc
 ABKNewsFeedTableViewController *newsFeed = [ABKNewsFeedTableViewController getNavigationFeedViewController];
 [self.navigationController pushViewController:newsFeed animated:YES];
 ```
 
+{% alert note %}
+To customize the navigation bar's title, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
+{% endalert %}
+
 ## Modal Context -- ABKFeedViewControllerModalContext
 
 - Used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar
-- Set the modal's title via the `navigationBarTitle` property
+- Set the modal's title via the embedded `ABKNewsFeedTableViewController` instance's `navigationItem`'s `title` property
 - If a delegate __is NOT set__ the Done button will dismiss the modal view
 - If a delegate __is set__ the Done button will call the delegate, and the delegate itself will be responsible for dismissing the view
 
