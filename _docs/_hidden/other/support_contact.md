@@ -257,14 +257,27 @@ a:hover {
   z-index: -2;
   height: 100%;
   width: 100%;
-  background-color: #212123
+  background-color: #212123;
 }
 
 #ticket_form button[type=submit]:focus, #ticket_form button[type=submit]:hover {
   color: #212123
 }
 
-
+#firefox_warning {
+  width: 100%;
+  text-align: center;
+  background-color: #f4f4f7;
+  padding: 10px;
+}
+#firefox_warning a, #ticket_thankyou_msg a{
+  color: #3accdd;
+  text-decoration: none;
+}
+#firefox_warning a:hover, #ticket_thankyou_msg a:hover {
+  color: #3accdd;
+  text-decoration: none;
+}
 </style>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -1048,8 +1061,8 @@ $( document ).ready(function() {
     $('#ticket_mainform').hide();
 
     $('#ticket_thankyou').fadeIn("slow");
-    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.');
-
+    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, please check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, please contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#ticket_issue').popover();
   $('#ticket_comment').popover();
@@ -1110,13 +1123,15 @@ $( document ).ready(function() {
          $(this).autocomplete('val', '');;
        }
      });
-
-
-
+     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+       var ff_div = $('#firefox_warning').detach();
+       ff_div.insertBefore($('#basic_page')).show();
+     }
 });
 </script>
-<div class="container-fluid" id="main-container">
+<div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
 
+<div class="container-fluid" id="main-container">
       <div class="row">
           <div class="col" >
               <h1 class="h1">Need Help? </h1>
