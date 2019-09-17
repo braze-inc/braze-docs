@@ -100,6 +100,48 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
+## Step 2: (Optional) In-App Message Manager Blacklist
+
+In your integration, you may require that certain Activities in your app should not show In-App Messages. The [Activity Lifecycle Callback Integration][59] provides an easy way to accomplish this.
+
+The following example code adds two Activities to the In-App Message registration blacklist, `SplashActivity` and `SettingsActivity`.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    Set<Class> inAppMessageBlacklist = new HashSet<>();
+    inAppMessageBlacklist.add(SplashActivity.class);
+    inAppMessageBlacklist.add(SettingsActivity.class);
+    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener(inAppMessageBlacklist));
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class MyApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    val inAppMessageBlacklist = HashSet<Class<*>>()
+    inAppMessageBlacklist.add(SplashActivity::class.java)
+    inAppMessageBlacklist.add(SettingsActivity::class.java)
+    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener(inAppMessageBlacklist))
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+> See the [`AppboyLifecycleCallbackListener`][83] constructor javadocs for more information.
+
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
@@ -162,3 +204,4 @@ public override fun onPause() {
 [80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
 [81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
+[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-java.util.Set-
