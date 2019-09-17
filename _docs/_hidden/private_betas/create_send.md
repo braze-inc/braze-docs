@@ -97,7 +97,7 @@ Content-Type: application/json
   "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) your Canvas Identifier,
   "canvas_entry_properties": (optional, string) sets of key value pairs which define your Canvas Entry,
-  "broadcast": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "broadcast": (optional, boolean) defaults to false,
   "recipients": (optional, array) if not provided and broadcast is not set to 'false', message will send to entire segment targeted by the campaign [
     {
       "external_user_id": (optional, string) External Id of user to receive message,
