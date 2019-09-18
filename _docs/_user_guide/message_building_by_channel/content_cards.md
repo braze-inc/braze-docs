@@ -1,12 +1,35 @@
 ---
 nav_title: Content Cards
-config_only: false
-layout: featured
 page_order: 1
----
-# Content Cards
+layout: user_guide
+user_top_header: "Content Cards"
+user_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications."
 
-With __Content Cards__, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
+user_featured_title: "Popular Articles"
+user_featured_list:
+
+- name: Creating a Content Card
+  link: /docs/user_guide/message_building_by_channel/content_cards/create/
+  fa_icon:
+- name: Creative Details
+  link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
+  fa_icon:
+- name: Customize
+  link: /docs/user_guide/message_building_by_channel/content_cards/customize/
+  fa_icon:
+
+user_menu_title: "More Articles"
+user_menu_list:
+- name: Testing
+  link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+  fa_icon:
+- name: Reporting & Analytics
+  link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
+  fa_icon:
+- name: Migrating From News Feed
+  link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
+  fa_icon:
+---
 
 {% alert note %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.

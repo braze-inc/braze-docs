@@ -4,6 +4,20 @@ layout: dev_guide
 page_order: 4
 guide_top_header: "EU-01 & US-03 Implementation Differences"
 guide_top_text: "Depending on your instance, you will have to configure your integration so that it points to the [correct endpoints]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). The following set of steps will go over relevant details on how to properly set this up should your dashboard be on the EU-01 Instance. For customers on this instance, please ensure you are contractually authorized to use the EU data center prior to using the following integration."
+
+guide_featured_title: "Popular Articles"
+
+guide_featured_list:
+  - name: For Android
+    link: /docs/developer_guide/eu01_us3_sdk_implementation_differences/for_android/
+    fa_icon: fab fa-android
+  - name: For iOS
+    link: /docs/developer_guide/eu01_us3_sdk_implementation_differences/for_ios/
+    fa_icon: fab fa-apple
+  - name: For Web
+    link: /docs/developer_guide/eu01_us3_sdk_implementation_differences/for_web/
+    fa_icon: fas fa-globe
+
 ---
 ## SDK Implementation
 If you are on the EU-01 Instance when integrating any of our SDKs, please point your SDK endpoints to `https://sdk.fra-01.braze.eu`.

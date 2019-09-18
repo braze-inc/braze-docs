@@ -1,13 +1,35 @@
 ---
 nav_title: User Data Collection
-config_only: false
-layout: featured
 page_order: 3
+layout: user_guide
+user_top_header: "User Data Collection"
+user_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there."
+
+user_featured_title: "Popular Articles"
+
+user_featured_list:
+  - name: User Archival Definitions
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
+    fa_icon:
+  - name: Data Collected by Default
+    link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
+    fa_icon:
+  - name: User Profile Lifecycle
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+    fa_icon:
+
+user_menu_title: "More Articles"
+
+user_menu_list:
+  - name: Taxi/Ride-Sharing App Use Case
+    link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
+    fa_icon:
+  - name: User Import
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+    fa_icon:
 ---
 
-# User Data Collection
-
-Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there. Please reference our case of a [Taxi/Ride-Sharing App]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/collection_use_case/#taxiride-sharing-app-use-case) at the end of this guide for an example of this process.
+Please reference our case of a [Taxi/Ride-Sharing App]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/collection_use_case/#taxiride-sharing-app-use-case) at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a "Custom Event" vs. a "Custom Attribute".
 

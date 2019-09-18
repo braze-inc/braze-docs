@@ -1,13 +1,24 @@
 ---
 nav_title: Company Settings
-config_only: false
-layout: featured
-page_order: 1.5
+page_order: 1
+layout: user_guide
+user_top_header: "Company Settings"
+user_top_text: "Most features within Company Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator."
+
+user_featured_title: "Popular Articles"
+
+user_featured_list:
+- name: Contact Information
+  link: /docs/user_guide/administrative/company_settings/contact_information/
+  fa_icon:
+- name: Notification Preferences
+  link: /docs/user_guide/administrative/company_settings/notification_preferences/
+  fa_icon:
+- name: Security Settings
+  link: /docs/user_guide/administrative/company_settings/security_settings/
+  fa_icon:
 ---
-# Company Settings
-
-Most features within Company Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator. If you're looking for more information about your own account settings, look [here][1].
-
+If you're looking for more information about your own account settings, look [here][1].
 
 You can get to the Company Settings section by clicking on your name, then clicking Company Settings in the dropdown.
 
@@ -22,4 +33,4 @@ Please note that whatever you edit in this section will apply to _every_ Braze u
 {% endalert %}
 
 [1]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/logging_in/
-[2]: {% image_buster /assets/img/navigation_co_set.gif %}
+[2]: {% image_buster /assets/img/navigation_co_set.gif %}"

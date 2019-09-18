@@ -1,13 +1,40 @@
 ---
 nav_title: Personalization & Dynamic Content
-config_only: false
-layout: featured
 page_order: 6
+user_top_header: "Personalized Messaging"
+user_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
+
+user_featured_title: "Available Messaging Channels"
+user_featured_list:
+- name: Liquid
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/
+  fa_icon:
+- name: Connected Content
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
+  fa_icon:
+- name: Deep-Linking to In-App Content
+  link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
+  fa_icon:
+
+user_menu_title: "More Articles"
+
+user_menu_list:
+
+- name: Key-Value Pairs
+  link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
+  fa_icon:
+- name: Key-Value Pairs
+  link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
+  fa_icon:
+- name: Emoji Messaging
+  link: /docs/user_guide/personalization_and_dynamic_content/emoji_messaging/
+  fa_icon:
+- name: Content Blocks
+  link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
+  fa_icon:
 ---
 
-# Personalized Messaging
-
-Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages. Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [here][1].
+Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [here][1].
 
 For more on Dynamic Personalization with Liquid, check out our [detailed, guided LAB course](https://lab.braze.com/dynamic-personalization-with-liquid)!
 

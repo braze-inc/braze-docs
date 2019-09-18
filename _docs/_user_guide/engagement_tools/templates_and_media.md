@@ -1,12 +1,22 @@
 ---
 nav_title: Templates & Media
-config_only: false
-layout: featured
 page_order: 5
----
-# Templates & Media
+layout: user_guide
+user_top_header: "Templates & Media"
+user_top_text: "Templates & Media allow you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
 
-__Templates & Media__ allows you to manage templates and upload images for messages in a single, centralized location.  You can consolidate and organize your templates across the dashboard for a coherent look and feel.  To access this section, navigate to __Engagement > Templates & Media__ in your Braze account.
+user_featured_title: "Popular Articles"
+
+user_featured_list:
+  - name: Media Library
+    link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
+    fa_icon:
+  - name: Content Blocks
+    link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
+    fa_icon:
+---
+
+To access this section, navigate to __Engagement > Templates & Media__ in your Braze account.
 
 ![Templates and Media][1]
 

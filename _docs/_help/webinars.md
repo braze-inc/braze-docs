@@ -1,8 +1,48 @@
 ---
-nav_title: Webinars
-config_only: false
-layout: featured
 page_order: 5
+nav_title: Webinars
+layout: dev_guide
+guide_top_header: "Webinars"
+guide_top_text: ""
+
+guide_featured_title: "Popular Articles"
+guide_featured_list:
+- name: A/B and Multivariate Testing
+  link: /docs/help/webinars/ab_and_multivariate_testing/
+  fa_icon:
+- name: Building a Strategy for Android Oreo
+  link: /docs/help/webinars/building_a_strategy_for_android_oreo/
+  fa_icon: fab fa-android
+- name: Canvas Entry Steps and Conditions
+  link: /docs/help/webinars/canvas_entry_steps_and_conditions/
+  fa_icon:
+
+guide_menu_title: "More Articles"
+guide_menu_list:
+  - name: Canvas Lifecycle Testing
+    link: /docs/help/webinars/canvas_lifecycle_testing/
+    fa_icon:
+  - name: Creating Segments and Sending Campaigns
+    link: /docs/help/webinars/creating_segments_and_sending_campaigns/
+    fa_icon:
+  - name: Email 101
+    link: /docs/help/webinars/email_101/
+    fa_icon: fas fa-envelope
+  - name: Importing User Profiles
+    link: /docs/help/webinars/importing_user_profiles/
+    fa_icon:
+  - name: Measuring Success with Braze Data
+    link: /docs/help/webinars/measuring_success_with_braze_data/
+    fa_icon:
+  - name: Personalization and Liquid
+    link: /docs/help/webinars/personalization_and_liquid/
+    fa_icon:
+  - name: Sending Test Messages
+    link: /docs/help/webinars/sending_test_messages/
+    fa_icon:
+  - name: Troubleshooting Bootcamp
+    link: /docs/help/webinars/troubleshooting_bootcamp/
+    fa_icon:
 ---
 
 # Videos and Past Webinar Recordings
