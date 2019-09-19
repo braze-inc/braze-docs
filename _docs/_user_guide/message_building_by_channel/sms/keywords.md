@@ -1,5 +1,5 @@
 ---
-nav_title: Templates
+nav_title: Keyword Processing & Management
 page_order: 4
 ---
 waiting on UI
