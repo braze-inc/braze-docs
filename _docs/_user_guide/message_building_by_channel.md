@@ -8,16 +8,20 @@ user_featured_title: "Popular Articles"
 user_featured_list:
 - name: Email Messaging
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
-  image: /assets/img/email-msg-chn.png
+  fa_icon: fas fa-envelope
 - name: In-App Messaging
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  image: /assets/img/in-app-msg-chn.png
+  fa_icon: fas fa-mobile
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
-  image: /assets/img/icon_full_screen.png
+  image: far fa-dot-circle
+
+user_menu_title: "More Articles"
+
+user_menu_list:
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-  image: /assets/img/webhook-msg-chn.png
+  image: fas fa-undo
 ---
 
 Or, check out [our LAB course on Messaging Channels](http://lab.braze.com/channels-course)!

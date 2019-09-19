@@ -10,13 +10,13 @@ user_featured_title: "Popular Articles"
 user_featured_list:
 - name: Contact Information
   link: /docs/user_guide/administrative/company_settings/contact_information/
-  fa_icon:
+  fa_icon: fas fa-address-book
 - name: Notification Preferences
   link: /docs/user_guide/administrative/company_settings/notification_preferences/
-  fa_icon:
+  fa_icon: far fa-dot-circle
 - name: Security Settings
   link: /docs/user_guide/administrative/company_settings/security_settings/
-  fa_icon:
+  fa_icon: fas fa-shield-alt
 ---
 If you're looking for more information about your own account settings, look [here][1].
 

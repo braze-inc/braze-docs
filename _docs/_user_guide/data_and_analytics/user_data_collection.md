@@ -10,23 +10,23 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: User Archival Definitions
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
-    fa_icon:
+    fa_icon: fas fa-users
   - name: Data Collected by Default
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
-    fa_icon:
+    fa_icon: fas fa-chart-bar
   - name: User Profile Lifecycle
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-    fa_icon:
+    fa_icon: fas fa-sync
 
 user_menu_title: "More Articles"
 
 user_menu_list:
   - name: Taxi/Ride-Sharing App Use Case
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
-    fa_icon:
+    fa_icon: fas fa-taxi
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-    fa_icon:
+    fa_icon: fas fa-user
 ---
 
 Please reference our case of a [Taxi/Ride-Sharing App]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/collection_use_case/#taxiride-sharing-app-use-case) at the end of this guide for an example of this process.

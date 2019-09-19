@@ -10,10 +10,10 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: Media Library
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
-    fa_icon:
+    fa_icon: fas fa-book-open
   - name: Content Blocks
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-    fa_icon:
+    fa_icon: fas fa-columns
 ---
 
 To access this section, navigate to __Engagement > Templates & Media__ in your Braze account.

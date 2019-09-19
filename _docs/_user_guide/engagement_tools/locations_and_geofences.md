@@ -10,20 +10,20 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: Creating Geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
-    fa_icon:
+    fa_icon: fas fa-map-marker-alt
   - name: Mobile Integrations
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
-    fa_icon:
+    fa_icon: fas fa-mobile
   - name: Geofence Configuration
     link: /docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/
-    fa_icon:
+    fa_icon: fas fa-cog
 
 user_menu_title: "More Articles"
 
 user_menu_list:
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon:
+    fa_icon: fas fa-question
 ---
 
 The ubiquity and flexibility of mobile technology allows marketers, product managers and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Using the Braze platform, you can create and enhance relationships with your users based upon their location in the real world, unlocking a powerful set of deeply connected interactions:

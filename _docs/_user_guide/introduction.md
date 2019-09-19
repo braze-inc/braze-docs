@@ -30,7 +30,7 @@ user_menu_list:
     fa_icon: fas fa-user-circle
 -   name: Data & Analytics
     link: /docs/user_guide/data_and_analytics/
-    fa_icon: fas fa-table
+    fa_icon: fas fa-chart-bar
 -   name: Engagement Tools
     link: /docs/user_guide/engagement_tools/
     fa_icon: fas fa-chart-pie

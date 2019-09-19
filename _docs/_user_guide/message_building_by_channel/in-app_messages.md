@@ -10,22 +10,22 @@ user_featured_list:
 
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  fa_icon:
+  fa_icon: fas fa-mobile
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon:
+  fa_icon: fas fa-paint-brush
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  fa_icon:
+  fa_icon: fas fa-cog
 
 user_menu_title: "More Articles"
 user_menu_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon:
+  fa_icon: fas fa-vial
 - name: Reporting & Analytics
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  fa_icon:
+  fa_icon: fas fa-chart-bar
 ---
 
 To see examples of in-app messages, check out our [Client Integration Gallery][11].

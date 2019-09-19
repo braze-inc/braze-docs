@@ -23,5 +23,5 @@ user_menu_title: "More Articles"
 user_menu_list:
 -   name: App Settings
     link: /docs/user_guide/administrative/app_settings/
-    fa_icon:
+    fa_icon: fas fa-mobile
 ---

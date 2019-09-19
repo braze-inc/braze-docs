@@ -10,8 +10,8 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: Uninstall Tracking
     link: /user_guide/data_and_analytics/tracking/uninstall_tracking/
-    fa_icon:
+    fa_icon: fas fa-undo
   - name: Influenced Opens
     link: /docs/user_guide/data_and_analytics/tracking/influenced_opens/
-    fa_icon:
+    fa_icon: far fa-dot-circle
 ---

@@ -10,8 +10,8 @@ user_featured_list:
 
 - name: Creating a Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-  fa_icon:
+  fa_icon: fas fa-undo
 - name: Creating a Webhook Template
   link: /docs/user_guide/message_building_by_channel/webhooks/webhook_template/
-  fa_icon:
+  fa_icon: fas fa-table
 ---

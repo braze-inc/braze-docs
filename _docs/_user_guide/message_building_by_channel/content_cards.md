@@ -10,25 +10,25 @@ user_featured_list:
 
 - name: Creating a Content Card
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
-  fa_icon:
+  fa_icon: fas fa-columns
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
-  fa_icon:
+  fa_icon: fas fa-paint-brush
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/content_cards/customize/
-  fa_icon:
+  fa_icon: fas fa-cog
 
 user_menu_title: "More Articles"
 user_menu_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
-  fa_icon:
+  fa_icon: fas fa-vial
 - name: Reporting & Analytics
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-  fa_icon:
+  fa_icon: fas fa-chart-pie
 - name: Migrating From News Feed
   link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-  fa_icon:
+  fa_icon: fas fa-suitcase
 ---
 
 {% alert note %}

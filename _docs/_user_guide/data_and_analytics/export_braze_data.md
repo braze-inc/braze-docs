@@ -10,41 +10,41 @@ user_featured_title: "Popular Articles"
 user_featured_list:
   - name: Campaign Results Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
-    fa_icon:
+    fa_icon: fas fa-chart-bar
   - name: Canvas Results Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
-    fa_icon:
+    fa_icon: fas fa-palette
   - name: Exporting to CSV
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
-    fa_icon:
+    fa_icon: fas fa-file-csv
 
 user_menu_title: "More Articles"
 
 user_menu_list:
   - name: Exporting App Usage Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
-    fa_icon:
+    fa_icon: far fa-dot-circle
   - name: Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-    fa_icon:
+    fa_icon: fas fa-funnel-dollar
   - name: News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    fa_icon:
+    fa_icon: fas fa-newspaper
   - name: Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
-    fa_icon:
+    fa_icon: fas fa-cog
   - name: Device and Carrier Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_device_and_carrier_data/
-    fa_icon:
+    fa_icon: fas fa-mobile
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
-    fa_icon:
+    fa_icon: fas fa-server
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
-    fa_icon:
+    fa_icon: fas fa-file-csv
   - name: Exporting to Facebook Audiences
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_to_facebook_audiences/
-    fa_icon:
+    fa_icon: fab fa-facebook-square
 ---
 
 ## Things to Keep in Mind

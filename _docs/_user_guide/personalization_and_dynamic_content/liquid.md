@@ -1,14 +1,43 @@
 ---
 nav_title: Liquid
-config_only: false
-layout: featured
 page_order: 0
+user_top_header: "Personalization Using Liquid Tags"
+user_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them."
+
+user_featured_title: "Popular Articles"
+user_featured_list:
+- name: Using Liquid
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
+  fa_icon: fas fa-flask
+- name: Supported Personalization Tags
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+  fa_icon: fas fa-tag
+- name: Operators
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
+  fa_icon: fas fa-code
+
+user_menu_title: "More Articles"
+
+user_menu_list:
+
+- name: Filters
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
+  fa_icon: fas fa-filter
+- name: Advanced Filters
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
+  fa_icon: fas fa-cog
+- name: Setting Default Values
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
+  fa_icon: fas fa-table
+- name: Conditional Messaging Logic
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+  fa_icon: fas fa-columns
+- name: Aborting Messages
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
+  fa_icon: fas fa-undo
 ---
 
-# Personalization Using Liquid Tags
-
 {% raw %}
-Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.
 
 For example, if you include the following text in your message: `{{${first_name}}}`, the appropriate value from the user will be interpolated when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
 

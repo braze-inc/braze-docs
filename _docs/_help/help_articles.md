@@ -1,7 +1,5 @@
 ---
 nav_title: Help Articles
-config_only: false
-layout: featured
 page_order: 1
 ---
 

@@ -1,13 +1,32 @@
 ---
 nav_title: Connected Content
-config_only: false
-layout: featured
 page_order: 1
+user_top_header: "Connected Content"
+user_top_text: "Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions.  This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs."
+
+user_featured_title: "Popular Articles"
+user_featured_list:
+- name: Making An API Call
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
+  fa_icon: fas fa-location-arrow
+- name: Local Connected Content Variables
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
+  fa_icon: fas fa-server
+- name: Aborting Connected Content
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
+  fa_icon: fas fa-undo
+
+user_menu_title: "More Articles"
+
+user_menu_list:
+
+- name: Connected Content Retries
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+  fa_icon: fas fa-reply
+- name: Public APIs
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
+  fa_icon: far fa-dot-circle
 ---
-
-# About Connected Content
-
-Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions.  This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs.
 
 You can use our connected content capabilities with our Technology Partners - like [AccuWeather]({{ site.baseurl }}/partners/technology_partners/data_augmentation/contextual_location/accuweather/) and [Transifex]({{ site.baseurl }}/partners/technology_partners/channel_extensions/localization/transifex/)!
 

@@ -15,7 +15,7 @@ guide_featured_list:
   fa_icon: fas fa-tasks
 - name: Creating Custom Opt-In Prompts
   link: /docs/help/best_practices/push/creating_custom_opt-in_prompts/
-  fa_icon:
+  fa_icon: far fa-dot-circle
 
 guide_menu_title: "More Articles"
 guide_menu_list:
@@ -24,7 +24,7 @@ guide_menu_list:
     fa_icon: fas fa-sun
   - name: Conversion Tracking
     link: /docs/help/best_practices/push/conversion_tracking/
-    fa_icon:
+    fa_icon: fas fa-chart-line
 
 ---
 
