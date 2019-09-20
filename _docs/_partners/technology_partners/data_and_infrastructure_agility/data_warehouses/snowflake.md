@@ -42,7 +42,7 @@ You can do whatever you want with the data, but we recommend using it in conjunc
 
 ### Query Samples
 
-Below, you can see query samples for two possible use cases.
+Below, you can see query samples for some possible use cases.
 
 {% tabs %}
   {% tab Push Funnel %}
