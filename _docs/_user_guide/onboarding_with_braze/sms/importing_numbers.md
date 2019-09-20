@@ -1,6 +1,6 @@
 ---
 nav_title: Importing Phone Numbers
-page_order: 0
+page_order: 2
 ---
 
 # Importing Phone Numbers to Braze

@@ -15,8 +15,8 @@ Before you can even think about sending an SMS
 
 | Requirement | Description | Acquirement |
 |---|---|---|
-|Short Code | Either a short or a long code are required. <br> This is a short, memorable 5-6 digit sequences that allows senders to send more messages at more consistent rates than long numbers (1 message per second). | Braze will apply and acquire this for you. You must let us know that you want one, as there are requirements beyond what is listed here. <br> Getting a short code takes some time - you can expect a delay before you are assigned an approved short code. These are also subject to upfront and other charges. |
-| Long Code | Not
+|Short Code | Either a short or a long code are required. <br><br> This is a short, memorable 5-6 digit sequences that allows senders to send more messages at more consistent rates than long numbers (1 message per second). | Braze will apply and acquire this for you. You must let us know that you want one, as there are requirements beyond what is listed here. <br> <br>Getting a short code takes some time - you can expect a delay before you are assigned an approved short code. These are also subject to upfront and other charges. |
+| Long Code | Either a short or a long code are required. <br><br> This is your standard, 10-
 
 ## A List of Things You Need to Know
 
