@@ -131,6 +131,7 @@ LIMIT 500
 You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
 
 **Set Up this Query**
+
 Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
 
 ```sql
