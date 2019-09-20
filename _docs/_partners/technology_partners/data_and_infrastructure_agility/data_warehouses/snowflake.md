@@ -42,7 +42,7 @@ You can do whatever you want with the data, but we recommend using it in conjunc
 
 ### Query Samples
 
-Below, you can see query samples for two possible use cases.
+Below, you can see query samples for some possible use cases.
 
 {% tabs %}
   {% tab Push Funnel %}
@@ -131,6 +131,7 @@ LIMIT 500
 You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
 
 **Set Up this Query**
+
 Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
 
 ```sql
