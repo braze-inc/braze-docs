@@ -163,9 +163,56 @@ Braze's suite of in-app messages types are versatile enough to cover the vast ma
 
 ### Step 1: Implement an In-App Message View Factory
 
-Create a class that implements [`IInAppMessageViewFactory`][42]
+Create a class that implements [`IInAppMessageViewFactory`][87].
 
-- See [`CustomInAppMessageViewFactory.java`][43] in our Droidboy sample app for an implementation example.
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomInAppMessageViewFactory implements IInAppMessageViewFactory {
+  @Override
+  public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage) {
+    // Uses a custom view for slideups, modals, and full in-app messages.
+    // HTML in-app messages and any other types will use the Braze default in-app message view factories
+    switch (inAppMessage.getMessageType()) {
+      case SLIDEUP:
+      case MODAL:
+      case FULL:
+        // Use a custom view of your choosing
+        return createMyCustomInAppMessageView();
+      default:
+        // Use the default in-app message factories
+        final IInAppMessageViewFactory defaultInAppMessageViewFactory = AppboyInAppMessageManager.getInstance().getDefaultInAppMessageViewFactory(inAppMessage);
+        return defaultInAppMessageViewFactory.createInAppMessageView(activity, inAppMessage);
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
+  override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
+    // Uses a custom view for slideups, modals, and full in-app messages.
+    // HTML in-app messages and any other types will use the Braze default in-app message view factories
+    when (inAppMessage.messageType) {
+      MessageType.SLIDEUP, MessageType.MODAL, MessageType.FULL ->
+        // Use a custom view of your choosing
+        return createMyCustomInAppMessageView()
+      else -> {
+        // Use the default in-app message factories
+        val defaultInAppMessageViewFactory = AppboyInAppMessageManager.getInstance().getDefaultInAppMessageViewFactory(inAppMessage)
+        return defaultInAppMessageViewFactory!!.createInAppMessageView(activity, inAppMessage)
+      }
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
@@ -173,10 +220,8 @@ Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
 {% alert tip %}
-We recommend setting your `IInAppMessageViewFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
+We recommend setting your `IInAppMessageViewFactory` in your `Application.onCreate()` before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
 {% endalert %}
-
-See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
 #### In-Depth: Implementing a Braze View Interface
 
@@ -422,3 +467,4 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [85]: https://developer.android.com/guide/topics/ui/dialogs.html
 [86]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.java
+[87]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
