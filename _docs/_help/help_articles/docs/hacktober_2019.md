@@ -17,7 +17,7 @@ Learn more about [why we went open source](https://www.braze.com/perspectives/ar
 
 To participate, just...
 
-1. Check out [our repo](https://github.com/Appboy/braze-docs).
+1. Check out [our repo](https://github.com/Appboy/braze-docs) or click the <i class="fab fa-github"></i> __Edit this page on Github__ button at the bottom of most pages.
 2. Sign [our CLA](http://braze.com/docs/cla).
 3. [Make changes](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide)!
 
