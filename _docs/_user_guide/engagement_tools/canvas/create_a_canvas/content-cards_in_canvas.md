@@ -48,7 +48,7 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 | Option | Description |
 |---|---|
-| Message Sent | When message sent is selected, users must be successfully sent at least one of the message types in the step <br> <br>  _If the content card expires and the user hasn't been sent the email/webhook/push or viewed the content card, they will exit the Canvas and will not advance to subsequent steps._ |
+| Message Sent | When message sent is selected, users must be successfully sent at least one of the message types in the step in order to advance to subsequent steps.|
 | Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
 
 
