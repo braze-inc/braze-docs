@@ -91,7 +91,21 @@
     color: #fff;
     background-color: $blue-scooter;
   }
+}
 
-
-
+#gitedit_div {
+  color: $grey-boulder;
+  margin-bottom: 10px;
+  line-height: 20px;
+  vertical-align: middle;
+  img {
+    height: 20px;
+    vertical-align: middle;
+  }
+  a {
+    text-decoration: none;
+    &.hover,:hover {
+      text-decoration: none;      
+    }
+  }
 }
