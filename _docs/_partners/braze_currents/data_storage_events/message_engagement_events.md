@@ -35,7 +35,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Open: users.messages.pushnotification.Open
 {
@@ -56,7 +57,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
@@ -75,7 +77,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Bounce: users.messages.pushnotification.Bounce
 {
@@ -94,7 +97,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 ```
 {% enddetails %}
