@@ -25,7 +25,8 @@ If you choose to apply your own template, click __Apply Template__ and choose fr
 
 While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
-#### <a id="iam-customize-javascript-bridge">JavaScript Bridge (appboyBridge)</a>
+#### JavaScript Bridge (appboyBridge) {#javascript-bridge}
+
 HTML in-app messages support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
 
 {% include archive/appboyBridge.md platform="web" %}
