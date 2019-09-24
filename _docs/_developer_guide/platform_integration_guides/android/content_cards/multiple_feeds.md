@@ -9,17 +9,17 @@ platform: Android
 
 Content Cards can be filtered on the app to only display specific cards, which enables you to have multiple Content Card feeds for different use cases (as in having a "Transactional" feed versus a "Marketing" feed).
 
-The following documentation demonstrates an example implementation that can be changed to fit your specific integration. 
+The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
 ## Step 1: Setting Key-Value Pairs on Cards
 
-When creating a Content Card campaign, key-value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards. 
+When creating a Content Card campaign, key-value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
 
 For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
 
 ## Step 2: Create A Content Card Update Handler
 
-To perform filtering on a [`AppboyContentCardsFragment`][1], we will create a use a custom [`IContentCardsUpdateHandler`][2]. A [`IContentCardsUpdateHandler`][2] takes a [`ContentCardsUpdatedEvent`][3] from the Braze SDK and returns a list of cards to display. 
+To perform filtering on a [`AppboyContentCardsFragment`][1], we will create a use a custom [`IContentCardsUpdateHandler`][2]. A [`IContentCardsUpdateHandler`][2] takes a [`ContentCardsUpdatedEvent`][3] from the Braze SDK and returns a list of cards to display.
 
 In our example handler, we'll first sort the cards using the default [`IContentCardsUpdateHandler`][2]. The default Braze [`IContentCardsUpdateHandler`][2] only sorts cards and by default doesn't perform any removals or filtering on its own. Next, we'll remove any cards from the list that don't match our desired value for the `feed_type` that we set earlier.
 
@@ -105,7 +105,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Create a Content Cards Feed Using The Custom Update Handler 
+## Step 3: Create a Content Cards Feed Using The Custom Update Handler
 
 Now that we have a custom [`IContentCardsUpdateHandler`][2], we can create a [`AppboyContentCardsFragment`][1] that uses it. In the following example code, we'll create a [`AppboyContentCardsFragment`][1] that only displays cards with a "Transactional" value for `feed_type`:
 
@@ -131,6 +131,8 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 ## Step 4: Using the Content Cards Fragment
 
 This custom feed can be used like any other [`AppboyContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the Dashboard. Each [`AppboyContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
+
+When you create a Content Card campaign, set your key-value pair as: `feed_type` > `Transactional` or whatever feed type you desire.
 
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html

@@ -98,6 +98,9 @@ valid_partner_list:
   url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
 - name: Fivetran
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
-
+- name: Rokt Calendar
+  url: /docs/partners/technology_partners/channel_extensions/calendar/rokt_calendar/
+- name: Passkit
+  url: /docs/partners/technology_partners/additional_channels/mobile_wallet/passkit/
 
 ---

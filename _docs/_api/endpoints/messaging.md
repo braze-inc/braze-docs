@@ -159,6 +159,8 @@ For more information on the "broadcast" flag, see [Broadcast][42] below.
 
 >  If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
 
+> Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
+
 ##  Schedule Endpoints
 
 The schedule endpoints allow you to send messages at a designated time and modify or cancel messages that you have already scheduled.
@@ -293,6 +295,8 @@ Content-Type: application/json
 ```
 
 >  Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+
+> Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
 ###  Update Schedule Endpoint
 

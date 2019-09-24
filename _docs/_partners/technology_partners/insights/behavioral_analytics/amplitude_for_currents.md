@@ -153,7 +153,8 @@ Devices should not report more than 60 events/second under normal circumstances,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.)
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Open
 {
@@ -168,7 +169,8 @@ Devices should not report more than 60 events/second under normal circumstances,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "device_model": (string) hardware model of the device,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification iOS Foreground Open
 {
@@ -181,7 +183,8 @@ Devices should not report more than 60 events/second under normal circumstances,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.)
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Bounce
 {
@@ -194,7 +197,8 @@ Devices should not report more than 60 events/second under normal circumstances,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the bounce occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.)
+  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 ```
 
