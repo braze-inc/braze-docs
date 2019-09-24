@@ -3,7 +3,7 @@ nav_title: PassKit
 alias: /partners/passkit/
 ---
 
-# Rokt Calendar
+# PassKit
 
 PassKit enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customers experience. Easily create, manage, distribute and analyze the performance of digital coupons, loyalty cards, membership cards, tickets and much more; without your customers needing another app.
 
