@@ -49,7 +49,7 @@ Normal Web URL or Deep Linking | For web URLs, Braze will open the new content o
 `appboy://customEvent` | Braze will log a custom event and will NOT dismiss the HTML in-app message. | `name`<br>All additional queries will be set as properties of the custom event.
 
 {% alert tip %}
-Link-based actions are not supported by the Web SDK. For cross-platform compatibility, please refer to the [Javascript Bridge](#iam-customize-javascript-bridge) methods.
+Link-based actions are not supported by the Web SDK. For cross-platform compatibility, please refer to the [Javascript Bridge](#javascript-bridge) methods.
 {% endalert %}
 
 #### Supported Query Strings
