@@ -28,41 +28,41 @@ This partnership is in early access beta. All features may not perform as exactl
 
 To further enrich your customers’ mobile wallet experiences, you can work with your PassKit account manager to pass data into Braze through Braze’s [Users Track Endpoint](https://www.braze.com/docs/api/endpoints/user_data/#user-track-endpoint). Examples of data to share from PassKit includes:
 
-- Pass Issue: when a customer clicks on a pass link and is first shown a pass
-- Pass Installs: when the customer adds/saves the pass to their wallet app
-- Pass updates: when a pass is updated
-- Pass delete: when a customer deletes the pass from their wallet app
+- Pass Issue: when a customer clicks on a pass link and is first shown a pass.
+- Pass Installs: when the customer adds/saves the pass to their wallet app.
+- Pass updates: when a pass is updated.
+- Pass delete: when a customer deletes the pass from their wallet app.
 
 Once the data is passed into Braze, you can build audiences, personalize content via liquid, and trigger campaigns or Cavanses once these actions have been performed.
 
 In order to pass data from PassKit, please ensure that you have:
-- Set your Braze external ID as PassKit’s userDefinedID
-- Provide your PassKit account manager with a Braze API Key
-- Provide your PassKit account manager with a Braze REST Endpoint
+- Set your Braze external ID as PassKit’s userDefinedID.
+- Provide your PassKit account manager with a Braze API Key.
+- Provide your PassKit account manager with a Braze REST Endpoint.
 
 ## Using PassKit in Your Braze Campaigns & Canvases
 
 Within Braze, you can setup a webhook campaign or a webhook within a Canvas to either:
 
-- Create a new pass
-- Update an existing pass
+- Create a new pass.
+- Update an existing pass.
 
 Before you get started, here are the common JSON Payload Parameters that you can include within your Create and Update webhooks to PassKit.
 
 | Data              | Type             | Description      |
 | ----------------  | ---------------- | ---------------- |
-| campaignName (required) | string | This is the name of the campaign you created. For more detail, please see [Create Campaign](https://dev.passkit.net/v3/#create-a-campaign). This value cannot be changed after a pass created. |
-| templateName (required) | string | Required. This is the name of the template you created. For more detail, please see [Create Template](https://dev.passkit.net/v3/#create-a-template).|
-| dynamicData | object | A key pair value JSON object. This is the user’s unique data. For example, customer name, date of birth, membership number. etc. The data will not show on the pass until it is defined in the template. See the example json for an example of the format. |
-| dynamicImages | object | This is used to define a dynamic image for a pass, like a profile image on a membership pass. The value is the image path from Images Upload Endpoint. Please also see the sections Passbook Image Types and Dynamic Image Keys for more information regarding pass images. |
-| userDefinedId | string | This allows a unique Id to be added to the pass record that can provide easy compatible with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via [userDefinedId](https://dev.passkit.net/v3/#retrieve-a-pass-with-user-defined-id) and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.
-For the Braze integration, we would recommend using the [Braze external ID](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). |
-| recoveryEmail | string | The user’s email address. If this parameter is used, the user will receive an email containing a link to the pass. |
-| isVoided | bool | When this field set to true, the pass will be voided. When the pass is voided the barcode will be greyed out and beacon and location notification will be turned off. Default value is false. |
-| isRedeemed | bool | When this field set to true, the pass will be marked as redeemed. Default value is false. |
-| isInvalid | bool | When this field set to true, the pass is invalidated The barcode, beacon and location messages will be removed and the pass can no longer be communicated with. Once a pass is set as invalidated, it cannot be changed. Default is false. |
-| expiryDate | ISO8601 datetime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
-| passbook | object | This is where the Apple Wallet (Passbook) specific parameters are defined. Please see [Passbook](https://dev.passkit.net/v3/#passbook). |
+| `campaignName` <br> _Required._ | string | This is the name of the campaign you created. For more detail, please see [Create Campaign](https://dev.passkit.net/v3/#create-a-campaign). This value cannot be changed after a pass created. |
+| `templateName` <br> _Required._ | string | Required. This is the name of the template you created. For more detail, please see [Create Template](https://dev.passkit.net/v3/#create-a-template).|
+| `dynamicData` | object | A key pair value JSON object. This is the user’s unique data. For example, customer name, date of birth, membership number. etc. The data will not show on the pass until it is defined in the template. See the example json for an example of the format. |
+| `dynamicImages` | object | This is used to define a dynamic image for a pass, like a profile image on a membership pass. The value is the image path from Images Upload Endpoint. Please also see the sections Passbook Image Types and Dynamic Image Keys for more information regarding pass images. |
+| `userDefinedId` | string | This allows a unique Id to be added to the pass record that can provide easy compatible with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via [userDefinedId](https://dev.passkit.net/v3/#retrieve-a-pass-with-user-defined-id) and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.
+For the Braze integration, we would recommend using the [Braze external ID]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). |
+| `recoveryEmail` | string | The user’s email address. If this parameter is used, the user will receive an email containing a link to the pass. |
+| `isVoided` | bool | When this field set to true, the pass will be voided. When the pass is voided the barcode will be greyed out and beacon and location notification will be turned off. Default value is false. |
+| `isRedeemed` | bool | When this field set to true, the pass will be marked as redeemed. Default value is false. |
+| `isInvalid` | bool | When this field set to true, the pass is invalidated The barcode, beacon and location messages will be removed and the pass can no longer be communicated with. Once a pass is set as invalidated, it cannot be changed. Default is false. |
+| `expiryDate` | ISO8601 datetime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
+| `passbook` | object | This is where the Apple Wallet (Passbook) specific parameters are defined. Please see [Passbook](https://dev.passkit.net/v3/#passbook). |
 
 
 ### Create a New Pass via Webhook
@@ -134,8 +134,6 @@ Remember to save your template before leaving the page!
 
 You can create this from the `Templates & Media` section, or create a new Webhook Campaign or Canvas in Braze.
 
-!Rokt_Webhook_Template 2
-
 Once you have selected the `PassKit - Update Pass` webhook template, you should see the following in the composer:
 
 - `Webhook URL`: https://braze.passkitapi.com/v1/passes/{insert_campaign_name}/{{${user_id}}}
@@ -148,7 +146,7 @@ Once you have selected the `PassKit - Update Pass` webhook template, you should 
 To setup the webhook, fill out the details of the new event within the Request Body.
 
 {% raw %}
-```
+```javascript
 {% assign templateName= "example_templateName" %}
 {% assign campaignName = "example_campaignName" %}
 {% capture name %}{{${first_name} | default: "Friend" }}{% endcapture %}
