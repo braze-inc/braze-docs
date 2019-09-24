@@ -1,6 +1,11 @@
 ---
 nav_title: Calendar
-config_only: true
-layout: blank_config
 page_order: 9
+
+partner_path: "https://www.braze.com/product/alloys/partners/"
+partner_top_header: "Calendar"
+
+valid_partner_list: Calendar
+name: Rokt Calendar
+url: /docs/partners/technology_partners/channel_extensions/calendar/rokt_calendar/
 ---
