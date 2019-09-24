@@ -98,6 +98,8 @@ valid_partner_list:
   url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
 - name: Fivetran
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
+- name: Rokt
+  url: /docs/partners/technology_partners/channel_extensions/calendar/rokt_calendar/
 
 
 ---
