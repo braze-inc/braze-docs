@@ -13,7 +13,7 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 
 Two options which will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
-## [Content Card Expiration](#content-card-expiration)
+## <a id="content-card-expiration">Content Card Expiration</a>
 When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time will begin only once the card reaches the canvas step and the card is sent.
 
 If a sent card expires before a user has viewed it in your app, they will no longer be eligible to receive this card as it will be removed from their feed the next time their cards are refreshed.
@@ -23,11 +23,11 @@ If a sent card expires before a user has viewed it in your app, they will no lon
  The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
-## [Advancement Behavior Options](#advancement-behavior-options)
+## <a id="advancement-behavior-options">Advancement Behavior Options</a>
 
 The Advancement Behavior option allows you to control when a user should advance to their next eligible step. [Steps that send only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
 
-### [Steps with Content Cards Only](#steps-with-in-content-cards-only)
+### <a id="steps-with-in-content-cards-only">Steps with Content Cards Only</a>
 
 If a step conatins only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
 
@@ -40,7 +40,7 @@ If a step conatins only Content Cards (and no other messaging channel), you can 
 
 
 
-### [Steps with Multiple Channels](#steps-with-multiple-message-channels)
+### <a id="steps-with-multiple-message-channels">Steps with Multiple Channels</a>
 
 ![content-card-multiple-channels.png][3]
 
