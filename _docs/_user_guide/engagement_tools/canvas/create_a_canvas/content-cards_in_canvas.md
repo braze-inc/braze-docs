@@ -48,7 +48,7 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 | Option | Description |
 |---|---|
-| Message Sent | When message sent is selected, users must be successfully sent at least one of the message types in the step in order to advance to subsequent steps.|
+| Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
 | Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
 
 
@@ -69,3 +69,5 @@ Using Canvas, you can add a step that sends both a Content Card and Push Notific
 #### Categories for Offers and Promotions
 
 Give users different categories for offers or content they can browser through. This can be done using Key Value Pairs within your Content Card campaign: **LINK NEEDED to KVP customization**
+
+[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
