@@ -30,8 +30,6 @@ glossaries:
     description: For each program that is created in the SMS Campaign Manager platform, content for this keyword must be provided and has to meet the best practices and carrier compliance per country or region in which the SMS traffic is being sent and received. In most cases this content should have a brief explanation of the SMS program, and how to OPTED-OUT.
   - name: Global STOP Keywords
     description: Variations include `STOP`, `END`, `QUIT`, `UNSUBSCRIBE`, `CANCEL`, `STOPALL`. These are referred to as `Global-Stop-Keywords`. If any of these keywords are texted in to a short or long code, it results in the mobile number (the originating mobile phone number) being opted-out of every active SMS program on that code it is associated with.
-  - name: "<KEYWORD> STOP (Unsubscribe from Specific SMS Program)"
-    description: "Keywords can be used to categorize their SMS programs and therefore enable their mobile users to unsubscribe from those specific programs, rather than all of the programs. For example, if a brand used the keyword `SAVINGS` as the keyword to enter their marketing SMS program and the mobile user only wants to OPT-OUT of that specific single program on that code, then they would text in 'SAVINGS STOP'."
 
 
 
