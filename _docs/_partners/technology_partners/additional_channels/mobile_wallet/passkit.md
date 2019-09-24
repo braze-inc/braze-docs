@@ -9,7 +9,9 @@ PassKit enables you to extend your mobile reach by integrating Apple Wallet and 
 
 Deliver seamless, connected online to offline customer experiences with Braze and PassKit. Increase engagement with and measure engagement of your online campaigns by instantly delivering Apple Wallet and Google Pay passes. Analyze usage and make real time adjustments to increase in-store traffic by triggering location based messages and personalized, dynamic updates to your customers mobile wallet.
 
-{% alert important %} This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information. {% endalert %}
+{% alert important %} 
+This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information. 
+{% endalert %}
 
 ## Pre-Requisites
 
@@ -82,7 +84,7 @@ Once you have selected the `PassKit - Create Pass` webhook template, you should 
 Here is a generic template that can help you get started in building your pass. Your can add / edit the JSON Payload parameters and liquid to fit your use case. If you have worked with your PassKit account manager on customized templates or images, they will be able to help you add the appropriate JSON payload parameters for your campaign.
 
 {% raw %}
-```
+```javascript
 {% assign templateName= "example_templateName" %}
 {% assign campaignName = "example_campaignName" %}
 {% capture name %}{{${first_name} | default: "Friend" }}{% endcapture %}
@@ -104,7 +106,7 @@ Here is a generic template that can help you get started in building your pass. 
 }
 
 ```
-{% end raw %}
+{% endraw %}
 
 ##### Step 3: Fill Out Your Request Headers & Select HTTP Method
 
@@ -167,7 +169,7 @@ To setup the webhook, fill out the details of the new event within the Request B
   }
 }
 ```
-{% end raw %}
+{% endraw %}
 
 ##### Step 3: Fill Out Your Request Headers & Select HTTP Method
 
