@@ -85,10 +85,10 @@ Before you get started, the fields below detail the information that can be cust
 | `eventId` <br> _Required._ | A unique identifier for the event to be added or updated | `Event_00001`
 | `eventTitle` <br> _Required._ | The title of the event as it would appear in the calendar | Summer Sale 2019
 | `eventDescr` | The description of the event as it would appear in the calendar | The sale is on for 3 days, click this link `www.mybusiness.com/sale` to see the offers. |
-| `eventLocation` | The location of the event as it would appear in the calendar, note that this is often used as a second call to action which is complementary to the eventTitle. | Open the event to get 50% off. |
+| `eventLocation` | The location of the event as it would appear in the calendar, note that this is often used as a second call to action which is complementary to the eventTitle. | Braze |
 | `eventStart` <br> _Required._  | The start date and time of the event as it would appear in the calendar | `2019-02-21T15:00:00` |
 | `eventEnd` <br> _Required._  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
-| `eventTz` <br> _Required._  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found here Eastern Standard Time. |
+| `eventTz` <br> _Required._  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found here. | `Eastern Standard Time.` |
 | `notifyBefore` <br> _Required._  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
 
 ### Send a New Event
