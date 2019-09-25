@@ -75,7 +75,7 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ### Custom Event Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager. 
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Event Properties
 
@@ -96,7 +96,7 @@ Custom Attributes are best for storing attributes about your users, or informati
 
 ### Custom Attribute Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager. 
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Attribute Data Types
 Custom Attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
@@ -110,8 +110,8 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __IS BLANK__ | __N/A__ |
+| Check if the string attribute __exists__ on a user's profile | __IS BLANK__ | __N/A__ |
+| Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
