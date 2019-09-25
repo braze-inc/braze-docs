@@ -103,7 +103,7 @@ Once you have selected the `Rokt Calendar - New Event` webhook template, you sho
 
 | Composer Parameter | Input This Value: |
 |---|---|
-| `Webhook URL` | Input your equivalent of (replace {{accountCode}}) `{% assign accountCode = custom_attribute.${account_code}[0] | split: "/" | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}`. |
+| `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
 
@@ -117,12 +117,15 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
 {% capture eventTitle %}Event Title{% endcapture %}
+{% capture eventName %}Event Name{% endcapture %}
 {% capture eventDescr %}Event Description{% endcapture %}
 {% capture eventLocation %}Event Location{% endcapture %}
 {% capture eventStart %}2019-02-21T15:00:00{% endcapture %}
-{% capture eventEnd %}2019-02-21T17:00:00{% endcapture %}
+{% capture eventEnd %}2019-02-21T15:00:00{% endcapture %}
+{% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
-{% capture notifyBefore %}15{% endcapture %}
+
+{% comment %} For a list of valid timezones see: https://roktcalendar-api.readme.io/docs/timezones {% endcomment %}
 
 {
   "event": {
@@ -135,7 +138,7 @@ To setup the webhook, fill out the details of the new event within the Request B
     "timezone": "{{eventTZ}}",
     "notifyBefore": "{{notifyBefore}}"
   },
-  "subscriptionIds": ["{{custom_attribute.${subscription_id}| join: '","'  }}"]
+  "subscriptionIds": ["{{custom_attribute.${calreply:subscription_id}| join: '","'  }}"]
 }
 ```
 
@@ -176,7 +179,7 @@ Once you have selected the `Rokt Calendar - Update Event` webhook template, inpu
 
 | Composer Parameter | Input This Value: |
 |---|---|
-| `Webhook URL` | Input your equivalent of (replace {{accountCode}}) `{% assign accountCode = custom_attribute.${account_code}[0] | split: "/" | first %} <br> https://api.calreply.net/v1/subscriptionevent/{{accountCode}}/update`. |
+| `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}/update`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
 
@@ -187,24 +190,26 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
 {% capture eventTitle %}Event Title{% endcapture %}
+{% capture eventName %}Event Name{% endcapture %}
 {% capture eventDescr %}Event Description{% endcapture %}
 {% capture eventLocation %}Event Location{% endcapture %}
 {% capture eventStart %}2019-02-21T15:00:00{% endcapture %}
-{% capture eventEnd %}2019-02-21T17:00:00{% endcapture %}
+{% capture eventEnd %}2019-02-21T15:00:00{% endcapture %}
+{% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
-{% capture notifyBefore %}15{% endcapture %}
+
+{% comment %} For a list of valid timezones see: https://roktcalendar-api.readme.io/docs/timezones {% endcomment %}
 
 {
-    "eventId": "{{eventId}}_{{${user_id}}}",
-    "title": "{{eventTitle}}",
-    "description": "{{eventDescr}}",
-    "location": "{{eventLocation}}",
-    "start": "{{eventStart}}",
-    "end": "{{eventEnd}}",
-    "timezone": "{{eventTZ}}",
-    "notifyBefore": "{{notifyBefore}}"
-  }
-
+  "eventId": "{{eventId}}_{{${user_id}}}",
+  "title": "{{eventTitle}}",
+  "description": "{{eventDescr}}",
+  "location": "{{eventLocation}}",
+  "start": "{{eventStart}}",
+  "end": "{{eventEnd}}",
+  "timezone": "{{eventTZ}}",
+  "notifyBefore": "{{notifyBefore}}"
+}
 ```
 
 {% alert tip %}
