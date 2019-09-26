@@ -6,7 +6,7 @@ page_order: 6
 
 ## Global Subscription States {#subscription-states}
 
-Braze has three global subscription states for e-mail users (listed in chart below), which are considered the primary gate through which determine whether messages send to your users.
+Braze has three global subscription states for e-mail users (listed in chart below), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
