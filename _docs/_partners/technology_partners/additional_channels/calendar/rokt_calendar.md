@@ -145,7 +145,7 @@ To setup the webhook, fill out the details of the new event within the Request B
 
 {% alert tip %}
 
-For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+For a list of valid timezones see [https://roktcalendar.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
 
 {% endalert %}
 
@@ -221,7 +221,7 @@ To setup the webhook, fill out the details of the new event within the Request B
 
 {% alert tip %}
 
-For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+For a list of valid timezones see [https://roktcalendar.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
 
 {% endalert %}
 
