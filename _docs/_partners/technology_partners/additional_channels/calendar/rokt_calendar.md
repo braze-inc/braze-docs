@@ -125,8 +125,6 @@ To setup the webhook, fill out the details of the new event within the Request B
 {% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
 
-{% comment %} For a list of valid timezones see: https://roktcalendar-api.readme.io/docs/timezones {% endcomment %}
-
 {
   "event": {
     "eventId": "{{eventId}}_{{${user_id}}}",
@@ -197,8 +195,6 @@ To setup the webhook, fill out the details of the new event within the Request B
 {% capture eventEnd %}2019-02-21T15:00:00{% endcapture %}
 {% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
-
-{% comment %} For a list of valid timezones see: https://roktcalendar-api.readme.io/docs/timezones {% endcomment %}
 
 {
   "eventId": "{{eventId}}_{{${user_id}}}",
