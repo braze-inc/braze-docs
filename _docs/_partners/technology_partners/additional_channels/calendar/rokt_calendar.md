@@ -140,6 +140,9 @@ To setup the webhook, fill out the details of the new event within the Request B
 }
 ```
 
+{% endraw %}
+
+
 {% alert tip %}
 
 For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
@@ -147,6 +150,8 @@ For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
 {% endalert %}
 
 #### Step 3: Fill Out Your Request Headers & Select HTTP Method
+
+{% raw %}
 
 | HTTP Header       | Definition       |
 | ----------------  | ---------------- |
@@ -211,6 +216,8 @@ To setup the webhook, fill out the details of the new event within the Request B
   "notifyBefore": "{{notifyBefore}}"
 }
 ```
+{% endraw %}
+
 
 {% alert tip %}
 
@@ -220,6 +227,8 @@ For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
 
 
 #### Step 3: Fill Out Your Request Headers & Select HTTP Method
+
+{% raw %}
 
 | HTTP Header       | Definition       |
 | ----------------  | ---------------- |
