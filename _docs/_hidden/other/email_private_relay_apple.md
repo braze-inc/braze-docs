@@ -7,11 +7,11 @@ permalink: /email_relay/
 
 Braze customers who use Sendgrid as an email provider can now, essentially, "whitelist" with Apple without having to make DNS changes.
 
-Go to your Apple Certificate page and whitelist an individual email address. It should be formatted as:
+Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist an individual email address. It should be formatted as:
 
 `bounces+<YOUR_UID>@<YOUR_WHITELABEL_SUBDOMAIN_AND_DOMAIN>`
 
-And could look like:
+For example:
 
 `bounces+1234567@braze.online.docs.com`
 
@@ -20,7 +20,7 @@ And could look like:
 | UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> _You can also ask your Braze representative to provide your UID if you had previously provided it._ |
 | Whitelabel Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the HOST value in your DNS records in Sendgrid. |
 
-Once added to your Apple Certificate page, emails from this address will be delivered to the Apple Private Relay system.
+Once added to your Apple Certificate page, emails from this from-address domain will be delivered to the Apple Private Relay system.
 
 ## What is the Apple Private Relay System?
 
