@@ -52,22 +52,22 @@ When Rokt either creates a new user or matches an existing subscriber with a Bra
 
 | Custom Attribute  | Definition       | Example          |
 | ----------------  | ---------------- | ---------------- |
-| `account_code` | Code of the Rokt Calendar account. | `brazetest/f5733866ade2` and `brazetest/ff10919f1078` |
-| `account_id` |Id of the Rokt Calendar account. | `d0ce4299-7d6c-4888-bfd8-c7e867a0fa6c/f5733866ade2` |
-| `account_name` | Name of the Rokt Calendar account. | `Braze Test/f5733866ade2` |
-| `calendar_code` | Code of the Rokt Calendar calendar. | `test-calendar-1/f5733866ade2` |
-| `calendar_id` | Id of the Rokt Calendar calendar. | `9a9007c7-f5a4-e811-b13c-06424c4f2724/f5733866ade2` |
-| `calendar_title` |Title of the Rokt Calendar calendar. | `Test Calendar 1/f5733866ade2` |
-| `country_code` | Country code related to the created subscription. | `AU/f5733866ade2` |
-| `device_name` | Device type related to the created subscription. | `Desktop/f5733866ade2` |
-| `geo_country` | Country of origin related to the created subscription. | `Australia/f5733866ade2` |
-| `optIn1` | If the user has opted-in to the first of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
-| `optIn2` | If the user has opted-in to the second of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
-| `source` | The source of the created subscription. | `brazetest.Rokt Calendarapp.com/f5733866ade2` |
-| `subscriber_email` | The email address entered by the user during the subscription process. | `test@email.com/f5733866ade2` |
-| `subscription_id` | The subscription Id, serving as a unique identifier, related to the created subscription. | `06423672-b6ba-4536-aa36-70788a7a0a36` |
-| `subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
-| `tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
+| `calreply:account_code` | Code of the Rokt Calendar account. | `brazetest/f5733866ade2` and `brazetest/ff10919f1078` |
+| `calreply:account_id` |Id of the Rokt Calendar account. | `d0ce4299-7d6c-4888-bfd8-c7e867a0fa6c/f5733866ade2` |
+| `calreply:account_name` | Name of the Rokt Calendar account. | `Braze Test/f5733866ade2` |
+| `calreply:calendar_code` | Code of the Rokt Calendar calendar. | `test-calendar-1/f5733866ade2` |
+| `calreply:calendar_id` | Id of the Rokt Calendar calendar. | `9a9007c7-f5a4-e811-b13c-06424c4f2724/f5733866ade2` |
+| `calreply:calendar_title` |Title of the Rokt Calendar calendar. | `Test Calendar 1/f5733866ade2` |
+| `calreply:country_code` | Country code related to the created subscription. | `AU/f5733866ade2` |
+| `calreply:device_name` | Device type related to the created subscription. | `Desktop/f5733866ade2` |
+| `calreply:geo_country` | Country of origin related to the created subscription. | `Australia/f5733866ade2` |
+| `calreply:optIn1` | If the user has opted-in to the first of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
+| `calreply:optIn2` | If the user has opted-in to the second of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
+| `calreply:source` | The source of the created subscription. | `brazetest.Rokt Calendarapp.com/f5733866ade2` |
+| `calreply:subscriber_email` | The email address entered by the user during the subscription process. | `test@email.com/f5733866ade2` |
+| `calreply:subscription_id` | The subscription Id, serving as a unique identifier, related to the created subscription. | `06423672-b6ba-4536-aa36-70788a7a0a36` |
+| `calreply:subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
+| `calreply:tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
 
 In addition, Rokt will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
 
