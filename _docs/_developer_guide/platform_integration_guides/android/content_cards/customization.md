@@ -482,7 +482,7 @@ To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 
-## Key-Value Pair.
+## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
