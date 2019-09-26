@@ -20,7 +20,7 @@ For example, if Becky and Tom are both included in your scheduled Campaign audie
 If they are included in the audience of an API-triggered Campaign, they will have different `dispatch_ids`.
 
 {% alert warning %}
-Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in either unique `dispatch_ids` per user per send, or shared `dispatch_ids` across users per send.
+Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas step will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.
 {% endalert %}
 
 # More on Using Dispatch ID
