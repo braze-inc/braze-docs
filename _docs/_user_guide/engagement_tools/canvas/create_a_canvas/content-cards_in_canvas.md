@@ -11,6 +11,8 @@ Content Cards can be sent to your customers as part of their Canvas journey. Thi
 
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
+![content cards in canvas][1]
+
 Two options which will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
 ## Content Card Expiration {#content-card-expiration}
@@ -54,8 +56,6 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 ## Use Cases
 
-When should you use this feature? 
-
 #### Promotional Offers
 
 Add cards to a user's feed as they qualify for specific promotions and advertisements. For example, if a user becomes eligible for a new offer after performing an action or making a purchase, using Canvas you can send them a Content Card, in addition to other messaging channels, so that the next time they open the app the offer is available to them.
@@ -66,8 +66,13 @@ There are times when a user may dismiss a push notification or delete an email, 
 
 Using Canvas, you can add a step that sends both a Content Card and Push Notification to give users a persistent "inbox" of cards that align with promotional messages sent via Push. 
 
-#### Categories for Offers and Promotions
+#### Multiple Feeds based on Categories
 
-Give users different categories for offers or content they can browser through. This can be done using Key Value Pairs within your Content Card campaign: **LINK NEEDED to KVP customization**
+You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating multiople feeds using Key Value Pairs:
+
+* [Multiple Feeds for Web SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
+* [Multiple Feeds for Android SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
+[2]: {% image_buster /assets/img_archive/content-card-single-channel.png %}
+[3]: {% image_buster /assets/img_archive/content-card-multiple-channels.png %}
