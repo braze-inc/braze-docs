@@ -44,6 +44,12 @@ We're still working on setting some things up, but trust us, they're on our mind
 
 <iframe src="https://script.google.com/macros/s/AKfycbwwJwf3RbgRRx3Ls3QzvyYNrIRWBvO0ID4xtwnQSK_5uUjLb_Q/exec" style="width:100%;min-height:650px;border:none;" id="gittopcommit"></iframe>
 
+### LTR Plug
+
+While you're here, make sure to join us at the end of Hacktober for our LTR conference!
+
+<img src="https://ci5.googleusercontent.com/proxy/zPOq-cODqJKIIiddjVk-PVAA7lNTPRNwYS0rYNNtKnUlX3kKlJ88k45Z7sZpddY0YvzbHq7N1ia2afwxSmGlYVbxCSLCcYnFAd8jnQwiR7CbgO4-uwZOAlD2AGaFH9rsQLtXU6M410aURaJ-vTaeybWXGPTtdMmEBrdjUA3Gmp3X4ZxLc0HFWzGa3Fgz=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5d6fde1199e8af40543977be/original.jpg?1567612433" style="max-width:100%;height:auto;width:100%;outline:none!important;display:block!important;border:0" width="650" height="100" class="CToWUd">
+
 
 <script type="text/javascript">
 var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
