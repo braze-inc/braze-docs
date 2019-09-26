@@ -141,7 +141,9 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```
 
 {% alert tip %}
+
 For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+
 {% endalert %}
 
 #### Step 3: Fill Out Your Request Headers & Select HTTP Method
@@ -162,7 +164,9 @@ You will see that your raw text automatically highlights if it is an applicable 
 You should be able to preview your request in the left-hand panel, or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
+
 Remember to save your template before leaving the page!
+
 {% endalert %}
 
 ### Update an Existing Event
@@ -209,7 +213,9 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```
 
 {% alert tip %}
+
 For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+
 {% endalert %}
 
 
