@@ -9,8 +9,8 @@ PassKit enables you to extend your mobile reach by integrating Apple Wallet and 
 
 Deliver seamless, connected online to offline customer experiences with Braze and PassKit. Increase engagement with and measure engagement of your online campaigns by instantly delivering Apple Wallet and Google Pay passes. Analyze usage and make real time adjustments to increase in-store traffic by triggering location based messages and personalized, dynamic updates to your customers mobile wallet.
 
-{% alert important %} 
-This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information. 
+{% alert important %}
+This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
 {% endalert %}
 
 ## Pre-Requisites
@@ -135,10 +135,12 @@ You can create this from the `Templates & Media` section, or create a new Webhoo
 
 Once you have selected the `PassKit - Update Pass` webhook template, you should see the following in the composer:
 
+{% raw %}
 - `Webhook URL`: https://braze.passkitapi.com/v1/passes/{insert_campaign_name}/{{${user_id}}}
   - _Note: You will need to manually input your campaign name within the URL._
 - `Request Body`: Raw Text
 - `HTTP Method`: PUT
+{% endraw %}
 
 ##### Step 2: Fill Out Your Template
 
