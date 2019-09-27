@@ -4,11 +4,13 @@ platform: Android
 page_order: 1
 search_rank: 5
 ---
-## Localization
+# Localization
 
 Localization is supported within the Braze Android SDK. In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
-### Languages Supported
+If you are looking for the list of supported languages you may attribute to your users in their profiles, please see [our Help article on Supported Languages for Data]({{ site.baseurl }}/help/help_articles/data/supported_languages/).
+
+## Languages Supported
 
 1. Arabic
 2. Burmese
@@ -40,7 +42,7 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 28. Thai
 29. Vietnamese
 
-### List of Localized Strings
+## List of Localized Strings
 
 - Free
 - Reporting an Issue?
