@@ -6,7 +6,7 @@ page_order: 6
 
 ## Global Subscription States {#subscription-states}
 
-Braze has three global subscription states for e-mail users (listed in chart below), which are considered the primary gate through which determine whether messages send to your users.
+Braze has three global subscription states for e-mail users (listed in chart below), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the Global Subscription State of `subscribed` or `opted-in`.
 
 | State | Definition |
 | ----- | ---------- |
@@ -100,8 +100,7 @@ You can edit the logo and header of your Preference Center. Click the gear, then
 ### Changing Email Subscriptions {#changing-email-subscriptions}
 In most cases, your users will manage their email subscription through subscription links that are included in the emails they receive.
 
-Braze automatically inserts a footer with an unsubscribe link at the bottom of every email you send, in accordance with the [CAN-SPAM Act of 2003][8]. When users click on the unsubscribe url in this footer, they are unsubscribed and taken to a landing page that confirms the change to their subscription.
-
+You must insert a legally compliant footer with an unsubscribe link at the bottom of every email you send. When users click on the unsubscribe url in your footer, they should be unsubscribed and taken to a landing page that confirms the change to their subscription. 
 
 #### Custom Footers {#custom-footer}
 

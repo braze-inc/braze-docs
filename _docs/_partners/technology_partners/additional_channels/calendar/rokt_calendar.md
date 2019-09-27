@@ -52,22 +52,22 @@ When Rokt either creates a new user or matches an existing subscriber with a Bra
 
 | Custom Attribute  | Definition       | Example          |
 | ----------------  | ---------------- | ---------------- |
-| `account_code` | Code of the Rokt Calendar account. | `brazetest/f5733866ade2` and `brazetest/ff10919f1078` |
-| `account_id` |Id of the Rokt Calendar account. | `d0ce4299-7d6c-4888-bfd8-c7e867a0fa6c/f5733866ade2` |
-| `account_name` | Name of the Rokt Calendar account. | `Braze Test/f5733866ade2` |
-| `calendar_code` | Code of the Rokt Calendar calendar. | `test-calendar-1/f5733866ade2` |
-| `calendar_id` | Id of the Rokt Calendar calendar. | `9a9007c7-f5a4-e811-b13c-06424c4f2724/f5733866ade2` |
-| `calendar_title` |Title of the Rokt Calendar calendar. | `Test Calendar 1/f5733866ade2` |
-| `country_code` | Country code related to the created subscription. | `AU/f5733866ade2` |
-| `device_name` | Device type related to the created subscription. | `Desktop/f5733866ade2` |
-| `geo_country` | Country of origin related to the created subscription. | `Australia/f5733866ade2` |
-| `optIn1` | If the user has opted-in to the first of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
-| `optIn2` | If the user has opted-in to the second of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
-| `source` | The source of the created subscription. | `brazetest.Rokt Calendarapp.com/f5733866ade2` |
-| `subscriber_email` | The email address entered by the user during the subscription process. | `test@email.com/f5733866ade2` |
-| `subscription_id` | The subscription Id, serving as a unique identifier, related to the created subscription. | `06423672-b6ba-4536-aa36-70788a7a0a36` |
-| `subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
-| `tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
+| `calreply:account_code` | Code of the Rokt Calendar account. | `brazetest/f5733866ade2` and `brazetest/ff10919f1078` |
+| `calreply:account_id` |Id of the Rokt Calendar account. | `d0ce4299-7d6c-4888-bfd8-c7e867a0fa6c/f5733866ade2` |
+| `calreply:account_name` | Name of the Rokt Calendar account. | `Braze Test/f5733866ade2` |
+| `calreply:calendar_code` | Code of the Rokt Calendar calendar. | `test-calendar-1/f5733866ade2` |
+| `calreply:calendar_id` | Id of the Rokt Calendar calendar. | `9a9007c7-f5a4-e811-b13c-06424c4f2724/f5733866ade2` |
+| `calreply:calendar_title` |Title of the Rokt Calendar calendar. | `Test Calendar 1/f5733866ade2` |
+| `calreply:country_code` | Country code related to the created subscription. | `AU/f5733866ade2` |
+| `calreply:device_name` | Device type related to the created subscription. | `Desktop/f5733866ade2` |
+| `calreply:geo_country` | Country of origin related to the created subscription. | `Australia/f5733866ade2` |
+| `calreply:optIn1` | If the user has opted-in to the first of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
+| `calreply:optIn2` | If the user has opted-in to the second of 2 opt-ins related to the created subscription. | `True/f5733866ade2` |
+| `calreply:source` | The source of the created subscription. | `brazetest.Rokt Calendarapp.com/f5733866ade2` |
+| `calreply:subscriber_email` | The email address entered by the user during the subscription process. | `test@email.com/f5733866ade2` |
+| `calreply:subscription_id` | The subscription Id, serving as a unique identifier, related to the created subscription. | `06423672-b6ba-4536-aa36-70788a7a0a36` |
+| `calreply:subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
+| `calreply:tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
 
 In addition, Rokt will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
 
@@ -85,10 +85,10 @@ Before you get started, the fields below detail the information that can be cust
 | `eventId` <br> _Required._ | A unique identifier for the event to be added or updated | `Event_00001`
 | `eventTitle` <br> _Required._ | The title of the event as it would appear in the calendar | Summer Sale 2019
 | `eventDescr` | The description of the event as it would appear in the calendar | The sale is on for 3 days, click this link `www.mybusiness.com/sale` to see the offers. |
-| `eventLocation` | The location of the event as it would appear in the calendar, note that this is often used as a second call to action which is complementary to the eventTitle. | Open the event to get 50% off. |
+| `eventLocation` | The location of the event as it would appear in the calendar, note that this is often used as a second call to action which is complementary to the eventTitle. | Braze |
 | `eventStart` <br> _Required._  | The start date and time of the event as it would appear in the calendar | `2019-02-21T15:00:00` |
 | `eventEnd` <br> _Required._  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
-| `eventTz` <br> _Required._  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found here Eastern Standard Time. |
+| `eventTz` <br> _Required._  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found here. | `Eastern Standard Time.` |
 | `notifyBefore` <br> _Required._  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
 
 ### Send a New Event
@@ -103,7 +103,7 @@ Once you have selected the `Rokt Calendar - New Event` webhook template, you sho
 
 | Composer Parameter | Input This Value: |
 |---|---|
-| `Webhook URL` | Input your equivalent of (replace {{accountCode}}) `{% assign accountCode = custom_attribute.${account_code}[0] | split: "/" | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}`. |
+| `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
 
@@ -117,12 +117,13 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
 {% capture eventTitle %}Event Title{% endcapture %}
+{% capture eventName %}Event Name{% endcapture %}
 {% capture eventDescr %}Event Description{% endcapture %}
 {% capture eventLocation %}Event Location{% endcapture %}
 {% capture eventStart %}2019-02-21T15:00:00{% endcapture %}
-{% capture eventEnd %}2019-02-21T17:00:00{% endcapture %}
+{% capture eventEnd %}2019-02-21T15:00:00{% endcapture %}
+{% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
-{% capture notifyBefore %}15{% endcapture %}
 
 {
   "event": {
@@ -135,15 +136,22 @@ To setup the webhook, fill out the details of the new event within the Request B
     "timezone": "{{eventTZ}}",
     "notifyBefore": "{{notifyBefore}}"
   },
-  "subscriptionIds": ["{{custom_attribute.${subscription_id}| join: '","'  }}"]
+  "subscriptionIds": ["{{custom_attribute.${calreply:subscription_id}| join: '","'  }}"]
 }
 ```
 
+{% endraw %}
+
+
 {% alert tip %}
-For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+
+For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
+
 {% endalert %}
 
 #### Step 3: Fill Out Your Request Headers & Select HTTP Method
+
+{% raw %}
 
 | HTTP Header       | Definition       |
 | ----------------  | ---------------- |
@@ -161,7 +169,9 @@ You will see that your raw text automatically highlights if it is an applicable 
 You should be able to preview your request in the left-hand panel, or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
+
 Remember to save your template before leaving the page!
+
 {% endalert %}
 
 ### Update an Existing Event
@@ -176,7 +186,7 @@ Once you have selected the `Rokt Calendar - Update Event` webhook template, inpu
 
 | Composer Parameter | Input This Value: |
 |---|---|
-| `Webhook URL` | Input your equivalent of (replace {{accountCode}}) `{% assign accountCode = custom_attribute.${account_code}[0] | split: "/" | first %} <br> https://api.calreply.net/v1/subscriptionevent/{{accountCode}}/update`. |
+| `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}/update`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
 
@@ -187,32 +197,38 @@ To setup the webhook, fill out the details of the new event within the Request B
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
 {% capture eventTitle %}Event Title{% endcapture %}
+{% capture eventName %}Event Name{% endcapture %}
 {% capture eventDescr %}Event Description{% endcapture %}
 {% capture eventLocation %}Event Location{% endcapture %}
 {% capture eventStart %}2019-02-21T15:00:00{% endcapture %}
-{% capture eventEnd %}2019-02-21T17:00:00{% endcapture %}
+{% capture eventEnd %}2019-02-21T15:00:00{% endcapture %}
+{% capture notifyBefore %}10{% endcapture %}
 {% capture eventTZ %}Eastern Standard Time{% endcapture %}
-{% capture notifyBefore %}15{% endcapture %}
 
 {
-    "eventId": "{{eventId}}_{{${user_id}}}",
-    "title": "{{eventTitle}}",
-    "description": "{{eventDescr}}",
-    "location": "{{eventLocation}}",
-    "start": "{{eventStart}}",
-    "end": "{{eventEnd}}",
-    "timezone": "{{eventTZ}}",
-    "notifyBefore": "{{notifyBefore}}"
-  }
-
+  "eventId": "{{eventId}}_{{${user_id}}}",
+  "title": "{{eventTitle}}",
+  "description": "{{eventDescr}}",
+  "location": "{{eventLocation}}",
+  "start": "{{eventStart}}",
+  "end": "{{eventEnd}}",
+  "timezone": "{{eventTZ}}",
+  "notifyBefore": "{{notifyBefore}}"
+}
 ```
+{% endraw %}
+
 
 {% alert tip %}
-For a list of valid timezones see https://roktcalendar.readme.io/docs/timezones.
+
+For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
+
 {% endalert %}
 
 
 #### Step 3: Fill Out Your Request Headers & Select HTTP Method
+
+{% raw %}
 
 | HTTP Header       | Definition       |
 | ----------------  | ---------------- |
