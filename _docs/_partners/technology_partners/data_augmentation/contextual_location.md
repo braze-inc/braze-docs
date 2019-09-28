@@ -1,6 +1,22 @@
 ---
 nav_title: Contextual Location
-config_only: true
-layout: blank_config
 page_order: 1
+
+partner_path: "https://www.braze.com/product/alloys/partners"
+partner_top_header: "Contextual Location"
+
+valid_partner_list: Contextual Location
+name: Accuweather
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/
+name: Factual
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/factual/
+name: Foursquare
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/foursquare/
+name: Gimbal
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/
+name: Neura
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/neura/
+name: Radar
+url: /docs/partners/technology_partners/data_augmentation/contextual_location/radar/
+
 ---
