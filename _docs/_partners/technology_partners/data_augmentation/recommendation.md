@@ -1,6 +1,15 @@
 ---
 nav_title: Recommendation
-config_only: true
-layout: blank_config
 page_order: 2
+layout: partner_page
+
+partner_path: "https://www.braze.com/product/alloys/partners/"
+partner_top_header: "Recommendation"
+
+valid_partner_list: Recommendation
+name: Certona
+url: /docs/partners/technology_partners/data_augmentation/recommendation/certona/
+name: Liftigniter
+url: /docs/partners/technology_partners/data_augmentation/recommendation/liftigniter/
+
 ---
