@@ -59,7 +59,7 @@ public class GlideAppboyImageLoader implements IAppboyImageLoader {
           .apply(mRequestOptions)
           .load(imageUrl).submit().get();
     } catch (Exception e) {
-      AppboyLogger.e(TAG, "Failed to retrieve bitmap at url: " + imageUrl, e);
+      Log.e(TAG, "Failed to retrieve bitmap at url: " + imageUrl, e);
     }
     return null;
   }
@@ -113,7 +113,7 @@ class GlideAppboyImageLoader : IAppboyImageLoader {
           .apply(mRequestOptions)
           .load(imageUrl).submit().get()
     } catch (e: Exception) {
-      AppboyLogger.e(TAG, "Failed to retrieve bitmap at url: $imageUrl", e)
+      Log.e(TAG, "Failed to retrieve bitmap at url: $imageUrl", e)
     }
 
     return null
