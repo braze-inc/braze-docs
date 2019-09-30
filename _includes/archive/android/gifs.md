@@ -22,25 +22,44 @@ The integration example below is taken from the [Glide Integration Sample App][g
 ```java
 public class GlideAppboyImageLoader implements IAppboyImageLoader {
   private static final String TAG = GlideAppboyImageLoader.class.getName();
+
   private RequestOptions mRequestOptions = new RequestOptions();
 
   @Override
-  public void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+  public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public Bitmap getPushBitmapFromUrl(Context context, Bundle extras, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  @Override
+  public Bitmap getInAppMessageBitmapFromUrl(Context context, IInAppMessage inAppMessage, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView);
   }
 
-  @Override
-  public Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
+  private Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
     try {
       return Glide.with(context)
           .asBitmap()
           .apply(mRequestOptions)
           .load(imageUrl).submit().get();
     } catch (Exception e) {
-      Log.e(TAG, "Failed to retrieve bitmap at url: " + imageUrl, e);
+      AppboyLogger.e(TAG, "Failed to retrieve bitmap at url: " + imageUrl, e);
     }
     return null;
   }
@@ -64,21 +83,37 @@ class GlideAppboyImageLoader : IAppboyImageLoader {
 
   private var mRequestOptions = RequestOptions()
 
-  override fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+  override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  override fun getInAppMessageBitmapFromUrl(context: Context, inAppMessage: IInAppMessage, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView)
   }
 
-  override fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+  private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
     try {
       return Glide.with(context)
           .asBitmap()
           .apply(mRequestOptions)
           .load(imageUrl).submit().get()
     } catch (e: Exception) {
-      Log.e(TAG, "Failed to retrieve bitmap at url: $imageUrl", e)
+      AppboyLogger.e(TAG, "Failed to retrieve bitmap at url: $imageUrl", e)
     }
 
     return null
