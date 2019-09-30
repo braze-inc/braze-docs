@@ -4,7 +4,7 @@ page_order: 1
 search_rank: 5
 platform: Android
 ---
-# Customization 
+# Customization
 
 ## Default Styling {#default-styling-for-android}
 
@@ -77,7 +77,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
-The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47]. 
+The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
 
 Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
@@ -481,6 +481,16 @@ When using custom views, you will need to log analytics manually as well, since 
 To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
+
+#### Manually Dismissing a Content Card
+
+You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
+
+```java
+public void setIsDismissed(boolean isDismissed)
+```
+
+If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
 ## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
