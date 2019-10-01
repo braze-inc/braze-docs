@@ -18,7 +18,7 @@ In order to access Braze's messaging features, you must integrate the UI library
 
 #### Using Android Studio
 
-##### Add our repository
+##### Add Our Repository
 
 In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`.
 
@@ -37,7 +37,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 > See the [Android Support Library Setup instructions][65] for more information on the google maven repository.
 
-##### Add Braze dependency
+##### Add Braze Dependency
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
 
@@ -147,6 +147,10 @@ The SDK Endpoint configuration via `appboy.xml` is available starting with __Bra
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
 Please see the following sections in order to enable [custom event tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+
+{% alert important %}
+Our Unity SDK integration for Android requires [the same support library version as the base Android SDK](https://github.com/Appboy/appboy-android-sdk#version-support).
+{% endalert %}
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/customization/#news-feed-customization
 [2]: {{ site.baseurl }}/user_guide/introduction/
