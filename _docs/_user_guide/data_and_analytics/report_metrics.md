@@ -30,7 +30,7 @@ glossaries:
     tags:
       - All
   - name: Unique Recipients
-    description: The number of users who received a particular message. This number is received from Braze.
+    description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
     calculation: Count
     tags:
       - All
