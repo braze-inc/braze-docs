@@ -28,7 +28,13 @@ Send this message in English!
 {% endif %}
 ```
 
-You can have the abort_message log something to your Developer Console log by including a string inside the parentheses:
+By default Braze will log a generic error message to your Developer Console log:
+
+```text
+{% abort_message %} called
+```
+
+You can also have the abort_message log something to your Developer Console log by including a string inside the parentheses:
 
 ```liquid
 {% abort_message('language was nil') %}
