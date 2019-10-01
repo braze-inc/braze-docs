@@ -486,10 +486,6 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.l
 
 You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
 
-```java
-public void setIsDismissed(boolean isDismissed)
-```
-
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
 ## Key-Value Pairs
