@@ -1,6 +1,8 @@
 ---
 nav_title: Deprecations
 page_order: 10
+layout: dev_guide
+guide_top_header: "Deprecations"
 ---
 # About Deprecations
 
