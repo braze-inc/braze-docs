@@ -15,7 +15,7 @@ _Braze Partnership_
 
 _Support withdrawn: August 2019_
 
-If you are currently using Apptimize with Braze, you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+If you are currently using [Apptimize with Braze]({{ site.baseurl }}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
 
 ## Original In-App Messages
@@ -70,7 +70,7 @@ _Integration_
 
 _Support withdrawn: 2014-2015_
 
-Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
+Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance. Initial SDK Setup is [here]({{ site.baseurl }}/help/release_notes/deprecations/eclipse_setup_deprecated).
 
 ## The Raw Event Stream (RES)
 
