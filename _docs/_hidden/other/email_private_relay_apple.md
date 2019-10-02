@@ -7,7 +7,7 @@ permalink: /email_relay/
 
 Braze customers who use Sendgrid as an email provider can now, essentially, "[whitelist](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc)" with Apple without having to make DNS changes.
 
-Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist an individual email address.
+Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist the email address you wish to use for sending via Apple's Email Relay Service.
 
 ![Whitelabel the Address]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
