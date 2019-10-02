@@ -26,9 +26,9 @@ The following example will show the Content Cards feed for `Transactional` type 
 /**
  * @param {String} feed_type - value of the "feed_type" KVP to filter
  */
-function showCardsByFeedType(feed_type){
+function showCardsByFeedType(feed_type) {
   appboy.display.showContentCards(null, function(cards) {
-    return cards.filter(function(card){
+    return cards.filter(function(card) {
       return card.extras["feed_type"] === feed_type;
     });
   }
@@ -39,7 +39,7 @@ Then, you can set up a toggle for your custom feed, like the example shown below
 
 ```javascript
 // show the "Transactional" feed when this button is clicked
-document.getElementById('show-transactional-feed').onclick = function(){
+document.getElementById("show-transactional-feed").onclick = function() {
   showCardsByFeedType("Transactional"); 
 };
 ```
