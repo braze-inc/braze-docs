@@ -1,6 +1,14 @@
 ---
-config_only: true
 page_order: 5
 nav_title: Push
-layout: blank_config
+layout: dev_guide
+guide_top_header: "Push Help Articles"
+
+guide_menu_title: "Push Help Articles"
+guide_menu_list:
+  - name: No Push Notification Was Received
+    link: /docs/help/help_articles/push/no_push_notification_was_received/
+  - name: Push Token Migration
+    link: /docs/help/help_articles/push/push_token_migration/
+
 ---
