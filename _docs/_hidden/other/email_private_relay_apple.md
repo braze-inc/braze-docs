@@ -17,7 +17,7 @@ To find the proper address, go to your Sendgrid DNS record and copy the UID, Whi
 
 The address should be formatted as:
 
-`bounces+<YOUR_UID>@<YOUR_WHITELABEL_SUBDOMAIN_AND_DOMAIN>`
+`bounce+<YOUR_UID>@<YOUR_WHITELABEL_SUBDOMAIN_AND_DOMAIN>`
 
 For example: `bounces+1234567@braze.online.docs.com`.
 
