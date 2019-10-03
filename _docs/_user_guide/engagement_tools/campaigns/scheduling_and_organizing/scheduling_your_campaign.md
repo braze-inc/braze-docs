@@ -202,11 +202,11 @@ Additionally, if you are trying to send a message immediately with a re-eligibil
 
 With regards to multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:
 
-* When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
+- When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
 
-* If the variant percentages change, users may be redistributed to other variants.
+- If the variant percentages change, users may be redistributed to other variants.
 
-* Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
+- Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
 ## Editing Campaigns After Launch
 
