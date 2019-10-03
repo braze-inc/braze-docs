@@ -14,7 +14,8 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 | Requirement | Details |
 |---|---|
 | **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
-| **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br> *For some IdPs, this can also be referred to as the Reply URL, Entity ID, Audience URL, or Audience URI.* |
+| **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br> *For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI.* |
+| **Entity ID** | `braze_dashboard`|
 
 
 ## Service Provider (SP) Initiated Login within Azure AD
