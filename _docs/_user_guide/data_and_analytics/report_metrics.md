@@ -30,7 +30,7 @@ glossaries:
     tags:
       - All
   - name: Unique Recipients
-    description: The number of users who received a particular message. This number is received from Braze.
+    description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
     calculation: Count
     tags:
       - All
@@ -63,7 +63,7 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Bounces
-    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched.
+    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
     calculation: (Bounces) / (Sends)
     tags:
       - All Push

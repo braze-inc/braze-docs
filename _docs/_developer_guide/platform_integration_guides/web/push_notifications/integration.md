@@ -113,9 +113,8 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 When you wish to display the soft push prompt to the user, call `appboy.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins, your code would look like:
 
 ```
-appboy.openSession(function() {
-  appboy.logCustomEvent("prime-for-push");
-});
+appboy.openSession();
+appboy.logCustomEvent("prime-for-push");
 ```
 
 [1]: http://www.w3.org/TR/push-api/

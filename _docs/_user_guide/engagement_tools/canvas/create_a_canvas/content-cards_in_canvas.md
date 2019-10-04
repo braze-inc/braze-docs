@@ -16,9 +16,9 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 Two options which will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
 ## Content Card Expiration {#content-card-expiration}
-When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time will begin only once the card reaches the canvas step and the card is sent.
+When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its canvas step and the card is sent.
 
-If a sent card expires before a user has viewed it in your app, they will no longer be eligible to receive this card and it will be removed from their feed the next time their cards are refreshed.
+If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
 
 
 {% alert important %}
@@ -33,7 +33,7 @@ The Advancement Behavior option allows you to control when a user should advance
 
 If a step conatins only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
 
-![content-card-single-channel.png][2]
+![content-card-in-canvas-single-channel.png][2]
 
 | Option | Description |
 |---|---|
@@ -44,7 +44,7 @@ If a step conatins only Content Cards (and no other messaging channel), you can 
 
 ### Steps with Multiple Channels {#steps-with-multiple-message-channels}
 
-![content-card-multiple-channels.png][3]
+![content-cards-in-canvas-multiple-channels.png][3]
 
 Canvas steps with a Content Card and another messaging channel have the following advancement options:
 
@@ -53,6 +53,11 @@ Canvas steps with a Content Card and another messaging channel have the followin
 | Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
 | Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
 
+## Reporting & Analytics
+
+After launching a Content Cards step in Canvas you can begin to analyze 
+
+![content-card-in-canvas-analytics.png][4]
 
 ## Use Cases
 
@@ -74,5 +79,8 @@ You can separate your Content Cards into multiple feeds based on categories. For
 * [Multiple Feeds for Android SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-card-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-card-multiple-channels.png %}
+[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
+[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
+[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
+[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/reporting/#IAM-Reporting
+[6]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/

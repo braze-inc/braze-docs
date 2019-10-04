@@ -31,9 +31,6 @@ hide_breadcrumb: true
 
 
 {% unless hide_nav %}
-<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
-   <i class="fas"></i>
-</button -->
 <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
   <div id="nav_col" class="  ">
   {% include left_nav_menu.html  %}
@@ -154,7 +151,7 @@ hide_breadcrumb: true
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(lsp, s);
           };
-          
+
           window.addEventListener('load', loadStatusPage, false);
         </script>
 
