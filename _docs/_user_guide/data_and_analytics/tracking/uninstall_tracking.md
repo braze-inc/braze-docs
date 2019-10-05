@@ -24,7 +24,11 @@ This time can be used to define a segment of users for win-back campaigns. Using
 
 ## App-Level Analysis
 
-Daily statistics on uninstalls are found on the App Usage page. The visualization can be broken down by segment, similar to other statistics Braze provides. View statistics for usage analytics, and then select Uninstalls from the dropdown to display the graph. The graph can then be broken down by segment, and by app, using the dropdowns. Note that apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
+Daily statistics on uninstalls are found on the App Usage page. The visualization can be broken down by segment, similar to other statistics Braze provides. View statistics for usage analytics, and then select Uninstalls from the dropdown to display the graph. The graph can then be broken down by segment, and by app, using the dropdowns. 
+
+{% alert note %}
+Note that apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
+{% endalert %}
 
 ![Uninstall Graph Selection][2]
 
