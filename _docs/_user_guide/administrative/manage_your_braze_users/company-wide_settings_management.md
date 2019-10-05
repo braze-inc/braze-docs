@@ -7,7 +7,11 @@ page_order: 5
 
 ## Company Settings Page
 
-The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company. Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
+The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company.
+
+{% alert note %}
+Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
+{% endalert %}
 
 ### Consequences of Switching Your Time Zone
 
