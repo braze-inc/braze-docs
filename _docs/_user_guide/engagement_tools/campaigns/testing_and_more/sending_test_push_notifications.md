@@ -105,7 +105,11 @@ Testing campaigns [personalized][20] with [Custom Event Properties][19] differs 
 
 ![Composing Test Message with Properties][15]
 
-Then use [Action Based Delivery][21] to deliver the campaign when the event occurs. Note that if you're testing an iOS Push campaign, you must set the delay to 1 minute to allow yourself time to exit the app, since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
+Then use [Action Based Delivery][21] to deliver the campaign when the event occurs. 
+
+{% alert note %}
+If you're testing an iOS Push campaign, you must set the delay to 1 minute to allow yourself time to exit the app, since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
+{% endalert %}
 
 ![Test Message Delivery][16]
 
