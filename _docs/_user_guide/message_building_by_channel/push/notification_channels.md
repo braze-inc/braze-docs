@@ -16,11 +16,16 @@ Notification channels can only be created in the code of your application, and c
 
 Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or above, you must use Braze SDK version 2.1.0 or higher. Your development team should define the channels that you want to use as well as suggested notification settings (e.g importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
 
-Note that Android supports localization for channel names, so in the code of your application you can associate one channel ID with multiple translations of a channel name.
+{% alert note %}
+Android supports localization for channel names, so in the code of your application you can associate one channel ID with multiple translations of a channel name.
+{% endalert %}
 
 Once these channels are created, your engineers will need to pass on the associated channel IDs to your marketing team. Your team should enter your channel names and channel IDs into the Braze dashboard for use in your Campaigns and Canvases.
 
-To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select “manage channels.” Note that only users with permissions that include “manage apps” will be able to manage channels.
+To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select “manage channels.” 
+{% alert important %}
+Only users with permissions that include “manage apps” will be able to manage channels.
+{% endalert %}
 
 ## SDK Default Channel
 
@@ -63,6 +68,7 @@ To better understand the expected behavior for channels, please refer to the fol
 * Open any Campaign or Canvas that includes an Android push and click "edit Campaign".
 * Navigate to the Android Push message composer
 * Click "Manage Notification Channels". Note that any channels added here will be available globally for all Campaigns and Canvases and that you must have "manage apps" permissions for your app group in order to manage channels.
+
 
 ![click_here][6]
 
