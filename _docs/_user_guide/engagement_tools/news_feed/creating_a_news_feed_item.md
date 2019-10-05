@@ -53,7 +53,10 @@ Banner cards consist of:
 
 ![CrossPromo][5]
 
-Cross promotion cards allow you to showcase another app that's in the app store. Note that you may not advertise apps which are the property of companies other than your own.
+Cross promotion cards allow you to showcase another app that's in the app store. 
+{% alert important %}
+You may not advertise apps which are the property of companies other than your own.
+{% endalert %}
 
 
 #### Image guidelines
