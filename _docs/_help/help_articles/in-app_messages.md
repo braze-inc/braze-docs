@@ -7,10 +7,10 @@ guide_top_header: "In-App Message Help Articles"
 guide_menu_title: ""
 guide_menu_list:
   - name: In-App Message Impressions Appear Lower Than Expected
-    link: /docs/help/help_articles/in-app-messages/in-app_message_impressions_appear_lower_than_expected/
+    link: /docs/help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/
     fa_icon: fas fa-low-vision
   - name: In-App Messages Not Displaying
-    link: /docs/help/help_articles/in-app-messages/in-app_messages_not_displaying/
+    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/
     fa_icon: fas fa-comment-slash
 
 
