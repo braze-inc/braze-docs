@@ -15,7 +15,7 @@ guide_menu_list:
     fa_icon: fas fa-plug
   - name: Campaigns and Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/
-    fa_icon: fas fa-mail-bulk
+    fa_icon: fas fa-comments
   - name: Content Cards
     link: /docs/help/help_articles/content_cards/
     fa_icon: fas fa-stream
