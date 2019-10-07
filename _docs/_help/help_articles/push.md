@@ -11,6 +11,6 @@ guide_menu_list:
     fa_icon: fas fa-comment-slash
   - name: Push Token Migration
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-route
+    fa_icon: fas fa-map-signs
 
 ---
