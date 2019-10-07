@@ -2,6 +2,7 @@
 nav_title: Content Cards In Canvas
 platform: Canvas
 subplatform: Create a Canvas
+hidden: true
 page_order: 5
 ---
 
