@@ -66,6 +66,8 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 }
 ```
 
+{% endraw %}
+
 ##### Custom Key-Value Pairs
 
 In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. In the message composer, click the gear icon and specify your key-value pairs below. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
@@ -116,6 +118,8 @@ Braze automatically formats both payloads as a JSON before sending them to FCM.
 
 **Notification and Data Payloads**
 
+{% raw %}
+
 ```
 {
     "notification" : {
@@ -164,6 +168,8 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 
 For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
 
+{% endraw %}
+
 {% alert note %}
 Note that bounced emails will not deliver key-value pairs to SendGrid.
 {% endalert %}
@@ -176,7 +182,6 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 
 ![key-valueInput][23]
 
-{% endraw %}
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
