@@ -825,7 +825,7 @@ The `messages` hash will contain information about each message. Example message
 {
     "channel": "content_cards",
     "name": (string) name of variant,
-    "extras": (hash) any key-value pairs provided, only present if at least one custom key-value pair has been set
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
