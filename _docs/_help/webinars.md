@@ -7,13 +7,13 @@ guide_top_text: "These webinars are considered archived and not kept up to date,
 
 guide_featured_title: "Webinars"
 guide_featured_list:
-  - name: A/B and Multivariate Testing
+  - name: "A/B and Multivariate Testing"
     link: /docs/help/webinars/ab_and_multivariate_testing/
     fa_icon: fas fa-vials
   - name: Building a Strategy for Android Oreo
     link: /docs/help/webinars/building_a_strategy_for_android_oreo/
     fa_icon: fab fa-android
-  - name: Canvas: Entry Steps and Conditions
+  - name: "Canvas Entry Steps and Conditions"
     link: /docs/help/webinars/canvas_entry_steps_and_conditions/
     fa_icon: fas fa-door-open
   - name: Canvas Lifecycle Testing
