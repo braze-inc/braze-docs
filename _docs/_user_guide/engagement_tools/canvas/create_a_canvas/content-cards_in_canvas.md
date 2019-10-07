@@ -55,7 +55,12 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 ## Reporting & Analytics
 
-After launching a Content Cards step in Canvas you can begin to analyze 
+After launching a Content Cards step in Canvas you can begin to analyze a number of different metrics for this step. 
+These metrics include the number of messages sent, unique recipients, converion rates, total revenue, and more.
+
+
+
+For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
 
 ![content-card-in-canvas-analytics.png][4]
 
@@ -73,7 +78,7 @@ Using Canvas, you can add a step that sends both a Content Card and Push Notific
 
 #### Multiple Feeds based on Categories
 
-You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating multiople feeds using Key Value Pairs:
+You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using Key Value Pairs:
 
 * [Multiple Feeds for Web SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
 * [Multiple Feeds for Android SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
