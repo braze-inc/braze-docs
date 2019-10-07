@@ -10,7 +10,7 @@ guide_menu_list:
     link: /docs/help/help_articles/docs/contribution/
     fa_icon: fas fa-edit
   - name: Hacktober 2019
-    link: /docs/help/help_articles/docs/hacktober_2019/
+    link: /docs/help/help_articles/docs/hacktober/
     fa_icon: fas fa-user-edit
   - name: Scroll Bar Overlap
     link: /docs/help/help_articles/docs/scroll_bar_overlap/
