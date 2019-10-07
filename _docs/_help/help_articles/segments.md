@@ -4,7 +4,7 @@ nav_title: Segments
 layout: dev_guide
 guide_top_header: "Segments Help Articles"
 
-guide_menu_title: "Segments Help Articles"
+guide_menu_title: ""
 guide_menu_list:
   - name: My Filter Options Have Changed
     link: /docs/help/help_articles/segments/my_filter_options_have_changed/
