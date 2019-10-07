@@ -14,6 +14,6 @@ guide_menu_list:
     fa_icon: fas fa-user-edit
   - name: Scroll Bar Overlap
     link: /docs/help/help_articles/docs/scroll_bar_overlap/
-    fa_icon: fas fa-scroll
+    fa_icon: fas fa-caret-square-right
 
 ---
