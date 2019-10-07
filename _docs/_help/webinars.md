@@ -1,7 +1,7 @@
 ---
 nav_title: Webinars
 page_order: 5
-layout: featured
+layout: dev_guide
 guide_top_header: "Webinars"
 guide_top_text: "These webinars are considered archived and not kept up to date, but can still provide educational content. For the most up-to-date educational content, check out <a href='https://lab.braze.com/'>LAB (Learning at Braze)</a>!"
 
