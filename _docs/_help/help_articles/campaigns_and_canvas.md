@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: Campaigns & Canvas
-layout: featured
+layout: dev_guide
 guide_top_header: "Campaigns & Canvas Help Articles"
 
 guide_featured_title: "Popular Topics"
