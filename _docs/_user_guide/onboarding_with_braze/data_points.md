@@ -5,6 +5,8 @@ page_order: 4
 
 # Data Points
 
+{% include youtube.html id="rs4uo254YxU" align="right" %}
+
 At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger & cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
 
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
@@ -85,9 +87,6 @@ Connected Content does not consume data points - using Connected Content is a gr
 
 |Data Type | Data Point | Does it count towards consumption? |
 |---|---|---|
-|Contact Settings | First Name | No |
-|Contact Settings | Last Name | No |
-|Contact Settings | User ID | No |
 |Campaigns Received | Email Address | No |
 |Segments | Gender | No |
 |Communication Stats | Age Group | No |
