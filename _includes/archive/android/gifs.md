@@ -10,8 +10,10 @@ __Note:__ Although the example below uses [Glide][gifs-67], any image library th
 
 The Image Loader delegate must implement the following methods:
 
-* [`renderUrlIntoView()`][gifs-69]
-* [`getBitmapFromUrl()`][gifs-68]
+* [`getInAppMessageBitmapFromUrl()`][gifs-71]
+* [`getPushBitmapFromUrl()`][gifs-72]
+* [`renderUrlIntoCardView()`][gifs-73]
+* [`renderUrlIntoInAppMessageView()`][gifs-74]
 * [`setOffline()`][gifs-70]
 
 The integration example below is taken from the [Glide Integration Sample App][gifs-65] included with the Braze Android SDK.
@@ -176,6 +178,8 @@ _The usage of Fresco with `IAppboyImageLoader` is not supported since Fresco req
 [gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
 [gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setAppboyImageLoader-com.appboy.IAppboyImageLoader-
 [gifs-67]: https://bumptech.github.io/glide/
-[gifs-68]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getBitmapFromUrl-android.content.Context-java.lang.String-com.appboy.enums.AppboyViewBounds-
-[gifs-69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoView-android.content.Context-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
 [gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#setOffline-boolean-
+[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
+[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
