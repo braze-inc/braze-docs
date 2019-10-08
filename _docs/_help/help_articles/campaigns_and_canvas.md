@@ -1,11 +1,11 @@
 ---
 page_order: 2
 nav_title: Campaigns & Canvas
-layout: dev_guide
+layout: featured
 guide_top_header: "Campaigns & Canvas Help Articles"
 
-guide_menu_title: ""
-guide_menu_list:
+guide_featured_title: ""
+guide_featured_list:
   - name: Why isn’t my Canvas sending?
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
     fa_icon: far fa-paper-plane
