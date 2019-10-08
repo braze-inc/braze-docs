@@ -11,7 +11,7 @@ guide_menu_list:
     fa_icon: far fa-paper-plane
   - name: Why are my conversions low?
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
-    fa_icon: fas fa-comments-dollar
+    fa_icon: fas fa-cart-arrow-down
   - name: Where is my location data?
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
     fa_icon: fas fa-location-arrow
@@ -21,10 +21,11 @@ guide_menu_list:
   - name: Why is my Campaign/Canvas not triggering?
     link: /docs/help/help_articles/campaigns_and_canvas/not_triggering/
     fa_icon: far fa-times-circle
-  - name: Using custom event properties.
+  - name: Using Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
     fa_icon: fas fa-code
-  - name: Using event logging.
+  - name: Using Event Logging
     url: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
     fa_icon: fas fa-clipboard-list
+    
 ---
