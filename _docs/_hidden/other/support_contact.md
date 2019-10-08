@@ -1233,14 +1233,14 @@ $( document ).ready(function() {
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue. "
                           placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue.  " rows="7"></textarea>
                       </div>
-                      <div class="form-group" >
+                      <!-- div class="form-group" >
 
                           <label for="ticket_comment"  id="ticket_comment_label">     Additional comments and screenshots  </label>
 
                           <textarea name="Issue_Steps" class="form-control" id="ticket_comment" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Add any other comments and link to any relevant screenshots or screencasts."
                           placeholder="Add any other comments and link to any relevant screenshots or screencasts." rows="7"></textarea>
-                      </div>
+                      </div -->
                       <div class="form-group">
                           <label style="font-size: 12px;">
                          In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.
