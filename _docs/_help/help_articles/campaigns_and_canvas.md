@@ -4,7 +4,7 @@ nav_title: Campaigns & Canvas
 layout: featured
 guide_top_header: "Campaigns & Canvas Help Articles"
 
-guide_featured_title: ""
+guide_featured_title: "Popular Topics"
 guide_featured_list:
   - name: Why isn’t my Canvas sending?
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
@@ -15,6 +15,11 @@ guide_featured_list:
   - name: Where is my location data?
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
     fa_icon: fas fa-location-arrow
+
+
+
+guide_menu_title: "Other Topics"
+guide_menu_list:
   - name: Why is my control group so large?
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
     fa_icon: far fa-dot-circle
