@@ -1018,12 +1018,12 @@ $( document ).ready(function() {
     var user_subject = $('#ticket_subject').val();
 
     var user_issue = $('#ticket_issue').val();
-    var user_comments = mform.find('#ticket_comment').val();
+    //var user_comments = mform.find('#ticket_comment').val();
 
 
     var userinfo = '';
 
-    userinfo += "Question:\n" + user_issue +  "\n\nComments: " + user_comments;
+    userinfo += "Question:\n" + user_issue ; //+  "\n\nComments: " + user_comments;
     // userinfo += "\n\nAllow Dashboard Access: ";
     // if($("#all_dashboard").is(':checked')) {
     //   userinfo += 'Yes'
