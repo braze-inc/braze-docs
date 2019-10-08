@@ -29,6 +29,10 @@ guide_menu_list:
   - name: Using Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
     fa_icon: fas fa-code
+  - name: Using Custom Event Properties
+    link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
+    fa_icon: fas fa-code
+
   - name: Using Event Logging
     url: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
     fa_icon: fas fa-clipboard-list
