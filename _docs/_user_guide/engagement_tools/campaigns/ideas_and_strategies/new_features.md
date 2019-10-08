@@ -19,6 +19,10 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 Braze automatically tracks a user's most recent app version which can be used to segment users who should update their app.  You can set this filter to find users whose most recent app version is or is not a specific version of your app.
 
+### Last Used App Version Code
+
+Use this filter to target app versions which are greater than, less than, or equal to an app's build version. To enable use of this filter, please contact your success team.
+
 ![App Version Filter][1]
 
 ### Have Not Used Feature
