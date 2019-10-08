@@ -29,7 +29,7 @@ Your DKIM record will be set up when Braze configures your IPs and domains - bey
 
 This method takes the SPF and DKIM authentication protocols one step further.
 
-If you decide to use DMARC, you can instruct ISPs how they should handle mail that failed your signature or authentication checks.Failures could be a sign that others are trying to imitate you or your email. You can tell the ISPs to reject or quarantine the mail, and even send you automated reports about the bad mail.
+If you decide to use DMARC, you can instruct ISPs how they should handle mail that failed your signature or authentication checks. Failures could be a sign that others are trying to imitate you or your email. You can tell the ISPs to reject or quarantine the mail, and even send you automated reports about the bad mail.
 
 {% alert important %}
 
