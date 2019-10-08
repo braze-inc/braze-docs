@@ -4,20 +4,27 @@ nav_title: Campaigns & Canvas
 layout: dev_guide
 guide_top_header: "Campaigns & Canvas Help Articles"
 
-guide_menu_title: "Campaigns & Canvas Help Articles"
+guide_menu_title: ""
 guide_menu_list:
   - name: Why isn’t my Canvas sending?
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
+    fa_icon: far fa-paper-plane
   - name: Why are my conversions low?
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
+    fa_icon: fas fa-comments-dollar
   - name: Where is my location data?
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
+    fa_icon: fas fa-location-arrow
   - name: Why is my control group so large?
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
-  - name: Why Is My Campaign/Canvas Not Triggering?
+    fa_icon: far fa-dot-circle
+  - name: Why is my Campaign/Canvas not triggering?
     link: /docs/help/help_articles/campaigns_and_canvas/not_triggering/
-  - name: Using custom event Properties
+    fa_icon: far fa-times-circle
+  - name: Using custom event properties.
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-  - name: Using event using_event_logging
+    fa_icon: fas fa-code
+  - name: Using event logging.
     url: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
+    fa_icon: fas fa-clipboard-list
 ---
