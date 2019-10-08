@@ -87,6 +87,9 @@ Connected Content does not consume data points - using Connected Content is a gr
 
 |Data Type | Data Point | Does it count towards consumption? |
 |---|---|---|
+| Contact Settings | Email Subscribed | No |
+| Contact Settings |  Push Subscribed | No |
+| Contact Settings |  Apps Registered for Push | No |
 |Campaigns Received | Email Address | No |
 |Segments | Gender | No |
 |Communication Stats | Age Group | No |
