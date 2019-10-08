@@ -1,6 +1,16 @@
 ---
-config_only: true
 page_order: 2.5
 nav_title: Data
-layout: blank_config
+layout: dev_guide
+guide_top_header: "Data Help Articles"
+
+guide_menu_title: ""
+guide_menu_list:
+  - name: Change Custom Attribute or Event Data Type
+    link: /docs/help/help_articles/data/change_custom_data_type/
+    fa_icon: fas fa-table
+  - name: Dispatch ID Behavior
+    link: /docs/help/help_articles/data/dispatch_id/
+    fa_icon: fas fa-id-badge
+
 ---

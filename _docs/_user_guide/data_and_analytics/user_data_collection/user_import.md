@@ -40,7 +40,9 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 
 ## Standard User Data Column Headers
 
+{% alert note %}
 Note that all fields are case sensitive. If you import a user with a column header `first_name`, Braze will update that profile’s first name field. However, if you import a user with a column header, `First_name` Braze will create a Custom Attribute called `First_name`. This will impact your segmentation and personalization abilities in Braze.
+{% endalert %}
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | Mandatory |
 |---|---|---|---|

@@ -44,7 +44,13 @@ Once you've selected your conversion events, continue the campaign creation proc
 
 ## Step 3: View Results
 
-Navigate to the "Details" page to view details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign — as well as specific variants — during the window of the Primary Conversion Event (please note, if no conversion events were selected during campaign creation, the time period defaults to 3 days). Additionally, for multivariate messages, you can see the number of conversions and conversion percentage for your control group and each variant.
+Navigate to the "Details" page to view details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign — as well as specific variants — during the window of the Primary Conversion Event.
+
+{% alert note %}
+If no conversion events were selected during campaign creation, the time period defaults to 3 days. 
+{% endalert %}
+
+Additionally, for multivariate messages, you can see the number of conversions and conversion percentage for your control group and each variant.
 
 ![View Results][3]
 

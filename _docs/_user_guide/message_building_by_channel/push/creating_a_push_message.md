@@ -10,7 +10,9 @@ Push notifications are wonderful for time-sensitive calls to action, as well as 
 
 Successful Push Campaigns are going to drive the user directly to content or demonstrate the value of your app.
 
-_Please note that your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more._
+{% alert important %}
+Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more.
+{% endalert %}
 
 |Apple App Store Policies|
 |---|
@@ -130,7 +132,9 @@ _Users will still be able to turn off Critical Alerts on a per-app basis, separa
 
 Braze will give you the ability to select __Send Critical Alert__ under __Alert Options__ in the iOS Push Composer, which will then allow you to specify the notification as a Critical Alert.
 
-> Please note that this feature is still in beta. Additionally, if you attempt to use this feature without pre-approval by Apple, your message will not be allowed to send. Contact your account manager before attempting to use this feature.
+{% alert warning %}
+This feature is still in beta. Additionally, if you attempt to use this feature without pre-approval by Apple, your message will not be allowed to send. Contact your account manager before attempting to use this feature.
+{% endalert %}
 
 
 ### Android Notification Options
