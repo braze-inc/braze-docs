@@ -10,7 +10,7 @@ guide_menu_title: "Release Notes"
 guide_menu_list:
   - name: Most Recent
     link: /docs/help/release_notes/most_recent/
-    fa_icon: fas fa-calendar-week
+    fa_icon: fas fa-calendar
   - name: 2019
     link: /docs/help/release_notes/2019/
     fa_icon: fas fa-calendar-alt
