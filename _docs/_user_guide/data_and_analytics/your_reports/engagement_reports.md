@@ -19,7 +19,13 @@ With Engagement Reports, customers can now extract data across multiple Campaign
 
 ### Creating A New Report
 
-Navigate to Data >> Engagement Reports. Note that your Braze user account must have ‘Export User Data’ access to utilize Engagement Reports. To create a new report, click ‘Create New Report’ located on the top right of the page.
+Navigate to Data >> Engagement Reports.
+
+{% alert note %}
+Your Braze user account must have ‘Export User Data’ access to utilize Engagement Reports. 
+{% endalert %}
+
+To create a new report, click ‘Create New Report’ located on the top right of the page.
 
 
 ![engagement_reports_menu][1]

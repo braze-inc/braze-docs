@@ -14,7 +14,13 @@ Here's how you can set up an A/B test with random buckets:
 
 ## Step 1: Segment your users by the random bucket attribute
 
-Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*. Note that each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive). The example below partially documents the creation of segments for a campaign with three variants and a control group. Observe that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
+Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*. 
+
+{% alert note %}
+Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive). 
+{% endalert %}
+
+The example below partially documents the creation of segments for a campaign with three variants and a control group. Observe that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
 
 Consider the following sample plan for creating segments of equal size for three campaign series variants and a control. Bucket numbers 0 to 2499 correspond to the control segment; bucket numbers 2500 to 4999 correspond to the segment that will receive variant 1; bucket numbers 5000 to 7499 correspond to the segment that will receive variant 2; bucket numbers 7500 to 9999 correspond to the segment that will receive variant 3. You may want to use these types of segments if you want to run a test of three different variants (for instance, three different send times or three different combinations of message channels) and also include a control group.
 

@@ -42,7 +42,7 @@ glossaries:
     tags:
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <em>Please note that Custom Event Properties must be turned on by Braze for specific custom events. </em> <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> Custom Event Properties must be turned on by Braze for specific custom events. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - Custom Data
   - name: First Made Purchase
