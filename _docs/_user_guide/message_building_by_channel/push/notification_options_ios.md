@@ -73,7 +73,7 @@ If users choose to “Turn Off” provisional push from you, they won’t see an
 {% endalert %}
 
 {% alert important %}
-If you utilize additional push prompts, please reach out to your account manager for additional guidance.
+If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/)(an in-app message that encourages users to opt-in to push notifications), please reach out to your Braze representative for additional guidance.
 {% endalert %}
 
 #### Set Up Provisional Push Notifications
