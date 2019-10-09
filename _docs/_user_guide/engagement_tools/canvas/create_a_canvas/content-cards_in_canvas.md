@@ -10,6 +10,10 @@ page_order: 5
 
 Content Cards can be sent to your customers as part of their Canvas journey. This article describes features and nuances specific to using Content Cards as a messaging channel within Canvas.
 
+{% alert important %}
+Content Cards in Canvas is currently in limited availability. Please reach out to your Braze representative for more informtion. 
+{% endalert %}
+
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
 ![content cards in canvas][1]
