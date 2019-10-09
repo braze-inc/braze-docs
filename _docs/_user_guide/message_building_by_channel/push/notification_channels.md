@@ -2,7 +2,7 @@
 nav_title: Notification Channels
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 6
+page_order: 3
 ---
 
 
@@ -22,7 +22,7 @@ Android supports localization for channel names, so in the code of your applicat
 
 Once these channels are created, your engineers will need to pass on the associated channel IDs to your marketing team. Your team should enter your channel names and channel IDs into the Braze dashboard for use in your Campaigns and Canvases.
 
-To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select “manage channels.” 
+To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select “manage channels.”
 {% alert important %}
 Only users with permissions that include “manage apps” will be able to manage channels.
 {% endalert %}
