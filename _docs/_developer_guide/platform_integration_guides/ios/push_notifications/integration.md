@@ -111,9 +111,9 @@ If you are using the UserNotifications framework (recommended) that was introduc
 ```objc
 if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
   UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-  center.delegate = self;
+  UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
   if (@available(iOS 12.0, *)) {
-    options = options | UNAuthorizationOptionProvisional;
+      options = options | UNAuthorizationOptionProvisional;
   }
   [center requestAuthorizationWithOptions:options
                         completionHandler:^(BOOL granted, NSError * _Nullable error) {
@@ -155,7 +155,7 @@ if #available(iOS 10, *) {
 {% endtabs %}
 
 {% alert important %}
-Please note that the code sample above includes integration for Provisional Push Authentication (line 5 in `Objective-C`; line 6 in `Swift` ). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/).
+Please note that the code sample above includes integration for Provisional Push Authentication (lines 4 and 5 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/).
 {% endalert %}
 
 ### iOS 8+ without UserNotifications Framework

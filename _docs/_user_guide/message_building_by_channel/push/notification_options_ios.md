@@ -87,15 +87,21 @@ If you utilize additional push prompts or [in-app push primers](https://www.braz
 {% endalert %}
 
 #### Set Up Provisional Push Notifications
-Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)):
+Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+
+{% alert warning %}
+The implementation of Provisional Push Authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here](({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+{% endalert %}
 
 {% tabs local %}
   {% tab Swift %}
 __Swift__
 
 ```
-let notificationCenter = UNUserNotificationCenter.current()
-notificationCenter.requestAuthorization(options: [.alert, .badge, .sound, .provisional]) { ... }
+var options: UNAuthorizationOptions = [.alert, .sound, .badge]
+if #available(iOS 12.0, *) {
+  options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
+}
 ```
   {% endtab %}
   {% tab Objective-C %}
@@ -104,11 +110,13 @@ __Objective-C__
 
 ```
 UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge | UNAuthorizationOptionProvisional;
+UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+if (@available(iOS 12.0, *)) {
+    options = options | UNAuthorizationOptionProvisional;
+}
 ```
   {% endtab %}
 {% endtabs %}
-
 
 ### Critical Alerts
 Apple will allow some brands to send notification that are considered extremely important, will ignore Do Not Disturb settings, and will always play a sound no matter the setting on a user's device.
