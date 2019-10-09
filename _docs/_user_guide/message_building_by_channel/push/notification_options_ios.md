@@ -113,3 +113,7 @@ Braze will give you the ability to select __Send Critical Alert__ under __Alert 
 {% alert warning %}
 This feature is still in beta. Additionally, if you attempt to use this feature without pre-approval by Apple, your message will not be allowed to send. Contact your account manager before attempting to use this feature.
 {% endalert %}
+
+
+[26]: {% image_buster /assets/img_archive/notgroupclickdropdown.gif %}
+[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
