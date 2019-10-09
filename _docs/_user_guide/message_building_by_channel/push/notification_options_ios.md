@@ -66,7 +66,15 @@ Apple allows brands the option to send quiet push notifications to their users' 
 
 Unlike a traditional iOS push token, a provisional push token acts as a “trial pass” that allows brands to reach out to new users before they’ve seen and clicked Apple’s native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
-Whichever option the user chooses will add the appropriate token or [subscription status]({{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their profile. You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
+Whichever option the user chooses will add the appropriate token or [subscription status]({{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their profile (shown below).
+
+![User Profile Provisionally Authorized]({% image_buster /assets/img/profile-push-prov-auth.png %})
+
+
+You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
+
+![Provisionally Authorized Segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
+
 
 {% alert tip %}
 If users choose to “Turn Off” provisional push from you, they won’t see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality.
