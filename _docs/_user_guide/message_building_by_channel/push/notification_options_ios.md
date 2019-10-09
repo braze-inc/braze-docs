@@ -70,7 +70,6 @@ Whichever option the user chooses will add the appropriate token or [subscriptio
 
 ![User Profile Provisionally Authorized]({% image_buster /assets/img/profile-push-prov-auth.png %})
 
-
 You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
 
 ![Provisionally Authorized Segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
