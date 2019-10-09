@@ -2,7 +2,7 @@
 nav_title: Creating a Push Message
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 1
+page_order: 0
 ---
 # Creating a Push Message
 
@@ -36,13 +36,13 @@ From the Messaging Page, click "Create Campaign."
 
 ## Step 2: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types that will be included in the campaign. You select the platform(s) you're sending a Push message to by clicking on the toggle buttons on the right hand side.
+Next, you need to name your campaign and select the messaging types and notification style ([rich]({{ site.baseurl }}/user_guide/message_building_by_channel/push/rich_notifications/) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right hand side.
 
 ![Push2][2]
 
 Time to write your push message! Type it into the box and watch a preview appear on the device in the box.
 
-For more information on Notification Options, please see our [iOS Notification and Provisional Push documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/android_notification_options/), as well as our [Android Notification Options documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/android_notification_options/).
+For more information on Notification Options, please see our [iOS Notification and Provisional Push documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/), as well as our [Android Notification Options documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_android/).
 
 ## Step 3: Schedule Your Messaging Campaign {#schedule-push-campaign}
 
@@ -64,7 +64,7 @@ Unless you check the box titled "Allow users to become re-eligible to receive ca
 
 ## Step 4: Target Users
 
-On the “Target Users” step of campaign setup, you can choose the target audience for your campaign.  Braze now provides all the detailed audience statistics on the footer.  The footer will provide only the channels that are targeted by the campaign.  Additionally you will be able to see a breakdown of the ‘Push’ messages as Braze will provide details on how many will receive a Web Push versus an Android Push. In order to see what percentage of your userbase is being targeted or the LTV for this segment, simply click the “Show Additional Stats” located below the stats footer.
+On the “Target Users” step of campaign setup, you can choose the target audience for your campaign.  Braze now provides all the detailed audience statistics on the footer.  The footer will provide only the channels that are targeted by the campaign.  Additionally you will be able to see a breakdown of the ‘Push’ messages as Braze will provide details on how many will receive a Web Push versus an Android Push. In order to see what percentage of your user base is being targeted or the LTV for this segment, simply click the “Show Additional Stats” located below the stats footer.
 
 Keep in mind that exact segment membership is always calculated just before the message is sent.
 

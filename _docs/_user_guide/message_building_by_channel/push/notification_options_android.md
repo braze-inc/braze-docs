@@ -1,8 +1,8 @@
 ---
-nav_title: Android Notification Options
+nav_title: Notification Options (Android)
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 0.1
+page_order: 5
 ---
 
 # Android Notification Options

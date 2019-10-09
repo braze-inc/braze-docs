@@ -1,13 +1,13 @@
 ---
-nav_title: iOS Notification Options
+nav_title: Notification Options (iOS)
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 0.12
+page_order: 6
 ---
 
 # iOS Notification Options
 
-With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-authentication-quiet-notifications), and [Critical Alerts](#critical-alerts).
+With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 
 ## Notification Groups
 
@@ -60,31 +60,46 @@ Once this is set up on your app, use the summary category by checking the __Noti
 
 Then, input the summary category identifier that you set in your app.
 
-### Provisional Authentication/Quiet Notifications
+### Provisional Push Authentication & Quiet Notifications
 
-Apple allows brands the option to send quiet pushes to their users' Notification Centers before they officially opt in, giving you a chance to demonstrate the value of your messages early.
+Apple allows brands the option to send quiet push notifications to their users' Notification Centers _before_ they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up](#set-up-provisional-push-notifications) provisional push notifications in your app, then any user who has a provisional push token will receive your messages.
 
- Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers):
+Unlike a traditional iOS push token, a provisional push token acts as a “trial pass” that allows brands to reach out to new users before they’ve seen and clicked Apple’s native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
- __Swift__
+Whichever option the user chooses will add the appropriate token or [subscription status]({{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their profile. You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-  ```
-  let notificationCenter = UNUserNotificationCenter.current()
-  notificationCenter.requestAuthorization(options: [.alert, .badge, .sound, .provisional]) { ... }
-  ```
+{% alert tip %}
+If users choose to “Turn Off” provisional push from you, they won’t see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality.
+{% endalert %}
+
+{% alert important %}
+If you utilize additional push prompts, please reach out to your account manager for additional guidance.
+{% endalert %}
+
+#### Set Up Provisional Push Notifications
+Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers):
+
+{% tabs local %}
+  {% tab Swift %}
+__Swift__
+
+```
+let notificationCenter = UNUserNotificationCenter.current()
+notificationCenter.requestAuthorization(options: [.alert, .badge, .sound, .provisional]) { ... }
+```
+  {% endtab %}
+  {% tab Objective-C %}
 
 __Objective-C__
 
 ```
-	UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
- 	UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge | UNAuthorizationOptionProvisional;
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge
+UNAuthorizationOptionProvisional;
 ```
+  {% endtab %}
+{% endtabs %}
 
- You will also be able to segment your users based on whether they are provisionally authorized or not.
-
- {% alert important %}
-   If you utilize additional push prompts, please reach out to your account manager for additional guidance.
-{% endalert %}
 
 ### Critical Alerts
 Apple will allow some brands to send notification that are considered extremely important, will ignore Do Not Disturb settings, and will always play a sound no matter the setting on a user's device.

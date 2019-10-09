@@ -2,7 +2,7 @@
 nav_title: Push Action Buttons
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 3
+page_order: 7
 ---
 # Push Action Buttons
 
