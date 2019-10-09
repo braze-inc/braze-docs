@@ -9,7 +9,7 @@ page_order: 4
 
 {% include youtube.html id="6X8E20BlblI" align="right" %}
 
-If you choose to use in-app messages in a Canvas, there are nuances you should note while you build out and before you launch your Canvas.
+In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages.
 
 Once you've set up delay and audience options, you can add an in-app message to your Canvas by selecting in-app message from "messaging channels."  Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it if they open the app.
 
