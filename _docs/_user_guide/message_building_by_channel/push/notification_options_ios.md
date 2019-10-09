@@ -74,7 +74,6 @@ You will be able to target your users based on whether they are provisionally au
 
 ![Provisionally Authorized Segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
-
 {% alert tip %}
 If users choose to “Turn Off” provisional push from you, they won’t see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality.
 {% endalert %}
