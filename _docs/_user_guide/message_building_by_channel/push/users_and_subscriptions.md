@@ -2,7 +2,7 @@
 nav_title: Subscription States
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 2
+page_order: 10
 ---
 
 # Push Subscription States
