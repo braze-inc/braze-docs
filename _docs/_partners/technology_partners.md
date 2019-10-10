@@ -13,7 +13,7 @@ guide_featured_list:
   fa_icon: fas fa-plus
 - name: Advertising Technologies
   url: /docs/partners/technology_partners/advertising_technologies/
-  fa_icon: fas fa-ad
+  fa_icon: fas fa-cart-plus
 - name: Channel Extensions
   url: /docs/partners/technology_partners/channel_extensions/
   fa_icon: fas fa-angle-right
