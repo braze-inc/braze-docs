@@ -110,6 +110,7 @@ __Objective-C__
 
 ```
 UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+center.delegate = self;
 UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
 if (@available(iOS 12.0, *)) {
     options = options | UNAuthorizationOptionProvisional;
