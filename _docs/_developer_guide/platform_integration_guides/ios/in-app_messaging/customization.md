@@ -121,7 +121,8 @@ To set a fixed orientation for all in-app messages, you can set the `supportedOr
 
 ```objc
 // Set fixed in-app message orientation to portrait.
-[Appboy sharedInstance].inAppMessageController.inAppMessageUIController.supportedOrientationMasks = UIInterfaceOrientationMaskPortrait;
+id inAppMessageUIController = [Appboy sharedInstance].inAppMessageController.inAppMessageUIController;
+((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 // Use UIInterfaceOrientationMaskLandscape to display in-app messages in landscape
 ```
 
@@ -130,8 +131,10 @@ To set a fixed orientation for all in-app messages, you can set the `supportedOr
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
-// Use landscape to display in-app messages in landscape
+if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController as? ABKInAppMessageUIController {
+  controller.supportedOrientationMask = .portrait
+}
+// Use .landscape to display in-app messages in landscape
 ```
 
 {% endtab %}
