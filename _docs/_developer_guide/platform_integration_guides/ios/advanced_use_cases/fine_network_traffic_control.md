@@ -35,7 +35,7 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+Appboy.sharedInstance()!.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
@@ -62,7 +62,7 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+Appboy.sharedInstance()!.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
