@@ -811,7 +811,7 @@ The `messages` hash will contain information about each message. Example message
 {
     "channel": "email",
     "subject": (string) subject,
-    "body": (string) HTML body (truncated after 10kb),
+    "body": (string) HTML body,
     "from": (string) from address and display name,
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
