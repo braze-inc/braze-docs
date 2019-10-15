@@ -44,7 +44,7 @@ You can override this value via the `ABKMinimumTriggerTimeIntervalKey` inside th
 {% tab swift %}
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 1])
+Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
 ```
 
 {% endtab %}
