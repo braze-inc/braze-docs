@@ -114,7 +114,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 
 ### Setting Orientation For All In-App Messages
 
-To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMasks` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
+To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -126,6 +126,11 @@ id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstan
 ((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 ```
 
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
+
 {% endtab %}
 {% tab swift %}
 
@@ -136,6 +141,11 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
   controller.supportedOrientationMask = .portrait
 }
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% endtabs %}

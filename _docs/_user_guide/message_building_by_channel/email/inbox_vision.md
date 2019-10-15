@@ -7,17 +7,21 @@ page_order: 5
 
 # Inbox Vision
 
-Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices.  Access Inbox Vision from the email editor by clicking the 'Preview and Test' button.  It also allows you to spam test from the Spam Test tab.
+Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking the `Preview and Test` button.  It also allows you to spam test from the Spam Test tab.
 
 ## Test Your Email
 
-To test your email message in Inbox Vision, click 'Preview and Test' within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
+To test your email message in Inbox Vision, click `Preview and Test` within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
 
 Braze will then display screenshots of a sample, rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable, to allow for better viewing.
 
 If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
 
 ![inboxvision1][1]
+
+{% alert important %}
+Once you make changes to a template, you will need to re-run the test to see the effect of the changes on the previews.
+{% endalert %}
 
 ## Code Analysis
 

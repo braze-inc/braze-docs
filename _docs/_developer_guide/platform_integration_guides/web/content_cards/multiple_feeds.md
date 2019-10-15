@@ -19,18 +19,18 @@ For the purposes of this example, we'll set a key-value pair with the key `feed_
 
 ## Step 2: Set Up Your Custom Feed
 
-The following example will show a `Transactional` feed:
+The following example will show the Content Cards feed for `Transactional` type cards:
 
 ```javascript
-var toggleBespokeContentCardsFeed = function(desiredFeedType) {
-  appboy.display.toggleContentCards(null, function(cards) {
-    var cardsOfType = [];
-    for (var i=0; i<cards.length; i++) {
-      if (cards[i].extras["feed_type"] == desiredFeedType) {
-        cardsOfType.push(cards[i]);
-      }
-    }
-    return cardsOfType;
+
+/**
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  appboy.display.showContentCards(null, function(cards) {
+    return cards.filter(function(card) {
+      return card.extras["feed_type"] === feed_type;
+    });
   }
 }
 ```
@@ -38,9 +38,11 @@ var toggleBespokeContentCardsFeed = function(desiredFeedType) {
 Then, you can set up a toggle for your custom feed, like the example shown below:
 
 ```javascript
-toggleBespokeContentCardsFeed("Transactional");
-
+// show the "Transactional" feed when this button is clicked
+document.getElementById("show-transactional-feed").onclick = function() {
+  showCardsByFeedType("Transactional"); 
+};
 ```
-For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards).
+For more information, see [our JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards).
 
-When you create a Content Card campaign, set your key-value pair as: `feed_type` > `Transactional` or whatever feed type you desire.
+When you create a Content Card campaign, set a key-value pair as: `feed_type` > `Transactional` or based on the naming convention you choose to implement.
