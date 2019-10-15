@@ -8,10 +8,9 @@ permalink: /hacktober/
 
 Braze Docs is now Open Source! To celebrate, we're participating in Hacktober!
 
-{% comment %}
 Learn more about [why we went open source](https://www.braze.com/perspectives/article/braze-open-source-documentation-announcement).
-{% endcomment %}
 
+Also, please check out the pioneers of Hacktoberfest - [DigitalOcean](https://hacktoberfest.digitalocean.com/)!
 
 ## Participation
 
@@ -27,12 +26,17 @@ To participate, just...
 
 We're still working on setting some things up, but trust us, they're on our mind!
 
-| Migrate Issues to Public Repo | _Expect Friday, September 27, 2019._ |
-| Announce Available Prizes | _Expect Early October 2019._ |
+| Add Issues to Public Repo | _Ongoing! Check our repo often for new available issues and project ideas!_ |
 | Hacktober Final Report, Stats, and Winners | _Expect November 5, 2019._ |
 | Contact Winners & Send Out Prizes | _Expect Mid-November 2019._ |
 
 <br>
+
+## Prizes
+
+We have Hacktober Pumpkin-Torchie Pins, T-shirts, and Hoodies available for our top contributors!
+
+![]({% image_buster /assets/img/hacktoberfest-torchie2.png %})
 
 ## Leaderboards
 
@@ -46,7 +50,7 @@ We're still working on setting some things up, but trust us, they're on our mind
 
 ### LTR Plug
 
-While you're here, make sure to join us at the end of Hacktober for our LTR conference!
+While you're here, make sure to [join us at the end of Hacktober for our LTR conference](https://ltr2019.splashthat.com)!
 
 <img src="https://ci5.googleusercontent.com/proxy/zPOq-cODqJKIIiddjVk-PVAA7lNTPRNwYS0rYNNtKnUlX3kKlJ88k45Z7sZpddY0YvzbHq7N1ia2afwxSmGlYVbxCSLCcYnFAd8jnQwiR7CbgO4-uwZOAlD2AGaFH9rsQLtXU6M410aURaJ-vTaeybWXGPTtdMmEBrdjUA3Gmp3X4ZxLc0HFWzGa3Fgz=s0-d-e1-ft#https://appboy-images.com/appboy/communication/assets/image_assets/images/5d6fde1199e8af40543977be/original.jpg?1567612433" style="max-width:100%;height:auto;width:100%;outline:none!important;display:block!important;border:0" width="650" height="100" class="CToWUd">
 

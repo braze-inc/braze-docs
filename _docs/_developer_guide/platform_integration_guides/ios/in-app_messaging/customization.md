@@ -114,25 +114,35 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 
 ### Setting Orientation For All In-App Messages
 
-To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMasks` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
+To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 // Set fixed in-app message orientation to portrait.
-[Appboy sharedInstance].inAppMessageController.inAppMessageUIController.supportedOrientationMasks = UIInterfaceOrientationMaskPortrait;
+[Appboy sharedInstance].inAppMessageController.inAppMessageUIController.supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 // Use UIInterfaceOrientationMaskLandscape to display in-app messages in landscape
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
+Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMask = portrait;
 // Use landscape to display in-app messages in landscape
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% endtabs %}
