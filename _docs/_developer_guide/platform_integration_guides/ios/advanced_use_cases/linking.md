@@ -176,7 +176,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 }
 ```
 
-For an implementation example, take a look at `application:openURL:sourceApplication:annotation:` method in the [`AppDelegate.m`][9] file of our Stopwatch sample application.
+For an implementation example, take a look at `application:openURL:options:` method in the [`AppDelegate.m`][9] file of our Stopwatch sample application.
 
 ## Customization {#linking-customization}
 
