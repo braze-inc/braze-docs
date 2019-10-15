@@ -83,6 +83,7 @@ After activating your app, iOS will call the method [`application:openURL:option
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
   let path = url.path
   let query = url.query
+  // Here you should insert code to take some action based upon the path and query.
   return true
 }
 ```
