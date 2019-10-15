@@ -819,6 +819,16 @@ The `messages` hash will contain information about each message. Example message
 }
 ```
 
+**Content Card Channel**
+
+```json
+{
+    "channel": "content_cards",
+    "name": (string) name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+}
+```
+
 **Webhook Channel**
 
 ```json
