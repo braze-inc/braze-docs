@@ -127,6 +127,9 @@ For additional details please see this [helpful blog post][2].
 
 The following two methods can be used to set the last known location for the user. Keep in mind that these methods are intended for use only where Braze's automatic location tracking is disabled.
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
                                                      longitude:longitude
@@ -142,6 +145,20 @@ The following two methods can be used to set the last known location for the use
                                               verticalAccuracy:verticalAccuracy];
 
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()!.user.setLastKnownLocationWithLatitude(latitude: Double, longitude: Double, horizontalAccuracy: Double)
+```
+
+```swift
+Appboy.sharedInstance()!.user.setLastKnownLocationWithLatitude(latitude: Double, longitude: Double, horizontalAccuracy: Double, altitude: Double, verticalAccuracy: Double)
+```
+
+{% endtab %}
+{% endtabs %}
 
 For more information, see [`ABKUser.h`][5].
 
