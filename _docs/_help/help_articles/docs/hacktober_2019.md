@@ -36,7 +36,7 @@ We're still working on setting some things up, but trust us, they're on our mind
 
 We have Hacktober Pumpkin-Torchie Pins, T-shirts, and Hoodies available for our top contributors!
 
-![Torchie]({% image_buster /assets/img/hacktoberfest_torchie2.png %})
+![Torchie]({% image_buster /assets/img/hacktoberfest_torchie2.png %}){: style="border:none;"}
 
 ## Leaderboards
 
