@@ -6,7 +6,7 @@ page_order: 7
 ---
 # A/B Testing with Random Buckets
 
-A [random bucket number][8] is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
+A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
 
 If you have [Canvas][13] in your Braze platform, you will be able to accomplish all of these use cases using Canvas UI.
 
@@ -14,10 +14,10 @@ Here's how you can set up an A/B test with random buckets:
 
 ## Step 1: Segment your users by the random bucket attribute
 
-Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*. 
+Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*.
 
 {% alert note %}
-Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive). 
+Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive).
 {% endalert %}
 
 The example below partially documents the creation of segments for a campaign with three variants and a control group. Observe that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
@@ -77,7 +77,6 @@ You can test the effectiveness of different message channel combinations. For in
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
 [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
 [5]: {% image_buster /assets/img_archive/Random_Bucket_5.png %}
-[8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/
 [9]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
 [10]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
 [11]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery

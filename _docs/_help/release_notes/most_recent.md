@@ -20,7 +20,7 @@ Customers will be able to simply search and select Braze within [OneLogin]({{ si
 
 ### Rokt Calendar Partnership
 
-[Rokt Calendar]({{ site.baseurl }}/partners/technology_partners/channel_extensions/calendar/rokt_calendar) provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. Customers will be able to...
+[Rokt Calendar]({{ site.baseurl }}/partners/technology_partners/additional_channels/calendar/rokt_calendar/) provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. Customers will be able to...
 
 - Send a calendar invite via Braze platform to 'save the date' and extend our communication
 - Update an existing invite if the contents of the event has changed.
