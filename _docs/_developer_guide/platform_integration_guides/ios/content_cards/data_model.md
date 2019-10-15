@@ -114,6 +114,19 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 
 When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance] logContentCardsDisplayed];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()!.logContentCardsDisplayed()
+```
+
+{% endtab %}
+{% endtabs %}
