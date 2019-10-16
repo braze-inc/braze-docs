@@ -5,7 +5,7 @@ page_order: 4
 
 # Keyword Processing & Management
 
-## Subscription Changes
+## Subscription Changes with Subscription Groups
 
 | Keyword | Change |
 |---|---|

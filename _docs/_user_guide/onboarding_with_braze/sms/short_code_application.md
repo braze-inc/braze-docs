@@ -4,13 +4,22 @@ page_order: 4
 layout: featured
 ---
 
+# Short Code Application
+
+That's right, you actually have to apply for a short code. It's a longer process, but worthwhile if you know you need one! This article will walk you through the pros and cons of both short and long codes, as well as what the application for a short code requires from you and how to migrate your short code from your previous messaging provider.
+
+## Short Code vs. Long Code 
+
+Besides the obvious "short codes have fewer digits than long codes" spiel, there are other specific benefits to
+
+
 ## New Short Codes
 
 
 
 
-## Short Code Migration
 
+## Short Code Migration
 
 You'll need to let us know message flows for
 
