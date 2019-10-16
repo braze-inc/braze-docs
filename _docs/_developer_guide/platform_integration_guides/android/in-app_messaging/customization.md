@@ -18,7 +18,6 @@ Call the following when you get an in-app message object to retrieve its extras:
 {% tabs %}
 {% tab JAVA %}
 
-
 ```java
 Map<String, String> getExtras()
 ```
