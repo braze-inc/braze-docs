@@ -1,10 +1,9 @@
 ---
 nav_title: Most Engaged Channel
-permalink: /most_engaged_channel/
 ---
 
 # Most Engaged Channel Filter
-The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel. 
+The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
 ![most_engaged_channel_filter][1]{: height="50%" width="50%"}
 
 The Most Engaged Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last 6 months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. Every time a message is sent to a user and every time they interact with a message, the Most Engaged Channel is refreshed within seconds. Any interaction with a message causes it to be considered "interacted with" only once, e.g. an open and click on the same email will cause that message to be marked as having been engaged with only once, not twice.
@@ -33,7 +32,7 @@ When the user has sufficient data for a ranking to be determined, but becomes un
 
 ### Audience Sizing
 
-Most Engaged Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel. 
+Most Engaged Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel.
 
 
 [1]: {% image_buster /assets/img/most_engaged_channel.png %} "Most Engaged Channel Filter"
