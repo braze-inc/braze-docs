@@ -3,7 +3,7 @@ nav_title: A/B and Multivariate Testing
 page_order: 0
 ---
 
-## A/B and Multivariate Testing
+# A/B and Multivariate Testing
 
 {% include youtube.html id="XY5uXoKIvFY" %}
 

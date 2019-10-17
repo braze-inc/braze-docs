@@ -16,15 +16,12 @@ guide_featured_list:
 - name: Creating Custom Opt-In Prompts
   link: /docs/help/best_practices/push/creating_custom_opt-in_prompts/
   fa_icon: far fa-dot-circle
-
-guide_menu_title: "More Articles"
-guide_menu_list:
-  - name: Sunset Policies
-    link: /docs/help/best_practices/push/sunset_policies/
-    fa_icon: fas fa-sun
-  - name: Conversion Tracking
-    link: /docs/help/best_practices/push/conversion_tracking/
-    fa_icon: fas fa-chart-line
+- name: Sunset Policies
+  link: /docs/help/best_practices/push/sunset_policies/
+  fa_icon: fas fa-sun
+- name: Conversion Tracking
+  link: /docs/help/best_practices/push/conversion_tracking/
+  fa_icon: fas fa-chart-line
 
 ---
 
