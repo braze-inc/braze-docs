@@ -10,9 +10,22 @@ platform: Android
 
 Call the following on a `Card` object to retrieve its extras:
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
 Map<String, String> getExtras()
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+extras: Map<String, String>
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][36] for more information.
 

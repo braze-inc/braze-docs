@@ -1,6 +1,6 @@
 ---
 nav_title: Internal Groups Log Tab
-page_order: 4
+page_order: 3
 ---
 
 # Internal Groups Tab

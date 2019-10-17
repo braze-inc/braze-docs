@@ -33,9 +33,22 @@ To disable automatic location tracking, set `com_appboy_enable_location_collecti
 
 Then you can manually log single location data points via the setLastKnownLocation() method on `AppboyUser` like this:
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+Appboy.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
+```
+
+{% endtab %}
+{% endtabs %}
 
 See [here in our Javadocs][4] for more information on the `setLastKnownLocation` method.
 

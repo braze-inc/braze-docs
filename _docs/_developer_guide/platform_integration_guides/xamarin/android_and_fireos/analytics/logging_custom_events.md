@@ -9,7 +9,7 @@ page_order: 1
 See [the Android integration instructions][1] for in depth discussion of event tracking best practices and interfaces.
 
 ```csharp
-Appboy.GetInstance(this).LogCustomEvent("YOUR_EVENT_NAME");
+Appboy.GetInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/

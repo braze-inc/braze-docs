@@ -33,10 +33,7 @@ Start by [setting the In-App Message delegate][30] in your app. Next,implement t
 In your deep link handling code,  you can then add the following code to process the `{YOUR-APP-SCHEME}:appstore-review` deep link:
 
 ```objc
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
   NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
   if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:appstore-review"]) {
     [SKStoreReviewController requestReview];
@@ -58,9 +55,6 @@ Next, create an In-App Messaging campaign with the following:
 
   Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear, or directly ask for a review.
 {% endalert %}
-
-
-
 
 [1]: #customize-inAppMessage-dashboard
 [2]: #customize-inAppMessage-code
