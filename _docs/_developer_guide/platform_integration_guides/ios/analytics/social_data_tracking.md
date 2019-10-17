@@ -23,7 +23,7 @@ Initialize `ABKFacebookUser` objects with the Facebook data you have collected a
 
 ```objc
 ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:self.facebookUserProfile numberOfFriends:self.numberOfFacebookFriends likes:self.facebookLikes];
-  [Appboy sharedInstance].user.facebookUser = facebookUser;
+[Appboy sharedInstance].user.facebookUser = facebookUser;
 ```
 
 {% endtab %}
@@ -61,7 +61,6 @@ ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDic
 
 ```swift
 let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: -1, likes:nil)
-Appboy.sharedInstance()?.user.facebookUser = facebookUser
 ```
 
 {% endtab %}
