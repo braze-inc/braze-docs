@@ -422,7 +422,7 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
@@ -432,8 +432,8 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
         // Your logic below
     }
 };
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Appboy.getInstance(this).requestContentCardsRefresh(true);
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Appboy.getInstance(context).requestContentCardsRefresh(true);
 ```
 
 {% endtab %}
@@ -441,15 +441,15 @@ Appboy.getInstance(this).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all content cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Appboy.getInstance(this).requestContentCardsRefresh(true)
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Appboy.getInstance(context).requestContentCardsRefresh(true)
 ```
 
 {% endtab %}
@@ -461,14 +461,14 @@ We also recommend unsubscribing when your custom activity moves out of view. Add
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}

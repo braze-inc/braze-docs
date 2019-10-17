@@ -9,7 +9,7 @@ page_order: 0
 See [the Android integration instructions][1] for an in depth discussion of when to set and change a user ID.
 
 ```csharp
-Appboy.GetInstance(this).ChangeUser("YOUR_USER_ID");
+Appboy.GetInstance(context).ChangeUser("YOUR_USER_ID");
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
