@@ -1,12 +1,12 @@
 ---
 nav_title: Scheduling and Organizing
-layout: user_guide
-user_top_header: "Scheduling and Organizing"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Scheduling and Organizing"
+guide_top_text: ""
 
-user_featured_title: "Popular Articles"
+guide_featured_title: "Popular Articles"
 
-user_featured_list:
+guide_featured_list:
   - name: Scheduling Your Campaign
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
     fa_icon: fas fa-chart-line
@@ -17,9 +17,8 @@ user_featured_list:
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/attribute_triggers/
     fa_icon: fas fa-table
 
-user_menu_title: "More Articles"
-
-user_menu_list:
+guide_menu_title: "More Articles"
+guide_menu_list:
   - name: Archiving Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/
     fa_icon: fas fa-list

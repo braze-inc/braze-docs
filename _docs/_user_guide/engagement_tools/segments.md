@@ -1,13 +1,12 @@
 ---
 nav_title: Segments
 page_order: 1
-layout: user_guide
-user_top_header: "Segments"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Segments"
+guide_top_text: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out the articles below to lean how to segment and filter your audience to your (and their) greatest benefit!"
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Popular Articles"
+guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     fa_icon: fas fa-chart-pie
@@ -16,11 +15,10 @@ user_featured_list:
     fa_icon: fas fa-filter
   - name: Segment Funnels
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    fa_icon: fas fa-funnel
+    fa_icon: fas fa-user-slash
 
-user_menu_title: "More Articles"
-
-user_menu_list:
+guide_menu_title: "More Articles"
+guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
     fa_icon: fas fa-chart-pie

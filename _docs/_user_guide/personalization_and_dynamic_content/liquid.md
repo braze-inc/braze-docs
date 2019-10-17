@@ -1,11 +1,12 @@
 ---
 nav_title: Liquid
 page_order: 0
-user_top_header: "Personalization Using Liquid Tags"
-user_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them."
+layout: featured
+guide_top_header: "Personalization Using Liquid Tags"
+guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them."
 
-user_featured_title: "Popular Articles"
-user_featured_list:
+guide_featured_title: "Section Articles"
+guide_featured_list:
 - name: Using Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
   fa_icon: fas fa-flask
@@ -15,11 +16,6 @@ user_featured_list:
 - name: Operators
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
   fa_icon: fas fa-code
-
-user_menu_title: "More Articles"
-
-user_menu_list:
-
 - name: Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
   fa_icon: fas fa-filter
@@ -37,28 +33,24 @@ user_menu_list:
   fa_icon: fas fa-undo
 ---
 
-{% raw %}
+## About Liquid
 
-For example, if you include the following text in your message: `{{${first_name}}}`, the appropriate value from the user will be interpolated when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
+Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [here][1].
 
-The following values can be substituted into a message, depending on their availability:
+_For more on Dynamic Personalization with Liquid, check out our [detailed, guided LAB course](https://lab.braze.com/dynamic-personalization-with-liquid)!_
 
-- [Basic User Information][1] (e.g. `first_name`, `last_name`, `email_address`)
-- [Custom Attributes][2]
-- [Custom Event Properties][11]
-- [Most Recently Used Device Information][39]
-- [Target Device Information][40]
+Liquid templating language supports the use of objects, tags and filters.
 
-You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
-{% endraw %}
+- [Objects]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
 
-{% alert important %}
-Braze currently supports liquid up to and including Liquid 3 from Shopify. We do not currently support Liquid 4 and beyond.
-{% endalert %}
+- [Tags]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+
+- [Filters]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
+
 
 ## Terms to Know
 
-These terms are reinterpreted from [Shopify's documentation][3] based on our level of support.
+These terms are reinterpreted from [Shopify's documentation](https://shopify.github.io/liquid/basics/introduction/) based on our level of support.
 
 {% alert warning %}
 
@@ -78,10 +70,6 @@ Braze does not currently support 100% of Shopify's Liquid, only certain portions
 
 {% endraw %}
 
+<br>
+
 [1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: https://shopify.github.io/liquid/basics/introduction/
-[9]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information

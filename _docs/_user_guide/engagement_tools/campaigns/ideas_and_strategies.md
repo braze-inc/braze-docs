@@ -1,12 +1,11 @@
 ---
 nav_title: Ideas and Strategies
-layout: user_guide
-user_top_header: "Ideas and Strategies"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Ideas & Strategies"
+guide_top_text: "Learn more about how to build your ideal campaign with these use cases and other ideas."
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Popular Articles"
+guide_featured_list:
   - name: Active User Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
     fa_icon: fas fa-users
@@ -15,11 +14,10 @@ user_featured_list:
     fa_icon: far fa-user
   - name: Retargeting Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
-    fa_icon: fas fa-reply
+    fa_icon: fas fa-bullseye
 
-user_menu_title: "More Articles"
-
-user_menu_list:
+guide_menu_title: "More Articles"
+guide_menu_list:
   - name: Localizing A Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
     fa_icon: fas fa-street-view
@@ -35,7 +33,7 @@ user_menu_list:
   - name: Feature Awareness and New App Version
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile
-  - name: A/B Testing with Random Buckets
+  - name: "A/B Testing with Random Buckets"
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/
     fa_icon: fas fa-columns
 ---

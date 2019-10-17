@@ -1,13 +1,12 @@
 ---
 nav_title: In-App Messages
 page_order: 2
-layout: user_guide
-user_top_header: "In-App Messages"
-user_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
+layout: featured
+guide_top_header: "In-App Messages"
+guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
 
-user_featured_title: "Popular Articles"
-user_featured_list:
-
+guide_featured_title: "Popular Articles"
+guide_featured_list:
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile
@@ -17,9 +16,6 @@ user_featured_list:
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   fa_icon: fas fa-cog
-
-user_menu_title: "More Articles"
-user_menu_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
   fa_icon: fas fa-vial

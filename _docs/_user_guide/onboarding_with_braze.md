@@ -1,13 +1,12 @@
 ---
 page_order: 0
 nav_title: Onboarding with Braze
-layout: user_guide
-user_top_header: "Welcome to Braze!"
-user_top_text: "We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze. This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own."
+layout: featured
+guide_top_header: "Welcome to Braze!"
+guide_top_text: "We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze. <br> <br> This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own."
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Section Articles"
+guide_featured_list:
   - name: Terms to Know
     link: /docs/user_guide/onboarding_with_braze/terms_to_know/
     fa_icon: fas fa-sticky-note
@@ -15,20 +14,19 @@ user_featured_list:
     link: /docs/user_guide/onboarding_with_braze/integration/
     fa_icon: fas fa-server
   - name: Learning to Use Braze
-    link: docs/user_guide/onboarding_with_braze/learning_to
+    link: docs/user_guide/onboarding_with_braze/learning_to_use_braze/
     fa_icon: fas fa-user-graduate
-
-user_menu_title: "More Articles"
-
-user_menu_list:
-  - name: Web SDK
+  - name: Web SDK Overview for Marketers
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
-    fa_icon: fas fa-laptop-code
+    fa_icon: fas fa-globe
   - name: Email Set Up
     link: /docs/user_guide/onboarding_with_braze/email_setup/
     fa_icon: fas fa-envelope
 
 ---
+
+## Learning Goals
+
 By the end of your onboarding, you should feel comfortable with:
 
 1. Braze terminology,

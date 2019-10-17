@@ -1,13 +1,12 @@
 ---
 nav_title: Email Set Up
-layout: user_guide
+layout: featured
 page_order: 4
-user_top_header: "Email Set Up"
-user_top_text: "So you want to send email campaigns, huh? We can help you with that! Either follow our guide below or check out our [LAB course on deliverability](https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability)."
+guide_top_header: "Email Set Up"
+guide_top_text: "So you want to send email campaigns, huh? We can help you with that! Either follow our guide below or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>LAB course on deliverability</a>."
 
-user_featured_title: "Popular Articles"
-user_featured_list:
-
+guide_featured_title: "Section Articles"
+guide_featured_list:
 - name: Setting Up IPs and Domains
   link: /docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
   fa_icon: far fa-dot-circle
@@ -17,10 +16,6 @@ user_featured_list:
 - name: Consent & Address Collection
   link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book
-
-user_menu_title: "More Articles"
-user_menu_list:
-
 - name: Deliverability Pitfalls & Spam Traps
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
   fa_icon: fas fa-exclamation-triangle

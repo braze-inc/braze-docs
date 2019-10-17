@@ -1,11 +1,12 @@
 ---
 nav_title: Personalization & Dynamic Content
 page_order: 6
-user_top_header: "Personalized Messaging"
-user_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
+layout: featured
+guide_top_header: "Personalized Messaging"
+guide_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
 
-user_featured_title: "Available Messaging Channels"
-user_featured_list:
+guide_featured_title: "Topics"
+guide_featured_list:
 - name: Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   fa_icon: fas fa-flask
@@ -15,12 +16,7 @@ user_featured_list:
 - name: Deep-Linking to In-App Content
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile
-
-user_menu_title: "More Articles"
-
-user_menu_list:
-
-- name: Key-Value Pairs
+- name: "Key-Value Pairs"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
   fa_icon: far fa-dot-circle
 - name: Emoji Messaging
@@ -31,17 +27,7 @@ user_menu_list:
   fa_icon: fas fa-columns
 ---
 
-Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [here][1].
-
-For more on Dynamic Personalization with Liquid, check out our [detailed, guided LAB course](https://lab.braze.com/dynamic-personalization-with-liquid)!
-
-Liquid templating language supports the use of objects, tags and filters.
-
-[Objects][27] allow you to insert personalizable attributes into your messages.
-
-[Tags][6] allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
-
-[Filters][16] allow you to reformat personalizable attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
+<br> 
 
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
 [2]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/

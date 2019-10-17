@@ -1,20 +1,20 @@
 ---
 nav_title: Campaigns
 page_order: 2
-layout: user_guide
-user_top_header: "Campaigns"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Campaigns"
+guide_top_text: "If you want to engage with your users on a case by case basis, you can send them a campaign using any of our <a href='/docs/user_guide/message_building_by_channel/'>Messaging Channels</a>. <br> <br> Select any of the following topics to see articles you may be interested in."
 
-user_featured_title: "Popular Articles"
+guide_featured_title: "Campaign Topics"
+guide_featured_list:
+- name: Ideas & Strategies
+  link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
+  fa_icon: fas fa-gamepad
+- name: Scheduling & Organizing
+  link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/
+  fa_icon: fas fa-clock
+- name: Testing & More
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
+  fa_icon: fas fa-vials
 
-user_featured_list:
-  - name: Ideas and Strategies
-    link:
-    fa_icon:
-  - name: Scheduling and Organizing
-    link:
-    fa_icon:
-  - name: Testing and More
-    link:
-    fa_icon:
 ---

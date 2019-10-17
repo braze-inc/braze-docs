@@ -1,13 +1,12 @@
 ---
 nav_title: Data & Analytics
 page_order: 3
-layout: user_guide
-user_top_header: "Data & Analytics"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Data & Analytics"
+guide_top_text: "Braze has provided a wide breadth of metrics for you to use when measuting the success of your campaigns. We've also provided multiple reports and tracking capabilities to ensure you get the numbers you need. <br> <br> You can also expand your own data capabilities using <a href='/docs/partners/braze_currents/'>Currents</a>, Braze's data streaming export tool which enables your team to act on large amounts of granular customer data."
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Popular Articles"
+guide_featured_list:
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open
@@ -18,9 +17,8 @@ user_featured_list:
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
     fa_icon: fas fa-flask
 
-user_menu_title: "More Articles"
-
-user_menu_list:
+guide_menu_title: "Additional Sections"
+guide_menu_list:
   - name: User Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/
     fa_icon: fas fa-users

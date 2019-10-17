@@ -1,17 +1,16 @@
 ---
 nav_title: Your Reports
 page_order: 7
-layout: user_guide
-user_top_header: "Your Reports"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Your Reports"
+guide_top_text: "Your data means a lot to you, so we have the capability of several reporting options within Braze (not including <a href='/docs/partners/braze_currents/'>Currents</a>). Though these articles don't include all of our reporting capabilities, it does cover the basics and should help you with your reporting needs. More articles to come!"
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
-  - name: Understanding Your App Usage Data
+guide_featured_title: "Section Articles"
+guide_featured_list:
+  - name: App Usage Data
     link: /docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
     fa_icon: fas fa-mobile
-  - name: Viewing and Understanding Segment Data
+  - name: Segment Data
     link: /docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/
     fa_icon: fas fa-chart-pie
   - name: Engagement Reports

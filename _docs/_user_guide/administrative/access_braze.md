@@ -1,13 +1,12 @@
 ---
 nav_title: Access Braze
 page_order: 0
-layout: user_guide
-user_top_header: "Access Braze"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Access Braze"
+guide_top_text: "Do you need to log into your account? Double-check your endpoint? Reset a password? Set up single sign-on? Don't worry - we have docs for that."
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Section Articles"
+guide_featured_list:
 - name: Braze Instances
   link: /docs/user_guide/administrative/access_braze/braze_instances/
   fa_icon: fas fa-server
@@ -17,10 +16,6 @@ user_featured_list:
 - name: Getting Your Account
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
   fa_icon: far fa-user-circle
-
-user_menu_title: "More Articles"
-
-user_menu_list:
 - name: Logging In
   link: /docs/user_guide/administrative/access_braze/logging_in/
   fa_icon: fas fa-user-circle

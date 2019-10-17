@@ -1,13 +1,12 @@
 ---
 nav_title: Webhooks
 page_order: 4
-layout: user_guide
-user_top_header: "Webhooks"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Webhooks"
+guide_top_text: "Webhooks aren't for everyone, but they can be used for just about anything! Check out the articles below and get flexible with your sending!"
 
-user_featured_title: "Popular Articles"
-user_featured_list:
-
+guide_featured_title: "Section Articles"
+guide_featured_list:
 - name: Creating a Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
   fa_icon: fas fa-undo

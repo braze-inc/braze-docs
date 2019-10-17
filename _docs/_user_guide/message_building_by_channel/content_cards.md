@@ -1,14 +1,13 @@
 ---
 nav_title: Content Cards
 page_order: 1
-layout: user_guide
-user_top_header: "Content Cards"
-user_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications."
+layout: featured
+guide_top_header: "Content Cards"
+guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications."
 
-user_featured_title: "Popular Articles"
-user_featured_list:
-
-- name: Creating a Content Card
+guide_featured_title: "Section Articles"
+guide_featured_list:
+- name: Create a Content Card
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   fa_icon: fas fa-columns
 - name: Creative Details
@@ -17,9 +16,6 @@ user_featured_list:
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/content_cards/customize/
   fa_icon: fas fa-cog
-
-user_menu_title: "More Articles"
-user_menu_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial
@@ -34,8 +30,6 @@ user_menu_list:
 {% alert note %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
-
-[Learn how to create a Content Card here!]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/create/)
 
 ## When to Use Content Cards
 

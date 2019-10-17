@@ -1,13 +1,12 @@
 ---
 nav_title: Custom Data
 page_order: 4
-layout: user_guide
-user_top_header: "Custom Data"
-user_top_text: ""
+layout: dev_guide
+guide_top_header: "Custom Data"
+guide_top_text: "One of the best parts about Braze is it's flexibility - you can set up custom data in your app and have it and metrics associated with it sent to Braze. Check out how with our articles below!"
 
-user_featured_title: "Popular Articles"
-
-user_featured_list:
+guide_featured_title: "Section Articles"
+guide_featured_list:
   - name: Event Naming Conventions
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
     fa_icon: fas fa-list
@@ -17,10 +16,6 @@ user_featured_list:
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
     fa_icon: fas fa-cog
-
-user_menu_title: "More Articles"
-
-user_menu_list:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table
