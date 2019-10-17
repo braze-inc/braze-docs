@@ -150,11 +150,11 @@ The following two methods can be used to set the last known location for the use
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.user.setLastKnownLocationWithLatitude(latitude: Double, longitude: Double, horizontalAccuracy: Double)
+Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)
 ```
 
 ```swift
-Appboy.sharedInstance()!.user.setLastKnownLocationWithLatitude(latitude: Double, longitude: Double, horizontalAccuracy: Double, altitude: Double, verticalAccuracy: Double)
+Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy, altitude: altitude, verticalAccuracy: verticalAccuracy)
 ```
 
 {% endtab %}
