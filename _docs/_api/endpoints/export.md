@@ -1188,7 +1188,7 @@ of a Canvas' results.
 
 ### News Feed List Endpoint
 
-This endpoint allows you to export a list of News Feed cards, each of which will include it's name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 `GET https://YOUR_REST_API_URL/feed/list`
 

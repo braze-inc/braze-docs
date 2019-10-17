@@ -99,7 +99,7 @@ glossaries:
       - Delivery & Transportation
   - name: "Bring Users Back with a Personalized Push!"
     image: /docs/assets/img/hingealertspush.png
-    description: "<a href='https://hinge.co/'>Hinge</a> <br> <br> Push notifications can send important reminders that will encourage users to re-engage with your app. This notification is personalized and includes specific details about something that occured in the app. It also has text that entices users to click."
+    description: "<a href='https://hinge.co/'>Hinge</a> <br> <br> Push notifications can send important reminders that will encourage users to re-engage with your app. This notification is personalized and includes specific details about something that occurred in the app. It also has text that entices users to click."
     tags:
       - Media & Entertainment
       - Miscellaneous & Other
