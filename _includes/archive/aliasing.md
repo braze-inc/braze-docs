@@ -18,7 +18,7 @@ Each alias consists of two parts: a _name_ for the identifier itself, and a _lab
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.addAlias(ALIAS_NAME, ALIAS_LABEL)
+Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 
 {% endtab %}
