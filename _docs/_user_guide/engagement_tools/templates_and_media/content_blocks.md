@@ -1,6 +1,6 @@
 ---
 nav_title: Content Blocks
-page_order: 2
+page_order: 1
 ---
 
 # Content Blocks

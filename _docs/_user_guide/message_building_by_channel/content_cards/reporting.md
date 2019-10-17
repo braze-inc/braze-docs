@@ -1,6 +1,6 @@
 ---
 nav_title: Reporting & Analytics
-page_order: 7
+page_order: 4
 ---
 
 # Reporting & Analytics {#IAM-Reporting}

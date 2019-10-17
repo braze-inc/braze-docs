@@ -1,6 +1,6 @@
 ---
 nav_title: Event User Log Tab
-page_order: 3
+page_order: 2
 ---
 
 # Event User Log Tab

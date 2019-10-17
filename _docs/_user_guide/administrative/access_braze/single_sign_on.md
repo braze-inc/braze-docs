@@ -10,7 +10,7 @@ guide_featured_list:
 - name: Custom SAML SSO Set Up
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/
   fa_icon: fas fa-fingerprint
-- name: Restrict to SAML SSO and Google Only
+- name: Restrict to SAML SSO
   link: /docs/user_guide/administrative/access_braze/single_sign_on/restriction/
   fa_icon: fas fa-lock
 - name: Azure AD
@@ -25,6 +25,10 @@ guide_featured_list:
 
 ---
 
+<br>
+
 {% alert important %}
 Google SSO and SAML SSO support are only available to Enterprise and Pro customers. Please contact your Braze Account Manager for more details.
 {% endalert %}
+
+<br>

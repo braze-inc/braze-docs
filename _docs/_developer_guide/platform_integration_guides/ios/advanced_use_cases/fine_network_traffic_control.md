@@ -35,7 +35,7 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue()
+Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
@@ -62,12 +62,11 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue()
+Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Setting the Request Processing Policy
 
@@ -115,7 +114,7 @@ The request processing policy can also be set during runtime via the `requestPro
 
 ```swift
 // Sets the request processing policy to automatic (the default value)
-Appboy.sharedInstance()!.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
+Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
 ```
 
 {% endtab %}
@@ -136,7 +135,7 @@ If at any time an "in-flight" server communication needs to be halted, you must 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.shutdownServerCommunication();
+Appboy.sharedInstance()?.shutdownServerCommunication();
 ```
 
 {% endtab %}
@@ -147,7 +146,6 @@ After calling this method, you must reset the request processing mode back to Au
 
 ### Implementation Examples
 [`MiscViewController.m`][2] in the Stopwatch sample application provides examples of changing the data request processing policy, as well as manually flushing data to Braze.
-
 
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/MiscViewController.m
 [3]: #customizing-appboy-on-startup
