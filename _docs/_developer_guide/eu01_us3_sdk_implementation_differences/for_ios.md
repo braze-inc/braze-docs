@@ -7,11 +7,11 @@ page_order: 1
 
 To update the default endpoint in your integration of the Braze SDKs please add the following code:
 
-#### Compile-time Endpoint Configuration (Recommended)
+## Compile-time Endpoint Configuration (Recommended)
 
 Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
-#### Runtime Endpoint Configuration
+## Runtime Endpoint Configuration
 
 Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 

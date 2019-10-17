@@ -64,5 +64,3 @@ guide_menu_list:
 guide_footer_header: " "
 guide_footer_text: " "
 ---
-
-Developer Home

@@ -3,9 +3,9 @@ nav_title: Platform Wide Features & Behaviors
 layout: dev_guide
 page_order: 1
 guide_top_header: "Platform Wide Features & Behaviors"
-guide_top_text: ""
+guide_top_text: "Braze can do a lot! Check out are capabilities, from a developer frame of mind, below!"
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Platform Features
     link: /docs/developer_guide/platform_wide/platform_features/
@@ -16,9 +16,6 @@ guide_featured_list:
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/analytics_overview/
     fa_icon: fas fa-chart-line
-
-guide_menu_title: "More Articles"
-guide_menu_list:
   - name: Sending Text Messages
     link: /docs/developer_guide/platform_wide/sending_test_messages/
     fa_icon: fas fa-comments
