@@ -125,7 +125,7 @@ When displaying the Content Cards in your own user interface, you can manually r
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.logContentCardsDisplayed()
+Appboy.sharedInstance()?.logContentCardsDisplayed()
 ```
 
 {% endtab %}
