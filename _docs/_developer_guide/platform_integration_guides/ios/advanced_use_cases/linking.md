@@ -101,6 +101,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
   if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
     let url = userActivity.webpageURL
+    // Handle url
   }
   return true
 }
@@ -205,7 +206,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 ```
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     let urlString = url.absoluteString.removingPercentEncoding
-    // handle urlString
+    // Handle urlString
     return true
   }
 ```
