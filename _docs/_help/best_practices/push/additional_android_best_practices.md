@@ -1,6 +1,6 @@
 ---
 nav_title: Additional Android Push Best Practices
-page_order: 2
+page_order: 0
 ---
 
 # Additional Android Push Best Practices

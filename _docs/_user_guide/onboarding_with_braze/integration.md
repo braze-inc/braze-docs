@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-page_order: 2
+page_order: 1
 ---
 
 # Integration

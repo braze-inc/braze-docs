@@ -1,6 +1,6 @@
 ---
 nav_title: Importing User Profiles
-page_order: 7
+page_order: 6
 ---
 
 # Importing User Profiles

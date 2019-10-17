@@ -5,9 +5,9 @@ subplatform: Create a Canvas
 page_order: 1
 ---
 
-## Branching
+# Branching
 
-#### Create a Branch
+## Create a Branch
 
 You can harness the power of Braze’s action based delivery and powerful
 realtime segmentation to deliver personalized experiences for your users.
@@ -31,9 +31,9 @@ take.
 
 ![Canvas Create Branch 4][34]
 
-#### Warnings
+## Warnings
 
-###### Overlapping Filters
+### Overlapping Filters
 
 When setting up your Canvas, you should ensure that the Filters that you
 use to split users down different branches do not overlap.

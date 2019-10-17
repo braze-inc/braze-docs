@@ -1,6 +1,6 @@
 ---
 nav_title: Operators
-page_order: 3
+page_order: 2
 ---
 
 # Operators

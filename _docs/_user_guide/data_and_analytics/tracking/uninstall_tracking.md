@@ -4,9 +4,16 @@ page_order: 6
 ---
 # Uninstall Tracking
 
-Braze's Uninstall Tracking provides (1) daily app-level uninstall statistics in a time series graph on the App Usage page (2) campaign-level uninstall statistics in a time series graph on the Campaign Details page of a specific campaign. This statistic specifies the number of campaign recipients that uninstall each day. 
+Braze's Uninstall Tracking provides...
 
-Showing aggregate uninstalls over time can help you visualize trends and anomalies so that you can monitor app uninstalls with ease. Similarly, tracking campaign-level uninstalls can reveal whether a specific campaign is driving or preventing app uninstalls. Braze automatically collects a base level of uninstall information from your regular push campaigns. However, because the frequency that different users receive push campaigns may vary, Braze offers Uninstall Tracking to provide a more accurate snapshot of uninstall activity among your users. You must opt-in to Uninstall Tracking on the dashboard; this feature is currently available for apps on iOS, Android, and Fire OS.
+1. Daily app-level uninstall statistics in a time series graph on the App Usage page, and
+2. Campaign-level uninstall statistics in a time series graph on the Campaign Details page of a specific campaign. This statistic specifies the number of campaign recipients that uninstall each day.
+
+Showing aggregate uninstalls over time can help you visualize trends and anomalies so that you can monitor app uninstalls with ease. Similarly, tracking campaign-level uninstalls can reveal whether a specific campaign is driving or preventing app uninstalls.
+
+Braze __automatically collects a base level of uninstall information__ from your regular push campaigns. However, because the frequency that different users receive push campaigns may vary, Braze offers Uninstall Tracking to provide a more accurate snapshot of uninstall activity among your users.
+
+__You must opt-in to Uninstall Tracking on the dashboard. This feature is currently available for apps on iOS, Android, and Fire OS.__
 
 ## Implementation
 
@@ -24,7 +31,7 @@ This time can be used to define a segment of users for win-back campaigns. Using
 
 ## App-Level Analysis
 
-Daily statistics on uninstalls are found on the App Usage page. The visualization can be broken down by segment, similar to other statistics Braze provides. View statistics for usage analytics, and then select Uninstalls from the dropdown to display the graph. The graph can then be broken down by segment, and by app, using the dropdowns. 
+Daily statistics on uninstalls are found on the App Usage page. The visualization can be broken down by segment, similar to other statistics Braze provides. View statistics for usage analytics, and then select Uninstalls from the dropdown to display the graph. The graph can then be broken down by segment, and by app, using the dropdowns.
 
 {% alert note %}
 Note that apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
