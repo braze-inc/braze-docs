@@ -1,6 +1,6 @@
 ---
 nav_title: Testing
-page_order: 6
+page_order: 3
 ---
 
 # Testing

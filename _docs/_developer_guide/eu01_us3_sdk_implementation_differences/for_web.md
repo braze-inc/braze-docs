@@ -1,6 +1,6 @@
 ---
 nav_title: For Web
-page_order: 5
+page_order: 2
 ---
 
 # For Web

@@ -1,6 +1,6 @@
 ---
 nav_title: Message Format
-page_order: 8
+page_order: 5
 ---
 # Message Format
 

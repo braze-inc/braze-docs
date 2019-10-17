@@ -1,6 +1,6 @@
 ---
 nav_title: Export App Usage Data
-page_order: 4
+page_order: 3
 ---
 
 # Exporting App Usage Data

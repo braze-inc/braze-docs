@@ -2,7 +2,7 @@
 nav_title: Create an In-App Message
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
-page_order: 1
+page_order: 0
 ---
 
 # Creating an In-App Message

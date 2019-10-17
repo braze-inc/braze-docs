@@ -1,6 +1,6 @@
 ---
 nav_title: Creating Geofences
-page_order: 1
+page_order: 0
 ---
 
 # Creating Geofence Sets Manually

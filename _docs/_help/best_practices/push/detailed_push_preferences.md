@@ -1,6 +1,6 @@
 ---
 nav_title: Detailed Push Preferences
-page_order: 3
+page_order: 1
 ---
 
 # Detailed Push Preferences

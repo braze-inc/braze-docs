@@ -1,7 +1,6 @@
 ---
 nav_title: SAML & Single Sign-On
 page_order: 5
-layout: featured
 guide_top_header: "SAML & Single Sign-On"
 guide_top_text: "Single Sign-On (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be used to access different applications, including Braze. <br> <br> Braze supports Google SSO support via Open ID Connect and SAML SSO which supports the latest Security Assertion Markup Language (SAML 2.0) industry standards."
 

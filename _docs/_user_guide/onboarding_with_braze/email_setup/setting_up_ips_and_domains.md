@@ -1,6 +1,6 @@
 ---
 nav_title: Setting Up IPs & Domains
-page_order: 1
+page_order: 0
 ---
 
 # Setting Up IPs and Domains

@@ -1,6 +1,6 @@
 ---
 nav_title: Geofence Configuration
-page_order: 3
+page_order: 2
 ---
 
 # Geofence Configuration

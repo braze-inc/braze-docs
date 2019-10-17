@@ -1,6 +1,6 @@
 ---
 nav_title: Canvas Entry Steps and Conditions
-page_order: 3
+page_order: 2
 ---
 
 # Canvas: Entry Steps and Conditions

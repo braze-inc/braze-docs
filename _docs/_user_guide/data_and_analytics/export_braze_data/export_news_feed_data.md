@@ -1,6 +1,6 @@
 ---
 nav_title: Export News Feed Data
-page_order: 7
+page_order: 5
 ---
 
 ## News Feed Data

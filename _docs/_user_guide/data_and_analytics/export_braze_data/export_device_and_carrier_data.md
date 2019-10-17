@@ -1,6 +1,6 @@
 ---
 nav_title: Export Device & Carrier Data
-page_order: 9
+page_order: 7
 ---
 
 # Device and Carrier Data
