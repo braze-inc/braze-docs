@@ -17,7 +17,7 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add this method call after a successful purchase in your app:
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).logPurchase(
+Appboy.getInstance(context).logPurchase(
    String productId,
    String currencyCode,
    BigDecimal price,
@@ -39,7 +39,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 ```java
 AppboyProperties purchaseProperties = new AppboyProperties();
 purchaseProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logPurchase(..., purchaseProperties);
+Appboy.getInstance(context).logPurchase(..., purchaseProperties);
 ```
 
 See the [Javadoc][6] for more information.
