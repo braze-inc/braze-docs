@@ -37,7 +37,7 @@ __We strongly recommend collecting email addresses__ even if you're not sending 
 This is what setting a first name would look like in code:
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setFirstName("SomeFirstName");
+Appboy.getInstance(context).getCurrentUser().setFirstName("SomeFirstName");
 ```
 
 See [`UserProfileDialog.java`][1] in the Droidboy sample app.
@@ -60,7 +60,7 @@ Full method specifications for custom attributes can be found here within the [A
 #### Setting a Custom Attribute with a String Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_STRING_VALUE
 );
@@ -69,11 +69,11 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
 #### Setting a Custom Attribute with an Integer Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_INT_VALUE
 // Integer attributes may also be incremented using code like the following:
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().incrementCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().incrementCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   THE_INTEGER_VALUE_BY_WHICH_YOU_WANT_TO_INCREMENT_THE_ATTRIBUTE
 );
@@ -82,7 +82,7 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().incrementCustomUserAttri
 #### Setting a Custom Attribute with a Boolean Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_BOOLEAN_VALUE
 );
@@ -91,7 +91,7 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
 #### Setting a Custom Attribute with a Long Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_LONG_VALUE
 );
@@ -100,7 +100,7 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
 #### Setting a Custom Attribute with a Float Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_FLOAT_VALUE
 );
@@ -109,19 +109,18 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
 #### Setting a Custom Attribute with a Date Value
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   YOUR_DATE_VALUE
 );
 // This method will assign the current time to a custom attribute at the time the method is called:
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttributeToNow(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToNow(
   YOUR_ATTRIBUTE_KEY_STRING
 );
 // This method will assign the date specified by secondsFromEpoch to a custom attribute:
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch(
+Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch(
   YOUR_ATTRIBUTE_KEY_STRING,
   long secondsFromEpoch
-);
 );
 ```
 >  Dates passed to Braze with this method must either be in the [ISO 8601][3] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
@@ -143,7 +142,7 @@ appboyUser.removeFromCustomAttributeArray("custom_attribute_array_test", testRem
 Custom Attributes can also be unset using the following method:
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().unsetCustomUserAttribute(
+Appboy.getInstance(context).getCurrentUser().unsetCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING
 );
 ```
@@ -175,7 +174,7 @@ To set up a subscription for your users (either email or push), call the functio
 ##### Setting Email Subscriptions
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setEmailNotificationSubscriptionType(
+Appboy.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(
   "NotificationSubscriptionType"
 );
 ```
@@ -183,7 +182,7 @@ Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setEmailNotificationSubs
 ##### Setting Push Notification Subscription
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setPushNotificationSubscriptionType(
+Appboy.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(
   "NotificationSubscriptionType"
 );
 ```
