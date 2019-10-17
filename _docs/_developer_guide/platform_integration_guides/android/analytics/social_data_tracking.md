@@ -13,6 +13,9 @@ Similar to the Braze iOS SDK, the Braze Android SDK does not automatically colle
 
 ### Social Network Data Constructors
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
 FacebookUser(
   String facebookId,
@@ -22,7 +25,6 @@ FacebookUser(
   String bio,
   String cityName,
   // Gender is a Braze enum.
-  // Specify either Gender.MALE or Gender.FEMALE.
   Gender gender,
   Integer numberOfFriends,
   // Names of pages the user likes.
@@ -42,18 +44,66 @@ TwitterUser(
 )
 ```
 
-To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `AppboyUser.setFacebookData()`/`AppboyUser.setTwitterData()`. For example:
+{% endtab %}
+{% tab KOTLIN %}
 
-```java
-FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, ,"04/13/1990");
-AppboyUser.setFacebookData(facebookUser);
-
-String imageUrl = "https://si0.twimg.com/profile_images/000/0000.jpeg";
-TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, imageUrl);
-AppboyUser.setTwitterData(twitterUser);
-
+```kotlin
+FacebookUser(
+  facebookId: String,
+  firstName: String,
+  lastName: String,
+  email: String,
+  bio: String,
+  cityName: String,
+  // Gender is a Braze enum.
+  gender: Gender gender,
+  numberOfFriends: Integer,
+  // Names of pages the user likes.
+  likes: Collection<String>,
+  // mm/dd/yyyy format.
+  birthday: String
+)
+TwitterUser(
+  twitterUserId: Integer,
+  twitterHandle: String,
+  name: String,
+  description: String,
+  followerCount: Integer,
+  followingCount: Integer,
+  tweetCount: Integer,
+  profileImageUrl: String
+)
 ```
 
+{% endtab %}
+{% endtabs %}
+
+To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `AppboyUser.setFacebookData()`/`AppboyUser.setTwitterData()`. For example:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, Arrays.asList(new String[]{ "like" }), "04/13/1990");
+Appboy.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
+
+TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url");
+Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val facebookUser = FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, listOf("like"),"04/13/1990")
+Appboy.getInstance(context).currentUser?.setFacebookData(facebookUser)
+
+val twitterUser = TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url")
+Appboy.getInstance(context).currentUser?.setTwitterData(twitterUser)
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: https://developers.facebook.com/docs/howtos/androidsdk/3.0/login-with-facebook/#step1
 [2]: https://developer.twitter.com/en/docs
