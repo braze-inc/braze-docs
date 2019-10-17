@@ -296,16 +296,14 @@ The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the 
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (void)setInAppMessageClickAction:(ABKInAppMessageClickActionType)clickActionType
-                           withURI:(NSURL *)uri;
+[inAppMessage setInAppMessageClickAction:clickActionType withURI:URL];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-// sample usage
-inAppMessage.setInAppMessageClickAction(clickActionType: ABKInAppMessageClickActionType, withURI: URL?)
+inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
 ```
 
 {% endtab %}
