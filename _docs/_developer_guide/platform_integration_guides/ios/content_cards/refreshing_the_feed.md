@@ -20,7 +20,7 @@ You can manually request Braze to refresh the user's Content Cards using the `re
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.requestContentCardsRefresh()
+Appboy.sharedInstance()?.requestContentCardsRefresh()
 ```
 
 {% endtab %}
