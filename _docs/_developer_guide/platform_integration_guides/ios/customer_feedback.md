@@ -132,7 +132,7 @@ The SDK will call the completion handler after the feedback sends successfully o
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.submitFeedback(feedback) { (feedbackSentResult) in
+Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
       print("Feedback sent: \(feedbackSentResult)")
     }
 ```
