@@ -26,8 +26,8 @@ In order to log a Custom Event when a user enters a place, input this code into 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.logCustomEvent("Entered %@", visit.place.name)
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue()
+Appboy.sharedInstance()?.logCustomEvent("Entered %@", visit.place.name)
+Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
