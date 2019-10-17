@@ -296,7 +296,7 @@ The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the 
 {% tab OBJECTIVE-C %}
 
 ```objc
-[inAppMessage setInAppMessageClickAction:clickActionType withURI:URL];
+[inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
 ```
 
 {% endtab %}
