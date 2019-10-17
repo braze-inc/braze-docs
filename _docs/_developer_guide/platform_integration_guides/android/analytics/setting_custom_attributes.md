@@ -240,11 +240,11 @@ Appboy.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("you
 
 ```kotlin
 // Setting a custom attribute with an array value
-Appboy.getInstance(context).currentUser?.setCustomAttributeArray("custom_attribute_array_test", testSetArray)
+Appboy.getInstance(context).currentUser?.setCustomAttributeArray("your_attribute_key", testSetArray)
 // Adding to a custom attribute with an array value
-Appboy.getInstance(context).currentUser?.addToCustomAttributeArray("custom_attribute_array_test", "string_to_add")
+Appboy.getInstance(context).currentUser?.addToCustomAttributeArray("your_attribute_key", "value_to_add")
 // Removing a value from an array type custom attribute
-Appboy.getInstance(context).currentUser?.removeFromCustomAttributeArray("custom_attribute_array_test", "string_to_remove")
+Appboy.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
 ```
 
 {% endtab %}
