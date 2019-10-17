@@ -37,12 +37,10 @@ Before you can even think about sending an SMS
 |---|---|---|
 |Short Code | Either a short or a long code are required. <br><br> This is a short, memorable 5-6 digit sequences that allows senders to send more messages at more consistent rates than long numbers (1 message per second). | Braze will apply and acquire this for you. You must let us know that you want one, as there are requirements beyond what is listed here. <br> <br>Getting a short code takes some time - you can expect a delay before you are assigned an approved short code. These are also subject to upfront and other charges. If you already have a short code and want to keep it after transferring service to Braze, please let your Braze representative know before your onboarding process begins. |
 | Long Code | Either a short or a long code are required. <br><br> This is your standard, 10-digit phone number which allows senders to send 1 message per second. |
-| List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as 10-digit..... |
+| List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as 10-digit number, as well as a country area code. [Learn more here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms/importing_numbers/). |
 | Keyword Templates | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
 
 ## A List of Things You Need to Know
 
-| Factoid | Source |
-|---|---|
-|In the United States of America, businesses are legally required to have a two-way number so that customer are able to subscribe and unsubscribe from their messages. |  
-|
+- In the United States of America, businesses are legally required to have a two-way number so that customer are able to subscribe and unsubscribe from their messages.
+- 
