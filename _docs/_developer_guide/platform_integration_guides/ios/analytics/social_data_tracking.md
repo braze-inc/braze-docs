@@ -27,7 +27,7 @@ ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDic
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes)
@@ -57,7 +57,7 @@ ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDic
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: -1, likes:nil)
@@ -81,7 +81,7 @@ twitterUser.twitterID = self.twitterID;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let twitterUser = ABKTwitterUser()
