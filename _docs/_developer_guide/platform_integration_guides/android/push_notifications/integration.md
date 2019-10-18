@@ -206,6 +206,12 @@ Braze's notification code also uses `AppboyFirebaseMessagingService` to handle o
 If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
+> Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+
+**Implementation Example**
+
+- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
+
 ##### Using Your Own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [AppboyFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
@@ -249,12 +255,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 {% endtab %}
 {% endtabs %}
-
-> Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
-
-**Implementation Example**
-
-- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
 
 ### Step 2: Configure Notification Icons
 

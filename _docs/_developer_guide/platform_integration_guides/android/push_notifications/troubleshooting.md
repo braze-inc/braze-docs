@@ -85,22 +85,19 @@ There are a few reasons why this could be occurring:
 
 If you force-quit your application through your system settings, your push notifications will not be sent. Launching the app again will re-enable your device to receive push notifications.
 
-##### 2. AppboyFcmReceiver Not Registered
+##### 2. AppboyFirebaseMessagingService Not Registered
 
-The AppboyFcmReceiver must be properly registered in `AndroidManifest.xml` for push notifications to appear:
+The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
 ```
-  <receiver android:name="com.appboy.AppboyFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<service android:name="com.appboy.AppboyFirebaseMessagingService">
   <intent-filter>
-    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-    <category android:name="Your Application's Package Name" />
+    <action android:name="com.google.firebase.MESSAGING_EVENT" />
   </intent-filter>
-</receiver>
+</service>
 ```
 
 For an implementation example, please check out our sample application's [AndroidManifest.xml][15]
-
-**Note** Before Braze Android SDK `2.7.0`, `AppboyFcmReceiver` is known as `AppboyGcmReceiver`. Their functionality is equivalent and integration instructions remain the same, however, all references to `AppboyFcmReceiver` in your `AndroidManifest.xml` and code will need to be replaced by references to `AppboyGcmReceiver`.
 
 ##### 3. Firewall is Blocking Push
 
