@@ -25,13 +25,13 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
 	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. In Xcode 7+, expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
 5. (Optional) If you are one of the following:
-  - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages, News Feed, or Feedback)
+  - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages or Content Cards)
   - You have custom UI for Braze's UI features and handle the image downloading yourself
 
 	You can use the core version of the SDK by removing the file `ABKSDWebImageProxy.m` and `Appboy.bundle`. This will remove the SDWebImage framework dependency and all the UI related resources (e.g. Nib files, images, localization files) from the SDK.
 
 {% alert warning %}
-If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's News Feed and Feedback UI with core version will lead to unpredictable behavior.
+If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's Content Cards UI with the core version will lead to unpredictable behavior.
 {% endalert %}
 
 ## Step 2: Adding Required iOS Libraries

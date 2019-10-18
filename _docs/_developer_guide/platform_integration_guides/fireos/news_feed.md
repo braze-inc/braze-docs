@@ -14,7 +14,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 ## News Feed Integration Overview
 
-In Android, the News Feed and feedback form are implemented as [Fragments][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+In Android, the News Feed is implemented as a [Fragment][2] that is available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 
 >  The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened (learn more about [tracking user sessions][4]).
 
@@ -30,7 +30,7 @@ See [`DroidBoyActivity.java`][5] in the Droidboy sample app.
 
 ### Default Styling
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>
