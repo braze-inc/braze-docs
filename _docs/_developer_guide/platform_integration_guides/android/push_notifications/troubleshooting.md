@@ -90,7 +90,7 @@ If you force-quit your application through your system settings, your push notif
 The AppboyFcmReceiver must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
 ```
-  <receiver android:name="com.appboy.AppboyFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+<receiver android:name="com.appboy.AppboyFcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
   <intent-filter>
     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
     <category android:name="Your Application's Package Name" />

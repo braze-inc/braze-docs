@@ -136,9 +136,9 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 - In your main activity's `onCreate()` method, add the following line, which will register your application with Baidu and begin listening for incoming push messages.  Make sure to replace "Your-API-Key" with your project's Baidu API Key.
 
-  ```
-  PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
-  ```
+```
+PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
+```
 
 - Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Appboy.registerAppboyPushMessages(channelId)`.  See our sample app's [main activity][47] for a sample implementation.
 
