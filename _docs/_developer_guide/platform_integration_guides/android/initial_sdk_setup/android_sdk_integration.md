@@ -6,7 +6,7 @@ platform: Android
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 

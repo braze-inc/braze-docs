@@ -1,4 +1,4 @@
-Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app slideup message with which you can engage your users{% endif %}.
+Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app messages with which you can engage your users{% endif %}.
 
 The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
