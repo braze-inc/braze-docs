@@ -33,8 +33,6 @@ target 'YourAppTarget' do
 end
 ```
 
-If you are using Xcode 8.3.3 or earlier, please use SDK version 3.0.2.
-
 __Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-iOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-iOS-SDK'` in your Podfile.
 {% if include.platform == 'iOS' %}
 __Note__: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
