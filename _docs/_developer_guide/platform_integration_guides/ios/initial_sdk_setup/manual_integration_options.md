@@ -23,7 +23,7 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 2. In Xcode, from the project navigator, select the destination project or group for Braze
 3. Navigate to File > Add Files to “Project_Name”
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
-	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. In Xcode 7+, expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
+	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. Expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
 5. (Optional) If you are one of the following:
   - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages, News Feed, or Feedback)
   - You have custom UI for Braze's UI features and handle the image downloading yourself
@@ -42,7 +42,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 4. Mark this library as required using the pull-down menu next to `SystemConfiguration.framework`
 5. Repeat to add each of the following required frameworks to your project, marking each as “required”
 	- `QuartzCore.framework`
-	- `libz.dylib`, or `libz.tbd` in Xcode 7+
+	- `libz.tbd`
 	- `CoreImage.framework`
 	- `CoreText.framework`
 	- `WebKit.framework`

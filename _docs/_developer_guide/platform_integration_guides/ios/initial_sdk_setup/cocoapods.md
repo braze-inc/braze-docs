@@ -25,7 +25,7 @@ __Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
-If you are using Xcode 9+, add the following line to your Podfile:
+Add the following line to your Podfile:
 
 ```
 target 'YourAppTarget' do
