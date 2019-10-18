@@ -807,7 +807,7 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
 
 
 ```
-  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
+"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
 ```
 
 
