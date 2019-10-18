@@ -187,9 +187,9 @@ Then, copy and paste the following `HTML` snippet into your code, replacing the 
 
 ```
 <video class="video" autoplay muted playsinline controls>
-          <source src="mov_bbb.mp4" type="video/mp4">
-          <source src="mov_bbb.ogg" type="video/ogg">
-          Your device does not support HTML5 video.
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your device does not support HTML5 video.
 </video>
 ```
 
@@ -207,12 +207,6 @@ To use a video in iOS in-app messages, you may require developer assistance. You
 
 Modify the file using the following snippets:
 
-__UIWebView Settings__
-```
-webView.allowsInlineMediaPlayback = YES;
-webView.mediaPlaybackRequiresUserAction = NO;
-```
-
 __WKWebView Settings__
 ```
 WKWebViewConfiguration *config = [WKWebViewConfiguration new];
@@ -224,9 +218,9 @@ Then, add the following snippet to your HTML code and use the code in your messa
 
 ```
 <video class="video" playsinline autoplay>
-          <source src="mov_bbb.mp4" type="video/mp4">
-          <source src="mov_bbb.ogg" type="video/ogg">
-          Your device does not support HTML5 video.
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your device does not support HTML5 video.
 </video>
 ```
 
