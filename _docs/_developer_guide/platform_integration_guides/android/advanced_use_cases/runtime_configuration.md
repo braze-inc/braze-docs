@@ -43,7 +43,7 @@ Appboy.configure(this, appboyConfig)
 {% endtab %}
 {% endtabs %}
 
-Another example can be found in our [Hello Braze sample app][3].
+Another example can be found in our [Hello Appboy sample app][3].
 
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.AppboyConfig-
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html
