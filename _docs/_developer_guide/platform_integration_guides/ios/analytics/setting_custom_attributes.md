@@ -40,7 +40,6 @@ The following attributes should be set on the `ABKUser` object:
 - `country`
 - `language`
 - `homeCity`
-- `bio`
 - `phone`
 - `userID`
 - `avatarImageURL`
