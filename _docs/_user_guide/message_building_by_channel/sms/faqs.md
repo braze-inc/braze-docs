@@ -38,7 +38,9 @@ You should reach out to your Braze representative for more exact details.
 
 {% details How do I get a short code? %}
 
-Getting a short code can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to recieve approval to start using your short code. 
+Getting a short code can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
+
+You can [learn more about Short Codes and Long Codes here]({{ site.baseurl }}/).
 {% enddetails %}
 
 
@@ -62,4 +64,17 @@ While we can't promise that you won't occasionally have an overage, you could fo
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses UCS-2 encoding,  you can usually estimate that you can send a message with 67 characters per message segment.
 - Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
+{% enddetails %}
+
+
+
+{% details What keywords does Braze automatically process? %}
+
+Braze will only automatically process the following _exact, single-word, case-insensitive_ messages:
+
+- `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
+- `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
+- `HELP`, `INFO`: Triggers custom "help" message built fduring onboarding process.
+
+[Learn more about Keyword Processing and Management here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
 {% enddetails %}

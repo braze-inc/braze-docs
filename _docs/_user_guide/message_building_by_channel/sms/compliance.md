@@ -50,7 +50,7 @@ Some spam considerations are built into SMS capabilities in general (long and sh
 
 This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics - you may still be charged for messages that are blocked by various carriers.
 
-The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow S.H.A.F.T. Compliance, which defines the following topics as generally "illegal" when messaging in the United States:
+The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow __SHAFT Compliance__, which defines the following topics as generally "illegal" when messaging in the United States:
 
 - Sex
 - Hate
@@ -66,6 +66,6 @@ Please ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/Telephone
 
 ### International
 
-Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of the US region, please research best practices and laws in those areas. It is always best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the United States, Canada, and countries part of the European Union.
+Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
 
-Better safe than sorry!
+Better to be safe than sorry!

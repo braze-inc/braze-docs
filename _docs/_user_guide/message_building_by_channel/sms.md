@@ -18,7 +18,13 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/compliance/
   fa_icon: fas fa-gavel
 - name: Keyword Processing & Management
-  link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/
+  fa_icon: fas fa-key
+- name: User Phone Numbers
+  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/
+  fa_icon: fas fa-phone
+- name: Short & Long Codes
+  link: /docs/user_guide/onboarding_with_braze/short_and_long_codes/
   fa_icon: fas fa-table
 - name: FAQs
   link: /docs/help/best_practices/sms/faqs/
