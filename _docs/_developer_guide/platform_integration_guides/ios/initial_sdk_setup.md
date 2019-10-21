@@ -19,7 +19,7 @@ guide_featured_list:
 - name: Manual
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/
   fa_icon: fas fa-toolbox
-- name: IDFA Collection (Optional)
+- name: "IDFA Collection (Optional)"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
   fa_icon: fas fa-id-card-alt
 

@@ -19,10 +19,10 @@ guide_featured_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial
-- name: Reporting & Analytics
+- name: "Reporting & Analytics"
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   fa_icon: fas fa-chart-pie
-- name: Migrating From News Feed
+- name: Migrating from News Feed
   link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
   fa_icon: fas fa-suitcase
 ---

@@ -1,8 +1,6 @@
 ---
-config_only: false
 page_order: 1
 nav_title: Braze Currents
-layout: featured
 ---
 # Braze Currents
 

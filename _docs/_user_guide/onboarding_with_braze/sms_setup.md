@@ -3,21 +3,18 @@ nav_title: SMS Set Up
 layout: featured
 page_order: 4
 guide_top_header: "Email Set Up"
-guide_top_text: "Braze has just launched SMS! "
+guide_top_text: "Braze has just launched SMS!"
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Terms to Know
   link: /docs/user_guide/onboarding_with_braze/sms/terms_to_know/
   fa_icon: fas fa-bookmark
-- name: Create User Profiles
+- name: "Create User Profiles & Import Phone Numbers"
   link: /docs/user_guide/onboarding_with_braze/sms/importing_numbers/
   fa_icon: fas fa-user-circle
-- name: Number Formatting
-  link: /docs/user_guide/onboarding_with_braze/sms/number_formatting/
-  fa_icon: far fa-comment
-- name: Short Code Application
-  link: /docs/user_guide/onboarding_with_braze/sms/short_code_application/
+- name: "Short & Long Codes"
+  link: /docs/user_guide/onboarding_with_braze/sms/short_and_long_codes/
   fa_icon: far fa-address-card
 - name: Requirements
   link: /docs/user_guide/onboarding_with_braze/sms/#requirements/

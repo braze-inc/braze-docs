@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Email Messaging
   link: /docs/user_guide/message_building_by_channel/email/
   image: /assets/img/email_icon.png
-- name: In-App Messaging
+- name: "In-App Messaging"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   image: /assets/img/in-app_message_icon.png
 - name: News Feed

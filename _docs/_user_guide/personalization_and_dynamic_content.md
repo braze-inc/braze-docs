@@ -1,5 +1,5 @@
 ---
-nav_title: Personalization & Dynamic Content
+nav_title: "Personalization & Dynamic Content"
 page_order: 6
 layout: featured
 guide_top_header: "Personalized Messaging"
@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   fa_icon: fas fa-server
-- name: Deep-Linking to In-App Content
+- name: "Deep-Linking to In-App Content"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile
 - name: "Key-Value Pairs"
@@ -27,7 +27,7 @@ guide_featured_list:
   fa_icon: fas fa-columns
 ---
 
-<br> 
+<br>
 
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
 [2]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/

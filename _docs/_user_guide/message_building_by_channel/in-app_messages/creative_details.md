@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Slideup
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
   image: /assets/img/icon_slideup.png
-- name: Full-Screen
+- name: "Full-Screen"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/
   image: /assets/img/icon_full_screen.png
 ---

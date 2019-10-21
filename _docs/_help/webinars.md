@@ -19,7 +19,7 @@ guide_featured_list:
   - name: Canvas Lifecycle Testing
     link: /docs/help/webinars/canvas_lifecycle_testing/
     fa_icon: far fa-user-circle
-  - name: Creating Segments and Sending Campaigns
+  - name: "Creating Segments & Sending Campaigns"
     link: /docs/help/webinars/creating_segments_and_sending_campaigns/
     fa_icon: fas fa-users
   - name: Email 101
@@ -31,7 +31,7 @@ guide_featured_list:
   - name: Measuring Success with Braze Data
     link: /docs/help/webinars/measuring_success_with_braze_data/
     fa_icon: fas fa-balance-scale-right
-  - name: Personalization and Liquid
+  - name: "Personalization & Liquid"
     link: /docs/help/webinars/personalization_and_liquid/
     fa_icon: fas fa-user-tag
   - name: Sending Test Messages
@@ -43,7 +43,7 @@ guide_featured_list:
 
 ---
 
-## Braze for Impact 
+## Braze for Impact
 
 Braze for Impact is Braze’s new podcast series!
 
@@ -55,4 +55,3 @@ This “Braze for Impact” Podcast (this “Podcast”) is the property of Braz
 Braze makes no warranty, guarantee, or representation as to the accuracy or reliability of the information featured in this Podcast. The information, opinions, and recommendations contained in this Podcast are for general information only and do not necessarily represent the views or opinions of Braze or its management. Any reliance on the information provided in this Podcast is at your own risk. This Podcast should not be considered professional advice. Braze does not endorse, approve, recommend, or certify any information, product, process, services or organizations presented or mentioned in this Podcast, and information from this Podcast should not be referenced in any way to imply such recommendation or endorsement.
 
 BRAZE EXPRESSLY DISCLAIMS ANY AND ALL LIABILITY OR RESPONSIBILITY FOR ANY LOSS OR DAMAGE, INCLUDING WITHOUT LIMITATION, INDIRECT OR CONSEQUENTIAL DAMAGES, ARISING OUT OF ANY PARTY’S USE OF, REFERENCE TO, OR RELIANCE ON THIS PODCAST OR THE INFORMATION CONTAINED IN THIS PODCAST.
-

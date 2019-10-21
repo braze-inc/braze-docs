@@ -7,16 +7,16 @@ guide_top_text: "So you want to send email campaigns, huh? We can help you with 
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Setting Up IPs and Domains
+- name: "Setting Up IPs & Domains"
   link: /docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
   fa_icon: far fa-dot-circle
 - name: Authentication
   link: /docs/user_guide/onboarding_with_braze/email_setup/authentication/
   fa_icon: fas fa-user-shield
-- name: Consent & Address Collection
+- name: "Consent & Address Collection"
   link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book
-- name: Deliverability Pitfalls & Spam Traps
+- name: "Deliverability Pitfalls & Spam Traps"
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
   fa_icon: fas fa-exclamation-triangle
 - name: Importing Your Email List into Braze

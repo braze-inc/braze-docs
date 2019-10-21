@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messages
+nav_title: "In-App Messages"
 page_order: 2
 layout: featured
 guide_top_header: "In-App Messages"
@@ -19,7 +19,7 @@ guide_featured_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
   fa_icon: fas fa-vial
-- name: Reporting & Analytics
+- name: "Reporting & Analytics"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   fa_icon: fas fa-chart-bar
 ---

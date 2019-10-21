@@ -8,25 +8,25 @@ guide_top_text: "SMS (Short Messaging Service) is a more direct way to reach you
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: Create an SMS
+- name: "Create an SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
   fa_icon: fas fa-table
-- name: Set Up SMS
+- name: "Set Up SMS"
   link: /docs/user_guide/onboarding_with_braze/sms/
   fa_icon: fas fa-table
-- name: Compliance & Regulations
+- name: "Compliance & Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/compliance/
   fa_icon: fas fa-gavel
-- name: Keyword Processing & Management
+- name: "Keyword Processing & Management"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
   fa_icon: fas fa-key
-- name: User Phone Numbers
+- name: "User Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/
   fa_icon: fas fa-phone
-- name: Short & Long Codes
+- name: "Short & Long Codes"
   link: /docs/user_guide/onboarding_with_braze/short_and_long_codes/
   fa_icon: fas fa-table
-- name: FAQs
+- name: "FAQs"
   link: /docs/help/best_practices/sms/faqs/
   fa_icon: fas fa-comment
 
