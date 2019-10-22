@@ -1,7 +1,7 @@
 ---
 nav_title: Social
 page_order: 3
-
+layout: partner_page
 partner_path: "https://www.braze.com/product/alloys/partners"
 partner_top_header: "Social"
 
