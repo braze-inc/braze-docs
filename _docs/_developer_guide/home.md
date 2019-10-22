@@ -2,8 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
-guide_top_text: "This is where developers can find all the integrations available with Braze. You can also
-use the <a href='/docs/developer_guide/rest_api/basics/'>REST API Guide</a>."
+guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/developer_guide/rest_api/basics/'>REST API Guide</a>."
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
@@ -11,7 +10,7 @@ guide_featured_list:
   fa_icon: fab fa-android
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 - name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/
+  link: /docs/developer_guide/platform_integration_guides/ios/
   fa_icon: fab fa-apple
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
@@ -65,5 +64,3 @@ guide_menu_list:
 guide_footer_header: " "
 guide_footer_text: " "
 ---
-
-Developer Home

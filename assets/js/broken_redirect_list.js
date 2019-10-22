@@ -27,5 +27,7 @@ validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/api/tls_dep
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
+validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
+
 
 validurls['/docs/SDK_Changelogs'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs';

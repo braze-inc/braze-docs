@@ -1,12 +1,21 @@
 ---
 nav_title: Deprecations
 page_order: 10
+layout: featured
+
+guide_top_header: "Deprecations"
+guide_top_text: "Technology is always moving - inside Braze and outside it! And we do our best to keep up with it. Here, you'll find the origins of Braze and it's technology - how we supported people in the 'before time' - before now, anyway... <br> <br> You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry. <br> <br> You can find a list of deprecated and unsupported features below. You can also read deprecated articles by clicking on the buttons below."
+
+guide_featured_title: "Deprecated Articles"
+guide_featured_list:
+  - name: Apptimize Partnership
+    link: /docs/help/release_notes/deprecations/apptimize/
+    fa_icon: fas fa-vials
+  - name: Eclipse SDK Set Up
+    link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
+    fa_icon: fas fa-circle
+
 ---
-# About Deprecations
-
-Technology is always moving - inside Braze and outside it! And we do our best to keep up with it. Here, you'll find the origins of Braze and it's technology - how we supported people in the "before time" - before now, anyway...
-
-You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry.
 
 
 ## Apptimize
@@ -15,7 +24,7 @@ _Braze Partnership_
 
 _Support withdrawn: August 2019_
 
-If you are currently using Apptimize with Braze, you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+If you are currently using [Apptimize with Braze]({{ site.baseurl }}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
 
 ## Original In-App Messages
@@ -70,7 +79,7 @@ _Integration_
 
 _Support withdrawn: 2014-2015_
 
-Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
+Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance. Initial SDK Setup is [here]({{ site.baseurl }}/help/release_notes/deprecations/eclipse_setup_deprecated).
 
 ## The Raw Event Stream (RES)
 

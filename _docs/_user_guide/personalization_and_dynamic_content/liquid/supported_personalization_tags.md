@@ -1,6 +1,6 @@
 ---
 nav_title: Supported Personalization Tags
-page_order: 2
+page_order: 1
 ---
 
 # Supported Personalization Tags
@@ -195,7 +195,7 @@ You can also target users based off of their time zone. For example, send one me
 It is between 2:00:00pm and 2:59:59pm ET!
 {% elsif hour_in_utc >= 22 && hour_in_utc < 23 %}
 It is between 2:00:00pm and 2:59:59pm PT!
-{else}
+{% else %}
 {% abort_message %}
 {% endif %}
 ```

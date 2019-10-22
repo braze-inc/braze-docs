@@ -7,9 +7,52 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
+
+## September 2019
+
+{% alert update %}
+New September updates!
+{% endalert %}
+
+### Braze App within OneLogin
+
+Customers will be able to simply search and select Braze within [OneLogin]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
+
+### Rokt Calendar Partnership
+
+[Rokt Calendar]({{ site.baseurl }}/partners/technology_partners/additional_channels/calendar/rokt_calendar/) provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. Customers will be able to...
+
+- Send a calendar invite via Braze platform to 'save the date' and extend our communication
+- Update an existing invite if the contents of the event has changed.
+
+### Passkit Partnership
+
+With [Passkit]({{ site.baseurl }}/partners/technology_partners/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
+
+### Dispatch ID Value Return via Messaging Endpoints
+
+A message's `dispatch_id` will be included in the following Messaging endpoint responses:
+
+- [`/campaigns/trigger/send`]({{ site.baseurl }}/api/endpoints/messaging/#sending-messages-via-api-triggered-delivery)
+- [`/campaigns/trigger/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#create-schedule-endpoint)
+- [`/messages/send`]({{ site.baseurl }}/api/endpoints/messaging/#sending-messages-immediately-via-api-only)
+- [`/messages/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#create-schedule-endpoint)
+- [`/canvases/trigger/send`]({{ site.baseurl }}/api/endpoints/messaging/#canvas)
+- [`/canvases/trigger/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#api-triggered-canvases)
+
+This way, customers who use transactional messaging can trace the call back through Currents.
+
+### Canvas Changelogs
+
+Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
+
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
+
+
 ## August 2019
 
 ### Campaign Details in Reports
+
 Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
@@ -133,17 +176,6 @@ The "Show Only Mine" filter on the Campaign grid will remain "on" any time you v
 
 You can send a one-time [A/B test]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a Campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
 
-## June 2019
-
-### Snowflake Partnership
-
-Braze is proud to announce our partnership with Snowflake!
-
-Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
-
-Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
-
-Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement) or in [our documentation]({{ site.baseurl }}/partners/snowflake/).
 
 
 

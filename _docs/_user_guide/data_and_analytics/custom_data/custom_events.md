@@ -55,7 +55,9 @@ Custom Event Properties are designed to help you personalize your messaging or b
 
 You can change the data type of your custom event, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
 
-
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
 
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"

@@ -1,6 +1,6 @@
 ---
 nav_title: Collection Use Case
-page_order: 5
+page_order: 3
 ---
 
 # Taxi/Ride-Sharing App Use Case
@@ -49,5 +49,9 @@ Adding these attributes would afford you the ability to send campaigns to users 
 1. Reminding users who haven't used the app in 7 days who have promotional credit remaining on their account that it is there and that they should come back to the app and use it!
 2. Use our [message templating and personalization features][13] to drag the unique promo code attribute into messaging directed at users.
 
+
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
 
 [13]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

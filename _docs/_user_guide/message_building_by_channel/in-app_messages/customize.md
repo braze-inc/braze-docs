@@ -2,7 +2,7 @@
 nav_title: Customize
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
-page_order: 5
+page_order: 2
 ---
 
 # Customization
@@ -25,21 +25,24 @@ If you choose to apply your own template, click __Apply Template__ and choose fr
 
 While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
-#### JavaScript Bridge (appboyBridge)
+#### JavaScript Bridge (appboyBridge) {#javascript-bridge}
 
 HTML in-app messages support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
 
 {% include archive/appboyBridge.md platform="web" %}
 
-Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
+Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`).
+{% alert note %}
+The only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
+{% endalert %}
 
 {% alert note %}
   To enable HTML in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
-#### Link-Based Actions
+#### Link-Based Actions (Mobile Apps)
 
-HTML in-app messages can trigger custom Braze actions when users click on elements with links. The supported link schemes are:
+HTML in-app messages on mobile apps can trigger custom Braze actions when users click on elements with links. The supported link schemes are:
 
 Supported Scheme | Corresponding Action | Supported Query Strings
 --- | --- |---
@@ -47,6 +50,10 @@ Normal Web URL or Deep Linking | For web URLs, Braze will open the new content o
 `appboy://close` | Braze will dismiss the HTML in-app message. | None
 `appboy://feed` | Braze will dismiss the HTML in-app message and display a modal News Feed. | `abButtonId`
 `appboy://customEvent` | Braze will log a custom event and will NOT dismiss the HTML in-app message. | `name`<br>All additional queries will be set as properties of the custom event.
+
+{% alert tip %}
+Link-based actions are not supported by the Web SDK. For cross-platform compatibility, please refer to the [Javascript Bridge](#javascript-bridge) methods.
+{% endalert %}
 
 #### Supported Query Strings
 

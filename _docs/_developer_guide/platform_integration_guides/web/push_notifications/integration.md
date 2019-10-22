@@ -36,9 +36,12 @@ This is a security requirement in the open standards specification that Braze We
 
 While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Braze has prepared an [example of this approach][4].
 
-### Step 1: Configure your Site
+### Step 1: Configure your Site's Service Worker
 
-- Create a `service-worker.js` file with the content below, and place it in the root directory of your website:
+- If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.
+
+- Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
+
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 
@@ -77,48 +80,41 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 3. Replace the removed call with the following snippet:
 
 ```javascript
-appboy.subscribeToNewInAppMessages(function(inAppMessages) {
-  var message = inAppMessages[0];
-  if (message != null) {
-    var shouldDisplay = true;
+appboy.subscribeToInAppMessage(function(inAppMessage) {
+  var shouldDisplay = true;
 
-    if (message instanceof appboy.ab.InAppMessage) {
-      // Read the key-value pair for msg-id
-      var msgId = message.extras["msg-id"];
+  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+    // Read the key-value pair for msg-id
+    var msgId = inAppMessage.extras["msg-id"];
 
-      // If this is our push primer message
-      if (msgId == "push-primer") {
-        // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
-        // has already granted/blocked permission
-        if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
-          shouldDisplay = false;
-        }
-        if (message.buttons[0] != null) {
-          // Prompt the user when the first button is clicked
-          message.buttons[0].subscribeToClickedEvent(function() {
-            appboy.registerAppboyPushMessages();
-          });
-        }
+    // If this is our push primer message
+    if (msgId == "push-primer") {
+      // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
+      // has already granted/blocked permission
+      if (!appboy.isPushSupported() || appboy.isPushPermissionGranted() || appboy.isPushBlocked()) {
+        shouldDisplay = false;
       }
-    }
-
-    // Display the message
-    if (shouldDisplay) {
-      appboy.display.showInAppMessage(message);
+      if (inAppMessage.buttons[0] != null) {
+        // Prompt the user when the first button is clicked
+        inAppMessage.buttons[0].subscribeToClickedEvent(function() {
+          appboy.registerAppboyPushMessages();
+        });
+      }
     }
   }
 
-  // Remove this message from the array of IAMs and return whatever's left
-  return inAppMessages.slice(1);
+  // Display the message
+  if (shouldDisplay) {
+    appboy.display.showInAppMessage(message);
+  }
 });
 ```
 
 When you wish to display the soft push prompt to the user, call `appboy.logCustomEvent("prime-for-push")` - for instance, to prompt the user on every page load just after the Braze session begins, your code would look like:
 
 ```
-appboy.openSession(function() {
-  appboy.logCustomEvent("prime-for-push");
-});
+appboy.openSession();
+appboy.logCustomEvent("prime-for-push");
 ```
 
 [1]: http://www.w3.org/TR/push-api/

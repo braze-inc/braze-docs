@@ -159,6 +159,8 @@ For more information on the "broadcast" flag, see [Broadcast][42] below.
 
 >  If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
 
+> Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
+
 ##  Schedule Endpoints
 
 The schedule endpoints allow you to send messages at a designated time and modify or cancel messages that you have already scheduled.
@@ -293,6 +295,8 @@ Content-Type: application/json
 ```
 
 >  Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+
+> Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
 ###  Update Schedule Endpoint
 
@@ -796,6 +800,16 @@ You must include an Android Push Object in `messages` if you want users you have
   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true
 }
 ```
+
+### Canvas Entry Properties Object
+When using one of the endpoints for triggering or scheduling a Canvas via the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the canvas_entry_properties namespace. For example, a request with `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to a message by adding {{canvas_entry_properties.${product_name}}}.
+
+
+
+```
+  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
+```
+
 
 ### Content Card Object
 

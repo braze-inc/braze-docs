@@ -1,6 +1,6 @@
 ---
 nav_title: Customize
-page_order: 4
+page_order: 2
 layout: featured
 guide_top_header: "Customize Your Content Cards"
 guide_top_text: "Customizing Content Cards and the feed they'll sit in cannot be done during the campaign creation process - you must work with your engineers and developers to build and customize your cards. It's easy and completely customizable this way!"

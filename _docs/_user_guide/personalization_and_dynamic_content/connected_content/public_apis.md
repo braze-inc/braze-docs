@@ -2,7 +2,7 @@
 nav_title: Public APIs
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 5
+page_order: 4
 ---
 
 # Public APIs

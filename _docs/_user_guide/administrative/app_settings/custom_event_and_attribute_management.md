@@ -35,7 +35,9 @@ Once a custom event or attribute is blacklisted,
 
 Changes to the blacklist may take a few minutes to propagate. You may re-enable any blacklisted event or attribute at anytime.
 
-_Please note that you should still remove the event/attribute from your app code during your next release._
+{% alert note %}
+Please note that you should still remove the event/attribute from your app code during your next release.
+{% endalert %}
 
 ## Forcing Data Type Comparisons
 Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Click on the dropdown in the Data Type column to choose.
@@ -46,7 +48,9 @@ If you elect to force the data type for an attribute, any data that comes in tha
 
 For more information on specific filter options exposed by different data type comparisons please see ["Configuring Reporting - Braze Academy"][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
 
-_Please note that data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard._
+{% alert note %}
+Please note that data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard.
+{% endalert %}
 
 [1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
 [2]: {% image_buster /assets/img_archive/add_new_user_company_settings.png %} "Add a New User"

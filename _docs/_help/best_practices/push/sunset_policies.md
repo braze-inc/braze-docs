@@ -1,6 +1,6 @@
 ---
 nav_title: Sunset Policies
-page_order: 5
+page_order: 3
 ---
 
 # Sunset Policies {#push-sunset-policies}

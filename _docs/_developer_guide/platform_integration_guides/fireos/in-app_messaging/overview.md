@@ -82,7 +82,7 @@ These are what each in-app message type will appear like for your users.
 
 {% endtab %}
 {% tab Custom HTML %}
-[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`UIWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 <br>
 
@@ -90,7 +90,7 @@ These are what each in-app message type will appear like for your users.
 
 <br>
 
-Full in-app message content is displayed in a `UIWebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
+Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
 {% alert important %}
 Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
@@ -136,7 +136,7 @@ See [`CustomInAppMessage.java`][29] in the DroidBoy sample app for an example im
 [34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
-[40]: {{ site.baseurl }}/docs/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
+[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
 [41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/IInAppMessageViewFactory.java
 [43]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageViewFactory.java

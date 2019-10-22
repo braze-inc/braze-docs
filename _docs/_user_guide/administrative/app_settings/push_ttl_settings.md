@@ -5,7 +5,7 @@ page_order: 3.5
 
 # Push Time to Live Settings
 
-This tab enables you to control the delivery attempt duration for offline devices. That is to say, if a user's device is offline when your campaign sends, Braze will attempt to deliver the message up to your set time on this page.
+This tab, in the `Manage App Group` section of your account, enables you to control the delivery attempt duration for offline devices. That is to say, if a user's device is offline when your campaign sends, Braze will attempt to deliver the message up to your set time on this page.
 
 By default, Braze sets this at a maximum of 28 days.
 

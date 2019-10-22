@@ -1,6 +1,6 @@
 ---
 nav_title: Notification Preferences
-page_order: 2
+page_order: 1
 ---
 
 # Notification Preferences

@@ -124,7 +124,7 @@
         margin-left:20px;
         > li {
           p {
-            display: inline;
+            display: inline-block;
           }
           &::before {
             content: "■";
@@ -472,6 +472,7 @@ table {
 
 table td code.highlighter-rouge {
   background-color: transparent !important;
+  word-break: break-all;
 }
 
 .highlight table {

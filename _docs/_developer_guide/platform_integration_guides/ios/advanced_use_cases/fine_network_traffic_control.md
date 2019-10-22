@@ -4,13 +4,13 @@ platform: iOS
 page_order: 1
 search_rank: 5
 ---
-## Fine Network Traffic Control
+# Fine Network Traffic Control
 
-### Request Processing Policies
+## Request Processing Policies
 
 Braze allows the user the option to control network traffic using the following protocols:
 
-#### Automatic Request Processing
+### Automatic Request Processing
 
 __*`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`*__
 
@@ -35,13 +35,13 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
 {% endtabs %}
 
-#### Manual Request Processing
+### Manual Request Processing
 
 __*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
 
@@ -62,16 +62,15 @@ Data can be manually flushed to Braze's servers at any time using the following 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.flushDataAndProcessRequestQueue();
+Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 ```
 
 {% endtab %}
 {% endtabs %}
 
+## Setting the Request Processing Policy
 
-### Setting the Request Processing Policy
-
-#### Set Request Policy On Startup
+### Set Request Policy On Startup
 
 These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` to any of the following `ABKRequestProcessingPolicy` enum values defined below:
 
@@ -98,7 +97,7 @@ public enum ABKRequestProcessingPolicy : Int {
 {% endtab %}
 {% endtabs %}
 
-#### Set Request Policy At Runtime
+### Set Request Policy At Runtime
 
 The request processing policy can also be set during runtime via the `requestProcessingPolicy` property on `Appboy`. For example:
 
@@ -115,13 +114,13 @@ The request processing policy can also be set during runtime via the `requestPro
 
 ```swift
 // Sets the request processing policy to automatic (the default value)
-Appboy.sharedInstance()!.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
+Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
 ```
 
 {% endtab %}
 {% endtabs %}
 
-### Manual Shutdown of In-Flight Server Communication
+## Manual Shutdown of In-Flight Server Communication
 
 If at any time an "in-flight" server communication needs to be halted, you must call the following method:
 
@@ -136,7 +135,7 @@ If at any time an "in-flight" server communication needs to be halted, you must 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.shutdownServerCommunication();
+Appboy.sharedInstance()?.shutdownServerCommunication();
 ```
 
 {% endtab %}
@@ -145,9 +144,8 @@ Appboy.sharedInstance()!.shutdownServerCommunication();
 After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
 
-##### Implementation Examples
+### Implementation Examples
 [`MiscViewController.m`][2] in the Stopwatch sample application provides examples of changing the data request processing policy, as well as manually flushing data to Braze.
-
 
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/MiscViewController.m
 [3]: #customizing-appboy-on-startup

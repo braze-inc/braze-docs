@@ -1,6 +1,6 @@
 ---
 nav_title: Importing Your Email List into Braze
-page_order: 5
+page_order: 4
 ---
 
 # Importing Your Email List into Braze {#importing-email-lists}

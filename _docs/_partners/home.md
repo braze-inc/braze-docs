@@ -5,7 +5,7 @@ layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/partners/braze_currents/about/'>here</a>."
+partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. If you're using Braze Currents, check out that documentation <a href='/docs/partners/braze_currents/about/'>here</a>. <br> <br> If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
 
 valid_partner_list:
 - name: Messenger
@@ -100,6 +100,9 @@ valid_partner_list:
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
 - name: Wavecell
   url: /docs/partners/technology_partners/additional_channels/sms/wavecell/
-
+- name: Rokt Calendar
+  url: /docs/partners/technology_partners/channel_extensions/calendar/rokt_calendar/
+- name: Passkit
+  url: /docs/partners/technology_partners/additional_channels/mobile_wallet/passkit/
 
 ---

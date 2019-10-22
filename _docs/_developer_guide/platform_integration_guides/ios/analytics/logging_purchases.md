@@ -4,7 +4,7 @@ platform: iOS
 page_order: 4
 search_rank: 5
 ---
-## Logging Purchases
+# Logging Purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
@@ -12,7 +12,7 @@ Braze supports purchases in multiple currencies. Purchases that you report in a 
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][5], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Tracking Purchases & Revenue
+## Tracking Purchases & Revenue
 
 To use this feature, add this method call after a successful purchase in your app:
 
@@ -40,12 +40,12 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - The product ID can have a maximum of 255 characters
 - Please note that if the product identifier is empty, the purchase will not be logged to Braze.
 
-#### Adding Properties {#properties-purchases}
+### Adding Properties {#properties-purchases}
 You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
 Please see the [iOS Class Documentation for additional details][8].
 
-#### Adding Quantity
+### Adding Quantity
 You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in a `NSUInteger` for the quantity.
 
 * A quantity input must be in the range of [0, 100] for the SDK to log a purchase.
@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 See the [Technical Documentation][6] for more information.
 
-#### Reserved Keys
+### Reserved Keys
 
 The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Properties:
 
@@ -95,7 +95,7 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 
 - Also see the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
 
-#### REST API
+### REST API
 
 You can also use our REST API to record purchases. Refer to the [user API documentation][4] for details.
 
