@@ -26,6 +26,7 @@ module Jekyll
         end
 
         if @results.code != '200'
+          puts 'Error returning results: ' + url
           return '{}'
         else
           if @results.body
