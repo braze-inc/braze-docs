@@ -48,7 +48,7 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_augmentation/contextual_location/radar/
 - name: Xamarin
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
-- name: "Lob.com"
+- name: Lob
   url: /docs/partners/technology_partners/additional_channels/direct_mail/lob/
 - name: Telesign
   url: /docs/partners/technology_partners/additional_channels/sms/telesign/
@@ -98,6 +98,8 @@ valid_partner_list:
   url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
 - name: Fivetran
   url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
+- name: Wavecell
+  url: /docs/partners/technology_partners/additional_channels/sms/wavecell/
 - name: Rokt Calendar
   url: /docs/partners/technology_partners/channel_extensions/calendar/rokt_calendar/
 - name: Passkit
