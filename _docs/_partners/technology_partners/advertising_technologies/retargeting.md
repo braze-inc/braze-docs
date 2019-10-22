@@ -8,7 +8,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Retargeting"
 
-valid_partner_list: Retargeting
+valid_partner_list:
 - name: Jampp
   url: /docs/partners/technology_partners/advertising_technologies/retargeting/jampp/
 - name: Remerge
