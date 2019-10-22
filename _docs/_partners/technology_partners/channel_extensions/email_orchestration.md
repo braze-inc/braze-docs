@@ -1,6 +1,5 @@
 ---
 nav_title: Email Orchestration
-layout: partner_page
 page_order: 8
 
 layout: partner_page
