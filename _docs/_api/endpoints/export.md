@@ -860,7 +860,8 @@ The `messages` hash will contain information about each message. Example message
 {
   "channel": "sms",
   "body": (string) payload body,
-  "subscription_group_id": (string) API id of the subscription group targeted in the SMS message,
+  "from": (string) list of numbers associated with the subscription group,
+  "subscription_group_id": (string) API id of the subscription group targeted in the SMS message
 }
 ```
 
