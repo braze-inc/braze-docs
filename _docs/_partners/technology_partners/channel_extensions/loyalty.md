@@ -1,12 +1,14 @@
 ---
 nav_title: Loyalty
 page_order: 3
-layout_ partner_page
 
-partner_path: "https://www.braze.com/product/alloys/partners"
+layout: partner_page
+partner_api: "https://www.braze.com/api/v1/partners.json"
+partner_path: "https://www.braze.com/product/alloys/partners/"
+
 partner_top_header: "Loyalty"
 
-valid_partner_list: Loyalty
+valid_partner_list: 
 name: Talon One
 url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
 name: Voucherify
