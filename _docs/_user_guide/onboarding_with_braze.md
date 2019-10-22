@@ -22,6 +22,9 @@ guide_featured_list:
   - name: Email Set Up
     link: /docs/user_guide/onboarding_with_braze/email_setup/
     fa_icon: fas fa-envelope
+  - name: SMS Set Up
+    link: /docs/user_guide/onboarding_with_braze/sms_setup/
+    fa_icon: fas fa-mobile
 
 ---
 
@@ -37,3 +40,5 @@ By the end of your onboarding, you should feel comfortable with:
 You can follow along with this guide, or you can check out [LAB](https://lab.braze.com)! We have courses for you, as well as a [Technical Integration Toolkit](http://lab.braze.com/technical-integration-checklists-and-toolkits) and [Technical Integration Overview](http://lab.braze.com/quick-overview-technical-integration) available for your developers!
 
 Continue to the next part of the guide, [Terms to Know]({{ site.baseurl }}/user_guide/onboarding_with_braze/terms_to_know/), to familiarize yourself with some common words you'll see in Documentation, the product, and from the people of Braze.
+
+<br> 
