@@ -9,7 +9,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Localization"
 
 valid_partner_list: 
-- name: Transifex
-  url: /docs/partners/technology_partners/channel_extensions/localization/transifex/
+  - name: Transifex
+    url: /docs/partners/technology_partners/channel_extensions/localization/transifex/
 
 ---
