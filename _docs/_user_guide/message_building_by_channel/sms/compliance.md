@@ -34,7 +34,7 @@ The CTIA recommends that you maintain and conspicuously display a clear and easy
 
 Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
-The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" in order to send customers messages - you can do this in a multitude of ways, including web or mobile.
+The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" in order to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 

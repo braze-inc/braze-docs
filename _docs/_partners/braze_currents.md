@@ -1,14 +1,27 @@
 ---
 page_order: 1
 nav_title: Braze Currents
+
+layout: featured
+
+guide_top_header: "Braze Currents"
+guide_top_text: "Understanding the impact of your engagement strategy is critical in informing your iteration and optimization of your communications with your users. To ensure that this valuable engagement data is tightly integrated with the rest of your operations, the Braze platform tracks a wide array of event data from your integration for analysis, retargeting, and other use-cases elsewhere within your own systems. <br> <br> To access this data for analysis, we recommend our Currents tool, a simple way to stream continuously updating data in a seamless circuit. Use Currents to send event data to one of <a href='/docs/partners/braze_currents/integration/available_partners/'>our many data partners</a> and begin using your data more intelligently sooner than you think!"
+
+guide_featured_title: "Section Topics"
+guide_featured_list:
+- name: "Integration & Set Up"
+  link: /docs/partners/braze_currents/integration/
+  fa_icon: fas fa-warehouse
+- name: "Data Storage Events"
+  link: /docs/partners/braze_currents/data_storage_events/
+  fa_icon: fas fa-database
+- name: "Advanced Topics"
+  link: /docs/partners/braze_currents/advanced_topics/
+  fa_icon: fas fa-user-graduate
+
 ---
-# Braze Currents
 
-Understanding the impact of your engagement strategy is critical in informing your iteration and optimization of your communications with your users. To ensure that this valuable engagement data is tightly integrated with the rest of your operations, the Braze platform tracks a wide array of event data from your integration for analysis, retargeting, and other use-cases elsewhere within your own systems.
-
-To access this data for analysis, we recommend our Currents tool, a simple way to stream continuously updating data in a seamless circuit. Use Currents to send event data to one of [our many data partners]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/) and begin using your data more intelligently sooner than you think!
-
-## Capabilities
+## Currents Capabilities
 
 Currents allows you to…
 * Send Braze event data into a data warehouse or to one of [our analytics partners]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/) for detailed analysis.
@@ -25,5 +38,6 @@ From there, your account manager and our data specialists will assist in your Cu
 Currents comes included with certain Braze packages. Please contact your Customer Success Manager or [open a support ticket][support] if you want access.
 
 
+<br>
 
 [support]: {{ site.baseurl }}/support_contact/

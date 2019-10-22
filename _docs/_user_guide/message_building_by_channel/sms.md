@@ -10,10 +10,7 @@ guide_featured_title: "Popular Articles"
 guide_featured_list:
 - name: "Create an SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
-  fa_icon: fas fa-table
-- name: "Set Up SMS"
-  link: /docs/user_guide/onboarding_with_braze/sms/
-  fa_icon: fas fa-table
+  fa_icon: fas fa-paint-brush
 - name: "Compliance & Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/compliance/
   fa_icon: fas fa-gavel
@@ -24,11 +21,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/
   fa_icon: fas fa-phone
 - name: "Short & Long Codes"
-  link: /docs/user_guide/onboarding_with_braze/short_and_long_codes/
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-table
 - name: "FAQs"
-  link: /docs/help/best_practices/sms/faqs/
+  link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
-
-
 ---
+
+<br>
+
+Not ready for any of the topics above? Head to our [SMS Set Up section]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
+
+<br>

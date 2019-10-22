@@ -23,7 +23,7 @@ We recommend you use your best judgment, but we, as well as our sending partners
 - Send at a healthy cadence - do not overwhelm your customers.
 - Do not send abusive or inappropriate content (for example, sending marketing content to someone who only wants transactional content).
 
-You can see our [Compliance Best Practices here]({{ site.baseurl }}/help/best_practices/sms/compliance.md).
+You can see our [Compliance Best Practices here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/compliance/).
 
 {% enddetails %}
 
@@ -40,7 +40,7 @@ You should reach out to your Braze representative for more exact details.
 
 Getting a short code can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
 
-You can [learn more about Short Codes and Long Codes here]({{ site.baseurl }}/).
+You can [learn more about Short Codes and Long Codes here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).
 {% enddetails %}
 
 
@@ -51,7 +51,7 @@ A short code has five (5) digits, while a long code has ten (10). Each come with
 
 Short codes cost more than long codes and take longer to receive. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the send process, as you will have gone through all of the checks during your application for the short code.
 
-You can [learn more about long codes and the short code application process here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms/short_code_application/).
+You can [learn more about long codes and the short code application process here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).
 
 {% enddetails %}
 
