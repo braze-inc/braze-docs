@@ -13,6 +13,6 @@ valid_partner_list:
     url: /docs/partners/technology_partners/channel_extensions/email_orchestration/stensul/
   - name: Stripo
     url: /docs/partners/technology_partners/channel_extensions/email_orchestration/stripo/
-  - name: Taxi
+  - name: Taxi for Email
     url: /docs/partners/technology_partners/channel_extensions/email_orchestration/taxi_for_email/
 ---
