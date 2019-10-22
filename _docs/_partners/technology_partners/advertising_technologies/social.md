@@ -10,6 +10,6 @@ partner_top_header: "Social"
 
 valid_partner_list: 
 - name: Facebook
-  url: /docs/partners/advertising_technologies/social/facebook/
+  url: /docs/partners/technology_partners/advertising_technologies/social/facebook/
 
 ---
