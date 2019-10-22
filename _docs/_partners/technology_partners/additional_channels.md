@@ -20,7 +20,5 @@ valid_partner_list:
   url: /docs/partners/technology_partners/additional_channels/sms/wavecell/
 - name: Twilio
   url: /docs/partners/technology_partners/additional_channels/sms/twilio/
-- name: Rokt Calendar
-  url: /docs/partners/technology_partners/additional_channels/calendar/rokt_calendar/
 
 ---
