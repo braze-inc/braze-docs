@@ -7,13 +7,6 @@ page_order: 20
 
 On this page, we'll attempt to answer your most stringent questions about SMS!
 
-{% details Who does Braze use to send SMS? %}
-
-We have an extensive SMS partnership with [Twilio](https://www.twilio.com/), who we work with to send messages to carriers and other SMS stakeholders.
-
-{% enddetails %}
-
-
 {% details What laws do I need to follow to send SMS with Braze? %}
 
 We recommend you use your best judgment, but we, as well as our sending partners, have checks in place that prevent most SMS abuses. There are a few general rules you should follow:
