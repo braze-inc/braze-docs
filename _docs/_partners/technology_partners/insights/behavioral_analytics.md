@@ -9,7 +9,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Behavioral Analytics"
 
 valid_partner_list:
-  - name: Amplitude for Currents
+  - name: Amplitude
     url: /docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/
   - name: Mixpanel
     url: /docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/
