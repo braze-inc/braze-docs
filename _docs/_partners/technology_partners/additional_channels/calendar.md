@@ -8,7 +8,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Calendar"
 
-valid_partner_list: Calendar
+valid_partner_list: 
 - name: Rokt Calendar
   url: /docs/partners/technology_partners/additional_channels/calendar/rokt_calendar/
 ---
