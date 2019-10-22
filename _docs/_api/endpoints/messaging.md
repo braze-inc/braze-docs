@@ -82,8 +82,9 @@ Content-Type: application/json
      "windows_universal_push": (optional, Windows Universal Push Object),
      "kindle_push": (optional, Kindle/FireOS Push Object),
      "web_push": (optional, Web Push Object),
-     "email": (optional, Email Object)
-     "content_card": (optional, Content Card Object)
+     "email": (optional, Email Object),
+     "content_card": (optional, Content Card Object),
+     "sms": (optional, SMS Object)
    }
  }
 ```
@@ -212,9 +213,10 @@ Content-Type: application/json
     "windows8_push": (optional, Windows Universal Push Object),
     "kindle_push": (optional, Kindle/FireOS Push Object),
     "web_push": (optional, Web Push Object),
-    "email": (optional, Email object)
-    "webhook": (optional, Webhook object)
-    "content_card": (optional, Content Card Object)
+    "email": (optional, Email object),
+    "webhook": (optional, Webhook object),
+    "content_card": (optional, Content Card Object),
+    "sms": (optional, SMS Object)
   }
 }
 ```
@@ -940,6 +942,20 @@ See the Windows Universal [toast template catalog][32] for details on the option
 >  An `email_template_id` can be retrieved from the bottom of any Email Template created within the dashboard. Below is an example of what this ID looks like:
 
 ![Email Template ID][31]
+
+### SMS Object Specification
+
+```json
+{
+  "sms": (optional, SMS Object),
+  {  
+    "subscription_group_id": (required, string) the id of your subscription group,
+    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
+    "body": (required, string),
+    "app_id": (required, string) see App Identifier above
+  }
+}
+```
 
 ### Webhook Object Specification
 
