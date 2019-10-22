@@ -24,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/
 - name: Gimbal
   url: /docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/
-- name: Branch
-  url: /docs/partners/technology_partners/channel_extensions/deep_linking/branch_for_deeplinking/
 - name: Tune
   url: /docs/partners/technology_partners/advertising_technologies/attribution/tune/
 - name: Foursquare
@@ -69,6 +67,12 @@ valid_partner_list:
   alt:
     - title: Currents
       url: /docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
+- name: Branch
+  title: Deeplinking
+  url: /docs/partners/technology_partners/channel_extensions/deep_linking/branch_for_deeplinking/
+  alt:
+    - title: Attribution
+      url: /docs/partners/technology_partners/advertising_technologies/attribution/branch_for_attribution/
 - name: Mixpanel
   url: /docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/
 - name: Twilio
