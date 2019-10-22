@@ -14,7 +14,7 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/technology_partners/advertising_technologies/attribution/appsflyer/
 - name: Branch
-  url: /docs/partners/technology_partners/advertising_technologies/attribution/branch/
+  url: /docs/partners/technology_partners/advertising_technologies/attribution/branch_for_attribution/
 - name: Kochava
   url: /docs/partners/technology_partners/advertising_technologies/attribution/kochava/
 - name: Singular
