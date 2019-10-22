@@ -26,14 +26,14 @@ module Jekyll
         end
 
         if @results.code != '200'
-          '{}'
+          return '{}'
         else
           if @results.body
             context['site']['data'][url] = @results.body.force_encoding('UTF-8')
             return context['site']['data'][url]
           else
             puts 'Empty content from : ' + url
-            '{}'
+            return '{}'
           end
         end
       end
