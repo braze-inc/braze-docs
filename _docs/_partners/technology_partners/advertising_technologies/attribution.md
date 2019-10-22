@@ -8,7 +8,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Attribution"
 
-valid_partner_list: Attribution
+valid_partner_list: 
 - name: Adjust
   url: /docs/partners/technology_partners/advertising_technologies/attribution/adjust/
 - name: AppsFlyer
