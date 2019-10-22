@@ -3,7 +3,6 @@ nav_title: Attribution
 page_order: 1
 
 layout: partner_page
-page_order: 2	
 partner_api: "https://www.braze.com/api/v1/partners.json"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
