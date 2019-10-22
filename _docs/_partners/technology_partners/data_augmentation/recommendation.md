@@ -1,7 +1,6 @@
 ---
 nav_title: Recommendation
 page_order: 2
-layout: partner_page
 
 layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
