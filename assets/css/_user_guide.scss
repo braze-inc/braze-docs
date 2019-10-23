@@ -106,21 +106,22 @@ $user_transition_time : 0.25s;
   .user_info {
     width: 100%;
     display: block;
-    padding: 17px 25px 30px 25px;
+    padding: 20px 20px 25px 20px;
     margin: auto;
     .user_name {
       font-family: $braze-medium;
       color: $black-shark;
       font-size: 20px;
-      line-height: 2;
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
     .user_description {
       margin-top: auto;
       margin-bottom: auto;
       color: $text-color;
       font-family: $braze-regular;
-      font-size: 16px;
-      line-height: 1.8;
+      font-size: 15px;
+      line-height: 1.5;
       display: inline-block;
     }
 
@@ -167,7 +168,7 @@ $user_transition_time : 0.25s;
         }
         div {
           flex: 0 1 30.3%;
-          margin-bottom: 10px;
+          margin-bottom: 6px;
         }
       }
     }
