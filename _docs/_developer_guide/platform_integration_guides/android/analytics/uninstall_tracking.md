@@ -8,7 +8,11 @@ search_rank: 5
 
 Uninstall Tracking utilizes a silent push from Firebase Cloud Messaging to detect uninstalled devices. However, If the app is still installed, then this silent push is received by your app. Starting in Braze Android SDK v3.1.0, we will intelligently drop the uninstall tracking notification and not wake up any custom broadcast receivers in your app with the regular silent push intent.
 
-If you wish to detect if the push notification is uninstall tracking yourself, please use [`isUninstallTrackingPush()`][3]. Note that since uninstall tracking silent push is not forwarded to your custom broadcast receiver, this method can only used before the push notification is passed to Braze, such as when using a custom [Firebase Messaging Service][5].
+If you wish to detect if the push notification is uninstall tracking yourself, please use [`isUninstallTrackingPush()`][3]. 
+
+{% alert important %}
+Note that since uninstall tracking silent push is not forwarded to your custom broadcast receiver, this method can only used before the push notification is passed to Braze, such as when using a custom [Firebase Messaging Service][5].
+{% endalert %}
 
 If you have a custom [`Application`][1] subclass, make sure you do not have automatic logic that pings your servers in your [`Application.onCreate()`][2] lifecycle method. This is because silent push will wake your app and instantiate the [`Application`][1] component, if the app is not already running.
 
