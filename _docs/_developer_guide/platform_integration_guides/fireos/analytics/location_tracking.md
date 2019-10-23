@@ -31,13 +31,13 @@ To disable automatic location tracking, set `com_appboy_enable_location_collecti
 <bool name="com_appboy_enable_location_collection">false</bool>
 ```
 
-Then you can manually log single location data points via the setLastKnownLocation() method on `AppboyUser` like this:
+Then you can manually log single location data points via the `setLastKnownLocation()` method on `AppboyUser` like this:
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
 ```
 
-See [here in our Javadocs][4] for more information on the `setLastKnownLocation` method.
+See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
 
 [1]: http://developer.android.com/guide/topics/location/strategies.html
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-
