@@ -13,7 +13,7 @@
   }
   color: $black-shark;
   .title {
-    color: $navy-bay;
+    color: $black-shark;
     font-family: $braze-black;
     font-size: 16px;
     margin-bottom: 0px;
@@ -39,11 +39,10 @@
   }
 
   .desc {
-    margin-top: 5px;
     font-family: $braze-regular;
-    font-size: 14px;
+    font-size: 15px;
     color: $black-shark;
-    margin-bottom: 10px;
+    margin: 8px 40px;
   }
   .glossary_text {
     *,
@@ -129,6 +128,7 @@
       margin-bottom: 30px;
     }
     #glossary_search {
+      border: 1px solid $grey-ghost;
       flex: 1 0 100%;
       width: 100%;
       padding: 5px 14px 5px 30px;
@@ -222,7 +222,7 @@
     margin-right: 15px;
     margin-bottom: 15px;
     padding: 10px 0 10px 0;
-    border-top: 2px solid $grey-manatee;
+    border-top: 1px solid $grey-ghost;
 
 
     // Hack the sticky header
