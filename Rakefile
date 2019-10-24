@@ -59,7 +59,11 @@ namespace :docs do
       puts `bundle exec puma -t 8:32 -p 5006`
   end
   task :serve do
-    pipe 'bundle exec jekyll s --port 5006'
+    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
+      pipe 'bundle exec jekyll s --port 5006'
+    else
+      pipe 'bundle exec jekyll s --port 5006  --incremental'
+    end
   end
 end
 
