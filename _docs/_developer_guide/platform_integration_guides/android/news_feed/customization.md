@@ -9,7 +9,7 @@ platform: Android
 
 ## Default Styling
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>
