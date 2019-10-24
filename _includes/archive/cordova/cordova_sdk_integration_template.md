@@ -15,7 +15,7 @@ By default the Cordova SDK supports in-app messages with no changes. See [the {{
 See [the {{ include.platform }} integration instructions][6] for an in depth discussion of when to set and change a user ID.
 
 ```javascript
- AppboyPlugin.changeUser("YOUR_USER_ID");
+AppboyPlugin.changeUser("YOUR_USER_ID");
 ```
 
 ### Logging Custom Events
@@ -59,8 +59,8 @@ You can look at the [sample {{ include.platform }} application][3] and [sample C
 A custom API endpoint can be configured via the `config.xml`. For example, to use the EU endpoint, see the following:
 
 ```
-    <platform name="{{ include.config_platform }}">
-        ...
-        <preference name="{{ include.endpoint_preference_key }}" value="sdk.fra-01.braze.eu" />
-    </platform>
+<platform name="{{ include.config_platform }}">
+    ...
+    <preference name="{{ include.endpoint_preference_key }}" value="sdk.fra-01.braze.eu" />
+</platform>
 ```
