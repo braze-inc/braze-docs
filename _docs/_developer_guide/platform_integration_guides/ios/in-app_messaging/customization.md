@@ -426,7 +426,7 @@ NSDictionary *userInfo = notification.request.content.userInfo;
  };
 ```
 
-This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event 'IAM Trigger' will be logged against the user profile.
+This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile.
 
 ### Step 2: Create a Push Campaign
 

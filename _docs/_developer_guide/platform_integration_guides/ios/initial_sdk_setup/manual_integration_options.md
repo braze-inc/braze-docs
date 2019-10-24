@@ -23,15 +23,15 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 2. In Xcode, from the project navigator, select the destination project or group for Braze
 3. Navigate to File > Add Files to “Project_Name”
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
-	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. In Xcode 7+, expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
+	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. Expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
 5. (Optional) If you are one of the following:
-  - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages, News Feed, or Feedback)
+  - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages or Content Cards)
   - You have custom UI for Braze's UI features and handle the image downloading yourself
 
 	You can use the core version of the SDK by removing the file `ABKSDWebImageProxy.m` and `Appboy.bundle`. This will remove the SDWebImage framework dependency and all the UI related resources (e.g. Nib files, images, localization files) from the SDK.
 
 {% alert warning %}
-If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's News Feed and Feedback UI with core version will lead to unpredictable behavior.
+If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's Content Cards UI with the core version will lead to unpredictable behavior.
 {% endalert %}
 
 ## Step 2: Adding Required iOS Libraries
@@ -42,7 +42,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 4. Mark this library as required using the pull-down menu next to `SystemConfiguration.framework`
 5. Repeat to add each of the following required frameworks to your project, marking each as “required”
 	- `QuartzCore.framework`
-	- `libz.dylib`, or `libz.tbd` in Xcode 7+
+	- `libz.tbd`
 	- `CoreImage.framework`
 	- `CoreText.framework`
 	- `WebKit.framework`
@@ -54,10 +54,6 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 	- `StoreKit.framework`
 7. While still under the target for your project, select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
 8. The SDWebImage framework is required for the Braze News Feed, Content Cards and In-App Messaging to function properly. SDWebImage is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards or In-App Messages, please follow the steps below.
-
-{% alert warning %}  
-From version 2.26.0, Braze iOS SDK only supports 4.x version of SDWebImage. If you have to use SDWebImage version 3.x, please use Braze SDK version 2.25.0 or below.
-{% endalert %}
 
 ### SDWebImage Integration
 

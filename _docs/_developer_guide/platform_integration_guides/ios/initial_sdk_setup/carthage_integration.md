@@ -9,8 +9,10 @@ search_rank: 5
 You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 
 ```
-github "Appboy/Appboy-iOS-SDK" "3.15.0"
+github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
+
+Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the latest version of the Braze iOS SDK in "x.y.z" format. Release versions are available [here](https://github.com/Appboy/appboy-ios-sdk/releases).
 
 For further instructions using Carthage, please refer to their [user guide][9] on Github.
 
@@ -80,7 +82,6 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [21]: {{ site.baseurl }}/partners/technology_partners/
-[22]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/SocialNetworkViewController.m
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

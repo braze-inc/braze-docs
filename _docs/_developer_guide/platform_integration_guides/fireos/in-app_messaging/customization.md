@@ -54,13 +54,13 @@ For example, to update the font on your in-app message button text, override the
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```
-  <style name="Appboy.InAppMessage.Button">
-    <item name="android:layout_height">wrap_content</item>
-    ...
-    <item name="android:paddingBottom">15.0dp</item>
-    <item name="android:fontFamily">@font/my_custom_font_family</item>
-    <item name="fontFamily">@font/my_custom_font_family</item>
-  </style>
+<style name="Appboy.InAppMessage.Button">
+  <item name="android:layout_height">wrap_content</item>
+  ...
+  <item name="android:paddingBottom">15.0dp</item>
+  <item name="android:fontFamily">@font/my_custom_font_family</item>
+  <item name="fontFamily">@font/my_custom_font_family</item>
+</style>
 ```
 
 Aside from the `Appboy.InAppMessage.Button` style for button text, the style for message text is `Appboy.InAppMessage.Message` and the style for message headers is `Appboy.InAppMessage.Header`. If you want to use your custom font family across all possible in-app message text, you can set your font family on the `Appboy.InAppMessage` style, which is the parent style for all in-app messages.
