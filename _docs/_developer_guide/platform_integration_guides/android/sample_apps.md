@@ -27,8 +27,8 @@ Braze's test application within the [Android SDK github repository][3] is called
   ./gradlew installDebug
   ```
 
-## Building the Hello Braze Test Application
-The Hello Braze test application shows a minimal use case of the Braze SDK, and additionally shows how to easily integrate the Braze SDK into a gradle project.
+## Building the Hello Appboy Test Application
+The Hello Appboy test application shows a minimal use case of the Braze SDK, and additionally shows how to easily integrate the Braze SDK into a gradle project.
 
 1. Copy your API key from your "App Settings" page into your `appboy.xml` file in the `res/values` folder.
 ![HelloBraze][34]
