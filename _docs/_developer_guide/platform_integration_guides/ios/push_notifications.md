@@ -8,7 +8,7 @@ guide_top_text: "A push notification is an out-of-app alert that appears on the 
 
 guide_featured_title: "Integrate & Customize"
 guide_featured_list:
-- name: Integration & Set Up
+- name: "Integration & Set Up"
   link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/
   fa_icon: fas fa-mobile-alt
 - name: iOS 10 Rich Notifications

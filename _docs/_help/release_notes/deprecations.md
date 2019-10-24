@@ -79,7 +79,7 @@ _Integration_
 
 _Support withdrawn: 2014-2015_
 
-Braze has deprecated support for the Eclipse IDE as [Google is sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance. Initial SDK Setup is [here]({{ site.baseurl }}/help/release_notes/deprecations/eclipse_setup_deprecated).
+Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
 
 ## The Raw Event Stream (RES)
 

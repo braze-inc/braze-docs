@@ -12,15 +12,13 @@ Braze’s User/Track REST API endpoint can be used to record custom events, user
 ## CSV
 Braze’s User Import feature allows users to upload and update user profiles via CSV files. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size.
 
-# CSV Imports
-
 When importing your customer data it is necessary to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
 
 When you provide an `external_id`, Braze will update any existing user with the same `external_id` or create a new identified user with that `external_id` set if one is not found.
 
 [Download a CSV Import Template here.][template]
 
-## Constructing Your CSV
+### Constructing Your CSV
 
 Braze has a number of data types in Braze. When importing or updating user profiles via CSV, you can create or update Standard User Attributes or Custom Attributes.
 
@@ -34,11 +32,11 @@ Braze accepts user data in the standard CSV format from files __up to 100MB in s
 
 [Download a CSV Import Template here.][template]
 
-## Data Point Considerations
+### Data Point Considerations
 
 Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point. Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
 
-## Standard User Data Column Headers
+### Standard User Data Column Headers
 
 {% alert note %}
 Note that all fields are case sensitive. If you import a user with a column header `first_name`, Braze will update that profile’s first name field. However, if you import a user with a column header, `First_name` Braze will create a Custom Attribute called `First_name`. This will impact your segmentation and personalization abilities in Braze.
@@ -61,7 +59,7 @@ Note that all fields are case sensitive. If you import a user with a column head
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g. `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 
-## Importing Custom Data via CSV
+### Importing Custom Data via CSV
 
 Any headers which do not exactly match non Standard User Data will create a Custom Attribute within Braze.
 
@@ -79,7 +77,7 @@ Especially for Arrays, commas in your CSV file will be interpreted as a column s
 For uploading these kinds of values, please use Braze’s [User/Track REST API][14].
 {% endalert %}
 
-## Importing a CSV
+### Importing a CSV
 
 To import your CSV file, navigate to the User Import page under the Users section on the left hand toolbar. In the lower text box, “Recent Imports”, there will be a table which lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
@@ -109,7 +107,7 @@ Under `Lines Processed`, you will see the progress of the import; the status wil
 
 When the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can mouse over the icon to see details into why certain lines failed. Once the import is Complete, all data will have been added to existing profiles or all new profiles will have been created.
 
-# Segmenting
+## Segmenting
 
 User Import creates and updates user profiles, and can also be used to create segments. To create a segment, check the ‘Create a segment from this CSV’ box.
 
@@ -123,28 +121,28 @@ The filter used to create the segment selects users who were created or updated 
 As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Previous to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
 {% endalert %}
 
-# Troubleshooting
+## Troubleshooting
 
-## No External ID
+### No External ID
 
 To connect data from User Import to user profiles, Braze requires an `external_id` in each row. Rows without a value in the `external_id` column will be excluded from the import. User profiles that lack an `external_id` cannot be created or updated via the User Import.
 
-## Malformed Row
+### Malformed Row
 
 There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length that have more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 
-## Multiple Data Types
+### Multiple Data Types
 
 Braze expects each value in a column to be of the same data type. Values which do not match their attribute’s data type will cause errors in segmenting.
 
-## Incorrectly Formatted Dates
+### Incorrectly Formatted Dates
 Dates not in the ISO 8601 format will not be read as datetimes on import.
 
-## String Quotation
+### String Quotation
 
 Values encapsulated in single (‘’) or double (“”) quotation marks will be read as strings on import.
 
-## Data Imported as Custom Attribute
+### Data Imported as Custom Attribute
 If you are seeing a piece of Standard User Data (e.g. `email` or `first_name` imported as a Custom Attribute), check the case and spacing of your CSV file. `First_name` would be imported as a Custom Attribute, `first_name` would be correctly imported into the “first name” field on a user’s profile.
 
 

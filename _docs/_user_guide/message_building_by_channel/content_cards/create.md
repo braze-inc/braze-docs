@@ -58,7 +58,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
 {% alert warning %}
-The combined size of all fields in a Content Card message (header, image, and body message) should not exceed 2Kb in total.
+Content Card messages are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent.
 {% endalert %}
 
 {% alert note %}
