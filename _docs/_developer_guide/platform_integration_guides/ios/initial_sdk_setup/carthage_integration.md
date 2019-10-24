@@ -9,8 +9,10 @@ search_rank: 5
 You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 
 ```
-github "Appboy/Appboy-iOS-SDK" "3.15.0"
+github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
+
+Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the latest version of the Braze iOS SDK in "x.y.z" format. Release versions are available [here](https://github.com/Appboy/appboy-ios-sdk/releases).
 
 For further instructions using Carthage, please refer to their [user guide][9] on Github.
 
