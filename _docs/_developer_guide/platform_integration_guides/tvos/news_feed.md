@@ -27,6 +27,6 @@ let feedCards = Appboy.sharedInstance()?.feedController.newsFeedCards
 {% endtab %}
 {% endtabs %}
 
-and then parse each card by inspecting it's class, as we do in our [Sample application][1].
+and then parse each card by inspecting its class, as we do in our [Sample application][1].
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/ViewController.m#L29

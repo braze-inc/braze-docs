@@ -195,7 +195,7 @@ Then, copy and paste the following `HTML` snippet into your code, replacing the 
 
 Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter it's URL.
+Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
 
 ![Video_IAM]({% image_buster /assets/img/video_iam.png %})
 {% endtab %}
@@ -232,7 +232,7 @@ Then, add the following snippet to your HTML code and use the code in your messa
 
 Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter it's URL.
+Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
 
 ![Video_IAM]({% image_buster /assets/img/video_iam.png %})
 

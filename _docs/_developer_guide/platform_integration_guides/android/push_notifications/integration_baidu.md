@@ -24,7 +24,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Sign-up Page][17]
 
-- You will recieve an email from Baidu.  Follow the verification link.  Make sure to follow the verification link within 48 hours.
+- You will receive an email from Baidu.  Follow the verification link.  Make sure to follow the verification link within 48 hours.
 
 ![Baidu Verification Email][34]
 

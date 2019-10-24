@@ -99,7 +99,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
-|Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have it's own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
+|Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
 |Button Text & On Click Behavior| Add up to two buttons. | You can create and edit custom button text and color. You can also add  Terms of Service Link within Web Email Capture forms.  |
 |Device Options | Restrict send to only iOS devices. | Click __Change__ and check the box as desired. |
 |Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the scree. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
@@ -226,7 +226,7 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 <br>
 
-After you've finished building the last of your campaign or Canvas, review it's details, then send it!
+After you've finished building the last of your campaign or Canvas, review its details, then send it!
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
