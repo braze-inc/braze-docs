@@ -34,7 +34,7 @@ Use the following code snippet to add an observer to listen for Content Card upd
 
 Add the following methods to respond to updates from the observer and filter the returned cards by type. 
 
-The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It the calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case `Transactional`.
+The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case `Transactional`.
 
 ```
 - (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
@@ -53,10 +53,10 @@ The first method, `contentCardsUpdatedNotificationReceived:`, handles updates fr
 
   NSMutableArray<ABKContentCard *> *filteredArray = [NSMutableArray arrayWithArray:[cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary *bindings) {
     NSDictionary *extras = [card extras];
-      if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
-        NSLog(@"Got card: %@ ", card.idString);
-        return YES;
-      }
+    if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
+      NSLog(@"Got card: %@ ", card.idString);
+      return YES;
+    }
     return NO;
   }]]];
 
