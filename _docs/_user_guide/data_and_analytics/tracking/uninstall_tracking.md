@@ -51,7 +51,7 @@ Braze tracks uninstalls by observing when push messages sent to users’ devices
 * Increments the uninstall count for every campaign that the user successfully received in the past 24 hours by 1.
 * If a user receives 3 campaigns in a 24 hour period and then uninstalls, we will increment the count of “uninstalls” for all 3 campaigns.
 
-Uninstall Tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNS tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, Uninstall Tracking should be used to detect directional trends as opposed to precise statistics.
+Uninstall Tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, Uninstall Tracking should be used to detect directional trends as opposed to precise statistics.
 
 To enable Uninstall Tracking, your user base should be on at least iOS SDK version 2.13. Turning on Uninstall Tracking for apps with users below this SDK version will send blank pushes to end users.
 

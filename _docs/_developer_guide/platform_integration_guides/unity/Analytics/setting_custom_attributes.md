@@ -25,9 +25,6 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 
 >  It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
-#### User Bio
->  `AppboyBinding.SetUserBio()` has been deprecated.
-
 #### Gender
 `AppboyBinding.SetUserGender(Appboy.Models.Gender.Male or Appboy.Models.Gender.Female);`
 

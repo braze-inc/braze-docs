@@ -361,6 +361,36 @@ Data accumulates when a user engages with the News Feed. Use this data to track 
 
 {% enddetails %}
 
+{% details SMS EVENTS (SEND, DELIVERY, REJECTION, DELIVERY FAILURE) %}
+```json
+// SMS Send: users.messages.sms.Send
+// SMS Delivery Failure: users.messages.sms.DeliveryFailure
+// SMS Rejection: users.messages.sms.Rejection
+// SMS Delivery: users.messages.sms.Delivery
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  “from_phone_number”: (string) the from phone number of the message (Delivered and Undelivered only),
+  “subscription_group_id“: (string) id of the subscription group targeted for this SMS message,
+  “subscription_group_api_id”: (string) api id of the subscription group targeted for this SMS message,
+  “to_phone_number”: (string) the number the message was sent to,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  “error”: (string) the Braze provided error (Undelivered and Failed only),
+  “provider_error_code”: (string) the provider’s reason code as to why the message was not sent (Undelivered and Failed only)
+}
+```
+{% enddetails %}
+
+
 {% details CONVERSION EVENTS %}
 
 Data accumulates when a user converts on a Campaign or a Canvas. You can use this data	to track conversions on Campaigns or Canvas Steps.
@@ -449,5 +479,7 @@ Data accumulates when your users are enrolled in a control group for a Campaign.
 ```
 
 {% enddetails %}
+
+
 
 [support]: {{ site.baseurl }}/support_contact/

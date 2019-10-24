@@ -142,13 +142,13 @@ For example, to update the font on your in-app message button text, override the
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```
-  <style name="Appboy.InAppMessage.Button">
-    <item name="android:layout_height">wrap_content</item>
-    ...
-    <item name="android:paddingBottom">15.0dp</item>
-    <item name="android:fontFamily">@font/my_custom_font_family</item>
-    <item name="fontFamily">@font/my_custom_font_family</item>
-  </style>
+<style name="Appboy.InAppMessage.Button">
+  <item name="android:layout_height">wrap_content</item>
+  ...
+  <item name="android:paddingBottom">15.0dp</item>
+  <item name="android:fontFamily">@font/my_custom_font_family</item>
+  <item name="fontFamily">@font/my_custom_font_family</item>
+</style>
 ```
 
 Aside from the `Appboy.InAppMessage.Button` style for button text, the style for message text is `Appboy.InAppMessage.Message` and the style for message headers is `Appboy.InAppMessage.Header`. If you want to use your custom font family across all possible in-app message text, you can set your font family on the `Appboy.InAppMessage` style, which is the parent style for all in-app messages.
@@ -167,7 +167,7 @@ Before customizing in-app messages with custom listeners, it's important to unde
 
 #### Setting a Custom Manager Listener
 
-The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to recieve the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
+The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
 
 ##### Step 1: Implement an In-App Message Manager Listener
 

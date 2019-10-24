@@ -41,6 +41,10 @@ Content-Type: application/json
 
 >  Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
+{% alert note %}
+Note that when creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
+{% endalert %}
+
 ###  User Attributes Object Specification
 
 An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze User Profile Field names (listed below or any listed in the [User Profile Fields chart][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
@@ -418,7 +422,13 @@ Content-Type: application/json
 
 ## New User Alias Endpoint
 
-Use this endpoint to create new user aliases for existing identified users. You can add up to 50 user aliases per request.
+Use this endpoint to add new user aliases for existing identified users, or to create new unidentified users.
+
+Adding a user alias for an existing user requires a valid `external_id` to be included in the new user alias object. If the `external_id` is present in the object but it is not a valid ID, the process will fail.
+
+Creating a new alias-only user requires the `external_id` to be omitted from the new user alias object. Once the user is created, use the `/users/track` endpoint to associate the alias-only user with attributes, events and purchases, and the `/users/identify` endpoint to identify the user with an `external_id`.
+
+You can add up to 50 user aliases per request.
 
 Your Endpoint will correspond to your [Braze Instance][1].
 
@@ -447,9 +457,58 @@ Content-Type: application/json
 ```json
 {
   "external_id" : (required, string) see External User ID below,
-  // external_ids for users that do not exist will return a non-fatal error. See Server Responses for details.
+  // external_ids for users that do not exist will return a non-fatal error. 
+  // (See Server Responses for details.)
+  // If an external_id is not present, a user will still be created, but needs to be identified down the road 
+  // (See "Identifying Users" and the `users/identify` endpoint below.)
   "alias_name" : (required, string),
   "alias_label" : (required, string)
+}
+```
+
+## User Identification Endpoint
+
+Use this endpoint to identify an unidentified (alias-only) user.
+
+Identifying a user requires an `external_id` to be included in the aliases to identify the object. If the `external_id` is not a valid or known ID, it will simply be added to the aliases user's record, and the user will be considered identified.
+
+Subsequently, you can associate multiple additional user aliases with a single `external_id`. When these subsequent associations are made, only the push tokens and message history associated with the user alias are retained; any attributes, events or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the `/users/export/ids` endpoint, then re-associate the attributes, events, and purchases with the identified user.
+
+You can add up to 50 user aliases per request.
+
+Your Endpoint will correspond to your [Braze Instance][1].
+
+Instance  | REST Endpoint
+----------|----------------------------------------------
+US-01  | `https://rest.iad-01.braze.com/users/alias/new`
+US-02  | `https://rest.iad-02.braze.com/users/alias/new`
+US-03  | `https://rest.iad-03.braze.com/users/alias/new`
+US-04  | `https://rest.iad-04.braze.com/users/alias/new`
+US-06  | `https://rest.iad-06.braze.com/users/alias/new`
+EU-01  | `https://rest.fra-01.braze.eu/users/alias/new`
+
+### New User Identify Request
+
+```json
+POST https://YOUR_REST_API_URL/users/identify
+Content-Type: application/json
+{
+   "api_key" : (required, string) see App Group REST API Key,
+   "aliases_to_identify" : (required, array of Aliases to Identify Object)
+}
+```
+
+###  Aliases to Identify Object Specification
+
+```json
+{
+  "external_id" : (required, string) see External User ID below,
+  // external_ids for users that do not exist will return a non-fatal error. 
+  // See Server Responses for details.
+  "user_alias" : {
+    "alias_name" : (required, string),
+    "alias_label" : (required, string)
+  }
 }
 ```
 

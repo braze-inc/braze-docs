@@ -7,9 +7,8 @@
     margin-right: auto;
   }
   #bottom_page_nav {
-
-    margin-top: 15px;
-    margin-bottom: 30px;
+    padding: 1.8rem 0 1rem 0;
+    margin: 10px 0 10px 0;
     display:none;
     color: $grey-dust;
     letter-spacing: 0px;
@@ -45,9 +44,8 @@
     }
     a:hover div {
       color: $grey-dust;
-      background-color: $blue-scooter;
       .nav_indicator {
-        color: $black-shark;
+        color: $blue-scooter;
       }
     }
     div.gradient-line {
@@ -57,14 +55,13 @@
     }
     %bottom_nav_box {
       width: 100%;
-      border: 1px solid black;
-      min-height: 90px;
+      border-top: 1px solid $grey-ghost;
       padding: 10px;
       line-height: 1;
       display: none;
-      padding: 1.5rem 1.5rem 1rem 1.5rem;
+      padding: 1rem 0rem 1rem 0rem;
       @media (max-width: $window-mobile-px){
-        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+        padding: .5rem 0rem .5rem 0rem;
       }
       overflow: hidden;
     }

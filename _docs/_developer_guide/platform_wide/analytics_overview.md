@@ -32,7 +32,7 @@ The following events and attributes are captured and updated automatically by th
 - Received Message from Campaign with Tag
   - This filter allows you to target users based on their having (not) received a campaign that currently has a tag.
 - Retarget Campaign
-  - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or slideup in the past
+  - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or in-app message in the past
 
 #### Device Information
 - Location Available (Boolean)

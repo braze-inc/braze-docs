@@ -61,7 +61,7 @@ You can customize your link actions by appending the optional URL query strings 
 
 Query String Name | Value | Action
 -----------|-------|-------
-`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.picsart.com?abButtonID=0](https://www.picsart.com?abButtonID=0)) *
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.mycompany.com?abButtonId=0](https://www.mycompany.com?abButtonId=0)) *
 `name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` (e.g., `appboy://customEvent?name=eventName`).
 `abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
 `abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
@@ -195,7 +195,7 @@ Then, copy and paste the following `HTML` snippet into your code, replacing the 
 
 Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter it's URL.
+Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
 
 ![Video_IAM]({% image_buster /assets/img/video_iam.png %})
 {% endtab %}

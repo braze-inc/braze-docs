@@ -23,7 +23,7 @@ If you choose to switch your time zone, you may face a variety of consequences:
 
 ### Notification Preferences
 
-The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should recieve notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
+The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
 ![Notification_Preferences][61]
 
