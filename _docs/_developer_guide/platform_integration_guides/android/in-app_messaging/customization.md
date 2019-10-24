@@ -15,9 +15,22 @@ In-app message objects may carry key-value pairs as `extras`. They are specified
 
 Call the following when you get an in-app message object to retrieve its extras:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+```java
 Map<String, String> getExtras()
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+extras: Map<String, String>
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][44] for more information.
 

@@ -8,11 +8,7 @@ search_rank: 5
 
 ## Collecting Social Account Data
 
-The Braze iOS SDK no longer automatically collects Facebook user data starting with version 2.10, and does not collect Twitter user data automatically with version 2.13. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
-
-You can get a user's Facebook and Twitter data from the iOS system. You can also refer to the sample code for accessing Facebook accounts in [class FacebookViewController][11], and Twitter account in [class TwitterViewController][12] in our Stopwatch sample application. If you were previously relying on the deprecated `promptUserForAccessToSocialNetwork:` method, see `promptUserToConnectFacebookAccountOnDeviceAndFetchAccountData` and `promptUserToConnectTwitterAccountOnDeviceAndFetchAccountData` for sample code on manually prompting your users for access to their social account data.
-
-Another way to get a user's Facebook data is from Facebook's iOS SDK. For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
+The Braze iOS SDK does not automatically collect Facebook or Twitter user data. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
 
 ## Passing Facebook Data To Braze
 
@@ -66,6 +62,8 @@ let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionar
 {% endtab %}
 {% endtabs %}
 
+For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
+
 ## Passing Twitter Data To Braze
 
 Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
@@ -93,16 +91,11 @@ Appboy.sharedInstance()?.user.twitterUser = twitterUser
 {% endtab %}
 {% endtabs %}
 
-### Recording Social Network Shares
-
-As of SDK v.2.16, `logSocialShare:` has been deprecated. If you were relying on this method to log social shares, you can use `logCustomEvent:` instead.
-
 [2]: https://developers.facebook.com/docs/ios "facebook ios sdk docs"
 [3]: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/ "create a facebook app"
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/SocialNetworkViewController.m
 [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/manual_sdk_integration/
 [9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
-[10]: https://developers.facebook.com/docs/graph-api/reference/v2.2/user "facebook graph api docs"
+[10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"
 [11]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample/CustomAppboyFeedbackViewController.m
 [12]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKContentCardsViewController/ContentCardsViewController/ABKContentCardsViewController.m

@@ -1,6 +1,6 @@
 ---
 nav_title: Aborting Messages
-page_order: 10
+page_order: 7
 ---
 
 # Aborting Messages

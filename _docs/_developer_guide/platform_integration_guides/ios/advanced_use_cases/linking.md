@@ -62,16 +62,34 @@ For more information, refer to [Apple's documentation][12] on the `LSApplication
 
 ### Step 3: Implement a Handler
 
-After activating your app, iOS will call the method [`application:handleOpenURL:`][1] (iOS 2.0-9.0) or [`application:openURL:options:`][13] (iOS 9.0+). The important argument is the [NSURL][2] object.
+After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
   NSString *path  = [url path];
   NSString *query = [url query];
   // Here you should insert code to take some action based upon the path and query.
   return YES;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+  let path = url.path
+  let query = url.query
+  // Here you should insert code to take some action based upon the path and query.
+  return true
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ![Open News Feed][10]
 
@@ -235,7 +253,7 @@ You can see an example implementation of `handleAppboyURL:fromChannel:withExtras
 
 ### Deep Linking to App Settings
 
-iOS 8 introduced the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
+iOS has the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [Universal Links][27].
 2. Decide on a URI for deep linking to the Settings page (e.g., `stopwatch://settings` or `https://www.braze.com/settings`).
@@ -273,8 +291,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtab %}
 {% endtabs %}
 
-
-[1]: https://developer.apple.com/library/ios/DOCUMENTATION/UIKit/Reference/UIApplicationDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:openURL:sourceApplication:annotation:
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
 [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW10 "Apple's Documentation"
 [4]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking

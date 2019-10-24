@@ -65,8 +65,11 @@ EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
 | `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
 | `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 50. |
+| `phone` | No | String | The phone number of the user. You must include _at least one_ phone number and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`. |
 
 _* Either `external_id` or `email` are required._
+
+> Only `external_id` or `phone` is accepted for SMS subscription groups
 
 ### Example Request
 
@@ -97,9 +100,12 @@ Content-Type: application/json
    "external_id": (required*, string) the external_id of the user,
    "email": (required*, string) the email address of the user
    //one of eternal_id or email is required
-   //can be passed as an array of string with a max of 50
+   //can be passed as an array of string with a max of 50,
+   "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
  }
 ```
+> Only `external_id` or `phone` is accepted for SMS subscription groups
+
 
 _Example of API call_
 
@@ -114,7 +120,8 @@ Content-Type: application/json
     "api_key": "12345",
     "subscription_group_id": "111-222-333",
     "subscription_state": "unsubscribed",
-    "email": "john@braze.com"
+    "email": "john@braze.com",
+    "phone": "+14152342671"
   }
 ```
 

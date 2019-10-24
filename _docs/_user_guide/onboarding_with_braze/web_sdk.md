@@ -1,6 +1,6 @@
 ---
 nav_title: Web SDK
-page_order: 3.6
+page_order: 3
 ---
 # Web SDK
 

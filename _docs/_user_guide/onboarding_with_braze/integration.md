@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-page_order: 2
+page_order: 1
 ---
 
 # Integration
@@ -35,7 +35,7 @@ Please ensure that you and your engineer don't unknowingly or unintentionally ch
 
 ### Step 2: They Implement Your Desired Messaging Channels
 
-Braze has many options for getting in touch with your customers/users, and each requires it's own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
+Braze has many options for getting in touch with your customers/users, and each requires its own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
 
 Be sure to tell your engineers which channels you want to use to ensure that implementation is done efficiently and in proper order.
 

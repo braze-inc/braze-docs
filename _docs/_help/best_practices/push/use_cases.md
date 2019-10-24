@@ -1,6 +1,6 @@
 ---
 nav_title: Use Cases
-page_order: 9
+page_order: 6
 ---
 
 # Use Cases {#push-use-cases}
