@@ -29,13 +29,26 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
 
 You can override this value via the `ABKMinimumTriggerTimeIntervalKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the `ABKMinimumTriggerTimeIntervalKey` to the integer value you want as your minimum time in seconds between in-app messages:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
-[Appboy startWithApiKey:@"YOUR-API_KEY"
+[Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:options
       withAppboyOptions:@{ ABKMinimumTriggerTimeIntervalKey : @(5) }];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
+```
+
+{% endtab %}
+{% endtabs %}
 
 An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) file.
 
@@ -81,24 +94,53 @@ A triggered in-app message will be discarded in the following situations:
 
 If you wish to display an in-app message at other times within your app, you may manually display the top-most in-app message on the stack by calling the following method:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessageWithDelegate:YOUR_IN_APP_MESSAGE_DELEGATE]
 // YOUR_IN_APP_MESSAGE_DELEGATE should be replaced with your in-app message controller delegate, if you have implemented one.
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage(with: YOUR_IN_APP_MESSAGE_DELEGATE?)
+// YOUR_IN_APP_MESSAGE_DELEGATE should be replaced with your in-app message controller delegate, if you have implemented one.
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Real Time In-App Message Creation & Display
 
 In-app messages can also be locally created within the app and displayed via Braze. This is particularly useful for displaying messages that you wish to trigger within the app in real-time. Braze does not support analytics on in-app messages created locally.
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
-- (IBAction)createAndDisplayACustomInAppMessage:(id)sender {
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];
   customInAppMessage.message = @"YOUR_CUSTOM_SLIDEUP_MESSAGE";
   customInAppMessage.duration = 2.5;
   customInAppMessage.extras = @{@"key" : @"value"};
   [[Appboy sharedInstance].inAppMessageController addInAppMessage:customInAppMessage];
-}
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+  let customInAppMessage = ABKInAppMessageSlideup.init()
+  customInAppMessage.message = "YOUR_CUSTOM_SLIDEUP_MESSAGE"
+  customInAppMessage.duration = 2.5
+  customInAppMessage.extras = ["key": "value"]
+  Appboy.sharedInstance()!.inAppMessageController.add(customInAppMessage)
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: #customize-inAppMessage-dashboard
 [2]: #customize-inAppMessage-code
