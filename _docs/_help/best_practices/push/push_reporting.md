@@ -29,7 +29,7 @@ If a user disables push within their device settings on subsequent app open the 
 
 Push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
 
-### Google Cloud Messaging
+### Firebase Cloud Messaging
 
 FCM bounces could occur in three cases:
 

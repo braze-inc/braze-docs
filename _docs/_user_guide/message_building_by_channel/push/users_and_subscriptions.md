@@ -69,7 +69,7 @@ If the user disables push, Braze will mark them as foreground push disabled no l
 On Android, Braze will move a user to be __push disabled__ if:
 - A user uninstalls the app from their device.
 - Braze receives a bounce when sending to a specific token (sometimes caused by app updates, uninstalls, new push token version or format).
-- Push registration fails to GCM/Firebase (sometimes caused by poor network connections or a failure to connect to or on GCM to return a valid token).
+- Push registration fails to FCM (sometimes caused by poor network connections or a failure to connect to or on FCM to return a valid token).
 - (For Android SDK v2.2.2+) The user blocks push notifications for the app within their device settings and subsequently log a session.
 
   {% endtab %}
