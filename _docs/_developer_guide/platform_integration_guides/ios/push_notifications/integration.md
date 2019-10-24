@@ -159,19 +159,17 @@ if #available(iOS 10, *) {
 Please note that the code sample above includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/).
 {% endalert %}
 
-### iOS 8+ without UserNotifications Framework
+### Without UserNotifications Framework
 
-When building against iOS 8+ and not using the `UserNotifications` framework, use the following:
+When not using the `UserNotifications` framework, use the following:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1) {
-  UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
-  [[UIApplication sharedApplication] registerForRemoteNotifications];
-  [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-}
+UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
+[[UIApplication sharedApplication] registerForRemoteNotifications];
+[[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 ```
 
 {% endtab %}

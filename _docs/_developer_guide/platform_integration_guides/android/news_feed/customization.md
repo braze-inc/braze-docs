@@ -9,7 +9,7 @@ platform: Android
 
 ## Default Styling
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>
@@ -72,12 +72,12 @@ For example, to update the font on all titles for Short News Cards, override the
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```
-  <style name="Appboy.Cards.ShortNews.Title">
-    <item name="android:layout_height">wrap_content</item>
-    ...
-    <item name="android:fontFamily">@font/my_custom_font_family</item>
-    <item name="fontFamily">@font/my_custom_font_family</item>
-  </style>
+<style name="Appboy.Cards.ShortNews.Title">
+  <item name="android:layout_height">wrap_content</item>
+  ...
+  <item name="android:fontFamily">@font/my_custom_font_family</item>
+  <item name="fontFamily">@font/my_custom_font_family</item>
+</style>
 ```
 
 ## Setting a Custom News Feed Click Listener

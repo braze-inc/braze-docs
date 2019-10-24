@@ -12,8 +12,7 @@ page_order: 5
   - iOS Banner Alert: 62 Characters
   - iOS Pop Up Alert: 235 Characters
 - Payload Size:
-  - Pre iOS 8: 0.256KB
-  - Post iOS 8: 2KB
+  - iOS: 2KB
 - Number of Lines:
   - iOS Lock Screen: 4 Lines
   - iOS Notification Center: 4 Lines

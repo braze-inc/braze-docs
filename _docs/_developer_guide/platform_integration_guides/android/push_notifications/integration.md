@@ -25,7 +25,7 @@ For devices without Google services installed, Braze offers the option to send p
 Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
 
 {% alert update %}
-Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
+Automatic GCM registration is unavailable through the Braze SDK as a result of Google's removal of support for GCM on May 29, 2019. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
 {% endalert %}
 
 ### Firebase Integration
@@ -206,6 +206,14 @@ Braze's notification code also uses `AppboyFirebaseMessagingService` to handle o
 If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
+{% alert update %}
+Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+{% endalert %}
+
+**Implementation Example**
+
+- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
+
 ##### Using Your Own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [AppboyFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
@@ -249,12 +257,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 {% endtab %}
 {% endtabs %}
-
-> Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
-
-**Implementation Example**
-
-- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
 
 ### Step 2: Configure Notification Icons
 

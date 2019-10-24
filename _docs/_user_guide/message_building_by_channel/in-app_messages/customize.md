@@ -61,7 +61,7 @@ You can customize your link actions by appending the optional URL query strings 
 
 Query String Name | Value | Action
 -----------|-------|-------
-`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.picsart.com?abButtonID=0](https://www.picsart.com?abButtonID=0)) *
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.mycompany.com?abButtonId=0](https://www.mycompany.com?abButtonId=0)) *
 `name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` (e.g., `appboy://customEvent?name=eventName`).
 `abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
 `abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
@@ -187,15 +187,15 @@ Then, copy and paste the following `HTML` snippet into your code, replacing the 
 
 ```
 <video class="video" autoplay muted playsinline controls>
-          <source src="mov_bbb.mp4" type="video/mp4">
-          <source src="mov_bbb.ogg" type="video/ogg">
-          Your device does not support HTML5 video.
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your device does not support HTML5 video.
 </video>
 ```
 
 Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter it's URL.
+Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
 
 ![Video_IAM]({% image_buster /assets/img/video_iam.png %})
 {% endtab %}
@@ -203,36 +203,17 @@ Finally, upload the files to your Braze account using the HTML + Asset Zip in yo
 {% tab iOS %}
 __iOS__
 
-To use a video in iOS in-app messages, you may require developer assistance. You are required to create a custom view controller in order to allow inline playback of HTML5 videos. You are able to modify our default view controller [here](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m) to make this process simpler.
+By default, the `WKWebView` in our default view controller [here](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m) allows inline media playback, including videos, but does not support autoplay.
 
-Modify the file using the following snippets:
-
-__UIWebView Settings__
-```
-webView.allowsInlineMediaPlayback = YES;
-webView.mediaPlaybackRequiresUserAction = NO;
-```
-
-__WKWebView Settings__
-```
-WKWebViewConfiguration *config = [WKWebViewConfiguration new];
-config.allowsInlineMediaPlayback = YES;
-config.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeVideo;
-```
-
-Then, add the following snippet to your HTML code and use the code in your message.
+Example `HTML` snippet:
 
 ```
-<video class="video" playsinline autoplay>
-          <source src="mov_bbb.mp4" type="video/mp4">
-          <source src="mov_bbb.ogg" type="video/ogg">
-          Your device does not support HTML5 video.
+<video class="video" playsinline>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your device does not support HTML5 video.
 </video>
 ```
-
-Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
-
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter it's URL.
 
 ![Video_IAM]({% image_buster /assets/img/video_iam.png %})
 

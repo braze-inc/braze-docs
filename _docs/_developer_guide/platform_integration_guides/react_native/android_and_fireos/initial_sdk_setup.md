@@ -71,6 +71,6 @@ Add our `AppboyReactPackage` to the `getPackages()` method of your Application c
 1.  Follow the directions at [our public documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/) to finish your integration. In particular, you will need to set your Braze API key and custom endpoint in a new `appboy.xml` file.
 2.  When you need to make Braze calls from javascript, use the following declaration to import the javascript module:
 
-  ```
-  const ReactAppboy = require('react-native-appboy-sdk');
-  ```
+```
+const ReactAppboy = require('react-native-appboy-sdk');
+```

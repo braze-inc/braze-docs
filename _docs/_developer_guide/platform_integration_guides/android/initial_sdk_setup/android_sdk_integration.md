@@ -6,12 +6,12 @@ platform: Android
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:

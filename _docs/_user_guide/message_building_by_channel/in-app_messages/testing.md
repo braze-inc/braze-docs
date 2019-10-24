@@ -12,10 +12,10 @@ It is __extremely important__ to __always__ test your in-app messages before sen
 You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
 {% alert warning %}
-In __Preview__, the view of your message might not be identical to it's actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
-### IAM Generation Preview
+### In-App Message Generation Preview
 
 Preview what your message will look like to a random user, a specific user or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
