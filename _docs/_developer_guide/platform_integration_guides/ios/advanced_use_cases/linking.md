@@ -253,7 +253,7 @@ You can see an example implementation of `handleAppboyURL:fromChannel:withExtras
 
 ### Deep Linking to App Settings
 
-iOS 8 introduced the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
+iOS has the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [Universal Links][27].
 2. Decide on a URI for deep linking to the Settings page (e.g., `stopwatch://settings` or `https://www.braze.com/settings`).

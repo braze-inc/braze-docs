@@ -22,15 +22,13 @@ __Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
-If you are using Xcode 9+, add the following line to your Podfile:
+Add the following line to your Podfile:
 
 ```
 target 'YourAppTarget' do
   pod 'Appboy-{{include.platform}}-SDK'
 end
 ```
-
-If you are using Xcode 8.3.3 or earlier, please use SDK version 3.0.2.
 
 __Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
 {% if include.platform == 'iOS' %}
