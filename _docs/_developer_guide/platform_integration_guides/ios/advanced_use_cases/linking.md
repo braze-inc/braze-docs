@@ -97,7 +97,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 {% endtab %}
 {% tab swift %}
 
-```
+```swift
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
   if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
     let url = userActivity.webpageURL
@@ -149,7 +149,7 @@ You can allow a subset of links with certain domains or schemes to be treated as
 
 To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -173,7 +173,7 @@ For more information, please refer to Apple's documentation on [App Transport Se
 
 You can turn off ATS entirely. Please note that this is not recommended practice, due to both lost security protections and future iOS compatibility. To disable ATS, insert the following in your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -203,7 +203,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 {% endtab %}
 {% tab swift %}
 
-```
+```swift
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     let urlString = url.absoluteString.removingPercentEncoding
     // Handle urlString
