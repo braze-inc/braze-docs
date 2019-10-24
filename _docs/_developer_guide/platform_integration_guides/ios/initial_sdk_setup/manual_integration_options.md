@@ -55,10 +55,6 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 7. While still under the target for your project, select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
 8. The SDWebImage framework is required for the Braze News Feed, Content Cards and In-App Messaging to function properly. SDWebImage is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards or In-App Messages, please follow the steps below.
 
-{% alert warning %}  
-From version 2.26.0, Braze iOS SDK only supports 4.x version of SDWebImage. If you have to use SDWebImage version 3.x, please use Braze SDK version 2.25.0 or below.
-{% endalert %}
-
 ### SDWebImage Integration
 
 1. Inside of your project folder, clone SDWebImage repository recursively:
