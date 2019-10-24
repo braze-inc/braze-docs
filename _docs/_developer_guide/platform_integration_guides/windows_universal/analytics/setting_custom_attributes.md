@@ -16,7 +16,6 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 - `FirstName`
 - `LastName`
 - `Email`
-- `Bio`
 - `Gender`
 - `DateOfBirth`
 - `Country`
