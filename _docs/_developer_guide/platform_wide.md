@@ -19,4 +19,7 @@ guide_featured_list:
   - name: Sending Text Messages
     link: /docs/developer_guide/platform_wide/sending_test_messages/
     fa_icon: fas fa-comments
+  - name: TV and OTT
+    link: /docs/developer_guide/platform_wide/tv_and_ott
+    fa_icon: fas fa-tv
 ---
