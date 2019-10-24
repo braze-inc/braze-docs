@@ -99,7 +99,6 @@ Example `Info.plist` contents:
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [21]: {{ site.baseurl }}/partners/technology_partners/advertising_technologies/attribution/adjust/
-[22]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/SocialNetworkViewController.m
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

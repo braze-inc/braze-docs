@@ -1,4 +1,4 @@
-Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app slideup message with which you can engage your users{% endif %}.
+Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app messages with which you can engage your users{% endif %}.
 
 The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
@@ -198,7 +198,6 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [apple_initial_setup_20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_22]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/SocialNetworkViewController.m
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"

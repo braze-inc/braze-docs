@@ -6,7 +6,7 @@ search_rank: 4
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 
@@ -47,7 +47,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Step 2: Add Braze dependency
 
-See the following example in our [Hello Braze example project][45]:
+See the following example in our [Hello Appboy example project][45]:
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle?slice=1:5&footer=minimal"></script>
 
@@ -101,7 +101,7 @@ Add the following code to the `onCreate()` method of your Application class:
 registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 ```
 
-You may refer to the following example inside Hello Braze:
+You may refer to the following example inside Hello Appboy:
 
 ![ActivityLifecycleCallbackIntegration][58]
 

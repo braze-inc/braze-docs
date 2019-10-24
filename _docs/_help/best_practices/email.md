@@ -19,10 +19,10 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
-  - name: Technical Guidelines & Tips
+  - name: "Technical Guidelines & Tips"
     link: /docs/help/best_practices/email/technical_guidelines_and_tips/
     fa_icon: fas fa-drafting-compass
-  - name: Content-Specific Best Practices
+  - name: "Content-Specific Best Practices"
     link: /docs/help/best_practices/email/content-specific/
     fa_icon: fas fa-award
   - name: Import Your Email List

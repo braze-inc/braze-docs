@@ -1,5 +1,5 @@
 ---
-nav_title: Templates & Media
+nav_title: "Templates & Media"
 page_order: 5
 layout: featured
 guide_top_header: "Templates & Media"
@@ -29,7 +29,7 @@ Aggregate templates across the following features:
 - [In-App Message Color Profiles][4]
 - [Manage Assets in the Media Library][5]
 
-<br> 
+<br>
 
 [1]: {% image_buster /assets/img_archive/templates_and_media.png %}
 [2]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
