@@ -10,15 +10,13 @@ Installing the Braze SDK will provide you with the ability to collect analytics 
 
 Before you can start using Braze in your Unity scripts, you'll need to import the plugin files to your Unity project.
 
->  As of Braze Unity SDK v1.5.0, Braze’s Unity plugins require Unity 5. See the [CHANGELOG](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#150) for more information.
-
 ## Initial SDK Setup
 
 Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
 ### Step 1: Importing the Braze Unity Package
 
-As of SDK v.1.8.0, the native Unity functionality, iOS libraries and Android libraries for Braze's Unity plugin are bundled as a Unity package.
+Native Unity functionality, iOS libraries and Android libraries for Braze's Unity plugin are bundled as a Unity package.
 
 1. To import the provided Braze Unity package into your project, download the package associated with the [most recent SDK release][16]. There are two options:
 	- `Appboy.unitypackage`
@@ -33,7 +31,7 @@ Alternatively, Braze also provides the option of [customizing and exporting the 
 
 ### Step 2: Setting Your API Key
 
-As of SDK v.1.8.0, Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`][6] and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
+Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`][6] and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
 2. Check the "Automate Unity iOS Integration" box.
@@ -85,7 +83,7 @@ Your Unity application is now set up to receive the News Feed data model from Br
 
 ## Transitioning from Manual to Automated Integration
 
-To take advantage of the automated iOS integration offered in Unity SDK v.1.8.0, follow these steps on transitioning from a manual to an automated integration.
+To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
 If the only modifications you have made to your app's built Xcode project have been for the Braze integration, you can follow the instructions on [replacing your Xcode project][20]. Otherwise, follow the instructions for [appending to your Xcode project][21].
 
