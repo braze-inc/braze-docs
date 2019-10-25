@@ -19,6 +19,12 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+- name: Android Push Notification Options
+  link: /docs/user_guide/message_building_by_channel/push/notification_options_android/
+  fa_icon: fab fa-android
+- name: iOS Push Notification Options
+  link: /docs/user_guide/message_building_by_channel/push/notification_options_ios/
+  fa_icon: fab fa-apple
 - name: Push Action Buttons
   link: /docs/user_guide/message_building_by_channel/push/push_action_buttons/
   fa_icon: far fa-dot-circle
