@@ -25,18 +25,36 @@ For the purposes of this example, we'll set a key-value pair with the key `feed_
 
 Use the following code snippet to add an observer to listen for Content Card updates.
 
-```
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
 [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(contentCardsUpdatedNotificationReceived:)
                                                name:ABKContentCardsProcessedNotification
                                              object:nil];
 ```
 
-Add the following methods to respond to updates from the observer and filter the returned cards by type. 
+{% endtab %}
+{% tab SWIFT %}
+
+```swift
+NotificationCenter.default.addObserver(self, selector:
+  #selector(contentCardsUpdated),
+  name:NSNotification.Name.ABKContentCardsProcessed, object: nil)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Add the following methods to respond to updates from the observer and filter the returned cards by type.
 
 The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case `Transactional`.
 
-```
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
 - (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
@@ -63,3 +81,35 @@ The first method, `contentCardsUpdatedNotificationReceived:`, handles updates fr
   return filteredArray;
 }
 ```
+
+{% endtab %}
+{% tab SWIFT %}
+
+```swift
+@objc private func contentCardsUpdatedNotifcationReceived(notification: NSNotification) {
+    guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
+    if updateSuccessful {
+        // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+        let filteredArray = getCards(forFeedType: "Transactional")
+        NSLog("Got filtered array of length: %@",filteredArray?.count ?? 0)
+
+        // Pass filteredArray to your UI layer for display.
+    }
+}
+
+func getCards(forFeedType type: String) -> [ABKContentCard]? {
+    guard let allCards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKContentCard] else { return nil }
+    // return filtered cards
+    return allCards.filter {
+        if $0.extras?["feed_type"] as? String == type {
+            NSLog("%@","Got card: \($0.idString)")
+            return true
+        } else {
+            return false
+        }
+    }
+}
+```
+
+{% endtab %}
+{% endtabs %}
