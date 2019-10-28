@@ -82,7 +82,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 ## Setting a Custom News Feed Click Listener
 
-As of Android SDK v.1.14.0, you can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
+You can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
 
 ### Step 1: Implement a News Feed Click Listener
 
