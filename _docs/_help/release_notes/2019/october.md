@@ -5,7 +5,9 @@ page_order: 3
 
 # October 2019
 
-More to come later this month!
+## Improved Canvas Variant Analytics
+
+Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. [Learn more here]({{ site.baseurl }}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant).
 
 ## SMS
 
