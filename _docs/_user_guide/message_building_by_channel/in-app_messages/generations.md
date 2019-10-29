@@ -15,6 +15,6 @@ This chart highlights the features and message types that are currently availabl
 | __Generation 2__ | • Text Alignment Controls <br> • Overlay behind Modal <br> • Image Safe Zone in Preview Window | Button Border |
 | __Generation 3__ | • Button Border <br> • Refined Look & Feel for All Message Types <br> • Concept of Generations 1, 2 and 3 <br> • New Close X Asset <br> • Improved accessibility on Web <br> • Improved support on Notched Devices | (The latest Generation always has full feature support!)
 
-![Difference in Generations]({% image_buster /assets/img/in-app-message-generations-of-modals.png  %})
+![Difference in Generations]({% image_buster /assets/img/iam-generations-of-modals.png %})
 
 [1]: {% image_buster /assets/pdf/IAM_Gen_Diff.xlsx %}
