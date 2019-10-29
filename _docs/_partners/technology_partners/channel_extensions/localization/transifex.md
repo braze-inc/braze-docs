@@ -23,7 +23,7 @@ Click __New Credential__. You can then name your credential and put in your user
 
 You can then use this basic authentication credential for calls to Transifex.
 
-# SDK Integration
+# Conntected Content Integration
 
 This integration will allow you to type in a source string instead of copying and pasting the translation for every language into the message composer.
 

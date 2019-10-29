@@ -45,13 +45,25 @@ You cannot have multiple in-app message variants in a single step.
 {% endtabs %}
 
 
-## Step 1: Specify Your Message Types
+## Step 1: Specify Delivery Platform(s)
+Start by choosing which platform(s) should receive the message. Use this selection to limit delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for a campaign encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because Platform selections are specific to each variant, you could try testing message engagement per platform!
 
-Choose a __Platform__, __Message Type__, __Layout__, and __Enforced Device Orientation__ as necessary.
+Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can only be used after selecting __Web Browsers__.
+
+| Platform | Message Delivery |
+|---|---|
+| Mobile Apps | iOS & Android SDKs|
+| Web Browsers | Web SDK|
+| Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
+
+
+## Step 2: Specify Your Message Types
+
+Choose a __Message Type__, __Layout__, and __Enforced Device Orientation__ as necessary.
 
 ### Message Types
 
-Click on your desired Platform tab to learn more about the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the tables.
+Once you've selected a sending platform, browse the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the tables.
 
 {% tabs local %}
 {% tab In-App Message Options %}
@@ -87,7 +99,7 @@ If Braze detects that you don't have a close or dismissal button included in you
 {% endtabs %}
 
 
-## Step 2: Compose In-App Message
+## Step 3: Compose In-App Message
 
 The Compose tab allows you to edit all aspects of your message’s content and behavior.
 
@@ -126,7 +138,14 @@ Braze has three Generations of in-app messages available. You can fine-tune to w
 
 ![In-App_Messages_Generations][22]{: height="50%" width="50%"}
 
-## Step 3: Style Your In-App Message
+Depending on what SDK Versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation. A Generation is defined as a collection of SDK Versions that contain a large quantity of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates. 
+
+By checking __Send to all Generations that support this message__, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences, and absence of button border).
+
+You could uncheck the __Send to all Generations that support this message__ and select __Send only to users on Generation 3 (the latest)__ if you do not want to allow users to receive the older message styles. Users on Generation 3 will be the only ones to receive the message.
+
+
+## Step 4: Style Your In-App Message
 
 The Style tab allows you to adjust all visual aspects of your message. Upload an image or badge, or pick a pre-designed badge icon. Change the colors of the header and body text, buttons and background by selecting from a palette or entering a hex, RGB or HSB code.
 
@@ -150,11 +169,11 @@ Always [preview and test]({{ site.baseurl }}/user_guide/message_building_by_chan
 Some in-app message types do not have the option for styling beyond uploading custom HTML (and/or CSS and/or Javascript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all around custom-styled messaging.
 {% endalert %}
 
-## Step 4: Configure Additional Settings
+## Step 5: Configure Additional Settings
 
 Add [key-value pairs][19] to your message if needed.
 
-## Step 5: Build the Remainder of Your Campaign or Canvas
+## Step 6: Build the Remainder of Your Campaign or Canvas
 
 Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages.
 

@@ -29,8 +29,6 @@ Quantity must be less than or equal to 100. Braze also supports adding metadata 
 AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
 ```
 
->  In versions of the SDK prior to 1.8.0, the properties `Dictionary` only supports `string` values.
-
 ### Currency Codes
 
 Supported currency symbols are listed below. Any other provided currency symbol will result in a logged warning and no other action taken by the SDK.

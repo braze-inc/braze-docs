@@ -19,8 +19,6 @@ Braze also supports adding metadata about custom events by passing a `Dictionary
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
 ```
 
->  In versions of the SDK prior to 1.8.0, the properties `Dictionary` only supports `string` values.
-
 ### REST API
 
 You can also use our REST API to record events. Refer to the [user API documentation][5] for details.
