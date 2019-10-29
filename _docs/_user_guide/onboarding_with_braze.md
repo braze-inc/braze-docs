@@ -14,7 +14,7 @@ guide_featured_list:
     link: /docs/user_guide/onboarding_with_braze/integration/
     fa_icon: fas fa-server
   - name: Learning to Use Braze
-    link: docs/user_guide/onboarding_with_braze/learning_to_use_braze/
+    link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
     fa_icon: fas fa-user-graduate
   - name: Web SDK Overview for Marketers
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
