@@ -59,24 +59,24 @@ The first method, `contentCardsUpdatedNotificationReceived:`, handles updates fr
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
     // Get an array containing only cards that have the "Transactional" feed type set in their extras.
-    NSMutableArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
+    NSArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
     NSLog(@"Got filtered array of length: %lu", [filteredArray count]);
 
     // Pass filteredArray to your UI layer for display.
   }
 }
 
-- (NSMutableArray<ABKContentCard *> *)getCardsForFeedType:(NSString *)type {
-  NSMutableArray<ABKContentCard *> *cards = [NSMutableArray arrayWithArray:[Appboy.sharedInstance.contentCardsController getContentCards]];
+- (NSArray<ABKContentCard *> *)getCardsForFeedType:(NSString *)type {
+  NSArray<ABKContentCard *> *cards = [Appboy.sharedInstance.contentCardsController getContentCards];
 
-  NSMutableArray<ABKContentCard *> *filteredArray = [NSMutableArray arrayWithArray:[cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary *bindings) {
+  NSArray<ABKContentCard *> *filteredArray = [cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary *bindings) {
     NSDictionary *extras = [card extras];
     if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
       NSLog(@"Got card: %@ ", card.idString);
       return YES;
     }
     return NO;
-  }]]];
+  }]];
 
   return filteredArray;
 }
