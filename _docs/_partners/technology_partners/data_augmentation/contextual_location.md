@@ -18,7 +18,8 @@ valid_partner_list:
   - name: Gimbal
     url: /docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/
   - name: Neura
-    url: /docs/partners/technology_partners/data_augmentation/contextual_location/neura/
+    title: Actions
+    url: /docs/partners/technology_partners/data_augmentation/contextual_location/neura_actions/
   - name: Radar
     url: /docs/partners/technology_partners/data_augmentation/contextual_location/radar/
 

@@ -20,5 +20,9 @@ valid_partner_list:
     url: /docs/partners/technology_partners/insights/business_intelligence/looker/
   - name: Apteligent
     url: /docs/partners/technology_partners/insights/crash_analytics/apteligent/
+  - name: Neura
+    title: Insights
+    url: /docs/partners/technology_partners/insights/behavioral_analytics/neura_insights/
+
 
 ---

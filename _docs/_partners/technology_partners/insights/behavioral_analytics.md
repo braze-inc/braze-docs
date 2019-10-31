@@ -15,6 +15,9 @@ valid_partner_list:
     url: /docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/
   - name: NPAW
     url: /docs/partners/technology_partners/insights/behavioral_analytics/npaw/
+  - name: Neura
+    title: Insights
+    url: /docs/partners/technology_partners/insights/behavioral_analytics/neura_insights/
 
 
 ---
