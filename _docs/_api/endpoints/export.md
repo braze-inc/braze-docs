@@ -223,6 +223,9 @@ User export object (we will include the least data possible - if a field is miss
             "carrier" : (string),
             "idfv" : (string) only included for iOS devices,
             "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
+            "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
+            "roku_ad_id" : (string) only included for Roku devices,
+            "windows_ad_id" : (string) only included for Windows devices,
             "ad_tracking_enabled" : (bool)
         },
         ...
