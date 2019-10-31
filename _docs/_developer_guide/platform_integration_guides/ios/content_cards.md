@@ -27,6 +27,10 @@ guide_featured_list:
 - name: Data Model
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
   fa_icon: fas fa-server
+- name: Multiple Feeds
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/
+  fa_icon: fas fa-th-list
+
 ---
 <br>
 

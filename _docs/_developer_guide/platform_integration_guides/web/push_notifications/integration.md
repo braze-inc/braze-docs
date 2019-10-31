@@ -105,7 +105,7 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 
   // Display the message
   if (shouldDisplay) {
-    appboy.display.showInAppMessage(message);
+    appboy.display.showInAppMessage(inAppMessage);
   }
 });
 ```
