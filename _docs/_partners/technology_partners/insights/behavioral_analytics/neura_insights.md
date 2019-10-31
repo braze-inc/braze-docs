@@ -6,7 +6,7 @@ alias: /partners/neura_insights/
 
 # Neura Insights Integration
 
-[Neura's][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
+[Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
 *Leverage [Neura insights][2] to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user.*
 
@@ -74,7 +74,7 @@ Neura's generic data import allows for two types of import methods:
 2. Follow the instructions to use the Neura [Insights API][6].
 
 Neura closes the loop by sending actionable data back to Braze, so you can seamlessly execute on Neura's real-world insights right within Braze.
-After you've identified the right engagement moment for the right user, easily create Campaigns and Canvases with [Neura Actions in Braze][7]. 
+After you've identified the right engagement moment for the right user, easily create Campaigns and Canvases with [Neura Actions in Braze][7].
 
 ![insights-moments-personas.png][12]
 

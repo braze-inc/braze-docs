@@ -5,7 +5,7 @@ alias: /partners/neura_actions/
 
 # Neura Actions Integration
 
-[Neura's][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
+[Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
 *Leverage Neura's [True Personas™][2] to create segments and audiences based on each users' lifestyle and preferences.*
 *Leverage [Neura Moments™][3] when triggering campaigns to reach each user when they're available and receptive.*
