@@ -97,6 +97,10 @@ glossaries:
     description: Segments your users by the latest version of your app that they have used.
     tags:
       - User Activity
+  - name: App Version Code
+    description: _App Version Code_ filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with Braze Android SDK `v3.6.0` and above, and can be enabled by your Braze account manager.
+    tags:
+      - User Activity
   - name: Most Recent Location
     description: Segments your users by the last recorded location at which they have used your app.
     tags:
