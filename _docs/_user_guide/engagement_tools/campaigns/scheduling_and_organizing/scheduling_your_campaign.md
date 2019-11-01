@@ -74,7 +74,9 @@ You can also further filter trigger events through Braze's [Custom Event Propert
 
 ![Custom Event Properties Pic][34]
 
-Note that the trigger event "start session" can be the user's very first app open, if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
+{% alert note %}
+The trigger event "start session" can be the user's very first app open, if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
+{% endalert %}
 
 Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't be able to receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, please read our section on [reasons why a user might not have received a triggered campaign][49].
 
@@ -90,7 +92,11 @@ In addition, triggered in-app messages still abide by [in-app message delivery r
 
 __Step 2: Select how long to wait before sending the campaign, after the trigger criteria is met.__ Choose how long to delay your message after the user completes the trigger event.
 
-In choosing your delay length, note that if you set a delay that is longer than the message's duration for sending (see Step 4), no users will receive your campaign. Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event prior to the campaign launching will not qualify to receive the campaign.
+{% alert important %}
+In choosing your delay length, note that if you set a delay that is longer than the message's duration for sending (see Step 4), no users will receive your campaign.
+{% endalert %}
+
+Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event prior to the campaign launching will not qualify to receive the campaign.
 
 ![triggered 2][19]
 
@@ -107,9 +113,11 @@ You can read more about how to employ exception events in our section on [use ca
 
 > If you are sending out a campaign with the trigger event equalling the same exception  event, the initial campaign will be cancelled. Instead of sending out both campaigns, your user's first campaign will be cancelled and we will automatically re-schedule a new campaign based on the exception event's message delivery time.
 >
->For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time). Please also note that you cannot make a "session start"  both the trigger event and exception event for a campaign (however, you always have the choice to select any other custom event outside of this option).
+>For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time).
 
-
+{% alert note %}
+You cannot make a "session start"  both the trigger event and exception event for a campaign (however, you always have the choice to select any other custom event outside of this option).
+{% endalert %}
 
 __Step 4: Assign the campaign's duration by specifying a start time and optional end time.__ If a user completes a trigger event during the specified time frame, but actually qualifies for the message outside of the time frame due to a scheduled delay, then she will not receive the campaign. Therefore, if you set a time delay that is longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones][5].
 
@@ -162,7 +170,11 @@ API Triggered Campaigns are ideal for more advanced transactional use-cases. Bra
 
 ### Setting up an API Triggered Campaign
 
-Setting up an API Triggered Campaign is easy. First, create a new multichannel or single channel campaign (with multiviariate testing). Note that an API Triggered Campaign is different from an [API Campaign][46].
+Setting up an API Triggered Campaign is easy. First, create a new multichannel or single channel campaign (with multiviariate testing). 
+
+{% alert note %}
+An API Triggered Campaign is different from an [API Campaign][46].
+{% endalert %}
 
 ![API Triggered Creation Step][45]
 
@@ -202,11 +214,9 @@ Additionally, if you are trying to send a message immediately with a re-eligibil
 
 With regards to multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:
 
-* When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
-
-* If the variant percentages change, users may be redistributed to other variants.
-
-* Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
+- When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
+- If the variant percentages change, users may be redistributed to other variants.
+- Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
 ## Editing Campaigns After Launch
 

@@ -10,7 +10,7 @@ platform: Android
 ## Using Proguard with Braze
 [Proguard][50] configuration is automatically included with your Braze integration.
 
-Braze Android SDK v.1.14.0 removes `keep` rules from `consumerProguardFiles` automatic Proguard configuration. Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
+Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
 
 ```
 -keep class bo.app.** { *; }
@@ -99,7 +99,6 @@ When the build variant is compiled, it will use the new API key.
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [42]: https://developers.google.com/android/guides/setup
-[43]: http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html "Sunsetting ADT Eclipse Plugin"
 [45]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle#L4
 [46]: https://developer.android.com/training/permissions/index.html
 [47]: https://android.googlesource.com/platform/sdk/+/master/files/proguard-android.txt

@@ -6,7 +6,7 @@ page_order: 7
 ---
 # A/B Testing with Random Buckets
 
-A [random bucket number][8] is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
+A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
 
 If you have [Canvas][13] in your Braze platform, you will be able to accomplish all of these use cases using Canvas UI.
 
@@ -14,7 +14,13 @@ Here's how you can set up an A/B test with random buckets:
 
 ## Step 1: Segment your users by the random bucket attribute
 
-Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*. Note that each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive). The example below partially documents the creation of segments for a campaign with three variants and a control group. Observe that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
+Apply the filter *Random Bucket #*. Once applied, the filter label will change to *Statistical sampling ID*.
+
+{% alert note %}
+Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive).
+{% endalert %}
+
+The example below partially documents the creation of segments for a campaign with three variants and a control group. Observe that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
 
 Consider the following sample plan for creating segments of equal size for three campaign series variants and a control. Bucket numbers 0 to 2499 correspond to the control segment; bucket numbers 2500 to 4999 correspond to the segment that will receive variant 1; bucket numbers 5000 to 7499 correspond to the segment that will receive variant 2; bucket numbers 7500 to 9999 correspond to the segment that will receive variant 3. You may want to use these types of segments if you want to run a test of three different variants (for instance, three different send times or three different combinations of message channels) and also include a control group.
 
@@ -71,7 +77,6 @@ You can test the effectiveness of different message channel combinations. For in
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
 [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
 [5]: {% image_buster /assets/img_archive/Random_Bucket_5.png %}
-[8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/
 [9]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
 [10]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
 [11]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery

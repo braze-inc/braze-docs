@@ -20,7 +20,7 @@ __Step 1: Integration Requirements__
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Tune. For most setups, this code should be included alongside all calls to `mobileAppTracker.setAndroidId` or `mobileAppTracker.setGoogleAdvertisingId`, typically in an activity's `onCreate` callback.
 
 ```java
-mobileAppTracker.setUserId(Appboy.getInstance(MyActivity.this).getInstallTrackingId());
+mobileAppTracker.setUserId(Appboy.getInstance(context).getInstallTrackingId());
 ```
 
 __Step 2: Getting the Postback URL__

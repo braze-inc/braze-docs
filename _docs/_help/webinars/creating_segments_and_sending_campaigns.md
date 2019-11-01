@@ -1,6 +1,6 @@
 ---
 nav_title: Creating Segments and Sending Campaigns
-page_order: 5
+page_order: 4
 ---
 
 # Creating Segments and Sending Campaigns

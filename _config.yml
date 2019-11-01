@@ -43,14 +43,15 @@ plugins:
 search_debug: false
 
 # For local testing, set to false to increase build time by not pulling partner api
-# data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
+# and markdown data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
 partner_api: true
+markdown_api: true
 
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
 
 # gitHub config
-github_baseurl: 'https://github.com/Appboy/braze-docs/blob/develop/_docs/'
+github_baseurl: 'https://github.com/Appboy/braze-docs/edit/develop/_docs/'
 github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]

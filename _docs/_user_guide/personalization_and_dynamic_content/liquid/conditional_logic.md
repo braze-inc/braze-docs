@@ -1,6 +1,6 @@
 ---
 nav_title: Conditional Messaging Logic
-page_order: 9
+page_order: 6
 ---
 
 # Conditional Messaging Logic (Tags)

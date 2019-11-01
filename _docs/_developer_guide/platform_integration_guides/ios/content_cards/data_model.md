@@ -1,7 +1,7 @@
 ---
 nav_title: Data Model
 platform: iOS
-page_order: 5
+page_order: 6
 search_rank: 5
 ---
 
@@ -70,7 +70,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `created` | (read only) This property is the unix timestamp of the card's creation time from Braze. |
 | `expiresAt` | (read only) This property is the unix timestamp of the card's expiration time.|
 | `dismissible` | This property reflects if the card can be dismissed by the user.|
-| `pinned` | This property reflects if the card has been pinned by the user.|
+| `pinned` | This property reflects if the card was set up as "pinned" in the dashboard.|
 | `dismissed` | This property reflects if the card has been dismissed by the user.|
 | `url` | The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.|
 | `openURLInWebView` | This property determines whether the URL will be opened within the app or in an external web browser.|
@@ -114,6 +114,19 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 
 When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance] logContentCardsDisplayed];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logContentCardsDisplayed()
+```
+
+{% endtab %}
+{% endtabs %}

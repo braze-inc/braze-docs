@@ -1,6 +1,6 @@
 ---
 nav_title: IP Warming
-page_order: 6
+page_order: 5
 ---
 
 # IP Warming

@@ -1,11 +1,11 @@
 ---
 nav_title: Event User Log Tab
-page_order: 3
+page_order: 2
 ---
 
 # Event User Log Tab
 
-The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associate with, when it happened, and often an opportunity to view the raw data associated with it.
+The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
 
 To find your logs easily, you can filter based on:
 

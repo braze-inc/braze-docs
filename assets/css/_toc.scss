@@ -84,13 +84,6 @@ $toc_width: 220px;
               display: block;
               height: 7px;
           }
-          //
-          // &:after {
-          //   content:"";
-          //   height: 2px;
-          //   display: block;
-          //   margin: 1px auto 0px auto;
-          // }
 
           transition: all ease $toc_transition_time;
           -webkit-transition:  all ease $toc_transition_time;
@@ -102,37 +95,13 @@ $toc_width: 220px;
             width: fit-content;
             border-bottom-width: 2px;
             border-color: transparent;
-            // &:after {
-            //   content: "";
-            //   display: block;
-            //   height: 2px;
-            //   margin: 1px auto 0px auto;
-            //   background-color: $blue-scooter;
-            //   position: relative;
-            //
-            //   left: 50%;
-            //   transform: translateX(-50%);
-            //
-            // }
-            // text-decoration: underline;
-            // text-decoration-color: $blue-scooter;
           }
           &:hover {
             text-decoration: none;
             color: $black-shark;
             border-bottom-width: 2px;
             border-color: transparent;
-            // &:after {
-            //   content: "";
-            //   display: block;
-            //   height: 2px;
-            //   margin: 1px auto 0px auto;
-            //   background-color: $blue-scooter;
-            //   position: relative;
-            //   left: 50%;
-            //   transform: translateX(-50%);
-            //   width: 100%;
-            // }
+
           }
         }
       }
@@ -143,115 +112,6 @@ $toc_width: 220px;
       font-size: $toc_font_size + 1;
       margin-bottom: 6px;
     }
-    // &.collapse {
-    //   display: none !important;
-    // }
-    // // &.collapsing {
-    // //   transition: unset;
-    // // }
-    // &.bz_expanding{
-    //   -webkit-transform: translateX(0);
-    //   -ms-transform: translateX(0);
-    //   transform: translateX(0);
-    //   -webkit-transition: 0.35s ease;
-    //   transition: 0.35s ease;
-    // }
-    // &.collapsing{
-    //   -webkit-transform: translateX(100%);
-    //   -ms-transform: translateX(100%);
-    //   transform: translateX(100%);
-    //   -webkit-transition: 0.35s ease;
-    //   transition: 0.35s ease;
-    // }
-    // &.collapse.show {
-    //   display: block !important;
-    //   @media print {
-    //     display: none !important;
-    //   }
-    // }
+
   }
 }
-
-//
-//
-// #toc_toggle {
-//   @media print {
-//     display: none !important;
-//   }
-//   display: none;
-//   @media (min-width: $window-xlarge-px) {
-//     color: $toc_color;
-//     background-color: #FFFFFF;
-//     border-color: $toc_color;
-//
-//
-//     padding: 1rem .75rem;
-//
-//     &.notoc {
-//       display: none;
-//     }
-//     z-index: 500;
-//     //opacity: 0.3;
-//     // margin-right: -10px;
-//     font-size: $toc_font_size + 2;
-//     box-shadow: -3px 2px 2px $toc_color;
-//     &:focus {
-//       box-shadow: -3px 2px 2px $toc_color;
-//     }
-//
-//
-//
-//     border-radius: 10px 0 0 10px;
-//     display: block;
-//     &.notoc {
-//       display: none !important;
-//     }
-//     @media print {
-//       display: none !important;
-//     }
-//     border-right-color: #FFFFFF;
-//     border-right-width: 2px;
-//
-//     // top: 15%;
-//
-//     position: fixed;
-//     right: 16.5%;
-//     padding: 15px 5px;
-//     i::before {
-//       content:  icon($nav_toggle_right);
-//     }
-//   }
-//   // &.bz_collapsing{
-//   //   -webkit-transform: translateX(0%);
-//   //   -ms-transform: translateX(0%);
-//   //   transform: translateX(0%);
-//   //   -webkit-transition: 0.35s ease;
-//   //   transition: 0.35s ease;
-//   // }
-//   // &.bz_expanding {
-//   //   -webkit-transform: translateX(0%);
-//   //   -ms-transform: translateX(0%);
-//   //   transform: translateX(0%);
-//   //   -webkit-transition: 0.65s ease;
-//   //   transition: 0.65s ease;
-//   // }
-//   //
-//   // &.collapsed {
-//   //   @media (min-width: $window-xlarge-px) {
-//   //     position: fixed;
-//   //     right: 0;
-//   //     i::before {
-//   //       content:  icon($toc_toggle_left);
-//   //     }
-//   //   }
-//   // }
-//
-//
-//
-//   // top: 3.5rem;
-//   // left: 15.5%;
-//   // &.collapsed {
-//   //   top: 3.5rem;
-//   //   left: -1%;
-//   // }
-// }

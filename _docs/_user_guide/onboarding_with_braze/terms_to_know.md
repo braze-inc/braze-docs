@@ -1,5 +1,5 @@
 ---
-page_order: 1
+page_order: 0
 nav_title: Terms to Know
 layout: glossary_page
 glossary_top_header: "Terms to Know"

@@ -1,6 +1,6 @@
 ---
 nav_title: Security Settings
-page_order: 3
+page_order: 2
 ---
 
 # Security Settings

@@ -7,7 +7,7 @@ search_rank: 5
 
 # Action Buttons {#push-action-buttons-integration}
 
-iOS 8+ introduces the ability for users to interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
+Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
 
 ![Illustration of Notification Action][13]
 

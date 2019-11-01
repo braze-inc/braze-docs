@@ -1,6 +1,6 @@
 ---
 nav_title: Creative Details
-page_order: 4
+page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with content cards! But you should know some of the guidelines, first! After all, you have to know that rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."

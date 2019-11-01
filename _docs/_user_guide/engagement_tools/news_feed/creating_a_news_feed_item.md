@@ -4,8 +4,6 @@ page_order: 3
 ---
 # Creating a News Feed Item
 
-Push Messages, Emails, and In-App messages are wonderful but ephemeral content. Once swiped away, you lose your opportunity to engage. If you catch a user at the wrong time, that message is lost to them forever. Multi-Channel messaging helps to ameliorate this problem, but the News Feed really puts it to rest once and for all.
-
 News-Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the news feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
 To see examples of News Feeds, check out our [Client Integration Gallery][13].
@@ -53,7 +51,10 @@ Banner cards consist of:
 
 ![CrossPromo][5]
 
-Cross promotion cards allow you to showcase another app that's in the app store. Note that you may not advertise apps which are the property of companies other than your own.
+Cross promotion cards allow you to showcase another app that's in the app store. 
+{% alert important %}
+You may not advertise apps which are the property of companies other than your own.
+{% endalert %}
 
 
 #### Image guidelines

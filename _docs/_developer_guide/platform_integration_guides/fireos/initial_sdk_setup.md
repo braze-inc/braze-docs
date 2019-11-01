@@ -6,12 +6,12 @@ search_rank: 4
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to the [User Guide][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
@@ -47,7 +47,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Step 2: Add Braze dependency
 
-See the following example in our [Hello Braze example project][45]:
+See the following example in our [Hello Appboy example project][45]:
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle?slice=1:5&footer=minimal"></script>
 
@@ -101,7 +101,7 @@ Add the following code to the `onCreate()` method of your Application class:
 registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 ```
 
-You may refer to the following example inside Hello Braze:
+You may refer to the following example inside Hello Appboy:
 
 ![ActivityLifecycleCallbackIntegration][58]
 
@@ -149,7 +149,7 @@ At this point you should also have default device data collection working in you
 ### Using Proguard with Braze
 [Proguard][50] configuration is automatically included with your Braze integration.
 
-Braze Android SDK v.1.14.0 removes `keep` rules from `consumerProguardFiles` automatic Proguard configuration. Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
+Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
 
 ```
 -keep class bo.app.** { *; }

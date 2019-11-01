@@ -35,9 +35,9 @@ Content-Type: application/json
 {
   "api_key": "YOUR-API-KEY-HERE",
   "email": "email@address.com"
- }
- ```
- 
+}
+```
+
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
 | `api_key` | Yes | String | Your App Group REST API Key. |

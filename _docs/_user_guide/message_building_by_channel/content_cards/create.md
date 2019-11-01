@@ -2,7 +2,7 @@
 nav_title: Create a Content Card
 platform: Message_Building_and_Personalization
 subplatform: Content Cards
-page_order: 1
+page_order: 0
 ---
 
 # Creating a Content Card
@@ -51,19 +51,19 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
-|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have it's own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
-|Pinning | Check pin a card, which will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Cards cannot be retroactively pinned or unpinned - you must select the pin option you’d like to use before they are sent to users.  |
+|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
+|Pinning | A pinned card will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Once a card has been sent you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
 |Expiration | Set the specific expiration date or the days until a Card expires. | All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
 {% alert warning %}
-The combined size of all fields in a Content Card message (header, image, and body message) should not exceed 2Kb in total.
+Content Card messages are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent.
 {% endalert %}
 
 {% alert note %}
 
-Braze will store up to 100 non-expired Content Cards in their feed. The oldest card will be removed from the feed, even if unread, once more than 100 cards have entered the feed.
+Each user is eligible to receive up to 100 non-expired Content Cards. As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
 
 {% endalert %}
 
@@ -71,7 +71,7 @@ Braze will store up to 100 non-expired Content Cards in their feed. The oldest c
 
 Add [key-value pairs][19] to your message, if needed.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), iOS to come), and customize how Cards are sorted.
+You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas
 
@@ -107,7 +107,7 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 <br>
 
-After you've finished building the last of your campaign, review it's details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
+After you've finished building the last of your campaign, review its details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 ## Things to Know
 

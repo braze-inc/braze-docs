@@ -114,25 +114,38 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 
 ### Setting Orientation For All In-App Messages
 
-To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMasks` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
+To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 // Set fixed in-app message orientation to portrait.
-[Appboy sharedInstance].inAppMessageController.supportedOrientationMasks = UIInterfaceOrientationMaskPortrait;
 // Use UIInterfaceOrientationMaskLandscape to display in-app messages in landscape
+id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstance].inAppMessageController.inAppMessageUIController;
+((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
-// Use landscape to display in-app messages in landscape
+// Use .landscape to display in-app messages in landscape
+if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController as? ABKInAppMessageUIController {
+  controller.supportedOrientationMask = .portrait
+}
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% endtabs %}
@@ -143,6 +156,9 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 // Set inAppMessage orientation to portrait
 inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
@@ -150,6 +166,20 @@ inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
 // Set inAppMessage orientation to landscape
 inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift    
+  // Set inAppMessage orientation to portrait
+  inAppMessage.orientation = ABKInAppMessageOrientation.portrait
+    
+  // Set inAppMessage orientation to landscape
+  inAppMessage.orientation = ABKInAppMessageOrientation.landscape
+```
+
+{% endtab %}
+{% endtabs %}
 
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
 
@@ -244,7 +274,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab OBJECTIVE-C %}
 
 ```objc
-/// Logs button click analytics
+// Logs button click analytics
 - (void)logInAppMessageClickedWithButtonID:(NSInteger)buttonID;
 ```
 
@@ -252,7 +282,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab swift %}
 
 ```swift
-/// Logs button click analytics
+// Logs button click analytics
 func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ```
 
@@ -262,10 +292,22 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ## Customizing In-App Message Behavior on Click
 The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
-- (void)setInAppMessageClickAction:(ABKInAppMessageClickActionType)clickActionType
-                           withURI:(NSURL *)uri;
+[inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
+```
+
+{% endtab %}
+{% endtabs %}
 
 The `inAppMessageClickActionType` can be set to one of the following values:
 
@@ -413,7 +455,7 @@ NSDictionary *userInfo = notification.request.content.userInfo;
  };
 ```
 
-This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event 'IAM Trigger' will be logged against the user profile.
+This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile.
 
 ### Step 2: Create a Push Campaign
 
