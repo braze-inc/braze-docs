@@ -1,30 +1,31 @@
 ---
 nav_title: Neura Actions
-alias: /partners/neura_actions/
+alias: /partners/neura/
 ---
 
 # Neura Actions Integration
 
 [Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
-*Leverage Neura's [True Personas™][2] to create segments and audiences based on each users' lifestyle and preferences.*
-*Leverage [Neura Moments™][3] when triggering campaigns to reach each user when they're available and receptive.*
+*Leverage Neura's [True Personas™][2] to create segments and audiences based on each users' lifestyle and preferences. Leverage [Neura Moments™][3] when triggering campaigns to reach each user when they're available and receptive.*
 
-![moments-of-availability.png][8]
+![moments-of-availability.png][9]
+
+See the [Neura Insights][4] Braze integration for further details on how to uncover these real-world behavioral insights.
 
 ## Integration Details
 
 To get started, ensure that both the Braze and Neura SDKs are properly integrated for Android and iOS.
 
-To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][4] or [MainActivity class on Android][5]. You’ll then begin receiving [Neura Moments™][3] as Braze "Custom Events". You’ll also gain the ability to segment users based on their real-world lifestyles and habits, [True Personas™][2], received as Braze "Custom Attributes".
+To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][5] or [MainActivity class on Android][6]. You’ll then begin receiving [Neura Moments™][3] as Braze "Custom Events". You’ll also gain the ability to segment users based on their real-world lifestyles and habits, [True Personas™][2], received as Braze "Custom Attributes".
 
-![neura-personas-moments.png][9]
+![neura-personas-moments.png][10]
 
 First, find your App ID on the "Developer Console" section of the Braze Dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
 
-![neura-braze-api-key.png][10]
+![neura-braze-api-key.png][11]
 
-Complete the Mobile Engagement Platform section of your application in the [Neura console][6], as follows:
+Complete the Mobile Engagement Platform section of your application in the [Neura console][7], as follows:
 
 **API Key:** Insert the key you've created in the Braze platform.
 
@@ -32,7 +33,7 @@ Complete the Mobile Engagement Platform section of your application in the [Neur
 
 **Android/iOS App ID:** We recommend providing a unique Braze application ID for each mobile platform, allowing you to segment the users for each platform individually.
 
-![neura-mep-details-in-neura.png][11]
+![neura-mep-details-in-neura.png][12]
 
 Last, ensure that Braze and Neura users are mapped:
 Create a user alias labeled `neura_id` with your user's neura_id
@@ -73,13 +74,13 @@ mNeuraApiClient.setExternalId(USER_ID)
 
 Once both SDKs are integrated, you can set up a Campaign or Canvas in the Braze Dashboard to be trigged by Neura Moments, which are available in the Braze platform as "Custom Events".
 
-![action-based-delivery.png][12]
+![action-based-delivery.png][13]
 
 In addition, Neura recognizes real-world behavioral traits for each individual user. Using Braze, you will be able to target specific users based on their True Personas™, which are available in the Braze platform as "Custom Attributes".
 
-![segment-creation.png][13]
+![segment-creation.png][14]
 
-See the [Neura developer site][7] for more details, tutorials, and FAQs.
+See the [Neura developer site][8] for more details, tutorials, and FAQs.
 
 {% alert note %}
 The Neura SDK requires that you enable location services.
@@ -89,14 +90,15 @@ The Neura SDK requires that you enable location services.
 [1]: https://www.theneura.com/
 [2]: https://dev.theneura.com/api-reference/persona/?ref=braze
 [3]: https://dev.theneura.com/api-reference/situations-and-moments/?ref=braze
-[4]: https://dev.theneura.com/tutorials/ios/?ref=braze
-[5]: https://dev.theneura.com/tutorials/android/?ref=braze
-[6]: https://dev.theneura.com/console/
-[7]: https://dev.theneura.com/?ref=braze
+[4]: {{ site.baseurl }}/partners/technology_partners/insights/behavioral_analytics/neura_insights
+[5]: https://dev.theneura.com/tutorials/ios/?ref=braze
+[6]: https://dev.theneura.com/tutorials/android/?ref=braze
+[7]: https://dev.theneura.com/console/
+[8]: https://dev.theneura.com/?ref=braze
 
-[8]: {% image_buster /assets/img/moments-of-availability.png %}
-[9]: {% image_buster /assets/img_archive/neura-personas-moments.png %}
-[10]: {% image_buster /assets/img/neura-braze-api-key.png %}
-[11]: {% image_buster /assets/img_archive/neura-mep-details-in-neura.png %}
-[12]: {% image_buster /assets/img/action-based-delivery.png %}
-[13]: {% image_buster /assets/img/segment-creation.png %}
+[9]: {% image_buster /assets/img/moments-of-availability.png %}
+[10]: {% image_buster /assets/img_archive/neura-personas-moments.png %}
+[11]: {% image_buster /assets/img/neura-braze-api-key.png %}
+[12]: {% image_buster /assets/img_archive/neura-mep-details-in-neura.png %}
+[13]: {% image_buster /assets/img/action-based-delivery.png %}
+[14]: {% image_buster /assets/img/segment-creation.png %}
