@@ -183,6 +183,8 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
 
+For *iPads*, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+
 ## Custom Handling In-App Message Display
 
 When the [`ABKInAppMessageControllerDelegate`][16] is set, the following delegate method will be called before in-app messages are displayed:

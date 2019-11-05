@@ -7,7 +7,7 @@ page_order: 0
 
 # Creating a Content Card
 
-You can create a Content Card using the Braze platform using Campaigns. Content Cards will appear in a feed.
+You can create a Content Card using the Braze platform using Campaigns. Content Cards have a maximum size of __2kb__ (including images, links, and all content), and will appear as a [Classic Card, Banner Card, or Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/) in a feed.
 
 ## Build Your Message
 
@@ -51,7 +51,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
-|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
+|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card messages are limited to 2kb in total size (including images, links, and other content), calculated by adding the byte-size length of the following fields. |
 |Pinning | A pinned card will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Once a card has been sent you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
 |Expiration | Set the specific expiration date or the days until a Card expires. | All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |

@@ -10,7 +10,7 @@ This best practice guide will help you to understand exactly what Braze consider
 
 ## Automatically Collected Data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes.
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_primer/).
 
 #### Usage Information
 - First Used App (Date)
