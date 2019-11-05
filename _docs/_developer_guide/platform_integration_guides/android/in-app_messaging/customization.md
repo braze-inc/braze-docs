@@ -401,6 +401,9 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 {% endtab %}
 {% endtabs %}
 
+
+For *tablet* devices, In-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+
 ## GIFs {#gifs-IAMs}
 
 {% include archive/android/gifs.md channel="in-app messages" %}
