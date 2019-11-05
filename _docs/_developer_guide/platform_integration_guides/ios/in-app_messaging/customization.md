@@ -152,8 +152,6 @@ As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-io
 
 Following this, all in-app messages will be displayed in the supported orientation, regardless of device orientation. Please note that the device orientation must also be supported by the in-app message's `orientation` property in order for the message to display. For more information, see the section below.
 
-Please note that for in-app messages that have a preferred orientation and are being displayed on an *iPad*, the in-app message will appear in the style of the user's preferred orientation regardless of actual screen orientation.
-
 ### Setting Orientation Per In-App Message
 
 You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
@@ -184,6 +182,8 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 {% endtabs %}
 
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
+
+For *iPads*, In-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
 ## Custom Handling In-App Message Display
 
