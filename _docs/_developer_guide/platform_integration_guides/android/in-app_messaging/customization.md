@@ -402,7 +402,7 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 {% endtabs %}
 
 
-For *tablet* devices, In-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
 ## GIFs {#gifs-IAMs}
 
