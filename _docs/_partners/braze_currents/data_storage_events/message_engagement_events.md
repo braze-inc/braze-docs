@@ -158,7 +158,7 @@ _Update noted in August 2019._
 Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
 
 {% alert important %}
-Subscription groups are only available for email at this time.
+Subscription groups are only available for the email and SMS channels at this time.
 {% endalert %}
 
 ```json
@@ -168,6 +168,7 @@ Subscription groups are only available for email at this time.
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
   "external_user_id": (string) External ID of the user,
+  "channel": (string) either 'sms' or 'email',
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -178,7 +179,8 @@ Subscription groups are only available for email at this time.
   "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "email_address": (string) email address for this event,
+  "email_address": (string) email address for this user,
+  "phone_number": (string) phone number of the user (presented in e.164 format),
   "subscription_group_id": (string) id of the subscription group,
   "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }

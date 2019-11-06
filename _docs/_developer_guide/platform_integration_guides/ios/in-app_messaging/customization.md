@@ -156,6 +156,9 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 // Set inAppMessage orientation to portrait
 inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
@@ -164,7 +167,23 @@ inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
 inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift    
+  // Set inAppMessage orientation to portrait
+  inAppMessage.orientation = ABKInAppMessageOrientation.portrait
+    
+  // Set inAppMessage orientation to landscape
+  inAppMessage.orientation = ABKInAppMessageOrientation.landscape
+```
+
+{% endtab %}
+{% endtabs %}
+
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
+
+For *iPads*, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
 ## Custom Handling In-App Message Display
 
@@ -257,7 +276,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab OBJECTIVE-C %}
 
 ```objc
-/// Logs button click analytics
+// Logs button click analytics
 - (void)logInAppMessageClickedWithButtonID:(NSInteger)buttonID;
 ```
 
@@ -265,7 +284,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab swift %}
 
 ```swift
-/// Logs button click analytics
+// Logs button click analytics
 func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ```
 
@@ -275,10 +294,22 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ## Customizing In-App Message Behavior on Click
 The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
-- (void)setInAppMessageClickAction:(ABKInAppMessageClickActionType)clickActionType
-                           withURI:(NSURL *)uri;
+[inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
+```
+
+{% endtab %}
+{% endtabs %}
 
 The `inAppMessageClickActionType` can be set to one of the following values:
 

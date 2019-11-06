@@ -19,15 +19,15 @@ Initialize `ABKFacebookUser` objects with the Facebook data you have collected a
 
 ```objc
 ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:self.facebookUserProfile numberOfFriends:self.numberOfFacebookFriends likes:self.facebookLikes];
-  [Appboy sharedInstance].user.facebookUser = facebookUser;
+[Appboy sharedInstance].user.facebookUser = facebookUser;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
-var facebookUser : ABKFacebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes);
-Appboy.sharedInstance()?.user.facebookUser = facebookUser;
+let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes)
+Appboy.sharedInstance()?.user.facebookUser = facebookUser
 ```
 
 {% endtab %}
@@ -45,9 +45,22 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser;
 
 Additionally, you can tailor what Facebook data you're sending to Braze, in case you don't want to include the entire basic profile. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:facebookUserPublicProfile numberOfFriends:-1 likes:nil];  
 ```
+
+{% endtab %}
+{% tab SWIFT %}
+
+```swift
+let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: -1, likes:nil)
+```
+
+{% endtab %}
+{% endtabs %}
 
 For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
 
@@ -66,13 +79,13 @@ twitterUser.twitterID = self.twitterID;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
-var twitterUser : ABKTwitterUser = ABKTwitterUser();
-twitterUser.userDescription = twitterDserDescription;
-twitterUser.twitterID = twitterID;
-Appboy.sharedInstance()?.user.twitterUser = twitterUser;
+let twitterUser = ABKTwitterUser()
+twitterUser.userDescription = twitterDserDescription
+twitterUser.twitterID = twitterID
+Appboy.sharedInstance()?.user.twitterUser = twitterUser
 ```
 
 {% endtab %}

@@ -480,12 +480,12 @@ Your Endpoint will correspond to your [Braze Instance][1].
 
 Instance  | REST Endpoint
 ----------|----------------------------------------------
-US-01  | `https://rest.iad-01.braze.com/users/alias/new`
-US-02  | `https://rest.iad-02.braze.com/users/alias/new`
-US-03  | `https://rest.iad-03.braze.com/users/alias/new`
-US-04  | `https://rest.iad-04.braze.com/users/alias/new`
-US-06  | `https://rest.iad-06.braze.com/users/alias/new`
-EU-01  | `https://rest.fra-01.braze.eu/users/alias/new`
+US-01  | `https://rest.iad-01.braze.com/users/identify`
+US-02  | `https://rest.iad-02.braze.com/users/identify`
+US-03  | `https://rest.iad-03.braze.com/users/identify`
+US-04  | `https://rest.iad-04.braze.com/users/identify`
+US-06  | `https://rest.iad-06.braze.com/users/identify`
+EU-01  | `https://rest.fra-01.braze.eu/users/identify`
 
 ### New User Identify Request
 

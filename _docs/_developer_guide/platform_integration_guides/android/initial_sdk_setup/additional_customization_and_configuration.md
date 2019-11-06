@@ -10,7 +10,7 @@ platform: Android
 ## Using Proguard with Braze
 [Proguard][50] configuration is automatically included with your Braze integration.
 
-Braze Android SDK v.1.14.0 removes `keep` rules from `consumerProguardFiles` automatic Proguard configuration. Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
+Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
 
 ```
 -keep class bo.app.** { *; }

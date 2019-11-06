@@ -97,6 +97,9 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 In order to use Universal Links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your AppDelegate. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 - (BOOL)application:(UIApplication *)application
 continueUserActivity:(NSUserActivity *)userActivity
@@ -105,8 +108,25 @@ continueUserActivity:(NSUserActivity *)userActivity
     NSURL *url = userActivity.webpageURL;
     // Handle url
   }
+  return YES;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
+    let url = userActivity.webpageURL
+    // Handle url
+  }
+  return true
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 For more information, refer to [Apple's Universal Links documentation][11].**
 
@@ -147,7 +167,7 @@ You can allow a subset of links with certain domains or schemes to be treated as
 
 To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -171,7 +191,7 @@ For more information, please refer to Apple's documentation on [App Transport Se
 
 You can turn off ATS entirely. Please note that this is not recommended practice, due to both lost security protections and future iOS compatibility. To disable ATS, insert the following in your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -187,12 +207,30 @@ As of Braze iOS SDK v2.21.0, the SDK percent-encodes links to create valid `NSUR
 
 To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
   NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
   // Handle urlString
+  return YES;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    let urlString = url.absoluteString.removingPercentEncoding
+    // Handle urlString
+    return true
+  }
+```
+
+{% endtab %}
+{% endtabs %}
 
 For an implementation example, take a look at `application:openURL:sourceApplication:annotation:` method in the [`AppDelegate.m`][9] file of our Stopwatch sample application.
 

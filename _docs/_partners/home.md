@@ -17,7 +17,11 @@ valid_partner_list:
 - name: Liftigniter
   url: /docs/partners/technology_partners/data_augmentation/recommendation/liftigniter/
 - name: Neura
-  url: /docs/partners/technology_partners/data_augmentation/contextual_location/neura/
+  url: /docs/partners/technology_partners/data_augmentation/contextual_location/neura_actions/
+  title: Actions
+  alt:
+    - title: Insights
+      url: /docs/partners/technology_partners/insights/behavioral_analytics/neura_insights/
 - name: Singular
   url: /docs/partners/technology_partners/advertising_technologies/attribution/singular/
 - name: AccuWeather

@@ -10,7 +10,7 @@ Installing the Braze SDK will provide you with the ability to collect analytics 
 
 ## Step 1: Importing the Braze Unity Package
 
-As of SDK v.1.8.0, the native Unity functionality and iOS libraries for Braze’s Unity plugin are bundled as a Unity package.
+The native Unity functionality and iOS libraries for Braze’s Unity plugin are bundled as a Unity package.
 
 1. To import the provided Braze Unity package into your project, download the package associated with the [most recent SDK release][16]. There are two options:
 	- `Appboy.unitypackage`
