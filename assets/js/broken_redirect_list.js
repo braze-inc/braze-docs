@@ -6,6 +6,8 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/logging_in/']
 validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/resetting_your_password/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 
+
+validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 
@@ -26,8 +28,10 @@ validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/
 validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/api/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 
+validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/';
 
 
 validurls['/docs/SDK_Changelogs'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs';

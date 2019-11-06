@@ -32,11 +32,7 @@ hide_breadcrumb: true
 
 {% unless hide_nav %}
 <script type="text/javascript">
-{%- if site.partner_api -%}
 var alloy_partners = {%- alloy_partner {{ page.partner_api }}  -%};
-{%- else -%}
-var alloy_partners = {};
-{%- endif -%}
 
 {%- assign vp = '' -%}
 

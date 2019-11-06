@@ -1,6 +1,6 @@
 ---
 nav_title: Message Activity Log
-page_order: 2
+page_order: 1
 ---
 
 # Message Activity Log Tab {#dev-console-troubleshooting}

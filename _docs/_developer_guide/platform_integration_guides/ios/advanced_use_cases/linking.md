@@ -62,10 +62,13 @@ For more information, refer to [Apple's documentation][12] on the `LSApplication
 
 ### Step 3: Implement a Handler
 
-After activating your app, iOS will call the method [`application:handleOpenURL:`][1] (iOS 2.0-9.0) or [`application:openURL:options:`][13] (iOS 9.0+). The important argument is the [NSURL][2] object.
+After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
   NSString *path  = [url path];
   NSString *query = [url query];
   // Here you should insert code to take some action based upon the path and query.
@@ -73,11 +76,29 @@ After activating your app, iOS will call the method [`application:handleOpenURL:
 }
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+  let path = url.path
+  let query = url.query
+  // Here you should insert code to take some action based upon the path and query.
+  return true
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 ![Open News Feed][10]
 
 # Universal Links
 
 In order to use Universal Links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your AppDelegate. For example:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -87,8 +108,25 @@ continueUserActivity:(NSUserActivity *)userActivity
     NSURL *url = userActivity.webpageURL;
     // Handle url
   }
+  return YES;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
+    let url = userActivity.webpageURL
+    // Handle url
+  }
+  return true
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 For more information, refer to [Apple's Universal Links documentation][11].**
 
@@ -129,7 +167,7 @@ You can allow a subset of links with certain domains or schemes to be treated as
 
 To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -153,7 +191,7 @@ For more information, please refer to Apple's documentation on [App Transport Se
 
 You can turn off ATS entirely. Please note that this is not recommended practice, due to both lost security protections and future iOS compatibility. To disable ATS, insert the following in your app's `Info.plist` file:
 
-```
+```html
 <key>NSAppTransportSecurity</key>
 <dict>
 	<key>NSAllowsArbitraryLoads</key>
@@ -169,14 +207,32 @@ As of Braze iOS SDK v2.21.0, the SDK percent-encodes links to create valid `NSUR
 
 To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
   NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
   // Handle urlString
+  return YES;
 }
 ```
 
 For an implementation example, take a look at `application:openURL:options:` method in the [`AppDelegate.m`][9] file of our Stopwatch sample application.
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    let urlString = url.absoluteString.removingPercentEncoding
+    // Handle urlString
+    return true
+  }
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Customization {#linking-customization}
 
@@ -235,7 +291,7 @@ You can see an example implementation of `handleAppboyURL:fromChannel:withExtras
 
 ### Deep Linking to App Settings
 
-iOS 8 introduced the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
+iOS has the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [Universal Links][27].
 2. Decide on a URI for deep linking to the Settings page (e.g., `stopwatch://settings` or `https://www.braze.com/settings`).
@@ -273,8 +329,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtab %}
 {% endtabs %}
 
-
-[1]: https://developer.apple.com/library/ios/DOCUMENTATION/UIKit/Reference/UIApplicationDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:openURL:sourceApplication:annotation:
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
 [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW10 "Apple's Documentation"
 [4]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking

@@ -1,6 +1,6 @@
 ---
 nav_title: Setting Default Values
-page_order: 8
+page_order: 5
 ---
 
 # Setting Default Values
@@ -10,7 +10,7 @@ page_order: 8
 Set default fallback values for any personalization attribute that you use in your messages. Default values can be added by specifying a [Liquid Filter][3] (use `|` to distinguish the filter inline, as shown below) with the name "default."
 
 ```
- | default: 'Insert Your Desired Default Here'
+| default: 'Insert Your Desired Default Here'
 ```
 
 If a default value is not provided and the field is missing or not set on the user, the field will be blank in the message.

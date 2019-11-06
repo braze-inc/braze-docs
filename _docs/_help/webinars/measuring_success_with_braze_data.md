@@ -1,6 +1,6 @@
 ---
 nav_title: Measuring Success with Braze Data
-page_order: 8
+page_order: 7
 ---
 
 # Measuring Success with Braze Data

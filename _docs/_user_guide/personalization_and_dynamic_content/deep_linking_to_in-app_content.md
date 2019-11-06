@@ -1,6 +1,6 @@
 ---
 nav_title: Deep-Linking to In-App Content
-page_order: 4
+page_order: 2
 ---
 # Deep-Linking to In-App Content
 

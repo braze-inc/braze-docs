@@ -8,10 +8,6 @@ page_order: 0
 
 Installing the Braze SDK will provide you with analytics functionality, as well as push and in-app messages.
 
-{% alert update %}
-As of SDK version 2.1.0, use of the iOS SDK requires XCode 8 or above.
-{% endalert %}
-
 ### Step 1: Get the SDK
 
 Download the SDK from [Github][1] and run the following from the root your project:

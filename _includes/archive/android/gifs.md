@@ -143,7 +143,7 @@ public class GlideIntegrationApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Appboy.getInstance(this).setAppboyImageLoader(new GlideAppboyImageLoader());
+    Appboy.getInstance(context).setAppboyImageLoader(new GlideAppboyImageLoader());
   }
 }
 ```
@@ -155,7 +155,7 @@ public class GlideIntegrationApplication extends Application {
 class GlideIntegrationApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    Appboy.getInstance(this).appboyImageLoader = GlideAppboyImageLoader()
+    Appboy.getInstance(context).appboyImageLoader = GlideAppboyImageLoader()
   }
 }
 ```

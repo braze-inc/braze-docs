@@ -189,7 +189,7 @@ Other content
 
 # Code Test Swift
 ```swift
-Appboy.sharedInstance()!.submitFeedback(feedback) { (feedbackSentResult) in
+Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
       print("Feedback sent: (feedbackSentResult)")
     }
 ```

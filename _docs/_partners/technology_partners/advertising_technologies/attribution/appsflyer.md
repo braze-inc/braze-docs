@@ -25,7 +25,7 @@ As of March 4th, 2019, AppsFlyer requires that the Activate Partner toggle be sw
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Appboy.getInstance(MyActivity.this).getInstallTrackingId());
+String deviceId = Appboy.getInstance(context).getInstallTrackingId();
 customData.put("customData", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```

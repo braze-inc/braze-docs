@@ -2,7 +2,7 @@
 nav_title: Local Connected Content Variables
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 2
+page_order: 1
 ---
 
 # Local Connected Content Variables
