@@ -27,6 +27,7 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 | [Dismissing and Pinning Cards][4] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Rich Analytics][3] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Available in Canvas][2] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| [Connected Content][5] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | Personalization and Segmentation | Templated at Impression | Templated at Send | 
 
 ## Implementation
@@ -41,3 +42,4 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 [2]: {{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
 [3]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/reporting/
 [4]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/create/#step-2-compose-a-content-card
+[5]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/
