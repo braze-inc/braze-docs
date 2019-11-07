@@ -254,7 +254,7 @@ Introduced in [SDK v.2.29.0][21], the `ABKURLDelegate` protocol can be used to c
 ```objc
 - (BOOL)handleAppboyURL:(NSURL *)url fromChannel:(ABKChannel)channel withExtras:(NSDictionary *)extras {
   if ([[url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
-    // Custom handle link
+    // Custom handle link here
     return YES;
   }
   // Let Braze handle links otherwise
@@ -268,7 +268,7 @@ Introduced in [SDK v.2.29.0][21], the `ABKURLDelegate` protocol can be used to c
 ```swift
 func handleAppboyURL(_ url: URL, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]) -> Bool {
   if (url.host == "MY-DOMAIN.com") {
-    // Custom handle link
+    // Custom handle link here
     return true;
   }
   // Let Braze handle links otherwise
