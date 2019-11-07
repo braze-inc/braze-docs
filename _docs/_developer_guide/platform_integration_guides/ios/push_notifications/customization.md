@@ -151,17 +151,7 @@ func application(_ application: UIApplication,
 
 ### Extracting Data from Push Notification Key-Value Pairs
 
-Braze allows you to send additional key-value pairs along with a push notification via your application within the `extras` property. Please see the following example code for extracting data from that key-value pair:
-
-```objc
-- (void)handleExtrasFromPush:(NSDictionary *)notification {
-  NSLog(@"A push was received");
-  if (notification != nil && [notification objectForKey:@"Some_Key"] !=[NSNull null] && [[notification objectForKey:@"Some_Key"] length] > 0 ) {
-    NSString *value = [NSString stringWithFormat:@"%@",[notification objectForKey:@"Some_Key"]];
-    // Here based on the extras key-value pair, you can run some arbitrary code.
-  }
-}
-```
+Braze allows you to send custom-defined string key-value pairs, known as extras, along with a push notification to your application. Extras can be defined on the dashboard or from the API and will be available as string typed key-value pairs within the notification dictionary passed to your push delegate implementations.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
