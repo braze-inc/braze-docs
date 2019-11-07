@@ -72,7 +72,7 @@ In your deep link handling code, you can then add the following code to process 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
   let urlString = url.absoluteString.removingPercentEncoding
-  if (urlString == "helloswift:appstore-review") {
+  if (urlString == "{YOUR-APP-SCHEME}:appstore-review") {
     SKStoreReviewController.requestReview()
     return true;
   }
