@@ -452,9 +452,9 @@ When building against iOS 10+ we recommend you integrate the UserNotifications f
 
 ```objc
 - (void)handleExtrasFromPush:(UNNotification *)notification {
-  NSLog(@"A push was received");
+  NSLog(@"A push was received.");
   NSDictionary *userInfo = notification.request.content.userInfo;
-  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil ) {
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil) {
     // Here based on the extras key-value pair, you can run some custom code.
     [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
   }
