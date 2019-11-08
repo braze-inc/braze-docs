@@ -236,11 +236,11 @@ For an implementation example, take a look at `application:openURL:options:` met
 
 ## Customization {#linking-customization}
 
-### Web View UI Customization
+### Default WebView Customization
 
-The `ABKModalWebViewController` class, which is used to display web URLs from the SDK, is open source.
+The open-source `ABKModalWebViewController` class is used to display web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply any UI customization to the web view. Please check the class's [.h file][6] and [.m file][5] for more detail.
+You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Please check the class's [.h file][6] and [.m file][5] for more detail.
 
 ### Linking Handling Customization
 
