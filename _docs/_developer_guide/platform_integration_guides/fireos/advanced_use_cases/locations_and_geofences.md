@@ -57,7 +57,7 @@ declaration is also required:
 
 ### Step 3: Enable Braze Location Collection
 
-To enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
+If you have not yet enabled Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>

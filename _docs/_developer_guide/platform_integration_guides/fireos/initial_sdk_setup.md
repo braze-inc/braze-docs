@@ -122,6 +122,18 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 
 SDK Endpoint configuration via `appboy.xml` is available starting with Braze Android SDK v2.1.1.
 
+### Step 6: Enable Location Tracking
+
+If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
+
+```xml
+<bool name="com_appboy_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
+{% endalert %}
+
 ### SDK Integration Complete
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
