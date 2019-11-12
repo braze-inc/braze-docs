@@ -19,7 +19,7 @@ The native Unity functionality and iOS libraries for Braze’s Unity plugin are 
 		- This package only bundles the Braze Android and iOS SDKs and the accompanying C# interface, which provides native Unity functionality for Braze's iOS plugin.
 2. In the Unity Editor, import the package into your Unity project by navigating to Assets > Import Package > Custom Package.
 3. Deselect any files you do not wish to import.
-  - If you already have your own `AndroidManifest.xml`, please remember to uncheck the `AndroidManifest.xml` file during package importing to avoid overwriting your existing file. Plase refer to this file as a template for needed permissions in [here](https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml) on our public GitHub repo.
+  - If you already have your own `AndroidManifest.xml`, please remember to uncheck the `AndroidManifest.xml` file during package importing to avoid overwriting your existing file. Please refer to this file as a template for needed permissions in [here](https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml) on our public GitHub repo.
   - If you only wish to import the Android plugins, you only need to check the `Appboy` and `Android` subdirectories.
 4. Click "Import".
 
