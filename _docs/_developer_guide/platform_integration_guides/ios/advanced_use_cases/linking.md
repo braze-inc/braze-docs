@@ -236,15 +236,15 @@ For an implementation example, take a look at `application:openURL:options:` met
 
 ## Customization {#linking-customization}
 
-### Web View UI Customization
+### Default WebView Customization
 
-Braze iOS SDK v.2.30.0 open sources the `ABKModalWebViewController` class, which is used to display web URLs from the SDK.
+The open-source `ABKModalWebViewController` class is used to display web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply any UI customization to the web view. Please check the class's [.h file][6] and [.m file][5] for more detail.
+You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Please check the class's [.h file][6] and [.m file][5] for more detail.
 
 ### Linking Handling Customization
 
-Introduced in [SDK v.2.29.0][21], the `ABKURLDelegate` protocol can be used to customize handling of URIs such as deep links, web URLs and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
+The `ABKURLDelegate` protocol can be used to customize handling of URIs such as deep links, web URLs and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
 
 #### Integration Example: ABKURLDelegate
 
@@ -342,7 +342,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [17]: http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [20]: #customizing-link-handling
-[21]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#2290
 [22]: #customizing-appboy-on-startup
 [23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKURLDelegate.h
 [24]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
