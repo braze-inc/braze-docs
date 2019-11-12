@@ -246,46 +246,42 @@ You can declare a category for, or directly modify, the `ABKModalWebViewControll
 
 Introduced in [SDK v.2.29.0][21], the `ABKURLDelegate` protocol can be used to customize handling of URIs such as deep links, web URLs and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
 
-For more information, see [`ABKURLDelegate.h`][23].
+#### Integration Example: ABKURLDelegate
 
-You can see an example implementation of `handleAppboyURL:fromChannel:withExtras:` in the [AppDelegate.m][9] of our Stopwatch sample application.
-
-#### Integration Example: Universal Links
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
-@interface AppDelegate : UIResponder<UIApplicationDelegate, ABKURLDelegate>
-@end
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [Appboy startWithApiKey:@"YOUR-API-KEY"
-          inApplication:application
-      withLaunchOptions:launchOptions
-        withAppboyOptions:@{ABKURLDelegateKey : self}];
-}
-
-- (void)handleUniversalLink:(NSURL *)url {
-  NSString *urlString = [[userActivity.webpageURL absoluteString] stringByRemovingPercentEncoding];
-  // Route users within your app based on the urlString
-}
-
-- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
-  if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
-    [self handleUniversalLink:url];
-  }
-}
-
 - (BOOL)handleAppboyURL:(NSURL *)url fromChannel:(ABKChannel)channel withExtras:(NSDictionary *)extras {
-  if ([[url.host lowercaseString] isEqualToString:@"MY-WEB-DOMAIN.com"]) {
-    // Handle Universal Links sent by the Braze iOS SDK
-    [self handleUniversalLink:url];
+  if ([[url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
+    // Custom handle link here
     return YES;
   }
   // Let Braze handle links otherwise
   return NO;
 }
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+func handleAppboyURL(_ url: URL, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]) -> Bool {
+  if (url.host == "MY-DOMAIN.com") {
+    // Custom handle link here
+    return true;
+  }
+  // Let Braze handle links otherwise
+  return false;
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+For more information, see [`ABKURLDelegate.h`][23].
+
+You can see an example implementation of `handleAppboyURL:fromChannel:withExtras:` in the [AppDelegate.m][9] of our Stopwatch sample application.
 
 ## Frequent Use Cases
 
