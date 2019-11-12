@@ -14,7 +14,6 @@ Once you implement this prompt, Braze stops automatically tracking impressions a
 
 {% endalert %}
 
-{% raw %}
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
 
 Start by [setting the In-App Message delegate][30] in your app. Next,implement the following delegate method to disable the default App Store review message:
@@ -82,6 +81,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 {% endtab %}
 {% endtabs %}
+
+{% raw %}
 
 Next, create an In-App Messaging campaign with the following:
 
