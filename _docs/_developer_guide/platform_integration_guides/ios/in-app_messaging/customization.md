@@ -447,15 +447,36 @@ To enable this feature you would send a silent push to the device which allows t
 ### Step 1: Handle Silent Push and Key Value Pairs
 When building against iOS 10+ we recommend you integrate the UserNotifications framework. If you use the UserNotifications framework, add the following code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 - (void)handleExtrasFromPush:(UNNotification *)notification {
- NSLog(@"A push was received");
-NSDictionary *userInfo = notification.request.content.userInfo;
- if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil ) {
-   // Here based on the extras key-value pair, you can run some custom code.
-   [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+  NSLog(@"A push was received.");
+  NSDictionary *userInfo = notification.request.content.userInfo;
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil) {
+    [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+  }
  };
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+func handleExtrasFromPush(notification: UNNotification) {
+  NSLog("A push was received.")
+  let userInfo = notification.request.content.userInfo;
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil {
+    if let campaignName = userInfo["CAMPAIGN_NAME"] as? String {
+      Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name" : campaignName])
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile.
 
