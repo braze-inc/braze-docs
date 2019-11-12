@@ -144,7 +144,7 @@ The SDK Endpoint configuration via `appboy.xml` is available starting with __Bra
 
 ### Step 6: Enable Location Tracking
 
-If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
+If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
