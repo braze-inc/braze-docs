@@ -4,7 +4,7 @@ page_order: 2
 alias: /partners/segment_for_currents/
 ---
 
-# About Segment & Currents
+# About Segment & Currents  
 
 [Segment](https://segment.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
