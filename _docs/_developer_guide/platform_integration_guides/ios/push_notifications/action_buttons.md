@@ -57,24 +57,24 @@ See our sample code [here][33] for `UserNotification.framework` and [here][32] f
 
 ## Step 2: Enable Interactive Push Handling
 
-To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` delegate method:
+To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] getActionWithIdentifier:identifier
-                           forRemoteNotification:userInfo
-                               completionHandler:completionHandler];
+[[Appboy sharedInstance] userNotificationCenter:center
+                           didReceiveNotificationResponse:response
+                               withCompletionHandler:completionHandler];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
-                         forRemoteNotification: userInfo,
-                             completionHandler: completionHandler)
+Appboy.sharedInstance()?.userNotificationCenter(center,
+                         didReceive: response,
+                             withCompletionHandler: completionHandler)
 ```
 
 {% endtab %}
