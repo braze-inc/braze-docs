@@ -61,7 +61,7 @@ You can customize your link actions by appending the optional URL query strings 
 
 Query String Name | Value | Action
 -----------|-------|-------
-`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>(e.g., `https://www.braze.com?abButtonId=0`)
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>(e.g., `https://www.braze.com/?abButtonId=0` to track a Button 1 Click)
 `name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` (e.g., `appboy://customEvent?name=eventName`).
 `abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
 `abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
