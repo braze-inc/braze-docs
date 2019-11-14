@@ -103,20 +103,22 @@ __Frequency Capping by Tag Rule:__
 | The `promotional` tag is removed from __Campaign A__ _after_ your user received the message, but _before_ __Campaign B has sent.__ | Your user will receive __Campaign B__.|
 | The `promotional` tag is mistakenly removed from __Campaign A__ after your user received the message. <br> The tag is added back to __Campaign A__ on Tuesday, before __Campaign B__ is sent. | Your user will not receive __Campaign B__. |
 
-### Feature Limitations 
-If you send more than one hundred (100) messages per channel from campaigns/canvas steps with frequency capping turned on to a user over the duration of your frequency capping by tag rule (e.g 1 week), the frequency capping by tag rule may not always be applied properly. 
+### Sending at Large Scales 
+If you send __more than one hundred (100) messages per channel__ from Campaigns/Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly. 
 
 For example, if your frequency capping by tag rule is: 
 
-No more than two (2) email campaigns/canvas steps with the tag `Promotional` to a user every week
+> No more than two (2) email Campaigns/Canvas Steps with the tag `Promotional` to a user every week.
 
-and you send the user more than one hundred (100) emails from campaigns/canvas steps with frequency capping turned on over the course of a week, the frequency capping by tag rule may not be applied properly. 
+And you send the user more than one hundred (100) emails from Campaigns/Canvas Steps with frequency capping turned on over the course of a week, the frequency capping by tag rule may not be applied properly. 
 
-Because 100 messages per channel is many more messages than most brands send to their users, it's unlikely that you will be impacted by this limitation. To avoid this limitation, you can simply set a cap for the maximum number of emails you'd like your users to receive over the course of a week. For example, you might set up the following rule: 
+Because 100 messages per channel is many more messages than most brands send to their users, it's unlikely that you will be impacted by this limitation. To avoid this limitation, you can simply set a cap for the maximum number of emails you'd like your users to receive over the course of a week. 
 
-No more than three (3) email Campaigns/Canvas steps per week from __all__ Campaign/Canvas steps
+For example, you might set up the following rule: 
 
-This rule will ensure that no users receive more than 100 emails per week because at most users will receive 3 emails per week from campaigns/canvas steps with frequency capping turned on.
+> No more than three (3) email Campaigns/Canvas steps per week from __all__ Campaign/Canvas Steps.
+
+This rule will ensure that no users receive more than 100 emails per week because at most users will receive 3 emails per week from Campaigns/Canvas Steps with frequency capping turned on.
 
 
 
