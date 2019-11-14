@@ -18,7 +18,7 @@ Braze supports adding an alternate Dark Mode theme to in-app messages that help 
 
 Users with the latest versions of Android (10+) and iOS (13+) can toggle Dark Mode on or off in their phone's settings.
 
-When Dark Mode is enabled on a user's device, the phone's native menus and screens (push notifications, phone settings, etc.) will change to a dark grey or other dark color pallette. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
+When Dark Mode is enabled on a user's device, the phone's native menus and screens (push notifications, phone settings, etc.) will change to a dark grey or other dark color palette. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
 
 ## Setting a Dark Mode Theme
 
