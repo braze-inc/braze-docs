@@ -1,6 +1,6 @@
 ---
 nav_title: Key-Value Pairs
-page_order: 5
+page_order: 3
 ---
 # Key-Value Pairs
 
@@ -66,15 +66,25 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 }
 ```
 
+{% endraw %}
+
 ##### Custom Key-Value Pairs
 
 In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. In the message composer, click the gear icon and specify your key-value pairs below. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
 
 ![key-valueInput][17]
 
-Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so please via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key. Note you should avoid handling a top-level key or dictionary called ab in your application.
+Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so please via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key.
 
-Apple advises clients to avoid including customer information or any sensitive data as custom payload data. Furthermore, Apple recommends that any action associated with an alert message should not delete data on a device. Note that if you are using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. The legacy binary interface, which will soon be depreciated, only supports a payload size of 2048 bytes.
+{% alert warning %}
+You should avoid handling a top-level key or dictionary called ab in your application.
+{% endalert %}
+
+Apple advises clients to avoid including customer information or any sensitive data as custom payload data. Furthermore, Apple recommends that any action associated with an alert message should not delete data on a device.
+
+{% alert warning %}
+If you are using the HTTP/2 provider API, any individual payload you send to APNs cannot exceed a size of 4096 bytes. The legacy binary interface, which will soon be depreciated, only supports a payload size of 2048 bytes.
+{% endalert %}
 
 ### Android
 
@@ -96,11 +106,19 @@ Custom key-value pairs can be input by clicking the gear icon and specifying you
 
 ![key-valueInput][19]
 
-Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface; they may be used for whatever purpose you choose. Note that your app's backend must be able to process custom key-value pairs for the data payload to function properly. For more information on accessing key-value pairs sent with Android push notifications, refer to the [Braze Documention][6].
+Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface; they may be used for whatever purpose you choose.
+
+{% alert important %}
+Note that your app's backend must be able to process custom key-value pairs for the data payload to function properly.
+{% endalert %}
+
+For more information on accessing key-value pairs sent with Android push notifications, refer to the [Braze Documention][6].
 
 Braze automatically formats both payloads as a JSON before sending them to FCM.
 
 **Notification and Data Payloads**
+
+{% raw %}
 
 ```
 {
@@ -130,7 +148,9 @@ Marketers should test that silent push notifications trigger expected behavior b
 
 Upon campaign launch, you should check that you have not received any visible push notification on your test device. For instructions on how to check if your silent push notification has updated your app as intended, contact your dedicated success manager or [success@braze.com](mailto:success@braze.com).
 
-_Please note that the iOS operating system may [gate notifications][24] for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause._
+{% alert note %}
+The iOS operating system may [gate notifications][24] for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
+{% endalert %}
 
 ### Web
 
@@ -146,7 +166,13 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 
 ## Emails
 
-For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. Note that bounced emails will not deliver key-value pairs to SendGrid.
+For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
+
+{% endraw %}
+
+{% alert note %}
+Note that bounced emails will not deliver key-value pairs to SendGrid.
+{% endalert %}
 
 ![key-valueInput][22]
 
@@ -156,7 +182,6 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 
 ![key-valueInput][23]
 
-{% endraw %}
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/

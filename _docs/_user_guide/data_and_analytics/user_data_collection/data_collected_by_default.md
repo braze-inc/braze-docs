@@ -1,6 +1,6 @@
 ---
 nav_title: Data Collected by Default
-page_order: 3
+page_order: 1
 ---
 
 # Data Collected by Default

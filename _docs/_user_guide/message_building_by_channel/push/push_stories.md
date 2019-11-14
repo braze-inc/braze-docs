@@ -2,7 +2,7 @@
 nav_title: Push Stories
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 2
+page_order: 8
 ---
 
 # Push Stories

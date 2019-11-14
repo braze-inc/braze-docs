@@ -173,7 +173,9 @@ Braze supports three targeting states:
 - Only users who are opted-in.
 - All users, including those who have unsubscribed.
 
-Please note that it is your responsibility to comply with any applicable [spam laws][8] when using these targeting settings.
+{% alert important %}
+It is your responsibility to comply with any applicable [spam laws][8] when using these targeting settings.
+{% endalert %}
 
 ![Campaign Targeting Subscription UI][17]
 

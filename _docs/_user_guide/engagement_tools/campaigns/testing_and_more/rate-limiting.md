@@ -53,7 +53,9 @@ If you anticipate large campaigns driving a spike in user activity and overloadi
 
 For instance, if you are trying to send out 75K messages with a 10K per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first 7 minutes, and 5K over the last minute. Be wary of delaying time sensitive messages, however, with this form of rate-limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
 
-It is important to note that when sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
+{% alert important %}
+When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
+{% endalert %}
 
 ### Rate Limiting and Connected Content Retries
 When the [Connected Content Retry][19] feature is enabled, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s think again about the 75K messages with a 10K per minute rate limit. In the first minute, the call fails or is slow and only sends 4K messages.
@@ -97,7 +99,11 @@ Each line of frequency caps will be connected using an "AND," and you're able to
 
 There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if she has already reached her frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.  If you want a particular campaign to override Frequency Capping rules, you can set this up when scheduling that campaign's delivery by checking the box next to "Ignore frequency capping settings for this campaign". When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
 
-By default new Campaigns/Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign/Canvas. Please note that this behavior changes the default behavior when you turn off Frequency Capping for a Campaign/Canvas; the changes are backwards compatible and do not impact messages that are currently live right now.
+By default new Campaigns/Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign/Canvas.
+
+{% alert note %}
+Please note that this behavior changes the default behavior when you turn off Frequency Capping for a Campaign/Canvas; the changes are backwards compatible and do not impact messages that are currently live right now.
+{% endalert %}
 
 ![Frequency Capping Update][18]
 

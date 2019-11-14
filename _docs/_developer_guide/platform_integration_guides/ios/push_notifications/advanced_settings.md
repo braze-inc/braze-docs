@@ -16,11 +16,11 @@ By clicking the checkbox here, you will notice a dropdown of key values availabl
 
 ## Adding Content-Available Flag
 
-The content-available flag instructs iOS 7+ devices to download new content in the background. Most commonly, this can be checked on should you be interested in sending [silent notifications][2].
+The `content-available` flag instructs devices to download new content in the background. Most commonly, this can be checked on should you be interested in sending [silent notifications][2].
 
 ## Adding Mutable-Content Flag
 
-The mutable-content flag enables advanced receiver customizations in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
+The `mutable-content` flag enables advanced receiver customizations in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
 
 ## Sounds
 
@@ -32,8 +32,6 @@ Specify a Collapse ID to coalesce similar notifications. If you send multiple no
 ## Expiry
 
 Clicking the checkbox here will offer the option to set an expiration time for your message. Should a user's device lose connectivity, Braze will continue to try and send the message until the specified time. If this is not set, the platform will default to an expiration of 30 days. Please note that push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
-
-
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.gif %}
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/

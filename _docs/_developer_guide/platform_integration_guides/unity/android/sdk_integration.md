@@ -6,11 +6,11 @@ page_order: 0
 ---
 # SDK Integration
 
-Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages.
+Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages. Unity requires [the same support library version as the base Android SDK](https://github.com/Appboy/appboy-android-sdk#version-support).
 
 ## Step 1: Importing the Braze Unity Package
 
-As of SDK v.1.8.0, the native Unity functionality and iOS libraries for Braze’s Unity plugin are bundled as a Unity package.
+The native Unity functionality and iOS libraries for Braze’s Unity plugin are bundled as a Unity package.
 
 1. To import the provided Braze Unity package into your project, download the package associated with the [most recent SDK release][16]. There are two options:
 	- `Appboy.unitypackage`
@@ -19,7 +19,7 @@ As of SDK v.1.8.0, the native Unity functionality and iOS libraries for Braze’
 		- This package only bundles the Braze Android and iOS SDKs and the accompanying C# interface, which provides native Unity functionality for Braze's iOS plugin.
 2. In the Unity Editor, import the package into your Unity project by navigating to Assets > Import Package > Custom Package.
 3. Deselect any files you do not wish to import.
-  - If you already have your own `AndroidManifest.xml`, please remember to uncheck the `AndroidManifest.xml` file during package importing to avoid overwriting your existing file. Plase refer to this file as a template for needed permissions in [here](https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml) on our public GitHub repo.
+  - If you already have your own `AndroidManifest.xml`, please remember to uncheck the `AndroidManifest.xml` file during package importing to avoid overwriting your existing file. Please refer to this file as a template for needed permissions in [here](https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml) on our public GitHub repo.
   - If you only wish to import the Android plugins, you only need to check the `Appboy` and `Android` subdirectories.
 4. Click "Import".
 

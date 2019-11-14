@@ -7,11 +7,11 @@ search_rank: 5
 
 # Action Buttons {#push-action-buttons-integration}
 
-iOS 8+ introduces the ability for users to interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
+Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
 
 ![Illustration of Notification Action][13]
 
-iOS SDK version 2.27.0 introduced default Braze push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
+The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
 
 ## Step 1: Adding Braze Default Push Categories
 

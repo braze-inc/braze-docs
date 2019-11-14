@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: In-App Messaging
+nav_title: "In-App Messaging"
 layout: featured
 
 guide_top_header: "In-App Messages"

@@ -123,7 +123,7 @@ If you need to handle ADM registration yourself, you should do the following:
 - Use the [registerAppboyPushMessages()][37] method to pass your user's ADM `registration_id` to Braze:
 
   ```java
-  Appboy.getInstance(this).registerAppboyPushMessages(registration_id);
+  Appboy.getInstance(context).registerAppboyPushMessages(registration_id);
   ```
 
 >  Braze does not recommend using manual registration if possible.

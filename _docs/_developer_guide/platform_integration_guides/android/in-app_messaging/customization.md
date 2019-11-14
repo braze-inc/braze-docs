@@ -15,9 +15,22 @@ In-app message objects may carry key-value pairs as `extras`. They are specified
 
 Call the following when you get an in-app message object to retrieve its extras:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+```java
 Map<String, String> getExtras()
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+extras: Map<String, String>
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][44] for more information.
 
@@ -388,6 +401,9 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 {% endtab %}
 {% endtabs %}
 
+
+For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+
 ## GIFs {#gifs-IAMs}
 
 {% include archive/android/gifs.md channel="in-app messages" %}
@@ -432,7 +448,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
-[40]: {{ site.baseurl }}/docs/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
+[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
 [41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageViewFactory.java
 [43]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageViewFactory.java

@@ -16,15 +16,11 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 
 ![API Key Location][14]
 
-If you have been provided a custom SDK endpoint, please include this in addition to your API key:
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
-US Cluster:
+*For US-03*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})` 
 
-`appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'https://customer.iad-03.braze.com/api/v3'})`
-
-EU Cluster:
-
-`appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'https://customer.fra-01.braze.eu/api/v3'})`
+*For EU-01*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://fra-01.iad-01.braze.eu/api/v3’})`
 
 ## Enable Error Logging {#error-logging}
 
@@ -44,7 +40,7 @@ To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Ta
 
 Subsequent tags which fire after page load can then reference this. For example `<script type="text/javascript">window.appboy.logCustomEvent("test event")</script>`.
 
-Please also ensure to replace the API key and custom SDK endpoint in the code with your API key and, if applicable, custom endpoint.
+Please also ensure to replace the API key and custom SDK endpoint in the code with your API key.
 
 Braze suggests the tag has the trigger configuration of **Page View > DOM Ready**. Other Page View triggers can fire the tag, provided that no other Braze related tags are fired to prior to this.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-page_order: 2
+page_order: 1
 ---
 
 # Integration
@@ -9,7 +9,7 @@ Integrating with Braze is a worth-while process. But you're smart. You're __here
 
 But what you probably don't know was that you and your engineers/developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).
+{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
 
 ## The Technical Side of the Integration Process
 
@@ -35,7 +35,7 @@ Please ensure that you and your engineer don't unknowingly or unintentionally ch
 
 ### Step 2: They Implement Your Desired Messaging Channels
 
-Braze has many options for getting in touch with your customers/users, and each requires it's own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
+Braze has many options for getting in touch with your customers/users, and each requires its own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
 
 Be sure to tell your engineers which channels you want to use to ensure that implementation is done efficiently and in proper order.
 

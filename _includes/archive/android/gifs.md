@@ -10,8 +10,10 @@ __Note:__ Although the example below uses [Glide][gifs-67], any image library th
 
 The Image Loader delegate must implement the following methods:
 
-* [`renderUrlIntoView()`][gifs-69]
-* [`getBitmapFromUrl()`][gifs-68]
+* [`getInAppMessageBitmapFromUrl()`][gifs-71]
+* [`getPushBitmapFromUrl()`][gifs-72]
+* [`renderUrlIntoCardView()`][gifs-73]
+* [`renderUrlIntoInAppMessageView()`][gifs-74]
 * [`setOffline()`][gifs-70]
 
 The integration example below is taken from the [Glide Integration Sample App][gifs-65] included with the Braze Android SDK.
@@ -22,18 +24,37 @@ The integration example below is taken from the [Glide Integration Sample App][g
 ```java
 public class GlideAppboyImageLoader implements IAppboyImageLoader {
   private static final String TAG = GlideAppboyImageLoader.class.getName();
+
   private RequestOptions mRequestOptions = new RequestOptions();
 
   @Override
-  public void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+  public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public Bitmap getPushBitmapFromUrl(Context context, Bundle extras, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  @Override
+  public Bitmap getInAppMessageBitmapFromUrl(Context context, IInAppMessage inAppMessage, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView);
   }
 
-  @Override
-  public Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
+  private Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
     try {
       return Glide.with(context)
           .asBitmap()
@@ -64,14 +85,30 @@ class GlideAppboyImageLoader : IAppboyImageLoader {
 
   private var mRequestOptions = RequestOptions()
 
-  override fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+  override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  override fun getInAppMessageBitmapFromUrl(context: Context, inAppMessage: IInAppMessage, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView)
   }
 
-  override fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+  private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
     try {
       return Glide.with(context)
           .asBitmap()
@@ -106,7 +143,7 @@ public class GlideIntegrationApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Appboy.getInstance(this).setAppboyImageLoader(new GlideAppboyImageLoader());
+    Appboy.getInstance(context).setAppboyImageLoader(new GlideAppboyImageLoader());
   }
 }
 ```
@@ -118,7 +155,7 @@ public class GlideIntegrationApplication extends Application {
 class GlideIntegrationApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    Appboy.getInstance(this).appboyImageLoader = GlideAppboyImageLoader()
+    Appboy.getInstance(context).appboyImageLoader = GlideAppboyImageLoader()
   }
 }
 ```
@@ -141,6 +178,8 @@ _The usage of Fresco with `IAppboyImageLoader` is not supported since Fresco req
 [gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
 [gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setAppboyImageLoader-com.appboy.IAppboyImageLoader-
 [gifs-67]: https://bumptech.github.io/glide/
-[gifs-68]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getBitmapFromUrl-android.content.Context-java.lang.String-com.appboy.enums.AppboyViewBounds-
-[gifs-69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoView-android.content.Context-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
 [gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#setOffline-boolean-
+[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
+[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-

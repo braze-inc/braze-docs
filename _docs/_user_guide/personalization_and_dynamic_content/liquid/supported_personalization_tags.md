@@ -1,6 +1,6 @@
 ---
 nav_title: Supported Personalization Tags
-page_order: 2
+page_order: 1
 ---
 
 # Supported Personalization Tags

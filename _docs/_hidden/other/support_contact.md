@@ -1018,12 +1018,12 @@ $( document ).ready(function() {
     var user_subject = $('#ticket_subject').val();
 
     var user_issue = $('#ticket_issue').val();
-    var user_comments = mform.find('#ticket_comment').val();
+    //var user_comments = mform.find('#ticket_comment').val();
 
 
     var userinfo = '';
 
-    userinfo += "Question:\n" + user_issue +  "\n\nComments: " + user_comments;
+    userinfo += "Question:\n" + user_issue ; //+  "\n\nComments: " + user_comments;
     // userinfo += "\n\nAllow Dashboard Access: ";
     // if($("#all_dashboard").is(':checked')) {
     //   userinfo += 'Yes'
@@ -1233,14 +1233,14 @@ $( document ).ready(function() {
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue. "
                           placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue.  " rows="7"></textarea>
                       </div>
-                      <div class="form-group" >
+                      <!-- div class="form-group" >
 
                           <label for="ticket_comment"  id="ticket_comment_label">     Additional comments and screenshots  </label>
 
                           <textarea name="Issue_Steps" class="form-control" id="ticket_comment" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Add any other comments and link to any relevant screenshots or screencasts."
                           placeholder="Add any other comments and link to any relevant screenshots or screencasts." rows="7"></textarea>
-                      </div>
+                      </div -->
                       <div class="form-group">
                           <label style="font-size: 12px;">
                          In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.

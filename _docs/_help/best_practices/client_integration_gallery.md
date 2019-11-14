@@ -99,7 +99,7 @@ glossaries:
       - Delivery & Transportation
   - name: "Bring Users Back with a Personalized Push!"
     image: /docs/assets/img/hingealertspush.png
-    description: "<a href='https://hinge.co/'>Hinge</a> <br> <br> Push notifications can send important reminders that will encourage users to re-engage with your app. This notification is personalized and includes specific details about something that occured in the app. It also has text that entices users to click."
+    description: "<a href='https://hinge.co/'>Hinge</a> <br> <br> Push notifications can send important reminders that will encourage users to re-engage with your app. This notification is personalized and includes specific details about something that occurred in the app. It also has text that entices users to click."
     tags:
       - Media & Entertainment
       - Miscellaneous & Other
@@ -200,7 +200,7 @@ glossaries:
     tags:
       - Retail & eCommerce
       - Financial Services & Insurance
-  - name: "Nurture a Relationship with Your Users from the Beginning with an IAM!"
+  - name: "Nurture a Relationship with Your Users from the Beginning with an In-App Message!"
     image: /docs/assets/img/ibottaonboardingnutiam.PNG
     description: "<a href='https://home.ibotta.com/'>Ibotta</a> <br> <br> In-app messages contribute to your brand voice. This modal in-app message starts things off right with new users by welcoming them to the app. It includes a graphic with the brand's logo, uses their core colors, and has a tone that's friendly and helpful. The call-to-action button makes it clear what a user should do next, even though they've never used the app before. It also includes a close 'X' button so users who may already be familiar with the app can skip the tutorial."
     tags:

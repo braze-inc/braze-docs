@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting Bootcamp
-page_order: 11
+page_order: 10
 ---
 
 # Troubleshooting Bootcamp

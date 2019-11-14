@@ -235,7 +235,6 @@ Content-Type: application/json
 
 | User Profile Field | Data Type Specification |
 | ---| --- |
-| bio | (string) |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |

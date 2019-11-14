@@ -2,7 +2,7 @@
 nav_title: Connected Content Retries
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 4
+page_order: 3
 ---
 
 # Connected Content Retries

@@ -2,7 +2,7 @@
 nav_title: iOS Push Message Titles
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 7
+page_order: 2
 ---
 # iOS Push Message Titles
 
