@@ -29,5 +29,7 @@ valid_partner_list:
     url: /docs/partners/technology_partners/channel_extensions/workflow_automation/fivetran/
   - name: Zapier
     url: /docs/partners/technology_partners/channel_extensions/social/zapier_integration/
+  - name: Amazon Moments
+    url: /docs/partners/technology_partners/channel_extensions/loyalty/amazon_moments/
 
 ---
