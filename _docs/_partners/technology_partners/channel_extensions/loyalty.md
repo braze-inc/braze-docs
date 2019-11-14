@@ -13,4 +13,7 @@ valid_partner_list:
   url: /docs/partners/technology_partners/channel_extensions/loyalty/talonone/
 - name: Voucherify
   url: /docs/partners/technology_partners/channel_extensions/loyalty/voucherify/
+- name: Amazon Moments
+  url: /docs/partners/technology_partners/channel_extensions/loyalty/amazon_moments/
+
 ---
