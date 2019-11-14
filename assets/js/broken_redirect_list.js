@@ -5,7 +5,7 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/getting_your_
 validurls['/docs/user_guide/administrative/logging_in_and_security/logging_in/'] = '/docs/user_guide/administrative/access_braze/logging_in/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/resetting_your_password/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates'] = 'https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile';
 
 validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/neura_actions/';
