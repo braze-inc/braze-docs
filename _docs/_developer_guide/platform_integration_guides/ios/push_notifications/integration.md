@@ -245,6 +245,7 @@ Next, add the following code to your app's `(void)userNotificationCenter:didRece
                  didReceiveNotificationResponse:response
                           withCompletionHandler:completionHandler];
 ```
+You will find you need to include this response method in your integration with a unity wrapper.
 
 **Foreground Push Handling**
 
