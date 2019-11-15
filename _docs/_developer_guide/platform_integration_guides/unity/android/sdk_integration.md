@@ -124,7 +124,7 @@ In-app messages from Braze's servers are automatically displayed natively.  To d
 
 Braze supports integrating [Amazon ADM push][10] into Unity apps.  If you would like to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM api key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, please visit our [ADM push integration instructions][11].
 
-### Receiving In-App Message Data in C#
+### Receiving In-App Message Data in Unity
 
 Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming in-app messages.
 
@@ -137,7 +137,7 @@ Sample `appboy.xml` Snippet:
 
 The method `InAppMessageReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming in-app message data.
 
-### Receiving Content Card Data in C#
+### Receiving Content Card Data in Unity
 
 Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming Content Cards.
 
