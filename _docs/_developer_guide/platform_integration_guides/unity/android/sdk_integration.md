@@ -139,7 +139,7 @@ The method `InAppMessageReceivedCallback` in our [sample callback code][8] shows
 
 ### Receiving Content Card Data in C#
 
-Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming content cards.
+Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming Content Cards.
 
 Sample `appboy.xml` Snippet:
 
@@ -148,18 +148,18 @@ Sample `appboy.xml` Snippet:
 <string name="com_appboy_content_cards_updated_listener_callback_method_name"></string>
 ```
 
-The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming content card data into our convenience wrapper class for content cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
+The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming Content Card data into our convenience wrapper class for content cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
 
 Sample code for parsing incoming content card data:
 
 ```
 void ExampleCallback(string message) {
-	// Example of logging a content card displayed event
+	// Example of logging a Content Card displayed event
 	AppboyBinding.LogContentCardsDisplayed();
 	try {
 		JSONClass json = (JSONClass)JSON.Parse(message);
 
-		// Content card data is contained in the `mContentCards` field of the top level object.
+		// Content Card data is contained in the `mContentCards` field of the top level object.
 		if (json["mContentCards"] != null) {
 			JSONArray jsonArray = (JSONArray)JSON.Parse(json["mContentCards"].ToString());
 			Debug.Log(String.Format("Parsed content cards array with {0} cards", jsonArray.Count));
@@ -171,7 +171,7 @@ void ExampleCallback(string message) {
 					ContentCard card = new ContentCard(cardJson);
 					Debug.Log(String.Format("Created card object for card: {0}", card));
 
-					// Example of logging content card analytics on the ContentCard object 
+					// Example of logging Content Card analytics on the ContentCard object 
 					card.LogImpression();
 					card.LogClick();
 				} catch {
