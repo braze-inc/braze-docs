@@ -150,6 +150,41 @@ Sample `appboy.xml` Snippet:
 
 The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming content card data into our convenience wrapper class for content cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
 
+Sample code for parsing incoming content card data:
+
+```
+void ExampleCallback(string message) {
+	// Example of logging a content card displayed event
+	AppboyBinding.LogContentCardsDisplayed();
+	try {
+		JSONClass json = (JSONClass)JSON.Parse(message);
+
+		// Content card data is contained in the `mContentCards` field of the top level object.
+		if (json["mContentCards"] != null) {
+			JSONArray jsonArray = (JSONArray)JSON.Parse(json["mContentCards"].ToString());
+			Debug.Log(String.Format("Parsed content cards array with {0} cards", jsonArray.Count));
+
+			// Iterate over the card array to parse individual cards.
+			for (int i = 0; i < jsonArray.Count; i++) {
+				JSONClass cardJson = jsonArray[i].AsObject;
+				try {
+					ContentCard card = new ContentCard(cardJson);
+					Debug.Log(String.Format("Created card object for card: {0}", card));
+
+					// Example of logging content card analytics on the ContentCard object 
+					card.LogImpression();
+					card.LogClick();
+				} catch {
+					Debug.Log(String.Format("Unable to create and log analytics for card {0}", cardJson));
+				}
+			}
+		}
+	} catch {
+		throw new ArgumentException("Could not parse content card JSON message.");
+	}
+}
+```
+
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
