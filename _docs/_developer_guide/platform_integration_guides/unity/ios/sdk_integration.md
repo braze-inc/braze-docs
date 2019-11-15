@@ -78,7 +78,7 @@ Braze's Content Cards feature allows you to insert content directly into your ap
 
 The method `ContentCardsReceivedCallback` in our [sample callback code][38] shows an example of parsing incoming Content Card data into our convenience wrapper class for Content Cards, [`ContentCard.cs`][39]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
 
-Sample code for parsing incoming content card data:
+Sample code for parsing incoming Content Card data:
 
 ```
 void ExampleCallback(string message) {

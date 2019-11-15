@@ -148,9 +148,9 @@ Sample `appboy.xml` Snippet:
 <string name="com_appboy_content_cards_updated_listener_callback_method_name"></string>
 ```
 
-The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming Content Card data into our convenience wrapper class for content cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
+The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming Content Card data into our convenience wrapper class for Content Cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
 
-Sample code for parsing incoming content card data:
+Sample code for parsing incoming Content Card data:
 
 ```
 void ExampleCallback(string message) {
