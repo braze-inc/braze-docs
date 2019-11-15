@@ -113,7 +113,7 @@ void ExampleCallback(string message) {
 }
 ```
 
-### News Feed Integration Complete
+### Content Cards Integration Complete
 
 ## News Feed Integration
 
