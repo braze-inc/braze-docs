@@ -5,7 +5,7 @@ page_order: 3
 
 # Phone Numbers
 
-This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [Short & Long Codes]({{ site.basurl }}/onboarding_with_braze/sms_setup/short_and_long_codes/).
+This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [Short & Long Codes]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
 Phone numbers are shown in the User Profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
