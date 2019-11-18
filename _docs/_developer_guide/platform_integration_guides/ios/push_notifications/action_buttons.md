@@ -73,8 +73,8 @@ Typically, someone following our [normal push integration][39] should already ha
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
-                         didReceive: response,
-                             withCompletionHandler: completionHandler)
+                                                didReceive: response,
+                                                withCompletionHandler: completionHandler)
 ```
 
 {% endtab %}
