@@ -488,6 +488,10 @@ You can manually log or set a Content Card as "dismissed" to Braze [for a partic
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
+## Disabling Swipe To Dismiss
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display in the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
+
 ## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
@@ -534,3 +538,4 @@ See the [Javadoc][36] for more information.
 [45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
