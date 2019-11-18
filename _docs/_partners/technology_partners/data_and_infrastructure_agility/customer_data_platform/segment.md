@@ -1,42 +1,43 @@
 ---
 nav_title: Segment
-page_order: 3
+page_order: 1
 alias: /partners/segment/
 ---
 # About Segment  
 
-![Segment Overview]({% image_buster /assets/img/segment.gif %}){: height="50%" width="50%" align="right"} [Segment][10] is an analytics data hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze. 
+{% include youtube.html id="RfOHfZ34hYM" align="right" %}
 
-We offer both a [side-by-side SDK integration](#side-by-side-sdk-integration) for your Android, iOS and web applications and a [server-to-server](#segment-1) integration for your backend services so that you can start building richer user profiles.
+[Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/).
+We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
+
+If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
 ## Pre-Requisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Segment Account & Account Information | Segment | https://app.segment.com/login | You must have an active Segment Account to utilize their services with Braze. |
-| Installed Source and Segment Source Libraries | Segment | https://segment.com/docs/sources/ | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
-| Destinations | Segment | https://segment.com/docs/destinations/ | Places that receive data from Segment for storage, analysis, or action - like Braze! <br> <br> Braze must be successfully installed into your app or site. |
+| Segment Account & Account Information | Segment | [https://app.segment.com/login](https://app.segment.com/login) | You must have an active Segment Account to utilize their services with Braze. |
+| Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
+| Destinations | Segment | [https://segment.com/docs/destinations/](https://segment.com/docs/destinations/) | Places that receive data from Segment for storage, analysis, or action - like Braze! <br> <br> Braze must be successfully installed into your app or site. |
+| Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][34], [Android][35] and [Web][38] documentation. | Braze must be successfully installed onto your app or site. |
 
-## Configure Braze Settings in Segment
+## Step 1: Configure Braze Settings in Segment {#connection-settings}
 
-When configuring Braze [from Segment][11], you'll have many options to customize the flow of data between Braze and Segment.
+![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: height="50%" width="50%" align="right"} When configuring [Braze as a destination from Segment](https://segment.com/docs/destinations/), you'll have many options to customize the flow of data between Braze and Segment using [Connection Settings](#connection-settings). 
 
-### Connection Settings
-
-|Name| Description |
+| Name| Description |
 |---|---|
-|App Identifier| Once called the API Key. Found in the Developer Console. |
-|REST API Key| Once called the "App Group Identifier". Found in the Developer Console. |
-|Custom API Endpoint| Given to you by your Braze support or account representative. For example: `https://sdk.api.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
-|Appboy Datacenter| This is your [Braze Instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). Select it from the drop down. |
-|Custom REST API Endpoint| Given to you by your Braze support or account representative. For example: `https://rest.iad.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
+| App Identifier| Previously called the API Key. Found in the Developer Console. |
+| REST API Key| Previously called the "App Group Identifier". Found in the Developer Console. <br> <br> __The REST API Key is not required for the Side-by-Side Integration.__ |
+| API Endpoint| Find and enter your [Braze SDK Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) in our documentation (`sdk.iad-01.braze.com`). |
+| Appboy Datacenter| Select your [Braze Instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
+| Log Purchase when Revenue is present | Choose when to log purchases. |
+| Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) in our documentation (`rest.iad-01.braze.com`). |
 |Safari Website Push ID| Safari requires a Website Push ID to send push. [More on this here]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push). |
 |Braze Web SDK Version| Which version of the Braze Web SDK you have integrated. You should have found this out during your initial integration process, but if you're unsure, reach out to your account manager or Braze support. |
 
-### Optional Settings
-
+{% details Additional Connection Settings you might see during your integration. %}
 |Name|Options | Description|
 |---|---|---|
 |Allow Crawler Activity| On/Off (True/False) | Web Crawlers are automatic programs that visit websites, read then, and collect information that might be important for a search engine index. You can either allow or disallow this from your integrated web page or app. Braze disallows this by default. |
@@ -50,65 +51,114 @@ When configuring Braze [from Segment][11], you'll have many options to customize
 |Session Timeout In Seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
 |Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/) to Braze as Page Events.|
 |Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/) to Braze
-|Update Existing Users Only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users vs. existing users will be updated. This defaults to false. |
+|Update Existing Users Only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users vs. existing users will be updated. This defaults to `false`. |
+{% enddetails %}
 
-## Side-by-Side SDK Integration
+<br>
 
-Also called "Cloud Mode", a side-by-side integration maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. These mappings of Segment's SDK for [Android][31], [iOS][32] and [Analytics.js (Segment's Javascript SDK)][33]  are open source and can be found on our GitHub page.
+{% alert note %}
+The keys you are required to input in Segment's dashboard can be found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android][29] and [iOS][30]. For Braze's Web SDK, Segment's Analytics.js library dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web][37] documentation.
+<br>
 
-{% alert important %}
-If you are given a custom endpoint for your Braze integration, be sure to add the custom endpoint to the "Custom API Endpoint" and your correct "Braze Datacenter" on your Braze destination settings found in Segment's dashboard. For the side-by-side integration, the "REST API Key" is **not** necessary.
+![Braze Developer Console - API Settings]({% image_buster /assets/img_archive/dashboard_keys_locations.png %})
+
 {% endalert %}
 
-![Segment's Dashboard UI][42]
 
-The keys required to input in Segment's dashboard can be found in the [Developer Console][45] under the 'API Settings' tab.
+## Step 2: Choose Integration Type and Implement {#integration-options}
 
-![Braze Developer Console - API Settings][44]
+You can integrate Segment's Web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Cloud-mode") integration, or a server-to-server ("Device-mode") integration.
 
-For more details regarding Braze's SDKs, please refer to our [iOS][34], [Android][35] and [Web][38] documentation.
+| Integration | Details |
+| ----------- | ------- |
+| [Side-by-Side / Cloud-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
+| [Server-to-Server / Device-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{ site.baseurl }}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 
-## Server-to-Server Integration {#segment-1}
+{% alert note %}
+You can learn more about Segment's integration options (Connection Modes), including the benefits of each, [here](https://segment.com/docs/destinations/#connection-modes).
+{% endalert %}
 
-Also called "Device Mode", the server-to-server integration forwards data from Segment to Braze's REST API. This integration is **only** used in association with Segment's [server-side libraries][36], such as their Ruby or Go SDKs. Enable the integration by setting your [App Group's REST API Key][39] and Braze's [REST API endpoint][40] for your corresponding data center in your destination settings on Segment's dashboard.
+### Side-by-Side SDK Integration
 
-![Segment's Go Integration][43]
+Also called "Cloud-mode", this integration maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
 
-Unlike the side-by-side integration, however, the server-to-server integration does not support any of Braze's UI features, such as in-app messaging, News Feed, or push notifications.
+{% tabs local %}
+{% tab Android %}
 
-### Getting Started
+mappings of Segment's SDK for [Android][31] on Github
 
-Once the Segment library is [integrated with your server][6], and Braze is added as a [destination][7] on your Segment dashboard, you can begin routing data.
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android][29].
+
+{% endtab %}
+{% tab iOS %}
+
+mappings of Segment's SDK for [iOS][32] on Github
+
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS][30].
+
+{% endtab %}
+{% tab "Web / Javascript" %}
+
+mappings of Segment's SDK for [Web / Analytics.js (Segment's Javascript SDK)][33] on Github
+
+For Braze's Web SDK, [Segment's Analytics.js library][33] dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web][37] documentation.
+
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+For the side-by-side integration, inputting the "Braze REST API Key" into your [Braze's Connection Settings](#connection-settings) in the Segment Dashboard is **not** necessary.
+{% endalert %}
+
+### Methods
 
 Braze supports the _identify_, _track_, and _group_ methods; however, our REST APIs require you to include a [user ID][41] when making these calls.
 
-### Identify
+#### Identify
 
 When you _identify_ a user, we will record information for that user with `userId` as the External User ID. Segment's special traits recognized as Braze's standard user profile fields (in parentheses) are `firstName` (`first_name`), `lastName` (`last_name`), `birthday` (`dob`), `avatar` (`image_url`), `address.city` (`home_city`), `address.country` (`country`), and `gender` (`gender`). All other traits will be recorded as [custom attributes][14].
 
 >  When passing user attribute data, please be sure that you are only passing values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
 
-### Track
+#### Track
 
 When you _track_ an event, we will record that event as a [custom event][13] using the name provided.
 
-#### Completed Order
+##### Completed Order
 
-When you _track_ an event with the name `Completed Order` using the format described in Segment's [ECommerce API][9], we will record the products you've listed as [purchases][12].
+When you _track_ an event with the name `Completed Order` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][12].
 
-### Group
+#### Group
 
-When you call _group_, we will record a custom attribute with the name `ab_segment_group_<groupId>`, where `groupId` is the group's ID in the method's parameters. For example, if the group's ID is `1234`, then the custom attribute name will be `ab_segment_group_1234`. The value of the custom attribute will be set to true.
+When you call _group_, we will record a custom attribute with the name `ab_segment_group_<groupId>`, where `groupId` is the group's ID in the method's parameters. For example, if the group's ID is `1234`, then the custom attribute name will be `ab_segment_group_1234`. The value of the custom attribute will be set to `true`.
 
-### Enabling Push Notifications {#segment-2}
 
-Currently, Braze's server-to-server integration with Segment does not support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [User Attribute Object][18] of our [User Data][19] REST API.
+### Server-to-Server Integration
 
-### How To Tell If You're Receiving Data From Segment
+Also called "Device-mode", this integration forwards data from Segment to Braze's REST API.
 
-Some [automatically captured][25] data is only available through the side-by-side integration. The following data is not available via the server-to-server integration:
+This integration is **only** used in association with Segment's [server-side libraries][36], such as their Ruby or Go SDKs.
+
+Enable the integration by setting your [App Group's REST API Key][39] and Braze's [REST API endpoint][40] for your corresponding data center in your [Connection Settings on Segment's dashboard](#connection-settings).
+
+![Segment's Go Integration][43]
+
+Similar to the side-by-side integration, three Segment [methods](#methods) map to Braze:
+
+- Identify = Setting user IDs, attributes and custom attributes
+- Track = Logging custom events and purchases
+- Page/Screen = Logging page/screen views as custom events
+
+Unlike the side-by-side integration, however, the server-to-server integration does **not** support any of Braze's UI features, such as in-app messaging, News Feed, or push notifications.
+
+#### Enabling Push Notifications
+
+Currently, Braze's server-to-server integration with Segment __does not__ support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [User Attribute Object][18] of our [User Data][19] REST API.
+
+## Step 3: Test Your Integration
+
+Some [automatically captured][25] data is only available through the side-by-side integration. The following data is __not available via the server-to-server integration__:
 
 - Sessions
 - First Used App
@@ -118,23 +168,29 @@ Consequently, most of your [app usage dashboard][27] (lifetime sessions, MAU, DA
 
 You can view your data in the [custom event dashboard][22], the [revenue dashboard][28] or by [creating a segment][23]. The custom event dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order][4]), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Completed Order][1]), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data. Note that filters related to automatically collected session data (such as "first used app" and "last used app") will not work.
 
-## Common Issues Integrating Segment with Braze
+## Best Practices
 
 ### Review Use Cases To Avoid Data Overages
 
 Segment __does not__ have a limit on the number of data elements clients send to them. Segment allows you to send all or turn on which events you will send to Braze. Rather than sending all of your events using Segment, we suggest that you review use cases with your marketing and editorial teams to determine which events you will send to Braze to avoid data overages.
 
-### Understand the Difference between ‘Customer API Endpoint’ vs ‘Custom REST API Endpoint’
+### Understand the Difference between ‘Custom API Endpoint’ vs ‘Custom REST API Endpoint’
 
-‘Custom API Endpoint’ corresponds to the custom endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). A ‘Custom REST API Endpoint’ does not exist as Braze does not have custom endpoints for REST API calls.
+{% alert important %}
+Braze no longer provides _custom_ endpoints or instances. Please see our Instance documentation for more information and to see which instances, SDK endpoints, and REST endpoints you have available to you.
+{% endalert %}
 
-### Ensure ‘Customer API Endpoint’ is Input into Segment Correctly
+Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API Endpoint
 
-Ensure that you input your proper Customer API Endpoint (for example, `customer.iad-03.braze.com`) into the Segment dashboard. The Braze integration will break if it has been entered as the Custom REST API Endpoint (for example, `https://sdk.iad-03.braze.com`), as Segment will automatically attempt to add `https://` for you, resulting in Braze initializing with the custom endpoint of `https://https://sdk.iad-03.braze.com`.
+### Ensure ‘Custom API Endpoint’ is Input into Segment Correctly
+
+Ensure that you input your proper API Endpoint in the proper format (for example, `customer.iad-03.braze.com`) into the Segment dashboard.
+
+The Braze integration will break if it has been entered as the Custom REST API Endpoint (for example: `sdk.iad-03.braze.com`), as Segment will automatically add `https://` to the beginning of the endpoint for you, resulting in Braze initializing with the custom endpoint of `https://https://sdk.iad-03.braze.com`.
 
 ### Ensure API Key is Input Correctly
 
@@ -161,11 +217,11 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 
 
-[4]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#completed-order
-[6]: https://segment.com/docs/
-[7]: https://segment.com/docs/destinations/appboy/
-[9]: https://segment.com/docs/spec/ecommerce/v2/
-[10]: https://segment.com
+[1]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#completed-order
+[2]: https://segment.com/docs/
+[3]: https://segment.com/docs/destinations/appboy/
+[4]: https://segment.com/docs/spec/ecommerce/v2/
+[5]: https://segment.com
 [11]: https://segment.com/docs/destinations/braze/
 [12]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#revenue-data
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/#user-data-collection

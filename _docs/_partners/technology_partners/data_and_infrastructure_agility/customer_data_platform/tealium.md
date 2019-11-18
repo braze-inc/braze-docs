@@ -1,5 +1,6 @@
 ---
 nav_title: Tealium
+page_order: 2
 alias: /partners/tealium/
 ---
 
