@@ -8,9 +8,9 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_o
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery'] = '/docs/user_guide/intelligence/intelligent_timing';
-validurls['docs/hidden/misc_reference/most_engaged_channel'] = '/docs/user_guide/intelligence/intelligent_channel';
-validurls['docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection'] = '/docs/user_guide/intelligence/intelligent_selection';
-validurls['docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing'] = '/docs/user_guide/intelligence/multivariate_testing';
+validurls['/docs/hidden/misc_reference/most_engaged_channel'] = '/docs/user_guide/intelligence/intelligent_channel';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection'] = '/docs/user_guide/intelligence/intelligent_selection';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing'] = '/docs/user_guide/intelligence/multivariate_testing';
 
 validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/neura_actions/';
