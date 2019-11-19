@@ -123,6 +123,10 @@ The [`IInAppMessageManagerListener`][21] interface has in-app message view metho
 
 For further context, the time between [afterInAppMessageViewOpened][93] and [beforeInAppMessageViewClosed][94] is when the in-app message view is on screen, visible to the user.
 
+{% alert note %}
+  No implementation of these methods is required. They are merely provided to track/inform of the in-app message view lifecycle. It is functionally acceptable to leave these method implementations empty.
+{% endalert %}
+
 ### Step 3: Instruct Braze to use your In-App Message Manager Listener
 
 Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
