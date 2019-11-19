@@ -1,7 +1,6 @@
 ---
 nav_title: Dark Mode Themes
 page_order: 5.20
-hidden: false
 ---
 
 {% alert note %}
