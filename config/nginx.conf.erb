@@ -151,18 +151,18 @@ http {
     # old site redirects
     rewrite ^/academy$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/introduction/;
     rewrite ^/academy/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/introduction/;
-    rewrite ^/academy/Scheduling_and_Organizing_Campaigns/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery permanent;
+    rewrite ^/academy/Scheduling_and_Organizing_Campaigns/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
     rewrite ^/academy/Troubleshooting_Guide/$ <%= ENV['SITE_URL'] || ''%>/docs/help/home/ permanent;
     rewrite ^/academy/Deep_Dives/Conversion_Events/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/ permanent;
     rewrite ^/academy/Deep_Dives/Creating_a_Webhook/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/ permanent;
-    rewrite ^/academy/Quick_Wins/Optimal_Send_Time/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery permanent;
+    rewrite ^/academy/Quick_Wins/Optimal_Send_Time/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
 
 
     rewrite ^/academy/Deep_Dives/Conversion_Events$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/ permanent;
     rewrite ^/academy/Deep_Dives/Creating_a_Webhook$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/ permanent;
-    rewrite ^/academy/Quick_Wins/Optimal_Send_Time$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery permanent;
+    rewrite ^/academy/Quick_Wins/Optimal_Send_Time$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
 
-    rewrite ^/academy/Scheduling_and_Organizing_Campaigns$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery permanent;
+    rewrite ^/academy/Scheduling_and_Organizing_Campaigns$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
     rewrite ^/academy/Troubleshooting_Guide$ <%= ENV['SITE_URL'] || ''%>/docs/help/home/ permanent;
 
     rewrite ^/academy/email_open_tracking/$ <%= ENV['SITE_URL'] || ''%>/docs/email_open_tracking_pixel/ permanent;
