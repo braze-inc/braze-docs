@@ -490,7 +490,7 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 
 ## Disabling Swipe To Dismiss
 
-Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display in the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
 ## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
