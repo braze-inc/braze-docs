@@ -15,9 +15,22 @@ In-app message objects may carry key-value pairs as `extras`. They are specified
 
 Call the following when you get an in-app message object to retrieve its extras:
 
-```
+{% tabs %}
+{% tab JAVA %}
+
+```java
 Map<String, String> getExtras()
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+extras: Map<String, String>
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][44] for more information.
 
@@ -387,6 +400,9 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 {% endtab %}
 {% endtabs %}
+
+
+For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
 ## GIFs {#gifs-IAMs}
 

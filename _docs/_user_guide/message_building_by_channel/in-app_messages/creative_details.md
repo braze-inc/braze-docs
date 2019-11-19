@@ -1,6 +1,6 @@
 ---
 nav_title: Creative Details
-page_order: 4
+page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! After all, you have to know those rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
@@ -13,18 +13,18 @@ guide_featured_list:
 - name: Slideup
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
   image: /assets/img/icon_slideup.png
-- name: Full-Screen
+- name: "Full-Screen"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/
   image: /assets/img/icon_full_screen.png
 ---
 
-Braze in-app messages have both global and individual creative specifications. For more information on our more customizable in-app message types, go to our [Customize]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
+## About
 
+Braze in-app messages have both global and individual creative specifications. For more information on our more customizable in-app message types, go to our [Customize]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
 
 {% alert important %}
   These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{ site.baseurl }}/help/best_practices/in-app_messages/previous_in-app_message_generations/) documentation.
 {% endalert %}
-
 
 ## Character and Copy Limits
 

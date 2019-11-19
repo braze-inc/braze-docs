@@ -1,6 +1,6 @@
 ---
 nav_title: Opening CSV Reports in Excel
-page_order: 11
+page_order: 9
 ---
 
 # Opening CSV Exports in Excel

@@ -1,6 +1,6 @@
 ---
 nav_title: Personalization and Liquid
-page_order: 9
+page_order: 8
 ---
 
 # Personalization and Liquid

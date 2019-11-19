@@ -57,7 +57,7 @@ declaration is also required:
 
 ### Step 3: Enable Braze Location Collection
 
-To enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to true.
+If you have not yet enabled Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
@@ -67,7 +67,7 @@ To enable Braze location collection, update your `appboy.xml` file to include `c
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
-Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to true in `appboy.xml`, independently of the value of `com_appboy_enable_location_collection`. 
+Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `appboy.xml`, independently of the value of `com_appboy_enable_location_collection`. 
 
 ```xml
 <bool name="com_appboy_geofences_enabled">true</bool>
@@ -106,7 +106,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 Note that Braze syncs geofences to devices using background push. In most cases this will involve no code changes, as this feature requires no further integration on the part of the app.
 
-However, note that if your application is stopped, receiving a background push will launch it in the background and its Application.onCreate() method will be called. If you have a custom Application.onCreate() implementation, you should defer automatic server calls and any other actions you would not want triggered by background push.
+However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want triggered by background push.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle

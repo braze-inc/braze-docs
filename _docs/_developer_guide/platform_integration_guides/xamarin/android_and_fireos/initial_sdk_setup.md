@@ -24,8 +24,6 @@ The simplest integration method involves getting the Braze SDK Bindings from the
 
 The second integration method is to include the binding source found [here][3].  Under `appboy-component\src\android` you will find our binding source code; adding a project reference to the ```AppboyPlatform.XamarinAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
 
-![Project Reference][10]
-
 >  The Braze Nuget package depends on the the [`Xamarin.Android.Support.v4`][12] Nuget package.
 
 ### Step 2: Configure the Braze SDK in Appboy.xml
@@ -72,7 +70,6 @@ You should now be able to launch your application and see sessions being logged 
 [7]: #track-sessions
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
-[10]: {% image_buster /assets/img_archive/xamarin_android_project.png %}
 [11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/Appboy.xml
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
 [13]: https://www.nuget.org/packages/AppboyPlatform.AndroidBinding/

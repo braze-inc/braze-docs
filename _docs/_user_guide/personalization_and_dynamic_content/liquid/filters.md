@@ -1,6 +1,6 @@
 ---
 nav_title: Filters
-page_order: 4
+page_order: 3
 ---
 
 # Filters

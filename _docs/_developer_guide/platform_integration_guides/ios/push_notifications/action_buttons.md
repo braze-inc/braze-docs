@@ -7,11 +7,11 @@ search_rank: 5
 
 # Action Buttons {#push-action-buttons-integration}
 
-iOS 8+ introduces the ability for users to interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
+Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
 
 ![Illustration of Notification Action][13]
 
-iOS SDK version 2.27.0 introduced default Braze push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
+The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
 
 ## Step 1: Adding Braze Default Push Categories
 
@@ -57,24 +57,24 @@ See our sample code [here][33] for `UserNotification.framework` and [here][32] f
 
 ## Step 2: Enable Interactive Push Handling
 
-To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` delegate method:
+If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] getActionWithIdentifier:identifier
-                           forRemoteNotification:userInfo
-                               completionHandler:completionHandler];
+[[Appboy sharedInstance] userNotificationCenter:center
+                           didReceiveNotificationResponse:response
+                               withCompletionHandler:completionHandler];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
-                         forRemoteNotification: userInfo,
-                             completionHandler: completionHandler)
+Appboy.sharedInstance()?.userNotificationCenter(center,
+                                                didReceive: response,
+                                                withCompletionHandler: completionHandler)
 ```
 
 {% endtab %}
@@ -111,3 +111,4 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 [36]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
+[39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling

@@ -1,6 +1,6 @@
 ---
 nav_title: Deliverability Pitfalls & Spam Traps
-page_order: 4
+page_order: 3
 ---
 
 # Deliverability Pitfalls & Spam Traps

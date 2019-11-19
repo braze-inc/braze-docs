@@ -15,7 +15,7 @@ guide_featured_list:
 - name: Customization
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/
   fa_icon: fas fa-palette
-- name: Read & Unread Indicators
+- name: "Read & Unread Indicators"
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/read_unread_indicators/
   fa_icon: fas fa-toggle-on
 - name: Refreshing the Feed
@@ -27,6 +27,10 @@ guide_featured_list:
 - name: Data Model
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
   fa_icon: fas fa-server
+- name: Multiple Feeds
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/
+  fa_icon: fas fa-th-list
+
 ---
 <br>
 

@@ -422,7 +422,7 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
@@ -432,8 +432,8 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
         // Your logic below
     }
 };
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Appboy.getInstance(this).requestContentCardsRefresh(true);
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Appboy.getInstance(context).requestContentCardsRefresh(true);
 ```
 
 {% endtab %}
@@ -441,15 +441,15 @@ Appboy.getInstance(this).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all content cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Appboy.getInstance(this).requestContentCardsRefresh(true)
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Appboy.getInstance(context).requestContentCardsRefresh(true)
 ```
 
 {% endtab %}
@@ -461,14 +461,14 @@ We also recommend unsubscribing when your custom activity moves out of view. Add
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}
@@ -487,6 +487,10 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.l
 You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
+
+## Disabling Swipe To Dismiss
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
 ## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
@@ -534,3 +538,4 @@ See the [Javadoc][36] for more information.
 [45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
