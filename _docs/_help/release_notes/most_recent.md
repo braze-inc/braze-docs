@@ -7,6 +7,33 @@ page_order: 0
 
 _Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
+
+## November 2019
+
+More to come! Check back later this month for more updates!
+
+### Intelligence Suite
+
+Braze's [Intelligence Suite]({{ site.baseurl }}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{ site.baseurl }}/user_guide/intelligence/intelligent_selection/).
+
+{% alert note %}
+The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Delivery", and "multivariate and A/B testing".
+{% endalert %}
+
+### Dark Mode Themes for In-App Messages
+
+iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
+
+<img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
+
+### SMS Metrics in Engagement Reports
+
+SMS Metrics are now available in [Engagement Reports]({{ site.baseurl }}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
+
+### Delete a Braze User's Teams
+
+You can now delete a team from a Braze User's account!
+
 ## October 2019
 
 ### Improved Canvas Variant Analytics
@@ -64,34 +91,6 @@ This way, customers who use transactional messaging can trace the call back thro
 Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
 
 ![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
-
-
-## August 2019
-
-### Campaign Details in Reports
-
-Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
-
-![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
-
-### New Email Content Block API Endpoints
-
-You can now manage ([create]({{ site.baseurl }}/api/endpoints/email_templates/#create-content-block), [list available]({{ site.baseurl }}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{ site.baseurl }}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
-
-{% alert update %}
-This feature is temporarily in limited availability. Please reach out to your Braze account manager for more information.
-{% endalert %}
-
-### Custom Email Unsubscribe Landing Page Update
-
-The default [custom Email Unsubscribe page]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
-
-### iOS SDK - Notched Phone Support Improvement
-
-Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
-
-You won't see many updates in the Docs reflecting this change just yet - but they're on the way!
-
 
 
 [support]: {{ site.baseurl }}/support_contact/

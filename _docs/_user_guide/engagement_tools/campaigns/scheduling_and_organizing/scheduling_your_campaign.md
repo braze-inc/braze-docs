@@ -170,7 +170,7 @@ API Triggered Campaigns are ideal for more advanced transactional use-cases. Bra
 
 ### Setting up an API Triggered Campaign
 
-Setting up an API Triggered Campaign is easy. First, create a new multichannel or single channel campaign (with multiviariate testing). 
+Setting up an API Triggered Campaign is easy. First, create a new multichannel or single channel campaign (with multivariate testing).
 
 {% alert note %}
 An API Triggered Campaign is different from an [API Campaign][46].
@@ -242,11 +242,11 @@ Changing the rate at which your messages will send will go into effect at the be
 [5]: #local-time-zone-campaigns
 [6]: #local-use
 [7]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
-[8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[8]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [11]: #delivery-rules
-[12]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[12]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [13]: #intelligent-use
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
 [15]: #triggered
@@ -273,7 +273,7 @@ Changing the rate at which your messages will send will go into effect at the be
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
 [38]: {% image_buster /assets/img_archive/api_trigger_photo_social_example_1.png %}
 [39]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[40]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[40]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
 [42]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [43]: {% image_buster /assets/img_archive/api-trigger-reeligible.png %}
