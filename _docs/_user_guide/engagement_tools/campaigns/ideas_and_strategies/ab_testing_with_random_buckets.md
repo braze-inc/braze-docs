@@ -80,7 +80,7 @@ You can test the effectiveness of different message channel combinations. For in
 [9]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
 [10]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
 [11]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery
-[12]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[12]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [13]: {{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [14]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
