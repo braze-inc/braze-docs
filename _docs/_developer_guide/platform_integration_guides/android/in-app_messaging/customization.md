@@ -100,7 +100,7 @@ Before customizing in-app messages with custom listeners, it's important to unde
 
 The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
 
-#### Step 1: Implement an In-App Message Manager Listener
+### Step 1: Implement an In-App Message Manager Listener
 
 Create a class that implements [`IInAppMessageManagerListener`][21].
 
@@ -112,7 +112,18 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 - See [`CustomInAppMessageManagerListener.java`][36] in our Droidboy sample app for an implementation example.
 
-#### Step 2: Instruct Braze to use your In-App Message Manager Listener
+### Step 2: Hook into In-App Message View Lifecycle Methods (Optional)
+
+The [`IInAppMessageManagerListener`][21] interface has in-app message view methods that are called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
+
+- [beforeInAppMessageViewOpened][92] - Called just before the in-app message is added to the Activity's view. The in-app message is not yet visible to the user at this time.
+- [afterInAppMessageViewOpened][93] - Called just after the in-app message is added to the Activity's view. The in-app message is now visible to the user at this time.
+- [beforeInAppMessageViewClosed][94] - Called just before the in-app message is removed from the Activity's view. The in-app message is still visible to the user at this time.
+- [afterInAppMessageViewClosed][95] - Called just after the in-app message is removed from the Activity's view. The in-app message is no longer visible to the user at this time.
+
+For further context, the time between [afterInAppMessageViewOpened][93] and [beforeInAppMessageViewClosed][94] is when the in-app message view is on screen, visible to the user.
+
+### Step 3: Instruct Braze to use your In-App Message Manager Listener
 
 Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
@@ -589,3 +600,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [89]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/DefaultInAppMessageViewWrapper.java
 [90]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapper.html
 [91]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setCustomInAppMessageViewWrapperFactory-com.appboy.ui.inappmessage.IInAppMessageViewWrapperFactory-
+[92]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewOpened-android.view.View-com.appboy.models.IInAppMessage-
+[93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewOpened-android.view.View-com.appboy.models.IInAppMessage-
+[94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.appboy.models.IInAppMessage-
+[95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.appboy.models.IInAppMessage-
