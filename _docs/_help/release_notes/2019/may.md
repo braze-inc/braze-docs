@@ -97,6 +97,10 @@ _Update noted in August 2019._
 
 ## Most Engaged Channel
 
+{% alert update %}
+As of the [November 2019 product release]({{ site.baseurl }}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/).
+{% endalert %}
+
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
