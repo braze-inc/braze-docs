@@ -80,6 +80,32 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 {% endtab %}
 {% endtabs %}
 
+If you are not using UNNotification Framework you will need to add the following code to your app's `application:handleActionWithIdentifier:forRemoteNotification:completionHandler:` to enable Braze's push action button handling:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance] getActionWithIdentifier:identifier
+                           forRemoteNotification:userInfo
+                               completionHandler:completionHandler];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
+                                                 forRemoteNotification: userInfo,,
+                                                 completionHandler: completionHandler)
+```
+
+{% endtab %}
+{% endtabs %}
+
+
+> We strongly reccomend that people using `handleActionWithIdentifier` begin using UNNotification Framework.
+
 
 
 [0]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
