@@ -31,6 +31,6 @@ This is what it looks like for your users to open a basic Content Card feed. As 
 ![Content Cards Feed]({% image_buster /assets/img/cc-feed_web.png %}){: height="50%" width="50%"}
 
  {% alert note %}
- Content Cards have a maximum size of 2kb (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
  {% endalert %}
 

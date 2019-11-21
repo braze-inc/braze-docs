@@ -81,6 +81,10 @@ Braze allows clients to replace existing default images with their own custom im
 
 {% alert note %} Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. {% endalert %}
 
+ {% alert note %}
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ {% endalert %}
+
 ## Customizing the Content Cards Feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. Alternatively, you can create a completely custom view controller and subscribe for data updates. In the latter case, you would need to log all view events, dismissed events, and clicks manually.
