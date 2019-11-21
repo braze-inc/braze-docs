@@ -24,7 +24,7 @@ If you're looking for information on the Currents integration with Segment, [cli
 
 ## Step 1: Configure Braze Settings in Segment {#connection-settings}
 
-![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: height="50%" width="50%" align="right"} When configuring [Braze as a destination from Segment](https://segment.com/docs/destinations/), you'll have many options to customize the flow of data between Braze and Segment using [Connection Settings](#connection-settings). 
+![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: height="50%" width="50%" align="right"} When configuring [Braze as a destination from Segment](https://segment.com/docs/destinations/), you'll have many options to customize the flow of data between Braze and Segment using [Connection Settings](#connection-settings).
 
 | Name| Description |
 |---|---|
@@ -81,26 +81,26 @@ You can learn more about Segment's integration options (Connection Modes), inclu
 
 ### Side-by-Side SDK Integration
 
-Also called "Cloud-mode", this integration maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
+Also called "Cloud-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
 
 {% tabs local %}
 {% tab Android %}
 
-mappings of Segment's SDK for [Android][31] on Github
+See and set up mappings to Segment's SDK for [Android][31] on Braze's Github.
 
 To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android][29].
 
 {% endtab %}
 {% tab iOS %}
 
-mappings of Segment's SDK for [iOS][32] on Github
+See and set up mappings to Segment's SDK for [iOS][32] on Braze's Github.
 
 To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS][30].
 
 {% endtab %}
 {% tab "Web / Javascript" %}
 
-mappings of Segment's SDK for [Web / Analytics.js (Segment's Javascript SDK)][33] on Github
+See and set up mappings to Segment's SDK for [Web / Analytics.js (Segment's Javascript SDK)][33] on Braze's Github.
 
 For Braze's Web SDK, [Segment's Analytics.js library][33] dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web][37] documentation.
 
@@ -113,7 +113,7 @@ For the side-by-side integration, inputting the "Braze REST API Key" into your [
 
 ### Methods
 
-Braze supports the _identify_, _track_, and _group_ methods; however, our REST APIs require you to include a [user ID][41] when making these calls.
+Braze supports the [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/), and [Page](https://segment.com/docs/spec/page/) (for mobile) / [Screen](https://segment.com/docs/spec/screen/) (web) Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls.
 
 #### Identify
 
