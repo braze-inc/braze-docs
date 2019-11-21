@@ -104,7 +104,7 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 {% endtabs %}
 
 
-> We strongly reccomend that people using `handleActionWithIdentifier` begin using UNNotification Framework.
+> We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework.
 
 
 
