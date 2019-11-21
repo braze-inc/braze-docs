@@ -104,7 +104,7 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 {% endtabs %}
 
 
-> We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework.
+> We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework. We recommend this due to the [deprecation of handleActionWithIdentifier][40].
 
 
 
@@ -138,3 +138,4 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 [37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
 [39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
+[40]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623068-application?language=objc
