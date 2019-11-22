@@ -81,6 +81,13 @@ For example, to build a segment that targets users with a date attribute between
 | Check if the date attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the selected calendar date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be counted up to, but __not including__ November 18, 2019. 
+{% endalert %}
+
 ## Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
 
@@ -125,6 +132,13 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
+{% endalert %}
+
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the selected calendar date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be counted up to, but __not including__ November 18, 2019. 
 {% endalert %}
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
