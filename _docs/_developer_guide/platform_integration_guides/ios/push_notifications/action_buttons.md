@@ -49,7 +49,7 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 {% endtab %}
 {% endtabs %}
 
->  Clicking on push action buttons with background activation mode will only dismiss the notification and will not open the app. Button click analytics for these actions will be flushed to the server the next time the user opens the app.
+Clicking on push action buttons with background activation mode will only dismiss the notification and will not open the app. Button click analytics for these actions will be flushed to the server the next time the user opens the app.
 
 >  If you wish to create your own custom notification categories, see our [action button customization][37] documentation.
 
@@ -57,7 +57,9 @@ See our sample code [here][33] for `UserNotification.framework` and [here][32] f
 
 ## Step 2: Enable Interactive Push Handling
 
-If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
+If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. 
+
+To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` delegate method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -103,8 +105,11 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 {% endtab %}
 {% endtabs %}
 
+{% alert important %}
+We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework. We recommend this due to the [deprecation of handleActionWithIdentifier](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623068-application?language=objc).
+{% endalert %}
 
-> We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework. We recommend this due to the [deprecation of handleActionWithIdentifier][40].
+<br>
 
 
 
