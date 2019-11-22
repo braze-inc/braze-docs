@@ -409,7 +409,7 @@ private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscribe
 {% tab KOTLIN %}
 
 ```kotlin
-private val mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 {% endtab %}
@@ -498,6 +498,10 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 See the [Javadoc][36] for more information.
 
 ## GIFs {#gifs-news-content-cards}
+
+ {% alert note %}
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ {% endalert %}
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 

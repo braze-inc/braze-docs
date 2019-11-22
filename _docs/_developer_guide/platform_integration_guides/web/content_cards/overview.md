@@ -29,3 +29,8 @@ Content Cards typically sit in a feed of sorts (but not necessarily), and help y
 This is what it looks like for your users to open a basic Content Card feed. As you can see, there are three basic types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
 ![Content Cards Feed]({% image_buster /assets/img/cc-feed_web.png %}){: height="50%" width="50%"}
+
+ {% alert note %}
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ {% endalert %}
+
