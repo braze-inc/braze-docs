@@ -31,7 +31,7 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
  ![Content Cards Feed]({% image_buster /assets/img/sample-torchy-feed-content-cards-braze.png %}){: height="50%" width="50%"}
 
  {% alert note %}
- Content Cards have a maximum size of 2kb (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
  {% endalert %}
 
 
