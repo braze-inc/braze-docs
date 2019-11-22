@@ -74,7 +74,7 @@ These data types are accepted in User Import:
 Arrays, Push Tokens, and Custom Event data types are not supported in User Import.
 Especially for Arrays, commas in your CSV file will be interpreted as a column separator; therefore, any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, please use Braze’s [User/Track REST API][14].
+For uploading these kinds of values, please use Braze’s <a href = "https://www.braze.com/docs/developer_guide/rest_api/user_data/#user-track-endpoint"> User/Track REST API</a>.
 {% endalert %}
 
 ### Importing a CSV
@@ -164,7 +164,6 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 [11]: {% image_buster /assets/img_archive/userimport-import_finished.png %}
 [12]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint
 [errors]:#common-errors
 [date]: https://en.wikipedia.org/wiki/ISO_8601
 [utf8]: https://en.wikipedia.org/wiki/UTF-8

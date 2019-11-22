@@ -22,7 +22,7 @@ _Most Recent App Version_ filters on an app's user-facing version name. This fil
 
 #### App Version Code
 
-_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
+_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with the Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+, and can be enabled by your Braze account manager.
 
 ![App Version Filter][1]
 
