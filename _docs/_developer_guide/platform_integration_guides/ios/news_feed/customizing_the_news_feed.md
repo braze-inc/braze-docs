@@ -15,6 +15,8 @@ Braze allows clients to replace existing default images with their own custom im
 
 {% alert note %} Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. {% endalert %}
 
+{% alert note %} Note that overriding default images is currently not supported in our Xamarin iOS integration. {% endalert %}
+
 ## Creating a Custom News Feed
 
 You can create your own News Feed interface by extending `ABKNewsFeedTableViewController`. You can customize all UI elements and News Feed behavior in this way.
