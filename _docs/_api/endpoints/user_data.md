@@ -456,9 +456,7 @@ Content-Type: application/json
 
 ```json
 {
-  "external_id" : (required, string) see External User ID below,
-  // external_ids for users that do not exist will return a non-fatal error. 
-  // (See Server Responses for details.)
+  "external_id" : (optional, string) see External User ID below,
   // If an external_id is not present, a user will still be created, but needs to be identified down the road 
   // (See "Identifying Users" and the `users/identify` endpoint below.)
   "alias_name" : (required, string),
