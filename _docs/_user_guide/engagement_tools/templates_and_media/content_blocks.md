@@ -1,6 +1,6 @@
 ---
 nav_title: Content Blocks
-page_order: 2
+page_order: 1
 ---
 
 # Content Blocks
@@ -27,6 +27,8 @@ Content Blocks currently have two types: `HTML` or `text`. Braze will select the
 {% comment %}
 While there is little value to having ‘types’ today, it will become important in the future as we add additional types.  We envision better validation being done, as well as more specific UI based on the type selected.
 {% endcomment %}
+
+You can also [create and manage your Content Blocks via API][5].
 
 ## Using Content Blocks
 
@@ -86,3 +88,4 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/archive-content-block.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
+[5]: {{ site.baseurl }}/api/endpoints/email_templates/#content-blocks

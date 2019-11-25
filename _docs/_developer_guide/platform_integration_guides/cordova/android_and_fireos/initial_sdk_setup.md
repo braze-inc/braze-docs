@@ -23,10 +23,9 @@ cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
 In your config.xml, add a `preference` element under the android `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
 
 ```
-    <platform name="android">
-        <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
-        ...
-    </platform>
+<platform name="android">
+    <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
+</platform>
 ```
 
 ### Setting Extra Configuration
@@ -43,6 +42,8 @@ The Cordova Android SDK also allows for various other settings to be configured 
     <preference name="com.appboy.android_log_level" value=LOG_LEVEL_INTEGER />
     <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="true"/"false" />
     <preference name="com.appboy.android_fcm_sender_id" value="str_YOUR_FCM_SENDER_ID" />
+    <preference name="com.appboy.enable_location_collection" value="true"/"false" />
+    <preference name="com.appboy.geofences_enabled" value="true"/"false" />
 </platform>
 ```
 
@@ -58,7 +59,6 @@ See the [Android Cordova Plugin][2] for more details.
 </platform>
 ```
 
-
 ### Customized Setup
 
 Note that this plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the javascript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
@@ -67,7 +67,30 @@ Users that check their platform directory into version control (enabling them to
 
 #### Removing automatic push setup (Android)
 
-To remove automatic push registration on Android set the `com.appboy.firebase_cloud_messaging_registration_enabled` value in the plugin `config.xml` to false.
+To remove automatic push registration on Android set the following configuration preferences:
+
+```
+<platform name="android">
+    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="false" />
+</platform>
+```
+
+#### Location Collection and Geofences
+
+To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
+
+```
+<platform name="android">
+    <preference name="com.appboy.enable_location_collection" value="true" />
+    <preference name="com.appboy.geofences_enabled" value="true" />
+</platform>
+```
+
+The geofence-branch can be added to your Cordova project with the following:
+
+```
+cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
+```
 
 ### Initial Setup Complete
 
@@ -75,3 +98,4 @@ Once the initial setup is complete, you can access the `AppboyPlugin` javascript
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
 [2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/AppboyPlugin.java
+[3]: https://github.com/Appboy/appboy-cordova-sdk/tree/geofence-branch

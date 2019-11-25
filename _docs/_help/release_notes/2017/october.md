@@ -13,7 +13,7 @@ On iOS and Android, you can now [create notifications][74] with multiple pages, 
 
 [Currents][75] displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. It launches with integrations for Amazon Redshift, Amplitude, and data management platforms Segment and mParticle. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or [open a support ticket][support].
 
-## Okta Single Sign On (October 2017)
+## Okta Single Sign-On (October 2017)
 
 Companies can use Okta to control Braze access and allow or force their fellow Braze users to log in using Okta credentials. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or [open a support ticket][support].
 
@@ -63,7 +63,7 @@ The limit to [email footers][76] is now 100kb. This update is in line with email
 [38]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
 [39]: {{ site.baseurl }}/help/best_practices/push/
 [40]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/
-[41]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[41]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [42]: {{ site.baseurl }}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags
 [43]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/#content-test-groups
 [44]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
@@ -73,7 +73,7 @@ The limit to [email footers][76] is now 100kb. This update is in line with email
 [48]: {{ site.baseurl }}/help/best_practices/in-app_messages/
 [49]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#overview
 [50]: {{ site.baseurl }}/user_guide/administrative/manage_your_users/user_import/#user-import
-[51]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#step-5-preview-message
+[51]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message
 [52]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#targeting-filters
 [53]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#step-6-preview-message
 [54]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template

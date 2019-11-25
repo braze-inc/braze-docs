@@ -14,7 +14,7 @@ module Jekyll
         # converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
         type = converter.convert(@caption).gsub(/<\/?p[^>]*>/, '').chomp
         body = converter.convert(super(context))
-        "<div class='alert alert-#{type}' role='alert'><div class='alert-msg'> <b>#{type}: </b>#{body}</div></div>"
+        "<div class='alert alert-#{type}' role='alert'><div class='alert-msg'> <b>#{type}: </b><br />#{body}</div></div>"
       end
 
     end

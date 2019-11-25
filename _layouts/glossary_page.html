@@ -1,6 +1,6 @@
 ---
 layout: default
-hide_toc: false
+hide_toc: true
 hide_bottom_nav: false
 hide_breadcrumb: false
 ---
@@ -14,10 +14,14 @@ hide_breadcrumb: false
 {%- assign hide_bottom_nav = page.hide_bottom_nav -%}
 {%- assign hide_breadcrumb = page.hide_breadcrumb -%}
 {%- assign hide_feedback = page.hide_feedback -%}
+{%- assign hide_toc = page.hide_toc -%}
+
 {%- unless hide_nav -%}
 {%- assign hide_nav = layout.hide_nav -%}
 {%- endunless -%}
-
+{%- unless hide_toc -%}
+{%- assign hide_toc = layout.hide_toc -%}
+{%- endunless -%}
 {%- unless hide_bottom_nav -%}
 {%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
 {%- endunless -%}
@@ -36,24 +40,21 @@ hide_breadcrumb: false
 <script type="text/javascript">
 
 {%- comment -%} Tag list allows for name and icon or image.{%- endcomment -%}
+{%- assign glossary_tags = "" -%}
 
-{%- assign glossary_tags = '' -%}
 {%- for tag in page.glossary_tags -%}
   {%- if glossary_tags != '' -%}
     {%- assign glossary_tags = glossary_tags | append: ','  -%}
   {%- endif -%}
 
+
   {%- capture glossary_tags -%}
-  {{ glossary_tags }}
-  "{{ tag['name'] | slugify | replace: '"', '\\"' }}": ["{{ tag['name'] | replace: '"', '\\"' }}"]
+  {{ glossary_tags }} {{ tag['name'] }}
   {%- endcapture -%}
 {% endfor %}
 
-var glossary_tags = {
-  {{ glossary_tags }}
-};
 
-{%- comment -%} Data order: 0 name, 1 description,2 metric,3 calculation,4 tags {%- endcomment -%}
+{%- comment -%} Data order: 0 name, 1 description,2 metric,3 calculation,4 field, 5 tags {%- endcomment -%}
 {%- assign glossary_list = '' -%}
 {%- for glossary in page.glossaries -%}
   {%- if glossary_list != '' -%}
@@ -61,7 +62,7 @@ var glossary_tags = {
   {%- endif -%}
   {%- capture glossary_list -%}
   {{ glossary_list }}
-  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}","{{ glossary['metric'] | replace: '"', '\\"' }}","{{ glossary['calculation'] | replace: '"', '\\"' }}",
+  "{{ glossary['name'] | downcase | replace: '"', '\\"' }}": ["{{ glossary['name'] | slugify | downcase | replace: '"', '\\"' }}","{{ glossary['name'] | replace: '"', '\\"' }}","{{ glossary['description'] | replace: '"', '\\"' }}","{{ glossary['metric'] | replace: '"', '\\"' }}","{{ glossary['calculation'] | replace: '"', '\\"' }}","{{ glossary['field'] | replace: '"', '\\"' }}",
   {%- endcapture -%}
   {%- assign glossary_tag = '' -%}
   {%- assign glossary_list = glossary_list | append: '['  -%}
@@ -80,12 +81,14 @@ var glossaries_list = {
 };
 
 var glossary_map = {
-  'name': 0,
-  'description': 1,
-  'metric': 2,
-  'calculation': 3,
-  'tags': 4,
-  'glossary_tags': 4
+  'id': 0,
+  'name': 1,
+  'description': 2,
+  'metric': 3,
+  'calculation': 4,
+  'field': 5,
+  'tags': 6,
+  'glossary_tags': 7,
 }
 $(document).ready(function() {
   function string_to_slug(str) {
@@ -99,9 +102,10 @@ $(document).ready(function() {
         str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
     }
 
-    str = str.replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
+    str = str.replace(/[\(\)]/g, '') // remove parenthsis
+        .replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
         .replace(/\s+/g, '-') // collapse whitespace and replace by -
-        .replace(/-+/g, '-'); // collapse dashes
+        .replace(/-+/g, '-');  // collapse dashes
 
     return str;
   }
@@ -116,8 +120,8 @@ $(document).ready(function() {
   var glossary_div = $('#glossary_list');
 
   var alltags = []
-  $.each(glossary_tags,function(k,v){
-    alltags.push(v[0]);
+  $.each("{{ glossary_tags }}".split(','),function(k,v){
+    alltags.push(v.replace(/^\s+|\s+$/gm,''));
   });
 
 
@@ -156,83 +160,48 @@ $(document).ready(function() {
     return found;
   }
 
-  function generate_card(cur_glossary){
-    var card_id = string_to_slug(cur_glossary[glossary_map['name']]);
-    var card_title = $('<p>').addClass('title').html(cur_glossary[glossary_map['name']]);
-    var tags = cur_glossary[glossary_map['tags']];
-
-    if (matchterms('all', tags)) {
-      tags = alltags;
-    }
-    var card_tag = $('<div>').addClass('tags');
-    if (tags.length){
-      card_tag.append($('<div>').addClass('tag').html('Filter Category: ' + tags.join(', ')));
-    }
-
-    var card_desc = $('<p>').addClass('desc').html(cur_glossary[glossary_map['description']]);
-
-    var card_metric = '';
-    if  (cur_glossary[glossary_map['metric']]) {
-      card_metric = $('<div>').addClass('metric').html('Metric: ' + cur_glossary[glossary_map['metric']]);
-    }
-    var card_calc = '';
-    if  (cur_glossary[glossary_map['calculation']]) {
-      card_calc = $('<div>').addClass('caclulation').html('Calculation: ' + cur_glossary[glossary_map['calculation']]);
-    }
-
-    var card_div = $('<div>').addClass('content').append(card_title).append(card_desc).append(card_metric).append(card_calc).append(card_tag);
-
-    var append_html = $('<span>').attr('id','filter_' + card_id).addClass('term').append($('<h2>').attr('id', card_id)).append(card_div);
-    return append_html;
-  }
-
-  function generate_glossarys(glossary_hash,initialize) {
+  function generate_glossarys(glossary_hash) {
     var result_cnt = 0;
     $('#results_msg').hide();
     for (var i = 0; i < glossary_hash['sorted'].length;i++){
       var cur_glossary = glossary_hash['data'][glossary_hash['sorted'][i]];
       var cur_filter_text = glossary_hash['search'][glossary_hash['sorted'][i]];
-       if (initialize) {
-         glossary_div.append(generate_card(cur_glossary));
+      var toappend = true;
+      var filtered = true;
+      var selected_vals = [];
+      $('.glossary_filter_div input[type="checkbox"]:checked').each(function(k,v){
+       selected_vals.push($(this).val());
+      })
+      if (selected_vals.length) {
+         toappend = false;
+         // Don't filter if item is set to all tags
+         if (matchterms('all',cur_glossary[glossary_map['tags']])) {
+           filter = false;
+         }
+         else if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
+           filtered = false;
+         }
+       }
+
+        var search_str = $('#glossary_search').val().toLowerCase();
+        if (search_str.length ) {
+         toappend = false;
+         if (!matchterms(search_str, cur_filter_text)) {
+           filtered = false;
+         }
+        }
+
+        if (filtered) {
+         toappend = true;
+        }
+        if (toappend ) {
+         $('#filter_' + cur_glossary[glossary_map['id']]).show();
          result_cnt++;
-       }
-       else {
-         var toappend = true;
-         var filtered = true;
-         var selected_vals = [];
-         $('.glossary_filter_div input[type="checkbox"]:checked').each(function(k,v){
-           selected_vals.push($(this).val());
-         })
-         if (selected_vals.length) {
-           toappend = false;
-           // Don't filter if item is set to all tags
-           if (matchterms('all',cur_glossary[glossary_map['tags']])) {
-             filter = false;
-           }
-           else if (!matchterms(selected_vals, cur_glossary[glossary_map['tags']]))  {
-             filtered = false;
-           }
-         }
+        }
+        else {
+         $('#filter_' + cur_glossary[glossary_map['id']]).hide();
+        }
 
-         var search_str = $('#glossary_search').val().toLowerCase();
-         if (search_str.length ) {
-           toappend = false;
-           if (!matchterms(search_str, cur_filter_text)) {
-             filtered = false;
-           }
-         }
-
-         if (filtered) {
-           toappend = true;
-         }
-         if (toappend ) {
-           $('#filter_' + string_to_slug(cur_glossary[glossary_map['name']])).show();
-           result_cnt++;
-         }
-         else {
-           $('#filter_' + string_to_slug(cur_glossary[glossary_map['name']])).hide();
-         }
-       }
     }
     if (!result_cnt) {
       $('#results_msg').html('<p>No glossarys matching these filters</p>');
@@ -252,22 +221,22 @@ $(document).ready(function() {
   })
   glossary_hash['sorted'].sort();
 
-  generate_glossarys(glossary_hash,true);
+  generate_glossarys(glossary_hash);
   var query_str = getUrlParameter('tags').toLowerCase().split(',');
   $('.glossary_filter_div input[type="checkbox"]').each(function(e){
     $(this).on('click', function(e){
-      generate_glossarys(glossary_hash,false);
+      generate_glossarys(glossary_hash);
     });
     if (matchterms($(this).val(), query_str)) {
       $(this).prop('checked',true);
     }
   });
   if (query_str.length) {
-    generate_glossarys(glossary_hash,false);
+    generate_glossarys(glossary_hash);
   }
 
   $('#glossary_search').on('keyup',function(e){
-    generate_glossarys(glossary_hash,false);
+    generate_glossarys(glossary_hash);
   });
   if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
     // Scroll to generated hash
@@ -308,6 +277,38 @@ $(document).ready(function() {
 
     <div id="glossary_list" class="flex mx-auto">
 
+      {%- assign glossary_sorted = page.glossaries | sort: 'name' -%}
+      {%- for glossary in glossary_sorted -%}
+      {%- assign glossary_id = glossary['name'] | slugify | downcase -%}
+        <span id="filter_{{ glossary_id }}" class="term">
+          <h2 id="{{ glossary_id }}"></h2>
+          <div class="content"><p class="title">{{ glossary['name'] }}</p>
+            {%- if glossary['image'] -%}
+            <img src="{{ glossary['image'] }}" />
+            {%- endif -%}
+            <p class="desc">{{ glossary['description'] }}</p>
+            {%- if glossary['metric'] -%}
+            <div class="metric">Metric: {{ glossary['metric'] }}</div>
+            {%- endif -%}
+            {%- if glossary['calculation'] -%}
+            <div class="caclulation">Calculation: {{ glossary['calculation'] }}</div>
+            {%- endif -%}
+            {%- if glossary['field'] -%}
+            <div class="field">Field: {{ glossary['field'] }}</div>
+            {%- endif -%}
+            {%- if glossary.tags.size > 0 -%}
+            <div class="tags">
+              <div class="tag">Filter Category:&nbsp;{%- if glossary.tags contains 'All' -%}
+                {{ glossary_tags }}
+              {%- else -%}
+                {{ glossary.tags | join: ", "}}
+              {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+          </div>
+        </span>
+        {%- endfor -%}
     </div>
     <div id="results_msg"></div>
 
@@ -330,9 +331,6 @@ $(document).ready(function() {
     {% include footer.html class="footer_glossary" %}
 </div>
 {%- unless hide_toc -%}
-<!-- button id="toc_toggle" class="btn btn-info collapsed notoc d-print-none" data-toggle="collapse" aria-expanded="false" href="#toc_col" >
-   <i class="fas"></i>
-</button -->
 <div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
   <div id="toc" ></div>
 </div>

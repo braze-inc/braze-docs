@@ -9,7 +9,7 @@ page_order: 3
 See [the Android integration instructions][1] for in depth discussion of revenue tracking best practices and interfaces.
 
 ```csharp
-Appboy.GetInstance(this).LogPurchase("YOUR_PURCHASE_NAME", 100);
+Appboy.GetInstance(context).LogPurchase("YOUR_PURCHASE_NAME", 100);
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases

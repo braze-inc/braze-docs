@@ -1,9 +1,9 @@
 ---
 nav_title: A/B and Multivariate Testing
-page_order: 1
+page_order: 0
 ---
 
-## A/B and Multivariate Testing
+# A/B and Multivariate Testing
 
 {% include video.html id="XY5uXoKIvFY" %}
 

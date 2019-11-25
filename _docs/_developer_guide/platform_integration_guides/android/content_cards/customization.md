@@ -4,10 +4,11 @@ page_order: 1
 search_rank: 5
 platform: Android
 ---
+# Customization
 
-### Default Styling {#default-styling-for-android}
+## Default Styling {#default-styling-for-android}
 
-Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/style.xml`](42) file in the Braze SDK distribution.
+Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
 ```xml
   <!-- Content Cards Example -->
@@ -24,11 +25,11 @@ Braze In App Messages and Content Cards come with a default look and feel that m
   </style>
 ```
 
-### Overriding Styles {#overriding-styles-for-android}
+## Overriding Styles {#overriding-styles-for-android}
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-#### Correct Style Override {#correct-style-override-for-android}
+### Correct Style Override {#correct-style-override-for-android}
 
 ```xml
 <style name="Appboy.ContentCardsDisplay">
@@ -42,7 +43,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-#### Incorrect Style Override {#incorrect-style-override-for-android}
+### Incorrect Style Override {#incorrect-style-override-for-android}
 
 ```xml
 <style name="Appboy.ContentCardsDisplay">
@@ -70,7 +71,130 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
+### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+
+To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
+
+The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
+
+Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+
+The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
+  @Override
+  public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
+    List<Card> sortedCards = event.getAllCards();
+    // Sort by pinned, then by the 'updated' timestamp descending
+    // Pinned before non-pinned
+    Collections.sort(sortedCards, new Comparator<Card>() {
+      @Override
+      public int compare(Card cardA, Card cardB) {
+        // A displays above B
+        if (cardA.getIsPinned() && !cardB.getIsPinned()) {
+          return -1;
+        }
+
+        // B displays above A
+        if (!cardA.getIsPinned() && cardB.getIsPinned()) {
+          return 1;
+        }
+
+        // At this point, both A & B are pinned or both A & B are non-pinned
+        // A displays above B since A is newer
+        if (cardA.getUpdated() > cardB.getUpdated()) {
+          return -1;
+        }
+
+        // B displays above A since A is newer
+        if (cardA.getUpdated() < cardB.getUpdated()) {
+          return 1;
+        }
+
+        // At this point, every sortable field matches so keep the natural ordering
+        return 0;
+      }
+    });
+
+    return sortedCards;
+  }
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
+  override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
+    val sortedCards = event.allCards
+    // Sort by pinned, then by the 'updated' timestamp descending
+    // Pinned before non-pinned
+    Collections.sort(sortedCards, Comparator { cardA, cardB ->
+      // A displays above B
+      if (cardA.isPinned && !cardB.isPinned) {
+        return@Comparator -1
+      }
+
+      // B displays above A
+      if (!cardA.isPinned && cardB.isPinned) {
+        return@Comparator 1
+      }
+
+      // At this point, both A & B are pinned or both A & B are non-pinned
+      // A displays above B since A is newer
+      if (cardA.updated > cardB.updated) {
+        return@Comparator -1
+      }
+
+      // B displays above A since A is newer
+      if (cardA.updated < cardB.updated) {
+        1
+      } else 0
+
+      // At this point, every sortable field matches so keep the natural ordering
+    })
+
+    return sortedCards
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+> This code can also be found here, [DefaultContentCardsUpdateHandler][46].
+
+And here's how to use the above class:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+IContentCardsUpdateHandler cardUpdateHandler = new DefaultContentCardsUpdateHandler();
+
+AppboyContentCardsFragment fragment = getMyCustomFragment();
+fragment.setContentCardUpdateHandler(cardUpdateHandler);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val cardUpdateHandler = DefaultContentCardsUpdateHandler()
+
+val fragment = getMyCustomFragment()
+fragment.setContentCardUpdateHandler(cardUpdateHandler)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Customizing Card Rendering {#customizing-card-rendering-for-android}
 
 Here's information on how to change how any card is rendered in the recyclerView. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want.
 
@@ -197,7 +321,7 @@ And here's how to use the above class:
 {% tab JAVA %}
 
 ```java
-IContentCardsViewBindingHandler viewBindingHandler = DefaultContentCardsViewBindingHandler();
+IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
 
 AppboyContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardsViewBindingHandler(viewBindingHandler);
@@ -224,7 +348,7 @@ You can handle Content Cards clicks manually by setting a custom click listener.
 
 #### Step 1: Implement a Content Cards Click Listener
 
-Create a class that implements [IContentCardsActionListener](43) and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
+Create a class that implements [IContentCardsActionListener][43] and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
 
 #### Step 2: Instruct Braze to Use Your Content Card Click Listener
 
@@ -285,7 +409,7 @@ private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscribe
 {% tab KOTLIN %}
 
 ```kotlin
-private val mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 {% endtab %}
@@ -298,7 +422,7 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
@@ -308,8 +432,8 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
         // Your logic below
     }
 };
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Appboy.getInstance(this).requestContentCardsRefresh(true);
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Appboy.getInstance(context).requestContentCardsRefresh(true);
 ```
 
 {% endtab %}
@@ -317,15 +441,15 @@ Appboy.getInstance(this).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all content cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Appboy.getInstance(this).requestContentCardsRefresh(true)
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Appboy.getInstance(context).requestContentCardsRefresh(true)
 ```
 
 {% endtab %}
@@ -337,14 +461,14 @@ We also recommend unsubscribing when your custom activity moves out of view. Add
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}
@@ -354,16 +478,30 @@ Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber
 
 When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
 
-To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`](41).
+To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 
-## Key-Value Pair.
+#### Manually Dismissing a Content Card
+
+You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
+
+If a card is already marked as dismissed, it cannot be marked as dismissed again.
+
+## Disabling Swipe To Dismiss
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
+
+## Key-Value Pairs
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 
 ## GIFs {#gifs-news-content-cards}
+
+ {% alert note %}
+ Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+ {% endalert %}
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 
@@ -400,3 +538,8 @@ See the [Javadoc][36] for more information.
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
+[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
+[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
+[46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
+[47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-

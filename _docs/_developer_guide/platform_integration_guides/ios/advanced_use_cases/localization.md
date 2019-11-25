@@ -4,11 +4,11 @@ platform: iOS
 page_order: 2
 search_rank: 5
 ---
-## Localization
+# Localization
 
-Localization is supported in version 2.5+ of the Braze iOS SDK. In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app that request feedback ("Please enter a feedback message") or when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
+In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
-### Languages Supported
+## Languages Supported
 1. Arabic
 2. Burmese
 3. Chinese - Simplified
@@ -39,7 +39,7 @@ Localization is supported in version 2.5+ of the Braze iOS SDK. In addition to E
 28. Thai
 29. Vietnamese
 
-### List of Localized Strings
+## List of Localized Strings
 
 - Free
 - Reporting an Issue?
@@ -69,13 +69,13 @@ Localization is supported in version 2.5+ of the Braze iOS SDK. In addition to E
 - Hh: mm (hour:minute format)
 - $%.2f (price format)
 
-### Technical Details
+## Technical Details
 
 For your convenience our CocoaPod integrates the `LocalizedAppboyUIString.strings` files for the aforementioned languages. If you do not wish to use one or more of these languages, you can feel free to delete these files from your project.
 
 Optionally, you can also override any of the following Key / String pairs within your app's `Localizable.strings` file much like a CSS override.
 
-### Localization String File Example
+## Localization String File Example
 
 ```objc
 /*General Braze Alarm Messages*/

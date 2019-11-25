@@ -1,6 +1,6 @@
 ---
 nav_title: Canvas Lifecycle Testing
-page_order: 4
+page_order: 3
 ---
 
 # Canvas: Lifecycle Testing

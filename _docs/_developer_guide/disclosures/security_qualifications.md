@@ -15,7 +15,7 @@ For more on this, check out [Braze Perspectives](https://www.braze.com/perspecti
 
 ![ISO Certification][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze has certification for compliance with [ISO 27001][3] as of December 18, 2018._
+_Braze has certification for compliance with [ISO 27001][3]  as of December 18, 2018, and renewed as of August 10, 2019. Expires December 17, 2021._
 
 Any third party wishing to independently verify the status of Braze's certification may query the [Schellman certificate directory][5], [read our report][7], or [see our certificate here][6].
 
@@ -27,6 +27,9 @@ _Review Date/Period: January 1, 2018 to June 30, 2018._
 
 Braze has successfully completed the Type 2 SOC 2 examination for _Security_, performed by independent CPA firm [Schellman & Company, LLC][8].
 
+## HIPAA
+
+Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) cluster complies with [the Security and Privacy rules of HIPAA](https://aspe.hhs.gov/report/health-insurance-portability-and-accountability-act-1996), as applicable. When creating this cluster, Braze worked with a lawyer who advised on HIPAA laws and worked through the compliance needs for HIPAA with respect to the Security and Privacy rules. This included a risk analysis for the environment, as well as going through each safeguard and ensuring compliance as required.
 
 [1]: {% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}
 [2]: {% image_buster /assets/img/SOC2.png %}

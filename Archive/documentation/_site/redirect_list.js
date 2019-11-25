@@ -53,8 +53,8 @@
 
     validurls['/academy/getting_started'] = '/docs/user_guide/onboarding_with_braze/overview/';
     validurls['/academy/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings';
-    validurls['/academy/quick_wins/optimal_send_time'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/';
-    validurls['/academy/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/';
+    validurls['/academy/quick_wins/optimal_send_time'] = '/docs/user_guide/intelligence/intelligent_timing/';
+    validurls['/academy/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/intelligence/intelligent_timing/';
     validurls['/academy/troubleshooting_guide/'] = '/docs/help/home/';
     validurls['/academy/user_targeting/#external-user-id'] = '/docs/developer_guide/rest_api/messaging/#external-user-id';
 
@@ -150,7 +150,7 @@
     validurls['/academy/locations_and_geofences/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/about/';
     validurls['/academy/manage_your_users/'] = '/docs/user_guide/administrative/manage_your_braze_users/adding_users_to_your_dashboard/';
     validurls['/academy/message_building_and_personalization/email/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/';
-    validurls['/academy/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/';
+    validurls['/academy/message_building_and_personalization/in-app_messages/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/create/';
     validurls['/academy/message_building_and_personalization/personalization/'] = '/docs/user_guide/personalization_and_dynamic_content/overview/';
     validurls['/academy/message_building_and_personalization/push/'] = '/docs/user_guide/message_building_by_channel/push/creating_a_push_message/';
     validurls['/academy/message_building_and_personalization/webhooks/'] = '/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/';

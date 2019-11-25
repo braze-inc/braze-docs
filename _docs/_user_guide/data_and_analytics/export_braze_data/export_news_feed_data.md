@@ -1,9 +1,9 @@
 ---
 nav_title: Export News Feed Data
-page_order: 7
+page_order: 5
 ---
 
-## News Feed Data
+# News Feed Data
 
 When analyzing the performance of a specific News Feed card, you can export the data that is found in the Performance Breakdown graphs:
 

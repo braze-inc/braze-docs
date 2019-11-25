@@ -30,7 +30,7 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ## Custom Event Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 
 # Custom Event Properties
@@ -53,6 +53,11 @@ Triggered in-app messages with templated custom event properties (for example, `
 
 Custom Event Properties are designed to help you personalize your messaging or build granular Action-Based Delivery Campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 
+You can change the data type of your custom event, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
+
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
 
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"

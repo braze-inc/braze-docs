@@ -31,16 +31,8 @@ hide_breadcrumb: true
 
 
 {% unless hide_nav %}
-<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
-   <i class="fas"></i>
-</button -->
-
 <script type="text/javascript">
-{%- if site.partner_api -%}
 var alloy_partners = {%- alloy_partner {{ page.partner_api }}  -%};
-{%- else -%}
-var alloy_partners = {};
-{%- endif -%}
 
 {%- assign vp = '' -%}
 

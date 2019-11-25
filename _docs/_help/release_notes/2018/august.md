@@ -18,6 +18,6 @@ Customers exporting data to Amazon S3 and Microsoft Azure can now include events
 
 ## Mixpanel Cohorts Integration
 
-Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{ site.baseurl }}/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
+Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{ site.baseurl }}/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
 
 [support]: {{ site.baseurl }}/support_contact/

@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-page_order: 2
+page_order: 1
 ---
 
 # Integration
@@ -9,7 +9,7 @@ Integrating with Braze is a worth-while process. But you're smart. You're __here
 
 But what you probably don't know was that you and your engineers/developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).
+{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
 
 ## The Technical Side of the Integration Process
 
@@ -35,7 +35,7 @@ Please ensure that you and your engineer don't unknowingly or unintentionally ch
 
 ### Step 2: They Implement Your Desired Messaging Channels
 
-Braze has many options for getting in touch with your customers/users, and each requires it's own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
+Braze has many options for getting in touch with your customers/users, and each requires its own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
 
 Be sure to tell your engineers which channels you want to use to ensure that implementation is done efficiently and in proper order.
 
@@ -57,7 +57,7 @@ So, what do you need to do to get them this information?
 3. From there, discuss [how that data should be tracked]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
 4. Define how many [App Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{ site.baseurl }}/developer_guide/platform_wide/app_group_configuration/) these.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Step 4: They Customize Based on What You Want
 
@@ -74,3 +74,5 @@ We even have specific instructions for [testing your Android integration]({{ sit
 Keep in mind that the Implementation Finish Line isn't also the green light to send a million messages at once! Sending a million push might break your app if every customer clicks the same link at once - we recommend discussing what your capacity of your internal set up is for handling requests from Braze before clicking that _Send_ button. Then, you can set your [rate limiting]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
 
 Now that you're more familiar with the integration process, check out the next article for [suggestions on where to go next]({{ site.baseurl }}/user_guide/onboarding_with_braze/learning_to_use_braze/)!
+
+After you're comfortable using Braze, consider becoming a Braze Firebrand! With Braze Firebrands, our customer engagement community, we're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? [Join now](https://brazefirebrands.splashthat.com/).

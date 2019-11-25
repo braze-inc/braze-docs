@@ -38,33 +38,21 @@ kramdown:
 plugins:
   - jekyll-algolia
 
-pwa:
-  sw_src_filepath: assets/js/service-worker.js # Optional
-  sw_dest_filename: service-worker.js # Optional
-  dest_js_directory: assets/js # Required
-  precache_recent_posts_num: 20 # Optional
-  precache_glob_directory: / # Optional
-  precache_glob_patterns: # Optional
-    - "assets/{js,css,fonts}/*.{js,css,eot,svg,ttf,woff,woff2}"
-    - "assets/*.{css,js}"
-    - index.html
-  precache_glob_ignores: # Optional
-    - sw-register.js
-    - "fonts/**/*"
-
-
 # Allows the DocSearch element to be inspected. Set to true locally, but don't
 # check in in that state, or it will cause undesirable behavior in prod.
 search_debug: false
 
 # For local testing, set to false to increase build time by not pulling partner api
-# data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
-partner_api: false
+# and markdown data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
+partner_api: true
+markdown_api: true
 
 # CLA Endpoint
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
 
-
+# gitHub config
+github_baseurl: 'https://github.com/Appboy/braze-docs/blob/develop/_docs/'
+github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]
 

@@ -5,141 +5,93 @@ page_order: 0
 
 # Most Recent Braze Release Notes
 
-_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]._
+_Braze releases information on it’s product updates on a monthly cadence. For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly releases, updates, and improvements._
 
-## May 2019
 
-## Content Cards
+## November 2019
 
-Content Cards are persistent content that appear within customers’ app and web experiences.
+More to come! Check back later this month for more updates!
 
-With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
+### Intelligence Suite
 
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
+Braze's [Intelligence Suite]({{ site.baseurl }}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{ site.baseurl }}/user_guide/intelligence/intelligent_selection/).
 
-In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
+{% alert note %}
+The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Delivery", and "multivariate and A/B testing".
+{% endalert %}
 
-Use it to create notification centers, homepage feeds, and promotion feeds.
+### Dark Mode Themes for In-App Messages
 
-You will need to update to a supported Braze SDK version:
-- __iOS__: 3.8.0 or above
-- __Android__: 2.6.0 or above
-- __Web__: 2.2.0 or above
+iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
 
-[Learn more about Content Cards here!]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/)
+<img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
+
+### SMS Metrics in Engagement Reports
+
+SMS Metrics are now available in [Engagement Reports]({{ site.baseurl }}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
+
+### Delete a Braze User's Teams
+
+You can now delete a team from a Braze User's account!
+
+## October 2019
+
+### Improved Canvas Variant Analytics
+
+Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. [Learn more here]({{ site.baseurl }}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant).
+
+### SMS
+
+Braze now provides SMS with Campaigns, Canvas, and [Currents]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/)! Check out our [Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/) to get started and our [SMS Sending Guide]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/) to learn more!
+
+### Content Block Improvements
+
+The API ID for a Content Block will now show on the selected Content Block page in the dashboard. Additionally, we will display where Content Blocks are being used.
+
+### Alias-only User creation and Identification via the API
+
+You can now [use an API request]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification) with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.
+
+## September 2019
 
 {% alert update %}
-Content Cards for Currents, as well as our API documentation for Content Cards, will be launched later this week. Stay tuned!
+New September updates!
 {% endalert %}
 
-### Roku Platform Addition
+### Braze App within OneLogin
 
-Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
+Customers will be able to simply search and select Braze within [OneLogin]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
 
-You can now retrieve data from Roku devices for data enrichment and custom event tracking.
+### Rokt Calendar Partnership
 
-[Check out the documentation here!]({{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
+[Rokt Calendar]({{ site.baseurl }}/partners/technology_partners/additional_channels/calendar/rokt_calendar/) provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. Customers will be able to...
 
-### Notification Preferences for Canvas & Campaign Updates
+- Send a calendar invite via Braze platform to 'save the date' and extend our communication
+- Update an existing invite if the contents of the event has changed.
 
-This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{ site.baseurl }}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
+### Passkit Partnership
 
-### Jampp Technology Partner Documentation
+With [Passkit]({{ site.baseurl }}/partners/technology_partners/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
 
-Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
+### Dispatch ID Value Return via Messaging Endpoints
 
-[Braze customers can integrate with Jampp]({{ site.baseurl }}/partners/technology_partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
+A message's `dispatch_id` will be included in the following Messaging endpoint responses:
 
-### Platform Picker for In-App Messages
+- [`/campaigns/trigger/send`]({{ site.baseurl }}/api/endpoints/messaging/#sending-messages-via-api-triggered-delivery)
+- [`/campaigns/trigger/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#create-schedule-endpoint)
+- [`/messages/send`]({{ site.baseurl }}/api/endpoints/messaging/#sending-messages-immediately-via-api-only)
+- [`/messages/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#create-schedule-endpoint)
+- [`/canvases/trigger/send`]({{ site.baseurl }}/api/endpoints/messaging/#canvas)
+- [`/canvases/trigger/schedule`]({{ site.baseurl }}/api/endpoints/messaging/#api-triggered-canvases)
 
-We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
+This way, customers who use transactional messaging can trace the call back through Currents.
 
-![Platform Picker][plat_p]
+### Canvas Changelogs
 
-### Dispatch ID Currents Field for Email
+Did you even wonder more about the details of who is working on a Canvas in your account? Wonder no more! You can now access Canvas Changelogs.
 
-In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
+![Canvas Changelogs]({% image_buster /assets/img/canvas-changelogs.gif %})
 
-The `dispatch_id` is the unique id generated for each transmission – or, dispatch – sent from the Braze platform.
-
-While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
-
-### Only Show Mine - Campaign Sorting Feature
-
-When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
-
-![Created by Me][cbm]{: height="50%" width="50%"}
-
-Also, the Campaign grid sidebar is now resizable!
-
-### Delete Users by Alias
-
-You can now use the `users/delete` endpoint to [delete users by alias]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-request)!
-
-### Unique Calculation for Email Clicks and Opens
-
-Unique Clicks and Unique Opens for Email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
-
-Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
-
-Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  Sendgrid customers should see no difference.
-
-You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
-
-### Most Engaged Channel
-
-The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
-
-Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
-
-## April 2019
-
-### New Currents Events & Fields
-
-In addition to some corrections to the section, a new [Subscription Event]({{ site.baseurl}}/partners/braze_currents/data_storage_events/message_engagement_events/#subscription-events) has been added to the Message Engagement Events page. You can now export Subscription Group State Change data from Braze to [Segment]({{ site.baseurl}}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) and [mParticle]({{ site.baseurl}}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/#integration-details), as well as that and Install Attribution Events in [Mixpanel]({{ site.baseurl}}/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents).
-
-Additionally, the property `canvas_step_id` has been added to available [Conversion Events]({{ site.baseurl}}/partners/braze_currents/data_storage_events/message_engagement_events/#conversion-events).
-
-{% alert important %}
-To take advantage of these updates, you will need to edit your Currents connector settings and enable the events you want to use. Reach out to your account manager if you have any questions.
-{% endalert %}
-
-### Subscription Groups Archiving
-
-You can now [archive Subscription Groups]({{ site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
-
-## March 2019
-
-### In-App Messages - Generation 3
-
-Braze is proud to announce that we have made improvements to the look and feel of our in-app messages to adhere to the latest UX and UI best practices. In the newest in-app messages, you can expect your users to interact with messages with
-- larger font sizes,
-- refined spacing,
-- a new close `x` asset,
-- improved responsive behavior for all message types to better fit viewports of all sizes, and
-- button borders to help you create custom contrasts between buttons.
-
-Our [new in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/) will take your interactions with your user from good to app-mazing!
-
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-
-#### What You Need to Do
-
-We highly recommend updating to the latest versions of the Braze SDKs for [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/), and [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
-
-After that, you're good to go!
-
-### Content Blocks Archive Update
-
-You can now archive and unarchive Content Blocks. Learn more in our main [Content Blocks documentation]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks).
-
-### Inkit Partner Addition
-
-You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Webhook Template or create a new Webhook Campaign.
-
-### Google Cloud Storage
-
-Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
 
 [support]: {{ site.baseurl }}/support_contact/
 [CCFeed]: {% image_buster /assets/img/cc-feed.png %}

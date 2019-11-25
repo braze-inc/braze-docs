@@ -10,7 +10,7 @@ This best practice guide will help you to understand exactly what Braze consider
 
 ## Automatically Collected Data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes.
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_primer/).
 
 #### Usage Information
 - First Used App (Date)
@@ -32,7 +32,7 @@ The following events and attributes are captured and updated automatically by th
 - Received Message from Campaign with Tag
   - This filter allows you to target users based on their having (not) received a campaign that currently has a tag.
 - Retarget Campaign
-  - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or slideup in the past
+  - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or in-app message in the past
 
 #### Device Information
 - Location Available (Boolean)
@@ -75,7 +75,7 @@ Braze notes the number of times these events have occurred as well as the last t
 
 ### Custom Event Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Event Properties
 
@@ -96,7 +96,7 @@ Custom Attributes are best for storing attributes about your users, or informati
 
 ### Custom Attribute Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Attribute Data Types
 Custom Attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
@@ -110,8 +110,8 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __IS BLANK__ | __N/A__ |
+| Check if the string attribute __exists__ on a user's profile | __IS BLANK__ | __N/A__ |
+| Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
@@ -164,8 +164,8 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 | Check if the date attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
 | Check if the date attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
 | Check if the date attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
-| Check if the date attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
-| Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+| Check if the date attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
+| Check if the date attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
 #### Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).

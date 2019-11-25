@@ -1,6 +1,6 @@
 ---
 nav_title: Building a Strategy for Android Oreo
-page_order: 2
+page_order: 1
 ---
 
 # Building a Strategy for Android Oreo

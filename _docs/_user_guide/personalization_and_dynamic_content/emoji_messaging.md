@@ -1,6 +1,6 @@
 ---
 nav_title: Emoji Messaging
-page_order: 6
+page_order: 4
 ---
 # Emoji Messaging
 

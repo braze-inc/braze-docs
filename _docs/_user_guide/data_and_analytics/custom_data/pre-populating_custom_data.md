@@ -1,6 +1,6 @@
 ---
 nav_title: Pre-Populating Custom Data
-page_order: 0
+page_order: 0.2
 ---
 
 # Pre-Populating Custom Data
@@ -17,5 +17,6 @@ Then, type in your custom attribute or event. For custom attributes, you'll need
 
 Keep in mind that when your development team integrates these custom events/ attributes later, they will need to name them exactly as you have named them here - including the use of uppercase or lowercase letters - or else Braze will generate a different custom event/ attribute.
 
+[20]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
 [22]: {% image_buster /assets/img_archive/prepopulate_add.png %}

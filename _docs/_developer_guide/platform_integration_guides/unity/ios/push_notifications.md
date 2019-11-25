@@ -40,7 +40,7 @@ Check out [Braze Academy]({{ site.baseurl }}/developer_guide/platform_integratio
 
 ## Step 3: Customize Push Notification Settings
 
-As of SDK v.1.8.0, Braze provides a native Unity solution for automating the Unity iOS push notification integration. To take advantage of this option, please ensure that you have followed the Initial SDK Setup steps on [setting your Braze API key][7] through Unity.
+Braze provides a native Unity solution for automating the Unity iOS push notification integration. To take advantage of this option, please ensure that you have followed the Initial SDK Setup steps on [setting your Braze API key][7] through Unity.
 
 - If you would prefer instead to complete the integration manually by modifying your built Xcode project, please follow the [Manual Push Integration instructions][1].
 - If you are transitioning from a manual integration to an automated one, please follow the instructions on [Transitioning from Manual to Automated Integration][2] before following the rest of these steps.
@@ -102,8 +102,7 @@ For a sample implementation, take a look at the [`PushNotificationOpenedCallback
 - Add the code below to your `application:didRegisterForRemoteNotificationsWithDeviceToken` method
 
   ```objc
-  [[Appboy sharedInstance] registerPushToken:
-                 [NSString stringWithFormat:@"%@", deviceToken]];
+  [[Appboy sharedInstance] registerDeviceToken:deviceToken];
   ```
 - Call the registerForRemoteNotificationTypes: in your `application:didFinishLaunchingWithOptions`: method
 

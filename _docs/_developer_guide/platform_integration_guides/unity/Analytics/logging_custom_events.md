@@ -7,7 +7,7 @@ page_order: 1
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][4].
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][4]. You should also check out our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ```csharp
 AppboyBinding.LogCustomEvent("event name");
@@ -18,8 +18,6 @@ Braze also supports adding metadata about custom events by passing a `Dictionary
 ```csharp
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
 ```
-
->  In versions of the SDK prior to 1.8.0, the properties `Dictionary` only supports `string` values.
 
 ### REST API
 

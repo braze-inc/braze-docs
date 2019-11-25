@@ -80,7 +80,7 @@ $search_offset: 65px;
       background-repeat: no-repeat;
       background-color: transparent;
       color: $navy-cove;
-      padding-left: 40px;
+      padding-left: 32px;
       padding-right: 0px;
       margin-right: 10px;
       //padding-right: 30px;
@@ -330,7 +330,7 @@ $search_offset: 65px;
       .aa-dropdown-menu .aa-suggestion {
         hr {
           margin-top: 15px;
-          border-width: 0.5px;
+          border-width: 1px;
           border-color: rgba($grey-ghost,0.7);
         }
         &:last-child  {
@@ -355,17 +355,17 @@ $search_offset: 65px;
 
 
           &.title {
-            font-family: $braze-black;
-            font-size: 13px;
+            font-family: $black-shark;
+            font-size: 14px;
             color: $search_color;
-
+            line-height: 1.5;
           }
 
           &.content {
             display: block;
             width: 100%;
             color: $grey-manatee;
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1.5;
           }
 
@@ -385,7 +385,6 @@ $search_offset: 65px;
       }
 
       .aa-dropdown-menu .aa-suggestion em {
-        font-weight: bold;
         font-family: $braze-black;
         color: $black-shark;
         font-style: normal;

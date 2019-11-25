@@ -1,6 +1,6 @@
 ---
 nav_title: API Settings
-page_order: 1
+page_order: 0
 ---
 
 # API Settings Tab

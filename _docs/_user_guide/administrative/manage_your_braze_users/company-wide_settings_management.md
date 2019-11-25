@@ -7,7 +7,11 @@ page_order: 5
 
 ## Company Settings Page
 
-The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company. Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
+The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company.
+
+{% alert note %}
+Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
+{% endalert %}
 
 ### Consequences of Switching Your Time Zone
 
@@ -19,7 +23,7 @@ If you choose to switch your time zone, you may face a variety of consequences:
 
 ### Notification Preferences
 
-The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should recieve notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
+The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
 ![Notification_Preferences][61]
 
@@ -100,10 +104,11 @@ Set List-Unsubscribe to ‘ON'
 
 The header is not added for messages targeting “all users including unsubscribed users,” as these represent transactional messages which do not need an unsubscribe function.
 
->
-*This feature is not supported for Mailjet customers who are in our EU data-center*
+*Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature.*
 
-*Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature*
+{% alert note %}
+If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
+{% endalert %}
 
 ## Security Settings
 

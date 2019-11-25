@@ -1,9 +1,9 @@
 ---
-nav_title: Email Sync
-page_order: 3
-search_rank: 0
+nav_title: Email Lists & Addresses
+page_order: 0
+search_rank: 2
 ---
-# Email Sync
+# Email Lists & Addresses
 
 Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database.
 

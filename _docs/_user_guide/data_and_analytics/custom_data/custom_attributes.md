@@ -8,12 +8,14 @@ Custom Attributes are best for storing attributes about your users, or informati
 
 We get that Custom Attributes can be confusing, so read closely and check out our [LAB course on Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
-### Custom Attribute Storage
+## Custom Attribute Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Event Properties are stored for sixty (60) days for segmentation.
+All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
 # Custom Attribute Data Types
-Custom Attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
+Custom Attributes are extraordinarily flexible tools that allow for great targeting.
+
+The following data types may be stored as custom attributes:
 
 ## Strings (Alpha-Numeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application.
@@ -66,6 +68,8 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
+For example, to build a segment that targets users with a date attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
+
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the date attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
@@ -76,6 +80,13 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 | Check if the date attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
 | Check if the date attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
+{% endalert %}
 
 ## Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
@@ -120,5 +131,14 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 | Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 
 {% alert tip %}
-If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/#incrementingdecrementing-custom-attributes).
+If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
+
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
+{% endalert %}
+
+You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).

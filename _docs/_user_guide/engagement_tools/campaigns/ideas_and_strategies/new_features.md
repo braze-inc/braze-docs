@@ -12,12 +12,17 @@ You work hard to continually update and improve your app, and you want your user
 
 Feature awareness campaigns are a great way to encourage users to stay engaged with your app as you continue to improve your app's functionality.  Keeping users up to date is a great way to keep them active, boost ratings and ensure user engagement.
 
-## Targeting Filters
+## Filtering by Most Recent App Versions
 
+Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign. There are two relevant version filters you can use:
 
-### Most Recent App Version
+#### Most Recent App Version
 
-Braze automatically tracks a user's most recent app version which can be used to segment users who should update their app.  You can set this filter to find users whose most recent app version is or is not a specific version of your app.
+_Most Recent App Version_ filters on an app's user-facing version name. This filter supports matching by "is", "is not", and regular expressions.
+
+#### App Version Code
+
+_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with the Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+, and can be enabled by your Braze account manager.
 
 ![App Version Filter][1]
 
@@ -46,5 +51,5 @@ Because they are relatively intrusive, push notifications and emails that ask us
 [2]: {% image_buster /assets/img_archive/update_notification.png %}
 [3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [4]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message/#creating-an-in-app-message
+[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [6]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#creating-a-news-feed-item

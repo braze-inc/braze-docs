@@ -1,6 +1,6 @@
 ---
 nav_title: User Archival Definitions
-page_order: 2
+page_order: 0
 ---
 # User Archival Definitions
 
@@ -34,5 +34,9 @@ This process ensures that Braze provides accurate statistics regarding campaign 
 That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes.
 
 If you have a user that meets the above criteria that you do not want to become Inactive or Dormant, you may simply register a single data point for that profile once every six or twelve months.
+
+{% alert important %}
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+{% endalert %}
 
 [1]: {{ site.baseurl }}/help/gdpr_compliance/#braze-recommendation

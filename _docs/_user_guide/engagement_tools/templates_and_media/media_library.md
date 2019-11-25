@@ -1,6 +1,6 @@
 ---
 nav_title: Media Library
-page_order: 1
+page_order: 0
 ---
 # Media Library
 
@@ -34,7 +34,10 @@ You can crop an existing image by selecting the image from the Media Library and
 ![media_library_crop2][3]
 
 ### Can I crop all images?
-Please note that the Media Library does not currently support cropping GIF images.
+
+{% alert note %}
+The Media Library does not currently support cropping GIF images.
+{% endalert %}
 
 ### Why can't I upload any image I want into the Push Composers?
 The reason for this is because most composers have restrictions on the image ratio size that is allowed.

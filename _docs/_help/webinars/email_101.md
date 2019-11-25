@@ -1,6 +1,6 @@
 ---
 nav_title: Email 101
-page_order: 6
+page_order: 5
 ---
 
 # Email 101

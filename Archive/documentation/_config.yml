@@ -10,7 +10,7 @@ twitter_username: Braze
 github_username:  Appboy
 permalink: /:title/
 index_url: /Platform_Wide/
-api_key: "bef30adf-6179-4b26-a3b5-42268996ad95"
+api_key: "5b26b83b-aa4e-4bd1-b9fa-81880aa8ac83"
 
 # Allows the DocSearch element to be inspected. Set to true locally, but don't
 # check in in that state, or it will cause undesirable behavior in prod.

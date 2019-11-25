@@ -3,10 +3,13 @@ nav_title: Customer Feedback
 platform: iOS
 page_order: 7
 search_rank: 5
+hidden: true
 ---
-# Customer Feedback
+{% alert Update %}
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+{% endalert %}
 
-_The Customer Feedback module has been deprecated and is not available to new integrations._
+# Customer Feedback
 
 The Braze feedback form allows users to submit feedback about your app that is immediately sent to your company's dashboard.
 
@@ -129,7 +132,7 @@ The SDK will call the completion handler after the feedback sends successfully o
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.submitFeedback(feedback) { (feedbackSentResult) in
+Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
       print("Feedback sent: \(feedbackSentResult)")
     }
 ```

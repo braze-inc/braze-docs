@@ -33,7 +33,7 @@ If you want to see how your email looks before sending it out to your users, you
 ![Enter Email Template Editing][3]
 ![E-Mail Template Editor Guide][6]
 
-Our Editor supports **HTML Autocomplete** triggered by the 'Tab' key.  It should be used on naked HTML tags. for example, use of tab on `head` will result in:
+Our Editor supports **HTML Autocomplete** triggered by the 'Tab' key.  It should be used on naked HTML tags. For example, use of tab on `head` will result in:
 {% raw %}
 ```
 <head>

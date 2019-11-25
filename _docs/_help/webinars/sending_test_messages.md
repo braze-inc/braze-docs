@@ -1,6 +1,6 @@
 ---
 nav_title: Sending Test Messages
-page_order: 10
+page_order: 9
 ---
 
 # Sending Test Messages

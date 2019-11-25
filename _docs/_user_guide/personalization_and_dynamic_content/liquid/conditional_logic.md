@@ -1,20 +1,51 @@
 ---
 nav_title: Conditional Messaging Logic
-page_order: 9
+page_order: 6
 ---
 
 # Conditional Messaging Logic (Tags)
 
-{% raw %}
 
 [Tags][7] allow you to include programming logic in your messaging campaigns.
 
+{% raw %}
 A tag must be wrapped in `{% %}`.
+{% endraw %}
 
 Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
+{% alert tip %}
+To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your liquid syntax.
+
+
+If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other liquid elements.
+
+
+For example, add the following into the message field first:  
+{% raw %}
+```liquid
+{% if X >0 %}
+{% else %}
+{% endif %}
+```
+
+Be sure it highlights in green, then replace the `X` with your chosen liquid or connected content using the blue `+` in the message field corner, and the `0` with your desired value.
+
+
+Then, add your message variations as you need them between the `else` conditionals:
+```liquid
+{% if {{custom_attribute.${total_spend}}} >0 %}
+Thanks for purchasing! Here's another 10% off!
+{% else %}
+Buy now! Would 5% off convince you?
+{% endif %}
+```
+{% endraw %}
+{% endalert %}
+
 ## Conditional Logic
 You can include many types of [intelligent logic within messages][1] -- one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+{% raw %}
 
 ```liquid
 {% if ${language} == 'en' %}

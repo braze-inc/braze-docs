@@ -120,14 +120,14 @@
 
 
       ul {
-        list-style: none;
+        list-style: square;
         margin-left:20px;
         > li {
           p {
-            display: inline;
+            display: inline-block;
           }
           &::before {
-            content: "■";
+            content: none;
             color: $black-shark;
             margin-right: 10px;
             margin-top: auto;
@@ -147,7 +147,7 @@
       ol {
         list-style: none;
         counter-reset: li;
-        margin-left:20px;
+        margin-left: 20px;
         > li {
           counter-increment: li;
           p {
@@ -317,7 +317,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $braze-regular;
-    margin-top: 15px 0px;
+    margin: 40px 0 4px 0;
   }
 
   h1 {
@@ -493,6 +493,9 @@ table {
         word-break: initial;
       }
     }
+    code.highlighter-rouge {
+      word-break: initial;
+    }
   }
   >tbody>tr>td, >tbody>tr>th, >tfoot>tr>td, >tfoot>tr>th, >thead>tr>td, >thead>tr>th {
       padding: 10px;
@@ -528,6 +531,7 @@ table {
 
 table td code.highlighter-rouge {
   background-color: transparent !important;
+  word-break: break-all;
 }
 
 .highlight table {

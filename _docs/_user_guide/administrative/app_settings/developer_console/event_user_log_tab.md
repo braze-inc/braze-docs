@@ -1,11 +1,11 @@
 ---
 nav_title: Event User Log Tab
-page_order: 3
+page_order: 2
 ---
 
 # Event User Log Tab
 
-The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associate with, when it happened, and often an opportunity to view the raw data associated with it.
+The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
 
 To find your logs easily, you can filter based on:
 
@@ -22,11 +22,11 @@ Each log is broken up into multiple sections, which can include:
 * Campaign Events
 * Response Data
 
-Click the “Raw Data” button to show the raw JSON data for that specific log.
+Click the “Raw Data” button to show the raw `JSON` data for that specific log.
 
 ![Raw logs][10]
 
-Event User Logs will remain in the dashboard for 7 days after they are logged.
+Event User Logs will remain in the dashboard for thirty (30) days after they are logged.
 
 
 [1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages

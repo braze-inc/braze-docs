@@ -3,10 +3,14 @@ nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
 search_rank: 4
+hidden: true
 ---
-# Customer Feedback
 
-_The Customer Feedback module has been deprecated and is not available to new integrations._
+{% alert Update %}
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+{% endalert %}
+
+# Customer Feedback
 
 The Braze feedback form allows users to submit feedback about your app that is immediately sent to your company's dashboard.
 
@@ -52,7 +56,7 @@ See the [`DroidBoyActivity.java` file][4] in the Droidboy sample app.
 
 ## Theming the Braze Feedback UI
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution. They are completely open source and completely customizable to suit your application's aesthetic.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution. They are completely open source and completely customizable to suit your application's aesthetic.
 
 ```xml
   <style name="Appboy"/>

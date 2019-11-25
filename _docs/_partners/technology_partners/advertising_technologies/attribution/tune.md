@@ -20,7 +20,7 @@ __Step 1: Integration Requirements__
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Tune. For most setups, this code should be included alongside all calls to `mobileAppTracker.setAndroidId` or `mobileAppTracker.setGoogleAdvertisingId`, typically in an activity's `onCreate` callback.
 
 ```java
-mobileAppTracker.setUserId(Appboy.getInstance(MyActivity.this).getInstallTrackingId());
+mobileAppTracker.setUserId(Appboy.getInstance(context).getInstallTrackingId());
 ```
 
 __Step 2: Getting the Postback URL__
@@ -43,6 +43,11 @@ Braze maps Tune's Postback Macros to segment filters in the following way
 __Step 4: Confirming the Integration__
 
 Once Braze receives attribution data from Tune, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Tune postback, are ignored by our API and are not counted when determining if a successful connection was established.
+
+## Facebook and Twitter Attribution Data
+
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+
 
 [5]: #api-restrictions
 [13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection

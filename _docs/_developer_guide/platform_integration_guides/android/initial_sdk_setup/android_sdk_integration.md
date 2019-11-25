@@ -6,19 +6,19 @@ platform: Android
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
 
 #### Using Android Studio
 
-##### Add our repository
+##### Add Our Repository
 
 In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`.
 
@@ -37,7 +37,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 > See the [Android Support Library Setup instructions][65] for more information on the google maven repository.
 
-##### Add Braze dependency
+##### Add Braze Dependency
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
 
@@ -70,6 +70,10 @@ Now that the libraries have been integrated, you have to create an `appboy.xml` 
 </resources>
 ```
 
+**Implementation Example**
+
+See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+
 ### Step 3: Add Required Permissions to Android Manifest
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml`:
 
@@ -82,7 +86,7 @@ Now that you've added your API key, you need to add the following permissions to
 
 **Implementation Example**
 
-See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
+See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementation example.
 
 ### Step 4: Tracking User Sessions in Android
 
@@ -138,11 +142,27 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 
 The SDK Endpoint configuration via `appboy.xml` is available starting with __Braze Android SDK v2.1.1__.
 
+### Step 6: Enable Location Tracking
+
+If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+
+```xml
+<bool name="com_appboy_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
+{% endalert %}
+
 ### SDK Integration Complete
 
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
 Please see the following sections in order to enable [custom event tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+
+{% alert important %}
+Our Unity SDK integration for Android requires [the same support library version as the base Android SDK](https://github.com/Appboy/appboy-android-sdk#version-support).
+{% endalert %}
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/customization/#news-feed-customization
 [2]: {{ site.baseurl }}/user_guide/introduction/
@@ -184,3 +204,4 @@ Please see the following sections in order to enable [custom event tracking]({{ 
 [66]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/
 [67]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{ site.baseurl }}/support_contact/
+[69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml

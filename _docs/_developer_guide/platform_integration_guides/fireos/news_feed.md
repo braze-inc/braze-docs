@@ -14,7 +14,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 ## News Feed Integration Overview
 
-In Android, the News Feed and feedback form are implemented as [Fragments][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+In Android, the News Feed is implemented as a [Fragment][2] that is available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 
 >  The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened (learn more about [tracking user sessions][4]).
 
@@ -30,21 +30,21 @@ See [`DroidBoyActivity.java`][5] in the Droidboy sample app.
 
 ### Default Styling
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>
-  <!-- Feedback -->
-  <style name="Appboy.Feedback"/>
-  <style name="Appboy.Feedback.Layout"/>
-  <style name="Appboy.Feedback.NavigationBar">
-    <item name="android:padding">4dp</item>
-    <item name="android:background">@color/com_appboy_feedback_form_navigation_bar_background</item>
+  <!-- Feed -->
+  <style name="Appboy.Feed"/>
+  <style name="Appboy.Feed.List">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:divider">@android:color/transparent</item>
+    <item name="android:dividerHeight">16.0dp</item>
+    <item name="android:paddingLeft">12.5dp</item>
+    <item name="android:paddingRight">5.0dp</item>
+    <item name="android:scrollbarStyle">outsideInset</item>
   </style>
-  <style name="Appboy.Feedback.NavigationBarCancelButton">
-    <item name="android:layout_marginRight">2dp</item>
-    <item name="android:text">@string/com_appboy_feedback_form_cancel</item>
-    <item name="android:textStyle">bold</item>
+  ...
   </style>
 ```
 
@@ -93,17 +93,17 @@ For example, to update the font on all titles for Short News Cards, override the
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```
-  <style name="Appboy.Cards.ShortNews.Title">
-    <item name="android:layout_height">wrap_content</item>
-    ...
-    <item name="android:fontFamily">@font/my_custom_font_family</item>
-    <item name="fontFamily">@font/my_custom_font_family</item>
-  </style>
+<style name="Appboy.Cards.ShortNews.Title">
+  <item name="android:layout_height">wrap_content</item>
+  ...
+  <item name="android:fontFamily">@font/my_custom_font_family</item>
+  <item name="fontFamily">@font/my_custom_font_family</item>
+</style>
 ```
 
 ### Setting a Custom News Feed Click Listener
 
-As of Android SDK v.1.14.0, you can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
+You can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
 
 #### Step 1: Implement a News Feed Click Listener
 
@@ -134,7 +134,7 @@ Next, add the following code to subscribe to feed updates from Braze, typically 
 
 ```java
 // Remove the old subscription first
-Appboy.getInstance(this).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
   @Override
   public void trigger(final FeedUpdatedEvent event) {
@@ -143,16 +143,16 @@ mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
     // your logic here
   }
 };
-Appboy.getInstance(this).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
+Appboy.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 
 // Request a refresh of feed data
-Appboy.getInstance(this).requestFeedRefresh();
+Appboy.getInstance(context).requestFeedRefresh();
 ```
 
 We also recommend unsubscribing when your custom feed activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```
-Appboy.getInstance(this).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
 #### Part 2: Logging Analytics

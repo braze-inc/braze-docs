@@ -2,7 +2,7 @@
 nav_title: Making an API Call
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 1
+page_order: 0
 ---
 
 # Making an API Call
@@ -25,14 +25,17 @@ Hi, here are some articles that you might find interesting:
 
 If the URL is unavailable, Braze will render an empty string in its place. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so we do not overload your server when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 
-If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Additionally, Connected Content messages are processed with lower priority in our systems as not to roadblock other messaging campaigns due to long response times from servers. As a result, you may notice that delivery on Connected Content messages are slightly slower than other messages you send normally. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+{% endraw %}
 
->  Attribute values must be surrounded by `${}` in order to operate properly within Braze's version of Liquid Syntax.
+{% alert note %}
+* Attribute values must be surrounded by `${}` in order to operate properly within Braze's version of Liquid Syntax.
+* Connected Content calls will happen at the time the message is sent, with the exception of In-App Messages, which will make this call at the time the message is viewed.
+* Connected Content calls do not follow redirects.
+* Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for the purposes of validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
+{% endalert %}
 
->  Connected Content calls do not follow redirects.
-
->  Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for the purposes of validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
-
+{% raw %}
 ### Using Basic Authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.
@@ -59,7 +62,7 @@ When a message using Connected Content is sent from Braze, the Braze servers aut
 
 With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send Connected Content requests from the IP ranges below.
+Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|

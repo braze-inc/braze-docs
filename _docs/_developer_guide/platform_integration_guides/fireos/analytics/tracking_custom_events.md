@@ -8,12 +8,12 @@ search_rank: 4
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][0].
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Adding A Custom Event
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME);
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 See the [Javadoc][2] for more information.
@@ -27,7 +27,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 ```java
 AppboyProperties eventProperties = new AppboyProperties();
 eventProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
 
 #### Reserved Keys

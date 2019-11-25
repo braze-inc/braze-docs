@@ -35,7 +35,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Open: users.messages.pushnotification.Open
 {
@@ -56,7 +57,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
@@ -75,7 +77,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 // Push Notification Bounce: users.messages.pushnotification.Bounce
 {
@@ -94,7 +97,8 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.
 }
 ```
 {% enddetails %}
@@ -139,6 +143,13 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
 }
 ```
+
+{% alert update %}
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
 {% enddetails %}
 
 
@@ -146,12 +157,18 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 
 Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
 
+{% alert important %}
+Subscription groups are only available for the email and SMS channels at this time.
+{% endalert %}
+
 ```json
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
+// Note that subscription groups are only available for email at this time.
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
   "external_user_id": (string) External ID of the user,
+  "channel": (string) either 'sms' or 'email',
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -162,7 +179,8 @@ Data accumulates when a user's performs a subscription event. You can use this d
   "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "email_address": (string) email address for this event,
+  "email_address": (string) email address for this user,
+  "phone_number": (string) phone number of the user (presented in e.164 format),
   "subscription_group_id": (string) id of the subscription group,
   "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }
@@ -345,6 +363,36 @@ Data accumulates when a user engages with the News Feed. Use this data to track 
 
 {% enddetails %}
 
+{% details SMS EVENTS (SEND, DELIVERY, REJECTION, DELIVERY FAILURE) %}
+```json
+// SMS Send: users.messages.sms.Send
+// SMS Delivery Failure: users.messages.sms.DeliveryFailure
+// SMS Rejection: users.messages.sms.Rejection
+// SMS Delivery: users.messages.sms.Delivery
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in seconds since the epoch,
+  “from_phone_number”: (string) the from phone number of the message (Delivered and Undelivered only),
+  “subscription_group_id“: (string) id of the subscription group targeted for this SMS message,
+  “subscription_group_api_id”: (string) api id of the subscription group targeted for this SMS message,
+  “to_phone_number”: (string) the number the message was sent to,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  “error”: (string) the Braze provided error (Undelivered and Failed only),
+  “provider_error_code”: (string) the provider’s reason code as to why the message was not sent (Undelivered and Failed only)
+}
+```
+{% enddetails %}
+
+
 {% details CONVERSION EVENTS %}
 
 Data accumulates when a user converts on a Campaign or a Canvas. You can use this data	to track conversions on Campaigns or Canvas Steps.
@@ -433,5 +481,7 @@ Data accumulates when your users are enrolled in a control group for a Campaign.
 ```
 
 {% enddetails %}
+
+
 
 [support]: {{ site.baseurl }}/support_contact/

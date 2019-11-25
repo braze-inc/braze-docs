@@ -1,6 +1,6 @@
 ---
 nav_title: Export Canvas Data
-page_order: 2
+page_order: 1
 ---
 
 # Canvas Results Data
