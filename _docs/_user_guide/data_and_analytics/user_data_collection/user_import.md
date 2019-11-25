@@ -64,7 +64,7 @@ Note that all fields are case sensitive. If you import a user with a column head
 {% alert note %}
 While `external_id` itself is not mandatory, you __must__ include one of these fields:
 - `external_id` - A unique user identifier for your customer
-- `braze_id` - A value pulled for existing Braze users
+- `braze_id` - A unique user identifier pulled for existing Braze users
 - `user_alias_name` or `user_alias_label` - Fields that will import a user by alias
 {% endalert %}
 
