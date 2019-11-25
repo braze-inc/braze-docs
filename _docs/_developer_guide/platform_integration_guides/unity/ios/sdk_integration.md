@@ -172,7 +172,7 @@ git clone git@github.com:Appboy/appboy-unity-sdk.git
 | Are you using other plugins? | What to Copy | Where to Copy |
 | ---------------------------- | ------------ | ------------- |
 | __NO__ | the `Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
-| __YES__ | `Plugins/Appboy/AppboyBinding.cs` | `/<your-project>/Assets/Plugins` |
+| __YES__ | `Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
 | __YES__ | `Plugins/iOS` | `/<your-project>/Assets/Plugins/iOS` |
 
 #### Step 3: Generating Xcode project & Adding Required Classes
