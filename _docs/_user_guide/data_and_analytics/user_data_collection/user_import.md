@@ -36,11 +36,11 @@ Braze accepts user data in the standard CSV format from files __up to 100MB in s
 
 Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point. Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
 
-### Standard User Data Column Headers
-
-{% alert note %}
-Note that all fields are case sensitive. If you import a user with a column header `first_name`, Braze will update that profile’s first name field. However, if you import a user with a column header, `First_name` Braze will create a Custom Attribute called `First_name`. This will impact your segmentation and personalization abilities in Braze.
+{% alert important %}
+Note that setting `language` and/or `country` on a user via CSV import or API will __prevent__ Braze from automatically capturing this information via the SDK.
 {% endalert %}
+
+### Standard User Data Column Headers
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | Mandatory |
 |---|---|---|---|
