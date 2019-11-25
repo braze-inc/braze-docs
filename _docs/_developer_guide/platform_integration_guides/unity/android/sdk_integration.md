@@ -39,7 +39,7 @@ If you do not wish to import the Unity package, you may also manually copy the p
 	| Are you using other plugins? | What to Copy | Where to Copy |
 	| ---------------------------- | ------------ | ------------- |
 	| __NO__ | the `Assets/Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
-	| __YES__ | `Assets/Plugins/Appboy/AppboyBinding.cs` | `/<your-project>/Assets/Plugins` |
+	| __YES__ | the `Assets/Plugins/Appboy` folder and its content | `/<your-project>/Assets/Plugins` |
 	| __YES__ | `Assets/Plugins/Android` | `/<your-project>/Assets/Plugins/Android` |
 
 ## Step 2: Adding Your Bundle Identifier
