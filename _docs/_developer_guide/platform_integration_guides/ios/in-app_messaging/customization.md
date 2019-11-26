@@ -243,6 +243,10 @@ For an implementation example, see our [In-App Message Sample Application][36].
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
+### Hiding the Status Bar During Display
+
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message to cover the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying these in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+
 ### Logging Impressions and Clicks
 
 Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
