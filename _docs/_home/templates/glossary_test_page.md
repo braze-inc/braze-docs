@@ -1,8 +1,8 @@
 ---
 page_order: 0
-nav_title: Glossary Test Page
+nav_title: Glossary Template
 layout: glossary_page
-glossary_top_header: "Glossary Test Page"
+glossary_top_header: "Glossary Template"
 glossary_top_text: "This is a test Glossary Page."
 
 glossary_tag_name: Tags
