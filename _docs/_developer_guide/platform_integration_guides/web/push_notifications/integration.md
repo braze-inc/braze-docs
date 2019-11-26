@@ -48,7 +48,11 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ### Step 2: Browser Registration
 
-In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. Note that this will immediately request push permission from the user. Refer to [Chrome's best practices][2] for user experience guidance on when to call this method. If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), note that you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See below for a soft push prompt example using Braze In-App Messages. If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
+In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. Note that this will immediately request push permission from the user. If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), note that you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See below for a soft push prompt example using Braze In-App Messages. If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
+
+{% alert important %}
+Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices][2] for push registration.
+{% endalert %}
 
 ### Step 3: Configure Safari Push
 
