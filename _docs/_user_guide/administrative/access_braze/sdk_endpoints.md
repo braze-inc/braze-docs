@@ -14,6 +14,12 @@ page_order: 1
 |US-06 | sdk.iad-06.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
 
+{% alert note %}
+To configure the Braze Web SDK to use the appropriate endpoint for your integration or if Braze has provided you with a custom, client-specific endpoint, you can configure the SDK to use that endpoint through the `baseUrl` option to the initialize function. For example `appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`
+<br>For more information check out our <a href="https://github.com/Appboy/appboy-web-sdk#getting-started">Github Web SDK documentation</a>.
+{% endalert %}
+
+
 ## Software Development Kit (SDK) File Sizes
 
 | Platform | Approximate SDK Size |
