@@ -1,10 +1,12 @@
 ---
 nav_title: Tutorial
+
+page_order: 6
 ---
 
 {% comment %}
 About this layout:
-This layout is for Quick Start guides, Product walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.
+This layout is for Quick Start guides, Product or feature walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.
 
 Tutorials:
 A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
@@ -19,6 +21,32 @@ A general walkthrough of an instructional concept. Should contain PRACTICAL KNOW
 This is what you'll be accomplishing in this step. Here is how you can reproduce it.
 
 Make sure you [link to other references as you need them]({{ site.baseurl }}/home/templates/reference_video/).
+
+### Code Sample
+
+If you're explaining a technical concept, please note that here and show a code sample.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
+
+Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+
+| Variable | Description |
+| -------- | ----------- |
+| Page Title | You can title your page anything. You have to have this. |
+| My First Heading | We recommend putting this in caps. This is also optional. |
 
 ## Step 2: Do the next thing
 

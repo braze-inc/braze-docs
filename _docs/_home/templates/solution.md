@@ -1,5 +1,7 @@
 ---
-nav_title: Solutions or Help Template
+nav_title: Technical Solutions
+page_order: 3
+
 ---
 
 # Solution Article Title
@@ -7,6 +9,7 @@ nav_title: Solutions or Help Template
 > Solutions are a special kind of help article. It doesn't troubleshoot, but it does give options for solving a more technical problem. In this introductory paragraph, you should posit the basic situation. From there you can say that there are several options to solve this problem:
 >
 > [Option 1: Do this thing](#option-one)
+> <br>
 > [Option 2: Do the other thing](#option-two)
 
 ## Option 1: Do this thing {#option-one}

@@ -1,8 +1,10 @@
 ---
-title: API Glossary
+title: API or Code Glossary
 navlink: apitest
-permalink: /apitest/
 layout: api_page
+
+page_order: 2
+
 excerpt_separator: ""
 ---
 {% api %}

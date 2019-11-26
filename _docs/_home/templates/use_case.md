@@ -1,28 +1,30 @@
 ---
-nav_title: Use Case Template
-permalink: /use_case_template/
+nav_title: Use Case
+
+page_order: 7
+
 ---
 
-# Use Case Name for [insert Engagement Tool name here (Campaign, Canvas, Email, etc.)]
+# Use Case Name
 
-_Welcome to the Use Case Template! Here, you'll find everything you need to write a walk through of a Braze Use Case. In this first section, you should describe the use case in just a few sentences. Perhaps something like "this use case explores how you can reintroduce lapsing users to your content using Push, Email, etc."._
-
-## Goals
-
-This is where you set up the Use Case Scenario. Why would someone want to read this page? Present a gripping hypothetical to "get the reader in the mood". Perhaps... "Sally's company, a hypothetical makeup company, finds that a portion of their users have shown little to no interest in their app app, even though they open their emails. They don't click on anything, but they open them! Sally decided that they wanted to convert 20% of these people to be app users again"
-
-The goals of this use case are as follows (break down the scenario above):
-- Goal 1
-- Goal 2
-- Goal 3
+> Welcome to the Use Case Template! Here, you'll find everything you need to write a walk through of a Braze Use Case. In this first section, you should describe the use case in just a few sentences. Perhaps something like "this use case explores how you can reintroduce lapsing users to your content using Push, Email, etc.".
+>
+> This is where you set up the Use Case Scenario. Why would someone want to read this page? Present a gripping hypothetical to "get the reader in the mood". Perhaps... "Sally's company, a hypothetical makeup company, finds that a portion of their users have shown little to no interest in their app app, even though they open their emails. They don't click on anything, but they open them! Sally decided that they wanted to convert 20% of these people to be app users again"
+>
+> The goals of this use case are as follows (break down the scenario above):
+> - Goal 1
+> - Goal 2
+> - Goal 3
 
 ## Suggested Metrics
 
 It's time to talk about measurement! How should the Braze User look to measure their campaign? What conversion metrics should they set up? List them below.
 
-- Conversion 1: Description
-- Conversion 2: Description
-- etc.
+| Metric | Description | Data Type |
+| ------ | ----------- | --------- |
+| Conversion 1 | This is a conversion. You should measure it because "reasons". | Boolean. |
+| Conversion 2 | This is another conversion. You should measure it because "reasons". | Boolean. |
+| Age | This is a user attribute. You should measure it because "reasons". | Integer. |
 
 ## How to Build This Campaign/Canvas
 

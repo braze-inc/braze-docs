@@ -1,19 +1,20 @@
 ---
-nav_title: Help Article Template
-permalink: /help_article_template/
+nav_title: Help Article
+
+page_order: 3
+
 ---
 
 # [Help Article Name]
-[Your Name](linked to a LinkedIn page or professional template)  |  Date of Publish  |  Share this article options
 
-_Welcome to the Help Article Template! Here, you'll find everything you need to create your own help article. In this first section, you should describe the topic of your article in just a few sentences. Perhaps something like "this article will walk you through troubleshooting why your messages aren't sending to your full audience"._
+> Welcome to the Help Article Template! Here, you'll find everything you need to create your own help article. In this first section, you should describe the topic of your article in just a few sentences. Perhaps something like "this article will walk you through troubleshooting why your messages aren't sending to your full audience".
 
 ## The Main Problem
 
 This section should be where you break down the main problem and list any sub-issues that might be related. You can also use this space to reference or suggest other help articles that might be related to this one. After you've sufficiently described the root problem, you can direct your reader to where they'll find the answer to their problem.
 
 Click the item that best describes your scenario:
-- [Solution 1](#solution-1) - link this to the header where you talk about that scenario
+- [Solution 1](#solution-1)
 - [Solution 2](#solution-2)
 - [Solution 3](#solution-3)
 

@@ -1,11 +1,13 @@
 ---
-nav_title: Partner Page
+nav_title: Partner Page with Video
 
 page_order: 4
 
 ---
 
 # [Partner Name]
+
+{% include video.html id="XY5uXoKIvFY" align="right" %}
 
 > Welcome to the Partner Page  Template! Here, you'll find everything you need to create your own partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
 
@@ -38,6 +40,33 @@ Just break this down, including any code as necessary. Remember that you can off
 
 You have the option to put images in your documentation, so we recommend you do and do so mindfully.
 
+### Code Sample
+
+If you're explaining a technical concept, please note that here and show a code sample.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
+
+Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+
+| Variable | Description |
+| -------- | ----------- |
+| Page Title | You can title your page anything. You have to have this. |
+| My First Heading | We recommend putting this in caps. This is also optional. |
+
+
 ### Step 3: How Many Steps
 
 Outline through usage of the integration - especially if it means inserting liquid into our message composer.
@@ -53,6 +82,33 @@ This should describe how to use the integration - let your reader know if they n
 ### Step 1: This Is a Short Description of Step One
 
 Just your typical step by step how to.
+
+### Code Sample
+
+If you're explaining a technical concept, please note that here and show a code sample.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
+
+Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+
+| Variable | Description |
+| -------- | ----------- |
+| Page Title | You can title your page anything. You have to have this. |
+| My First Heading | We recommend putting this in caps. This is also optional. |
+
 
 ## Use Cases
 
