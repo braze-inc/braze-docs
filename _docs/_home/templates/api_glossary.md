@@ -1,8 +1,10 @@
 ---
-title: API Glossary
+title: API or Code Glossary
 navlink: apitest
-permalink: /apitest/
 layout: api_page
+
+page_order: 2
+
 excerpt_separator: ""
 ---
 {% api %}
@@ -16,7 +18,7 @@ Post,Email,Create,Template,REST,API
 
 Use the email Template REST APIs to programmatically manager the email templates that you stored on the Braze dashboards, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-The respone from this endpoint includes a field for `email_template_id`, which can be used to update the template in subsequent API calls.
+The response from this endpoint includes a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}
