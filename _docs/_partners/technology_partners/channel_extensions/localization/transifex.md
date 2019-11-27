@@ -5,7 +5,7 @@ alias: /partners/transifex/
 
 # About Transifex
 
-Transifex enables powerful localization across your user base, no matter what the language is. Transifex and Braze's Connected Content feature empower you to automate translation so your teams are freed up to focus on delivering brilliant customer experiences.
+Transifex enables powerful localization across your user base, no matter what the language is. Transifex and Braze's Connected Content feature empowers you to automate translation so your teams are freed up to focus on delivering brilliant customer experiences.
 
 # Pre-Requisites
 
@@ -17,13 +17,13 @@ Set up basic authentication for your account in the __Connected Content__ tab in
 
 ![Basic Authentication Credential Management][34]
 
-Click __New Credential__. You can then name your credential and put in your username and password for that account.
+Click __New Credential__. You can then name your credentials and put in your username and password for that account.
 
 ![Basic Authentication Credential Creation][35]
 
 You can then use this basic authentication credential for calls to Transifex.
 
-# Conntected Content Integration
+# Connected Content Integration
 
 This integration will allow you to type in a source string instead of copying and pasting the translation for every language into the message composer.
 
