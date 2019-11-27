@@ -66,8 +66,22 @@ Make sure to tell your users important things as they come up. Don't wait until 
 
 The last step in a tutorial should give your reader some expectation for their result. Feel free to even show an image of the final result.
 
-## Tutorial Complete
+## Next Steps
 
-You've completed the tutorial! This is where you can add some tips to help users troubleshoot, in case they didn't get the result they wanted.
+Congratulations! You've completed this tutorial, troubleshooting article, or solution! This means that you should have:
+1. Thing you should have learned about,
+2. Task you should have completed, and
+3. Thing you should be ready to do now or next.
 
-> If you didn't get the result you expected and our troubleshooting tips above didn't help, [please reach out to support]({{ site.baseurl }}/support_contact/).
+### Related Articles
+
+If you want to learn more about things that were discussed in the article, checkout:
+- [Related Article 1](#solution-1): Description of why it's helpful.
+- [Related Article 2](#solution-2): Description of why it's helpful.
+- [Related Article 3](#solution-3): Description of why it's helpful.
+
+### Still Lost?
+
+If this article didn't help, leave feedback below or [open a support ticket][support]!
+
+[support]: {{ site.baseurl }}/support_contact/
