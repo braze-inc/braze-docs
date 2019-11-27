@@ -265,8 +265,8 @@ For general information about Android notification icons, please see the [Notifi
 Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha/transparency channels in action icons and in the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome with the exception of the transparent regions.
 
 To properly create a notification small icon asset:
-- Remove all color from the image except for white
-- All other non-white regions of the asset should be transparent
+- Remove all color from the image except for white.
+- All other non-white regions of the asset should be transparent. 
 
 {% alert note %}
 A common symptom of an improper asset is the notification small icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
