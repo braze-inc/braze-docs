@@ -48,7 +48,15 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ### Step 2: Browser Registration
 
-In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. Note that this will immediately request push permission from the user. Refer to [Chrome's best practices][2] for user experience guidance on when to call this method. If you wish to show your own push-related UI to the user before requesting push permission (known as a soft push prompt), note that you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See below for a soft push prompt example using Braze In-App Messages. If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
+In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This this will immediately request push permission from the user. 
+
+If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze In-App Messages. 
+
+If you wish to unsubscribe a user, you can do so by calling ```appboy.unregisterAppboyPushMessages()```.
+
+{% alert important %}
+Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
+{% endalert %}
 
 ### Step 3: Configure Safari Push
 
@@ -118,7 +126,6 @@ appboy.logCustomEvent("prime-for-push");
 ```
 
 [1]: http://www.w3.org/TR/push-api/
-[2]: https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
 [4]: http://abbeybond.com/modal-test.html
 [7]: {{ site.baseurl }}/help/best_practices/web_sdk/#web-push
