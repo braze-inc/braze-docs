@@ -258,7 +258,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Notification Icon Design Guidelines
+### Step 2: Ensure Small Icons Conform to Design Guidelines
 
 For general information about Android notification icons, please see the [Notifications Overview documentation][37].
 
