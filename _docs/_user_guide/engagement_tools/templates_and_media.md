@@ -26,6 +26,7 @@ Aggregate templates across the following features:
 - [Email Templates][2]
 - [Content Blocks][7]
 - [Webhook Templates][3]
+- [Link Templates][6]
 - [In-App Message Color Profiles][4]
 - [Manage Assets in the Media Library][5]
 
@@ -71,6 +72,7 @@ Duplicating and Archiving is not currently available for Link Templates
 [3]: {{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
 [4]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
 [5]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
+[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/link_templates/#link-templates
 [7]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/
 [8]: {% image_buster /assets/img_archive/template_duplicate_cog.png %}
 [9]: {% image_buster /assets/img_archive/duplicate_multiple_template.gif %}
