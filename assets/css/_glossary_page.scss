@@ -223,7 +223,38 @@
     margin-bottom: 15px;
     padding: 10px 0 10px 0;
     border-top: 1px solid $grey-ghost;
+    $content_transition_time: 0.2s;
+    *,
+    *::before,
+    *::after {
+      border-width: 0;
+      border-style: solid;
+    }
+    a {
+      font-family: $braze-black;
+      display: inline;
+      color: $black-shark;
+      font-weight: 700;
+      @media print {
+        font-weight: normal;
+      }
+      border-bottom-width: 2px;
+      border-color: $braze-link-color;
+      text-decoration: none;
+      transition: all ease $content_transition_time;
+      -webkit-transition:  all ease $content_transition_time;
+      -moz-transition:  all ease $content_transition_time;
+      &:hover {
+        background-color: $braze-link-color;
+        img {
+          background-color: transparent;
+        }
+      }
 
+      img {
+        vertical-align: middle;
+      }
+    }
 
     // Hack the sticky header
     > h1[id],

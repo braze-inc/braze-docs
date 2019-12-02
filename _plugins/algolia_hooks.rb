@@ -40,6 +40,9 @@ module Jekyll
           if record[:glossaries]
             record.delete(:glossaries)
           end
+          if record[:comment]
+            record.delete(:comment)
+          end
           record
         else
           nil
