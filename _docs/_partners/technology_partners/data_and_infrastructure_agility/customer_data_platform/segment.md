@@ -25,7 +25,7 @@ To get going with your Segment/Braze integration,
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 | Segment Account & Account Information | Segment | [https://app.segment.com/login](https://app.segment.com/login) | You must have an active Segment Account to utilize their services with Braze. |
-| Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
+| Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][34], [Android][35] and [Web][38] documentation. | Braze must be successfully installed onto your app or site. |
 
 ## Step 1: Configure Braze Settings in Segment {#connection-settings}
@@ -64,12 +64,12 @@ To get going with your Segment/Braze integration,
 
 ## Step 2A: Choose Integration Type and Implement {#integration-options}
 
-You can integrate Segment's Web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Cloud-mode") integration, or a server-to-server ("Device-mode") integration.
+You can integrate Segment's Web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Device-mode") integration, or a server-to-server ("Cloud-mode") integration.
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-Side / Cloud-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-Server / Device-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{ site.baseurl }}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Side-by-Side / Device-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
+| [Server-to-Server / Cloud-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{ site.baseurl }}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 
 {% alert note %}
 You can learn more about Segment's integration options (Connection Modes), including the benefits of each, [here](https://segment.com/docs/destinations/#connection-modes).
@@ -77,7 +77,7 @@ You can learn more about Segment's integration options (Connection Modes), inclu
 
 ### Side-by-Side SDK Integration
 
-Also called "Cloud-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
+Also called "Device-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
 
 {% tabs %}
 {% tab Android %}
@@ -109,11 +109,11 @@ For the side-by-side integration, inputting the "Braze REST API Key" into your [
 
 ### Server-to-Server Integration
 
-Also called "Device-mode", this integration forwards data from Segment to Braze's REST API.
+Also called "Cloud-mode", this integration forwards data from Segment to Braze's REST API.
 
 This integration is **only** used in association with Segment's [server-side libraries][36], such as their Ruby or Go SDKs.
 
-Enable the integration by setting your [App Group's REST API Key][39] and Braze's [REST API endpoint][40] for your corresponding data center (cluster) in your [Connection Settings on Segment's dashboard](#connection-settings). 
+Enable the integration by setting your [App Group's REST API Key][39] and Braze's [REST API endpoint][40] for your corresponding data center (cluster) in your [Connection Settings on Segment's dashboard](#connection-settings).
 
 Similar to the side-by-side integration, you will need to map Segment [methods](#methods) to Braze.
 
@@ -126,7 +126,7 @@ Some [automatically captured][25] data is only available through the side-by-sid
 
 #### Enabling Push Notifications
 
-Currently, Braze's server-to-server integration with Segment __does not__ support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [User Attribute Object][18] of our [User Data][19] REST API.
+Currently, Braze's server-to-server integration with Segment __does not__ support methods for push tokens. In order to enable push notifications in Braze, you must import push tokens via the [User Attribute Object][18] of our [User Data][19] REST API. You can also rely on the [side-by-side integration](#side-by-side-sdk-integration) for push token capture and mapping.
 
 
 ## Step 2B: Map Methods {#methods}
@@ -200,6 +200,16 @@ If you're sending purchase data to Braze (see [Completed Order][1]), the [revenu
 
 {% alert important %}
 If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, please use a side-by-side integration.
+{% endalert %}
+
+## Segment Replays
+
+Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
+
+Segment will connect to our [users/track endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
+
+{% alert important %}
+If users do not have an external ID, they will not be imported into Braze, as our users/track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
 {% endalert %}
 
 ## Best Practices
