@@ -34,4 +34,8 @@ guide_menu_list:
 - name: Email Reporting
   link: /docs/user_guide/message_building_by_channel/email/email_reporting/
   fa_icon: fas fa-chart-bar
+- name: Email Analytics Glossary
+  link: /docs/user_guide/message_building_by_channel/email/analytics_glossary/
+  fa_icon: fas fa-chart-pie
+
 ---
