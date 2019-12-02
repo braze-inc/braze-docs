@@ -245,7 +245,7 @@ If you would like to alter the display behavior of in-app messages, you should a
 
 ### Hiding the Status Bar During Display
 
-For `Full` and `HTML` in-app messages, the SDK will attempt to place the message to cover the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying these in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
 
 ### Logging Impressions and Clicks
 
