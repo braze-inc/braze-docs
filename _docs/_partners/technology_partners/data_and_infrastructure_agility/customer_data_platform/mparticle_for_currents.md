@@ -1,6 +1,6 @@
 ---
 nav_title: mParticle for Currents
-page_order: 0
+page_order: 0.5
 alias: /partners/mparticle_for_currents/
 ---
 
@@ -29,7 +29,7 @@ You can export the following data from Braze to mParticle:
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Push Notification Send               | Platform-specific Feed | A push notification was successfully sent to a User.                                      | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | Push Notification Open               | Platform-specific Feed | User opened a push notification.                                                          | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
-| Push Notification Bounce             | Platform-specific Feed | Braze was not able to send a push notification to this User.                              | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             | 
+| Push Notification Bounce             | Platform-specific Feed | Braze was not able to send a push notification to this User.                              | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | Email Sent                           | Unbound Feed           | An email was successfully sent.                                                           | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
 | Email Delivered                      | Unbound Feed           | An email was successfully delivered to a User’s mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
 | Email Opened                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
@@ -47,9 +47,9 @@ You can export the following data from Braze to mParticle:
 | News Feed Viewed                     | Platform-specific Feed | User viewed the native Braze News Feed.                                                   | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | News Feed Card Viewed                | Platform-specific Feed | User viewed a Card within the native Braze News Feed.                                     | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | News Feed Card Clicked               | Platform-specific Feed | User clicked on a Card within the native Braze News Feed.                                 | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Webhook Sent                         | Unbound Feed           | A webhook message was sent on behalf of a User.                                           | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      | 
-| Application Uninstalled              | Platform-specific Feed | User uninstalled the App.                                                                 | `app_id`                                                                              | 
+| Webhook Sent                         | Unbound Feed           | A webhook message was sent on behalf of a User.                                           | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| Application Uninstalled              | Platform-specific Feed | User uninstalled the App.                                                                 | `app_id`                                                                              |
 | Campaign Conversion Event            | Unbound Feed           | User performed the primary conversion event for a Campaign within its conversion window.  | `campaign_id`                                                                         |
 | Campaign Enrollment in Control Group | Unbound Feed           | User was enrolled in a Campaign control group.                                            | `campaign_id`                                                                         |
-| Canvas Conversion Event              | Unbound Feed           | User performed the primary conversion event for a Canvas within its conversion window.    | `canvas_step_id`, `canvas_id`, `canvas_variation_id`                                    | 
+| Canvas Conversion Event              | Unbound Feed           | User performed the primary conversion event for a Canvas within its conversion window.    | `canvas_step_id`, `canvas_id`, `canvas_variation_id`                                    |
 | Canvas Entry                         | Unbound Feed           | User was entered into a Canvas.                                                           | `in_control_group`, `canvas_id`, `canvas_variation_id`                                  |

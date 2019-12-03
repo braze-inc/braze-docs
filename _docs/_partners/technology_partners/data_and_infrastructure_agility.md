@@ -15,6 +15,9 @@ valid_partner_list:
     alt:
       - title: Currents
         url: /docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
+    alt:
+      - title: Personas
+        url: /docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/
   - name: mParticle
     url: /docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
     alt:
