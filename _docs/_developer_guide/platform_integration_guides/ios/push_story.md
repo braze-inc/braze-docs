@@ -43,7 +43,7 @@ The Background Mode in the Capabilities section of the main app target is requir
 
 ![Enable Background Mode][3]
 
-You also need to add Capability `App Groups`. If you haven't had any app group in your app, go the the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
+You also need to add Capability `App Groups`. If you haven't had any app group in your app, go the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
 
 ![Add App Groups][4]
 
