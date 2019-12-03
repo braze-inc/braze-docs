@@ -67,7 +67,7 @@ EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 | `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 50. |
 | `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
-_* Generally, either `external_id` or `email` is required. <br>  But, for SMS subscription groups, either `external_id` or `phone` is required. <br>  Must include `phone` or `email` field, but not both._
+_* Generally, either `external_id` or `email` is required. <br>  But, for SMS subscription groups, either `external_id` or `phone` is required. <br>  Must include `phone` or `email` value, but not both._
 
 ### Example Request
 
@@ -99,7 +99,7 @@ Content-Type: application/json
    "email": (required*, string) the email address of the user
    //one of eternal_id or email is required
    //can be passed as an array of string with a max of 50
-   //endpoint only accepts email or phone field, not both
+   //endpoint only accepts email or phone value, not both
    "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
  }
 ```
@@ -119,7 +119,7 @@ Content-Type: application/json
     "api_key": "12345",
     "subscription_group_id": "111-222-333",
     "subscription_state": "unsubscribed",
-    //endpoint only accepts email or phone field, not both
+    //endpoint only accepts email or phone value, not both
     "email": "john@braze.com",
     - or -
     "phone": "+14152342671"
@@ -133,7 +133,7 @@ Response: (status 201)
 }
 ```
 {% alert important %}
-The endpoint only accepts the `email` or `phone` field, not both. If given both, you will recieve this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+The endpoint only accepts the `email` or `phone` value, not both. If given both, you will recieve this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 [support]: {{ site.baseurl }}/support_contact/
