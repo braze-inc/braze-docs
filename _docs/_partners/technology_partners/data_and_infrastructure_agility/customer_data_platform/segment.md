@@ -285,7 +285,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [16]: {% image_buster /assets/img_archive/Custom_Events_Segment.png %}
 [18]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[22]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#custom-event-data
+[22]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
 [23]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [24]: {{ site.baseurl }}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
