@@ -53,7 +53,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
 |Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card messages are limited to 2kb in total size (including images, links, and other content), calculated by adding the byte-size length of the following fields. |
 |Pinning | A pinned card will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Once a card has been sent you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
-|Expiration | Set the specific expiration date or the days until a Card expires. | All variants have identical expiration dates. |
+|Expiration | Set the specific expiration date or the days until a Card expires. | Currently, Braze supports a maximum expiration time of __30 days__. <br> <br> All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 
@@ -119,7 +119,7 @@ The following capabilities are not yet supported for Content Cards:
 - Post-launch Edits
 
 {% alert warning %}
-Once a Content Card is launched, it cannot be edited. It can only stopped from sending to new users and removed from users' feeds.
+Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
