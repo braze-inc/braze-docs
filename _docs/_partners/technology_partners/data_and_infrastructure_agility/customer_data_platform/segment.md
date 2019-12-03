@@ -5,7 +5,7 @@ alias: /partners/segment/
 ---
 # About Segment  
 
-{% include youtube.html id="RfOHfZ34hYM" align="right" %}
+{% include video.html id="RfOHfZ34hYM" align="right" %}
 
 > [Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
 
