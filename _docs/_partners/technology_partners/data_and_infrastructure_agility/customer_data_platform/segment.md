@@ -179,7 +179,7 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 
 #### Completed Order
 
-When you _track_ an event with the name `Completed Order` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][12].
+When you _track_ an event with the name `Completed Order` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
 
 ### Page / Screen {#page-screen}
 
@@ -196,7 +196,7 @@ Most of your [app usage dashboard][27] (lifetime sessions, MAU, DAU, Stickiness,
 
 You can view your data in the [custom event dashboard][22], the [revenue dashboard][28] or by [creating a segment][23]. The custom event dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order][1]), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
@@ -279,7 +279,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [4]: https://segment.com/docs/spec/ecommerce/v2/
 [5]: https://segment.com
 [11]: https://segment.com/docs/destinations/braze/
-[12]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#revenue-data
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [15]: {% image_buster /assets/img_archive/Segment_App_Usage.png %}
