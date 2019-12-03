@@ -114,7 +114,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 
 ### Setting Orientation For All In-App Messages
 
-To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
+To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageUIController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

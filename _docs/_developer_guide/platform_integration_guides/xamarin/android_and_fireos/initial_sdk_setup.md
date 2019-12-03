@@ -24,7 +24,7 @@ The simplest integration method involves getting the Braze SDK Bindings from the
 
 The second integration method is to include the binding source found [here][3].  Under `appboy-component\src\android` you will find our binding source code; adding a project reference to the ```AppboyPlatform.XamarinAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
 
->  The Braze Nuget package depends on the the [`Xamarin.Android.Support.v4`][12] Nuget package.
+>  The Braze Nuget package depends on the [`Xamarin.Android.Support.v4`][12] Nuget package.
 
 ### Step 2: Configure the Braze SDK in Appboy.xml
 Now that the libraries have been integrated, you have to create an `Appboy.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:

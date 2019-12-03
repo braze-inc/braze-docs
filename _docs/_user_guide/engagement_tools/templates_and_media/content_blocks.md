@@ -5,7 +5,7 @@ page_order: 1
 
 # Content Blocks
 
-The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature please go into the __Content Blocks Library__ tab in the [Templates & Media][4] section of your Braze account.
+> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature please go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
 
 With Content Blocks, you can:
 
@@ -44,6 +44,8 @@ If you want to update a Content Block for a single message or make a copy of a C
 
 ![copy-content-block][2]{: height="70%" width="70%"}
 
+You can also [duplicate a Content Block with our Templates & Media feature]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
+
 ## Nesting Content Blocks
 
 Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into Content _Block C_.
@@ -56,7 +58,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ## Archiving Content Blocks
 
-Once you have finished using a Content Block, you can archive it from the __Templates & Media__ page.
+Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/).
 
 ![Archive_CB][3]{: height="80%" width="80%"}
 
@@ -89,3 +91,4 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 [3]: {% image_buster /assets/img/archive-content-block.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
 [5]: {{ site.baseurl }}/api/endpoints/email_templates/#content-blocks
+[6]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/

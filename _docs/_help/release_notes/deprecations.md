@@ -1,6 +1,6 @@
 ---
 nav_title: Deprecations
-page_order: 10
+page_order: 9
 layout: featured
 
 guide_top_header: "Deprecations"

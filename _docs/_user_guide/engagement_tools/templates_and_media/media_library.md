@@ -4,7 +4,7 @@ page_order: 0
 ---
 # Media Library
 
-The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the "Media Library" tab in the [Templates & Media][4] section of your dashboard.
+> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the "Media Library" tab in the [Templates & Media][4] section of your dashboard.
 
 The Library now allows you to:
 
@@ -23,6 +23,10 @@ Within the Media Library you can now see the image dimensions, URL, type as well
 
 ## Accessing the Media Library from a Message Composer
 Previously when composing a message, you would upload images for each respective message. As the Media Library now acts as your dashboard's centralized location for assets, all images will now be uploaded directly to it. This additional functionality gives you the flexibility to re-use images across different messages.
+
+## Managing Content 
+
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
 
 ## FAQ
 

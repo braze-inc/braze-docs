@@ -1,17 +1,13 @@
 ---
 nav_title: Tutorial
-
 page_order: 6
 ---
-
 {% comment %}
 About this layout:
 This layout is for Quick Start guides, Product or feature walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.
-
 Tutorials:
 A general walkthrough of an instructional concept. Should contain PRACTICAL KNOWLEDGE. Focuses on a single topic (like, how to create a campaign, how to create a canvas, etc.) Goal or Task-Oriented Article that walks STEP BY STEP through solving a SPECIFIC issue (How to target specific users, how to segment based on location, etc.).
 {% endcomment %}
-
 # How to Title This Tutorial
 
 > This article will walk you through doing XYZ. By the end of this tutorial, you should be able to A, B, and C!

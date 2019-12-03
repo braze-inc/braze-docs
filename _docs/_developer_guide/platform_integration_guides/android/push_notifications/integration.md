@@ -258,7 +258,25 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Configure Notification Icons
+### Step 2: Ensure Small Icons Conform to Design Guidelines
+
+For general information about Android notification icons, please see the [Notifications Overview documentation][37].
+
+Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha/transparency channels in action icons and in the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome with the exception of the transparent regions.
+
+To properly create a notification small icon asset:
+- Remove all color from the image except for white.
+- All other non-white regions of the asset should be transparent. 
+
+{% alert note %}
+A common symptom of an improper asset is the notification small icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
+{% endalert %}
+
+The icons pictured below are examples of properly designed icons:
+
+![Android Icon Example][38]
+
+### Step 3: Configure Notification Icons
 
 ##### Specifying Icons in appboy.xml
 
@@ -281,17 +299,7 @@ Setting a large notification icon is optional but recommended.
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
 ```
 
-##### Notification Icon Design Guidelines
-
-For general information about Android notification icons, please see the [Anatomy of a Notification section from the Android developer documentation][37].
-
-[Android's Design Guidelines][31] require small notification icons to be all white on a transparent background. __If you do not comply, your icons may look suboptimal when displayed by the Android system.__
-
-The icons pictured below are examples of properly designed icons:
-
-![Android Icon Example][38]
-
-### Step 3: Add Deep Links
+### Step 4: Add Deep Links
 
 ##### Enabling Automatic Deep Link Opening
 
@@ -378,7 +386,7 @@ See the equivalent configuration for your `appboy.xml`. Note that the class name
 
 Back stack configuration is only available on SDK 2.1.4 and above.
 
-### Step 4: Define Notification Channels
+### Step 5: Define Notification Channels
 
 Braze SDKs 2.1.0 and above support [Android O Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
@@ -405,7 +413,7 @@ For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, 
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Test Notification Display and Analytics
+### Step 6: Test Notification Display and Analytics
 
 #### Testing Display
 
@@ -618,10 +626,9 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
 [30]: #step-3-enable-automatic-registration
-[31]: https://developer.android.com/design/style/iconography.html#notification
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
-[37]: http://developer.android.com/design/patterns/notifications.html#Anatomy "Anatomy of a Android Notification"
+[37]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [38]: {% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon"
 [40]: http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation"
 [41]: {% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action"

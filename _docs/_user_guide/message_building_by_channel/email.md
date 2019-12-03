@@ -10,7 +10,7 @@ guide_featured_list:
 - name: Creating an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
-- name: Email Templates
+- name: Create an Email Template
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/
   fa_icon: fas fa-table
 - name: CSS Inlining
@@ -22,6 +22,9 @@ guide_menu_list:
 - name: Link Templates
   link: /docs/user_guide/message_building_by_channel/email/link_templates/
   fa_icon: fas fa-link
+- name: Upload an HTML Email Template
+  link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/
+  fa_icon: fas fa-upload
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox
@@ -34,4 +37,8 @@ guide_menu_list:
 - name: Email Reporting
   link: /docs/user_guide/message_building_by_channel/email/email_reporting/
   fa_icon: fas fa-chart-bar
+- name: Email Analytics Glossary
+  link: /docs/user_guide/message_building_by_channel/email/analytics_glossary/
+  fa_icon: fas fa-chart-pie
+
 ---

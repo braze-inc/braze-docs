@@ -21,7 +21,7 @@ You can easily share specific comparisons with the page’s unique URL, and user
 
 ![Segment Insights Expanded][2]
 
-Segment Insights have also been built right into the the segment details view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any other you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
+Segment Insights have also been built right into the segment details view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any other you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
 
 ![Segment Insights Details][3]
 
