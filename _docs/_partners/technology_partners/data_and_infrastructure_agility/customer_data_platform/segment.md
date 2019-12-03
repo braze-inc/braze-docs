@@ -16,9 +16,11 @@ If you're looking for information on the Currents integration with Segment, [cli
 ## Set Up Overview
 
 To get going with your Segment/Braze integration,
-1. Take note of and prepare for your integration by adhering to the requirements and pre-requisites.
-2. Set up Braze as a Destination.
-
+1. Take note of and prepare for your integration by [adhering to the requirements and pre-requisites](#pre-requisites).
+2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
+3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
+4. Set up [mappings](#methods) for your integration.
+5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Segment.
 
 ## Pre-Requisites
 
@@ -30,7 +32,7 @@ To get going with your Segment/Braze integration,
 
 ## Step 1: Configure Braze Settings in Segment {#connection-settings}
 
-![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: height="50%" width="50%" align="right"} After successfully setting up your Braze and Segment integrations individually, you'll need to configure [Braze as a destination from Segment](https://segment.com/docs/destinations/). You'll have many options to customize the flow of data between Braze and Segment using [Connection Settings](#connection-settings).
+![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: height="50%" width="50%" align="right"} After successfully setting up your Braze and Segment integrations individually, you'll need to configure [Braze as a destination from Segment](https://segment.com/docs/destinations/). You'll have many options to customize the flow of data between Braze and Segment using the connection settings described in the chart below.
 
 | Name| Description |
 |---|---|
@@ -84,21 +86,21 @@ Also called "Device-mode", this integration maps Segment's SDK and [methods](#me
 
 See and set up [mappings](#methods) to Segment's SDK for [Android](https://github.com/appboy/appboy-segment-android) on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android](https://segment.com/docs/destinations/appboy/#android).
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
 
 {% endtab %}
 {% tab iOS %}
 
 See and set up [mappings](#methods) to Segment's SDK for [iOS](https://github.com/appboy/appboy-segment-ios) on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS](https://segment.com/docs/destinations/appboy/#ios).
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
 
 {% endtab %}
 {% tab Web or Javascript %}
 
 See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's Javascript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/destinations/appboy/#web) documentation.
+For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
 
 {% endtab %}
 {% endtabs %}
@@ -290,14 +292,14 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [25]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [27]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
-[28]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#revenue-data
+[28]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [29]: https://segment.com/docs/destinations/appboy/#android
 [30]: https://segment.com/docs/destinations/appboy/#ios
 [31]: https://github.com/appboy/appboy-segment-android
 [32]: https://github.com/appboy/appboy-segment-ios
 [33]: https://github.com/segment-integrations/analytics.js-integration-appboy
 [34]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[35]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
+[35]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
 [37]: https://segment.com/docs/destinations/appboy/#web
 [38]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
