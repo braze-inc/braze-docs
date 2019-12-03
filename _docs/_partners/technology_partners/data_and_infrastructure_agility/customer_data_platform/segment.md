@@ -7,7 +7,7 @@ alias: /partners/segment/
 
 {% include youtube.html id="RfOHfZ34hYM" align="right" %}
 
-[Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
+> [Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
@@ -137,7 +137,7 @@ Braze supports the [Identify](https://segment.com/docs/spec/identify/), [Track](
 
 ### Identify
 
-When you _identify_ a user, we will record information for that user with `userId` as the External User ID.
+When you [identify](https://segment.com/docs/connections/destinations/catalog/braze/#identify) a user, we will record information for that user with `userId` as the External User ID.
 
 | Segment Field | Braze Field |
 | ------------- | ----------- |
@@ -273,7 +273,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 
 
-[1]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#completed-order
 [2]: https://segment.com/docs/
 [3]: https://segment.com/docs/destinations/appboy/
 [4]: https://segment.com/docs/spec/ecommerce/v2/
