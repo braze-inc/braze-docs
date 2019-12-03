@@ -31,7 +31,7 @@ You can use and manage templates and creative content in Templates & Media for t
 - [Content Blocks][7]
 - [Webhook Templates][3]
 - [Link Templates][6]
-- [In-App Message Color Profiles][4]
+- [In-App Message Color Profiles and CSS Templates][4]
 - [Manage Assets in the Media Library][5]
 
 <br>
