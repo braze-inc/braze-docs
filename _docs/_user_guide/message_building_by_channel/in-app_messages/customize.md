@@ -62,7 +62,7 @@ You can customize your link actions by appending the optional URL query strings 
 
 Query String Name | Value | Action
 -----------|-------|-------
-`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking. This query string is `case sensitive`. <br>(e.g., `https://www.braze.com/?abButtonId=0` to track a Button 1 Click) 
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking. This query string is `case sensitive`. <br>(e.g., `https://www.braze.com/?abButtonId=0` to track a Button 1 Click)
 `name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` <br>(e.g., `appboy://customEvent?name=eventName`).
 `abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
 `abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
@@ -116,6 +116,10 @@ You can save in-app message and in-browser message templates on the dashboard to
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
 Click __Save Color Profile__ on the bottom right when you’re finished.
+
+#### Managing Color Profiles
+
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
 
 ### CSS Template
 
@@ -172,6 +176,11 @@ Name and tag your CSS Template, then choose whether or not it will be your defau
 ```
 
 As you can see, you can edit everything from the background color to font size and weight, and so much more.
+
+#### Managing CSS Templates
+
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+
 
 ## Video
 
