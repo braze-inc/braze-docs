@@ -3,7 +3,7 @@ nav_title: "Templates & Media"
 page_order: 5
 layout: featured
 guide_top_header: "Templates & Media"
-guide_top_text: "Templates & Media allow you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
+guide_top_text: "The Templates & Media feature of Braze allows you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -13,15 +13,19 @@ guide_featured_list:
   - name: Content Blocks
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     fa_icon: fas fa-columns
+  - name: Duplicate Templates
+    link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
+    fa_icon: fas fa-copy
+  - name: Archive Templates
+    link: /docs/user_guide/engagement_tools/templates_and_media/archive/
+    fa_icon: fas fa-archive
 ---
 
 ## About Templates & Media
 
-To access this Templates & Media, navigate to __Engagement__ in your left navigation bar of your Braze account, then select __Templates & Media__.
+To access Templates & Media, navigate to __Engagement__ in your left navigation bar of your Braze account, then select __Templates & Media__. ![Templates and Media][1]
 
-![Templates and Media][1]
-
-Aggregate templates across the following features:
+You can use and manage templates and creative content in Templates & Media for the following features:
 
 - [Email Templates][2]
 - [Content Blocks][7]
@@ -32,40 +36,7 @@ Aggregate templates across the following features:
 
 <br>
 
-## Duplicate Templates in Templates & Media
-
-Duplicating a template can save a lot of time.  Braze now offers two different ways to duplicate a template
-
-### Duplicate an individual Template
-Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and hitting 'duplicate' [template_duplicate_cog][8]
-
-{% alert note %}
-For Content Block templates, a 'draft' copy is created.  For all other templates a new duplicate copy is automatically created.
-{% endalert %}
-
-
-### Duplicate multiple Templates
-Duplicating multiple templates can be achieved by selecting the checkbox next to the template name.  Select multiple templates and then click the "Duplicate" button that appears.  Duplicated templates can be found by sorting the 'last edited' column.  By default the new templates will by named "Copy of {{original template name}}"
-[duplicate_multiple_template] [9]
-
-## Archive Templates in Templates & Media
-
-Archiving templates can help better organize the template section.
-
-### Archive an individual Template
-Archiving an individual template can be achieved by clicking the cog located on the template grid screen and hitting 'archive' [template_archive_cog][10]
-
-
-### Archive multiple Templates
-Archiving multiple templates can be achieved by selecting the checkbox next to the template name.  Select multiple templates and then click the "Archive" button that appears.  Archived templates can be found clicking the "Archived".  
-
-[archive_multiple_template] [11]
-
-
-{% alert note %}
-Archiving is not currently available for Link Templates
-{% endalert %}
-
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
 
 [1]: {% image_buster /assets/img_archive/templates_and_media.png %}
 [2]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
@@ -74,7 +45,3 @@ Archiving is not currently available for Link Templates
 [5]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
 [6]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/link_templates/#link-templates
 [7]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/
-[8]: {% image_buster /assets/img_archive/template_duplicate_cog.png %}
-[9]: {% image_buster /assets/img_archive/duplicate_multiple_template.gif %}
-[10]: {% image_buster /assets/img_archive/template_archive_cog.png %}
-[11]: {% image_buster /assets/img_archive/archive_multiple_template.gif %}
