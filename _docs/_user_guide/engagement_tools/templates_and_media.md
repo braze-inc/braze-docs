@@ -63,7 +63,7 @@ Archiving multiple templates can be achieved by selecting the checkbox next to t
 
 
 {% alert note %}
-Duplicating and Archiving is not currently available for Link Templates
+Archiving is not currently available for Link Templates
 {% endalert %}
 
 
