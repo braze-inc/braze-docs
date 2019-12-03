@@ -44,7 +44,7 @@ If you want to update a Content Block for a single message or make a copy of a C
 
 ![copy-content-block][2]{: height="70%" width="70%"}
 
-You can also [duplicate a Content Block with our Templates & Media feature](({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
+You can also [duplicate a Content Block with our Templates & Media feature]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
 
 ## Nesting Content Blocks
 
