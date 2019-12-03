@@ -32,7 +32,7 @@ GET https://YOUR_REST_API_URL/subscription/user/status
 | `external_id`  | Yes | String | The external_id of the user (must include at least one and at most 50 `external_ids`). |
 | `email`  |  Yes | String | The email address of the user (must include at least one address and at most 50 addresses). |
 | `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
-| `offset`  |  No | Integer | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+| `offset`  |  No | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
 
 {% alert tip %}
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
@@ -65,11 +65,9 @@ EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
 | `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
 | `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 50. |
-| `phone` | No | String | The phone number of the user. You must include _at least one_ phone number and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`. |
+| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
-_* Either `external_id` or `email` are required._
-
-> Only `external_id` or `phone` is accepted for SMS subscription groups
+_* Generally, either `external_id` or `email` is required. <br>  But, for SMS subscription groups, either `external_id` or `phone` is required. <br>  Must include `phone` or `email` field, but not both._
 
 ### Example Request
 
@@ -100,7 +98,8 @@ Content-Type: application/json
    "external_id": (required*, string) the external_id of the user,
    "email": (required*, string) the email address of the user
    //one of eternal_id or email is required
-   //can be passed as an array of string with a max of 50,
+   //can be passed as an array of string with a max of 50
+   //endpoint only accepts email or phone field, not both
    "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
  }
 ```
@@ -120,7 +119,9 @@ Content-Type: application/json
     "api_key": "12345",
     "subscription_group_id": "111-222-333",
     "subscription_state": "unsubscribed",
+    //endpoint only accepts email or phone field, not both
     "email": "john@braze.com",
+    - or -
     "phone": "+14152342671"
   }
 ```
@@ -131,6 +132,8 @@ Response: (status 201)
     "message": "success"
 }
 ```
-
+{% alert important %}
+The endpoint only accepts the `email` or `phone` field, not both. If given both, you will recieve this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+{% endalert %}
 
 [support]: {{ site.baseurl }}/support_contact/
