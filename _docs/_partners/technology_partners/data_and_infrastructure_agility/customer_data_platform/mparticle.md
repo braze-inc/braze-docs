@@ -25,7 +25,7 @@ Please note that regardless of approach, it is necessary to integrate the mParti
 
 # Embedded Kit Integration
 
-Through the embedded kit integration, mParticle and Braze’s SDK will both be present on your application. Unlike a direct Braze integration, however, mParticle takes care of calling the majority of Braze SDK code for you. Any mParticle methods you use to track user data will automatically be mapped to Braze’s SDK. These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on Braze’s mParticle’s GitHub page.  
+Through the embedded kit integration, mParticle and Braze’s SDK will both be present on your application. Unlike a direct Braze integration, however, mParticle takes care of calling the majority of Braze SDK code for you. Any mParticle methods you use to track user data will automatically be mapped to Braze’s SDK. These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations).  
 
 The embedded SDK integration allows you to take advantage of our full suite of features (Push, In-app Messages, News Feed, and all relevant message analytics tracking).
 
