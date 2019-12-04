@@ -33,13 +33,13 @@ These will automatically change the layout or function of a page.
 ### Content Tags
 These will assist in external and internal SEO, informing page content and formatting, and other content-based structure.
 
-| YAML Content Tag | Description | Required? | Data Type | Available Values |
-| ----------------- | ----------- | --------- | -------------------- |
-| `description` | Description of the page that will show in online searches. Encapsulate in quotes. | Yes. | Sting. | Any - the page description of a page is up to you. We recommend less than 3 sentences.|
-| `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | String. | See [Page Types](#page-types) list below. |
-| `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | Yes. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, and any of the wrapper SDKs. |
-| `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | Yes. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
-| `tool` | Notes which engagement tools (Canvas, Campaigns, etc.) the article is associated with. | Yes. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
+| YAML Content Tag | Description  | Required? | Exclusive or can multiple be used? | Data Type | Available Values |
+| ----------------- | ----------- | --------- | ---------------------------------- | --------- | ---------------- |
+| `description` | Description of the page that will show in online searches. Encapsulate in quotes. | Yes. | Exclusive up to 160 characters. | Sting. | Any - the page description of a page is up to you. We recommend less than 3 sentences.|
+| `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types) list below. |
+| `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | Yes.  | Multiple values can be used. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, and any of the wrapper SDKs. |
+| `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
+| `tool` | Notes which engagement tools (Canvas, Campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
 
 ### Sample YAML
 
@@ -52,7 +52,9 @@ page_order: 0
 
 description: "This page walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata. This is a great resource for contributors via our Github page."
 page_type: reference
-tool: docs
+tool: 
+  - docs
+  - dashboard
 ---
 ```
 
