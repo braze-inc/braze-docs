@@ -17,6 +17,7 @@ validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
+validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
 
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';
@@ -40,5 +41,6 @@ validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/';
 
+validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 
 validurls['/docs/SDK_Changelogs'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs';

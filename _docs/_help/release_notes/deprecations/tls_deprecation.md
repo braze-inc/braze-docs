@@ -1,10 +1,12 @@
 ---
 nav_title: TLS 1.0 & 1.1 Deprecation
-platform: REST APIs
-page_order: 6
-search_rank: 6
+page_order: 2
 ---
 # TLS 1.0 & 1.1 Deprecation
+
+{% alert update %}
+Braze has removed support for Transport Layer Security (TLS) ciphers in both TLS 1.0 and 1.1, in accordance with recommendations made by the PCI Security Standards Council. We performed this deprecation of support in two phases, completed in May 2018.
+{% endalert %} 
 
 ## Background
 
