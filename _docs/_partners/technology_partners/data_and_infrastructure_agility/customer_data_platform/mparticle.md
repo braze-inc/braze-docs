@@ -11,7 +11,7 @@ You can improve your data flow by marrying mParticle and Braze for a seamless wa
 
 If you're looking for information on the Currents integration with mParticle, [click here]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
 
-# Pre-Requisites
+## Pre-Requisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -23,13 +23,13 @@ If you have backend data outside of your apps, then you’ll want to use the Ser
 
 Please note that regardless of approach, it is necessary to integrate the mParticle embedded kit.
 
-# Embedded Kit Integration
+## Embedded Kit Integration
 
 Through the embedded kit integration, mParticle and Braze’s SDK will both be present on your application. Unlike a direct Braze integration, however, mParticle takes care of calling the majority of Braze SDK code for you. Any mParticle methods you use to track user data will automatically be mapped to Braze’s SDK. These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations).  
 
 The embedded SDK integration allows you to take advantage of our full suite of features (Push, In-app Messages, News Feed, and all relevant message analytics tracking).
 
-## 1. Integrate the mParticle SDKs
+### 1. Integrate the mParticle SDKs
 
 Integrate the appropriate mParticle SDKs into your app based on your platform needs:
 
@@ -37,11 +37,11 @@ Integrate the appropriate mParticle SDKs into your app based on your platform ne
 * [mParticle for iOS](https://docs.mparticle.com/developers/sdk/ios/getting-started/)
 * [mParticle for Web](https://docs.mparticle.com/developers/sdk/web/getting-started/)
 
-## 2. Complete mParticle's Braze Event Kit Integration
+### 2. Complete mParticle's Braze Event Kit Integration
 
 mParticle's [Braze Event Kit Integration Guide](https://docs.mparticle.com/integrations/braze/event/#kit-integration) will walk you through custom mParticle:Braze alignment instructions based on your messaging needs (Push, Location Tracking, etc.).
 
-## 3. Integrate the Braze SDK
+### 3. Integrate the Braze SDK
 
 Integrate the appropriate Braze SDKs into your app based on your messaging needs.
 
@@ -53,7 +53,7 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
 |Push for Web | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
 
-## 4. Configure your mParticle dashboard to enable the Braze Kit.
+### 4. Configure your mParticle dashboard to enable the Braze Kit.
 
 ![mParticle Event Config UI][3]
 
@@ -70,11 +70,11 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 API keys will be different for each platform (iOS, Android, and Web).
 {% endalert %}
 
-# Server API Integration
+## Server API Integration
 
 This is an add-on to route your backend data to Braze if you’re using mParticle’s Server-Side SDKs (e.g. Ruby, Python, etc.). To set up this server-to-server integration with Braze, please follow mParticle’s documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
 
-## Connections Settings for your Braze Output
+### Connections Settings for your Braze Output
 
 These settings are located in mParticle’s “Connections” tab under “Connect”. You will need to add Braze as an output.
 
