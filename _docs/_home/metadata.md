@@ -16,6 +16,13 @@ The [content tags](#content-tags) listed on this page are currently a work in pr
 
 These are independent. If you need to see additional optional YAML content based on "Layout", check out the [templates]({{ site.baseurl }}/home/templates/) and layouts (TBD) breakdowns.
 
+{% alert imporant %}
+A note on capitalization... 
+<br> 
+<br> 
+Please leave all tag values (except for the content for the `description` tag) lowercase. This will ensure consistency. We may change this in the future, but for now, lowercase is better and easier to mass search and replace in the event of a formatting update.
+{% endalert %}
+
 ### Configuration Tags
 
 These will automatically change the layout or function of a page.
