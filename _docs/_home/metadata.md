@@ -29,17 +29,35 @@ These will automatically change the layout or function of a page.
 | `permalink` | Sets the page's url. For example: `permalink: /this_page_name/` will set the page's URL to `https://www.braze.com/docs/this_page_name/`. | No, unless page is `hidden`. | String. | Any - this url is up to you. Encapsulate in slashes (`/`). |
 | `layout` | Sets specific features on the page that align with developed layouts. Defaults is a regular page. | No. | Sting. | If you do not set this, it will default to a regular content page. You may choose between: `api_page`, `dev_guide`, `featured_video`, `featured`, `glossary_page`, `blank_config`, and `redirect`. There are others, but those are mostly for internal and config uses. |
 | `hide_toc` | Determines whether the Table of Contents on the right side of the page is included or not. | No. | Boolean. | You may choose between `true` and `false`. |
+| `noindex` | Determines whether the article will show in Algolia and Google Searches. Defaults to `false` unless you have the `hidden` YAML tag set as `true`. | No. | Boolean. | `true` or `false`. | 
 
 ### Content Tags
 These will assist in external and internal SEO, informing page content and formatting, and other content-based structure.
 
 | YAML Content Tag | Description  | Required? | Exclusive or can multiple be used? | Data Type | Available Values |
 | ----------------- | ----------- | --------- | ---------------------------------- | --------- | ---------------- |
-| `description` | Description of the page that will show in online searches. Encapsulate in quotes. | Yes. | Exclusive up to 160 characters. | Sting. | Any - the page description of a page is up to you. We recommend less than 3 sentences. <br> <br> Template: `This {page_type} {lists, describes, walks you through} {topic or task} for {platform and/or channel} using {tool}.` Though the exact phrasing can vary, it must include at least the page type, what the page aims to do (as in, it will "walk you through how to perform noted task" or "teach you how to read a certain report" or "describe the requirements of a certain Partner integration". <br> <br> Example: `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Or `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android Push campaigns.` Or even `This solutions article will walk you through a custom integration.` |
+| `description` | Description of the page that will show in online searches. Encapsulate in quotes. | Yes. | Exclusive up to 160 characters. | String. | Any - the page description of a page is up to you. We recommend less than 3 sentences. <br> <br> Template: `This {page_type} {lists, describes, walks you through} {topic or task} for {platform and/or channel} using {tool}.` Though the exact phrasing can vary, it must include at least the page type, what the page aims to do (as in, it will "walk you through how to perform noted task" or "teach you how to read a certain report" or "describe the requirements of a certain Partner integration". <br> <br> Example: `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Or `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android Push campaigns.` Or even `This solutions article will walk you through a custom integration.` |
 | `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types) list below. |
 | `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | No, unless on a Dev Guide page.  | Multiple values can be used. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, `API`, and any of the wrapper SDKs. |
 | `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | No, unless the content mentions a specific channel or channels. | Multiple values can be used. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
 | `tool` | Notes which engagement tools (Canvas, Campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
+
+### Multiple Tag Values
+Sometimes, you may find that a content tag for a page could be categorized with multiple values (as in, an article might talk about both Canvas and Campaigns, or cover a custom integration for both Android and iOS).
+
+You can format that like this: 
+```
+key:
+  - string1
+  - string2      
+  - string3
+  - string4
+  - string5
+  - string6
+```
+{% alert important %}
+Please note that there can only be a single `page_type` value for page. A page cannot be both a `reference` and a `glossary`. The different page types exist to narrow the scope and purpose of each article. 
+{% endalert %}
 
 ### Sample YAML
 
@@ -57,6 +75,7 @@ tool:
   - dashboard
 ---
 ```
+
 
 ## Page Types
 
