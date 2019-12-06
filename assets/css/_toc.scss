@@ -115,21 +115,22 @@ $toc_width: 220px;
       margin-bottom: 6px;
     }
   }
-  @media (min-width: $window-xxlarge-px) {
-    display: block !important;
-    position: fixed;
-    right: 0px;
 
-    &.featured_toc {
+  &.featured_toc {
+    @media (min-width: $window-xxlarge-px) {
+      display: block !important;
+      position: fixed;
+      right: 0px;
+
       top: calc((100vw * 0.5625 * 0.48) - 1*(#{$header_height + $banner_height + 10px } * -1));
       height: calc((100vh - 100vw * 0.5625 * 0.48) - #{$header_height + $banner_height + ($base_font_size * 4)});
-    }
-    &.scrollnav {
-      top: calc((100vw * 0.5625 * 0.48) - 1*(#{$header_height + 10px} * -1) );
-      height: calc((100vh - 100vw * 0.5625 * 0.48) - #{$header_height });
-    }
-    &.scrollbottom {
-      height: calc((100vh - 100vw * 0.5625 * 0.48) - #{$header_height + $footer_height + 50px  + ($base_font_size * 4)});
+      &.scrollnav {
+        top: calc((100vw * 0.5625 * 0.48) - 1*(#{$header_height + 10px} * -1) );
+        height: calc((100vh - 100vw * 0.5625 * 0.48) - #{$header_height });
+      }
+      &.scrollbottom {
+        height: calc((100vh - 100vw * 0.5625 * 0.48) - #{$header_height + $footer_height + 50px  + ($base_font_size * 4)});
+      }
     }
   }
 }
