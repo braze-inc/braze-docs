@@ -72,7 +72,13 @@ layout: default
 </div>
 
 {%- unless hide_toc -%}
-<div class="d-none d-print-none" id="toc_col">
+<div class="d-none d-lg-block col-lg-2 d-print-none featured_toc" id="toc_col">
+  <div class="gitedit_div" style="margin-top: 10px;padding-left: 5px;">
+      <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank">
+          <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" /> &nbsp; Edit this page on GitHub
+      </a>
+  </div>
   <div id="toc" ></div>
 </div>
 {%- endunless -%}
+
