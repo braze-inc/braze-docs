@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
   $('#toc').toc({
-    headers: 'h1, h2, h3',
+    headers: 'h2, h3',
     minimumHeaders: toc_minheaders
   });
   // Use Bootstrap's "Scrollspy" plugin to dynamically expand/collapse ToC
