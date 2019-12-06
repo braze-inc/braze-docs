@@ -547,7 +547,7 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
-[31]: #customizing-appboy-on-startup
+[31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
