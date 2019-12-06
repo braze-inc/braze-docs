@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
   $('#toc').toc({
-    headers: 'h1, h2, h3',
+    headers: 'h2, h3',
     minimumHeaders: toc_minheaders
   });
   // Use Bootstrap's "Scrollspy" plugin to dynamically expand/collapse ToC
@@ -93,12 +93,22 @@ $(document).ready(function() {
       $('#nav_bar' ).addClass('scrollnav');
       $('#contentcards' ).addClass('scrollnav');
       $('#main_content' ).addClass('scrollnav');
+      $('#toc_col' ).addClass('scrollnav');
+      if (y_cord > (bzheader_height * 5/6)) {
+        $('#toc_col' ).addClass('scrollbottom');
+      }
+      else {
+        $('#toc_col' ).removeClass('scrollbottom');
+      }
       //$('#nav_bottom').height(nav_bottom_height);
     } else {
       $('#header_nav').removeClass('scrollnav');
       $('#nav_bar' ).removeClass('scrollnav');
       $('#contentcards' ).removeClass('scrollnav');
       $('#main_content' ).removeClass('scrollnav');
+      $('#toc_col' ).removeClass('scrollnav');
+      $('#toc_col' ).removeClass('scrollbottom');
+
       //$('#nav_bottom').height($('#nav_bottom').height() + delta_scroll);
 
       if ($('#toc nav').length) {

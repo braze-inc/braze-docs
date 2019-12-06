@@ -1,6 +1,6 @@
 ---
 nav_title: Apptimize Partnership
-alias: /partners/apptimize/
+page_order: 0
 ---
 
 # Apptimize

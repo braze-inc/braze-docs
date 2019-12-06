@@ -1,10 +1,20 @@
 ---
 nav_title: Creating a Segment
 page_order: 1
+
+page_type: tutorial
+channel: 
+
+description: "This how-to article will walk you through how to set up and create a segment using Braze."
 ---
 # Creating a Segment
 
+> This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival. 
+
+
 Your developers have integrated the SDK, and the data from your users has begun pouring in. Now what? It's time to start segmenting your users. Follow the guide below or check out [our LAB Segmentation course](https://lab.braze.com/segmentation-course)!
+
+ This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Or `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android Push campaigns.` Or even `This solutions article will walk you through a custom integration.
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly and easily move your users from install to your KPIs.
 
@@ -36,7 +46,7 @@ Add at least one filter to your segment as depicted in the image below. You can 
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
-Notice that the statistics on your segment are changing in real time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
+Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
 
 ## Step 5: Save Your Segment
 
@@ -46,7 +56,7 @@ Once you've clicked "Save" you're ready to start sending messages to your users!
 
 ## Archiving Segments
 
-If you no longer need or wish to retire a specific segment, you can archive it by going to the __Segments__ page, clicking on the appropriate gear, then selecting "Archive" from the drop down that appears.
+If you no longer need or wish to retire a specific segment, you can archive it by going to the __Segments__ page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
 When you archive a segment, any Campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will __also be archived__. You will get a warning listing which Campaigns and Canvases are about to be archived by archiving the associated segment.
