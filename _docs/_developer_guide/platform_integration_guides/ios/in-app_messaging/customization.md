@@ -445,16 +445,15 @@ By default in-app messages are triggered by event types which are logged by the 
 To enable this feature you would send a silent push to the device which allows the device to log a SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ### Step 1: Handle Silent Push and Key Value Pairs
-When building against iOS 10+ we recommend you integrate the UserNotifications framework. If you use the UserNotifications framework, add the following code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method:
+Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (void)handleExtrasFromPush:(UNNotification *)notification {
+- (void)handleExtrasFromPush:(NSDictionary *)userInfo {
   NSLog(@"A push was received.");
-  NSDictionary *userInfo = notification.request.content.userInfo;
-  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil) {
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
     [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
   }
  };
@@ -464,13 +463,10 @@ When building against iOS 10+ we recommend you integrate the UserNotifications f
 {% tab swift %}
 
 ```swift
-func handleExtrasFromPush(notification: UNNotification) {
-  NSLog("A push was received.")
-  let userInfo = notification.request.content.userInfo;
-  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil {
-    if let campaignName = userInfo["CAMPAIGN_NAME"] as? String {
-      Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name" : campaignName])
-    }
+func handleExtras(userInfo: [AnyHashable : Any]) {
+  NSLog("A push was received");
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
+    Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
   }
 }
 ```
@@ -478,7 +474,7 @@ func handleExtrasFromPush(notification: UNNotification) {
 {% endtab %}
 {% endtabs %}
 
-This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile.
+When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in foreground.
 
 ### Step 2: Create a Push Campaign
 
