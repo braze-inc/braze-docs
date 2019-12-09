@@ -125,12 +125,11 @@ This example will cache for 900 seconds (or 15 minutes).
 
 #### Cache Busting
 
-To prevent a browser from reusing an ad it has already seen and cached, or saved, to a temporary memory file, use something like the snippet below, keeping your own needs in mind:
+To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below. Be certain the Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency due to Braze making Connected Content requests for every single message.
 
 {% raw %}
 ```js
-{% assign timestamp = 'now' | date: '%Y%m%d%H%m%s' %}
-{% connected_content https://example.com/webservice.json?user_id={{${braze_id}}}&timestamp={{timestamp}} %}
+{% connected_content https://example.com/webservice.json :no_cache %}
 ```
 {% endraw %}
 
