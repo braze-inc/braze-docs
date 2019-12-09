@@ -13,6 +13,7 @@ description: "This how-to article will go over how to send messages in different
 
 > This how-to article will go over how to send messages in different languages from within Braze dashboard campaigns.
 > <br>
+> <br>
 > Being able to deliver messages in multiple languages allows users to interact and reach their customers in a truly personalized way. 
 
 Braze allows you to send messages in different languages from our Dashboard. When composing a campaign, our language templating feature enables you to easily create one message that appears in different languages depending on the user's phone settings.
