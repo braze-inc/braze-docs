@@ -7,7 +7,7 @@ guide_top_text: "If you want to engage with your users on a case by case basis, 
 
 tools: campaigns
 page_type: landing
-description: "This landing page is home to Braze's Dashboard Campaigns. Here you can find resources to not only create and set up a campaign but also valuable campaign strategy tips as well as documentation to guide you in testing, scheduling and organizing your campaign."
+description: "This landing page is home to Braze's Dashboard Campaigns. Here you can find resources to create, set up, and personalize a campaign."
 
 guide_featured_title: "Campaign Topics"
 guide_featured_list:
