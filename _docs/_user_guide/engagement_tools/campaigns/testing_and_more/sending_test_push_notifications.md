@@ -6,7 +6,7 @@ page_order: 12
 
 tools: campaigns
 page_type: reference
-description: "This reference article goes over how to send test messages across all of the different Braze channels, as well as how to incorporate custom event properties and user attributes."
+description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
 ---
 # Sending Test Messages
 
