@@ -243,6 +243,10 @@ For an implementation example, see our [In-App Message Sample Application][36].
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
+### Hiding the Status Bar During Display
+
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+
 ### Logging Impressions and Clicks
 
 Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
@@ -445,16 +449,15 @@ By default in-app messages are triggered by event types which are logged by the 
 To enable this feature you would send a silent push to the device which allows the device to log a SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ### Step 1: Handle Silent Push and Key Value Pairs
-When building against iOS 10+ we recommend you integrate the UserNotifications framework. If you use the UserNotifications framework, add the following code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method:
+Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (void)handleExtrasFromPush:(UNNotification *)notification {
+- (void)handleExtrasFromPush:(NSDictionary *)userInfo {
   NSLog(@"A push was received.");
-  NSDictionary *userInfo = notification.request.content.userInfo;
-  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil) {
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
     [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
   }
  };
@@ -464,13 +467,10 @@ When building against iOS 10+ we recommend you integrate the UserNotifications f
 {% tab swift %}
 
 ```swift
-func handleExtrasFromPush(notification: UNNotification) {
-  NSLog("A push was received.")
-  let userInfo = notification.request.content.userInfo;
-  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil {
-    if let campaignName = userInfo["CAMPAIGN_NAME"] as? String {
-      Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name" : campaignName])
-    }
+func handleExtras(userInfo: [AnyHashable : Any]) {
+  NSLog("A push was received");
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
+    Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
   }
 }
 ```
@@ -478,7 +478,7 @@ func handleExtrasFromPush(notification: UNNotification) {
 {% endtab %}
 {% endtabs %}
 
-This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile.
+When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in foreground.
 
 ### Step 2: Create a Push Campaign
 
@@ -539,12 +539,11 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
 [21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates
-[25]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#2121
 [26]: http://fortawesome.github.io/Font-Awesome/
 [27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
-[31]: #customizing-appboy-on-startup
+[31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h

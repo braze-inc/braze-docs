@@ -1,8 +1,16 @@
 ---
 nav_title: Beacon and Geofence Support
 page_order: 7
+
+page_type: reference
+tool: segments
+
+description: "This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking."
 ---
 # Beacon and Geofence Support
+
+> This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking.
+
 
 Combining existing beacon or geofence support with Braze's targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly.
 

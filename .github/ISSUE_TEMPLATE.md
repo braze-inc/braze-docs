@@ -7,7 +7,7 @@
 
 
 
-### Is this change associated with a Braze feature/product release?
+### Is this change associated with a Braze feature/product/SDK release?
 - [ ] Yes (__Feature Release Date:__)
 - [ ] No
 
@@ -16,18 +16,16 @@
 ---
 ---
 
-## Before You Submit
+<details>
+<summary>Before Your Submit Checklist</summary>
 
 - [ ] Fill out the relevant items under __Submit an Issue__ above.
 - [ ] [Label](https://github.com/Appboy/braze-docs/issues/labels) this issue.
 - [ ] Assign this issue to either yourself, the Technical Writer (@EmilyNecciai), or to another appropriate person. _If you do not assign anyone to an issue, your issue may be closed or left uncompleted._
+</details>
+
 
 ---
 ---
 
 <!-- Thanks for filling me out! If you have any thoughts on how to improve this template, please file an issue or reach out to @EmilyNecciai. -->
-
----
----
-
-[Docs Request Policy (Braze Internal Only)](https://confluence.braze.com/display/GROW/Request+Process)
