@@ -6,7 +6,7 @@ guide_top_text: "Before you send your campaigns, you should always test your mes
 
 tools: campaigns
 page_type: landing
-description: "This landing page is home to Campaign Testing and Tips. Here you can find resources, references and how-to articles on the different aspects of a campaign like rate-limiting, conversions, and A/B testing."
+description: "This landing page is home to Campaign Testing and Tips. Here you can find resources on campaign preferences like rate-limiting, conversions, and A/B testing."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
