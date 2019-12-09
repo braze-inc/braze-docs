@@ -1,6 +1,6 @@
 ---
 nav_title: Event Delivery Semantics
-page_order: 0
+page_order: 3
 
 page_type: reference
 description: "This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners."
@@ -10,11 +10,16 @@ tool: currents
 
 # Event Delivery Semantics
 
+> This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners.
+
+Currents for Data Storage is a continuous stream of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
+
+Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
+
 {% alert important %}
-Please note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. For content that applies to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that this content **only applies to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. For content that applies to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
-Currents for Data Storage is a continuous stream of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/). Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
 ## At-Least-Once Delivery
 

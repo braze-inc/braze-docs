@@ -2,7 +2,7 @@
 nav_title: Customer Behavior Events
 layout: customer_behavior_events_glossary
 
-page_order: 2
+page_order: 4
 
 excerpt_separator: ""
 page_type: glossary
@@ -12,11 +12,11 @@ description: "This glossary lists the various Customer Behavior Events that Braz
 tool: currents
 ---
 
-Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/message_engagement_events/)
+Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)
 
 
 {% alert important %}
-Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
 
@@ -223,7 +223,7 @@ Impression, Users, Behaviors
 Data accumulates when a user views the News Feed. This is when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
-We do track other News Feed events; these are located in [Message Engagement Events](({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/message_engagement_events/).
+We do track other News Feed events; these are located in [Message Engagement Events](({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
 {% endalert %}
 
 ```json

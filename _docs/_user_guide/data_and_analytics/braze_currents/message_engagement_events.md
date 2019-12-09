@@ -2,7 +2,7 @@
 nav_title: Message Engagement Events
 layout: message_engagement_events_glossary
 
-page_order: 1
+page_order: 5
 
 excerpt_separator: ""
 page_type: glossary
