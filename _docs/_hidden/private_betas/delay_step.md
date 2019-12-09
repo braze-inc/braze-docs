@@ -9,7 +9,7 @@ permalink: "/delay_step/"
 The Canvas Delay Step is currently in Beta. Please reach out to a Braze representative for more information.
 {% endalert %}
 
-Delay Steps in Canvas allow you to add a stand alone delay to a Canvas. In other words, you can add a delay to your Canvas without needing to add an associated message.
+Delay Steps in Canvas allow you to add a stand-alone delay to a Canvas. In other words, you can add a delay to your Canvas without needing to add an associated message.
 
 Delay Steps can make your Canvas cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step.
 
@@ -17,7 +17,7 @@ You can also use Canvas Delay Steps to delay a step until an exact date, rather 
 
 ## Create a Delay Step
 
-To create a Delay Step, add a step to your Canvas. Then, use the drop down at the top of the new step to select `Delay Step`.
+To create a Delay Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select `Delay Step`.
 
 ![Canvas Delay Step][1]
 
@@ -40,7 +40,7 @@ You can choose the type of delay before the next message in your Canvas. You can
   The `Until Exact Date` option allows you to hold users in a step until a specific date and time.
 
   {% alert important %}
-  That if the selected date and time has already passed by the time users proceed to the delay step, users will exit the Canvas. There can be a maximum of 31 days between the start of the Canvas and the dates chosen for  “Wait until Exact Date” steps.
+  If the selected date and time have already passed by the time users proceed to the delay step, users will exit the Canvas. There can be a maximum of 31 days between the start of the Canvas and the dates chosen for  “Wait until Exact Date” steps.
   {% endalert %}
 
   {% endtab %}
@@ -48,9 +48,9 @@ You can choose the type of delay before the next message in your Canvas. You can
 
 ## Using Delay Steps
 
-Let’s say that it’s June 10th. On June 11th, you’d like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17th at 3:00PM local time. At 3:00PM local time on June 17th, you want to send users a reminder message about the promotion.
+Let’s say that it’s June 10th. On June 11th, you’d like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17th at 3:00 PM local time. At 3:00 PM local time on June 17th, you want to send users a reminder message about the promotion.
 
-You’d start by adding a full step that sends immediately after users enter the Canvas on June 11th. Then, you’d create a delay step that holds users in the step until 3:00PM local time on June 17th. After that, you’d link the delay step to a full step that sends it’s message immediately.
+You’d start by adding a full step that sends immediately after users enter the Canvas on June 11th. Then, you’d create a delay step that holds users in the step until 3:00 PM local time on June 17th. After that, you’d link the delay step to a full step that sends it’s message immediately.
 
 ## Delay Step Analytics
 
