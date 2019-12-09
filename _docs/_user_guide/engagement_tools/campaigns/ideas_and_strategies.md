@@ -6,7 +6,7 @@ guide_top_text: "Learn more about how to build your ideal campaign with these us
 
 tools: campaigns
 page_type: landing
-description: "This landing page is home to Campaign Ideas and Strategies. Here you can find resources, references, and how-to articles on different topics like how to localize a campaign or incorporate multiple languages."
+description: "This landing page is home to Campaign Ideas and Strategies. Here you can find articles on topics like localizing, multilanguage options, and retargeting."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
