@@ -1,6 +1,11 @@
 ---
 nav_title: Requirements & Methodology
 page_order: 2
+
+page_type: reference
+description: "This page outlines and describes the requirements for setting up and using Braze Currents."
+tool: currents
+
 ---
 
 # Requirements & Methodology

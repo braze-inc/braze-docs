@@ -1,6 +1,10 @@
 ---
 nav_title: Available Partners
 page_order: 3
+
+page_type: reference
+description: "This page outlines and describes the use cases of the data partners who seamlessly integrate with Braze Currents."
+tool: currents
 ---
 
 # Available Partners

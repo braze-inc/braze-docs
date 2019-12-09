@@ -1,6 +1,11 @@
 ---
 nav_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 2
+
+page_type: tutorial
+description: "This article will walk you through transferring data from cloud storage like Amazon S3 to a warehouse like Snowflake using the ELT process."
+tool: currents
+
 ---
 
 # Transfer Data from Amazon S3 to Snowflake
@@ -105,7 +110,7 @@ In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, u
 
 ![AWS Properties][1]{: height="50%" width="50%"}
 
-In **Events**, create new events for each set of Currents Data, as needed ([Messaging]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/) and/or [User Behavior]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/)).
+In **Events**, create new events for each set of Currents Data, as needed ([Messaging]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/message_engagement_events/) and/or [User Behavior]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/customer_behavior_events/)).
 
 ![AWS Events][2]{: height="50%" width="50%"}
 
@@ -113,12 +118,12 @@ Check the appropriate box for the object create notifications, as well as the AR
 
 ### Snowpipe Setup
 
-In order for the above configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/) and/or [User or Customer Behavior Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/) Currents documentation.
+In order for the above configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/message_engagement_events/) and/or [User or Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/customer_behavior_events/) Currents documentation.
 
 It is critical that your tables are structured in accordance to the Braze Currents schemas, as Braze Currents will continuously load data into them via specific fields with specific data types (a `user_id` will always be loaded as a string and called a `user_id` in Currents data).
 
 {% alert note %}
-  Depending on your Currents integration, you may have different events you must set up ([Message Engagement or Messaging Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/), [User or Customer Behavior Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/customer_behavior_events/), or both).  You can also write a script for some or all of this process.
+  Depending on your Currents integration, you may have different events you must set up ([Message Engagement or Messaging Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/message_engagement_events/), [User or Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/customer_behavior_events/), or both).  You can also write a script for some or all of this process.
 {% endalert %}
 
 {% tabs %}
