@@ -95,7 +95,7 @@ valid_partner_list:
 - name: Amazon S3
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
 - name: Amplitude
-  url: /docs/partners/braze_currents/data_partner_integrations/amplitude/about/
+  url: /docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/
 - name: Google Cloud Storage
   title: Currents
   url: /docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
