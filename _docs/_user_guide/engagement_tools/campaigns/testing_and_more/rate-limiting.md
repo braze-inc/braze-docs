@@ -3,9 +3,18 @@ nav_title: Rate-Limiting
 platform: Campaigns
 subplatform: Testing and More
 page_order: 4
+
+tools: campaigns
+page_type: reference
+description: "This reference article discusses the concept of rate-limiting, and how you can apply that marketing pressure to improve user experience."
 ---
 
 # Rate-Limiting
+
+> This reference article discusses the concept of rate-limiting, and how you can apply that marketing pressure to improve user experience.
+> <br>
+> <br>
+> We all want our users to have the best experience possible, with rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
 Braze allows you to control marketing pressure by implementing two different types of rate-limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
 
@@ -32,16 +41,16 @@ This is a standard re-engagement segment. If you have other more targeted segmen
 Appending this filter to all segments targeted by campaigns would cause your users to receive a maximum of one push every 24 hours. You could then prioritize your messaging by ensuring that your most important messages are delivered before less important messages.
 
 
-### Setting A Max User Cap
+### Setting a Max User Cap
 Additionally, in the 'Target Users' section of your campaign composition, you can limit the total number of users that will receive your message. This feature serves as a check that is independent of your campaign filters, allowing you to freely segment users without needing to worry about over-spamming.
 
 ![Total Limit Example][2]
 
-Using the filters in this way, you'll be able to limit the rate at which your users receive notifications on a per channel basis or globally across all message types.
+Using the filters in this way, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
 ### Setting a Max Impression Cap
 
-For in-app messages, you can control marketing pressure by setting a maximum number of impressions that will be displayed to your user base, after which Braze will not send down more messages to your users. However, it is important to note that this cap is not exact. New in-app message rules are sent down to an app on session start, meaning that it is possible for Braze to send an in-app message down to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
+For in-app messages, you can control marketing pressure by setting a maximum number of impressions that will be displayed to your user base, after which Braze will not send down more messages to your users. However, it is important to note that this cap is not exact. New in-app message rules are sent down to an app on session start, meaning that Braze can send an in-app message down to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
 
 For example, let's say you have a game with an in-app message that triggers when a user beats a level, and you cap it at 100 impressions. There have been 99 impressions so far. Alice and Bob both open the game and Braze tells their devices that they are eligible to receive the message when they beat a level. Alice beats a level first and gets the message. Bob beats the level next, but since his device has not communicated with Braze's servers since his session start, his device is unaware that the message has met its cap and he will also receive the message. However, once an impression cap has been hit, the next time any device requests the list of eligible in-app messages, that message will not be sent down and will be removed from that device.
 
@@ -51,7 +60,7 @@ If you anticipate large campaigns driving a spike in user activity and overloadi
 
 ![Per Minute Rate Limit Example][3]
 
-For instance, if you are trying to send out 75K messages with a 10K per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first 7 minutes, and 5K over the last minute. Be wary of delaying time sensitive messages, however, with this form of rate-limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
+For instance, if you are trying to send out 75K messages with a 10K per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first 7 minutes, and 5K over the last minute. Be wary of delaying time-sensitive messages, however, with this form of rate-limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
 
 {% alert important %}
 When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
@@ -78,11 +87,11 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
 
 ### Multi-Platform Push Campaigns
-For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS and Windows with a 10K rate limit per minute will equally distribute the 10K messages across the 3 platforms.
+For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate limit per minute will equally distribute the 10K messages across the 3 platforms.
 
 ## Frequency Capping
 
-As your user base continues to grow and your messaging scales to include life cycle, triggered, transactional and conversion campaigns, it’s important to prevent your notifications from appearing spammy or disruptive. By granting greater control over your users’ experience, Frequency Capping enables you to create the campaigns you desire without overwhelming your audience.
+As your user base continues to grow and your messaging scales to include life cycle, triggered, transactional, and conversion campaigns, it’s important to prevent your notifications from appearing spammy or disruptive. By granting greater control over your users’ experience, Frequency Capping enables you to create the campaigns you desire without overwhelming your audience.
 
 ### Feature Overview {#freq-cap-feat-over}
 
@@ -99,10 +108,10 @@ Each line of frequency caps will be connected using an "AND," and you're able to
 
 There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if she has already reached her frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.  If you want a particular campaign to override Frequency Capping rules, you can set this up when scheduling that campaign's delivery by checking the box next to "Ignore frequency capping settings for this campaign". When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
 
-By default new Campaigns/Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign/Canvas.
+By default, new Campaigns/Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign/Canvas.
 
 {% alert note %}
-Please note that this behavior changes the default behavior when you turn off Frequency Capping for a Campaign/Canvas; the changes are backwards compatible and do not impact messages that are currently live right now.
+Please note that this behavior changes the default behavior when you turn off Frequency Capping for a Campaign/Canvas; the changes are backward compatible and do not impact messages that are currently live right now.
 {% endalert %}
 
 ![Frequency Capping Update][18]

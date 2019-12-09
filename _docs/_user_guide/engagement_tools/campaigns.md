@@ -5,6 +5,10 @@ layout: dev_guide
 guide_top_header: "Campaigns"
 guide_top_text: "If you want to engage with your users on a case by case basis, you can send them a campaign using any of our <a href='/docs/user_guide/message_building_by_channel/'>Messaging Channels</a>. <br> <br> Select any of the following topics to see articles you may be interested in."
 
+tools: campaigns
+page_type: landing
+description: "This landing page is home to Braze's Dashboard Campaigns. Here you can find resources to not only create and set up a campaign but also valuable campaign strategy tips as well as documentation to guide you in testing, scheduling and organizing your campaign."
+
 guide_featured_title: "Campaign Topics"
 guide_featured_list:
 - name: Ideas & Strategies

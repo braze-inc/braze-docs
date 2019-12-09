@@ -3,9 +3,18 @@ nav_title: Comparing Campaigns
 platform: Campaigns
 subplatform: Testing and More
 page_order: 7
+
+tools: campaigns
+page_type: reference
+description: "This reference goes over how to compare up to 10 campaigns simultaneously from within the Braze dashboard."
 ---
 
 # Comparing Campaigns
+
+> This reference goes over how to compare up to 10 campaigns simultaneously from within the Braze dashboard.
+> <br>
+> <br>
+> By knowing which of your campaigns is most successful will help you define and build effective marketing campaigns.  
 
 Braze allows you to view high-level details from multiple campaigns in a single view, allowing you to compare overall performance for up to 10 campaigns.
 
@@ -13,7 +22,7 @@ Get started by visiting the Campaigns page in the Dashboard. From there, click t
 
 ![Compare Button][1]
 
-This puts the campaign list in "Compare Mode" which allows you to select up to 10 campaigns to compare at once. Select campaigns to copmare by clicking the "+" icon next to each campaign name.
+This puts the campaign list in "Compare Mode" which allows you to select up to 10 campaigns to compare at once. Select campaigns to compare by clicking the "+" icon next to each campaign name.
 
 ![Add Buttons][2]
 

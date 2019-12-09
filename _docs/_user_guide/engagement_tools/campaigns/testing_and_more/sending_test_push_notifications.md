@@ -3,14 +3,23 @@ nav_title: Sending Test Messages
 platform: Campaigns
 subplatform: Testing and More
 page_order: 12
+
+tools: campaigns
+page_type: reference
+description: "This reference article goes over how to send test messages across all of the different Braze channels, as well as how to incorporate custom event properties and user attributes."
 ---
 # Sending Test Messages
+
+> This reference article goes over how to send test messages across the difference Braze channels, as well as how to incorporate custom event properties and user attributes. 
+> <br>
+> <br>
+> By testing out your campaigns you can make sure everything about it is just right!
 
 Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. Creating and sending test messages to select devices or members of your team is very simple using the tools in the dashboard.
 
 ## Sending a Test Mobile Push Notification or Email Message
 
-After drafting your Push or Email, you have the ability to send the message to your own device to see what it looks like in real time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test." This will send the message that you drafted to your device.
+After drafting your Push or Email, you have the ability to send the message to your own device to see what it looks like in real-time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test." This will send the message that you drafted to your device.
 
 This is what the testing process will look like for a push message.
 
@@ -24,7 +33,7 @@ Keep in mind that you will either need your users' email address or Braze UserID
 
 ## Sending a Test Web Push Notification
 
-After drafting your web push, you have the ability to send the message to your computer to see what it looks like in real time. In the settings bar, click the "eye" icon, and click "Send Test to Myself."
+After drafting your web push, you have the ability to send the message to your computer to see what it looks like in real-time. In the settings bar, click the "eye" icon, and click "Send Test to Myself."
 
 ![Test Web Push][11]
 
@@ -32,7 +41,7 @@ If you have already accepted push messages from the Braze Dashboard, you will se
 
 ## Sending a Test In-App Message
 
-If you have push notifications set up within your app and on your test device, you have the ability to send test in-app messages to your app to see what it looks like in real time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test:"
+If you have push notifications set up within your app and on your test device, you have the ability to send test in-app messages to your app to see what it looks like in real-time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test:"
 
 ![Test In App][14]
 
@@ -48,7 +57,7 @@ Sending a test News Feed card requires you to set up a test segment and subseque
 
 ### Creating a Designated Test Segment
 
-Once you set up a test segment, you can utilize it these messaging channels. The process is very simple and if configured properly will only need to be done once.
+Once you set up a test segment, you can utilize these messaging channels. The process is very simple and if configured properly will only need to be done once.
 
 Navigate to the "Segments" page in the dashboard and create a new segment. In the dropdown menu under "Add Filter", you'll find our testing filters at the bottom of the list.
 
@@ -61,12 +70,12 @@ Our testing filters allow you to select users with specific email addresses or e
 These filters have three options:
 
 1. __"Equals"__ - This will look for an exact match of the email or user ID that you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
-2. __"Does Not Equal"__ - Use this if you want to exclude a particular email  or user ID from test campaigns.
+2. __"Does Not Equal"__ - Use this if you want to exclude a particular email or user ID from test campaigns.
 3. __"Matches"__ - This will find users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users that have an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
 These filters can also be used in conjunction with each other to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the   `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
 
-After adding the testing filters to your test segment, you can verify that you've selected only the users you intended by clicking "Preview" at the top of the segment editor or by exporting that segment's user data to CSV by clicking on the gear icon in the right hand corner of the editor and selecting "CSV Export All User Data" from the dropdown menu.
+After adding the testing filters to your test segment, you can verify that you've selected only the users you intended by clicking "Preview" at the top of the segment editor or by exporting that segment's user data to CSV by clicking on the gear icon in the right-hand corner of the editor and selecting "CSV Export All User Data" from the dropdown menu.
 
 ![Verify Test Segment][4]
 
@@ -90,9 +99,9 @@ If you are using [personalization][26] in your message, you'll need to take some
 
 When sending a test message, make sure to choose either the option to "Select Existing User" or preview as a "Custom User."
 
-![Testing a personlized message][23]
+![Testing a personalized message][23]
 
-If selecting a user, you'll be able to enter the user ID or email of a specific app user into a search field. Then you'll be able to use the dashboard preview to see how that user's message would appear, and send a test message to your device that reflects that that user would see.
+If selecting a user, you'll be able to enter the user ID or email of a specific app user into a search field. Then you'll be able to use the dashboard preview to see how that user's message would appear and send a test message to your device that reflects that that user would see.
 
 ![Select a user][24]
 
@@ -101,7 +110,7 @@ If previewing as a customized user, you'll be able to enter in text for various 
 ![Custom user][25]
 
 ## Sending a Test Campaign Personalized with Custom Event Properties
-Testing campaigns [personalized][20] with [Custom Event Properties][19] differs slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using Custom Event Properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Testing campaigns [personalized][20] with [Custom Event Properties][19] differ slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using Custom Event Properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 
 ![Composing Test Message with Properties][15]
 

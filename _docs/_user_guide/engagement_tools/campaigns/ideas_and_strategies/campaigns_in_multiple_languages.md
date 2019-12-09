@@ -3,9 +3,17 @@ nav_title: Campaigns in Multiple Languages
 platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 4
+
+tools: campaigns
+page_type: tutorial
+description: "This how-to article will go over how to send messages in different languages from within Braze dashboard campaigns."
 ---
 
 # Campaigns in Multiple Languages
+
+> This how-to article will go over how to send messages in different languages from within Braze dashboard campaigns.
+> <br>
+> Being able to deliver messages in multiple languages allows users to interact and reach their customers in a truly personalized way. 
 
 Braze allows you to send messages in different languages from our Dashboard. When composing a campaign, our language templating feature enables you to easily create one message that appears in different languages depending on the user's phone settings.
 
@@ -29,7 +37,7 @@ __Select the fields that you want to appear in different languages.__ These fiel
 - iOS Push: Message, Sound, and Custom URL
 - In-App Message: Message
 - Windows Universal Push: Text 1, Text 2, Text 3, and Image Name
-In addition, a warning will display if you have already entered content in any of the selected fields. You can choose to replace existing content with the templated text, or insert the templated text after the existing text.
+In addition, a warning will display if you have already entered content in any of the selected fields. You can choose to replace existing content with the templated text or insert the templated text after the existing text.
 
 ![Select Fields][4]
 
@@ -38,7 +46,7 @@ __Using the buttons at the bottom of the dialogue, choose how you wish to insert
 
 {% raw %}
 ## Step 5: Add Language Variations
-__After your templated text is inserted into the desired fields, type in different variations for each language.__ For each field where there is templating, you should enter the variations after bracketed segment of templating. The variation should correspond to the language code referenced in the brackets before it. For instance, in the message's body, this might look like:
+__After your templated text is inserted into the desired fields, type in different variations for each language.__ For each field where there is templating, you should enter the variations after the bracketed segment of templating. The variation should correspond to the language code referenced in the brackets before it. For instance, in the message's body, this might look like:
 
 ```
 {% if ${language} == 'en' %}
@@ -57,7 +65,7 @@ In the title of an Android push, this might look like:
 
 The text you enter after `{% else %}` will display to users who:
 - Have a language that was not selected in Step 2.
-- Have a language that is not supported by Braze. Braze supports all of the languages represented by [ISO 639-1 two letter codes][5].
+- Have a language that is not supported by Braze. Braze supports all of the languages represented by [ISO 639-1 two-letter codes][5].
 - Have a device where the language is undetectable. (This is highly unlikely).
 A best practice is to enter text here that you think your users are most likely to understand. To ensure smooth delivery, you should always enter content after `{% else %}`.
 
