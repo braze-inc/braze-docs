@@ -125,7 +125,7 @@ This example will cache for 900 seconds (or 15 minutes).
 
 #### Cache Busting
 
-To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below. Be certain the Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency due to Braze making Connected Content requests for every single message.
+To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below. 
 
 {% raw %}
 ```js
@@ -133,9 +133,11 @@ To prevent Connected Content from caching the value it returns from a GET reques
 ```
 {% endraw %}
 
+{% alert important %}
+Be certain the provided Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency (increased delays or wider time intervals between request and response) due to Braze making Connected Content requests for every single message.
+{% endalert %}
+
 With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
-
-
 
 [1]: #aborting-connected-content
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
