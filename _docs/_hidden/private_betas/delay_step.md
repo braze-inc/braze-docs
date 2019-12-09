@@ -21,10 +21,6 @@ To create a Delay Step, add a step to your Canvas. Then, use the drop down at th
 
 ![Canvas Delay Step][1]
 
-{% alert important %}
-The first step of a Canvas must be a `Full Step`.
-{% endalert %}
-
 - A delay step __cannot have full step sibling steps__. In other words, you cannot create a full step that branches into a delay step and a full step. This restriction exists because if there was a branch with a delay step and a full step, it wouldn’t be clear which branch users would go down.
 
 - A delay step can __only__ connect to one next step.
