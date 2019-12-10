@@ -3,7 +3,7 @@ nav_title: Segment Personas
 page_order: 1.3
 alias: /partners/segment_personas/
 
-description: "This article outlines the partnership between Braze and Segment, a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack."
+description: "This article outlines the partnership between Braze and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 
 ---

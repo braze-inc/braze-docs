@@ -2,7 +2,7 @@
 nav_title: TeleSign
 alias: /partners/telesign/
 
-description: "This article outlines the partnership between Braze and TeleSign, a cloud communications platform helping the world’s leading websites and mobile applications across SMS messaging, voice messaging, mobile app verification and phone intelligence."
+description: "This article outlines the partnership between Braze and TeleSign, a cloud communications platform helping the world’s leading websites and mobile applications."
 page_type: partner
 
 ---

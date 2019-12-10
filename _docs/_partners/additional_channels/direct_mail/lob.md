@@ -2,7 +2,7 @@
 nav_title: Lob.com
 alias: /partners/lob/
 
-description: "This article outlines the partnership between Braze and Lob.com, an online service which one can interact with through their API to send direct mail like letters, postcards, and checks through the mail."
+description: "This article outlines the partnership between Braze and Lob.com, which allows you to send direct mail like letters, postcards, and checks through the mail."
 page_type: partner
 
 ---

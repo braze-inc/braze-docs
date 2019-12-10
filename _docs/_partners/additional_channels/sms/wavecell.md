@@ -2,7 +2,7 @@
 nav_title: Wavecell
 alias: /partners/wavecell/
 
-description: "This article outlines the partnership between Braze and Wavecell, cloud communication platform businesses and developers can use to incorporate SMS functionality into their user engagement strategies."
+description: "This article outlines the partnership between Braze and Wavecell, cloud communication platform."
 page_type: partner
 
 ---

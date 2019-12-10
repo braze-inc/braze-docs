@@ -2,7 +2,7 @@
 nav_title: Neura Actions
 alias: /partners/neura_actions/
 
-description: "This article outlines the partnership between Braze and Neura Actions, which leads mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights."
+description: "This article outlines the partnership between Braze and Neura Actions, which leads mobile brands drive higher customer engagement & retention."
 page_type: partner
 
 ---

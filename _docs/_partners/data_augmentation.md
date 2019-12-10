@@ -3,7 +3,7 @@ nav_title: Data Augmentation
 page_order: 6
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to pull data from multiple resources to create custom and targeted content based on contextual location and recommendations for customer behavior trends."
+description: "This page lists Braze partners (Alloys) who allow you to pull data from multiple resources to create custom and targeted content based on contextual location and more."
 
 layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
