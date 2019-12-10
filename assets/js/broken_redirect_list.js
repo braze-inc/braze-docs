@@ -10,10 +10,10 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#e
 
 
 
-validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics/'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/requirements_and_methodology/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/integration'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/requirements_and_methodology'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 
 
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery'] = '/docs/user_guide/intelligence/intelligent_timing';

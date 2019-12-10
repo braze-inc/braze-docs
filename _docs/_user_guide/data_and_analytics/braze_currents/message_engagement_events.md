@@ -745,7 +745,7 @@ News Feed, Engagement, Impressions
 Data accumulates when a user engages with the News Feed. Use this data to track all events related to News Feed engagement.
 
 {% alert tip %}
-  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
+  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
 {% endalert %}
 
 ```json
@@ -778,7 +778,7 @@ News Feed, Engagement, Clicks
 Data accumulates when a user engages with the News Feed. Use this data to track all events related to News Feed engagement.
 
 {% alert tip %}
-  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/data_storage_events/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
+  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
 {% endalert %}
 
 ```json
