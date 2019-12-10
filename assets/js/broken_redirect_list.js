@@ -8,6 +8,14 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_o
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#email-analytics-glossary'] = '/docs/user_guide/message_building_by_channel/email/analytics_glossary/';
 
+
+
+validurls['/docs/user_guide/data_and_analytics/braze_currents/integration'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/requirements_and_methodology'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
+
+
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery'] = '/docs/user_guide/intelligence/intelligent_timing';
 validurls['/docs/hidden/misc_reference/most_engaged_channel'] = '/docs/user_guide/intelligence/intelligent_channel';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection'] = '/docs/user_guide/intelligence/intelligent_selection';

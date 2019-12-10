@@ -1,9 +1,15 @@
 ---
 nav_title: Available Partners
-page_order: 3
+page_order: 2
+
+page_type: reference
+description: "This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents."
+tool: currents
 ---
 
 # Available Partners
+
+> This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents.
 
 ## Data Warehouses
 

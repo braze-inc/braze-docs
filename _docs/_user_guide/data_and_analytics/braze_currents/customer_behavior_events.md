@@ -1,22 +1,33 @@
 ---
 nav_title: Customer Behavior Events
-page_order: 2
+layout: customer_behavior_events_glossary
+
+page_order: 4
+
+excerpt_separator: ""
+page_type: glossary
+
+description: "This glossary lists the various Customer Behavior Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+
+tool: currents
 ---
 
-
-# Customer Behavior Events
-
-These schema include other App or Website activity such as Sessions, Custom Events, and Purchases tracked through the platform.
-
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
+Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)
 
 
 {% alert important %}
-Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/).
+Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
 
-{% details CUSTOM EVENTS %}
+{% api %}
+
+
+## Custom Events
+
+{% apitags %}
+Custom, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user performs a custom event. Use this to track users who perform custom events in your app.
 
@@ -38,9 +49,14 @@ Data accumulates when a user performs a custom event. Use this to track users wh
 }
 ```
 
-{% enddetails %}
+{% endapi %}
+{% api %}
 
-{% details PURCHASE EVENTS %}
+## Purchase Event
+
+{% apitags %}
+Purchases, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user makes a purchase. Use this data to track when users purchase something in the app.
 
@@ -66,10 +82,16 @@ Purchases are special custom events, and come with a JSON encoded string of cust
   "device_id": (string) id of the device on which the event occurred
 }
 ```
-{% enddetails %}
+{% endapi %}
 
 
-{% details SESSION EVENTS %}
+{% api %}
+
+## First Session Event
+
+{% apitags %}
+Sessions, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
 
@@ -92,7 +114,24 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
 }
+```
+{% endapi %}
 
+{% api %}
+
+## Session Start Event
+
+{% apitags %}
+Sessions, Users, Behaviors
+{% endapitags %}
+
+Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
+
+{% alert tip %}
+When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
+{% endalert %}
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "id": (string) unique id of this event,
@@ -106,7 +145,25 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
 }
+```
 
+{% endapi %}
+
+{% api %}
+
+## End Session Event
+
+{% apitags %}
+Sessions, Users, Behaviors
+{% endapitags %}
+
+Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
+
+{% alert tip %}
+When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
+{% endalert %}
+
+```json
 // Session End: users.behaviors.app.SessionEnd
 {
   "id": (string) unique id of this event,
@@ -122,9 +179,15 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "device_id": (string) id of the device on which the session occurred
 }
 ```
-{% enddetails %}
+{% endapi %}
 
-{% details LOCATION EVENTS %}
+{% api %}
+
+## Location Event
+
+{% apitags %}
+Locations, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user triggers a location event. Use this to track users triggering location events in your app.
 
@@ -147,14 +210,20 @@ Data accumulates when a user triggers a location event. Use this to track users 
   "device_id": (string) id of the device on which the event occurred
 }
 ```
-{% enddetails %}
+{% endapi %}
 
-{% details NEWS FEED EVENTS %}
+{% api %}
+
+## News Feed Impression Event
+
+{% apitags %}
+Impression, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user views the News Feed. This is when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
-We do track other News Feed events; these are located in [Message Engagement Events](]({{ site.baseurl }}partners/braze_currents/data_storage_events/message_engagement_events/).
+We do track other News Feed events; these are located in [Message Engagement Events](({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
 {% endalert %}
 
 ```json
@@ -172,9 +241,13 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 }
 ```
 
-{% enddetails %}
+{% endapi %}
+{% api %}
+## Uninstall Events
 
-{% details UNINSTALL EVENTS %}
+{% apitags %}
+Uninstall, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when a user uninstalls an app. Use this data to track when users uninstall an app.
 
@@ -193,9 +266,15 @@ Please note that this is not fired when the user actually uninstalls the app - t
 }
 ```
 
-{% enddetails %}
+{% endapi %}
 
-{% details ATTRIBUTION EVENTS %}
+{% api %}
+
+## Attribution Events
+
+{% apitags %}
+Attribution, Users, Behaviors
+{% endapitags %}
 
 Data accumulates when an app installation is attributed to a source. Use this to track where your app installs are coming from.
 
@@ -209,6 +288,6 @@ Data accumulates when an app installation is attributed to a source. Use this to
   "source": (string) the source of the attribution
 }
 ```
-{% enddetails %}
+{% endapi %}
 
 [support]: {{ site.baseurl }}/support_contact/

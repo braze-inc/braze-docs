@@ -1,6 +1,6 @@
 ---
 nav_title: User Data Collection
-page_order: 3
+page_order: 3.5
 layout: featured
 guide_top_header: "User Data Collection"
 guide_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there."
@@ -30,4 +30,4 @@ guide_featured_list:
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
-<br> 
+<br>

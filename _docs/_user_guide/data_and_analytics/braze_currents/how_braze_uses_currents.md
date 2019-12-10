@@ -1,11 +1,15 @@
 ---
 nav_title: How Braze Uses Currents
-page_order: 1
+page_order: 6
+
+page_type: tutorial
+description: "This Currents article will walk you through the basic process for setting up proper intakes for event data, as well as moving it into a database and BI tool."
+tool: currents
 ---
 
 # How Braze Uses Currents
 
-Braze uses Currents! That’s right, we like our own product enough to use it in conjunction with a few of [our partners]({{ site.baseurl }}/partners/braze_currents/integration/available_partners/).
+> Braze uses Currents! That’s right, we like our own product enough to use it in conjunction with a few of [our partners]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 We filter our data from our email and push campaigns into a business insights tool, Looker, but it takes an interesting route to get there. We use a slightly inverted version of the ETL (Extract, Transform, Load) methodology - we just switched up the order to ELT (Extract, Load, Transform)!
 
