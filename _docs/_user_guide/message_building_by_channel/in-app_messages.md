@@ -7,7 +7,7 @@ guide_top_text: "In-App Messages help you get content to your user without inter
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: Creating an In-App Message
+- name: "Creating an In-App Message"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile-alt
 - name: Creative Details
