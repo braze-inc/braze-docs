@@ -426,17 +426,17 @@ var ticket_lookuptable = {
             'mParticle' : {
               'ShowSubmit': true,
               'LinksTitle': ['mParticle integration instructions'],
-              'Links': ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
+              'Links': ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
             },
             'Segment' : {
               'ShowSubmit': true,
               'LinksTitle': ['Segment integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']
+              'Links' : ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
             },
             'Install attribution' : {
               'ShowSubmit': true,
               'LinksTitle': ['Attribution partner integrations','Attribution partner integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
+              'Links' : ['{{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
             },
             'Other' : {
               'ShowSubmit': true,
@@ -620,7 +620,7 @@ var ticket_lookuptable = {
         'Webhooks' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Creating a webhook','Sending SMS via Twilio'],
-          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/technology_partners/additional_channels/sms/twilio/']
+          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/additional_channels/sms/twilio/']
         },
         'Currents' :  {
           'ShowSubmit': true,
