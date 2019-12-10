@@ -1,4 +1,4 @@
-/---
+---
 nav_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 7
 
