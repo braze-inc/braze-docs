@@ -81,6 +81,8 @@ module Jekyll
         collection = params[1]
 
         @currentpage = context.registers[:page]
+        Jekyll.logger.debug("Current Page: " + @currentpage.id)
+
         # print @currentpage.id +  ' '
         # puts @minlevel
 
@@ -93,9 +95,10 @@ module Jekyll
           menu_hash = {}
           menu_items = ''
           context['site']['documents'].find_all{|page| page.url.start_with?(root_string)}.each do |page|
-
             unless page.data[@page_hidden] == true
               path_parts = page.url.split('/')
+              Jekyll.logger.debug("Nav for: " + page.url)
+
               if path_parts.shift
                 path_url = '/'
                 if path_url += path_parts.shift  # ignore collection name from menu

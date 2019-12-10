@@ -7,7 +7,7 @@ guide_top_text: "Audience segmentation is key to strategic marketing - it can ke
 
 tools: segments
 page_type: landing
-description: This is the landing page for Segmentation within Dashboard Campaigns. Here you can find information on how to create an effective Segment, how to funnel your users to create more precise campaigns, as well as how to use various segmentation features like insights, user search, and location targeting. 
+description: "This is the landing page for Segmentation within Dashboard Campaigns. Here you can find information on how to set up and maintain effective Segments."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

@@ -64,7 +64,7 @@ The Stats tab will automatically show you stats for the types of Campaigns or Ca
 | Web Push | Sends, Opens, Bounces, Body Clicks |
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
-| SMS | Sends, Delivery Failures, Rejections, Deliveries |
+| SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 
 
 

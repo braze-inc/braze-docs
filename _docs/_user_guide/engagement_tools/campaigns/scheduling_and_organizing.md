@@ -4,6 +4,10 @@ layout: dev_guide
 guide_top_header: "Scheduling and Organizing"
 guide_top_text: ""
 
+tools: campaigns
+page_type: landing
+description: "This landing page is home to Campaign Scheduling and Organizing. Here you can find resources on how to set up your campaign and the different options available."
+
 guide_featured_title: "Popular Articles"
 
 guide_featured_list:
