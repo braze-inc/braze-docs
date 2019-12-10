@@ -3,8 +3,14 @@ nav_title: Campaign Connector
 platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 5
+
+tools: campaigns
+page_type: tutorial
+description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 ---
 # Campaign Connector
+
+> This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time.
 
 ## Overview
 
@@ -18,7 +24,7 @@ Braze's Campaign Connector allows you to create campaigns that are triggered whe
 - Perform conversion event
 - Receive e-mail
 - Receive push notification
-- Are enrolled in control group
+- Are enrolled in a control group
 
 As well as users who complete the following interactions with active News Feed Cards:
 
@@ -27,7 +33,7 @@ As well as users who complete the following interactions with active News Feed C
 
 ## Delivery Rules
 
-The Campaign Connector feature only works with active campaigns. In addition, you cannot use Campaign Connector to send a message to a user after they have completed  an interaction with a campaign. For example, if you are a running a marketing campaign for 9 weeks and you set up a follow-on campaign that utilizes Campaign Connector at the beginning of week 4, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
+The Campaign Connector feature only works with active campaigns. In addition, you cannot use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you are a running a marketing campaign for 9 weeks and you set up a follow-on campaign that utilizes Campaign Connector at the beginning of week 4, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
 
 - Set up your original campaign as a draft
 - Set up and publish your follow-on campaign
@@ -63,7 +69,7 @@ If you choose to set a schedule delay, you can add an exception to the trigger a
 
 ### Step 4: Proceed with Campaign Creation
 
-Continue creating your campaign just as you normally would. Note that if you want to ensure that you send a message to every user that is going to interact with a specific campaign, then it would be best to target a segment that contains  all of the users of your app.
+Continue creating your campaign just as you normally would. Note that if you want to ensure that you send a message to every user that is going to interact with a specific campaign, then it would be best to target a segment that contains all of the users of your app.
 
 ## Use Cases
 
@@ -71,7 +77,7 @@ You can use Campaign Connector to target users who engage or do not engage with 
 
 For example, you might choose to target users who clicked on a promotional push message that advertised free shipping so that you can send them a promotional push message advertising 15% off a purchase.
 
-Or, you might follow up with users who clicked a deep link in an on-boarding in-app message by sending them another in-app message that highlights additional features.  This way, you can target users that have demonstrated that they are interested in learning more about the features of your application and avoid annoying the users that prefer to discover these features by themselves.
+Or, you might follow up with users who clicked a deep link in an onboarding in-app message by sending them another in-app message that highlights additional features.  This way, you can target users that have demonstrated that they are interested in learning more about the features of your application and avoid annoying the users that prefer to discover these features by themselves.
 
 You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
 

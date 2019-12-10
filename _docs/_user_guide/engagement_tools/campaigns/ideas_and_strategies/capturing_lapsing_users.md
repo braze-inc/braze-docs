@@ -3,8 +3,14 @@ nav_title: Capturing Lapsing Users
 platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 1
+
+tools: campaigns
+page_type: tutorial
+description: "This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users."
 ---
 # Capturing Lapsing Users
+
+> This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users.
 
 If your audience is dwindling, it’s crucial to try wooing them back. Recognizing this necessity, Braze makes it easy to set up automated recurring re-engagement campaigns to capture lapsing users. You can choose the re-engagement timeframe and recurrence that best suits your app, but to demonstrate, we'll get started with a 14 day (2 week) weekly re-engagement plan.
 
@@ -28,7 +34,7 @@ Next, we’ll click 'Create Campaign' and choose what type of campaign we will b
 
 ![SCREENSHOT][5]
 
-We’ll automatically name the campaign “Message to Lapsed Users - 2 Weeks” and select the segment. Here, we will create the content of our message. In the example, we’ll only target iOS users, but you can use Braze for Android and iOS push notifications. The closer to the last time a user was in the app, the more important it is to be topical and relevant. Messaging a user after two weeks of not using the app, it's important to surface relevant content and highlight benefits of using the app.
+We’ll automatically name the campaign “Message to Lapsed Users - 2 Weeks” and select the segment. Here, we will create the content of our message. In the example, we’ll only target iOS users, but you can use Braze for Android and iOS push notifications. The closer to the last time a user was in the app, the more important it is to be topical and relevant. Messaging a user after two weeks of not using the app, it's important to surface relevant content and highlight the benefits of using the app.
 
 ![SCREENSHOT][2]
 
