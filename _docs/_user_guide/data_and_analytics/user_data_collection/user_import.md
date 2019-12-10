@@ -63,9 +63,8 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 
 {% alert note %}
 While `external_id` itself is not mandatory, you __must__ include one of these fields:
-- `external_id` - A unique user identifier for your customer
+- `external_id` - A unique user identifier for your customer <br> - OR -
 - `braze_id` - A unique user identifier pulled for existing Braze users
-- `user_alias_name` or `user_alias_label` - Fields that will import a user by alias
 {% endalert %}
 
 

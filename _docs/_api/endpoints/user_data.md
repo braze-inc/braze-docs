@@ -300,7 +300,7 @@ Content-Type: application/json
 
 ### Properties Object
 
-Custom events and purchases may have event properties. The "properties" values should be an Object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format), or strings less than or equal to 255 characters.
+Custom events and purchases may have event properties. The "properties" values should be an Object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format), or strings less than or equal to 255 characters.
 
 ### User Track Responses
 
