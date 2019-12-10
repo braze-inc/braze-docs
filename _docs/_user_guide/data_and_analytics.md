@@ -7,18 +7,21 @@ guide_top_text: "Braze has provided a wide breadth of metrics for you to use whe
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
+  - name: Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/
+    fa_icon: fas fa-swimmer
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open
   - name: Configuring Reporting
     link: /docs/user_guide/data_and_analytics/configuring_reporting/
     fa_icon: fas fa-cog
-  - name: Creating a Formula
-    link: /docs/user_guide/data_and_analytics/creating_a_formula/
-    fa_icon: fas fa-flask
 
 guide_menu_title: "Additional Sections"
 guide_menu_list:
+  - name: Creating a Formula
+    link: /docs/user_guide/data_and_analytics/creating_a_formula/
+    fa_icon: fas fa-flask
   - name: User Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/
     fa_icon: fas fa-users
