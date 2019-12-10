@@ -53,4 +53,4 @@ Data included in the exports:
 
 [1]: {% image_buster /assets/img_archive/csvexport.png %}
 [2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
+[26]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

@@ -46,7 +46,7 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
   - name: Zapier/Wordpress
-    link: /docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/
+    link: /docs/partners/channel_extensions/workflow_automation/zapier_integration/
     fa_icon: fab fa-wordpress
   - name: Xamarin Android and Fire OS
     link: /docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/

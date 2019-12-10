@@ -221,7 +221,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
-[21]: {{ site.baseurl }}/partners/technology_partners/
+[21]: {{ site.baseurl }}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

@@ -21,10 +21,11 @@ validurls['/docs/hidden/misc_reference/most_engaged_channel'] = '/docs/user_guid
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection'] = '/docs/user_guide/intelligence/intelligent_selection';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing'] = '/docs/user_guide/intelligence/multivariate_testing';
 
+validurls['/docs/partners/technology_partners'] = '/docs/partners/';
 validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/neura/'] = '/docs/partners/neura_actions/';
-validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
-validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
 
 validurls['/docs/help/release_notes/most_recent'] = '/docs/help/release_notes/#most-recent';
@@ -48,7 +49,7 @@ validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/post
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
-validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/';
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 
