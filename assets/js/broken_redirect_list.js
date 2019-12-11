@@ -10,8 +10,9 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#e
 
 
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/';
-validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/'] = '/docs/user_guide/braze_currents/event_delivery_semantics/';
-
+validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_sematics/';
+validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/';
+validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
