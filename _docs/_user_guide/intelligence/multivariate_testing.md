@@ -4,7 +4,7 @@ page_order: 1
 ---
 # Multivariate & A/B Testing
 
-Multivariate & A/B Testing can be quickly utilized using our [Intelligent Selection]({{ site.baseurl }}/docs/user_guide/intelligence/intelligent_selection/) feature.
+Multivariate & A/B Testing can be quickly utilized using our [Intelligent Selection]({{ site.baseurl }}/user_guide/intelligence/intelligent_selection/) feature.
 
 ## What are Multivariate & A/B Testing?
 
