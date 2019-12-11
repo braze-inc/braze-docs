@@ -9,6 +9,8 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_m
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#email-analytics-glossary'] = '/docs/user_guide/message_building_by_channel/email/analytics_glossary/';
 
 
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/'] = '/docs/user_guide/braze_currents/event_delivery_semantics/';
 
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
