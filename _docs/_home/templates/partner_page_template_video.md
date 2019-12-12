@@ -33,7 +33,7 @@ channel:
   - webhooks
 
 noindex = true 
-//(ATTENTION: remove noindex and this alert from template)
+//ATTENTION, remove noindex and this alert from template
 
 ---
 
