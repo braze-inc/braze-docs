@@ -32,8 +32,8 @@ channel:
   - webhooks
 
 noindex = true 
-//(ATTENTION: remove noindex and this alert from template)
----
+//ATTENTION, remove noindex and this alert from template
+
 {% comment %}
 About this layout:
 This layout is for Quick Start guides, Product or feature walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.
