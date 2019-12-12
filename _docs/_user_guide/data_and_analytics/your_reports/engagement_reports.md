@@ -100,7 +100,6 @@ The report, when opened, will contain all the statistics selected in the [Add St
 
 
 
-[1]: {% image_buster /assets/img_archive/engagement_report_menuoption.png %}
 [2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
 [3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
 [4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}

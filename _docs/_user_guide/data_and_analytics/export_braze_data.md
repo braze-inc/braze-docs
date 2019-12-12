@@ -59,5 +59,3 @@ guide_menu_list:
 
 <br>
 
-[6]: {% image_buster /assets/img_archive/Export_Icon.png %}
-[8]: {% image_buster /assets/img_archive/Export_time.png %}

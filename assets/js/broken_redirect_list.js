@@ -8,7 +8,7 @@ validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_o
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#email-analytics-glossary'] = '/docs/user_guide/message_building_by_channel/email/analytics_glossary/';
 
-validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_sematics/';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_sematics/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';

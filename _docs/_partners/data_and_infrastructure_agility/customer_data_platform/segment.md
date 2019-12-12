@@ -284,8 +284,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [11]: https://segment.com/docs/destinations/braze/
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[15]: {% image_buster /assets/img_archive/Segment_App_Usage.png %}
-[16]: {% image_buster /assets/img_archive/Custom_Events_Segment.png %}
 [18]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
 [22]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
@@ -308,7 +306,5 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [39]: {{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys
 [40]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
-[42]: {% image_buster /assets/img_archive/segment_destination_ui.png %}
-[43]: {% image_buster /assets/img_archive/segment_go_integration.png %}
 [44]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [45]: https://dashboard.braze.com/app_settings/developer_console

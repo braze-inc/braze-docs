@@ -175,10 +175,7 @@ Our Unity SDK integration for Android requires [the same support library version
 [17]: {% image_buster /assets/img_archive/android_import.png %}
 [18]: {% image_buster /assets/img_archive/click_browse.png %}
 [19]: {% image_buster /assets/img_archive/select_project_android.png %}
-[20]: {% image_buster /assets/img_archive/import_android_ui.png %}
-[21]: {% image_buster /assets/img_archive/reference_project.png %}
 [22]: {% image_buster /assets/img_archive/click_properties.png %}
-[23]: {% image_buster /assets/img_archive/NewBuildPath.png %}
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}

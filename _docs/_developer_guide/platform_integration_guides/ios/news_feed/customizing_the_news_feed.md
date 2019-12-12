@@ -34,6 +34,5 @@ For an example, see the [News Feed sample app][11].
 [28]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [40]: {{ site.baseurl }}/help/best_practices/news_feed/
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
-[43]: {% image_buster /assets/img_archive/sample_news_feed.png %}
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
 [45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}

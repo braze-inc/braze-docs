@@ -66,7 +66,6 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`logClick()` | Manually log a click to Braze for a particular card. 
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
-[1]:{% image_buster /assets/img_archive/contentcard.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
@@ -81,7 +80,6 @@ All `Card` data model objects offer the following analytics methods for logging 
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[22]: {% image_buster /assets/img_archive/sample_news_feed.png %}
 [23]: {% image_buster /assets/img_archive/android_news_feed.png %}
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png

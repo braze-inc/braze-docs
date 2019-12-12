@@ -38,16 +38,9 @@ We added a new filter, Segment Membership, enabling you to target users based of
 We updated the Android preview to reflect more recent versions of Android since Android N.  Learn more about preview messages [here][51].
 
 
-[1]: {% image_buster /assets/img_archive/exception_event_trigger.png %}
-[2]: {% image_buster /assets/img_archive/has_received_tag.png %}
-[3]: {% image_buster /assets/img_archive/group_pause.png %}
 [4]: {{ site.baseurl }}/developer_guide/rest_api/export/#kpi-export
 [5]: {% image_buster /assets/img_archive/improved_error_log.png %}
 [6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[7]: {% image_buster /assets/img_archive/test_send_on_webhooks.png %}
-[8]: {% image_buster /assets/img_archive/export_campaign_recipients.png %}
-[9]: {% image_buster /assets/img_archive/IAM_impression_cap.png %}
-[10]: {% image_buster /assets/img_archive/developer_console_filter.png %}
 [11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}
 [12]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#connected-audience-object
 [13]: https://www.braze.com/blog/connected-audiences/

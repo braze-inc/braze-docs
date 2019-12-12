@@ -370,4 +370,3 @@ If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can 
 [17]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
-[20]: {% image_buster /assets/img_archive/array_max_length.png %} "array_max_length.png"

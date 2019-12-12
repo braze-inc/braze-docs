@@ -194,7 +194,6 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking

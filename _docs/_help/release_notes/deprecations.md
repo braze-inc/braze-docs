@@ -101,5 +101,4 @@ _Support withdrawn: November 2016_
 The Delay While Idle parameter was previously a part of the [GCM push options](https://developers.google.com/cloud-messaging/http-server-ref). Google withdrew support for this option on November 15th 2016. Previously, when set to **true**, it indicated that the message should not be sent until the device becomes active.
 
 
-[11]: {% image_buster /assets/img_archive/feedback_dashboard_example.png %} "Feedback Response Dashboard"
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}

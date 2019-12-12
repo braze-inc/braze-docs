@@ -50,7 +50,6 @@ A test that doesn’t have a confidence of 95% can still hold important insights
 Whether or not your test has a clear winner, it can be helpful to run [follow-up test][140] to confirm your results or apply your findings to a slightly different scenario.
 
 
-[1]: {% image_buster /assets/img/control_group_check_intelligent_selection.png %}
 [2]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [3]: https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test
 [10]: #introduction-to
@@ -72,14 +71,10 @@ Whether or not your test has a clear winner, it can be helpful to run [follow-up
 [170]: {% image_buster /assets/img/ab_create_2.gif %}
 [175]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign
 [180]: {% image_buster /assets/img/ab_create_4.png %}
-[190]: {% image_buster /assets/img_archive/multivariate-screen-4.png %}
-[200]: {% image_buster /assets/img_archive/multivariate-screen-5.png %}
 [205]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [210]: {% image_buster /assets/img/ab_create_8.png %}
-[220]: {% image_buster /assets/img_archive/multivariate-screen-7.png %}
 [225]: https://www.optimizely.com/resources/sample-size-calculator/
 [227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
-[230]: {% image_buster /assets/img_archive/UpdatedMVWinner.png %}
 [271]: {% image_buster /assets/img/intelligent_selection1.png %}
 [272]: #intelligent-selection
 [273]: {{ site.baseurl }}/help/best_practices/push/message_format/
