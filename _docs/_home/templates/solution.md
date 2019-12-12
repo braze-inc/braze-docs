@@ -2,7 +2,7 @@
 nav_title: Technical Solutions
 page_order: 3
 
-//Required
+#Required
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
 page_type: reference
 tool:
@@ -16,7 +16,8 @@ tool:
   - location 
   - currents
   - reports
-//Use if applicable
+  
+#Use if applicable
 platform: 
   - iOS
   - Android
@@ -32,7 +33,7 @@ channel:
   - webhooks
 
 noindex = true 
-//ATTENTION: remove noindex and this alert from template
+#ATTENTION: remove noindex and this alert from template
 
 ---
 

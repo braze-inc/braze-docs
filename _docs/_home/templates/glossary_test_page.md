@@ -6,7 +6,7 @@ layout: glossary_page
 glossary_top_header: "Glossary Template"
 glossary_top_text: "This is a test Glossary Page."
 
-//Required
+#Required
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
 page_type: glossary
 tool:
@@ -20,7 +20,8 @@ tool:
   - location 
   - currents
   - reports
-//Use if applicable
+  
+#Use if applicable
 platform: 
   - iOS
   - Android
@@ -36,7 +37,7 @@ channel:
   - webhooks
 
 noindex = true 
-//ATTENTION: remove noindex and this alert from template
+#ATTENTION: remove noindex and this alert from template
 
 glossary_tag_name: Tags
 glossary_filter_text: "Select tags below to narrow the glossary:"

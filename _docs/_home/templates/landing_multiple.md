@@ -4,7 +4,7 @@ layout: dev_guide
 
 page_order: 1.3
 
-//Required
+#Required
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
 page_type: landing
 tool:
@@ -18,7 +18,8 @@ tool:
   - location 
   - currents
   - reports
-//Use if applicable
+  
+#Use if applicable
 platform: 
   - iOS
   - Android
@@ -34,7 +35,7 @@ channel:
   - webhooks
 
 noindex = true 
-//ATTENTION: remove noindex and this alert from template
+#ATTENTION: remove noindex and this alert from template
 
 guide_top_header: "Multi-Section Landing Page using FA Icons"
 guide_top_text: "Multi-Section Landing Pages are great for a large section with division between the pages in the section, usually by topic. This particular template uses the 'dev_guide' layout yaml parameter ('layout: dev_guide'), which prevents you from adding extra information at the bottom of the page, but allows you to have multiple sections of buttons."

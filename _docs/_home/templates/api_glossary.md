@@ -4,7 +4,7 @@ navlink: apitest
 layout: api_page
 page_order: 2
 
-//Required
+#Required
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
 page_type: glossary
 tool:
@@ -18,7 +18,8 @@ tool:
   - location 
   - currents
   - reports
-//Use if applicable
+
+#Use if applicable
 platform: 
   - iOS
   - Android
@@ -34,7 +35,7 @@ channel:
   - webhooks
 
 noindex = true 
-//ATTENTION: remove noindex and this alert from template
+#ATTENTION: remove noindex and this alert from template
 
 excerpt_separator: ""
 ---
