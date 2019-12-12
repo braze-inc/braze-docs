@@ -35,6 +35,8 @@ channel:
 noindex = true 
 #ATTENTION: remove noindex and this alert from template
 ---
+
+>>>>>>> b6b88435a01f83cb7a9ef00a07a3c16a2d0eff9e
 {% comment %}
 About this layout:
 This layout is for Quick Start guides, Product or feature walkthroughs, and Troubleshooting walkthroughs without a video. This tutorial will have a TOC which shows all header levels.

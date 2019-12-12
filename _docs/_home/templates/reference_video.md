@@ -32,7 +32,7 @@ channel:
   - push
   - sms
   - webhooks
-
+  
 noindex = true 
 #ATTENTION: remove noindex and this alert from template
 

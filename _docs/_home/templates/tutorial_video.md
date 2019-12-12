@@ -37,6 +37,7 @@ channel:
 
 noindex = true 
 #ATTENTION: remove noindex and this alert from template
+
 ---
 {% comment %}
 About this layout:
