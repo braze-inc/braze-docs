@@ -36,7 +36,7 @@ channel:
   - webhooks
 
 noindex = true 
-//(ATTENTION: remove noindex and this alert from template)
+//ATTENTION, remove noindex and this alert from template
 
 glossary_tag_name: Tags
 glossary_filter_text: "Select tags below to narrow the glossary:"
