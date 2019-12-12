@@ -2,8 +2,39 @@
 title: API or Code Glossary
 navlink: apitest
 layout: api_page
-
 page_order: 2
+
+//Required
+description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
+page_type: glossary
+tool:
+  - dashboard
+  - docs
+  - canvas
+  - campaigns
+  - segments
+  - templates
+  - media
+  - location 
+  - currents
+  - reports
+//Use if applicable
+platform: 
+  - iOS
+  - Android
+  - Web
+  - API
+channel: 
+  - content cards
+  - email
+  - news feed
+  - in-app messages
+  - push
+  - sms
+  - webhooks
+
+noindex = true 
+//(ATTENTION: remove noindex and this alert from template)
 
 excerpt_separator: ""
 ---
