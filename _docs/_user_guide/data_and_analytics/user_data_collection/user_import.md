@@ -44,7 +44,7 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | Mandatory |
 |---|---|---|---|
-| `external_id` | String | A unique user identifier for your customer. | Yes, see following note |
+| <nobr><code>external_id</code></nobr> | String | A unique user identifier for your customer. | Yes, see following note |
 | `first_name` | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |

@@ -1,9 +1,9 @@
 ---
-nav_title: Creating a Push Message
+nav_title: Create a Push Primer Campaign
 page_order: 0
 
 page_type: tutorial
-description:
+description: This walkthrough will show you how to get your users qualified and ready to receive your push messages. 
 channel: push
 
 ---

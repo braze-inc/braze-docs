@@ -1,8 +1,8 @@
 ---
-nav_title: iOS 10.3 Customizable App Icon Feature
-platform: Message_Building_and_Personalization
-subplatform: Push
+nav_title: "Custom App Icon Feature (iOS)"
 page_order: 1
+
+
 ---
 # iOS 10.3 Customizable App Icon Feature
 
