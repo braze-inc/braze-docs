@@ -34,7 +34,7 @@ channel:
   - sms
   - webhooks
 
-noindex = true 
+noindex: true 
 #ATTENTION: remove noindex and this alert from template
 
 excerpt_separator: ""
