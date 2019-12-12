@@ -1,7 +1,5 @@
 ---
 nav_title: Notification Channels
-platform: Message_Building_and_Personalization
-subplatform: Push
 page_order: 3
 ---
 

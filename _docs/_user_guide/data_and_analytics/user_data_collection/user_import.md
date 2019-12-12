@@ -42,23 +42,23 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 
 ### Standard User Data Column Headers
 
-| USER PROFILE FIELD | DATA TYPE | INFORMATION | Mandatory |
+| USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
 | <nobr><code>external_id</code></nobr> | String | A unique user identifier for your customer. | Yes, see following note |
-| `first_name` | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
-| `last_name` | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
-| `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
-| `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g. `GB`). | No |
-| `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
-| `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say) or nil (unknown). | No |
-| `home_city` | String | The home city of your users as they have indicated (e.g. `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). | No |
-| `phone` | String | A telephone number as indicated by your users (e.g. `541 754 3010`). | No |
-| `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
-| `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
-| `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g. `America/New_York` or `Eastern Time (US & Canada)`).  | No |
-| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g. `2019-11-20T18:38:57`) | No |
-| `image_url` | String | A URL of an image  | No |
+| <nobr><code>first_name</code></nobr> | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
+| <nobr><code>last_name</code></nobr> | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
+| <nobr><code>email</code></nobr> | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
+| <nobr><code>country</code></nobr> | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g. `GB`). | No |
+| <nobr><code>dob</code></nobr> | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
+| <nobr><code>gender</code></nobr> | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say) or nil (unknown). | No |
+| <nobr><code>home_city</code></nobr> | String | The home city of your users as they have indicated (e.g. `London`). | No |
+| <nobr><code>language</code></nobr> | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). | No |
+| <nobr><code>phone</code></nobr> | String | A telephone number as indicated by your users (e.g. `541 754 3010`). | No |
+| <nobr><code>email_subscribe</code></nobr> | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
+| <nobr><code>push_subscribe</code></nobr> | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed</code></nobr> (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
+| <nobr><code>time_zone</code></nobr> | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g. `America/New_York` or `Eastern Time (US & Canada)`).  | No |
+| <nobr><code>date_of_first_session</code></nobr> <br><br> <nobr><code>date_of_last_session</code></nobr>| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g. `2019-11-20T18:38:57`) | No |
+| <nobr><code>image_url</code></nobr> | String | A URL of an image.  | No |
 
 
 {% alert note %}

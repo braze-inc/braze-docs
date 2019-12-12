@@ -1,6 +1,6 @@
 ---
 nav_title: Creating a Push Message
-page_order: 0
+page_order: 3
 
 page_type: tutorial
 description:

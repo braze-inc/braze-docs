@@ -1,7 +1,5 @@
 ---
 nav_title: Notification IDs
-platform: Message_Building_and_Personalization
-subplatform: Push
 page_order: 4
 ---
 # Notification IDs
