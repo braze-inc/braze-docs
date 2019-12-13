@@ -24,3 +24,5 @@ Appboy.getInstance(context).requestContentCardsRefresh(false)
 
 {% endtab %}
 {% endtabs %}
+
+For more information on this method, please see [our corresponding Javadocs](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestContentCardsRefresh-boolean-).
