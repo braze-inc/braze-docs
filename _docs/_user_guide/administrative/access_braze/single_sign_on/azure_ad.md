@@ -1,6 +1,9 @@
 ---
 nav_title: Azure Active Directory
 page_order: 3
+
+page_type: tutorial
+description: This article will walk you through how to set up Azure AD sign on capabilities with Braze.
 ---
 
 # Azure Active Directory
@@ -22,20 +25,20 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 
 ### Step 1: Add Braze from the Gallery
 
-#### Step 2a: Go to the Azure Active Directory
+#### Step 1a: Go to the Azure Active Directory
 
 Go to the Azure Portal and click `Azure Active Directory` in the left navigation panel.
 ![Azure_AD1]({% image_buster /assets/img/azure_ad1.png %})
 
-#### Step 2b: Find Applications
+#### Step 1b: Find Applications
 Navigate to `Enterprise Applications`, then select `All applications`.
 ![Azure_AD2]({% image_buster /assets/img/azure_ad2.png %})
 
-#### Step 2c: Create a New Application
+#### Step 1c: Create a New Application
 Add a new application by clicking `+ New application` in the top of the dialog.
 ![Azure_AD3]({% image_buster /assets/img/azure_ad3.png %})
 
-#### Step 2d: Add Braze
+#### Step 1d: Add Braze
 Search for `Braze` in the search box, then select it from the result panel, then click `Add`.
 ![Azure_AD4]({% image_buster /assets/img/azure_ad4.png %})
 
@@ -80,7 +83,7 @@ Go to the `Set up Single Sign-On with SAML` page, then scroll to the `SAML Signi
 
 ![Azure_AD13]({% image_buster /assets/img/azure_ad13.png %})
 
-#### Step 2a: Copy URLs for Configuration in Braze
+#### Step 2h: Copy URLs for Configuration in Braze
 Go to the `Set up Braze` section and copy the appropriate URLs for use in the [Braze configuration](#step-3-configure-braze-single-sign-on).
 
 ![Azure_AD14]({% image_buster /assets/img/azure_ad14.png %})
