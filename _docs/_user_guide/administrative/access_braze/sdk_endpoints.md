@@ -14,6 +14,13 @@ page_order: 1
 |US-06 | sdk.iad-06.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
 
+{% alert important %}
+When using endpoints for SDK integration, use the "SDK Endpoint" on this page, __not__ the "REST Endpoint".
+
+If you are using endpoints for API calls, use the ["REST Endpoint"]({{site.baseurl}}/api/basics/#endpoints).
+
+{% endalert %}
+
 {% alert note %}
 To configure the Braze Web SDK to use the appropriate endpoint for your integration, you must use the `baseUrl` option when initializing the function and include the SDK endpoint here. For example `appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`
 <br>For more information check out our <a href="https://github.com/Appboy/appboy-web-sdk#getting-started">Github Web SDK documentation</a>.
