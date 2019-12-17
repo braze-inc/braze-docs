@@ -19,8 +19,6 @@ You can check out how to set up custom events for a specific platform by reading
 
 - Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
 
-For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices] - User Data Collection documentation.
-
 ### Event Object
 
 ```json
