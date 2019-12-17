@@ -9,6 +9,8 @@ page_type: partner
 ---
 # About mParticle
 
+{% include video.html id="Njhqwd36gZM" align="right" %}
+
 > mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key moments of the customer journey.
 
 You can improve your data flow by marrying mParticle and Braze for a seamless way to control the flow of information between systems. What's more, with Currents, Braze's real-time data export, connect data to mParticle and make it actionable across the entire growth stack.
