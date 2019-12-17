@@ -171,6 +171,7 @@ Content-Type: application/json
 This example contains two User Attribute objects of the allowed 75 per API call.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ### Event Object Specification
 
@@ -305,6 +306,8 @@ Content-Type: application/json
 Custom events and purchases may have event properties. The "properties" values should be an Object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format), or strings less than or equal to 255 characters.
 
 >>>>>>> 5fea1a5fa51d10bb38fd913566f7808626c8f254
+=======
+>>>>>>> 1bee0dc3bab4fdbe8d963a229fbe9121115668f3
 ### User Track Responses
 
 Upon using any of the aforementioned API requests you should receive one of the following three general responses:
