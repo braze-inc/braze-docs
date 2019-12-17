@@ -2,7 +2,7 @@
 nav_title: "API Key Overview"
 page_order: 5
 
-description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
+description: "This reference article covers the concept of API keys, what they are used for, and how they are used, as well as as a look at various types of IDs and their purposes." 
 page_type: reference
 tool:
   - dashboard
@@ -191,7 +191,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 {% endtab %}
 {% endtabs %}
 
-Please check [Braze documentation](http://localhost:4000/docs/api/endpoints/email_sync/#api-specification) site or our [Braze Postman documentation](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) for a full description of these API endpoints.
+Please check [Braze documentation][5] site or our [Braze Postman documentation][6] for a full description of these API endpoints.
 
 {% alert note %}
 Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you’ve completed your implementation, go ahead and delete the old key.
@@ -209,7 +209,7 @@ A good security practice is to assign a user only as much access as is necessary
 
 ### Multiple API keys:
 
-The most common use case for multiple API keys is separating API keys for debug and release build variants.
+During SDK set up, The most common use case for multiple API keys is separating API keys for debug and release build variants.
 To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 For each relevant build variant, create a new `appboy.xml` for it in `src/<build variant name>/res/values/`:
 When the build variant is compiled, it will use the new API key.
@@ -249,3 +249,8 @@ Under "Integration Parameters" select "enable".
 Copy the Braze API key (obtained in the prior step) into the "API_key" field.
 Copy the Braze Rest Endpoint URL (obtained in the prior step) into the "REST_endpoint" field.
 Click "Save & Close".
+
+[3]: https://developer.android.com/studio/build/build-variants.html
+[4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
+[5]: http://localhost:4000/docs/api/endpoints/email_sync/#api-specification
+[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
