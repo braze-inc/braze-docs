@@ -91,7 +91,7 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 
 The following data types can be stored as a custom attribute:
 
-- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format)
+- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format)
   - Date attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
   - Events and Attributes with timestamps in the future will default to the current time
 - Strings
@@ -112,8 +112,8 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | ---| --- |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
-| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
-| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
+| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
+| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
@@ -125,7 +125,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | image_url | (string) URL of image to be associated with user profile. |
 | language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. |
 | last_name | (string) |
-|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss.SSSZ format.|
+|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
@@ -170,6 +170,141 @@ Content-Type: application/json
 
 This example contains two User Attribute objects of the allowed 75 per API call.
 
+<<<<<<< HEAD
+=======
+### Event Object Specification
+
+```json
+{
+  // One of "external_id" or "user_alias" or "braze_id" is required
+  "external_id" : (optional, string) see External User ID below,
+  "user_alias" : (optional, User Alias Object),
+  "braze_id" : (optional, string) Braze User Identifier,
+  "app_id" : (optional, string) see App Identifier below,
+  "name" : (required, string) the name of the event,
+  "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
+  "properties" : (optional, Properties Object) properties of the event
+  // Setting this flag to true will put the API in "Update Only" mode.
+  // When using a "user_alias", "Update Only" mode is always true.
+  "_update_existing_only" : (optional, boolean)
+}
+```
+
+Each Event Object in the _events_ array represents a single occurrence of a Custom Event by a particular user at the designated time value.
+
+- [ISO 8601 Time Code Wiki][19]
+
+For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
+
+#### Event Example Request
+
+```json
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+{
+  "api_key" : "your App Group REST API Key",
+  "events" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "your-app-id",
+      "name" : "watched_trailer",
+      "time" : "2013-07-16T19:20:30+01:00"
+    },
+    {
+      "external_id" : "user1",
+      "app_id" : "your-app-id",
+      "name" : "rented_movie",
+      "time" : "2013-07-16T19:20:45+01:00"
+    },
+    {
+      "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
+      "app_id" : "your-app-id",
+      "name" : "watched_trailer",
+      "time" : "2013-07-16T19:20:50+01:00"
+    }
+  ]
+}
+```
+
+
+###  Purchase Object Specification
+
+```json
+{
+  // One of "external_id" or "user_alias" or "braze_id" is required
+  "external_id" : (optional, string) see External User ID below,
+  "user_alias" : (optional, User Alias Object),
+  "braze_id" : (optional, string) Braze User Identifier,
+  "app_id" : (optional, string) see App Identifier below,
+  "product_id" : (required, string) identifier for the purchase, e.g. Product Name or Product Category,
+  "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
+  "price" : (required, float) value in the base currency unit (e.g. Dollars for USD, Yen for JPY),
+  "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
+  "time" : (required, datetime as string in ISO 8601),
+  "properties" : (optional, Properties Object) properties of the event
+  // Setting this flag to true will put the API in "Update Only" mode.
+  // When using a "user_alias", "Update Only" mode is always true.
+  "_update_existing_only" : (optional, boolean)
+}
+```
+Each Purchase Object in the _purchases_ array represents a single purchase by a particular user at a particular time.
+
+- [ISO 4217 Currency Code Wiki][20]
+
+
+#### Purchase Example Request
+
+```json
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+{
+  "api_key" : "your App Group REST API Key",
+  "purchases" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "backpack",
+      "currency" : "USD",
+      "price" : 40.00,
+      "time" : "2013-07-16T19:20:30+01:00",
+      "properties" : {
+        "color" : "red",
+        "monogram" : "ABC",
+        "checkout_duration" : 180
+      }
+    },
+    {
+      "external_id" : "user1",
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "pencil",
+      "currency" : "USD",
+      "price" : 2.00,
+      "time" : "2013-07-17T19:20:20+01:00",
+      "properties" : {
+        "number" : 2,
+        "sharpened" : true
+      }
+    },
+    {
+      "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "pen",
+      "currency" : "USD",
+      "price" : 2.50,
+      "time" : "2013-07-17T19:20:20+01:00",
+      "properties" : {
+        "color" : "blue",
+      }
+    }
+  ]
+}
+```
+
+### Properties Object
+
+Custom events and purchases may have event properties. The "properties" values should be an Object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format), or strings less than or equal to 255 characters.
+
+>>>>>>> 5fea1a5fa51d10bb38fd913566f7808626c8f254
 ### User Track Responses
 
 Upon using any of the aforementioned API requests you should receive one of the following three general responses:

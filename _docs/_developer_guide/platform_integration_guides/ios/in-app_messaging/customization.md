@@ -490,13 +490,13 @@ The push campaign must include key value pair extras which indicate that this pu
 
 ![IAMSilentPush][41]
 
-The code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
+The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
 You are able to alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name, or as an event property, when logging the custom event.
 
 ### Step 3: Create an In-App Message Campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method.
+Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
 In the example below the specific in-app message to be trigger has been configured by sending the event property as part of the initial silent push.
 
