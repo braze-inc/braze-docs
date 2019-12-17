@@ -91,7 +91,7 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 
 The following data types can be stored as a custom attribute:
 
-- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format)
+- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format)
   - Date attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
   - Events and Attributes with timestamps in the future will default to the current time
 - Strings
@@ -112,8 +112,8 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | ---| --- |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
-| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
-| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
+| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
+| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
@@ -125,7 +125,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | image_url | (string) URL of image to be associated with user profile. |
 | language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. |
 | last_name | (string) |
-|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss.SSSZ format.|
+|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
