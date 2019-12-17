@@ -71,7 +71,7 @@ If the API responded with `{{localweather.consolidated_weather[0].weather_state_
 
 ![Connected Content Push Example][17]
 
-By default, Connected Content will set a Content-Type header on a GET HTTP request that it makes to "application/json" with "Accept: */*". If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
+By default, Connected Content will set a Content-Type header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
 
 {% raw %}
 ```
