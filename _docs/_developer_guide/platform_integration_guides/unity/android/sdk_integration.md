@@ -39,7 +39,7 @@ If you do not wish to import the Unity package, you may also manually copy the p
 	| Are you using other plugins? | What to Copy | Where to Copy |
 	| ---------------------------- | ------------ | ------------- |
 	| __NO__ | the `Assets/Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
-	| __YES__ | `Assets/Plugins/Appboy/AppboyBinding.cs` | `/<your-project>/Assets/Plugins` |
+	| __YES__ | `Assets/Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
 	| __YES__ | `Assets/Plugins/Android` | `/<your-project>/Assets/Plugins/Android` |
 
 ## Step 2: Adding Your Bundle Identifier
@@ -124,19 +124,65 @@ In-app messages from Braze's servers are automatically displayed natively.  To d
 
 Braze supports integrating [Amazon ADM push][10] into Unity apps.  If you would like to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM api key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, please visit our [ADM push integration instructions][11].
 
-### Registering Unity GameObject as Listeners
-Unity GameObjects must be registered as listeners in in your Unity project's `appboy.xml` to be notified of incoming in-app messages.
+### Receiving In-App Message Data in Unity
 
-#### In-App Message GameObject Listeners
-The Unity GameObject to be notified when an in-app message is received.
-    `com_appboy_inapp_listener_game_object_name`
-    `com_appboy_inapp_listener_callback_method_name`
+Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming in-app messages.
 
-**Sample appboy.xml Snippet:**
+Sample `appboy.xml` Snippet:
 
 ```xml
 <string name="com_appboy_inapp_listener_game_object_name"></string>
 <string name="com_appboy_inapp_listener_callback_method_name"></string>
+```
+
+The method `InAppMessageReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming in-app message data.
+
+### Receiving Content Card Data in Unity
+
+Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming Content Cards.
+
+Sample `appboy.xml` Snippet:
+
+```xml
+<string name="com_appboy_content_cards_updated_listener_game_object_name"></string>
+<string name="com_appboy_content_cards_updated_listener_callback_method_name"></string>
+```
+
+The method `ContentCardsReceivedCallback` in our [sample callback code][8] shows an example of parsing incoming Content Card data into our convenience wrapper class for Content Cards, [`ContentCard.cs`][23]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
+
+Sample code for parsing incoming Content Card data:
+
+```
+void ExampleCallback(string message) {
+	// Example of logging a Content Card displayed event
+	AppboyBinding.LogContentCardsDisplayed();
+	try {
+		JSONClass json = (JSONClass)JSON.Parse(message);
+
+		// Content Card data is contained in the `mContentCards` field of the top level object.
+		if (json["mContentCards"] != null) {
+			JSONArray jsonArray = (JSONArray)JSON.Parse(json["mContentCards"].ToString());
+			Debug.Log(String.Format("Parsed content cards array with {0} cards", jsonArray.Count));
+
+			// Iterate over the card array to parse individual cards.
+			for (int i = 0; i < jsonArray.Count; i++) {
+				JSONClass cardJson = jsonArray[i].AsObject;
+				try {
+					ContentCard card = new ContentCard(cardJson);
+					Debug.Log(String.Format("Created card object for card: {0}", card));
+
+					// Example of logging Content Card analytics on the ContentCard object 
+					card.LogImpression();
+					card.LogClick();
+				} catch {
+					Debug.Log(String.Format("Unable to create and log analytics for card {0}", cardJson));
+				}
+			}
+		}
+	} catch {
+		throw new ArgumentException("Could not parse content card JSON message.");
+	}
+}
 ```
 
 ## SDK Integration Complete
@@ -150,6 +196,7 @@ Braze should now be collecting data from your application and your basic integra
 [5]: #clone-unity
 [6]: #copy-plugins
 [7]: #add-bundle-id
+[8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
 [9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging
 [11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/
@@ -164,3 +211,4 @@ Braze should now be collecting data from your application and your basic integra
 [20]: #inapp-disabling-native
 [21]: https://github.com/Appboy/appboy-android-sdk/tree/master/android-sdk-ui/assets
 [22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package
+[23]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs

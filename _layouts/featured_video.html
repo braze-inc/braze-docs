@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
+{%- assign hide_nav = page.hide_nav -%}
+{%- assign hide_toc = page.hide_toc -%}
+{%- assign hide_bottom_nav = page.hide_bottom_nav -%}
+{%- assign hide_breadcrumb = page.hide_breadcrumb -%}
+{%- assign hide_feedback = page.hide_feedback -%}
+{%- assign video_source = page.video_source -%}
+{%- unless hide_nav -%}
+{%- assign hide_nav = layout.hide_nav -%}
+{%- endunless -%}
+{%- unless hide_toc -%}
+{%- assign hide_toc = layout.hide_toc -%}
+{%- endunless -%}
+{%- unless hide_bottom_nav -%}
+{%- assign hide_bottom_nav = layout.hide_bottom_nav -%}
+{%- endunless -%}
+{%- unless hide_breadcrumb -%}
+{%- assign hide_breadcrumb = layout.hide_breadcrumb -%}
+{%- endunless -%}
+{%- unless hide_feedback -%}
+{%- assign hide_feedback = layout.hide_feedback -%}
+{%- endunless -%}
+{%- unless video_source -%}
+{%- assign video_source = "youtube" -%}
+{%- endunless -%}
+
+
+{% unless hide_nav %}
+<!-- button id="sidebar_toggle" class="btn btn-info d-print-none" data-toggle="collapse" aria-expanded="true" href="#nav_bar" >
+   <i class="fas"></i>
+</button -->
+<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 d-print-none collapse d-md-block" id="nav_bar"  >
+  <div id="nav_col" class="  ">
+  {% include left_nav_menu.html  %}
+  </div>
+</div>
+{% endunless %}
+
+<div class="col d-print-block " id="main_content" >
+
+    <div id="featured_video">
+    {%- unless hide_breadcrumb -%}
+    <!-- div id="breadcrumb">&nbsp;
+    </div -->
+    {%- endunless -%}
+    {% include video.html id=page.video_id source=video_source type="static" %}
+
+    {{ content }}
+
+    </div>
+
+    {%- unless hide_bottom_nav -%}
+    <div id="bottom_nav" >
+      {%- unless hide_feedback -%}
+      {% include feedback.html  %}
+      {%- endunless -%}
+      <!-- div class="gradient-line" ></div -->
+      <div id="bottom_page_nav">
+        <a id="page_prev_link"><div id="page_prev" ></div></a>
+        <a id="page_next_link"><div id="page_next" ></div></a>
+      </div>
+    </div>
+
+    {%- endunless -%}
+
+
+
+    {% include footer.html %}
+</div>
+
+{%- unless hide_toc -%}
+<div class="d-none d-lg-block col-lg-2 d-print-none featured_toc" id="toc_col">
+  <div id="toc" ></div>
+</div>
+{%- endunless -%}
+

@@ -1,10 +1,16 @@
 ---
 nav_title: Location Targeting
 page_order: 6
+
+page_type: tutorial
+tool: segments
+
+description: "This how-to article will walk you through how to set up Location Targeting, allowing you to segment users by location."
 ---
 # Location Targeting
 
-Braze's location targeting feature allows you to specifically segment users based off of their most recent location.
+> This article will walk you through how to set up Location Targeting, allowing you to segment users by their most recent location. This is perfect for if you are looking into location-based campaigns and strategies.
+
 
 ## Step 1: Create your Segment
 

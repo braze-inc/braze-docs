@@ -53,8 +53,8 @@
 
     validurls['/academy/getting_started'] = '/docs/user_guide/onboarding_with_braze/overview/';
     validurls['/academy/getting_started#list-unsubscribe-settings'] = '/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings';
-    validurls['/academy/quick_wins/optimal_send_time'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/';
-    validurls['/academy/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/';
+    validurls['/academy/quick_wins/optimal_send_time'] = '/docs/user_guide/intelligence/intelligent_timing/';
+    validurls['/academy/scheduling_and_organizing_campaigns/#intelligent-delivery'] = '/docs/user_guide/intelligence/intelligent_timing/';
     validurls['/academy/troubleshooting_guide/'] = '/docs/help/home/';
     validurls['/academy/user_targeting/#external-user-id'] = '/docs/developer_guide/rest_api/messaging/#external-user-id';
 
@@ -131,7 +131,7 @@
     validurls['/documentation/faqs/'] = '/docs/help/faqs/';
     validurls['/documentation/currents/'] = '/docs/partners/braze_currents/how_it_works/';
     validurls['/documentation/partner_integrations/'] = '/docs/partners/home/';
-    validurls['/documentation/apptimize_integration/'] = '/docs/partners/technology_partners/channel_extensions/ab_testing/apptimize/';
+    validurls['/documentation/apptimize_integration/'] = '/docs/partners/channel_extensions/ab_testing/apptimize/';
     validurls['/documentation/okta/'] = '/docs/user_guide/administrative/logging_in_and_security/single_sign_on/';
     validurls['/documentation/email_spam_testing/'] = '/docs/user_guide/message_building_by_channel/email/inbox_vision/#spam-testing';
     validurls['/documentation/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/link_templates/';

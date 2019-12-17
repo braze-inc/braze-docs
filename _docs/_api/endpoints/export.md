@@ -1684,7 +1684,7 @@ The following status codes and associated error messages will be returned if you
 [25]: #revenue-products
 [26]: #revenue-series
 [27]: #revenue-quantity-series
-[28]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/aws_s3/#aws-s3-integration
+[28]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/aws_s3/#aws-s3-integration
 [29]: https://aws.amazon.com/documentation/s3/
 [30]: {{ site.baseurl }}/hidden/res/#parameters
 [31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#basics

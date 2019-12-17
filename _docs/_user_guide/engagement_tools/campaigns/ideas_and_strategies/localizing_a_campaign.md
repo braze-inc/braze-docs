@@ -3,8 +3,14 @@ nav_title: Localizing a Campaign
 platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 3
+
+tools: campaigns
+page_type: reference
+description: "This reference article goes over how user locale is retrieved and accessed by the Braze platform."
 ---
 # Localizing a Campaign
+
+> This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience. 
 
 Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
 

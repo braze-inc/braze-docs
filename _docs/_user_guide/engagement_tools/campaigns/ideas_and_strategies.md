@@ -4,6 +4,10 @@ layout: dev_guide
 guide_top_header: "Ideas & Strategies"
 guide_top_text: "Learn more about how to build your ideal campaign with these use cases and other ideas."
 
+tools: campaigns
+page_type: landing
+description: "This landing page is home to Campaign Ideas and Strategies. Here you can find articles on topics like localizing, multilanguage options, and retargeting."
+
 guide_featured_title: "Popular Articles"
 guide_featured_list:
   - name: Active User Campaigns

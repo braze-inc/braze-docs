@@ -1,10 +1,21 @@
 ---
 nav_title: Segment Funnels
 page_order: 3
+
+page_type: reference
+tool: segments
+
+description: "This reference article explains how to use Braze Segment Funnels, their best practices, and some example use cases."
 ---
 # Segment Funnels
 
-Segment funnels allows you to see how each added filter impacts the your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters _up to that point_:
+> This reference article explains how to use Braze Segment Funnels, their best practices, and some example use cases. 
+> <br>
+> <br>
+> Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions and using that knowledge to strategize and develop effective campaigns.
+
+
+Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters _up to that point_:
 
 - The total number of users targeted and the percentage of your audience base
 - The LTV and LTV for paying users  
@@ -21,7 +32,7 @@ Segment funnels allows you to see how each added filter impacts the your segment
 
 - Segment funnels let you compare the percentage of users who commit different actions. For instance, do active users, or those with high LTV, [tend to interact more with push or email][4]? To find out, create a segment of active users with one or more filters, and then see how statistics change when you add a filter for opting in to push, and when you add a filter for opting in to email.
 
-- Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to Twitter have a higher LTV? Or is LTV significantly higher to those who have connected to both? If you find, for instance, that connecting to Twitter has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
+- Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to Twitter have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to Twitter has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
 
 
 ## Sample Use Cases

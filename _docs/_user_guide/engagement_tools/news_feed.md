@@ -17,4 +17,7 @@ guide_featured_list:
   - name: Analytics
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_analytics_and_retargeting_data/
     fa_icon: fas fa-chart-line
+  - name: Use Cases
+    link: /docs/user_guide/engagement_tools/news_feed/news_feed_use_cases/
+    fa_icon: fas fa-user-tie
 ---

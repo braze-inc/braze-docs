@@ -15,7 +15,7 @@ Campaigns now also uses Quiet Time instead of “send this message during a spec
 
 ## Adjust Customers
 
-Braze Customers using [Adjust]({{ site.baseurl }}/partners/technology_partners/advertising_technologies/attribution/adjust/) are now able to see their Braze API Key and Braze instance URL, which they will then use in the Adjust platform to integrate.
+Braze Customers using [Adjust]({{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/) are now able to see their Braze API Key and Braze instance URL, which they will then use in the Adjust platform to integrate.
 
 ## Not In Segment Filter
 

@@ -5,7 +5,7 @@ search_rank: 5
 ---
 # API Overview
 
-Braze provides a high performance REST API to allow you to track users, send messages, export data, and more.
+Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more.
 
 ## What is a REST API?
 
@@ -34,14 +34,14 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 
 {% alert important %}
-When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
+When using endpoints for API calls, use the "REST Endpoint" located on this page.
 
-When using endpoints for API calls, use the "REST Endpoint".
+For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
 {% endalert %}
 
 ### Company Secret Explanation
 
-The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backwards compatibility.
+The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
 
 ### App Group REST API Keys
 
@@ -126,7 +126,7 @@ API Rate Limits and their Values (limited or unlimited) are subject to change de
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- Each `/users/track` request can contain up to 75 Purchases, 75 Events and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
+- Each `/users/track` request can contain up to 75 Purchases, 75 Events, and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`

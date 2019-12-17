@@ -18,9 +18,9 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
-*For US-03*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})` 
+*For US-03*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
 
-*For EU-01*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://fra-01.iad-01.braze.eu/api/v3’})`
+*For EU-01*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk-01.iad-01.braze.eu/api/v3’})`
 
 ## Enable Error Logging {#error-logging}
 
@@ -63,7 +63,7 @@ For further instruction on this please see the appropriate section of our [Braze
 
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, just search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
+For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
 ### Other Tag Managers
 

@@ -39,7 +39,7 @@ __Note__: If you do not use any Braze default UI and don't want to introduce the
 
 ### Example Podfile
 
-If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. {% if include.platform == 'iOS' %}If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.{% endif %}
+If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.
 
 ## Step 3: Installing the Braze SDK
 
@@ -60,7 +60,7 @@ At this point you should be able to open the new Xcode project workspace created
 Add the following line of code to your `AppDelegate.m` file:
 
 ```objc
-{% if include.platform == 'iOS' %}#import "Appboy-iOS-SDK/AppboyKit.h"{% else %}#import <AppboyTVOSKit/AppboyKit.h>{% endif %}
+#import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
@@ -77,7 +77,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
-{% if include.platform == 'iOS' %}import Appboy_iOS_SDK{% else %}import AppboyTVOSKit{% endif %}
+import Appboy_iOS_SDK
 ```
 
 For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
@@ -221,7 +221,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
-[21]: {{ site.baseurl }}/partners/technology_partners/
+[21]: {{ site.baseurl }}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

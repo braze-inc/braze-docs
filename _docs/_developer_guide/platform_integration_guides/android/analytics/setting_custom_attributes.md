@@ -217,7 +217,7 @@ Appboy.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoc
 {% endtabs %}
 
 {% alert warning %}
-  Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
+  Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
 #### Setting a Custom Attribute with an Array Value

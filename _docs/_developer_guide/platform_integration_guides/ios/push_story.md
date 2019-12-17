@@ -43,7 +43,7 @@ The Background Mode in the Capabilities section of the main app target is requir
 
 ![Enable Background Mode][3]
 
-You also need to add Capability `App Groups`. If you haven't had any app group in your app, go the the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
+You also need to add Capability `App Groups`. If you haven't had any app group in your app, go to the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
 
 ![Add App Groups][4]
 
@@ -61,7 +61,11 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 ## Step 5: Link the Braze Push Story Framework
 
-Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+
+{% alert important %}
+If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do this step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
+{% endalert %}
 
 ![New Copy File Phase][ios_pushstory_01]
 
@@ -70,10 +74,6 @@ Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Insid
 To verify that this was successful, go to the `General` tab of the main application target. Under `Embedded Binaries` check that `AppboyPushStory.framework` has been added.
 
 ![Embedded Binaries][ios_pushstory_05]
-
-{% alert important %}
-If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do the previous step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
-{% endalert %}
 
 Back in `Build Phases`, click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.  Add this text into the Script body:
 
@@ -194,7 +194,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
 ## Step 7: Set the Notification Content Extension Storyboard
 
--		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height autoresizable matching the Notification View Controller main view frame.
+-		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the Notification View Controller's main view frame.
 
 ![View Class][ios_pushstory_06]
 
