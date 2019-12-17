@@ -27,6 +27,7 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   // Please see product_id naming conventions below for clarification.
   "product_id" : (required, string), identifier for the purchase, e.g. Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
+  //Revenue from a purchase object is calculated as the product of quantity and price.
   "price" : (required, float) value in the base currency unit (e.g. Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
   "time" : (required, datetime as string in ISO 8601), Time of purchase,

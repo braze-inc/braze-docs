@@ -68,8 +68,7 @@ Content-Type: application/json
       "time" : "2013-07-16T19:20:45+01:00",
       "properties": {
       "movie": "The Sad Egg",
-      "director": "Dan Alexander",
-      "cost": "30"
+      "director": "Dan Alexander"
       }
     },
     {
@@ -85,7 +84,7 @@ Content-Type: application/json
 
 ## Event Objects
 
-Using the example provided above, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically like using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Beth__, Thanks for renting __The Sad Egg__ by __Dan Alexander__ for __$30__!"
+Using the example provided above, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically like using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Beth__, Thanks for renting __The Sad Egg__ by __Dan Alexander__, here are some recommended movies based on your rental..."
 
 
 [1]: https://www.braze.com/docs/developer_guide/home/
