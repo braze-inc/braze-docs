@@ -1,6 +1,6 @@
 ---
 nav_title: "API Key Overview"
-page_order: 5
+page_order: 2.1
 
 description: "This reference article covers the concept of API keys, what they are used for, and how they are used." 
 page_type: reference
@@ -15,17 +15,13 @@ platform:
 
 >  This reference article covers what API keys are, what they are used for, their permissions and how to keep these keys secure.  
 
-## What is an REST API Key?
+## What is a REST API Key/App Group REST API Key?
 
-An REST Application Programming Interface key (API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's rest API endpoint. We use API keys at Braze in tandem with our SDK to make sure everything is running smoothly on both your and our end. 
+A REST Application Programming Interface key (API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's rest API endpoint. We use API keys at Braze in tandem with our SDK to make sure everything is running smoothly on both your and our end. 
 
 The `api_key` included in each request acts as an authentication key that allows your server code to utilize our REST APIs. REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. [endpoints listed here] By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
-### Where can I find it?
-
-Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". This new page will list all of your available REST API Keys as well as give you options to create new API keys. 
-
-## What is an App Group REST API Key?
+-----
 
 App Groups are used all the time at Braze, they are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these App groups are also making use of the REST API. 
 
@@ -33,7 +29,11 @@ Within your company, each app group will have a unique set of REST API Keys. The
 
 These app group keys can be found within the Braze dashboard by navigating to the Developer Console section for each app group. To use the REST API for any given App Group, you must create keys and give them permissions.
 
-### API Key Permissions
+### Where can I find it?
+
+Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". This new page will list all of your available REST API Keys as well as give you options to create new API keys. 
+
+## API Key Permissions
 
 API key permissions are permissions you can assign a user or group to limit their access to certain API calls.
 
@@ -202,7 +202,7 @@ Please check [Braze documentation][5] site or our [Braze Postman documentation][
 Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you’ve completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
-### API Key Security
+## API Key Security
 
 Security is of the utmost importance at Braze. Given that REST API Keys allow access to potentially sensitive REST API endpoints, please ensure they are stored and used securely. 
 
@@ -210,7 +210,26 @@ A good security practice is to assign a user only as much access as is necessary
 
 For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
-### Multiple API keys
+## API key vs. APP Identifier
+
+### The App Identifier:
+
+The `app_id` or App Identifier is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. You will find that you will have an app_id for your iOS app, an app_id for your android app, and an app_id for your web integration. 
+
+(?) If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the Developer Console section of the Braze dashboard. This field is necessary for SDK integrations to work.
+- How to do this? - 
+
+If you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you are able to omit completely or randomly include a string of characters in that field. 
+
+### Where can I find it?
+There are two ways to locate your `app_id`:
+
+1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, you can see your API key identifiers, and below them, you will be able to see every `app_id` for all your apps.
+
+2. From the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
+
+
+## Multiple API keys
 
 During SDK set up, The most common use case for multiple API keys is separating API keys for debug and release build variants.
 To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
@@ -223,30 +242,7 @@ When the build variant is compiled, it will use the new API key.
 <string name="com_appboy_api_key">REPLACE_WITH_YOUR_BUILD_VARIANT_API_KEY</string>
 </resources>
 ```
-
 When the build variant is compiled, it will use the new API key.
-
-## API key vs. APP Identifier
-
-### The App Identifier:
-
-The `app_id` or App Identifier is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. You will find that you will have an app_id for your iOS app, an app_id for your android app, and an app_id for your web integration. 
-
-(?) If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the Developer Console section of the Braze dashboard. This field is necessary for SDK integrations to work.
-- How to do this? - 
-
-If you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can type anything in that field and it will work. 
-
-### Where can I find it?
-There are two ways to locate your `app_id`:
-
-1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, you can see your API key identifiers, and below them, you will be able to see every `app_id` for all your apps.
-
-2. The second way is to from the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find a "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
-
-### The API Key
-
-The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
 
 ### App Identifier vs. REST API key
 
@@ -257,3 +253,10 @@ The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make 
 [4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: http://localhost:4000/docs/api/endpoints/email_sync/#api-specification
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
+
+BAD_PLACE
+### The API Key
+
+The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
+
+include way to find listed in develop console
