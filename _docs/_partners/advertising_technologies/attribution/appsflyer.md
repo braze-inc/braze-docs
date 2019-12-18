@@ -9,13 +9,15 @@ page_type: partner
 
 # AppsFlyer
 
+{% include video.html id="gQ9y2DA2LuQ" align="right" %}
+
 > AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
 
 Build more holistic marketing campaigns by leveraging mobile install attribution data from AppsFlyer. With AppsFlyer and Braze, you can pass install attribution data to Braze to better understand how to optimize your campaigns.
 
 ## Integration
 
-__Step 1: Integration Requirements__
+### Step 1: Integration Requirements
 
 {% alert important %}
 As of March 4th, 2019, AppsFlyer requires that the Activate Partner toggle be switched to "on" for every integrated partner, including Braze. Please be sure that your toggle is flipped on from your AppsFlyer dashboard.
@@ -34,11 +36,11 @@ customData.put("customData", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
 
-__Step 2: Getting the Braze API Key__
+### Step 2: Getting the Braze API Key
 
 In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in Appsflyer's dashboard.
 
-__Step 3: Configure Braze in Appsflyer's Dashboard__
+### Step 3: Configure Braze in Appsflyer's Dashboard
 
 - In Appsflyer's dashboard, navigate to the "Integrated Partners" page.
 - On that page, search for Braze and click on Braze's logo to open up a configuration window.
@@ -53,12 +55,12 @@ Braze maps AppsFlyer's data fields to segment filters in the following way
 
 | AppsFlyer Data Field | Braze Segment Filter |
 | -------------------- | --------------------- |
-| media_source | Attributed Source |
-| campaign | Attributed Campaign |
-| af_adset | Attributed Adgroup |
-| af_ad | Attributed Ad |
+| `media_source` | Attributed Source |
+| `campaign` | Attributed Campaign |
+| `af_adset` | Attributed Adgroup |
+| `af_ad` | Attributed Ad |
 
-__Step 4: Confirming the Integration__
+### Step 4: Confirming the Integration
 
 Once Braze receives attribution data from AppsFlyer, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
