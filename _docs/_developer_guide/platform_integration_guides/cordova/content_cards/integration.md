@@ -1,6 +1,7 @@
 ---
 nav_title: Integration
 platform: Cordova
+page_order: 1
 ---
 
 # Content Cards for Cordova Integration
