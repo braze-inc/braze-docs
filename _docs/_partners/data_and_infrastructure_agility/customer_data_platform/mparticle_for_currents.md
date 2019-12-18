@@ -28,7 +28,7 @@ All events sent to mParticle will include the user's `external_user_id` as the `
 
 mParticle's documentation is available [here](http://docs.mparticle.com/integrations/braze/feed).
 
-#@ Integration Details
+## Integration Details
 
 You can export the following data from Braze to mParticle:
 
