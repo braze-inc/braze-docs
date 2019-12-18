@@ -11,6 +11,8 @@ tool: currents
 
 # About Segment & Currents  
 
+{% include video.html id="RfOHfZ34hYM" align="right" %}
+
 > [Segment](https://segment.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 To get started, find the following information from your Segment dashboard:

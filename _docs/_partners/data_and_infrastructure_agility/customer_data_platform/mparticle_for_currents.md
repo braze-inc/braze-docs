@@ -11,7 +11,9 @@ tool: currents
 
 # About mParticle & Currents
 
-[mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+{% include video.html id="Njhqwd36gZM" align="right" %}
+
+> [mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 To get started, find the following information from your mParticle dashboard:
 
@@ -26,7 +28,7 @@ All events sent to mParticle will include the user's `external_user_id` as the `
 
 mParticle's documentation is available [here](http://docs.mparticle.com/integrations/braze/feed).
 
-# Integration Details
+## Integration Details
 
 You can export the following data from Braze to mParticle:
 

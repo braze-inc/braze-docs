@@ -10,6 +10,8 @@ tool: currents
 
 # About Amplitude & Currents
 
+{% include video.html id="7yadPjDImxQ" align="right" %}
+
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform. You can export the data events from your Braze integration to Amplitude in order to perform deep analysis of your product and marketing data.
 
 To get started, find the following information from your Amplitude dashboard:

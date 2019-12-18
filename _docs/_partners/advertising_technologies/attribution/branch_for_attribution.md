@@ -7,10 +7,13 @@ page_type: partner
 
 ---
 
-# Branch
-> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points.
+# Branch for Attribution {#branch}
 
-Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and deep linking.
+{% include video.html id="PwGKqfwV-Ss" align="right" %}
+
+> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with braze to support your attribution needs.
+
+Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{ site.baseurl }}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
 
 ## Integration
 
