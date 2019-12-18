@@ -2,7 +2,7 @@
 nav_title: "API Key Overview"
 page_order: 5
 
-description: "This reference article covers the concept of API keys, what they are used for, and how they are used, as well as as a look at various types of IDs and their purposes." 
+description: "This reference article covers the concept of API keys, what they are used for, and how they are used." 
 page_type: reference
 tool: 
   - dashboard
@@ -11,19 +11,23 @@ platform:
   - API
 ---
 
-#API Key Overview
+# API Key Overview
 
->  This reference article covers what API keys are, what they are used for, their permissions and how to keep these keys secure. It also touches on what campaign IDs, canvas IDs, and template IDs are, how they are used, and how you can use them too within the Braze Dashboard. 
+>  This reference article covers what API keys are, what they are used for, their permissions and how to keep these keys secure.  
 
-## What is an API Key?
+## What is an REST API Key?
 
-An application programming interface key (API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's rest API endpoint. We use API keys at Braze in tandem with our SDK to make sure everything is running smoothly on both your and our end. 
+An REST Application Programming Interface key (API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's rest API endpoint. We use API keys at Braze in tandem with our SDK to make sure everything is running smoothly on both your and our end. 
 
 The `api_key` included in each request acts as an authentication key that allows your server code to utilize our REST APIs. REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. [endpoints listed here] By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
-## What is an App Group Key?
+### Where can I find it?
 
-Often used at Braze is the functionality of App Groups, App groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these App groups are also making use of the REST API. 
+Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". This new page will list all of your available REST API Keys as well as give you options to create new API keys. 
+
+## What is an App Group REST API Key?
+
+App Groups are used all the time at Braze, they are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these App groups are also making use of the REST API. 
 
 Within your company, each app group will have a unique set of REST API Keys. These keys are similar to our standard API keys, except they are linked to an app group that you or your company has made. 
 
@@ -202,13 +206,11 @@ Keep in mind that once you create a new API Key, you cannot edit the scope of pe
 
 Security is of the utmost importance at Braze. Given that REST API Keys allow access to potentially sensitive REST API endpoints, please ensure they are stored and used securely. 
 
-(?) We strongly encourage you to keep your API keys within your company.
-
 A good security practice is to assign a user only as much access as is necessary to complete his or her job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account.
 
-(?)For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
+For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
-### Multiple API keys:
+### Multiple API keys
 
 During SDK set up, The most common use case for multiple API keys is separating API keys for debug and release build variants.
 To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
@@ -226,121 +228,32 @@ When the build variant is compiled, it will use the new API key.
 
 ## API key vs. APP Identifier
 
-###The App Identifier (previously called the API key):
+### The App Identifier:
 
-The app_id is an identifier that designates which app within the app group you are interacting with
-The key value can be found in the developer console or manage appgroup (iosClient, subkey, app)
+The `app_id` or App Identifier is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. You will find that you will have an app_id for your iOS app, an app_id for your android app, and an app_id for your web integration. 
 
-App_id is a parameter associating activity with a specific app in your app group. Ie you will have an app_id for your iOS app, an app_id for your android app and an app_id for your web integration.
+(?) If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the Developer Console section of the Braze dashboard. This field is necessary for SDK integrations to work.
+- How to do this? - 
 
-If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the Developer Console section of the Braze dashboard under the `API settings` tab.
+If you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can type anything in that field and it will work. 
 
-(?) This field is necessary for SDK integrations to work.
+### Where can I find it?
+There are two ways to locate your `app_id`:
 
-###The API Key:
+1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, you can see your API key identifiers, and below them, you will be able to see every `app_id` for all your apps.
 
-The API key is an identifier that designates which app group you are interacting with
-The key value can be found on the developer console. (client production, master, appgroup)
+2. The second way is to from the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find a "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
 
-______________________
+### The API Key
 
-### App Identifier vs REST API key
+The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
+
+### App Identifier vs. REST API key
+
 The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. 
 The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
-
-
-Within API
-App Identifier is a legacy field specific to a specific platform like iOS or Android.
-If you are not on one of these channels/platofrm, you can put in anything and it will work. 
-
-App Group: Manage App Group > App Settings
-    The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
-____________________________________________________________
- (?) How to get the API Key in technology partners?
-    In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in Appsflyer's dashboard.
-
-On that page, search for Braze and click on Braze's logo to open up a configuration window.
-Under "Integration Parameters" select "enable".
-Copy the Braze API key (obtained in the prior step) into the "API_key" field.
-Copy the Braze Rest Endpoint URL (obtained in the prior step) into the "REST_endpoint" field.
-Click "Save & Close".
-
-# Template IDs, Canvas IDs and Campaign IDs
-
-The following identifiers can be used to acess your teample, canvas or campaign from Braze's external API
-
-##Template IDs
-
-A Template ID, or Template API Identifier is a key generated by Braze for a given template within the Dashboard. Template IDs are unique for each template and can be used to reference templates throughout the platform. 
-
-Templates are great for if your company contracts out your HTML designs for campaigns. Once the templates have been built, you now have a template that is not specific to a campaign, but can be applied to a series of campaigns like a newsletter.
-
-### Where can I find it?
-You can find your Template ID by going to the Dashboard, opening up "Templates & Media" under "Engagement" and selecting a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your Template API Identifier.
-
-[Picture]
-
-### What can it be used for?
-
-At Braze, we have a seperate endpoint for [templates][7]. 
-Using the Template ID, we can over API...
-- Update templates over API
-- Grab information on a specific template
-
-## Canvas IDs
-
-A Canvas ID, or Canvas API Identifier is a key generated by Braze for a given campaign within the Dashboard. Canvas IDs are unique to each canvas
-
-### Where can I find it?
-You can find your Canvas ID by going to the Dashboard, opening up "Canvas" under "Engagement" and selecting a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of the individual Canvas page, you will find a "Analyze Variants" button, upon clicking it, a window will apear with the Canvas API Identifier located at the bottom. 
-
-Note that if you have a Canvas that has variants, there exists an overall Canvas ID as well as individual varient Canvas IDs nested under the main campaign. 
-
-[Picture]
-
-### What can it be used for?
-- Track analytics on a specific message
-- Grab high level agregate stats on Canvas performance
-- Grab details on a specific Canvas
-- In currents
-- With API trigger delivery in order to collect statistics for transactional messages
-
-## Campaign IDs
-
-A Campaign ID, or Campaign API Identifier is a key generated by Braze for a given campaign within the Dashboard. Campaign IDs are unique to each campaign. 
-
-### Where can I find it?
-You can find your Campaign ID by going to the Dashboard, opening up "Campaigns" under "Engagement" and selecting a pre-existing Campaign. If the Canvas you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your Campaign API Identifier.
-
-Note that if you have a Campaign that has variants, there exists an overall Campaign ID as well as individual varient Campaign IDs nested under the main campaign. 
-
-[Picture]
-
-### What can it be used for?
-- Track analytics on a specific message
-- Grab high level agregate stats on Campaign performance
-- Grab details on a specific Campaign
-- With API trigger delivery in order to collect statistics for transactional messages
-
-## Segment IDs
-
-A Campaign ID, or Campaign API Identifier is a key generated by Braze for a given campaign within the Dashboard. Campaign IDs are unique to each campaign. 
-
-### Where can I find it?
-You can find your Campaign ID by going to the Dashboard, opening up "Campaigns" under "Engagement" and selecting a pre-existing Campaign. If the Canvas you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your Campaign API Identifier.
-
-Note that if you have a Campaign that has variants, there exists an overall Campaign ID as well as individual varient Campaign IDs nested under the main campaign. 
-
-[Picture]
-
-### What can it be used for?
-- Track analytics on a specific message
-- Grab high level agregate stats on Campaign performance
-- Grab details on a specific Campaign
-- With API trigger delivery in order to collect statistics for transactional messages
 
 [3]: https://developer.android.com/studio/build/build-variants.html
 [4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: http://localhost:4000/docs/api/endpoints/email_sync/#api-specification
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[7]: https://www.braze.com/docs/api/endpoints/email_templates/
