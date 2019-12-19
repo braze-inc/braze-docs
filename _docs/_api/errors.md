@@ -70,7 +70,9 @@ The following status codes and associated error messages will be returned if you
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|
 | `400 Invalid Extra Push Payload` | You provide the `extra` key for either `apple_push` or `android_push` but it is not a dictionary.|
-| `400 Max Input Length Exceeded` | Caused by calling more than 50 external ids.|
+| `400 Max Input Length Exceeded` | Caused by calling more than 75 external ids when hitting the User Track endpoint.|
+| `400 The max number of external_ids and aliases per request was exceeded` | Caused by calling more than 50 external ids.|
+| `400 The max number of ids per request was exceeded` | Caused by calling more than 50 external ids.|
 | `400 No message to send` | No payload is specified for the message.|
 | `400 Slideup Message Length Exceeded` | Slideup message contains more than 140 characters.|
 | `400 Apple Push Length Exceeded` | JSON payload is more than 1912 bytes.|

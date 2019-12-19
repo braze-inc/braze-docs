@@ -20,9 +20,22 @@ In your app project, go to menu "File"->"New"->"Target...", add a new "Notificat
 ![Add Content Extension][2]
 
 Xcode should generate a new target for you and create files automatically for you including:
- - `NotificationViewController.h`
- - `NotificationViewController.m`
- - `MainInterface.storyboard`
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+- `NotificationViewController.h`
+- `NotificationViewController.m`
+- `MainInterface.storyboard`
+
+{% endtab %}
+{% tab swift %}
+
+- `NotificationViewController.swift`
+- `MainInterface.storyboard`
+
+{% endtab %}
+{% endtabs %}
 
 ## Step 3: Enable Capacities
 
@@ -30,7 +43,7 @@ The Background Mode in the Capabilities section of the main app target is requir
 
 ![Enable Background Mode][3]
 
-You also need to add Capability `App Groups`. If you haven't had any app group in your app, go the the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
+You also need to add Capability `App Groups`. If you haven't had any app group in your app, go to the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
 
 ![Add App Groups][4]
 
@@ -38,7 +51,7 @@ You also need to add Capability `App Groups`. If you haven't had any app group i
 
 Add the following line to your Podfile:
 
-```
+```ruby
 target 'YourContentExtensionTarget' do
   pod 'Appboy-Push-Story', '~>3.0'
 end
@@ -48,7 +61,11 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 
 ## Step 5: Link the Braze Push Story Framework
 
-Under `Build Phases`, click on `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+
+{% alert important %}
+If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do this step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
+{% endalert %}
 
 ![New Copy File Phase][ios_pushstory_01]
 
@@ -58,13 +75,9 @@ To verify that this was successful, go to the `General` tab of the main applicat
 
 ![Embedded Binaries][ios_pushstory_05]
 
-{% alert important %}
-If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do the previous step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
-{% endalert %}
-
 Back in `Build Phases`, click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.  Add this text into the Script body:
 
-```
+```shell
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
 
 find "$APP_PATH" -name 'AppboyPushStory.framework' -type d | while read -r FRAMEWORK
@@ -102,7 +115,10 @@ Go to the `General` tab of the Content Extension target and add `AppboyPushStory
 
 ## Step 6: Updating your Notification View Controller
 
-In your `NotificationViewController.h`, add following lines to add new properites and import the header files:
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+In your `NotificationViewController.h`, add following lines to add new properties and import the header files:
 
 ```objc
 #import <AppboyPushStory/AppboyPushStory.h>
@@ -138,9 +154,47 @@ In your `NotificationViewController.m`, remove the default implementation and ad
 @end
 ```
 
+{% endtab %}
+{% tab swift %}
+
+In your `NotificationViewController.swift`, add following line to import the header files:
+
+```swift
+import AppboyPushStory
+```
+
+Next, remove the default implementation and add following code:
+
+```swift
+class NotificationViewController: UIViewController, UNNotificationContentExtension {
+
+  @IBOutlet weak var storiesView: ABKStoriesView!
+  var dataSource: ABKStoriesViewDataSource?
+    
+  func didReceive(_ notification: UNNotification) {
+    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "group.Appboy.HelloSwift")
+  }
+    
+  func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+    if dataSource != nil {
+      let option: UNNotificationContentExtensionResponseOption = dataSource!.didReceive(response)
+      completion(option)
+    }
+  }
+    
+  override func viewWillDisappear(_ animated: Bool) {
+    dataSource?.viewWillDisappear()
+    super.viewWillDisappear(animated)
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Step 7: Set the Notification Content Extension Storyboard
 
--		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height autoresizable matching the Notification View Controller main view frame.
+-		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the Notification View Controller's main view frame.
 
 ![View Class][ios_pushstory_06]
 
@@ -164,6 +218,9 @@ Open the Info.plist file of the Notification Content Extension and add/change fo
 
 Add `ABKPushStoryAppGroupKey` in the `appboyOption` dictionary as following when you initialize Braze:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
 appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
@@ -172,6 +229,19 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+let appboyOptions: [AnyHashable: Any] = [
+  ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
+]
+Appboy.start(withApiKey: "YOUR_APPBOY_API_KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions: appboyOptions)
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}

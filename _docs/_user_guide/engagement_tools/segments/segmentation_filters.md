@@ -5,6 +5,10 @@ layout: glossary_page
 glossary_top_header: "Segmentation Filters"
 glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by <a href="/docs/user_guide/engagement_tools/segments/filter_categories/">Filter Category.</a>
 
+page_type: glossary
+tool: segments
+description: "This glossary lists available filters to segment and target your users."
+
 glossary_tag_name: Filter Category
 glossary_filter_text: "Select Categories below to narrow the glossary:"
 
@@ -445,8 +449,8 @@ glossaries:
     description: Allows you to find users who are provisionally authorized on iOS 12 for a given app.
     tags:
       - Other
-  - name: Most Engaged Channel
-    description: Filters the portion of your audience whose most active channel (the channel which has the highest likelihood of engagement given the user's past three months or activity) is the one you select in the subsequent dropdown (Email, Mobile push, or Web push). <br> You can also elect to filter by Not Enough Data, which only sends to users who have received messages from at least two of the three available channels in the drop down but have not had enough distinct channel activity to determine a most engaged channel. <br> <a href="/docs/most_engaged_channel/">Learn more about this filter here.</a>
+  - name: "Intelligent Channel"
+    description: Filters the portion of your audience whose most active channel (the channel which has the highest likelihood of engagement given the user's past three months or activity) is the one you select in the subsequent dropdown (Email, Mobile push, or Web push). <br> You can also elect to filter by Not Enough Data, which only sends to users who have received messages from at least two of the three available channels in the drop down but have not had enough distinct channel activity to determine a most engaged channel. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Learn more about this filter here.</a> <br> <br> _As of the <a href="/docs/help/release_notes/2019/november/#intelligence-suite">November 2019 product release</a>, 'Most Engaged Channel' has been renamed to 'Intelligent Channel'._
     tags:
       - User Activity
 ---

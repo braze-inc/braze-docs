@@ -7,7 +7,7 @@ page_order: 4
 
 # In-App Messages In Canvas
 
-{% include youtube.html id="6X8E20BlblI" align="right" %}
+{% include video.html id="6X8E20BlblI" align="right" %}
 
 In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages.
 

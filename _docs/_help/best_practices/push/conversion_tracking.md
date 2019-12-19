@@ -44,7 +44,7 @@ In addition, by using the conversion event "opens app," you are tracking app ope
 [45]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
 [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
-[48]: {{ site.baseurl }}/user_guide/data_and_analytics/influenced_opens/#influenced-opens
+[48]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens
 [49]: https://medium.com/@hopper_travel/the-notification-problem-50267cbabad2#.auax13q52
 [50]: http://developer.android.com/design/patterns/notifications.html
 [51]: http://developer.android.com/design/patterns/notifications.html

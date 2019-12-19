@@ -3,8 +3,14 @@ nav_title: Understanding Campaign Status
 platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 3
+
+tools: campaigns
+page_type: reference
+description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
 ---
 # Understanding Campaign Status
+
+> This reference article gives an overview of the various statuses a campaign can have and what they mean.
 
 On your Braze Dashboard, your campaigns are grouped by their status. Below are the different statuses your campaigns could have and descriptions on what they mean:
 
@@ -30,7 +36,7 @@ On your Braze Dashboard, your campaigns are grouped by their status. Below are t
 
 
 - __Multivariate Testing in Progress__
-	- Campaigns with [multivariate tests][1] still running. Should they reach a point where a variant outperforms others with better than 95% confidence, the variant will marked as the "winner."
+	- Campaigns with [multivariate tests][1] still running. Should they reach a point where a variant outperforms others with better than 95% confidence, the variant will be marked as the "winner."
 
 
 - __Inactive Multivariate Test - Winner Selection Needed__

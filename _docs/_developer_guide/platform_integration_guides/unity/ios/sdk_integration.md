@@ -36,6 +36,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
 2. Check the "Automate Unity iOS Integration" box.
 3. In the "Braze API Key" field, input your application's API key from the [Braze Dashboard][19]. Your Braze Configuration settings should look like this:
+
 ![Braze Config Editor][18]
 
 >  If your application is already using another UnityAppController subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
@@ -53,7 +54,7 @@ By default, Braze will handle and display in-app messages via the native iOS SDK
 2. Set the name of your Game Object and In-App Message listener callback method under "Set In-App Message Listener."
 3. If you set a listener, Braze will send the in-app message to Unity instead of displaying it, and your in-app message will __not__ automatically appear in your app. If you check "Braze Displays In-App Messages", Braze will both send the in-app message to your callback method and display it.
 
-    ![In-App Message Listener][25]
+![In-App Message Listener][25]
 
 ### Implementation Example {#iam-implementation-example}
 
@@ -63,6 +64,57 @@ For a sample implementation, take a look at the [`InAppMessageReceivedCallback`]
 
 Your Unity application is now set up to receive in-app messages from Braze. See the [In-App Message documentation][34] for information on in-app message customization.
 
+## Content Cards Integration
+
+Braze's Content Cards feature allows you to insert content directly into your app from our web dashboard. Braze does not provide a default UI for Content Cards in Unity. Instead, the Braze SDK passes along all cards to Unity. If you wish to integrate Content Cards into your application, you must do the following:
+
+1. Ensure that you have followed the Initial SDK Setup steps on [setting your Braze API key][8] through Unity.
+	- If you would like to integrate Content Cards manually, please refer to the instructions on [Manual Content Cards Integration][29].
+2. Set the name of your Game Object and Content Cards listener callback method under "Set Content Cards Listener."
+
+![Set Content Cards Listener][40]
+
+### Implementation Example {#feed-implementation-example}
+
+The method `ContentCardsReceivedCallback` in our [sample callback code][38] shows an example of parsing incoming Content Card data into our convenience wrapper class for Content Cards, [`ContentCard.cs`][39]. `ContentCard.cs` also supports logging analytics through its `LogImpression()` and `LogClick()` methods.
+
+Sample code for parsing incoming Content Card data:
+
+```
+void ExampleCallback(string message) {
+	// Example of logging a Content Card displayed event
+	AppboyBinding.LogContentCardsDisplayed();
+	try {
+		JSONClass json = (JSONClass)JSON.Parse(message);
+
+		// Content Card data is contained in the `mContentCards` field of the top level object.
+		if (json["mContentCards"] != null) {
+			JSONArray jsonArray = (JSONArray)JSON.Parse(json["mContentCards"].ToString());
+			Debug.Log(String.Format("Parsed content cards array with {0} cards", jsonArray.Count));
+
+			// Iterate over the card array to parse individual cards.
+			for (int i = 0; i < jsonArray.Count; i++) {
+				JSONClass cardJson = jsonArray[i].AsObject;
+				try {
+					ContentCard card = new ContentCard(cardJson);
+					Debug.Log(String.Format("Created card object for card: {0}", card));
+
+					// Example of logging Content Card analytics on the ContentCard object 
+					card.LogImpression();
+					card.LogClick();
+				} catch {
+					Debug.Log(String.Format("Unable to create and log analytics for card {0}", cardJson));
+				}
+			}
+		}
+	} catch {
+		throw new ArgumentException("Could not parse content card JSON message.");
+	}
+}
+```
+
+### Content Cards Integration Complete
+
 ## News Feed Integration
 
 Braze's News Feed allows you to insert permanent content directly into your app from our web dashboard. Braze does not provide a default UI for the News Feed in Unity. Instead, the Braze SDK passes along all News Feed cards to Unity. If you wish to integrate the News Feed into your application, you must do the following:
@@ -71,7 +123,7 @@ Braze's News Feed allows you to insert permanent content directly into your app 
 	- If you would like to integrate the News Feed manually, please refer to the instructions on [Manual News Feed Integration][28].
 2. Set the name of your Game Object and News Feed listener callback method under "Set News Feed Listener."
 
-    ![Set News Feed Listener][30]
+![Set News Feed Listener][30]
 
 ### Implementation Example {#feed-implementation-example}
 
@@ -120,7 +172,7 @@ git clone git@github.com:Appboy/appboy-unity-sdk.git
 | Are you using other plugins? | What to Copy | Where to Copy |
 | ---------------------------- | ------------ | ------------- |
 | __NO__ | the `Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
-| __YES__ | `Plugins/Appboy/AppboyBinding.cs` | `/<your-project>/Assets/Plugins` |
+| __YES__ | `Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
 | __YES__ | `Plugins/iOS` | `/<your-project>/Assets/Plugins/iOS` |
 
 #### Step 3: Generating Xcode project & Adding Required Classes
@@ -212,12 +264,12 @@ You can set an in-app message listener by manually modifying your built Xcode pr
 ```objc
 [Appboy sharedInstance].inAppMessageController.delegate = [AppboyUnityManager sharedInstance];
 
-[[AppboyUnityManager sharedInstance] addInAppMessageListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Call Back Method Name"];
+[[AppboyUnityManager sharedInstance] addInAppMessageListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Callback Method Name"];
 ```
 
 - `@"Your Unity Game Object Name"` must be replaced with the Unity object name you want to listen to the in-app message.
-- `@"Your Unity Call Back Method Name"` is the call back method name that handles the in-app message.
-- The call back method must be contained within the Unity object you passed in as the first parameter.
+- `@"Your Unity Callback Method Name"` is the callback method name that handles the in-app message.
+- The callback method must be contained within the Unity object you passed in as the first parameter.
 
 >  If you have added an in-app message listener, Braze will send the message to Unity instead of displaying it by default, meaning your in-app message will __not__ automatically appear in your app. To have Braze handle displaying in-app messages, change the `(BOOL) onInAppMessageReceived:(ABKInAppMessage *)inAppMessage` method in `AppboyUnityManager.mm` and make it return `NO`.
 
@@ -226,12 +278,24 @@ You can set an in-app message listener by manually modifying your built Xcode pr
 You can set a feed listener by manually modifying your built Xcode project. In order to pass the News Feed from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
 
 ```objc
-[[AppboyUnityManager sharedInstance] addFeedListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Call Back Method Name"];
+[[AppboyUnityManager sharedInstance] addFeedListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Callback Method Name"];
 ```
 
 - `@"Your Unity Game Object Name"` must be replaced with the Unity object name you want to receive the News Feed.
-- `@"Your Unity Call Back Method Name"` is the call back method name that handles the News Feed model.
-- The call back method must be contained within the Unity object you passed in as the first parameter.
+- `@"Your Unity Callback Method Name"` is the callback method name that handles the News Feed model.
+- The callback method must be contained within the Unity object you passed in as the first parameter.
+
+### Content Cards Integration {#manual-content-cards-integration}
+
+You can set a Content Card listener by manually modifying your built Xcode project. Add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
+
+```objc
+[[AppboyUnityManager sharedInstance] addContentCardsListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Callback Method Name"];
+```
+
+- `@"Your Unity Game Object Name"` must be replaced with the Unity object name you want to receive Content Cards.
+- `@"Your Unity Callback Method Name"` is the callback method name that handles the Content Card model.
+- The callback method must be contained within the Unity object you passed in as the first parameter.
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [2]: {% image_buster /assets/img_archive/unity-bundle-ios.png %} "Link iOS Binary and Library"
@@ -259,6 +323,7 @@ You can set a feed listener by manually modifying your built Xcode project. In o
 [26]: #manual-iam-integration
 [27]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L14
 [28]: #manual-feed-integration
+[29]: #manual-content-cards-integration
 [30]: {% image_buster /assets/img_archive/unity-ios-feed-listener.png %}
 [31]: #in-app-message-integration
 [32]: #news-feed-integration
@@ -267,3 +332,6 @@ You can set a feed listener by manually modifying your built Xcode project. In o
 [35]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [36]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
 [37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package
+[38]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
+[39]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
+[40]: {% image_buster /assets/img_archive/unity-ios-content-cards-listener.png %}

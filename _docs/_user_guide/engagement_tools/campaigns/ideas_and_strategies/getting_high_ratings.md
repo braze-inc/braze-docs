@@ -3,10 +3,19 @@ nav_title: Getting High Ratings
 platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 5
+
+tools: campaigns
+page_type: reference
+description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
 ---
 # Getting High Ratings
 
-Getting five star ratings in the app store is on every mobile marketer's wish list because it drives downloads and makes your app stand out among the millions. Achieving positive reviews, however, is no easy task because it requires extra work by your users. Learn how to ask users for ratings the right way.
+> This reference article discusses best practices when using Braze to drive your customer platforms toward success.
+> <br>
+> <br>
+> We all know high ratings are invaluable for a mobile application, and by applying Braze's functionality in clever ways we can help you increase your customer engagement. 
+
+Getting five-star ratings in the app store is on every mobile marketer's wish list because it drives downloads and makes your app stand out among the millions. Achieving positive reviews, however, is no easy task because it requires extra work by your users. Learn how to ask users for ratings the right way.
 
 ## Best Practices
 

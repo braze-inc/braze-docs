@@ -3,8 +3,14 @@ nav_title: Feature Awareness and New App Version
 platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
+
+tools: campaigns
+page_type: reference
+description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
 ---
 # Feature Awareness and New App Version
+
+> This reference article addresses how to use the Braze platform to keep your customers up to date on new features and versions of your app. 
 
 You work hard to continually update and improve your app, and you want your users to experience these exciting new features and new app versions.  Learn how to teach users about the new features they have yet to use, and encourage them to explore the app to get the most you have to offer.
 
@@ -22,13 +28,13 @@ _Most Recent App Version_ filters on an app's user-facing version name. This fil
 
 #### App Version Code
 
-_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager.
+_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with the Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+ and can be enabled by your Braze account manager.
 
 ![App Version Filter][1]
 
 ### Have Not Used Feature
 
-When you release a new app version and introduce new features, users may not notice new content.  Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action.  You can use this attribute (or event) to segment users that you want to sent the campaign to.
+When you release a new app version and introduce new features, users may not notice new content.  Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action.  You can use this attribute (or event) to segment users that you want to send the campaign to.
 
 ## Best Practices
 
@@ -38,9 +44,9 @@ Persuading a user to update their app or change the way they use your app can be
 
 ### Send at the Right Time
 
-Convincing your users to update their app can be difficult as they must navigate to the app store to do so.  In general, it is best to ask users to update as soon as the app is updated, however if they choose not to do not spam them with messages. Rather, wait until they have a positive experience within the app, for instance beating a level, redeeming a coupon, or favoriting a song.
+Convincing your users to update their app can be difficult as they must navigate to the app store to do so.  In general, it is best to ask users to update as soon as the app is updated, however, if they choose not to do not spam them with messages. Rather, wait until they have a positive experience within the app, for instance beating a level, redeeming a coupon, or favoriting a song.
 
-For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully users will discover new features easily, however if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
+For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully users will discover new features easily, however, if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
 
 ### Use Non-intrusive Channels
 
