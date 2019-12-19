@@ -52,7 +52,7 @@ At Braze, we offer some general naming conventions for the purchase object `prod
 When choosing product_id, Braze suggests using simplistic names such as the product name or product category with the intention of grouping all logged items by this `product_id`. 
 
 ## Purchase Properties Object
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
+Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
 
 ### Purchase properties
 Purchase properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, but __does not__ allow you to segment based on these properties. However, Braze does allow you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager. 
@@ -110,7 +110,7 @@ Content-Type: application/json
 
 ## Purchase Objects, Event Objects, and Webhooks
 
-Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically like using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Ann F.__, Thanks for purchasing that __red, medium backpack__ for __$40.00__! Thanks for shopping at __Backpack Locker__!"
+Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Ann F.__, Thanks for purchasing that __red, medium backpack__ for __$40.00__! Thanks for shopping at __Backpack Locker__!"
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
 

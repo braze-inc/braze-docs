@@ -2,6 +2,10 @@
 nav_title: User Data
 page_order: 5
 search_rank: 5
+
+local_redirect: #event-object-specification #purchase-object-specification
+  event-object-specification: '/docs/api/objects_filters/event_object/'
+  purchase-object-specification: '/docs/api/objects_filters/purchase_object/'
 ---
 # User Data
 
