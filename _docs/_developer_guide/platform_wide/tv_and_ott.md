@@ -78,6 +78,8 @@ Below is a list of features and messaging channels supported today.
 
 For platforms which support In App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In App Message templates into your existing app designs.
 
+## Integration Guides
+
 ### Amazon Fire TV
 
 Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
