@@ -35,7 +35,7 @@ Below is a list of features and messaging channels supported today.
             <td>Amazon Fire TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Data Model)</td>
+            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Custom UI)</td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
@@ -51,7 +51,7 @@ Below is a list of features and messaging channels supported today.
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Data Model)</td>
+            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Custom UI)</td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
@@ -74,6 +74,10 @@ Below is a list of features and messaging channels supported today.
     </tbody>
 </table>
 
+## In App Message with Custom UI
+
+For platforms which support In App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In App Message templates into your existing app designs.
+
 ### Amazon Fire TV
 
 Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
@@ -85,7 +89,7 @@ Features include:
 - Content Cards
 - In App Messages are available using custom views with our Data Model
 
-For more information, visit the [Fire OS Integration Guide]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/).
+For more information, visit the [Fire OS Integration Guide][1].
 
 ### Kindle Fire
 
@@ -98,7 +102,7 @@ Features include:
 - Content Cards
 - In App Messages
 
-For more information, visit the [Fire OS Integration Guide]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/).
+For more information, visit the [Fire OS Integration Guide][1].
 
 ### Android TV
 
@@ -111,16 +115,23 @@ Features include:
 - Content Cards
 - In App Messages are available using custom views with our Data Model
 
+For more information, visit the [Android SDK Integration Guide][2].
+
 ### Roku
 
 Use Braze's Roku SDK to collect data and analytics on your Roku users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
 
 The ability to send In App Messages to your Roku users is coming soon - stay tuned!
 
-For more information, visit the [Roku Integration Guide]({{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/).
+For more information, visit the [Roku Integration Guide][3].
 
 ### Apple TV OS
 
 Use Braze's iOS SDK to collect data and analytics on your TV OS users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
 
-For more information, visit the [Roku Integration Guide]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).
+For more information, visit the [Roku Integration Guide][4].
+
+[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
+[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
