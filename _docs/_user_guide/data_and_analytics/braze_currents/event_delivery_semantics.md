@@ -64,13 +64,15 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{ sit
 File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
 {% endalert %}
 
-Data files will be written to your storage bucket at set thresholds:
+### Avro Write Threshold
+
+Data files will be written to your storage bucket once you hit _any of the set thresholds_, whichever happens first:
 
 | Partner | Write Threshold |
 |---|---|
-| Amazon AWS S3 | Every 5 minutes, 15,000 events, or on the hour. |
-| Microsoft Azure Blob Storage | Every 5 minutes, 15,000 events, or on the hour. |
-| Google Cloud Storage | Every 5 minutes, 15,000 events, or on the hour. |
+| Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
+| Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
+| Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
 
 {% alert important %}
 Currents will never write empty files.
