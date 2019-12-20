@@ -85,7 +85,6 @@ Exit-intent in-app messages appear when visitors are about to navigate away from
 [46]: #inapp-control
 [47]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
-[49]: {% image_buster /assets/img_archive/Web_Slideup.png %}
 [50]: https://github.com/carlsednaoui/ouibounce
 [51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [52]: {{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages

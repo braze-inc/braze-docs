@@ -524,7 +524,6 @@ Content Cards have a maximum size of **2kb** (including images, links, and all
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[22]: {% image_buster /assets/img_archive/sample_news_feed.png %}
 [23]: {% image_buster /assets/img_archive/android_news_feed.png %}
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png

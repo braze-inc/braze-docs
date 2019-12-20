@@ -159,13 +159,8 @@ Check out:
 [49]: https://developers.facebook.com/docs/messenger-platform/guidelines
 [50]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-attributes
 [51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[52]: {% image_buster /assets/img_archive/fbm-webhook-header.png %}
-[53]: {% image_buster /assets/img_archive/fbm-webhook.png %}
 [54]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/
 [55]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[56]: {% image_buster /assets/img_archive/fbm-text.png %}
-[57]: {% image_buster /assets/img_archive/fbm-image.png %}
-[58]: {% image_buster /assets/img_archive/fbm-structured.png %}
 [59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
 [61]: {{ site.baseurl }}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
