@@ -13,7 +13,9 @@ platform:
 
 # API Key Overview
 
->  This reference article covers what API keys are, what they are used for, their permissions and how to keep these keys secure.  
+>  This reference article covers the two main types of keys you will see at Braze, the REST API Key or APP Group Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are are, how they are used at Braze, their permissions and how to keep them secure. 
+
+In addition to these keys, there also exists Identifier Keys that can be used to reference specific things like templates, canvases, campaigns, content cards, and segments from the API. Information on those API identifier types/keys can be found [here][2].
 
 ## What is a REST API Key/App Group REST API Key?
 
@@ -21,7 +23,8 @@ A REST Application Programming Interface key (API key) is a unique code that is 
 
 The `api_key` included in each request acts as an authentication key that allows your server code to utilize our REST APIs. REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. [endpoints listed here] By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
------
+
+
 
 App Groups are used all the time at Braze, they are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these App groups are also making use of the REST API. 
 
@@ -249,6 +252,7 @@ When the build variant is compiled, it will use the new API key.
 The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. 
 The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
 
+[2]: https://www.braze.com/docs/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
 [4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: http://localhost:4000/docs/api/endpoints/email_sync/#api-specification
@@ -258,5 +262,3 @@ BAD_PLACE
 ### The API Key
 
 The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
-
-include way to find listed in develop console
