@@ -10,6 +10,8 @@ page_type: partner
 
 # Segment Personas
 
+{% include video.html id="RfOHfZ34hYM" align="right" %}
+
 > This article will give an overview of [the connection between Braze and Segment Personas](https://segment.com/docs/destinations/braze/#personas), as well as describe requirements and process for proper implementation and usage.
 
 If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for our regular integration (side-by-side or server-to-server) with Segment, [click here]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment/).

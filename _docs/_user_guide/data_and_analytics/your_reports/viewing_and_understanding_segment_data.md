@@ -76,5 +76,4 @@ On this page, you can view a number of user-specific attributes as shown below:
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
 [18]: {% image_buster /assets/img_archive/Events_Over_Time2.png %}
-[19]: {% image_buster /assets/img_archive/segment_analytics_custom_events.png %}
 [20]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/

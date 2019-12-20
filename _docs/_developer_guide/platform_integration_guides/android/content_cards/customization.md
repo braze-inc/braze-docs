@@ -4,6 +4,7 @@ page_order: 1
 search_rank: 5
 platform: Android
 ---
+
 # Customization
 
 ## Default Styling {#default-styling-for-android}
@@ -126,6 +127,7 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   }
 }
 ```
+
 {% endtab %}
 {% tab KOTLIN %}
 
@@ -164,6 +166,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   }
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -493,20 +496,22 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
 ## Key-Value Pairs
+
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 
 ## GIFs {#gifs-news-content-cards}
 
- {% alert note %}
- Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
- {% endalert %}
+{% alert note %}
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+{% endalert %}
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
+
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
@@ -519,7 +524,6 @@ See the [Javadoc][36] for more information.
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[22]: {% image_buster /assets/img_archive/sample_news_feed.png %}
 [23]: {% image_buster /assets/img_archive/android_news_feed.png %}
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
