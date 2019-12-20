@@ -208,6 +208,13 @@ If you're sending purchase data to Braze (see [Completed Order](#completed-order
 If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, please use a side-by-side integration.
 {% endalert %}
 
+## User Deletion & Suppression 
+
+If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to our [Users/Delete endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+
+You must ensure that that you select a common user identifier between Braze and Segment ( as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
+
+
 ## Segment Replays
 
 Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
