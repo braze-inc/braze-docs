@@ -23,6 +23,7 @@ validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivar
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing'] = '/docs/user_guide/intelligence/multivariate_testing';
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/'] = '/docs/partners/snowflake/';
 validurls['/docs/partners/technology_partners/insights/business_intelligence/looker'] = '/docs/partners/looker/';
 validurls['/docs/partners/neura/'] = '/docs/partners/neura_actions/';
