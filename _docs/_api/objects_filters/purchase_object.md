@@ -47,14 +47,14 @@ Within the purchase object, The `product_id` is an identifier for the purchase, 
 - Braze allows you to store more than 5000 `product_id`s in the dashboard.
 - `product_id` max is 255 characters
 
-### product_id naming conventions
+### Product_ID Naming Conventions
 At Braze, we offer some general naming conventions for the purchase object `product_id`. 
-When choosing product_id, Braze suggests using simplistic names such as the product name or product category with the intention of grouping all logged items by this `product_id`. 
+When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category with the intention of grouping all logged items by this `product_id`. 
 
 ## Purchase Properties Object
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
 
-### Purchase properties
+### Purchase Properties
 Purchase properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, but __does not__ allow you to segment based on these properties. However, Braze does allow you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager. 
 
 While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes. }
