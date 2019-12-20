@@ -13,7 +13,7 @@ platform:
 
 # API Identifier Types
 
-> This reference guide touches on the different types of API Identifiers that can be found within the Braze Dashboard, their purpose, where you can find them, and ideas on how to implement these identifiers yourself.
+> This reference guide touches on the different types of API Identifiers that can be found within the Braze Dashboard, their purpose, where you can find them, and how they are typically used.
 
 The following API Identifiers can be used to access your template, canvas, campaign, segment, or card from Braze's external API.
 
@@ -37,7 +37,6 @@ You can find your Template ID one of two ways:
 - Update templates over API
 - Grab information on a specific template
 
-
 <br>
 {% endtab %}
 {% tab Canvas IDs %}
@@ -58,9 +57,8 @@ You can find your Canvas ID one of two ways:
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Canvas performance
 - Grab details on a specific Canvas
-- In currents
+- With currents to bring in user-level data for a "bigger picture" approach to canvases
 - With API trigger delivery in order to collect statistics for transactional messages
-
 
 <br>
 {% endtab %}
@@ -82,9 +80,8 @@ You can find your Campaign ID one of two ways:
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Campaign performance
 - Grab details on a specific Campaign
-- With currents
+- With currents to bring in user-level data for a "bigger picture" approach to campaigns
 - With API trigger delivery in order to collect statistics for transactional messages
-
 
 <br>
 {% endtab %}
@@ -122,7 +119,6 @@ You can find your Card ID one of two ways:
 ### What can it be used for?
 - Retrieve relevant information on a card
 - Track events related to Content Cards and engagement
-
 
 <br>
 {% endtab %}

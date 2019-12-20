@@ -204,7 +204,7 @@ The App Identifier API Key or `app_id` is a parameter associating activity with 
 
 App identifiers at Braze are when integrating the SDK and are also used to reference a specific app in API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app. 
 
-Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you are able to "omit" this field by including any string of characters as a placeholder for this required parameter. For example, if we are trying to send an email object, an `app_id` is required, but because the channel is not associated with an app (iOS or Android) like Push or IAM is, we can "omit" this field by including placeholder text. 
+Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can "omit" this field by including any string of characters as a placeholder for this required parameter. For example, if we are trying to send an email object, an `app_id` is required, but because the channel is not associated with an app (iOS or Android) like Push or IAM is, we can "omit" this field by including placeholder text. 
 
 ### Where can I find it?
 There are two ways to locate your `app_id`:
@@ -230,18 +230,11 @@ When the build variant is compiled, it will use the new API key.
 
 ## API Key Security
 
-Security is of the utmost importance at Braze. Given that REST API Keys allow access to potentially sensitive REST API endpoints, please secure these keys and only share them with trusted partners. They should never be publicly exposed.
+Security is of the utmost importance at Braze. Given that REST API Keys allow access to potentially sensitive REST API endpoints, please secure these keys and only share them with trusted partners. They should never be publicly exposed. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
 A good security practice is to assign a user only as much access as is necessary to complete his or her job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
 
-With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked, so because of the nature of the relationship with between them and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
-
-For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
-
-## App Identifier vs. REST API key
-
-The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. 
-The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked, so because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
 
 [2]: https://www.braze.com/docs/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
