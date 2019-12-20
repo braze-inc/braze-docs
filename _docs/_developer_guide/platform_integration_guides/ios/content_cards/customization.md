@@ -76,19 +76,20 @@ To customize the header, set the title property of the `navigationItem` belongin
 ## Overriding Default Images
 
 Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in Content Cards include:
-* Placeholder image: `appboy_cc_noimage_lrg`.
-* Pinned icon image: `appboy_cc_icon_pinned`.
 
-{% alert note %} 
-Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes. 
+- Placeholder image: `appboy_cc_noimage_lrg`.
+- Pinned icon image: `appboy_cc_icon_pinned`.
+
+{% alert note %}
+Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes.
 {% endalert %}
 
 {% alert important %}
-Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
 {% endalert %}
 
-{% alert note %} 
-Note that overriding default images is currently not supported in our Xamarin iOS integration. 
+{% alert note %}
+Note that overriding default images is currently not supported in our Xamarin iOS integration.
 {% endalert %}
 
 ## Customizing the Content Cards Feed

@@ -2,7 +2,7 @@
 nav_title: Overview
 page_order: 0
 search_rank: 5
-platform: Android
+platform: Cordova
 ---
 
 # Content Cards
@@ -32,15 +32,11 @@ This is what it looks like for your users to open a basic Content Card feed. As 
 ![Content Cards Feed]({% image_buster /assets/img/sample-torchy-feed-content-cards-braze.png %}){: height="50%" width="50%"}
 
 {% alert note %}
-Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - anything that exceeds that amount will prevent the card from sending.
 {% endalert %}
 
-## Content Cards Integration Overview {#content-cards-integration-for-android}
+## Content Cards Integration Overview {#content-cards-integration-for-cordova}
 
-In Android, the Content Cards feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+In a Cordova app, Content Cards can be accessed and displayed directly in JavaScript. To learn more visit our [Integration Guide][1].
 
-The [`AppboyContentCardsFragment`][3] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's ContentCards are created on the Braze dashboard.
-
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/cordova/content_cards/integration/
