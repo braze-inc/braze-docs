@@ -2,34 +2,22 @@
 nav_title: Messaging
 page_order: 2
 search_rank: 5
-local_redirect: #parameter-definitions
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-group-rest-api-key
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #external-user-id
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #segment-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #campaign-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #send-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #trigger-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-entry-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #server-responses
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #messaging-queued
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #responses-for-tracked-send-ids
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #fatal-errors
-  hashtag-name-here: '/docs/api/errors/'
+local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
+  parameter-definitions: '/docs/api/parameters/'
+  app-group-rest-api-key: '/docs/api/parameters/'
+  app-identifier: '/docs/api/parameters/'
+  external-user-id: '/docs/api/parameters/'
+  segment-identifier: '/docs/api/parameters/'
+  campaign-identifier: '/docs/api/parameters/'
+  canvas-identifier: '/docs/api/parameters/'
+  send-identifier: '/docs/api/parameters/'
+  trigger-properties: '/docs/api/parameters/'
+  canvas-entry-properties: '/docs/api/parameters/'
+  server-responses: '/docs/api/errors/'
+  messaging-queued: '/docs/api/errors/'
+  responses-for-tracked-send-ids: '/docs/api/errors/'
+  fatal-errors: '/docs/api/errors/'
+  
 ---
 # Messaging
 
