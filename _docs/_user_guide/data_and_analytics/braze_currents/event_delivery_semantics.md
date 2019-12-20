@@ -70,9 +70,9 @@ Data files will be written to your storage bucket once you hit _any of the set t
 
 | Partner | Write Threshold |
 |---|---|
-| Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
-| Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
-| Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. <br> On the hour. |
+| Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. |
+| Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. |
+| Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. |
 
 {% alert important %}
 Currents will never write empty files.
