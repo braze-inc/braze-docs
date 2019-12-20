@@ -46,7 +46,7 @@ https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-o
 
 ## Getting the Subscription Status
 
-Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include a 0 (subscribed), 1 (unsubscribed), or null value for the specific subscription group requested in the API call.  This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call.  This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
 Instance  | REST Endpoint
 ----------|------------------------------------------------
@@ -64,7 +64,7 @@ EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
 | `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
-| `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 50. |
+| `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
 | `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
 _* Generally, either `external_id` or `email` is required. <br>  But, for SMS subscription groups, either `external_id` or `phone` is required. <br>  Must include `phone` or `email` value, but not both._
@@ -133,7 +133,7 @@ Response: (status 201)
 }
 ```
 {% alert important %}
-The endpoint only accepts the `email` or `phone` value, not both. If given both, you will recieve this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 [support]: {{ site.baseurl }}/support_contact/

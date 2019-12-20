@@ -968,11 +968,9 @@ See the Windows Universal [toast template catalog][32] for details on the option
 
 ## Broadcast
 
-When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call. If the `broadcast` flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including `broadcast: true` and providing a recipient list will return an error. The `broadcast` flag is required to protect against accidental sends to large groups of users.
+When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call.
 
-{% alert important %}
-For backward-compatibility, this field is only required for API calls made for campaigns and Canvases created after August 15, 2017 that intend to send to the entire audience. It will be mandatory on August 31, 2017 for all campaigns and Canvases for API calls that intend to send to the entire audience. The behavior for API calls to deliver campaigns and canvases created prior to these dates is: if an explicit list of recipients is not provided, the message will send to the entire targeted audience of the campaign or Canvas. That is, until 8/15/17, the `broadcast` field does not have a default value, so you may wish to explicitly set `broadcast: false` in existing API calls. On 8/15/17, it will default to false for newly created Campaigns and Canvases. On 8/31/17, it will default to false for all API calls.
-{% endalert %}
+Broadcast is a required field and the default value set by Braze when a Campaign or Canvas is made is `broadcast: false`. If the `broadcast` flag is not set to true and an explicit list of recipients is provided, the API endpoint will return an error. Similarly, including `broadcast: true` and not providing a recipient list will return an error. The `broadcast` flag is required to protect against accidental sends to large groups of users.
 
 [18]: https://dashboard-01.braze.com/app_settings/api_settings/
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification
