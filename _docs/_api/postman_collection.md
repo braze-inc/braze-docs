@@ -65,7 +65,6 @@ Once your API request is ready to send, click on the 'Send' button next to the U
 ![Response Data][6]
 
 [1]: https://www.getpostman.com
-[2]: {% image_buster /assets/img_archive/postman_environments.png %}
 [3]: {% image_buster /assets/img/postman_variable.png %}
 [4]: {% image_buster /assets/img_archive/postman_post.png %}
 [5]: {% image_buster /assets/img_archive/postman_get.png %}

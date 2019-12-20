@@ -105,9 +105,6 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 [29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
 [30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
 [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-[33]: {% image_buster /assets/img_archive/Multiple_click_tracking_screen_3a.png %}
-[34]: {% image_buster /assets/img_archive/Email_HeatMap_new.png %}
-[35]: {% image_buster /assets/img_archive/campaign_data_2.png %}
 [36]: #deep-linking
 [37]: http://googlewebmastercentral.blogspot.com/2015/05/app-deep-linking-with-googl.html
 [38]: {{ site.baseurl }}/help/best_practices/email/#unsubscribed-email-addresses
@@ -118,10 +115,6 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 [44]: https://senderscore.org/
 [45]: http://www.senderbase.org/
 [46]: {{ site.baseurl }}/help/best_practices/email/#email-sunset-policies
-[47]: {% image_buster /assets/img_archive/appusage_ipwarming_main.png %}
-[48]: {% image_buster /assets/img_archive/campaign_confirmation_ipwarming.png %}
-[49]: {% image_buster /assets/img_archive/canvas_ip_warming.png %}
-[50]: {% image_buster /assets/img_archive/targeting_campaign_ipwarming.png %}
 [60]: {{ site.baseurl }}/help/best_practices/email/#email-sunset-policies
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
 [62]: https://www.emailonacid.com/blog/article/email-development/tips-for-coding-email-preheaders

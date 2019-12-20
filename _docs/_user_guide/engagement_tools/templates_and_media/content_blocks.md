@@ -82,7 +82,7 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 |---|---|
 | Name | Required field limited to 100 characters. Cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used. |
-| Content Size | Limited to 50kb. |
+| Content Size | Limited to 50kB (Kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML or Text. |
 

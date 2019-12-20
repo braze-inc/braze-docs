@@ -160,17 +160,9 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 {% endalert %}
 
 [fields]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#custom-attribute-data-types
-[1]: {% image_buster /assets/img_archive/userimport_examplecsv_noerrors.png %}
-[2]: {% image_buster /assets/img_archive/userimport_nav.png %}
 [3]: {% image_buster /assets/img/importcsv.png %}
-[4]: {% image_buster /assets/img_archive/userimport_Uploaded_NoErrors.png %}
-[5]: {% image_buster /assets/img_archive/userimport_Uploaded_Errors.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-upsers.png %}
-[8]: {% image_buster /assets/img_archive/userimport_view_segment.png %}
-[9]: {% image_buster /assets/img_archive/userimport_edit_segment.png %}
-[10]: {% image_buster /assets/img_archive/userimport-import_started.png %}
-[11]: {% image_buster /assets/img_archive/userimport-import_finished.png %}
 [12]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors

@@ -102,7 +102,6 @@ The following example shows a paginated HTML in-app message:
 [42]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
 [47]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
-[49]: {% image_buster /assets/img_archive/Web_Slideup.png %}
 [51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [52]: {{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages
 [53]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam

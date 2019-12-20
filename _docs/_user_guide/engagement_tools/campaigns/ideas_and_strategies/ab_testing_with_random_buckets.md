@@ -82,7 +82,6 @@ You can test the effectiveness of different message channel combinations. For in
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
 [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
-[5]: {% image_buster /assets/img_archive/Random_Bucket_5.png %}
 [9]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
 [10]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
 [11]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery

@@ -297,9 +297,7 @@ A notification will inform you whether your credentials have been successfully v
 
 [5]: {% image_buster /assets/img/s3_tech_partners.png %} "AWS Creds"
 [6]: https://console.aws.amazon.com/s3/
-[7]: {% image_buster /assets/img_archive/S3_Category.png %}
 [8]: https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
-[9]: {% image_buster /assets/img_archive/S3_CreateBucket.png %}
 [10]: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
 [11]: {% image_buster /assets/img_archive/S3_Credentials.png %}
 [12]: {% image_buster /assets/img_archive/S3_CreatePolicy.png %}

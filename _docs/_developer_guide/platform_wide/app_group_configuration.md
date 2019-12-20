@@ -36,4 +36,3 @@ Braze recommends that you create a "Testing App Group" for integration and campa
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
 [4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze App Settings"
 [5]: {% image_buster /assets/img_archive/App_Setup_API.png %} "Braze API Input"
-[6]: {% image_buster /assets/img_archive/app_testing_groups.png %} "Group Testing"

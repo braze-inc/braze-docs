@@ -54,7 +54,6 @@ Because they are relatively intrusive, push notifications and emails that ask us
 
 
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[2]: {% image_buster /assets/img_archive/update_notification.png %}
 [3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [4]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message

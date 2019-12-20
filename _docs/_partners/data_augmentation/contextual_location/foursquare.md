@@ -9,6 +9,8 @@ page_type: partner
 
 # Foursquare Integration
 
+{% include video.html id="G2ZoJqZGqrU" align="right" %}
+
 > Unlock location data campaign targeting, Braze provides a seamless product integration with [Foursquare](https://foursquare.com/).
 
 You can use Foursquare’s Pilgrim SDK on iOS and Android to provide real-time event triggering based on location, allowing you to harness Foursquare’s powerful geo-targeting capabilities to send relevant, personalized messaging with Braze.

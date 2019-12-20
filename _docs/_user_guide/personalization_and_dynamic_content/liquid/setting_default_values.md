@@ -46,8 +46,6 @@ Hi Valued User, thanks for using the App!
 [8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
 [9]: #connected-content
 [11]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
-[13]: {% image_buster /assets/img_archive/total_revenue_ios.png %}
-[14]: {% image_buster /assets/img_archive/games_liquid.png %}
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [16]: #manipulating-message-content-filters
 [17]: #conditional-logic
@@ -61,13 +59,10 @@ Hi Valued User, thanks for using the App!
 [25]: https://docs.shopify.com/themes/liquid/basics/operators
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
 [27]: #adding-personalizable-attributes-objects
-[29]: {% image_buster /assets/img_archive/MemberSince.png %}
 [30]: #variable-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[33]:{% image_buster /assets/img_archive/SupportedAttributes.png %}
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[36]:{% image_buster /assets/img_archive/value_null.png %}
 [37]:#accounting-for-null-attribute-values
 [38]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [39]: #most-recently-used-device-information

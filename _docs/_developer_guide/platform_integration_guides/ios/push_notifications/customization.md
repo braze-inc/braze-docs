@@ -160,7 +160,6 @@ Braze allows you to send custom-defined string key-value pairs, known as extras,
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
 [12]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[16]: {% image_buster /assets/img_archive/ExampleCategory.png %}
 [17]: {{ site.baseurl }}/assets/img_archive/push_example_category.png
 [20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
 [21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1
