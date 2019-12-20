@@ -89,7 +89,6 @@ Although most marketers add a one-click Unsubscribe link to their email, it is b
 
 ![list_unsub_1] [57]
 
-*More technical information is available [here] [60].*
 
 ### Benefits of the List-Unsubscribe Header
 Some recipients prefer to have an Unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent Unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
