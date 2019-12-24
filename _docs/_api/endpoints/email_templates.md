@@ -4,28 +4,30 @@ page_order: 4
 search_rank: 3
 ---
 
-# Templates
+{% api %}
+
+## Create Email Templates
+
+{% apimethod post %}
+/templates/email/create
+{% endapimethod %}
+
+{% apitags %}
+Post,Templates,Email
+{% endapitags %}
 
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-## Email Templates
-
-### Creating Email Templates
+Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
 
 Use the endpoints below to create email templates on the Braze dashboard. These templates will be available on the Templates and Media page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
-Instance  | REST Endpoint
-----------|------------------------------------------------
-US-01 | `https://rest.iad-01.braze.com/templates/email/create`
-US-02 | `https://rest.iad-02.braze.com/templates/email/create`
-US-03 | `https://rest.iad-03.braze.com/templates/email/create`
-US-04 | `https://rest.iad-04.braze.com/templates/email/create`
-US-06 | `https://rest.iad-06.braze.com/templates/email/create`
-EU-01 | `https://rest.fra-01.braze.eu/templates/email/create`
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/CreateEmailTemplate {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
+
+### Request Body
 
 ```json
-POST https://YOUR_REST_API_URL/templates/email/create
-Content-Type: application/json
 {
    "api_key": (required, string) your App Group REST API Key,
    "template_name": (required, string) the name of your email template,
@@ -35,25 +37,32 @@ Content-Type: application/json
    "preheader": (optional, string) the email preheader used to generate previews in some clients
  }
 ```
+{% endapi %}
 
-### Updating Email Templates
+
+{% api %}
+
+## Update Existing Email Templates
+
+{% apimethod post %}
+/templates/email/update
+{% endapimethod %}
+
+{% apitags %}
+Post,Templates,Email
+{% endapitags %}
+
+Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
 Use the endpoints below to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference.
 
 All fields other than the `api_key` and `email_template_id` are optional, but you must specify at least one field to update.
 
-Instance  | REST Endpoint
-----------|------------------------------------------------
-US-01 | `https://rest.iad-01.braze.com/templates/email/update`
-US-02 | `https://rest.iad-02.braze.com/templates/email/update`
-US-03 | `https://rest.iad-03.braze.com/templates/email/update`
-US-04 | `https://rest.iad-04.braze.com/templates/email/update`
-US-06 | `https://rest.iad-06.braze.com/templates/email/update`
-EU-01 | `https://rest.fra-01.braze.eu/templates/email/update`
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/UpdateEmailTemplate {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#680315e8-32d4-4a3d-81b6-0085a91b9cdc {% endapiref %}
+
 
 ```json
-POST https://YOUR_REST_API_URL/templates/email/update
-Content-Type: application/json
 {
   "api_key": (required, string) your App Group REST API Key,
   "email_template_id": (required, string) your email template's API Identifier,
@@ -64,21 +73,29 @@ Content-Type: application/json
   "preheader": (optional, string) the email preheader used to generate previews in some clients
 }
 ```
+{% endapi %}
 
-### List Email Templates Available
 
-Use the endpoints below to get a list of available templates.
+{% api %}
 
-Instance  | REST Endpoint
-----------|------------------------------------------------
-US-01 | `https://rest.iad-01.braze.com/templates/email/list`
-US-02 | `https://rest.iad-02.braze.com/templates/email/list`
-US-03 | `https://rest.iad-03.braze.com/templates/email/list`
-US-04 | `https://rest.iad-04.braze.com/templates/email/list`
-US-06 | `https://rest.iad-06.braze.com/templates/email/list`
-EU-01 | `https://rest.fra-01.braze.eu/templates/email/list`
+## List Available Email Templates
 
-#### Request Parameters
+{% apimethod get %}
+/templates/email/list
+{% endapimethod %}
+
+{% apitags %}
+Get,Templates,Email
+{% endapitags %}
+
+Use this endpoint to get a list of available templates in your Braze account.
+
+Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/ListEmailTemplates {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
+
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -86,15 +103,15 @@ EU-01 | `https://rest.fra-01.braze.eu/templates/email/list`
 | `modified_after`  | No | String in ISO 8601 | Retrieve only templates updated at or after the given time. |
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
-| `offset`  |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+| `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 
-#### Example Request
+### Example Request
 
 ```
 https://rest.iad-01.braze.com/templates/email/list?api_key=123abc-def5-3729-owod-23f9f3j30
 ```
 
-#### Successful Response Properties
+### Successful Response Properties
 
 ```json
 GET https://YOUR_REST_API_URL/templates/email/list
@@ -108,34 +125,41 @@ GET https://YOUR_REST_API_URL/templates/email/list
     “updated_at”: (string, in ISO 8601)
 }
 ```
+{% endapi %}
 
-### See Email Template Information
+{% api %}
 
-Use the endpoints below to get information on your email templates.
+## See Email Template Information
 
-Instance  | REST Endpoint
-----------|------------------------------------------------
-US-01 | `https://rest.iad-01.braze.com/templates/email/info`
-US-02 | `https://rest.iad-02.braze.com/templates/email/info`
-US-03 | `https://rest.iad-03.braze.com/templates/email/info`
-US-04 | `https://rest.iad-04.braze.com/templates/email/info`
-US-06 | `https://rest.iad-06.braze.com/templates/email/info`
-EU-01 | `https://rest.fra-01.braze.eu/templates/email/info`
+{% apimethod get %}
+/templates/email/info
+{% endapimethod %}
 
-#### Request Parameters
+{% apitags %}
+Post,Templates,Email
+{% endapitags %}
+
+Use to get information on your email templates.
+
+Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/SeeEmailTemplateInformation {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
+
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
 
-#### Example Request
+### Example Request
 
 ```
 https://rest.iad-01.braze.com/templates/email/info?api_key=123abc-def5-3729-owod-23f9f3j30& email_template_id=759c2ad9-eefc-4af1-bde4-602630644935
 ```
 
-#### Successful Response Properties
+### Successful Response Properties
 
 ```json
 GET https://YOUR_REST_API_URL/templates/email/info
@@ -153,18 +177,24 @@ GET https://YOUR_REST_API_URL/templates/email/info
 }
 ```
 
-Images in this response will show in the "body" variable as HTML.
+Images in this response will show in the `body` variable as HTML.
 
-## Content Blocks
+{% endapi %}
 
-Use these endpoints to manage your [Email Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+{% api %}
+## List Available Content Blocks
 
-### List Available Content Blocks
-This endpoint will list existing Content Block information.
+{% apimethod get %}
+/content_blocks/list
+{% endapimethod %}
 
-```json
-GET https://YOUR_REST_API_URL/content_blocks/list
-```
+{% apitags %}
+Get,Templates,Email
+{% endapitags %}
+
+This endpoint will list your exiting [Email Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
 #### Request Parameters
 
@@ -217,12 +247,22 @@ The `offset` parameter must be an integer (positive number) greater than 0.
 - `Offset must be greater than 0.`
 The `offset` parameter must be an integer (positive number) greater than 0.
 
-### See Content Block Information
-This endpoint will call information for an existing Content Block.
+{% endapi %}
 
-```json
-GET https://YOUR_REST_API_URL/content_blocks/info
-```
+{% api %}
+## See Content Block Information
+
+{% apimethod get %}
+/content_blocks/info
+{% endapimethod %}
+
+{% apitags %}
+Get,Templates,Email
+{% endapitags %}
+
+This endpoint will call information for your exiting [Email Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 #### Request Parameters
 
@@ -256,15 +296,24 @@ This Content Block does not exist or is in a different company account or app gr
 - `Content Block has been deleted - content not available.`
 This Content Block, though it may have existed earlier, has been deleted.
 
-### Create Content Block
+{% endapi %}
 
-This endpoint will create a Content Block.
+{% api %}
+## Create Content Block
 
-```json
-POST https://YOUR_REST_API_URL/content_blocks/create
-```
+{% apimethod post %}
+/content_blocks/create
+{% endapimethod %}
 
-#### Request Body
+{% apitags %}
+Post,Templates,Email
+{% endapitags %}
+
+This endpoint will create an [Email Content Block]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
+
+### Request Body
 ```json
 {
   "api_key": "YOUR_API_KEY_HERE",
@@ -275,6 +324,8 @@ POST https://YOUR_REST_API_URL/content_blocks/create
   "tags": ["",""]
 }
 ```
+
+### Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -332,3 +383,5 @@ Content Block names can include any of the following characters: the letters (ca
 - `All Tags must be Strings.`
 
 - `Some Tags could not be found.`
+
+{% endapi %}

@@ -1,37 +1,30 @@
 ---
 nav_title: Email Lists & Addresses
 page_order: 0
-search_rank: 2
+layout: api_page
+excerpt_separator: ""
 ---
-# Email Lists & Addresses
 
-Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database.
+{% api %}
 
-## API Specification
+## Retrieve List of or Query Email Unsubscribes
 
-All API requests are made over HTTPS. Below are the paths for each email sync endpoint:
+{% apimethod get %}
+/email/unsubscribes
+{% endapimethod %}
 
-| URL | HTTP Verb | Functionality |
-| ---------------------| --------------- |
-| /email/unsubscribes | GET | Retrieving Objects|
-| /email/status | POST | Creating Objects |
-| /email/bounce/remove | POST | Removing Objects |
-| /email/spam/remove | POST | Removing Objects |
+{% apitags %}
+Get,Email Lists & Addresses,Subscriptions
+{% endapitags %}
 
-Your Endpoint will correspond to your Braze Instance.
+Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
 
-Instance  | REST Endpoint
------------|-----------------------------------------
-US-01 | `https://rest.iad-01.braze.com/email/`
-US-02 | `https://rest.iad-02.braze.com/email/`
-US-03 | `https://rest.iad-03.braze.com/email/`
-US-04 | `https://rest.iad-04.braze.com/email/`
-US-06 | `https://rest.iad-06.braze.com/email/`
-EU-01 | `https://rest.fra-01.braze.eu/email/`
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/QueryingAllEmailUnsubscribesExample {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
-## Querying Unsubscribed Emails
+### Query Parameters
 
-`GET https://YOUR_REST_API_URL/email/unsubscribes`
+You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
@@ -43,11 +36,9 @@ EU-01 | `https://rest.fra-01.braze.eu/email/`
 | `sort_direction` | No | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest. |
 | `email` | No * | String | If provided, we will return whether or not the user has unsubscribed |
 
-\* You must provide either an `email` or a `start_date`, and an `end_date`.
-
 >  If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-#### Sample response
+#### Sample Response
 
 Entries are listed in descending order.
 
@@ -71,9 +62,27 @@ Entries are listed in descending order.
 }
 ```
 
+{% endapi %}
+
+{% api %}
+
 ## Querying Hard Bounced Emails
 
-`GET https://YOUR_REST_API_URL/email/hard_bounces`
+{% apimethod get %}
+/email/hard_bounces
+{% endapimethod %}
+
+{% apitags %}
+Get,Email Lists & Addresses,Bounces
+{% endapitags %}
+
+Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
+
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
+
+### Query Parameters
+
+You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
@@ -84,11 +93,9 @@ Entries are listed in descending order.
 | `offset` | No | Integer | Optional beginning point in the list to retrieve from |
 | `email` | No * | String | If provided, we will return whether or not the user has hard bounced |
 
-\* You must provide either an `email` or a `start_date`, and an `end_date`.
-
 >  If your date range has more than `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-#### Sample response
+#### Sample Response
 
 Entries are listed in descending order.
 
@@ -112,50 +119,120 @@ Entries are listed in descending order.
 }
 ```
 
-## Changing Email Subscription Status
+{% endapi %}
 
-```json
-POST https://YOUR_REST_API_URL/email/status
-Content-Type: application/json
-```
 
-This endpoint allows you to set the email subscription state for your users. Users can be "opted_in", "unsubscribed", or "subscribed" (not specifically opted in or out).
+{% api %}
+
+## Change User's Email Subscription Status
+
+{% apimethod post %}
+/email/status
+{% endapimethod %}
+
+{% apitags %}
+Post,Email Lists & Addresses,Subscriptions
+{% endapitags %}
+
+This endpoint allows you to set the email subscription state for your users. Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
 
 You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded will be automatically set.
 
+`Content-Type: application/json`
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/ChangingEmailSubscriptionStatusExample {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#be852462-0cda-4a48-b68b-85bd8a9f2147 {% endapiref %}
+
+### Request Body
+
+```json
+{
+  "api_key": "{{api_key}}",
+  "email": "example@123.com",
+  "subscription_state": "subscribed"
+}
+```
+
+#### Parameters
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
+| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 | `subscription_state` | Yes | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
 
-## Removing Hard Bounces
+{% endapi %}
 
-```json
-POST https://YOUR_REST_API_URL/email/bounce/remove
-Content-Type: application/json
-```
+{% api %}
+
+## Remove Hard Bounces
+
+{% apimethod post %}
+/email/bounce/remove
+{% endapimethod %}
+
+{% apitags %}
+Post,Email Lists & Addresses,Bounces
+{% endapitags %}
 
 This endpoint allows you to remove email addresses from your Braze bounce list. We will also remove them from the bounce list maintained by your email provider.
+
+`Content-Type: application/json`
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/RemovingHardBouncedEmailExample {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
+
+### Request Body
+
+```json
+{
+  "api_key": "{{api_key}}",
+  "email": "example@123.com"
+}
+```
+
+#### Parameters
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
 | `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 
-## Removing Spam
+{% endapi %}
+
+{% api %}
+
+## Remove Spam
+
+{% apimethod post %}
+/email/spam/remove
+{% endapimethod %}
+
+{% apitags %}
+Post,Email Lists & Addresses,Spam
+{% endapitags %}
 
 This endpoint allows you to remove email addresses from your Braze spam list. We will also remove them from the spam list maintained by your email provider.
 
+`Content-Type: application/json`
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/RemovingSpamListEmailExample {% endapiref %}
+{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
+
+### Request Body
+
 ```json
-POST https://YOUR_REST_API_URL/email/spam/remove
-Content-Type: application/json
+{
+  "api_key": "{{api_key}}",
+  "email": "example@123.com"
+}
 ```
+
+#### Parameters
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
+| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 
 ### Example Unsubscribe CURL
@@ -165,6 +242,7 @@ The following example CURL demonstrates how to unsubscribe a user from receiving
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"api_key":"YOUR_APP_GROUP_REST_API_KEY","email":"EMAIL_TO_UNSUBSCRIBE","subscription_state":"unsubscribed"}' https://rest.iad-01.braze.com/email/status
 ```
+{% endapi %}
 
 [1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
