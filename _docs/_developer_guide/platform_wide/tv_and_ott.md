@@ -21,13 +21,13 @@ Below is a list of features and messaging channels supported today.
 </style>
 <table id="tv-feature-table">
     <thead>
-        <tr align="center">
-            <th>Device Type</th>
-            <th>Data and Analytics</th>
-            <th>Push Notifications</th>
-            <th>In App Messages</th>
-            <th>Content Cards</th>
-            <th>Canvas</th>
+        <tr>
+            <th align="center">Device Type</th>
+            <th align="center">Data and Analytics</th>
+            <th align="center">Push Notifications</th>
+            <th align="center">In App Messages</th>
+            <th align="center">Content Cards</th>
+            <th align="center">Canvas</th>
         </tr>
     </thead>
     <tbody>
@@ -129,9 +129,9 @@ Use Braze's iOS SDK to collect data and analytics on your TV OS users. These cus
 
 For more information, visit the [iOS SDK Integration Guide][4].
 
-## In App Message with Custom UI
+## In-App Message with Custom UI
 
-For platforms which support In App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In App Message templates into your existing app designs.
+For platforms which support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In App Message templates into your existing app designs.
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
