@@ -21,7 +21,7 @@ Below is a list of features and messaging channels supported today.
 </style>
 <table id="tv-feature-table">
     <thead>
-        <tr>
+        <tr align="center">
             <th>Device Type</th>
             <th>Data and Analytics</th>
             <th>Push Notifications</th>
