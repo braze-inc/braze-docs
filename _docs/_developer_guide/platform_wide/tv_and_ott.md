@@ -14,20 +14,22 @@ Braze offers different engagement channels for a number of different TV Operatin
 Below is a list of features and messaging channels supported today.
 
 <style>
-#tv-feature-table td {
+#tv-feature-table td,
+#tv-feature-table th {
     text-align: center !important;
     vertical-align: center;
 }
+
 </style>
 <table id="tv-feature-table">
     <thead>
         <tr>
-            <th align="center">Device Type</th>
-            <th align="center">Data and Analytics</th>
-            <th align="center">Push Notifications</th>
-            <th align="center">In App Messages</th>
-            <th align="center">Content Cards</th>
-            <th align="center">Canvas</th>
+            <th>Device Type</th>
+            <th>Data and Analytics</th>
+            <th>Push Notifications</th>
+            <th>In App Messages</th>
+            <th>Content Cards</th>
+            <th>Canvas</th>
         </tr>
     </thead>
     <tbody>
