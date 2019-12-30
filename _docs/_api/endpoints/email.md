@@ -3,7 +3,13 @@ nav_title: Email Lists & Addresses
 page_order: 0
 layout: api_page
 excerpt_separator: ""
+
+
 ---
+
+{% comment %}
+redirect from email_sync.md
+{% endcomment %}
 
 {% api %}
 

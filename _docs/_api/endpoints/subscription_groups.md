@@ -3,6 +3,8 @@ nav_title: Subscription Groups
 page_order: 3
 ---
 
+redirect from subscription_group_api.md
+
 # Subscription Group REST APIs
 
 Use the Subscription Group REST APIs to programmatically manage the subscription groups that you have stored on the Braze dashboard, on the Subscription Group page.

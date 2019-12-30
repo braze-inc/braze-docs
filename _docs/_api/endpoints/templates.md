@@ -4,6 +4,11 @@ page_order: 4
 search_rank: 3
 ---
 
+{% comment %}
+redirect from email_templates.md
+{% endcomment %}
+
+
 {% api %}
 
 ## Create Email Templates
