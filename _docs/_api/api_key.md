@@ -13,21 +13,21 @@ platform:
 
 # API Key Overview
 
->  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are are, how they are used at Braze, their permissions and how to keep them secure. 
+>  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group API Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are, how they are used at Braze, their permissions and how to keep them secure. 
 
 In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, canvases, campaigns, content cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
 
 ## What is a REST API Key/App Group API Key?
 
-A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use API keys at Braze in tandem with our SDK to track, access, send, export and analyze data to help make sure everything is running smoothly on both your and our end. 
+A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export and analyze data to help make sure everything is running smoothly on both your and our end. 
 
-App Groups and API Keys go hand in hand at Braze. App Groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these app groups are also making use of the REST API and have their own REST API key. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
+App Groups and API Keys go hand in hand at Braze. App Groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these app groups are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API Key and App Group Key as the `api_key`. The `api_key` included in each request and acts as an authentication key that allows your server code to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
+We refer to both the REST API Key and App Group API Key as the `api_key`. The `api_key` is included in each request and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
 ### Where can I find it?
 
-Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group Keys as well as give you options to create new API keys. 
+Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
 
 ### API Key Permissions
 
@@ -171,14 +171,9 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `canvas.trigger.send` | Trigger the sending of an existing Canvas. |
-| `canvas.trigger.schedule.create` | Schedule a future send of a Canvas with API-triggered delivery. |
-| `canvas.trigger.schedule.update` | Update a Canvas scheduled with API-triggered delivery. |
-| `canvas.trigger.schedule.delete` | Delete a Canvas scheduled with API-triggered delivery. |
-| `canvas.list` | Query for a list of Canvases. |
-| `canvas.data_series` | Query for Canvas analytics over a time range. |
-| `canvas.details` | Query for details of a specific Canvas. |
-| `canvs.data_summary` | Query for rollups of Canvas analytics over a time range. |
+| `content_blocks.info` | Query for information of a specific template. |
+| `content_blocks.list` | Query for a list of Content Blocks. |
+| `content_blocks.create` | Create a new Content Block on the Dashboard. |
 
 {% endtab %}
 {% tab Subscription %}
@@ -200,9 +195,11 @@ Keep in mind that once you create a new API Key, you cannot edit the scope of pe
 
 ## The App Identifier API Key
 
-The App Identifier API Key or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. You will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. 
+The App Identifier API Key or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
 
-App identifiers at Braze are when integrating the SDK and are also used to reference a specific app in API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app. 
+you can have multiple apps for the same platform and that there a
+
+App identifiers at Braze are used when integrating the SDK and are also used to reference a specific app in REST API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app. 
 
 Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can "omit" this field by including any string of characters as a placeholder for this required parameter. For example, if we are trying to send an email object, an `app_id` is required, but because the channel is not associated with an app (iOS or Android) like Push or IAM is, we can "omit" this field by including placeholder text. 
 
@@ -218,7 +215,6 @@ There are two ways to locate your `app_id`:
 During SDK set up, The most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
 To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 For each relevant build variant, create a new `appboy.xml` for it in `src/<build variant name>/res/values/`:
-When the build variant is compiled, it will use the new API key.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
