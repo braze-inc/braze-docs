@@ -36,7 +36,7 @@ You can modify the form of generated codes for any campaign by navigating to the
 ### Endpoint Usage
 
 {% alert note %}
-Note that as of December 31st, 2019 custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 Because Braze's connected content only supports **string** data types, a custom endpoint must be used to convert everything to the correct data type.

@@ -60,7 +60,7 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 ### Step 2: Configure the Braze SDK in appboy.xml
 
 {% alert note %}
-Note that as of December 31st, 2019 custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
@@ -138,7 +138,7 @@ See the [javadoc][63] for more information. Please note that any non-standard ma
 ### Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
 
 {% alert note %}
-Note that as of December 31st, 2019 custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
