@@ -5,8 +5,8 @@ page_order: 2.1
 description: "This reference article covers the concept of API keys, what they are used for, and how they are used." 
 page_type: reference
 tool: 
-  - dashboard
-  - docs
+  - Dashboard
+  - Docs
 platform: 
   - API
 ---
@@ -230,7 +230,7 @@ A good security practice is to assign a user only as much access as is necessary
 
 With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
 
-[2]: https://www.braze.com/docs/api/identifier_types/
+[2]: {{ site.baseurl }}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
 [4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: http://www.braze.com/docs/api/basics/

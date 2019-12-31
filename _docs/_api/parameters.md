@@ -5,6 +5,13 @@ layout: glossary_page
 glossary_top_header: "Parameters"
 glossary_top_text: "Use these parameters to define your API requests. Though the parameters you need are listed under endpoints, this should give you more insight into their nuance and other specifications."
 
+description: "This glossary covers in detail the parameters involved in making API requests." 
+page_type: glossary
+tool: 
+  - Docs
+platform: 
+  - API
+
 glossaries:
   - name: App Group REST API Key
     description: The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.

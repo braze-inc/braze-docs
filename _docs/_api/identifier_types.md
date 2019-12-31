@@ -5,8 +5,8 @@ page_order: 2.2
 description: "This reference article covers the different types of API Identifiers that exist in the Braze dashboard, where you can find them, and what they are used for." 
 page_type: reference
 tool: 
-  - dashboard
-  - docs
+  - Dashboard
+  - Docs
 platform: 
   - APIs
 ---
