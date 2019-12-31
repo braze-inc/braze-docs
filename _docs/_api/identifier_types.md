@@ -123,6 +123,3 @@ You can find your Card ID one of two ways:
 <br>
 {% endtab %}
 {% endtabs %}
-
-
-[7]: https://www.braze.com/docs/api/endpoints/email_templates/
