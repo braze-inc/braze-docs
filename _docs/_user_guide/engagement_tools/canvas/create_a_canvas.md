@@ -10,6 +10,9 @@ guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     fa_icon: fas fa-palette
+  - name: Canvas Time-Based Functionalities
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
+    fa_icon: fas fa-clock
   - name: Branching
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/
     fa_icon: fas fa-code-branch
