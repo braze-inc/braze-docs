@@ -2,7 +2,7 @@
 nav_title: Deep Linking to In-App Resources
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 ## Deep Linking to the News Feed {#Android_Deep_Advance}
 

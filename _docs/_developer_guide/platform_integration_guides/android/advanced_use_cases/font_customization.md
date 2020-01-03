@@ -2,7 +2,7 @@
 nav_title: Font Customization
 platform: Android
 page_order: 7
-search_rank: 5
+
 ---
 
 ## Font Customization

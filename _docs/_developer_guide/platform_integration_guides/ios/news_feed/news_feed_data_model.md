@@ -2,7 +2,7 @@
 nav_title: News Feed Data Model
 platform: iOS
 page_order: 6
-search_rank: 5
+
 ---
 
 # News Feed Data Model

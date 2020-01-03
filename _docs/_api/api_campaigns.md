@@ -2,7 +2,7 @@
 nav_title: API Campaigns
 platform: REST APIs
 page_order: 5
-search_rank: 5
+
 ---
 # API Campaigns
 Campaigns sent through the [Messaging API][1] can have the same detailed reporting and retargeting options as campaigns created on the dashboard. This section of the documentation will detail how to generate a `campaign_id` to include in your API calls and take advantage of this feature.

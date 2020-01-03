@@ -1,7 +1,7 @@
 ---
 nav_title: Data Models
 page_order: 6
-search_rank: 5
+
 platform: Android
 ---
 

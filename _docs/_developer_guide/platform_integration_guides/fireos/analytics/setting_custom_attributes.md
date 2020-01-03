@@ -2,7 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: FireOS
 page_order: 3
-search_rank: 4
+
 ---
 ## Setting Custom Attributes
 

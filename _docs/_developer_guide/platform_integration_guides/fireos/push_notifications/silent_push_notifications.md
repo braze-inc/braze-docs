@@ -2,7 +2,7 @@
 nav_title: Silent Push Notifications
 platform: FireOS
 page_order: 3
-search_rank: 4
+
 ---
 ## Silent Push Notifications
 

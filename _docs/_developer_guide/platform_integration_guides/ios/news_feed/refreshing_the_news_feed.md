@@ -2,7 +2,7 @@
 nav_title: Refreshing the News Feed
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 
 # Refreshing the News Feed

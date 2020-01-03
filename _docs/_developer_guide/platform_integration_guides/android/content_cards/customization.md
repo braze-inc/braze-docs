@@ -1,7 +1,7 @@
 ---
 nav_title: Customization
 page_order: 1
-search_rank: 5
+
 platform: Android
 ---
 

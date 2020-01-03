@@ -1,7 +1,7 @@
 ---
 nav_title: Errors & Responses
 page_order: 2.1
-search_rank: 5
+
 ---
 # Errors & Responses
 

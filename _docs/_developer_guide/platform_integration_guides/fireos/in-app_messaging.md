@@ -2,7 +2,7 @@
 nav_title: In-App Messaging
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 
 # In-App Messaging

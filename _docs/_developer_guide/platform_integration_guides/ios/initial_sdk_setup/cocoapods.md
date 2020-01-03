@@ -2,7 +2,7 @@
 nav_title: CocoaPod
 platform: iOS
 page_order: 1
-search_rank: 5
+
 ---
 
 # CocoaPods Integration

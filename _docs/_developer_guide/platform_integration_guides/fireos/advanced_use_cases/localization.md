@@ -2,7 +2,7 @@
 nav_title: Localization
 platform: FireOS
 page_order: 1
-search_rank: 4
+
 ---
 ## Localization
 

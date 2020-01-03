@@ -2,7 +2,7 @@
 nav_title: Uninstall Tracking
 platform: FireOS
 page_order: 7
-search_rank: 4
+
 ---
 ## Uninstall Tracking
 

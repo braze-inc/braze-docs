@@ -2,7 +2,7 @@
 nav_title: Optional IDFA Collection
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 
 # Optional IDFA Collection

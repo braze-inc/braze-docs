@@ -2,7 +2,7 @@
 nav_title: Initial SDK Setup
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 # Initial SDK Setup
 

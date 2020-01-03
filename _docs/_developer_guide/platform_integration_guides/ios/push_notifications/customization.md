@@ -3,7 +3,7 @@ nav_title: Customization
 platform: iOS
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
-search_rank: 5
+
 ---
 ## Customization {#push-customization}
 

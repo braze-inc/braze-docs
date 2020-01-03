@@ -2,7 +2,7 @@
 nav_title: Localization
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 # Localization
 

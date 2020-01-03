@@ -2,7 +2,7 @@
 nav_title: News Feed Integration Overview
 platform: iOS
 page_order: 1
-search_rank: 5
+
 ---
 
 # News Feed Integration Overview
