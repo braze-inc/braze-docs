@@ -138,8 +138,6 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
-[5]: {% image_buster /assets/img_archive/testmessages4.png %}
-[6]: {% image_buster /assets/img_archive/testmessages5.png %}
 [7]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#user-preview
 [8]: {% image_buster /assets/img_archive/test_segment.png %}
 [9]: {% image_buster /assets/img_archive/testemail.png %}

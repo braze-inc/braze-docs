@@ -2,7 +2,7 @@
 nav_title: Advanced Settings
 platform: FireOS
 page_order: 4
-search_rank: 4
+
 ---
 ## Advanced Settings
 

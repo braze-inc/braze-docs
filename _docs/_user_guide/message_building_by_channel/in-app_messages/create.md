@@ -87,8 +87,8 @@ These in-app messages are customizable to your needs.
 
 | Message Type | Type Description |Available Layouts| Other Options |
 |---|---|---|
-|[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | None |
-|[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | None |
+|[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
+|[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
 |[Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
 
 {% alert important %}
@@ -249,15 +249,10 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[3]: {% image_buster /assets/img_archive/InAppNewComposer.png %}
-[4]: {% image_buster /assets/img_archive/InAppNewComposer2.png %}
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
-[13]: {% image_buster /assets/img_archive/InAppNewComposer3.png %}
-[14]: {% image_buster /assets/img_archive/InAppNewComposer4.png %}
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/compose_iam.gif %}
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/iam_compose.gif %}

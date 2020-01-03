@@ -208,6 +208,13 @@ If you're sending purchase data to Braze (see [Completed Order](#completed-order
 If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, please use a side-by-side integration.
 {% endalert %}
 
+## User Deletion & Suppression 
+
+If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to our [Users/Delete endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+
+You must ensure that that you select a common user identifier between Braze and Segment ( as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
+
+
 ## Segment Replays
 
 Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
@@ -284,8 +291,6 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [11]: https://segment.com/docs/destinations/braze/
 [13]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[15]: {% image_buster /assets/img_archive/Segment_App_Usage.png %}
-[16]: {% image_buster /assets/img_archive/Custom_Events_Segment.png %}
 [18]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
 [22]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
@@ -308,7 +313,5 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [39]: {{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys
 [40]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
-[42]: {% image_buster /assets/img_archive/segment_destination_ui.png %}
-[43]: {% image_buster /assets/img_archive/segment_go_integration.png %}
 [44]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [45]: https://dashboard.braze.com/app_settings/developer_console

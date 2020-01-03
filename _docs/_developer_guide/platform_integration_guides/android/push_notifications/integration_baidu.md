@@ -2,7 +2,7 @@
 nav_title: Baidu Integration
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Baidu Integration
 
@@ -252,7 +252,6 @@ On the "App Settings Page" (where your API keys are located), select your Androi
 [17]: {% image_buster /assets/img_archive/baidu_signup.png %}
 [19]: {% image_buster /assets/img_archive/baidu_api_key.png %} "APIKey"
 [26]: {% image_buster /assets/img_archive/baidu_app_name.png %}
-[28]: {% image_buster /assets/img_archive/Gallery_Push_Baidu.png %}
 [29]: {% image_buster /assets/img_archive/baidu_continue.png %}
 [33]: {% image_buster /assets/img_archive/baidu_portal.png %}
 [34]: {% image_buster /assets/img_archive/baidu_email.png %}

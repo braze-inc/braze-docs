@@ -1,7 +1,11 @@
 ---
 nav_title: User Data
 page_order: 5
-search_rank: 5
+
+
+local_redirect: #event-object-specification #purchase-object-specification
+  event-object-specification: '/docs/api/objects_filters/event_object/'
+  purchase-object-specification: '/docs/api/objects_filters/purchase_object/'
 ---
 # User Data
 
@@ -169,138 +173,6 @@ Content-Type: application/json
 ```
 
 This example contains two User Attribute objects of the allowed 75 per API call.
-
-### Event Object Specification
-
-```json
-{
-  // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID below,
-  "user_alias" : (optional, User Alias Object),
-  "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
-  "name" : (required, string) the name of the event,
-  "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
-  "properties" : (optional, Properties Object) properties of the event
-  // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
-  "_update_existing_only" : (optional, boolean)
-}
-```
-
-Each Event Object in the _events_ array represents a single occurrence of a Custom Event by a particular user at the designated time value.
-
-- [ISO 8601 Time Code Wiki][19]
-
-For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
-
-#### Event Example Request
-
-```json
-POST https://YOUR_REST_API_URL/users/track
-Content-Type: application/json
-{
-  "api_key" : "your App Group REST API Key",
-  "events" : [
-    {
-      "external_id" : "user1",
-      "app_id" : "your-app-id",
-      "name" : "watched_trailer",
-      "time" : "2013-07-16T19:20:30+01:00"
-    },
-    {
-      "external_id" : "user1",
-      "app_id" : "your-app-id",
-      "name" : "rented_movie",
-      "time" : "2013-07-16T19:20:45+01:00"
-    },
-    {
-      "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
-      "app_id" : "your-app-id",
-      "name" : "watched_trailer",
-      "time" : "2013-07-16T19:20:50+01:00"
-    }
-  ]
-}
-```
-
-
-###  Purchase Object Specification
-
-```json
-{
-  // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID below,
-  "user_alias" : (optional, User Alias Object),
-  "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
-  "product_id" : (required, string) identifier for the purchase, e.g. Product Name or Product Category,
-  "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
-  "price" : (required, float) value in the base currency unit (e.g. Dollars for USD, Yen for JPY),
-  "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
-  "time" : (required, datetime as string in ISO 8601),
-  "properties" : (optional, Properties Object) properties of the event
-  // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
-  "_update_existing_only" : (optional, boolean)
-}
-```
-Each Purchase Object in the _purchases_ array represents a single purchase by a particular user at a particular time.
-
-- [ISO 4217 Currency Code Wiki][20]
-
-
-#### Purchase Example Request
-
-```json
-POST https://YOUR_REST_API_URL/users/track
-Content-Type: application/json
-{
-  "api_key" : "your App Group REST API Key",
-  "purchases" : [
-    {
-      "external_id" : "user1",
-      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
-      "product_id" : "backpack",
-      "currency" : "USD",
-      "price" : 40.00,
-      "time" : "2013-07-16T19:20:30+01:00",
-      "properties" : {
-        "color" : "red",
-        "monogram" : "ABC",
-        "checkout_duration" : 180
-      }
-    },
-    {
-      "external_id" : "user1",
-      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
-      "product_id" : "pencil",
-      "currency" : "USD",
-      "price" : 2.00,
-      "time" : "2013-07-17T19:20:20+01:00",
-      "properties" : {
-        "number" : 2,
-        "sharpened" : true
-      }
-    },
-    {
-      "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
-      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
-      "product_id" : "pen",
-      "currency" : "USD",
-      "price" : 2.50,
-      "time" : "2013-07-17T19:20:20+01:00",
-      "properties" : {
-        "color" : "blue",
-      }
-    }
-  ]
-}
-```
-
-### Properties Object
-
-Custom events and purchases may have event properties. The "properties" values should be an Object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format), or strings less than or equal to 255 characters.
 
 ### User Track Responses
 
@@ -517,8 +389,6 @@ For more information on `alias_name` and `alias_label`, check out our [User Alia
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [16]: #not-used-app
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
 [22]: https://rubygems.org/gems/multi_json "multiJSON"
 [23]: https://rubygems.org/gems/rest-client "Rest Client"

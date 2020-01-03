@@ -2,7 +2,7 @@
 nav_title: Location Tracking
 platform: Web
 page_order: 5
-search_rank: 5
+
 ---
 ## Location Tracking
 

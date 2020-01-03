@@ -1,7 +1,7 @@
 ---
 nav_title: Categories
 page_order: 3
-search_rank: 5
+
 platform: Android
 ---
 

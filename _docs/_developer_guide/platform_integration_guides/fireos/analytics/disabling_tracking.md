@@ -2,7 +2,7 @@
 nav_title: Disabling Android SDK Tracking
 platform: FireOS
 page_order: 8
-search_rank: 4
+
 ---
 
 # Disabling Data Collection

@@ -2,7 +2,7 @@
 nav_title: Logging Purchases
 platform: FireOS
 page_order: 4
-search_rank: 4
+
 ---
 ## Logging Purchases
 

@@ -1,7 +1,6 @@
 ---
 nav_title: Overview
 page_order: 0
-search_rank: 5
 
 description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits." 
 page_type: reference

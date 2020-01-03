@@ -2,7 +2,7 @@
 nav_title: Advanced Settings
 platform: Android
 page_order: 4
-search_rank: 5
+
 ---
 ## Advanced Settings
 

@@ -66,9 +66,6 @@ Formulas, especially when combined with custom events, allow you to better under
 [9]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
 [10]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [11]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
-[12]: {% image_buster /assets/img_archive/Not_Normalized.png %}
-[13]: {% image_buster /assets/img_archive/Normalized.png %}
-[14]: {% image_buster /assets/img_archive/KPI_Forms_New.png %}
 [15]: {% image_buster /assets/img_archive/KPI_formulas.png %}
 [16]: {% image_buster /assets/img_archive/KPI_Forms.png %}
 [17]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

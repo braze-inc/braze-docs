@@ -2,7 +2,7 @@
 nav_title: In-App Message Templates
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 
 # In-App Message Templates

@@ -2,7 +2,7 @@
 nav_title: Disabling iOS SDK Tracking
 platform: iOS
 page_order: 8
-search_rank: 5
+
 ---
 
 # Disabling Data Collection

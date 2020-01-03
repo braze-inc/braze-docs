@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 
 # Troubleshooting In-App Messages

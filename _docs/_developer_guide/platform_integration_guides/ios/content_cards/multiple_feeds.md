@@ -2,7 +2,7 @@
 nav_title: Multiple Feeds
 platform: iOS
 page_order: 6
-search_rank: 5
+
 ---
 
 # Using Multiple Content Card Feeds

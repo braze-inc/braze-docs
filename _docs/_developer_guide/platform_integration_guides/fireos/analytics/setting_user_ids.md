@@ -2,7 +2,7 @@
 nav_title: Setting User IDs
 platform: FireOS
 page_order: 1
-search_rank: 4
+
 ---
 ## Setting User IDs
 

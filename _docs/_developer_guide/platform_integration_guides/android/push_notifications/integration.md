@@ -2,7 +2,7 @@
 nav_title: Integration
 platform: Android
 page_order: 0
-search_rank: 5
+
 ---
 # Overview
 
@@ -641,7 +641,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [50]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
 [52]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[54]: {% image_buster /assets/img_archive/android_push_reg.png %} "Android Push Registration"
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/

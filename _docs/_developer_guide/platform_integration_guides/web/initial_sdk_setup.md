@@ -2,7 +2,7 @@
 nav_title: Initial SDK Setup
 platform: Web
 page_order: 0
-search_rank: 5
+
 ---
 # Initial SDK Setup
 
@@ -83,7 +83,6 @@ These files must be updated in coordination with each other to ensure proper fun
 [1]: {{ site.baseurl }}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
 [3]: https://www.google.com/analytics/tag-manager/ "Google Tag Manager"
-[4]: {% image_buster /assets/img_archive/tealium-screenshot.png %}
 [6]: https://github.com/Appboy/appboy-web-sdk#getting-started "Web SDK Documentation"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
 [11]: {% image_buster /assets/img_archive/gtm_trigger.png %}

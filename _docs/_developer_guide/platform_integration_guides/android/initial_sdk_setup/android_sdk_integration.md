@@ -1,7 +1,7 @@
 ---
 nav_title: Android SDK Integration
 page_order: 0
-search_rank: 5
+
 platform: Android
 ---
 # Initial SDK Setup
@@ -58,9 +58,14 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 ![GradleSync][38]
 
 ### Step 2: Configure the Braze SDK in appboy.xml
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you have a custom endpoint or are on a [specific data cluster][66], you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or [open a support ticket][68].
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
+Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+
+>  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -132,6 +137,10 @@ See the [javadoc][63] for more information. Please note that any non-standard ma
 
 ### Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
 
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 To update the default endpoint in your integration of the Braze SDKs please add the following code to your `appboy.xml`:
@@ -175,10 +184,7 @@ Our Unity SDK integration for Android requires [the same support library version
 [17]: {% image_buster /assets/img_archive/android_import.png %}
 [18]: {% image_buster /assets/img_archive/click_browse.png %}
 [19]: {% image_buster /assets/img_archive/select_project_android.png %}
-[20]: {% image_buster /assets/img_archive/import_android_ui.png %}
-[21]: {% image_buster /assets/img_archive/reference_project.png %}
 [22]: {% image_buster /assets/img_archive/click_properties.png %}
-[23]: {% image_buster /assets/img_archive/NewBuildPath.png %}
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}

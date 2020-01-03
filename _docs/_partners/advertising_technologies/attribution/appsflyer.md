@@ -80,12 +80,6 @@ For more information, please see Appsflyer's [documentation][31].
 [20]: https://github.com/adjust/ios_sdk#9-implement-the-attribution-callback "Adjust SDK-to-SDK Integrations on iOS"
 [21]: https://github.com/adjust/android_sdk#16-set-listener-for-attribution-changes "Adjust SDK-to-SDK Integrations on Android"
 [22]: https://dev.branch.io/recipes/analytics_appboy/ "Branch Webhooks"
-[23]:{% image_buster /assets/img_archive/adjust.png %}
-[24]:{% image_buster /assets/img_archive/appsflyer.png %}
-[25]:{% image_buster /assets/img_archive/singular.png %}
-[26]:{% image_buster /assets/img_archive/branch.png %}
-[27]:{% image_buster /assets/img_archive/kochava.png %}
-[28]:{% image_buster /assets/img_archive/tune.png %}
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration

@@ -2,7 +2,6 @@
 nav_title: API Network Connectivity Issues
 platform: REST APIs
 page_order: 4
-search_rank: 6
 
 description: "This reference article touches on API connectivity issues and how to troubleshoot them." 
 page_type: reference

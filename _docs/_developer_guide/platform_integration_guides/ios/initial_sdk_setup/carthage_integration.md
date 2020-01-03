@@ -2,7 +2,7 @@
 nav_title: Carthage Integration
 platform: iOS
 page_order: 0
-search_rank: 5
+
 ---
 
 # Carthage Integration
@@ -80,7 +80,6 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 [15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [21]: {{ site.baseurl }}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"

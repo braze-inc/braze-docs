@@ -71,8 +71,6 @@ Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 [28]: {% image_buster /assets/img_archive/trouble8.png %}
 [29]: {% image_buster /assets/img_archive/trouble9.png %}
 [30]: {% image_buster /assets/img_archive/trouble10.png %}
-[31]: {% image_buster /assets/img_archive/trouble11.png %}
-[32]: {% image_buster /assets/img_archive/trouble12.png %}
 [33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
 [34]: {% image_buster /assets/img_archive/VennDiagram.png %}
 [35]: {{ site.baseurl }}user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

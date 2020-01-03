@@ -2,7 +2,6 @@
 nav_title: Postman & Sample Requests
 platform: REST APIs
 page_order: 3
-search_rank: 5
 
 description: "This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests." 
 page_type: reference
@@ -73,7 +72,6 @@ Once your API request is ready to send, click on the 'Send' button next to the U
 ![Response Data][6]
 
 [1]: https://www.getpostman.com
-[2]: {% image_buster /assets/img_archive/postman_environments.png %}
 [3]: {% image_buster /assets/img/postman_variable.png %}
 [4]: {% image_buster /assets/img_archive/postman_post.png %}
 [5]: {% image_buster /assets/img_archive/postman_get.png %}

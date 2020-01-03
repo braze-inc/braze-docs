@@ -2,7 +2,7 @@
 nav_title: Silent Push Notifications
 platform: Android
 page_order: 3
-search_rank: 5
+
 ---
 ## Silent Push Notifications
 

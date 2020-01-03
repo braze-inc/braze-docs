@@ -1,35 +1,23 @@
 ---
 nav_title: Messaging
 page_order: 2
-search_rank: 5
-local_redirect: #parameter-definitions
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-group-rest-api-key
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #external-user-id
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #segment-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #campaign-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #send-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #trigger-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-entry-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #server-responses
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #messaging-queued
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #responses-for-tracked-send-ids
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #fatal-errors
-  hashtag-name-here: '/docs/api/errors/'
+
+local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
+  parameter-definitions: '/docs/api/parameters/'
+  app-group-rest-api-key: '/docs/api/parameters/'
+  app-identifier: '/docs/api/parameters/'
+  external-user-id: '/docs/api/parameters/'
+  segment-identifier: '/docs/api/parameters/'
+  campaign-identifier: '/docs/api/parameters/'
+  canvas-identifier: '/docs/api/parameters/'
+  send-identifier: '/docs/api/parameters/'
+  trigger-properties: '/docs/api/parameters/'
+  canvas-entry-properties: '/docs/api/parameters/'
+  server-responses: '/docs/api/errors/'
+  messaging-queued: '/docs/api/errors/'
+  responses-for-tracked-send-ids: '/docs/api/errors/'
+  fatal-errors: '/docs/api/errors/'
+  
 ---
 # Messaging
 
@@ -980,11 +968,9 @@ See the Windows Universal [toast template catalog][32] for details on the option
 
 ## Broadcast
 
-When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call. If the `broadcast` flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including `broadcast: true` and providing a recipient list will return an error. The `broadcast` flag is required to protect against accidental sends to large groups of users.
+When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call.
 
-{% alert important %}
-For backward-compatibility, this field is only required for API calls made for campaigns and Canvases created after August 15, 2017 that intend to send to the entire audience. It will be mandatory on August 31, 2017 for all campaigns and Canvases for API calls that intend to send to the entire audience. The behavior for API calls to deliver campaigns and canvases created prior to these dates is: if an explicit list of recipients is not provided, the message will send to the entire targeted audience of the campaign or Canvas. That is, until 8/15/17, the `broadcast` field does not have a default value, so you may wish to explicitly set `broadcast: false` in existing API calls. On 8/15/17, it will default to false for newly created Campaigns and Canvases. On 8/31/17, it will default to false for all API calls.
-{% endalert %}
+Broadcast is a required field and the default value set by Braze when a Campaign or Canvas is made is `broadcast: false`. If the `broadcast` flag is not set to true and an explicit list of recipients is provided, the API endpoint will return an error. Similarly, including `broadcast: true` and not providing a recipient list will return an error. The `broadcast` flag is required to protect against accidental sends to large groups of users.
 
 [18]: https://dashboard-01.braze.com/app_settings/api_settings/
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification

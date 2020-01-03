@@ -2,7 +2,7 @@
 nav_title: Customization
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 ## Customization {#in-app-message-customization}
 All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.

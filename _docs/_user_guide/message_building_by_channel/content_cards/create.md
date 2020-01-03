@@ -124,15 +124,10 @@ Once a Content Card is launched, it cannot be edited. It can only be stopped fro
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[3]: {% image_buster /assets/img_archive/InAppNewComposer.png %}
-[4]: {% image_buster /assets/img_archive/InAppNewComposer2.png %}
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
-[13]: {% image_buster /assets/img_archive/InAppNewComposer3.png %}
-[14]: {% image_buster /assets/img_archive/InAppNewComposer4.png %}
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/compose_iam.gif %}
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/compose-cc.gif %}

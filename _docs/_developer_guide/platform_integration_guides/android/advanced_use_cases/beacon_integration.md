@@ -2,7 +2,7 @@
 nav_title: Beacon Integration
 platform: Android
 page_order: 2
-search_rank: 5
+
 ---
 ## Beacon Integration
 
