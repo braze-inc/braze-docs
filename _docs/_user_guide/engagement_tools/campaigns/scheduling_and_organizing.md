@@ -23,6 +23,9 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+  - name: Campaign Time-Based Functionalities
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/
+    fa_icon: fas fa-clock
   - name: Archiving Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/
     fa_icon: fas fa-list
