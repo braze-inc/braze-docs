@@ -25,13 +25,18 @@ Once you choose a template for your e-mail you'll see an overview of your e-mail
 
 ![newemailoverview][14]
 
-### Step 2a: Preview and Test Your Message
+### Step 2a: Adding Email Headers
+
+Email headers contain information about the email being sent.  These key:value pairs typically have information about the sender, recipient, authentication protocals and contain email routing information.  Braze automatically adds the necessary header information as required by the RFC and for emails to properly be delivered to your inbox provider.  However, Braze does allow our customers flexibility, to add additional email headers as needed for advanced use cases.  There are a few reserved fields that will be overwritten by the Braze platform during sending.  Avoid using the following keys:
+'x-sg-id', 'x-sg-eid', 'received', 'dkim-signature', 'Content-Type', 'Content-Transfer-Encoding', 'To', 'From', 'Subject', 'Reply-To', 'CC', 'BCC', 'Received', 'DKIM-Signature', 'MIME-Version'
+
+### Step 2b: Preview and Test Your Message
 
 After you finish composing your perfect e-mail, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your connected content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your e-mail displays properly on a variety of devices and e-mail clients.
 
 ![newemailtest][15]
 
-### Step 2b: Check for E-Mail Errors
+### Step 2c: Check for E-Mail Errors
 
 The new E-Mail Editor will call out problems with your message before you send. Here's a list of errors that are accounted for in our editor:
 
