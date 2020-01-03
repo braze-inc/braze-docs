@@ -2,7 +2,7 @@
 nav_title: Read & Unread Indicators
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 
 # Disabling the Unviewed Indicator

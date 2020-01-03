@@ -2,7 +2,7 @@
 nav_title: Setting User IDs
 platform: Web
 page_order: 1
-search_rank: 5
+
 ---
 ## Setting User IDs
 

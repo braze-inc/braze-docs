@@ -2,7 +2,7 @@
 nav_title: Sample Apps
 platform: FireOS
 page_order: 7
-search_rank: 4
+
 ---
 # Sample Apps
 

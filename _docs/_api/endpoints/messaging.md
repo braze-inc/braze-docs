@@ -1,7 +1,7 @@
 ---
 nav_title: Messaging
 page_order: 2
-search_rank: 5
+
 local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
   parameter-definitions: '/docs/api/parameters/'
   app-group-rest-api-key: '/docs/api/parameters/'

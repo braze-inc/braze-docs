@@ -2,7 +2,7 @@
 nav_title: Amp Support
 platform: Web
 page_order: 5
-search_rank: 5
+
 ---
 # Amp Support
 

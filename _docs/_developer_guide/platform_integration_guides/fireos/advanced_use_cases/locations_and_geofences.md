@@ -2,7 +2,7 @@
 nav_title: Locations & Geofences Integration for Android
 platform: FireOS
 page_order: 6
-search_rank: 4
+
 ---
 
 ## Locations & Geofences

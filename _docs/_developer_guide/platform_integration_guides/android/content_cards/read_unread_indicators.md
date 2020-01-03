@@ -1,7 +1,7 @@
 ---
 nav_title: Read & Unread Indicators
 page_order: 2
-search_rank: 5
+
 platform: Android
 ---
 

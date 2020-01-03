@@ -2,7 +2,7 @@
 nav_title: Defining a News Feed Category
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 
 # Defining a News Feed Category

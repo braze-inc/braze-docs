@@ -2,7 +2,7 @@
 nav_title: Overview
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 # In-App Messages
 

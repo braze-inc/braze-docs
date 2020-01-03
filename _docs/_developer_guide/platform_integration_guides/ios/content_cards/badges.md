@@ -2,7 +2,7 @@
 nav_title: Badges
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 
 # Requesting Unread Content Card Counts

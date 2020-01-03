@@ -2,7 +2,7 @@
 nav_title: Location Tracking
 platform: Android
 page_order: 6
-search_rank: 5
+
 ---
 ## Location Tracking
 

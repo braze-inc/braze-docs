@@ -2,7 +2,7 @@
 nav_title: Beacon Integration
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 ## Beacon Integration
 

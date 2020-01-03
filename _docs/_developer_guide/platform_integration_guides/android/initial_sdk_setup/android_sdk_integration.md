@@ -1,7 +1,7 @@
 ---
 nav_title: Android SDK Integration
 page_order: 0
-search_rank: 5
+
 platform: Android
 ---
 # Initial SDK Setup

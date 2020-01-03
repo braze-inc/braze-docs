@@ -1,7 +1,7 @@
 ---
 nav_title: Integration
 page_order: 0.1
-search_rank: 3
+
 platform: Web
 ---
 

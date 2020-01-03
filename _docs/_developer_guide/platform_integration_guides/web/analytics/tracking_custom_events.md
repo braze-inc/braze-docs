@@ -2,7 +2,7 @@
 nav_title: Tracking Custom Events
 platform: Web
 page_order: 2
-search_rank: 5
+
 ---
 ## Tracking Custom Events
 
