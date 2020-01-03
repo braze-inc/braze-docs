@@ -1,7 +1,7 @@
 ---
 nav_title: Refreshing the Feed
 page_order: 7
-search_rank: 5
+
 platform: Android
 ---
 

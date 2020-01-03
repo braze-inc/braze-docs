@@ -2,7 +2,7 @@
 nav_title: Beacon Integration
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 # Beacon Integration
 

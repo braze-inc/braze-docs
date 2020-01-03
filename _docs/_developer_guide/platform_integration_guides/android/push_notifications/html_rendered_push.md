@@ -2,7 +2,7 @@
 nav_title: HTML Push Notifications
 platform: Android
 page_order: 6
-search_rank: 5
+
 ---
 ## HTML Push Notifications
 

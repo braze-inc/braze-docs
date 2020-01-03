@@ -2,7 +2,7 @@
 nav_title: Uninstall Tracking
 platform: iOS
 page_order: 7
-search_rank: 5
+
 ---
 # Uninstall Tracking
 

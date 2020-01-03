@@ -2,7 +2,7 @@
 nav_title: Locations & Geofences
 platform: iOS
 page_order: 6
-search_rank: 5
+
 ---
 # Locations & Geofences
 

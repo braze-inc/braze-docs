@@ -1,7 +1,7 @@
 ---
 nav_title: Templates
 page_order: 4
-search_rank: 3
+
 ---
 
 # Templates

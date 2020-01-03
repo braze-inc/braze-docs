@@ -2,7 +2,7 @@
 nav_title: Universal Deep Link Delegate
 platform: FireOS
 page_order: 5
-search_rank: 4
+
 ---
 
 ## Universal Deep Link Delegate

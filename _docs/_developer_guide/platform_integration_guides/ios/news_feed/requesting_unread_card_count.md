@@ -2,7 +2,7 @@
 nav_title: Requesting Unread Card Count
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 
 # Requesting Unread Card Count

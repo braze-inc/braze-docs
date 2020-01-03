@@ -2,7 +2,7 @@
 nav_title: Testing
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 ## Testing {#push-testing}
 

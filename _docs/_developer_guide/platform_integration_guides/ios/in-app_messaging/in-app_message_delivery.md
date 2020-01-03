@@ -2,7 +2,7 @@
 nav_title: In-App Message Delivery
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 
 # In-App Message Delivery

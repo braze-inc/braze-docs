@@ -2,7 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 # Setting Custom Attributes
 

@@ -2,7 +2,7 @@
 nav_title: Refreshing the Feed
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 
 # Refreshing Content Cards

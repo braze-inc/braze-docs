@@ -2,7 +2,7 @@
 nav_title: Location Tracking
 platform: FireOS
 page_order: 6
-search_rank: 4
+
 ---
 ## Location Tracking
 

@@ -2,7 +2,7 @@
 nav_title: Customization
 platform: Web
 page_order: 3
-search_rank: 5
+
 ---
 
 ## Customization {#in-app-message-customization}

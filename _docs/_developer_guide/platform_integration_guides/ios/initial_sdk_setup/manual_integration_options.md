@@ -2,7 +2,7 @@
 nav_title: Manual Integration Options
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 
 # Manual Integration
