@@ -1,9 +1,18 @@
 ---
 nav_title: Errors & Responses
+
+description: "This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them." 
+page_type: reference
+tool: 
+  - Docs
+platform: 
+  - APIs
 page_order: 2.1
 
 ---
 # Errors & Responses
+
+> This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them. 
 
 {% raw %}
 
@@ -47,7 +56,7 @@ During times of maintenance, Braze might pause real-time processing of the API. 
 
 ## Responses For Tracked Send Ids
 
-Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance  when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
+Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
 
 ```json
 {
