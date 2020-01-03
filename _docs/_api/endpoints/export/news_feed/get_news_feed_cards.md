@@ -7,46 +7,48 @@ layout: api_page2
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+channel: News Feed
+description: "This article outlines details about the News Feed Cards List Endpoint."
 ---
 
 {% api %}
 
-# Segment List Endpoint
+# News Feed Cards List Endpoint
 
 {% apimethod get %}
-/segments/list
+/feed/list
 {% endapimethod %}
 
-This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
+This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20list%20example {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
 ## Parameters
 
-| Parameter| Required | Data Type | Description |
-| -------- | -------- | --------- | ----------- |
+| Parameter | Required | Data Type | Description |
+| --------- | -------- | --------- | ----------- |
 | `api_key` | Yes | String    | App Group REST API Key |
-| `page` | No | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100) |
-| `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
+| `page` | No | Integer   | The page of cards to return, defaults to 0 (returns the first set of up to 100) |
+| `include_archived` | No | Boolean   | Whether or not to include archived cards, defaults to false |
+| `sort_direction`   | No | String    | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
 
 ### Example URL
-`https://rest.iad-01.braze.com/segments/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+`https://rest.iad-01.braze.com/feed/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1&include_archived=true`
 
 ## Response
 
 `Content-Type: application/json`
 
 ```json
+Content-Type: application/json
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "segments" : [
+    "cards" : [
         {
-            "id" : (string) Segment API Identifier,
-            "name" : (string) segment name,
-            "analytics_tracking_enabled" : (boolean) whether the segment has analytics tracking enabled,
-            "tags" : (array) tag names associated with the segment
+            "id" : (string) Card API Identifier,
+            "type" : (string) type of the card - NewsItem (classic cards), CaptionedImage, Banner or DevPick (cross-promotional cards),
+            "title" : (string) title of the card,
+            "tags" : (array) tag names associated with the card
         },
         ...
     ]

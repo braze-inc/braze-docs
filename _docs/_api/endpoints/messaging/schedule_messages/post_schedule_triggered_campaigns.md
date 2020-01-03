@@ -6,12 +6,10 @@ layout: api_page2
 
 page_type: reference
 platform: API
-channel: Email
 tool:
-  - Canvas
   - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Update Scheduled Campaigns Braze endpoint."
 ---
 
 {% api %}
@@ -26,14 +24,15 @@ Use this endpoint to trigger API Triggered Campaigns, which are created on the D
 
 This endpoint allows you to send Campaign messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{ site.baseurl }}/api/api_campaigns/).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
-{% apiref postman %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCampaignExample {% endapiref %}
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCampaignExample {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2608e4a6-24eb-4d24-88b2-86382e62d6dc {% endapiref %}
+
+
+## Request Body
 
 ```
 Content-Type: application/json
 ```
-
-## Request Body
 
 ```json
 {

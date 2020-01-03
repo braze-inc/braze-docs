@@ -7,50 +7,51 @@ layout: api_page2
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+description: "This article outlines details about a specified campaign."
 ---
 
 {% api %}
 
-# Segment List Endpoint
+# Campaigns List Endpoint
 
 {% apimethod get %}
-/segments/list
+/campaigns/list
 {% endapimethod %}
 
-This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
+This endpoint allows you to export a list of campaigns, each of which will include its name, Campaign API Identifier, whether it is an API Campaign, and Tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20list%20example {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20list%20example {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
-## Parameters
+## Request Parameter Details
 
-| Parameter| Required | Data Type | Description |
-| -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String    | App Group REST API Key |
-| `page` | No | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100) |
-| `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
+| Parameter | Required | Data Type | Description |
+| --------- | -------- | --------- | ----------- |
+| `api_key` | Yes | String | App Group REST API Key |
+| `page` | No | Integer   | The page of campaigns to return, defaults to 0 (returns the first set of up to 100) |
+| `include_archived` | No | Boolean | Whether or not to include archived campaigns, defaults to false |
+| `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
 
 ### Example URL
-`https://rest.iad-01.braze.com/segments/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+`https://rest.iad-01.braze.com/campaigns/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1&include_archived=true`
 
-## Response
-
-`Content-Type: application/json`
+## Campaign List Endpoint API Response
 
 ```json
+Content-Type: application/json
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "segments" : [
+    "campaigns" : [
         {
-            "id" : (string) Segment API Identifier,
-            "name" : (string) segment name,
-            "analytics_tracking_enabled" : (boolean) whether the segment has analytics tracking enabled,
-            "tags" : (array) tag names associated with the segment
+            "id" : (string) Campaign API Identifier,
+            "name" : (string) campaign name,
+            "is_api_campaign" : (boolean) whether the campaign is an API Campaign,
+            "tags" : (array) tag names associated with the campaign
         },
         ...
     ]
 }
 ```
+
 
 {% endapi %}

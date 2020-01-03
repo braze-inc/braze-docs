@@ -6,12 +6,10 @@ layout: api_page2
 
 page_type: reference
 platform: API
-channel: Email
 tool:
   - Canvas
-  - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Update Scheduled Canvases Braze endpoint."
 ---
 
 {% api %}
@@ -29,11 +27,12 @@ This endpoint allows you to schedule Canvas messages via API Triggered delivery,
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCanvasExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2806cc2f-1ddf-4b84-a4c2-34aa9a53986c {% endapiref %}
 
+
+## Request Body
+
 ```
 Content-Type: application/json
 ```
-
-## Request Body
 
 ```json
 {

@@ -6,12 +6,11 @@ layout: api_page2
 
 page_type: reference
 platform: API
-channel: Email
 tool:
   - Canvas
   - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Send Messages Immediately Braze endpoint."
 ---
 
 {% api %}
@@ -29,11 +28,11 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendMessageImmediatelyExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74fc3f0d-11f1-40f6-93f4-2eacb0ed459a {% endapiref %}
 
+## Request Body
+
 ```
 Content-Type: application/json
 ```
-
-## Request Body
 
 ```json
 {

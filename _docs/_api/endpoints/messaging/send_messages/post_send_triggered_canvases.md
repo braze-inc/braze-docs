@@ -8,32 +8,31 @@ page_type: reference
 platform: API
 tool:
   - Canvas
-  - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Send Canvas Messages via API Triggered Delivery Braze endpoint."
 ---
 
 {% api %}
 
 # Sending Canvas Messages via API Triggered Delivery
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API. Please see this section of [Braze Academy for further details][39].
-
-This endpoint allows you to send Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{ site.baseurl }}/api/identifier_types/#canvas-api-identifier).
-
 {% apimethod post %}
 /canvas/trigger/send
 {% endapimethod %}
 
+API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendMessageImmediatelyExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74fc3f0d-11f1-40f6-93f4-2eacb0ed459a {% endapiref %}
+This endpoint allows you to send Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{ site.baseurl }}/api/identifier_types/#canvas-api-identifier).
+
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendApiTriggeredDeliveryCanvasExample {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
+
+
+## Request Body
 
 ```
 Content-Type: application/json
 ```
-
-## Request Body
 
 ```json
 {

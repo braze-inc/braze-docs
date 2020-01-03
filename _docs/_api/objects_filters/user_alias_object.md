@@ -6,7 +6,6 @@ page_type: reference
 
 platform:
   - API
-  - Android
 tool:
   - Campaigns
   - Canvas
@@ -16,8 +15,6 @@ description: "This article explains the different components of the User Alias o
 
 # User Alias Object
 
-{% raw %}
-
 The User Alias Object consists of two parts: an `alias_name` for the identifier itself, and an `alias_label` indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one `alias_name` per `alias_label`.
 
 This object is used frequently in all of our endpoints, and oftentimes within other objects.
@@ -25,8 +22,9 @@ This object is used frequently in all of our endpoints, and oftentimes within ot
 ## Object Body
 ```json
 {
-  "alias_name" : (required, string),
-  "alias_label" : (required, string)
+  "user_alias" : {
+    "alias_name" : (required, string),
+    "alias_label" : (required, string)
+  }
 }
 ```
-{% endraw %}

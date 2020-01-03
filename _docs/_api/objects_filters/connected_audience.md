@@ -4,7 +4,6 @@ page_order: 3
 
 page_type: reference
 
-channel: Push
 platform:
   - API
 tool:

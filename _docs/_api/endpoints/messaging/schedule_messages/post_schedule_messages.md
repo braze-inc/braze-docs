@@ -6,12 +6,11 @@ layout: api_page2
 
 page_type: reference
 platform: API
-channel: Email
 tool:
   - Canvas
   - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Schedule Messages Braze endpoint."
 ---
 
 {% api %}
@@ -27,13 +26,14 @@ The create schedule endpoint allows you to schedule a Campaign, Canvas, or other
 Use this endpoint to send messages directly from the API.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0c5fd295-d433-4b8d-ba69-cacf39f25034 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8f813eee-7db3-4a99-b2ec-e972235d55b9 {% endapiref %}
+
+
+## Request Body
 
 ```
 Content-Type: application/json
 ```
-
-## Request Body
 
 ```json
 {

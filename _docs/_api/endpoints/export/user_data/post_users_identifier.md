@@ -6,12 +6,11 @@ layout: api_page2
 
 page_type: reference
 platform: API
-channel: Email
 tool:
   - Canvas
   - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about the Users by ID Braze endpoint."
 ---
 
 {% api %}

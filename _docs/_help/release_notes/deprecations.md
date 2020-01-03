@@ -14,6 +14,10 @@ guide_featured_list:
   - name: Eclipse SDK Set Up
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
+  - name: "TLS 1.0 & 1.1 Deprecation"
+    link: /docs/help/release_notes/deprecations/tls_deprecation/
+    fa_icon: fas fa-lock
+
 
 ---
 

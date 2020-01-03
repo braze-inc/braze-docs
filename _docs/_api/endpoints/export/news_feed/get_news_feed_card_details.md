@@ -6,50 +6,57 @@ layout: api_page2
 
 page_type: reference
 platform: API
+channel: News Feed
 tool: Segments
-description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+description: "This article outlines details about the News Feed Card Details endpoint."
 ---
 
 {% api %}
 
-# Segment List Endpoint
+# News Feed Card Details Endpoint
 
 {% apimethod get %}
-/segments/list
+/feed/details
 {% endapimethod %}
 
-This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
+This endpoint allows you to retrieve relevant information on the card, which can be identified by the `card_id`.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20list%20example {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
 ## Parameters
 
-| Parameter| Required | Data Type | Description |
-| -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String    | App Group REST API Key |
-| `page` | No | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100) |
-| `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
+| Parameter | Required | Data Type | Description            |
+| --------- | -------- | --------- | ---------------------- |
+| `api_key` | Yes      | String    | App Group REST API Key |
+| `card_id` | Yes      | String    | Card API Identifier    |
+
+{% alert tip %}
+The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{ site.baseurl }}/api/endpoints/export/news_feed/get_news_feed_cards/).
+{% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/segments/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+`https://rest.iad-01.braze.com/feed/details?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
 
 ## Response
 
 `Content-Type: application/json`
 
 ```json
+Content-Type: application/json
 {
-    "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "segments" : [
-        {
-            "id" : (string) Segment API Identifier,
-            "name" : (string) segment name,
-            "analytics_tracking_enabled" : (boolean) whether the segment has analytics tracking enabled,
-            "tags" : (array) tag names associated with the segment
-        },
-        ...
-    ]
+    "message": (required, string) The status of the export, returns 'success' when completed without errors,
+    "created_at" : (string) Date created as ISO 8601 date,
+    "updated_at" : (string) Date last updated as ISO 8601 date,
+    "name" : (string) Card name,
+    "publish_at" : (string) Date card was published as ISO 8601 date,
+    "end_at" : (string) Date card will stop displaying for users as ISO 8601 date,
+    "tags" : (array) Tag names associated with the card,
+    "title" : (string) Title of the card,
+    "image_url" : (string) Image URL used by this card,
+    "extras" : (dictionary) Dictionary containing key-value pair data attached to this card,
+    "description" : (string) Description text used by this card,
+    "archived": (boolean) whether this Card is archived,
+    "draft": (boolean) whether this Card is a draft,
 }
 ```
 

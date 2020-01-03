@@ -4,7 +4,6 @@ page_order: 2
 
 page_type: reference
 
-channel: Push
 platform: API
 tool:
   - Canvas

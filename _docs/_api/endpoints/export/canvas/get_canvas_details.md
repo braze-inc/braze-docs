@@ -1,55 +1,73 @@
 ---
-nav_title: "GET: Campaign Daily Stats for a Tracked Send ID"
+nav_title: "GET: Canvas Details"
 page_order: 4
 
 layout: api_page2
 
 page_type: reference
 platform: API
-tool: Segments
-description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+tool: Canvas
+description: "This article outlines details about the Canvas Details Endpoint."
 ---
 
 {% api %}
 
-# Segment List Endpoint
+# Canvas Details Endpoint
 
 {% apimethod get %}
-/segments/list
+/canvas/details
 {% endapimethod %}
 
-This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
+This endpoint allows you to export metadata about a Canvas, such as its name, when it was created, its current status, and more.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20list%20example {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
+{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20details%20example {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Parameters
+## Request Parameter Details
 
-| Parameter| Required | Data Type | Description |
-| -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String    | App Group REST API Key |
-| `page` | No | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100) |
-| `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
-
-### Example URL
-`https://rest.iad-01.braze.com/segments/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+| Parameter   | Required | Data Type | Description            |
+| ----------- | -------- | --------- | ---------------------- |
+| `api_key`   | Yes      | String    | App Group REST API Key |
+| `canvas_id` | Yes      | String    | Canvas API Identifier  |
 
 ## Response
 
-`Content-Type: application/json`
-
 ```json
 {
-    "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "segments" : [
-        {
-            "id" : (string) Segment API Identifier,
-            "name" : (string) segment name,
-            "analytics_tracking_enabled" : (boolean) whether the segment has analytics tracking enabled,
-            "tags" : (array) tag names associated with the segment
-        },
-        ...
-    ]
+  "created_at": (string) date created as ISO 8601 date,
+  "updated_at": (string) date updated as ISO 8601 date,
+  "name": (string) Canvas name,
+  "archived": (boolean) whether this Canvas is archived,
+  "draft": (boolean) whether this Canvas is a draft,
+  "schedule_type": (string) type of scheduling action,
+  "first_entry": (string) date of first entry as ISO 8601 date,
+  "last_entry": (string) date of last entry as ISO 8601 date,
+  "channels": (array of strings) step channels used with Canvas,
+  "variants": [
+    {
+      "name": (string) name of variant,
+      "first_step_ids": (array of strings) API identifiers for first steps in variant,
+      "first_step_id": (string) API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
+    },
+    ... (more variations)
+  ],
+  "tags": (array of strings) tag names associated with the Canvas,
+  "steps": [
+    {
+      "name": (string) name of step,
+      "id": (string) API identifier of the step,
+      "next_step_ids": (array of strings) API identifiers of steps following step,
+      "channels": (array of strings) channels used in step,
+      "messages": {
+          "message_variation_id": (string) {  // <=This is the actual id
+              "channel": (string) channel type of the message (eg., "email"),
+              ... channel-specific fields for this message, see Campaign Details Endpoint API Response for example message responses ...
+          }
+      }
+    },
+    ... (more steps)
+  ],
+  "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
 
