@@ -70,7 +70,7 @@ Content-Type: application/json
   }
 }
 ```
-For more information on the "broadcast" flag, see [Broadcast][42] below.
+For more information on the "broadcast" flag, see [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) below.
 
 ### Available Messaging Objects
 

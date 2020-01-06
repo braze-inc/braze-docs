@@ -59,5 +59,8 @@ Your request must include `phone` or `email` value, _but not both_.
 ```
 https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com
 ```
+### Response
+
+All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
 
 {% endapi %}

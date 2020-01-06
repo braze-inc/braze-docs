@@ -55,9 +55,16 @@ Content-Type: application/json
   ]
 }
 ```
-For more information on the "broadcast" flag, see [Broadcast][42] below.
+For more information on the "broadcast" flag, see [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) below.
+
+
+### Response Details
+Message sending endpoint responses will include the message’s dispatch_id for reference back to the dispatch of the message. The dispatch_id is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform).
+
+
 
 {% endapi %}
 
 
 [41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
+[42]: {{ site.baseurl }}/api/parameters/#broadcast

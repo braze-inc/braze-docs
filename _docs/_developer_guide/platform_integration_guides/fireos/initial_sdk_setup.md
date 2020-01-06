@@ -92,6 +92,10 @@ See the [`appboy.xml`][6] in the Droidboy sample app for an implementation examp
 
 #### Activity Lifecycle Callback Integration (API 14+)
 
+{% alert warning %}
+Our minimum supported version is `API 16`.
+{% endalert %}
+
 This feature is supported on API 14 and above. Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically. See the [HelloBraze sample application][62] for a full example.
 
 ##### Instructions

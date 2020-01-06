@@ -53,7 +53,7 @@ Content-Type: application/json
   ]
 }
 ```
-For more information on the "broadcast" flag, see [Broadcast][42] below.
+For more information on the "broadcast" flag, see [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) below.
 
 The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and `canvas_entry_properties` object.
 
