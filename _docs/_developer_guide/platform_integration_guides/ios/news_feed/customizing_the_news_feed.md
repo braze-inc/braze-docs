@@ -8,7 +8,7 @@ page_order: 5
 # Customization
 
 {% alert important %}
-__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, Newsfeed, or Content Cards.
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
 ## Overriding Default Images
