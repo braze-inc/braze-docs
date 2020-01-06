@@ -75,17 +75,19 @@ To customize the header, set the title property of the `navigationItem` belongin
 
 ## Overriding Default Images
 
+{% alert important %}
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, Newsfeed, or Content Cards.
+{% endalert %}
+
 Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in Content Cards include:
 
 - Placeholder image: `appboy_cc_noimage_lrg`.
 - Pinned icon image: `appboy_cc_icon_pinned`.
 
+Because Content Cards have a maximum size of **2kb** (including images, links, and all content) make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
+
 {% alert note %}
 Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes.
-{% endalert %}
-
-{% alert important %}
-Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
 {% endalert %}
 
 {% alert note %}

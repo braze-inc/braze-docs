@@ -36,6 +36,12 @@ All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic
 
 ![ABKInAppMessage models][29]
 
+{% alert important %}
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+<br><br>
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, Newsfeed, or Content Cards.
+{% endalert %}
+
 ### Expected Behaviors by Message Types
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
