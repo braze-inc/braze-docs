@@ -2,7 +2,7 @@
 nav_title: Runtime Configuration
 platform: Android
 page_order: 4
-search_rank: 5
+
 ---
 ## Runtime Configuration
 

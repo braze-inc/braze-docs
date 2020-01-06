@@ -2,7 +2,7 @@
 nav_title: News Feed
 platform: FireOS
 page_order: 3
-search_rank: 4
+
 ---
 # News Feed
 

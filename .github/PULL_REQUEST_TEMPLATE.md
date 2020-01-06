@@ -20,7 +20,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <summary>PR Checklist</summary>
 - [ ] Check that all links work!
 - [ ] Ensure you have completed [our CLA](https://www.braze.com/docs/cla/).
-- [ ] Tag @EmilyNecciai as a reviewer when the your work is _done and ready to be reviewed for merge_.
+- [ ] Tag @KellieHawks as a reviewer when the your work is _done and ready to be reviewed for merge_.
 - [ ] Tag others as Reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `config/nginx.conf.erb`.
 
@@ -51,4 +51,4 @@ _Consult the [Docs Text Formatting Guide](https://github.com/Appboy/braze-docs/w
 ---
 ---
 
-<!-- Thanks for filling me out! If you have any thoughts on how to improve this template, please file an issue or reach out to @EmilyNecciai. -->
+<!-- Thanks for filling me out! If you have any thoughts on how to improve this template, please file an issue or reach out to @KellieHawks. -->

@@ -2,7 +2,7 @@
 nav_title: Deep Linking to In-App Resources
 platform: Android
 page_order: 0
-search_rank: 5
+
 ---
 ## Deep Linking to the News Feed {#Android_Deep_Advance}
 

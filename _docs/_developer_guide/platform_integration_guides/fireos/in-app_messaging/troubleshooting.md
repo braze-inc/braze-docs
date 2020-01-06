@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: FireOS
 page_order: 4
-search_rank: 4
+
 ---
 {% include archive/troubleshooting_iams.md platform="FireOS" %}
 

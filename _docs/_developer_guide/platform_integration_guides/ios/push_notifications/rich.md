@@ -2,7 +2,7 @@
 nav_title: Rich Notifications
 platform: iOS
 page_order: 0.1
-search_rank: 5
+
 ---
 
 # iOS 10 Rich Notifications

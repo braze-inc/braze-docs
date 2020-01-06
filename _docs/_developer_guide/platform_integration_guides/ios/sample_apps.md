@@ -2,7 +2,7 @@
 nav_title: Sample Apps
 platform: iOS
 page_order: 9
-search_rank: 5
+
 ---
 # Sample Apps
 
