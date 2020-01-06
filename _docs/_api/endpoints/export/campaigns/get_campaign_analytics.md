@@ -2,18 +2,15 @@
 nav_title: "GET: Campaign Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Segments
 description: "This article outlines details about the Campaign Analytics endpoint."
 ---
-
 {% api %}
-
 # Campaign Analytics Endpoint
-
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}

@@ -2,7 +2,7 @@
 nav_title: "GET: Send Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform:
@@ -14,11 +14,8 @@ tool:
 
 description: "This article outlines details about Braze's Campaign Daily Stats by Send ID endpoint."
 ---
-
 {% api %}
-
 # Send Analytics Endpoint
-
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}

@@ -90,6 +90,3 @@ guide_menu_list:
     link: /docs/api/endpoints/export/sessions/get_sessions_analytics/
     fa_icon: fas fa-tablet-alt
 ---
-
-<br>
-<br>

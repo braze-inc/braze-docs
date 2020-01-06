@@ -2,7 +2,7 @@
 nav_title: "GET: Segment Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -13,11 +13,8 @@ tool:
 
 description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
 ---
-
 {% api %}
-
 # Segment Analytics Endpoint
-
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}

@@ -2,7 +2,7 @@
 nav_title: "POST: Create Send IDs"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the Create Send IDs Braze endpoint."
 ---
-
 {% api %}
-
 # Create Send IDs For Message Send Tracking
-
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}

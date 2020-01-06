@@ -2,18 +2,15 @@
 nav_title: "GET: Daily New Users by Date"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Segments
 description: "This article outlines details about the Daily New Users Endpoint."
 ---
-
 {% api %}
-
 # Daily New Users Endpoint
-
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}

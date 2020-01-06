@@ -2,7 +2,7 @@
 nav_title: "GET: See Content Blocks Information"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -17,7 +17,6 @@ description: "This article outlines details about the See Available Content Bloc
 
 {% api %}
 # See Content Block Information
-
 {% apimethod get %}
 /content_blocks/info
 {% endapimethod %}

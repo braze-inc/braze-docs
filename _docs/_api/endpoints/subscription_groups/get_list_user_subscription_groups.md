@@ -2,7 +2,7 @@
 nav_title: "GET: List User's Subscription Groups"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -15,11 +15,8 @@ tool:
 
 description: "This article outlines details about the List User's Subscription Groups Braze endpoint."
 ---
-
 {% api %}
-
 # Get Users' Subscription Groups
-
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}
@@ -30,8 +27,6 @@ If you want to see examples or test this endpoint for __Email Subscription Group
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/GetUsersSubscriptionGroups {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
-
-<br>
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 

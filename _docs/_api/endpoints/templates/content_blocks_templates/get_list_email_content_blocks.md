@@ -2,7 +2,7 @@
 nav_title: "GET: List Available Content Blocks"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,11 +14,8 @@ tool:
 
 description: "This article outlines details about the List Available Content Blocks Braze endpoint."
 ---
-
-
 {% api %}
 # List Available Content Blocks
-
 {% apimethod get %}
 /content_blocks/list
 {% endapimethod %}

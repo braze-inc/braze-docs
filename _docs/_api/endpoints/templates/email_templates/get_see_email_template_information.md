@@ -2,7 +2,7 @@
 nav_title: "GET: See Email Template Information"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,11 +14,8 @@ tool:
 
 description: "This article outlines details about the See Email Template Braze endpoint."
 ---
-
 {% api %}
-
 # See Email Template Information
-
 {% apimethod get %}
 /templates/email/info
 {% endapimethod %}

@@ -2,7 +2,7 @@
 nav_title: "POST: Create Email Template"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,11 +14,8 @@ tool:
 
 description: "This article outlines details about the Create Email Templates Braze endpoint."
 ---
-
 {% api %}
-
 # Create Email Template
-
 {% apimethod post %}
 /templates/email/create
 {% endapimethod %}

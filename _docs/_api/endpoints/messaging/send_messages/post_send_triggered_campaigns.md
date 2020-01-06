@@ -2,7 +2,7 @@
 nav_title: "POST: Send Campaign Messages via API Triggered Delivery"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -11,11 +11,8 @@ tool:
 
 description: "This article outlines details about the Send Campaign Messages via API Triggered Delivery Braze endpoint."
 ---
-
 {% api %}
-
 # Sending Campaign Messages via API Triggered Delivery
-
 {% apimethod post %}
 /campaigns/trigger/send
 {% endapimethod %}

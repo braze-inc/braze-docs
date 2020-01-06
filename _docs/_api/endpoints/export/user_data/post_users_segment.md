@@ -2,7 +2,7 @@
 nav_title: "POST: User Profile Export by Segment"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -13,11 +13,8 @@ tool:
 
 description: "This article outlines details anout the Users by Segment Braze endpoint."
 ---
-
 {% api %}
-
 # Users by Segment Endpoint
-
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}

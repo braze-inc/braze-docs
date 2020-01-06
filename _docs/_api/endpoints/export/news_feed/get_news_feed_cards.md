@@ -2,7 +2,7 @@
 nav_title: "GET: News Feed Cards List"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -10,11 +10,8 @@ tool: Segments
 channel: News Feed
 description: "This article outlines details about the News Feed Cards List Endpoint."
 ---
-
 {% api %}
-
 # News Feed Cards List Endpoint
-
 {% apimethod get %}
 /feed/list
 {% endapimethod %}

@@ -2,7 +2,7 @@
 nav_title: "GET: List Upcoming Scheduled Campaigns and Canvases"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the Get Scheduled Messages Braze endpoint."
 ---
-
 {% api %}
-
 # Get Upcoming Scheduled Campaigns and Canvases
-
 {% apimethod get %}
 /messages/scheduled_broadcasts
 {% endapimethod %}

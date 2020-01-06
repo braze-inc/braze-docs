@@ -2,7 +2,7 @@
 nav_title: "POST: Delete Scheduled Messages"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the Delete Scheduled Messages Braze endpoint."
 ---
-
 {% api %}
-
 # Delete Scheduled Messages
-
 {% apimethod post %}
 /messages/schedule/delete
 {% endapimethod %}

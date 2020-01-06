@@ -2,7 +2,7 @@
 nav_title: "POST: Create New User Alias"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the create new User Aliases Braze endpoint."
 ---
-
 {% api %}
-
 # Create New User Alias
-
 {% apimethod post %}
 /users/alias/new
 {% endapimethod %}

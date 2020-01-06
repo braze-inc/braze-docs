@@ -2,7 +2,7 @@
 nav_title: "POST: Update User's Subscription Group Status"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -15,11 +15,8 @@ tool:
 
 description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
 ---
-
 {% api %}
-
 # Update Users' Subscription Group Status
-
 {% apimethod post %}
 /subscription/status/set
 {% endapimethod %}
@@ -30,8 +27,6 @@ If you want to see examples or test this endpoint for __Email Subscription Group
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
-
-<br>
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 

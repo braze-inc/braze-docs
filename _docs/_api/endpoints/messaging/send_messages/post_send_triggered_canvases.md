@@ -2,7 +2,7 @@
 nav_title: "POST: Send Canvas Messages via API Triggered Delivery"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -11,11 +11,8 @@ tool:
 
 description: "This article outlines details about the Send Canvas Messages via API Triggered Delivery Braze endpoint."
 ---
-
 {% api %}
-
 # Sending Canvas Messages via API Triggered Delivery
-
 {% apimethod post %}
 /canvas/trigger/send
 {% endapimethod %}

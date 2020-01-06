@@ -37,6 +37,3 @@ guide_featured_list:
     link: /docs/api/endpoints/user_data/post_user_track/
     fa_icon: fas fa-database
 ---
-
-<br>
-<br>

@@ -2,7 +2,7 @@
 nav_title: "POST: Identify Users"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the Identify Users Braze endpoint."
 ---
-
 {% api %}
-
 # Identify Users
-
 {% apimethod post %}
 /users/identify
 {% endapimethod %}

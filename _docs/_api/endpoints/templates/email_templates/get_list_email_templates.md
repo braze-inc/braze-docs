@@ -2,7 +2,7 @@
 nav_title: "GET: List Available Email Templates"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,10 +14,8 @@ tool:
 
 description: "This article outlines details about the List Available Email Templates Braze endpoint."
 ---
-
 {% api %}
 # List Available Email Templates
-
 {% apimethod get %}
 /templates/email/list
 {% endapimethod %}

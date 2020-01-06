@@ -35,6 +35,3 @@ guide_featured_list:
 {% comment %}
 redirect from subscription_group_api.md
 {% endcomment %}
-
-<br>
-<br>

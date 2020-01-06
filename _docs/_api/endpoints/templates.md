@@ -48,10 +48,6 @@ guide_menu_list:
     fa_icon: fas fa-th-large
 
 ---
-
 {% comment %}
 redirect from email_templates.md
 {% endcomment %}
-
-<br>
-<br>

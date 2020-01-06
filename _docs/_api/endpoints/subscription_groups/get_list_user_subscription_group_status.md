@@ -2,7 +2,7 @@
 nav_title: "GET: List Users' Subscription Group Status"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -15,11 +15,8 @@ tool:
 
 description: "This article outlines details about the List Users' Subscription Group Status Braze endpoint."
 ---
-
 {% api %}
-
 # Get Users' Subscription Group Status
-
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
@@ -30,8 +27,6 @@ If you want to see examples or test this endpoint for __Email Subscription Group
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/GetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2 {% endapiref %}
-
-<br>
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 
@@ -48,7 +43,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 | `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
 | `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
-/* Generally, either `external_id` or `email` is required.
+\* Generally, either `external_id` or `email` is required.
 
 For SMS subscription groups, either `external_id` or `phone` is required.
 

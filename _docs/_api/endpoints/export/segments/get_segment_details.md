@@ -2,18 +2,15 @@
 nav_title: "GET: Segment Details"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Segments
 description: "This article outlines details about and using the Segments Details endpoint to export a list of available Segments."
 ---
-
 {% api %}
-
 # Segment Details Endpoint
-
 {% apimethod get %}
 /segments/details
 {% endapimethod %}

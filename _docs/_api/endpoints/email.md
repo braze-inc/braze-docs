@@ -37,9 +37,6 @@ guide_featured_list:
     link: /docs/api/endpoints/email/post_remove_spam/
     fa_icon: fas fa-envelope-open
 ---
-
-<br>
-<br>
 {% comment %}
 redirect from email_sync.md
 {% endcomment %}

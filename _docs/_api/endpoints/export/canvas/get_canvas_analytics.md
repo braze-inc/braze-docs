@@ -2,18 +2,15 @@
 nav_title: "GET: Canvas Data Series Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Canvas
 description: "This article outlines details about the Canvas Data Series Analytics Endpoint."
 ---
-
 {% api %}
-
 # Canvas Data Series Analytics Endpoint
-
 {% apimethod get %}
 /canvas/data_series
 {% endapimethod %}

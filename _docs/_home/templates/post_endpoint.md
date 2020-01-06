@@ -2,7 +2,7 @@
 nav_title: "POST: [Endpoint Name]"
 page_order:
 
-layout: api_page2
+layout: api_page
 excerpt_separator: ""
 
 page_type: reference

@@ -2,7 +2,7 @@
 nav_title: "POST: Schedule API Triggered Campaign Messages"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -11,11 +11,8 @@ tool:
 
 description: "This article outlines details about the Update Scheduled Campaigns Braze endpoint."
 ---
-
 {% api %}
-
 # Schedule API Triggered Campaigns
-
 {% apimethod post %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}

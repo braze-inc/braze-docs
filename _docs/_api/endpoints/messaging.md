@@ -87,6 +87,3 @@ guide_menu_list:
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
 ---
-
-<br>
-<br> 

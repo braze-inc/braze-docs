@@ -2,18 +2,15 @@
 nav_title: "GET: Canvas Data Summary Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Canvas
 description: "This article outlines details about the Canvas Data Summary Analytics Endpoint."
 ---
-
 {% api %}
-
 # Canvas Data Summary Endpoint
-
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}

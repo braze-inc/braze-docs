@@ -2,7 +2,7 @@
 nav_title: "GET: Query List of Unsubscribed Email Addresses"
 page_order: 1
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,9 +14,7 @@ tool:
 description: "This article outlines the usage of and parameters for using the Get Email Unsubscribes Braze endpoint."
 ---
 {% api %}
-
 # Retrieve List of or Query Email Unsubscribes
-
 {% apimethod get %}
 /email/unsubscribes
 {% endapimethod %}

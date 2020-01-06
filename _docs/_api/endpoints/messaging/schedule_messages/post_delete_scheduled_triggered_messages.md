@@ -2,7 +2,7 @@
 nav_title: "POST: Delete Scheduled API Triggered Campaigns"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -12,11 +12,8 @@ tool:
 
 description: "This article outlines details about the Delete Scheduled API Triggered Messages Braze endpoint."
 ---
-
 {% api %}
-
 # Delete Scheduled API Triggered Campaigns
-
 {% apimethod post %}
 /campaigns/trigger/schedule/delete
 {% endapimethod %}

@@ -2,18 +2,15 @@
 nav_title: "GET: Campaigns List"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 tool: Segments
 description: "This article outlines details about a specified campaign."
 ---
-
 {% api %}
-
 # Campaigns List Endpoint
-
 {% apimethod get %}
 /campaigns/list
 {% endapimethod %}

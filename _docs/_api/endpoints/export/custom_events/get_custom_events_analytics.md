@@ -2,17 +2,14 @@
 nav_title: "GET: Custom Events Analytics"
 page_order: 4
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
 description: "This article outlines details about the Custom Events List Endpoint."
 ---
-
 {% api %}
-
 # Custom Events Analytics
-
 {% apimethod get %}
 /events/data_series
 {% endapimethod %}

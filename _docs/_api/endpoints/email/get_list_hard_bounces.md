@@ -2,7 +2,7 @@
 nav_title: "GET: Query Hard Bounced Emails"
 page_order: 0
 
-layout: api_page2
+layout: api_page
 
 page_type: reference
 platform: API
@@ -14,9 +14,7 @@ tool:
 description: "This article outlines the usage of and parameters for using the retrieve a List of Hard Bounced Email Addresses Braze endpoint."
 ---
 {% api %}
-
 # Query or List Hard Bounced Emails
-
 {% apimethod get %}
 /email/hard_bounces
 {% endapimethod %}
