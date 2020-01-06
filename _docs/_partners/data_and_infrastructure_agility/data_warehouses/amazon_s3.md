@@ -16,10 +16,6 @@ Braze has two different integration strategies with Amazon S3 - one for [Braze C
 -   [AWS Secret Access Key method](#aws-secret-key-auth-method)
 -   [AWS Role ARN method](#aws-role-arn-auth-method)
 
-{% alert important %}
-The AWS Role ARN method is currently in limited release. Please contact your Account Manager if you are interested in using this feature.
-{% endalert %}
-
 Follow the instructions on this page to get started with your AWS S3 integration. If you already have an S3 bucket, we still recommend creating a new bucket **specifically for Braze** so you can limit permissions.
 
 1.  To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**.
