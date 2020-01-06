@@ -1,7 +1,7 @@
 ---
 nav_title: Gifs
 page_order: 9
-search_rank: 5
+
 platform: Android
 ---
 

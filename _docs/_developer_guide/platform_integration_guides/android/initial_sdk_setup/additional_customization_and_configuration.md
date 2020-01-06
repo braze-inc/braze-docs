@@ -1,7 +1,7 @@
 ---
 nav_title: Additional Customization & Configuration
 page_order: 3
-search_rank: 5
+
 platform: Android
 ---
 

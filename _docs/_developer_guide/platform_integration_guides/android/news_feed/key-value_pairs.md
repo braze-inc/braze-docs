@@ -1,7 +1,7 @@
 ---
 nav_title: Key-Value Pairs
 page_order: 8
-search_rank: 5
+
 platform: Android
 ---
 

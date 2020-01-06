@@ -2,7 +2,7 @@
 nav_title: Overview
 platform: iOS
 page_order: 0
-search_rank: 5
+
 ---
 
 # In-App Messages

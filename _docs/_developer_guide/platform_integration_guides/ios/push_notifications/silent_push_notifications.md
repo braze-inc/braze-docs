@@ -2,7 +2,7 @@
 nav_title: Silent Push Notifications
 platform: iOS
 page_order: 4
-search_rank: 5
+
 ---
 
 # Silent Push Notifications

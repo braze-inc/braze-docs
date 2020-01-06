@@ -2,7 +2,7 @@
 nav_title: Integration
 platform: iOS
 page_order: 0
-search_rank: 5
+
 
 local_redirect:
   ios-10-rich-notifications: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'

@@ -2,7 +2,7 @@
 nav_title: Action Buttons
 platform: iOS
 page_order: 0.2
-search_rank: 5
+
 ---
 
 # Action Buttons {#push-action-buttons-integration}

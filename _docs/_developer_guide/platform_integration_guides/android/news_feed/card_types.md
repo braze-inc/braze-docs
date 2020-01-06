@@ -1,7 +1,7 @@
 ---
 nav_title: Card Types
 page_order: 5
-search_rank: 5
+
 platform: Android
 ---
 

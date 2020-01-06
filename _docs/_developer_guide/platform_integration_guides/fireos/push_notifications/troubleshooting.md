@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 ## Troubleshooting
 

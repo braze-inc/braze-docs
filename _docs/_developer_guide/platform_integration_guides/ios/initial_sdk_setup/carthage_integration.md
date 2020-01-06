@@ -2,7 +2,7 @@
 nav_title: Carthage Integration
 platform: iOS
 page_order: 0
-search_rank: 5
+
 ---
 
 # Carthage Integration
