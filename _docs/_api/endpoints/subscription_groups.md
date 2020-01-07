@@ -32,6 +32,3 @@ guide_featured_list:
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
     fa_icon: fas fa-user-plus
 ---
-{% comment %}
-redirect from subscription_group_api.md
-{% endcomment %}
