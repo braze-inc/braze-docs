@@ -3,7 +3,7 @@ nav_title: Customization
 platform: iOS
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
-search_rank: 5
+
 ---
 ## Customization {#push-customization}
 
@@ -151,17 +151,7 @@ func application(_ application: UIApplication,
 
 ### Extracting Data from Push Notification Key-Value Pairs
 
-Braze allows you to send additional key-value pairs along with a push notification via your application within the `extras` property. Please see the following example code for extracting data from that key-value pair:
-
-```objc
-- (void)handleExtrasFromPush:(NSDictionary *)notification {
-  NSLog(@"A push was received");
-  if (notification != nil && [notification objectForKey:@"Some_Key"] !=[NSNull null] && [[notification objectForKey:@"Some_Key"] length] > 0 ) {
-    NSString *value = [NSString stringWithFormat:@"%@",[notification objectForKey:@"Some_Key"]];
-    // Here based on the extras key-value pair, you can run some arbitrary code.
-  }
-}
-```
+Braze allows you to send custom-defined string key-value pairs, known as extras, along with a push notification to your application. Extras can be defined via the dashboard or API and will be available as key-value pairs within the notification dictionary passed to your push delegate implementations.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
@@ -170,7 +160,6 @@ Braze allows you to send additional key-value pairs along with a push notificati
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
 [12]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[16]: {% image_buster /assets/img_archive/ExampleCategory.png %}
 [17]: {{ site.baseurl }}/assets/img_archive/push_example_category.png
 [20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
 [21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1

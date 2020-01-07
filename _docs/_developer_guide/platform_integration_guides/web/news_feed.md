@@ -2,7 +2,7 @@
 nav_title: News Feed
 platform: Web
 page_order: 3
-search_rank: 5
+
 ---
 # News Feed
 

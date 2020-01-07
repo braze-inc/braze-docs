@@ -1,6 +1,6 @@
 ---
 nav_title: For Android
-page_order: 5
+page_order: 0
 ---
 
 # For Android

@@ -2,8 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
-guide_top_text: "This is where developers can find all the integrations available with Braze. You can also
-use the <a href='/docs/developer_guide/rest_api/basics/'>REST API Guide</a>."
+guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/developer_guide/rest_api/basics/'>REST API Guide</a>."
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
@@ -47,7 +46,7 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
   - name: Zapier/Wordpress
-    link: /docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/
+    link: /docs/partners/channel_extensions/workflow_automation/zapier_integration/
     fa_icon: fab fa-wordpress
   - name: Xamarin Android and Fire OS
     link: /docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/
@@ -65,5 +64,3 @@ guide_menu_list:
 guide_footer_header: " "
 guide_footer_text: " "
 ---
-
-Developer Home

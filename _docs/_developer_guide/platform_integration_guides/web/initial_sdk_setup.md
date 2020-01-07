@@ -2,7 +2,7 @@
 nav_title: Initial SDK Setup
 platform: Web
 page_order: 0
-search_rank: 5
+
 ---
 # Initial SDK Setup
 
@@ -16,15 +16,11 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 
 ![API Key Location][14]
 
-If you have been provided a custom SDK endpoint, please include this in addition to your API key:
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
-US Cluster:
+*For US-03*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
 
-`appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'https://customer.iad-03.braze.com/api/v3'})`
-
-EU Cluster:
-
-`appboy.initialize('YOUR-API-KEY-HERE', {baseUrl: 'https://customer.fra-01.braze.eu/api/v3'})`
+*For EU-01*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk-01.iad-01.braze.eu/api/v3’})`
 
 ## Enable Error Logging {#error-logging}
 
@@ -44,7 +40,7 @@ To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Ta
 
 Subsequent tags which fire after page load can then reference this. For example `<script type="text/javascript">window.appboy.logCustomEvent("test event")</script>`.
 
-Please also ensure to replace the API key and custom SDK endpoint in the code with your API key and, if applicable, custom endpoint.
+Please also ensure to replace the API key and custom SDK endpoint in the code with your API key.
 
 Braze suggests the tag has the trigger configuration of **Page View > DOM Ready**. Other Page View triggers can fire the tag, provided that no other Braze related tags are fired to prior to this.
 
@@ -67,7 +63,7 @@ For further instruction on this please see the appropriate section of our [Braze
 
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, just search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
+For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
 ### Other Tag Managers
 
@@ -87,7 +83,6 @@ These files must be updated in coordination with each other to ensure proper fun
 [1]: {{ site.baseurl }}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
 [3]: https://www.google.com/analytics/tag-manager/ "Google Tag Manager"
-[4]: {% image_buster /assets/img_archive/tealium-screenshot.png %}
 [6]: https://github.com/Appboy/appboy-web-sdk#getting-started "Web SDK Documentation"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
 [11]: {% image_buster /assets/img_archive/gtm_trigger.png %}

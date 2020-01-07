@@ -2,7 +2,7 @@
 nav_title: Tracking Custom Events
 platform: iOS
 page_order: 2
-search_rank: 5
+
 ---
 # Tracking Custom Events
 
@@ -23,7 +23,7 @@ Before implementation, be sure to review examples of the segmentation options af
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME");
+Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
 ```
 
 {% endtab %}
@@ -44,7 +44,7 @@ You can add metadata about custom events by passing an `NSDictionary` populated 
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1":"value1"]);
+Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME", withProperties:["key1":"value1"])
 ```
 
 {% endtab %}

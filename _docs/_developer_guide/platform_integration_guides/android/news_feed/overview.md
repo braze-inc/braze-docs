@@ -1,7 +1,7 @@
 ---
 nav_title: Overview
 page_order: 0
-search_rank: 5
+
 platform: Android
 ---
 # News Feed

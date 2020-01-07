@@ -25,9 +25,6 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 
 >  It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
-#### User Bio
->  `AppboyBinding.SetUserBio()` has been deprecated.
-
 #### Gender
 `AppboyBinding.SetUserGender(Appboy.Models.Gender.Male or Appboy.Models.Gender.Female);`
 
@@ -111,7 +108,7 @@ AppboyBinding.AddToCustomUserAttributeArray("key", "Attribute")
 AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 ```
 
->  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+>  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
 #### Unsetting a Custom Attribute
 

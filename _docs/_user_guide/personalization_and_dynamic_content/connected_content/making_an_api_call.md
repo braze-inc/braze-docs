@@ -2,7 +2,7 @@
 nav_title: Making an API Call
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 1
+page_order: 0
 ---
 
 # Making an API Call
@@ -62,7 +62,7 @@ When a message using Connected Content is sent from Braze, the Braze servers aut
 
 With IP whitelisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests. 
+Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|
@@ -138,6 +138,5 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 [57]: https://developer.accuweather.com
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
-[60]: {% image_buster /assets/img_archive/Accuweather_APIKey2.png %}
 [61]: https://developer.accuweather.com/weather-icons
 [62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

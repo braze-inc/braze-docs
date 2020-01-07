@@ -1,6 +1,40 @@
 ---
 nav_title: Data & Analytics
-config_only: true
-layout: blank_config
-page_order: 4
+page_order: 3
+layout: dev_guide
+guide_top_header: "Data & Analytics"
+guide_top_text: "Braze has provided a wide breadth of metrics for you to use when measuting the success of your campaigns. We've also provided multiple reports and tracking capabilities to ensure you get the numbers you need. <br> <br> You can also expand your own data capabilities using <a href='/docs/partners/braze_currents/'>Currents</a>, Braze's data streaming export tool which enables your team to act on large amounts of granular customer data."
+
+guide_featured_title: "Popular Articles"
+guide_featured_list:
+  - name: Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/
+    fa_icon: fas fa-swimmer
+  - name: Report Metrics Glossary
+    link: /docs/user_guide/data_and_analytics/report_metrics/
+    fa_icon: fas fa-book-open
+  - name: Configuring Reporting
+    link: /docs/user_guide/data_and_analytics/configuring_reporting/
+    fa_icon: fas fa-cog
+
+guide_menu_title: "Additional Sections"
+guide_menu_list:
+  - name: Creating a Formula
+    link: /docs/user_guide/data_and_analytics/creating_a_formula/
+    fa_icon: fas fa-flask
+  - name: User Data Collection
+    link: /docs/user_guide/data_and_analytics/user_data_collection/
+    fa_icon: fas fa-users
+  - name: Custom Data
+    link: /docs/user_guide/data_and_analytics/custom_data/
+    fa_icon: fas fa-wrench
+  - name: Tracking
+    link: /docs/user_guide/data_and_analytics/tracking/
+    fa_icon: fas fa-chart-line
+  - name: Exporting Braze Data
+    link: /docs/user_guide/data_and_analytics/export_braze_data/
+    fa_icon: fas fa-file-export
+  - name: Your Reports
+    link: /docs/user_guide/data_and_analytics/your_reports/
+    fa_icon: fas fa-chart-bar
 ---

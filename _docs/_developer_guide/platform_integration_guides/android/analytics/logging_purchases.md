@@ -2,7 +2,7 @@
 nav_title: Logging Purchases
 platform: Android
 page_order: 4
-search_rank: 5
+
 ---
 ## Logging Purchases
 
@@ -16,14 +16,33 @@ Before implementation, be sure to review examples of the segmentation options af
 
 To use this feature, add this method call after a successful purchase in your app:
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).logPurchase(
+Appboy.getInstance(context).logPurchase(
    String productId,
    String currencyCode,
    BigDecimal price,
    int quantity
 );
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).logPurchase(
+  productId: String,
+  currencyCode: String,
+  price: BigDecimal,
+  quantity: Int
+)
+```
+
+{% endtab %}
+{% endtabs %}
+
 __If the product Identifier is empty, the purchase will not be logged to Braze.__ See the [Javadoc][8] for more information.
 
 {% alert tip %}
@@ -36,11 +55,26 @@ You can add metadata about purchases by passing a [Braze Properties][4] object w
 
 Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
 AppboyProperties purchaseProperties = new AppboyProperties();
 purchaseProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logPurchase(..., purchaseProperties);
+Appboy.getInstance(context).logPurchase(..., purchaseProperties);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val purchaseProperties = AppboyProperties()
+purchaseProperties.addProperty("key", "value")
+Appboy.getInstance(context).logPurchase(..., purchaseProperties)
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][6] for more information.
 

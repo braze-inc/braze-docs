@@ -127,10 +127,10 @@ Braze will send Webhooks from the IP ranges below.
 There are many ways to utilize webhooks, and with Braze's technology partners (Alloys) you can use webhooks to uplevel your communication directly with your customers and users.
 
 Check out:
-* [Messenger]({{ site.baseurl }}/partners/technology_partners/additional_channels/instant_chat/messenger/)
-* [Remerge]({{ site.baseurl }}/partners/technology_partners/advertising_technologies/retargeting/remerge/)
-* [Twilio]({{ site.baseurl }}/partners/technology_partners/additional_channels/sms/twilio/)
-* [Lob.com]({{ site.baseurl }}/partners/technology_partners/additional_channels/direct_mail/lob/)
+* [Messenger]({{ site.baseurl }}/partners/additional_channels/instant_chat/messenger/)
+* [Remerge]({{ site.baseurl }}/partners/advertising_technologies/retargeting/remerge/)
+* [Twilio]({{ site.baseurl }}/partners/additional_channels/sms/twilio/)
+* [Lob.com]({{ site.baseurl }}/partners/additional_channels/direct_mail/lob/)
 * And many more in our [technology partners]({{ site.baseurl }}/partners/home/) section of Braze Docs!
 
 [14]: https://sendgrid.com/blog/whats-webhook
@@ -151,7 +151,7 @@ Check out:
 [41]: https://en.wikipedia.org/wiki/JSON#Example
 [42]: https://dashboard-01.braze.com/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[44]: {{ site.baseurl }}/partners/technology_partners/additional_channels/instant_chat/messenger/
+[44]: {{ site.baseurl }}/partners/additional_channels/instant_chat/messenger/
 [45]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup
 [46]: https://github.com/Appboy/appboy-fb-messenger-bot
 [47]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup#page_access_token
@@ -159,13 +159,8 @@ Check out:
 [49]: https://developers.facebook.com/docs/messenger-platform/guidelines
 [50]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-attributes
 [51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[52]: {% image_buster /assets/img_archive/fbm-webhook-header.png %}
-[53]: {% image_buster /assets/img_archive/fbm-webhook.png %}
 [54]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/
 [55]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[56]: {% image_buster /assets/img_archive/fbm-text.png %}
-[57]: {% image_buster /assets/img_archive/fbm-image.png %}
-[58]: {% image_buster /assets/img_archive/fbm-structured.png %}
 [59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
 [61]: {{ site.baseurl }}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off

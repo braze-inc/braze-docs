@@ -2,7 +2,7 @@
 nav_title: Tracking Custom Events
 platform: Android
 page_order: 2
-search_rank: 5
+
 ---
 ## Tracking Custom Events
 
@@ -12,9 +12,22 @@ Before implementation, be sure to review examples of the segmentation options af
 
 ### Adding A Custom Event
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME);
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
+```
+
+{% endtab %}
+{% endtabs %}
 
 See the [Javadoc][2] for more information.
 
@@ -24,11 +37,26 @@ You can add metadata about custom events by passing a [Braze Properties][4] obje
 
 Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
 AppboyProperties eventProperties = new AppboyProperties();
 eventProperties.addProperty("key", "value");
 Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val eventProperties = AppboyProperties()
+eventProperties.addProperty("key", "value")
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
+```
+
+{% endtab %}
+{% endtabs %}
 
 #### Reserved Keys
 

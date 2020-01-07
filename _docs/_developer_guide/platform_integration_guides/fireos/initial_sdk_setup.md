@@ -2,16 +2,16 @@
 nav_title: Initial SDK Setup
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 # Initial SDK Setup
 
-Installing the Braze SDK will provide you with basic analytics functionality as well as a working in-app slideup message with which you can engage your users. Note that the Android SDK file size is 763 KB.
+Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, In-App Messaging, the News Feed, and Feedback will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our `BroadcastReceiver` that handles push is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to the [User Guide][2] for the benefits of using the Braze News Feed, In-App Message, and Feedback UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
@@ -47,7 +47,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Step 2: Add Braze dependency
 
-See the following example in our [Hello Braze example project][45]:
+See the following example in our [Hello Appboy example project][45]:
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle?slice=1:5&footer=minimal"></script>
 
@@ -62,9 +62,14 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 ![GradleSync][38]
 
 ### Step 2: Configure the Braze SDK in appboy.xml
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you have a custom endpoint or are on a [specific data cluster][66], you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or email [open a support ticket][support].
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
+Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+
+>  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster please ask your Customer Success Manager or email [open a support ticket][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -101,7 +106,7 @@ Add the following code to the `onCreate()` method of your Application class:
 registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 ```
 
-You may refer to the following example inside Hello Braze:
+You may refer to the following example inside Hello Appboy:
 
 ![ActivityLifecycleCallbackIntegration][58]
 
@@ -112,6 +117,10 @@ See the [javadoc][63] for more information. Please note that any non-standard ma
 
 ### Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
 
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 To update the default endpoint in your integration of the Braze SDKs please add the following code to your `appboy.xml`:
@@ -121,6 +130,18 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 ```
 
 SDK Endpoint configuration via `appboy.xml` is available starting with Braze Android SDK v2.1.1.
+
+### Step 6: Enable Location Tracking
+
+If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+
+```xml
+<bool name="com_appboy_enable_location_collection">true</bool>
+```
+
+{% alert important %}
+Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
+{% endalert %}
 
 ### SDK Integration Complete
 Braze will now be able to collect [specified data from your application]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
@@ -149,7 +170,7 @@ At this point you should also have default device data collection working in you
 ### Using Proguard with Braze
 [Proguard][50] configuration is automatically included with your Braze integration.
 
-Braze Android SDK v.1.14.0 removes `keep` rules from `consumerProguardFiles` automatic Proguard configuration. Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
+Client apps that Proguard Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard configuration:
 
 ```
 -keep class bo.app.** { *; }
@@ -213,10 +234,7 @@ When the build variant is compiled, it will use the new API key.
 [17]: {% image_buster /assets/img_archive/android_import.png %}
 [18]: {% image_buster /assets/img_archive/click_browse.png %}
 [19]: {% image_buster /assets/img_archive/select_project_android.png %}
-[20]: {% image_buster /assets/img_archive/import_android_ui.png %}
-[21]: {% image_buster /assets/img_archive/reference_project.png %}
 [22]: {% image_buster /assets/img_archive/click_properties.png %}
-[23]: {% image_buster /assets/img_archive/NewBuildPath.png %}
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}

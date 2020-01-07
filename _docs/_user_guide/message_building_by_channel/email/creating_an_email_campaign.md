@@ -21,28 +21,33 @@ Click on the appropriate tile to choose an [existing email template][10] or [upl
 
 ![email1][3]
 
-Once you choose a template for your e-mail you'll see an overview of your e-mail, where you can quickly jump to the fullscreen editor, change your sending info, and view warnings about deliverability or law compliance.
+Once you choose a template for your email you'll see an overview of your email, where you can quickly jump to the fullscreen editor, change your sending info, and view warnings about deliverability or law compliance.
 
 ![newemailoverview][14]
 
-### Step 2a: Preview and Test Your Message
+### Step 2a: Adding Email Headers
 
-After you finish composing your perfect e-mail, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your connected content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your e-mail displays properly on a variety of devices and e-mail clients.
+Email headers contain information about the email being sent.  These key:value pairs typically have information about the sender, recipient, authentication protocals and contain email routing information.  Braze automatically adds the necessary header information as required by the RFC and for emails to properly be delivered to your inbox provider.  However, Braze does allow our customers flexibility, to add additional email headers as needed for advanced use cases.  There are a few reserved fields that will be overwritten by the Braze platform during sending.  Avoid using the following keys:
+'x-sg-id', 'x-sg-eid', 'received', 'dkim-signature', 'Content-Type', 'Content-Transfer-Encoding', 'To', 'From', 'Subject', 'Reply-To', 'CC', 'BCC', 'Received', 'DKIM-Signature', 'MIME-Version'
+
+### Step 2b: Preview and Test Your Message
+
+After you finish composing your perfect email, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your connected content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your email displays properly on a variety of devices and email clients.
 
 ![newemailtest][15]
 
-### Step 2b: Check for E-Mail Errors
+### Step 2c: Check for Email Errors
 
-The new E-Mail Editor will call out problems with your message before you send. Here's a list of errors that are accounted for in our editor:
+The new Email Editor will call out problems with your message before you send. Here's a list of errors that are accounted for in our editor:
 
 - From Display Name and Header not specified together.
-- Invalid From and Reply-To E-Mails.
+- Invalid From and Reply-To Emails.
 - Duplicate Header Keys.
 - Liquid Syntax Problems.
 - [E-Mail bodies larger than 400kb; bodies are highly recommended to be smaller than 102kb.][16]
-- E-Mails with blank Bodies or Subjects.
-- E-Mails with no unsubscribe link.
-- The E-Mail that you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
+- Emails with blank Bodies or Subjects.
+- Emails with no unsubscribe link.
+- The email that you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
 
 
 ## Step 3: Schedule Your Messaging Campaign
@@ -124,11 +129,8 @@ Braze will de-duplicate sends by email address. However, opens are not de-duplic
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[7]: {% image_buster /assets/img_archive/Multiple_click_tracking_screen_3a.png %}
 [9]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-email
 [10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[11]: {% image_buster /assets/img_archive/email_heatmap.png %}
-[12]: {% image_buster /assets/img_archive/Email_Click_Metrics.png %}
 [13]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img_archive/Email2Overview.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}

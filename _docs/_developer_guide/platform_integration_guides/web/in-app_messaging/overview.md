@@ -2,7 +2,7 @@
 nav_title: Overview
 platform: Web
 page_order: 0
-search_rank: 5
+
 ---
 # In-App Messages
 
@@ -34,9 +34,9 @@ To see examples of in-app messages, check out our [Client Integration Gallery][5
 
 ### In-App Message Types
 
-Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
+Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery. 
 
-All in-app messages inherit their prototype from [`appboy.ab.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.ab.SlideUpMessage][3], [appboy.ab.ModalMessage][6], [appboy.ab.FullScreenMessage][7], and [appboy.ab.HtmlMessage][12].
+All in-app messages inherit their prototype from [`appboy.ab.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.ab.SlideUpMessage][3], [appboy.ab.ModalMessage][6], [appboy.ab.FullScreenMessage][7], and [appboy.ab.HtmlMessage][12]. 
 
 ### Expected Behaviors by Message Types
 
@@ -80,7 +80,13 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 [`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a Javascript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages) for more details.
 
->  To enable HTML in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+{% alert important %}
+
+To enable HTML in-app messages, your SDK integration __must__ supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+<br> <br>
+At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message, therefore the same `enableHtmlInAppMessages` option must be set. 
+
+{% endalert %}
 
 The following example shows a paginated HTML in-app message:
 
@@ -102,7 +108,6 @@ The following example shows a paginated HTML in-app message:
 [42]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
 [47]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
-[49]: {% image_buster /assets/img_archive/Web_Slideup.png %}
 [51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [52]: {{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages
 [53]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam

@@ -1,6 +1,6 @@
 ---
 nav_title: Consent & Address Collection
-page_order: 3
+page_order: 2
 ---
 
 # Consent

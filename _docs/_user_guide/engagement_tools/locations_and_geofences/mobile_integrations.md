@@ -1,6 +1,6 @@
 ---
 nav_title: Mobile Integrations
-page_order: 2
+page_order: 1
 ---
 
 # Mobile Integrations

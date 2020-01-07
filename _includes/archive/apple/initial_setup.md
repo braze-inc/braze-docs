@@ -1,4 +1,4 @@
-Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app slideup message with which you can engage your users{% endif %}.
+Installing the Braze SDK will provide you with basic analytics functionality{% if include.platform == 'iOS' %} as well as a working in-app messages with which you can engage your users{% endif %}.
 
 The {{include.platform}} Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
@@ -22,15 +22,13 @@ __Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
-If you are using Xcode 9+, add the following line to your Podfile:
+Add the following line to your Podfile:
 
 ```
 target 'YourAppTarget' do
   pod 'Appboy-{{include.platform}}-SDK'
 end
 ```
-
-If you are using Xcode 8.3.3 or earlier, please use SDK version 3.0.2.
 
 __Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-{{include.platform}}-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-{{include.platform}}-SDK'` in your Podfile.
 {% if include.platform == 'iOS' %}
@@ -103,22 +101,27 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 
 ### Step 5: Specify Your Custom Endpoint or Data Cluster
 
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Compile-time Endpoint Configuration (Recommended)
-
-Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+If given a pre-exisiting custom endpoint...
+- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 #### Runtime Endpoint Configuration
 
-Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+If given a pre-exisiting custom endpoint...
+- Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
 Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has been removed in Braze iOS SDK v3.17.0. If you already use `ABKAppboyEndpointDelegate`, note that in Braze iOS SDK versions v3.14.1 to v3.16.0, any reference to `dev.appboy.com` in your `getApiEndpoint()` method must be replaced with a reference to `sdk.iad-01.braze.com`.
 {% endalert %}
 
 {% alert important %}
-To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
+To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
 #### Implementation Example
@@ -196,9 +199,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_22]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/SocialNetworkViewController.m
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"

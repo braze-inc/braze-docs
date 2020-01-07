@@ -2,7 +2,7 @@
 nav_title: Localization
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Localization
 
@@ -48,9 +48,6 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 - Email
 - An email address is required.
 - Cancel
-- Please enter a feedback message.
-- Empty Feedback Message
-- Feedback
 - Send
 - Invalid Email Address
 - Please enter a valid email address and try again.

@@ -2,7 +2,7 @@
 nav_title: Customer Feedback
 platform: iOS
 page_order: 7
-search_rank: 5
+
 hidden: true
 ---
 {% alert Update %}
@@ -132,7 +132,7 @@ The SDK will call the completion handler after the feedback sends successfully o
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.submitFeedback(feedback) { (feedbackSentResult) in
+Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
       print("Feedback sent: \(feedbackSentResult)")
     }
 ```

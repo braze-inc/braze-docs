@@ -2,7 +2,7 @@
 nav_title: Locations & Geofences
 platform: iOS
 page_order: 6
-search_rank: 5
+
 ---
 # Locations & Geofences
 
@@ -13,10 +13,6 @@ To support geofences for iOS:
 1. Your integration must support background push notifications.
 
 2. Braze Geofences [must be enabled][1] through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
-
-{% alert note %}
-On iOS, we are not strictly enforcing the Braze request processing policy for geofences. When geofences are enabled, the requests will automatically be sent up even if the processing policy is manual processing.
-{% endalert %}
 
 ## Step 1: Enable Background Push
 

@@ -2,7 +2,7 @@
 nav_title: Baidu Integration
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Baidu Integration
 
@@ -24,7 +24,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Sign-up Page][17]
 
-- You will recieve an email from Baidu.  Follow the verification link.  Make sure to follow the verification link within 48 hours.
+- You will receive an email from Baidu.  Follow the verification link.  Make sure to follow the verification link within 48 hours.
 
 ![Baidu Verification Email][34]
 
@@ -136,9 +136,9 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 - In your main activity's `onCreate()` method, add the following line, which will register your application with Baidu and begin listening for incoming push messages.  Make sure to replace "Your-API-Key" with your project's Baidu API Key.
 
-  ```
-  PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
-  ```
+```
+PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
+```
 
 - Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Appboy.registerAppboyPushMessages(channelId)`.  See our sample app's [main activity][47] for a sample implementation.
 
@@ -252,7 +252,6 @@ On the "App Settings Page" (where your API keys are located), select your Androi
 [17]: {% image_buster /assets/img_archive/baidu_signup.png %}
 [19]: {% image_buster /assets/img_archive/baidu_api_key.png %} "APIKey"
 [26]: {% image_buster /assets/img_archive/baidu_app_name.png %}
-[28]: {% image_buster /assets/img_archive/Gallery_Push_Baidu.png %}
 [29]: {% image_buster /assets/img_archive/baidu_continue.png %}
 [33]: {% image_buster /assets/img_archive/baidu_portal.png %}
 [34]: {% image_buster /assets/img_archive/baidu_email.png %}

@@ -44,4 +44,4 @@ Braze customers using Currents can now see [Azure]({{ site.baseurl }}/partners/b
 
 ## Input Field Expansions
 
-You can now expand the the input boxes for Email subject lines and Push titles.
+You can now expand the input boxes for Email subject lines and Push titles.

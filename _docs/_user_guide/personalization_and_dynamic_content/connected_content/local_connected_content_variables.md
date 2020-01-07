@@ -2,7 +2,7 @@
 nav_title: Local Connected Content Variables
 platform: Message_Building_and_Personalization
 subplatform: Personalization
-page_order: 2
+page_order: 1
 ---
 
 # Local Connected Content Variables
@@ -71,7 +71,7 @@ If the API responded with `{{localweather.consolidated_weather[0].weather_state_
 
 ![Connected Content Push Example][17]
 
-By default, Connected Content does not set a Content-Type or Accept header on the HTTP GET request that it makes. By adding `:content_type application/json` to the tag, Braze will set both the Content-Type and Accept header to the type you specify.
+By default, Connected Content will set a Content-Type header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
 
 {% raw %}
 ```
@@ -125,18 +125,19 @@ This example will cache for 900 seconds (or 15 minutes).
 
 #### Cache Busting
 
-To prevent a browser from reusing an ad it has already seen and cached, or saved, to a temporary memory file, use something like the snippet below, keeping your own needs in mind:
+To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below. 
 
 {% raw %}
 ```js
-{% assign timestamp = 'now' | date: '%Y%m%d%H%m%s' %}
-{% connected_content https://example.com/webservice.json?user_id={{${braze_id}}}&timestamp={{timestamp}} %}
+{% connected_content https://example.com/webservice.json :no_cache %}
 ```
 {% endraw %}
 
+{% alert important %}
+Be certain the provided Connected Content endpoint can handle large bursts of traffic before using this option, or you will likely see increased sending latency (increased delays or wider time intervals between request and response) due to Braze making Connected Content requests for every single message.
+{% endalert %}
+
 With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
-
-
 
 [1]: #aborting-connected-content
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
@@ -193,6 +194,5 @@ With a `POST` you don't need to cache bust, as Braze never caches the results fr
 [57]: https://developer.accuweather.com
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
-[60]: {% image_buster /assets/img_archive/Accuweather_APIKey2.png %}
 [61]: https://developer.accuweather.com/weather-icons
 [62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

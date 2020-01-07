@@ -32,7 +32,7 @@ GET https://YOUR_REST_API_URL/subscription/user/status
 | `external_id`  | Yes | String | The external_id of the user (must include at least one and at most 50 `external_ids`). |
 | `email`  |  Yes | String | The email address of the user (must include at least one address and at most 50 addresses). |
 | `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
-| `offset`  |  No | Integer | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+| `offset`  |  No | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
 
 {% alert tip %}
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
@@ -46,7 +46,7 @@ https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-o
 
 ## Getting the Subscription Status
 
-Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include a 0 (subscribed), 1 (unsubscribed), or null value for the specific subscription group requested in the API call.  This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+Use the endpoints below to get the subscription state of a user in a subscription group. These groups will be available on the __Subscription Group__ page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call.  This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
 Instance  | REST Endpoint
 ----------|------------------------------------------------
@@ -64,9 +64,10 @@ EU-01 | `https://rest.fra-01.braze.eu/subscription/status/get`
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
 | `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
-| `email` | Yes* | String | The email address of the user. Can be passed as an array of string with a max of 50. |
+| `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
+| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
-_* Either `external_id` or `email` are required._
+_* Generally, either `external_id` or `email` is required. <br>  But, for SMS subscription groups, either `external_id` or `phone` is required. <br>  Must include `phone` or `email` value, but not both._
 
 ### Example Request
 
@@ -98,8 +99,12 @@ Content-Type: application/json
    "email": (required*, string) the email address of the user
    //one of eternal_id or email is required
    //can be passed as an array of string with a max of 50
+   //endpoint only accepts email or phone value, not both
+   "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
  }
 ```
+> Only `external_id` or `phone` is accepted for SMS subscription groups
+
 
 _Example of API call_
 
@@ -114,7 +119,10 @@ Content-Type: application/json
     "api_key": "12345",
     "subscription_group_id": "111-222-333",
     "subscription_state": "unsubscribed",
-    "email": "john@braze.com"
+    //endpoint only accepts email or phone value, not both
+    "email": "john@braze.com",
+    - or -
+    "phone": "+14152342671"
   }
 ```
 
@@ -124,6 +132,8 @@ Response: (status 201)
     "message": "success"
 }
 ```
-
+{% alert important %}
+The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+{% endalert %}
 
 [support]: {{ site.baseurl }}/support_contact/

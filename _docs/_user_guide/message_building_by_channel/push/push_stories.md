@@ -2,7 +2,7 @@
 nav_title: Push Stories
 platform: Message_Building_and_Personalization
 subplatform: Push
-page_order: 2
+page_order: 8
 ---
 
 # Push Stories
@@ -65,6 +65,5 @@ In certain situations where all the pages do not load, for example due to a loss
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
 [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
 [3]: {% image_buster /assets/img_archive/pushstories_composer_setup.gif %}
-[4]: {% image_buster /assets/img_archive/pushstories_composer_dropdown.png %}
 [5]: {% image_buster /assets/img_archive/pushstories_analytics.png %}
 [6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}

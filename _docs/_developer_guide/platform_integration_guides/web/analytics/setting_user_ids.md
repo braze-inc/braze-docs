@@ -2,7 +2,7 @@
 nav_title: Setting User IDs
 platform: Web
 page_order: 1
-search_rank: 5
+
 ---
 ## Setting User IDs
 
@@ -12,9 +12,13 @@ User IDs should be set for each of your users. These should be unchanging and ac
 - Import data about your users using our [User Data API][1].
 - Target specific users with our [Messaging API][2] for both general and transactional messages.
 
->  If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default.
+{% alert note %}
+If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities above. You should avoid setting User IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default.
+{% endalert %}
 
->  These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
+{% alert warning %}
+These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
+{% endalert %}
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
@@ -41,7 +45,7 @@ Please note the following:
 - __Once a user ID has been set, you cannot revert that user to an anonymous profile__
 - __Do Not change the user ID upon a user "log out".__
   - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
-  - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, slideup and other Braze resources for the new user.
+  - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, in-app messages, and other Braze resources for the new user.
 
 > If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Filters
-page_order: 4
+page_order: 3
 ---
 
 # Filters
@@ -140,5 +140,4 @@ Which will return something like:
 [24]: https://docs.shopify.com/themes/liquid/filters/additional-filters#date
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
 [27]: #adding-personalizable-attributes-objects
-[29]: {% image_buster /assets/img_archive/MemberSince.png %}
 [30]: #variable-tags

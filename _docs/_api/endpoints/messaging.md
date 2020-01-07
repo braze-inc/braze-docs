@@ -1,35 +1,23 @@
 ---
 nav_title: Messaging
 page_order: 2
-search_rank: 5
-local_redirect: #parameter-definitions
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-group-rest-api-key
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #app-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #external-user-id
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #segment-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #campaign-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #send-identifier
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #trigger-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #canvas-entry-properties
-  hashtag-name-here: '/docs/api/parameters/'
-local_redirect: #server-responses
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #messaging-queued
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #responses-for-tracked-send-ids
-  hashtag-name-here: '/docs/api/errors/'
-local_redirect: #fatal-errors
-  hashtag-name-here: '/docs/api/errors/'
+
+local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
+  parameter-definitions: '/docs/api/parameters/'
+  app-group-rest-api-key: '/docs/api/parameters/'
+  app-identifier: '/docs/api/parameters/'
+  external-user-id: '/docs/api/parameters/'
+  segment-identifier: '/docs/api/parameters/'
+  campaign-identifier: '/docs/api/parameters/'
+  canvas-identifier: '/docs/api/parameters/'
+  send-identifier: '/docs/api/parameters/'
+  trigger-properties: '/docs/api/parameters/'
+  canvas-entry-properties: '/docs/api/parameters/'
+  server-responses: '/docs/api/errors/'
+  messaging-queued: '/docs/api/errors/'
+  responses-for-tracked-send-ids: '/docs/api/errors/'
+  fatal-errors: '/docs/api/errors/'
+  
 ---
 # Messaging
 
@@ -37,7 +25,7 @@ local_redirect: #fatal-errors
 
 The Braze messaging API provides you with two distinct options for sending messages to your users. You can provide the message contents and configuration in the API request with the `/messages/send` and `/messages/schedule` endpoints. Alternatively, you can manage the details of your message with an API-Triggered Delivery campaign in the dashboard and just control when and to whom it is sent with the `campaigns/trigger/send` and `campaigns/trigger/schedule` endpoints. The following sections will detail the request specification for both methods.
 
-The examples below contain the URL https://rest.iad-01.braze.com, but some customers will need to use a different endpoint URL, for example if you are hosted in Braze's EU data center or have a dedicated Braze installation. Your Success Manager will inform you if you should use a different endpoint URL.
+The examples below contain the URL https://rest.iad-01.braze.com, but some customers will need to use a different endpoint URL, for example, if you are hosted in Braze's EU data center or have a dedicated Braze installation. Your Success Manager will inform you if you should use a different endpoint URL.
 
 >  Similarly to other campaigns, you can limit the number of times a particular user can receive a Messaging API campaign by configuring [re-eligibility settings][40] in the Braze Dashboard. Braze will not deliver API messages to users that haven't become re-eligible for the campaign regardless of how many API requests are sent.
 
@@ -82,8 +70,9 @@ Content-Type: application/json
      "windows_universal_push": (optional, Windows Universal Push Object),
      "kindle_push": (optional, Kindle/FireOS Push Object),
      "web_push": (optional, Web Push Object),
-     "email": (optional, Email Object)
-     "content_card": (optional, Content Card Object)
+     "email": (optional, Email Object),
+     "content_card": (optional, Content Card Object),
+     "sms": (optional, SMS Object)
    }
  }
 ```
@@ -91,7 +80,7 @@ For more information on the "broadcast" flag, see [Broadcast][42] below.
 
 ### Sending Messages via API Triggered Delivery
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard, while dictating when a message is sent, and to whom via your API. Please see this section of [Braze Academy for further details][39].
+API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API. Please see this section of [Braze Academy for further details][39].
 
 Instance  | REST Endpoint
 ----------|------------------------------------------------
@@ -115,7 +104,7 @@ Content-Type: application/json
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, Connected Audience Object) see Connected Audience,
   // Including 'audience' will only send to users in the audience
-  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to entire segment targeted by the campaign) [
+  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the campaign) [
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
@@ -158,6 +147,8 @@ For more information on the "broadcast" flag, see [Broadcast][42] below.
 >  Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
 
 >  If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
+
+> Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
 ##  Schedule Endpoints
 
@@ -210,9 +201,10 @@ Content-Type: application/json
     "windows8_push": (optional, Windows Universal Push Object),
     "kindle_push": (optional, Kindle/FireOS Push Object),
     "web_push": (optional, Web Push Object),
-    "email": (optional, Email object)
-    "webhook": (optional, Webhook object)
-    "content_card": (optional, Content Card Object)
+    "email": (optional, Email object),
+    "webhook": (optional, Webhook object),
+    "content_card": (optional, Content Card Object),
+    "sms": (optional, SMS Object)
   }
 }
 ```
@@ -281,7 +273,7 @@ For more information on the "broadcast" flag, see [Broadcast][42] below.
 
 ##### The Schedule Object
 
-The parameters for the Campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message. If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time. If you set `in_local_time` to be true, your users will receive the message at the designated date and time in their respective timezones. If `in_local_time`is true, you will get an error response if the `time` parameter has passed in your company's time zone. If you set `at_optimal_time` to be true, your users will receive the message at the designated date at the [optimal time][33] for them (regardless of the time you provide). When using local or optimal time sending, do not provide time zone designators in the value of the time parameter (e.g. just give us `"2015-02-20T13:14:47"` instead of `"2015-02-20T13:14:47-05:00"`).
+The parameters for the Campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message. If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time. If you set `in_local_time` to be true, your users will receive the message at the designated date and time in their respective timezones. If `in_local_time` is true, you will get an error response if the `time` parameter has passed in your company's time zone. If you set `at_optimal_time` to be true, your users will receive the message at the designated date at the [optimal time][33] for them (regardless of the time you provide). When using local or optimal time sending, do not provide time zone designators in the value of the time parameter (e.g. just give us `"2015-02-20T13:14:47"` instead of `"2015-02-20T13:14:47-05:00"`).
 
 The response will provide you with a `schedule_id` that you should save in case you later need to cancel or update the message you schedule:
 
@@ -293,6 +285,8 @@ Content-Type: application/json
 ```
 
 >  Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+
+> Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
 ###  Update Schedule Endpoint
 
@@ -369,7 +363,7 @@ Content-Type: application/json
 
 ##### Updating API Triggered Campaigns and Canvases
 
-Any schedule will completely overwrite the one that you provided in the create schedule request or in previous update schedule requests. For example, if you originally provide `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` and then in your update you provide `"schedule" : {"time" : "2015-02-20T14:14:47"}`, your message will now be sent at the provided time in UTC, not in the user's local time. Scheduled triggers that are updated very close to or during the time they were supposed to be sent will be updated with best efforts, so last second changes could be applied to all, some, or none of your targeted users.
+Any schedule will completely overwrite the one that you provided in the create schedule request or in previous update schedule requests. For example, if you originally provide `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` and then in your update you provide `"schedule" : {"time" : "2015-02-20T14:14:47"}`, your message will now be sent at the provided time in UTC, not in the user's local time. Scheduled triggers that are updated very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second changes could be applied to all, some, or none of your targeted users.
 
 ###  Delete Schedule Endpoint
 
@@ -416,7 +410,7 @@ Content-Type: application/json
 }
 ```
 
-Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last second deletions could be applied to all, some, or none of your targeted users.
+Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
 
 ## Create Send IDs For Message Send Tracking
 
@@ -532,7 +526,7 @@ The User Alias Object consists of two parts: an `alias_name` for the identifier 
 
 ### Connected Audience Object
 
-A Connected Audience is a selector that identifies the audience to send the message to. It is composed of either a single Connected Audience Filter, or several Connected Audience Filters in a logical expression using either "AND" or "OR" operators.
+A Connected Audience is a selector that identifies the audience to send the message to. It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either "AND" or "OR" operators.
 
 Multiple filter example:
 
@@ -555,7 +549,7 @@ Multiple filter example:
 
 ### Connected Audience Filter
 
-These filters are used to create an Connected Audience Object.
+These filters are used to create a Connected Audience Object.
 
 #### Custom Attribute Filter
 
@@ -653,7 +647,7 @@ This filter allows you to segment based on a user's email subscription status. T
 
 #### Last Used App Filter
 
-This filter allows you to segment based on when was the last time user used the App. These filters contain two fields:
+This filter allows you to segment based on when was the last time the user used the App. These filters contain two fields:
 
 ```json
 {
@@ -693,7 +687,7 @@ This filter allows you to segment based on when was the last time user used the 
 }
 ```
 
->  You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object, and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
+>  You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
 ##### Apple Push Alert Object
 
@@ -776,7 +770,7 @@ You _must_ include the `category` field in the Apple Push Object to use iOS push
 
 >  `priority` will accept values from -2 to 2, where -2 represents "MIN" priority and 2 represents "MAX". 0 is the "DEFAULT" value. Any values sent that outside of that integer range will default to 0. For more information on which priority level to use, please see our section on [Android Notification Priority][29].
 
->  The value for the large icon `push_icon_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. Images used for custom notification icons will only display on devices running Honeycomb MR1 (Android 3.1) or higher.
+>  The value for the large icon `push_icon_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40.
 
 >  If `notification_channel` is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more information on `notification_channel` please see our [developer documentation][43] and our [academy article][44].
 
@@ -803,7 +797,7 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
 
 
 ```
-  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
+"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
 ```
 
 
@@ -818,7 +812,7 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
   "pinned": (optional, boolean) whether the card is pinned. Defaults to false,
   "image_url": (optional, string) the card's image URL. Required for "CAPTIONED_IMAGE" and "BANNER",
   "time_to_live": (optional, integer) the number of seconds before the card expires. You must include either "time_to_live" or "expire_at",
-  "expire_at": (optional, string) ISO 8601 date when the card expires. You must include either "time_to_live" or "expire_at",
+  "expire_at": (optional, string) ISO 8601 date when the card expires. You must include either "time_to_live" or "expire_at", a maximum expiration time exists of 30 days,
   "expire_in_local_time": (optional, boolean) if using "expire_at", determines whether the card should expire in users' local time. Defaults to false,
   "ios_uri": (optional, string) a web URL, or Deep Link URI,
   "android_uri": (optional, string) a web URL, or Deep Link URI,
@@ -829,6 +823,13 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
   "extra": (optional, object) additional keys and values sent with the card,
 }
 ```
+{% endraw %}
+
+{% alert important %}
+Currently, Braze supports a maximum expiration time of 30 days.
+{% endalert %}
+
+{% raw %}
 
 ### Kindle/FireOS Push Object
 
@@ -857,8 +858,8 @@ When using one of the endpoints for triggering or scheduling a Canvas via the AP
    "extra": (optional, object) additional keys and values to be sent in the push,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Kindle/FireOS Push Message),
    "custom_uri": (optional, string) a web URL,
-   "image_url": (optional, string) url for image to show,
-   "large_image_url": (optional, string) url for large image, supported on Chrome Windows/Android,
+   "image_url": (optional, string) URL for image to show,
+   "large_image_url": (optional, string) URL for large image, supported on Chrome Windows/Android,
    "require_interaction": (optional, boolean) whether to require the user to dismiss the notification, supported on Mac Chrome,
    "time_to_live": (optional, integer (seconds)),
    "send_to_most_recent_device_only" : (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used browser, rather than all eligibles browsers,
@@ -924,10 +925,10 @@ See the Windows Universal [toast template catalog][32] for details on the option
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash), extra hash - for SendGrid customers, this will be passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash), hash of custom extensions headers. Currently, only supported for SendGrid customers,
-  "should_inline_css": (optional, boolean), whether to inline css on the body. If not provided, falls back to the default css inlining value for the App Group,
-  "attachments": (optional, array), array of json objects that define the files you need attached, defined by "file_name" and "url" below,
+  "should_inline_css": (optional, boolean), whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the App Group,
+  "attachments": (optional, array), array of JSON objects that define the files you need attached, defined by "file_name" and "url" below,
     "file_name": (required, string) the name of the file you would like to attach to your email. You can attach any number of files up to 1MB. This is required if you use "attachments",
-    "url": (required, string) the corresponding url of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined below, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments".
+    "url": (required, string) the corresponding URL of the file you would like to attach to your email. The file name's extension will be detected automatically from the URL defined below, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments".
 }
 ```
 
@@ -936,6 +937,20 @@ See the Windows Universal [toast template catalog][32] for details on the option
 >  An `email_template_id` can be retrieved from the bottom of any Email Template created within the dashboard. Below is an example of what this ID looks like:
 
 ![Email Template ID][31]
+
+### SMS Object Specification
+
+```json
+{
+  "sms": (optional, SMS Object),
+  {  
+    "subscription_group_id": (required, string) the id of your subscription group,
+    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
+    "body": (required, string),
+    "app_id": (required, string) see App Identifier above
+  }
+}
+```
 
 ### Webhook Object Specification
 
@@ -953,11 +968,9 @@ See the Windows Universal [toast template catalog][32] for details on the option
 
 ## Broadcast
 
-When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call. If the `broadcast` flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including `broadcast: true` and providing a recipient list will return an error. The `broadcast` flag is required in order to protect against accidental sends to large groups of users.
+When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a `broadcast` to a large group of users by including a `broadcast` boolean in the API call. That is if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include `broadcast: true` in your API call.
 
-{% alert important %}
-For backwards-compatibility, this field is only required for API calls made for campaigns and Canvases created after August 15, 2017 that intend to send to the entire audience. It will be mandatory on August 31, 2017 for all campaigns and Canvases for API calls that intend to send to the entire audience. The behavior for API calls to deliver campaigns and canvases created prior to these dates is: if an explicit list of recipients is not provided, the message will send to the entire targeted audience of the campaign or Canvas. That is, until 8/15/17, the `broadcast` field does not have a default value, so you may wish to explicitly set `broadcast: false` in existing API calls. On 8/15/17, it will default to false for newly created Campaigns and Canvases. On 8/31/17, it will default to false for all API calls.
-{% endalert %}
+Broadcast is a required field and the default value set by Braze when a Campaign or Canvas is made is `broadcast: false`. If the `broadcast` flag is not set to true and an explicit list of recipients is provided, the API endpoint will return an error. Similarly, including `broadcast: true` and not providing a recipient list will return an error. The `broadcast` flag is required to protect against accidental sends to large groups of users.
 
 [18]: https://dashboard-01.braze.com/app_settings/api_settings/
 [19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification

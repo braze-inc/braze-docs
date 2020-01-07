@@ -2,7 +2,7 @@
 nav_title: Sample Apps
 platform: Android
 page_order: 9
-search_rank: 5
+
 ---
 # Sample Apps
 
@@ -16,27 +16,28 @@ Braze's test application within the [Android SDK github repository][3] is called
 - Copy your FCM API Key into your "App Settings" page.
 - To assemble the Droidboy APK run the following command within the SDK directory:
 
-  ```
-  ./gradlew assemble
-  ```
+```
+./gradlew assemble
+```
 > Use `gradlew.bat` on Windows
 
 - To automatically install the Droidboy APK on a test device run the following command within the SDK directory:
 
-  ```
-  ./gradlew installDebug
-  ```
+```
+./gradlew installDebug
+```
 
-## Building the Hello Braze Test Application
-The Hello Braze test application shows a minimal use case of the Braze SDK, and additionally shows how to easily integrate the Braze SDK into a gradle project.
+## Building the Hello Appboy Test Application
+The Hello Appboy test application shows a minimal use case of the Braze SDK, and additionally shows how to easily integrate the Braze SDK into a gradle project.
 
 1. Copy your API key from your "App Settings" page into your `appboy.xml` file in the `res/values` folder.
 ![HelloBraze][34]
 
 2. To install the sample app to a device or emulator, run the following command within the SDK directory:
-  ```
-  ./gradlew installDebug
-  ```
+
+```
+./gradlew installDebug
+```
 
 > If you don't have your `ANDROID_HOME` variable properly set or don't have a `local.properties` folder with a valid `sdk.dir` folder, this plugin will also install the base SDK for you. See the [plugin repo][27] for more information.
 

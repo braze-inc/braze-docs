@@ -1,6 +1,6 @@
 ---
 nav_title: Web SDK
-page_order: 3.6
+page_order: 3
 ---
 # Web SDK
 
@@ -50,9 +50,7 @@ This will allow you to target users based on their behavior on the web only. If 
 [6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [7]: {% image_buster /assets/img_archive/web-app-group.png %}
 [8]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/
-[9]: {% image_buster /assets/img_archive/appboy-web-inapp-message.png %}
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}
 [11]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
 [13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
-[14]: {% image_buster /assets/img_archive/Appboy_Web_Push_Gif.gif %}

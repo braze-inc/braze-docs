@@ -2,7 +2,7 @@
 nav_title: Integration
 platform: Android
 page_order: 0
-search_rank: 5
+
 ---
 # Overview
 
@@ -25,7 +25,7 @@ For devices without Google services installed, Braze offers the option to send p
 Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
 
 {% alert update %}
-Though you could previously use GCM, Google has announced that they will remove support for GCM as soon as April 11, 2019 and automatic GCM registration is unavailable through the Braze SDK. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
+Automatic GCM registration is unavailable through the Braze SDK as a result of Google's removal of support for GCM on May 29, 2019. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
 {% endalert %}
 
 ### Firebase Integration
@@ -206,6 +206,14 @@ Braze's notification code also uses `AppboyFirebaseMessagingService` to handle o
 If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
 {% endalert %}
 
+{% alert update %}
+Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+{% endalert %}
+
+**Implementation Example**
+
+- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
+
 ##### Using Your Own Firebase Messaging Service
 
 If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [AppboyFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
@@ -250,13 +258,25 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-> Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
+### Step 2: Ensure Small Icons Conform to Design Guidelines
 
-**Implementation Example**
+For general information about Android notification icons, please see the [Notifications Overview documentation][37].
 
-- See [`AndroidManifest.xml`][70] in the Firebase Push sample app.
+Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha/transparency channels in action icons and in the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome with the exception of the transparent regions.
 
-### Step 2: Configure Notification Icons
+To properly create a notification small icon asset:
+- Remove all color from the image except for white.
+- All other non-white regions of the asset should be transparent. 
+
+{% alert note %}
+A common symptom of an improper asset is the notification small icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
+{% endalert %}
+
+The icons pictured below are examples of properly designed icons:
+
+![Android Icon Example][38]
+
+### Step 3: Configure Notification Icons
 
 ##### Specifying Icons in appboy.xml
 
@@ -279,17 +299,7 @@ Setting a large notification icon is optional but recommended.
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
 ```
 
-##### Notification Icon Design Guidelines
-
-For general information about Android notification icons, please see the [Anatomy of a Notification section from the Android developer documentation][37].
-
-[Android's Design Guidelines][31] require small notification icons to be all white on a transparent background. __If you do not comply, your icons may look suboptimal when displayed by the Android system.__
-
-The icons pictured below are examples of properly designed icons:
-
-![Android Icon Example][38]
-
-### Step 3: Add Deep Links
+### Step 4: Add Deep Links
 
 ##### Enabling Automatic Deep Link Opening
 
@@ -376,7 +386,7 @@ See the equivalent configuration for your `appboy.xml`. Note that the class name
 
 Back stack configuration is only available on SDK 2.1.4 and above.
 
-### Step 4: Define Notification Channels
+### Step 5: Define Notification Channels
 
 Braze SDKs 2.1.0 and above support [Android O Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
@@ -403,7 +413,7 @@ For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, 
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Test Notification Display and Analytics
+### Step 6: Test Notification Display and Analytics
 
 #### Testing Display
 
@@ -616,10 +626,9 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
 [30]: #step-3-enable-automatic-registration
-[31]: https://developer.android.com/design/style/iconography.html#notification
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
-[37]: http://developer.android.com/design/patterns/notifications.html#Anatomy "Anatomy of a Android Notification"
+[37]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [38]: {% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon"
 [40]: http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation"
 [41]: {% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action"
@@ -632,7 +641,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [50]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
 [52]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[54]: {% image_buster /assets/img_archive/android_push_reg.png %} "Android Push Registration"
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/

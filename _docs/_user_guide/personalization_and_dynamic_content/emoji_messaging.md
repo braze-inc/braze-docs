@@ -1,6 +1,6 @@
 ---
 nav_title: Emoji Messaging
-page_order: 6
+page_order: 4
 ---
 # Emoji Messaging
 
@@ -42,5 +42,4 @@ Many of the available emojis are currently unviewable in the Chrome browser. Thi
 [2]: {% image_buster /assets/img_archive/accessing_emoji_2.png %}
 [3]: {% image_buster /assets/img_archive/push_emoji.png %}
 [9]: http://apps.timwhitlock.info/emoji/tables/unicode
-[10]: {% image_buster /assets/img_archive/emoji_windows.png %}
 [EmojiOne extension]: http://emojione.com/chrome/

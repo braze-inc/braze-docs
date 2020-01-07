@@ -66,11 +66,20 @@ Add our `AppboyReactPackage` to the `getPackages()` method of your Application c
     }
 ```
 
+If your main activity uses the `singleTask` `launchMode`, add the following code to your main activity to ensure that deep links from push are passed to `Linking.getInitialURL()`.
+
+```java
+public void onNewIntent(Intent intent) {
+  super.onNewIntent(intent);
+  setIntent(intent);
+}
+```
+
 ### Completing the integration
 
-1.  Follow the directions at [our public documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/) to finish your integration. In particular, you will need to set your Braze API key and custom endpoint in a new `appboy.xml` file.
+1.  Follow the directions at [our public documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) to finish your integration. In particular, you will need to set your Braze API key in a new `appboy.xml` file.
 2.  When you need to make Braze calls from javascript, use the following declaration to import the javascript module:
 
-  ```
-  const ReactAppboy = require('react-native-appboy-sdk');
-  ```
+```
+const ReactAppboy = require('react-native-appboy-sdk');
+```

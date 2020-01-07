@@ -18,7 +18,7 @@ Each alias consists of two parts: a _name_ for the identifier itself, and a _lab
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance().user.addAlias(ALIAS_NAME, ALIAS_LABEL);
+Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 
 {% endtab %}
@@ -26,9 +26,22 @@ Appboy.sharedInstance().user.addAlias(ALIAS_NAME, ALIAS_LABEL);
 
 {% elsif include.platform == "Android" %}
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+Appboy.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% elsif include.platform == "Web" %}
 

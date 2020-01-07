@@ -2,7 +2,7 @@
 nav_title: Tracking Custom Events
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 ## Tracking Custom Events
 
@@ -13,7 +13,7 @@ Before implementation, be sure to review examples of the segmentation options af
 ### Adding A Custom Event
 
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME);
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 See the [Javadoc][2] for more information.
@@ -27,7 +27,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 ```java
 AppboyProperties eventProperties = new AppboyProperties();
 eventProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
 
 #### Reserved Keys

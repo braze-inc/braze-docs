@@ -13,11 +13,11 @@ You can see the Xamarin binding accessing these interfaces in the `HomeFragment.
 ```csharp```
 // Record Facebook Data
 FacebookUser facebookUser = new FacebookUser("708379", "Test", "User", "test@braze.com", "Test", "Testtown", Gender.Male, new Java.Lang.Integer(100), new String[]{"Cats", "Dogs"}, "06/17/1987");
-Appboy.GetInstance(this).CurrentUser.SetFacebookData(facebookUser);
+Appboy.GetInstance(context).CurrentUser.SetFacebookData(facebookUser);
 
 // Record Twitter Data
 TwitterUser twitterUser = new TwitterUser(6253282, "Test", "User", "Tester",  new Java.Lang.Integer(100), new Java.Lang.Integer(100), new Java.Lang.Integer(100), "https://si0.twimg.com/profile_images/2685532587/fa47382ad67a0135acc62d4c6b49dbdc_bigger.jpeg");
-Appboy.GetInstance(this).CurrentUser.SetTwitterData(twitterUser);
+Appboy.GetInstance(context).CurrentUser.SetTwitterData(twitterUser);
 ```
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/

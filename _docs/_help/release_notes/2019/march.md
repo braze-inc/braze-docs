@@ -34,4 +34,4 @@ You can now use [Inkit]({{ site.baseurl }}/partners/inkit/) as a Predesigned Web
 
 ## Google Cloud Storage
 
-Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).
+Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).

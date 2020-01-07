@@ -2,7 +2,7 @@
 nav_title: Amp Support
 platform: Web
 page_order: 5
-search_rank: 5
+
 ---
 # Amp Support
 
@@ -51,15 +51,15 @@ Create a `service-worker.js` file with the content below, and place it in the ro
 You'll now need to add the amp-web-push html element to your page. Drop the following HTML code into the body of your document:
 
 ```
-    <amp-web-push
-    layout="nodisplay"
-    id="amp-web-push"
-    helper-iframe-url="FILE_PATH_TO_YOUR_HELPER_IFRAME"
-    permission-dialog-url="FILE_PATH_TO_YOUR_PERMISSION_DIALOG"
-    service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey=YOUR_API_KEY&baseUrl=YOUR_BASE_URL"
-    >
+<amp-web-push
+layout="nodisplay"
+id="amp-web-push"
+helper-iframe-url="FILE_PATH_TO_YOUR_HELPER_IFRAME"
+permission-dialog-url="FILE_PATH_TO_YOUR_PERMISSION_DIALOG"
+service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey=YOUR_API_KEY&baseUrl=YOUR_BASE_URL"
+>
 ```
 
-In particular, the service-worker-url requires appending your apiKey and baseUrl (if you don't have a custom endpoint use the default: https://dev.appboy.com/api/v3) as query parameters, as shown above. 
+In particular, the service-worker-url requires appending your apiKey and baseUrl (https://dev.appboy.com/api/v3) as query parameters, as shown above. 
 
 You should now be configured for push subscription and unsubscription on your AMP page. 

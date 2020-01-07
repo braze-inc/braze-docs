@@ -1,7 +1,7 @@
 ---
 nav_title: Export
 page_order: 1
-search_rank: 2
+
 ---
 
 # Export
@@ -34,6 +34,7 @@ Content-Type: application/json
     "device_id" : (optional, string) device id as returned by various SDK methods such as getDeviceId,
     "braze_id" : (optional, string) Braze ID for a particular user,
     "email_address" : (optional, string) email address of a user,
+    "phone" : (optional, string) phone number of a user,
     "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'], defaults to all if not provided
 }
 ```
@@ -222,6 +223,9 @@ User export object (we will include the least data possible - if a field is miss
             "carrier" : (string),
             "idfv" : (string) only included for iOS devices,
             "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
+            "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
+            "roku_ad_id" : (string) only included for Roku devices,
+            "windows_ad_id" : (string) only included for Windows devices,
             "ad_tracking_enabled" : (bool)
         },
         ...
@@ -568,8 +572,16 @@ Content-Type: application/json
                       "delivered": (int),
                       "reported_spam": (int)
                     }
+                ],
+                "sms" : [
+                  {
+                    "sent": (int),
+                    "delivered": (int),
+                    "undelivered": (int),
+                    "delivery_failed": (int)
+                  }
                 ]
-            },
+              },
            "conversions_by_send_time": (optional, int),
            "conversions1_by_send_time": (optional, int),
            "conversions2_by_send_time": (optional, int),
@@ -704,6 +716,9 @@ Content-Type: application/json
 {
             "variation_name": (string) variation name,
             "sent": (int) the number of sends,
+            "delivered": (int) the number of messages successfully delivered,
+            "undelivered": (int) the number of undelivered,
+            "delivery_failed": (int) the number of rejected,
             "direct_opens": (int) the number of direct opens,
             "total_opens": (int) the number of total opens,
             "bounces": (int) the number of bounces,
@@ -782,7 +797,7 @@ Content-Type: application/json
     "tags" : (array) tag names associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) channel type of the message (eg., "email", "ios_push", "webhook", "content_card", "in-app_message"),
+            "channel": (string) channel type of the message (as in, "email", "ios_push", "webhook", "content_card", "in-app_message", "sms"),
             "name": (string) name of the message in the Dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see below ...
         }
@@ -811,11 +826,21 @@ The `messages` hash will contain information about each message. Example message
 {
     "channel": "email",
     "subject": (string) subject,
-    "body": (string) HTML body (truncated after 10kb),
+    "body": (string) HTML body,
     "from": (string) from address and display name,
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
     "extras": (hash) any key-value pairs provided
+}
+```
+
+**Content Card Channel**
+
+```json
+{
+    "channel": "content_cards",
+    "name": (string) name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
@@ -829,6 +854,17 @@ The `messages` hash will contain information about each message. Example message
     "type": (string) body content type,
     "headers": (hash) specified request headers,
     "method": (string) HTTP method (e.g., "POST" or "GET"),
+}
+```
+
+**SMS Channel**
+
+```json
+{
+  "channel": "sms",
+  "body": (string) payload body,
+  "from": (string) list of numbers associated with the subscription group,
+  "subscription_group_id": (string) API id of the subscription group targeted in the SMS message
 }
 ```
 
@@ -1178,7 +1214,7 @@ of a Canvas' results.
 
 ### News Feed List Endpoint
 
-This endpoint allows you to export a list of News Feed cards, each of which will include it's name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+This endpoint allows you to export a list of News Feed cards, each of which will include its name and Card API Identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 `GET https://YOUR_REST_API_URL/feed/list`
 
@@ -1648,7 +1684,7 @@ The following status codes and associated error messages will be returned if you
 [25]: #revenue-products
 [26]: #revenue-series
 [27]: #revenue-quantity-series
-[28]: {{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/aws_s3/#aws-s3-integration
+[28]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/aws_s3/#aws-s3-integration
 [29]: https://aws.amazon.com/documentation/s3/
 [30]: {{ site.baseurl }}/hidden/res/#parameters
 [31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#basics

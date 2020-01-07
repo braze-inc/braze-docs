@@ -2,7 +2,7 @@
 nav_title: Setting User IDs
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Setting User IDs
 
@@ -24,9 +24,22 @@ These User IDs should be private and not easily obtained (e.g. not a plain email
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
+{% tabs %}
+{% tab JAVA %}
+
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).changeUser(YOUR_USER_ID_STRING);
+Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING);
 ```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING)
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert warning %}
 __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
@@ -57,7 +70,7 @@ Please note the following:
 - __Do Not change the user ID upon a user "log out".__
   - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
 - __Switching from one identified user to another is a relatively costly operation.__
-  - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, slideup and other Braze resources for the new user.
+  - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, in-app messages, and other Braze resources for the new user.
 
 {% alert tip %}
 If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking [localization problems](http://developer.android.com/reference/java/util/Locale.html#default_locale) into account.

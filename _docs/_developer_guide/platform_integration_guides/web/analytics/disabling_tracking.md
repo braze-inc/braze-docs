@@ -2,7 +2,7 @@
 nav_title: Disabling Web SDK Tracking
 platform: Web
 page_order: 6
-search_rank: 5
+
 ---
 
 In order to comply with data privacy regulations, data tracking activity on the Web SDK can be stopped entirely using the method [`stopWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking). This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection.

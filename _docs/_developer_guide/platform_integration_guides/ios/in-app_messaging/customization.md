@@ -2,12 +2,18 @@
 nav_title: Customization
 platform: iOS
 page_order: 1
-search_rank: 5
+
 ---
 
 # Customization {#in-app-message-customization}
 
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
+
+{% alert important %}
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+<br><br>
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+{% endalert %}
 
 ## Key-Value Pair Extras
 
@@ -114,25 +120,38 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAp
 
 ### Setting Orientation For All In-App Messages
 
-To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMasks` property on `ABKInAppMessageController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
+To set a fixed orientation for all in-app messages, you can set the `supportedOrientationMask` property on `ABKInAppMessageUIController`. Add the following code after your app's call to `startWithApiKey:inApplication:withLaunchOptions:`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 // Set fixed in-app message orientation to portrait.
-[Appboy sharedInstance].inAppMessageController.supportedOrientationMasks = UIInterfaceOrientationMaskPortrait;
 // Use UIInterfaceOrientationMaskLandscape to display in-app messages in landscape
+id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstance].inAppMessageController.inAppMessageUIController;
+((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
 // Set fixed in-app message orientation to portrait
-Appboy.sharedInstance()?.inAppMessageController.supportedOrientationMasks = portrait;
-// Use landscape to display in-app messages in landscape
+// Use .landscape to display in-app messages in landscape
+if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController as? ABKInAppMessageUIController {
+  controller.supportedOrientationMask = .portrait
+}
 ```
+
+{% alert update %}
+As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
+{% endalert %}
+
 
 {% endtab %}
 {% endtabs %}
@@ -143,6 +162,9 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 You may alternatively set orientation on a per-message basis. To do this, [set an in-app message delegate][23]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 // Set inAppMessage orientation to portrait
 inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
@@ -151,7 +173,23 @@ inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
 inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift    
+  // Set inAppMessage orientation to portrait
+  inAppMessage.orientation = ABKInAppMessageOrientation.portrait
+    
+  // Set inAppMessage orientation to landscape
+  inAppMessage.orientation = ABKInAppMessageOrientation.landscape
+```
+
+{% endtab %}
+{% endtabs %}
+
 In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
+
+For *iPads*, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
 ## Custom Handling In-App Message Display
 
@@ -211,6 +249,10 @@ For an implementation example, see our [In-App Message Sample Application][36].
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
+### Hiding the Status Bar During Display
+
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+
 ### Logging Impressions and Clicks
 
 Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (*i.e.* if you circumvent Braze's in-app message display by returning `ABKDiscardInAppMessage` in your `beforeInAppMessageDisplayed:`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `ABKInAppMessage` class:
@@ -244,7 +286,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab OBJECTIVE-C %}
 
 ```objc
-/// Logs button click analytics
+// Logs button click analytics
 - (void)logInAppMessageClickedWithButtonID:(NSInteger)buttonID;
 ```
 
@@ -252,7 +294,7 @@ Furthermore, you should be logging button clicks on subclasses of `ABKInAppMessa
 {% tab swift %}
 
 ```swift
-/// Logs button click analytics
+// Logs button click analytics
 func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ```
 
@@ -262,10 +304,22 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 ## Customizing In-App Message Behavior on Click
 The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
-- (void)setInAppMessageClickAction:(ABKInAppMessageClickActionType)clickActionType
-                           withURI:(NSURL *)uri;
+[inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
+```
+
+{% endtab %}
+{% endtabs %}
 
 The `inAppMessageClickActionType` can be set to one of the following values:
 
@@ -401,19 +455,36 @@ By default in-app messages are triggered by event types which are logged by the 
 To enable this feature you would send a silent push to the device which allows the device to log a SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ### Step 1: Handle Silent Push and Key Value Pairs
-When building against iOS 10+ we recommend you integrate the UserNotifications framework. If you use the UserNotifications framework, add the following code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method:
+Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
-- (void)handleExtrasFromPush:(UNNotification *)notification {
- NSLog(@"A push was received");
-NSDictionary *userInfo = notification.request.content.userInfo;
- if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil ) {
-   // Here based on the extras key-value pair, you can run some custom code.
-   [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+- (void)handleExtrasFromPush:(NSDictionary *)userInfo {
+  NSLog(@"A push was received.");
+  if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
+    [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+  }
  };
 ```
 
-This will be called when a notification is received whilst the application is in the foreground. When the silent push is received an SDK recorded event 'IAM Trigger' will be logged against the user profile.
+{% endtab %}
+{% tab swift %}
+
+```swift
+func handleExtras(userInfo: [AnyHashable : Any]) {
+  NSLog("A push was received");
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
+    Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in foreground.
 
 ### Step 2: Create a Push Campaign
 
@@ -425,13 +496,13 @@ The push campaign must include key value pair extras which indicate that this pu
 
 ![IAMSilentPush][41]
 
-The code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
+The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
 You are able to alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name, or as an event property, when logging the custom event.
 
 ### Step 3: Create an In-App Message Campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method.
+Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
 In the example below the specific in-app message to be trigger has been configured by sending the event property as part of the initial silent push.
 
@@ -474,12 +545,11 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
 [21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates
-[25]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#2121
 [26]: http://fortawesome.github.io/Font-Awesome/
 [27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
-[31]: #customizing-appboy-on-startup
+[31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h

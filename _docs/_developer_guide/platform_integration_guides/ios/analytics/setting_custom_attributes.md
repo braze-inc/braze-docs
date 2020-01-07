@@ -2,7 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 # Setting Custom Attributes
 
@@ -12,20 +12,22 @@ Before implementation, be sure to review examples of the segmentation options af
 
 ## Assigning Standard User Attributes
 
-To assign user attributes, you need to set the appropriate field on the shared `ABKUser` object. For example, to assign the current user's first name to be "Jeff," you would use the following line of code:
+To assign user attributes, you need to set the appropriate field on the shared `ABKUser` object.
+
+The following is an example of setting the first name attribute:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-[Appboy sharedInstance].user.firstName = @"Jeff";
+[Appboy sharedInstance].user.firstName = @"first_name";
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.firstName = "Jeff"
+Appboy.sharedInstance()?.user.firstName = "first_name"
 ```
 
 {% endtab %}
@@ -40,7 +42,6 @@ The following attributes should be set on the `ABKUser` object:
 - `country`
 - `language`
 - `homeCity`
-- `bio`
 - `phone`
 - `userID`
 - `avatarImageURL`
@@ -54,20 +55,20 @@ __We strongly recommend collecting email addresses__ even if you're not sending 
 Beyond the attributes above, Braze also allows you to define Custom Attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
-### Custom Attribute with a Boolean Value
+### Custom Attribute with a String Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your-attribute-string" andBOOLValue:yourBOOLValue];
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andStringValue:"your_attribute_value"];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andBOOLValue: yourBoolValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andStringValue: "your_attribute_value")
 ```
 
 {% endtab %}
@@ -79,14 +80,14 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your-attribute-string" andIntegerValue:yourIntegerValue];
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andIntegerValue: yourIntegerValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andIntegerValue: yourIntegerValue)
 ```
 
 {% endtab %}
@@ -98,35 +99,35 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your-attribute-string" andDoubleValue:yourDoubleValue];
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andDoubleValue: yourDoubleValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDoubleValue: yourDoubleValue)
 ```
 
 {% endtab %}
 {% endtabs %}
 
->  Braze treats FLOAT and DOUBLE values exactly the same within our database.
+>  Braze treats `float` and `double` values exactly the same within our database.
 
-### Custom Attribute with a String Value
+### Custom Attribute with a Boolean Value
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your-attribute-string" andStringValue:"Your String"];
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andStringValue: "Your String")
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andBOOLValue: yourBoolValue)
 ```
 
 {% endtab %}
@@ -138,20 +139,20 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string",
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your-attribute-string" andDateValue:yourDateValue];
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your-attribute-string", andDateValue:yourDateValue)
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDateValue:yourDateValue)
 ```
 
 {% endtab %}
 {% endtabs %}
 
->  Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+>  Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
 ### Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][8].
@@ -193,14 +194,14 @@ Custom Attributes can also be unset using the following method:
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user unsetCustomAttributeWithKey:@"your-attribute-string"];
+[[Appboy sharedInstance].user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your-attribute-string")
+Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
 ```
 
 {% endtab %}
@@ -214,14 +215,14 @@ This code is an example of an incrementing custom attribute. You may increment t
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].user incrementCustomUserAttribute:@"Attribute Key" by:incrementIntegerValue];
+[[Appboy sharedInstance].user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.incrementCustomUserAttribute("Attribute Key", by: incrementIntegerValue)
+Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key", by: incrementIntegerValue)
 ```
 
 {% endtab %}
@@ -294,8 +295,6 @@ Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificatio
 
 {% endtab %}
 {% endtabs %}
-
->  Users who grant permission for an app to send them push notifications are defaulted to the status of `ABKOptedin` as iOS requires an explicit optin.
 
 For more information on implementing subscriptions, visit our page on [managing user subscriptions][10].
 

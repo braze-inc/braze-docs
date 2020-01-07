@@ -2,7 +2,7 @@
 nav_title: Customer Feedback
 platform: Android
 page_order: 7
-search_rank: 5
+
 hidden: true
 ---
 
@@ -62,7 +62,7 @@ See the [`DroidBoyActivity.java` file][4] in the Droidboy sample app.
 
 ## Theming the Braze Feedback UI
 
-The Braze UI elements (the feedback form and News Feed) come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution. They are completely open source and completely customizable to suit your application's aesthetic.
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
   <style name="Appboy"/>

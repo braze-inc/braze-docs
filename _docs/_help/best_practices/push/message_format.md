@@ -1,6 +1,6 @@
 ---
 nav_title: Message Format
-page_order: 8
+page_order: 5
 ---
 # Message Format
 
@@ -12,8 +12,7 @@ page_order: 8
   - iOS Banner Alert: 62 Characters
   - iOS Pop Up Alert: 235 Characters
 - Payload Size:
-  - Pre iOS 8: 0.256KB
-  - Post iOS 8: 2KB
+  - iOS: 2KB
 - Number of Lines:
   - iOS Lock Screen: 4 Lines
   - iOS Notification Center: 4 Lines
@@ -105,9 +104,6 @@ page_order: 8
 [26]: {% image_buster /assets/img_archive/textplus_directions.png %}
 [27]: {% image_buster /assets/img_archive/android_push_img2.png %}
 [29]: {% image_buster /assets/img_archive/braze_campaignresults.png %}
-[30]: {% image_buster /assets/img_archive/Push_Reporting_Campaign_Statistics.png %}
-[31]: {% image_buster /assets/img_archive/Push_Reporting_iOS_Push_Metric.png %}
-[32]: {% image_buster /assets/img_archive/Push_Reporting_Message_Deliveries.png %}
 [34]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [35]: {{ site.baseurl }}/user_guide/data_and_analytics/influenced_opens/#influenced-opens
 [36]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
@@ -131,6 +127,4 @@ page_order: 8
 [54]: {% image_buster /assets/img_archive/braze_richpush1.png %}
 [55]: {% image_buster /assets/img_archive/braze_richpush2.png %}
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}
-[57]: {% image_buster /assets/img_archive/braze_subscribed.png %}
-[58]: {% image_buster /assets/img_archive/braze_pushenabled.png %}
 [59]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

@@ -1,7 +1,7 @@
 ---
 nav_title: Adding a Badge
 page_order: 6
-search_rank: 5
+
 platform: Android
 ---
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Reporting
-page_order: 10
+page_order: 7
 ---
 
 # Push Reporting
@@ -23,13 +23,13 @@ On this page, you will be able to comprehensively view and analyze the success o
 
 ### Apple Push Notification Service
 
-Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNS also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (i.e. at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
+Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (i.e. at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
 If a user disables push within their device settings on subsequent app open the SDK will detect that push has been disabled and notify Braze. At this point we will update the push enabled state to be disabled. When a disabled user receives a push campaign before having a new session, the campaign would successfully send and appear as delivered. The push will not bounce for this user. Following a subsequent session, when you attempt to send a push to the user Braze is already aware of whether we have a token as such no notification is sent.
 
 Push notifications that expire before delivery are not considered as failed and will not be recorded as a bounce.
 
-### Google Cloud Messaging
+### Firebase Cloud Messaging
 
 FCM bounces could occur in three cases:
 
@@ -63,9 +63,6 @@ When an application is updated, the previous version's registration ID may no lo
 [26]: {% image_buster /assets/img_archive/textplus_directions.png %}
 [27]: {% image_buster /assets/img_archive/android_push_img2.png %}
 [29]: {% image_buster /assets/img_archive/braze_campaignresults.png %}
-[30]: {% image_buster /assets/img_archive/Push_Reporting_Campaign_Statistics.png %}
-[31]: {% image_buster /assets/img_archive/Push_Reporting_iOS_Push_Metric.png %}
-[32]: {% image_buster /assets/img_archive/Push_Reporting_Message_Deliveries.png %}
 [34]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [35]: {{ site.baseurl }}/user_guide/data_and_analytics/influenced_opens/#influenced-opens
 [36]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
@@ -89,6 +86,4 @@ When an application is updated, the previous version's registration ID may no lo
 [54]: {% image_buster /assets/img_archive/braze_richpush1.png %}
 [55]: {% image_buster /assets/img_archive/braze_richpush2.png %}
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}
-[57]: {% image_buster /assets/img_archive/braze_subscribed.png %}
-[58]: {% image_buster /assets/img_archive/braze_pushenabled.png %}
 [59]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

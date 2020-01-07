@@ -1,10 +1,11 @@
 ---
 nav_title: Customization
 page_order: 1
-search_rank: 5
+
 platform: Android
 ---
-# Customization 
+
+# Customization
 
 ## Default Styling {#default-styling-for-android}
 
@@ -77,7 +78,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
-The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47]. 
+The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
 
 Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
@@ -126,6 +127,7 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   }
 }
 ```
+
 {% endtab %}
 {% tab KOTLIN %}
 
@@ -164,6 +166,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   }
 }
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -409,7 +412,7 @@ private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscribe
 {% tab KOTLIN %}
 
 ```kotlin
-private val mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
 ```
 
 {% endtab %}
@@ -422,7 +425,7 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
@@ -432,8 +435,8 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
         // Your logic below
     }
 };
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Appboy.getInstance(this).requestContentCardsRefresh(true);
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Appboy.getInstance(context).requestContentCardsRefresh(true);
 ```
 
 {% endtab %}
@@ -441,15 +444,15 @@ Appboy.getInstance(this).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all content cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Appboy.getInstance(this).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Appboy.getInstance(this).requestContentCardsRefresh(true)
+Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Appboy.getInstance(context).requestContentCardsRefresh(true)
 ```
 
 {% endtab %}
@@ -461,14 +464,14 @@ We also recommend unsubscribing when your custom activity moves out of view. Add
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(this).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}
@@ -482,17 +485,33 @@ To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
 
-## Key-Value Pair.
+#### Manually Dismissing a Content Card
+
+You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
+
+If a card is already marked as dismissed, it cannot be marked as dismissed again.
+
+## Disabling Swipe To Dismiss
+
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
+
+## Key-Value Pairs
+
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 
 ## GIFs {#gifs-news-content-cards}
 
+{% alert note %}
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+{% endalert %}
+
 {% include archive/android/gifs.md channel="Content Cards" %}
 
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
+
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
@@ -505,7 +524,6 @@ See the [Javadoc][36] for more information.
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[22]: {% image_buster /assets/img_archive/sample_news_feed.png %}
 [23]: {% image_buster /assets/img_archive/android_news_feed.png %}
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
@@ -528,3 +546,4 @@ See the [Javadoc][36] for more information.
 [45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-

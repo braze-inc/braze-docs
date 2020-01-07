@@ -257,14 +257,27 @@ a:hover {
   z-index: -2;
   height: 100%;
   width: 100%;
-  background-color: #212123
+  background-color: #212123;
 }
 
 #ticket_form button[type=submit]:focus, #ticket_form button[type=submit]:hover {
   color: #212123
 }
 
-
+#firefox_warning {
+  width: 100%;
+  text-align: center;
+  background-color: #f4f4f7;
+  padding: 10px;
+}
+#firefox_warning a, #ticket_thankyou_msg a{
+  color: #3accdd;
+  text-decoration: none;
+}
+#firefox_warning a:hover, #ticket_thankyou_msg a:hover {
+  color: #3accdd;
+  text-decoration: none;
+}
 </style>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -413,17 +426,17 @@ var ticket_lookuptable = {
             'mParticle' : {
               'ShowSubmit': true,
               'LinksTitle': ['mParticle integration instructions'],
-              'Links': ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
+              'Links': ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
             },
             'Segment' : {
               'ShowSubmit': true,
               'LinksTitle': ['Segment integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']
+              'Links' : ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
             },
             'Install attribution' : {
               'ShowSubmit': true,
               'LinksTitle': ['Attribution partner integrations','Attribution partner integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
+              'Links' : ['{{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
             },
             'Other' : {
               'ShowSubmit': true,
@@ -607,7 +620,7 @@ var ticket_lookuptable = {
         'Webhooks' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Creating a webhook','Sending SMS via Twilio'],
-          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/technology_partners/additional_channels/sms/twilio/']
+          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/additional_channels/sms/twilio/']
         },
         'Currents' :  {
           'ShowSubmit': true,
@@ -1005,12 +1018,12 @@ $( document ).ready(function() {
     var user_subject = $('#ticket_subject').val();
 
     var user_issue = $('#ticket_issue').val();
-    var user_comments = mform.find('#ticket_comment').val();
+    //var user_comments = mform.find('#ticket_comment').val();
 
 
     var userinfo = '';
 
-    userinfo += "Question:\n" + user_issue +  "\n\nComments: " + user_comments;
+    userinfo += "Question:\n" + user_issue ; //+  "\n\nComments: " + user_comments;
     // userinfo += "\n\nAllow Dashboard Access: ";
     // if($("#all_dashboard").is(':checked')) {
     //   userinfo += 'Yes'
@@ -1048,8 +1061,8 @@ $( document ).ready(function() {
     $('#ticket_mainform').hide();
 
     $('#ticket_thankyou').fadeIn("slow");
-    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.');
-
+    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, please check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, please contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#ticket_issue').popover();
   $('#ticket_comment').popover();
@@ -1110,13 +1123,15 @@ $( document ).ready(function() {
          $(this).autocomplete('val', '');;
        }
      });
-
-
-
+     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+       var ff_div = $('#firefox_warning').detach();
+       ff_div.insertBefore($('#basic_page')).show();
+     }
 });
 </script>
-<div class="container-fluid" id="main-container">
+<div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
 
+<div class="container-fluid" id="main-container">
       <div class="row">
           <div class="col" >
               <h1 class="h1">Need Help? </h1>
@@ -1218,14 +1233,14 @@ $( document ).ready(function() {
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue. "
                           placeholder="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, and relevant user IDs. Please also include steps to reproduce your issue.  " rows="7"></textarea>
                       </div>
-                      <div class="form-group" >
+                      <!-- div class="form-group" >
 
                           <label for="ticket_comment"  id="ticket_comment_label">     Additional comments and screenshots  </label>
 
                           <textarea name="Issue_Steps" class="form-control" id="ticket_comment" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Add any other comments and link to any relevant screenshots or screencasts."
                           placeholder="Add any other comments and link to any relevant screenshots or screencasts." rows="7"></textarea>
-                      </div>
+                      </div -->
                       <div class="form-group">
                           <label style="font-size: 12px;">
                          In order to provide you with technical support or address service or technical problems, please be aware that Braze may need to access your dashboard and data.

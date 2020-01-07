@@ -38,7 +38,11 @@ New Users tells you how many users who have previously never recorded a session 
 
 ## Stickiness
 
-Your app's "Stickiness" value is a ratio of a given day's DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis. For example, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users. Note that the MAU value is still calculated nightly and will not update until the next day.
+Your app's "Stickiness" value is a ratio of a given day's DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis. For example, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users. 
+
+{% alert important %}
+The MAU value is still calculated nightly and will not update until the next day.
+{% endalert %}
 
 ## Daily Sessions
 
@@ -52,4 +56,3 @@ Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. Wha
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}
 [3]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
 [4]: {{ site.baseurl }}/help/faqs/
-[5]: {% image_buster /assets/img_archive/retention_heatmap.png %}

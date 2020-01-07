@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-page_order: 2
+page_order: 1
 ---
 
 # Integration
@@ -9,11 +9,11 @@ Integrating with Braze is a worth-while process. But you're smart. You're __here
 
 But what you probably don't know was that you and your engineers/developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).
+{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
 
 ## The Technical Side of the Integration Process
 
-You may find yourself thinking "My engineers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say "Can you send me the API Key and Custom Endpoint?".
+You may find yourself thinking "My engineers are magical! They can do anything, so I usually just leave them to it!" And they probably are and probably can! But there's no reason why you shouldn't know what they're doing behind the scenes. In fact, it would help the entire process if you knew when to jump in with information and what to look for when they say "Can you send me the API Key and API Endpoint?".
 
 "So what are they doing when they integrate Braze with my app or site?"
 
@@ -25,7 +25,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * [The API Keys]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/api_settings_tab/)
 * [Your Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * This can be custom for [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#step-5-specify-your-custom-endpoint-or-data-cluster), and [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk). If you don't know your custom endpoint, reach out to your Braze contact or [use the predefined SDK endpoints]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+  * Braze no longer gives out custom endpoints so please use the [predefined SDK endpoints]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/). If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#step-5-specify-your-custom-endpoint-or-data-cluster), and [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them.
 
@@ -35,7 +35,7 @@ Please ensure that you and your engineer don't unknowingly or unintentionally ch
 
 ### Step 2: They Implement Your Desired Messaging Channels
 
-Braze has many options for getting in touch with your customers/users, and each requires it's own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
+Braze has many options for getting in touch with your customers/users, and each requires its own set up or tweaking to work the way you want. This is where communication with your engineers becomes critical.
 
 Be sure to tell your engineers which channels you want to use to ensure that implementation is done efficiently and in proper order.
 

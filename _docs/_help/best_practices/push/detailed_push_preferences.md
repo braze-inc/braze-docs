@@ -1,6 +1,6 @@
 ---
 nav_title: Detailed Push Preferences
-page_order: 3
+page_order: 1
 ---
 
 # Detailed Push Preferences
@@ -46,9 +46,6 @@ Documentation for setting custom attributes:
 [26]: {% image_buster /assets/img_archive/textplus_directions.png %}
 [27]: {% image_buster /assets/img_archive/android_push_img2.png %}
 [29]: {% image_buster /assets/img_archive/braze_campaignresults.png %}
-[30]: {% image_buster /assets/img_archive/Push_Reporting_Campaign_Statistics.png %}
-[31]: {% image_buster /assets/img_archive/Push_Reporting_iOS_Push_Metric.png %}
-[32]: {% image_buster /assets/img_archive/Push_Reporting_Message_Deliveries.png %}
 [34]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [35]: {{ site.baseurl }}/user_guide/data_and_analytics/influenced_opens/#influenced-opens
 [36]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
@@ -72,6 +69,4 @@ Documentation for setting custom attributes:
 [54]: {% image_buster /assets/img_archive/braze_richpush1.png %}
 [55]: {% image_buster /assets/img_archive/braze_richpush2.png %}
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}
-[57]: {% image_buster /assets/img_archive/braze_subscribed.png %}
-[58]: {% image_buster /assets/img_archive/braze_pushenabled.png %}
 [59]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

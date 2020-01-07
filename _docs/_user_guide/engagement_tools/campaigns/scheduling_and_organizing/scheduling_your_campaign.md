@@ -3,10 +3,19 @@ nav_title: Scheduling Your Campaign
 platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 0
+
+tools: campaigns
+page_type: reference
+description: "This reference article gives an overview of different ways to go about scheduling a campaign."
 ---
 # Scheduling Your Campaign
 
-Every savvy marketer knows that timing is key, which is why Braze provides multiple scheduling options that will empower you to reach users at precisely the right time. Ample flexibility, however, may cause uncertainty over which type of schedule fits best with your campaign's goals. To help you get the most of Braze's platform, we've created this handy guide that reviews your scheduling options, best practices and use cases.
+> This reference article goes over the three different delivery methods Braze offers (Scheduled Delivery, Action-Based Delivery, and API-triggered Delivery) and how to set them up and use them. 
+> <br>
+> <br>
+> Choosing how your campaign gets delivered is crucial in developing an effective campaign. Thankfully, with Braze you have fine tuned control over when and how your campaigns get sent. 
+
+Every savvy marketer knows that timing is key, which is why Braze provides multiple scheduling options that will empower you to reach users at precisely the right time. Ample flexibility, however, may cause uncertainty over which type of schedule fits best with your campaign's goals. To help you get the most of Braze's platform, we've created this handy guide that reviews your scheduling options, best practices, and use cases.
 
 ## Scheduled Delivery
 
@@ -30,9 +39,9 @@ Scheduling a campaign for a designated time allows you to specify the days and t
 
 #### Local Time Zone Campaigns
 
-You can deliver the message in users' local time zones, so that members of your international audience won't receive a notification at 4am. Local time zone campaigns need to be scheduled 24 hours in advance to ensure that eligible users from all time zones can receive it. Read [our FAQ page on this feature][25] to understand how local time zone campaigns work and the associated delivery rules.
+You can deliver the message in users' local time zones so that members of your international audience won't receive a notification at 4 am. Local time zone campaigns need to be scheduled 24 hours in advance to ensure that eligible users from all time zones can receive it. Read [our FAQ page on this feature][25] to understand how local time zone campaigns work and the associated delivery rules.
 
-Segments targeted with local time zone campaigns should include at minimum a 2-day window to incorporate users from all time zones. For instance, if your campaign is scheduled to send in the evening but has just a 1-day window, then some users may have fallen out of the segment when their time zone is reached. Examples of filters that create a 2-day window are "last used more than 1 day ago" and "last used less than 3 days ago," or "first purchased more than 7 days ago" and "first purchased less than 9 days ago."
+Segments targeted with local time zone campaigns should include, at minimum, a 2-day window to incorporate users from all time zones. For instance, if your campaign is scheduled to send in the evening but has just a 1-day window, then some users may have fallen out of the segment when their time zone is reached. Examples of filters that create a 2-day window are "last used more than 1 day ago" and "last used less than 3 days ago," or "first purchased more than 7 days ago" and "first purchased less than 9 days ago."
 
 #### Use Cases
 
@@ -40,7 +49,7 @@ Designated time schedules are best suited for messages scheduled in advance and 
 
 ### Option 3: Intelligent Delivery
 
-Intelligent Delivery allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that intelligent delivery campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10pm at the latest. Read our [page on Intelligent Delivery][8] for more details on how this feature works.
+Intelligent Delivery allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that intelligent delivery campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest. Read our [page on Intelligent Delivery][8] for more details on how this feature works.
 
 ![Intelligent Delivery][14]
 
@@ -70,17 +79,19 @@ __Step 1: Select a trigger event, which can be:__
 - Performing the exception event for another campaign
 - Adding an email address to a user profile
 
-You can also further filter trigger events through Braze's [Custom Event Properties][32] which allows for customizable event properties for both custom events and in-app purchases. This feature allows you to further tailor which users receive a message based off of the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. For example, in the following screenshot, an Abandoned Cart custom event is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts.
+You can also further filter trigger events through Braze's [Custom Event Properties][32] which allows for customizable event properties for both custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. For example, in the following screenshot, an Abandoned Cart custom event is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts.
 
 ![Custom Event Properties Pic][34]
 
-Note that the trigger event "start session" can be the user's very first app open, if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
+{% alert note %}
+The trigger event "start session" can be the user's very first app open, if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
+{% endalert %}
 
 Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't be able to receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, please read our section on [reasons why a user might not have received a triggered campaign][49].
 
 With respect to the trigger event for when a user adds an email address to their profile, the following rules apply:
 
-- The trigger event will be fired after the user profile attribute updates. This means that the evaluation of the campaign's segments and filters will happen after the attribute updates. This is beneficial because it enables you do things like set up a filter of "email address matches gmail.com" to create a trigger campaign that only sends to Gmail users and fires as soon as they add their email address.
+- The trigger event will be fired after the user profile attribute updates. This means that the evaluation of the campaign's segments and filters will happen after the attribute updates. This is beneficial because it enables you to do things like set up a filter of "email address matches gmail.com" to create a trigger campaign that only sends to Gmail users and fires as soon as they add their email address.
 - The trigger event will fire when an email address is added to a user profile. If you have multiple user profiles that you create that have the same email address, the campaign may fire multiple times, once for each user profile.
 
 In addition, triggered in-app messages still abide by [in-app message delivery rules][29] and will appear at the beginning of an app session.
@@ -90,7 +101,11 @@ In addition, triggered in-app messages still abide by [in-app message delivery r
 
 __Step 2: Select how long to wait before sending the campaign, after the trigger criteria is met.__ Choose how long to delay your message after the user completes the trigger event.
 
-In choosing your delay length, note that if you set a delay that is longer than the message's duration for sending (see Step 4), no users will receive your campaign. Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event prior to the campaign launching will not qualify to receive the campaign.
+{% alert important %}
+In choosing your delay length, note that if you set a delay that is longer than the message's duration for sending (see Step 4), no users will receive your campaign.
+{% endalert %}
+
+Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event prior to the campaign launching will not qualify to receive the campaign.
 
 ![triggered 2][19]
 
@@ -105,11 +120,13 @@ You can read more about how to employ exception events in our section on [use ca
 
 ![triggered 3][20]
 
-> If you are sending out a campaign with the trigger event equalling the same exception  event, the initial campaign will be cancelled. Instead of sending out both campaigns, your user's first campaign will be cancelled and we will automatically re-schedule a new campaign based on the exception event's message delivery time.
+> If you are sending out a campaign with the trigger event equalling the same exception event, the initial campaign will be canceled. Instead of sending out both campaigns, your user's first campaign will be canceled and we will automatically re-schedule a new campaign based on the exception event's message delivery time.
 >
->For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time). Please also note that you cannot make a "session start"  both the trigger event and exception event for a campaign (however, you always have the choice to select any other custom event outside of this option).
+>For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time).
 
-
+{% alert note %}
+You cannot make a "session start"  both the trigger event and exception event for a campaign (however, you always have the choice to select any other custom event outside of this option).
+{% endalert %}
 
 __Step 4: Assign the campaign's duration by specifying a start time and optional end time.__ If a user completes a trigger event during the specified time frame, but actually qualifies for the message outside of the time frame due to a scheduled delay, then she will not receive the campaign. Therefore, if you set a time delay that is longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones][5].
 
@@ -136,7 +153,7 @@ __Step 6: Determine whether users can become [re-eligible][24] for the campaign.
 
 Triggered campaigns are very effective for transactional or achievement-based messages.
 
-Transactional campaigns include messages sent after the user completes a purchase or adds an item to her cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event in this case would be the user buying the products in her cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
+Transactional campaigns include messages sent after the user completes a purchase or adds an item to her cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in her cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
 
 In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough [onboarding process][30].
 
@@ -154,15 +171,19 @@ Any of these things will prevent a user who has completed the trigger event from
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration`, and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
-It is a best practice to make sure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. In cases where this is not possible, the best way to guarantee delivery is to use [Custom Event Properties][48] to attach the relevant user properties to the event, and apply a property filter for the specific event property instead of a segmentation filter. In the example above, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need at the time your campaign is triggered.
+It is a best practice to make sure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. In cases where this is not possible, the best way to guarantee delivery is to use [Custom Event Properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. In the example above, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need at the time your campaign is triggered.
 
 ## API Triggered Campaigns (Server Triggered Campaigns)
 
-API Triggered Campaigns are ideal for more advanced transactional use-cases. Braze API Triggered Campaigns allow marketers to manage campaign copy, multivariate testing and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real time.
+API Triggered Campaigns are ideal for more advanced transactional use-cases. Braze API Triggered Campaigns allow marketers to manage campaign copy, multivariate testing and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
 
 ### Setting up an API Triggered Campaign
 
-Setting up an API Triggered Campaign is easy. First, create a new multichannel or single channel campaign (with multiviariate testing). Note that an API Triggered Campaign is different from an [API Campaign][46].
+Setting up an API Triggered Campaign is easy. First, create a new multichannel or single-channel campaign (with multivariate testing).
+
+{% alert note %}
+An API Triggered Campaign is different from an [API Campaign][46].
+{% endalert %}
 
 ![API Triggered Creation Step][45]
 
@@ -192,7 +213,7 @@ For example, if you are using an API triggered campaign to send the user a campa
 
 Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. By checking "Allow users to become re-eligible to receive campaign or re-enter this Canvas", you are overriding this default behavior and allowing qualified members to receive messages again once they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
-Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and do not receive any messages will not be able to re-enter the Canvas unless re-eligibility is enabled. For example, let’s say that a user without an email address enters a daily recurring Canvas that contains one step. The Canvas step only contains an email message, so the user does not get the engagement. This user will not be able to enter the Canvas again, unless the Canvas has re-eligibility enabled. If you have an active recurring or triggered Canvas without re-eligibility, and you'd like users to re-enter the Canvas until they receive a message from it, you can consider allowing users to be re-eligible for entry by adding a filter to the entry criteria that excludes customers who’ve received a message from the Canvas.
+Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and do not receive any messages will not be able to re-enter the Canvas unless re-eligibility is enabled. For example, let’s say that a user without an email address enters a daily recurring Canvas that contains one step. The Canvas step only contains an email message, so the user does not get the engagement. This user will not be able to enter the Canvas again unless the Canvas has re-eligibility enabled. If you have an active recurring or triggered Canvas without re-eligibility, and you'd like users to re-enter the Canvas until they receive a message from it, you can consider allowing users to be re-eligible for entry by adding a filter to the entry criteria that excludes customers who’ve received a message from the Canvas.
 
 In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign][26] (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. By making users re-eligible for a triggered campaign, you are enabling them to actually receive (and not simply trigger) the message more than once.
 
@@ -202,11 +223,9 @@ Additionally, if you are trying to send a message immediately with a re-eligibil
 
 With regards to multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:
 
-* When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
-
-* If the variant percentages change, users may be redistributed to other variants.
-
-* Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
+- When variant percentages are not changed, each user will always enter the same variant of a campaign, triggered in-app message, or Canvas entry every time they are re-eligible.
+- If the variant percentages change, users may be redistributed to other variants.
+- Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
 ## Editing Campaigns After Launch
 
@@ -232,11 +251,11 @@ Changing the rate at which your messages will send will go into effect at the be
 [5]: #local-time-zone-campaigns
 [6]: #local-use
 [7]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
-[8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[8]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [11]: #delivery-rules
-[12]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[12]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [13]: #intelligent-use
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
 [15]: #triggered
@@ -263,7 +282,7 @@ Changing the rate at which your messages will send will go into effect at the be
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
 [38]: {% image_buster /assets/img_archive/api_trigger_photo_social_example_1.png %}
 [39]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[40]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/#intelligent-delivery
+[40]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
 [42]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [43]: {% image_buster /assets/img_archive/api-trigger-reeligible.png %}

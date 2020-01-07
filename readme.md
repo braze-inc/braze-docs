@@ -1,6 +1,6 @@
 # Welcome to Braze Docs!
 
-This is where you can contribute to the [Braze Documentation site](www.braze.com/docs).
+This is where you can contribute to the [Braze Documentation site](http://www.braze.com/docs).
 
 ## What You Need to Know
 
@@ -43,8 +43,8 @@ Braze Documentation is licensed under a [Creative Commons Attribution-NonCommerc
 2. Take the [Braze Docs Tour](https://www.braze.com/docs/tour).
 3. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 4. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
-  - the [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide),
-  - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment),
-  - [the Writing Style Guide](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices),  
-  - [the Markdown Formatting Style Guide](https://github.com/Appboy/braze-docs/wiki/Special-Formatting), and
-  - [the Media Style Guide](https://github.com/Appboy/braze-docs/wiki/Media-Formatting-Guide).
+  - The [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide)
+  - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
+  - [The Writing Style Guide](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices)
+  - [The Markdown Formatting Style Guide](https://github.com/Appboy/braze-docs/wiki/Special-Formatting)
+  - [The Media Style Guide](https://github.com/Appboy/braze-docs/wiki/Media-Formatting-Guide)

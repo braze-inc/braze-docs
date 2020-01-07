@@ -1,6 +1,6 @@
 ---
 nav_title: Export Segment Data to Facebook Audiences
-page_order: 14
+page_order: 10
 ---
 # Exporting to Facebook Audiences
 
