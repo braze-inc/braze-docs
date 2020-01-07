@@ -31,7 +31,7 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
-
+validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels/calendar/rokt_calendar/';
 validurls['/docs/help/release_notes/most_recent'] = '/docs/help/release_notes/#most-recent';
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';
