@@ -1,5 +1,5 @@
 ---
-nav_title: Rate-Limiting
+nav_title: Rate-Limiting and Frequency Capping
 platform: 
   - iOS
   - Android
