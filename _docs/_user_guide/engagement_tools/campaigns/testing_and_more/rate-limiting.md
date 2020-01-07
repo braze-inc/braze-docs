@@ -56,7 +56,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ## Delivery Speed Rate-Limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per minute rate limit for sending messages. While targeting users during campaign creation, you can click into Advanced Options and select a rate limit (in various increments from 10K to 500K messages per minute).
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per minute rate limit for sending messages. While targeting users during campaign creation, you can click into Advanced Options and select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute).
 
 ![Per Minute Rate Limit Example][3]
 
