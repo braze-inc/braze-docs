@@ -13,6 +13,7 @@ channel:
 
 {% alert warning %}
 Please note that support for the Twilio Webhook Integration will be discontinued on January 31, 2019. If you wish to still access SMS services with Braze, please see our [SMS documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/). 
+{% endalert %}
 
 For this example, we'll configure the Braze webhook channel to send SMS and MMS to your users, via Twilio's [message sending API][20]. For your convenience, a Twilio webhook template is included on the dashboard.
 
