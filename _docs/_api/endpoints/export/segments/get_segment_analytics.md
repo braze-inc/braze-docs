@@ -25,6 +25,7 @@ This endpoint allows you to retrieve a daily series of the size of a segment ove
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 
 ## Parameters
+
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `api_key` | Yes | String | App Group REST API Key. |

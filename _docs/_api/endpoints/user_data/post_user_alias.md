@@ -107,7 +107,7 @@ For more information on `alias_name` and `alias_label`, check out our [User Alia
 {% endapi %}
 
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
+[1]: {{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances
 [6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [16]: #not-used-app

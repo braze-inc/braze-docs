@@ -22,7 +22,7 @@ description: "This article outlines details about and using the Remove Email Add
 This endpoint allows you to remove email addresses from your Braze spam list. We will also remove them from the spam list maintained by your email provider.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/RemovingSpamListEmailExample {% endapiref %}
-{% apiref postman %}https://brazeapis.postman.co/collections/4689407-29829c45-e619-4c12-910f-564ec8ccfda9?version=latest&workspace=e6986601-aa60-4cf9-8366-b2238ee9edd6#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
 ## Request Body
 

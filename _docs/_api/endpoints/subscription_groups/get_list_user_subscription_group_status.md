@@ -43,7 +43,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 | `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
 | `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
-\* Generally, either `external_id` or `email` is required.
+Generally, either `external_id` or `email` is required.
 
 For SMS subscription groups, either `external_id` or `phone` is required.
 

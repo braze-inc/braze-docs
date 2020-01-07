@@ -84,3 +84,5 @@ You can use these objects in the [request body](#request-body) above.
 - [Windows Objects]({{ site.baseurl }}/api/objects_filters/windows_objects/)
 
 {% endapi %}
+
+[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
