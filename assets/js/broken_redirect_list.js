@@ -43,11 +43,11 @@ validurls['/docs/developer_guide/rest_api/user_data'] = '/docs/api/endpoints/use
 validurls['/docs/developer_guide/rest_api/messaging'] = '/docs/api/endpoints/messaging';
 validurls['/docs/developer_guide/rest_api/email_sync'] = '/docs/api/endpoints/email_sync';
 validurls['/docs/developer_guide/rest_api/email_templates'] = '/docs/api/endpoints/email_templates';
-validurls['/docs/developer_guide/rest_api/subscription_group_api'] = '/docs/api/endpoints/subscription_group_api';
+validurls['/docs/developer_guide/rest_api/subscription_group_api'] = '/docs/api/endpoints/subscription_groups';
 validurls['/docs/developer_guide/rest_api/export'] = '/docs/api/endpoints/export';
 validurls['/docs/developer_guide/rest_api/api_campaigns'] = '/docs/api/api_campaigns';
 validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/docs/api/network_connectivity_issues';
-validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/api/tls_deprecation';
+validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/help/release_notes/deprecations/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
