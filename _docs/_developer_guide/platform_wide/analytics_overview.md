@@ -125,7 +125,12 @@ More resources on RegEx:
 #### Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array. If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
+Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.
+
+If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. 
+
+
+Below is some example code showing the array behavior in the web SDK:
 
 ```
 var abUser = appboy.getUser();

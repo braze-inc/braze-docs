@@ -9,6 +9,12 @@ page_order: 1
 
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
+{% alert important %}
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+<br><br>
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+{% endalert %}
+
 ## Key-Value Pair Extras
 
 `ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.

@@ -5,36 +5,38 @@ layout: featured
 page_order: 1.1
 
 #Required
-description: "This is the Google Search description. Characters past 160 get truncated, keep it brief." 
+description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
 page_type: landing
-tool:
-  - dashboard
-  - docs
-  - canvas
-  - campaigns
-  - segments
-  - templates
-  - media
-  - location 
-  - currents
-  - reports
-  
 #Use if applicable
-platform: 
+
+tool:
+  - Dashboard
+  - Docs
+  - Canvas
+  - Campaigns
+  - Segments
+  - Templates
+  - Media
+  - Location
+  - Currents
+  - Reports
+
+platform:
   - iOS
   - Android
   - Web
   - API
-channel: 
-  - content cards
-  - email
-  - news feed
-  - in-app messages
-  - push
-  - sms
-  - webhooks
+
+channel:
+  - Content Cards
+  - Email
+  - News Feed
+  - In-App Messages
+  - Push
+  - SMS
+  - Webhooks
   
-noindex: true 
+noindex: true
 #ATTENTION: remove noindex and this alert from template
 
 guide_top_header: "Single Section Landing Page with Images"

@@ -3,15 +3,13 @@ nav_title: API Campaigns
 platform: REST APIs
 page_order: 5
 
-description: "This reference article covers how to create and configure a new Braze Campaign." 
+description: "This reference article covers how to create and configure a new Braze Campaign."
 page_type: reference
-tool: 
+tool:
   - Dashboard
   - Docs
-platform: 
+platform:
   - APIs
-=======
-
 ---
 # API Campaigns
 

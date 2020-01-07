@@ -31,7 +31,7 @@ validurls['/docs/partners/technology_partners/data_augmentation/contextual_locat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3_for_currents'] = '/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
-
+validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels/calendar/rokt_calendar/';
 validurls['/docs/help/release_notes/most_recent'] = '/docs/help/release_notes/#most-recent';
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';
@@ -43,11 +43,11 @@ validurls['/docs/developer_guide/rest_api/user_data'] = '/docs/api/endpoints/use
 validurls['/docs/developer_guide/rest_api/messaging'] = '/docs/api/endpoints/messaging';
 validurls['/docs/developer_guide/rest_api/email_sync'] = '/docs/api/endpoints/email_sync';
 validurls['/docs/developer_guide/rest_api/email_templates'] = '/docs/api/endpoints/email_templates';
-validurls['/docs/developer_guide/rest_api/subscription_group_api'] = '/docs/api/endpoints/subscription_group_api';
+validurls['/docs/developer_guide/rest_api/subscription_group_api'] = '/docs/api/endpoints/subscription_groups';
 validurls['/docs/developer_guide/rest_api/export'] = '/docs/api/endpoints/export';
 validurls['/docs/developer_guide/rest_api/api_campaigns'] = '/docs/api/api_campaigns';
 validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/docs/api/network_connectivity_issues';
-validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/api/tls_deprecation';
+validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/help/release_notes/deprecations/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
