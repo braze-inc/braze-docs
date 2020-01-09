@@ -18,7 +18,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 /messages/schedule/create
 {% endapimethod %}
 
-The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console][41] after all scheduled messages have been sent.
+The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
 Use this endpoint to send messages directly from the API.
 
@@ -67,7 +67,7 @@ Content-Type: application/json
   }
 }
 ```
-For more information on the "broadcast" flag, see [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) below.
+For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
 
 ### Available Messaging Objects
 

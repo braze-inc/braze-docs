@@ -324,7 +324,7 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['iOS Initial SDK Setup','Android Initial SDK Setup','Web Initial SDK Setup'],
-          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
+          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
           'SelectOption' : {
             'Push' : {
               'SelectDefault': 'Select a platform...',
@@ -510,7 +510,7 @@ var ticket_lookuptable = {
             'I\'m running into an issue during SDK integration.' :{
               'ShowSubmit': true,
               'LinksTitle': ['iOS: push troubleshooting','Android: push troubleshooting','Web: error logging'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#push-troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
+              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
             },
             'I\'m seeing a bug.' : {
               'ShowSubmit': true,
