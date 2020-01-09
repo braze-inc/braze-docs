@@ -41,9 +41,9 @@ Content-Type: application/json
 >  Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
 ### Objects Used
-- [User Attributes Object]({{ site.baseurl }}api/objects_filters/user_attributes_object/)
-- [Events Object]({{ site.baseurl }}api/objects_filters/event_object/)
-- [Purchases Object]({{ site.baseurl }}api/objects_filters/purchase_object/)
+- [User Attributes Object]({{ site.baseurl }}/api/objects_filters/user_attributes_object/)
+- [Events Object]({{ site.baseurl }}/api/objects_filters/event_object/)
+- [Purchases Object]({{ site.baseurl }}/api/objects_filters/purchase_object/)
 
 {% alert note %}
 Note that when creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.

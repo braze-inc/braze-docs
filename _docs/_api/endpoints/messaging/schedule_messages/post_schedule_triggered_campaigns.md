@@ -53,7 +53,7 @@ Content-Type: application/json
   }
 }
 ```
-For more information on the "broadcast" flag, see [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) below.
+For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
 
 This endpoint uses the [Schedule Object]({{ site.baseurl }}/api/objects_filters/schedule_object/).
 
