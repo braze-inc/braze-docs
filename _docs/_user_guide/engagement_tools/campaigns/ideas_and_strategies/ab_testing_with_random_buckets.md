@@ -4,13 +4,16 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
 
-tools: campaigns
 page_type: tutorial
-description: "This how-to article goes over the concept of A/B testing and how you can use in your Braze campaigns."
+description: "This how-to article goes over the concept of A/B testing and variants and how you can use them in your Braze campaigns."
+page_type: reference
+tool:
+  - Campaign
+  - Dashboard
 ---
 # A/B Testing with Random Buckets
 
-> This article will cover the concept of A/B testing, how to use it in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
+> This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
 
 A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
 
@@ -77,6 +80,11 @@ You can test multiple messaging flows over a period of time. For instance, you c
 
 You can test the effectiveness of different message channel combinations. For instance, you can compare the impact of using just one email versus an email combined with a push.
 
+### Campaign Variant Percentages
+
+In a Campaign, if a variant percentage is modified after inital creation, you will find that the users may be redistributed to other variants.
+
+Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a campaign variant) - __they will receive the same variant unless the variant percentages are modified__. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
 
 
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
