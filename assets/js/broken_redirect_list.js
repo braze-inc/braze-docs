@@ -50,6 +50,7 @@ validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/
 validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/help/release_notes/deprecations/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 
+validurls['/docs/day-of-custom-attribute-behavior'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates'
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
