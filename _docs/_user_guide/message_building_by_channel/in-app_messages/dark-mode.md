@@ -3,10 +3,6 @@ nav_title: Dark Mode Themes
 page_order: 5.20
 ---
 
-{% alert note %}
-This feature is currently in Early Access. Please speak to your Braze Success team for access or to provide any feedback.
-{% endalert %}
-
 # Dark Mode for In App Messages
 
 Dark Mode offers users the opportunity to set a system-wide color preference (introduced on Android 10 and iOS 13). "Dark Mode" themes are intended to conserve battery life and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that many users prefer.
