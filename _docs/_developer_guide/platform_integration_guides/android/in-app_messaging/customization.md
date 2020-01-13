@@ -524,7 +524,7 @@ For *tablet* devices, in-app messages will appear in the style of the user's pre
 
 By default, the hardware back button dismisses Braze In-App Messages. This behavior can be disabled on a per-message basis via [`AppboyInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 
 
-An example is included below.
+In the following example, `disable_back_button` is a custom key-value pair set on the In-App Message that signifies whether the message should allow for the back button to dismiss the message.
 
 {% tabs %}
 {% tab JAVA %}
