@@ -237,6 +237,10 @@ glossaries:
     description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Timezone:<br>UTC
     tags:
       - Marketing Activity
+  - name: Last Received SMS
+    description: Segments your users by the last time that they have received a SMS. (24-hour period)<br><br>Timezone:<br>UTC
+    tags:
+      - Marketing Activity
   - name: Last Enrolled in Any Control Group
     description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Timezone:<br>UTC
     tags:
