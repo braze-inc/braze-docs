@@ -52,7 +52,7 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 | `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say) or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (e.g. `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). <br>[List of accepted Languages][1] | No |
 | `phone` | String | A telephone number as indicated by your users (e.g. `541 754 3010`). | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
@@ -159,6 +159,7 @@ If you are seeing a piece of Standard User Data (e.g. `email` or `first_name` im
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
+[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [fields]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#custom-attribute-data-types
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}

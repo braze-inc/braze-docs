@@ -91,7 +91,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
 | image_url | (string) URL of image to be associated with user profile. |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24].<br>[List of accepted Languages][2] |
 | last_name | (string) |
 |marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
 | phone | (string) |
@@ -140,7 +140,8 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 
 
 [1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays [
+[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
