@@ -246,9 +246,10 @@
             }
           }
         }
-
-
-        p {
+        h1, h2, h3, h4, h5, h6 {
+          padding: 5px 0 0 18px;
+        }
+        p, ol, ul {
           padding: 5px 0 0 18px;
           font-size: 14px;
           color: $text-color;
