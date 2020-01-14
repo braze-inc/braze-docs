@@ -572,7 +572,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obj
 {% endtabs %}
 
 {% alert note %}
-Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead closing the app instead of the displayed In-App Message.
+Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead closing the application instead of the displayed in-app message.
 {% endalert %}
 
 
@@ -586,7 +586,7 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 
 ## Youtube in HTML in-app messages
 
-Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the In-App Message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
+Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
