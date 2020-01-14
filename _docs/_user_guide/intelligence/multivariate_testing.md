@@ -119,7 +119,7 @@ For best practices around choosing a segment to test with, see [here][80].
 
 ![Choose a Segment][180]
 
-### Step 5: Pick the Action the Determines the Winner
+### Step 5: Pick the Action that Determines the Winner
 
 The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner will not affect what you choose for the campaign’s [Conversion Events][2].
 

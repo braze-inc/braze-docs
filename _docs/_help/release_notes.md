@@ -8,6 +8,9 @@ check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_cha
 
 guide_featured_title: "Release Notes"
 guide_featured_list:
+  - name: 2020
+    link: /docs/help/release_notes/2020/
+    fa_icon: fas fa-calendar-alt
   - name: 2019
     link: /docs/help/release_notes/2019/
     fa_icon: fas fa-calendar-alt
