@@ -22,14 +22,47 @@ You can migrate your tokens by [importing them with our API]({{ site.baseurl }}/
 Use the `users/track` endpoint and post the following information:
 
 ```json
-"app_group_id" :
+"app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
     {
-      "push_token_import" : true
+      "push_token_import" : true,
       "push_tokens": [
           "app_id": ""
           "token": ""
           "device_id": ""
+      ]
+    }
+]
+```
+
+Example:
+
+```json
+"app_group_id" : "YOUR_APP_GROUP_ID",
+"attributes" : [
+    {
+      "push_token_import" : true,
+      "email": "braze.test1@testbraze.com",
+      "country": "US",
+      "language": "en",
+      "YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+      "push_tokens": [
+          "app_id": "APP_ID_OF_OS"
+          "token": "PUSH_TOKEN_STRING"
+          "device_id": "DEVICE_ID"
+      ]
+    },
+    {
+      "push_token_import" : true,
+      "email": "braze.test2@testbraze.com",
+      "country": "US",
+      "language": "en",
+      "YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
+      "YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
+      "push_tokens": [
+          "app_id": "APP_ID_OF_OS"
+          "token": "PUSH_TOKEN_STRING"
+          "device_id": "DEVICE_ID"
       ]
     }
 ]

@@ -1,9 +1,18 @@
 ---
 nav_title: "Custom App Icon Feature (iOS)"
 page_order: 1
+page_type: reference
+description: "This reference article covers the iOS 10.3 update on Customizable App Icon."
 
-
+platform: iOS
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
+
 # iOS 10.3 Customizable App Icon Feature
 
 With iOS 10.3 Apple introduced the ability to change an app’s home screen icon without having to update the application from the Apple App Store. The developer can now allow the user to change the home screen icon inside of their app. Apple requires all of the app icon images that the developer wants to make available to the user to be included in the binary that is submitted to Apple for review during the publishing of the app on the Apple App Store.

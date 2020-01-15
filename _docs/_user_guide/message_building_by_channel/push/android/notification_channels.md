@@ -1,12 +1,20 @@
 ---
-nav_title: Notification Channels
+nav_title: "Notification Channels"
 page_order: 3
----
+description: "This reference article covers Android Push Notification Channel topics like Android O transition, how to add a channel to Braze, setting a fallback channel, and more."
 
+platform: Android
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
+---
 
 # Notification Channels
 
-[Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g. “chat notifications,” or “follow notifications”). End users can then control aspects of their notification (e.g. snoozing, noise/vibration settings, or opting-out etc) based upon individual Channels.
+> [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g. “chat notifications,” or “follow notifications”). End users can then control aspects of their notification (e.g. snoozing, noise/vibration settings, or opting-out etc) based upon individual Channels.
 
 ## Transitioning to Android O
 

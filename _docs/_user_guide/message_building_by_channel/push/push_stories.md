@@ -1,11 +1,20 @@
 ---
-nav_title: Push Stories
+nav_title: "Push Stories"
 page_order: 6
+page_type: reference
+description: "This reference article covers what Push stories are, how to create one as well as some frequently asked questions."
+
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
 
 # Push Stories
 
-Push Stories is a new type of Push Notification introduced by Braze (formerly known as Appboy). It allows customers to send down multiple ‘pages’, which consists of an image, click action, title, and description to a device. The users can iterate through these pages and go though the 'story' as told by each marketer.
+> Push Stories is a new type of Push Notification introduced by Braze. It allows customers to send down multiple ‘pages’, which consists of an image, click action, title, and description to a device. The users can iterate through these pages and go though the 'story' as told by each marketer.
 
 
 | Android Example (Expanded) | IOS Example (Expanded) |

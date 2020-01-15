@@ -1,17 +1,19 @@
 ---
 nav_title: Create a Push Primer Campaign
 page_order: 2
-
 page_type: tutorial
 description: This walkthrough will show you how to get your users qualified and ready to receive your push messages.
-channel: push
 
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
 # Create a Push Primer Campaign
 
-> This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users.
-
-Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help!
+> This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. <br><br> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help!
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{ site.baseurl }}/)

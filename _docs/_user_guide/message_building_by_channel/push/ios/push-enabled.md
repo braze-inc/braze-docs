@@ -1,9 +1,15 @@
 ---
-nav_title: Push-Enabled Users
-
+nav_title: "Push-Enabled Users"
 page_type: reference
-platform: ios
-channel: push
+description: "This reference article goes over what it means to be Push-Enabled."
+
+platform: iOS
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
 
 # What makes an iOS user "Push-Enabled"?

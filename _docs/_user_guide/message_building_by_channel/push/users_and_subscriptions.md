@@ -1,11 +1,20 @@
 ---
-nav_title: Subscription States
+nav_title: "Subscription States"
 page_order: 4
+page_type: reference
+description: "This reference article covers the different push subscription states."
+
+channel:
+  - push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
 
 # Push Subscription States
 
-Push subscription states are filters that allow your users to control whether they receive messages or not. For your user to receive your messages through push, they must be `Subscribed` or `Opted-In`, as well as [Push Enabled](#push-enabled).
+> Push subscription states are filters that allow your users to control whether they receive messages or not. For your user to receive your messages through push, they must be `Subscribed` or `Opted-In`, as well as [Push Enabled](#push-enabled).
 
 ![opt-in][56]{: height="50%" width="50%"}
 

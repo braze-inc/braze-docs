@@ -1,17 +1,19 @@
 ---
-nav_title: Creating a Push Message
+nav_title: "Creating a Push Message"
 page_order: 3
-
 page_type: tutorial
-description:
-channel: push
+description: "This tutorial page goes over the different components involved in creating a Push Message."
 
+channel: push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
+
 # Creating a Push Message
 
-Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while.
-
-Successful push campaigns drive the user directly to content and demonstrate the value of your app.
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. <br><br> Successful push campaigns drive the user directly to content and demonstrate the value of your app.
 
 _To see examples of push notifications, check out our [Client Integration Gallery][8]._
 

@@ -1,12 +1,20 @@
 ---
-nav_title: Push Action Buttons
+nav_title: "Push Action Buttons"
 platform: Message_Building_and_Personalization
-subplatform: Push
 page_order: 5
+description: "This reference article covers what Push Action buttons are and how to use them."
+
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
+
 # Push Action Buttons
 
-Push Action Buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. Your users will now be able to interact directly with your app from a notification without needing to click into an app experience to take action.
+> Push Action Buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. Your users will now be able to interact directly with your app from a notification without needing to click into an app experience to take action.
 
 ![Push Action Buttons][1]
 

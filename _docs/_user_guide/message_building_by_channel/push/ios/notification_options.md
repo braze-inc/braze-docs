@@ -3,11 +3,21 @@ nav_title: Notification Options (iOS)
 platform: Message_Building_and_Personalization
 subplatform: Push
 page_order: 6
+page_layout: reference
+description: "This reference article covers iOS Notification Options like critical alerts, quiet notifications, provisional push notifications and more."
+
+platform: iOS
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
 
 # iOS Notification Options
 
-With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
+> With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 
 ## Notification Groups
 
