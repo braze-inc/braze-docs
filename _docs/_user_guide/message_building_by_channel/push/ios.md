@@ -1,11 +1,11 @@
 ---
-nav_title: iOS Options
+nav_title: "iOS Options"
 page_order: 8
 layout: featured
 
 page_type: landing
 channel: push
-platform: ios
+platform: iOS
 description: "This landing page is a hub for all things that are solely iOS Push for Braze."
 
 guide_top_header: "iOS Push Articles"

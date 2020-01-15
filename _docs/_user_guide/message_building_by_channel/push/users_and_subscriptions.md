@@ -32,7 +32,7 @@ Individual user profiles can be exported in the JSON format using the users/expo
 {% alert note %}
   __Bounces__
 
-  Occasionally, a push message will bounce (not be received by a user). This can happen because a user has either uninstalled the app, or because iOS or Android has changed the push token, as they have a right to do.
+  Occasionally, a push message will bounce (not be received by a user). This can happen because a user has either uninstalled the app or because iOS or Android has changed the push token, as they have a right to do.
 {% endalert %}
 
 ## Push Enabled
@@ -61,7 +61,7 @@ In iOS 12, Apple introduced Provisional Authorization, allowing brands the optio
 
 On devices running iOS 11 or below, your users _must explicitly opt-in to receive your push messages_. You must request whether the user would like to receive push from you.
 
-If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appear in the foreground. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the background (you must have "Remote Notifications" enabled in __Xcode__).
+If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the foreground. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the background (you must have "Remote Notifications" enabled in __Xcode__).
 
 iOS users are considered "Push Enabled" only if they have allowed notifications in the foreground, either explicitly or provisionally.
 
@@ -69,7 +69,7 @@ iOS users are considered "Push Enabled" only if they have allowed notifications 
   {% tab Android %}
 __Android Push__
 
-You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request for a new token and upon successfully receiving update the user’s push enabled state.
+You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving an update the user’s push enabled state.
 
 If the user disables push, Braze will mark them as foreground push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
 
@@ -85,7 +85,7 @@ On Android, Braze will move a user to be __push disabled__ if:
 ## Before Android SDK v2.2.2 {#before-android-sdk}
 
 Here are some details you should know if you aren't using our most up to date Android SDK.
-- The previous version of the Android SDK does not detect that a user has disabled push and so the user's push enabled state remains enabled. When you attempt to send to a device in this state the push is 'sent' and the device receives the payload but is suppressed by the device so is not displayed to a user. Braze refers to this as ‘silently failing’.
+- The previous version of the Android SDK does not detect that a user has disabled push and so the user's push enabled state remains enabled. When you attempt to send to a device in this state the push is 'sent' and the device receives the payload but is suppressed by the device so it is not displayed to a user. Braze refers to this as ‘silently failing’.
 - The previous version of the Android SDK does not have the `notifications_enabled` parameter and will not return a value for it if user data is called using the Braze REST API.
 
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png

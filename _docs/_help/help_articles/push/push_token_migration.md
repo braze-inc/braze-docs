@@ -17,9 +17,15 @@ These campaigns will have to be configured with proper key-value pairs to ensure
 
 ## Migration via API
 
-You can migrate your tokens by [importing them with our API]({{ site.baseurl }}/api/endpoints/user_data/#push-token-import).
+Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
-Use the `users/track` endpoint and post the following information:
+{% alert note %}
+When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
+{% endalert %}
+
+These tokens can be migrated by [importing them with our API]({{ site.baseurl }}/api/endpoints/user_data/#push-token-import).
+
+To do this, use the `users/track` endpoint and post the following information:
 
 ```json
 "app_group_id" : "YOUR_APP_GROUP_ID",
@@ -68,11 +74,11 @@ Example:
 ]
 ```
 
-When specifying push_token_import as `true`:
+When specifying `push_token_import` as `true`:
 
-- The `external_id` and `braze_id` should __not__ be specified.
-- The attribute object must contain a push token
-- If the token already exists in Braze, the request is ignored. Otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message those users.
+* `external_id` and `braze_id` should __not__ be specified
+* The attribute object __must__ contain a push token
+* If the token already exists in Braze, the request is ignored; otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals
 
 After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
 

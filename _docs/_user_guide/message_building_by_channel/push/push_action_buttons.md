@@ -1,7 +1,7 @@
 ---
 nav_title: "Push Action Buttons"
-platform: Message_Building_and_Personalization
 page_order: 5
+page_type: reference
 description: "This reference article covers what Push Action buttons are and how to use them."
 
 channel:

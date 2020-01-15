@@ -1,11 +1,7 @@
 ---
 nav_title: "Advanced Push Campaign Settings"
-platform: Android
-nav_title: "Push Action Buttons"
-platform: Message_Building_and_Personalization
 page_order: 5
 page_layout: reference
-
 description: "This reference article covers some Advanced Push Campaign settings like priority, custom URLs, delivery options, and more."
 
 platform: Android
@@ -50,7 +46,7 @@ For more information, please consult [Google's documentation on Android notifica
 
 Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
 
-For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing teams score, for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
+For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing team's score, for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
 
 - A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones. However, if the phone correctly receives the original push notifications, then the Notification ID will not replace the already delivered notification(s).
 
@@ -74,7 +70,7 @@ For push notifications that include images, the message text will be shown in th
 
 ## Custom URLs
 
-The __"Custom URL"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URL is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+The __"Custom URL"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URL is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
 > To enable Custom URL, your app's `BroadcastReceiver` must be configured to properly handle opening the URL.  This involves parsing incoming message contents for the custom URI and navigating to it.  Our [example receiver][14] provides a sample implementation.
 

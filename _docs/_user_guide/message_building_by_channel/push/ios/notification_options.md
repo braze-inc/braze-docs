@@ -1,10 +1,8 @@
 ---
-nav_title: Notification Options (iOS)
-platform: Message_Building_and_Personalization
-subplatform: Push
+nav_title: "Notification Options (iOS)"
 page_order: 6
 page_layout: reference
-description: "This reference article covers iOS Notification Options like critical alerts, quiet notifications, provisional push notifications and more."
+description: "This reference article covers iOS Notification Options like critical alerts, quiet notifications, provisional push notifications, and more."
 
 platform: iOS
 channel:
@@ -100,7 +98,7 @@ If you utilize additional push prompts or [in-app push primers](https://www.braz
 Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
-The implementation of Provisional Push Authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here](({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+The implementation of Provisional Push Authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
 {% endalert %}
 
 {% tabs local %}
@@ -130,7 +128,7 @@ if (@available(iOS 12.0, *)) {
 {% endtabs %}
 
 ### Critical Alerts
-Apple will allow some brands to send notification that are considered extremely important, will ignore Do Not Disturb settings, and will always play a sound no matter the setting on a user's device.
+Apple will allow some brands to send notifications that are considered extremely important, will ignore Do Not Disturb settings, and will always play a sound no matter the setting on a user's device.
 
 Brands [must be approved by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/) to use Critical Alerts. Good candidates for this feature could be apps with medical and other health-related information, home security, and public safety features. You must do this before using the feature in Braze.
 

@@ -25,7 +25,7 @@ From the Messaging Page, click "Create Campaign."
 
 ## Step 2: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types and notification style ([rich]({{ site.baseurl }}/user_guide/message_building_by_channel/push/rich_notifications/) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right hand side.
+Next, you need to name your campaign and select the messaging types and notification style ([rich]({{ site.baseurl }}/user_guide/message_building_by_channel/push/rich_notifications/) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 
@@ -53,7 +53,7 @@ Unless you check the box titled "Allow users to become re-eligible to receive ca
 
 ## Step 4: Target Users
 
-On the “Target Users” step of campaign setup, you can choose the target audience for your campaign.  Braze now provides all the detailed audience statistics on the footer.  The footer will provide only the channels that are targeted by the campaign.  Additionally you will be able to see a breakdown of the ‘Push’ messages as Braze will provide details on how many will receive a Web Push versus an Android Push. In order to see what percentage of your user base is being targeted or the LTV for this segment, simply click the “Show Additional Stats” located below the stats footer.
+On the “Target Users” step of the campaign setup, you can choose the target audience for your campaign.  Braze now provides all the detailed audience statistics on the footer.  The footer will provide only the channels that are targeted by the campaign.  Additionally, you will be able to see a breakdown of the ‘Push’ messages as Braze will provide details on how many will receive a Web Push versus an Android Push. In order to see what percentage of your user base is being targeted or the LTV for this segment, simply click the “Show Additional Stats” located below the stats footer.
 
 Keep in mind that exact segment membership is always calculated just before the message is sent.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Android Options
+nav_title: "Android Options"
 page_order: 7
 layout: featured
 

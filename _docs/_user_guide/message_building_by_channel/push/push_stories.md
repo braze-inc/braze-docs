@@ -14,7 +14,7 @@ tool:
 
 # Push Stories
 
-> Push Stories is a new type of Push Notification introduced by Braze. It allows customers to send down multiple ‘pages’, which consists of an image, click action, title, and description to a device. The users can iterate through these pages and go though the 'story' as told by each marketer.
+> Push Stories is a new type of Push Notification introduced by Braze. It allows customers to send down multiple ‘pages’, which consists of an image, click action, title, and description to a device. The users can iterate through these pages and go through the 'story' as told by each marketer.
 
 
 | Android Example (Expanded) | IOS Example (Expanded) |
@@ -35,7 +35,7 @@ _Pre-req: Clients must update to the latest version of Android(version:2.2.0+) a
 ### New Composer
 ![composerworkflow][3]
 
-The Push Story composer is controlled by a drop down at the top. You can choose to send a Standard Push Notification as you would today or send a Push Story Notification instead.
+The Push Story composer is controlled by a drop-down at the top. You can choose to send a Standard Push Notification as you would today or send a Push Story Notification instead.
 
 To create a page:
 
@@ -62,11 +62,11 @@ Push Story Segmentation is now available! When you create a Campaign or Canvas, 
 
 
 ###  I sent myself a Push Story on iOS but did not receive the notification - what happened?
-Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors - this includes evaluating the customers data plan, notification size and/or the customers storage capacity.  As a result, sometimes no notification will be sent to your customers. These are limitations imposed by Apple that should be considered when designing your Push Story.
+Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors - this includes evaluating the customers' data plan, notification size and/or the customers' storage capacity.  As a result, sometimes no notification will be sent to your customers. These are limitations imposed by Apple that should be considered when designing your Push Story.
 
 
 ### I sent myself a Push Story on iOS but saw the condensed view instead - what happened?
-In certain situations where all the pages do not load, for example due to a loss of data connection, the Push Story will only show the condensed notification.
+In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.
 
 
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}

@@ -1,7 +1,8 @@
 ---
 nav_title: "Push for Web"
+page_order: 9
 page_type: reference
-description: "This reference page breifly covers web push, and links out to the neccesary steps to create one."
+description: "This reference page briefly covers web push, and links out to the necessary steps to create one."
 
 platform: Web
 channel:
@@ -14,7 +15,9 @@ tool:
 
 # Web Push
 
-> Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See below for a sample web push sent by Braze.
+> Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
+
+Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See below for a sample web push sent by Braze.
 
 ![appboy-web-push][12]
 

@@ -21,7 +21,7 @@ tool:
 
 ## Requirements
 
-- Note that expanded notification view is only available on devices using Jelly Bean (Android 4.1) or higher. If a user's device is not running on these systems, they will not see the notification image.
+- Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or higher. If a user's device is not running on these systems, they will not see the notification image.
 - Currently, Android rich notifications only allow for static images including jpg and png file formats.
 
 ## Setting Up Your Android Rich Notification
@@ -32,12 +32,12 @@ Follow the [campaign steps][3] you normally do to compose a push notification fo
 ### Step 2: Add Captioning
 Add your Summary Text/ Image Caption that you'd like to display above the image in the notification.
 
-	![Add Android Summary Text][9]
+    ![Add Android Summary Text][9]
 
 ### Step 3: Add Media
 Add your image in the 'Expanded Notification Image' field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
 
-	![Add Android Image][8]
+    ![Add Android Image][8]
 
 ### Step 4: Continue Creating Your Campaign
 Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.

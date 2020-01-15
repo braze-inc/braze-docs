@@ -1,19 +1,28 @@
 ---
-nav_title: Create Rich Notifications for iOS
+nav_title: "Create Rich Notifications for iOS"
 page_order: 9
+page_type: tutorial
+description: "This tutorial covers how to create iOS Rich Notifications for your Braze Campaigns."
 
-
+platform: iOS
+channel:
+  - Push
+tool:
+  - Docs
+  - Dashboard
+  - Campaigns
 ---
+
 # Create iOS Rich Notifications
 
-Rich Notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, messaged as an ‘Expanded Notification Image’. Starting with iOS 10, your customers will be able to receive iOS push notifications that include gifs, images, videos, or audio.
+> Rich Notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, messaged as an ‘Expanded Notification Image’. Starting with iOS 10, your customers will be able to receive iOS push notifications that include gifs, images, videos, or audio.
 
 ![Rich Not Blog][7]
 
 ## Requirements
 
-- To ensure your app is able to send rich notifications, please follow these instructions [here][1], as your developer will need to add a service extension to your app.
-- You should also reference [Apple's documentation][2] for media limitations and specs. We recommend using as small of a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+- To ensure your app can send rich notifications, please follow these instructions [here][1], as your developer will need to add a service extension to your app.
+- You should also reference [Apple's documentation][2] for media limitations and specs. We recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
 - File types that we currently support for direct uploading within our dashboard include jpg, png, or gif. These files can also be entered into the templatable URL field along with these additional file types: aif, m4a, mp3, mp4, or wav.
 
 ## Setting Up Your iOS Rich Notification
@@ -26,7 +35,7 @@ Add your image, gif, audio, or video file in the 'Rich Notification Asset' field
 
 ![Add Image][4]
 
-You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10 it will appear as a text only notifications without the rich content if you leave the below box unchecked.
+You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10, it will appear as text-only notifications without the rich content if you leave the below box unchecked.
 
 ![iOS 10 Checkbox][5]
 
