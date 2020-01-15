@@ -1,7 +1,7 @@
 ---
 nav_title: Test Your Basic Integration
 page_order: 1
-search_rank: 5
+
 platform: Android
 ---
 

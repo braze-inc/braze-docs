@@ -2,7 +2,7 @@
 nav_title: Universal Deep Link Delegate
 platform: Android
 page_order: 5
-search_rank: 5
+
 ---
 
 ## Universal Deep Link Delegate

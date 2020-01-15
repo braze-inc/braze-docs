@@ -2,12 +2,18 @@
 nav_title: Customization
 platform: iOS
 page_order: 1
-search_rank: 5
+
 ---
 
 # Customization {#in-app-message-customization}
 
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
+
+{% alert important %}
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+<br><br>
+__Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
+{% endalert %}
 
 ## Key-Value Pair Extras
 
@@ -490,13 +496,13 @@ The push campaign must include key value pair extras which indicate that this pu
 
 ![IAMSilentPush][41]
 
-The code within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
+The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
 You are able to alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name, or as an event property, when logging the custom event.
 
 ### Step 3: Create an In-App Message Campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `userNotificationCenter(_:willPresent:withCompletionHandler:)` method.
+Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method.
 
 In the example below the specific in-app message to be trigger has been configured by sending the event property as part of the initial silent push.
 

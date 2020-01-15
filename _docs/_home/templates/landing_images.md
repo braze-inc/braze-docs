@@ -4,6 +4,41 @@ layout: featured
 
 page_order: 1.1
 
+#Required
+description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
+page_type: landing
+#Use if applicable
+
+tool:
+  - Dashboard
+  - Docs
+  - Canvas
+  - Campaigns
+  - Segments
+  - Templates
+  - Media
+  - Location
+  - Currents
+  - Reports
+
+platform:
+  - iOS
+  - Android
+  - Web
+  - API
+
+channel:
+  - Content Cards
+  - Email
+  - News Feed
+  - In-App Messages
+  - Push
+  - SMS
+  - Webhooks
+  
+noindex: true
+#ATTENTION: remove noindex and this alert from template
+
 guide_top_header: "Single Section Landing Page with Images"
 guide_top_text: "Single Section Landing Pages are great for a large section with little or no division between the pages in the section. This particular template uses the 'featured' layout yaml parameter ('layout: featured'), which allows you to add extra information at the bottom of the page. If you need to extra sections, use the multi-section Landing Page page type using the 'dev_guide' layout yaml parameter."
 

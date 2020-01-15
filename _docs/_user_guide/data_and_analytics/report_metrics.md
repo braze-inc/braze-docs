@@ -144,7 +144,7 @@ glossaries:
     tags:
       - All
   - name: Primary Conversions (A) or Primary Conversion Event
-    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Content Cards, this count begins when they view a Content Card for the first time.
+    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
       - All
   - name: Conversion Rate

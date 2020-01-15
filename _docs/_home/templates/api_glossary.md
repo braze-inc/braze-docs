@@ -2,8 +2,42 @@
 title: API or Code Glossary
 navlink: apitest
 layout: api_page
-
 page_order: 2
+
+#Required
+description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
+page_type: glossary
+#Use if applicable
+
+tool:
+  - Dashboard
+  - Docs
+  - Canvas
+  - Campaigns
+  - Segments
+  - Templates
+  - Media
+  - Location
+  - Currents
+  - Reports
+
+platform:
+  - iOS
+  - Android
+  - Web
+  - API
+
+channel:
+  - Content Cards
+  - Email
+  - News Feed
+  - In-App Messages
+  - Push
+  - SMS
+  - Webhooks
+
+noindex: true
+#ATTENTION: remove noindex and this alert from template
 
 excerpt_separator: ""
 ---
@@ -239,8 +273,8 @@ Content-Type: application/json
 | ---| --- |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
-| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
-| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss.SSSZ` format. |
+| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
+| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
@@ -250,9 +284,9 @@ Content-Type: application/json
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
 | image_url | (string) URL of image to be associated with user profile. |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. <br>[List of accepted Languages][1]|
 | last_name | (string) |
-|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss.SSSZ format.|
+|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
@@ -260,3 +294,5 @@ Content-Type: application/json
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 
 {% endapi %}
+
+[1]: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/

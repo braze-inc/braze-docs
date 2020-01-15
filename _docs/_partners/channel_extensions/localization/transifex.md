@@ -126,6 +126,5 @@ You can also leverage the user's `{{${most_recent_locale}}}` if you want to incl
 [57]: https://developer.accuweather.com
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
-[60]: {% image_buster /assets/img_archive/Accuweather_APIKey2.png %}
 [61]: https://developer.accuweather.com/weather-icons
 [62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

@@ -107,7 +107,7 @@
 
     validurls['/documentation/android'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';
     validurls['/documentation/fireos'] = '/docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/';
-    validurls['/documentation/ios'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/';
+    validurls['/documentation/ios'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
     validurls['/documentation/windows_universal'] = '/docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/';
     validurls['/documentation/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
     validurls['/documentation/tvos'] = '/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/';
@@ -121,8 +121,8 @@
     validurls['/documentation/cordova/android_and_fireos/'] = '/docs/developer_guide/platform_integration_guides/cordova/android_and_fireos/initial_sdk_setup/';
     validurls['/documentation/cordova/ios/'] = '/docs/developer_guide/platform_integration_guides/cordova/ios/cordova_integration/';
     validurls['/documentation/fireos/'] = '/docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/';
-    validurls['/documentation/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/';
-    validurls['/documentation/delayed_braze_initialization_ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#appboysharedinstance-and-swift-nullability';
+    validurls['/documentation/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
+    validurls['/documentation/delayed_braze_initialization_ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#appboysharedinstance-and-swift-nullability';
     validurls['/documentation/react_native/android_and_fireos/'] = '/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/';
     validurls['/documentation/react_native/ios/'] = '/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/';
     validurls['/documentation/platform_wide/'] = '/docs/developer_guide/platform_wide/platform_features/';

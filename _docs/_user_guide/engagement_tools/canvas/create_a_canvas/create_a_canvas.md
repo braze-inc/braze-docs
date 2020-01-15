@@ -222,18 +222,9 @@ journey as they come in:
 
 
 [1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
-[2]:{% image_buster /assets/img_archive/Create_New_Canvas_Button.png %}
-[3]:{% image_buster /assets/img_archive/Name_Your_Canvas.png %}
-[4]:{% image_buster /assets/img_archive/Canvas_Starting_Condition.png %}
 [5]:{% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %}
 [6]:{% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %}
-[6a]: {% image_buster /assets/img_archive/Canvas_Send_Settings_Click.png %}
 [6b]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
-[6c]: {% image_buster /assets/img_archive/Canvas_Send_Settings.png %}
-[7]:{% image_buster /assets/img_archive/Canvas_Entry_Audience.png %}
-[8]:{% image_buster /assets/img_archive/canvas_audience_entry.png %}
-[9]:{% image_buster /assets/img_archive/Canvas_Conversion_Event.png %}
-[10]:{% image_buster /assets/img_archive/Canvas_Conversion_Start.png %}
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
@@ -246,17 +237,11 @@ journey as they come in:
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
-[20]:{% image_buster /assets/img_archive/Journey.png %}
 [21]:{% image_buster /assets/img_archive/Journey_2.png %}
-[22]:{% image_buster /assets/img_archive/Journey_3.png %}
-[23]:{% image_buster /assets/img_archive/Journey_4.png %}
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/Journey_7.png %}
-[27]:{% image_buster /assets/img_archive/Journey_8.png %}
 [28]:{% image_buster /assets/img_archive/Journey_9.png %}
 [29]:{% image_buster /assets/img_archive/Journey_10.png %}
-[30]:{% image_buster /assets/img_archive/Journey_11.png %}
 [31]:{% image_buster /assets/img_archive/Canvas_Branch_1.png %}
 [32]:{% image_buster /assets/img_archive/Canvas_Branch_2.png %}
 [33]:{% image_buster /assets/img_archive/Canvas_Branch_3.png %}
@@ -264,13 +249,8 @@ journey as they come in:
 [35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
 [36]: https://www.braze.com/contact/
 [37]: {{ site.baseurl }}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
-[38]: {% image_buster /assets/img_archive/Journey-audience_options.png %}
-[39]: {% image_buster /assets/img_archive/Journey_3-audience_options.png %}
-[40]: {% image_buster /assets/img_archive/Journey_4-audience_options.png %}
 [41]: {% image_buster /assets/img_archive/Journey_8-audience_options.png %}
 [42]: {% image_buster /assets/img_archive/Journey_11-audience_options.png %}
-[43]: {% image_buster /assets/img_archive/window.png %}
-[44]: {% image_buster /assets/img_archive/eligibility.png %}
 [45]: {% image_buster /assets/img_archive/step_priority.png %}
 [46]: {% image_buster /assets/img_archive/canvas_priority.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}

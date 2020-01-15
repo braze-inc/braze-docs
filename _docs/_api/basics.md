@@ -1,11 +1,18 @@
 ---
 nav_title: Overview
 page_order: 0
-search_rank: 5
+
+description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits." 
+page_type: reference
+tool: 
+  - Dashboard
+  - Docs
+platform: 
+  - APIs
 ---
 # API Overview
 
-Braze provides a high performance REST API to allow you to track users, send messages, export data, and more.
+> Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This reference article covers what a REST API is, the terminology, a brief overview of API keys, and API limits. 
 
 ## What is a REST API?
 
@@ -34,16 +41,21 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 
 {% alert important %}
-When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
+When using endpoints for API calls, use the "REST Endpoint" located on this page.
 
-When using endpoints for API calls, use the "REST Endpoint".
+For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
 {% endalert %}
 
 ### Company Secret Explanation
 
-The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backwards compatibility.
+The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
 
 ### App Group REST API Keys
+
+{% alert note %}
+For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{ site.baseurl }}/api/api_key/">API Keys</a> and <a href="{{ site.baseurl }}/api/identifier_types/">API Identifier Types</a> reference articles.
+
+{% endalert %}
 
 The `api_key` included in each request acts as an authentication key that allows your server code to utilize our REST APIs. Within your company, each app group will have a unique set of REST API Keys. They can be found within the Braze dashboard by navigating to the Developer Console section for each app group. To use the REST API for any given App Group, you must create keys and give them permissions.
 
@@ -51,7 +63,7 @@ The `api_key` included in each request acts as an authentication key that allows
 
 #### API Key Permissions
 
-API Keys are used to authenticate an API call. When you create a new REST API Key, you need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key is able to authenticate.
+API Keys are used to authenticate an API call. When you create a new REST API Key, you need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
 A good security practice is to assign a user only as much access as is necessary to complete his or her job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account.
 
@@ -62,7 +74,6 @@ Given that REST API Keys allow access to potentially sensitive REST API endpoint
 {% endalert %}
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
-
 
 #### API IP Whitelisting
 
@@ -106,7 +117,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 - [Setting User IDs - iOS][9]
 - [Setting User IDs - Android][10]
-- [Setting User IDs - Windows Universal][12]
+- [Setting User IDs - Windows Universal][13]
 
 ##  API Limits
 
@@ -121,12 +132,12 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 |Requests of any other kind|250,000 per hour. |
 
 {% alert warning %}
-API Rate Limits and their Values (limited or unlimited) are subject to change depending on proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
+API Rate Limits and their Values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
 {% endalert %}
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- Each `/users/track` request can contain up to 75 Purchases, 75 Events and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
+- Each `/users/track` request can contain up to 75 Purchases, 75 Events, and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`
@@ -147,7 +158,7 @@ If you have questions about API limits please contact your Customer Success Mana
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
+[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
 [18]: {{ site.baseurl }}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [support]: {{ site.baseurl }}/support_contact/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}

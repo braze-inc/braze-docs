@@ -2,7 +2,7 @@
 nav_title: Add Braze to Your Project
 platform: iOS
 page_order: 0
-search_rank: 5
+
 layout: featured
 
 guide_top_header: "Add Braze to Your Project"

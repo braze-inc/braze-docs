@@ -1,7 +1,7 @@
 ---
 nav_title: Customization
 page_order: 2
-search_rank: 5
+
 platform: Android
 ---
 
@@ -520,6 +520,62 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
+## Disabling Back Button Dismissal
+
+By default, the hardware back button dismisses Braze In-App Messages. This behavior can be disabled on a per-message basis via [`AppboyInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 
+
+In the following example, `disable_back_button` is a custom key-value pair set on the In-App Message that signifies whether the message should allow for the back button to dismiss the message.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(new AppboyDefaultInAppMessageManagerListener() {
+  @Override
+  public void beforeInAppMessageViewOpened(View inAppMessageView, IInAppMessage inAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage);
+    final Map<String, String> extras = inAppMessage.getExtras();
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false);
+    }
+  }
+
+  @Override
+  public void afterInAppMessageViewClosed(IInAppMessage inAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage);
+    AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true);
+  }
+});
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : AppboyDefaultInAppMessageManagerListener() {
+  override fun beforeInAppMessageViewOpened(inAppMessageView: View, inAppMessage: IInAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage)
+    val extras = inAppMessage.extras
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false)
+    }
+  }
+
+  override fun afterInAppMessageViewClosed(inAppMessage: IInAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage)
+    AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true)
+  }
+})
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead closing the application instead of the displayed in-app message.
+{% endalert %}
+
+
 ## GIFs {#gifs-IAMs}
 
 {% include archive/android/gifs.md channel="in-app messages" %}
@@ -530,7 +586,7 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 
 ## Youtube in HTML in-app messages
 
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Also that hardware acceleration is only available on API versions 11 and above.
+Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
@@ -608,3 +664,4 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewOpened-android.view.View-com.appboy.models.IInAppMessage-
 [94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.appboy.models.IInAppMessage-
 [95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.appboy.models.IInAppMessage-
+[96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-

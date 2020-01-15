@@ -1,14 +1,15 @@
 ---
 nav_title: Overview
 page_order: 0
-search_rank: 3
+
 platform: Web
 ---
+
 # Content Cards
 
- With __Content Cards__, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
+With **Content Cards**, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
 
- {% alert note %}
+{% alert note %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and scalable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
@@ -30,7 +31,6 @@ This is what it looks like for your users to open a basic Content Card feed. As 
 
 ![Content Cards Feed]({% image_buster /assets/img/cc-feed_web.png %}){: height="50%" width="50%"}
 
- {% alert note %}
- Content Cards have a maximum size of __2kb__ (including images, links, and all content) - anything that exceeds that amount will cause an error and prevent the card from sending.
- {% endalert %}
-
+{% alert note %}
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+{% endalert %}

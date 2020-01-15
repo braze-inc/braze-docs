@@ -19,7 +19,7 @@ Leverage Factual to better understand and uplevel mobile experiences through loc
 Requirement   |Origin| Description
 --------------|------|-------------
 Engine SDK    |[Factual Engine SDK](http://developer.factual.com/engine/ios/)|In order to successfully integrate Factual's Engine SDK with Braze, ensure the Engine client has been configured properly and starts successfully. This requires confirming an api key has been acquired and the Engine SDK has been properly imported into the project.
-Appboy Client|[Braze SDK iOS Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#initial-sdk-setup) |Also ensure the Appboy client is properly configured.
+Appboy Client|[Braze SDK iOS Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/) |Also ensure the Appboy client is properly configured.
 {% endtab %}
 {% tab Android %}
 Requirement   |Origin | Description

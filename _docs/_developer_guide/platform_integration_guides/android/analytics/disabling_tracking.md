@@ -2,7 +2,7 @@
 nav_title: Disabling Android SDK Tracking
 platform: Android
 page_order: 8
-search_rank: 5
+
 ---
 
 # Disabling Data Collection

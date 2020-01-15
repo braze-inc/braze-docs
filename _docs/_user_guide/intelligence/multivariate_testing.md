@@ -4,7 +4,7 @@ page_order: 1
 ---
 # Multivariate & A/B Testing
 
-Multivariate & A/B Testing can be quickly utilized using our [Intelligent Selection]({{ site.baseurl }}/docs/user_guide/intelligence/intelligent_selection/) feature.
+Multivariate & A/B Testing can be quickly utilized using our [Intelligent Selection]({{ site.baseurl }}/user_guide/intelligence/intelligent_selection/) feature.
 
 ## What are Multivariate & A/B Testing?
 
@@ -119,7 +119,7 @@ For best practices around choosing a segment to test with, see [here][80].
 
 ![Choose a Segment][180]
 
-### Step 5: Pick the Action the Determines the Winner
+### Step 5: Pick the Action that Determines the Winner
 
 The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner will not affect what you choose for the campaign’s [Conversion Events][2].
 
@@ -224,7 +224,6 @@ One multivariate and A/B test can (and should!) inspire ideas for future tests, 
   Use the intuitions you gather from past tests to guide your future ones. Does a previous test hint at one messaging technique being more effective? Are you unsure about what specific aspect of a variant made it better? Running follow-up tests based on these questions will help you generate insightful findings about your users.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/control_group_check_intelligent_selection.png %}
 [2]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [3]: https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test
 [10]: #introduction-to
@@ -246,14 +245,10 @@ One multivariate and A/B test can (and should!) inspire ideas for future tests, 
 [170]: {% image_buster /assets/img/ab_create_2.gif %}
 [175]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign
 [180]: {% image_buster /assets/img/ab_create_4.png %}
-[190]: {% image_buster /assets/img_archive/multivariate-screen-4.png %}
-[200]: {% image_buster /assets/img_archive/multivariate-screen-5.png %}
 [205]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [210]: {% image_buster /assets/img/ab_create_8.png %}
-[220]: {% image_buster /assets/img_archive/multivariate-screen-7.png %}
 [225]: https://www.optimizely.com/resources/sample-size-calculator/
 [227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
-[230]: {% image_buster /assets/img_archive/UpdatedMVWinner.png %}
 [271]: {% image_buster /assets/img/intelligent_selection1.png %}
 [272]: #intelligent-selection
 [273]: {{ site.baseurl }}/help/best_practices/push/message_format/

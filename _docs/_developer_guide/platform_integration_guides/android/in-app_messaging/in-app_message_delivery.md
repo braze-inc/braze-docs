@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Message Delivery
 page_order: 3
-search_rank: 5
+
 platform: Android
 ---
 

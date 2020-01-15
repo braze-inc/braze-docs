@@ -2,7 +2,7 @@
 nav_title: Initial SDK Setup
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 # Initial SDK Setup
 
@@ -62,9 +62,14 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 ![GradleSync][38]
 
 ### Step 2: Configure the Braze SDK in appboy.xml
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you have a custom endpoint or are on a [specific data cluster][66], you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or email [open a support ticket][support].
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
+
+Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+
+>  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster please ask your Customer Success Manager or email [open a support ticket][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,6 +97,10 @@ See the [`appboy.xml`][6] in the Droidboy sample app for an implementation examp
 
 #### Activity Lifecycle Callback Integration (API 14+)
 
+{% alert warning %}
+Our minimum supported version is `API 16`.
+{% endalert %}
+
 This feature is supported on API 14 and above. Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically. See the [HelloBraze sample application][62] for a full example.
 
 ##### Instructions
@@ -111,6 +120,10 @@ The second argument instructs the listener to handle `registerInAppMessageManage
 See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
 ### Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
+
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
@@ -225,10 +238,7 @@ When the build variant is compiled, it will use the new API key.
 [17]: {% image_buster /assets/img_archive/android_import.png %}
 [18]: {% image_buster /assets/img_archive/click_browse.png %}
 [19]: {% image_buster /assets/img_archive/select_project_android.png %}
-[20]: {% image_buster /assets/img_archive/import_android_ui.png %}
-[21]: {% image_buster /assets/img_archive/reference_project.png %}
 [22]: {% image_buster /assets/img_archive/click_properties.png %}
-[23]: {% image_buster /assets/img_archive/NewBuildPath.png %}
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}

@@ -2,7 +2,7 @@
 nav_title: Runtime Configuration
 platform: FireOS
 page_order: 4
-search_rank: 4
+
 ---
 ## Runtime Configuration
 

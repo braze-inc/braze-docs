@@ -3,6 +3,39 @@ nav_title: "Reference with Video"
 
 page_order: 5
 
+#Required
+description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
+page_type: reference
+tool:
+  - Dashboard
+  - Docs
+  - Canvas
+  - Campaigns
+  - Segments
+  - Templates
+  - Media
+  - Location
+  - Currents
+  - Reports
+
+platform:
+  - iOS
+  - Android
+  - Web
+  - API
+
+channel:
+  - Content Cards
+  - Email
+  - News Feed
+  - In-App Messages
+  - Push
+  - SMS
+  - Webhooks
+    
+noindex: true
+#ATTENTION: remove noindex and this alert from template
+
 ---
 
 # Page Title

@@ -1,0 +1,153 @@
+---
+nav_title: "User Attributes Object"
+page_order: 11
+
+page_type: reference
+
+platform:
+  - API
+tool:
+  - Campaigns
+  - Canvas
+
+description: "This article explains the different components of the User Alias object."
+---
+
+#  User Attributes Object Specification
+
+An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze User Profile Field names (listed below or any listed in the [User Profile Fields chart][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
+
+```json
+{
+  // One of "external_id" or "user_alias" or "braze_id" is required
+  "external_id" : (optional, string) see External User ID below,
+  "user_alias" : (optional, User Alias Object),
+  "braze_id" : (optional, string) Braze User Identifier,
+  // Setting this flag to true will put the API in "Update Only" mode.
+  // When using a "user_alias", "Update Only" mode is always true.
+  "_update_existing_only" : (optional, boolean),
+  // See note below regarding anonymous push token imports
+  "push_token_import" : (optional, boolean).
+  // Braze User Profile Fields
+  "first_name" : "Jon",
+  "email" : "bob@example.com",
+  // Custom Attributes
+  "my_custom_attribute" : value,
+  "my_custom_attribute_2" : {"inc" : int_value},
+  "my_array_custom_attribute":[ "Value1", "Value2" ],
+  // Adding a new value to an array custom attribute
+  "my_array_custom_attribute" : { "add" : ["Value3"] },
+  // Removing a value from an array custom attribute
+  "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
+}
+```
+
+To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
+
+#### Push Token Import
+When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying this parameter.
+
+When specifying `push_token_import` as `true`:
+
+* `external_id` and `braze_id` should __not__ be specified
+* The attribute object must contain a push token
+* If the token already exists in Braze, the request is ignored; otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals
+
+After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
+
+#### Custom Attribute Data Types
+
+The following data types can be stored as a custom attribute:
+
+- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format)
+  - Date attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
+  - Events and Attributes with timestamps in the future will default to the current time
+- Strings
+- Floats
+- Booleans
+- Integers
+  - Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them.
+    - Example: `"my_custom_attribute_2" : {"inc" : int_value},`
+- Arrays
+  - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
+  - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
+  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+
+For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
+
+#### Braze User Profile Fields
+
+| User Profile Field | Data Type Specification |
+| ---| --- |
+| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
+| current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
+| date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
+| date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. |
+| dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
+| email | (string) |
+| email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
+| external_id | (string) Of the unique user identifier. |
+| facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
+| first_name | (string) |
+| gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
+| home_city | (string) |
+| image_url | (string) URL of image to be associated with user profile. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24].<br>[List of accepted Languages][2] |
+| last_name | (string) |
+|marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
+| phone | (string) |
+| push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
+| push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
+| time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
+| twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+
+Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
+
+{% alert update %}
+The Profile Field `bio` was removed several years ago and will not be processed as a custom attribute.
+{% endalert %}
+
+####  User Attribute Example Request
+
+```json
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+{
+  "api_key" : "your App Group REST API Key",
+  "attributes" : [
+    {
+      "external_id" : "user1",
+      "first_name" : "Jon",
+      "has_profile_picture" : true,
+      "dob": "1988-02-14",
+      "music_videos_favorited" : { "add" : [ "calvinharris-summer" ], "remove" : ["nickiminaj-anaconda"] }
+    },
+    {
+      "external_id" : "user2",
+      "first_name" : "Jill",
+      "has_profile_picture" : false,
+      "push_tokens": [{"app_id": App Identifier, "token": "abcd"}]
+    },
+    {
+      "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
+      "first_name" : "Alice",
+      "has_profile_picture" : false,
+    }
+  ]
+}
+```
+
+This example contains two User Attribute objects of the allowed 75 per API call.
+
+
+[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
+[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
+[21]: http://docs.python-requests.org/en/latest/ "Requests"
+[22]: https://rubygems.org/gems/multi_json "multiJSON"
+[23]: https://rubygems.org/gems/rest-client "Rest Client"
+[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
+[26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields

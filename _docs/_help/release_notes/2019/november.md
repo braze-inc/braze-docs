@@ -1,6 +1,6 @@
 ---
 nav_title: November
-page_order: 3
+page_order: 2
 ---
 
 # November 2019

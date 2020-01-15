@@ -21,3 +21,7 @@ If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered 
 {% alert important %}
 Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
 {% endalert %}
+
+## New users
+
+Braze  automatically creates a user when a user with a new phone number responds with a START or STOP (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the user alias ('phone') will be set with the same value.  Customers can use the track endpoint to find users based on their alias and set an external_id.

@@ -14,6 +14,10 @@ guide_featured_list:
   - name: Eclipse SDK Set Up
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
+  - name: "TLS 1.0 & 1.1 Deprecation"
+    link: /docs/help/release_notes/deprecations/tls_deprecation/
+    fa_icon: fas fa-lock
+
 
 ---
 
@@ -100,6 +104,17 @@ _Support withdrawn: November 2016_
 
 The Delay While Idle parameter was previously a part of the [GCM push options](https://developers.google.com/cloud-messaging/http-server-ref). Google withdrew support for this option on November 15th 2016. Previously, when set to **true**, it indicated that the message should not be sent until the device becomes active.
 
+## Custom Endpoints
 
-[11]: {% image_buster /assets/img_archive/feedback_dashboard_example.png %} "Feedback Response Dashboard"
+_Replaced by: n/a_
+
+_Braze Feature_
+
+_Support withdrawn: December 2019_
+
+Removal of Custom Endpoints. If you have a custom endpoint, you can still continue to use it, but Braze no longer gives them out.
+
+
+
+
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}

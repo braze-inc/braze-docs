@@ -1,10 +1,20 @@
 ---
 nav_title: Branch
 alias: /partners/branch_for_deeplinking/
----
-# Branch
 
-[Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points	Branch and Braze team to allow you to provide better experiences to your customers through allowing you to properly attribute the beginning of their user journey & connect them through deeplinks to the their intended location
+page_type: partner
+description: "This article describes the partnership between Braze and Branch and how to use it to support your deep linking practices."
+---
+# Branch for Deep-Linking {#branch}
+
+{% include video.html id="PwGKqfwV-Ss" align="right" %}
+
+> [Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with braze to support your deep linking needs.
+
+Branch, with Braze, allows you to provide better experiences to your customers through allowing you to properly attribute the beginning of their user journey & connect them through deeplinks to the their intended location.
+
+Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust [attribution]({{ site.baseurl }}/partners/advertising_technologies/attribution/branch_for_attribution/) and deep linking.
+
 
 ## Install Attribution {#branch-install-attribution}
 

@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: Android
 page_order: 2
-search_rank: 5
+
 ---
 ## Troubleshooting
 

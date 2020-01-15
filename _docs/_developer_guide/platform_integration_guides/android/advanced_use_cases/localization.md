@@ -2,7 +2,7 @@
 nav_title: Localization
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Localization
 

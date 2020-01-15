@@ -59,7 +59,7 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 Push, Engagement, Opens
 {% endapitags %}
 
-Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline.
+Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens".
 
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
@@ -121,10 +121,10 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 {% endapi %}
 {% api %}
 
-## Push Notifications in the iOS Foreground Events
+## Push Notifications Bounce
 
 {% apitags %}
-Push, Engagement, iOS, Sends
+Push, Engagement, iOS, Sends, Bounce
 {% endapitags %}
 
 Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline.

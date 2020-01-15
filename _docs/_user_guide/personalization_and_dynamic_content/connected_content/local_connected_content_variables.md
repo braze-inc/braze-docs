@@ -71,7 +71,7 @@ If the API responded with `{{localweather.consolidated_weather[0].weather_state_
 
 ![Connected Content Push Example][17]
 
-By default, Connected Content does not set a Content-Type or Accept header on the HTTP GET request that it makes. By adding `:content_type application/json` to the tag, Braze will set both the Content-Type and Accept header to the type you specify.
+By default, Connected Content will set a Content-Type header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
 
 {% raw %}
 ```
@@ -194,6 +194,5 @@ With a `POST` you don't need to cache bust, as Braze never caches the results fr
 [57]: https://developer.accuweather.com
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
-[60]: {% image_buster /assets/img_archive/Accuweather_APIKey2.png %}
 [61]: https://developer.accuweather.com/weather-icons
 [62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

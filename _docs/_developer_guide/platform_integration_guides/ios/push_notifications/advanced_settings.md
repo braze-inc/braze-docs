@@ -2,7 +2,7 @@
 nav_title: Advanced Settings
 platform: iOS
 page_order: 5
-search_rank: 5
+
 ---
 # Advanced Settings
 

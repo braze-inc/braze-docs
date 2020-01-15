@@ -2,7 +2,7 @@
 nav_title: Google Advertising ID
 platform: Android
 page_order: 9
-search_rank: 5
+
 ---
 
 # Optional Google Advertising ID

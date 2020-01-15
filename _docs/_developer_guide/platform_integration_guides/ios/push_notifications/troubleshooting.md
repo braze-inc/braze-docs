@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 ## Troubleshooting {#push-troubleshooting}
 
@@ -132,7 +132,6 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [1]: {% image_buster /assets/img_archive/push_changelog.png %}
 [20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1
 [21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[22]: {% image_buster /assets/img_archive/pushenabled.png %}
 [23]: {% image_buster /assets/img_archive/prov_profile_refresh_step1.png %}
 [24]: {% image_buster /assets/img_archive/prov_profile_refresh_step2.png %}
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}

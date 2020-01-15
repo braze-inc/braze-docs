@@ -2,7 +2,7 @@
 nav_title: Locations & Geofences Integration for Android
 platform: Android
 page_order: 6
-search_rank: 5
+
 ---
 
 ## Locations & Geofences
