@@ -8,6 +8,8 @@ page_order: 2
 
 In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
+If you are looking for a complete list of supported langauges you may attribute to your users in their profiles, please see our [User Language List][1].
+
 ## Languages Supported
 1. Arabic
 2. Burmese
@@ -115,5 +117,6 @@ Optionally, you can also override any of the following Key / String pairs within
 
 For more information see the [Apple Localization Developer Docs][3] as well as the [LOC standard language list][4].
 
+[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/
 [4]: http://www.loc.gov/standards/iso639-2/php/English_list.php
