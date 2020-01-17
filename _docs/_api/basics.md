@@ -16,7 +16,7 @@ platform:
 
 ## What is a REST API?
 
-A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints with specific requirements that will perform various actions and/or return various data. API access is done using HTTPS web requests to your company's REST API endpoint. Typically this is `https://rest.iad-01.braze.com`, but your Success Manager will provide an alternative endpoint URL if necessary.
+A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
 {% alert note %}
 Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
