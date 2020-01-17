@@ -27,7 +27,7 @@ An API request with any fields in the Attributes Object will create or update an
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean),
   // See note below regarding anonymous push token imports
-  "push_token_import" : (optional, boolean).
+  "push_token_import" : (optional, boolean),
   // Braze User Profile Fields
   "first_name" : "Jon",
   "email" : "bob@example.com",

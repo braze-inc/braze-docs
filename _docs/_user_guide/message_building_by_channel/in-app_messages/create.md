@@ -175,7 +175,7 @@ Add [key-value pairs][19] to your message if needed.
 
 ## Step 6: Build the Remainder of Your Campaign or Canvas
 
-Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages.
+Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages. For more information on Canvas specific in-app messaging options like expiry and steps, [check out our documentation][16]. 
 
 {% details Triggering %}
 ![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: height="50%" width="50%"}
@@ -257,6 +257,7 @@ After you've finished building the last of your campaign or Canvas, review its d
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
+[16]: {{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
 [18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [22]: {% image_buster /assets/img/iam-generations.gif %}
