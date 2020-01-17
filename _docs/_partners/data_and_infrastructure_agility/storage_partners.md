@@ -1,6 +1,6 @@
 ---
 nav_title: Braze Storage Partners
-page_order: 2
+page_order: 3
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to store data to use in your messaging campaigns."
