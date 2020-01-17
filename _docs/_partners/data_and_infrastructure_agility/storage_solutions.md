@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Storage Partners
+nav_title: Storage Solutions
 page_order: 3
 
 page_type: landing
@@ -9,13 +9,13 @@ layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners.json"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Braze Storage Partners"
+partner_top_header: "Storage Solutions"
 
 valid_partner_list:
   - name: Amazon S3
-    url: /docs/partners/data_and_infrastructure_agility/storage_partners/amazon_s3/
+    url: /docs/partners/data_and_infrastructure_agility/storage_solutions/amazon_s3/
   - name: Google Cloud Storage
-    url: /docs/partners/data_and_infrastructure_agility/storage_partners/google_cloud_storage_for_currents/
+    url: /docs/partners/data_and_infrastructure_agility/storage_solutions/google_cloud_storage_for_currents/
   - name: Microsoft Azure
-    url: /docs/partners/data_and_infrastructure_agility/storage_partners/microsoft_azure_blob_storage_for_currents/
+    url: /docs/partners/data_and_infrastructure_agility/storage_solutions/microsoft_azure_blob_storage_for_currents/
 ---
