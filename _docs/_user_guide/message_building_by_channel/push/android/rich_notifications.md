@@ -32,17 +32,18 @@ Follow the [campaign steps][3] you normally do to compose a push notification fo
 ### Step 2: Add Captioning
 Add your Summary Text/ Image Caption that you'd like to display above the image in the notification.
 
-    ![Add Android Summary Text][9]
+![Add Android Summary Text][9]
 
 ### Step 3: Add Media
 Add your image in the 'Expanded Notification Image' field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
 
-    ![Add Android Image][8]
+![Add Android Image][8]
 
 ### Step 4: Continue Creating Your Campaign
 Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.
 
 [3]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
+[6]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
 [7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %}
 [8]: {% image_buster /assets/img_archive/Android_rich_image.png %}
 [9]: {% image_buster /assets/img_archive/Android_Rich_SummaryText.png %}

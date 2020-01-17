@@ -18,7 +18,7 @@ tool:
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{ site.baseurl }}/)
-- [iOS Push Enabled]
+- [iOS Push Enabled]({{ site.baseurl }}/)
 
 ## Step 1: Select Your Channel of Choice
 
