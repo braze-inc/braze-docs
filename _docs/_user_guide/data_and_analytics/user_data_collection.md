@@ -22,6 +22,9 @@ guide_featured_list:
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     fa_icon: fas fa-user
+  - name: User Language Codes
+    link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
+    fa_icon: fas fa-language
 ---
 
 <br>

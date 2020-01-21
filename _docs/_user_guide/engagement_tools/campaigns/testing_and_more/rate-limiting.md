@@ -36,6 +36,7 @@ Braze provides the following filters in order to help you limit the rate at whic
 - Last Received Any Campaign
 - Last Received Push Campaign
 - Last Received Email Campaign
+- Last Received SMS
 - Last Viewed News Feed
 
 #### Implementing Filters
@@ -104,7 +105,7 @@ As your user base continues to grow and your messaging scales to include life cy
 
 Frequency Capping can be set up for each app group by selecting Global Campaign Settings found underneath the Engagement tab. From here, you can choose:
 
-- Which message channel you’d like to cap - push, email, webhook or any of those three.
+- Which message channel you’d like to cap - push, email, sms, webhook or any of those three.
 - How many times each user should receive that channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
 
 Each line of frequency caps will be connected using an "AND," and you're able to add as many as you wish. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than 1 push per day and no more than 3 pushes per week.

@@ -18,6 +18,7 @@ Closes #**ISSUE_NUMBER_HERE**
 
 <details>
 <summary>PR Checklist</summary>
+
 - [ ] Check that all links work!
 - [ ] Ensure you have completed [our CLA](https://www.braze.com/docs/cla/).
 - [ ] Tag @KellieHawks as a reviewer when the your work is _done and ready to be reviewed for merge_.
@@ -44,6 +45,7 @@ _Consult the [Docs Text Formatting Guide](https://github.com/Appboy/braze-docs/w
 
 <details>
 <summary>ATTENTION: For PR Reviewers</summary>
+
 - [ ] Read our [Reviewing a PR page](https://github.com/Appboy/braze-docs/wiki/Reviewing-a-PR) for more on our reviewing suggestions.
 - [ ] Preview all changes in the linked Heroku environment (click `View deployment` button below, then "Docs". A `502` error just means you should refresh until you see the Docs Home page.
 </details>

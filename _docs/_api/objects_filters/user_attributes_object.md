@@ -27,7 +27,7 @@ An API request with any fields in the Attributes Object will create or update an
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean),
   // See note below regarding anonymous push token imports
-  "push_token_import" : (optional, boolean).
+  "push_token_import" : (optional, boolean),
   // Braze User Profile Fields
   "first_name" : "Jon",
   "email" : "bob@example.com",
@@ -69,6 +69,7 @@ The following data types can be stored as a custom attribute:
   - Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them.
     - Example: `"my_custom_attribute_2" : {"inc" : int_value},`
 - Arrays
+  - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
   - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
   - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
@@ -91,7 +92,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
 | image_url | (string) URL of image to be associated with user profile. |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24].<br>[List of accepted Languages][2] |
 | last_name | (string) |
 |marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|
 | phone | (string) |
@@ -140,7 +141,8 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 
 
 [1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays [
+[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"

@@ -15,6 +15,13 @@ Braze provides indicators on Content Cards as pictured below:
 |Read | ![ReadContentCard][2] |
 | Unread | ![UnreadContentCard][3] |
 
+# Changing colors
+
+To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, changing it to green with the following CSS:
+
+```css
+.ab-unread-indicator { background-color: green !important; }
+```
 
 # Disabling the Indicators
 
