@@ -1,6 +1,6 @@
 ---
 nav_title: "Create a Push Primer Campaign"
-page_order: 2
+page_order: 5
 page_type: tutorial
 description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages."
 

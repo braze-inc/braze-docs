@@ -1,6 +1,6 @@
 ---
 nav_title: "Push Stories"
-page_order: 6
+page_order: 2
 page_type: reference
 description: "This reference article covers what Push stories are, how to create one as well as some frequently asked questions."
 

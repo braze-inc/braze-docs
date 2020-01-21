@@ -31,4 +31,7 @@ guide_featured_list:
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
   fa_icon: fas fa-chart-bar
+- name: "Push Primer Campaign"
+  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  fa_icon: fas fa-comment-alt
 ---

@@ -1,6 +1,6 @@
 ---
 nav_title: "Creating a Push Message"
-page_order: 3
+page_order: 4
 page_type: tutorial
 description: "This tutorial page goes over the different components involved in creating a Push Message."
 

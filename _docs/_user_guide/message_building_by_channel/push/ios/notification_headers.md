@@ -1,6 +1,6 @@
 ---
 nav_title: "iOS Push Message Titles"
-page_order: 2
+page_order: 4
 page_type: reference
 description: "This reference article briefly covers how to use, setup and implement iOS Push Message Tiles."
 

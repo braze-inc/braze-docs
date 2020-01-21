@@ -1,6 +1,6 @@
 ---
 nav_title: "Create Rich Notifications for Android"
-page_order: 9
+page_order: 3
 page_layout: tutorial
 description: "This tutorial covers how to set up Android Rich notifications for your Braze Campaigns."
 

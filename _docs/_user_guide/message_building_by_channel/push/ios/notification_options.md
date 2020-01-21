@@ -1,6 +1,6 @@
 ---
 nav_title: "Notification Options (iOS)"
-page_order: 6
+page_order: 2
 page_layout: reference
 description: "This reference article covers iOS Notification Options like critical alerts, quiet notifications, provisional push notifications, and more."
 

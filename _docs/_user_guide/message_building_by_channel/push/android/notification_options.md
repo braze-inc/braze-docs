@@ -1,6 +1,6 @@
 ---
 nav_title: "Notification Options (Android)"
-page_order: 5
+page_order: 2
 page_type: reference
 description: "This reference article covers several Android Notification Option and how to best use them within Braze campaigns."
 

@@ -1,6 +1,6 @@
 ---
 nav_title: "Create Rich Notifications for iOS"
-page_order: 9
+page_order: 3
 page_type: tutorial
 description: "This tutorial covers how to create iOS Rich Notifications for your Braze Campaigns."
 

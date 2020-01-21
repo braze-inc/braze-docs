@@ -1,6 +1,6 @@
 ---
 nav_title: "Subscription States"
-page_order: 4
+page_order: 2
 page_type: reference
 description: "This reference article covers the different push subscription states."
 

@@ -14,33 +14,36 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-users
 - name: Push Stories
-  link: /docs/user_guide/message_building_by_channel/push/push_stories/
+  link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
   fa_icon: fas fa-book-open
 
 guide_menu_title: "More Articles"
 guide_menu_list:
 - name: Android Push Notification Options
-  link: /docs/user_guide/message_building_by_channel/push/notification_options_android/
+  link: /docs/user_guide/message_building_by_channel/push/android/
   fa_icon: fab fa-android
 - name: iOS Push Notification Options
-  link: /docs/user_guide/message_building_by_channel/push/notification_options_ios/
+  link: /docs/user_guide/message_building_by_channel/push/ios/
   fa_icon: fab fa-apple
 - name: Push Action Buttons
-  link: /docs/user_guide/message_building_by_channel/push/push_action_buttons/
+  link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
   fa_icon: far fa-dot-circle
-- name: Rich Notifications
-  link: /docs/user_guide/message_building_by_channel/push/rich_notifications/
+- name: iOS Rich Notifications
+  link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
   fa_icon: fas fa-image
 - name: Notification IDs
-  link: /docs/user_guide/message_building_by_channel/push/notification_ids/
+  link: /docs/user_guide/message_building_by_channel/push/android/notification_ids/
   fa_icon: fas fa-fingerprint
 - name: Notification Channels
-  link: /docs/user_guide/message_building_by_channel/push/notification_channels/
+  link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/
   fa_icon: fab fa-android
 - name: iOS Push Message Titles
-  link: /docs/user_guide/message_building_by_channel/push/ios_notification_headers/
+  link: /docs/user_guide/message_building_by_channel/push/ios/notification_headers/
   fa_icon: fas fa-mobile-alt
+- name: "Push Registration"
+  link: /docs/user_guide/message_building_by_channel/push/push_registration/
+  fa_icon: fas fa-check-square
 - name: "iOS 10.3 Customizable App Icon Feature"
-  link: /docs/user_guide/message_building_by_channel/push/ios_customizable_app_icon_feature/
+  link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-cog
 ---

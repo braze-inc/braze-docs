@@ -78,5 +78,9 @@ glossaries:
       - iOS
       - Android
       - Web
+  - name: "Wearable Push Notifications"
+    description: "These push notifications allow brands to send messages directly to wearable devices like the Apple Watch."
+    tags:
+      - iOS
 
 ---

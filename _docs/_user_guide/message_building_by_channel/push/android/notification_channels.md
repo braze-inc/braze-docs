@@ -1,6 +1,6 @@
 ---
 nav_title: "Notification Channels"
-page_order: 3
+page_order: 4
 page_type: reference
 description: "This reference article covers Android Push Notification Channel topics like Android O transition, how to add a channel to Braze, setting a fallback channel, and more."
 
