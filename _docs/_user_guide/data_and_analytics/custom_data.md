@@ -19,4 +19,7 @@ guide_featured_list:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table
+  - name: Regex
+    link: /docs/user_guide/data_and_analytics/custom_data/regex/
+    fa_icon: fas fa-search
 ---
