@@ -45,6 +45,10 @@ glossaries:
     description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Custom Data
+  - name: Last Received SMS
+    description: Segments your users by the last time that they have received a SMS. (24-hour period)<br><br>Timezone:<br>UTC
+    tags:
+      - Marketing Activity
   - name: X Custom Event in Y Days
     description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
