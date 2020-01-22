@@ -17,35 +17,64 @@ tool:
 
 _To see examples of push notifications, check out our [Client Integration Gallery][8]._
 
-## Step 1: Create a New Campaign {#create-new-campaign-push}
+## Step 1: Create a New Push Campaign {#create-new-campaign-push}
 
-From the Messaging Page, click "Create Campaign."
+Click __Create Campaign__ in the top right corner of the __Campaigns__ page. <br><br>From there, select __Push Notification__ within Single Channel Options or __Multichannel Campaign__ if you want to include multiple channels in addition to Push. 
 
 ![newcampaign][1]
 
-## Step 2: Name Your Campaign, Choose Messaging Types, and Compose your Message
+## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
 Next, you need to name your campaign and select the messaging types and notification style ([rich]({{ site.baseurl }}/user_guide/message_building_by_channel/push/rich_notifications/) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 
-Time to write your push message! Type it into the box and watch a preview appear on the device in the box.
+Time to write your push message! Type it into the message box and watch a preview appear on in the preview box to the left. Don't forget to make use of our wonderful liquid logic tools when writing your messages. These tools allow you to make personalized, targeted push messages a snap!
 
-For more information on Notification Options, please see our [iOS Notification and Provisional Push documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/), as well as our [Android Notification Options documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_android/).
+### Additonal Push Customization Steps
 
-## Step 3: Schedule Your Messaging Campaign {#schedule-push-campaign}
+#### Languages
+
+You also have the ability to Add Languages through the __Add Languages__ button. Braze offers the option to "Internationalize" your message, showing certain custom messages and fields in specific languages based on a users language preferences. 
+
+#### OnClick Behavior
+
+Braze allows you to specify what happens when a user clicks the body of a push notification. Whether you want to do something as simple as open the application, or redirect to a specified URL, we have many different ways to customize our push notifications, and therefore user experiance. Here, you can also find the option to set up button prompts within your push notification, for example: yes/no prompt, confirm/cancel, more button, etc. 
+
+For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_android/).
+
+### Step 2b: Preview and Test Your Message
+
+Arguably one of the most important steps, testing! After you finish composing your perfect push message, you should test it before sending it out! Navigate to the test page by clicking the "Test" button denoted by the eye symbol. Use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to ensure that your message displays properly.
+
+## Step 3: Schedule Your Push Messaging Campaign {#schedule-push-campaign}
 
 ![Schedule][3]
 
-Message scheduling features include:
+{% tabs %}
+  {% tab Scheduled Delivery %}
+Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use Intelligent Delivery to send the message at the time the user is most likely to engaged. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
 
-- Schedule messages to send immediately, at a specific time, using "Intelligent Delivery".
-- __Intelligent Delivery__: Braze allows you to define a window during which you would like a user to receive a notification and Braze will send it to each individual user at the time we determine they are most likely to engage. We make this calculation based upon a statistical analysis of the user's past interactions with the app.
+Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
 
-![Optimized Push Scheduling][7]
+Unless you select the option to "Message Repeatedly", each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
 
-- Automatically schedule campaigns to send at a certain time with respect to the local time of each of your users.
-- Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
+> __Intelligent Delivery__: Braze allows you to define a window during which you would like a user to receive a notification and Braze will send it to each individual user at the time we determine they are most likely to engage. We make this calculation based upon a statistical analysis of the user's past interactions with the app.
+
+  {% endtab %}
+  {% tab Action-Based Delivery %}
+
+  Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ drop down.)
+
+![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
+
+  {% endtab %}
+  {% tab API-Triggered Delivery %}
+Check out our [API-Triggered section of the Developer Guide]({{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
+
+![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
+  {% endtab %}
+{% endtabs %}
 
 {% alert warning %}
 Unless you check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
@@ -57,7 +86,7 @@ On the “Target Users” step of the campaign setup, you can choose the target 
 
 Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-![Multi-Channel Footer][24]
+![Multi-Channel Footer][25]
 
 Under the Targeting Options section, you'll find a few options for who you can send your campaign to:
 
@@ -69,7 +98,7 @@ Under the Targeting Options section, you'll find a few options for who you can s
 
 4. __Users that fall under a series of filters (and are not defined by pre-existing segments).__ This means you do not need to target a campaign at a pre-existing segment - you can make an ad hoc audience during campaign creation by just using the additional filters, and not selecting any segments under "Target Users By Segment. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
-![Segmenter][25]
+![Segmenter][24]
 
 Above the Audience Statistics chart, there will be an Audience Summary that spells out which users you're targeting.
 
