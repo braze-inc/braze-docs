@@ -40,6 +40,14 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+### January 2020
+
+#### Added SMS Capability
+
+Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages as well as implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
+
+In the SMS channel, the New User settings and behavior have been outlined and can be checked out [here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
+
 ### November 2019
 
 #### Intelligence Suite
