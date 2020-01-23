@@ -18,7 +18,6 @@ Kochava and Braze power a more holistic understanding of campaigns. Kochava send
 __Step 1: Integration Requirements__
 
 * This integration supports iOS, Android, and Windows apps.
-* If you expect more than 100 attributed installs per hour, you will need a Braze Enterprise account. See [API Restrictions][5] for more information.
 * Your app will need Braze's SDK and Kochava's SDK installed.
 * You will need to [enable IDFA collection][13] in Braze's SDK.
 

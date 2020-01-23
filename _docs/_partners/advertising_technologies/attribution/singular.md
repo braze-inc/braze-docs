@@ -18,7 +18,6 @@ Singular allows you to import paid install attribution data to segment more inte
 ### Step 1: Integration Requirements
 
 * This integration supports iOS and Android apps.
-* If you expect more than 100 attributed installs per hour, you will need a Braze Enterprise account. See [API Restrictions][5] for more information.
 * Your app will need Braze's SDK and Singular's SDK installed.
 * If you have an iOS app, you will need to [enable IDFA collection][13] in Braze's SDK.
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method  or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
@@ -42,7 +41,7 @@ In your Braze account, navigate to "Technology Partners" , then "Attribution" an
 
 ### Step 3: Confirming the Integration
 
-Once Braze receives attribution data from Singular, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from Singular, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ## Facebook and Twitter Attribution Data
 
