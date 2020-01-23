@@ -38,6 +38,8 @@ To use Dark Mode for all in-app messages, go to Templates & Media, then In-App M
 
 {% alert info %}
 Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not upgraded their phones to at least these versions will only be shown the light theme.
+
+Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.
 {% endalert %}
 
 ## Using HTML In App Messages
