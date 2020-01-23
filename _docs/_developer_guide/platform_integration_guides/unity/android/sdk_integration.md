@@ -210,5 +210,5 @@ Braze should now be collecting data from your application and your basic integra
 [19]: #game-objects
 [20]: #inapp-disabling-native
 [21]: https://github.com/Appboy/appboy-android-sdk/tree/master/android-sdk-ui/assets
-[22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package
+[22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
 [23]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
