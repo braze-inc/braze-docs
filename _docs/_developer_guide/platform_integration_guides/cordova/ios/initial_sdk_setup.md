@@ -83,4 +83,4 @@ Once the initial setup is complete, you can access the `AppboyPlugin` javascript
 [1]: https://github.com/Appboy/appboy-cordova-sdk
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
-[4]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
