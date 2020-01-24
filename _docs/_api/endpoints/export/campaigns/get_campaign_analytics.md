@@ -39,7 +39,7 @@ The `campaign_id` for API campaigns can be found on the Developer Console page a
 
 ### Responses
 
-#### Multichannel Response
+#### Multi-Channel Response
 
 ```json
 Content-Type: application/json

@@ -73,7 +73,7 @@ From there, this code can be pasted into a message within the Dashboard.
 
 ![Promo Codes 10][10]{:height="200px"}
 
-Now, using Liquid Logic, you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as used on the Braze backend to ensure no other message receives that same code.
+Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as used on the Braze backend to ensure no other message receives that same code.
 
 __Please note that promotion codes cannot be sent in In-App Messages.__
 
@@ -87,7 +87,7 @@ __Please note that promotion codes cannot be sent in In-App Messages.__
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-
+[11]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/
 
 
 

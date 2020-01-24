@@ -26,11 +26,11 @@ This partnership is in early access beta. All features may not perform as exactl
 | Custom API Proxy | PassKit | This is required for basic authentication within the HTTP header of your webhook requests. |
 | userDefinedID | Client | In order to appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the userDefinedID.|
 | Braze API Key | Braze | You will need to create a new API Key can be created in the Developer Console -> API Settings -> +Create New API Key with *users.track* permissions. The Braze API key will need to be provided to your Rokt account manager.|
-| [Braze REST Endpoint](https://www.braze.com/docs/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your PassKit account manager to pass subscriber data into Braze.|
+| [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your PassKit account manager to pass subscriber data into Braze.|
 
 ## API Integration
 
-To further enrich your customers’ mobile wallet experiences, you can work with your PassKit account manager to pass data into Braze through Braze’s [Users Track Endpoint](https://www.braze.com/docs/api/endpoints/user_data/#user-track-endpoint). Examples of data to share from PassKit includes:
+To further enrich your customers’ mobile wallet experiences, you can work with your PassKit account manager to pass data into Braze through Braze’s [Users Track Endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-track-endpoint). Examples of data to share from PassKit includes:
 
 - Pass Issue: when a customer clicks on a pass link and is first shown a pass.
 - Pass Installs: when the customer adds/saves the pass to their wallet app.

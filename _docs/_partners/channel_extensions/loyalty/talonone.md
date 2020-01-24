@@ -20,9 +20,9 @@ This partnership is in early access beta. All features may not perform as exactl
 | Braze Account | [Braze Settings](https://dashboard.braze.com/sign_in) | You will need an account with Braze, as well as an active Braze campaign that vouchers and codes will be generated for. |
 
 {% alert warning %}
-Talon.One **_requires_** a rate-limit of 500 messages per minute.
+Talon.One **_requires_** a rate limit of 500 messages per minute.
 
-You can modify your rate-limit using Braze. Find out how [here]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
+You can modify your rate limit using Braze. Find out how [here]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
 {% endalert %}
 
 ## API Integration
