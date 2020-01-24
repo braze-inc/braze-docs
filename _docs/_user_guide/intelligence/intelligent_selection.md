@@ -20,6 +20,6 @@ Intelligent Selection is ideal for campaigns that are scheduled to send multiple
 For Campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret". You can think of it as similar to Confidence: when there's enough data to know which variant is best, Intelligent Selection will turn itself off. In most cases, one of the variants will be chosen by the algorithm as the winning variant. This variant will be given 100% of the audience for future sends.
 
 
-[1]: https://www.braze.com/docs/user_guide/intelligence/multivariate_testing/
+[1]: {{ site.baseurl }}/user_guide/intelligence/multivariate_testing/
 [227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
 [271]: {% image_buster /assets/img/intelligent_selection1.png %}
