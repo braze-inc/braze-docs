@@ -37,7 +37,7 @@ Because promotion codes generally don't last forever, we need to set up an expir
 
 ![Promo Codes 4][4]{:height="200px"}
 
-You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration.
+You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. This check is performed once a day.
 
 ![Promo Codes 5][5]
 
@@ -76,6 +76,8 @@ From there, this code can be pasted into a message within the Dashboard.
 Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as used on the Braze backend to ensure no other message receives that same code.
 
 __Please note that promotion codes cannot be sent in In-App Messages.__
+
+__Additionally, if the code snippet is used across messages in a multichannel campaign, different codes will be sent in each channel's message.__
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
