@@ -69,12 +69,6 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 Braze may also be compatible with other tag management solutions. Please reach out to a Braze representative if you need help evaluating these solutions.
 
-## Increasing the Security of the Braze SDK
-
-As an additional layer of Web SDK security on the developer side, Braze suggests the simple set up of a bundler tool for Javascript. This can help prevent the SDK from being exposed to others, overall making it harder for malicious users to leverage Braze's SDK API in customer web apps.
-
-The steps to do this can be found in the Braze Web SDK Github Repository under [Alternative NPM installation][15].
-
 ## Upgrading the SDK
 
 When you reference the Braze Web SDK from our content delivery network, for example, https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
@@ -95,4 +89,3 @@ These files must be updated in coordination with each other to ensure proper fun
 [12]: {% image_buster /assets/img_archive/gtm_example.png %}
 [13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
 [14]: {% image_buster /assets/img/api_key_location.png %}
-[15]: https://github.com/Appboy/appboy-web-sdk#alternative-npm-installation
