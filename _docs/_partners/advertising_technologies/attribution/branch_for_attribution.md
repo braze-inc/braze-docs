@@ -20,7 +20,6 @@ Branch and Braze help you understand exactly when and where users were acquired 
 ### Step 1: Integration Requirements
 
 * This integration supports iOS and Android.
-* If you expect more than 100 attributed installs per hour, you will need a Braze Enterprise account. See [API Restrictions][5] for more information.
 * Your app will need Braze's SDK and Branch's SDK installed.
 * You will need to [enable IDFA collection][13] in Braze's SDK.
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Branch. You must set the correct key before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
