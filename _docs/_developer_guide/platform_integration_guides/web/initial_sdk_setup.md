@@ -19,8 +19,8 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
 *For US-03* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
+*For EU-01* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.fra-01.braze.eu/api/v3’})`
 
-*For EU-01* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk-01.iad-01.braze.eu/api/v3’})`
 
 ## Enable Error Logging {#error-logging}
 
