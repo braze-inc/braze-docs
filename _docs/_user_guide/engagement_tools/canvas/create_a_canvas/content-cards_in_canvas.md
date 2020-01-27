@@ -85,8 +85,8 @@ Using Canvas, you can add a step that sends both a Content Card and Push Notific
 
 You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using Key Value Pairs:
 
-* [Multiple Feeds for Web SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
-* [Multiple Feeds for Android SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
+* [Multiple Feeds for Web SDK]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
+* [Multiple Feeds for Android SDK]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}

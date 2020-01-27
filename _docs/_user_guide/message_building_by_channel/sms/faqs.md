@@ -67,7 +67,7 @@ Braze will only automatically process the following _exact, single-word, case-in
 
 - `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
 - `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
-- `HELP`, `INFO`: Triggers custom "help" message built fduring onboarding process.
+- `HELP`, `INFO`: Triggers custom "help" message built during onboarding process.
 
 [Learn more about Keyword Processing and Management here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
 {% enddetails %}
