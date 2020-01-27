@@ -52,3 +52,8 @@ We created a [Data Tool for Braze Benchmarks](https://www.braze.com/perspectives
 The initial industries are: Delivery Services, Ecommerce, Education, Entertainment, Finance, Gaming, Health, Lifestyle, Restaurants, Retail, Technology, Transportation, and Travel.
 
 Our benchmarking data will also be available directly in the Snowflake Data Exchange.
+
+> For a set of example queries to reference when setting up snowflake, check out our [Sample Queries][SQ] and [ETL Event Pipleine Setup][ETL] examples.
+
+[SQ]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
+[ETL]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
