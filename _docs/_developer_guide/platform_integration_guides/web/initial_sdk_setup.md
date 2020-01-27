@@ -18,9 +18,9 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
-*For US-03*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
+*For US-03* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
 
-*For EU-01*: `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk-01.iad-01.braze.eu/api/v3’})`
+*For EU-01* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk-01.iad-01.braze.eu/api/v3’})`
 
 ## Enable Error Logging {#error-logging}
 
@@ -36,11 +36,11 @@ Braze's SDK can be initialized and controlled within tags configured from Google
 
 To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Tag Manager workspace.  Place Braze’s [Web SDK/javascript code from the Google Tag Manager integration instructions][13] within the tag.
 
-> This is instead of directly placing the snippit directly within the <head> section of your website.
+> This is instead of directly placing the snippet directly within the <head> section of your website.
 
 Subsequent tags which fire after page load can then reference this. For example `<script type="text/javascript">window.appboy.logCustomEvent("test event")</script>`.
 
-Please also ensure to replace the API key and custom SDK endpoint in the code with your API key.
+Please also ensure to replace the API key and custom SDK endpoint (if assigned one) in the code with your API key.
 
 Braze suggests the tag has the trigger configuration of **Page View > DOM Ready**. Other Page View triggers can fire the tag, provided that no other Braze related tags are fired to prior to this.
 
@@ -67,11 +67,17 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 ### Other Tag Managers
 
-Braze may also be compatible with other tag management solutions. Please reach out to the a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions. Please reach out to a Braze representative if you need help evaluating these solutions.
 
-## Upgrading The SDK
+## Increasing the Security of the Braze SDK
 
-When you reference the Braze Web SDK from our content delivery network, for example https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backwards compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to insure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
+As an additional layer of Web SDK security on the developer side, Braze suggests the simple set up of a bundler tool for Javascript. This can help prevent the SDK from being exposed to others, overall making it harder for malicious users to leverage Braze's SDK API in customer web apps.
+
+The steps to do this can be found in the Braze Web SDK Github Repository under [Alternative NPM installation][15].
+
+## Upgrading the SDK
+
+When you reference the Braze Web SDK from our content delivery network, for example, https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
 
 You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
@@ -89,3 +95,4 @@ These files must be updated in coordination with each other to ensure proper fun
 [12]: {% image_buster /assets/img_archive/gtm_example.png %}
 [13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
 [14]: {% image_buster /assets/img/api_key_location.png %}
+[15]: https://github.com/Appboy/appboy-web-sdk#alternative-npm-installation
