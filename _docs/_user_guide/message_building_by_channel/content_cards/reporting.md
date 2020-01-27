@@ -3,9 +3,22 @@ nav_title: Reporting & Analytics
 page_order: 4
 ---
 
-# Reporting & Analytics {#IAM-Reporting}
+# Reporting & Analytics
 
 To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1].
+
+## Content Card Metrics
+
+- **Recipients** The number of users who have received a Content Card which received at least one impression.
+- **Impressions** The number of times a Content Card was visible and on-screen.
+- **Clicks** The number of times a user has clicked the CTA Link of a Content Card.
+- **Dismissals** The number of times a user has swiped away or clicked to dismiss a Content Card.
+
+### Control Groups
+
+To measure the impact of an individual Content Card, a [Control Group][2] can be added to an A/B Test.
+
+The top level campaign details will not include metrics from the Control Group variant.
 
 ## Reporting in Campaigns
 
@@ -15,9 +28,9 @@ Campaigns will deliver your reports in a series of blocks. You may see more or l
 
 {% tab Campaign Details %}
 
-__Campaign Details__
+**Campaign Details**
 
-The Campaign Details analytics block will give you a high-level overview of the entire in-app message campaign.
+The Campaign Details analytics block will give you a high-level overview of the entire Content Card campaign.
 
 ![CC_Campaign_Details]({% image_buster /assets/img/cc-campaign-details.png %})
 
@@ -25,7 +38,7 @@ The Campaign Details analytics block will give you a high-level overview of the 
 
 {% tab Message Performance %}
 
-__Message Performance__
+**Message Performance**
 
 This block will define the messages performance on multiple levels (by Variant, Audience %, Unique Impressions, Impressions, Body Clicks, Button Clicks, Revenue, Primary Conversions, and more!). Click on the <i class="fa fa-eye preview-icon"></i> to view your message.
 
@@ -35,7 +48,7 @@ This block will define the messages performance on multiple levels (by Variant, 
 
 {% tab Historical Performance %}
 
-__Historical Performance__
+**Historical Performance**
 
 This block allows you to see the message's performance over a set time period on a timeline.
 
@@ -45,7 +58,7 @@ This block allows you to see the message's performance over a set time period on
 
 {% tab Conversion Event Details %}
 
-__Conversion Event Details__
+**Conversion Event Details**
 
 This block will show you the performance of your conversion events for an individual Content Card.
 
@@ -56,3 +69,4 @@ This block will show you the performance of your conversion events for an indivi
 {% endtabs %}
 
 [1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
+[2]: {{ site.baseurl }}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
