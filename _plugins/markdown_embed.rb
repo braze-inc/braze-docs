@@ -18,6 +18,9 @@ module Jekyll
       if @url.empty?
         embedmarkdown = false
       end
+      if ENV["SITE_URL"].to_s.downcase != 'https://www.braze.com' || ENV["RACK_ENV"].to_s.downcase != 'production'
+        embedmarkdown = false
+      end
       if embedmarkdown
         url = @url.strip
 

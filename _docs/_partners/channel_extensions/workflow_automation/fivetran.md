@@ -37,11 +37,11 @@ Locate your External ID in the Fivetran setup form for Braze.
 
 ### Step 2: Create a Braze API Key For Amazon S3 Storage
 
-Next, login to your dashboard [here](https://dashboard.braze.com) or with your [designated dashboard URL](https://www.braze.com/docs/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
+Next, login to your dashboard [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{ site.baseurl }}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
 
 ![Braze Dashboard]({% image_buster /assets/img/fivetran_braze_developer_console.png %})
 
-From here, [create an API Key](https://www.braze.com/docs/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
+From here, [create an API Key]({{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
 
 * users.export.ids
 * users.export.segment
@@ -153,11 +153,11 @@ Locate your Fivetran email in the Fivetran setup form for Braze by logging into 
 
 ### Step 2: Create a Braze API Key For Google Cloud Storage
 
-Next, login to your Braze account [here](https://dashboard.braze.com) or with your [designated dashboard URL](https://www.braze.com/docs/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
+Next, login to your Braze account [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{ site.baseurl }}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
 
 ![Braze Dashboard]({% image_buster /assets/img/fivetran_braze_developer_console.png %})
 
-From here, [create an API Key](https://www.braze.com/docs/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
+From here, [create an API Key]({{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
 
 * users.export.ids
 * users.export.segment
