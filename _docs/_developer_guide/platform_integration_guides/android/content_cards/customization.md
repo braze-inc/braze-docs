@@ -61,7 +61,7 @@ This section covers customization of the [AppboyContentCardsFragment][49] whose 
 
 If the [AppboyContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message.
+A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
 
 The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
 
