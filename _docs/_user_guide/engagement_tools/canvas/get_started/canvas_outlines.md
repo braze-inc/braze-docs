@@ -18,7 +18,7 @@ __Onboarding - Restaurant Reservation Example__
 - Who: All New Customers
 - Why: Perform custom event “completed reservation”
 - Where: Push, Email
-- How: Channel, Content (test
+- How: Channel, Content (test)
 
 ## Upsell - Music Streaming Example
 ![Journey_9][28]
