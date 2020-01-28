@@ -46,14 +46,14 @@ Content-Type: application/json
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
    "email": (required*, string) the email address of the user
-   //one of eternal_id or email is required
+   //one of external_id or email is required
    //can be passed as an array of string with a max of 50
    //endpoint only accepts email or phone value, not both
    "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
  }
 ```
-Only `external_id` or `phone` is accepted for SMS subscription groups.
-
+\* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
+\* Email subscription groups: Either `email` or `external_id` is required. 
 
 ### Example Requests
 
