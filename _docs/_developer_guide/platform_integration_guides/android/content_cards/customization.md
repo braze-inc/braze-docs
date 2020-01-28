@@ -53,6 +53,32 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
+## Customizing The Default Content Card Feed {#content-cards-fragment-customization}
+
+This section covers customization of the [AppboyContentCardsFragment][49] whose source can be found [here][54].
+
+### Customizing The Network Connection Error Message
+
+If the [AppboyContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
+
+A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message.
+
+The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
+
+```xml
+<style name="Appboy.ContentCardsDisplay.Empty">
+  <item name="android:lineSpacingExtra">1.5dp</item>
+  <item name="android:text">@string/com_appboy_feed_empty</item>
+  <item name="android:textColor">@color/com_appboy_title</item>
+  <item name="android:textSize">18.0sp</item>
+  <item name="android:gravity">center</item>
+  <item name="android:layout_height">match_parent</item>
+  <item name="android:layout_width">match_parent</item>
+</style>
+```
+
+To fully customize the network error behavior, you can extend the [AppboyContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
+
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
 ### Setting A Custom Font {#setting-a-custom-font-for-android}
@@ -547,3 +573,9 @@ Content Cards have a maximum size of **2kb** (including images, links, and all
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
+[49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyEmptyContentCardsAdapter.html
+[51]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/layout/com_appboy_content_cards_empty.xml
+[52]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml#L552-L560
+[53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
+[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/AppboyContentCardsFragment.java
