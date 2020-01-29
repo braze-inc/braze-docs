@@ -1,6 +1,7 @@
 |Method (click each method for its documentation) | Description |
 |:------ |:------------|
 |`appboyBridge.closeMessage()`|Closes this in-app message.|
+|`window.addEventListener("ab.BridgeReady", callbackFunction, false)`|Callback method for when the `appboyBridge` has finished loading. All javaScript code should be run within this callback function.|
 |[`appboyBridge.requestImmediateDataFlush()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.requestImmediateDataFlush)||
 |**TODO**[`appboyBridge.logClick(buttonId)`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logClick)|Log a button click for a given `buttonId` string. When `buttonId` is left blank, a body-click will be logged instead. This method was introduced in Android SDK v5.0.0 and iOS SDK v3.23.0.|
 |[`appboyBridge.logCustomEvent(eventName, eventProperties)`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logCustomEvent)| Log a custom event.|
