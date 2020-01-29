@@ -13,9 +13,6 @@ guide_top_text: "This landing page is a hub for all things that are solely iOS P
 
 guide_featured_title: "Articles in this Section"
 guide_featured_list:
-- name: "Push-Enabled iOS Users"
-  link: /docs/user_guide/message_building_by_channel/push/ios/push-enabled/
-  fa_icon: fas fa-mobile-alt
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-mobile-alt

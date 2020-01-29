@@ -13,9 +13,6 @@ guide_top_text: "This landing page is a hub for all things that are solely Andro
 
 guide_featured_title: "Articles in this Section"
 guide_featured_list:
-- name: "Push-Enabled Android Users"
-  link: /docs/user_guide/message_building_by_channel/push/android/push-enabled/
-  fa_icon: fas fa-mobile-alt
 - name: "Notification Channels"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/
   fa_icon: fas fa-mobile-alt

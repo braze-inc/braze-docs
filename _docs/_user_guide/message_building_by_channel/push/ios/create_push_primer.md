@@ -12,51 +12,159 @@ tool:
   - Campaigns
 ---
 
+#include that these messages can be redelivered
+
 # Create a Push Primer Campaign
 
 > This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. <br><br> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help!
+
+Push Primer campaigns are useful because they address the issue of the dreaded iOS notification prompt that user recieve upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt out of push notifications. This prompt is only ever shown once. Once those notifications are turned off, theres very little we can do to get users to turn them back on. This becomes a problem when we want to use our Push Channel for marketing, but not many users are push enabled. 
+
+To address this, Braze offers steps on how to set up Push Primers Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers can provide users valuable information on why notifications for your application are important. 
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{ site.baseurl }}/)
 - [iOS Push Enabled]({{ site.baseurl }}/)
 
-Push primer campaigns are important because IOS users only get asked for to have push notifications turned on once when they have the app downloaded. This usually only happens once, with the users Often disregarding this message and be opted out of push messages forever. (or until they go into settings, and manually turn on push notifications). Setting up an effective push primer early into you adoption of Braze is important if you want to use the push channel seriously. Setting up a push primer delays this initial push ask, allowing you to choose the message, time and formt in which you'd like to prime these users, providing them valuable information on why notifications are important. (see examples below)
-
+{% alert note %}
+__Should I be using Push Primers?__ Depends on your iOS version.<br><br>
+- __iOS 12__: With the iOS 12 update adding provisional authorization, allowing this inital push prompt to be delivered silently to your notification center, some may find Push Primers not needed, other may and choose to still use Push Primers. We recommend meeting with your Customer Success Manager to discuss if this is the right move.
+- __iOS 11 and Later__: Because these iOS version only allow foreground Push, those intrusive iOS Push messages will still get sent, in turn costing you marketablility to those users. We strongly suggest setting up Push Primers for these verisons. 
+{% endalert %}
 
 ## Step 1: Select you Channel of Choice
 
-From the Campaigns pane within the Dashboard, select In-App Messaging under Create Campaign as the messaging channel.
+From the Campaigns pane within the Dashboard, select In-App Messaging as the messaging channel under Create Campaign.
 
 ## Step 2: Set Up Initial Campaign Options
 
 Once you have a blank In-App Messaging campaign to work on, you must name your campaign, select where you would like your Push Primer campaign to send to, select the message type, and pick the layout type (text and image or image only). For your basic Push Primer campaign message type, we suggest either a full screen or modal message. 
 
-## Step 3a: Customize your Message
+## Step 3: Customize your Message
 
-After you have chosen how you want your push primer to look, you can customize your message and add buttons.
+After you have chosen how you want your push primer to look, you can customize your message content and add buttons.
 
-Remember that a push primer is supposed to prime the user to turn on push notifications. In your message body, include the reason they should have push notifications turned on. 
+Remember that a push primer is supposed to prime the user to turn on push notifications. In your message body, we suggest including the reason they should have push notifications turned on. 
 
 Here are some example Push Primer Messages:
 
 Example 1, Example 2, Example, 3
 
-To Add buttons, you will find a Button1 text box and Button2 text box. Here you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "close" as starter buttons, but there are many different button prompts you could assign. As noted below, we will be assigning these buttons to certain actions. 
+To Add buttons, you will find a Button1 text box and Button2 text box. Here you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Close" as starter buttons, but there are many different button prompts you could assign. In later steps, we will be assigning these buttons to certain actions. 
 
-If you would like even further customization options, you can also set the message type to Custom code, and provide the HTML .
+If you would like even further customization options, you can also set the message type to Custom code, and provide the HTML.
 
 (examples)
 
-### Step 3a: Customize your look
+## Step 4: Setting up the Back End - Assembling a functional push primer message:
 
-Now that you have created the perfect push primer message, you can choose the style of the message. 
+Now you have your Push Primer message made, with all the settings you want. But as of now, there are quite a few more steps to make this in-app message a true Push Primer message. Because Push Primer Campaigns are not an out-of-the-box feature, your developers must set up the backend. We have included the code snippets required below.
 
-## Assembling a functional push primer message:
+### Push Primer Integration
 
-Now you have your push primer message made, with all the settings you want. But as of now, there are quite a few more steps to make this in-app message a true push primer message.
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
-# Backend
+Add the following line of code to your `AppDelegate.m` file instead of the standard integration:
 
-# Front End
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+...
+if (@available(iOS 10.0, *)) {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+      if (settings.authorizationStatus != UNAuthorizationStatusNotDetermined) {
+        // authorization has already been requested, need to follow usual steps
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+          [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+        }];
+        center.delegate = self;
+        [center setNotificationCategories:[ABKPushUtils getAppboyUNNotificationCategorySet]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+      }
+    }];
+  } else {
+    UIApplication *sharedApplication = [UIApplication sharedApplication];
+    UIUserNotificationSettings *notificationSettings = [sharedApplication currentUserNotificationSettings];
+    if (notificationSettings.types) {
+      UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:[ABKPushUtils getAppboyUIUserNotificationCategorySet]];
+      [sharedApplication registerUserNotificationSettings:settings];
+      [sharedApplication registerForRemoteNotifications];
+    }
+  }
+```
+{% endtab %}
+{% tab swift %}
+swift
+{% endtab %}
+{% endtabs %}
 
-# Testing
+{% tabs %}
+{% tab OBJECTIVE-C %}
+Add the following line of code to your `AppDelegate.m` in addition to the one above.
+
+Checks if a custom event needs to be fired.
+```objc
+if (@available(iOS 10.0, *)) {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+      if (settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
+        // ...
+        // fire custom event
+        // ...
+      }
+    }];
+  } else {
+    UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+    if (!notificationSettings.types) {
+        // …
+        // fire custom event
+        // ...
+    }
+  }
+```
+{% endtab %}
+{% tab swift %}
+swift
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+Deep Link Handler
+For more information on deep linking check out our [documentation][].
+```objc
+ // ...
+  // check that this deep link relates to the push prompt
+  // ...
+  if (@available(iOS 10.0, *)) {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+      [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+    }];
+    center.delegate = self;
+    [center setNotificationCategories:[ABKPushUtils getAppboyUNNotificationCategorySet]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+  } else {
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:[ABKPushUtils getAppboyUIUserNotificationCategorySet]];
+      UIApplication *sharedApplication = [UIApplication sharedApplication];
+      [sharedApplication registerUserNotificationSettings:settings];
+      [sharedApplication registerForRemoteNotifications];
+  }
+```
+{% endtab %}
+{% tab swift %}
+swift
+{% endtab %}
+{% endtabs %}
+
+## Step 5: Selecting Delivery Method
+To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action, choosing the custom event you want the push primer to trigger from. 
+
+## Step 6: Targeting Users
+For Push Primer Campaigns, you must target all users. 
+
+## Step 7: Conversions
+Do we want conversions. 
+
+[deeplink]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links

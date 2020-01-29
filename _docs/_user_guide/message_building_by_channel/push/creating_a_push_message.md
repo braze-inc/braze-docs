@@ -35,9 +35,7 @@ Time to write your push message! Type it into the message box and watch a previe
 
 #### Languages
 
-You also have the ability to Add Languages through the __Add Languages__ button. Braze offers the option to "Internationalize" your message, showing certain custom messages and fields in specific languages based on a user's language preferences. 
-
-[TEXT CHUNK FROM ALLIE]
+You also have the ability to Add Languages through the __Add Languages__ button. Braze offers the option to "Internationalize" your message, by inserting the Liquid into your message to help set custom messages and fields in specific languages based on a user's language preferences. 
 
 #### OnClick Behavior
 
@@ -64,9 +62,7 @@ Messages can also be configured to recur on a daily, weekly (optionally on speci
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ dropdown.)
-
-[TEXT CHUNK FROM ALLIE]
+Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action you are able to use [custom events][30] as a trigger action. (selected from the __New Trigger Action__ dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
@@ -93,11 +89,11 @@ Keep in mind that exact segment membership is always calculated just before the 
 Under the Targeting Options section, you'll find a few options for who you can send your campaign to:
 
 1. __Members of a previously created segment.__ To do this, simply select one segment from the dropdown under "Target Users By Segment."
-<br>
+<br><br>
 2. __Users that fall into multiple previously created segments.__ To do this, add multiple segments from the dropdown under "Target Users By Segment." The resulting target audience will be users that are in the first segment *and* the second segment *and* the third segment, etc.
-<br>
+<br><br>
 3. __Users of one or more previously created segments that also fall under additional filters.__ After first selecting your segment(s), you can further refine your audience under the "Additional Filters" section. This is demonstrated in the screenshot below, which targets users that are in the 10 Unread Messages segment *and* are in the Active Users segment *and* have made a purchase less than 30 days ago.
-<br>
+<br><br>
 4. __Users that fall under a series of filters (and are not defined by pre-existing segments).__ This means you do not need to target a campaign at a pre-existing segment - you can make an ad hoc audience during campaign creation by just using the additional filters, and not selecting any segments under "Target Users By Segment. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
 ![Segmenter][24]
@@ -148,3 +144,4 @@ For push notifications, you'll be able to view statistics for the number of mess
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
 [28]: {% image_buster /assets/img_archive/notchannclickdropdown.gif %}
 [29]: {% image_buster /assets/img_archive/notchannels.png %}
+[30]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
