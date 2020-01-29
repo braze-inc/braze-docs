@@ -1,16 +1,19 @@
 ---
 nav_title: Keyword Processing & Management
 page_order: 2
+description: "This reference article covers how Braze proccesses certain keywords for SMS."
+page_type: reference
+channel: SMS
 ---
 
 # Keyword Processing & Management
 
-Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.basurl }}/) for the phone number on all inbound requests.
+> Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.basurl }}/) for the phone number on all inbound requests.
 
 | Keyword | Change |
-|---|---|
-| `START`, `YES`, `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |
-| `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer. |
+|-------|---|
+| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |
+| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer. |
 
 {% alert warning %}
 Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.

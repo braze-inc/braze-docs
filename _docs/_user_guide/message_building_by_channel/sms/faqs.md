@@ -1,11 +1,14 @@
 ---
 nav_title: SMS FAQs
 page_order: 20
+description: "This reference article addreses some of the most frequently asked questions that arise when setting up SMS campaigns."
+page_type: reference
+channel: SMS
 ---
 
 # SMS Frequently Asked Questions
 
-On this page, we'll attempt to answer your most stringent questions about SMS!
+> On this page, we'll attempt to answer your most stringent questions about SMS!
 
 {% details What laws do I need to follow to send SMS with Braze? %}
 

@@ -1,11 +1,14 @@
 ---
 nav_title: Laws, Regulations, & Abuse Prevention
 page_order: 1
+description: "This reference article covers the laws and regulations surrounding SMS."
+page_type: reference
+channel: SMS
 ---
 
 # SMS Laws, Regulations, & Abuse Prevention
 
-SMS is one of the most direct ways to reach your users and customers. Therefore, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. In this article, you'll be provided with some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
+> SMS is one of the most direct ways to reach your users and customers. Therefore, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. In this article, you'll be provided with some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
 
 {% alert warning %}
 This article is not intended to provide, nor may it be relied upon as providing, legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your own legal counsel.
