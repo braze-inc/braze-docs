@@ -488,6 +488,7 @@ table {
   td {
     border: 1px solid $grey-ghost !important;
     font-size: 14px;
+    word-break: break-all;
     @media (max-width: $window-large-px) {
       word-break: break-word;
       a {
@@ -496,6 +497,29 @@ table {
     }
     code.highlighter-rouge {
       word-break: initial;
+    }
+  }
+  @media (min-width: $window-large-px) {
+    &.reset-td-br-1 {
+      td:nth-child(1) {
+        word-break: break-word;
+      }
+    }
+    &.reset-td-br-2 {
+      td:nth-child(2) {
+        word-break: break-word;
+      }
+
+    }
+    &.reset-td-br-3 {
+      td:nth-child(3) {
+        word-break: break-word;
+      }
+    }
+    &.reset-td-br-4 {
+      td:nth-child(4) {
+        word-break: break-word;
+      }
     }
   }
   >tbody>tr>td, >tbody>tr>th, >tfoot>tr>td, >tfoot>tr>th, >thead>tr>td, >thead>tr>th {
@@ -510,6 +534,7 @@ table {
     vertical-align: bottom;
   }
 }
+
 // table>tbody>tr>td, table>tbody>tr>th, table>tfoot>tr>td, table>tfoot>tr>th, table>thead>tr>td, table>thead>tr>th {
 //   padding: 8px;
 //   line-height: 1.42857143;
@@ -534,7 +559,14 @@ table td code.highlighter-rouge {
   background-color: transparent !important;
   word-break: break-all;
 }
-
+@media (min-width: $window-large-px) {
+  table.reset-td-br-1 td:nth-child(1) code.highlighter-rouge,
+  table.reset-td-br-2 td:nth-child(2) code.highlighter-rouge,
+  table.reset-td-br-3 td:nth-child(3) code.highlighter-rouge,
+  table.reset-td-br-4 td:nth-child(4) code.highlighter-rouge  {
+    word-break: break-word;
+  }
+}
 .highlight table {
   margin-bottom: 0px;
 }
