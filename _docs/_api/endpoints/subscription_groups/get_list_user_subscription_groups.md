@@ -53,4 +53,11 @@ If there are multiple users (multiple external ids) who share the same email add
 ```
 https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com&subscription_group_id=14386d4a-60dd-42e2-9c94-5f2423b91d9f
 ```
+
+
+### Example Request for multiple users
+
+```
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&external_id[]=1&external_id[]=2
+```
 {% endapi %}
