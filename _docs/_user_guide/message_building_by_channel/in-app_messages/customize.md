@@ -9,17 +9,17 @@ page_order: 2
 
 In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/), you can also create customized message templates with the following features:
 
-- [Custom HTML templates](#custom-web-messages) - create a customized template with HTML, JavaScript, and CSS.
-- [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to our standard modal template for more flexible styling options.
+- [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
+- [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
 - [Email Capture Form (web only)](#email-capture-form) - collect email addresses into Braze.
-- [Color profiles and CSS](#in-app-message-templates) - save and re-use color profiles for in-app message templates.
+- [Reusable Color profiles and CSS](#reusable-color-profiles) - save and re-use color profiles for in-app message templates.
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
 Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
 
-## HTML In-App Messages
+## HTML In-App Messages {#custom-html-messages}
 While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
 
 - Custom Fonts and Styles
@@ -155,7 +155,7 @@ To navigate to this option, you must create an in-app messaging campaign. From t
 To enable Email Capture in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
-### Customizable Features
+#### Customizable Features
 - Header, body, and submit button text
 - An optional image
 - An optional "Terms of Service" link
@@ -163,7 +163,7 @@ To enable Email Capture in-app messages, your SDK integration must supply the `e
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
-## In-App Message Templates {#in-app-message-templates}
+## Reusable Message Templates {#reusable-color-profiles}
 
 You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
 
