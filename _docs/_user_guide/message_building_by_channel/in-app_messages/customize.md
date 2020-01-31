@@ -9,17 +9,15 @@ page_order: 2
 
 In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/), you can also create customized message templates with the following features:
 
-- [Custom HTML templates](#custom-web-messages) - create a customized template with HTML, JavaScript, and CSS
-- [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to our standard modal template for more flexible styling options
-- [Email Capture Form (web only)](#email-capture-form) - collect email addresses into Braze
-- [Re-usable color profiles and CSS](#in-app-message-templates) to use over and over again.
-- [Adding Video](#video) into your messages.
+- [Custom HTML templates](#custom-web-messages) - create a customized template with HTML, JavaScript, and CSS.
+- [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to our standard modal template for more flexible styling options.
+- [Email Capture Form (web only)](#email-capture-form) - collect email addresses into Braze.
+- [Color profiles and CSS](#in-app-message-templates) - save and re-use color profiles for in-app message templates.
+- [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
 Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
-
-
 
 ## HTML In-App Messages
 While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
@@ -35,14 +33,38 @@ Custom HTML messages can use the [Javascript Bridge](#javascript-bridge) methods
 
 Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
-
 {% alert note %}
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
 ### JavaScript Bridge (appboyBridge) {#javascript-bridge}
 
-HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
+HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. 
+
+For example, to log a custom attribute, custom event, and then close the message, you could use the following Javascript within your HTML in-app message:
+
+```html
+<button id="button">Set Favorite Color</button>
+<script>
+// wait for the appboyBridge to be ready for use
+window.addEventListener("ab.BridgeReady", function(){
+  // event handler when the button is clicked
+  document.querySelector("#button").onclick = function(){
+    // set the user's custom attribute
+    appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");
+    // track a custom event
+    appboyBridge.logCustomEvent("completed survey");
+    // send the enqueued data to Braze
+    appboyBridge.requestImmediateDataFlush();
+    // close this in-app message
+    appboyBridge.closeMessage();
+  };
+}, false);
+</script>
+```
+
+
+The following javascript methods are supported within Braze's HTML in-app messages:
 
 <style>
 /* makes first column wider */
@@ -54,11 +76,12 @@ HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" int
     font-size:12px !important;
 }
 </style>
-{% include archive/appboyBridge.md platform="web" %}
+
+{% include archive/appboyBridge.md %}
 
 ### Link-Based Actions
 
-In addition to custom javascript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all `case sensitive`.
+In addition to custom javascript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all **case sensitive**.
 
 #### Button Click Tracking
 
@@ -98,7 +121,6 @@ For mobile apps, you can log log a custom event by setting a URL to `appboy://cu
 Additional query parameters will be passed as property key/value pairs.
 
 For example, `appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
-
 
 #### News Feed (mobile only)
 
