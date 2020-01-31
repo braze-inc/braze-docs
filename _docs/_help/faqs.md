@@ -84,18 +84,20 @@ Target segments for local time zone campaigns should include at least a 48-hour 
 
 {% details What changes can I make to scheduled campaigns ahead of launch? %}
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send.
-As per all campaigns, you can’t edit conversion events after it is launched.
-For Canvas entries, refer to above.
-For Canvas steps: - Scheduled changes will only apply to users who are not already waiting to receive the step. - Audience changes default to apply to everyone unless you’ve selected Evaluate At Enqueue Time, in which case it’s similar behavior to above.
+As per all campaigns, you can’t edit conversion events after it is launched.<br>
+For Canvas entries, refer to above.<br>
+
+For Canvas steps: <br>- Scheduled changes will only apply to users who are not already waiting to receive the step. <br>- Audience changes default to apply to everyone unless you’ve selected Evaluate At Enqueue Time, in which case it’s similar behavior to above.
 {% enddetails %}
 
 {% details What is the “safe zone” before messages on a scheduled campaign are enqueued? %}
-One-time scheduled campaigns - can be edited up until the scheduled send time.
-Recurring scheduled campaigns - can be edited up until the scheduled send time.
-Local Send Time campaigns - can be edited up to 24 hours prior to the scheduled send time.
-Optimal Send Time campaigns - can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
+__One-time scheduled campaigns__ - can be edited up until the scheduled send time.<br>
+__Recurring scheduled campaigns__ - can be edited up until the scheduled send time.<br>
+__Local Send Time campaigns__ - can be edited up to 24 hours prior to the scheduled send time.<br>
+__Optimal Send Time campaigns__ - can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
 What if I make an edit within the “safe zone?”
-Changing the send time on campaigns within this time can lead to undesired behavior, for example - Braze will not send messages to any users that have missed the send time by more than 1 hour. - Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
+
+Changing the send time on campaigns within this time can lead to undesired behavior, for example:<br>- Braze will not send messages to any users that have missed the send time by more than 1 hour.<br>- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
 {% enddetails %}
 
 {% details What should I do if the “safe zone” has already passed? %}
