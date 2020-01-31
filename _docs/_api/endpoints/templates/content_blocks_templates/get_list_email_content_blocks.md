@@ -44,6 +44,7 @@ This endpoint will list your exiting [Email Content Blocks]({{ site.baseurl }}/u
       "name": "string",
       "content_type": "html or text",
       "liquid_tag": "string",
+      "inclusion_count" : integer,
       "created_at": "time-in-iso",
       "last_edited": "time-in-iso"
     }
