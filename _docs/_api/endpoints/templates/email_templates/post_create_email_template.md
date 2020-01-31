@@ -39,7 +39,7 @@ Use the endpoints below to create email templates on the Braze dashboard. These 
    "body": (required, string) the email template body that may include HTML,
    "plaintext_body": (optional, string) a plaintext version of the email template body,
    "preheader": (optional, string) the email preheader used to generate previews in some clients,
-   "tags": [optional, Array of Strings] Tags must already exist.
+   "tags": (optional, Array of Strings) Tags must already exist.
  }
 ```
 
