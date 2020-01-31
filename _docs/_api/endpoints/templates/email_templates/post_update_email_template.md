@@ -47,4 +47,15 @@ Content-Type: application/json
   "tags": (optional, array of Strings) Tags must already exist
 }
 ```
+
+
+### Possible Errors
+- `Template Name is required`
+
+- `Tags must be an array.`
+
+- `All Tags must be Strings.`
+
+- `Some Tags could not be found.`
+
 {% endapi %}
