@@ -98,7 +98,7 @@ What if I make an edit within the “safe zone?”
 Changing the send time on campaigns within this time can lead to undesired behavior, for example - Braze will not send messages to any users that have missed the send time by more than 1 hour. - Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
 {% enddetails %}
 
-{% details What should I do if the “safe zone” has already passed? %}”
+{% details What should I do if the “safe zone” has already passed? %}
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 Please ensure you re-adjust campaign schedule times to allow for timezone sending.
 {% enddetails %}
