@@ -37,8 +37,8 @@ If you are unsure if you’ve set a UserID for your users, or are trying to perf
 
 
 {% details What is the definition of an “active user”? %}
-Braze defines an active user for a given time period as any users who has a session in that time period. If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active - registered or unregistered.
-Additionally, if you set User IDs to identify users, when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
+Braze defines an active user for a given time period as any user who has a session in that time period. If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active - registered or unregistered.<br><br>
+Additionally, if you set User IDs to identify users, when a new user logs in they will be counted as a separate active user, unless they have previously been identified as an anonymous user, in which case, the user will switch from unidentified to identified. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 {% enddetails %}
 
 
