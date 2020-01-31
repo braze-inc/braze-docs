@@ -62,7 +62,7 @@ window.addEventListener("ab.BridgeReady", function(){
 }, false);
 </script>
 ```
-
+#### `appboyBridge` methods
 
 The following javascript methods are supported within Braze's HTML in-app messages:
 
@@ -116,21 +116,25 @@ When this query string parameter is absent or set to `false`, Braze will try to 
 
 #### Custom Events (mobile only)
 
-For mobile apps, you can log log a custom event by setting a URL to `appboy://customEvent?name=event%20name`. 
+For mobile apps, you can log log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter parameter.
+
+For example, `appboy://customEvent?name=eventName` will log a custom event of `eventName`.
+
+Be sure to url encode spaces and other special characters as you would in any other URL. For example, `appboy://customEvent?name=event%20name` sends `event name`.
 
 Additional query parameters will be passed as property key/value pairs.
 
-For example, `appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
+`appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
 
 #### News Feed (mobile only)
 
-Use `appboy://feed` to open the News Feed in your mobile app.
+For mobile apps, you can open the News Feed by setting a link's URL to `appboy://feed`.
 
 For example, `<a href="appboy://feed">View Feed</a>`.
 
 #### Close In App Message (mobile only)
 
-Use `appboy://close` to close the visible in-app message.
+To close an in-app message, you can set a link's URL to `appboy://close`.
 
 For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
