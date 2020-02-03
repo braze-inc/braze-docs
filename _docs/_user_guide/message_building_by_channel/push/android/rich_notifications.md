@@ -22,7 +22,16 @@ tool:
 ## Requirements
 
 - Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or higher. If a user's device is not running on these systems, they will not see the notification image.
-- Currently, Android rich notifications only allow for static images including jpg and png file formats.
+- Android Extended Notification images must be 2:1 ratio, but __do not have a size limit__. 
+- Android also allows for setting a separate image for the standard notification view. <br>Recommended size images: 512x256 for Small, 1024x512 for Medium, and 2048x1024 for Large.
+- Currently, Android rich notifications only allow for static images including jpg and png file formats, gifs and other image formats are not yet supported.
+
+{% alert note %}
+While Braze provides instructions on how to set up rich push, that actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, android version, OEM- specific constraints, etc. 
+<br><br>
+We recommend doing a send test to multiple Android devices to make sure your rich push notifications are appearing as you intend them to.
+{% endalert %}
+
 
 ## Setting Up Your Android Rich Notification
 
@@ -42,6 +51,7 @@ Add your image in the 'Expanded Notification Image' field in the composer of the
 ### Step 4: Continue Creating Your Campaign
 Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.
 
+[1]: https://developer.android.com/training/notify-user/expanded#image-style
 [3]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [6]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
 [7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %}

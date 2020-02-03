@@ -22,7 +22,8 @@ tool:
 ## Requirements
 
 - To ensure your app can send rich notifications, please follow these instructions [here][1], as your developer will need to add a service extension to your app.
-- You should also reference [Apple's documentation][2] for media limitations and specs. We recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+- You should also reference [Apple's documentation][2] for media limitations and specs.<br>As of January 2020, iOS Rich Push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible.<br>In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+- iOS will scale images to fit in the screen and will scale Rich images for the active/locked view.
 - File types that we currently support for direct uploading within our dashboard include jpg, png, or gif. These files can also be entered into the templatable URL field along with these additional file types: aif, m4a, mp3, mp4, or wav.
 
 ## Setting Up Your iOS Rich Notification
