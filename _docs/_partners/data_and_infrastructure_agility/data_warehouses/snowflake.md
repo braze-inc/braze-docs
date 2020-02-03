@@ -51,6 +51,10 @@ Additionally, using Snowflake's built in roles and permissions capabilities, acc
 
 When a Data Share is requested by a client, Braze will provision the share from the App Group(s) for which the share was purchased. Once the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an Incoming Data Share. 
 
+![inbound-share]({% image_buster /assets/img/inbound-data-share.png %})
+
+Once the share is visible in your instance (you need to be `ACCOUNTADMIN` role to see it), you'll need to create a database from the share so you can see and query the tables.
+
 In the context of Data Sharing, Braze is a [Data Provider](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) - any Snowflake account that creates shares and makes them available to other Snowflake accounts to consume. You, our client, are a [Data Consumer](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers) - any account that chooses to create a database from a share made available by a data provider.
 
 ## Usage & Visualization
