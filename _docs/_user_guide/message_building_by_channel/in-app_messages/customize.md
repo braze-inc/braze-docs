@@ -37,16 +37,17 @@ Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
-### JavaScript Bridge (appboyBridge) {#javascript-bridge}
 
-HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. 
+### JavaScript Bridge {#javascript-bridge}
+
+HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
 For example, to log a custom attribute, custom event, and then close the message, you could use the following Javascript within your HTML in-app message:
 
 ```html
 <button id="button">Set Favorite Color</button>
 <script>
-// wait for the appboyBridge to be ready for use
+// wait for the `appboyBridge` ready event, "ab.BridgeReady"
 window.addEventListener("ab.BridgeReady", function(){
   // event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
@@ -62,7 +63,7 @@ window.addEventListener("ab.BridgeReady", function(){
 }, false);
 </script>
 ```
-#### `appboyBridge` methods
+#### appboyBridge methods
 
 The following javascript methods are supported within Braze's HTML in-app messages:
 
@@ -101,6 +102,9 @@ As with other URL parameters, the first parameter should begin with a `?`, while
 
 In addition to URL parameters, you can also set a `<button>` tag's `id` attribute to log a button click. For example, `<button id="1">` will log a Button 2 click.
 
+{% alert note %}
+In-app messages support only Button 1 and Button 2 clicks. URLs which do not specify one of these two button IDs will be logged as generic "body clicks".
+{% endalert %}
 
 #### Open Link in New Window
 
@@ -132,15 +136,11 @@ For mobile apps, you can open the News Feed by setting a link's URL to `appboy:/
 
 For example, `<a href="appboy://feed">View Feed</a>`.
 
-#### Close In App Message (mobile only)
+#### Close In-App Message (mobile only)
 
 To close an in-app message, you can set a link's URL to `appboy://close`.
 
 For example, `<a href="appboy://close">Close</a>` will close the in-app message.
-
-{% alert note %}
-In-app messages support only Button 1 and Button 2 clicks. URLs which do not specify one of these two button IDs will be logged as generic "body clicks".
-{% endalert %}
 
 ## Modal with CSS (Web Only) {#web-modal-css}
 
