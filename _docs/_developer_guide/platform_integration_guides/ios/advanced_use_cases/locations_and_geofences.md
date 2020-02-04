@@ -49,21 +49,39 @@ withAppboyOptions:[ ABKEnableGeofencesKey : true ]])
 {% endtab %}
 {% endtabs %}
 
-
 ## Step 3: Check for Braze Background Push
 
 Braze syncs geofences to devices using background push notifications. Follow the instructions [here][7] to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
 
 ## Step 4: Add NSLocationAlwaysUsageDescription to your Info.plist
 
-Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11.
+Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 and above.
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
 ## Step 5: Request authorization from the user
 
-The Braze iOS SDK can automatically request authorization from the user at app start if configured in our dashboard.
+The Geofences feature is only functional while `Always` location authorization is granted.
 
-Otherwise, you can request authorization yourself and our SDK will wait until it has permission to start registering geofences.
+To request for `Always` location authorization, use the following code:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestAlwaysAuthorization];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+var locationManager = CLLocationManager()
+locationManager.requestAlwaysAuthorization()
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Step 6: Enable Geofences on the Dashboard
 
