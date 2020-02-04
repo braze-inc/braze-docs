@@ -30,6 +30,16 @@ Dashboard objects can be organized by Teams. Canvases, Campaigns, Cards, Segment
 
 Teams is not available on all Braze contracts. If you’d like to access this feature, reach out to your account executive and customer success manager or contact us at hello@braze.com for a consultation.
 
+## Archive an Existing Team
+Teams can be archived by going to the Manage App Group > Manage teams page.  Select one or many teams to archive.
+
+If the team is not associated with any object within Braze, the team will be archived immediately.
+If the team is associated with an object, you will be presented with an option to 'remove the team after the archive process' or 'replace the team with another team' 
+![archive_a_team][86]
+
+Admins can unarchive a team by selecting the archived team and then clicking the unarchived button.
+
+
 
 [1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
 [6]: https://dashboard-01.braze.com/app_settings/app_settings/analytics_report/
@@ -84,3 +94,4 @@ Teams is not available on all Braze contracts. If you’d like to access this fe
 [83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632
 [85]: https://lab.braze.com/braze-101
+[86]: {% image_buster /assets/img_archive/archive_a_team.png %}

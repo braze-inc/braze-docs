@@ -43,7 +43,19 @@ Content-Type: application/json
   "subject": (optional, string) the email template subject line,
   "body": (optional, string) the email template body that may include HTML,
   "plaintext_body": (optional, string) a plaintext version of the email template body,
-  "preheader": (optional, string) the email preheader used to generate previews in some clients
+  "preheader": (optional, string) the email preheader used to generate previews in some clients,
+  "tags": (optional, array of Strings) Tags must already exist
 }
 ```
+
+
+### Possible Errors
+- `Template Name is required`
+
+- `Tags must be an array.`
+
+- `All Tags must be Strings.`
+
+- `Some Tags could not be found.`
+
 {% endapi %}
