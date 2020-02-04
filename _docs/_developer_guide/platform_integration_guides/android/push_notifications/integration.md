@@ -623,7 +623,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [23]: #step-4-registering-opens-and-receipts
 [26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
 [27]: {% image_buster /assets/img_archive/Push_Android_2.png %}
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
 [30]: #step-3-enable-automatic-registration
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
