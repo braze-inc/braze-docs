@@ -20,7 +20,7 @@ tool:
 
 Push Primer campaigns are useful because they address the issue of the dreaded iOS notification prompt that user recieve upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt out of push notifications. This prompt is only ever shown once. Once those notifications are turned off, theres very little we can do to get users to turn them back on. This becomes a problem when we want to use our Push Channel for marketing, but not many users are push enabled. 
 
-To address this, Braze offers steps on how to set up Push Primers Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers can provide users valuable information on why notifications for your application are important. 
+To address this, Braze offers steps on how to set up Push Primers Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers can provide users valuable information on why notifications for your application are important.
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{ site.baseurl }}/)
@@ -36,11 +36,15 @@ __Should I be using Push Primers?__ Depends on your iOS version.<br><br>
 
 From the Campaigns pane within the Dashboard, select In-App Messaging as the messaging channel under Create Campaign.
 
+![push_primer][push_primer1]{: height="100px"}{: float:right :}
+
 ## Step 2: Set Up Initial Campaign Options
 
 Once you have a blank In-App Messaging campaign to work on, you must name your campaign, select where you would like your Push Primer campaign to send to, select the message type, and pick the layout type (text and image or image only). For your basic Push Primer campaign message type, we suggest either a full screen or modal message. 
 
 ## Step 3: Customize your Message
+
+![push_primer][push_primer2]
 
 After you have chosen how you want your push primer to look, you can customize your message content and add buttons.
 
@@ -48,7 +52,7 @@ Remember that a push primer is supposed to prime the user to turn on push notifi
 
 Here are some example Push Primer Messages:
 
-Example 1, Example 2, Example, 3
+![push_primer_example_1][push_primer3]{: height="300px"} ![push_primer_example_2][push_primer4]{: height="300px"} ![push_primer_example_3][push_primer5]{: height="300px"}
 
 To Add buttons, you will find a Button1 text box and Button2 text box. Here you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Close" as starter buttons, but there are many different button prompts you could assign. In later steps, we will be assigning these buttons to certain actions. 
 
@@ -224,3 +228,8 @@ For Push Primer Campaigns, you must target all users.
 Do we want conversions. 
 
 [deeplink]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
+[push_primer1]: {% image_buster /assets/img/push_primer/push_primer_1.jpg %}
+[push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.jpg %}
+[push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %}
+[push_primer4]: {% image_buster /assets/img/push_primer/push_primer_4.png %}
+[push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %}
