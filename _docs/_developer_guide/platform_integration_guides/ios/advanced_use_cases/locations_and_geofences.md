@@ -55,12 +55,12 @@ Braze syncs geofences to devices using background push notifications. Follow the
 
 ## Step 4: Add NSLocationAlwaysUsageDescription to your Info.plist
 
-Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11.
+Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 and above.
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
 ## Step 5: Request authorization from the user
 
-To use our Geofences feature, you will first need to request for `Always` location authorization from the user. Once the user has successfully granted permission, our SDK will start registering and requesting geofences.
+The Geofences feature is only functional while `Always` location authorization is granted.
 
 To request for `Always` location authorization, use the following code:
 
