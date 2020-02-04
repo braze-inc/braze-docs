@@ -42,15 +42,14 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="REPLACE_WITH_YOUR_PACKAGE_NAME">
 
-  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
 
   <application android:icon="@drawable/app_icon" 
                android:label="@string/app_name">
 
-    <activity android:name="com.appboy.unity.AppboyUnityPlayerNativeActivity" 
+    <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
+    <activity android:name="com.appboy.unity.AppboyUnityPlayerActivity" 
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
       android:screenOrientation="sensor">
@@ -62,14 +61,17 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
       </intent-filter>
     </activity>
 
+    <!-- Overlay Activity used to display in-app messages. -->
     <activity android:name="com.appboy.unity.AppboyOverlayActivity" android:theme="@style/Appboy.Theme.Transparent" />
 
+    <!-- A Braze specific FirebaseMessagingService used to handle push notifications. -->
     <service android:name="com.appboy.AppboyFirebaseMessagingService">
       <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
 
+    <!-- BroadcastReceiver used to forward certain Braze push notification events to Unity -->
     <receiver android:name="com.appboy.unity.AppboyUnityPushBroadcastReceiver" android:exported="false" >
       <intent-filter>
         <action android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED" />
@@ -83,7 +85,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
 > Your `AndroidManifest.xml` should exist under `Assets/Plugins/Android/AndroidManifest.xml`. Please see [the Unity AndroidManifest documentation][29] for more information.
 
-> All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK. If you add your own Activity class, you must follow Braze's usual [integration instructions][9] to ensure that analytics are being collected.
+> All Activity classes registered in your `AndroidManifest.xml` file should be fully integrated with the Braze Android SDK. If you add your own Activity class, you must follow [Braze's Unity Activity integration instructions][34] to ensure that analytics are being collected.
 
 ### Part 2: Finding your Package Name 
 
@@ -94,21 +96,6 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 ### Part 3: Make Replacements in the AndroidManifest
 
 In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME` should be replaced with your `Package Name` from the previous step.
-
-### Part 4: Add Amazon Device Messaging to your AndroidManifest (optional)
-
-If using ADM instead of Firebase Messaging, please add the following to your `AndroidManifest.xml`.
-```xml
-  <!-- Permissions for ADM -->
-  <permission android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
-  <uses-permission android:name="REPLACE_WITH_YOUR_PACKAGE_NAME.permission.RECEIVE_ADM_MESSAGE" />
-  <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
-
-  <application android:icon="@drawable/app_icon" android:label="@string/app_name"
-               android:debuggable="true">
-    <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
-  </application>
-```
 
 ## Step 4: Configure the SDK {#unity-static-configuration}
 
@@ -127,7 +114,6 @@ If your app does not have an `appboy.xml`, you can use the following as a templa
   <!-- FCM Push Notification configuration (optional) -->
   <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
   <string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
-
 
   <!-- Push deep link configuration (optional) -->
   <bool name="com_appboy_handle_push_deep_links_automatically">true</bool> <!-- Whether to open push deep links from Braze automatically. -->
@@ -175,7 +161,7 @@ If using ADM, please add the following to your `appboy.xml`:
 
 ## Advanced Android Integration Options
 
-### Extending Braze's Unity Player
+### Extending Braze's Unity Player {#extending-braze-unity-player}
 
 The default `AndroidManifest.xml` file provided has one Activity class registered, [`AppboyUnityPlayerActivity`][32]. This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [this documentation][33] for more information on extending the `UnityPlayerActivity` class.
 
@@ -341,3 +327,4 @@ Braze should now be collecting data from your application and your basic integra
 [31]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push
 [32]: https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java
 [33]: https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html
+[34]: #extending-braze-unity-player
