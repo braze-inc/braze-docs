@@ -4,21 +4,28 @@ layout: dev_guide
 guide_top_header: "Scheduling and Organizing"
 guide_top_text: ""
 
+tools: campaigns
+page_type: landing
+description: "This landing page is home to Campaign Scheduling and Organizing. Here you can find resources on how to set up your campaign and the different options available."
+
 guide_featured_title: "Popular Articles"
 
 guide_featured_list:
   - name: Scheduling Your Campaign
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
     fa_icon: fas fa-chart-line
-  - name: Intelligent Delivery
-    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/intelligent_delivery/
-    fa_icon: fas fa-location-arrow
   - name: Attribute Triggers
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/attribute_triggers/
     fa_icon: fas fa-table
+  - name: Campaign Alerts
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/
+    fa_icon: fas fa-exclamation
 
 guide_menu_title: "More Articles"
 guide_menu_list:
+  - name: Campaign Time-Based Functionalities
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/
+    fa_icon: fas fa-clock
   - name: Archiving Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/
     fa_icon: fas fa-list
@@ -31,7 +38,4 @@ guide_menu_list:
   - name: Campaign Connector
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/
     fa_icon: fas fa-arrows-alt-h
-  - name: Campaign Alerts
-    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/
-    fa_icon: fas fa-exclamation
 ---

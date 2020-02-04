@@ -4,9 +4,15 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 1
 alias: /attribute_triggers/
+
+tools: campaigns
+page_type: reference
+description: "This reference article gives an overview of attribute triggers and how you can use them to send action-based messages to users."
 ---
 
 # Attribute Triggers Overview
+
+> This reference article gives an overview of attribute triggers and how you can use them to send action-based messages.
 
 Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. Attribute triggers are available for the following scenarios:
 

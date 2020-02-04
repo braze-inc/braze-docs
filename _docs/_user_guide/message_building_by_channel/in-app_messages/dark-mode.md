@@ -1,16 +1,11 @@
 ---
 nav_title: Dark Mode Themes
 page_order: 5.20
-hidden: true
 ---
-
-{% alert note %}
-This feature is currently in Early Access. Please speak to your Braze Success team for access or to provide any feedback.
-{% endalert %}
 
 # Dark Mode for In App Messages
 
-Dark Mode introduces a new way for users to set a system-wide color preference on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
+Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
 
 Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
 
@@ -20,19 +15,23 @@ Users with the latest versions of Android (10+) and iOS (13+) can toggle Dark Mo
 
 When Dark Mode is enabled, the device's native menus and screens (push notifications, device settings, etc.) will change to a dark grey. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
 
-## Setting Dark Theme for App Messages
+## Setting a Dark Mode Theme
 
-The new Dark Mode option located in the Style tab of In App Messages lets you easily add an alternate color theme for users who are in Dark Mode.
+The new Dark Mode option, located in the Style tab when [creating an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/), lets you easily add an alternate color theme for users who are in Dark Mode on their device.
 
 <img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-When this option is enabled, you can choose dark theme colors for your In App Message using the color picker, or by selecting existing [Color Profiles][2] to re-use existing Dark or Light themes.
+When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles][2] to re-use existing Dark or Light themes.
 
 {% alert note %}
-You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the _light_ theme by default.
+You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the _Light_ theme by default.
 {% endalert %}
 
-## SDK Compatibility
+### Using Dark Mode Consistently
+
+To use Dark Mode for all in-app messages, go to Templates & Media, then In-App Message Templates. From there, select [`Create Color Profile`][2] from the dropdown. Create a Color Profile that aligns with your Dark Mode theme. Then, anytime you create a Dark Mode version of an in-app message, you can select that Color Profile and keep the look of your in-app messages consistent.
+
+## Compatibility
 
 ### Android
 
@@ -43,6 +42,12 @@ You may still use this feature even if your app does not offer its own dark them
 
 - iOS devices version 13 and above
 - Braze iOS SDK v3.21.0 and above
+
+{% alert info %}
+Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not upgraded their phones to at least these versions will only be shown the light theme.
+
+Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.
+{% endalert %}
 
 ## Using HTML In App Messages
 
@@ -66,4 +71,4 @@ For example:
 }
 ```
 
-[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/#in-app-message-color-templates
+[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile

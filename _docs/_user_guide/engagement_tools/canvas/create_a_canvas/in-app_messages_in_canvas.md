@@ -7,7 +7,7 @@ page_order: 4
 
 # In-App Messages In Canvas
 
-{% include youtube.html id="6X8E20BlblI" align="right" %}
+{% include video.html id="6X8E20BlblI" align="right" %}
 
 In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages.
 
@@ -17,7 +17,7 @@ You can customize [when your message will expire](#in-app-message-expiration) an
 
 ## In-App Message Expiration
 
-In the in-app message composer, you have the option to choose when the in-app message will expire.
+In the in-app message composer, you have the option to choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. Once sent, the in-app message can be viewed at most once.
 
 ![Expire After][1]
 

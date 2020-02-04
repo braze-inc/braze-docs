@@ -2,7 +2,7 @@
 nav_title: Uninstall Tracking
 platform: iOS
 page_order: 7
-search_rank: 5
+
 ---
 # Uninstall Tracking
 
@@ -49,6 +49,5 @@ Follow the instructions for enabling uninstall tracking using our [article on Un
 [5]: {{ site.baseurl }}developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [6]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [7]: https://dashboard-01.braze.com/
-[8]: {% image_buster /assets/img_archive/ios-uninstall-tracking-1.png %}
 [9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
 [10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

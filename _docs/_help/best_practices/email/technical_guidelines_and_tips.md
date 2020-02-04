@@ -1,6 +1,9 @@
 ---
 nav_title: Technical Guidelines & Tips
 page_order: 9
+page_type: reference
+description: "This reference page covers technical guideslines and tips when dealing with email validation and HTML tags"
+channel: Email
 ---
 
 # Technical Guidelines & Notes
@@ -9,7 +12,29 @@ page_order: 9
 
 Braze automatically adjusts inputted email addresses to trim any whitespace.
 
-Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards.  If an email is bounced, Braze automatically unsubscribes the corresponding email address but does not remove the email address from user profiles.
+Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards.<br>
+__In addition to these standards__, Braze does not accept certain characters (noted below) and recognizes them as invalid. 
+
+If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
+{% details Unaccepted characters outside of RFC Standards %}
+- *
+- /
+- ?
+- !
+- $
+- #
+- %
+- &#94;
+- &
+- (
+- )
+- {
+- }
+- [
+- ]
+- ~
+- ,
+{% enddetails %}
 
 ## General Technical Guidelines
 
@@ -18,13 +43,13 @@ Email addresses targeted via the Braze servers must be validated per the [RFC 28
 - Images uploaded to the email template must be less than 5MB and either PNG, JPG, GIF.
 - Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
-- Div tags should not be used as most email clients do not support their use. Instead use nested tables.
+- Div tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Don’t use Javascript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
 
 ## Disallowed HTML Tags
 
-- The following HTML tags are disallowed as they may potentially let malicious code run in the browser. As a result, end user mail clients often filter emails which contain them.
+- The following HTML tags are disallowed as they may potentially let malicious code run in the browser. As a result, end-user mail clients often filter emails that contain them.
   - `<!doctype>`
   - `<applet>`
   - `<bgsound>`
@@ -188,4 +213,5 @@ Email addresses targeted via the Braze servers must be validated per the [RFC 28
 ## Implementing 'ALT' Tags
 
 Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, ALT texts can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider.
+
 [24]: http://tools.ietf.org/html/rfc2822

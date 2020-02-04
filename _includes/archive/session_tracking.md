@@ -60,7 +60,7 @@ otherwise closed sessions if the call to StartSession comes within this interval
 <integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ``` {% endif %}
 
-{% if include.platform == "Web" %}To customize the session timeout, pass the the `sessionTimeoutInSeconds` option to your [`initialize`][session_tracking_5] function.
+{% if include.platform == "Web" %}To customize the session timeout, pass the `sessionTimeoutInSeconds` option to your [`initialize`][session_tracking_5] function.
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30

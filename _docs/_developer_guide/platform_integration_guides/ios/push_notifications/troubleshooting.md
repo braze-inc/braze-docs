@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 platform: iOS
 page_order: 3
-search_rank: 5
+
 ---
 ## Troubleshooting {#push-troubleshooting}
 
@@ -18,7 +18,7 @@ There are two types of provisioning profiles and certificates - development and 
 
 #### Step 2: Devices register for APNs and provide Braze with push tokens
 
-When users open your app, they will be prompted to accept push notifications. If they accept this prompt, then APNs will generate a push token for that particular device. As of SDK version 2.21.0, the iOS SDK will immediately and asynchronously send up the push token for apps using the default [Automatic Flush Policy][40].  After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the "Engagement" tab and will be eligible to receive push notifications from Braze campaigns.
+When users open your app, they will be prompted to accept push notifications. If they accept this prompt, then APNs will generate a push token for that particular device. The iOS SDK will immediately and asynchronously send up the push token for apps using the default [Automatic Flush Policy][40].  After we have a push token associated with a user, they will show as "Push Registered" in the dashboard on their user profile under the "Engagement" tab and will be eligible to receive push notifications from Braze campaigns.
 
 > This does not work with the iOS Simulator. You cannot test push notifications with the iOS Simulator as a result.
 
@@ -90,7 +90,7 @@ On iOS versions that do not integrate push via the UserNotifications framework, 
 
 ##### Test Notification Scheduled Incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or Intelligent Delivery, you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 #### User Not "Push Registered" For the App Being Tested
 
@@ -129,12 +129,9 @@ Most of the code that handles deep links also handles push opens.  First, ensure
 
 If opens are being logged, check to see if it is an issue with the deep link in general or with the deep linking push click handling.  To do this, test to see if a deep link from an In-App Message click works.
 
-If deep links are working normally and opens are working, but deep links don’t work from our push clicks, check what version of the SDK you are on. In 2.21.0 we required deep links to be whitelisted in order to function properly.  We removed this in 2.24.2.  If the issue is happening on a version in between, ensure that the deep link is [whitelisted][39].
-
 [1]: {% image_buster /assets/img_archive/push_changelog.png %}
 [20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1
 [21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[22]: {% image_buster /assets/img_archive/pushenabled.png %}
 [23]: {% image_buster /assets/img_archive/prov_profile_refresh_step1.png %}
 [24]: {% image_buster /assets/img_archive/prov_profile_refresh_step2.png %}
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}
@@ -150,5 +147,4 @@ If deep links are working normally and opens are working, but deep links don’t
 [35]: #received-unregistered-sending
 [37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [38]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#app-transport-security-ats
-[39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing

@@ -2,7 +2,7 @@
 nav_title: Push Story
 platform: FireOS
 page_order: 6
-search_rank: 4
+
 ---
 
 # Push Stories Set Up for Android

@@ -2,7 +2,7 @@
 nav_title: Tracking Custom Events
 platform: FireOS
 page_order: 2
-search_rank: 4
+
 ---
 ## Tracking Custom Events
 

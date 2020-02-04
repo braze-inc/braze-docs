@@ -44,7 +44,7 @@ This new notification will alert you via email when a Campaign/Canvas is activat
 
 Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
 
-[Braze customers can integrate with Jampp]({{ site.baseurl }}/partners/technology_partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
+[Braze customers can integrate with Jampp]({{ site.baseurl }}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
 ## Platform Picker for In-App Messages
 
@@ -96,6 +96,10 @@ _Update noted in August 2019._
 
 
 ## Most Engaged Channel
+
+{% alert update %}
+As of the [November 2019 product release]({{ site.baseurl }}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/).
+{% endalert %}
 
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
 

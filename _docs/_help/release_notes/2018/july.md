@@ -6,7 +6,7 @@ page_order: 6
 
 ## Triggers From Attribute Changes
 
-You can now trigger Campaigns and Canvas steps based on attribute value changes, such as Subscription Status changes and custom attribute changes. Previously, you needed to send Braze an event or api trigger in order to trigger a campaign in real time. but with attribute triggers, you can set up triggered workflows directly from Braze (without adding an event)!
+You can now trigger Campaigns and Canvas steps based on attribute value changes, such as Subscription Status changes and custom attribute changes. Previously, you needed to send Braze an event or API trigger in order to trigger a campaign in real time. but with attribute triggers, you can set up triggered workflows directly from Braze (without adding an event)!
 
 This feature is not yet available for all customers. Please reach out to your Account Manager if you are interested in enabling this feature for your Braze account.
 

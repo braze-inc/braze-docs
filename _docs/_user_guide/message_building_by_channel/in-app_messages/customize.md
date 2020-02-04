@@ -23,15 +23,16 @@ If you choose to apply your own template, click __Apply Template__ and choose fr
 
 ### Custom Web Messages
 
-While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
+While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
 #### JavaScript Bridge (appboyBridge) {#javascript-bridge}
 
-HTML in-app messages support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
+HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
 
 {% include archive/appboyBridge.md platform="web" %}
 
-Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`).
+Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`).
+
 {% alert note %}
 The only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
 {% endalert %}
@@ -61,8 +62,8 @@ You can customize your link actions by appending the optional URL query strings 
 
 Query String Name | Value | Action
 -----------|-------|-------
-`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking<br>([https://www.mycompany.com?abButtonId=0](https://www.mycompany.com?abButtonId=0)) *
-`name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` (e.g., `appboy://customEvent?name=eventName`).
+`abButtonId` | `{0,1}` | Braze will use the value specified as the button's ID for analytics tracking. This query string is `case sensitive`. <br>(e.g., `https://www.braze.com/?abButtonId=0` to track a Button 1 Click)
+`name` | Arbitrary string | This represents the custom event name for use with `appboy://customEvent` <br>(e.g., `appboy://customEvent?name=eventName`).
 `abExternalOpen` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze open the web link in an external web browser, set this parameter to `true`.
 `abDeepLink` | `{true, false}` | When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. To have Braze handle your HTTP(S) link as a deep link, set this parameter to `true`.
 
@@ -91,8 +92,12 @@ We've designed a set of HTML5 in-app messages templates to help you get started.
 - Interactive Components
 - Animation
 
-### Email Capture Form
+### Web Email Capture Form
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
+
+To navigate to this option, you must create an in-app messaging campaign. From there, this message type can be found by selecting "Web Broswers" under "Send To" and "Web Email Capture Form" under "Message Type".
+
+![emailimage]({% image_buster /assets/img/email_capture.png %})
 
 {% alert note %}
 To enable Email Capture in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
@@ -108,13 +113,17 @@ To enable Email Capture in-app messages, your SDK integration must supply the `e
 
 ## In-App Message Templates
 
-You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates, or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
+You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
 
 ### Color Profile
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
 Click __Save Color Profile__ on the bottom right when you’re finished.
+
+#### Managing Color Profiles
+
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
 
 ### CSS Template
 
@@ -172,9 +181,14 @@ Name and tag your CSS Template, then choose whether or not it will be your defau
 
 As you can see, you can edit everything from the background color to font size and weight, and so much more.
 
+#### Managing CSS Templates
+
+You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+
+
 ## Video
 
-You are able to display HTML5 videos in our customizable in-app message types with sound included. You can either use an embedded link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) using custom a HTML5 file, or upload a video to your Braze account in the `assets.zip` folder. This uploaded video will then be sent to the device for local playback, so there is no need for a network connection to play the video. This second option is recommended mostly for shorter videos.
+You are able to display HTML5 videos in our customizable in-app message types with sound included. You can either use an embedded link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) using a custom HTML5 file or upload a video to your Braze account in the `assets.zip` folder. This uploaded video will then be sent to the device for local playback, so there is no need for a network connection to play the video. This second option is recommended mostly for shorter videos.
 
 {% tabs %}
   {% tab Android %}

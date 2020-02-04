@@ -27,7 +27,7 @@
   }
 
 
-  #article-main {
+  #article-main{
     padding-top: $base_font_size;
     padding-bottom: $base_font_size * 6;
     @media (min-width: $window-small-px) {
@@ -246,14 +246,74 @@
             }
           }
         }
-
-
-        p {
+        h1, h2, h3, h4, h5, h6 {
+          padding: 5px 0 0 18px;
+        }
+        p, ol, ul {
           padding: 5px 0 0 18px;
           font-size: 14px;
           color: $text-color;
         }
       }
+  }
+
+  #featured_video {
+    width: 100%;
+    .fixed_video {
+      width: 100%;
+      height: calc(100vw * 0.5625);
+      iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vw * 0.5625);
+      }
+    }
+
+    @media (min-width: $window-medium-px) {
+      width: 100%;
+      .fixed_video {
+        width: 100%;
+        height: calc((100vw - #{ $nav_width }) * 0.5625 ) ;
+        iframe, object, embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc((100vw - #{ $nav_width }) * 0.5625 ) ;
+        }
+      }
+    }
+    @media (min-width: $window-xxlarge-px) {
+      max-width: 45%;
+      padding-right: 3%;
+      .fixed_video {
+        position: fixed;
+        width: 44%;
+        height: calc(100vw * 0.5625 * 0.44);
+        top: #{ $header_height + $banner_height + 15px };
+        right: 15px;
+        iframe, object, embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100vw * 0.5625 * 0.45);
+        }
+      }
+    }
+
+  }
+
+  &.scrollnav {
+    #featured_video {
+        @media (min-width: $window-xxlarge-px) {
+          .fixed_video {
+            top: #{ $header_height + 15px };
+          }
+        }
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

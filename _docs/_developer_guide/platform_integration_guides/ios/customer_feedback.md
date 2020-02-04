@@ -2,7 +2,7 @@
 nav_title: Customer Feedback
 platform: iOS
 page_order: 7
-search_rank: 5
+
 hidden: true
 ---
 {% alert Update %}

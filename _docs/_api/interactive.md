@@ -3,6 +3,7 @@ platform: REST APIs
 nav_title: Interactive Endpoints
 page_order: 2.5
 noindex: true
+hidden: true
 ---
 
 <link rel="stylesheet" type="text/css" href="/docs/assets/css/swagger/swagger_ui.css" >

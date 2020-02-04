@@ -1,7 +1,7 @@
 ---
 nav_title: Customization
 page_order: 2
-search_rank: 5
+
 platform: Android
 ---
 
@@ -94,14 +94,15 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IInAppMessageViewFactory`][42] - Implement to [build custom in-app message views](#setting-a-custom-view-factory).
 - [`IInAppMessageAnimationFactory`][20] - Implement to [define custom in-app message animations](#setting-a-custom-animation-factory).
 - [`IHtmlInAppMessageActionListener`][86] - Implement to [custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener).
+- [`IInAppMessageViewWrapperFactory`][88] - Implement to [custom manage in-app message view hierarchy interaction](#setting-a-custom-view-wrapper-factory).
 
-### Setting a Custom Manager Listener
+## Setting a Custom Manager Listener
 
 The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
 
-#### Step 1: Implement an In-App Message Manager Listener
+### Step 1: Implement an In-App Message Manager Listener
 
-Create a class that implements [`IInAppMessageManagerListener`][21]
+Create a class that implements [`IInAppMessageManagerListener`][21].
 
 The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
 
@@ -111,7 +112,22 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 - See [`CustomInAppMessageManagerListener.java`][36] in our Droidboy sample app for an implementation example.
 
-#### Step 2: Instruct Braze to use your In-App Message Manager Listener
+### Step 2: Hook into In-App Message View Lifecycle Methods (Optional)
+
+The [`IInAppMessageManagerListener`][21] interface has in-app message view methods that are called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
+
+- [beforeInAppMessageViewOpened][92] - Called just before the in-app message is added to the Activity's view. The in-app message is not yet visible to the user at this time.
+- [afterInAppMessageViewOpened][93] - Called just after the in-app message is added to the Activity's view. The in-app message is now visible to the user at this time.
+- [beforeInAppMessageViewClosed][94] - Called just before the in-app message is removed from the Activity's view. The in-app message is still visible to the user at this time.
+- [afterInAppMessageViewClosed][95] - Called just after the in-app message is removed from the Activity's view. The in-app message is no longer visible to the user at this time.
+
+For further context, the time between [afterInAppMessageViewOpened][93] and [beforeInAppMessageViewClosed][94] is when the in-app message view is on screen, visible to the user.
+
+{% alert note %}
+  No implementation of these methods is required. They are merely provided to track/inform of the in-app message view lifecycle. It is functionally acceptable to leave these method implementations empty.
+{% endalert %}
+
+### Step 3: Instruct Braze to use your In-App Message Manager Listener
 
 Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
@@ -172,7 +188,7 @@ Once an in-app message has been placed on the stack, you can request for it to b
 
 ## Setting a Custom View Factory
 
-Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
+Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
 
 ### Step 1: Implement an In-App Message View Factory
 
@@ -366,7 +382,107 @@ AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(new CustomHtmlInAppMessageActionListener(context))
+AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(CustomHtmlInAppMessageActionListener(context))
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Setting a Custom View Wrapper Factory
+
+The `AppboyInAppMessageManager` automatically handles placing the in-app message model into the existing Activity view hierarchy by default using [`DefaultInAppMessageViewWrapper`][89]. If you need to customize how in-app messages are placed into the view hierarchy, you should use a custom [`IInAppMessageViewWrapperFactory`][88].
+
+### Step 1: Implement an In-App Message View Wrapper Factory
+
+Create a class that implements [`IInAppMessageViewWrapperFactory`][88] and returns an [IInAppMessageViewWrapper][90].
+
+This factory is called immediately after the in-app message view is created. The easiest way to implement a custom [IInAppMessageViewWrapper][90] is just to extend the default [`DefaultInAppMessageViewWrapper`][89].
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrapper {
+  public CustomInAppMessageViewWrapper(View inAppMessageView,
+                                       IInAppMessage inAppMessage,
+                                       IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener,
+                                       AppboyConfigurationProvider appboyConfigurationProvider,
+                                       Animation openingAnimation,
+                                       Animation closingAnimation, View clickableInAppMessageView) {
+    super(inAppMessageView,
+        inAppMessage,
+        inAppMessageViewLifecycleListener,
+        appboyConfigurationProvider,
+        openingAnimation,
+        closingAnimation,
+        clickableInAppMessageView);
+  }
+
+  @Override
+  public void open(@NonNull Activity activity) {
+    super.open(activity);
+    Toast.makeText(activity.getApplicationContext(), "Opened in-app message", Toast.LENGTH_SHORT).show();
+  }
+
+  @Override
+  public void close() {
+    super.close();
+    Toast.makeText(mInAppMessageView.getContext().getApplicationContext(), "Closed in-app message", Toast.LENGTH_SHORT).show();
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomInAppMessageViewWrapper(inAppMessageView: View,
+                                    inAppMessage: IInAppMessage,
+                                    inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener,
+                                    appboyConfigurationProvider: AppboyConfigurationProvider,
+                                    openingAnimation: Animation,
+                                    closingAnimation: Animation, clickableInAppMessageView: View) : 
+    DefaultInAppMessageViewWrapper(inAppMessageView, 
+        inAppMessage, 
+        inAppMessageViewLifecycleListener, 
+        appboyConfigurationProvider, 
+        openingAnimation, 
+        closingAnimation, 
+        clickableInAppMessageView) {
+
+  override fun open(activity: Activity) {
+    super.open(activity)
+    Toast.makeText(activity.applicationContext, "Opened in-app message", Toast.LENGTH_SHORT).show()
+  }
+
+  override fun close() {
+    super.close()
+    Toast.makeText(mInAppMessageView.context.applicationContext, "Closed in-app message", Toast.LENGTH_SHORT).show()
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Instruct Braze to use your Custom View Wrapper Factory
+
+Once your [IInAppMessageViewWrapper][90] is created, call [`AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`][91] to instruct `AppboyInAppMessageManager` to use your custom [`IInAppMessageViewWrapperFactory`][88] instead of the default view wrapper factory.
+
+We recommend setting your [`IInAppMessageViewWrapperFactory`][88] in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom view wrapper factory is set before any in-app message is displayed.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapper());
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapper())
 ```
 
 {% endtab %}
@@ -404,6 +520,62 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
 
+## Disabling Back Button Dismissal
+
+By default, the hardware back button dismisses Braze In-App Messages. This behavior can be disabled on a per-message basis via [`AppboyInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 
+
+In the following example, `disable_back_button` is a custom key-value pair set on the In-App Message that signifies whether the message should allow for the back button to dismiss the message.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(new AppboyDefaultInAppMessageManagerListener() {
+  @Override
+  public void beforeInAppMessageViewOpened(View inAppMessageView, IInAppMessage inAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage);
+    final Map<String, String> extras = inAppMessage.getExtras();
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false);
+    }
+  }
+
+  @Override
+  public void afterInAppMessageViewClosed(IInAppMessage inAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage);
+    AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true);
+  }
+});
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : AppboyDefaultInAppMessageManagerListener() {
+  override fun beforeInAppMessageViewOpened(inAppMessageView: View, inAppMessage: IInAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage)
+    val extras = inAppMessage.extras
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false)
+    }
+  }
+
+  override fun afterInAppMessageViewClosed(inAppMessage: IInAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage)
+    AppboyInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true)
+  }
+})
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead closing the application instead of the displayed in-app message.
+{% endalert %}
+
+
 ## GIFs {#gifs-IAMs}
 
 {% include archive/android/gifs.md channel="in-app messages" %}
@@ -414,7 +586,7 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 
 ## Youtube in HTML in-app messages
 
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Also that hardware acceleration is only available on API versions 11 and above.
+Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
@@ -433,8 +605,8 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#modal-in-app-messages
 [18]: http://developer.android.com/reference/android/view/View.html
 [19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners
-[20]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/factories/AppboyInAppMessageAnimationFactory.java
-[21]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.java
+[20]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageAnimationFactory.html
+[21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html
 [22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-animation-factory
 [23]: http://developer.android.com/reference/android/R.integer.html#config_shortAnimTime
 [24]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageImmersiveView.java
@@ -450,7 +622,7 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
 [40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
 [41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
-[42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageViewFactory.java
+[42]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
 [43]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageViewFactory.java
 [44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html#getExtras--
 [45]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/InAppMessageOperation.java
@@ -482,5 +654,14 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [85]: https://developer.android.com/guide/topics/ui/dialogs.html
-[86]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.java
+[86]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.html
 [87]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
+[88]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapperFactory.html
+[89]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/DefaultInAppMessageViewWrapper.java
+[90]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapper.html
+[91]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setCustomInAppMessageViewWrapperFactory-com.appboy.ui.inappmessage.IInAppMessageViewWrapperFactory-
+[92]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewOpened-android.view.View-com.appboy.models.IInAppMessage-
+[93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewOpened-android.view.View-com.appboy.models.IInAppMessage-
+[94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.appboy.models.IInAppMessage-
+[95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.appboy.models.IInAppMessage-
+[96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-

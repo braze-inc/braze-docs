@@ -2,7 +2,7 @@
 nav_title: In-App Message Delivery
 platform: FireOS
 page_order: 3
-search_rank: 4
+
 ---
 
 # In-App Message Delivery

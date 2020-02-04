@@ -1,8 +1,19 @@
 ---
 nav_title: Segment Insights
 page_order: 4
+
+page_type: tutorial
+tool: segments
+
+description: "This how-to article will walk you through how to use, interpret and share Segment Insights."
 ---
 # Segment Insights
+
+> This how-to article will walk you through how to use, interpret, and share Segment Insights. 
+> <br>
+> <br> 
+> These insights can be used to target users and develop effective marketing campaigns.
+
 
 ![Segment Insights Dash][1]
 
@@ -21,7 +32,7 @@ You can easily share specific comparisons with the page’s unique URL, and user
 
 ![Segment Insights Expanded][2]
 
-Segment Insights have also been built right into the the segment details view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any other you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
+Segment Insights have also been built right into the segment details view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
 
 ![Segment Insights Details][3]
 
@@ -42,13 +53,13 @@ Segment Insights can help uncover differences between user demographics. The exa
 
 ![Segment Insights by Language][5]
 
-Notice that on average, German speakers signed up a longer time ago, which might explain why they're no longer as active. This could be due to a multitude of factors, for example if the app first launched in Europe but is now more popular in the U.S., where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g. if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
+Notice that on average, German speakers signed up longer ago, which might explain why they're no longer as active. This could be due to a multitude of factors, for example if the app first launched in Europe but is now more popular in the U.S., where most people speak English or Spanish. For more robust findings, when analyzing KPIs across demographics, it's sensible to test the findings from a general study of demographics (e.g. if language impacts LTV in all users) by looking at a smaller, more similar population and seeing if the findings persist.
 
 To improve conversions among speakers of languages other than English, a good first step would be to [localize campaigns][10] to the user's device language and making sure that the copy of those messages is engaging users by using a [multivariate campaign][11] to test different versions of the foreign language copy.
 
 ### Understanding indicators of higher revenue
 
-Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstalling your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example adding items to their wish list, sharing on social media or favoriting content. Below is an example charting out the impact on purchases different behaviors within an e-commerce app.
+Getting users to convert to purchasers can be difficult, and trying to push new, inactive or disengaged users directly toward purchasing may lead the user to uninstall your app. Segment Insights can help you discover actions that lead users further down the purchase funnel without requiring them to purchase just yet, for example, adding items to their wish list, sharing on social media or favoriting content. Below is an example charting out the impact on purchases different behaviors within an e-commerce app.
 
 ![User Actions contributing to purchases][7]
 

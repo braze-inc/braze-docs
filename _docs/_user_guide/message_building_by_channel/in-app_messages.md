@@ -7,9 +7,9 @@ guide_top_text: "In-App Messages help you get content to your user without inter
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: Creating an In-App Message
+- name: "Creating an In-App Message"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  fa_icon: fas fa-mobile
+  fa_icon: fas fa-mobile-alt
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
   fa_icon: fas fa-paint-brush
@@ -22,6 +22,10 @@ guide_featured_list:
 - name: "Reporting & Analytics"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   fa_icon: fas fa-chart-bar
+- name: "Dark Mode"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
+  fa_icon: fas fa-mobile
+
 ---
 
 To see examples of in-app messages, check out our [Client Integration Gallery][11].

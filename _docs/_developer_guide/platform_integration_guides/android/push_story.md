@@ -2,7 +2,7 @@
 nav_title: Push Story
 platform: Android
 page_order: 5
-search_rank: 5
+
 ---
 
 # Push Stories Set Up for Android

@@ -206,6 +206,7 @@ algolia:
       - searchable(platform)
       - searchable(url)
       - searchable(nav_title)
+      - searchable(channel)
     searchableAttributes:
       - search_rank
       - platform
@@ -214,6 +215,7 @@ algolia:
       - url
       - collection,tags
       - nav_title
+      - channel
   extensions_to_index:
     - html
     - md

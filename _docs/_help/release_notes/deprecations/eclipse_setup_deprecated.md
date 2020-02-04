@@ -1,5 +1,6 @@
 ---
 nav_title: Initial SDK Setup with Eclipse
+page_order: 1
 ---
 
 # Initial SDK Setup with Eclipse

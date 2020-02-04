@@ -324,7 +324,7 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['iOS Initial SDK Setup','Android Initial SDK Setup','Web Initial SDK Setup'],
-          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
+          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
           'SelectOption' : {
             'Push' : {
               'SelectDefault': 'Select a platform...',
@@ -426,17 +426,17 @@ var ticket_lookuptable = {
             'mParticle' : {
               'ShowSubmit': true,
               'LinksTitle': ['mParticle integration instructions'],
-              'Links': ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
+              'Links': ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
             },
             'Segment' : {
               'ShowSubmit': true,
               'LinksTitle': ['Segment integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']
+              'Links' : ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
             },
             'Install attribution' : {
               'ShowSubmit': true,
               'LinksTitle': ['Attribution partner integrations','Attribution partner integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/technology_partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
+              'Links' : ['{{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
             },
             'Other' : {
               'ShowSubmit': true,
@@ -510,7 +510,7 @@ var ticket_lookuptable = {
             'I\'m running into an issue during SDK integration.' :{
               'ShowSubmit': true,
               'LinksTitle': ['iOS: push troubleshooting','Android: push troubleshooting','Web: error logging'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/#push-troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
+              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
             },
             'I\'m seeing a bug.' : {
               'ShowSubmit': true,
@@ -620,7 +620,7 @@ var ticket_lookuptable = {
         'Webhooks' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Creating a webhook','Sending SMS via Twilio'],
-          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/technology_partners/additional_channels/sms/twilio/']
+          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/additional_channels/sms/twilio/']
         },
         'Currents' :  {
           'ShowSubmit': true,
@@ -1041,7 +1041,7 @@ $( document ).ready(function() {
     if (user_ccemail) {
       sf_submit.addParameter('00N0V000008wX0Y',user_ccemail);
     }
-    sf_submit.addBodyText('description',userinfo);
+    sf_submit.addBodyText('question',userinfo);
     $.each(sels,function(k,v){
       var selopt = $(this);
       var selval = selopt.find(':selected');

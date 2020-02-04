@@ -2,11 +2,11 @@
 nav_title: Setting User IDs
 platform: Android
 page_order: 1
-search_rank: 5
+
 ---
 ## Setting User IDs
 
-User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. A database ID or a hashed email address/username is usually a good reference to use. We __strongly recommend__ providing this identifier as it will allow you to:
+User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
 - Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [User Data API][1].
@@ -19,6 +19,22 @@ If such an identifier is not available, Braze will assign a unique identifier to
 {% alert warning %}
 These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
 {% endalert %}
+
+## Suggested User ID Naming Convention
+
+At Braze, we __strongly suggest__ naming User IDs also known as `external_user_ids`, in a [UUIDs/GUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) format. UUIDs/GUIDs are Universally Unique Identifiers that consist of a 128-bit number used to identify information in computer systems. This means that these UUIDs are long, random and well distributed. If you choose a different method in which to name your User IDs, they must also be long, random and well distributed. It is also important to note, that User IDs are __case sensitive__. For example, "Abcdef" is a different user from "abcdef". 
+
+If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
+
+Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
+
+| User ID Naming |
+| Good Example | Bad Example |
+| ------------ | ----------- |
+| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
+| 83nmas45-eks1-083m-mk36-426655440000 | Anna@email.com |
+| Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
+| k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
 
 ### Assigning a User ID
 
@@ -45,7 +61,7 @@ Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
 {% endalert %}
 
-Additionally, we recommend __against__ changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
+Additionally, we recommend __against__ changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
 Refer to the [changeUser documentation][4] for more information.
 
@@ -68,7 +84,7 @@ Please note the following:
 - __If your app is used by multiple people, you can assign each user a unique identifier to track them.__
 - __Once a user ID has been set, you cannot revert that user to an anonymous profile__
 - __Do Not change the user ID upon a user "log out".__
-  - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
+  - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
 - __Switching from one identified user to another is a relatively costly operation.__
   - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, in-app messages, and other Braze resources for the new user.
 

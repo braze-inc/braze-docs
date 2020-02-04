@@ -24,17 +24,20 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute __exactly matches__ an inputted string| __EQUALS__ | __STRING__ |
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
+| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ * | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
 | Check if the string attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
+{% alert important %}
+&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+{% endalert %}
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx Tester and Debugger](https://regex101.com/)
-- [RegEx: Learn More](https://regexr.com/)
+- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
@@ -52,10 +55,9 @@ Array attributes are good for storing related lists of information about your us
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-
 More resources on RegEx:
-- [RegEx Tester and Debugger](https://regex101.com/)
-- [RegEx: Learn More](https://regexr.com/)
+- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
@@ -66,7 +68,7 @@ Date attributes are useful for storing the last time a specific action was taken
 The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom date attribute.
 {% endalert %}
 
-Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
+Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
 For example, to build a segment that targets users with a date attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
 
@@ -81,11 +83,18 @@ For example, to build a segment that targets users with a date attribute between
 | Check if the date attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
+{% endalert %}
+
 ## Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
 
 {% alert tip %}
-Money spent in app should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
+Money spent in-app should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -108,7 +117,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 
 ## Purchases / Revenue Tracking
 
-Using our purchase methods to record in-app purchases establishes the Life-time Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+Using our purchase methods to record in-app purchases establishes the Lifetime Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -125,6 +134,13 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
+{% endalert %}
+
+{% alert important %}
+When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+<br> 
+<br> 
+For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
 {% endalert %}
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).

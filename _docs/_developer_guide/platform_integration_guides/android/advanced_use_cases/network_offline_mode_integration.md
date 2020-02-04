@@ -2,7 +2,7 @@
 nav_title: Network Offline Mode
 platform: Android
 page_order: 3
-search_rank: 5
+
 ---
 ## Network Offline Mode
 

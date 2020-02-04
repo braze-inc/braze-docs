@@ -2,7 +2,7 @@
 nav_title: CocoaPod
 platform: iOS
 page_order: 1
-search_rank: 5
+description: "This tutorial covers how to install and use CocoaPods"
 ---
 
 # CocoaPods Integration
@@ -39,7 +39,7 @@ __Note__: If you do not use any Braze default UI and don't want to introduce the
 
 ### Example Podfile
 
-If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. {% if include.platform == 'iOS' %}If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.{% endif %}
+If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.
 
 ## Step 3: Installing the Braze SDK
 
@@ -60,7 +60,7 @@ At this point you should be able to open the new Xcode project workspace created
 Add the following line of code to your `AppDelegate.m` file:
 
 ```objc
-{% if include.platform == 'iOS' %}#import "Appboy-iOS-SDK/AppboyKit.h"{% else %}#import <AppboyTVOSKit/AppboyKit.h>{% endif %}
+#import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
@@ -77,7 +77,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
-{% if include.platform == 'iOS' %}import Appboy_iOS_SDK{% else %}import AppboyTVOSKit{% endif %}
+import Appboy_iOS_SDK
 ```
 
 For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
@@ -102,24 +102,26 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 {% endalert %}
 
 
-## Step 5: Specify Your Custom Endpoint or Data Cluster
+## Step 5: Specify Your Data Cluster
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+{% alert note %}
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+{% endalert %}
 
 ### Compile-time Endpoint Configuration (Recommended)
 
-Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+If given a pre-exisiting custom endpoint...
+- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+
+Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### Runtime Endpoint Configuration
 
-Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
-
-{% alert note %}
-Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has been removed in Braze iOS SDK v3.17.0. If you already use `ABKAppboyEndpointDelegate`, note that in Braze iOS SDK versions v3.14.1 to v3.16.0, any reference to `dev.appboy.com` in your `getApiEndpoint()` method must be replaced with a reference to `sdk.iad-01.braze.com`.
-{% endalert %}
+If given a pre-existing custom endpoint...
+- Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert important %}
-To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
+To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
 ### Implementation Example
@@ -197,7 +199,6 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
 [apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
@@ -220,8 +221,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[20]: {% image_buster /assets/img_archive/IDFAInBuildSetting.png %}
-[21]: {{ site.baseurl }}/partners/technology_partners/
+[21]: {{ site.baseurl }}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

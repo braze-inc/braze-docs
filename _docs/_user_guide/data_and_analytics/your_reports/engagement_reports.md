@@ -59,11 +59,12 @@ The Stats tab will automatically show you stats for the types of Campaigns or Ca
 
 | channel| stats available|
 | ------| --------------|
-| Email | Sent, Opens, Unique Opens, Clicks, Unique Clicks, Unsubscribes, Bounces, Delivered, Reported Spam |
-| Push  | Sent, Opens, Influenced Opens, Bounces, Body Clicks |
-| Web Push | Sent, Opens, Bounces, Body Clicks |
+| Email | Sends, Opens, Unique Opens, Clicks, Unique Clicks, Unsubscribes, Bounces, Delivered, Reported Spam |
+| Push  | Sends, Opens, Influenced Opens, Bounces, Body Clicks |
+| Web Push | Sends, Opens, Bounces, Body Clicks |
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
-| Webhook  |  Sent, Errors |
+| Webhook  |  Sends, Errors |
+| SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 
 
 
@@ -99,7 +100,6 @@ The report, when opened, will contain all the statistics selected in the [Add St
 
 
 
-[1]: {% image_buster /assets/img_archive/engagement_report_menuoption.png %}
 [2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
 [3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
 [4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}

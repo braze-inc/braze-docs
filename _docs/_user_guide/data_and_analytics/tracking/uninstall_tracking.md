@@ -21,7 +21,7 @@ You can enable Uninstall Tracking in the App Settings section of the "Manage App
 
 ![Uninstall Tracking Checkbox][1]
 
-When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. If you are interested in filtering Braze background push on iOS, you can use the utility method that was released in [iOS SDK version 2.13][iOS]; documentation for this methods can be found [here][iOS docs]. On Android, we are able to utilize Firebase Cloud Messaging's "dry run" feature to perform Uninstall Tracking without actually sending a notification to the device, and so filtering Braze uninstall background push is therefore unnecessary on Android. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
+When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`AppboyNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
 
 ![Uninstall Attribute][4]
 
@@ -53,11 +53,9 @@ Braze tracks uninstalls by observing when push messages sent to users’ devices
 
 Uninstall Tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, Uninstall Tracking should be used to detect directional trends as opposed to precise statistics.
 
-To enable Uninstall Tracking, your user base should be on at least iOS SDK version 2.13. Turning on Uninstall Tracking for apps with users below this SDK version will send blank pushes to end users.
-
 For more on using Uninstall Tracking, see [this blog post][7].
 
-Uninstall statistics for campaigns are located on the Campaign Details page. For multichannel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
+Uninstall statistics for campaigns are located on the Campaign Details page. For multi-channel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
 
 ![Uninstall Campaign Level][6]
 
@@ -66,7 +64,7 @@ Uninstall statistics for campaigns are located on the Campaign Details page. For
 [3]: {% image_buster /assets/img_archive/Uninstall_232.png %} "Uninstall Graph"
 [4]: {% image_buster /assets/img_archive/User_Profile.png %} "Uninstall Attribute"
 [5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment"
-[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS]: https://github.com/appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[iOS docs]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/
 [6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
+[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
+[iOS docs]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/
+[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/push/AppboyNotificationUtils.html#isUninstallTrackingPush-android.os.Bundle-

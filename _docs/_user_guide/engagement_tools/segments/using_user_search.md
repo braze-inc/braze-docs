@@ -1,8 +1,16 @@
 ---
 nav_title: Using User Search
 page_order: 5
+
+page_type: reference
+tool: segments
+
+description: "This reference article will go through how to use User Search in the Dashboard and showcases some User Search use cases."
 ---
 # Using User Search
+
+> This reference article will go through how to use User Search in the Dashboard, the different components involved in a user profile, and showcases some examples of how this feature can be used to troubleshoot campaigns. 
+
 
 ## Feature Overview
 
@@ -16,7 +24,7 @@ You can search your user base using a user's e-mail or user ID. Most of the time
 
 ## Overview Tab
 
-In the Overview Tab you can see information about the user's Profile, App Usage, Custom Attributes, Custom Events, Purchases and the Most Recent Device that the user logged in on. For more information on this data, see [User Data Collection][12].
+In the Overview Tab you can see information about the user's Profile, App Usage, Custom Attributes, Custom Events, Purchases, and the Most Recent Device that the user logged in on. For more information on this data, see [User Data Collection][12].
 
 ![User_Search_Overview][8]
 
@@ -33,7 +41,7 @@ The Social Tab allows you to see the social accounts that a user has connected t
 ![User_Search_Social][11]
 
 ## Use Cases
-The User Search feature is a great resource for trouble shooting and testing because you can easily access information about a user's engagement history, segment membership, device and operating system.
+The User Search feature is a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device and operating system.
 
 
 For example, if a user reports a problem and you are not sure what device and operating system they are using, you can use the Overview Tab to find this information (as long as you have their e-mail or user ID). You can also view a user's language, which could be helpful if you are troubleshooting a [multi-lingual campaign][13] that did not behave as expected.

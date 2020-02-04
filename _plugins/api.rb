@@ -51,7 +51,7 @@ module Api
         when "postman"
           reftext = 'See me in Postman'
         end
-        "<div class='api_reference #{@reftype}'><a href='#{content}'>#{reftext}</a></div>"
+        "<div class='api_reference #{@reftype}'><a href='#{content}' class='seeme'>#{reftext}</a></div>"
       end
   end
 end

@@ -1,7 +1,7 @@
 ---
 nav_title: Multiple Feeds
 page_order: 5
-search_rank: 5
+
 platform: Web
 ---
 

@@ -2,7 +2,7 @@
 nav_title: Add Braze to Your Project
 platform: iOS
 page_order: 0
-search_rank: 5
+
 layout: featured
 
 guide_top_header: "Add Braze to Your Project"
@@ -28,7 +28,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-The iOS SDK will add 1MB to 2MB to the the app IPA file, in addition to App File, and 30MB for the Framework.
+The iOS SDK will add 1MB to 2MB to the app IPA file, in addition to App File, and 30MB for the Framework.
 {% endalert %}
 
 After you have integrated using one of the three options above, as well as enabled IDFA collection (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  

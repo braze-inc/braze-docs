@@ -7,7 +7,7 @@ page_order: 1
 
 A `dispatch_id` is the ID of the message dispatch - a unique ID for each "transmission" sent from Braze. Users who are send a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
 
-These IDs are __per user, per Campaign for triggered (action-based or API-triggered) messages__. This can result in two different users having different `dispatch_ids` for a single Campaign.
+These IDs are __per user, per Campaign for triggered (action-based or API-triggered) messages__. This can result in two different users having different `dispatch_ids` for a single Campaign if messages were sent at two different times. This is often because the API requests were made separately. If both users were in the same campaign audience in a single send, their Dispatch IDs would be the same.
 
 ## Dispatch ID Behavior in Campaigns
 
@@ -43,4 +43,4 @@ The `dispatch_id` is the unique id generated for each transmission – or, dispa
 
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
-You can use `dispatch_id` as a [Personalization Tag]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags), in [Message Engagement Events]({{ site.baseurl }}/partners/braze_currents/data_storage_events/message_engagement_events/), or when you use [Segment]({{ site.baseurl }}/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details), [Mixpanel]({{ site.baseurl }}/partners/technology_partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events), or [Amplitude]({{ site.baseurl }}/partners/technology_partners/insights/behavioral_analytics/amplitude_for_currents/#email-events) for Currents.
+You can use `dispatch_id` as a [Personalization Tag]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags), in [Message Engagement Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), or when you use [Segment]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details), [Mixpanel]({{ site.baseurl }}/partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events), or [Amplitude]({{ site.baseurl }}/partners/insights/behavioral_analytics/amplitude_for_currents/#email-events) for Currents.

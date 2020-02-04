@@ -46,7 +46,7 @@ You cannot have multiple in-app message variants in a single step.
 
 
 ## Step 1: Specify Delivery Platform(s)
-Start by choosing which platform(s) should receive the message. Use this selection to limit delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for a campaign encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because Platform selections are specific to each variant, you could try testing message engagement per platform!
+Start by choosing which platform(s) should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for a campaign encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because Platform selections are specific to each variant, you could try testing message engagement per platform!
 
 Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can only be used after selecting __Web Browsers__.
 
@@ -87,12 +87,12 @@ These in-app messages are customizable to your needs.
 
 | Message Type | Type Description |Available Layouts| Other Options |
 |---|---|---|
-|[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | None |
-|[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | None |
+|[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | Must set `enableHtmlInAppMessages` initialization option to `true` for your In-App Message to work. |
+|[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
 |[Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
 
 {% alert important %}
-If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and pasted into your code: `<a href="appboy://close">X</a>`.
+If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: `<a href="appboy://close">X</a>`.
 {% endalert %}
 
 {% endtab %}
@@ -114,7 +114,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 |Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
 |Button Text & On Click Behavior| Add up to two buttons. | You can create and edit custom button text and color. You can also add  Terms of Service Link within Web Email Capture forms.  |
 |Device Options | Restrict send to only iOS devices. | Click __Change__ and check the box as desired. |
-|Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the scree. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
+|Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the screen. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
 |Header & Body Text | Completely custom copy (often with custom HTML capabilities) with the options to include liquid and other types of personalization. | Some message types do not need and therefore do not ask for headers. |
 |Position | __From Bottom of App Screen__ or __From Top of App Screen__. | This only exists in the Universal Slideup message builder.|
 |HTML & Assets | Completely custom via upload, URL, or copy and paste. | Copy and paste HTML into the available space and upload your assets via ZIP. |
@@ -175,13 +175,14 @@ Add [key-value pairs][19] to your message if needed.
 
 ## Step 6: Build the Remainder of Your Campaign or Canvas
 
-Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages.
+Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages. For more information on Canvas specific in-app messaging options like expiry and steps, [check out our documentation][16]. 
 
 {% details Triggering %}
 ![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: height="50%" width="50%"}
 
-In-app message delivery is entirely based off of of the following action triggers:
+## Triggering 
 
+In-app message delivery is entirely based off of of the following action triggers:
 - Making a purchase
 - Opening the app/webpage
 - Performing a custom event (only works with events sent via the SDK)
@@ -192,6 +193,10 @@ In-app message delivery is entirely based off of of the following action trigger
 A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
 Please refer to our developer documentation for [server-side event triggering]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+
+### Online vs. Offline Triggering
+
+In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). When you stop a campaign, the trigger condition is set to null and updated on the user's next session. For a user's current session, they may still see the in-app messages until the triggers are updated on their next session. 
 
 {% enddetails %}
 
@@ -208,7 +213,7 @@ The high, medium, and low options for triggered message priorities are buckets, 
 
 __Canvas__
 
-It is possible that a customer will trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
+A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
 ![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: height="50%" width="50%"}
 
@@ -249,15 +254,11 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[3]: {% image_buster /assets/img_archive/InAppNewComposer.png %}
-[4]: {% image_buster /assets/img_archive/InAppNewComposer2.png %}
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
-[13]: {% image_buster /assets/img_archive/InAppNewComposer3.png %}
-[14]: {% image_buster /assets/img_archive/InAppNewComposer4.png %}
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
+[16]: {{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
 [18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/compose_iam.gif %}
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/iam_compose.gif %}

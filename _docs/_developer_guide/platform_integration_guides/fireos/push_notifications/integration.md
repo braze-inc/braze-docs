@@ -2,7 +2,7 @@
 nav_title: Integration
 platform: FireOS
 page_order: 0
-search_rank: 4
+
 ---
 ## Integration
 
@@ -159,7 +159,6 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 [17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
 [20]: {{ site.baseurl }}/download/amazon-device-messaging-1.0.1.jar
 [26]: http://www.compiletimeerror.com/2013/03/android-broadcast-receiver-in-detail.html#.U5nCZxYmbww "Android Receiver Tutorial"
-[28]: {% image_buster /assets/img_archive/android_push_sample.png %}
 [29]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}

@@ -3,7 +3,7 @@ page_order: 0
 nav_title: Report Metrics Glossary
 layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
-glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need, or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select Channels below to narrow the glossary:"
@@ -42,7 +42,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Unique Impressions
-    description: The total number of people who actually received and viewed the in-app message or card (if a user receives a message twice, they will be only counted once).
+    description: Also known as Unique Daily Impression, is the total number of people who actually received and viewed the in-app message or card in a day. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
@@ -144,7 +144,7 @@ glossaries:
     tags:
       - All
   - name: Primary Conversions (A) or Primary Conversion Event
-    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Content Cards, this count begins when they view a Content Card for the first time.
+    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
       - All
   - name: Conversion Rate

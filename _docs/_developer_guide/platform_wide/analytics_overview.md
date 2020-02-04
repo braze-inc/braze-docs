@@ -108,24 +108,30 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute __exactly matches__ an inputted string| __EQUALS__ | __STRING__ |
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
+| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__* | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
 | Check if the string attribute __exists__ on a user's profile | __IS BLANK__ | __N/A__ |
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+
+{% alert important %}
+&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+{% endalert %}
 
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx Tester and Debugger](https://regex101.com/)
-- [RegEx: Learn More](https://regexr.com/)
+- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 #### Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array. If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
+Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
+
+If the array contains its maximum number of elements, the first element will be discarded and the new element added to the end. Below is some example code showing the array behavior in the web SDK:
 
 ```
 var abUser = appboy.getUser();
@@ -370,4 +376,3 @@ If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can 
 [17]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
-[20]: {% image_buster /assets/img_archive/array_max_length.png %} "array_max_length.png"

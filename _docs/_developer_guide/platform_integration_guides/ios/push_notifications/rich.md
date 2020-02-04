@@ -2,7 +2,7 @@
 nav_title: Rich Notifications
 platform: iOS
 page_order: 0.1
-search_rank: 5
+
 ---
 
 # iOS 10 Rich Notifications
@@ -93,7 +93,6 @@ Also note the supported file types and sizes, listed [here][28].
 [26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
 [27]: https://developer.apple.com
 [28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[29]: {% image_buster /assets/img_archive/ios10_se_db.png %}
 [30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L218-L223
 [33]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L245-L249
