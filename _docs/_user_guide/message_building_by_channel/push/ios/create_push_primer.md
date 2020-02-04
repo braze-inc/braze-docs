@@ -12,15 +12,13 @@ tool:
   - Campaigns
 ---
 
-#include that these messages can be redelivered
-
 # Create a Push Primer Campaign
 
 > This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. <br><br> Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help!
 
-Push Primer campaigns are useful because they address the issue of the dreaded iOS notification prompt that user recieve upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt out of push notifications. This prompt is only ever shown once. Once those notifications are turned off, theres very little we can do to get users to turn them back on. This becomes a problem when we want to use our Push Channel for marketing, but not many users are push enabled. 
+Push Primer campaigns are useful because they address the issue of the dreaded iOS notification prompt that user recieve upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt out of push notifications. This prompt is only ever shown once, and unfortunately, once those notifications are turned off, theres very little we can do to get users to turn them back on. This becomes a problem when we want to use our Push Channel for marketing, but not many users are push enabled. 
 
-To address this, Braze offers steps on how to set up Push Primers Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers can provide users valuable information on why notifications for your application are important.
+To address this, Braze offers steps on how to set up Push Primers Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message as well as offer redeliverability, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers should provide users valuable information on why notifications for your application are important.
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{ site.baseurl }}/)
@@ -36,7 +34,7 @@ __Should I be using Push Primers?__ Depends on your iOS version.<br><br>
 
 From the Campaigns pane within the Dashboard, select In-App Messaging as the messaging channel under Create Campaign.
 
-![push_primer][push_primer1]{: height="100px"}{: float:right :}
+![push_primer][push_primer1]{:height="200px" float:right }
 
 ## Step 2: Set Up Initial Campaign Options
 
@@ -52,17 +50,15 @@ Remember that a push primer is supposed to prime the user to turn on push notifi
 
 Here are some example Push Primer Messages:
 
-![push_primer_example_1][push_primer3]{: height="300px"} ![push_primer_example_2][push_primer4]{: height="300px"} ![push_primer_example_3][push_primer5]{: height="300px"}
+![push_primer_example_1][push_primer3]{: height="250px"} ![push_primer_example_2][push_primer4]{: height="250px"} ![push_primer_example_3][push_primer5]{: height="250px"}
 
-To Add buttons, you will find a Button1 text box and Button2 text box. Here you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Close" as starter buttons, but there are many different button prompts you could assign. In later steps, we will be assigning these buttons to certain actions. 
+To Add buttons to your in-app message, you will find a Button1 textbox and Button2 textbox. Here, you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Not Now" as starter buttons, but there are many different button prompts you could assign. In later steps, we will be assigning these buttons to certain actions, one of those being deep-linking. Your developers will need to go through and complete [Push Primer Integrations][] before the deeplink required becomes available.
 
-If you would like even further customization options, you can also set the message type to Custom code, and provide the HTML.
-
-(examples)
+If you would like even further customization options, you can also set the message type to Custom code, and provide the full HTML for your in-app message.
 
 ## Step 4: Setting up the Back End - Assembling a functional push primer message:
 
-Now you have your Push Primer message made, with all the settings you want. But as of now, there are quite a few more steps to make this in-app message a true Push Primer message. Because Push Primer Campaigns are not an out-of-the-box feature, your developers must set up the backend. We have included the code snippets required below.
+Now that you have your Push Primer message made, with all the settings you want. But as of now, there are quite a few more steps to make this in-app message a true Push Primer message. Because Push Primer Campaigns are not an out-of-the-box feature, your developers must set up the backend. We have included the code snippets required below.
 
 ### Push Primer Integration
 
