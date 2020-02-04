@@ -49,7 +49,6 @@ withAppboyOptions:[ ABKEnableGeofencesKey : true ]])
 {% endtab %}
 {% endtabs %}
 
-
 ## Step 3: Check for Braze Background Push
 
 Braze syncs geofences to devices using background push notifications. Follow the instructions [here][7] to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
@@ -61,9 +60,28 @@ This description will be shown when the system location prompt requests authoriz
 
 ## Step 5: Request authorization from the user
 
-The Braze iOS SDK can automatically request authorization from the user at app start if configured in our dashboard.
+For our SDK to register geofences, you will first need to request for `Always` location authorization from the user. Once the user has successfully granted permission, our SDK will start registering geofences.
 
-Otherwise, you can request authorization yourself and our SDK will wait until it has permission to start registering geofences.
+To request for `Always` location authorization, use the following code:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestAlwaysAuthorization];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+var locationManager = CLLocationManager()
+locationManager.requestAlwaysAuthorization()
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Step 6: Enable Geofences on the Dashboard
 
