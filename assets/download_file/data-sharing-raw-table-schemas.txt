@@ -1,0 +1,1441 @@
+users.UserDeleteRequest: when a user is deleted by customer request
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that was requested for delete
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the user delete request was processed
+
+users.messages.webhook.Send: when we send a webhook for a user
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+
+users.messages.contentcard.Send: when we send a content card to a user
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"content_card_id": (string) id of the card that generated this event
+
+users.messages.contentcard.Dismiss: when a user dismisses a content card
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"content_card_id": (string) id of the card that generated this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.messages.contentcard.Impression: when a user views a content card
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"content_card_id": (string) id of the card that generated this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.messages.contentcard.Click: when a user clicks a content card
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"content_card_id": (string) id of the card that generated this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.messages.sms.Send: when a SMS message is sent
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"to_phone_number": (optional string) phone number of the recipient
+	"subscription_group_id": (optional string) BSON id of subscription group
+	"subscription_group_api_id": (optional string) external ID of the subscription group
+
+users.messages.sms.Rejection: when a SMS message is not delivered to a user
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"to_phone_number": (optional string) phone number of the recipient
+	"from_phone_number": (optional string) phone number from which the SMS message was sent
+	"subscription_group_id": (optional string) BSON id of subscription group
+	"subscription_group_api_id": (optional string) external ID of the subscription group
+	"error": (optional string) error name
+	"provider_error_code": (optional string) error code from SMS service provider
+
+users.messages.sms.Delivery: when a SMS message is delivered
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"to_phone_number": (optional string) phone number of the recipient
+	"from_phone_number": (optional string) phone number from which the SMS message was sent
+	"subscription_group_id": (optional string) BSON id of subscription group
+	"subscription_group_api_id": (optional string) external ID of the subscription group
+
+users.messages.sms.CarrierSend: when a SMS message is sent to carrier
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"to_phone_number": (optional string) phone number of the recipient
+	"from_phone_number": (optional string) phone number from which the SMS message was sent
+	"subscription_group_id": (optional string) BSON id of subscription group
+	"subscription_group_api_id": (optional string) external ID of the subscription group
+
+users.messages.sms.DeliveryFailure: when Braze is unable to deliver the SMS message to the SMS service provider
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"to_phone_number": (optional string) phone number of the recipient
+	"subscription_group_id": (optional string) BSON id of subscription group
+	"subscription_group_api_id": (optional string) external ID of the subscription group
+	"error": (optional string) error name
+	"provider_error_code": (optional string) error code from SMS service provider
+
+users.messages.newsfeedcard.Impression: when a user views a a news feed card
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"card_id": (string) BSON id of the card this in app message comes from
+	"card_api_id": (optional string) API ID of the card
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+
+users.messages.newsfeedcard.Click: when a user clicks a news feed card
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"card_id": (string) BSON id of the card this in app message comes from
+	"card_api_id": (optional string) API ID of the card
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+
+users.messages.inappmessage.Impression: when a user views an in app message
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"card_id": (optional string) BSON id of the card this in app message comes from
+	"card_api_id": (optional string) API ID of the card
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"version": (string) which version of in app message, legacy or triggered
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.messages.inappmessage.Click: when a user clicks an in app message
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"card_id": (optional string) BSON id of the card this in app message comes from
+	"card_api_id": (optional string) API ID of the card
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"version": (string) which version of in app message, legacy or triggered
+	"button_id": (optional string) id of the button clicked, if this click represents a click on a button
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.messages.pushnotification.Send: when we send a push notification to a user
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"push_token": (optional string) push token that we made a delivery attempt to
+	"device_id": (optional string) device_id that we made a delivery attempt to
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"platform": (string) platform of the device
+	"ad_id": (optional string) advertising id of the device that we made a delivery attempt to
+	"ad_id_type": (optional string) type of the advertising id
+	"ad_tracking_enabled": (optional boolean) whether or not tracking is enabled for advertising
+
+users.messages.pushnotification.InfluencedOpen: when a user opens the app after receiving a notification without clicking on the notification
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+
+users.messages.pushnotification.Open: when a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app)
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"button_string": (optional string) identifier (button_string) of the push notification button clicked. null if not from a button click
+	"button_action_type": (optional string) Action type of the push notification button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not from a button click
+	"slide_id": (optional string) slide identifier of the push carousel slide user clicks on
+	"slide_action_type": (optional string) action type of the push carousel slide
+	"ad_id": (optional string) advertising id of the device that we made a delivery attempt to
+	"ad_id_type": (optional string) type of the advertising id
+	"ad_tracking_enabled": (optional boolean) whether or not tracking is enabled for advertising
+
+users.messages.pushnotification.IosForeground: when a user receives a push notification while the app is open
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"device_id": (optional string) id of the device on which the event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"resolution": (optional string) resolution of the device
+	"carrier": (optional string) carrier of the device
+	"browser": (optional string) browser of the device
+	"ad_id": (optional string) advertising id of the device that we made a delivery attempt to
+	"ad_id_type": (optional string) type of the advertising id
+	"ad_tracking_enabled": (optional boolean) whether or not tracking is enabled for advertising
+
+users.messages.pushnotification.Bounce: when a push notification bounces
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"push_token": (optional string) push token that bounced
+	"device_id": (optional string) device_id that we made a delivery attempt to that bounced
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"platform": (optional string) platform of the device
+	"ad_id": (optional string) advertising id of the device that we made a delivery attempt to
+	"ad_id_type": (optional string) type of the advertising id
+	"ad_tracking_enabled": (optional boolean) whether or not tracking is enabled for advertising
+
+users.messages.email.Send: when we send an email to a user
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+
+users.messages.email.Click: when a user clicks a link in an email
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"url": (optional string) URL that the user clicked on
+	"user_agent": (optional string) user agent on which the click occurred
+
+users.messages.email.Open: when a user begins opens an email
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"user_agent": (optional string) user agent on which the open occurred
+
+users.messages.email.Delivery: when an email is delivered
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"sending_ip": (optional string) IP address from which the email was sent
+
+users.messages.email.SoftBounce: when an email soft bounces
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"sending_ip": (optional string) IP address from which the email send was made
+
+users.messages.email.Bounce: when an email bounces
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"sending_ip": (optional string) IP address from which the email send was made
+
+users.messages.email.Unsubscribe: when a user unsubscribes from email
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+
+users.messages.email.MarkAsSpam: when an email is marked as spam
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (optional string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"email_address": (string) email address of the user
+	"user_agent": (optional string) user agent on which the spam report occurred
+
+users.UserOrphan: when a user is orphaned, meaning the user is merged with another user's profile
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that was orphaned
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app the orphaned user belonged to
+	"app_api_id": (optional string) API ID of the app the orphaned user belonged to
+	"time": (int) unix timestamp at which the user was orphaned
+	"orphaned_by_id": (string) BSON id of the user whose profile was merged with the orphaned user's profile
+
+users.canvas.FrequencyCap: when a user gets frequency capped for a canvas step
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"canvas_id": (string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+
+users.canvas.Entry: when a user enters a canvas
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"canvas_id": (string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (string) BSON id of the canvas variation this event belongs to
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"in_control_group": (boolean) whether the user was enrolled in the control group
+
+users.canvas.Revenue: when a user generates revenue with in the primary conversion period
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (optional string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"canvas_id": (string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"revenue": (int) the amount of USD revenue in cents generated
+
+users.canvas.Conversion: when a user converts for a canvas
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (optional string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"canvas_id": (string) BSON id of the canvas this event belongs to
+	"canvas_variation_id": (string) BSON id of the canvas variation this event belongs to
+	"canvas_step_id": (string) BSON id of the canvas step this event belongs to
+	"canvas_step_message_variation_id": (string) BSON id of the canvas step message variation this user received
+	"canvas_api_id": (optional string) API id of the canvas this event belongs to
+	"canvas_variation_api_id": (optional string) API id of the canvas variation this event belongs to
+	"canvas_step_api_id": (optional string) API id of the canvas step this event belongs to
+	"canvas_step_message_variation_api_id": (optional string) API id of the canvas step message variation this user received
+	"conversion_behavior_index": (optional int) index of the conversion behavior
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+
+users.behaviors.CustomEvent: when a user makes a performs a custom event
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed the event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (optional string) BSON id of the app this action occurred on
+	"app_api_id": (optional string) API ID of the app on which this action occurred
+	"time": (int) unix timestamp at which the user performed the event
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"device_id": (optional string) id of the device on which the custom event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"name": (string) name of the custom event
+	"properties": (string) custom properties of the event stored as a JSON encoded string
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+	"data_point_source": (optional int) source that logged the event
+
+users.behaviors.Location: when a user records a location
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that records the location
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app on which this location was recorded
+	"app_api_id": (optional string) API ID of the app on which this location was recorded
+	"time": (int) unix timestamp at which the location was recorded
+	"latitude": (float) latitude of recorded location
+	"longitude": (float) longitude of recorded location
+	"altitude": (optional float) altitude of recorded location
+	"ll_accuracy": (optional float) latitude/longitude accuracy of recorded location
+	"alt_accuracy": (optional float) altitude accuracy of recorded location
+	"device_id": (optional string) id of the device on which the location was recorded
+	"sdk_version": (optional string) version of the Braze SDK in use when the location was recorded
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+
+users.behaviors.app.FirstSession: when a user has their first session
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performs this action
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app on which this session occurred
+	"app_api_id": (optional string) API ID of the app on which this session occurred
+	"time": (int) unix timestamp at which the session started
+	"session_id": (string) uuid of the session
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"device_id": (optional string) id of the device on which the session occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the session
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+
+users.behaviors.app.SessionEnd: when a user ends a session on an app
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performs this action
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app on which this session occurred
+	"app_api_id": (optional string) API ID of the app on which this session occurred
+	"time": (int) unix timestamp at which the session ended
+	"duration": (optional float) duration of the session
+	"session_id": (string) uuid of the session
+	"device_id": (optional string) id of the device on which the session occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the session
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+
+users.behaviors.app.NewsFeedImpression: when a user views the news feed
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that viewed the news feed
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app on which the user viewed the news feed
+	"app_api_id": (optional string) API ID of the app on which the user viewed the news feed
+	"time": (int) unix timestamp at which the user viewed the news feed
+	"device_id": (optional string) id of the device on which the impression occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the impression
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+
+users.behaviors.app.SessionStart: when a user begins a session on an app
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performs this action
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app on which this session occurred
+	"app_api_id": (optional string) API ID of the app on which this session occurred
+	"time": (int) unix timestamp at which the session started
+	"session_id": (string) uuid of the session
+	"device_id": (optional string) id of the device on which the session occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the session
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+
+users.behaviors.InstallAttribution: when a user installs an app and we attribute it to a partner
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that installed
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the user installed
+	"source": (string) the source of the attribution
+
+users.behaviors.Uninstall: when a user uninstalls an app
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that uninstalled
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app that was uninstalled
+	"app_api_id": (optional string) API ID of the app that was uninstalled
+	"time": (int) unix timestamp at which the user uninstalled
+
+users.behaviors.UpgradedApp: when a user upgrades the app
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that upgraded the app
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (string) BSON id of the app the user upgraded
+	"app_api_id": (optional string) API ID of the app the user upgraded
+	"time": (int) unix timestamp at which the user upgraded the app
+	"device_id": (optional string) id of the device on which the user upgraded the app
+	"sdk_version": (optional string) version of the Braze SDK in use
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"old_app_version": (optional string) old version of the app
+	"new_app_version": (optional string) new version of the app
+
+users.behaviors.geofence.DataEvent: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed the event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (optional string) BSON id of the app this action occurred on
+	"app_api_id": (optional string) API ID of the app on which this action occurred
+	"time": (int) unix timestamp at which the user performed the event
+	"device_id": (optional string) id of the device on which the custom event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"event_type": (string) What kind of geofence event was triggered. (e.g. 'enter' or 'exit')
+	"location_set_id": (string) The ID of the location set of the geofence that was triggered
+	"geofence_id": (string) The ID of the geofence that was triggered
+
+users.behaviors.geofence.RecordEvent: When a user triggers a geofenced area (e.g. when they enter/exit a geofence). This event was received through the dedicated Geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. In addition, due to rate-limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed the event
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (optional string) BSON id of the app this action occurred on
+	"app_api_id": (optional string) API ID of the app on which this action occurred
+	"time": (int) unix timestamp at which the user performed the event
+	"device_id": (optional string) id of the device on which the custom event occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the event
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"event_type": (string) What kind of geofence event was triggered. (e.g. 'enter' or 'exit')
+	"location_set_id": (string) The ID of the location set of the geofence that was triggered
+	"geofence_id": (string) The ID of the geofence that was triggered
+
+users.behaviors.Purchase: when a user makes a purchase
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that made a purchase
+	"external_user_id": (optional string) external user id of the user
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"app_id": (optional string) BSON id of the app on which the purchase occurred
+	"app_api_id": (optional string) API ID of the app on which the purchase occurred
+	"time": (int) unix timestamp at which the user made the purchase
+	"device_id": (optional string) id of the device on which the purchase occurred
+	"sdk_version": (optional string) version of the Braze SDK in use during the purchase
+	"platform": (optional string) platform of the device
+	"os_version": (optional string) version of the operating system of the device
+	"device_model": (optional string) model of the device
+	"product_id": (string) id of the product purchased
+	"price": (float) price of the purchase
+	"currency": (string) currency of the purchase
+	"properties": (string) custom properties of the purchase stored as a JSON encoded string
+	"ad_id": (optional string) Advertising identifier
+	"ad_id_type": (optional string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id'
+	"ad_tracking_enabled": (optional boolean) Whether advertising tracking is enabled for the device
+	"data_point_source": (optional int) source that logged the purchase
+
+users.behaviors.subscriptiongroup.StateChange: when a user is subscribed or unsubscribed to/from a subscription group
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user affected
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"email_address": (optional string) email address of the user
+	"phone_number": (optional string) phone number of the user in e164 format
+	"app_id": (optional string) BSON id of the app the event belongs to
+	"app_api_id": (optional string) api id of the app the event belongs to
+	"campaign_id": (optional string) BSON id of the campaign this event belongs to
+	"campaign_api_id": (optional string) api id of the campaign this event belongs to
+	"message_variation_id": (optional string) BSON id of the message variation this event belongs to
+	"message_variation_api_id": (optional string) api id of the message variation this event belongs to
+	"canvas_id": (optional string) BSON id of the canvas this event belongs to
+	"canvas_api_id": (optional string) api id of the canvas this event belongs to
+	"canvas_variation_id": (optional string) BSON id of the canvas variation this event belongs to
+	"canvas_variation_api_id": (optional string) api id of the canvas variation this event belongs to
+	"canvas_step_id": (optional string) BSON id of the canvas step this subscription state change originated from
+	"canvas_step_api_id": (optional string) api id of the canvas step this event belongs to
+	"subscription_group_id": (string) BSON id of subscription group
+	"subscription_group_api_id": (string) subscription group api id
+	"channel": (optional string) channel: 'email' or 'sms', depending on the channel type of the subscription group
+	"subscription_status": (string) subscription status: 'Subscribed' or 'Unsubscribed'
+	"time": (int) unix timestamp at which the subscription state changed
+	"timezone": (optional string) timezone of the user
+	"send_id": (optional string) message send ID this subscription state change action originated from
+
+users.campaigns.FrequencyCap: when a user gets frequency capped for a campaign
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (string) BSON id of the campaign this event belongs to
+	"message_variation_id": (string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+
+users.campaigns.EnrollInControl: when a user is enrolled in the control group for a campaign
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (optional string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (string) BSON id of the campaign this event belongs to
+	"message_variation_id": (string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+
+users.campaigns.Revenue: when a user generates revenue with in the primary conversion period
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (optional string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (string) BSON id of the campaign this event belongs to
+	"message_variation_id": (string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+	"revenue": (int) the amount of USD revenue in cents generated
+
+users.campaigns.Conversion: when a user converts for a campaign
+	"id": (string) globally unique id for this event
+	"user_id": (string) BSON id of the user that performed this event
+	"external_user_id": (optional string) external user id of the user
+	"device_id": (optional string) device_id that is tied to this user if user is anonymous
+	"app_group_id": (string) BSON id of the app group this user belongs to
+	"time": (int) unix timestamp at which the event happened
+	"app_id": (optional string) BSON id of the app on which this event occurred
+	"app_api_id": (optional string) API ID of the app on which this event occurred
+	"dispatch_id": (optional string) ID of the dispatch this message belongs to
+	"send_id": (optional string) message send ID this message belongs to
+	"campaign_id": (string) BSON id of the campaign this event belongs to
+	"message_variation_id": (string) BSON id of the message variation this user received
+	"campaign_api_id": (optional string) API ID of the campaign this event belongs to
+	"message_variation_api_id": (optional string) API ID of the message variation this user received
+	"conversion_behavior_index": (optional int) index of the conversion behavior
+	"gender": (optional string) gender of the user
+	"country": (optional string) country of the user
+	"timezone": (optional string) timezone of the user
+	"language": (optional string) language of the user
+	"string_custom_attributes": (optional array of optional string) tracked string custom attributes of this user
+	"boolean_custom_attributes": (optional array of optional boolean) tracked boolean custom attributes of this user
+	"time_custom_attributes": (optional array of optional long) tracked time custom attributes of this user
+	"float_custom_attributes": (optional array of optional double) tracked float custom attributes of this user
+	"number_custom_attributes": (optional array of optional double) tracked number custom attributes of this user
+

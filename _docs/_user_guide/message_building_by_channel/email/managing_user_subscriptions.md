@@ -152,6 +152,8 @@ We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}
 
 ![Custom Unsubscribe][11]
 
+{% endraw %}
+
 ### Changing Push Subscriptions {#changing-push-subscriptions}
 Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
 
@@ -174,7 +176,7 @@ Braze supports three targeting states:
 - All users, including those who have unsubscribed.
 
 {% alert important %}
-It is your responsibility to comply with any applicable [spam laws][8] when using these targeting settings.
+It is your responsibility to comply with any applicable [spam laws]({{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
 
 ![Campaign Targeting Subscription UI][17]
@@ -185,7 +187,6 @@ The "Email Subscription Status" and "Push Subscription Status" filters allow you
 This can be useful - for example, if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed but not opted in.
 
 ![Subscription Filter][18]
-{% endraw %}
 
 [1]: #subscription-states
 [2]: #changing-subscriptions
@@ -194,7 +195,6 @@ This can be useful - for example, if you want to target users who have neither o
 [5]: #manually-changing-subscriptions
 [6]: #subscriptions-and-campaign-targeting
 [7]: #segmenting-by-user-subscriptions
-[8]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
 [10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions

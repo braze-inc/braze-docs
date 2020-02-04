@@ -5,6 +5,9 @@ hide_nav: true
 layout: basic
 hide_toc: true
 ---
+{% alert service-notice %}
+Braze will be holding its annual, company-wide kick-off event in New York City during the week of February 10, 2020. During this once-a-year event, all teams receive intensive training sessions allowing us to serve you even better. The Technical Support Team will also be attending the event and receiving critical product training in order to provide you with the best possible service. During this timeframe, critical issues response (to Critical severity cases) will remain normal. Response times for non-critical cases may be slightly delayed depending on the time of issue submission. Rest assured, our aim is to provide a quick, accurate response, but please bear with us as we conduct these important training sessions. If you have any questions or concerns, please reach out to your CSM.
+{% endalert %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
 
@@ -1041,7 +1044,7 @@ $( document ).ready(function() {
     if (user_ccemail) {
       sf_submit.addParameter('00N0V000008wX0Y',user_ccemail);
     }
-    sf_submit.addBodyText('description',userinfo);
+    sf_submit.addBodyText('question',userinfo);
     $.each(sels,function(k,v){
       var selopt = $(this);
       var selval = selopt.find(':selected');

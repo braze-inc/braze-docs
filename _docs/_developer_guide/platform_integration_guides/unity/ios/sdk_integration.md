@@ -14,22 +14,28 @@ Before you can start using Braze in your Unity scripts, you'll need to import th
 
 Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
-### Step 1: Importing the Braze Unity Package
+## Step 1: Choosing A Braze Unity Package
 
-Native Unity functionality, iOS libraries and Android libraries for Braze's Unity plugin are bundled as a Unity package.
+The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a Unity C# interface.
 
-1. To import the provided Braze Unity package into your project, download the package associated with the [most recent SDK release][16]. There are two options:
-	- `Appboy.unitypackage`
-		- This package bundles the Braze Android and iOS SDKs as well as the [SDWebImage][17] dependency for the iOS SDK, which is required for proper functionality of Braze's In-App Messaging and News Feed features. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
-	- `Appboy-nodeps.unitypackage`
-		- This package only bundles the Braze Android and iOS SDKs and the accompanying C# interface, which provides native Unity functionality for Braze's iOS plugin.
-2. In the Unity Editor, import the package into your Unity project by navigating to Assets > Import Package > Custom Package.
-3. (Optional) Deselect any files you do not wish to import. Note that the `Appboy` and `iOS` subdirectories are required for this integration.
-4. Click "Import".
+There are several Braze Unity packages available for download at [Braze Unity Releases Page][42]:
+ 
+{% include archive/unity/unitypackage_descriptions.md%}
 
-Alternatively, Braze also provides the option of [customizing and exporting the Unity package][37].
+## Step 2: Importing the Braze Unity Package
 
-### Step 2: Setting Your API Key
+1. In the Unity Editor, import the package into your Unity project by navigating to `Assets > Import Package > Custom Package`.
+2. Click "Import".
+
+Alternatively, follow the Unity instructions for [Importing Asset packages][41] for a more detailed guide on importing custom Unity packages. 
+
+Braze also provides the option of [customizing and exporting the Unity package][37].
+
+{% alert note %}
+If you only wish to import the iOS plugin, deselect the `Plugins/Android` subdirectory when importing the Braze `.unitypackage`.
+{% endalert %}
+
+### Step 3: Setting Your API Key
 
 Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`][6] and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 
@@ -41,7 +47,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 
 >  If your application is already using another UnityAppController subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
 
-### Step 3: SDK Integration Complete
+### Step 4: SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Continue on to the following sections to integrate [in-app messages][31], [the News Feed][32], [push notifications][33] and the complete suite of Braze features.
 
@@ -335,3 +341,5 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [38]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
 [39]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
 [40]: {% image_buster /assets/img_archive/unity-ios-content-cards-listener.png %}
+[41]: https://docs.unity3d.com/Manual/AssetPackages.html
+[42]: https://github.com/Appboy/appboy-unity-sdk/releases
