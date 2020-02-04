@@ -95,7 +95,29 @@ if (@available(iOS 10.0, *)) {
 ```
 {% endtab %}
 {% tab swift %}
-swift
+```swift
+if #available(iOS 10, *) {
+  let center = UNUserNotificationCenter.current()
+  center.getNotificationSettings(completionHandler: { (settings) in
+    if settings.authorizationStatus != .notDetermined {
+      // authorization has already been requested, need to follow usual steps
+      center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+      Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
+      }
+      center.delegate = self as? UNUserNotificationCenterDelegate
+      center.setNotificationCategories(ABKPushUtils.getAppboyUNNotificationCategorySet())
+      UIApplication.shared.registerForRemoteNotifications()
+    }
+  })
+} else {
+  let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
+  if notificationSettiings?.types != nil {
+    let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories:nil)
+    UIApplication.shared.registerUserNotificationSettings(setting)
+    UIApplication.shared.registerForRemoteNotifications()
+  }
+}
+```
 {% endtab %}
 {% endtabs %}
 
@@ -125,7 +147,25 @@ if (@available(iOS 10.0, *)) {
 ```
 {% endtab %}
 {% tab swift %}
-swift
+```swift
+if #available(iOS 10, *) {
+  let center = UNUserNotificationCenter.current()
+  center.getNotificationSettings(completionHandler: { (settings) in
+    if settings.authorizationStatus == .notDetermined {
+      // ...
+      // fire custom event
+      // ...
+    }
+  })
+} else {
+let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
+  if notificationSettiings?.types != nil {
+    // ...
+    // fire custom event
+    // ...
+```
+}
+}
 {% endtab %}
 {% endtabs %}
 
@@ -134,7 +174,7 @@ swift
 Deep Link Handler
 For more information on deep linking check out our [documentation][].
 ```objc
- // ...
+  // ...
   // check that this deep link relates to the push prompt
   // ...
   if (@available(iOS 10.0, *)) {
@@ -154,7 +194,23 @@ For more information on deep linking check out our [documentation][].
 ```
 {% endtab %}
 {% tab swift %}
-swift
+```swift
+  // ...
+  // check that this deep link relates to the push prompt
+  // ...
+  if #available(iOS 10, *) {
+    let center = UNUserNotificationCenter.current()
+    center.delegate = self as? UNUserNotificationCenterDelegate
+    center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+    Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
+  }
+  UIApplication.shared.registerForRemoteNotifications()
+  } else {
+    let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories:nil)
+    UIApplication.shared.registerUserNotificationSettings(setting)
+    UIApplication.shared.registerForRemoteNotifications()
+  }
+```
 {% endtab %}
 {% endtabs %}
 
