@@ -60,7 +60,7 @@ This description will be shown when the system location prompt requests authoriz
 
 ## Step 5: Request authorization from the user
 
-For our SDK to register geofences, you will first need to request for `Always` location authorization from the user. Once the user has successfully granted permission, our SDK will start registering geofences.
+To use our Geofences feature, you will first need to request for `Always` location authorization from the user. Once the user has successfully granted permission, our SDK will start registering and requesting geofences.
 
 To request for `Always` location authorization, use the following code:
 
