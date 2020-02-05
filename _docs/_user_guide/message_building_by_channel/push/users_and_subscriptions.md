@@ -51,7 +51,7 @@ If a push token is moved a different user on the same device, that first user wi
 
 ![img2][2]{: height="50%" width="50%"}
 
-# iOS & Android Details
+## iOS & Android Details {#ios-android-details}
 
 {% tabs %}
   {% tab iOS %}
@@ -61,15 +61,15 @@ In iOS 12, Apple introduced Provisional Authorization, allowing brands the optio
 
 On devices running iOS 11 or below, your users _must explicitly opt-in to receive your push messages_. You must request whether the user would like to receive push from you.
 
-If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the foreground. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the background (you must have "Remote Notifications" enabled in __Xcode__).
+If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the foreground. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the background (you must have "Remote Notifications" enabled in __Xcode__). These users with provisional authorization have push enabled at the device-level. 
 
-iOS users are considered "Push Enabled" only if they have allowed notifications in the foreground, either explicitly or provisionally.
+iOS users are considered "Push Enabled" only if they have allowed notifications in the foreground, either explicitly (app-level) or provisionally (device-level).
 
   {% endtab %}
   {% tab Android %}
 __Android Push__
 
-You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving an update the user’s push enabled state.
+You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving an update the user’s push enabled state. At this point, a user has push enabled at both the app-level and the device-level.
 
 If the user disables push, Braze will mark them as foreground push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
 
