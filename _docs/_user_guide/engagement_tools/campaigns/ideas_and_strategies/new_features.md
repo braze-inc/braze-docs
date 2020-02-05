@@ -22,13 +22,29 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign. There are two relevant version filters you can use:
 
-#### Most Recent App Version
+#### App Version Name
 
-_Most Recent App Version_ filters on an app's user-facing version name. This filter supports matching by "is", "is not", and regular expressions.
+Use the _App Version Name_ filter to segment users by the app's user-facing version name. 
 
-#### App Version Code
+This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
-_App Version Code_ filters based on app version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using "below", "above", and "equal to" certain app versions. Support for this feature is available with the Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+ and can be enabled by your Braze account manager.
+
+For Android, this version number is based on the [Package Version Name](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) for the app.
+
+For iOS, this version number is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
+
+
+#### App Version Number
+
+Use the _App Version Number_ filter to segment users by the app's version/build number. 
+
+This filter supports numerical comparisons to target a range of app versions. For example, you can target users who have an app whose version is "below", "above", and "equal to" a certain version. 
+
+Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+.
+
+For Android, this version number is based on the [Package Long Version Code](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) for the app.
+
+For iOS, this version number is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
 
 ![App Version Filter][1]
 
