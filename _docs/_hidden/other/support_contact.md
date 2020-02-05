@@ -1044,7 +1044,7 @@ $( document ).ready(function() {
     if (user_ccemail) {
       sf_submit.addParameter('00N0V000008wX0Y',user_ccemail);
     }
-    sf_submit.addBodyText('00N3o0000090hErEAI',userinfo);
+    sf_submit.addBodyText('description',userinfo);
     $.each(sels,function(k,v){
       var selopt = $(this);
       var selval = selopt.find(':selected');
