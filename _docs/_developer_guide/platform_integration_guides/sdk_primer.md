@@ -42,7 +42,7 @@ These properties are collected by the Android SDK upon proper integration.
 | ANDROID_VERSION <br> `os_version` | The version of the Android OS installed on the device. |
 | CARRIER | The mobile carrier.
 | MODEL | The specific hardware of the device.
-| RESOLUTION | Device resolution as "<width>x<height>".
+| RESOLUTION | Device resolution as "`<width>`x`<height>`".
 | LOCALE | The default locale of the device. The format of this key is "en_US" or "language_COUNTRY".
 | TIMEZONE <br> `time_zone` | The device time zone.
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.
@@ -57,7 +57,7 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Resolution <br> `ABKDeviceOptionResolution`| The device's reported resolution. |  
 | Device Carrier <br> `ABKDeviceOptionCarrier`| The reported mobile carrier. |
 | Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
-| Device Model <br> `ABKDeviceOptionModel`| Device resolution as "<width>x<height>".
+| Device Model <br> `ABKDeviceOptionModel`| Device resolution as "`<width>`x`<height>`".
 | Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
 | Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. |
 | Device IDFA <br> `ABKDeviceOptionIDFA`| Device identifier for advertisers. |
