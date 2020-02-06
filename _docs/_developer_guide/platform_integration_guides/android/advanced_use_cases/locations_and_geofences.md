@@ -241,7 +241,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ### Step 6: (Optional) Manually Request Geofence Updates
 
-By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze Geofences. To manually request Braze Geofences, you must disable automatic Braze Geofence request and provide a GPS coordinate for requests.
+By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze Geofences instead. To manually request Braze Geofences, you must disable automatic Braze Geofence requests and provide a GPS coordinate for requests.
 
 #### Part 1: Disable Automatic Geofence Requests
 
@@ -282,7 +282,7 @@ Braze Geofences are manually requested via the [`requestGeofences()`][11] method
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(getApplicationContext()).requestGeofences(33.078947d, -116.601356d);
+Appboy.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
 ```
 
 {% endtab %}
