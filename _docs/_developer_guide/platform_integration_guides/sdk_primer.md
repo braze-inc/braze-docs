@@ -23,7 +23,7 @@ All our our features are configurable, but it would not be advantageous to avoid
 These properties are collected by the Web SDK upon proper integration.
 
 | Name | Description  |
-|---|---|---|
+|---|---|
 | BROWSER | The name of the browser.  |
 | BROWSER_VERSION | The version of the browser. |
 | OS | The name of the operating system.  |
@@ -38,7 +38,7 @@ These properties are collected by the Web SDK upon proper integration.
 These properties are collected by the Android SDK upon proper integration.
 
 | Name | Description |
-|---|---|---|
+|---|---|
 | ANDROID_VERSION <br> `os_version` | The version of the Android OS installed on the device. |
 | CARRIER | The mobile carrier.
 | MODEL | The specific hardware of the device.
@@ -53,7 +53,7 @@ These properties are collected by the Android SDK upon proper integration.
 These properties are collected by the iOS SDK upon proper integration.
 
 | Name | Description |
-|---|---|---|
+|---|---|
 | Device Resolution <br> `ABKDeviceOptionResolution`| The device's reported resolution. |  
 | Device Carrier <br> `ABKDeviceOptionCarrier`| The reported mobile carrier. |
 | Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
