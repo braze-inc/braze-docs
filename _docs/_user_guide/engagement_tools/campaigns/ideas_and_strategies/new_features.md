@@ -28,11 +28,9 @@ Use the _App Version Name_ filter to segment users by the app's user-facing vers
 
 This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
+For Android, this version name is based on the [Package Version Name][7] for the app.
 
-For Android, this version number is based on the [Package Version Name](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) for the app.
-
-For iOS, this version number is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
-
+For iOS, this version name is based on the [Short Version String][8] for the app.
 
 #### App Version Number
 
@@ -42,9 +40,9 @@ This filter supports numerical comparisons to target a range of app versions. Fo
 
 Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+.
 
-For Android, this version number is based on the [Package Long Version Code](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) for the app.
+For Android, this version number is based on the [Package Long Version Code][9] for the app.
 
-For iOS, this version number is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
+For iOS, this version number is based on the [Short Version String][8] for the app.
 
 ![App Version Filter][1]
 
@@ -74,3 +72,6 @@ Because they are relatively intrusive, push notifications and emails that ask us
 [4]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [6]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#creating-a-news-feed-item
+[7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
+[8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
+[9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()
