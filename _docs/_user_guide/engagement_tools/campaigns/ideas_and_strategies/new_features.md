@@ -24,6 +24,20 @@ Braze SDKs automatically track a user's _most recent_ app version. These version
 
 ![App Version Filter][1]
 
+#### App Version Number
+
+Use the _App Version Number_ filter to segment users by the app's version/build number. 
+
+This filter supports numerical comparisons to target a range of app versions. For example, you can target users whose app is "below", "above", and "equal to" a certain version, for example, to promote a new feature which requires an app upgrade.
+
+This new filter can replace the legacy "App Version Name" filter which would require explicitly listing each older version or using a regular expression.
+
+Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+.
+
+For Android, this version number is based on the [Package Long Version Code][9] for the app.
+
+For iOS, this version number is based on the [Short Version String][8] for the app.
+
 #### App Version Name
 
 Use the _App Version Name_ filter to segment users by the app's user-facing version name. 
@@ -33,18 +47,6 @@ This filter supports matching with "is", "is not", and regular expressions. For 
 For Android, this version name is based on the [Package Version Name][7] for the app.
 
 For iOS, this version name is based on the [Short Version String][8] for the app.
-
-#### App Version Number
-
-Use the _App Version Number_ filter to segment users by the app's version/build number. 
-
-This filter supports numerical comparisons to target a range of app versions. For example, you can target users who have an app whose version is "below", "above", and "equal to" a certain version. 
-
-Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+.
-
-For Android, this version number is based on the [Package Long Version Code][9] for the app.
-
-For iOS, this version number is based on the [Short Version String][8] for the app.
 
 ### Have Not Used Feature
 
