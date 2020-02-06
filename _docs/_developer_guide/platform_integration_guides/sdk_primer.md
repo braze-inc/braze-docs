@@ -27,7 +27,7 @@ These properties are collected by the Web SDK upon proper integration.
 | BROWSER | The name of the browser.  |
 | BROWSER_VERSION | The version of the browser. |
 | OS | The name of the operating system.  |
-| RESOLUTION | The screen resolution of the device.  |
+| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`".  |
 | LANGUAGE | The language the browser is set to use.  |
 | TIME_ZONE | The time zone of the device.  |
 | USER_AGENT | The user agent string of the browser. <br> See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) for more information. |
@@ -42,7 +42,7 @@ These properties are collected by the Android SDK upon proper integration.
 | ANDROID_VERSION <br> `os_version` | The version of the Android OS installed on the device. |
 | CARRIER | The mobile carrier.
 | MODEL | The specific hardware of the device.
-| RESOLUTION | Device resolution as "`<width>`x`<height>`".
+| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`".
 | LOCALE | The default locale of the device. The format of this key is "en_US" or "language_COUNTRY".
 | TIMEZONE <br> `time_zone` | The device time zone.
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.
@@ -54,10 +54,10 @@ These properties are collected by the iOS SDK upon proper integration.
 
 | Name | Description |
 |---|---|
-| Device Resolution <br> `ABKDeviceOptionResolution`| The device's reported resolution. |  
+| Device Resolution <br> `ABKDeviceOptionResolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
 | Device Carrier <br> `ABKDeviceOptionCarrier`| The reported mobile carrier. |
 | Device Locale <br> `ABKDeviceOptionLocale`| The default locale of the device. |
-| Device Model <br> `ABKDeviceOptionModel`| Device resolution as "`<width>`x`<height>`".
+| Device Model <br> `ABKDeviceOptionModel`| The specific hardware of the device.
 | Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
 | Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. |
 | Device IDFA <br> `ABKDeviceOptionIDFA`| Device identifier for advertisers. |
