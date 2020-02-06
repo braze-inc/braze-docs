@@ -239,6 +239,66 @@ Android only allows up to 100 geofences to be stored for a given app. Braze's Lo
 
 For Braze's Locations product to work correctly, you should also ensure that your App is not using all available geofence spots.
 
+### Step 6: (Optional) Manually Request Geofence Updates
+
+By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze Geofences. To manually request Braze Geofences, you must disable automatic Braze Geofence request and provide a GPS coordinate for requests.
+
+#### Part 1: Disable Automatic Geofence Requests
+
+Automatic Braze Geofence requests can be disabled in your `appboy.xml` file by setting `com_appboy_automatic_geofence_requests_enabled` to `false`.
+
+```xml
+<bool name="com_appboy_automatic_geofence_requests_enabled">false</bool>
+```
+
+This can additionally be done at runtime via:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
+    .setAutomaticGeofenceRequestsEnabled(false);
+Appboy.configure(getApplicationContext(), appboyConfigBuilder.build());
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val appboyConfigBuilder = AppboyConfig.Builder()
+    .setAutomaticGeofenceRequestsEnabled(false)
+Appboy.configure(applicationContext, appboyConfigBuilder.build())
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Part 2: Manually Request Braze Geofence with GPS Coordinate
+
+Braze Geofences are manually requested via the [`requestGeofences()`][11] method.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Appboy.getInstance(getApplicationContext()).requestGeofences(33.078947d, -116.601356d);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+Braze Geofences can only be requested once per session, either automatically by the SDK or manually with the above method.
+{% endalert %}
+
 ##### Enable geofences from the Locations page:
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
@@ -261,3 +321,4 @@ However, note that if your application is stopped, receiving a background push w
 [6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
 [9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [10]: https://developers.google.com/android/guides/setup
+[11]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestGeofences-double-double-
