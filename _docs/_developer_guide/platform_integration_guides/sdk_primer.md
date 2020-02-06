@@ -43,7 +43,7 @@ These properties are collected by the Android SDK upon proper integration.
 | CARRIER | The mobile carrier.
 | MODEL | The specific hardware of the device.
 | RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`".
-| LOCALE | The default locale of the device. The format of this key is "en_US" or "language_COUNTRY".
+| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g. "en_US").
 | TIMEZONE <br> `time_zone` | The device time zone.
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.
 
