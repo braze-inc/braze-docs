@@ -38,7 +38,7 @@ Add boot, fine location, and background location permissions to your `AndroidMan
 ```
 
 {% alert important %}
-The background location access permission was added in Android Q and is required for Geofences to work while the app is backgrounded. This permission is required for Geofences to work properly on Android Q+ devices.
+The background location access permission was added in Android 10 and is required for Geofences to work while the app is backgrounded. This permission is required for Geofences to work properly on Android 10+ devices.
 {% endalert %}
 
 Add the Braze boot receiver to the `application` element of your `AndroidManifest.xml`:
@@ -103,6 +103,135 @@ AppboyLocationService.requestInitialization(context)
 This will cause the SDK to request geofences from Braze's servers and initialize geofence tracking.
 
 See [`RuntimePermissionUtils.java`][4] in our sample application for an example implementation.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class RuntimePermissionUtils {
+  private static final String TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils.class);
+  public static final int DROIDBOY_PERMISSION_LOCATION = 40;
+
+  public static void handleOnRequestPermissionsResult(Context context, int requestCode, int[] grantResults) {
+    switch (requestCode) {
+      case DROIDBOY_PERMISSION_LOCATION:
+        // In Android Q, we require both FINE and BACKGROUND location permissions. Both
+        // are requested simultaneously.
+        if (areAllPermissionsGranted(grantResults)) {
+          Log.i(TAG, "Required location permissions granted.");
+          Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
+          AppboyLocationService.requestInitialization(context);
+        } else {
+          Log.i(TAG, "Required location permissions NOT granted.");
+          Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show();
+        }
+        break;
+      default:
+        break;
+    }
+  }
+
+  private static boolean areAllPermissionsGranted(int[] grantResults) {
+    for (int grantResult : grantResults) {
+      if (grantResult != PackageManager.PERMISSION_GRANTED) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+object RuntimePermissionUtils {
+  private val TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils::class.java!!)
+  val DROIDBOY_PERMISSION_LOCATION = 40
+
+  fun handleOnRequestPermissionsResult(context: Context, requestCode: Int, grantResults: IntArray) {
+    when (requestCode) {
+      DROIDBOY_PERMISSION_LOCATION ->
+        // In Android Q, we require both FINE and BACKGROUND location permissions. Both
+        // are requested simultaneously.
+        if (areAllPermissionsGranted(grantResults)) {
+          Log.i(TAG, "Required location permissions granted.")
+          Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
+          AppboyLocationService.requestInitialization(context)
+        } else {
+          Log.i(TAG, "Required location permissions NOT granted.")
+          Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
+        }
+      else -> {
+      }
+    }
+  }
+
+  private fun areAllPermissionsGranted(grantResults: IntArray): Boolean {
+    for (grantResult in grantResults) {
+      if (grantResult != PackageManager.PERMISSION_GRANTED) {
+        return false
+      }
+    }
+    return true
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+Using the above sample code is done via:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+    boolean hasAllPermissions = PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+        && PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION);
+    if (!hasAllPermissions) {
+      // Request both BACKGROUND and FINE location permissions
+      requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION},
+          RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION);
+    }
+  } else {
+    if (!PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)) {
+      // Request only FINE location permission
+      requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+          RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION);
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+    val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION) 
+        && PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)
+    if (!hasAllPermissions) {
+      // Request both BACKGROUND and FINE location permissions
+      requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION),
+          RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION)
+    }
+  } else {
+    if (!PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)) {
+      // Request only FINE location permission
+      requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+          RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION)
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: Enable Geofences on the Dashboard
 
