@@ -20,7 +20,9 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 ## Filtering by Most Recent App Versions
 
-Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign. There are two relevant version filters you can use:
+Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
+
+![App Version Filter][1]
 
 #### App Version Name
 
@@ -43,8 +45,6 @@ Values for this filter are collected starting with Braze Android SDK v3.6.0+ and
 For Android, this version number is based on the [Package Long Version Code][9] for the app.
 
 For iOS, this version number is based on the [Short Version String][8] for the app.
-
-![App Version Filter][1]
 
 ### Have Not Used Feature
 
