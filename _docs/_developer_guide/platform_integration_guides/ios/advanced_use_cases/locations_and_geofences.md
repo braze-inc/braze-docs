@@ -149,6 +149,7 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 {% endtabs %}
 
 __Note:__ There is a rate-limit of one geofence refresh per session.
+__Note:__ It is recommended to disable automatic geofence requests when using this method.
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
 [4]: #customizing-appboy-on-startup
