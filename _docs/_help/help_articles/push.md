@@ -12,5 +12,8 @@ guide_menu_list:
   - name: Push Token Migration
     link: /docs/help/help_articles/push/push_token_migration/
     fa_icon: fas fa-map-signs
+  - name: Push Error Codes
+    link: /docs/help/help_articles/push/push_error_codes/
+    fa_icon: fas fa-exclamation-circle
 
 ---
