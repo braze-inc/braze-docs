@@ -43,6 +43,7 @@ This endpoint will call information for your exiting [Email Content Blocks]({{ s
   "tags":  "array of strings",
   "created_at": "time-in-iso",
   "last_edited": "time-in-iso",
+  "inclusion_count" : integer,
   "message": "success"
 }
 ```

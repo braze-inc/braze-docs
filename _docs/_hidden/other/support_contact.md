@@ -5,6 +5,9 @@ hide_nav: true
 layout: basic
 hide_toc: true
 ---
+{% alert service-notice %}
+Braze will be holding its annual, company-wide kick-off event in New York City during the week of February 10, 2020. During this once-a-year event, all teams receive intensive training sessions allowing us to serve you even better. The Technical Support Team will also be attending the event and receiving critical product training in order to provide you with the best possible service. During this timeframe, critical issues response (to Critical severity cases) will remain normal. Response times for non-critical cases may be slightly delayed depending on the time of issue submission. Rest assured, our aim is to provide a quick, accurate response, but please bear with us as we conduct these important training sessions. If you have any questions or concerns, please reach out to your CSM.
+{% endalert %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
 
@@ -1057,6 +1060,32 @@ $( document ).ready(function() {
 
     sf_submit.addParameter('external','1');
     sf_submit.send();
+    var gs_submit = new iframeform('https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ7eoZEY-FLTBSL5r92k6Y-iUpskG9SffRHv0GylQzgSMH-w/formResponse');
+    gs_submit.addParameter('entry.1850709480', user_name);
+    gs_submit.addParameter('entry.1269583593', user_email);
+    gs_submit.addParameter('entry.83902596', user_subject);
+    if (user_ccemail) {
+      gs_submit.addParameter('entry.2143316233',user_ccemail);
+    }
+    gs_submit.addBodyText('entry.353828619', userinfo);
+    var gs_mapping = {
+      "00N0V000009G0MG" : "entry.657215056", // Topic
+      "00N0V000009G0MB" : "entry.716293339",  // Category
+      "00N0V000009G0ML" : "entry.1633602955", // Subcategory
+      "00N0V000009G0MQ" : "entry.1959649079", // Type
+      "priority" : "entry.631884783", // Priority
+    }
+
+    $.each(sels,function(k,v){
+      var selopt = $(this);
+      var selval = selopt.find(':selected');
+      if (typeof selval !== 'undefined') {
+        if (gs_mapping[selopt.attr('name')]) {
+          gs_submit.addParameter(gs_mapping[selopt.attr('name')],selval.val());
+        }
+      }
+    });
+    gs_submit.send();
 
     $('#ticket_mainform').hide();
 

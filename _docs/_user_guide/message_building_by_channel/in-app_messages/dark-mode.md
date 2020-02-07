@@ -5,15 +5,15 @@ page_order: 5.20
 
 # Dark Mode for In App Messages
 
-Dark Mode offers users the opportunity to set a system-wide color preference (introduced on Android 10 and iOS 13). "Dark Mode" themes are intended to conserve battery life and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that many users prefer.
+Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
 
-Braze supports adding an alternate Dark Mode theme to in-app messages that help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
+Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
 
 ## How Dark Mode Works
 
-Users with the latest versions of Android (10+) and iOS (13+) can toggle Dark Mode on or off in their phone's settings.
+Users with the latest versions of Android (10+) and iOS (13+) can toggle Dark Mode on or off in their device's settings.
 
-When Dark Mode is enabled on a user's device, the phone's native menus and screens (push notifications, phone settings, etc.) will change to a dark grey or other dark color palette. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
+When Dark Mode is enabled, the device's native menus and screens (push notifications, device settings, etc.) will change to a dark grey. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
 
 ## Setting a Dark Mode Theme
 
@@ -32,7 +32,6 @@ You may still use this feature even if your app does not offer its own dark them
 To use Dark Mode for all in-app messages, go to Templates & Media, then In-App Message Templates. From there, select [`Create Color Profile`][2] from the dropdown. Create a Color Profile that aligns with your Dark Mode theme. Then, anytime you create a Dark Mode version of an in-app message, you can select that Color Profile and keep the look of your in-app messages consistent.
 
 ## Compatibility
-
 - End users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
 - Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ is required.
 

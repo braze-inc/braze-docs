@@ -53,13 +53,13 @@ Your request must include `phone` or `email` value, _but not both_.
 ### Example Request
 
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&email=example%2B1%40braze.com
 ```
 
 ### Example Request for multiple users
 
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&external_id[]=1&external_id[]=2
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&&external_id[]=1&external_id[]=2
 ```
 
 ### Response

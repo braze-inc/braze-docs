@@ -187,7 +187,7 @@ image_buster:
 # Image asset pipeline setting for japr
 asset_pipeline:
   bundle: true
-  compress: false
+  compress: true
   output_path: assets
   display_path: docs/assets
   gzip: false

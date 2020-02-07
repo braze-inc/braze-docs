@@ -6,7 +6,7 @@ page_order: 0
 ---
 ## Setting User IDs
 
-See [the iOS integration instructions][1] for an in depth discussion of when to set and change a user ID.
+See [the iOS integration instructions][1] for an in depth discussion of when and how to set and change a user ID.
 
 **Xamarin C#**
 
