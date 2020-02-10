@@ -62,6 +62,8 @@ glossaries:
     description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push Token migration</a> is the importing of those already-generated keys into Braze’s platform.
   - name: Push Time to Live
     description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/">Push TTL</a>, time to live refers to the period Campaigns will continue to attempt to be delivered to an offline user.
+  - name: Rcae Condition
+    description: A race condition is a software engineering concept that describes some undesirable situation that occurs when a system tries to perform several operations simultaneously, but because of the nature of the system, the operations must be done in the correct sequence to be done correctly. <br><br>In the Braze platform, segmenting a triggered campaign on user data recorded at the time of the event may cause a race condition. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent, and can lead to the user not receiving the campaign.
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple Campaigns.
   - name: Segmentation

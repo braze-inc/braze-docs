@@ -34,7 +34,7 @@ The following events and attributes are captured and updated automatically by th
 - Push Enabled (Boolean)
 - Device Locale
 - Language (taken from Device Locale)
-- Country (first taken from IP Address. If this is not available, taken from Device Locale. Upon request, Braze can disable IP detection for this field)
+- Country (first taken from IP Address. If this is not available, taken from Device Locale. 
 - Most Recent App Version
 - Device Model
 - Device OS Version
