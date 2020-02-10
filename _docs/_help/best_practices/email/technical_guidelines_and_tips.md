@@ -10,31 +10,57 @@ channel: Email
 
 ## Email Validation
 
-Braze automatically adjusts inputted email addresses to trim any whitespace.
+{% alert important %}
+This validation is done for both user email addresses and the from-address of an email message.
+{% endalert %}
 
-Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards.<br>
-__In addition to these standards__, Braze does not accept certain characters (noted below) and recognizes them as invalid. 
+Braze validates the email address using the following Ruby Gem: https://github.com/afair/email_address.  
+The Gem is set to relaxed mode and configured to accept UTF-8 character.
+
+Email Validation looks at both the Local and Host Domain part of an address.
+Local part is anything before the @ symbol
+Host Domain part is anything after the @ symbol
+
+
+### Local part Validation Rules
+#### Microsoft Domains
+If the host domain is has “msn, hotmail, outlook, live” then the following is allowed for the local part
+Regex: \A[a-z][\-\w]*(?:\.[\-\w]+)*\z
+
+**Regex explanation:**
+- Local part must start with a character (a-z)
+- Local part can contain any character or number (a-z or 0-9)
+- can contain the following characters "." or "-"
+- can not end with a ‘.’
+- cannot contain two or more consecutive ‘.’
+
+
+##### All other domains
+For all other domains, Braze allows the following for the local part
+Regex: /\A [\p\{L}\p\{N}_]+ (?: [\.\-\+\'_]+ [\p\{L}\p\{N}_]+ )* \z/x
+
+**Regex explanation:**
+- Local part can contain any letter, number or underscore, including Unicode letters and numbers
+- can contain but may not start or end with the following characters: "." "-" "+" or "'"
+
+
+### Host part validation Rules
+ipv4 or ipv6 addresses are not allowed in the host domain part of the email address
+Regex: / [\p{L}\p{N}]+ (?: (?: \-{1,2} | \.) [\p{L}\p{N}]+ )*/x
+
+**Regex explanation:**
+- host domain must start with a alphanumeric character (a-z or 0-9)
+- host domain can only contain one period “.”
+- host domain must end with a top level domain
+- top level domain is determined by anything after the ‘.’ and can contain alphanumeric characters (a-z or 0-9)
+- can contain the following characters: "." or "?"
+
+{% alert important %}
+Unicode is accepted for both the local and host domain part of the email address.
+{% endalert %}
 
 If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
-{% details Unaccepted characters outside of RFC Standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- &#94;
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+
 
 ## General Technical Guidelines
 
