@@ -12,6 +12,6 @@ Make sure to hit _Save_ before you leave the page!
 
 {% alert warning %}
 
-Switching time zones can cause some data discrepancies around the point when the timezone was changed. If someone switches their time zone, we make a good faith effort to convert things over accurately, but it is not always a perfect conversion. You may notice a discontinuity in your data,  where it may switch between time sones.
+Switching time zones can cause some data discrepancies around the point when the timezone was changed. If someone switches their time zone, we make a good faith effort to convert things over accurately, but it is not always a perfect conversion. You may notice a discontinuity in your data,  where it may switch between time zones.
 
 {% endalert %}
