@@ -31,8 +31,6 @@ Then use the available filters to select which behaviors in that time frame cons
 
 ## Step 3: Choose the users you want to keep from churning
 Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if we narrow down the group of users we want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, we might want to retain users who first used the app within the last 6 months or have ever made a purchase.
- 
-[example]
 
 Note that for the beta period of Predictive Churn, the model will only score up to the first 5 million users that fit the above criteria.
 
