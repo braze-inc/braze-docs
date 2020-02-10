@@ -69,7 +69,7 @@ iOS users are considered "Push Enabled" only if they have allowed notifications 
   {% tab Android %}
 __Android Push__
 
-You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving an update the user’s push enabled state. At this point, a user has push enabled at both the app-level and the device-level.
+You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving that token, an update to the user’s push enabled state will happen. At this point, a user has push enabled at both the app-level and the device-level.
 
 If the user disables push, Braze will mark them as foreground push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
 
