@@ -11,6 +11,7 @@ tool:
   - Campaign
   - Dashboard
 ---
+
 # A/B Testing with Random Buckets
 
 > This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
