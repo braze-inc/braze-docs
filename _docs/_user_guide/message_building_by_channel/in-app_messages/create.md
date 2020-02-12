@@ -181,10 +181,10 @@ In some scenarios, you may want to re-evaluate a user's eligibility as they trig
 
 ![Re-evaluate IAM Membership][27]
 
-When you enable this "Re-evaluate Campaign Eligibility" option, an additional request to Braze will be made to confirm that the user is still eligible for this message. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated again before the message is displayed.
+When you enable this "Re-evaluate Campaign Eligibility" option, an additional request to Braze will be made to confirm that the user is still eligible for this message. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated at that moment before the message is displayed.
 
 {% alert note %}
-Enabling this option will result in a slight delay between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
+Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
 
 Do not use this option for messages that can be triggered while a user is offline, or when eligibility and liquid re-evaluation are not required.
 {% endalert %}
