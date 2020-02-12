@@ -164,13 +164,13 @@ On the analytics page, you can also see the performance of the Winning Variant t
 ![View Results][210]
 
 {% alert note %}
-Braze tests all the variants against each other with [Pearson’s chai-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
+Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
 
 
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
 {% endalert %}
 
-Zero, one, or more variants can do better than control, but the chai-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
+Zero, one, or more variants can do better than control, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
 
 ### Understanding Confidence {#understanding-confidence}
 
