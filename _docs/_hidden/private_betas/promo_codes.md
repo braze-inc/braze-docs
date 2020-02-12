@@ -30,7 +30,7 @@ Next, create a code snippet for the promotion code. This code snippet will be wh
 
 ### Step 3: Promotion Code Options
 
-Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messaged calling that list’s code snippet will not be sent.
+Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list’s code snippet will not be sent.
 
 ![Promo Codes 4][4]{:height="200px"}
 
