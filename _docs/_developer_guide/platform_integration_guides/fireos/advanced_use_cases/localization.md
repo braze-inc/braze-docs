@@ -42,30 +42,9 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 
 ### List of Localized Strings
 
-- Free
-- Reporting an Issue?
-- Message
-- Email
-- An email address is required.
-- Cancel
-- Send
-- Invalid Email Address
-- Please enter a valid email address and try again.
-- We have no updates. Please check again later.
 - Connection Error
+- We have no updates. Please check again later.
 - Cannot establish network connection. Please try again later.
-- Cannot establish network connection.
-- Please try again later.
-- Provide contact info from:
-- or
-- Done
-- Enable Facebook Connection
-- To re-enable Facebook, go to Settings > Facebook.
-- Enable Twitter Connection
-- To re-enable Twitter, go to Settings > Twitter.
-- OK
-- Hh: mm (hour:minute format)
-- $%.2f (price format)
 
 For more information see the [Android Localization Developer Docs][3].
 

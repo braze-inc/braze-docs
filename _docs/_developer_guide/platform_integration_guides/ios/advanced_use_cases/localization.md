@@ -8,7 +8,7 @@ page_order: 2
 
 In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
-If you are looking for a complete list of supported langauges you may attribute to your users in their profiles, please see our [User Language List][1].
+If you are looking for a complete list of supported languages you may attribute to your users in their profiles, please see our [User Language List][1].
 
 ## Languages Supported
 1. Arabic
@@ -43,76 +43,54 @@ If you are looking for a complete list of supported langauges you may attribute 
 
 ## List of Localized Strings
 
-- Free
-- Reporting an Issue?
-- Message
-- Email
-- An email address is required.
-- Cancel
-- Please enter a feedback message.
-- Empty Feedback Message
-- Feedback
-- Send
-- Invalid Email Address
-- Please enter a valid email address and try again.
-- We have no updates. Please check again later.
 - Connection Error
+- We have no updates. Please check again later.
 - Cannot establish network connection. Please try again later.
-- Cannot establish network connection.
-- Please try again later.
-- Provide contact info from:
-- or
 - Done
-- Enable Facebook Connection
-- To re-enable Facebook, go to Settings > Facebook.
-- Enable Twitter Connection
-- To re-enable Twitter, go to Settings > Twitter.
 - OK
-- Hh: mm (hour:minute format)
-- $%.2f (price format)
+- Accept
+- Decline
+- Confirm
+- Cancel
+- Yes
+- No
+- More
+- Next
+- Go To App
 
 ## Technical Details
 
-For your convenience our CocoaPod integrates the `LocalizedAppboyUIString.strings` files for the aforementioned languages. If you do not wish to use one or more of these languages, you can feel free to delete these files from your project.
+For your convenience our CocoaPod integrates the `.strings` files for the aforementioned languages. Note that each open-sourced UI component has its own `.strings` file. If you do not wish to use one or more of these languages, you can feel free to delete these files from your project.
 
 Optionally, you can also override any of the following Key / String pairs within your app's `Localizable.strings` file much like a CSS override.
 
 ## Localization String File Example
 
 ```objc
-/*General Braze Alarm Messages*/
-"Appboy.alert.connect-facebook.title" = "Enable Facebook Connection";
-"Appboy.alert.connect-facebook.message" = "To re-enable Facebook, go to Settings -> Privacy -> Facebook.";
-"Appboy.alert.connect-twitter.title" = "Enable Twitter Connection";
-"Appboy.alert.connect-twitter.message" = "To re-enable Twitter, go to Settings -> Privacy -> Twitter.";
-"Appboy.alert.cancel-button.title" = "OK";
-/*Feedback No Connection Messages*/
-"Appboy.feedback.no-connection.title" = "Unable to Establish\n Network Connection";
-"Appboy.feedback.no-connection.message" = "Please try again later.";
-/* Feedback Alert Invalid Email Messages */
-"Appboy.feedback.alert.invalid-email.title" = "Invalid Email Address";
-"Appboy.feedback.alert.invalid-email.message" = "Please enter a valid email address and try again.";
-/*Feedback Alert Empty Feedback Labels*/
-"Appboy.feedback.alert.empty-feedback.title" = "Empty Feedback Message";
-"Appboy.feedback.alert.empty-feedback.message" = "Please enter a feedback message.";
-/*Feedback Modal Context Labels*/
-"Appboy.feedback.modal-context.title" = "Feedback";
-"Appboy.feedback.cancel-button.title" = "Cancel";
-"Appboy.feedback.send-button.title" = "Send";
-"Appboy.feedback.label.message" = "Message";
-"Appboy.feedback.label.required" = "Required";
-"Appboy.feedback.label.report-issue" = "Reporting an Issue?";
-"Appboy.feedback.label.provide-contact-info" = "Provide contact info from:";
-"Appboy.feedback.label.contact-info-required" = "Required";
-"Appboy.feedback.label.contack-info-or" = "or";
-"Appboy.feedback.email-text-field-place-hold" = "Email (Required)";
 /*News Feed Default Labels*/
 "Appboy.feed.done-button.title" = "Done";
 "Appboy.feed.no-card.text" = "We have no updates.\nPlease check again later.";
 "Appboy.feed.no-connection.title" = "Connection Error";
 "Appboy.feed.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
+/* Content Cards Context Labels */
+"Appboy.content-cards.done-button.title" = "Done";
+"Appboy.content-cards.no-card.text" = "We have no updates.\nPlease check again later.";
+"Appboy.content-cards.no-connection.title" = "Connection Error";
+"Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
 /*Web View Default Button Labels*/
 "Appboy.slideup.webview.done-button.title" = "Done";
+/* General Braze Alarm Messages */
+"Appboy.alert.cancel-button.title" = "OK";
+/* Default Push Action Category Button Title */
+"Appboy.push.action.accept" = "Accept";
+"Appboy.push.action.decline" = "Decline";
+"Appboy.push.action.confirm" = "Confirm";
+"Appboy.push.action.cancel" = "Cancel";
+"Appboy.push.action.yes" = "Yes";
+"Appboy.push.action.no" = "No";
+"Appboy.push.action.more" = "More";
+"Appboy.push.action.next" = "Next";
+"Appboy.push.action.gotoapp" = "Go To App";
 ```
 
 For more information see the [Apple Localization Developer Docs][3] as well as the [LOC standard language list][4].
