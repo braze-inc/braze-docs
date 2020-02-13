@@ -329,18 +329,17 @@
 
     #glossary_filter {
       #glossary_search {
+        color: $black-shark-inverted ;
         border: 1px solid $grey-ghost-inverted;
       }
-
       .select {
-          color: #dfdfdb !important;
+        color: #dfdfdb !important;
       }
     }
     .btn {
-        background-color: #dfdfdb !important;
-        color: #000 !important;
+      background-color: #dfdfdb !important;
+      color: #000 !important;
     }
-
     .term {
       border-top: 1px solid $grey-ghost-inverted;
       a {
