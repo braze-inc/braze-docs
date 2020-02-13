@@ -22,7 +22,7 @@ description: "This article outlines details about the Update Email Content Block
 
 This endpoint will create an [Email Content Block]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
 ## Request Body
 ```json
