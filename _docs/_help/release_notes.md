@@ -40,6 +40,12 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+### February 2020
+
+#### New Email Content Block API Endpoint
+
+You can now [update]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/post_email_content_block/) your Email Content Blocks via API!
+
 ### January 2020
 
 #### Added SMS Capability
