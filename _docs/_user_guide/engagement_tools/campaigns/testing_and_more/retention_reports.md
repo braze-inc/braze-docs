@@ -24,11 +24,11 @@ User retention is one of the most important metrics to any marketer. Keeping eng
 
 Braze allows you to measure user retention right on the Campaign Analytics page.
 
-Get started by visiting any campaign in your Braze Dashboard, and scrolling down to the Campaign Retention section. Currently, Campaign Retention shows you the rate at which any user who has received this specific campaign has performed a Retention Event (specified by you on the Retention Report) over the 30 days from the time they received the campaign
+Get started by visiting any campaign in your Braze Dashboard, and scrolling down to the Campaign Retention section. Currently, Campaign Retention shows you the rate at which any user who has received this specific campaign has performed a Retention Event (specified by you on the Retention Report) over the 30 days from the time they received the campaign.
 
 ![Select a Retention event][1]
 
-Once you've selected a Retention event, click "Run Report" to start the query
+Once you've selected a Retention event, click "Run Report" to start the query.
 
 ![Run Report][2]
 
@@ -42,7 +42,7 @@ Once the report is generated, it can't be re-run with the same Retention event f
 
 The report will only show days down the left column on which the campaign was sending messages. For some campaigns, that may mean the report only shows one day if it was a one-and-done campaign. If it's recurring or triggered, you may/will see multiple days down the left.
 
-Additionally, our Retention Report uses the Rolling Retention formula, which measures how many users come back and do the Retention event on or after any of the days listed across the top of the report. So, if a user, say, Started Session between day 3 and 7, the user will be counted as retained under the "3 days" column. Any user who is counted as retained aftere the 30-day mark from when the campaign was sent on the date in the left column will be counted under the "30 days" column in that row.
+Additionally, our Retention Report uses the Rolling Retention formula, which measures how many users come back and do the Retention event on or after any of the days listed across the top of the report. So, if a user, say, Started Session between day 3 and 7, the user will be counted as retained under the "3 days" column. Any user who is counted as retained after the 30-day mark from when the campaign was sent on the date in the left column will be counted under the "30 days" column in that row.
 
 
 [1]: {% image_buster /assets/img/retention_report_select_retention.png %}
