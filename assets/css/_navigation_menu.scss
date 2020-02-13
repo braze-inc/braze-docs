@@ -442,3 +442,118 @@ $nav_bottom_height: 60px;
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  #nav_bar {
+    background-color: $grey-athens-inverted;
+    #nav_col {
+      @media (min-width: $window-medium-px) {
+        #sidebar_toggle {
+          color: $grey-boulder-inverted;
+        }
+      }
+    }
+
+    #nav_top > .nav-item {
+      border-top: 1px solid #333333;
+    }
+    .nav {
+      .nav_title {
+        color: $black-shark-inverted;
+      }
+      div  {
+        &.nav {
+          padding-left: 16px;
+        }
+        &.nav_reg {
+          //margin-left: 15px;
+          a {
+            .nav_block {
+              margin-left: 0px;
+            }
+          }
+        }
+        border-bottom-width: 2px;
+        border-color: transparent;
+
+        &.nav-item {
+          a {
+            color: $black-shark-inverted !important;
+          }
+          &:hover {
+              color:  $black-shark-inverted !important;
+              a {
+                color: $black-shark-inverted !important;
+              }
+            }
+          &.active {
+            color: $nav_active_color;
+            div.nav_block {
+              .nav_title {
+                border-color:  $nav_active_color;
+              }
+            }
+          }
+        }
+      }
+      a.nav_toggle {
+        color: $black-shark-inverted !important;
+      }
+    }
+    #filter-msg {
+      a {
+          color: $black-shark-inverted !important;
+          border-color: $braze-link-color-inverted !important;
+          &:hover {
+            background-color: $braze-link-color-inverted;
+          }
+      }
+    }
+    #nav_filter {
+      background-color: $grey-athens-inverted !important;
+      &:hover, &:focus {
+        #filter-form {
+          border-color: $black-shark-inverted;
+        }
+      }
+      #filter-form {
+        border: 2px solid $grey-ghost-inverted;
+      }
+      #nav_filter_input {
+        background-image: url(#{$base_url}/assets/img/filter.svg) ;
+        filter: invert(100%);
+    }
+      .mark, mark {
+        background-color: $blue-scooter;
+      }
+    }
+
+  /* Status Monitor */
+    #nav_bottom {
+      background-color: $grey-athens-inverted !important;
+      .nav_bottom_item{
+        border-top: 1px solid $grey-ghost-inverted;
+      }
+      .color-dot.critical {
+          background-color: #ff5b68;
+      }
+
+      .color-dot.major {
+          background-color: #ff5b68;
+      }
+
+      .color-dot.minor {
+          background-color: #ff9349;
+      }
+      .color-dot.none {
+          background-color: #66d4b3;
+      }
+      .status-title{
+        color: $black-shark-inverted !important;
+      }
+      .color-description {
+        color: $black-shark-inverted !important;
+      }
+    }
+  }
+}

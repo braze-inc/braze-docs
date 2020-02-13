@@ -260,3 +260,68 @@
   }
 
 }
+
+@media (prefers-color-scheme: dark) {
+  #api-main {
+    color: $black-shark-inverted;
+    .api_search_icon {
+      color: #dededc;
+    }
+    .select_svg {
+      color: #dededc;
+    }
+    h1 {
+      color: $black-shark-inverted;
+    }
+
+    .api_div {
+      .api_type {
+        background-color: #141414;
+        .method {
+          font-family: $braze-black;
+          color: #000000;
+          &.post {
+           background-color: #49cc90;
+          }
+          &.get {
+            background-color: #61affe;
+          }
+          &.put {
+            background-color: #fca130;
+          }
+          &.delete {
+            background-color: #f93e3e;
+          }
+        }
+      }
+      a {
+        color: $black-shark-inverted;
+        border-color: $braze-link-color-inverted;
+        &:hover {
+          background-color: $braze-link-color-inverted;
+        }
+      }
+
+      .api_reference {
+        color: $black-shark-inverted;
+        a.seeme {
+          &:hover {
+            color: $black-shark-inverted;
+          }
+        }
+        &.swagger {
+          background-color: #63db2a;
+        }
+        &.postman {
+          background-color: #EF5B25;
+        }
+      }
+    }
+
+    #results_msg {
+      color: $black-shark-inverted;
+    }
+
+  }
+
+}

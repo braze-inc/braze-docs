@@ -93,6 +93,26 @@
       flex: 50%;
     }
   }
-
-
+}
+@media (prefers-color-scheme: dark) {
+  #bottom_nav {
+    #bottom_page_nav {
+      color: $grey-dust-inverted !important;
+      .nav_indicator {
+        color: $black-shark-inverted !important;
+      }
+      a {
+        color: $grey-dust-inverted !important;
+      }
+      a:hover div {
+        color: $grey-dust-inverted !important;
+        .nav_indicator {
+          color: $blue-scooter;
+        }
+      }
+      %bottom_nav_box {
+        border-top: 1px solid $grey-ghost-inverted;
+      }
+    }
+  }
 }

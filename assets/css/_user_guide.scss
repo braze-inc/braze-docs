@@ -196,13 +196,58 @@ $user_transition_time : 0.25s;
       background-color: none;
     }
   }
-
-
-
 }
 
 .footer_user {
   @media (min-width:  $window-medium-px) {
     width: 97%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #user-main {
+    h1 {
+      color: $white;
+    }
+
+    #user_list {
+      a {
+        color: $text-color-inverted;
+        &:hover {
+          .user_item {
+            border-color: $braze-link-color-inverted;
+          }
+        }
+      }
+
+      .user_item {
+        color: $black-shark-inverted;
+        border: 1px solid $grey-ghost-inverted;
+        box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+      }
+    }
+    .user_info {
+      .user_name {
+        color: $black-shark-inverted;
+      }
+      .user_description {
+        color: $text-color-inverted;
+      }
+    }
+    #user_bottom {
+      #user_popular {
+        border: 1px solid $grey-ghost-inverted;
+        box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+        a {
+          &:hover {
+            border-bottom-color: $braze-link-color-inverted;
+          }
+        }
+      }
+    }
+    a {
+      color: $black-shark-inverted;
+      border-color: $braze-link-color-inverted;
+    }
   }
 }

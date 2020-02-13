@@ -379,3 +379,98 @@ $doc_transition_time : 0.25s;
     width: 97%;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  #doc-main {
+    h1 {
+      color: $black-shark-inverted;
+    }
+    .doc_menu_title {
+      color: $navy-bay;
+    }
+
+    #doc_list {
+      a {
+        color: $text-color-inverted !important;
+      }
+
+      .doc_item {
+        color: $black-shark-inverted !important;
+        border: 1px solid $grey-ghost-inverted;
+        box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+      }
+    }
+    .doc_info {
+      .doc_name {
+        color: $black-shark-inverted !important;
+      }
+      .doc_description {
+        color: $text-color-inverted !important;
+      }
+
+    }
+    #doc_bottom {
+      #doc_bottom_left {
+        #doc_lab {
+          color: $black-shark-inverted !important;
+
+          border: 1px solid $grey-ghost-inverted;
+          &:hover {
+            border-color: $braze-link-color-inverted;
+          }
+          box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+        }
+
+        #doc_help {
+          border: 1px solid $grey-ghost-inverted;
+          box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+          a {
+            border-bottom-color: $braze-link-color-inverted;
+            &:hover {
+              background-color: $braze-link-color-inverted;
+            }
+          }
+          #help-search-form {
+            border: 1px solid $grey-ghost-inverted;
+            .btn {
+              color: $black-shark-inverted;
+            }
+          }
+        }
+      }
+      #doc_bottom_right {
+        #doc_popular {
+          a {
+            &:hover {
+              border-bottom-color: $braze-link-color-inverted;
+            }
+          }
+        }
+
+        #doc_popular, #doc_status {
+          border: 1px solid $grey-ghost-inverted;
+          box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+        }
+        #doc_status {
+          &:hover {
+            border-color: $braze-link-color-inverted;
+          }
+          .status-title{
+            color: $black-shark-inverted !important;
+          }
+          .color-description {
+            color: $black-shark-inverted !important;
+          }
+        }
+      }
+
+    }
+
+    a {
+      color: $black-shark-inverted !important;
+      border-color: $braze-link-color-inverted !important;
+    }
+
+  }
+}

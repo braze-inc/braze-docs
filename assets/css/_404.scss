@@ -238,7 +238,65 @@ $broken_transition_time : 0.25s;
       background-color: none;
     }
   }
+}
 
+@media (prefers-color-scheme: dark) {
+  #broken-main {
+    h1 {
+      color: $black-shark-inverted;
+    }
+    .broken_menu_title {
+      color: $navy-bay;
+    }
 
+    #broken_banner {
+      color: $black-shark-inverted;
+      border: 1px solid $grey-ghost-inverted;
+    }
 
+    .broken_info {
+      .broken_name {
+        color: $black-shark-inverted;
+      }
+      .broken_description {
+        color: $black-shark-inverted;
+      }
+    }
+    #broken_bottom {
+      #broken_bottom_left {
+        #broken_popular {
+          a {
+            &:hover {
+              border-bottom-color: $braze-link-color-inverted;
+            }
+          }
+
+          border: 1px solid $grey-ghost-inverted;
+        }
+      }
+      #broken_bottom_right {
+        #broken_help {
+          border: 1px solid $grey-ghost-inverted;
+          box-shadow: 0 0 6px 0 rgba(223,223,219,0.12);
+          #help-search-form {
+            border: 1px solid $grey-ghost-inverted;
+            .btn {
+              color: $black-shark-inverted;
+            }
+          }
+        }
+        a {
+          border-bottom-color: $braze-link-color-inverted;
+          &:hover {
+            background-color: $braze-link-color-inverted;
+          }
+        }
+      }
+
+    }
+    a {
+      color: $black-shark-inverted;
+      border-color: $braze-link-color-inverted;
+    }
+  }
 }

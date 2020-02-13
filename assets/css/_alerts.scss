@@ -34,64 +34,69 @@ div.alert {
   }
   &.alert-warning {
     b {
-      color: $red-rose;
+      color: $red-rose !important;
     }
-    border-color: $pink-apricot;
+    border-color: $pink-apricot !important;
     background-image: url(#{$base_url}/assets/img/message-warning.png) ;
     div.alert-msg {
-      background-color: $pink-cinderella;
+      background-color: $pink-cinderella !important;
     }
   }
   &.alert-update{
     b {
-      color: $yellow-gold;
+      color: $yellow-gold !important;
     }
-    border-color: $yellow-beige;
+    border-color: $yellow-beige !important;
     background-image: url(#{$base_url}/assets/img/message-update.png) ;
     div.alert-msg {
-      background-color: $yellow-cream;
+      background-color: $yellow-cream !important;
     }
   }
   &.alert-important{
     b {
-      color: $purple-orchard;
+      color: $purple-orchard !important;
     }
-    border-color: $purple-lavender;
+    border-color: $purple-lavender !important;
     background-image: url(#{$base_url}/assets/img/message-important.png) ;
     div.alert-msg {
-      background-color: $purple-ghost;
+      background-color: $purple-ghost !important;
     }
   }
   &.alert-note{
 
     b {
-      color: $green-grass;
+      color: $green-grass !important;
     }
-    border-color: $green-pea;
+    border-color: $green-pea !important;
     background-image: url(#{$base_url}/assets/img/message-note.png) ;
     div.alert-msg {
-      background-color: $green-mint;
+      background-color: $green-mint !important;
     }
   }
   &.alert-service-notice{
     b {
-      color: $green-grass;
+      color: $green-grass !important;
     }
-    border-color: $green-pea;
+    border-color: $green-pea !important;
     background-image: url(#{$base_url}/assets/img/message-note.png) ;
     div.alert-msg {
-      background-color: $green-mint;
+      background-color: $green-mint !important;
     }
   }
   &.alert-tip{
     b {
-      color: $blue-scooter;
+      color: $blue-scooter !important;
     }
-    border-color: $blue-blizzard;
+    border-color: $blue-blizzard !important;
     background-image: url(#{$base_url}/assets/img/message-tip.png) ;
     div.alert-msg {
-      background-color: $blue-silver;
+      background-color: $blue-silver !important;
     }
   }
+}
 
+@media (prefers-color-scheme: dark) {
+  #main_content #article-main a {
+    color: $black-shark !important;
+  }
 }

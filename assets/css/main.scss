@@ -91,6 +91,19 @@ $grey-athens: #f4f4f7;
 $text-color: $grey-boulder;
 $header-color: $black-shark;
 
+// Inverted color scheme
+// Core palate (colors)
+$black-shark-inverted: #dededc;
+$text-color-inverted: #cccccc;
+$header-color-inverted: $black-shark-inverted;
+$grey-dust-inverted: #a4a4a1;
+$grey-ghost-inverted: #22221d;
+$grey-athens-inverted: #0b0b08;
+$grey-boulder-inverted: #92928f;
+$grey-stardust-inverted: #666664;
+
+$braze-link-color-inverted: $blue-scooter;
+
 $z-index-normal: 1;
 $z-index-header: 2;
 $z-index-overlay: 1000;
@@ -172,5 +185,13 @@ li {
   > ul,
   > ol {
     margin-bottom: 0;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $text-color-inverted;
+    background-color: #111111;
   }
 }

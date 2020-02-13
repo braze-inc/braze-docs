@@ -134,3 +134,28 @@ $toc_width: 220px;
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  #toc_col {
+    @media (min-width: $window-medium-px) {
+      color: #dededc !important;
+      #toc {
+        .toc_container {
+          border-left: 2px solid $grey-ghost-inverted;
+        }
+        .nav {
+          a.nav-link {
+            color: rgba($black-shark-inverted, 0.7) !important;
+            &.active {
+              color: $black-shark-inverted !important;
+            }
+            &:hover {
+              color: $black-shark-inverted !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

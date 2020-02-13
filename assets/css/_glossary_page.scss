@@ -293,3 +293,69 @@
   }
 
 }
+
+@media (prefers-color-scheme: dark) {
+  #glossary-main {
+    color: $black-shark-inverted !important;
+    .title {
+      color: $black-shark-inverted !important;
+    }
+    .metric, .caclulation, .field, .subinfo {
+      color: $grey-stardust-inverted !important;
+    }
+
+    .desc {
+      color: $black-shark-inverted !important;
+    }
+    .glossary_text {
+
+      a {
+        color: $black-shark-inverted !important;
+        border-color: $braze-link-color-inverted !important;
+        &:hover {
+          background-color: $braze-link-color-inverted !important;
+        }
+      }
+    }
+    .glossary_search_icon {
+      color: #dededc !important;
+    }
+    .select_svg {
+      color: #dededc !important;
+    }
+    h1 {
+      color: $black-shark-inverted !important;
+    }
+
+    #glossary_filter {
+      #glossary_search {
+        border: 1px solid $grey-ghost-inverted;
+      }
+
+      .select {
+          color: #dfdfdb !important;
+      }
+    }
+    .btn {
+        background-color: #dfdfdb !important;
+        color: #000 !important;
+    }
+
+    .term {
+      border-top: 1px solid $grey-ghost-inverted;
+      a {
+        color: $black-shark-inverted;
+        border-color: $braze-link-color-inverted;
+        &:hover {
+          background-color: $braze-link-color-inverted;
+        }
+      }
+
+    }
+
+    #results_msg {
+      color: $black-shark-inverted;
+    }
+
+  }
+}

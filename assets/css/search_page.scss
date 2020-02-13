@@ -40,8 +40,22 @@ $grey-stardust: #99999b;
 $grey-french: #c6c6cc;
 $grey-ghost: #dddde2;
 $grey-athens: #f4f4f7;
-
 $search_font_color: $black-shark;
+
+
+// Inverted color scheme
+// Core palate (colors)
+$black-shark-inverted: #dededc;
+$text-color-inverted: #cccccc;
+$header-color-inverted: $black-shark-inverted;
+$grey-dust-inverted: #a4a4a1;
+$grey-ghost-inverted: #22221d;
+$grey-athens-inverted: #0b0b08;
+$grey-boulder-inverted: #92928f;
+$braze-link-color-inverted: $blue-scooter;
+$search_font_color-inverted: $black-shark-inverted;
+$grey-stardust-inverted: #666664;
+
 //Font Variables
 $braze-light: 'Sailec W00 Light', Arial, Helvetica, sans-serif;
 $braze-light-oblique: 'Sailec W00 Light Italic', Arial, Helvetica, sans-serif;
@@ -54,8 +68,6 @@ $braze-medium: 'Sailec W00 Medium', Arial, Helvetica, sans-serif;
 $braze-medium-oblique: 'Sailec W00 Medium Italic', Arial, Helvetica, sans-serif;
 $braze-black: 'Sailec W00 Bold', Arial, Helvetica, sans-serif;
 $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
-
-
 
 #search_page{
   font-size: $search_font_size;
@@ -191,5 +203,64 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
       margin-bottom: $search_padding/2;
     }
   }
+  #searchlabel {
+    padding-top:40px;
+    color: #212123;
+  }
+}
 
+@media (prefers-color-scheme: dark) {
+
+  #search_page{
+    .ais-refinement-list--header {
+      color: $black-shark-inverted !important;
+    }
+    .ais-search-box--input {
+      border-color: $navy-bay;
+      box-shadow: 0 1px 1px 0 rgba($navy-bay,.2);
+    }
+    .ais-refinement-list--list {
+      .ais-refinement-list--item {
+        color: $black-shark-inverted !important;
+        .ais-refinement-list--count {
+          color: $black-shark-inverted !important;
+        }
+      }
+    }
+    .ais-refinement-list--label {
+      color: $grey-dust-inverted !important;
+    }
+    .ais-pagination {
+      background-color: transparent;
+    }
+    #search_pagination {
+      .ais-pagination--item__active {
+        background-color: $blue-scooter;
+      }
+    }
+    .hit {
+      &:hover {
+        background-color: #636367 !important;
+      }
+      .hit-subname {
+        color: $black-shark-inverted !important;
+      }
+      .hit-name {
+        color: $navy-bay;
+      }
+      .hit-description{
+        color: $grey-dust-inverted !important;
+        em {
+          color: $search_font_color-inverted !important;
+        }
+      }
+      hr {
+        background-color: $grey-dust-inverted !important;
+      }
+    }
+    #searchlabel {
+      color: #dededc;
+    }
+
+  }
 }
