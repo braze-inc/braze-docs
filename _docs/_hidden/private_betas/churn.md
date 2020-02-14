@@ -35,6 +35,8 @@ Although you can try to prevent churn as defined above in your entire population
 
 Note that for the beta period of Predictive Churn, the model will only score up to the first 5 million users that fit the above criteria.
 
+For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters cannot exceed 30 days - the # of days of the window specified in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+
 ## Step 4: Choose the Update Frequency for Churn Predictions
 
 Next, the machine learning model will be created when you complete this page, it will be used on a regular schedule to generate fresh predictions of users’ probability to churn according to the schedule you choose here. Please select the maximum frequency of updates that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to Weekly on the day and time of your choosing.
@@ -46,16 +48,15 @@ Verify that the details you’ve provided are correct, and choose “Build Predi
 
 Once it’s done, the page will switch to the Analytics view automatically. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
-__The model will automatically be rebuilt (i.e. retrained) on fresh data every two weeks to keep it current.__
+The model will automatically be rebuilt (i.e. retrained) on fresh data every two weeks to keep it current.
 
 # Understanding Results
 
 ## Lift Quality
-In order to measure the accuracy of your model, the Lift Quality metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). Lift Quality measures how much better than random guessing* the model is on the test set. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of future knowledge of who will churn.
+In order to measure the accuracy of your model, the Lift Quality metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). Lift Quality measures how much better than random guessing the model is on the test set. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of future knowledge of who will churn.
 
 {% alert note %}
-&#42; In this case, random guessing means randomly guessing at the measured baseline churn rate. For example, if 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. If the model were to only do that well, the lift would be 0%. If the model, on the other hand, allowed you to identify 20% of the users as churned and correctly identify all the “true” churners, it would be perfect. That would correspond to a lift quality of 100%. In reality of course, models usually fall somewhere inbetween.
-{% endalert %}
+Random guessing: if 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. If the model were to only do that well, the lift would be 0%. If the model, on the other hand, allowed you to identify 20% of the users as churned and correctly identify all the “true” churners, it would be perfect. That would correspond to a lift quality of 100%. In reality, models are usually somewhere in between. For more detail, see [here](https://humboldt-wi.github.io/blog/research/theses/uplift_modeling_blogpost/).
 
 Here’s what we recommend for various different ranges of Lift Quality:
 
