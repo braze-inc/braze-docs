@@ -151,7 +151,7 @@ US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
 
 ## Resetting Table word-break by column
-For tables columns which word-break should be set to `break-word`, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
+For tables columns which word-break should be reset to the default style, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
 
 ### Usage
 ```
