@@ -187,11 +187,3 @@ li {
     margin-bottom: 0;
   }
 }
-
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $text-color-inverted;
-    background-color: #111111;
-  }
-}

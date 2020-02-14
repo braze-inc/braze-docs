@@ -53,19 +53,3 @@
     }
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  #footer_div {
-    #footer_container {
-      border-top: 1px solid #363636;
-    }
-
-    #footer_terms {
-      color: #91918f !important;
-      a {
-        color: #91918f !important;
-        border-color: $braze-link-color-inverted;
-      }
-    }
-  }
-}

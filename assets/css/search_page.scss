@@ -209,58 +209,59 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-
-  #search_page{
-    .ais-refinement-list--header {
-      color: $black-shark-inverted !important;
-    }
-    .ais-search-box--input {
-      border-color: $navy-bay;
-      box-shadow: 0 1px 1px 0 rgba($navy-bay,.2);
-    }
-    .ais-refinement-list--list {
-      .ais-refinement-list--item {
+body {
+  &.dark_mode{
+    #search_page{
+      .ais-refinement-list--header {
         color: $black-shark-inverted !important;
-        .ais-refinement-list--count {
+      }
+      .ais-search-box--input {
+        border-color: $navy-bay;
+        box-shadow: 0 1px 1px 0 rgba($navy-bay,.2);
+      }
+      .ais-refinement-list--list {
+        .ais-refinement-list--item {
+          color: $black-shark-inverted !important;
+          .ais-refinement-list--count {
+            color: $black-shark-inverted !important;
+          }
+        }
+      }
+      .ais-refinement-list--label {
+        color: $grey-dust-inverted !important;
+      }
+      .ais-pagination {
+        background-color: transparent;
+      }
+      #search_pagination {
+        .ais-pagination--item__active {
+          background-color: $blue-scooter;
+        }
+      }
+      .hit {
+        &:hover {
+          background-color: #636367 !important;
+        }
+        .hit-subname {
           color: $black-shark-inverted !important;
         }
-      }
-    }
-    .ais-refinement-list--label {
-      color: $grey-dust-inverted !important;
-    }
-    .ais-pagination {
-      background-color: transparent;
-    }
-    #search_pagination {
-      .ais-pagination--item__active {
-        background-color: $blue-scooter;
-      }
-    }
-    .hit {
-      &:hover {
-        background-color: #636367 !important;
-      }
-      .hit-subname {
-        color: $black-shark-inverted !important;
-      }
-      .hit-name {
-        color: $navy-bay;
-      }
-      .hit-description{
-        color: $grey-dust-inverted !important;
-        em {
-          color: $search_font_color-inverted !important;
+        .hit-name {
+          color: $navy-bay;
+        }
+        .hit-description{
+          color: $grey-dust-inverted !important;
+          em {
+            color: $search_font_color-inverted !important;
+          }
+        }
+        hr {
+          background-color: $grey-dust-inverted !important;
         }
       }
-      hr {
-        background-color: $grey-dust-inverted !important;
+      #searchlabel {
+        color: #dededc;
       }
-    }
-    #searchlabel {
-      color: #dededc;
-    }
 
+    }
   }
 }

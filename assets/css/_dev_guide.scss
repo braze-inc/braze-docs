@@ -124,38 +124,3 @@ $guide_transition_time : 0.25s;
     width: 97%;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  #dev-main, #featured_main {
-    h1 {
-      color: $black-shark-inverted !important;
-    }
-    .guide_menu_title {
-      color: $navy-bay;
-    }
-
-    #guide_list, #guide_featured_list {
-      .guide_item {
-        .menu_description {
-          color: $text-color-inverted !important;
-        }
-      }
-
-      a {
-        border: 1px solid $grey-ghost-inverted;
-        color: $black-shark-inverted !important;
-        &:hover {
-          border-color: $braze-link-color-inverted;
-        }
-      }
-    }
-
-    a {
-      color: $black-shark-inverted !important;
-      border-color: $braze-link-color-inverted !important;
-      &:hover {
-        background-color: $braze-link-color-inverted !important;
-      }
-    }
-  }
-}

@@ -94,13 +94,3 @@ div.alert {
     }
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  #main_content #article-main {
-    div.alert {
-      a {
-        color: $black-shark !important;
-      }
-    }
-  }
-}

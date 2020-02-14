@@ -142,24 +142,3 @@ $header_transition_time: 0.25s;
   height: 2px;
   width: 100%;
 }
-
-@media (prefers-color-scheme: dark) {
-  #braze_header {
-    .nav-link {
-      color: $black-shark-inverted !important;
-    }
-    &.active {
-      div {
-        border-color: $black-shark-inverted !important;
-      }
-    }
-    &.header {
-       .navbar-brand {
-         img {
-           filter: invert(100%);
-         }
-       }
-     }
-    color: $black-shark-inverted !important;
-  }
-}

@@ -2,7 +2,36 @@
 
 var query_str = window.location.search;
 $(document).ready(function() {
-
+  var dark_mode = 'dark_mode';
+  var light_mode = 'light_mode';
+  var theme_mode = Cookies.get('theme_mode');
+  if (theme_mode) {
+    if (theme_mode == dark_mode) {
+      $('body').addClass(dark_mode);
+    }
+  }
+  else {
+    if (window.matchMedia) {
+      if ( window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        $('body').addClass(dark_mode);
+        Cookies.set('theme_mode',dark_mode);
+      }
+      else {
+        Cookies.set('theme_mode',light_mode);
+      }
+    }
+  }
+  $('#modetoggle_full, #modetoggle_collapse').on('click', function(e){
+    e.preventDefault();
+    if ($('body').hasClass(dark_mode)) {
+      Cookies.set('theme_mode',light_mode);
+      $('body').removeClass(dark_mode);
+    }
+    else {
+      Cookies.set('theme_mode',dark_mode);
+      $('body').addClass(dark_mode);
+    }
+  })
   function string_to_slug(str) {
     if (str) {
       str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
