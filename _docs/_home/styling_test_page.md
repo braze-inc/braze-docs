@@ -150,7 +150,7 @@ US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
 US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
 
-## Formatting Table word-break back to break-word
+## Resetting Table word-break by column
 For tables columns which word-break should be set to `break-word`, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
 
 ### Usage
@@ -158,7 +158,7 @@ For tables columns which word-break should be set to `break-word`, use markdown 
 | Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User’s mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| Email Opened                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
 | In-App Message Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | In-App Message Clicked               | Platform-specific Feed | User tapped or clicked a button in an In-App Message.                                     | `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 | Content Card Dismissed               | Platform-specific Feed | User dismissed a Content Card                                                             | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
@@ -173,7 +173,7 @@ For tables columns which word-break should be set to `break-word`, use markdown 
 | Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User’s mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| Email Opened                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
 | In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | In-App Message Clicked               | Platform-specific Feed | User tapped or clicked a button in an In-App Message.                                     | `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 | Content Card Dismissed               | Platform-specific Feed | User dismissed a Content Card                                                             | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
@@ -185,7 +185,7 @@ For tables columns which word-break should be set to `break-word`, use markdown 
 | Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User’s mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| Email Opened                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
 | In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | In-App Message Clicked               | Platform-specific Feed | User tapped or clicked a button in an In-App Message.                                     | `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 | Content Card Dismissed               | Platform-specific Feed | User dismissed a Content Card                                                             | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
@@ -197,10 +197,10 @@ For tables columns which word-break should be set to `break-word`, use markdown 
 Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 
 # Image Test
-Image: ![Logo](https://www.braze.com/images/logos/logo-braze-stroked-monogram.svg){: height="36px" width="36px"}
+Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: height="36px" width="36px"}
 
 ## Linked Image Test
-Linked Image: [![Braze](https://www.braze.com/images/logos/logo-braze-stroked-monogram.svg){: height="36px" width="36px"}](https://www.braze.com)
+Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: height="36px" width="36px"}](https://www.braze.com)
 
 ## Gallery Test
 

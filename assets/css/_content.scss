@@ -499,26 +499,26 @@ table {
       word-break: initial;
     }
   }
-  @media (min-width: $window-large-px) {
+  @media (min-width: $window-xlarge-px) {
     &.reset-td-br-1 {
       td:nth-child(1) {
-        word-break: break-word;
+        word-break: initial;
       }
     }
     &.reset-td-br-2 {
       td:nth-child(2) {
-        word-break: break-word;
+        word-break: initial;
       }
 
     }
     &.reset-td-br-3 {
       td:nth-child(3) {
-        word-break: break-word;
+        word-break: initial;
       }
     }
     &.reset-td-br-4 {
       td:nth-child(4) {
-        word-break: break-word;
+        word-break: initial;
       }
     }
   }
@@ -559,12 +559,12 @@ table td code.highlighter-rouge {
   background-color: transparent !important;
   word-break: break-all;
 }
-@media (min-width: $window-large-px) {
+@media (min-width: $window-xlarge-px) {
   table.reset-td-br-1 td:nth-child(1) code.highlighter-rouge,
   table.reset-td-br-2 td:nth-child(2) code.highlighter-rouge,
   table.reset-td-br-3 td:nth-child(3) code.highlighter-rouge,
   table.reset-td-br-4 td:nth-child(4) code.highlighter-rouge  {
-    word-break: break-word;
+    word-break: initial;
   }
 }
 .highlight table {
