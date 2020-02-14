@@ -25,7 +25,7 @@ The following methods can be used to hide or show the default Content Cards feed
 
 ### Customizing the Feed
 
-You can use custom CSS to change the default styling of the Content Cards Feed, and its individual cards. To see more examples, take a look at the [Customization examples][/docs/developer_guide/platform_integration_guides/web/content_cards/customization/] page.
+You can use custom CSS to change the default styling of the Content Cards Feed, and its individual cards. To see more examples, take a look at the [Customization examples](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/) page.
 
 ## Custom Card Feed
 
@@ -51,7 +51,6 @@ var list_of_cards = [];
 // get the last known list of Content Cards
 const {cards, lastUpdated} = appboy.getCachedContentCards();
 console.log(`This user has ${cards.length} cards which were last refreshed ${lastUpdated || "never"}`);
-
 // update your website to use this cached list of cards
 list_of_cards = cards;
 
@@ -62,6 +61,11 @@ appboy.subscribeToContentCardUpdates(updates => {
     // update your website to use the latest list of cards
     list_of_cards = cards;
 });
+
+// button users can click to refresh the Content Cards feed
+document.querySelector(".feed-refresh-button").onclick = function(){
+    appboy.requestContentCardsRefresh();
+};
 ```
 
 {% alert tip %}
@@ -70,4 +74,4 @@ These methods return a new instance of each card, and will therefore note update
 
 ### Creating a custom feed
 
-For more examples on how to customize your Content Cards implementation, take a look at the [Customization examples][/docs/developer_guide/platform_integration_guides/web/content_cards/customization/] page.
+For more examples on how to customize your Content Cards implementation, take a look at the [Customization examples](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/) page.
