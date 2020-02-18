@@ -21,7 +21,7 @@ Create another step, branching from the first:
 
 ![Canvas Create Branch 2][32]
 
-You can setup filters to determine how users should flow to subsequent
+You can set up filters to determine how users should flow to subsequent
 steps.
 
 ![Canvas Create Branch 3][33]

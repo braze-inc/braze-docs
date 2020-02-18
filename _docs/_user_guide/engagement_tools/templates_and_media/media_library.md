@@ -19,7 +19,7 @@ The Library now allows you to:
 ![media_library_main][1]
 
 ## Stats Available
-Within the Media Library you can now see the image dimensions, URL, type as well as the date it was added to the library.
+Within the Media Library, you can now see the image dimensions, URL, type as well as the date it was added to the library.
 
 ## Accessing the Media Library from a Message Composer
 Previously when composing a message, you would upload images for each respective message. As the Media Library now acts as your dashboard's centralized location for assets, all images will now be uploaded directly to it. This additional functionality gives you the flexibility to re-use images across different messages.

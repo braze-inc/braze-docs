@@ -6,14 +6,14 @@ page_order: 10
 
 Braze provides Facebook marketing integration, allowing you to export segments as Facebook marketing audiences and target those users for ad campaigns. Here are instructions on setting up this feature.
 
-In order to export custom audiences from the dashboard, your Facebook App must be configured to allow Braze to make requests to Facebook through the [Facebook Marketing API][29] on behalf of the members of your team. Common use cases for exporting custom audiences include:
+To export custom audiences from the dashboard, your Facebook App must be configured to allow Braze to make requests to Facebook through the [Facebook Marketing API][29] on behalf of the members of your team. Common use cases for exporting custom audiences include:
 
 - Retargeting Campaigns
 - Seed audiences for lookalike targeting
 
 ## Before You Begin...
 
-In order to configure your Facebook App’s settings, ensure the following:
+To configure your Facebook App’s settings, ensure the following:
 
 - Your organization has connected your app or apps within the [Facebook App Dashboard][30]
 - Your organization’s administrator has granted you either Developer or Admin access through the Facebook App Dashboard
@@ -31,7 +31,7 @@ Due to Facebook’s increased security policies, you will need to whitelist OAut
 
 ![FB Settings][33]
 
-- Append “/auth/facebook/callback” to the end of your dashboard url and then add it to the “Valid OAuth redirect URIs” field.
+- Append “/auth/facebook/callback” to the end of your dashboard URL and then add it to the “Valid OAuth redirect URIs” field.
  - Example: [https://dashboard-01.braze.com/auth/facebook/callback][41]
 - Save your changes in the bottom right-hand corner.
 
