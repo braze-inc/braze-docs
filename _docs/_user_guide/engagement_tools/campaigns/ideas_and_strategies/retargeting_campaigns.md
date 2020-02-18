@@ -13,7 +13,7 @@ description: "This reference article goes over how and why you should consider r
 > This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. 
 > <br>
 > <br>
-> By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data driven marketing approach.
+> By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 
 Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your Campaigns, Canvases, and News Feed cards.
 
