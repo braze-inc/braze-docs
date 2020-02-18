@@ -28,7 +28,7 @@ Braze SDKs automatically track a user's _most recent_ app version. These version
 
 Use the _App Version Number_ filter to segment users by the app's version/build number. 
 
-This filter supports numerical comparisons to target a range of app versions. For example, you can target users whose app is "below", "above", and "equal to" app version "1.2.3", for example, to promote a new feature which requires an app upgrade.
+This filter supports numerical comparisons to target a range of app versions. For example, you can target users whose app is "below", "above", and "equal to" app version "1.2.3", which might be beneficial to promote a new feature which requires an app upgrade.
 
 This new filter can replace the legacy "App Version Name" filter which would require explicitly listing each older version or using a regular expression.
 
@@ -62,18 +62,18 @@ Persuading a user to update their app or change the way they use your app can be
 
 Convincing your users to update their app can be difficult as they must navigate to the app store to do so.  In general, it is best to ask users to update as soon as the app is updated, however, if they choose not to do not spam them with messages. Rather, wait until they have a positive experience within the app, for instance beating a level, redeeming a coupon, or favoriting a song.
 
-For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully users will discover new features easily, however, if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
+For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully, users will discover new features easily, however, if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
 
 ### Use Non-intrusive Channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [News Feed][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
+Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
 
 
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}
 [3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [4]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#creating-a-news-feed-item
+[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/
 [7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
 [8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
 [9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()

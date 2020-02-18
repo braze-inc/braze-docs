@@ -13,7 +13,7 @@ description: "This reference article goes over how to duplicate segments and cam
 > This reference article goes over how to duplicate segments and campaigns for reuse.
 > <br>
 > <br>
-> Not only is duplicating segments and campaigns a time saver, it allows you continually build off and iterate over successful campaigns and segments.
+> Not only is duplicating segments and campaigns a time saver, but it also allows you to continually build off and iterate over successful campaigns and segments.
 
 Braze allows you to duplicate pre-existing segments and campaigns. This can be useful in cases where you wish to create a new segment or campaign that is very similar to an old one. By our cloning feature, you can create a second version of an old segment or campaign and make the necessary edits.
 

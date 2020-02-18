@@ -20,7 +20,7 @@ description: "This reference goes over how to measure user retention for users w
 This report is not yet available to our clients deployed in our EU region, or on our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
 {% endalert %}
 
-User retention is one of the most important metrics to any marketer. Keeping engaged users coming back for more indicates that business is healthy.
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy.
 
 Braze allows you to measure user retention right on the Campaign Analytics page.
 
