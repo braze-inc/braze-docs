@@ -66,14 +66,14 @@ For feature awareness campaigns, timing is also key.  Onboarding should familiar
 
 ### Use Non-intrusive Channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [News Feed][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
+Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
 
 
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}
 [3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [4]: {{ site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
 [5]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#creating-a-news-feed-item
+[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/
 [7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
 [8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
 [9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()
