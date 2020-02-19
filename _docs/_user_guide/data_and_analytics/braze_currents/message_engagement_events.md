@@ -321,7 +321,7 @@ _Update noted in August 2019._
 ## Email Bounces Events
 
 {% apitags %}
-Email, Engagement, Bounces
+Email, Engagement, Bounce
 {% endapitags %}
 
 This event accounts for both Bounces and Soft Bounces.
@@ -702,7 +702,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 ## Content Card Dismissal Events
 
 {% apitags %}
-Content Cards, Engagement, Dismissals
+Content Cards, Engagement
 {% endapitags %}
 
 Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
