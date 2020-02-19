@@ -46,7 +46,7 @@ Below is a list of features and messaging channels supported today.
         <tr>
             <td>Amazon Fire TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Custom UI)</td>
+            <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -62,7 +62,7 @@ Below is a list of features and messaging channels supported today.
         <tr>
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-check text-success"></i><br>(via Custom UI)</td>
+            <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-danger"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
