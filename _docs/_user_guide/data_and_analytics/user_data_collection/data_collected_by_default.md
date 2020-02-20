@@ -34,7 +34,7 @@ The following events and attributes are captured and updated automatically by th
 - Push Enabled (Boolean)
 - Device Locale
 - Language (taken from Device Locale)
-- Country (first taken from IP Address. If this is not available, taken from Device Locale. Upon request, Braze can disable IP detection for this field)
+- Country (first taken from IP Address. If this is not available, taken from Device Locale. 
 - Most Recent App Version
 - Device Model
 - Device OS Version
@@ -45,5 +45,5 @@ The following events and attributes are captured and updated automatically by th
 
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager. 
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager. 
 {% endalert %}

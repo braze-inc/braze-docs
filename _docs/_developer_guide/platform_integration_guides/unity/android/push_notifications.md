@@ -37,14 +37,10 @@ Once you have setup your Firebase project, it is time to configure your Android 
 
 1. Add the following permissions to your `AndroidManifest.xml`:
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 ```
-
-##### Implementation Example
-
-A sample [`AndroidManifest.xml`][27] is available at our public repo.
 
 ## Step 3: Configure your appboy.xml
 
@@ -52,28 +48,28 @@ In order for a device to receive push notifications, it must register with the F
 
 - To tell Braze to handle registration automatically, add the following configuration to your `appboy.xml` file:
 
-```
+```xml
 <!-- Whether or not Braze should handle registering the device to receive push notifications. Default is false. -->
 <bool name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
 ```
 
 - Add the following configuration element to your `appboy.xml` file and replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Sender ID:
 
-```
+```xml
 <!-- Replace with your Firebase Sender ID -->
 <string name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
 ```
 
 - **Recommended** To instruct Braze to handle deep links from push automatically, add the following configuration to your `appboy.xml` file:
 
-```
+```xml
 <!-- Whether to open push deep links from Braze automatically. -->
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
 ```
 
 - **Recommended**: Specify the drawable resource that should be displayed in the push notification in your appboy.xml file.
 
-```
+```xml
 <!-- The drawable that should be displayed whenever a push notification is received. If no icon is given, the notification will use the application icon -->
 <drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
@@ -81,14 +77,10 @@ In order for a device to receive push notifications, it must register with the F
 - **Optional**: Braze will broadcast Intents whenever a push notification is received or opened. If you need to perform custom logic upon push notifications open or receipt, you may create and register a custom broadcast receiver to listen to and respond to these intents. The names of the actions are:
 
 ```
-REPLACE_WITH_YOUR_BUNDLE_IDENTIFIER.intent.APPBOY_PUSH_RECEIVED
-REPLACE_WITH_YOUR_BUNDLE_IDENTIFIER.intent.APPBOY_NOTIFICATION_OPENED
-REPLACE_WITH_YOUR_BUNDLE_IDENTIFIER.intent.APPBOY_PUSH_DELETED
+REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED
+REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_NOTIFICATION_OPENED
+REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED
 ```
-
-##### Implementation Example
-
-A sample [`appboy.xml`][28] is available at our public repo.
 
 ## Step 4: Set Your Firebase Credentials
 
@@ -126,7 +118,7 @@ See Android's documentation on ["Deep Linking" to In-App Resources][26]
 [13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples
 [15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [23]: {% image_buster /assets/img_archive/Push_Android_2.png %}
-[26]: http://developer.android.com/training/app-indexing/deep-linking.html
+[26]: https://developer.android.com/training/app-links/deep-linking
 [27]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml
 [28]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/res/values/appboy.xml
 [58]: https://console.firebase.google.com/

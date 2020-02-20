@@ -4,10 +4,10 @@ page_order: 3
 ---
 # How to Duplicate Templates in Templates & Media
 
-> Duplicating a template can save a lot of time. You can duplicate a single template, or multiple.
+> Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
 
 ## Duplicate an Individual Template
-Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and selecting `duplicate` from the drop down.
+Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and selecting `duplicate` from the drop-down.
 
 ![template_duplicate_cog][8]
 

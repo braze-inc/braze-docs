@@ -1057,6 +1057,32 @@ $( document ).ready(function() {
 
     sf_submit.addParameter('external','1');
     sf_submit.send();
+    var gs_submit = new iframeform('https://docs.google.com/forms/u/0/d/e/1FAIpQLScJ7eoZEY-FLTBSL5r92k6Y-iUpskG9SffRHv0GylQzgSMH-w/formResponse');
+    gs_submit.addParameter('entry.1850709480', user_name);
+    gs_submit.addParameter('entry.1269583593', user_email);
+    gs_submit.addParameter('entry.83902596', user_subject);
+    if (user_ccemail) {
+      gs_submit.addParameter('entry.2143316233',user_ccemail);
+    }
+    gs_submit.addBodyText('entry.353828619', userinfo);
+    var gs_mapping = {
+      "00N0V000009G0MG" : "entry.657215056", // Topic
+      "00N0V000009G0MB" : "entry.716293339",  // Category
+      "00N0V000009G0ML" : "entry.1633602955", // Subcategory
+      "00N0V000009G0MQ" : "entry.1959649079", // Type
+      "priority" : "entry.631884783", // Priority
+    }
+
+    $.each(sels,function(k,v){
+      var selopt = $(this);
+      var selval = selopt.find(':selected');
+      if (typeof selval !== 'undefined') {
+        if (gs_mapping[selopt.attr('name')]) {
+          gs_submit.addParameter(gs_mapping[selopt.attr('name')],selval.val());
+        }
+      }
+    });
+    gs_submit.send();
 
     $('#ticket_mainform').hide();
 

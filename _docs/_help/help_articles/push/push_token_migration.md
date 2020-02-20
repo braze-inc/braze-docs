@@ -57,4 +57,4 @@ __You must have a receiver to handle and display push payloads.__
 
 To notify the receiver of the push payload, add the necessary key-value pairs to the push campaign. The values of these pairs is contingent on the specific push partner you used before Braze.
 
-_For some push notification providers, you will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, navigate to the “Internal Tools Page”, then “Company Settings”. Scroll to the “Flatten Push Payload” section, where you can add the setting for specific apps in your  company’s app group._
+_For some push notification providers, Braze will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, contact your Customer Onboarding/Success Manager._

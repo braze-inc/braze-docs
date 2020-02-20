@@ -50,11 +50,11 @@ Currents allows you to…
 
 ## Access Currents
 
-Currents is already included in some of our pro- and enterprise-level packages. If you’re interested in adding it to your plan, reach out to your account manager for access.
+Currents are already included in some of our pro- and enterprise-level packages. If you’re interested in adding it to your plan, reach out to your account manager for access.
 
 From there, your account manager and our data specialists will assist in your Currents [set up and integration]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 
-Currents comes included with certain Braze packages. Please contact your Customer Success Manager or [open a support ticket][support] if you want access.
+Currents come included with certain Braze packages. Please contact your Customer Success Manager or [open a support ticket][support] if you want access.
 
 
 <br>
