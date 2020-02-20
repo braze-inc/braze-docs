@@ -16,7 +16,7 @@ tool: currents
 > More information on how to transfer data from Amazon S3 to Redshift via an ETL process are available on Github [here](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
-Please note that this is only one of many options you can /sa from when it comes to transferring your data to places that would be most advantageous to you.
+Please note that this is only one of many options you can choose from when it comes to transferring your data to places that would be most advantageous to you.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/currents-examples/master/redshift-s3-loader/README.md %}

@@ -9,10 +9,11 @@ page_order: 0
 
 {% raw %}
 
-Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
+Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2]. For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
 
 ```
-Hi there, here is fun some trivia for you!: {% connected_content http://numbersapi.com/random/trivia %}
+{% connected_content http://numbersapi.com/random/trivia :save result %}
+Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
 You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as @, make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the e-mail address attribute below.
@@ -84,6 +85,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 
 
 [1]: #aborting-connected-content
+[2]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
 [7]: http://openweathermap.org/api
 [8]: http://developer.nytimes.com/docs/read/article_search_api_v2

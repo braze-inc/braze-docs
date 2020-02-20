@@ -20,7 +20,7 @@ When __Message Sent__ is selected, customers will only be advanced to subsequent
 When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - Any message is sent or the in-app message in the step becomes live
-- The webhook is not sent because the webhook errors
+- The webhook is not sent because the webhook causes an error or errors
 - A push or email is not sent because the user is not reachable by push or email
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
@@ -35,19 +35,19 @@ For action-based steps, users must perform the trigger action and meet the audie
   Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
-When sending a multichannel step with intelligent delivery, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
+When sending a multi-channel step with intelligent delivery, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
 
 ## Using Canvas Advancement
 
-Advancement works well when subsequent messaging relates to the previous messages. For example, you wouldn't want to send a follow up push about an email that was __never sent__ to users.
+Advancement works well when subsequent messaging relates to the previous messages. For example, you wouldn't want to send a follow-up push about an email that was __never sent__ to users.
 
-There may be times when you want users to continue to advance through a Canvas even when they do not receive a certain message. For example, you might have a "Welcome" push on __Day 3__ and a "Welcome" email on __Day 6__. Some of your users may not be reachable via push notifications, as not everyone opts into receive push messages. You may want to send the __Day 6__ email to all users, even if they weren't sent the __Day 3__ push.
+There may be times when you want users to continue to advance through a Canvas even when they do not receive a certain message. For example, you might have a "Welcome" push on __Day 3__ and a "Welcome" email on __Day 6__. Some of your users may not be reachable via push notifications, as not everyone opts in to receive push messages. You may want to send the __Day 6__ email to all users, even if they weren't sent the __Day 3__ push.
 
 In this scenario, you can use Braze's Advancement Behavior options to ensure that users continue down the Canvas, even if they are not sent the __Day 3__ push.
 
-If you want all users to receive the __Day 6__ email, even if they didn't get the __Day 3__ push you can select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push.
+If you want all users to receive the __Day 6__ email, even if they didn't get the __Day 3__ push, you can select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push.
 
-When you select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push, but will be advanced anyway.
+When you select __Immediately Advance Audience__ advancement behavior for the __Day 3__ push, users will advance when Braze attempts to send the push. Users who match the audience options and who are not reachable via push will not be sent the push but will be advanced anyway.
 
 {% details Previous Canvas Advancement Behavior %}
 

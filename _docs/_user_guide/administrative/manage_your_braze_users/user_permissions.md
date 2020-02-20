@@ -40,7 +40,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |View Usage Data| Allows user to view app usage.|
 |Import and Update User Data| Allows user to import CSV and update files of app users as well as view the User Import page.|
 |View Billing Details| Allows user to view subscriptions and billing. |
-|Access Dev Console| Allows access to Developer Console (where you can view api keys, api campaign activity log, event user log, and internal groups for testing messages).|
+|Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under Technology Partners and the ability to sync Braze with other platforms.|
 |Manage Apps| Allows user to edit app settings (under Manage App Group).|
 |Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under manage app group).|

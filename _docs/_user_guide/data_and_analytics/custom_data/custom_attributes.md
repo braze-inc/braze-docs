@@ -24,17 +24,20 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | ---------------------| --------------- | ------------- |
 | Check if the string attribute __exactly matches__ an inputted string| __EQUALS__ | __STRING__ |
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
-| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
+| Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ * | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
 | Check if the string attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
+{% alert important %}
+&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+{% endalert %}
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx Tester and Debugger](https://regex101.com/)
-- [RegEx: Learn More](https://regexr.com/)
+- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
@@ -52,10 +55,9 @@ Array attributes are good for storing related lists of information about your us
 {% alert tip %}
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-
 More resources on RegEx:
-- [RegEx Tester and Debugger](https://regex101.com/)
-- [RegEx: Learn More](https://regexr.com/)
+- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
@@ -63,14 +65,14 @@ More resources on RegEx:
 Date attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
 {% alert warning %}
-As of January 21, 2020, specific filters have been updated to be more intuitive. Please see the explanation below of the new filter behavior. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+As of March 2, 2020, specific filters have been updated to be more intuitive. Please see the explanation below of the new filter behavior. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
 {% endalert %}
 
 {% alert warning %}
 The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom date attribute.
 {% endalert %}
 
-Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example,  last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
+Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
 For example, to build a segment that targets users with a date attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
 
@@ -86,12 +88,14 @@ For example, to build a segment that targets users with a date attribute between
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 
 {% alert important %}
-As of January 21, 2020, the behavior of "Date of Custom Attribute", "Less than X Days Ago", and "Less than X Days in the Future" has changed. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+
+As of March 2, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
 <br> <br>
-"Date of Custom Attribute"
+"Day of Recurring Event"
 - Change: Current date is now counted in this segmentation filter.
-- When using the "Date of Custom Attribute" filter, and are then prompted to select the "Calendar date of Custom Attribute", __if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
-- For example, if on January 21, 2020, you selected the date of the attribute to be `LESS THAN ... January 21, 2020`, attributes will be considered for the days up to, and __including__ January 21, 2020. 
+- When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", __if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
+- For example, if on March 2, 2020, you selected the date of the attribute to be `LESS THAN ... March 2, 2020`, attributes will be considered for the days up to, and __including__ March 2, 2020. 
+
 <br> 
 
 "Less than X Days Ago" and "Less than X Days in the Future"
@@ -148,13 +152,14 @@ If you would like to segment on the number of times a specific purchase has occu
 {% endalert %}
 
 {% alert important %}
-As of January 21, 2020, the behavior of "Date of Custom Attribute" has changed, now including the current date in the filter.
+
+As of March 2, 2020, the behavior of "Day of Recurring Event" has changed, now including the current date in the filter.
 <br><br>
 Explanation:
-When using the "Date of Custom Attribute" filter, and are then prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
+When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event". __If you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
 <br> 
 <br> 
-For example, if on January 21, 2020, you selected the date of the attribute to be `LESS THAN ... January 15, 2020`, attributes will be considered for the days up to, and __including__ January 21, 2020. 
+For example, if on March 2, 2020, you selected the date of the attribute to be `LESS THAN ... March 2, 2020`, attributes will be considered for the days up to, and __including__ March 2, 2020. 
 {% endalert %}
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).

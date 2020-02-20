@@ -73,6 +73,16 @@ div.alert {
       background-color: $green-mint;
     }
   }
+  &.alert-service-notice{
+    b {
+      color: $green-grass;
+    }
+    border-color: $green-pea;
+    background-image: url(#{$base_url}/assets/img/message-note.png) ;
+    div.alert-msg {
+      background-color: $green-mint;
+    }
+  }
   &.alert-tip{
     b {
       color: $blue-scooter;

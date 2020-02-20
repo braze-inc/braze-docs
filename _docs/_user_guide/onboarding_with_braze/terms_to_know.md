@@ -15,7 +15,7 @@ glossaries:
   - name: "Application Program Interface (API)"
     description: The <a href="https://www.braze.com/docs/api/basics/#api-overview">Braze API</a> provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile SDKs. This allows you to, for example, pass user data to Braze that is not tracked within your app or website.
   - name: "Braze (The Product)"
-    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, setup targeted messaging Campaigns, and view analytics or feedback. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
+    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, setup targeted messaging Campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
   - name: Braze Engagement Tools
     description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">tools</a> to reach your customers and users with our Campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
   - name: Braze Teams
@@ -62,6 +62,8 @@ glossaries:
     description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push Token migration</a> is the importing of those already-generated keys into Braze’s platform.
   - name: Push Time to Live
     description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/">Push TTL</a>, time to live refers to the period Campaigns will continue to attempt to be delivered to an offline user.
+  - name: Rcae Condition
+    description: A race condition is a software engineering concept that describes some undesirable situation that occurs when a system tries to perform several operations simultaneously, but because of the nature of the system, the operations must be done in the correct sequence to be done correctly. <br><br>In the Braze platform, segmenting a triggered campaign on user data recorded at the time of the event may cause a race condition. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent, and can lead to the user not receiving the campaign.
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple Campaigns.
   - name: Segmentation

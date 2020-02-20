@@ -24,7 +24,6 @@ As of March 4th, 2019, AppsFlyer requires that the Activate Partner toggle be sw
 {% endalert %}
 
 * This integration supports iOS and Android apps.
-* If you expect more than 100 attributed installs per hour, you will need a Braze Enterprise account. See [API Restrictions][5] for more information.
 * Your app will need Braze's SDK and AppsFlyer's SDK installed.
 * If you have an iOS app, you will need to [enable IDFA collection][13] in Braze's SDK.
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to AppsFlyer. For most setups, this code should be included alongside all calls to `AppsFlyerLib.setAppsFlyerKey`, typically in an activity's `onCreate` callback.
@@ -62,7 +61,7 @@ Braze maps AppsFlyer's data fields to segment filters in the following way
 
 ### Step 4: Confirming the Integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from AppsFlyer, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ## Facebook, Snapchat, and Twitter Attribution Data
 

@@ -24,7 +24,7 @@ An API request with any fields in the Attributes Object will create or update an
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
+  // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
   // See note below regarding anonymous push token imports
   "push_token_import" : (optional, boolean),

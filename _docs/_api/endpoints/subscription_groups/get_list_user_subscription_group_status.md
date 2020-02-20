@@ -45,6 +45,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 Generally, either `external_id` or `email` is required.
 
+
 For SMS subscription groups, either `external_id` or `phone` is required.
 
 Your request must include `phone` or `email` value, _but not both_.
@@ -52,10 +53,27 @@ Your request must include `phone` or `email` value, _but not both_.
 ### Example Request
 
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&email=example%2B1%40braze.com
 ```
+
+### Example Request for multiple users
+
+```
+https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&&external_id[]=1&external_id[]=2
+```
+
 ### Response
 
 All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
+
+```
+{
+  "status": {
+    "1": "Unsubscribed",
+    "2": "Subscribed"
+  },
+  "message": "success"
+}
+```
 
 {% endapi %}
