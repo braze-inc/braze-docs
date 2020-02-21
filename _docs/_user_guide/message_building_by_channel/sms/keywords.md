@@ -29,9 +29,35 @@ Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync 
 
 Braze  automatically creates a user when a user with a new phone number responds with a START or STOP (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
 
-# Custom Keyword Handling
+~~~~~~~~~ Info Dump ~~~~~~~~~
 
+## Two-Way Messaging
 
+Managing Custom Keyword Responses
+
+| Custom Keyword Message Handling |
+| ---- | --- | -- |
+| Custom Event Fired | `sms_response_subscriptionName_custom` | Response examples => __Status, Coupon, News__ |
+| Included Event Properties | `message_body`<br>`to_number`<br> `from_number`<br> `sms_messsage_id` | __Message Body__ => User response returned as lower-case |
+
+- An incoming SMS response with a keyword other than default opt-in/out will fire a custom event with event properties to Braze
+- Use this custom event with property “message_body” to trigger an SMS campaign from Braze
+- Make sure that the “message_body” value is lowercase
+
+- make sure the below information gets integrated into the docs - 
+
+{% details What keywords does Braze automatically process? %}
+
+Braze will only automatically process the following _exact, single-word, case-insensitive_ messages:
+
+- `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
+- `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
+- `HELP`, `INFO`: Triggers custom "help" message built during onboarding process.
+
+[Learn more about Keyword Processing and Management here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
+{% enddetails %}
+
+~~~~~~~~~ End Info Dump ~~~~~~~~~
 
 [oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-states
 [ualink]: {{ site.baseurl }}/api/objects_filters/user_alias_object/

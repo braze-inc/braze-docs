@@ -8,21 +8,25 @@ guide_top_text: "SMS (Short Messaging Service) is a more direct way to reach you
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
+- name: "About SMS"
+  link: /docs/user_guide/message_building_by_channel/sms/about_sms/
+  fa_icon: fas fa-paint-brush
+- name: "SMS Subscription Group"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+  fa_icon: fas fa-table
 - name: "Create an SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
-  fa_icon: fas fa-paint-brush
-- name: "Compliance & Regulations"
-  link: /docs/user_guide/message_building_by_channel/sms/compliance/
-  fa_icon: fas fa-gavel
+  fa_icon: fas fa-table
 - name: "Keyword Processing & Management"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
   fa_icon: fas fa-key
 - name: "User Phone Numbers"
-  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/
+  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
+- name: "Sending Phone Numbers"
+  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
+- name: "Understanding SMS Stats"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_stats/
   fa_icon: fas fa-phone
-- name: "Short & Long Codes"
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
-  fa_icon: fas fa-table
 - name: "FAQs"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment

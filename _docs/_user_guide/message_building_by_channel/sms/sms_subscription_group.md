@@ -63,3 +63,33 @@ Make sure you define parameters or elements that users might have to adjust from
 ## Topic 2 Regarding this Concept
 
 In the event that a second topic is added, be sure to distinguish it from the first concept immediately. Then, go into explaining the concept. You should feel free to add diagrams!
+
+~~~~~~~~~ Info Dump for DW ~~~~~~~~~
+
+## Default Opt-In/ Opt-Out
+
+|| Keyword | Change |
+|-|-------|---|
+|Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |
+|Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer. |
+
+- Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses.
+- When user responds with default keyword, Braze will automatically update the subscription status for all user profiles with that phone number.
+
+## Double Opt-In Process
+
+You might find that some users who might send a text to your short/long code, won't yet be opted-in to your SMS Subscription Group. Regulations require that you obtain a user’s explicit consent before you send them any promotional or informational messaging. We highly recommend implementing a Double-Opt In to ensure compliance. 
+
+We suggest setting a triggered entry in Canvas whenever there's an incoming event `sms_response_subscriptionGroupName_custom`.
+
+### Step 1: Create Webhook
+
+We first suggest to create a webhook campaign that makes a request to the subscription/status/set endpoint to subscribe the user to that SMS subscription group.
+
+### Step 2: Send a SMS campaign
+Next, we recommend sending an SMS campaign a few second later, with clear call-to-actions along the lines of:
+
+[IMAGE]
+
+~~~~~~~~~ End Info Dump ~~~~~~~~~
+

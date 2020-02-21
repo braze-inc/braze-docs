@@ -1,6 +1,6 @@
 ---
 nav_title: "SMS Statistics"
-page_order: 4
+page_order: 5
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
 page_type: reference
 tool:

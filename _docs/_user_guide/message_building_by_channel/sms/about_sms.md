@@ -12,6 +12,7 @@ tool:
 
 # What are SMS Messages?
 
+~~~~~~~~~ Info Dump ~~~~~~~~~
 > Brief Summary
 
 ![picture or gif]
@@ -21,6 +22,22 @@ Is it worth it to include customer examples in the customer example library?
 ## Potential Use Cases
 
 Reach out to marketing for this.
+
+- Make sure this content gets addressed below -
+{% details What laws do I need to follow to send SMS with Braze? %}
+
+We recommend you use your best judgment, but we, as well as our sending partners, have checks in place that prevent most SMS abuses. There are a few general rules you should follow:
+
+- Do not SPAM.
+- Offer your recipients a way to opt-out and get help via SMS.
+- Send at a healthy cadence - do not overwhelm your customers.
+- Do not send abusive or inappropriate content (for example, sending marketing content to someone who only wants transactional content).
+
+You can see our [Compliance Best Practices here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/compliance/).
+
+{% enddetails %}
+
+~~~~~~~~~ End Info Dump ~~~~~~~~~
 
 ## SMS Laws, Regulations, & Abuse Prevention
 
