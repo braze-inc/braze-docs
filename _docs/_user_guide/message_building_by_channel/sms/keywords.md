@@ -1,6 +1,6 @@
 ---
 nav_title: Keyword Processing & Management
-page_order: 2
+page_order: 3
 description: "This reference article covers how Braze proccesses certain keywords for SMS."
 page_type: reference
 channel: SMS
@@ -28,6 +28,10 @@ Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync 
 ## New users
 
 Braze  automatically creates a user when a user with a new phone number responds with a START or STOP (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
+
+# Custom Keyword Handling
+
+
 
 [oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-states
 [ualink]: {{ site.baseurl }}/api/objects_filters/user_alias_object/

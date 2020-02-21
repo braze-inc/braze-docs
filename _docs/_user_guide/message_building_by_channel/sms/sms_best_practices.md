@@ -1,5 +1,5 @@
 ---
-nav_title: SMS Best Practices
+nav_title: "Best Practices"
 page_order: 5
 description: "This reference article covers best practices surrounding SMS campaigns."
 page_type: reference

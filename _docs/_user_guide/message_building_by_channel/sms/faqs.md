@@ -1,6 +1,6 @@
 ---
 nav_title: SMS FAQs
-page_order: 20
+page_order: 6
 description: "This reference article addreses some of the most frequently asked questions that arise when setting up SMS campaigns."
 page_type: reference
 channel: SMS

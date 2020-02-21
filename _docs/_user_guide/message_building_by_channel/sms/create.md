@@ -1,6 +1,6 @@
 ---
 nav_title: Create an SMS
-page_order: 0
+page_order: 2
 description: "This reference article covers the steps involved in creating and sendign a SMS capmaign."
 page_type: reference
 channel: SMS
