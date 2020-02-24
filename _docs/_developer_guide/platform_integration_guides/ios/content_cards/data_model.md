@@ -111,6 +111,8 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `logContentCardDismissed` | Manually log a dismissal to Braze for a particular card.|
 | `isControlCard` | Determine if a card is the Control card for an A/B test. |
 
+For more details, view the full [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
+
 ## Log Content Cards Display
 
 When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
