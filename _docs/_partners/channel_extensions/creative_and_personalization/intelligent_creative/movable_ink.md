@@ -1,6 +1,6 @@
 ---
 nav_title: Movable Ink
-permalink: "/movable_ink/"
+alias: "/movable_ink/"
 ---
 # Movable Ink
 
