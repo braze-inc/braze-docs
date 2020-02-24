@@ -21,6 +21,20 @@ This method will toggle the visility of the Content Cards. By default, if no arg
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
+### Control Group 
+
+If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
+
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card _would have been seen_.
+
+Here is an example of how to determine if a Content Card is a "Control" card:
+
+```javascript
+function isControlCard(card){
+    return card instanceof appboy.ab.ControlCard;
+}
+```
+
 ## Other Methods to Note
 
 |Method | Description | Link|
