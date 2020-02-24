@@ -90,5 +90,5 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/archive-content-block.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{ site.baseurl }}/api/endpoints/email_templates/#content-blocks
+[5]: {{ site.baseurl }}/api/endpoints/templates/
 [6]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/
