@@ -31,9 +31,11 @@ To implement this example, enter 7 days in the time window at the top of the pan
 Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select “Last Used App.” The time window automatically matches the one selected above. Any other filters you select will do the same. Note that not all filters available in Braze segments will be available here.
 
 ## Step 3: Choose the Users you Want to Keep from Churning
-Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if we narrow down the group of users we want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, we might want to retain users who first used the app within the last 6 months or have ever made a purchase.
+Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if we narrow down the group of users we want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, we might want to retain users who first used the app more than a month ago or have ever made a purchase.
 
-Note that for the beta period of Predictive Churn, the model will only score up to the first 5 million users that fit the above criteria.
+{% alert note %}
+During the beta of Predictive Churn, the Retainable Users audience cannot exceed 5 million users.
+{% endalert %}
 
 For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters cannot exceed 30 days - the # of days of the window specified in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
 
@@ -55,8 +57,11 @@ The model will automatically be rebuilt (i.e. retrained) on fresh data every two
 ## Lift Quality
 In order to measure the accuracy of your model, the Lift Quality metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). Lift Quality measures how much better than random guessing the model is on the test set. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of future knowledge of who will churn.
 
+The Prediction will be trained again every two weeks to keep it updated on the most recent user behavior patterns. This is also when the Lift Quality metric will be updated. The last time the model was created is displayed at thet of the Prediction's analytics page.
+
 {% alert note %}
-Random guessing: if 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. If the model were to only do that well, the lift would be 0%. If the model, on the other hand, allowed you to identify 20% of the users as churned and correctly identify all the “true” churners, it would be perfect. That would correspond to a lift quality of 100%. In reality, models are usually somewhere in between. For more detail, see [here](https://humboldt-wi.github.io/blog/research/theses/uplift_modeling_blogpost/).
+If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. If the model were to only do that well, the lift would be 0%. If the model, on the other hand, allowed you to identify 20% of the users as churned and correctly identify all the “true” churners, it would be perfect. That would correspond to a lift quality of 100%. In reality, models are usually somewhere in between. For more detail, see [here](https://humboldt-wi.github.io/blog/research/theses/uplift_modeling_blogpost/).
+{% endalert %}
 
 Here’s what we recommend for various different ranges of Lift Quality:
 
@@ -69,7 +74,7 @@ Here’s what we recommend for various different ranges of Lift Quality:
 | 0 - 30 | We recommend you change your audience definitions and try again. |
 
 ## Churn Score and Category
-The first 5 million users in the Retainable Users audience will be assigned a Churn Score between 0.0 and 1.0. Users with Churn Scores between 0.0 and 0.5 will also be placed in the Low Churn Risk category. Users with scores between 0.5 and 0.75, and 0.75 and 1.0 will be placed in the Medium and High Churn Risk categories, respectively. This prediction and the corresponding categories will be updated according to the schedule you chose in the model creation page. 
+Users in the Retainable Users audience will be assigned a Churn Score between 0.0 and 1.0. Users with Churn Scores between 0.0 and 0.5 will also be placed in the Low Churn Risk category. Users with scores between 0.5 and 0.75, and 0.75 and 1.0 will be placed in the Medium and High Churn Risk categories, respectively. This prediction and the corresponding categories will be updated according to the schedule you chose in the model creation page. 
 
 You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
