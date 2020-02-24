@@ -65,7 +65,7 @@ More resources on RegEx:
 Date attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
 {% alert warning %}
-As of March 2, 2020, specific filters have been updated to be more intuitive. Please see the explanation below of the new filter behavior. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+Beginning March 10, 2020, specific filters have been updated to be more intuitive. Please see the explanation below of the new filter behavior. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
 {% endalert %}
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
@@ -89,12 +89,12 @@ The last date a custom event or purchase event occurred is automatically recorde
 
 {% alert important %}
 
-As of March 2, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+Beginning March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
 <br> <br>
 "Day of Recurring Event"
 - Change: Current date is now counted in this segmentation filter.
 - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", __if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
-- For example, if on March 2, 2020, you selected the date of the attribute to be `LESS THAN ... March 2, 2020`, attributes will be considered for the days up to, and __including__ March 2, 2020. 
+- For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and __including__ March 10, 2020. 
 
 <br> 
 
@@ -153,13 +153,13 @@ If you would like to segment on the number of times a specific purchase has occu
 
 {% alert important %}
 
-As of March 2, 2020, the behavior of "Day of Recurring Event" has changed, now including the current date in the filter.
+Beginning March 10, 2020, the behavior of "Day of Recurring Event" has changed, now including the current date in the filter.
 <br><br>
 Explanation:
 When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event". __If you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
 <br> 
 <br> 
-For example, if on March 2, 2020, you selected the date of the attribute to be `LESS THAN ... March 2, 2020`, attributes will be considered for the days up to, and __including__ March 2, 2020. 
+For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and __including__ March 10, 2020. 
 {% endalert %}
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
