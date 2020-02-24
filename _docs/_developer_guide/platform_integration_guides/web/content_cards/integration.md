@@ -30,7 +30,7 @@ If you use a custom integration for Content Cards, your integration needs to log
 Here is an example of how to determine if a Content Card is a "Control" card:
 
 ```javascript
-function isControlCard(card){
+function isControlCard(card) {
     return card instanceof appboy.ab.ControlCard;
 }
 ```
