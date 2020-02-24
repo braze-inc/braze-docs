@@ -37,7 +37,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% endalert %}
 
 {% raw %}
-### Using Basic Authentication
+## Using Basic Authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.
 
@@ -55,6 +55,27 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 
 >  If you delete a credential, keep in mind that any Connected Content calls trying to use it will be aborted.
 
+{% endraw %}
+
+## Using Token Authentication 
+
+When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of. 
+
+{% raw %}
+```
+{% assign campaign_name="New Year Sale" %}
+{% connected_content
+     https://your_API_link_here/
+     :method post
+     :headers {
+       "X-App-Id": "YOUR-APP-ID",
+       "X-App-Token": "YOUR-APP-TOKEN"
+ 	}
+     :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
+     :content_type application/json
+     :save publication
+%}
+```
 {% endraw %}
 
 ## Connected Content IP Whitelisting
