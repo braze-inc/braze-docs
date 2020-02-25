@@ -3,9 +3,7 @@ nav_title: Common Error Codes
 page_order: 0
 ---
 
-Questions to ask, who are "we" and "People", the clients? Our users? Their Users? 
-
-# Common Push Related Error Codes
+# Common Push Related Error Messages
 
 {% tabs %}
 {% tab Android %} 
@@ -33,43 +31,24 @@ This can also happen if multiple registration is happening and a second registra
 ### Push Bounced: Error sending to bad push token
 
 This can happen for several reasons:
-- The push token isn’t being sent to us correctly in [[Appboy sharedInstance] registerPushToken:].
-	- Look at the token in the Message Activity Log 
-	- It should generally look like `6e407a9be8d07f0cdeb9e724733a89445f57a89ec890d63867c482a483506fa6`
-	- i.e. a string about that length of letters and numbers
-	- If it doesn’t, look at code for sending us the push token for errors
-- Provisioning environment mismatch
+- __The push token isn’t being sent to us correctly in [[Appboy sharedInstance] registerPushToken:]__
+	- Check the token in the Message Activity Log. It should generally look like a long string of letters and numbers. (e.g `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`)
+	- If it doesn’t, check the code involved in sending Braze push token errors.<br><br>
+- __Provisioning environment mismatch__
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
-	- Note:  Appboy only supports universal certificates for production environments and testing push on their development environments with a universal certificate will not work. 
-	- Look for folks reporting sends bouncing in prod but not development
-Bad provisioning profile/mismatch
-	- If your certificate just doesn’t match the one that was used to get the token, this can also happen
-	- If this is suspected
-		- Ensure that the push certificate being used to send push from the Appboy dashboard and the provisioning profile are configured correctly.
-		- If all else fails, a nuclear option, recreating the APNS cert and then recreating the provisioning profile once the APNS certificate is configured to the app id can sometimes solve some more opaque problems.
+	- Note:  Braze only supports universal certificates for production environments. Testing Push on development environments with a universal certificate will not work. 
+	- This reporting sends bouncing in production but not development.<br><br>
+- __Bad provisioning profile/mismatch__
+	- If your certificate doesn’t match the one that was used to get the token, this error can happen.
+	- If this is suspected, next steps are...
+		- Ensure that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
+		- If this does not work, consider recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the app id. This can sometimes solve some more opaque problems.
 
 ### Push Bounced: APNS Feedback Service Removed
 
-This generally happens when someone uninstalls. Appboy query’s the APNS Feedback Service each night to get a list of invalid tokens. See Apple’s Docs and Description on the Feedback Service.
+This generally happens when someone uninstalls. Braze query’s the APNS Feedback Service each night to get a list of invalid tokens. See [Apple’s Docs and Description on the Feedback Service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
 
-If push isn't delivered, check if it bounced by looking inthe de
-
-| Status Code | Error String | Description |
-| ----------- | ------------ | ----------- |
-| 403 | `BadCertificate` | The certificate was bad.|
-| 403 | `BadCertificateEnvironment` | The client certificate was for the wrong environment. |
-| 403 | `ExpiredProviderToken` | The provider token is stale and a new token should be generated. |
-| 403 | `Forbidden` | The specified action is not allowed. |
-| 403 | `InvalidProviderToken` | The provider token is not valid or the token signature could not be verified. |
-| 403 | `MissingProviderToken` | No provider certificate was used to connect to APNs and Authorization header was missing or no provider token was specified. |
-| 404 | `BadPath` | The request contained a bad `:path` value. |
-| 405 | `MethodNotAllowed` | The specified `:method` was not `POST`. |
-| 410 | `Unregistered` | The device token is inactive for the specified topic.<br><br> Expected HTTP/2 status code is `410`; see [Table 8-4](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html). |
-
-For a complete list of status codes. Check out the [Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
 
 {% endtab %}
 {% endtabs %}
-
-[1]: https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html
 

@@ -11,6 +11,10 @@ tool:
   - Dashboard
   - Campaigns
 ---
+{% alert important %}
+Push Primer campaigns require backend set up from your developers. Check out the neccesary Push Primer Integrations [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_primer/).
+{% endalert %}
+
 
 # Create a Push Primer Campaign
 
@@ -18,7 +22,7 @@ tool:
 
 ![push_primer_example_3][push_primer5]{: style="float:right;max-width:30%;margin-left:15px;"} 
 
-Push Primer campaigns are useful because they address the issue of the dreaded iOS notification opt-in prompt that users receive upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt-out of push notifications. This prompt is only ever shown once, and unfortunately, once those notifications are turned off, there's very little we can do to get users to turn them back on. This becomes a problem when we want to use our Push Channel for marketing, but not many users are push enabled. 
+Push Primer campaigns are useful because they address the issue of the dreaded iOS notification opt-in prompt that users receive upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt-out of push notifications. This prompt is only ever shown once, and unfortunately, once those notifications are turned off, there's very little we can do to get users to turn them back on. 
 
 To address this, Braze offers steps on how to set up Push Primer Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message as well as offer re-deliverability, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers should provide users valuable information on why notifications for your application are important.
 
@@ -65,7 +69,7 @@ If you would like even further customization options, you can also set the messa
 
 ### Button Set-Up
 
-To add buttons to your in-app message, you will find a Button1 textbox and Button2 textbox underneath the text body prompt. Here, you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Not Now" as starter buttons, but there are many different button prompts you could assign. 
+To add buttons to your in-app message, you will find a Button 1 textbox and Button 2 textbox underneath the text body prompt. Here, you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Not Now" as starter buttons, but there are many different button prompts you could assign. 
 
 ![push_primer][push_primer6]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -79,8 +83,7 @@ Documentation for this can be found here: [Push Primer Integrations][integration
 
 ## Step 5: Selecting the Delivery Method
 
-To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action.
-Your developers will set up a custom event that you can choose to trigger off of for your Push Primer Campaign. To figure out how your company references this custom event, check with your developers. This customer event will check if a user has already been provided a native push prompt, and if not, will trigger the push primer in-app message. 
+To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer Campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward you allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, will trigger the push primer in-app message. 
 
 ## Step 6: Targeting Users
 
