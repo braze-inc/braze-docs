@@ -1,5 +1,5 @@
 ---
-nav_title: Common Error Codes
+nav_title: Common Error Messages
 page_order: 0
 ---
 
