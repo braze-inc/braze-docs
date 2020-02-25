@@ -4,7 +4,7 @@ alias: "/movable_ink/"
 ---
 # Movable Ink
 
-> [Moveable Ink][1] is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers. The Movable Ink Platform provides valuable customization options that can easily be inserted into your campaigns. 
+> [Movable Ink][1] is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers. The Movable Ink Platform provides valuable customization options that can easily be inserted into your campaigns. 
 
 Expand Braze's creative capabilities by leveraging Intelligent Creative features like polling, countdown timer, and scratch off with Movable Ink. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
@@ -38,7 +38,7 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 - Dynamically personalize images for email, push, or rich notifications based on last known behavior.<br>
 	For Example: 
 	- Using a Rich Push Message to dynamically create a schedule of events by pulling data from API. 
-	- Using the Countdown Timer feature to notify users when a big sale is approaching (e.g Black Friday, Valentines Day, Holiday Deals, etc.)
+	- Using the Countdown Timer feature to notify users when a big sale is approaching (e.g Black Friday, Valentine's Day, Holiday Deals, etc.)
 	- Use the Scratch Off feature as a fun and interactive way to disburse Promo Codes.
 
 ## Implementation Process
@@ -97,13 +97,13 @@ To obtain the source URL, you must have set up the content in the Movable Ink Da
 	- __iOS Push__: Paste URL in __Rich Notification Media__ link field, and directly below, denote the file format you are using.
 2. In order to make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
-#### In-App and Content Card Messages
+#### In-App Messages and Content Cards
 
 1. In Braze’s platform, paste the URL in the __Rich Notification Media__ field.
-2. __Provide a Unique URL to help Prevent Caching.__ To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it's working with the "Test" tab on the right of the Compose tab - this will evaluate the code and show a preview.
-3. __Re-Evaluate Segment Membership__. Enable the `Re-evaluate Segment membership` option located on the "Target Users" step of a campaign. If this is option is not available, reach out to your Customer Success Manager. This option will tell the mobile SDKs to re-request the campaign each time an In-App Message is triggered. It's needed because ordinarily the Liquid code is evaluated just once at send-time, and we need a unique URL every time the message is shown.
+2. __Provide a Unique URL to help Prevent Caching.__ To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it's working with the "Test" tab on the right of the Compose tab - this will evaluate the code and show a preview.
+3. __Re-Evaluate Segment Membership__. Enable the `Re-evaluate Segment membership` option located on the "Target Users" step of a campaign. If this is option is not available, reach out to your Customer Success Manager. This option will instruct Braze SDKs to re-request the campaign each time an In-App Message is triggered. It's needed because ordinarily the Liquid code is evaluated just once at send-time, and we need a unique URL every time the message is shown.
 
-## Trouble Shooting
+## Troubleshooting
 __Dynamic Images not showing correctly? What channel are you experiencing difficulties with?__<br>
 &#45; Push: Make sure that you have empty logic before your Movable Ink image URL: {% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}<br>
 &#45; In-App Messages and Content Cards: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
