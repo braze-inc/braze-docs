@@ -15,9 +15,9 @@ This Predictive Churn feature is currently in Beta. Please reach out to your Bra
 Churn Prediction allows you to create custom machine-learning models of user churn, and use them to predict and respond to predicted future churn before it happens. You can also tailor these models to specific audiences within your user base. Predictive Churn will generate new predictions on a regular schedule as well as keep its understanding of actual user churn updated automatically.
 
 ## Step 1: Create a New Prediction
-On the left navigation bar of the Braze dashboard, choose the Predictions page.  A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them.
+On the left navigation bar of the Braze dashboard, choose the Predictions page.  A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
-Choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
+To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
 
 On the Edit page, give your new Prediction a unique name.
 
@@ -74,9 +74,24 @@ Here’s what we recommend for various different ranges of Lift Quality:
 | 0 - 30 | We recommend you change your audience definitions and try again. |
 
 ## Churn Score and Category
-Users in the Retainable Users audience will be assigned a Churn Score between 0.0 and 1.0. Users with Churn Scores between 0.0 and 0.5 will also be placed in the Low Churn Risk category. Users with scores between 0.5 and 0.75, and 0.75 and 1.0 will be placed in the Medium and High Churn Risk categories, respectively. This prediction and the corresponding categories will be updated according to the schedule you chose in the model creation page. 
 
-You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+Users in the Retainable Users audience will be assigned a Churn Score between 0.0 and 1.0. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0.0 and 0.5 will be placed in the Low Churn Risk category. Users with scores between 0.5 and 0.75, and 0.75 and 1.0 will be placed in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
+
+Below the chart of Churn Scores, two sentences will help you decide who to target in your Retainable Users population, and what the risks are. Based on the data used during creation of the Prediction, these two sentences and corresponding inputs will help you determine what accuracy (true positive rate) and number of false positives or false alarms to expect based on the number of users you target for messaging.
+
+The first sentence reads:
+
+Target the top X% of Retainable Users (Y users) that are most likely to churn according to the model.
+
+This allows you to input the X percentage of the audience that's likeliest to churn in the box. Once you set X, Y will also tell you how many actual users this is estimated to represent. Based on this percentage, the second sentence, "This corresponds to users with a Churn score greater than Z" tells you what the threshold or cutoff would be in order to target the top X percentage. For example, to target the top X = 15% of users, you, for example, might need to target the users with churns cores greater than Z = 0.8.
+
+The third sentence tells you about how accurate this size of an audience will be according to historic data and how many errors its likely to make. The first half gives you the estimate in percentage (and estimated actual users) of the true churners you are likely to capture by messaging X percent of the audience (specified in the box in the first sentence). It also tells you that along with this number of correctly identified users, some number of users will incorrectly be identified as churners. This is the number of so-called 
+"false positives" or "false alarms."
+
+### Target Users
+
+Once you've decided what threshold to use for your Churn Score, you can use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
