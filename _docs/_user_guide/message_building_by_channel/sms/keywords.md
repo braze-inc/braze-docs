@@ -8,12 +8,25 @@ channel: SMS
 
 # Keyword Processing & Management
 
-> Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.basurl }}/) for the phone number on all inbound requests.
+## Braze automatic keywords
+
+Braze will only automatically process the following _exact, single-word, case-insensitive_ messages:
+
+- `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
+- `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
+- `HELP`, `INFO`: Triggers custom "help" message built during onboarding process.
+
+## Default Opt-In/ Opt-Out
+
+> Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/) for the phone number on all inbound requests.
 
 | Type | Keyword | Change |
 |-|-------|---|
 |Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |
 |Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer. |
+
+- Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses.
+- When user responds with default keyword, Braze will automatically update the subscription status for all user profiles with that phone number.
 
 {% alert warning %}
 Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
@@ -27,9 +40,7 @@ Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync 
 
 ## New users
 
-Braze  automatically creates a user when a user with a new phone number responds with a START or STOP (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
-
-~~~~~~~~~ Info Dump ~~~~~~~~~
+Braze  automatically creates a user when a user with a new phone number responds with a `START` or `STOP` (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
 
 ## Two-Way Messaging
 
@@ -46,18 +57,20 @@ Managing Custom Keyword Responses
 
 - make sure the below information gets integrated into the docs - 
 
-{% details What keywords does Braze automatically process? %}
+## Double Opt-In Process
 
-Braze will only automatically process the following _exact, single-word, case-insensitive_ messages:
+You might find that some users who might send a text to your short/long code, won't yet be opted-in to your SMS Subscription Group. Regulations require that you obtain a user’s explicit consent before you send them any promotional or informational messaging. We highly recommend implementing a Double-Opt In to ensure compliance. 
 
-- `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
-- `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
-- `HELP`, `INFO`: Triggers custom "help" message built during onboarding process.
+We suggest setting a triggered entry in Canvas whenever there's an incoming event `sms_response_subscriptionGroupName_custom`.
 
-[Learn more about Keyword Processing and Management here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
-{% enddetails %}
+### Step 1: Create Webhook
 
-~~~~~~~~~ End Info Dump ~~~~~~~~~
+We first suggest to create a webhook campaign that makes a request to the subscription/status/set endpoint to subscribe the user to that SMS subscription group.
+
+### Step 2: Send a SMS campaign
+Next, we recommend sending an SMS campaign a few second later, with clear call-to-actions along the lines of:
+
+[IMAGE]
 
 [oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-states
 [ualink]: {{ site.baseurl }}/api/objects_filters/user_alias_object/
