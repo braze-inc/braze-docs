@@ -1,6 +1,8 @@
 ---
-nav_title: Movable Ink
+title: "Movable Ink"
 alias: "/movable_ink/"
+page_type: partner
+description: "Movable Ink is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers."
 ---
 # Movable Ink
 
@@ -15,7 +17,7 @@ Expand Braze's creative capabilities by leveraging Intelligent Creative features
 - An active Movable Ink account.
 - Data Source connected to Movable Ink.
     - Either CSV, Website Import or API.
-    - Note: Ensure that you are passing data with a unifying identifier between Movable Ink and Braze. This should be either external_id or User ID.
+    - Note: Ensure that you are passing data with a unifying identifier between Movable Ink and Braze (e.g external_id)
 
 Intelligent Creative has many offerings that Braze users can take advantage of. Below is a list of what is supported. 
 
