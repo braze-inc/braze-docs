@@ -32,7 +32,7 @@ mParticle's documentation is available [here](http://docs.mparticle.com/integrat
 
 You can export the following data from Braze to mParticle:
 
-| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
+| Event Name                           | Feed Type              | Description                                                                               | Currents Properties
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Push Notification Send               | Platform-specific Feed | A push notification was successfully sent to a User.                                      | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 | Push Notification Open               | Platform-specific Feed | User opened a push notification.                                                          | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |

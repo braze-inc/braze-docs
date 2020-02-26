@@ -13,7 +13,7 @@ The Intelligent Channel computes the engagement rate for each user for each of t
 
 For Braze to determine which channel is "best", there needs to be adequate data. This means that a user must have received at least three (3) or more messages on at least two (2) of the three (3) available channels. The messages do not necessarily need to have been opened.
 
-So, if a user only has data for one (1) channel, or less than three (3) messages received on two (2) or three (3) channels, that user will then fall under the "Not Enough Data" option of this filter. This will allow you to choose to use whichever messaging channel you wish for the users that do not have a "Intelligent Channel" reliably calculated.
+So, if a user only has data for one (1) channel, or less than three (3) messages received on two (2) or three (3) channels, that user will then fall under the "Not Enough Data" option of this filter. This will allow you to choose to use whichever messaging channel you wish for the users that do not have an "Intelligent Channel" reliably calculated.
 
 For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Intelligent Channel" filter as "Mobile" and use __OR__ to add a second "Intelligent Channel" filter set to "Not Enough Data". This way users who prefer push will receive one as well as users for whom there isn't enough data to know. A separate campaign with the Most Engaged filter set to "Email" could address users who prefer email.
 
@@ -29,7 +29,7 @@ Because some users will have low numbers of messages received, it is not unusual
 
 ### Unreachable Channels
 
-When the user has sufficient data for a ranking to be determined, but becomes unreachable on their "Intelligent Channel", the user will "fall out" and not receive any messages. Users who are unreachable on specific channels should be targeted separately.
+When the user has sufficient data for a ranking to be determined but becomes unreachable on their "Intelligent Channel", the user will "fall out" and not receive any messages. Users who are unreachable on specific channels should be targeted separately.
 
 ### Audience Sizing
 

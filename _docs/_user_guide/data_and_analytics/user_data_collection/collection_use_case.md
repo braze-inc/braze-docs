@@ -26,7 +26,7 @@ The above actions could then be tagged as the following Custom Events:
 
 After implementing the events, you can now run the following campaigns:
 
-1. Message users who Began Registration, but didn't Completed Registration within a certain time frame.
+1. Message users who Began Registration, but didn't Complete Registration within a certain time frame.
 2. Send congratulation messages to users who complete registration.
 3. Send apologies and promotional credit to users who had unsuccessful taxi hails, that weren't followed by a successful taxi hail within a certain amount of time.
 4. Send promotions to power users with lots of Successful Taxi Hails to thank them for their loyalty.
@@ -51,7 +51,7 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
 [13]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

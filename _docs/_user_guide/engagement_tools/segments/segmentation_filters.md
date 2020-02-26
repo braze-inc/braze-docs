@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month, but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = more than 24 hours ago <br><br>Timezone:<br>Dependent on the timezone sent to Braze from the client's SDK/API requestDate attributes. Without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone.)
+    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = more than 24 hours ago <br><br>Timezone:<br>Dependent on the timezone sent to Braze from the client's SDK/API requestDate attributes. Without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone.)
     tags:
       - Custom Data
   - name: First Did Custom Event
@@ -390,7 +390,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Random Bucket Number
-    description: Segments your users by a randomly assigned number (0 to 9999 inclusive). Can enable the creation of uniformly distributed segments of truly random users for A/B and multivariate testing.
+    description: Segments your users by a randomly assigned number (0 to 9999 inclusive). It can enable the creation of uniformly distributed segments of truly random users for A/B and multivariate testing.
     tags:
       - User Attributes
   - name: Update/Imported from CSV

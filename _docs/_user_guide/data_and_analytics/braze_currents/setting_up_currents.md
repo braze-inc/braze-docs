@@ -12,7 +12,7 @@ tool: currents
 > This page outlines and describes the generic process for integrating and configuring Braze Currents.
 
 {% alert important %}
-Currents is included with certain Braze packages. Please contact your Braze representative if you have any questions or want to gain access.
+Currents are included with certain Braze packages. Please contact your Braze representative if you have any questions or want to gain access.
 {% endalert %}
 
 ## Requirements
@@ -21,7 +21,7 @@ Using Currents with any of our partners requires the same basic parameters and c
 
 Each partner requires that Braze has permission to write and send data files to them, and Braze asks for the location they should write those files to, specifically bucket names or keys.
 
-The following requirements are the basic, minimum requirements to integrate with most of our partners. Some partners will require additional parameters, but those will be listed on [those partners pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/) along with any nuances associate with these basic requirements.
+The following requirements are the basic, minimum requirements to integrate with most of our partners. Some partners will require additional parameters, but those will be listed on [those partners pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/) along with any nuances associated with these basic requirements.
 
 | Requirement | Origin | Access | Description
 |---|---|---|---|

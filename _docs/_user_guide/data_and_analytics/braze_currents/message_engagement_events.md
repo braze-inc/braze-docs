@@ -15,7 +15,7 @@ tool: currents
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
 {% alert important %}
-Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
 {% endalert %}
 
 {% api %}
@@ -321,7 +321,7 @@ _Update noted in August 2019._
 ## Email Bounces Events
 
 {% apitags %}
-Email, Engagement, Bounces
+Email, Engagement, Bounce
 {% endapitags %}
 
 This event accounts for both Bounces and Soft Bounces.
@@ -454,7 +454,7 @@ Subscription, Engagement
 Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
 
 {% alert important %}
-Subscription groups are only available for the email and SMS channels at this time.
+Subscription groups are only available for email and SMS channels at this time.
 {% endalert %}
 
 ```json
@@ -702,7 +702,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 ## Content Card Dismissal Events
 
 {% apitags %}
-Content Cards, Engagement, Dismissals
+Content Cards, Engagement
 {% endapitags %}
 
 Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
@@ -1002,7 +1002,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 Canvas, Engagement, Conversion
 {% endapitags %}
 
-Data accumulates when a user converts on a  Canvas. You can use this data	to track conversions on Canvas Steps.
+Data accumulates when a user converts on a  Canvas. You can use this data to track conversions on Canvas Steps.
 
 {% alert important %}
 Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.

@@ -84,7 +84,7 @@ For example, to build a segment that targets users with a date attribute between
 | Check if the date attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 
 {% alert important %}
-When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+When using the "Date of Custom Attribute" filter, and then you are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
 <br> 
 <br> 
 For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
@@ -137,7 +137,7 @@ If you would like to segment on the number of times a specific purchase has occu
 {% endalert %}
 
 {% alert important %}
-When using the "Date of Custom Attribute" filter, and then are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
+When using the "Date of Custom Attribute" filter, and then you are prompted to select the "Calendar date of Custom Attribute". __If you select `IS LESS THAN`, the current date will not be counted for that segmentation filter.__
 <br> 
 <br> 
 For example, if on November 18th, 2019, you selected the date of the attribute to be `LESS THAN ... November 18, 2019`, attributes will be considered for the days up to, but __not including__ November 18, 2019. 
