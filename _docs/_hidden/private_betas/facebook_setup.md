@@ -3,8 +3,11 @@ nav_title: Facebook
 alias: /partners/facebook/
 hidden: true
 description: "This article outlines the updated integration for Facebook Audience Exports through Segments."
-
 ---
+
+{% alert note %}
+This Facebook Audience Export feature is currently in Beta. Please reach out to your Braze account manager for more information.
+{% endalert %}
 
 # Facebook
 
@@ -43,7 +46,7 @@ Once you have successfully linked your Facebook account, you should see a "Conne
 
 ![Facebook Connected][8]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-At any point in time, you will also be able to disconnected your Facebook account from Braze by simply clicking the <b>Disconnect Facebook</b> button.
+At any point in time, you will also be able to disconnec your Facebook account from Braze by simply clicking the <b>Disconnect Facebook</b> button.
 
 ### Exporting Your Users into Facebook
 
@@ -60,9 +63,9 @@ There are 4 possible user fields you can export:
   - If you would like to export the Facebook UID you will need to enable Facebook social data tracking natively through the  Braze's [iOS][10] and [Android][11] SDKs.
   - A [Facebook Application ID][12] is required if you are looking to export Facebook UIDs. After you are successfully collecting your users' Facebook UIDs through the Braze's SDKs, you will be able to select <b> Facebook UID </b> as an export field and select which Facebook Application IDs to include within the export modal.
 
-  {% alert note %}
+{% alert note %}
 You can only select one user field within a single export. If you choose more than 1 data type, Braze will create a separate custom audience for each.
-  {% endalert %}
+{% endalert %}
 
 Once you have selected the user field, click on the export button. Similar to CSV exports, you will receive an email when the segment has finished exporting into Facebook.
 
@@ -70,7 +73,7 @@ You can view the custom audience on the [Facebook Ads Manager][13].
 
 #### Lookalike Audiences
 
-Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][17]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
+Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][14]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
 
 ## Facebook Audience Export FAQ
 
@@ -91,7 +94,6 @@ Why can't I see the Custom Audience size?
 [6]: {% image_buster /assets/img/fb_activate.png %}
 [7]: {% image_buster /assets/img/fb_dialog.png %}
 [8]: {% image_buster /assets/img/fb_connected.png %}
-[9]:
 [10]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
 [11]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [12]: https://developers.facebook.com/docs/apps/#app-id
