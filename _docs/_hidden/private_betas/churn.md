@@ -10,7 +10,7 @@ This Predictive Churn feature is currently in Beta. Please reach out to your Bra
 {% endalert %}
 
 # Predictive Churn
-> Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Churn Prediction, providing an understanding and level of anticipation over future churn.
+Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Churn Prediction, providing an understanding and level of anticipation over future churn.
 
 Churn Prediction allows you to create custom machine-learning models of user churn, and use them to predict and respond to predicted future churn before it happens. You can also tailor these models to specific audiences within your user base. Predictive Churn will generate new predictions on a regular schedule as well as keep its understanding of actual user churn updated automatically.
 
@@ -81,12 +81,20 @@ Below the chart of Churn Scores, two sentences will help you decide who to targe
 
 The first sentence reads:
 
-Target the top X% of Retainable Users (Y users) that are most likely to churn according to the model.
+>Target the top X% of Retainable Users (Y users) that are most likely to churn according to the model.
 
-This allows you to input the X percentage of the audience that's likeliest to churn in the box. Once you set X, Y will also tell you how many actual users this is estimated to represent. Based on this percentage, the second sentence, "This corresponds to users with a Churn score greater than Z" tells you what the threshold or cutoff would be in order to target the top X percentage. For example, to target the top X = 15% of users, you, for example, might need to target the users with churns cores greater than Z = 0.8.
+This allows you to input the X percentage of the audience that's likeliest to churn in the box. Once you set X, Y will also tell you how many actual users this is estimated to represent. Based on this percentage, the second sentence...
 
-The third sentence tells you about how accurate this size of an audience will be according to historic data and how many errors its likely to make. The first half gives you the estimate in percentage (and estimated actual users) of the true churners you are likely to capture by messaging X percent of the audience (specified in the box in the first sentence). It also tells you that along with this number of correctly identified users, some number of users will incorrectly be identified as churners. This is the number of so-called 
-"false positives" or "false alarms."
+>This corresponds to users with a Churn score greater than Z.
+
+...tells you what the threshold or cutoff would be in order to target the top X percentage. For example, to target the top X = 15% of users, you, for example, might need to target the users with churns cores greater than Z = 0.8.
+
+>We estimate that this will include T% users that will churn (___ users) and falsely identify ___ users.
+
+The third sentence tells you about how accurate this size of an audience will be according to historic data and how many errors its likely to make. The first half gives you the estimate in percentage T (and estimated actual users) of the true churners you are likely to capture by messaging X percent of the audience (specified in the box in the first sentence). If you change either X or T, the other will be updated accordingly. 
+
+There is a trade-off: the more users you message, the more true churners you'll correctly message. But, some number of users will incorrectly be identified as churners. This is the number of so-called 
+"false positives" or "false alarms." That last half of the sentence estimates how many the Prediction will "falsely identify" given the X and T values specified.
 
 ### Target Users
 
