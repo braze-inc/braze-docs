@@ -33,15 +33,15 @@ Activate Facebook in Braze    |Braze | You have connected your Facebook account 
 
 In the Braze dashboard, go to Technology Partners and select Facebook. In the Facebook Audience Export module, click <b>Connect Facebook</b>.
 
-![Activate Facebook][6]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Activate Facebook][6]
 
 A Facebook dialog window will appear to authorize Braze to create custom audiences into your Facebook ad accounts and retrieve your associated Facebook App IDs if you plan to use the Facebook User ID when exporting your audiences (this is optional).
 
-![Facebook Dialog][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Facebook Dialog][7]
 
 Once you have successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names their associated ad account IDs listed.
 
-![Facebook Connected][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Facebook Connected][8]
 
 At any point in time, you will also be able to disconnected your Facebook account from Braze by simply clicking the <b>Disconnect Facebook</b> button.
 
@@ -68,19 +68,13 @@ Once you have selected the user field, click on the export button. Similar to CS
 
 You can view the custom audience on the [Facebook Ads Manager][13].
 
-#### Lookalike Audiences
-
-Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][17]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
-
 ## Facebook Audience Export FAQ
 
-Can I see the exact users that were successfully added to a Custom Audience?
+- Can I see the exact users that were successfully added to a Custom Audience?
+  - Facebook does **not** allow this for user privacy reasons. Learn more [here][14].
 
-- Facebook does **not** allow this for user privacy reasons. Learn more [here][14].
-
-Why can't I see the Custom Audience size?
-
-- Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting][16].
+- Why can't I see the Custom Audience size?
+  - Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting][16].
 
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
