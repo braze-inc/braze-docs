@@ -20,5 +20,6 @@ gem 'sinatra'
 gem 'jekyll_asset_pipeline'
 gem 'yui-compressor'
 group :jekyll_plugins do
-  gem 'jekyll-algolia', '~> 1.0'
+  gem 'algolia_html_extractor', git: 'https://github.com/zzhaobraze/html-extractor'
+  gem 'jekyll-algolia', '~> 1.0', git: "https://github.com/zzhaobraze/jekyll-algolia"
 end
