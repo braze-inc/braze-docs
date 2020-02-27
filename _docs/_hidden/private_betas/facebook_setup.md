@@ -46,7 +46,7 @@ Once you have successfully linked your Facebook account, you should see a "Conne
 
 ![Facebook Connected][8]
 
-At any point in time, you will also be able to disconnec your Facebook account from Braze by simply clicking the <b>Disconnect Facebook</b> button.
+At any point in time, you will also be able to disconnect your Facebook account from Braze by simply clicking the <b>Disconnect Facebook</b> button.
 
 ### Exporting Your Users into Facebook
 
@@ -71,13 +71,10 @@ Once you have selected the user field, click on the export button. Similar to CS
 
 You can view the custom audience on the [Facebook Ads Manager][13].
 
-<<<<<<< HEAD
-=======
 #### Lookalike Audiences
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][14]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
 
->>>>>>> 19f09a88c94f46677fd2ef6d3013fc06f656c38b
 ## Facebook Audience Export FAQ
 
 - Can I see the exact users that were successfully added to a Custom Audience?
