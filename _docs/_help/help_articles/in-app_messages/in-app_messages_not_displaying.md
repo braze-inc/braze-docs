@@ -57,6 +57,6 @@ Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
 [16]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
 [17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
 [18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout
-[19]: {{ site.baseurl }}developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_types/#minimum-time-interval-between-triggers
-[20]: {{ site.baseurl }}docs/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_types/#minimum-time-interval-between-triggers
-[21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#minimum-time-interval-between-triggers
+[19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+[20]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+[21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#in-app-message-delivery
