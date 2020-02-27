@@ -12,40 +12,31 @@ tool:
 
 # What are SMS Messages?
 
-~~~~~~~~~ Info Dump ~~~~~~~~~
-> Brief Summary
-
-![picture or gif]
-
-Is it worth it to include customer examples in the customer example library?
+> SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value has made SMS an effective marketing tool for businesses of all sizes. <br><br>This article discusses some common use cases as well as some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
 
 ## Potential Use Cases
 
-Reach out to marketing for this.
+| Use Case | Explanation |
+|---|---|
+| General Marketing | SMS messages are a direct, flexible and efficient way to communicate upcoming deals, favorable sales, and current or anticipated products to your customers. |
+| Reminders | SMS messages can be effective in notifying users who have set an appointment for a service. For example, sending an SMS message reminding a customer the day before a doctor's appointment will help minimize missed appointments, saving both our clients and their users time and money. |
+| Product Verification or Password Confirmation | If your application requires authentication to access it, the SMS channel could be a good way to accomplish this.|
+{: .reset-td-br-1 .reset-td-br-2}
 
-- Make sure this content gets addressed below -
-{% details What laws do I need to follow to send SMS with Braze? %}
+## SMS Laws, Regulations, & Abuse Prevention
 
-We recommend you use your best judgment, but we, as well as our sending partners, have checks in place that prevent most SMS abuses. There are a few general rules you should follow:
+Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
+
+{% alert warning %}
+This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your own legal counsel.
+{% endalert %}
+
+In general, we encourage using your best judgment when approaching SMS sending. Braze, as well as our sending partners, have checks in place that prevent most SMS abuses. There are a few general rules you should follow:
 
 - Do not SPAM.
 - Offer your recipients a way to opt-out and get help via SMS.
 - Send at a healthy cadence - do not overwhelm your customers.
 - Do not send abusive or inappropriate content (for example, sending marketing content to someone who only wants transactional content).
-
-You can see our [Compliance Best Practices here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/compliance/).
-
-{% enddetails %}
-
-~~~~~~~~~ End Info Dump ~~~~~~~~~
-
-## SMS Laws, Regulations, & Abuse Prevention
-
-> SMS is one of the most direct ways to reach your users and customers. Therefore, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. In this article, you'll be provided with some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
-
-{% alert warning %}
-This article is not intended to provide, nor may it be relied upon as providing, legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your own legal counsel.
-{% endalert %}
 
 ### Resources
 
@@ -54,7 +45,6 @@ Here are some links you might need to consult as you build up your SMS campaign:
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - Twilio's [Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - IBM's [Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
-
 
 ### Considerations for Compliance
 

@@ -26,6 +26,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 | --------- | ---------- |
 | Subscribed | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to a SMS Subscription Group in order to receive an SMS|
 | Unsubscribed | User has explicitly opt-ed out of messaging from your SMS Subscription group and the sending-phone numbers inside the Subscription Group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the Braze subscription API. Users unsubscribed from a SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the Subscription Group.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 - Use the [Subscription Group REST APIs][4] to programmatically manage users' subscription states.
 - For more details on opt-in and opt-key keyword handling, please refer to this [doc][7].
