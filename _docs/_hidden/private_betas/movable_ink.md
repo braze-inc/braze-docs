@@ -35,6 +35,7 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 || Polling | ✗ | ✔* | * After voting, will leave the app to be a mobile landing page |
 || Scratch Off | ✔* | ✔* | * On click, will leave the app for the Scratch Off experience |
 || Video | ✔* | ✔* | * Animated GIFs only, <br>For Android, Braze requires [GIF support][GIFsupport] in implementation |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Use Cases
 - Personalized monthly or end of year recaps.
