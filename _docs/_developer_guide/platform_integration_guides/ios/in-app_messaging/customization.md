@@ -61,10 +61,10 @@ In some cases (e.g., on session start), the in-app message may be triggered and 
 {% tab swift %}
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY",
-                       inApplication:application,
-                       withLaunchOptions:launchOptions,
-                       withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions: [ ABKInAppMessageControllerDelegateKey : true ])
 ```
 {% endtab %}
 {% endtabs %}
