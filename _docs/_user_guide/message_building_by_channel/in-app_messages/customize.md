@@ -248,14 +248,14 @@ To play a video in an HTML In-App Message, include the following `<video>` eleme
 
 To use a local video asset, be sure to include this file when uploading assets to your campaign.
 
-To support iOS devices, you must include the `playsinline` attribute since full screen playback is not support at this time.
+To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
 Other `<video>` options that can be used can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```
 <video class="video" autoplay muted playsinline controls>
-  <source src="YOUR_VIDEO_FILE.mp4" type="video/mp4">
-  <source src="YOUR_VIDEO_FILE.ogg" type="video/ogg">
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
   Your device does not support playing this video.
 </video>
 ```
