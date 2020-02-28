@@ -64,7 +64,7 @@ In some cases (e.g., on session start), the in-app message may be triggered and 
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,
-                 withAppboyOptions: [ ABKInAppMessageControllerDelegateKey : true ])
+                 withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : true ])
 ```
 {% endtab %}
 {% endtabs %}

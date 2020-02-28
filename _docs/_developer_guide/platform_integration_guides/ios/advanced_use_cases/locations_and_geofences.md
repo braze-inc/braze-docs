@@ -41,7 +41,7 @@ By default, geofences are enabled based on whether automatic location collection
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,
-                 withAppboyOptions: [ ABKEnableGeofencesKey : true ])
+                 withAppboyOptions:[ ABKEnableGeofencesKey : true ])
 ```
 
 {% endtab %}
@@ -118,7 +118,7 @@ Starting in iOS SDK version 3.21.3, you can disable geofences from being automat
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,
-                 withAppboyOptions: [ ABKDisableAutomaticGeofenceRequestsKey : true ])
+                 withAppboyOptions:[ ABKDisableAutomaticGeofenceRequestsKey : true ])
 ```
 
 {% endtab %}

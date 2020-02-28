@@ -30,7 +30,7 @@ Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default.
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,
-                 withAppboyOptions: [ ABKEnableAutomaticLocationCollectionKey : true ])
+                 withAppboyOptions:[ ABKEnableAutomaticLocationCollectionKey : true ])
 ```
 
 {% endtab %}

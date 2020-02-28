@@ -237,7 +237,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
 let appboyOptions: [AnyHashable: Any] = [
   ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
 ]
-Appboy.start(withApiKey: "YOUR_APPBOY_API_KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions: appboyOptions)
+Appboy.start(withApiKey: "YOUR_APPBOY_API_KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
 
 {% endtab %}
