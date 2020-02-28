@@ -70,7 +70,7 @@ From there, this code can be pasted into a message within the Dashboard.
 
 ![Promo Codes 10][10]{:height="200px"}
 
-Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as used on the Braze backend to ensure no other message receives that same code.
+Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
 
 {% alert important %}
 
