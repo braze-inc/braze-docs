@@ -264,6 +264,6 @@ Other `<video>` options that can be used can be found [here](https://developer.m
 Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
 {% endalert %}
 
-{% alert info %}
+{% alert note %}
 iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 {% endalert %}
