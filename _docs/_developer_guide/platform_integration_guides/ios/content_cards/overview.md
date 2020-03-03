@@ -5,7 +5,7 @@ page_order: 0
 
 ---
 
-# Content Cards Overview
+# Content Cards Overview {% include video.html id="4FUPxkIq2xc" align="right" %}
 
 ## When to Use Content Cards
 
