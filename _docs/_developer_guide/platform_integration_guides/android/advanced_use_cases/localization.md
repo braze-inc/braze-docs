@@ -39,7 +39,7 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 - Swedish
 - Tagalog
 - Thai
-- Ukranian (coming soon)
+- Ukrainian (coming soon)
 - Vietnamese
 
 For more information see the [Android Localization Developer Docs][3].
