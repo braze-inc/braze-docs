@@ -6,7 +6,7 @@ permalink: "/predictive_churn/"
 hidden: true
 ---
 {% alert note %}
-This Predictive Churn feature is currently in Beta. Please reach out to your Braze account manager for more information.
+This feature is currently in Beta. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
 # Predictive Churn
