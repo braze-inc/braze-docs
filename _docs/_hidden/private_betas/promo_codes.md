@@ -40,7 +40,7 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion Code Upload
 
-You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 10MB and the total number of codes allowed in one list is 10MM codes. 
+You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 100MB and the total number of codes allowed in one list is 10MM codes. 
 If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
 ![Promo Codes 6][6]
