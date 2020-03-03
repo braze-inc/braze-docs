@@ -15,7 +15,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Burmese
 - Chinese - Simplified
 - Chinese - Traditional
-- Czech
+- Czech (coming soon)
 - Danish
 - Dutch
 - Estonian
@@ -40,6 +40,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Swedish
 - Tagalog
 - Thai
+- Ukrainian (coming soon)
 - Vietnamese
 
 ## Technical Details
