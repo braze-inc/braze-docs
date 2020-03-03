@@ -162,7 +162,10 @@ In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOpt
 In `AppDelegate.swift`, within your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, add the following Braze method:
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY", inApplication:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:appboyOptions)
 ```
 
 where `appboyOptions` is a `Dictionary` of startup configuration values.

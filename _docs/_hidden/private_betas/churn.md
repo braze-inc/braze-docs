@@ -6,7 +6,7 @@ permalink: "/predictive_churn/"
 hidden: true
 ---
 {% alert note %}
-This Predictive Churn feature is currently in Beta. Please reach out to your Braze account manager for more information.
+This feature is currently in Beta. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
 # Predictive Churn
@@ -75,26 +75,13 @@ Here’s what we recommend for various different ranges of Lift Quality:
 
 ## Churn Score and Category
 
-Users in the Retainable Users audience will be assigned a Churn Score between 0.0 and 1.0. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0.0 and 0.5 will be placed in the Low Churn Risk category. Users with scores between 0.5 and 0.75, and 0.75 and 1.0 will be placed in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
+Users in the Retainable Users audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be placed in the Low Churn Risk category. Users with scores between 50 and 75, and 75 and 100 will be placed in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
 
-Below the chart of Churn Scores, two sentences will help you decide who to target in your Retainable Users population, and what the risks are. Based on the data used during creation of the Prediction, these two sentences and corresponding inputs will help you determine what accuracy (true positive rate) and number of false positives or false alarms to expect based on the number of users you target for messaging.
+Below the chart of Churn Scores, three sentences will help you decide who to target in your Retainable Users population, and what the risks are. Based on the data used during creation of the Prediction, the sentences with editable fields will help you determine what accuracy (true positive rate) and number of false positives or false alarms to expect based on the number of users you target for messaging.
 
-The first sentence reads:
+The first sentence allows you to set the number of users out of the Retainable Users audience that you could potentially target with a message. (100% would mean sending a message to everyone in the Retainable Users group. Of course, this is not the goal.) Once you set this percentage, the other editable field will change to what percentage of actual churners this is likely to successfully identify based on previously estimated accuracy. Notice both fields are editable and change when the other is changed. The second sentence will identify what threshold for the churn score corresponds to the audience percentage and accuracy currently populated in the editable fields, i.e. the churn score cutoff above which to send users a message.
 
->Target the top X% of Retainable Users (Y users) that are most likely to churn according to the model.
-
-This allows you to input the X percentage of the audience that's likeliest to churn in the box. Once you set X, Y will also tell you how many actual users this is estimated to represent. Based on this percentage, the second sentence...
-
->This corresponds to users with a Churn score greater than Z.
-
-...tells you what the threshold or cutoff would be in order to target the top X percentage. For example, to target the top X = 15% of users, you, for example, might need to target the users with churns cores greater than Z = 0.8.
-
->We estimate that this will include T% users that will churn (___ users) and falsely identify ___ users.
-
-The third sentence tells you about how accurate this size of an audience will be according to historic data and how many errors its likely to make. The first half gives you the estimate in percentage T (and estimated actual users) of the true churners you are likely to capture by messaging X percent of the audience (specified in the box in the first sentence). If you change either X or T, the other will be updated accordingly. 
-
-There is a trade-off: the more users you message, the more true churners you'll correctly message. But, some number of users will incorrectly be identified as churners. This is the number of so-called 
-"false positives" or "false alarms." That last half of the sentence estimates how many the Prediction will "falsely identify" given the X and T values specified.
+ The third sentence will also identify how many users are likely to be misidentified as churners (again based on previous estimates.) Because no predictions are perfect, this allows you to gauge the trade off between correctly targeting more actual churners and falsely identifying users who seem like they may churn but ultimately would not have in truth. The better the model, the fewer users you'll need to message to capture more of the true churners.
 
 ### Target Users
 

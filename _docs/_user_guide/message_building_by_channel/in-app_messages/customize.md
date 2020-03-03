@@ -244,56 +244,26 @@ You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/template
 
 ## Video {#video}
 
-You are able to display HTML5 videos in our customizable in-app message types with sound included. You can either use an embedded link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) using a custom HTML5 file or upload a video to your Braze account in the `assets.zip` folder. This uploaded video will then be sent to the device for local playback, so there is no need for a network connection to play the video. This second option is recommended mostly for shorter videos.
+To play a video in an HTML In-App Message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). 
 
-{% tabs %}
-  {% tab Android %}
+To use a local video asset, be sure to include this file when uploading assets to your campaign.
 
-__Android__
+To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
-To use a video in Android in-app messages, all you need to do is create a custom HTML5 file [using one of our templates on Github](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates).
-
-Then, copy and paste the following `HTML` snippet into your code, replacing the source parameters with your actual file names.
+Other `<video>` options that can be used can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```
 <video class="video" autoplay muted playsinline controls>
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-  Your device does not support HTML5 video.
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
+  Your device does not support playing this video.
 </video>
 ```
 
-Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
+{% alert warning %}
+Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
+{% endalert %}
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
-
-![Video_IAM]({% image_buster /assets/img/video_iam.png %})
-{% endtab %}
-
-{% tab iOS %}
-__iOS__
-
-By default, the `WKWebView` in our default view controller [here](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m) allows inline media playback, including videos, but does not support autoplay.
-
-Example `HTML` snippet:
-
-```
-<video class="video" playsinline>
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-  Your device does not support HTML5 video.
-</video>
-```
-
-![Video_IAM]({% image_buster /assets/img/video_iam.png %})
-
-{% endtab %}
-
-{% tab Web %}
-
-__Web__
-
-To use a video in Web in-app messages, embed a link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) into your [Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-message).
-
-{% endtab %}
-{% endtabs %}
+{% alert note %}
+iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+{% endalert %}
