@@ -18,6 +18,6 @@ As of January 13th, 2020 this feature is not yet available to our client deploye
 
 ## New Email Content Block API Endpoint
 
-You can now [update]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/post_email_content_block/) your Email Content Blocks via API!
+You can now [update]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/) your Email Content Blocks via API!
 
 [4]: {% image_buster /assets/img/retention_report_full_report.png %}
