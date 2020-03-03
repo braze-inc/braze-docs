@@ -12,7 +12,7 @@ description: "This glossary lists the various Message Engagement Events that Bra
 tool: currents
 ---
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
+Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% alert important %}
 Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
@@ -26,7 +26,7 @@ Please note that these schemas __only apply to the flat file event data we send 
 Push, Engagement, Sends
 {% endapitags %}
 
-Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline.
+This event shows that Braze processed a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
 
 ```json
 // Push Notification Send: users.messages.pushnotification.Send
@@ -59,7 +59,7 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 Push, Engagement, Opens
 {% endapitags %}
 
-Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens".
+This event shows that a user directly clicked on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at campaign level of “influenced opens” as these are not attributed at user level. 
 
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
@@ -94,7 +94,7 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 Push, Engagement, iOS, Sends
 {% endapitags %}
 
-Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline.
+This event represents that a push was sent when the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
@@ -127,7 +127,7 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 Push, Engagement, iOS, Sends, Bounce
 {% endapitags %}
 
-Data accumulates when a user engages with a Push Notification, or as a Push Notification moves through the message pipeline. Use this data to track all events related to push engagement and message pipeline.
+This event represents an error being received from either Apple Push Notification Service or Fire Cloud Messaging which means the push was bounced, and therefore not delivered to the user’s device.
 
 ```json
 // Push Notification Bounce: users.messages.pushnotification.Bounce
@@ -160,16 +160,18 @@ Data accumulates when a user engages with a Push Notification, or as a Push Noti
 Email, Engagement, Sends
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+Recieving this event signifies that the email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end-user’s inbox
 
 ```json
 // Email Send: users.messages.email.Send
 {
+  // User Specific Properties
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
+  // Campaign/Canvas Tracking Properties
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
@@ -177,6 +179,7 @@ Data accumulates when a user engages with an email, or as an email moves through
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  // Event Specific Properties
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event
@@ -200,7 +203,7 @@ _Update noted in August 2019._
 Email, Engagement, Delivery
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This endpoint signifies that an email made it successfully to the end-user’s inbox.
 
 ```json
 // Email Delivery: users.messages.email.Delivery
@@ -241,7 +244,7 @@ _Update noted in August 2019._
 Email, Engagement, Opens
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This event shows that a user opened an email. Multiple events may be generated for the same campaign if a user opens the email multiple times. 
 
 ```json
 // Email Open: users.messages.email.Open
@@ -283,7 +286,7 @@ _Update noted in August 2019._
 Email, Engagement, Clicks
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This event represents that a user clicked an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
 
 ```json
 // Email Click: users.messages.email.Click
@@ -324,9 +327,7 @@ _Update noted in August 2019._
 Email, Engagement, Bounce
 {% endapitags %}
 
-This event accounts for both Bounces and Soft Bounces.
-
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This event occurs when an Internet Service Provider returns a soft or hard bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. A hard bounce signifies a permenant deliverability failure.
 
 ```json
 // Email Bounce: users.messages.email.Bounce
@@ -367,7 +368,7 @@ _Update noted in August 2019._
 Email, Engagement, Spam
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This event represents when the end-user hit the “spam” button on the email. Note that this does not represent the fact the email went in to the spam folder as Braze does not track this.
 
 ```json
 // Email Mark As Spam: users.messages.email.MarkAsSpam
@@ -408,7 +409,7 @@ _Update noted in August 2019._
 Email, Engagement, Subscription
 {% endapitags %}
 
-Data accumulates when a user engages with an email, or as an email moves through the message pipeline. You can use this data to track all events related to email message engagement and message pipeline.
+This event signifies when the end-user clicked “unsubscribe” from the email.
 
 {% alert important %}
 Please note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, __not__ when the user changes state to unsubscribed.
@@ -451,7 +452,7 @@ _Update noted in August 2019._
 Subscription, Engagement
 {% endapitags %}
 
-Data accumulates when a user's performs a subscription event. You can use this data to track all events related to a user's subscription.
+This event occurs when the subscription state of a user in a subscription group changes. 
 
 {% alert important %}
 Subscription groups are only available for email and SMS channels at this time.
@@ -492,7 +493,7 @@ Subscription groups are only available for email and SMS channels at this time.
 In-App Messages, Engagement, Impressions
 {% endapitags %}
 
-Data accumulates when a user engages with in-app messages in any of the ways defined below. You can use this data to track all events related to in-app message engagement.
+This event occurs when a user views an in-app message.
 
 ```json
 // In-App Message Impression: users.messages.inappmessage.Impression
@@ -530,7 +531,7 @@ Data accumulates when a user engages with in-app messages in any of the ways def
 In-App Messages, Engagement, Clicks
 {% endapitags %}
 
-Data accumulates when a user engages with in-app messages in any of the ways defined below. You can use this data to track all events related to in-app message engagement.
+This event occurs when a user clicks on an in-app message.
 
 ```json
 // In-App Message Click: users.messages.inappmessage.Click
@@ -569,7 +570,7 @@ Data accumulates when a user engages with in-app messages in any of the ways def
 Webhooks, Engagement, Sends
 {% endapitags %}
 
-Data accumulates when a Webhook is sent. Use this data to track when webhooks are sent.
+This event occurs when a webhook was processed and sent to the third party specified in that webhook. Note that it is not representative of whether the request was recieved.
 
 ```json
 // Webhook Send: users.messages.webhook.Send
@@ -630,12 +631,10 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 Content Cards, Engagement, Impressions
 {% endapitags %}
 
-Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+This event occurs when a user views a content card.
 
 ```json
 // Content Card Impression: users.messages.contentcard.Impression
-// Content Card Click: users.messages.contentcard.Click
-// Content Card Dismiss: users.messages.contentcard.Dismiss
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
@@ -668,7 +667,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 Content Cards, Engagement, Clicks
 {% endapitags %}
 
-Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+This event occurs when a user clicks a content card.
 
 ```json
 // Content Card Click: users.messages.contentcard.Click
@@ -705,7 +704,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 Content Cards, Engagement
 {% endapitags %}
 
-Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+This event occurs when a user dismisses a content card.
 
 ```json
 // Content Card Dismiss: users.messages.contentcard.Dismiss
@@ -742,7 +741,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 News Feed, Engagement, Impressions
 {% endapitags %}
 
-Data accumulates when a user engages with the News Feed. Use this data to track all events related to News Feed engagement.
+This event occurs when a user views the News Feed.
 
 {% alert tip %}
   The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
@@ -775,7 +774,7 @@ Data accumulates when a user engages with the News Feed. Use this data to track 
 News Feed, Engagement, Clicks
 {% endapitags %}
 
-Data accumulates when a user engages with the News Feed. Use this data to track all events related to News Feed engagement.
+This event occurs when a user clicks the News Feed.
 
 {% alert tip %}
   The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
@@ -806,6 +805,8 @@ Data accumulates when a user engages with the News Feed. Use this data to track 
 {% apitags %}
 SMS, Engagement, Sends
 {% endapitags %}
+
+This event occurs when a user views the News Feed.
 
 ```json
 // SMS Send: users.messages.sms.Send
@@ -863,7 +864,7 @@ SMS, Engagement, Delivery
 
 {% api %}
 
-## SMS Send Events
+## SMS Delivery Events
 
 {% apitags %}
 SMS, Engagement, Delivery
@@ -968,7 +969,7 @@ SMS, Engagement, Delivery
 Campaign, Engagement, Conversion
 {% endapitags %}
 
-Data accumulates when a user converts on a Campaign.
+This event occurs when a use does an action that has been set as a conversion event on a campaign. 
 
 {% alert important %}
 Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
@@ -1002,7 +1003,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 Canvas, Engagement, Conversion
 {% endapitags %}
 
-Data accumulates when a user converts on a  Canvas. You can use this data to track conversions on Canvas Steps.
+This event occurs when a user does an action that has been set as a conversion event in canvas.
 
 {% alert important %}
 Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
@@ -1036,8 +1037,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 Canvas, Engagement, Entry
 {% endapitags %}
 
-Data accumulates when your users enter a Canvas. You can use this data to track when users enter a Canvas.
-
+This event occurs when a user enters into the canvas. This event tells you which variant the user entered into. 
 ```json
 // Canvas Entry Event: users.canvas.Entry
 {
@@ -1063,7 +1063,7 @@ Data accumulates when your users enter a Canvas. You can use this data to track 
 Campaign, Engagement, Entry
 {% endapitags %}
 
-Data accumulates when your users are enrolled in a control group for a Campaign. You can use this data to track when users are enrolled in the control group for a specific campaign.
+This event occurs when a user is enrolled in the control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user
 
 ```json
 // Campaign Control Group Enrollment: users.campaigns.EnrollInControl
