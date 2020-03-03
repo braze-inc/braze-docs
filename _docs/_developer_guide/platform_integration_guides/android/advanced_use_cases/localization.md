@@ -14,7 +14,7 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 - Burmese
 - Chinese - Simplified
 - Chinese - Traditional
-- Czech
+- Czech (coming soon)
 - Danish
 - Dutch
 - Estonian
@@ -39,6 +39,7 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 - Swedish
 - Tagalog
 - Thai
+- Ukranian (coming soon)
 - Vietnamese
 
 For more information see the [Android Localization Developer Docs][3].
