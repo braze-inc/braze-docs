@@ -14,6 +14,16 @@ tool: currents
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
+{% details Explanation of Message Engagement Event Structure %}
+<br>
+This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+
+![image]({% image_buster /assets/img/message_engagement_event.png %})
+
+Message engagement events are comprised of __user specific__ properties, __campaign/canvas tracking__ properties and __event specific__ properties. 
+
+{% enddetails %}
+
 {% alert important %}
 Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
 {% endalert %}
@@ -23,10 +33,10 @@ Please note that these schemas __only apply to the flat file event data we send 
 ## Push Send Events
 
 {% apitags %}
-Push, Engagement, Sends
+Push, Sends
 {% endapitags %}
 
-This event shows that Braze processed a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
+This event occurs when Braze processes a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
 
 ```json
 // Push Notification Send: users.messages.pushnotification.Send
@@ -56,10 +66,10 @@ This event shows that Braze processed a push message for a user, communicating t
 ## Push Open Events
 
 {% apitags %}
-Push, Engagement, Opens
+Push, Opens
 {% endapitags %}
 
-This event shows that a user directly clicked on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at campaign level of “influenced opens” as these are not attributed at user level. 
+This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of “influenced opens” as these are not attributed at the user level. 
 
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
@@ -91,10 +101,10 @@ This event shows that a user directly clicked on the Push notification to open t
 ## Push Notifications in the iOS Foreground Events
 
 {% apitags %}
-Push, Engagement, iOS, Sends
+Push, iOS, Sends
 {% endapitags %}
 
-This event represents that a push was sent when the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
+This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
@@ -124,10 +134,10 @@ This event represents that a push was sent when the iOS app was in the foregroun
 ## Push Notifications Bounce
 
 {% apitags %}
-Push, Engagement, iOS, Sends, Bounce
+Push, Sends, Bounce
 {% endapitags %}
 
-This event represents an error being received from either Apple Push Notification Service or Fire Cloud Messaging which means the push was bounced, and therefore not delivered to the user’s device.
+This event occurs when an error is received from either Apple Push Notification Service or Fire Cloud Messaging. This means that the push message was bounced, and therefore not delivered to the user’s device.
 
 ```json
 // Push Notification Bounce: users.messages.pushnotification.Bounce
@@ -157,10 +167,10 @@ This event represents an error being received from either Apple Push Notificatio
 ## Email Send Events
 
 {% apitags %}
-Email, Engagement, Sends
+Email, Sends
 {% endapitags %}
 
-Recieving this event signifies that the email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end-user’s inbox
+This event occurs when an email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end-user’s inbox
 
 ```json
 // Email Send: users.messages.email.Send
@@ -187,7 +197,7 @@ Recieving this event signifies that the email send request was successfully comm
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -200,10 +210,10 @@ _Update noted in August 2019._
 ## Email Delivery Events
 
 {% apitags %}
-Email, Engagement, Delivery
+Email, Delivery
 {% endapitags %}
 
-This endpoint signifies that an email made it successfully to the end-user’s inbox.
+This event occurs when an email sent made it successfully to the end-users inbox.
 
 ```json
 // Email Delivery: users.messages.email.Delivery
@@ -228,7 +238,7 @@ This endpoint signifies that an email made it successfully to the end-user’s i
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -241,10 +251,10 @@ _Update noted in August 2019._
 ## Email Open Events
 
 {% apitags %}
-Email, Engagement, Opens
+Email, Opens
 {% endapitags %}
 
-This event shows that a user opened an email. Multiple events may be generated for the same campaign if a user opens the email multiple times. 
+This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times. 
 
 ```json
 // Email Open: users.messages.email.Open
@@ -269,7 +279,7 @@ This event shows that a user opened an email. Multiple events may be generated f
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -283,10 +293,10 @@ _Update noted in August 2019._
 ## Email Clicks Events
 
 {% apitags %}
-Email, Engagement, Clicks
+Email, Clicks
 {% endapitags %}
 
-This event represents that a user clicked an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
 
 ```json
 // Email Click: users.messages.email.Click
@@ -312,7 +322,7 @@ This event represents that a user clicked an email. Multiple events may be gener
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -324,10 +334,10 @@ _Update noted in August 2019._
 ## Email Bounces Events
 
 {% apitags %}
-Email, Engagement, Bounce
+Email, Bounce
 {% endapitags %}
 
-This event occurs when an Internet Service Provider returns a soft or hard bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. A hard bounce signifies a permenant deliverability failure.
+This event occurs when an Internet Service Provider returns a soft or hard bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. A hard bounce signifies a permanent deliverability failure.
 
 ```json
 // Email Bounce: users.messages.email.Bounce
@@ -353,7 +363,7 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -365,10 +375,10 @@ _Update noted in August 2019._
 ## Email Spam Events
 
 {% apitags %}
-Email, Engagement, Spam
+Email, Spam
 {% endapitags %}
 
-This event represents when the end-user hit the “spam” button on the email. Note that this does not represent the fact the email went in to the spam folder as Braze does not track this.
+This event occurs when the end-user hits the “spam” button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
 
 ```json
 // Email Mark As Spam: users.messages.email.MarkAsSpam
@@ -393,7 +403,7 @@ This event represents when the end-user hit the “spam” button on the email. 
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -406,10 +416,10 @@ _Update noted in August 2019._
 ## Email Unsubscribe Events
 
 {% apitags %}
-Email, Engagement, Subscription
+Email, Subscription
 {% endapitags %}
 
-This event signifies when the end-user clicked “unsubscribe” from the email.
+This event occurs when the end-user has clicked “unsubscribe” from the email.
 
 {% alert important %}
 Please note that the `Unsubscribe` event is actually a specialized click event that is fired when your user _clicks on the unsubscribe link in the email_, __not__ when the user changes state to unsubscribed.
@@ -437,7 +447,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 ```
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -449,7 +459,7 @@ _Update noted in August 2019._
 ## Subscription Events
 
 {% apitags %}
-Subscription, Engagement
+Subscription
 {% endapitags %}
 
 This event occurs when the subscription state of a user in a subscription group changes. 
@@ -460,7 +470,6 @@ Subscription groups are only available for email and SMS channels at this time.
 
 ```json
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
-// Note that subscription groups are only available for email at this time.
 {
   "id": (string) unique id of this event,
   "user_id": (string) braze user id of the user,
@@ -490,7 +499,7 @@ Subscription groups are only available for email and SMS channels at this time.
 ## In-App Message Impression Events
 
 {% apitags %}
-In-App Messages, Engagement, Impressions
+In-App Messages, Impressions
 {% endapitags %}
 
 This event occurs when a user views an in-app message.
@@ -528,7 +537,7 @@ This event occurs when a user views an in-app message.
 ## In-App Message Click Events
 
 {% apitags %}
-In-App Messages, Engagement, Clicks
+In-App Messages, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks on an in-app message.
@@ -567,10 +576,10 @@ This event occurs when a user clicks on an in-app message.
 ## Webhook Send Events
 
 {% apitags %}
-Webhooks, Engagement, Sends
+Webhooks, Sends
 {% endapitags %}
 
-This event occurs when a webhook was processed and sent to the third party specified in that webhook. Note that it is not representative of whether the request was recieved.
+This event occurs when a webhook was processed and sent to the third party specified in that webhook. Note that this does not signify whether or not the request was received.
 
 ```json
 // Webhook Send: users.messages.webhook.Send
@@ -596,10 +605,10 @@ This event occurs when a webhook was processed and sent to the third party speci
 ## Content Card Send Events
 
 {% apitags %}
-Content Cards, Engagement, Sends
+Content Cards, Sends
 {% endapitags %}
 
-Data accumulates when a user engages with Content Cards. Use this data to track all events related to Content Card engagement.
+This event occurs when a content card gets sent to a user. 
 
 ```json
 // Content Card Send: users.messages.contentcard.Send
@@ -628,7 +637,7 @@ Data accumulates when a user engages with Content Cards. Use this data to track 
 ## Content Card Impression Events
 
 {% apitags %}
-Content Cards, Engagement, Impressions
+Content Cards, Impressions
 {% endapitags %}
 
 This event occurs when a user views a content card.
@@ -664,7 +673,7 @@ This event occurs when a user views a content card.
 ## Content Card Click Events
 
 {% apitags %}
-Content Cards, Engagement, Clicks
+Content Cards, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a content card.
@@ -701,7 +710,7 @@ This event occurs when a user clicks a content card.
 ## Content Card Dismissal Events
 
 {% apitags %}
-Content Cards, Engagement
+Content Cards, Dismissal
 {% endapitags %}
 
 This event occurs when a user dismisses a content card.
@@ -738,7 +747,7 @@ This event occurs when a user dismisses a content card.
 ## News Feed Impression Event
 
 {% apitags %}
-News Feed, Engagement, Impressions
+News Feed, Impressions
 {% endapitags %}
 
 This event occurs when a user views the News Feed.
@@ -771,7 +780,7 @@ This event occurs when a user views the News Feed.
 ## News Feed Click Events
 
 {% apitags %}
-News Feed, Engagement, Clicks
+News Feed, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks the News Feed.
@@ -803,10 +812,10 @@ This event occurs when a user clicks the News Feed.
 ## SMS Send Events
 
 {% apitags %}
-SMS, Engagement, Sends
+SMS, Sends
 {% endapitags %}
 
-This event occurs when a user views the News Feed.
+This event occurs when a user sends an SMS.
 
 ```json
 // SMS Send: users.messages.sms.Send
@@ -836,8 +845,10 @@ This event occurs when a user views the News Feed.
 ## SMS Sends to Carrier Events
 
 {% apitags %}
-SMS, Engagement, Delivery
+SMS, Delivery
 {% endapitags %}
+
+This event occurs when an SMS is sent to the carrier. 
 
 ```json
 // SMS Delivery: users.messages.sms.SendToCarrier
@@ -867,8 +878,10 @@ SMS, Engagement, Delivery
 ## SMS Delivery Events
 
 {% apitags %}
-SMS, Engagement, Delivery
+SMS, Delivery
 {% endapitags %}
+
+This event occurs when an SMS was successfully delivered to the users mobile phone. 
 
 ```json
 // SMS Delivery: users.messages.sms.Delivery
@@ -898,8 +911,10 @@ SMS, Engagement, Delivery
 ## SMS Rejection Events
 
 {% apitags %}
-SMS, Engagement, Rejection
+SMS, Rejection
 {% endapitags %}
+
+This event occurs when the mobile an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
 
 ```json
 // SMS Rejection: users.messages.sms.Rejection
@@ -932,8 +947,10 @@ SMS, Engagement, Rejection
 ## SMS Delivery Failure Events
 
 {% apitags %}
-SMS, Engagement, Delivery
+SMS, Delivery
 {% endapitags %}
+
+This event occurs when an SMS experiences delivery failure. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
 
 ```json
 // SMS Delivery Failure: users.messages.sms.DeliveryFailure
@@ -966,10 +983,10 @@ SMS, Engagement, Delivery
 ## Campaign Conversion Events
 
 {% apitags %}
-Campaign, Engagement, Conversion
+Campaign, Conversion
 {% endapitags %}
 
-This event occurs when a use does an action that has been set as a conversion event on a campaign. 
+This event occurs when a user does an action that has been set as a conversion event in a campaign. 
 
 {% alert important %}
 Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
@@ -1000,7 +1017,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 ## Canvas Conversion Events
 
 {% apitags %}
-Canvas, Engagement, Conversion
+Canvas, Conversion
 {% endapitags %}
 
 This event occurs when a user does an action that has been set as a conversion event in canvas.
@@ -1034,10 +1051,11 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 ## Canvas Entry Events
 
 {% apitags %}
-Canvas, Engagement, Entry
+Canvas, Entry
 {% endapitags %}
 
 This event occurs when a user enters into the canvas. This event tells you which variant the user entered into. 
+
 ```json
 // Canvas Entry Event: users.canvas.Entry
 {
@@ -1060,10 +1078,10 @@ This event occurs when a user enters into the canvas. This event tells you which
 ## Campaign Control Group Enrollment Events
 
 {% apitags %}
-Campaign, Engagement, Entry
+Campaign, Entry
 {% endapitags %}
 
-This event occurs when a user is enrolled in the control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user
+This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
 
 ```json
 // Campaign Control Group Enrollment: users.campaigns.EnrollInControl

@@ -14,9 +14,18 @@ tool: currents
 
 Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
+{% details Explanation of Customer Behavior Event Structure %}
+<br>
+This Customer Behavior Events breakdown shows what type of information is generally included in a customer behavior event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+
+![image]({% image_buster /assets/img/customer_engagement_event.png %})
+
+Customer Behavior Events events are comprised of __user specific__ properties, __behavior specific__ properties and __device specific__ properties. 
+
+{% enddetails %}
 
 {% alert important %}
-Please note that these schema __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
 {% api %}
@@ -24,10 +33,10 @@ Please note that these schema __only apply to the flat file event data we send t
 ## Custom Events
 
 {% apitags %}
-Custom, Users, Behaviors
+Custom Events
 {% endapitags %}
 
-Data accumulates when a user performs a custom event. Use this to track users who perform custom events in your app.
+This event occurs when a specific custom event is triggered. Use this to track when users perform custom events in your application.
 
 ```json
 // Custom Event: users.behaviors.CustomEvent
@@ -53,13 +62,13 @@ Data accumulates when a user performs a custom event. Use this to track users wh
 ## Purchase Event
 
 {% apitags %}
-Purchases, Users, Behaviors
+Purchases
 {% endapitags %}
 
-Data accumulates when a user makes a purchase. Use this data to track when users purchase something in the app.
+This event occurs when a user makes a purchase. Use this data to track when users purchase something in the application.
 
 {% alert tip %}
-Purchases are special custom events, and come with a JSON encoded string of custom event properties the same way custom events do.
+Purchases are special custom events and come with a JSON encoded string of custom event properties the same way custom events do.
 {% endalert %}
 
 ```json
@@ -88,10 +97,10 @@ Purchases are special custom events, and come with a JSON encoded string of cust
 ## First Session Event
 
 {% apitags %}
-Sessions, Users, Behaviors
+Sessions
 {% endapitags %}
 
-Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
+This event occurs when a user starts their first session in your application. Use this data to track when users start sessions. 
 
 {% alert tip %}
 When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
@@ -120,10 +129,10 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ## Session Start Event
 
 {% apitags %}
-Sessions, Users, Behaviors
+Sessions
 {% endapitags %}
 
-Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
+This event occurs when a user starts a session. Use this data to track when users start sessions.
 
 {% alert tip %}
 When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
@@ -152,10 +161,10 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ## End Session Event
 
 {% apitags %}
-Sessions, Users, Behaviors
+Sessions
 {% endapitags %}
 
-Data accumulates when a user triggers session events. Use this data to track when users start and end sessions.
+This occurs when a user exits your application, therefore ending the current session. Use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session.
 
 {% alert tip %}
 When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
@@ -184,10 +193,10 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ## Location Event
 
 {% apitags %}
-Locations, Users, Behaviors
+Locations
 {% endapitags %}
 
-Data accumulates when a user triggers a location event. Use this to track users triggering location events in your app.
+This event is triggered when a user visits a specified location. Use this to track users triggering location events in your app.
 
 ```json
 // Location Event: users.behaviors.Location
@@ -215,10 +224,10 @@ Data accumulates when a user triggers a location event. Use this to track users 
 ## News Feed Impression Event
 
 {% apitags %}
-Impression, Users, Behaviors
+Impression, News Feed
 {% endapitags %}
 
-Data accumulates when a user views the News Feed. This is when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
+This event occurs when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
 We do track other News Feed events; these are located in [Message Engagement Events](({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
@@ -244,10 +253,10 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 ## Uninstall Events
 
 {% apitags %}
-Uninstall, Users, Behaviors
+Uninstall
 {% endapitags %}
 
-Data accumulates when a user uninstalls an app. Use this data to track when users uninstall an app.
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app.
 
 {% alert important %}
 Please note that this is not fired when the user actually uninstalls the app - that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
@@ -271,10 +280,10 @@ Please note that this is not fired when the user actually uninstalls the app - t
 ## Attribution Events
 
 {% apitags %}
-Attribution, Users, Behaviors
+Attribution
 {% endapitags %}
 
-Data accumulates when an app installation is attributed to a source. Use this to track where your app installs are coming from.
+This event occurs when an app installation is attributed to a source. Use this to track where your app installs are coming from.
 
 ```json
 // Install Attribution Event: users.behaviors.InstallAttribution
