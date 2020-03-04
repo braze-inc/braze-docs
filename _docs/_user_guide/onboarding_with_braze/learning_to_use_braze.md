@@ -32,6 +32,7 @@ _These reading paths assume that you've already completed your integration and s
 | 9 | [Creating a Push Campaign]({{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/) | How to create and send an push message for web or your chosen app on iOS or Android. |
 | 10 | [Personalization Overview]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/) | How to use dynamic content in your messages. |
 | 11 | [Exporting Braze Data]({{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/overview/) | The many ways to export data from the Braze platform. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ## Adept Admin
@@ -45,6 +46,7 @@ _These reading paths assume that you've already completed your integration and s
 | 5 | [Company Wide Settings]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) | Learn about and set settings for your entire company's Braze account. |
 | 6 | [App Group Management]({{ site.baseurl }}/user_guide/administrative/app_settings/app_group_management/) | Set up and manage your company apps. |
 | 7 | [Message Activity Log Tab]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) | Learn about and utilize the message log, including all associated errors. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Email Expert
 
@@ -67,6 +69,7 @@ _These reading paths assume that you've already completed your integration and s
 | 5 | [Connected Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
 | 6 | [Key-Value Pairs]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key-value pairs. |
 | 7 | [Deep-Linking to In-App Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) | How to launch a native app and provide additional information from a message. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ## Data Doctor

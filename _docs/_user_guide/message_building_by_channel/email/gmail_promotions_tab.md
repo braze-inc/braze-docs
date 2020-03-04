@@ -45,6 +45,7 @@ You can customize many variables for your card, which will map to the locations 
 | Discount Offer (Green Deal Badge)| One or two words used to quickly highlight an offer or as a call to action, such as "Free Gift", "2 for 1", or "Limited Offer." |
 | Discount Code (Promo Code)| Use your regular promo code. Only use if there is a promo code. |
 | Expiration Date | The start date should be when your email sends or the promotion starts (if this date is in the future, your email __will not populate__ in a bundle). The end date should only be used if you have an expiring offer and the date needs to be in the future. Old or past due expiration dates will cause our system to see the offer as stale and will not preview your email. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 We recommend that you upload your logo and product image to the Braze Media Library, then copy and pasting the URLs from there into the appropriate fields. Only static image formats like `.png` and `.jpeg` are accepted. Some image formats, like `.gif`, will upload, but not act as expected.

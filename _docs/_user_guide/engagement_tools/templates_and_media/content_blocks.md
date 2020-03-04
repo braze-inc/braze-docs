@@ -85,6 +85,7 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 | Content Size | Limited to 50kB (Kilobyte). |
 | Placement | Content Blocks cannot be used within an email footer. |
 | Creation | HTML or Text. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 [1]: {% image_buster /assets/img/create-content-blocks.gif %}
 [2]: {% image_buster /assets/img/copy-content-block.png %}
