@@ -9,4 +9,4 @@ In order to comply with data privacy regulations, data tracking activity on the 
 
 If you wish to provide users with the option to stop tracking, we recommend building a simple page with two links or buttons, one that calls `stopWebTracking()` when clicked, and another that calls `resumeWebTracking()` to allow users to opt back in. You can use these controls to start or stop tracking via other data sub-processors as well. 
 
-Note that the Braze SDK does _not_ need to be initialized in order to call `stopWebTracking()`, allowing you to disable tracking for fully anonymous users. In other hand, the Braze SDK does *need* to be re-initialized in order to call `resumeWebTracking()`
+Note that the Braze SDK does _not_ need to be initialized in order to call `stopWebTracking()`, allowing you to disable tracking for fully anonymous users. Conversely,`resumeWebTracking()` does not initialize the Braze SDK so you must also call `initialize()` afterwards in order to enable tracking.
