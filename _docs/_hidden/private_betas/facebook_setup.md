@@ -27,7 +27,6 @@ Requirement   |Origin| Description
 Facebook Business Manager    |[Facebook][1]| A centralized tool to manage your brand's Facebook assets (i.e. ad accounts, pages, apps).
 Facebook ad account    |[Facebook][2]| An active Facebook ad account tied to your brand's Business Manager that you want to use your custom audiences from Braze.
 Facebook Custom Audiences Terms    |[Facebook][3]| You have accepted Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.
-Activate Facebook in Braze    |Braze | You have connected your Facebook account through the Facebook Technology Partners page in the Braze dashboard.
 {% endraw %}
 
 ## Integration
@@ -38,11 +37,11 @@ In the Braze dashboard, go to Technology Partners and select Facebook. In the Fa
 
 ![Activate Facebook][6]
 
-A Facebook dialog window will appear to authorize Braze to create custom audiences into your Facebook ad accounts and retrieve your associated Facebook App IDs if you plan to use the Facebook User ID when exporting your audiences (this is optional).
+A Facebook dialog window will appear to authorize Braze to create custom audiences into your Facebook ad accounts and retrieve your associated Facebook app IDs if you plan to use the Facebook user ID when exporting your audiences (this is optional).
 
 ![Facebook Dialog][7]
 
-Once you have successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names their associated ad account IDs listed.
+Once you have successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names and their associated ad account IDs listed.
 
 ![Facebook Connected][8]
 
@@ -59,7 +58,7 @@ There are 4 possible user fields you can export:
 - Email
 - Device IDFA
 - Phone number
-- Facebook User ID (UID)
+- Facebook user ID (UID)
   - If you would like to export the Facebook UID you will need to enable Facebook social data tracking natively through the  Braze's [iOS][10] and [Android][11] SDKs.
   - A [Facebook Application ID][12] is required if you are looking to export Facebook UIDs. After you are successfully collecting your users' Facebook UIDs through the Braze's SDKs, you will be able to select <b> Facebook UID </b> as an export field and select which Facebook Application IDs to include within the export modal.
 
