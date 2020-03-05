@@ -6,7 +6,9 @@ description: "This article outlines the updated integration for Facebook Audienc
 ---
 
 {% alert note %}
-This Facebook Audience Export feature is currently in Beta. Please reach out to your Braze account manager for more information.
+The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, you Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
+
+If you have any questions, please reach out to your Braze Customer Success Manager.
 {% endalert %}
 
 # Facebook
