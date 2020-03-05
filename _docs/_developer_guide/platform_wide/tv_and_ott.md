@@ -97,7 +97,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications (known as "Heads Up Notifications")
 - Content Cards
-- In App Messages are available using custom views with our Data Model
+- In App Messages
 
 For more information, visit the [Fire OS Integration Guide][1].
 
@@ -122,7 +122,7 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
-- In App Messages are available using custom views with our Data Model
+- In App Messages
 
 For more information, visit the [Android SDK Integration Guide][2].
 
