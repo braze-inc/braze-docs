@@ -1,14 +1,14 @@
 ---
 nav_title: Create an SMS
 page_order: 2
-description: "This reference article covers the steps involved in creating and sendign a SMS capmaign."
+description: "This reference article covers the steps involved in creating and sending an SMS campaign."
 page_type: reference
 channel: SMS
 ---
 
 # Create an SMS Campaign
 
-> SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances a unobtrusive user experience with your brand.
+> SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
 ## Choose Where to Build Your Message
 
@@ -66,7 +66,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% tabs local %}
   {% tab Encoding Types %}
 
-Braze SMS message bodies can be composed with either [GSM-7]() or [UCS-2]() encoding standards. In the event that a UCS-2 character is used, the message body will automatically format for that encoding standard. This will limit your characters per message segment to 67, as opposed to 160 with GSM-7.
+Braze SMS message bodies can be composed of either [GSM-7]() or [UCS-2]() encoding standards. In the event that a UCS-2 character is used, the message body will automatically format for that encoding standard. This will limit your characters per message segment to 67, as opposed to 160 with GSM-7.
 
   {% endtab %}
 
@@ -411,7 +411,7 @@ $('#sms_split input[name=sms_type]').change(function(e){
 
 ## Step 3: Configure Message Delivery
 
-Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time, or trigger it off of a user's action. You can also trigger it via API.
+Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API.
 
 ![SMS Delivery]({% image_buster /assets/img/sms_campaign_delivery.gif %})
 
