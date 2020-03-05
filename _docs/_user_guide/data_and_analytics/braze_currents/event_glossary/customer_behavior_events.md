@@ -164,7 +164,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 Sessions
 {% endapitags %}
 
-This occurs when a user exits your application, therefore ending the current session. Use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session.
+This occurs when a user exits your application, therefore ending their current session. Use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session.
 
 {% alert tip %}
 When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.

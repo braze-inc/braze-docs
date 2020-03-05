@@ -914,7 +914,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
 SMS, Rejection
 {% endapitags %}
 
-This event occurs when the mobile an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
+This event occurs when an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
 
 ```json
 // SMS Rejection: users.messages.sms.Rejection
