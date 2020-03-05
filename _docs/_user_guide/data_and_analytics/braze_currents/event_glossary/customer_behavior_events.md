@@ -230,7 +230,7 @@ Impression, News Feed
 This event occurs when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
-We do track other News Feed events; these are located in [Message Engagement Events](({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
+We do track other News Feed events; these are located in [Message Engagement Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
 {% endalert %}
 
 ```json
