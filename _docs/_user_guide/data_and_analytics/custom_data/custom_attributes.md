@@ -4,7 +4,7 @@ page_order: 3
 ---
 
 # Custom Attributes
-Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom Attributes, so you're not going to get any graphs based upon them like the above example for Custom Events.
+Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom Attributes, so you won't be able to get any graphs based upon them like you can for Custom Events.
 
 We get that Custom Attributes can be confusing, so read closely and check out our [LAB course on Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
