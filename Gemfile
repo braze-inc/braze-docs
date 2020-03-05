@@ -3,7 +3,6 @@ ruby '~> 2.5.1'
 gem "jekyll", "~> 3.8.5"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
-gem 'therubyracer', "~> 0.12.3"
 gem 'sass'
 gem 'kramdown'
 gem 'rouge'
@@ -14,7 +13,6 @@ gem 'rack-reverse-proxy', require: 'rack/reverse_proxy'
 gem 'puma', "4.3.3"
 gem 'rack-rewrite'
 gem 'sinatra'
-
 
 #gem 'japr' #Jekyll Asset Pipeline Reborn https://github.com/janosrusiczki/japr
 gem 'jekyll_asset_pipeline'
