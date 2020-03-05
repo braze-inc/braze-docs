@@ -19,4 +19,5 @@ Schedule Delay<br>Send "after x day" | The 'after' clause allows the user to spe
 Schedule Delay with Intelligent Delivery | The behavior is the same if using in/after with Intelligent Delivery | | | Product Team is working on a solution here to either make the UI clearer or change the behavior |
 Global Frequency Capping | Calendar Day | User's Timezone | I set up a frequency capping rule of sending no more than 1 campaign a day<br><br>If a user receives a message at 11 pm in their local time zone, he/she can receive another message an hour later.  | We use Company's Time Zone if User's Time Zone is not Set <br><br> It's possible a user does not have to wait 24 hours to get another message, since it's based on calendar days and not a 24-hour period.|
 Global Frequency Capping - Week| Rolling 7 days: now minus 7 days (now is constantly shifting) | User's Time Zone | Every 2 days will limit the capping to the previous and current calendar days in your user's local time (ending at midnight local time on the current calendar day) | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

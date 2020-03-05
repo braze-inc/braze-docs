@@ -12,6 +12,7 @@ Braze’s user permission feature allows you to choose who can access your apps 
 |---|---|
 |Administrator|Administrators have access to all available features.|
 |Limited|Limited users are completely customized at several levels (outlined below). When you switch a user’s permissions from admin to limited, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear below the Edit User box.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Editing User Permissions
 From the Manage Users page, you can edit a specific user’s permissions, either by allowing them to remain as the default Administrator role, or changing them to a Limited role. To change their role, click on the edit icon in the user’s row and select Limited from the User Role drop down.
@@ -47,6 +48,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Manage Tags|Allows users to edit or delete tags (under manage app group). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows user to save email configuration changes (email settings tab under "manage app group").|
 |Manage Teams|Allows user to manage teams which is under "Manage App Group". The ability to select this permission depends on your contract with Braze.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-App User Permissions
 
@@ -57,6 +59,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |Company Level|Regarding managing the company's app and group settings.|
 |App Group Level Permissions|Which App Groups should the limited user be able to manage?|
 |App Level Settings|What level of editing access should this limited user have? (See sample image below or further details [here][76].)
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ![Permissions App to App][31]
 
