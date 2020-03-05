@@ -1,6 +1,6 @@
 ## Universal Deep Link Delegate
 
-The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, push, and the News Feed.
+The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
 Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using `AppboyNavigator.setAppboyNavigator()`. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
@@ -37,7 +37,7 @@ public class CustomNavigator implements IAppboyNavigator {
     }
 
     @Override
-    protected void openUriWithActionViewFromPush(Context context, Uri uri, Bundle extras) {
+    protected void openUriWithActionView(Context context, Uri uri, Bundle extras) {
       Intent intent = getActionViewIntent(context, uri, extras);
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
       if (intent.resolveActivity(context.getPackageManager()) != null) {
@@ -73,7 +73,7 @@ class CustomNavigator : IAppboyNavigator {
 
   class CustomUriAction(uriAction: UriAction) : UriAction(uriAction) {
 
-    override fun openUriWithActionViewFromPush(context: Context, uri: Uri, extras: Bundle) {
+    override fun openUriWithActionView(context: Context, uri: Uri, extras: Bundle) {
       val intent = getActionViewIntent(context, uri, extras)
       intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
       if (intent.resolveActivity(context.packageManager) != null) {
