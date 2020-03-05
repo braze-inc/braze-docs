@@ -29,6 +29,7 @@ The following requirements are the basic, minimum requirements to integrate with
 | Partner API Key or Token | Usually the Partner’s dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data.
 | Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner’s dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account.
 | Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner’s dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don’t want your data to get lost! | Though this is required for some Partners, it’s important to get right when you do need it. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Step 1: Choose Your Partner

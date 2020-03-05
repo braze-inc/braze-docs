@@ -19,3 +19,4 @@ If you would like to monitor the messaging and activity in your company account,
 |Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 |Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook. |
 |Weekly Analytics Report  | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

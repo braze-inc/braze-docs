@@ -107,6 +107,7 @@ When will a customer run into this Canvas? Users can enter your Canvas in two wa
 | Scheduled | Action-Based |
 |---|---|
 |You can use scheduled delivery when you want to send a Canvas out immediately to your target audience, have it regularly sent, or schedule it for a specific time in the future. | These Canvases respond to specific customer behaviors as they happen. These action-based triggers can include opening your app, making a purchase, interacting with another campaign, or triggering any custom event. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ### Select an Entry Audience for Entry: The “Who”
@@ -122,6 +123,7 @@ Who are you trying to reach? Here you can use a pre-defined segment and add furt
 | User Attributes | User attribute filters segment customers by their constant attributes and characteristics. |
 | Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad. |
 | Social Activity | Social activity filters segment customers by their social media activity namely through connection to Facebook and Twitter. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Only the users who match these target audience criteria can enter the journey.
 

@@ -13,6 +13,7 @@ Braze has three global subscription states for e-mail users (listed in chart bel
 | Opted-in | User has explicitly confirmed he/she wants to receive e-mail. We recommend an explicit opt-in process to acquire consent from users to send e-mail. |
 | Subscribed | User has neither unsubscribed, nor explicitly opted-in to receive e-mails. A user automatically gets set as Subscribed when a valid e-mail address is added to their user profile. |
 | Unsubscribed | User has either explicitly unsubscribed from your e-mails or been automatically unsubscribed after marked one of your e-mails as spam. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 Please note that these Global Subscription States are different from [Subscription Groups](#subscription-groups), which should be considered filters that can further narrow your audience from the Global Subscription States.
@@ -136,6 +137,7 @@ When creating a custom footer, Braze suggests you use attributes for personaliza
 | User's Custom Unsubscribe URL | `{{${set_user_to_unsubscribed_url}}}` |
 | User's Custom Opt-In URL | `{{${set_user_to_opted_in_url}}}` |
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e. ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e. ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way users will be able to both unsubscribe or opt-in and you can passively collect opt-in data for a portion of your users.
 

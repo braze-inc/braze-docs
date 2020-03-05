@@ -86,7 +86,7 @@ GEM
       forwardable-extended (~> 2.6)
     progressbar (1.10.1)
     public_suffix (3.1.1)
-    puma (4.3.1)
+    puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.0.8)
     rack-jekyll (0.3.5)
@@ -135,7 +135,7 @@ DEPENDENCIES
   jekyll_asset_pipeline
   kramdown
   minima (~> 2.0)
-  puma
+  puma (= 4.3.3)
   rack
   rack-jekyll
   rack-reverse-proxy

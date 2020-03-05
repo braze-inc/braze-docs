@@ -11,7 +11,7 @@ gem 'rack-jekyll'
 gem 'rake'
 gem 'rack'
 gem 'rack-reverse-proxy', require: 'rack/reverse_proxy'
-gem 'puma'
+gem 'puma', "4.3.3"
 gem 'rack-rewrite'
 gem 'sinatra'
 

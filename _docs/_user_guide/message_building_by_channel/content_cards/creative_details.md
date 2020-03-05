@@ -32,6 +32,7 @@ The Classic card is great for standard messaging and notifications, or even visu
 | Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use liquid here to personalize your message. |
 | Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within  your app. |
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60px by 60px. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ### Captioned Image
@@ -46,6 +47,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 | Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use liquid here to personalize your message. |
 | Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within  your app. |
 | Image | Suggested be 4:3 ratio. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner
 
@@ -57,6 +59,7 @@ If you want fancy, the Banner card is for you! This is completely custom to what
 | --- | ---|
 | Linked Card | Optional. <br> 13px <br> On-click behavior link to a webpage or a deep link to within  your app. |
 | Image | Any aspect ratio supported. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Creative Details {#general}
 
@@ -77,6 +80,7 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|
 | [Install Custom Image Library.]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Included in integration. | Included in Integration. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [1]: {% image_buster /assets/img/classic-cc.png %}
 [2]: {% image_buster /assets/img/captioned-image-cc.png %}

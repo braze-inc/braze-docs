@@ -12,7 +12,7 @@ App groups are designed to house versions of the same application across multipl
 
 
 ### Renaming or Deleting Your App Group
-Click the pencil on the ["App Settings"][19] page to rename your app group. The name of your app group controls the title that will be displayed for iOS push notifications.
+Click the pencil on the ["App Settings"][19] page to rename your app group.
 
 Delete your App Group entirely from the Dashboard by clicking the Settings Icon on your Manage App Group Page and selecting “Delete App Group”.
 

@@ -206,6 +206,7 @@ What levers do you have to pull and what are the desired effects? While there ar
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app Notification | Aspects listed for "push" <br> [Message Format][273] | Click <br> Conversion Rate |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 

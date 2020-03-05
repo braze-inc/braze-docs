@@ -19,6 +19,7 @@ Our slideups typically appear at the top or bottom of the app screen (you can se
 | Slideup Size | 450px Maximum Width | 3-Line maximum height, at which point the message is truncated with an ellipsis. |
 | Image/Icon Size | 50px by 50px | These images are optional, but always appear on the left side of the message. |
 | Copy | 14px - Bolded | Three lines of text will appear before being truncated with an ellipsis. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Slideup Viewport
 
