@@ -6,7 +6,7 @@ excerpt_separator: <!--end-excerpt-->
 description: "This article outlines the updated integration for Facebook Audience Exports through Segments."
 ---
 {% alert note %}
-The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, you Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
+The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, your Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
 
 If you have any questions, please reach out to your Braze Customer Success Manager.
 {% endalert %}
