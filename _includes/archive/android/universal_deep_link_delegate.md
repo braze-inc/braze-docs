@@ -2,7 +2,7 @@
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
-Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using `AppboyNavigator.setAppboyNavigator()`. In most cases, the delegate should be set in your app's `Application.onCreate()`.
+Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using [`AppboyNavigator.setAppboyNavigator()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
 The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for Youtube URLs. 
 
@@ -94,6 +94,5 @@ class CustomNavigator : IAppboyNavigator {
 {% endtabs %}
 
 [udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
-[udl-2]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#200
+[udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
 [udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
-[udl-4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
