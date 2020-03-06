@@ -26,9 +26,10 @@ Common use cases for exporting custom audiences include:
 {% raw %}
 Requirement   |Origin| Description
 --------------|------|-------------
-Facebook Business Manager    |[Facebook][1]| A centralized tool to manage your brand's Facebook assets (i.e. ad accounts, pages, apps).
-Facebook ad account    |[Facebook][2]| An active Facebook ad account tied to your brand's Business Manager that you want to use your custom audiences from Braze.
-Facebook Custom Audiences Terms    |[Facebook][3]| You have accepted Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.
+Facebook Business Manager|[Facebook][1]| A centralized tool to manage your brand's Facebook assets (i.e. ad accounts, pages, apps).|
+Facebook ad account|[Facebook][2]| An active Facebook ad account tied to your brand's Business Manager that you want to use your custom audiences from Braze.|
+Facebook Custom Audiences Terms|[Facebook][3]| You have accepted Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endraw %}
 
 ## Integration
