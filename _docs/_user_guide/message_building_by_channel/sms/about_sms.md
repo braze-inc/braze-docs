@@ -3,11 +3,17 @@ nav_title: "About SMS"
 page_order: 0
 description: "This reference article covers general use cases of the SMS channel and the laws and regulations surrounding SMS."
 page_type: reference
-channel: SMS
 tool:
-  - Docs
   - Dashboard
+  - Docs
   - Campaigns
+
+platform:
+  - iOS
+  - Android
+
+channel:
+  - SMS
 ---
 
 # What are SMS Messages?

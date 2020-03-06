@@ -3,7 +3,17 @@ nav_title: Create an SMS
 page_order: 2
 description: "This reference article covers the steps involved in creating and sending an SMS campaign."
 page_type: reference
-channel: SMS
+tool:
+  - Dashboard
+  - Docs
+  - Campaigns
+
+platform:
+  - iOS
+  - Android
+
+channel:
+  - SMS
 ---
 
 # Create an SMS Campaign
@@ -24,7 +34,7 @@ SMS is available in both Campaigns and Canvas.
 2. Add __Teams__ and __Tags__, as necessary.
 3. Add and name as many Variants as you need for this campaign.
   - You can choose different platforms, message types, and layouts for each of your added Variants.
-4. Select the Subscription Group to ensure you're sending your message to the proper users.
+4. Select the __Subscription Group__ to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed recieve the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target usrs. 
 
   {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional Variants - you will be able to choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -56,7 +66,7 @@ Composing an SMS is easy! Just write your message, using languages and personali
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive `Hi, {{$first_name}}`, instead of there name or a coherent sentence.
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive `Hi, {{$first_name}}`, instead of their name or a coherent sentence.
 {% endraw %}
 
 {% endalert %}
@@ -100,7 +110,7 @@ Braze will alert you if...
 
 - Your message body exceeds 1600 characters,
 - UCS-2 characters are used, increasing the potential for overflow into another message segment as your message will then be limited to 67 characters per message segment,
-- Your message uses liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncatewords filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your liquid could bring to the message.
+- Your message uses liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncat words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your liquid could bring to the message.
 
 <br>
 
