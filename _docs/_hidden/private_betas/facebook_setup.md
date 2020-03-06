@@ -2,15 +2,15 @@
 nav_title: Facebook
 alias: /partners/facebook/
 hidden: true
+excerpt_separator: <!--end-excerpt-->
 description: "This article outlines the updated integration for Facebook Audience Exports through Segments."
 ---
-
 {% alert note %}
-The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, you Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
+The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, your Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
 
 If you have any questions, please reach out to your Braze Customer Success Manager.
 {% endalert %}
-
+<!--end-excerpt-->
 # Facebook
 
 Facebook is a leading social platform for brands to reach and engage with their customers. Marketers and developers can utilize a plethora of tools, like Facebook Ads and the Facebook Developer Console, to make meaningful relationships with their customers.
@@ -83,7 +83,6 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 
 - Why can't I see the Custom Audience size?
   - Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting][16].
-
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059
