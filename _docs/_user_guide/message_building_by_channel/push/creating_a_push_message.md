@@ -35,7 +35,7 @@ Time to write your push message! Type it into the message box and watch a previe
 
 #### Languages
 
-You also have the ability to Add Languages through the __Add Languages__ button. Braze offers the option to "Internationalize" your message, by inserting the Liquid into your message to help set custom messages and fields in specific languages based on a user's language preferences. 
+You also can Add Languages through the __Add Languages__ button. Braze offers the option to "Internationalize" your message, by inserting the Liquid into your message to help set custom messages and fields in specific languages based on a user's language preferences. 
 
 #### OnClick Behavior
 

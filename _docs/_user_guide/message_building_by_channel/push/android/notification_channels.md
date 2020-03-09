@@ -58,7 +58,7 @@ You then decide to change your dashboard default channel from “Marketing” to
 
 In this situation, all 10 Campaigns with no channel selection that were previously sending through the “Marketing” Channel will now send through the “Updates” channel because these messages send through the fallback channel. The 15 messages that were sending through the “Social Notifications” channel will continue to send through the “Social Notifications” channel. The 5 messages that were sending through the "Marketing" channel will continue to send through the "Marketing" channel.
 
-In the event an invalid channel ID is supplied to Braze (ie. if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze’s dashboard during development.
+In the event that an invalid channel ID is supplied to Braze (ie. if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze’s dashboard during development.
 
 To better understand the expected behavior for channels, please refer to the following table:
 
