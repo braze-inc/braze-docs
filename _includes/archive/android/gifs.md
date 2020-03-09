@@ -163,11 +163,6 @@ class GlideIntegrationApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-### Fresco Migration {#gifs-integration}
-Fresco is no longer supported as a GIF loading library in version 3.0.0 of the Braze Android SDK. A custom image loader, such as [Glide][gifs-67], must be used in order to display GIFs.
-
-_The usage of Fresco with `IAppboyImageLoader` is not supported since Fresco requires Drawee views to work._
-
 [gifs-56]: http://developer.android.com/reference/android/app/Application.html
 [gifs-57]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
 [gifs-58]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml

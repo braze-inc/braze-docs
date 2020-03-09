@@ -5,7 +5,7 @@ page_order: 3
 
 # Exporting App Usage Data
 
-The App Usage page of the Dashboard contains high level data, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
+The App Usage page of the Dashboard contains high-level data, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
 
 ![App usage graph][27]
 

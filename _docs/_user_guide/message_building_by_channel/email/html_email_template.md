@@ -42,6 +42,7 @@ There are a number of email error messages you can receive when uploading an HTM
 |Images over 5MB| Reduce the number of images and try uploading again. |
 |Extra Images| You may have extra images in your file that are not referenced in your HTML file. This will not cause a fail error, but those extra images will be discarded. If those images were supposed to be referenced in the HTML file, please check its contents and correct any errors, then try uploading again.
 |Missing Images| If there are images referenced in your HTML file but those images are not included in the image folder of the .zip file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your .zip file and try uploading again.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Step 4: Finish and Save Your Template

@@ -24,7 +24,7 @@ Using an A/B test, you can see which wording results in a higher conversion rate
 
 The above test only examines the effect of one variable-- the copy in the push notification. A multivariate test is similar, except it tests the effects of 2 or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing 2 variables (or variates-- not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message-- 2 options for the copy multiplied by 2 options for the emoji (present or not) equals 4 total message variants.
 
-For the purposes of this documentation, a "multivariate test" should be considered interchangeable with an "A/B test".
+In the Braze documentation, a "multivariate test" should be considered interchangeable with an "A/B test".
 
 
 ## The Benefits of Multivariate & A/B Testing {#the-benefits-of}
@@ -115,7 +115,7 @@ Decide what percentage of your target segment should receive each of your varian
 
 #### Including a Control Group {#including-a-control-group}
 
-When you create a multivariate or A/B test, you can reserve a percentage of your target audience for a randomized control group. Users in the control group will not receive the test, but Braze will monitor their conversion rate for the duration of the campaign. When viewing your results, you’ll be able to compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare not only the effects of your variants, but also compare the effects of your variants against the conversion rate that would result if you didn’t send a message at all. <br><br>The size of the control group for a campaign with [Intelligent Selection][intelselection] will be based on the number of variants. If each variant is being sent to more than 20% of users, then the control group will be 20% and the variants will be split evenly across the remaining 80%. However, if you have multiple variants such that each variant is being sent to less than 20% of users, then the control group will have to become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group will grow or shrink based on the results.
+When you create a multivariate or A/B test, you can reserve a percentage of your target audience for a randomized control group. Users in the control group will not receive the test, but Braze will monitor their conversion rate for the duration of the campaign. When viewing your results, you’ll be able to compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare not only the effects of your variants but also compare the effects of your variants against the conversion rate that would result if you didn’t send a message at all. <br><br>The size of the control group for a campaign with [Intelligent Selection][intelselection] will be based on the number of variants. If each variant is being sent to more than 20% of users, then the control group will be 20% and the variants will be split evenly across the remaining 80%. However, if you have multiple variants such that each variant is being sent to less than 20% of users, then the control group will have to become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group will grow or shrink based on the results.
 
 {% alert note %}
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate will be 0% by definition and does not constitute a meaningful comparison to the variants.
@@ -164,17 +164,17 @@ On the analytics page, you can also see the performance of the Winning Variant t
 ![View Results][210]
 
 {% alert note %}
-Braze tests all the variants against each other with [Pearson’s chai-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
+Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
 
 
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
 {% endalert %}
 
-Zero, one, or more variants can do better than control, but the chai-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
+Zero, one, or more variants can do better than control, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
 
 ### Understanding Confidence {#understanding-confidence}
 
-An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses, and that there is only a 5% likelihood that the difference has occurred by chance.
+An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
 Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a Z Test. A result of 95% or greater confidence, as in the above example, indicates that the variant is, statistically speaking, better than the control. A confidence of 0-5% indicates that the control is better, and any value between 5% and 95% means there is no statistically rigorous winner.
 
@@ -206,6 +206,7 @@ What levers do you have to pull and what are the desired effects? While there ar
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
 | In-app Notification | Aspects listed for "push" <br> [Message Format][273] | Click <br> Conversion Rate |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 

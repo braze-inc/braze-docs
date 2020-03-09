@@ -11,6 +11,7 @@ tool:
   - Campaign
   - Dashboard
 ---
+
 # A/B Testing with Random Buckets
 
 > This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
@@ -82,7 +83,7 @@ You can test the effectiveness of different message channel combinations. For in
 
 ### Campaign Variant Percentages
 
-In a Campaign, if a variant percentage is modified after inital creation, you will find that the users may be redistributed to other variants.
+In a Campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
 
 Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a campaign variant) - __they will receive the same variant unless the variant percentages are modified__. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
 

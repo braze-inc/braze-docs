@@ -5,7 +5,7 @@ page_order: 7
 
 # Device and Carrier Data
 
-For information on your users' phone operating systems, screen resolutions, wireless carriers and device models, go to the Devices & Carriers page, where you can export the following data:
+For information on your users' phone operating systems, screen resolutions, wireless carriers, and device models go to the Devices & Carriers page, where you can export the following data:
 
 - Operating Systems
     - Number count for each device

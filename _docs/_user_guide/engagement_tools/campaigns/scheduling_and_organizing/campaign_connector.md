@@ -79,7 +79,7 @@ For example, you might choose to target users who clicked on a promotional push 
 
 Or, you might follow up with users who clicked a deep link in an onboarding in-app message by sending them another in-app message that highlights additional features.  This way, you can target users that have demonstrated that they are interested in learning more about the features of your application and avoid annoying the users that prefer to discover these features by themselves.
 
-You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
+You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
 
 [1]: #overview
 [2]: #how-to

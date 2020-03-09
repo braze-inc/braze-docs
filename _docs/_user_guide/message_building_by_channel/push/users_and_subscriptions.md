@@ -24,6 +24,7 @@ tool:
 |Subscribed| Default status.|
 |Opted-In| A user has explicitly allowed Braze will automatically move a user's opt-in state to “Opted-In”. |
 |Unsubscribed| A user has explicitly disallowed push notifications.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 Braze determines these states with __push tokens__, which can grant permission to send push notifications to your user - this is called ["Push Enabled"](#push-enabled).
 

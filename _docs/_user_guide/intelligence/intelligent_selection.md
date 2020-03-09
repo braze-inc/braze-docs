@@ -9,7 +9,7 @@ page_order: 1
 
 A variant that appears to be performing better than others will go to more users, while variants that are underperforming will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
-By repeatedly looking at performance data and shifting campaign traffic toward winning variants gradually, Intelligent Selection ensures that more users receive your best performing variant, without any sacrifice in statistical confidence. Intelligent Selection will also rule out underperforming variants and identify high performing variants faster than a [traditional A/B test][1]. With Intelligent Selection, you can test more frequently and with greater confidence that your users will see your best message.
+By repeatedly looking at performance data and shifting campaign traffic toward winning variants gradually, Intelligent Selection ensures that more users receive your best-performing variant, without any sacrifice in statistical confidence. Intelligent Selection will also rule out underperforming variants and identify high performing variants faster than a [traditional A/B test][1]. With Intelligent Selection, you can test more frequently and with greater confidence that your users will see your best message.
 
 Intelligent Selection is ideal for campaigns that are scheduled to send multiple times. As Intelligent Selection needs initial results to begin adjusting your campaign, a campaign that sends only once will not benefit. For those campaigns, an [A/B test][1] would be more effective.
 

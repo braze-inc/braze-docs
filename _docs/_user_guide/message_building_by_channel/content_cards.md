@@ -31,7 +31,9 @@ guide_featured_list:
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
 {% endalert %}
 
-## When to Use Content Cards
+## When to Use Content Cards 
+
+{% include video.html id="4FUPxkIq2xc" align="right" %}
 
 Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 

@@ -12,7 +12,7 @@ tool: currents
 > This page outlines and describes the generic process for integrating and configuring Braze Currents.
 
 {% alert important %}
-Currents is included with certain Braze packages. Please contact your Braze representative if you have any questions or want to gain access.
+Currents are included with certain Braze packages. Please contact your Braze representative if you have any questions or want to gain access.
 {% endalert %}
 
 ## Requirements
@@ -21,7 +21,7 @@ Using Currents with any of our partners requires the same basic parameters and c
 
 Each partner requires that Braze has permission to write and send data files to them, and Braze asks for the location they should write those files to, specifically bucket names or keys.
 
-The following requirements are the basic, minimum requirements to integrate with most of our partners. Some partners will require additional parameters, but those will be listed on [those partners pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/) along with any nuances associate with these basic requirements.
+The following requirements are the basic, minimum requirements to integrate with most of our partners. Some partners will require additional parameters, but those will be listed on [those partners pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/) along with any nuances associated with these basic requirements.
 
 | Requirement | Origin | Access | Description
 |---|---|---|---|
@@ -29,6 +29,7 @@ The following requirements are the basic, minimum requirements to integrate with
 | Partner API Key or Token | Usually the Partner’s dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data.
 | Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner’s dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account.
 | Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner’s dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don’t want your data to get lost! | Though this is required for some Partners, it’s important to get right when you do need it. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Step 1: Choose Your Partner

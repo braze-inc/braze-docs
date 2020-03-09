@@ -33,7 +33,13 @@ validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
-
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/'] = '/docs/partners/data_augmentation/contextual_location/accuweather/'
+validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/data_import/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/#data-import'
+validurls['/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/'
+validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/'
 
 validurls['/docs/help/release_notes/most_recent'] = '/docs/help/release_notes/#most-recent';
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
@@ -54,6 +60,7 @@ validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/help/releas
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
 
+validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates'
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';

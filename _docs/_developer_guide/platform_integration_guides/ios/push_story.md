@@ -224,7 +224,7 @@ Add `ABKPushStoryAppGroupKey` in the `appboyOption` dictionary as following when
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
 appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
-[Appboy startWithApiKey:@"YOUR_APPBOY_API_KEY"
+[Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];
@@ -237,7 +237,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
 let appboyOptions: [AnyHashable: Any] = [
   ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
 ]
-Appboy.start(withApiKey: "YOUR_APPBOY_API_KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions: appboyOptions)
+Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
 
 {% endtab %}
