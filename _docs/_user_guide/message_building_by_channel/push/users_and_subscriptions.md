@@ -28,7 +28,7 @@ tool:
 
 Braze determines these states with __push tokens__, which can grant permission to send push notifications to your user - this is called ["Push Enabled"](#push-enabled).
 
-Individual user profiles can be exported in the JSON format using the users/export/ endpoints using Braze’s Rest API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK](#before-android-sdk) version does not have the `notifications_enabled` parameter).
+Individual user profiles can be exported in the JSON format using the users/export/ [endpoints][3] using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK](#before-android-sdk) version does not have the `notifications_enabled` parameter).
 
 {% alert note %}
   __Bounces__
@@ -62,9 +62,9 @@ In iOS 12, Apple introduced Provisional Authorization, allowing brands the optio
 
 On devices running iOS 11 or below, your users _must explicitly opt-in to receive your push messages_. You must request whether the user would like to receive push from you.
 
-If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the foreground. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the background (you must have "Remote Notifications" enabled in __Xcode__). These users with provisional authorization have push enabled at the device-level. 
+If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the __foreground__. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the __background__ (you must have "Remote Notifications" enabled in __Xcode__). These users with provisional authorization have push enabled at the device-level. 
 
-iOS users are considered "Push Enabled" only if they have allowed notifications in the foreground, either explicitly (app-level) or provisionally (device-level).
+iOS users are considered "Push Enabled" only if they have allowed notifications in the __foreground__, either explicitly (app-level) or provisionally (device-level).
 
   {% endtab %}
   {% tab Android %}
@@ -72,7 +72,7 @@ __Android Push__
 
 You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving that token, an update to the user’s push enabled state will happen. At this point, a user has push enabled at both the app-level and the device-level.
 
-If the user disables push, Braze will mark them as foreground push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send background (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
+If the user disables push, Braze will mark them as __foreground__ push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send __background__ (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
 
 On Android, Braze will move a user to be __push disabled__ if:
 - A user uninstalls the app from their device.
@@ -91,4 +91,5 @@ Here are some details you should know if you aren't using our most up to date An
 
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
 [2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
+[3]: {{ site.baseurl }}/api/endpoints/export/
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}

@@ -46,10 +46,12 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |---|
 |[4.5.4][9] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
 |[3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 |Google Play Store Policy|
 |---|
 |[We don’t allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings.][10] System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
+{: .reset-td-br-1}
 
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
