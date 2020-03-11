@@ -47,7 +47,7 @@ validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onbo
 validurls['/docs/help/best_practices/email/email_reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting';
 validurls['/docs/help/best_practices/email/import_your_email_list'] = '/docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list';
 
-validurls['/docs/developer_guide/rest_api/basics'] = '/docs/api/basics';
+validurls['/docs/developer_guide/rest_api/basics/'] = '/docs/api/basics/';
 validurls['/docs/developer_guide/rest_api/interactive'] = '/docs/api/interactive';
 validurls['/docs/developer_guide/rest_api/user_data'] = '/docs/api/endpoints/user_data';
 validurls['/docs/developer_guide/rest_api/messaging'] = '/docs/api/endpoints/messaging';

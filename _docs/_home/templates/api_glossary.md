@@ -92,6 +92,7 @@ The response from this endpoint includes a field for `email_template_id`, which 
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset`  |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 {% endapi %}
@@ -145,6 +146,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endapi %}
 
@@ -214,6 +216,7 @@ Content-Type: application/json
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endapi %}
 
@@ -292,6 +295,7 @@ Content-Type: application/json
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
 
