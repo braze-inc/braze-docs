@@ -146,7 +146,7 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client
 [2]: #utilizing-the-push-error-log
 [3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
-[4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/firebaseinstanceid.html#gettoken(java.lang.string, java.lang.string)
+[4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
 [9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
