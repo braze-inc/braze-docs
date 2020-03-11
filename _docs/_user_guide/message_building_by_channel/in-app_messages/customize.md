@@ -78,6 +78,9 @@ The following javascript methods are supported within Braze's HTML in-app messag
 #article-main > table:first-of-type > tbody > tr td:first-child code {
     font-size:12px !important;
 }
+#article-main > table:first-of-type td {
+  word-break: break-word;
+}
 </style>
 
 {% include archive/appboyBridge.md %}
