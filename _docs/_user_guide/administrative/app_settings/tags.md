@@ -12,7 +12,7 @@ You can add tags when creating or editing a campaign, Canvas, segment, or News F
 
 ![Campaign Creation][I1]
 
-You can also add tags to multiple campaigns, Canvases, segments, or News Feed cards by checking the box next to each engagement and clicking the `Tag As` dropdown.
+You can also add tags to multiple campaigns, Canvases, segments, or News Feed cards by checking the box next to each engagement and clicking the `Tag As` drop-down.
 
 ![Tagging multiple][I4]
 

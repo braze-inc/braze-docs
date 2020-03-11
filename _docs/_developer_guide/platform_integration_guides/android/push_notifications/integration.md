@@ -45,13 +45,13 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 #### Step 2: Configure Token Registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token is registered. Firebase tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
 ##### Option 1: Automatic Registration
 
-To automatically register Firebase push tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
+To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
 
 In your `appboy.xml`:
 
@@ -104,7 +104,7 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     final Context applicationContext = this;
     new Thread(new Runnable() {
       @Override
@@ -113,7 +113,7 @@ public class MyApplication extends Application {
           String token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM");
           Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
         } catch (Exception e) {
-          Log.e(TAG, "Exception while registering Firebase token with Braze.", e);
+          Log.e(TAG, "Exception while registering FCM token with Braze.", e);
         }
       }
     }).start();
@@ -129,13 +129,13 @@ class MyApplication: Application() {
   override fun onCreate() {
     super.onCreate()
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     Thread(Runnable {
       try {
         val token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM")
         Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
       } catch (e: Exception) {
-        Log.e(TAG, "Exception while registering Firebase token with Braze.", e)
+        Log.e(TAG, "Exception while registering FCM token with Braze.", e)
       }
     }).start()
   }
@@ -145,7 +145,7 @@ class MyApplication: Application() {
 {% endtab %}
 {% endtabs %}
 
-> While we highly recommend you register your Firebase token in your application [`onCreate()`][67], the push token can be registered anywhere in your code.
+> While we highly recommend you register your FCM registration token in your application [`onCreate()`][67], the token can be registered anywhere in your code.
 
 #### Step 3: Migrate from GCM (Optional)
 
@@ -623,7 +623,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [23]: #step-4-registering-opens-and-receipts
 [26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
 [27]: {% image_buster /assets/img_archive/Push_Android_2.png %}
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
 [30]: #step-3-enable-automatic-registration
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"

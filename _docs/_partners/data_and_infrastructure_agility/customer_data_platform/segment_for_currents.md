@@ -56,8 +56,8 @@ You can export the following data from Braze to Segment:
 | News Feed Card Viewed          | User viewed a Card within the native Braze News Feed. |
 | News Feed Card Clicked         | User clicked on a Card within the native Braze News Feed. |
 | Webhook Sent                   | A webhook message was sent. |                                                                 |
-| Campaign Converted             | User performed the primary conversion event for a Campaign within its conversion window. |
-| Canvas Converted               | User performed the primary conversion event for a Canvas within its conversion window. |
+| Campaign Converted             | User performed a conversion event for a Campaign within its conversion window. |
+| Canvas Converted               | User performed a conversion event for a Canvas within its conversion window. |
 | Canvas Entered                 | User was entered into a Canvas. |
 | Campaign Control Group Entered | User was enrolled in a Campaign control group. |
 | Application Uninstalled        | User uninstalled the App. |

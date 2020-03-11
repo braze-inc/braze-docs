@@ -13,6 +13,7 @@ Braze has three global subscription states for e-mail users (listed in chart bel
 | Opted-in | User has explicitly confirmed he/she wants to receive e-mail. We recommend an explicit opt-in process to acquire consent from users to send e-mail. |
 | Subscribed | User has neither unsubscribed, nor explicitly opted-in to receive e-mails. A user automatically gets set as Subscribed when a valid e-mail address is added to their user profile. |
 | Unsubscribed | User has either explicitly unsubscribed from your e-mails or been automatically unsubscribed after marked one of your e-mails as spam. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 Please note that these Global Subscription States are different from [Subscription Groups](#subscription-groups), which should be considered filters that can further narrow your audience from the Global Subscription States.
@@ -136,6 +137,7 @@ When creating a custom footer, Braze suggests you use attributes for personaliza
 | User's Custom Unsubscribe URL | `{{${set_user_to_unsubscribed_url}}}` |
 | User's Custom Opt-In URL | `{{${set_user_to_opted_in_url}}}` |
 | User's Custom Subscribe URL | `{{${set_user_to_subscribed_url}}}` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Of course, the full set of default and custom attributes are available to you. As a best practice, Braze recommends including both an unsubscribe link (i.e. ``{{${set_user_to_unsubscribed_url}}}``) and an opt-in link (i.e. ``{{${set_user_to_opted_in_url}}}``) in your custom footer. This way users will be able to both unsubscribe or opt-in and you can passively collect opt-in data for a portion of your users.
 
@@ -151,6 +153,8 @@ Optionally, you may provide HTML for your own custom landing page, which users w
 We recommend including a resubscribe link (i.e. `{{${set_user_to_subscribed_url}}}` ) on this page so that users have the option to resubscribe in case they unsubscribed by accident.
 
 ![Custom Unsubscribe][11]
+
+{% endraw %}
 
 ### Changing Push Subscriptions {#changing-push-subscriptions}
 Braze's SDKs provide methods for changing a user's push message subscription. Please refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
@@ -174,7 +178,7 @@ Braze supports three targeting states:
 - All users, including those who have unsubscribed.
 
 {% alert important %}
-It is your responsibility to comply with any applicable [spam laws][8] when using these targeting settings.
+It is your responsibility to comply with any applicable [spam laws]({{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
 
 ![Campaign Targeting Subscription UI][17]
@@ -185,7 +189,6 @@ The "Email Subscription Status" and "Push Subscription Status" filters allow you
 This can be useful - for example, if you want to target users who have neither opted in nor out and encourage them to explicitly opt-in to email or push. In that case, you would create a segment with a filter for "Email/Push Subscription Status is Subscribed" and campaigns to this segment will go to users who are subscribed but not opted in.
 
 ![Subscription Filter][18]
-{% endraw %}
 
 [1]: #subscription-states
 [2]: #changing-subscriptions
@@ -194,7 +197,6 @@ This can be useful - for example, if you want to target users who have neither o
 [5]: #manually-changing-subscriptions
 [6]: #subscriptions-and-campaign-targeting
 [7]: #segmenting-by-user-subscriptions
-[8]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
 [10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions

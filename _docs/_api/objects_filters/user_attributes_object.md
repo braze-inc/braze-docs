@@ -24,7 +24,7 @@ An API request with any fields in the Attributes Object will create or update an
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
+  // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
   // See note below regarding anonymous push token imports
   "push_token_import" : (optional, boolean),
@@ -71,7 +71,7 @@ The following data types can be stored as a custom attribute:
 - Arrays
   - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
   - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
-  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
 For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
 

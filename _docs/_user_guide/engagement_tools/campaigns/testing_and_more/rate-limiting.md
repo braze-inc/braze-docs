@@ -95,7 +95,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
 
 #### Multi-Platform Push Campaigns
-For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate limit per minute will equally distribute the 10K messages across the 3 platforms.
+For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate-limit per minute will equally distribute the 10K messages across the 3 platforms.
 
 ## Frequency Capping
 
@@ -105,7 +105,7 @@ As your user base continues to grow and your messaging scales to include life cy
 
 Frequency Capping can be set up for each app group by selecting Global Campaign Settings found underneath the Engagement tab. From here, you can choose:
 
-- Which message channel you’d like to cap - push, email, sms, webhook or any of those three.
+- Which message channel you’d like to cap - push, email, sms, webhook or any of those four.
 - How many times each user should receive that channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
 
 Each line of frequency caps will be connected using an "AND," and you're able to add as many as you wish. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than 1 push per day and no more than 3 pushes per week.

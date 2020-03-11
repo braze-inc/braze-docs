@@ -24,7 +24,7 @@ For more on conversions, check out our [Campaign Set Up LAB course](http://lab.b
 Along with "Make a Purchase,” events like "Start a Session,” "Upgrade App," or any of your Custom Events can be selected as Conversion Events. Below are further details on the feature, as well as the steps needed to implement them.
 
 ## Primary Conversion Event
-The Primary Conversion Event is the first event added during campaign or Canvas creation, and it is the one that has the most bearing on your engagement and reporting. It is used to:
+The Primary Conversion Event is the first event added during the campaign or Canvas creation, and it is the one that has the most bearing on your engagement and reporting. It is used to:
 
 - Compute the winning message variation in multivariate campaigns or Canvases.
 - Determine the window in which revenue is calculated for the campaign or Canvas.
@@ -33,7 +33,7 @@ The Primary Conversion Event is the first event added during campaign or Canvas 
 ## Step 1: Create a Campaign with Conversion Tracking
 Navigate to the [Braze Campaigns page][1] in your company dashboard and click "Create Campaign," then select the type of campaign you'd like to create.
 
-After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion Events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value Custom Event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application, but also how involved and active these sessions are.
+After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion Events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value Custom Event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
 
 ## Step 2: Add Conversion Events
 
@@ -41,12 +41,12 @@ For each conversion event you wish to track, select the event and conversion dea
 
 1. Select the general type of event you'd like to use.
 
-	![Conversion Event Selection][2]
+    ![Conversion Event Selection][2]
 
-	- __Opens App__: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the app group).
-	- __Makes Purchase__: A user is counted as having converted when they purchase the product you specify (defaults to any product).
-	- __Performs Custom Event__: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
-  - __Upgrade App__: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the app group). Braze will perform a best-efforts numerical comparison to determine if the version change was, in fact, an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, while Braze will not register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version names contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was in fact an upgrade. In that situation, Braze will count it as a conversion when the user's most recent app version changes.
+    - __Opens App__: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the app group).
+    - __Makes Purchase__: A user is counted as having converted when they purchase the product you specify (defaults to any product).
+    - __Performs Custom Event__: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
+  - __Upgrade App__: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the app group). Braze will perform a best-efforts numerical comparison to determine if the version change was, in fact, an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, while Braze will not register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version names contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was, in fact, an upgrade. In that situation, Braze will count it as a conversion when the user's most recent app version changes.
 
 2. Set a "conversion deadline." You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.  
 

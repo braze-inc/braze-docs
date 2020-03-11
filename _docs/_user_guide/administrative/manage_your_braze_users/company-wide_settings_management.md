@@ -29,8 +29,8 @@ The Notification Preferences Page is where you can configure who (if anyone) rec
 
 The available notifications are in the table below:
 
-| Notification                        | Description                                                                                                                                             | Webhook Support |
-|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| Notification | Description | Webhook Support |
+|--------------|-------------|-----------------|
 | AWS Credential Errors               | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export.                        | Yes             |
 | Scheduled Campaign Sent/Not Sent    | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to.         | Yes             |
 | Scheduled Campaign Limit Met        | Notifies recipients when a scheduled recurring campaign is not sent because the total campaign limit has been met.                                      | Yes             |
@@ -40,6 +40,7 @@ The available notifications are in the table below:
 | Connected Content Timeouts          | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Yes             |
 | News Feed Card Published/Live        | Notifies recipients when News Feed cards are scheduled or published.                                                                                     | Yes             |
 | Weekly Analytics Report             | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to.  | No              |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Slack Incoming Webhook Integration
 

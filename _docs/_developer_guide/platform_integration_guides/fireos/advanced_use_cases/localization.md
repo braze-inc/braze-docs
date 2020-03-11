@@ -6,66 +6,41 @@ page_order: 1
 ---
 ## Localization
 
-Localization is supported within the Braze Android SDK. In addition to English, Braze supports 29 languages in our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
+Localization is supported within the Braze Android SDK. In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
 ### Languages Supported
 
-1. Arabic
-2. Burmese
-3. Chinese - Simplified
-4. Chinese - Traditional
-5. Danish
-6. Dutch
-7. Estonian
-8. Finnish
-9. French
-10. German
-11. Hindi
-12. Indonesian
-13. Italian
-14. Japanese
-15. Khmer
-16. Korean
-17. Lao
-18. Malay
-19. Norwegian
-20. Polish
-21. Portuguese - Brazil
-22. Portuguese - Portugal
-23. Russian
-24. Spanish - Latin America
-25. Spanish - Spain
-26. Swedish
-27. Tagalog
-28. Thai
-29. Vietnamese
-
-### List of Localized Strings
-
-- Free
-- Reporting an Issue?
-- Message
-- Email
-- An email address is required.
-- Cancel
-- Send
-- Invalid Email Address
-- Please enter a valid email address and try again.
-- We have no updates. Please check again later.
-- Connection Error
-- Cannot establish network connection. Please try again later.
-- Cannot establish network connection.
-- Please try again later.
-- Provide contact info from:
-- or
-- Done
-- Enable Facebook Connection
-- To re-enable Facebook, go to Settings > Facebook.
-- Enable Twitter Connection
-- To re-enable Twitter, go to Settings > Twitter.
-- OK
-- Hh: mm (hour:minute format)
-- $%.2f (price format)
+- Arabic
+- Burmese
+- Chinese - Simplified
+- Chinese - Traditional
+- Czech (coming soon)
+- Danish
+- Dutch
+- Estonian
+- Finnish
+- French
+- German
+- Hindi
+- Indonesian
+- Italian
+- Japanese
+- Khmer
+- Korean
+- Lao
+- Malay
+- Norwegian
+- Polish
+- Portuguese - Brazil
+- Portuguese - Portugal
+- Russian
+- Spanish - Latin America
+- Spanish - Spain
+- Swedish
+- Tagalog
+- Thai
+- Ukrainian (coming soon)
+- Vietnamese
 
 For more information see the [Android Localization Developer Docs][3].
 

@@ -19,6 +19,8 @@ validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing
 validurls['/docs/hidden/misc_reference/most_engaged_channel'] = '/docs/user_guide/intelligence/intelligent_channel';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection'] = '/docs/user_guide/intelligence/intelligent_selection';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing'] = '/docs/user_guide/intelligence/multivariate_testing';
+validurls['/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/'
+validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/'
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
@@ -30,10 +32,15 @@ validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/da
 validurls['/docs/partners/braze_currents/data_partner_integrations/dpi/#mixpanel-cohort-import'] = '/docs/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import';
 validurls['/docs/partners/apptimize/'] = '/docs/help/release_notes/deprecations/apptimize/';
 validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels/calendar/rokt_calendar/';
-validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/coud_storage/amazon_s3/'
-validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/coud_storage/google_cloud_storage_for_currents/'
-validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/coud_storage/microsoft_azure_blob_storage_for_currents/'
-
+validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
+validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
+validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/'] = '/docs/partners/data_augmentation/contextual_location/accuweather/'
+validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/data_import/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/#data-import'
+validurld['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/'
 
 validurls['/docs/help/release_notes/most_recent'] = '/docs/help/release_notes/#most-recent';
 validurls['/docs/help/best_practices/email/ip_warming'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming';
@@ -52,8 +59,9 @@ validurls['/docs/developer_guide/rest_api/api_campaigns'] = '/docs/api/api_campa
 validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues'] = '/docs/api/network_connectivity_issues';
 validurls['/docs/developer_guide/rest_api/tls_deprecation'] = '/docs/help/release_notes/deprecations/tls_deprecation';
 validurls['/docs/developer_guide/rest_api/postman_collection'] = '/docs/api/postman_collection';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
 
+validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates'
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';

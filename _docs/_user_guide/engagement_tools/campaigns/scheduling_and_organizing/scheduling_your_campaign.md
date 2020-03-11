@@ -13,7 +13,7 @@ description: "This reference article gives an overview of different ways to go a
 > This reference article goes over the three different delivery methods Braze offers (Scheduled Delivery, Action-Based Delivery, and API-triggered Delivery) and how to set them up and use them. 
 > <br>
 > <br>
-> Choosing how your campaign gets delivered is crucial in developing an effective campaign. Thankfully, with Braze you have fine tuned control over when and how your campaigns get sent. 
+> Choosing how your campaign gets delivered is crucial in developing an effective campaign. Thankfully, with Braze you have fine-tuned control over when and how your campaigns get sent. 
 
 Every savvy marketer knows that timing is key, which is why Braze provides multiple scheduling options that will empower you to reach users at precisely the right time. Ample flexibility, however, may cause uncertainty over which type of schedule fits best with your campaign's goals. To help you get the most of Braze's platform, we've created this handy guide that reviews your scheduling options, best practices, and use cases.
 
@@ -29,7 +29,7 @@ If you choose to send a message as soon as it's launched, it will begin sending 
 
 ![Immediately][10]
 
-This type of schedule is designed for one-off campaigns that you wish to send immediately, such as messages pertaining to a current event. A sports app, for instance, may schedule push notifications on score updates using this option. In addition, when sending test messages aimed at just yourself or your team, this option allows you to deliver them immediately. If you plan on editing the campaign and re-sending it after viewing the test, be sure to check the box that makes users [re-eligible][24] to receive the campaign. By default, Braze sends a campaign to a user just once, unless that box is checked.
+This type of schedule is designed for one-off campaigns that you wish to send immediately, such as messages about a current event. A sports app, for instance, may schedule push notifications on score updates using this option. In addition, when sending test messages aimed at just yourself or your team, this option allows you to deliver them immediately. If you plan on editing the campaign and re-sending it after viewing the test, be sure to check the box that makes users [re-eligible][24] to receive the campaign. By default, Braze sends a campaign to a user just once, unless that box is checked.
 
 ### Option 2: Sending at a Designated Time
 
@@ -84,7 +84,7 @@ You can also further filter trigger events through Braze's [Custom Event Propert
 ![Custom Event Properties Pic][34]
 
 {% alert note %}
-The trigger event "start session" can be the user's very first app open, if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
+The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
 {% endalert %}
 
 Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't be able to receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, please read our section on [reasons why a user might not have received a triggered campaign][49].
@@ -99,7 +99,7 @@ In addition, triggered in-app messages still abide by [in-app message delivery r
 ![triggered 1][17]
 
 
-__Step 2: Select how long to wait before sending the campaign, after the trigger criteria is met.__ Choose how long to delay your message after the user completes the trigger event.
+__Step 2: Select how long to wait before sending the campaign, after the trigger criteria are met.__ Choose how long to delay your message after the user completes the trigger event.
 
 {% alert important %}
 In choosing your delay length, note that if you set a delay that is longer than the message's duration for sending (see Step 4), no users will receive your campaign.
@@ -167,7 +167,7 @@ Any of these things will prevent a user who has completed the trigger event from
 - The user has already received the campaign, and users do not become re-eligible.
 - While users are re-eligible to receive the campaign, they can only re-trigger it after a certain period of time, and that period of time has not yet elapsed.
 
-[Segmenting][47] a triggered campaign on user data recorded at the time of the event may cause a _race condition_. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent, and can lead to the user not receiving the campaign.
+[Segmenting][47] a triggered campaign on user data recorded at the time of the event may cause a _race condition_. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time that segment membership is determined and the campaign is sent and can lead to the user not receiving the campaign.
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration`, and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 

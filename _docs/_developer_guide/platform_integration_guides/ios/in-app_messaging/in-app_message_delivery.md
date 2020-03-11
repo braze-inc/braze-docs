@@ -180,4 +180,4 @@ In-app messages can also be locally created within the app and displayed via Bra
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}
 [44]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
-[45]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[45]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle
