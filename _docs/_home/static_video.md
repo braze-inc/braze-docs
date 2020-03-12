@@ -71,6 +71,7 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the custom events analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 

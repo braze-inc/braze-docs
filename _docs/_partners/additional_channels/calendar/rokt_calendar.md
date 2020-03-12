@@ -23,14 +23,15 @@ This partnership is in early access beta. All features may not perform as exactl
 
 ## Pre-Requisites
 
-| Requirement    | Origin                                                | Description                                                             |
-| -------------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
+| Requirement | Origin  | Description |
+| ----------- | ------- | ----------- |
 | Rokt Calendar Setup | Rokt Calendar account manager | A client specific Rokt Calendar account will be setup. |
 | Rokt Calendar OAuth Credentials | Rokt Calendar account manager | This key will enable you to connect your Braze and Rokt Calendar accounts. It’s setup for each new Braze client and added to ‘Connected content’ in Braze <br> `Manage App Group` > `Connected Content` > `+Add Credential` |
 | [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
 | [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
 | Braze API Key | Braze | You will need to create a new API Key can be created in the `Developer Console` > `API Settings` > `+Create New API Key` with `users.track` permissions. The Braze API key will need to be provided to your Rokt account manager.|
 | External Subscriber ID | Customer | This is the identifier that will be used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something that is passed through by the client to Rokt Calendar or email is used.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## API Integration
 
@@ -45,6 +46,7 @@ Your Rokt account manager will provide you with a link to your new calendar whic
 | You are an existing Rokt Calendar and Braze customer. <br> _Specifically, your calendar has subscribers and your Braze account has users that pre-date the use of the Braze integration._ | - Calendar subscribers exist. <br> - Braze users exist.| - Matching an identifier at the subscription level to Braze user identifier (for example, by email). <br> - A pre go-live data transfer of subscription data from Rokt Calendar to Braze user profile.|
 | You are an existing Braze customer. <br> _Specifically, you do not have a calendar set up with any  subscribers and your Braze account has users that pre-date the use of the Braze integration._ | - No calendar subscribers. <br> - Braze users exist. | As the subscribers will be new, an agreed identifier, common to Braze users will be used.|
 | You are neither a Rokt Calendar nor Braze client. <br> _Specifically, the calendar has no subscribers and the Braze account has no users that pre-date the use of the Braze integration._ | - No calendar subscribers. <br> - No Braze users. | As both subscribers and Braze users will be new, an agreed identifier will be assigned to the calendar subscription and Braze user. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
 If a subscriber is not a Braze user, Rokt will create a new user. When the user logs into your app, a new Braze profile will also be created. In order to merge these user profiles, you will have to migrate the Rokt created user to the new app-created user through the [`changeUser`]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id) through the SDKs. (Optional) Your team can also choose to delete the orphaned profile (email only profile created by Rokt).
@@ -72,6 +74,7 @@ When Rokt either creates a new user or matches an existing subscriber with a Bra
 | `calreply:subscription_id` | The subscription Id, serving as a unique identifier, related to the created subscription. | `06423672-b6ba-4536-aa36-70788a7a0a36` |
 | `calreply:subscription_method` | Subscription method (webcal/Google) related to the created subscription. | `WebCal/f5733866ade2` |
 | `calreply:tags` | Calendar tags used  related to the created subscription. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 In addition, Rokt will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
 
@@ -94,6 +97,7 @@ Before you get started, the fields below detail the information that can be cust
 | `eventEnd` <br> _Required._  | The start date and time of the event as it would appear in the calendar | `2019-02-21T16:00:00` |
 | `eventTz` <br> _Required._  | The time zone of the event as it would appear in the calendar, note that the list of applicable time zones can be found here. | `Eastern Standard Time.` |
 | `notifyBefore` <br> _Required._  | The reminder time of the event as it would appear in the calendar, note that this is expressed in minutes | `15` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Send a New Event
 
@@ -110,6 +114,7 @@ Once you have selected the `Rokt Calendar - New Event` webhook template, you sho
 | `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
 
@@ -161,6 +166,7 @@ For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timez
 | ----------------  | ---------------- |
 | Authorization  | Bearer `{% connected_content https://api.calreply.net/oauth2/token :method post :basic_auth {insert credential} :body grant_type=[YOUR_CREDENTIALS] :save token :retry %}{{token.access_token}}` <br> _Note: This is the credential name in the `Manage App Group` > `Connected Content` > `Credential`_ |
 | Content-Type  | `application/json` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Ensure that your `HTTP Method` is set to **Post**.
 
@@ -193,6 +199,7 @@ Once you have selected the `Rokt Calendar - Update Event` webhook template, inpu
 | `Webhook URL` | `{% assign accountCode = {{custom_attribute.${calreply:account_code}}}[0] | split: '/' | first %}https://api.calreply.net/v1/subscriptionevent/{{accountCode}}/update`. |
 | `Request Body` | Select `Raw Text`. |
 | `HTTP Method` | Select `POST`. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Step 2: Fill Out Your Template
 
@@ -238,6 +245,7 @@ For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timez
 | ----------------  | ---------------- |
 | Authorization  | `Bearer {% connected_content https://api.calreply.net/oauth2/token :method post :basic_auth {insert credential} :body grant_type=[YOUR_CREDENTIALS] :save token :retry %}{{token.access_token}}` <br> _Note: This is the credential name in the `Manage App Group` > `Connected Content` > `Credential_` |
 | Content-Type  | `application/json` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
 
