@@ -51,6 +51,8 @@ For example, to log a custom attribute, custom event, and then close the message
 window.addEventListener("ab.BridgeReady", function(){
   // event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
+    // track Button 1 clicks for analytics
+    appboyBridge.logClick("0");
     // set the user's custom attribute
     appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");
     // track a custom event
@@ -75,6 +77,9 @@ The following javascript methods are supported within Braze's HTML in-app messag
 /* makes code column smaller font */
 #article-main > table:first-of-type > tbody > tr td:first-child code {
     font-size:12px !important;
+}
+#article-main > table:first-of-type td {
+  word-break: break-word;
 }
 </style>
 
