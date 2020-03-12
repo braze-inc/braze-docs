@@ -19,6 +19,7 @@ Use Certona with Braze's Connected Content partner to easily insert content reco
 | ---| ---| ---|
 |Certona Account | Certona | https://manage.certona.com/ | You'll need this account to access other resources and tools needed to incorporate and leverage Certona data with Braze. |
 | Certona REST API Endpoint | Certona | https://manage.certona.com/ | This endpoint is used directly in your message (in the Braze Campaign Message Composer) to pull recommended content based on User ID. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 # Integration
 

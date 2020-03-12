@@ -18,6 +18,7 @@ Liquid supports many [operators][25] that can be used in your conditional statem
 | or | condition A or condition B|
 | and | condition A and condition B|
 | contains | checks to see if a string or string array contains a string|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Operator Examples

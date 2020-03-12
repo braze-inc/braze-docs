@@ -20,6 +20,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
 | Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
 
@@ -52,6 +53,8 @@ You can template in the following attributes for the user's most recent device a
 | `{{most_recently_used_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{most_recently_used_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
 | `{{most_recently_used_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
@@ -70,6 +73,8 @@ For push notification and in-app message channels, you can template in the follo
 | `{{targeted_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{targeted_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
 | `{{targeted_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 {% endraw %}
 

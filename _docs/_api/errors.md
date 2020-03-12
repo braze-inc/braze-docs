@@ -93,5 +93,6 @@ The following status codes and associated error messages will be returned if you
 | `404 Not Found` | Unknown REST API Key.|
 | `429 Rate Limited` | Over rate limit.|
 | `5XX Internal Server Error` | You should retry your request with exponential backoff.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}

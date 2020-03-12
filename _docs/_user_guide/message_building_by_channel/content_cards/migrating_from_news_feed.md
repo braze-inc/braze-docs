@@ -28,7 +28,8 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 | [Rich Analytics][3] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Available in Canvas][2] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Connected Content][5] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| Personalization and Segmentation | Templated at Impression | Templated at Send | 
+| Personalization and Segmentation | Templated at Impression | Templated at Send |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3} 
 
 ## Implementation
 

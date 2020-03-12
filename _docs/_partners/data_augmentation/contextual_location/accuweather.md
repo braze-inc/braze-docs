@@ -24,6 +24,7 @@ Here are all of the AccuWeather APIs you can reference within your Braze campaig
 | [Imagery][54] | Get radar and satellite images. |
 | [Tropical][55] | Get current position, past positions, and forecasts for tropical cyclones worldwide. |
 | [Translations][56] | Get a list of available languages. Get translations for specific groups of phrases. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 In order to get started, you’ll need to have your app’s AccuWeather API key on-hand to use within your request urls. You will need to contact your Accuweather account manager for API keys that will work with the instructions listed on the [AccuWeather Enterprise API page][57].
 

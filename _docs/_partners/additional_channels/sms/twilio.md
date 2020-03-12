@@ -43,7 +43,7 @@ Twilio requires two request headers, the request Content-Type and an [HTTP Basic
 Header Name | Header Value
 --- | ---
 Content-Type | `application/x-www-form-urlencoded`
-Authentication | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
+Authorization | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
 
 Be sure to replace `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` with values from your Twilio dashboard. Lastly, Twilio’s API endpoint is expecting an HTTP POST request, so choose that option in the dropdown for *HTTP Method*.
 
