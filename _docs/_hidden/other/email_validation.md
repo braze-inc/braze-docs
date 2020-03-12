@@ -31,8 +31,8 @@ Regex: \A[a-z][\-\w]*(?:\.[\-\w]+)*\z
 
 **Regex explanation:**
 1. Local part must start with a character (a-z)
-2. Local part can contain any character or number (a-z or 0-9)
-3. can contain the following characters (**.**) or (**-**)
+2. Local part can contain any alphanumeric character (a-z or 0-9) or an underscore (**_**)
+3. can also contain the following characters (**.**) or (**-**)
 4. can not end with a period (**.**)
 5. cannot contain two or more consecutive periods (**.**)
 
@@ -46,19 +46,27 @@ Regex: /\A [\p\{L}\p\{N}_]+ (?: [\.\-\+\'_]+ [\p\{L}\p\{N}_]+ )* \z/x
 1. Local part can contain any letter, number or underscore, including Unicode letters and numbers
 2. can contain but may not start or end with the following characters: (**.**) (**-**) (**+**) or (**'**)
 
+{% alert important %}
+If the domain part is a Gmail address, the local part needs to be at least 5 characters long
+This is an addition to the regex validation specified above under "All other domains"
+{% endalert %}
+
 
 ### Host part validation Rules
 ipv4 or ipv6 addresses are not allowed in the host domain part of the email address
 
-Regex: / [\p{L}\p{N}]+ (?: (?: \-{1,2} &#94; \.) [\p{L}\p{N}]+ )*/x
+Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
 
 **Regex explanation:**
 1. host domain must start with a alphanumeric character (a-z or 0-9)
 2. host domain can only contain one period “.”
-3. host domain must end with a top level domain
-4. the top level domain is determined by anything after the ‘.’ and can only contain alphanumeric characters (a-z or 0-9)
-5. can contain the following characters: (**.**) or (**?**)
+3. Host domain cannot contain two or more consecutive periods
+4. host domain must end with a top level domain
+5. the top level domain is determined by anything after the ‘.’ and can only contain alphanumeric characters (a-z or 0-9)
+6. can contain the following characters: (**.**) or (**?**)
 
 {% alert important %}
 Unicode is accepted for both the local and host domain part of the email address.
 {% endalert %}
+
+This validation is done for user email addresses, the from-address as well as the reply-to address  of an email message.
