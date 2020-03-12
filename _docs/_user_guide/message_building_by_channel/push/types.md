@@ -20,17 +20,17 @@ glossary_tags:
 
 glossaries:
   - name: "Regular Push"
-    description: "The all-encompassing Push Message. Appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
+    description: "The all-encompassing Push Message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
     tags:
       - iOS
       - Android
       - Web
   - name: "Web Push"
-    description: "These push messages appear in Web Apps or Browsers. They still require permissions to reach the customer."
+    description: "These push messages appear in Web Apps or Browsers. They still require permission to reach the customer. Note that Web Push does not work if the user is using a hidden browser."
     tags:
       - Web
   - name: "Push Primer Campaigns"
-    description: "Though Push Primer Campaigns aren't necessarily a 'type' of message, they are a required method for enabling push on a user's device. For iOS devices, push primer campaigns can actually be your first push message, which are called 'provisional push' messages and show the user immediate value in enabling push."
+    description: "In-App Message Campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e. notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
     tags:
       - iOS
       - Android
@@ -52,17 +52,16 @@ glossaries:
       - iOS
       - Android
   - name: "Silent Push Notification"
-    description: "Silent Push Notifications are important because they don't intrude as much as regular push notifications."
+    description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
     tags:
       - iOS
-      - Android
       - Web
   - name: "Provisional Push Notifications for iOS"
-    description: "Segments your users based upon the calendar date of custom attributes. This filter looks for matches of an indicated day/month, but ignores the year. As such, the filter works nicely for anniversary use cases."
+    description: "Introduced by Apple in iOS 12, Provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
     tags:
       - iOS
   - name: "HTML Push Notifications"
-    description: "Determines the earliest time that a user has performed a specially recorded event (above)."
+    description: "HTML Push Notifications are notifications that are coded in HTML instead of working off of the pre-set push template within the dashboard. Having the option to create HTML Push Notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these Push Notifications to look."
     tags:
       - iOS
       - Android
@@ -73,7 +72,7 @@ glossaries:
       - iOS
       - Android
   - name: "Background Push Notifications"
-    description: "These push notifications don't appear in the view of the user at all, though they must still be enabled to receive them."
+    description: "Push notifications that are not rendered for the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A Background-enabled push token is required for background push to be sent."
     tags:
       - iOS
       - Android

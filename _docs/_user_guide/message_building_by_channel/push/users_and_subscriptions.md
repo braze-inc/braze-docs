@@ -1,6 +1,6 @@
 ---
 nav_title: "Subscription States"
-page_order: 2
+page_order: 3
 page_type: reference
 description: "This reference article covers the different push subscription states."
 
@@ -26,15 +26,14 @@ tool:
 |Unsubscribed| A user has explicitly disallowed push notifications.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze determines these states with __push tokens__, which can grant permission to send push notifications to your user - this is called ["Push Enabled"](#push-enabled).
 
-Individual user profiles can be exported in the JSON format using the users/export/ [endpoints][3] using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK](#before-android-sdk) version does not have the `notifications_enabled` parameter).
+Subscription states are filters that let Braze know if you are subscribed to recieve Push Messages. Note that even though you may __not__ have a Push Token (e.g You turn off push tokens at the device level through settings, opting not to recieve messages) you still may be subscribed. Being subscribed does not guarentee that a push will be delivered, you must also be Push enabled or Push registered to receive these notifications. This is done in part because a user may have multiple devices with your application that they can enable or disable push with, but only one Push subscription state. 
 
-{% alert note %}
-  __Bounces__
 
-  Occasionally, a push message will bounce (not be received by a user). This can happen because a user has either uninstalled the app or because iOS or Android has changed the push token, as they have a right to do.
-{% endalert %}
+How to Check my Push Subscription State
+1. User Profile
+2. CSV Export
+3. Rest API Export - Individual user profiles can be exported in the JSON format using the users/export/ [endpoints][3] using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK](#before-android-sdk) version does not have the `notifications_enabled` parameter).
 
 ## Push Enabled
 
