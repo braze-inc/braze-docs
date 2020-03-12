@@ -19,6 +19,7 @@ Tealium’s connection to Braze enables a data flow of custom events, user attri
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 | Tealium Account & Account Information | Tealium | https://my.tealiumiq.com/ | You must have an active Tealium Account to utilize their services with Braze. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 # Data In Integration
 Integrate Braze into your web app using the Tealium Tag Manager. In order to set up this integration correctly, there are a number of steps you need to take in order to configure the core integration. It’s then important to be able to understand how you start sending data to Braze by setting up custom events/custom attributes.

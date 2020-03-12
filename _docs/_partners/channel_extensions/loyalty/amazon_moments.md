@@ -16,11 +16,12 @@ This partnership is in early access beta. All features may not perform as exactl
 ## Prerequisites
 
 {% raw %}
-Requirement   |Origin| Description
---------------|------|-------------
-Amazon Developer Account   |[Amazon Developer Console](https://developer.amazon.com/)| You will need to have an Amazon Developer Account that can be created at https://developer.amazon.com/.
-Register a new app within Amazon Moments   |[Amazon Moments](https://developer.amazon.com/moments/console/register) | You will need to register a new app within your Amazon Moments Console: https://developer.amazon.com/moments/console/register.
-Moments Campaign Information   | Amazon Moments Campaign | You will need to include the App ID, Moments ID, Campaign ID, Reward Group, and API key from your Amazon Moments campaign to template into your Connected Content call.
+| Requirement   |Origin| Description |
+| --------------|------|------------- |
+| Amazon Developer Account   |[Amazon Developer Console](https://developer.amazon.com/)| You will need to have an Amazon Developer Account that can be created at https://developer.amazon.com/. |
+| Register a new app within Amazon Moments   |[Amazon Moments](https://developer.amazon.com/moments/console/register) | You will need to register a new app within your Amazon Moments Console: https://developer.amazon.com/moments/console/register. |
+| Moments Campaign Information   | Amazon Moments Campaign | You will need to include the App ID, Moments ID, Campaign ID, Reward Group, and API key from your Amazon Moments campaign to template into your Connected Content call. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endraw %}
 
 ## Integration
@@ -53,6 +54,7 @@ Cost per Action | Amount you will spend each time a customer completes an action
 Targeted marketplace  | Pick the Amazon marketplaces that your reward will be fulfilled from.
 Reward Selection | Choose the rewards you'd like to offer to your users. This rewards catalog is a curated list of popular items gifted on Amazon.
 Input Announcement & Redemption Messages | **Announcement Message** will be shown to customers who meet your Announcement Criteria. **Redemption Message** will be shown to users who completed the action you specified above. **Redemption Landing Page and Email Image** (3000x600px) will be shown to users who visit the reward redemption landing page on Amazon.
+{: .reset-td-br-1 .reset-td-br-2}
 {% endraw %}
 
 Once you have submitted your campaign, you will be able to view your Moments Reward API Parameters on the campaign details page that you will need to incorporate into your Braze Connected Content call.
@@ -70,11 +72,12 @@ Through Braze’s [Connected Content]({{ site.baseurl }}/user_guide/personalizat
 There are two Amazon Moments REST API Endpoints:
 
 {% raw %}
-Endpoint   |URL| Description
+ Endpoint   |URL| Description
 --------------|------|-------------
 `getRewardInfo` | https://dnxr7vm27d.execute-api.us-east-1.amazonaws.com/prod/GetRewardInfo | Retrieves information about a reward to be displayed to the customer for promotional purposes. Making this request will not consume a reward.
 `getReward` |https://dnxr7vm27d.execute-api.us-east-1.amazonaws.com/prod/GetReward | Gets a specific reward for the customer to redeem. Calling this endpoint will consume one reward from the inventory. Each reward can be  only one time.
 Moments Campaign Information   | Amazon Moments Campaign | You will need to include the App ID, Moments ID, Campaign ID, Reward Group, and API key from your Amazon Moments campaign to template into your Connected Content call.
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endraw %}
 
 The two endpoints use the same request parameters. The following workflow map shows the high-level interactions and when to use each endpoint:

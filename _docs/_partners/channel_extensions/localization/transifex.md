@@ -12,6 +12,7 @@ Transifex enables powerful localization across your user base, no matter what th
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 |Transifex Account | Transifex | https://www.transifex.com/signin/ | You must first have a Transifex account to access their SDK integration information. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Set up basic authentication for your account in the __Connected Content__ tab in __Manage App Group__.
 

@@ -149,6 +149,7 @@ US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
 US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
 US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Resetting Table word-break by column
 For tables columns which word-break should be reset to the default style, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
@@ -179,6 +180,7 @@ For tables columns which word-break should be reset to the default style, use ma
 | Content Card Dismissed               | Platform-specific Feed | User dismissed a Content Card                                                             | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | News Feed Viewed                     | Platform-specific Feed | User viewed the native Braze News Feed.                                                   | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | News Feed Card Viewed                | Platform-specific Feed | User viewed a Card within the native Braze News Feed.                                     | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### After
 
