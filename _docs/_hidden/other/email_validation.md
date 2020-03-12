@@ -58,12 +58,11 @@ ipv4 or ipv6 addresses are not allowed in the host domain part of the email addr
 Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
 
 **Regex explanation:**
-1. host domain must start with a alphanumeric character (a-z or 0-9)
-2. host domain can only contain one period “.”
-3. Host domain cannot contain two or more consecutive periods
-4. host domain must end with a top level domain
-5. the top level domain is determined by anything after the ‘.’ and can only contain alphanumeric characters (a-z or 0-9)
-6. can contain the following characters: (**.**) or (**?**)
+1. The host domain must start with a alphanumeric character (a-z or 0-9)
+2. The host domain must contain atleast one period “.”
+3. The host domain cannot contain two or more consecutive periods
+4. The host domain must end with a top level domain (TLD)
+5. The top level domain is determined by anything after the ‘.’ and can only contain alphanumeric characters (a-z or 0-9).  Some Valid TLDs contain dashes. You can find them toward the bottom of the TLD list http://data.iana.org/TLD/tlds-alpha-by-domain.txt
 
 {% alert important %}
 Unicode is accepted for both the local and host domain part of the email address.
