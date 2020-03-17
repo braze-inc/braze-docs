@@ -13,11 +13,11 @@ This Funnel Report feature is currently in Beta. Please reach out to your Braze 
 
 > Customer Retention is an important metric to understand because, with the proper tools, you can use customer data to optimize your marketing strategies and increase customer's lifetime value. The best part is that Braze already has tools to handle this. With campaigns, your company can run multiple variants, gaining data on what is most effective for your customers. And now, with Braze's new feature, Funnel Reporting, we can offer a visual reporting metric alongside those multivariant campaigns, making data-driven solutions easier to understand and implement. 
 
-![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:15px"}
+![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 Funnel Reporting offers a visual report for campaigns with a control group and/or multiple variants, allowing you to directly compare these variants with dynamic tables and stats for each variant pair. Companies can now use this information to help them understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. 
 
-![Funnel Report 1][1]{:height="500px"}
+![Funnel Report 1][1]
 
 # Funnel Report Set Up
 
@@ -27,7 +27,7 @@ The funnel reporting feature is available through the Campaigns page in the Dash
 
 From the Campaigns page, with your active campaign selected, you will be able to scroll past campaign details and see the Funnel Report option.
 
-![Funnel Report 3][3]{:height="400px"} 
+![Funnel Report 3][3]
 
 For every funnel report, the first event will be when the user receives your message. From there, the subsequent events you choose will funnel the number of users who performed those events, as well as the previous events. While building the funnel report, you must also choose the time window you would like the report to span. 
 
@@ -46,7 +46,7 @@ Funnel Report Components:
 - __Regenerate Option__: Allows you regenerate your report and notes when the current report was last generated. 
 - __Variants__: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the __chart__ will only show three variants. If users wish to see more, they must manually select the rest of the variants.
 
-![Funnel Report 4][4]{:height="800px"}
+![Funnel Report 4][4]
 
 __For campaigns with multiple variants__: Braze will show a table that displays metrics for each event and variant, the conversion rate is the number of users who performed the event (and subsequent ones) per message recipients.
 
