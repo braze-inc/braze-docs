@@ -18,7 +18,6 @@ tool:
 
 ![opt-in][56]{: height="50%" width="50%"}
 
-
 |Opt-in State|Description|
 |---|---|
 |Subscribed| Default status.|
@@ -26,32 +25,29 @@ tool:
 |Unsubscribed| A user has explicitly disallowed push notifications.|
 {: .reset-td-br-1 .reset-td-br-2}
 
+Subscription states are filters that let Braze know if users are subscribed to receive Push Messages. Note that even though users __may not have a Push Token__ (e.g They turn off push tokens at the device level through settings, opting not to receive messages) they still may be subscribed. Being subscribed does not guarantee that a push will be delivered, users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
-Subscription states are filters that let Braze know if you are subscribed to recieve Push Messages. Note that even though you may __not__ have a Push Token (e.g You turn off push tokens at the device level through settings, opting not to recieve messages) you still may be subscribed. Being subscribed does not guarentee that a push will be delivered, you must also be Push enabled or Push registered to receive these notifications. This is done in part because a user may have multiple devices with your application that they can enable or disable push with, but only one Push subscription state. 
-
-
-How to Check my Push Subscription State
-1. User Profile
-2. CSV Export
-3. Rest API Export - Individual user profiles can be exported in the JSON format using the users/export/ [endpoints][3] using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK](#before-android-sdk) version does not have the `notifications_enabled` parameter).
+### Three ways to Check a Users Push Subscription State:
+1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
+2. __CSV Export__: User profiles can be accessed through doing a CSV User Data Export. This can be done by selecting a campaign and then selecting User Data in the upper right corner. In the window that pops up, you may select what custom attributes or events you would like to choose. <br><br>
+3. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device.
 
 ## Push Enabled
 
 A user is "Push Enabled" or "Push Registered" if they have an *active push token* for an app in your app group.
 
-On the User Engagement tab in the dashboard you will see: **Push Registered For** followed by an **App Name(s)** or followed by **No Apps**. There will be an entry for every device that belongs to the user.
+![img][1]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-![img][1]{: height="50%" width="50%"}
+On the User Engagement tab in the dashboard you will see: **Push Registered For** followed by an **App Name(s)** or followed by **No Apps**. There will be an entry for every device that belongs to the user.
 
 If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
 
 On the other hand, if the device entry's app name is prefixed by `Background:`, the app is only authorized to receive background push and can not display user-visible notifications on that device. This usually indicates the user has disabled notifications for the app on that device.
+![img2][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 If a push token is moved a different user on the same device, that first user will no longer be push registered.
 
-![img2][2]{: height="50%" width="50%"}
-
-## iOS & Android Details {#ios-android-details}
+## iOS & Android Push Details {#ios-android-details}
 
 {% tabs %}
   {% tab iOS %}
@@ -90,5 +86,6 @@ Here are some details you should know if you aren't using our most up to date An
 
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
 [2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
-[3]: {{ site.baseurl }}/api/endpoints/export/
+[identifier]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_identifier/
+[segment]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_segment/
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}

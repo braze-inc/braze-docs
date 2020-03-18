@@ -36,7 +36,7 @@ Add your image, gif, audio, or video file in the 'Rich Notification Asset' field
 
 ![Add Image][4]
 
-You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10, it will appear as text-only notifications without the rich content if you leave the below box unchecked.
+You can also limit this message to only send to users who have a device that runs on iOS 10. For users who have not upgraded to iOS 10, it will appear as text-only notifications without the rich content if you leave the box below unchecked.
 
 ![iOS 10 Checkbox][5]
 

@@ -12,7 +12,7 @@ tool:
   - Campaigns
 ---
 {% alert important %}
-Push Primer campaigns require backend set up from your developers. Check out the neccesary Push Primer Integrations [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_primer/).
+Push Primer campaigns require backend set up from your developers. <br>Check out the neccesary Push Primer Integrations [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
 
 
@@ -63,7 +63,7 @@ Remember that a push primer is supposed to prime the user to turn on push notifi
 
 Here are some example Push Primer Messages:
 
-![push_primer_example_1][push_primer3]{: height="250px"} ![push_primer_example_2][push_primer4]{: height="250px"} ![push_primer_example_3][push_primer5]{: height="250px"}
+![push_primer_example_1][push_primer3]{: height="225px"} ![push_primer_example_2][push_primer4]{: height="225px"} ![push_primer_example_3][push_primer5]{: height="225px"}
 
 If you would like even further customization options, you can also set the message type to Custom code, and provide the full HTML for your in-app message.
 

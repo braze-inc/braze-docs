@@ -14,9 +14,9 @@ tool:
 
 # What are Push Messages?
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. <br>Successful push campaigns drive the user directly to content and demonstrate the value of your application.
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
 
-![Push Message Example][1]{: height="400px"}
+![Push Message Example][1]{: height="400px"}  ![Push Message Example][2]{: height="400px"}
 
 _To see more examples of push notifications, check out our [Customer Examples Library][8]._
 
@@ -55,6 +55,7 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
+[2]: {% image_buster /assets/img/ios_push.png %}
 [8]: https://www.braze.com/docs/help/best_practices/client_integration_gallery/
 [9]: https://developer.apple.com/app-store/review/guidelines/
 [10]: https://play.google.com/about/developer-content-policy-print/

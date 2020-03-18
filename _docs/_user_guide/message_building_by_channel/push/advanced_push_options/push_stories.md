@@ -25,12 +25,12 @@ tool:
 On iOS versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. You should ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
-## How it works
-_Pre-req: Clients must update to the latest version of Android(version:2.2.0+) and IOS (version: 3.2.0+)_
+__Pre-requsites__: Users must update to the latest version of Android(version:2.2.0+) and IOS (version: 3.2.0+)
 
 ## Dashboard Changes
-![Composerdropdown][6]
 
+![Composerdropdown][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+Within the campaign set up dashboard, once you have selected what Push Message Variants you want, you must select __Push Stories__ as the notification type for the Push Story Composer to appear. 
 
 ### New Composer
 ![composerworkflow][3]

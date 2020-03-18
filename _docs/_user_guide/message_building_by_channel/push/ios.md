@@ -13,6 +13,9 @@ guide_top_text: "This landing page is a hub for all things that are solely iOS P
 
 guide_featured_title: "Articles in this Section"
 guide_featured_list:
+- name: "Push Primer Campaign"
+  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  fa_icon: fas fa-comment-alt
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-mobile-alt
@@ -28,7 +31,4 @@ guide_featured_list:
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
   fa_icon: fas fa-chart-bar
-- name: "Push Primer Campaign"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-  fa_icon: fas fa-comment-alt
 ---

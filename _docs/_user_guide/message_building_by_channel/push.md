@@ -10,12 +10,12 @@ guide_featured_list:
 - name: Creating a Push Message
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   fa_icon: fas fa-check
+- name: Push Registration
+  link: /docs/user_guide/message_building_by_channel/push/push_registration/
+  fa_icon: fas fa-check-square
 - name: Push Subscription States
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-users
-- name: Push Stories
-  link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-  fa_icon: fas fa-book-open
 
 guide_menu_title: "More Articles"
 guide_menu_list:
@@ -25,12 +25,15 @@ guide_menu_list:
 - name: iOS Push Notification Options
   link: /docs/user_guide/message_building_by_channel/push/ios/
   fa_icon: fab fa-apple
+- name: iOS Push Primers
+  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  fa_icon: fas fa-mobile-alt
 - name: Push Action Buttons
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
   fa_icon: far fa-dot-circle
-- name: iOS Rich Notifications
-  link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
-  fa_icon: fas fa-image
+- name: Push Stories
+  link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
+  fa_icon: fas fa-book-open
 - name: Notification IDs
   link: /docs/user_guide/message_building_by_channel/push/android/notification_ids/
   fa_icon: fas fa-fingerprint
@@ -39,10 +42,7 @@ guide_menu_list:
   fa_icon: fab fa-android
 - name: iOS Push Message Titles
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_headers/
-  fa_icon: fas fa-mobile-alt
-- name: "Push Registration"
-  link: /docs/user_guide/message_building_by_channel/push/push_registration/
-  fa_icon: fas fa-check-square
+  fa_icon: fas fa-comment-alt
 - name: "iOS 10.3 Customizable App Icon Feature"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-cog
