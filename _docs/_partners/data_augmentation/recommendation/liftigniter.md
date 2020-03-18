@@ -19,6 +19,7 @@ Use Liftigniter with Braze’s Connected Content to allow brands to recommend in
 | ---| ---| ---|
 |Liftigniter Account | Liftigniter | https://console.liftigniter.com/login | You'll need this account to access other resources and tools needed to incorporate and leverage Liftigniter data with Braze. |
 | Liftigniter API Integration | Liftigniter| https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview | You must integrate Liftigniter into your site or app to be able to pull recommendations from there. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 # Integration
 

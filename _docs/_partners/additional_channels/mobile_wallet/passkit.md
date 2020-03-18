@@ -27,6 +27,7 @@ This partnership is in early access beta. All features may not perform as exactl
 | userDefinedID | Client | In order to appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the userDefinedID.|
 | Braze API Key | Braze | You will need to create a new API Key can be created in the Developer Console -> API Settings -> +Create New API Key with *users.track* permissions. The Braze API key will need to be provided to your Rokt account manager.|
 | [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your PassKit account manager to pass subscriber data into Braze.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## API Integration
 
@@ -66,6 +67,7 @@ Before you get started, here are the common JSON Payload Parameters that you can
 | `isInvalid` | bool | When this field set to true, the pass is invalidated The barcode, beacon and location messages will be removed and the pass can no longer be communicated with. Once a pass is set as invalidated, it cannot be changed. Default is false. |
 | `expiryDate` | ISO8601 datetime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
 | `passbook` | object | This is where the Apple Wallet (Passbook) specific parameters are defined. Please see [Passbook](https://dev.passkit.net/v3/#passbook). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ### Create a New Pass via Webhook
@@ -117,6 +119,7 @@ Here is a generic template that can help you get started in building your pass. 
 | ----------------  | ---------------- |
 | Authorization  | Basic {{ '[INSERT_YOUR_API_PROXY]' | base64_encode }} |
 | Content-Type  | application/json |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Ensure that your `HTTP Method` is set to **Post**.
 
@@ -181,6 +184,7 @@ To setup the webhook, fill out the details of the new event within the Request B
 | Authorization  | Basic {{ '[INSERT_YOUR_API_PROXY]' | base64_encode }}|
 | Content-Type  | application/json |
 | Cache-Control | no-cache |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Ensure that your `HTTP Method` is set to **PUT**.
 

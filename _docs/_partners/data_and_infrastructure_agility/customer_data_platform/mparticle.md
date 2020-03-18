@@ -22,6 +22,7 @@ If you're looking for information on the Currents integration with mParticle, [c
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 | mParticle Account & Account Information | mParticle | https://app.mparticle.com/login | You must have an active mParticle Account to utilize their services with Braze. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 If you want to connect your mobile and web apps to Braze, then you will need to use the [embedded kit integration][5] below.
 
@@ -58,6 +59,7 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | Push for Android | Follow the [mParticle Android Push Notification Integration Documentation](https://docs.mparticle.com/developers/sdk/android/push-notifications). |
 | Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
 |Push for Web | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### 4. Configure your mParticle dashboard to enable the Braze Kit.
 
@@ -71,6 +73,7 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | Custom SDK Endpoint | Given to you by your Braze support or account representative. For example: `https://sdk.api.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
 |Custom REST Endpoint | Given to you by your Braze support or account representative. For example: `https://rest.iad.braze.com`. If you know which Braze Instance you’re on, you can find your endpoint [here]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). |
 | Custom Javascript Endpoint | Same as Custom SDK endpoint. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 API keys will be different for each platform (iOS, Android, and Web).

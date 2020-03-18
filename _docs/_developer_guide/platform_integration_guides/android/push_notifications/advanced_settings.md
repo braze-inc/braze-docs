@@ -22,13 +22,14 @@ To message your full userbase with a specific priority, we recommend that you in
 
 The priority levels that you can set on Android or Fire OS push notifications are:
 
-| Priority | Description/Intended Use                                                                               | `priority` value (for API messages) |
-|----------|--------------------------------------------------------------------------------------------------------|-------------------------------------|
-| Max      | Urgent or time-critical messages                                                                       | `2`                                 |
-| High     | Important communication, such as a new message from a friend                                           | `1`                                 |
-| Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0`                                 |
-| Low      | Information that you want users to know about, but does not require immediate action                   | `-1`                                |
-| Min      | Contextual or background information.                                                                  | `-2`                                |
+| Priority | Description/Intended Use | `priority` value (for API messages) |
+|----------|--------------------------|-------------------------------------|
+| Max      | Urgent or time-critical messages | `2` |
+| High     | Important communication, such as a new message from a friend | `1` |
+| Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0` |
+| Low      | Information that you want users to know about, but does not require immediate action | `-1` |
+| Min      | Contextual or background information. | `-2` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 For more information, please consult [Google's documentation on Android notifications][2].

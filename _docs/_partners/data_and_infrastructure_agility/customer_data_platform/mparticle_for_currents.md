@@ -60,3 +60,4 @@ You can export the following data from Braze to mParticle:
 | Campaign Enrollment in Control Group | Unbound Feed           | User was enrolled in a Campaign control group.                                            | `campaign_id`                                                                         |
 | Canvas Conversion Event              | Unbound Feed           | User performed the primary conversion event for a Canvas within its conversion window.    | `canvas_step_id`, `canvas_id`, `canvas_variation_id`                                    |
 | Canvas Entry                         | Unbound Feed           | User was entered into a Canvas.                                                           | `in_control_group`, `canvas_id`, `canvas_variation_id`                                  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

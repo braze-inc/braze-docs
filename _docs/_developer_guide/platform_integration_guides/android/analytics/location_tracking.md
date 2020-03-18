@@ -52,5 +52,5 @@ Appboy.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VA
 
 See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
 
-[1]: http://developer.android.com/guide/topics/location/strategies.html
+[1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-

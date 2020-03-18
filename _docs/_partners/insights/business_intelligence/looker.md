@@ -57,6 +57,19 @@ __Looker Actions__ allows you to flag users within Braze via the REST API Endpoi
 Only existing users will be flagged. You cannot use pivoted Looks when flagging data in Braze.
 {% endalert %}
 
+## Update User Attributes
+
+Optional, any attributes can also be set by using a tag of `braze[]` with the name of the attribute between the `[]` ie if you want a custom attribute of `User Segment` to be sent, then the tag would be `braze[User Segment]`.
+- Note the following:
+  - Attribute will only be sent if it's **included as a field within the look**.
+  - Attribute name are case sensitive.
+  - Supported types are: `Strings`, `Booleans`, `Numbers` and `Dates`.
+  - Standard attributes can also be set as long as they matched the [standard user profiles](https://www.braze.com/docs/api/endpoints/user_data/#braze-user-profile-fields) name exactly.
+  - The full tag will be within quotes, so it should look like `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
+  - Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze)
+
+##  Setup Instructions
+
 [You can also find these instructions and sample code on Github.](https://github.com/looker/actions/tree/master/src/actions/braze)
 
 ### Step 1: Create a REST API Key
@@ -108,7 +121,7 @@ To target the flagged users, a Braze Segments can be created that matches the fl
 ### Limitations
 
 - This process only works with data that has not been pivoted.
-- Currently, the API is limited to 10,000 rows sent.
+- Currently, the API is limited to 100,000 rows sent.
 - The Final count of a user's flag may be lower due to duplicates or non-users.
 
 ### Sample Outgoing API

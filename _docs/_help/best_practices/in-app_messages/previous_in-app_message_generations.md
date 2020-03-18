@@ -130,6 +130,7 @@ This will review previous information around our in-app message creative specifi
 | Slideup                            |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
 | Modal (Image Only)                 |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
 | Modal (With Text)                  |     29:10    |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Keeping In-App Message File Sizes Small

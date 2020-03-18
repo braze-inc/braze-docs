@@ -31,6 +31,7 @@ Landscape Full Screen (Image Only) | 16:10 | 500KB | 5MB| PNG, JPG, GIF
 Slideup | 1:1 | 500KB | 5MB | PNG, JPG, GIF
 Modal (Image Only) | 1:1 | 500KB | 5MB | PNG, JPG, GIF
 Modal with Text | 29:10 | 500KB | 5MB | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Text
 
@@ -45,6 +46,7 @@ While there are no limits to how many characters of text you can include in an i
 (iOS) 2:1 *Recommended* | 500KB | 5MB | PNG, JPG, GIF
 (Android) Push Icon | 500KB | 5MB | PNG, JPG
 (Android) Expanded Notification | 500KB | 5MB | PNG, JPG
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Text
 
@@ -56,6 +58,7 @@ While there are no limits to how many characters of text you can include in an i
 (iOS) Pop Up Alert | 235 Characters
 (Android) Lock Screen | 49 Characters
 (Android) Notification Drawer | 597 Characters
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Payload Size
 
@@ -64,6 +67,7 @@ While there are no limits to how many characters of text you can include in an i
 pre iOS 8 | 0.256 KB
 post iOS 8 | 2 KB
 Android (FCM) | 4 KB
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Web Push Notifications
 
@@ -75,6 +79,7 @@ Chrome | 192 x 192 ≥
 Firefox | 192 x 192 ≥
 Safari | Icons not configurable on a per-campaign basis
 Opera | 192x192 ≥
+{: .reset-td-br-1 .reset-td-br-2}
 
 | **Browser** | **Platform** | **Large Image Size**
 | --- | --- | ---
@@ -84,6 +89,7 @@ Chrome | Windows | 360 ≥ x 240
 Firefox | macOS| N/A
 Safari | macOS | N/A
 Opera | macOS | N/A
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Text
 
@@ -93,6 +99,7 @@ Chrome | macOS | 28 | 27
 Safari | macOS | 38 | 84
 Firefox | macOS | 38 | 42
 Opera | macOS | 38 | 42
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### News Feed Specifications
 
@@ -103,6 +110,7 @@ Opera | macOS | 38 | 42
 Classic Card | 1:1 (110 pixels wide minimum) | 500KB | 1MB | PNG, JPG, GIF
 Captioned Image Card | 4:3 (600 pixels wide minimum) | 500KB | 1MB | PNG, JPG, GIF
 Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Email
 
@@ -113,6 +121,7 @@ Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
 Size | 5MB maximum
 Width | (Header: 600 pixels maximum) (Body: 480 pixels maximum)
 File Types | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Text
 
@@ -121,6 +130,7 @@ File Types | PNG, JPG, GIF
 Subject Line Length | 35 characters maximum (for optimal mobile display) (6 to 10 words)
 Sender Name Length | 25 characters maximum (for optimal mobile display)
 Pre-Header Length | 85 characters maximum
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Size
 
@@ -129,3 +139,4 @@ Pre-Header Length | 85 characters maximum
 Text Only | 25KB maximum
 Text With Images | 60KB maximum
 Email Width | 600 pixels maximum
+{: .reset-td-br-1 .reset-td-br-2}
