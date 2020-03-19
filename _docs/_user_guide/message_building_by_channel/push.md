@@ -13,7 +13,7 @@ guide_featured_list:
 - name: Push Registration
   link: /docs/user_guide/message_building_by_channel/push/push_registration/
   fa_icon: fas fa-check-square
-- name: Push Subscription States
+- name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-users
 
