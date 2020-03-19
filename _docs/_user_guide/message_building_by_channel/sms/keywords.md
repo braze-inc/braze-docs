@@ -18,7 +18,7 @@ channel:
 
 # Keyword Processing & Management
 
-> Keywords are a foundational aspect of automated SMS messaging. With keywords, users are able to message a preset list of single-word commands that do some type of action, for example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords that can be leveraged for more marketing options. This article will cover how Braze approaches Keyword Processing and Management, as well as some best practices.
+> Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords that can be leveraged for more marketing options. This article will cover how Braze approaches Keyword Processing and Management, as well as some best practices.
 
 ## Default Opt-In/ Opt-Out Keywords
 
@@ -53,31 +53,33 @@ Two-way messaging uses short codes and keywords to deliver text messages to mobi
 
 Two-way messaging leverges custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
 
-| Type | Speed | Notes
+| Type | Speed | Notes | 
 | ----- | ----- | ---- | 
-| Known Phone numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and they are already subscribed to a subscription group within Braze.
+| Known Phone Numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
 | Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 If you require a faster sending speeds for unknown phone numbers, reach out to your customer sucess manager to discuss your options.
 
-### Custom Keywords
+### Custom Keyword Messaging Handling
 
-| Custom Keyword Message Handling |
+| Custom Event Fired |
 | ------- | ------ |
-| Included Event Properties: <br><br>`sms_response_subscriptionName_custom` | Custom Event Fired: <br><br>- `message_body`: users SMS response<br>- `to_number`: usually shortcode the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_messsage_id`: messaging service ID |
-| Response Examples => Status, Coupons, News | Message Body => User response returned as all lower case |
+| `sms_response_subscriptionName_custom` | Response Examples => Status, Coupons, News |
 {: .reset-td-br-1 .reset-td-br-2}
 
+| Included Event Properties |
+| ------- | ------ |
+| - `message_body`: users SMS response<br>- `to_number`: usually shortcode the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_messsage_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
+{: .reset-td-br-1 .reset-td-br-2}
 
-- Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group,  a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
+- Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
 - Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.
 - The `message_body` custom keyword value must be __lowercase__.
 
 ![picture][IMAGE2]
 
-Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. <br>
-The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
+Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
 1. alias_label: `phone` and alias_name: `users_phone_number`
 2. Phone numbers must be in the E.164 format (e.g +19173337578)
 
@@ -95,9 +97,9 @@ We first suggest creating a webhook campaign that makes a request to the [subscr
 ### Step 2: Send an SMS campaign
 Next, we recommend sending an SMS campaign a few seconds later, with clear call-to-actions along the lines of:
 
-![picture][IMAGE]
+![picture][IMAGE]{: style="border: 0"}
 
-[oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-states
+[oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [ualink]: {{ site.baseurl }}/api/objects_filters/user_alias_object/
 [telink]: {{ site.baseurl }}/api/endpoints/user_data/post_user_track/
 [uaolink]: {{ site.baseurl }}/api/objects_filters/user_attributes_object/

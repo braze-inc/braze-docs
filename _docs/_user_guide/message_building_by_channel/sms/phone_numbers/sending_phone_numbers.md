@@ -71,13 +71,11 @@ Braze automatically addresses an unknown number in one of three ways:
 1. If an opt-in keyword is texted:
   * Braze creates an anonymous profile
   * Our system sets the phone attribute
-  * Subscribes the user to the corresponding subscription group based on what opt-in keyword was received by Braze.
-
+  * Subscribes the user to the corresponding subscription group based on what opt-in keyword was received by Braze.<br><br>
 2. If an opt-out keyword is texted:
   * Braze creates an anonymous profile
   * Our system sets the phone attribute
-  * Unsubscribes the user form the corresponding subscription group based on what opt-out keyword was received by Braze.
-
+  * Unsubscribes the user form the corresponding subscription group based on what opt-out keyword was received by Braze.<br><br>
 3. If any other custom keyword is texted:
   * Braze ignores the text message and does nothing.
 
@@ -92,16 +90,14 @@ To overcome this limitation, Subscription Groups can hold long and short codes f
 Plan on doing some high volume sending? We have some best practices for you to ensure it runs smoothly.
 
 - Adjust the delivery speed rate-limiting for your campaign/canvases as needed, based on target audience size. This will ensure that (1) you reach the send volume that you need and (2) Braze sends the messages at the rate that Twilio is expecting and can handle.
-
 - Look to AE/leadership to assist with increased MPS rate discussions with Twilio.
 Please note: higher throughput pricing needs to go through a deal desk.
-
 - Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
 
 ## Alphanumeric Sender ID
-![picture][senderID]{: style="float:right;max-width:30%;margin-left:15px;"}
+![picture][senderID]{: style="float:right;max-width:30%;margin-left:15px;border: 0"}
 
-Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages all together. Through the use of Alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
+Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages altogether. Through the use of Alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
 
 Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There __may not__ be only numbers. 
 
