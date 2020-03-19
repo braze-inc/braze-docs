@@ -25,7 +25,7 @@ Click __Create Campaign__ in the top right corner of the __Campaigns__ page. <br
 
 ## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types and notification style ([rich]({{ site.baseurl }}/user_guide/message_building_by_channel/push/rich_notifications/) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
+Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{ site.baseurl }}/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{ site.baseurl }}/docs/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 
@@ -62,7 +62,7 @@ Messages can also be configured to recur on a daily, weekly (optionally on speci
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action you are able to use [custom events][30] as a trigger action. (selected from the __New Trigger Action__ dropdown.)
+Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action you are able to use [custom events]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) as a trigger action. (selected from the __New Trigger Action__ dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
@@ -144,4 +144,3 @@ For push notifications, you'll be able to view statistics for the number of mess
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
 [28]: {% image_buster /assets/img_archive/notchannclickdropdown.gif %}
 [29]: {% image_buster /assets/img_archive/notchannels.png %}
-[30]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events

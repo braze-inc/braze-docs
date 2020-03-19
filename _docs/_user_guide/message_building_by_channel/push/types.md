@@ -57,11 +57,11 @@ glossaries:
       - iOS
       - Web
   - name: "Provisional Push Notifications for iOS"
-    description: "Introduced by Apple in iOS 12, Provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
+    description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
     tags:
       - iOS
   - name: "HTML Push Notifications"
-    description: "HTML Push Notifications are notifications that are coded in HTML instead of working off of the pre-set push template within the dashboard. Having the option to create HTML Push Notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these Push Notifications to look."
+    description: "HTML Push Notifications are push messages that are hard coded in HTML and do not use the pre-set push templates that Braze provides. Having the option to create HTML push notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these push messages to look."
     tags:
       - iOS
       - Android
