@@ -6,7 +6,7 @@ page_order: 9
 hidden: true
 ---
 
-# In-App Messages with HTML Preview Beta
+# In-App Messages HTML Preview Beta
 
 Learn about the new Beta Version of custom HTML In-App Messages.
 
