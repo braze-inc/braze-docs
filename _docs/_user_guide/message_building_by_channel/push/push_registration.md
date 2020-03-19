@@ -33,6 +33,16 @@ Android and iOS deal with Push token registration in different ways:
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's push registration state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK][1] version does not have the `notifications_enabled` parameter).
 
+### Push Token Management
+
+Check out the chart below for actions that lead to push tokens changes or removal from user profiles. 
+
+| Action | Description |
+| ------ | ----------- |
+| `changeUser()` Method Called | The Braze `changeUser()` method switches the user ID that the SDKs are assigning user behavior data to. This method is usually called when a user logs into an application. When `changeUser()` is called with a different or new user ID on a specific device, that device's push token will be moved to the appropriate Braze profile with corresponding user ID. |
+| Push Error Occurs | Some common push errors that lead to token changes include `MismatchSenderId`, `InvalidRegistration`, and other types of push bounces. <br>Check out our full list of common [push errors][errors]. |
+| User Uninstalls | When a user uninstalls the application from a device, Braze will remove the user's push notification from the profile. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### What Does this Look Like on a Broader Scale?
 
@@ -48,6 +58,7 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#before-android-sdk
+[errors]: {{ site.baseurl }}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
 [identifier]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_segment/
 [push-process]: {% image_buster /assets/img/push_process.png %}

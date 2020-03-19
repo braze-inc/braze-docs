@@ -1,5 +1,5 @@
 ---
-nav_title: "Subscription States"
+nav_title: "Push Enablement and Subscription"
 page_order: 3
 page_type: reference
 description: "This reference article covers the different push subscription states."
@@ -12,26 +12,30 @@ tool:
   - Campaigns
 ---
 
-# Push Subscription States
+# Push Enablement and Subscription
 
 > Push subscription states are filters that allow your users to control whether they receive messages or not. For your user to receive your messages through push, they must be `Subscribed` or `Opted-In`, as well as [Push Enabled](#push-enabled).
 
 ![opt-in][56]{: height="50%" width="50%"}
 
+## Push Subscription State
+
 |Opt-in State|Description|
 |---|---|
 |Subscribed| Default status.|
 |Opted-In| A user has explicitly allowed Braze will automatically move a user's opt-in state to “Opted-In”. |
-|Unsubscribed| A user has explicitly disallowed push notifications.|
+|Unsubscribed| A user explicitly unsubscribed from push through your application UI or other method that your brand provides. By default, Braze Push Campaigns only target users that are "Subscribed" or "Opted-in" for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Subscription states are filters that let Braze know if users are subscribed to receive Push Messages. Note that even though users __may not have a Push Token__ (e.g They turn off push tokens at the device level through settings, opting not to receive messages) they still may be subscribed. Being subscribed does not guarantee that a push will be delivered, users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
+Subscription states are helpful flags for brands to use when deciding which users to target for push ntoifications. Brands may provide simple toggles in their applications to make it simple for users to determine their push notification status. This helps prevents users from going into device settings and removing push tokens completely. 
+
+Note that even though users __may not have a Push Token__ (e.g They turn off push tokens at the device level through settings, opting not to receive messages) they still may be subscribed. Being subscribed does not guarantee that a push will be delivered, users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
 ### Two ways to Check a Users Push Subscription State:
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device.
 
-## Push Enabled
+## Push Enablement
 
 A user is "Push Enabled" or "Push Registered" if they have an *active push token* for an app in your app group.
 
