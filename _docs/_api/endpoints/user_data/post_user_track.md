@@ -46,7 +46,9 @@ Content-Type: application/json
 - [Purchases Object]({{ site.baseurl }}/api/objects_filters/purchase_object/)
 
 {% alert note %}
-Note that when creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
+- When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
+<br><br>
+- Updating the subscription status with this endpoint will not only update the user specified by their external_id (e.g User 123), but it will also update the subscription status of any users with the same email as that user (User 123).
 {% endalert %}
 
 ### Example Request Body for Event Tracking
