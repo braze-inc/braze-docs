@@ -66,7 +66,7 @@ glossaries:
       - Financial Services & Insurance
   - name: "Increase User Engagement with Personalized Push Notifications!"
     image: /docs/assets/img/yelpproductrecpushrich.png
-    description: "<a href='https://www.yelp.com/'>Yelp</a> <br> <br> This <a href='/docs/user_guide/message_building_by_channel/push/rich_notifications/'>rich push notification</a> has it all -- pictures, emojis, personalization, and geolocation. The image and emojis  capture the reader's attention. The message is then addressed directly to the reader and uses their location to make a recommendation. These features all make it more likely that the reader will open the message and engage with the brand."
+    description: "<a href='https://www.yelp.com/'>Yelp</a> <br> <br> This <a href='/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/'>rich push notification</a> has it all -- pictures, emojis, personalization, and geolocation. The image and emojis  capture the reader's attention. The message is then addressed directly to the reader and uses their location to make a recommendation. These features all make it more likely that the reader will open the message and engage with the brand."
     tags:
       - Retail & eCommerce
       - Miscellaneous & Other
