@@ -7,7 +7,7 @@ page_order: 0
 
 The API Settings page displays API identifications for your app group. The first section on Services will link you to our technical documentation for whatever you’re using the API for ([User Data][3], [Messaging][4], [Email Sync][5], and [Exporting][6] your data).
 
-### Rest API Keys
+### REST API Keys
 
 This section provides your App Group REST API Key, the unique identifier that allows you access to your data for an app group. This key is required with every request to the Braze API.
 
