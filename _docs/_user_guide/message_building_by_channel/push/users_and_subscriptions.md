@@ -27,7 +27,7 @@ tool:
 |Unsubscribed| A user explicitly unsubscribed from push through your application UI or other method that your brand provides. By default, Braze Push Campaigns only target users that are "Subscribed" or "Opted-in" for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Subscription states are helpful flags for brands to use when deciding which users to target for push ntoifications. Brands may provide simple toggles in their applications to make it simple for users to determine their push notification status. This helps prevents users from going into device settings and removing push tokens completely. 
+Subscription states are helpful flags for brands to use when deciding which users to target for push notifications. Brands may provide simple toggles in their applications to make it simple for users to determine their push notification status. This helps prevents users from going into device settings and removing push tokens completely. 
 
 Note that even though users __may not have a Push Token__ (e.g They turn off push tokens at the device level through settings, opting not to receive messages) they still may be subscribed. Being subscribed does not guarantee that a push will be delivered, users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
