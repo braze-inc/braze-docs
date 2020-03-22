@@ -67,7 +67,9 @@ Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
 - Each part must start with an alphanumeric character (a-z or 0-9)
 - Each part must end with an alphanumeric character (a-z or 0-9)
 - Each part contains from 1 to 63 characters
-- The final part must be a valid top level domain (TLD)top level domain is determined by anything after the final ‘.’ and must contain at least one alphabetic character
+
+**Additional validation required** 
+- The final part must be a valid top level domain (TLD)top level domain which is determined by anything after the final ‘.’ and must contain at least one alphabetic character
 -- The TLD should be in ICANN’s TLD list 
 
 
