@@ -9,10 +9,10 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 
 ## Content Card Metrics
 
-- **Recipients** The number of users who have received a Content Card which received at least one impression.
-- **Impressions** The number of times a Content Card was visible and on-screen.
-- **Clicks** The number of times a user has clicked the CTA Link of a Content Card.
-- **Dismissals** The number of times a user has swiped away or clicked to dismiss a Content Card.
+- **Recipients**: The number of users who have received a Content Card which received at least one impression.
+- **Impressions**: The number of times a Content Card was visible and on-screen.
+- **Clicks**: The number of times a user has clicked the CTA Link of a Content Card.
+- **Dismissals**: The number of times a user has swiped away or clicked to dismiss a Content Card.
 
 ### Control Groups
 
