@@ -12,7 +12,7 @@ description: ""
 ## Email Validation
 
 {% alert important %}
-This validation is done for both user email addresses and the from-address of an email message.
+This validation is used for dashboard email addresses, end-user email addresses (your customers), from and reply-to addresses done of an email message .
 {% endalert %}
 
 Braze validates the email address using the following Ruby Gem: https://github.com/afair/email_address.  
@@ -78,5 +78,3 @@ Regex: /^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?
 Unicode is accepted for only for the local part of the email address.
 Unicode is not accepted for the domain part, but may be punycode-encoded and will be accepted. 
 {% endalert %}
-
-This validation is done for user email addresses, the from-address as well as the reply-to address  of an email message.
