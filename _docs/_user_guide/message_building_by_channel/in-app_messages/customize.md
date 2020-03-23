@@ -105,8 +105,6 @@ As with other URL parameters, the first parameter should begin with a `?`, while
 - `myApp://deep-link?page=home&abButtonId=1` - Mobile deeplink with Button 2 click
 - `<a href="https://example.com/?abButtonId=1">` - `<a>` tag with Button 2 click
 
-In addition to URL parameters, you can also set a `<button>` tag's `id` attribute to log a button click. For example, `<button id="1">` will log a Button 2 click.
-
 {% alert note %}
 In-app messages support only Button 1 and Button 2 clicks. URLs which do not specify one of these two button IDs will be logged as generic "body clicks".
 {% endalert %}

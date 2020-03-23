@@ -45,15 +45,26 @@ An API request with any fields in the Attributes Object will create or update an
 To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
 #### Push Token Import
-When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying this parameter.
+
+Before you import push tokens to Braze, double check if you need to. When the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them via the API.
+
+If you do find you need to upload them via the API, they can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
+
+{% alert note %}
+When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
+{% endalert %}
 
 When specifying `push_token_import` as `true`:
 
 * `external_id` and `braze_id` should __not__ be specified
-* The attribute object must contain a push token
+* The attribute object __must__ contain a push token
 * If the token already exists in Braze, the request is ignored; otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals
 
 After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
+
+Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
+
+For more information, check out [Push Token Migration][3].
 
 #### Custom Attribute Data Types
 
@@ -126,7 +137,8 @@ Content-Type: application/json
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
-      "push_tokens": [{"app_id": App Identifier, "token": "abcd"}]
+      "push_tokens": [{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]
+
     },
     {
       "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
@@ -142,9 +154,11 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 
 [1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[3]: ({{ site.baseurl }}/help/help_articles/push/push_token_migration/
 [6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
+[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
 [22]: https://rubygems.org/gems/multi_json "multiJSON"
 [23]: https://rubygems.org/gems/rest-client "Rest Client"

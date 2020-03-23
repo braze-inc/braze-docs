@@ -23,6 +23,14 @@ validurls['/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_
 validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 validurls['/docs/user_guide/message_building_by_channel/sms/compliance/'] = '/docs/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention/';
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/';
+validurls['/docs/user_guide/message_building_by_channel/push/ios_customizable_app_icon_feature/'] = '/docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/';
+validurls['/docs/user_guide/message_building_by_channel/push/ios_notification_headers/'] = '/docs/user_guide/message_building_by_channel/push/ios/notification_headers/';
+validurls['/docs/user_guide/message_building_by_channel/push/notification_channels/'] = '/docs/user_guide/message_building_by_channel/push/android/notification_channels/';
+validurls['/docs/user_guide/message_building_by_channel/push/notification_ids/'] = '/docs/user_guide/message_building_by_channel/push/android/notification_ids/';
+validurls['/docs/user_guide/message_building_by_channel/push/notification_options_android/'] = '/docs/user_guide/message_building_by_channel/push/android/notification_options/';
+validurls['/docs/user_guide/message_building_by_channel/push/notification_options_ios/'] = '/docs/user_guide/message_building_by_channel/push/ios/notification_options/';
+validurls['/docs/user_guide/message_building_by_channel/push/push_action_buttons/'] = '/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/';
+validurls['/docs/user_guide/message_building_by_channel/push/push_stories/'] = '/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/';
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
