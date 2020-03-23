@@ -63,7 +63,7 @@ Below is a list of features and messaging channels supported today.
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-danger"></i></td>
+            <td for="push"><i class="fas fa-times text-danger"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
@@ -97,7 +97,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications (known as "Heads Up Notifications")
 - Content Cards
-- In App Messages are available using custom views with our Data Model
+- In App Messages
 
 For more information, visit the [Fire OS Integration Guide][1].
 
@@ -122,7 +122,7 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
-- In App Messages are available using custom views with our Data Model
+- In App Messages
 
 For more information, visit the [Android SDK Integration Guide][2].
 

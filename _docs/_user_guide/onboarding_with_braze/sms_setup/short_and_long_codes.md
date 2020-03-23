@@ -14,6 +14,7 @@ Besides the obvious "short codes have fewer digits than long codes" spiel, there
 | User Experience | Shorter, more memorable. | Longer, indistinguishable from typical 10-digit phone number. |
 | Access | Takes up to 12 weeks to receive permission. However, you are considered a "trusted" number by sending providers. | Available immediately, but subject to more vetting and gates before messages are cleared for send. |
 | Sending Limits <br> _SMS are subject to Braze's own [rate limits]({{ site.baseurl }}//user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/)._ | 100 messages per second. | 1 message per second. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Besides these differences, know that a brand will usually have one short code, but multiple, back-up long codes, depending on how many recipients they plan to send SMS.
 
@@ -29,6 +30,7 @@ You'll need to let us know message flows (the responses you want to send to user
 | Opt-In via Website | `Hi there, would you like to sign up for SMS? Text "START" to "23456". Or, enter your number below.` |
 | Opt-Out via SMS | `Sorry to see you go! If this was a mistake, text back "UNSTOP". Text "HELP" for more information.` |
 | Help | `Our company is a company that does this and that. For more info on the company, let us know here. Or, you can contact support at 1-800-111-1111.` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Depending on your situation, you may need to provide more or fewer flows the ones listed above. You'll also have to let us know three general examples of messages you plan to send via SMS - feel free to ask your Braze representative for guidance.
 

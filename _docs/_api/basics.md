@@ -39,6 +39,7 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located on this page.
@@ -150,6 +151,7 @@ Header Name             | Description
 `X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per hour.
 `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.
 `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
+{: .reset-td-br-1 .reset-td-br-2}
 
 If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
 

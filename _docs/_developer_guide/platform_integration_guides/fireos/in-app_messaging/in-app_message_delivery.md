@@ -12,7 +12,7 @@ page_order: 3
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert important %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the Rest APIs.  If you're working with Android, please check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs.  If you're working with Android, please check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Delivery Semantics
@@ -160,7 +160,7 @@ See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for exampl
 [83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [84]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
 [85]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
-[86]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[86]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/analytics/tracking_sessions/#session-lifecycle
 [87]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
 [88]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
 [89]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events

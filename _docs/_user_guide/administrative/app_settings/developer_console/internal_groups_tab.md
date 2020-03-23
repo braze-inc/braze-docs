@@ -23,6 +23,7 @@ Depending on your access and permissions, you can create Internal Groups from th
 | User Event Group| Used for verifying events or logs from your test device.|
 |Content Test Group| A similar concept to Test Lists. Can be used across Push, Email, and In-App messages to send a rendered copy of the message.|
 |Seed Group | Automatically sends a copy of the Email to everyone the Seed Group upon send.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Adding Test Users
 
@@ -35,6 +36,7 @@ After you create your Internal Group you can add test users as members. If you a
 | Identified Users |Search for the user by their External User ID or email address.|
 |Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the Event User Log page.|
 |Bulk Add Users|Copy and paste a list of email addresses or external ID’s into the provided section. Braze will only allow you to add users that are already known in the database. Remember to upload your .csv files to add users to the database or programmatically create them via the API.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Content Test Groups
 

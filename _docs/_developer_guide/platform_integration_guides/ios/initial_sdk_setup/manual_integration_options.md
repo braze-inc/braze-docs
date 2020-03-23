@@ -117,7 +117,10 @@ For more information about using Objective-C code in Swift projects, please refe
 In `AppDelegate.swift`, add following snippet within function `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
 ```
-Appboy.startWithApiKey("YOUR-API-KEY", inApplication:application, withLaunchOptions:launchOptions)
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:appboyOptions)
 ```
 
 {% endtab %}

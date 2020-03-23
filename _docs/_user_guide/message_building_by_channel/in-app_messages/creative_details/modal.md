@@ -20,7 +20,8 @@ Modals appear in the center of the device's screen with a screen overlay that he
 | Image Size | 29:10 Aspect Ratio <br> 450px by 155px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
 | Copy | 20px Header Text - Bolded <br> 14px Message Text - Regular Weight | We cannot recommend character or word limits.|
 | Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
-| Screen Overlay | Transparent | This is a customizable, transparent film that lays between your app and the message.
+| Screen Overlay | Transparent | This is a customizable, transparent film that lays between your app and the message. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Modal Viewport
 
@@ -44,9 +45,7 @@ You should __always__ [preview and test your messages]({{ site.baseurl }}/user_g
 
 ### Font Awesome
 
-Though Braze supports using [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
-
-
+Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
 [1a]: {% image_buster /assets/img/modal-spec.png %}
 [1b]: {% image_buster /assets/img/modal-large-viewport.png %}

@@ -33,6 +33,7 @@ To get going with your Segment/Braze integration,
 | Segment Account & Account Information | Segment | [https://app.segment.com/login](https://app.segment.com/login) | You must have an active Segment Account to utilize their services with Braze. |
 | Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][34], [Android][35] and [Web][38] documentation. | Braze must be successfully installed onto your app or site. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Step 1: Configure Braze Settings in Segment {#connection-settings}
 
@@ -48,6 +49,7 @@ To get going with your Segment/Braze integration,
 | Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) in our documentation. Format without the `https` as `rest.iad-01.braze.com`. |
 |Safari Website Push ID| Safari requires a Website Push ID to send push. [More on this here]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push). |
 |Braze Web SDK Version| Which version of the Braze Web SDK you have integrated. You should have found this out during your initial integration process, but if you're unsure, reach out to your account manager or Braze support. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% details Additional Connection Settings you might see during your integration. %}
 |Name|Options | Description|
@@ -64,6 +66,7 @@ To get going with your Segment/Braze integration,
 |Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/) to Braze as Page Events.|
 |Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/) to Braze
 |Update Existing Users Only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users vs. existing users will be updated. This defaults to `false`. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% enddetails %}
 
 <br>
@@ -76,6 +79,7 @@ You can integrate Segment's Web source (Analytics.js) and native client-side lib
 | ----------- | ------- |
 | [Side-by-Side / Device-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
 | [Server-to-Server / Cloud-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{ site.baseurl }}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 You can learn more about Segment's integration options (Connection Modes), including the benefits of each, [here](https://segment.com/docs/destinations/#connection-modes).
@@ -152,6 +156,7 @@ When you [identify](https://segment.com/docs/connections/destinations/catalog/br
 | `address.city` | `home_city`|
 | `address.country` | `country` |
 | `gender` | `gender` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 All other traits will be recorded as [custom attributes][14].
 
@@ -161,6 +166,7 @@ All other traits will be recorded as [custom attributes][14].
 | Identify with Reserved Traits	| Set User Attributes | 	analytics.identify({email: "dawei@braze.com"});	appboy.getUser().setEmail("dawei@braze.com");
 | Identify with Custom Traits	| Set Custom Attributes | 	analytics.identify({fav_cartoon: "Naruto"});	appboy.getUser().setCustomAttribute("fav_cartoon": "Naruto");
 | Identify with User ID and Traits |	Set External ID and Attribute | Combine methods above. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 {% alert important %}
@@ -180,6 +186,7 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event][13]. | `analytics.track("played_game");` > `appboy.logCustomEvent("played_game");`|
 | [Track with Properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` > `appboy.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
 | [Track with Product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Completed Order
 
@@ -193,6 +200,7 @@ The [page](https://segment.com/docs/spec/page/) or [screen](https://segment.com/
 |---|---|---|
 | [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) without name	| Logged as a [Custom Event][13] |	`analytics.page();` > 	`appboy.logCustomEvent("Loaded a Page");` |
 | [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) with name |	Logged as a [Custom Event][13]	| `analytics.page("Home");`	> `appboy.logCustomEvent("Viewed Home Page");` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Test Your Integration
 
@@ -256,7 +264,7 @@ The Braze integration will break if it has been entered as the Custom REST API E
 
 > ‘App Identifier’ vs. ‘REST API Key’
 
-The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard Rest API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
 
 {% enddetails %}
 

@@ -21,6 +21,7 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 | Inkit API Key | Inkit | [Inkit Dashboard](https://app.inkit.io/#/account/integrations) | This key will enable you to connect your Braze and Inkit accounts.|
 | Inkit Template ID | Inkit | Found within the URL for each template. | This key will enable you to send your template to Braze. <br> Within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
 | HTTP Header | Inkit | Inkit Account | You will combine this with your Inkit API Key to authorize the connection as a key value pair within your Braze template. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Integration

@@ -51,6 +51,7 @@ Each message type is designed to adapt to device sizes and shapes, so you may oc
 | Slideup | 1:1 | Can contain up to three lines of copy before truncation with ellipses. Images will never be cropped or clipped - they will always scale down to fit within the 50X50 image container. |
 | Modal (Image Only) | Any | Will adapt to fit the image to be as large as possible on any device. |
 | Modal (with Text) | Any | A modal's image container will adapt to fit the image to be as large as possible on any device. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 #### Safe Zone
@@ -66,6 +67,7 @@ __Image Safe Zone Dimensions__
 | Full-Screen | 10% Margin around the top and bottom of the device. <br> 14% Margin around the left and right sides of the device. |
 | Modal | 15px Margin around the edges of the device. |
 | Slideup | 10px Margin around the edges of the device. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Font Defaults
 If you are using the newest generation of in-app messages (Generation 3), you'll find that the fonts default to the Operating System default Sans Serif for iOS and Android. Web in-app messages will default to Helvetica.

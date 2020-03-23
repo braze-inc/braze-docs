@@ -14,6 +14,7 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 | Requirement | Details |
 |---|---|
 | **Braze Domain** | You will need your Braze domain to setup Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Service Provider (SP) Initiated Login within OneLogin

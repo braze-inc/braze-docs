@@ -15,27 +15,27 @@ page_type: partner
   You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined, since each raw event typically has a separate table.
 
 ```sql
-SELECT
-    COUNT(DISTINCT users_messages_pushnotification_send."ID" ) AS "users_messages_pushnotification_send.push_sent",
-    COALESCE((COUNT(DISTINCT users_messages_pushnotification_send."ID" )),0)-COALESCE((COUNT(DISTINCT users_messages_pushnotification_bounce."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
-    COUNT(DISTINCT users_messages_pushnotification_open."ID" ) AS "users_messages_pushnotification_open.push_opens"
-FROM USERS_MESSAGES_PUSHNOTIFICATION_SEND  AS users_messages_pushnotification_send
-LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_OPEN  AS users_messages_pushnotification_open ON (users_messages_pushnotification_send."USER_ID")=(users_messages_pushnotification_open."USER_ID")
-            AND
-            (users_messages_pushnotification_send."DEVICE_ID")=(users_messages_pushnotification_open."DEVICE_ID")
-            AND
-            ((users_messages_pushnotification_send."MESSAGE_VARIATION_ID")=(users_messages_pushnotification_open."MESSAGE_VARIATION_ID")
-            OR
-            (users_messages_pushnotification_send."CANVAS_STEP_ID")=(users_messages_pushnotification_open."CANVAS_STEP_ID"))
-LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE  AS users_messages_pushnotification_bounce ON (users_messages_pushnotification_send."USER_ID")=(users_messages_pushnotification_bounce."USER_ID")
-            AND
-            (users_messages_pushnotification_send."DEVICE_ID")=(users_messages_pushnotification_bounce."DEVICE_ID")
-            AND
-            ((users_messages_pushnotification_send."MESSAGE_VARIATION_ID")=(users_messages_pushnotification_bounce."MESSAGE_VARIATION_ID")
-            OR
-            (users_messages_pushnotification_send."CANVAS_STEP_ID")=(users_messages_pushnotification_bounce."CANVAS_STEP_ID"))
 
-LIMIT 500
+SELECT
+    COUNT(DISTINCT users_messages_pushnotification_send_non_pii_shared."ID" ) AS "users_messages_pushnotification_send.push_sent",
+    COALESCE((COUNT(DISTINCT users_messages_pushnotification_send_non_pii_shared."ID" )),0)-COALESCE((COUNT(DISTINCT users_messages_pushnotification_bounce_non_pii_shared."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
+    COUNT(DISTINCT users_messages_pushnotification_open_non_pii_shared."ID" ) AS "users_messages_pushnotification_open.push_opens"
+FROM USERS_MESSAGES_PUSHNOTIFICATION_SEND_NON_pii_shared AS users_messages_pushnotification_send_non_pii_shared
+LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_OPEN_NON_pii_shared AS users_messages_pushnotification_open_non_pii_shared ON (users_messages_pushnotification_send_non_pii_shared."USER_ID")=(users_messages_pushnotification_open_non_pii_shared."USER_ID")
+    AND
+    (users_messages_pushnotification_send_non_pii_shared."DEVICE_ID")=(users_messages_pushnotification_open_non_pii_shared."DEVICE_ID")
+    AND
+    ((users_messages_pushnotification_send_non_pii_shared."MESSAGE_VARIATION_API_ID")=(users_messages_pushnotification_open_non_pii_shared."MESSAGE_VARIATION_API_ID")
+    OR
+    (users_messages_pushnotification_send_non_pii_shared."CANVAS_STEP_API_ID")=(users_messages_pushnotification_open_non_pii_shared."CANVAS_STEP_API_ID"))
+LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_NON_pii_shared AS users_messages_pushnotification_bounce_NON_pii_shared ON (users_messages_pushnotification_send_NON_pii_shared."USER_ID")=(users_messages_pushnotification_bounce_NON_pii_shared."USER_ID")
+    AND
+    (users_messages_pushnotification_send_non_pii_shared."DEVICE_ID")=(users_messages_pushnotification_bounce_non_pii_shared."DEVICE_ID")
+    AND
+    ((users_messages_pushnotification_send_non_pii_shared."MESSAGE_VARIATION_API_ID")=(users_messages_pushnotification_bounce_non_pii_shared."MESSAGE_VARIATION_API_ID")
+    OR
+    (users_messages_pushnotification_send_non_pii_shared."CANVAS_STEP_API_ID")=(users_messages_pushnotification_bounce_non_pii_shared."CANVAS_STEP_API_ID"))
+LIMIT 500;
 ```
 
   {% endtab %}
