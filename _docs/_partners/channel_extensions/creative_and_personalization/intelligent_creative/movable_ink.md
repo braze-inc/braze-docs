@@ -1,8 +1,7 @@
 ---
-nav_title: Movable Ink
+title: "Movable Ink"
 alias: "/movable_ink/"
-description: ""
-hidden: true
+description: "Movable Ink is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers."
 ---
 
 # Movable Ink
@@ -79,7 +78,7 @@ Customers will need to create a data source that can either be a CSV, Website Im
 1. ![create_campaign]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 From the Movable Ink home screen, you can choose to create a campaign. You can select from either Email from HTML, Email from Image, or a Block that can be used in any channel including Push, In-App Message, and Content Cards (suggested).
 We also suggest taking a look at the various content options available through creating a campaign using blocks.<br><br>
-2. Movable Ink has an easy editor for customers to drag and drop elements like text, image, etc. <br><br>Given that the customer has populated their data source, they can also dynamically generate an image using the data properties. In addition, they can also create fall backs within this flow for users in the event that the campaign is sent and a user doesn't fit within the personalization criteria.<br>![create_campaign2]({% image_buster /assets/img/movable_ink/create_campaign2.png %})Customers can also preview the dynamic images and test out the query parameters to see what the images will look upon view. <br><br>For more information on how to use the Movable Ink Platform, check out [Movable Ink Support Center][support]
+2. Movable Ink has an easy editor for customers to drag and drop elements like text, image, etc. <br><br>Given that the customer has populated their data source, they can also dynamically generate an image using the data properties. In addition, they can also create fall backs within this flow for users in the event that the campaign is sent and a user doesn't fit within the personalization criteria.<br>![create_campaign2]({% image_buster /assets/img/movable_ink/create_campaign2.png %})Customers can also preview the dynamic images and test out the query parameters to see what the images will look upon view. <br><br>For more information on how to use the Movable Ink Platform, check out [Movable Ink Support Center][support]
 
 Once complete, you should be able to generate a dynamic URL that you can then insert into Braze!
 
@@ -109,15 +108,17 @@ To obtain the source URL, you must have set up the content in the Movable Ink Da
 
 ## Troubleshooting
 __Dynamic Images not showing correctly? What channel are you experiencing difficulties with?__<br>
-&#45; Push: Make sure that you have empty logic before your Movable Ink image URL: {% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}<br>
-&#45; In-App Messages and Content Cards: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
+- __Push__: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+- __In-App Messages and Content Cards__: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
 <br><br>
+
 __Having trouble showing GIFs on Android?__<br>
-&#45; Android requires [GIF support][GIFsupport] in implementation. If you do not have this setup, follow the instructions to do so [here][GIFsupport].
+- Android requires [GIF support][GIFsupport] in implementation. If you do not have this setup, follow the instructions to do so [here][GIFsupport].
 
 [1]: https://movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [support]: https://support.movableink.com/
 [GIFsupport]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs
 [Instructions]: {{ site.baseurl }}/hidden/private_betas/movable_ink/#step-4-braze-experience
+
 
