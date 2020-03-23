@@ -66,7 +66,7 @@ Regex: /^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?
 -- Host domain cannot contain two or more consecutive periods
 - Each part must start with an alphanumeric character (a-z or 0-9)
 - Each part must end with an alphanumeric character (a-z or 0-9)
-- Intermediate characters may include a dash (-)
+- Intermediate characters may include a dash (**-**)
 - Each part contains from 1 to 63 characters
 
 **Additional validation required** 
