@@ -57,7 +57,7 @@ This is an addition to the regex validation specified above under "All other dom
 - The TLD (Top Level Domain - i.e. the final part of the domain, e.g.  com, gov) may not be fully numeric
 The domain must match the regex: 
 
-Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
+Regex: /^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i
 
 **Regex explanation:**
 
@@ -66,6 +66,7 @@ Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
 -- Host domain cannot contain two or more consecutive periods
 - Each part must start with an alphanumeric character (a-z or 0-9)
 - Each part must end with an alphanumeric character (a-z or 0-9)
+- Intermediate characters may include a dash (-)
 - Each part contains from 1 to 63 characters
 
 **Additional validation required** 
@@ -75,7 +76,7 @@ Regex: /^[\w\d](?:[\w\d-]{0,61}[\w\d])?(?:\.[\w\d](?:[\w\d-]{0,61}[\w\d])?)+$/i
 
 {% alert important %}
 Unicode is accepted for only for the local part of the email address.
-Unicode is not accepted for the domain part, but may be unicode-encoded and will be accepted. 
+Unicode is not accepted for the domain part, but may be punycode-encoded and will be accepted. 
 {% endalert %}
 
 This validation is done for user email addresses, the from-address as well as the reply-to address  of an email message.
