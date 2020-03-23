@@ -21,9 +21,9 @@ channel:
 > On this page, we'll attempt to answer your most stringent questions about SMS!
 
 {% details How will I be billed for SMS? %}
-Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. Overages will cost a bit more per message. Different providers and carriers down the send pipeline will charge different rates in different circumstances, so billing can vary per region.
+Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. 
+For overages, your account manager will reach out to let you know if you are close to reaching you maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
-You should reach out to your Braze representative for more exact details.
 {% enddetails %}
 
 {% details How can I avoid overages? %}

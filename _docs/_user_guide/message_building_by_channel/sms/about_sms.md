@@ -17,16 +17,19 @@ channel:
 ---
 
 # What are SMS Messages?
+![SMS about][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-> SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value has made SMS an effective marketing tool for businesses of all sizes. <br><br>This article discusses some common use cases as well as some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
+SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value has made SMS an effective marketing tool for businesses of all sizes. 
+
+This article discusses some common use cases as well as some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
 
 ## Potential Use Cases
 
 | Use Case | Explanation |
 |---|---|
 | General Marketing | SMS messages are a direct, flexible and efficient way to communicate upcoming deals, favorable sales, and current or anticipated products to your customers. |
-| Reminders | SMS messages can be effective in notifying users who have set an appointment for a service. For example, sending an SMS message reminding a customer the day before a doctor's appointment will help minimize missed appointments, saving both our clients and their users time and money. |
-| Product Verification or Password Confirmation | If your application requires authentication to access it, the SMS channel could be a good way to accomplish this.|
+| Reminders | SMS messages can be effective in notifying users who have set an appointment for a service. For example, sending an SMS message reminding a customer the day before a doctor's appointment will help minimize missed appointments, saving both you and your users time and money. |
+| Confirmation Messages | SMS messages are an efficient way to send out order confirmations and shipping information, providing them all the information they need in one convenient place. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## SMS Laws, Regulations, & Abuse Prevention
@@ -101,3 +104,5 @@ Please ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/Telephone
 Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
 
 Better to be safe than sorry!
+
+[picture]: {% image_buster /assets/img/sms/sms_about.jpg %}

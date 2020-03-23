@@ -22,11 +22,13 @@ guide_featured_list:
   fa_icon: fas fa-key
 - name: "User Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
+  fa_icon: fas fa-phone
 - name: "Sending Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
+  fa_icon: fas fa-phone-square
 - name: "Understanding SMS Stats"
   link: /docs/user_guide/message_building_by_channel/sms/sms_stats/
-  fa_icon: fas fa-phone
+  fa_icon: fas fa-mobile-alt
 - name: "FAQs"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
