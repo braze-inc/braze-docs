@@ -16,50 +16,67 @@ channel:
   - SMS
 ---
 
-# SMS Statistics
+# Reporting & Analytics
+To see the meanings of all SMS metrics, check the [Metrics Glossary][1].
 
->  This type of article explains a concept and contains specific information about technical processes and product content (Canvas Steps, Segmentation, a specific type of Object etc.). The other type of Reference template is a Glossary. This format is not used for our API glossary or reference documentation unless there is a specific concept that needs to be explained. Be sure to outline that they will learn [this](#what-is-x-concept), [that](#topic-1-regarding-this-concept), and [the other](#topic-2-regarding-this-concept) on this page. This is a [good sample of a general reference doc](https://guide.meteor.com/code-style.html). This is a good example of a [very technical reference doc](https://www.w3schools.com/html/html_intro.asp).
-
-## What is X Concept
-
-Include:
-- This concept's origins, if relevant.
-- Links to outside resources about this concept and other names for it as needed.
-- How this concept is used and applied at Braze.  
-- What are the benefits of this concept
+## SMS Metrics
+- **Sent** A campaign or canvas step has been launched or triggered and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
+- **Sent to Carrier** Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+- **Delivery Failures** The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
+- **Confirmed Delivery** The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
+- **Rejections** The SMS has been rejected by the carrier. This can happen for a number of reasons including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
 
 
-## Topic 1 Regarding this Concept
+### Control Groups
 
-This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, please check out [this link to that tutorial]({{ site.baseurl }}/home/templates/tutorial_video.md).
+To measure the impact of an individual SMS, a [Control Group][2] can be added to an A/B Test.
 
-### Code Sample
+The top level campaign details will not include metrics from the Control Group variant.
 
-If you're explaining a technical concept, please note that here and show a code sample.
+## Reporting in Campaigns
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has their own useful purpose.
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+{% tabs %}
 
-</body>
-</html>
-```
+{% tab Campaign Details %}
 
-Make sure you define parameters or elements that users might have to adjust from the sample above. Many users will just copy and paste.
+**Campaign Details**
 
-| Variable | Description |
-| -------- | ----------- |
-| Page Title | You can title your page anything. You have to have this. |
-| My First Heading | We recommend putting this in caps. This is also optional. |
+The Campaign Details analytics block will give you a high-level overview of the entire SMS campaign.
 
+![sms_campaign_details]({% image_buster /assets/img/sms/sms_campaign_details.png %})
 
-## Topic 2 Regarding this Concept
+{% endtab %}
 
-In the event that a second topic is added, be sure to distinguish it from the first concept immediately. Then, go into explaining the concept. You should feel free to add diagrams!
+{% tab Message Performance %}
+
+**Message Performance**
+
+This block will define the messages performance on multiple levels (by Variant, Audience %, Unique Recipients, Sends, Sends to Carriers, Confirmed Deliveries, Delivery Failures, Rejections, and more!). Click on the <i class="fa fa-eye preview-icon"></i> to view your message.
+
+![sms_message_performance]({% image_buster /assets/img/sms/sms-message-performance.png %})
+
+{% endtab %}
+
+{% tab Historical Performance %}
+
+**Historical Performance**
+
+This block allows you to see the message's performance over a set time period on a timeline.
+
+![sms_historical_performance]({% image_buster /assets/img/sms/sms-historical-performance.png %})
+
+{% endtab %}
+
+{% tab Conversion Event Details %}
+
+**Conversion Event Details**
+
+This block will show you the performance of your conversion events for the SMS message campaign or canvas.
+
+![CC_Conversion]({% image_buster /assets/img/cc-conversion.png %})
+
+{% endtab %}
+
+{% endtabs %}
