@@ -1,7 +1,6 @@
 ---
 title: "Movable Ink"
 alias: "/movable_ink/"
-page_type: partner
 description: "Movable Ink is a cloud-based software platform that offers digital marketers a way to create compelling and unique visual experiences that move customers."
 ---
 
