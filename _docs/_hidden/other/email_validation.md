@@ -62,7 +62,7 @@ Regex: /^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?
 **Regex explanation:**
 
 - Host consists of two or more period-separated parts. 
--- Host domain must contain at least one period “.”
+-- Host domain must contain at least one period (**.**)
 -- Host domain cannot contain two or more consecutive periods
 - Each part must start with an alphanumeric character (a-z or 0-9)
 - Each part must end with an alphanumeric character (a-z or 0-9)
