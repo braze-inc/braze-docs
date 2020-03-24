@@ -39,5 +39,5 @@ On the Delivery and Target Users pages, you can generate a chart to see how many
 
 The chart also separately displays users who had enough data to compute an optimal time (in blue) and users who will receive a time according to your chosen fallback (Custom Fallback or Most Popular App Time) in red. You can separately enable the bars representing users with optimal times calculated with Engagement Data or your chosen Fallback by clicking the checkbox next to their labels in the legend. For multichannel campaigns, you can examine the times separately per channel by changing the selected channel in the dropdown at the top of the chart.
 
-[1]: {% image_buster /assets/img/intel-timing.png %}
+[1]: {% image_buster /assets/img/optimal-send-time.png %}
 [2]: {% image_buster /assets/img/intel-timing-preview.png %}
