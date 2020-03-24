@@ -66,7 +66,7 @@ Composing an SMS is easy! Just write your message, using languages and personali
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive `Hi, {{$first_name}}`, instead of their name or a coherent sentence.
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
 {% endraw %}
 
 {% endalert %}
