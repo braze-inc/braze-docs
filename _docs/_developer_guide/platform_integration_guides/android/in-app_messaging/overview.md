@@ -24,7 +24,7 @@ Braze has refreshed in-app messages! Though the creation process is very much th
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
 
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
+In-app messages don't deliver outside of the user's app and won't intrude on their home screen like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
 
 ### Great Use Cases
 

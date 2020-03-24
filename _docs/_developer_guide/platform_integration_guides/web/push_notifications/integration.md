@@ -48,7 +48,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ### Step 2: Browser Registration
 
-In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This this will immediately request push permission from the user. 
+In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This will immediately request push permission from the user. 
 
 If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze In-App Messages. 
 

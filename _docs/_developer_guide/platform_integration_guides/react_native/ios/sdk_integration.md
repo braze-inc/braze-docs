@@ -19,7 +19,7 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 
 1.  Install the Braze iOS SDK into your iOS project.  See instructions for Cocoapods [here][1]. For manual integration, please check [here][2].  See notes below for further information.
 2. `npm install react-native-appboy-sdk@latest --save`
-3. In the Xcode's "Project navigator", right click on your project's Libraries folder ➜ `Add Files to <...>`
+3. In the Xcode's "Project navigator", right-click on your project's Libraries folder ➜ `Add Files to <...>`
 4. Go to `node_modules` ➜ `react-native-appboy-sdk` ➜ `ios` ➜ `AppboyReactBridge` ➜ select `AppboyReactBridge.xcodeproj`
 5. Add `libAppboyReactBridge.a` to `Build Phases -> Link Binary With Libraries`
 6. Update the 'Header Search Paths' in the AppboyReactBridge Xcode project to reference the headers directory of your installation of the Braze iOS SDK.
