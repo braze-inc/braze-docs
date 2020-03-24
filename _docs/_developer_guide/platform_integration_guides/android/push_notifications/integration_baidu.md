@@ -20,7 +20,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Login Dialog][38]
 
-- Enter an email address, password, and captcha in the account creation page.  Accept the license agreement and click 注册 (Create Account) to register.
+- Enter an email address, password, and captcha on the account creation page.  Accept the license agreement and click 注册 (Create Account) to register.
 
 ![Baidu Sign-up Page][17]
 
@@ -38,7 +38,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Developer Portal][37]
 
--  On the registration page, choose your account type (个人 for personal, 公司 for business) and developer type (Developer is preselected and correct for most cases).  Enter your name, a bio, and phone number with country code in parenthesis (For example, (1)xxxxxxxxxx). Click 发送验证码 (Send Verification Code) and enter the verification code in the following line.  The next two fields, developer website and developer logo, are optional.  Accept the license agreement and click 提交 (Submit) to submit.  Congratulations!  You now have a Baidu developer account.
+-  On the registration page, choose your account type (个人 for personal, 公司 for business) and developer type (Developer is preselected and correct for most cases).  Enter your name, a bio, and phone number with country code in parenthesis (For example, (1)xxxxxxxxxx). Click 发送验证码 (Send Verification Code) and enter the verification code in the following line.  The next two fields, developer website, and developer logo are optional.  Accept the license agreement and click 提交 (Submit) to submit.  Congratulations!  You now have a Baidu developer account.
 
 ![Baidu Developer Registration][13]
 
@@ -52,13 +52,13 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu App Name][26]
 
-- Upon setting up your application, you will be taken to a console which displays information about your app, including the API Key.  Click on the cloud push link in the menu on the left hand side of the console.  On the following page, click 推送设置 (Set Up Push).
+- Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key.  Click on the cloud push link in the menu on the left hand side of the console.  On the following page, click 推送设置 (Set Up Push).
 
 ![Baidu App Console][14]
 
 ![Baidu Continue][29]
 
-- On the following page, enter your app package name (e.g. com.braze.sample) and specify whether to cache messages, and if so, how long.  This indicates to Baidu how long to continue to attempt to send messages to offline users. Click 保存设置 (Save Settings) to save.
+- On the following page, enter your app package name (e.g. com.braze.sample) and specify whether to cache messages and if so, how long.  This indicates to Baidu how long to continue to attempt to send messages to offline users. Click 保存设置 (Save Settings) to save.
 
 ![Baidu Configure Cloud][39]
 
@@ -68,7 +68,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu SDK Portal][41]
 
-- Inside the SDK, you will find the push service jar and platform specific native libraries.  Integrate these into your project.  There is also a Baidu demo push application which can be used as a reference along with our [sample Baidu push application][50].  Make sure your app targets the highest SDK version currently supported by Baidu.  This documentation is current for Baidu Cloud Push Android SDK version `4.6.2.38`.
+- Inside the SDK, you will find the push service jar and platform-specific native libraries.  Integrate these into your project.  There is also a Baidu demo push application that can be used as a reference along with our [sample Baidu push application][50].  Make sure your app targets the highest SDK version currently supported by Baidu.  This documentation is current for Baidu Cloud Push Android SDK version `4.6.2.38`.
 
 - Add the following required Baidu permissions to your application's `AndroidManifest.xml`.  See our sample app's [AndroidManifest.xml][49] for a sample implementation.
 
@@ -122,7 +122,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
       </service>
   ```
 
-- You will also need to create a broadcast receiver which listens for incoming push messages and notifications.  Declare your own receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.  See our sample app's [receiver][48] for a sample implementation.
+- You will also need to create a broadcast receiver that listens for incoming push messages and notifications.  Declare your own receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.  See our sample app's [receiver][48] for a sample implementation.
 
   ```xml
       <receiver android:name=".MyPushMessageReceiver">
@@ -194,7 +194,7 @@ AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
 
 ### Step 6: Extras
 
-- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
+- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
 
 {% tabs %}
 {% tab JAVA %}

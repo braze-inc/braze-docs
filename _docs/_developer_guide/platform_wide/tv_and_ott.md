@@ -97,7 +97,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications (known as "Heads Up Notifications")
 - Content Cards
-- In App Messages
+- In-App Messages
 
 For more information, visit the [Fire OS Integration Guide][1].
 
@@ -110,7 +110,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications
 - Content Cards
-- In App Messages
+- In-App Messages
 
 For more information, visit the [Fire OS Integration Guide][1].
 
@@ -122,7 +122,7 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
-- In App Messages
+- In-App Messages
 
 For more information, visit the [Android SDK Integration Guide][2].
 
@@ -132,7 +132,7 @@ For more information on why Push Notifications are not supported on Android TV, 
 
 Use Braze's Roku SDK to collect data and analytics on your Roku users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
 
-The ability to send In App Messages to your Roku users is coming soon - stay tuned!
+The ability to send In-App Messages to your Roku users is coming soon - stay tuned!
 
 For more information, visit the [Roku Integration Guide][3].
 
@@ -144,7 +144,7 @@ For more information, visit the [iOS SDK Integration Guide][4].
 
 ## In-App Message with Custom UI
 
-For platforms which support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In App Message templates into your existing app designs.
+For platforms that support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In-App Message templates into your existing app designs.
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
 [2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

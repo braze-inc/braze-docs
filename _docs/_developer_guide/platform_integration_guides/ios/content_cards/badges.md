@@ -16,7 +16,7 @@ The method declarations in [ABKContentCardsController](https://appboy.github.io/
 
 ```
 /*!
- * This method returns the number of currently active content cards which have not been viewed.
+ * This method returns the number of currently active content cards that have not been viewed.
  * A "view" happens when a card becomes visible in the Content Cards view.  This differentiates
  * between cards which are off-screen in the scrolling view, and those which
  * are on-screen; when a card scrolls onto the screen, it's counted as viewed.
@@ -37,7 +37,7 @@ The method declarations in [ABKContentCardsController](https://appboy.github.io/
 
 ## Displaying Number of Unviewed Content Cards on App Badge Count
 
-In addition to serving as push notification reminders for an app, Badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based off unviewed Content Cards updates can be a valuable tool in attracting users back to your app and increasing sessions.
+In addition to serving as push notification reminders for an app, Badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based on unviewed Content Cards updates can be a valuable tool in attracting users back to your app and increasing sessions.
 
 This method records the badge count once the app is closed and the user's session ends:
 

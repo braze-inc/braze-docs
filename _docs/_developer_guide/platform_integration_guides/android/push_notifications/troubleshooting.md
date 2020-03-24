@@ -10,7 +10,7 @@ page_order: 2
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze is able to send push notifications to them:
 
 #### Step 1: Configuring Your Google Cloud API Key
-In the development of your app, you'll need to provide the Braze Android SDK with your Firebase Sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key when we attempt to send messages to your devices. You will need to ensure that FCM service is enabled in the Google Developer's console as well. __Note__: A common mistake in this step is using an API key for Android applications. This is a different, incompatible API key for the type of access Braze needs.
+In the development of your app, you'll need to provide the Braze Android SDK with your Firebase Sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key when we attempt to send messages to your devices. You will need to ensure that FCM service is enabled in Google Developer's console as well. __Note__: A common mistake in this step is using an API key for Android applications. This is a different, incompatible API key for the type of access Braze needs.
 
 #### Step 2: Devices Register for FCM and Provide Braze with Push Tokens
 In typical integrations, the Braze Android SDK will handle the process of registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with a FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user and that user will become "Push Registered" if they previously did not have a push token for any of your apps.
@@ -63,7 +63,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 ##### Error: MismatchSenderID
 
-`MismatchSenderID` indicates an authetication failure. Ensure sure your Firebase Sender ID and FCM API key are correct. See our section on [debugging push registration][3] for more information.
+`MismatchSenderID` indicates an authentication failure. Ensure sure your Firebase Sender ID and FCM API key are correct. See our section on [debugging push registration][3] for more information.
 
 ##### Error: InvalidRegistration
 
@@ -101,7 +101,7 @@ For an implementation example, please check out our sample application's [Androi
 
 ##### 3. Firewall is Blocking Push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229 and 5230 are open. Additionally, since FCM doesn't specify its IPs, also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in [Google's ASN of 15169] [14].
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229 and 5230 are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in [Google's ASN of 15169] [14].
 
 ##### 4. Custom Notification Factory Returning Null
 

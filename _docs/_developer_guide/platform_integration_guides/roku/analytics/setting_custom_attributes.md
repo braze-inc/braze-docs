@@ -32,8 +32,8 @@ m.Braze.setFirstName("User's First Name")
 
 ### Assigning Custom User Attributes
 
-Beyond the default attributes above, Braze also allows you to define Custom Attributes using a number of different data types.
-For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
+Beyond the default attributes above, Braze also allows you to define Custom Attributes using several different data types.
+For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
 #### Custom Attribute with a Boolean Value
 ```
@@ -109,7 +109,7 @@ You can set the following email subscription statuses for your users programmati
 
 >  These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
 
-The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
+The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
 
 Example usage:
 ```
