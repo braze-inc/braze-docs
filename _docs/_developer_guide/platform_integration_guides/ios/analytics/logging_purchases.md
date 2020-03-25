@@ -93,7 +93,7 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 
 `logPurchase` is utilized within the [`EventsViewController.m` file][1] in the Stopwatch sample application.
 
-- Also see the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
+- Also, see the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
 
 ### REST API
 

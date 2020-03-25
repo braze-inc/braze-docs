@@ -12,7 +12,7 @@ To enable location tracking via the Braze Web SDK, call
 appboy.trackLocation();
 ```
 
-This will cause the Braze Web SDK to continuously collect the user's location (in browsers that support it), whenever your site is visible in the foreground of the user's browser. This location collection will continue for the duration of the page load (you should call this method for each page on which you want location to be tracked). Note that calling this will immediately request permission from the user, unless they have already granted or denied permission. See the [JSDocs][0] for more information.
+This will cause the Braze Web SDK to continuously collect the user's location (in browsers that support it), whenever your site is visible in the foreground of the user's browser. This location collection will continue for the duration of the page load (you should call this method for each page on which you want the location to be tracked). Note that calling this will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs][0] for more information.
 
 ### Logging A Single Location
 

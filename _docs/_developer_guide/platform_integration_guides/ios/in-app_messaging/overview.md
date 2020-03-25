@@ -11,7 +11,7 @@ page_order: 0
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
 
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
+In-app messages don't deliver outside of the user's app and won't intrude on their home screen like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
 
 ### Great Use Cases
 
@@ -30,7 +30,7 @@ To see examples of in-app messages, check out our [Client Integration Gallery][3
 [Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
 ## In-App Message Types
-Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display and delivery.
+Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
 
 All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class structures as following:
 

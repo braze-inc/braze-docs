@@ -24,6 +24,8 @@ channel:
 
 Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
 
+Braze will process the following keywords automatically and update the Subscription Group state for the phone number on all inbound requests.
+
 | Type | Keyword | Change |
 |-|-------|---|
 |Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |

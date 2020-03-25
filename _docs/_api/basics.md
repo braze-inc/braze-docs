@@ -16,7 +16,7 @@ platform:
 
 ## What is a REST API?
 
-A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
+A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data. 
 
 {% alert note %}
 Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
@@ -106,10 +106,6 @@ Keep in mind that once you create a new API Key, you cannot edit the scope of pe
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-### User Alias Object
-
-{% include archive/aliasing.md platform="REST" %}
-
 ###  Braze User ID Explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
@@ -122,7 +118,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 ##  API Limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
 |Default API Rate Limit | Value|
 |---|---|
