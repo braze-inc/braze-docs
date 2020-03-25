@@ -61,7 +61,7 @@ Depending on your situation, you may need to provide more or fewer flows the one
 You also must inform us, regardless of which number you use, of how many messages per month you plan to send.
 
 {% alert important %}
-If you have your own short code, reach out to your Braze representative during the onboarding process to discuss migrating or transferring your short code.
+If you have your own short code, reach out to your Customer Success Manager  __during the onboarding process__ to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
 
 ## Handling Unknown Phone Numbers
