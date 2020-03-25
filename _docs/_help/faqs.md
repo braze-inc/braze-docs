@@ -223,4 +223,5 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 Braze Firebrands is our customer engagement community. We're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? <a href='https://brazefirebrands.splashthat.com/'>Join now</a>.
 {% enddetails %}
 
+
 [support]: {{ site.baseurl }}/support_contact/
