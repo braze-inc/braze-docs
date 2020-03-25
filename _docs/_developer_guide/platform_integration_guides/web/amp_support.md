@@ -8,7 +8,7 @@ page_order: 5
 
 **This section is NOT a necessary integration step unless you're trying to integrate Braze on an AMP page.**
 
-Accelerated Mobile Pages (AMP) is a Google backed project designed to improve page load time on mobile devices by enforcing certain standards, including restricting the usage of JavaScript. 
+Accelerated Mobile Pages (AMP) is a Google-backed project designed to improve page load time on mobile devices by enforcing certain standards, including restricting the usage of JavaScript. 
 
 As a result, the Braze SDK cannot be loaded onto an AMP page. However, the AMP project does provide a component that supports web push. The following instructions detail how to setup that component and reference the following documentation on the `amp-web-push` component: https://www.ampproject.org/docs/reference/components/amp-web-push
 
@@ -40,7 +40,7 @@ You'll need to add a widget that allows users to subscribe and unsubscribe from 
 
 The AMP Web Push component works by creating a popup that handles the push subscription. As a result, you'll need to include a couple of helper files into your project. Download the [helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) file and [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) file and store them on your site. 
 
-## Step 4: Create Service Worker File
+## Step 4: Create a Service Worker File
 
 Create a `service-worker.js` file with the content below, and place it in the root directory of your website:
 
@@ -60,6 +60,6 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey=YOUR_API_KEY&baseUrl
 >
 ```
 
-In particular, the service-worker-url requires appending your apiKey and baseUrl (https://dev.appboy.com/api/v3) as query parameters, as shown above. 
+In particular, the service-worker-URL requires appending your apiKey and baseUrl (https://dev.appboy.com/api/v3) as query parameters, as shown above. 
 
 You should now be configured for push subscription and unsubscription on your AMP page. 

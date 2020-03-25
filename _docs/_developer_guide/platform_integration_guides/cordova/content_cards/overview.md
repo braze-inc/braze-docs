@@ -16,7 +16,7 @@ Braze recommends that customers who use our News Feed tool, move over to our Con
 
 ## When to Use Content Cards
 
-Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
+Content Cards typically sit in a feed of sorts (but not necessarily) and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 
 ### Great Use Cases
 
@@ -24,7 +24,7 @@ Content Cards typically sit in a feed of sorts (but not necessarily), and help y
 - Coordinate with push messages to illustrate a persistent record of promotions.
 - Give customers without push enabled access to promotions.
 - Trigger order confirmations or other personalized communication with your customer.
-- Develop and deliver and onboarding schedule.
+- Develop and deliver an onboarding schedule.
 
 ## Content Cards & Feed
 

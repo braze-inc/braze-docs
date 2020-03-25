@@ -6,7 +6,7 @@ platform: Android
 ---
 
 # Card Types
-Braze has five unique News Feed card types which share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has five unique News Feed card types that share a base model. Each card type also has additional card-specific properties which are listed below.
 
 ## Base Card
 

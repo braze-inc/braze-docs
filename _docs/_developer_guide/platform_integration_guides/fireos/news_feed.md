@@ -119,7 +119,7 @@ See [PreferencesActivity.java][39] in our Droidboy sample application for an exa
 
 ### Fully Custom Feed Display
 
-If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe to News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Feed Updates
 
@@ -204,7 +204,7 @@ In order to enable this functionality add the following line to your `appboy.xml
 These indicators can be customized by altering the values in [android-sdk-ui/src/main/res/drawable-hdpi/icon_unread.png][26] and [android-sdk-ui/src/main/res/drawable-hdpi/icon_read.png][27].
 
 ## Card Types
-Braze has 5 unique News Feed card types which share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has 5 unique News Feed card types that share a base model. Each card type also has additional card-specific properties which are listed below.
 
 #### Base Card
 

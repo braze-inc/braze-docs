@@ -115,7 +115,7 @@ However, if there is no in-app message being displayed, the following delegate m
   }
 ```
 
-The `InAppMessageOperation()` return value can be used to control when the message should be displayed. A suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
+The `InAppMessageOperation()` return value can be used to control when the message should be displayed. The suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
 
 | `InAppMessageOperation` return value | Behavior |
 | -------------------------- | -------- |
@@ -196,7 +196,7 @@ Android Material Design specifies that Button text should be upper case by defau
 
 ## Youtube in HTML in-app messages
 
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also that hardware acceleration is only available on API versions 11 and above.
+Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also, that hardware acceleration is only available on API versions 11 and above.
 
 ## GIFs {#gifs-IAMs}
 

@@ -60,7 +60,7 @@ RegisterActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 
 You should now be able to launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics).  
 
-> Consult the [Android integration instructions][8] for more in depth discussion of best practices for the basic SDK integration.
+> Consult the [Android integration instructions][8] for a more in-depth discussion of best practices for the basic SDK integration.
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
