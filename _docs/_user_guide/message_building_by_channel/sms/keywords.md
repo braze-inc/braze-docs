@@ -43,7 +43,11 @@ Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync 
 
 ## New Users
 
-Braze automatically creates a user when a user with a new phone number responds with a `START` or `STOP` (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the [E.164][e.164] number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
+Braze has the ability to automatically creates a user when a user with a new phone number responds with a `START` or `STOP` (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the [E.164][e.164] number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
+
+{% alert important %}
+If you would like to enable this functionality, please contact your Onboarding Manager or Customer Success Manager.
+{% endalert %}
 
 # Best Practices
 
