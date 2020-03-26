@@ -88,7 +88,7 @@ A triggered in-app message will be discarded in the following situations:
 - The in-app message is ready to be displayed but past the timeout duration
 - The device orientation doesn't match the triggered in-app message's orientation
 - The in-app message is a full in-app message but has no image
-- The in-app message is a image-only modal in-app message but has no image
+- The in-app message is an image-only modal in-app message but has no image
 
 #### Manually Queue In-App Message Display
 

@@ -47,7 +47,7 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
   {% tab .p12 Certificate (Legacy) %}
 __Using a .p12 Certificate (Legacy)__
 
-Alternately, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process we recommend utilizing the above-described .p8 authentication scheme instead.  However, if you still wish to, you may configure and upload .p12 certificates as described here:
+Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process we recommend utilizing the above-described .p8 authentication scheme instead.  However, if you still wish to, you may configure and upload .p12 certificates as described here:
 
 _Step 1: Generate Certificate Signing Request_
 

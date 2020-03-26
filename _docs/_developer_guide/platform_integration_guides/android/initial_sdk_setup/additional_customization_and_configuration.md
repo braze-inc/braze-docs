@@ -65,7 +65,7 @@ When debugging Braze behavior, set the Log level to `Verbose` before your first 
 
 ## Multiple API Keys
 
-The most common usecase for multiple API keys is separating API keys for debug and release build variants.
+The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
 To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 

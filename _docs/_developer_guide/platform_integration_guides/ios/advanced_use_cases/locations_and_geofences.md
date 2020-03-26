@@ -128,7 +128,7 @@ If you choose to use this option, you will need to manually request geofences fo
 
 ## Manually Requesting Geofences
 
-When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and in turn receives geofences that are determined to be optimally relevant based on the location reported. To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3 you can manually request geofences by providing latitude and longitude of a location. To do so, use the following code:
+When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and in turn, receives geofences that are determined to be optimally relevant based on the location reported. To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3 you can manually request geofences by providing latitude and longitude of a location. To do so, use the following code:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
