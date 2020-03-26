@@ -45,4 +45,4 @@ The delivered/clicked response returned by FCM will follow the same convention a
 [9]: https://developer.android.com/guide/topics/ui/notifiers/toasts#CustomToastView
 [10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [11]: {% image_buster /assets/img/android_tv.png %}
-[12]: {% image_buster /assets/img/television.png %}
+[12]: {% image_buster /assets/img/Television.png %}
