@@ -1,6 +1,6 @@
 ---
 nav_title: "SMS Subscription Groups"
-page_order: 1
+page_order: 3
 description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
 page_type: reference
 tool:

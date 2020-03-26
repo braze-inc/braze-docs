@@ -1,6 +1,6 @@
 ---
 nav_title: Create an SMS
-page_order: 2
+page_order: 4
 description: "This reference article covers the steps involved in creating and sending an SMS campaign."
 page_type: reference
 tool:

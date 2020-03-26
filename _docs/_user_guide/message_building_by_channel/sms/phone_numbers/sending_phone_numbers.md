@@ -79,21 +79,6 @@ Braze automatically addresses an unknown number in one of three ways:
 3. If any other custom keyword is texted:
   * Braze ignores the text message and does nothing.
 
-## Multi-Country SMS Sending
-
-In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, __short codes can only send SMS to phone numbers from the same country the short code was created in__. 
-
-To overcome this limitation, Subscription Groups can hold long and short codes from multiple different countries and will automatically use the appropriate short code or long code when targeting a user for SMS. Check out our [SMS Subscription Group][1] docs for more information.
-
-## High Volume Sending
-
-Plan on doing some high volume sending? We have some best practices for you to ensure it runs smoothly.
-
-- Adjust the delivery speed rate-limiting for your campaign/canvases as needed, based on target audience size. This will ensure that (1) you reach the send volume that you need and (2) Braze sends the messages at the rate that Twilio is expecting and can handle.
-- Look to AE/leadership to assist with increased MPS rate discussions with Twilio.
-Please note: higher throughput pricing needs to go through a deal desk.
-- Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
-
 ## Alphanumeric Sender ID
 ![picture][senderID]{: style="float:right;max-width:30%;margin-left:15px;border: 0"}
 
@@ -107,6 +92,5 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 
 For more information on Alphanumeric Sender ID, please reach out to your Customer Success Manager. 
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses
 [senderID]: {% image_buster /assets/img/sms/alphanumericsenderid.jpg %}
