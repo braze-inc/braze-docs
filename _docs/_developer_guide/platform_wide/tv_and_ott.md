@@ -63,7 +63,7 @@ Below is a list of features and messaging channels supported today.
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-danger"></i></td>
+            <td for="push"><i class="fas fa-times text-danger"></i> *</td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
@@ -122,11 +122,12 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
-- In-App Messages
+- In-App Messages 
+- &#42; Push Notifications (Manual Integration Required, See Below)
 
 For more information, visit the [Android SDK Integration Guide][2].
 
-For more information on why Push Notifications are not supported on Android TV, see Google's [Design Guidelines][5].
+Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, __do a manual integration of Push notification UI to achieve this__. Please see our [documentation][6] on how to set this up.
 
 ### Roku
 
@@ -151,3 +152,4 @@ For platforms that support In-App Messages via Custom UI, your app can be config
 [3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
+[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
