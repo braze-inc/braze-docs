@@ -1,5 +1,5 @@
 ---
-nav_title: Create an SMS
+nav_title: Creating an SMS Campaign
 page_order: 4
 description: "This reference article covers the steps involved in creating and sending an SMS campaign."
 page_type: reference
@@ -16,7 +16,7 @@ channel:
   - SMS
 ---
 
-# Create an SMS Campaign
+# Creating an SMS Campaign
 
 > SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
