@@ -35,7 +35,7 @@ Data included in the exports:
     - Last Session
     - Last App Version Used
     - In-App Purchase Total
-    - Email Subscription Status
+    - Email Unsubscribe Time 
     - Device Info
     - Number of IDFAs
     - Number of IDFVs

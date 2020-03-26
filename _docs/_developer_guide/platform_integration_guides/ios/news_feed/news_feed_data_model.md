@@ -84,8 +84,8 @@ Braze has five unique card types that share a base model. Each type of card also
 In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
-- `url` (optional) - The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card, but is hidden in the default Braze News Feed.
+- `URL` (optional) - The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card, but is hidden in the default Braze News Feed.
 
 ## Captioned Image Properties
 In addition to the base card properties:
@@ -93,7 +93,7 @@ In addition to the base card properties:
 - `image` (required) - This property is the URL of the card's image
 - `title` (required) - The title text for the card
 - `description` (required) - The body text for the card
-- `url` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Text Announcement (Captioned Image without Image) Properties
@@ -102,7 +102,7 @@ In addition to the base card properties:
 - `title` (required) - The title text for the card
 - `description` (required) - The body text for the card
 - `url` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Classic Card Properties
 In addition to the base card properties:
@@ -110,8 +110,8 @@ In addition to the base card properties:
 - `image` (required) - This property is the URL of the card's image
 - `title` (optional) - The title text for the card
 - `description` (required) - The body text for the card
-- `url` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
-- `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
+- `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
+- `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
 ## Cross Promotion (Small) Properties
 In addition to the base card properties:
@@ -133,9 +133,9 @@ In addition to the base card properties:
 - `iTunesId` - The iTunes ID number of the promoted item
 - `rating` (required for mediaType ItunesSoftware, optional otherwise) - The rating of the promoted app. This property will be 0.0 unless the promoted item is an app, and the rating will be in the range of [0.0, 5.0];
 - `price` - The number of reviews of the promoted app. This property will be 0 unless the promoted item is an app.
-- `reviews` - This property is the text that will be displayed in the tag on the top of the small cross promotion card.
-- `caption` - The iTunes url of the promoted item which leads to the item's App Store page.
-- `url` - The iTunes url of the promoted item which leads to the item's App Store page.
+- `reviews` - This property is the text that will be displayed in the tag on the top of the small cross-promotion card.
+- `caption` - The iTunes URL of the promoted item which leads to the item's App Store page.
+- `url` - The iTunes URL of the promoted item which leads to the item's App Store page.
 - `universal` (optional) - This property indicates if the promoted item is universal or not.
 
 ## Card Methods:

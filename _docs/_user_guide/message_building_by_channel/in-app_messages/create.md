@@ -175,7 +175,23 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ## Step 5: Configure Additional Settings
 
-Add [key-value pairs][19] to your message if needed.
+### Key-Value Pairs
+
+Add [key-value pairs][19] to send extra custom fields to user devices. 
+
+### Re-evaluate Campaign Eligibility and Liquid
+
+In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include: campaigns that target a custom attribute that frequently changes, or messages that should reflect any last-minute profile changes.
+
+![Re-evaluate IAM Membership][27]
+
+When you enable this "Re-evaluate Campaign Eligibility" option, an additional request to Braze will be made to confirm that the user is still eligible for this message. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated at that moment before the message is displayed.
+
+{% alert note %}
+Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
+
+Do not use this option for messages that can be triggered while a user is offline, or when eligibility and liquid re-evaluation are not required.
+{% endalert %}
 
 ## Step 6: Build the Remainder of Your Campaign or Canvas
 
@@ -266,3 +282,6 @@ After you've finished building the last of your campaign or Canvas, review its d
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/iam_compose.gif %}
+[25]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/
+[26]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/
+[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

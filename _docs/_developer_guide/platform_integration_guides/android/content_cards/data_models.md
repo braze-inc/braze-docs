@@ -9,7 +9,7 @@ platform: Android
 The Content Cards data model is available in the Android SDK.
 
 ## Card Types {#card-types-for-android}
-Braze has 3 unique Content Cards card types which share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has 3 unique Content Cards card types that share a base model. Each card type also has additional card-specific properties which are listed below.
 
 ### Base Card {#base-card-for-android}
 
