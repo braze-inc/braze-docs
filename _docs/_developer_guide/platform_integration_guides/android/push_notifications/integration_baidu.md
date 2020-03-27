@@ -4,13 +4,13 @@ platform: Android
 page_order: 1
 
 ---
-## Baidu Integration
+# Baidu Integration
 
 Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].  Our Baidu push sample app, `China Push Sample`, provides a full implementation example.
 
 >  Using Baidu Cloud Push __does not__ require you to distribute your apps via the Baidu App Store.
 
-### Step 1: Create a Baidu Account
+## Step 1: Create a Baidu Account
 
 - Visit the [Baidu Portal][7].  You will see a homepage similar to the following.  Click 登录 (Log In) among the menu options on the top right to bring up a dialog that will allow you to log in or create a new account.
 
@@ -32,7 +32,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Verification SMS][35]
 
-### Step 2: Register as a Baidu Developer
+## Step 2: Register as a Baidu Developer
 
 - Visit the [Baidu Developer Portal][36].  Open the dropdown menu in the top right of the screen.  Choose 注册开发者 (Create New Developer Account) to begin registration.
 
@@ -42,7 +42,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Developer Registration][13]
 
-### Step 3: Register your Application with Baidu
+## Step 3: Register your Application with Baidu
 
 - Visit the [Baidu Project Portal][11]. Click 创建工程 (Create Project).
 
@@ -62,7 +62,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu Configure Cloud][39]
 
-### Step 4: Add Baidu to your Application
+## Step 4: Add Baidu to your Application
 
 - Visit the [Baidu Push SDK Portal][40] and download the latest Baidu Cloud Push Android SDK.
 
@@ -159,7 +159,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Registering Push Opens
+## Step 5: Registering Push Opens
 
 - Baidu supports sending extra key-value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key-value pairs:
 
@@ -192,7 +192,7 @@ AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
 {% endtab %}
 {% endtabs %}
 
-### Step 6: Extras
+## Step 6: Extras
 
 - Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
 
@@ -223,7 +223,7 @@ try {
 {% endtab %}
 {% endtabs %}
 
-### Step 7: Set Up Baidu Keys
+## Step 7: Set Up Baidu Keys
 
 You need to input your Baidu API Key and Baidu Secret Key into the Braze dashboard.  Both keys are available from the [Baidu application console][52].
 
@@ -231,7 +231,7 @@ On the "App Settings Page" (where your API keys are located), select your Androi
 
 ![APIKey][19]
 
-### Resources
+## Resources
 
 - [Baidu Portal][7]
 - [Baidu Developer Portal][36]
