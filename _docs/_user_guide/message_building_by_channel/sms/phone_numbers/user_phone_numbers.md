@@ -24,6 +24,8 @@ All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. T
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+4402012341234`)
 
+![e164][picture]{: style="max-width:50%;border: 0;"}
+
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
 You can see the differences between local number formatting as well as universal, `E.164` formatting in the table below:
@@ -41,8 +43,10 @@ As you can see, the country codes for each listing are:
 
 ### Adding Users to SMS Subscription Groups
 
-For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
+For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+[picture]: {% image_buster /assets/img/sms/e164.jpg %}
+
 
 
