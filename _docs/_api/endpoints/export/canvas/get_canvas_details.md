@@ -43,6 +43,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
   "variants": [
     {
       "name": (string) name of variant,
+      "id": (string) API identifier of the variant,
       "first_step_ids": (array of strings) API identifiers for first steps in variant,
       "first_step_id": (string) API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
     },
