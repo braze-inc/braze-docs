@@ -339,4 +339,3 @@ Braze should now be collecting data from your application and your basic integra
 [33]: https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html
 [34]: #extending-braze-unity-player
 [35]: https://docs.unity3d.com/ScriptReference/Android.IPostGenerateGradleAndroidProject.html
-[36]: {% image_buster /assets/img_archive/unity-ios-appboyconfig.png %}
