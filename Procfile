@@ -1,1 +1,1 @@
-web: bin/start-nginx bundle exec rake docs:puma
+web: bin/start-nginx-solo bundle exec rake docs:puma
