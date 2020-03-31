@@ -417,7 +417,7 @@ For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, 
 
 #### Testing Display
 
-At this point you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
+At this point, you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
 
 ![Android push test][55]
 
@@ -425,7 +425,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point, you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -450,7 +450,7 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 #### Step 1: Create your Custom Notification Factory
 
-In some scenarios you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
+In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
 If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 

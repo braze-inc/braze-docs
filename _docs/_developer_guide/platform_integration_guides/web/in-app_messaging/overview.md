@@ -20,7 +20,7 @@ Braze has refreshed in-app messages! Though the creation process is very much th
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
 
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
+In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are rarely unwelcome! They're always delivered when the user is active within your app.
 
 ### Great Use Cases
 
@@ -45,7 +45,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% tabs %}
   {% tab Slideup %}
 
-  [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html) in-app messages are so-named because traditionally on mobile platforms they "slide up" or "slide down" from the top or bottom of the screen. In the Braze Web SDK, these messages are actually displayed as more of a Growl or Toast style notification, to align with the web's dominant paradigm. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
+  [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html) in-app messages are so-named because traditionally on mobile platforms they "slide up" or "slide down" from the top or bottom of the screen. In the Braze Web SDK, these messages are displayed as more of a Growl or Toast style notification, to align with the web's dominant paradigm. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
   
   <br>
 

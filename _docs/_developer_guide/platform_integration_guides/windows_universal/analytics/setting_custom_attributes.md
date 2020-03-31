@@ -35,7 +35,7 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 ### Assigning Custom User Attributes
 
 Beyond the attributes above, Braze also allows you to define Custom Attributes using a number of different data types:
-For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
+For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
 #### Custom Attribute with a Boolean Value
 ```csharp
@@ -96,7 +96,7 @@ Custom Attributes can also be unset using the following method:
 bool UnsetCustomAttribute(STRING_KEY);
 ```
 
-#### Setting a Custom Atttribute via the REST API
+#### Setting a Custom Attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
 
@@ -115,9 +115,9 @@ To set up a subscription for your users (either email or push), you can set the 
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
 
 - `EmailNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon reciept of explicit consent from your user. [See Braze Academy for details][10].
+  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
 - `PushNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon valid push registration, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon reciept of explicit consent from your user. [See Braze Academy for details][10].
+  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
 
 >  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`
 

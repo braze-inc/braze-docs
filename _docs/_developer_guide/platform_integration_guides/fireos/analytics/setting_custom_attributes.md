@@ -48,7 +48,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 - Strings
 - Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
+  - Includes methods to set arrays, add items to existing arrays and delete items from existing arrays.
 - Integers
 - Booleans
 - Dates
