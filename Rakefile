@@ -17,8 +17,6 @@ end
 
 task default: :serve
 
-
-
 namespace :academy do
   task :puma do
     Dir.chdir 'Archive' do
