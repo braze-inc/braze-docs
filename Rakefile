@@ -76,5 +76,5 @@ namespace :assets do
 end
 
 multitask serve: [
-  'academy:serve', 'documentation:serve', 'docs:serve', 'success:serve'
+  'docs:serve', 'success:serve'
 ]
