@@ -18,9 +18,7 @@ The message preview screen now renders a more realistic preview, and will run Ja
 
 This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, preview javascript animation, etc.)
 
-{% alert note %}
-TODO: add a gif here 
-{% endalert %}
+![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 All [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods are available, but will be replaced with "no-op" functions to avoid updating any actual user profiles.
 
