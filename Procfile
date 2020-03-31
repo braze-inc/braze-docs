@@ -1,1 +1,1 @@
-web: bin/runsvdir-dyno
+web: bundle exec rake docs:puma
