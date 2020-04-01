@@ -106,7 +106,7 @@ Create a class that implements [`IInAppMessageManagerListener`][21].
 
 The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
 
-For example, if you set a custom manager listener, when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
+For example, if you set a custom manager listener when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
@@ -165,7 +165,7 @@ override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InApp
 {% endtab %}
 {% endtabs %}
 
-The `InAppMessageOperation()` return value can be used to control when the message should be displayed. A suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
+The `InAppMessageOperation()` return value can be used to control when the message should be displayed. The suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
 
 | `InAppMessageOperation` return value | Behavior |
 | -------------------------- | -------- |
@@ -188,7 +188,7 @@ Once an in-app message has been placed on the stack, you can request for it to b
 
 ## Setting a Custom View Factory
 
-Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
+Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
 ### Step 1: Implement an In-App Message View Factory
 
@@ -262,7 +262,7 @@ Implementing `IInAppMessageView` allows you to define a certain portion of your 
 
 ## Setting a Custom Animation Factory
 
-In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible via setting a custom animation factory.
+In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible by setting a custom animation factory.
 
 ### Step 1: Implement an In-App Message Animation Factory
 
@@ -587,6 +587,20 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 ## Youtube in HTML in-app messages
 
 Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
+
+The following is an example of an embedded Youtube video in an HTML snippet:
+
+```html
+<body>
+    <div class="box">
+        <div class="relativeTopRight">
+            <a href="appboy://close">X</a>
+        </div>
+        <iframe width="60%" height="50%" src="https://www.youtube.com/embed/_x45EB3BWqI">
+        </iframe>
+    </div>
+</body>
+```
 
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration

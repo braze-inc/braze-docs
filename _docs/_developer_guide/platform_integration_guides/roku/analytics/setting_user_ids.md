@@ -57,7 +57,7 @@ Please note the following:
 - If your app is used by multiple people, you can assign each user a unique identifier to track them.
 - Once a user ID has been set, you cannot revert that user to an anonymous profile.
 - Do Not change the user ID upon a user "log out".
-  - Doing so separates the device from the user profile. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
+  - Doing so separates the device from the user profile. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 - Switching from one identified user to another is a relatively costly operation.
   - When you request the user switch, the current session for the previous user is automatically closed and a new session is started.
 

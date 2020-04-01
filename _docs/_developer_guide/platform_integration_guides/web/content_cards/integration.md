@@ -12,7 +12,7 @@ To toggle display of Content Cards through the Braze Web SDK, call:
 [`appboy.display.toggleContentCards();`](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
 
 
-This method will toggle the visility of the Content Cards. By default, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
+This method will toggle the visibility of the Content Cards. By default, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
 
 |Parameters | Description |
 |---|---|

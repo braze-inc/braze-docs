@@ -104,9 +104,9 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ### Note about Push to Sync
 
-Note that Braze syncs geofences to devices using background push. In most cases this will involve no code changes, as this feature requires no further integration on the part of the app.
+Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
 
-However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want triggered by background push.
+However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle

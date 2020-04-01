@@ -45,7 +45,7 @@ If you are looking for a complete list of supported languages you may attribute 
 
 ## Technical Details
 
-For your convenience our CocoaPod integrates the `.strings` files for the aforementioned languages. Note that each open-sourced UI component has its own `.strings` file. If you do not wish to use one or more of these languages, you can feel free to delete these files from your project.
+For your convenience, our CocoaPod integrates the `.strings` files for the aforementioned languages. Note that each open-sourced UI component has its own `.strings` file. If you do not wish to use one or more of these languages, you can feel free to delete these files from your project.
 
 Optionally, you can also override any of the following Key / String pairs within your app's `Localizable.strings` file much like a CSS override.
 
