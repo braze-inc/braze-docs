@@ -20,8 +20,9 @@ This means you can now preview _and interact_ with your custom messages (i.e. cl
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
-All [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods are available, but will not update any actual user profiles.
-
+{% alert info %}
+Any [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods included in the HTML won't update user profiles while in the preview.
+{% endalert %}
 
 ### Syntax Highlighting
 
@@ -31,32 +32,6 @@ This helps to easily spot potential code errors directly in the message composer
 
 ![New HTML In App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
-<!--
-### Cross-Channel HTML Messages
-
-This new HTML message type can now be used across both mobile and web!
-
-As always, it's recommended to [nudge users to upgrade]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
-
-![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
--->
-## Upcoming Features
-
-The following features are planned and coming soon!
-
-### Mobile App Support
-
-* Adding this new preview feature to custom HTML In-App Messages for Mobile Apps
-
-* Send a custom HTML In-App Message to both mobile and web with the same campaign
-
-### Asset Management
-
-* Upload assets directly to the Media Library from within a campaign via simple drag-and-drop interface
-
-* List assets associated with this campaign, and quickly copy their URLs to use within your HTML
-
-* Support for uploading additional file types (Fonts, SVG Images, Javascript, CSS)
 
 ## Migration Guide
 
@@ -75,6 +50,33 @@ These Beta features are supported on Web only, and require upgrading to the foll
 Toggle the new "Custom Message" type when creating your HTML campaign, as shown below:
 
 ![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
+
+<!--
+### Cross-Channel HTML Messages
+
+This new HTML message type can now be used across both mobile and web!
+
+As always, it's recommended to [nudge users to upgrade]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+
+![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+-->
+## Upcoming Features
+
+The following features are planned and coming soon!
+
+### Mobile App Support
+
+* Adding support to preview custom HTML In-App Messages for Mobile Apps
+
+* Send a custom HTML In-App Message to both mobile and web with the same campaign
+
+### Asset Management
+
+* Upload assets directly to the Media Library from within a campaign via simple drag-and-drop interface
+
+* List assets associated with this campaign, and quickly copy their URLs to use within your HTML
+
+* Support for uploading additional file types (Fonts, SVG Images, Javascript, CSS)
 
 ## Providing Feedback
 
