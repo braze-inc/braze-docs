@@ -4,7 +4,7 @@ page_order: 1
 ---
 # App Group Configuration
 
-Braze organizes your apps via "App Groups." Think of each of these app groups as an individual title. For example, you should group the iOS and Android version of the same application or a free and paid version. These two apps should be in the same group to allow for ease of navigation, segmentation, and messaging across both platforms.
+Braze organizes your apps via "App Groups." Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same application or a free and paid versions. These two apps should be in the same group to allow for ease of navigation, segmentation, and messaging across both platforms.
 
 ## Creating your App Group in "My Apps"
 
@@ -14,7 +14,7 @@ Braze organizes your apps via "App Groups." Think of each of these app groups as
 
 Type the name of your app group into the form.
 
-Once you have created your app group, you will be taken to the app settings page. Generally, you can access this page by navigating to the apps tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
+Once you have created your app group, you will be taken to the app settings page. Generally, you can access this page by navigating to the Apps tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
 
 ![Braze App Settings][4]
 
@@ -25,7 +25,7 @@ Using the form at the top right of your screen, select your platform, type in th
 - If your app has not been published yet, you can add the app by simply typing the name
 - Once your app is published, you will be able to update the iTunes ID or Android package name for automatic name and image refreshes
 - After adding your app, you will have access to its API key, which you will need to complete SDK integration.
-	- You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
+    - You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have 4 app instances within your app group and must use the appropriate API key that is generated for each app.
 
 ![Braze API Input][5]
 

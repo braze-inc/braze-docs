@@ -130,7 +130,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 
 For more information, refer to [Apple's Universal Links documentation][11].**
 
-> The default Universal Link integration is not compatible with Braze's push notifications, in-app messages, or the News Feed. See our [Linking Customization][26] documentation to handle Universal Links within your application. Alternatively, we recommend using [scheme-based deep links][25] with push notifications, in-app messages and the News Feed.
+> The default Universal Link integration is not compatible with Braze's push notifications, in-app messages, or the News Feed. See our [Linking Customization][26] documentation to handle Universal Links within your application. Alternatively, we recommend using [scheme-based deep links][25] with push notifications, in-app messages, and the News Feed.
 
 ## App Transport Security (ATS)
 iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, News Feed cards and push notifications.
@@ -151,7 +151,7 @@ Error Domain=NSURLErrorDomain Code=-1200 "An SSL error has occurred and a secure
 NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
 ```
 
-ATS compliance is enforced for links opened within the mobile app (Braze's default handling of clicked links), and does not apply to sites opened externally via a web browser.
+ATS compliance is enforced for links opened within the mobile app (Braze's default handling of clicked links) and does not apply to sites opened externally via a web browser.
 
 ### Handling ATS Requirements
 
@@ -163,25 +163,25 @@ Your Braze integration can satisfy ATS requirements most simply by ensuring that
 An SSL tool can help you pinpoint web server security issues. This [SSL Server Test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 / iOS 9 compliance.
 
 #### Partially Disable ATS
-You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in an Braze messaging channel is either ATS compliant or handled by an exception.
+You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
 
 To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
 
 ```html
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
-	<key>NSExceptionDomains</key>
-	<dict>
-		<key>example.com</key>
-		<dict>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<false/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
-		</dict>
-	</dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>example.com</key>
+        <dict>
+            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+            <false/>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+        </dict>
+    </dict>
 </dict>
 ```
 
@@ -194,8 +194,8 @@ You can turn off ATS entirely. Please note that this is not recommended practice
 ```html
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 ```
 
@@ -244,7 +244,7 @@ You can declare a category for, or directly modify, the `ABKModalWebViewControll
 
 ### Linking Handling Customization
 
-The `ABKURLDelegate` protocol can be used to customize handling of URIs such as deep links, web URLs and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
+The `ABKURLDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs and Universal Links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
 
 #### Integration Example: ABKURLDelegate
 
@@ -287,7 +287,7 @@ You can see an example implementation of `handleAppboyURL:fromChannel:withExtras
 
 ### Deep Linking to App Settings
 
-iOS has the ability to take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages and the News Feed.
+iOS can take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages, and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [Universal Links][27].
 2. Decide on a URI for deep linking to the Settings page (e.g., `stopwatch://settings` or `https://www.braze.com/settings`).

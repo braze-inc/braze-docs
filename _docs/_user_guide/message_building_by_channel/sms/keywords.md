@@ -5,7 +5,7 @@ page_order: 2
 
 # Keyword Processing & Management
 
-Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.basurl }}/) for the phone number on all inbound requests.
+Braze will process the following keywords automatically and update the Subscription Group state for the phone number on all inbound requests.
 
 || Keyword | Change |
 |-|-------|---|

@@ -9,7 +9,7 @@ platform: Android
 
 ## Default Styling {#default-styling-for-android}
 
-Braze In App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
+Braze In-App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
 ```xml
   <!-- Content Cards Example -->
@@ -28,7 +28,7 @@ Braze In App Messages and Content Cards come with a default look and feel that m
 
 ## Overriding Styles {#overriding-styles-for-android}
 
-If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
+If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
 ### Correct Style Override {#correct-style-override-for-android}
 
@@ -420,7 +420,7 @@ AppboyContentCardsManager.getInstance().contentCardsActionListener = object : IC
 
 ### Fully Custom Content Card Display {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s content cards models, you will need to subscribe for content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s content cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Content Card Updates
 

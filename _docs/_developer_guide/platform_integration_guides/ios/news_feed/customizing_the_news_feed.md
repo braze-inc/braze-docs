@@ -13,7 +13,7 @@ __Note that integration of `SDWebImage` is required if you plan on using our Bra
 
 ## Overriding Default Images
 
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in the News Feed include:
+Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for an override in the News Feed include:
 * Read icon indicator: `Icons_Read`
 * Placeholder image: `img-noimage-lrg`
 
