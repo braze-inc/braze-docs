@@ -72,6 +72,7 @@ Here’s what we recommend for various different ranges of Lift Quality:
 | 50 - 70 | This model will produce useful predictions, but trying different audience settings could achieve something more effective. |
 | 30 - 50 | This model can produce some value but consider trying different audience definitions to see if they increase performance. |
 | 0 - 30 | We recommend you change your audience definitions and try again. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Churn Score and Category
 
