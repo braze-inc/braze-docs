@@ -1,6 +1,6 @@
 ---
 nav_title: Push TTL Settings
-page_order: 3.5
+page_order: 4
 ---
 
 # Push Time to Live Settings
