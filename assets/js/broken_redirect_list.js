@@ -4,13 +4,15 @@ validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-re
 validurls['/docs/user_guide/administrative/logging_in_and_security/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/getting_your_account/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/logging_in/'] = '/docs/user_guide/administrative/access_braze/logging_in/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/resetting_your_password/';
+validurls['/docs/user_guide/administrative/app_settings/app_group_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/';
+validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/';
+validurls['/docs/user_guide/administrative/app_settings/tags/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/tags/';
+validurls['/docs/user_guide/administrative/app_settings/push_ttl_settings/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/in_app_message_color_templates/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile/';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/#email-analytics-glossary/'] = '/docs/user_guide/message_building_by_channel/email/analytics_glossary/';
 
 validurls['/docs/user_guide/data_and_analytics/braze_currents/event_delivery_sematics/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
-validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
-validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/integration/'] = '/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/data_storage_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/advanced_topics/'] = '/docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/';
@@ -31,7 +33,6 @@ validurls['/docs/user_guide/message_building_by_channel/push/push_action_buttons
 validurls['/docs/user_guide/message_building_by_channel/push/push_stories/'] = '/docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/';
 validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/#push-notification-events'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 
-
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/snowflake/'] = '/docs/partners/snowflake/';
@@ -48,9 +49,12 @@ validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/micros
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
-validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/'] = '/docs/partners/data_augmentation/contextual_location/accuweather/'
-validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/data_import/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/#data-import'
-validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/'
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/accuweather/'] = '/docs/partners/data_augmentation/contextual_location/accuweather/';
+validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/data_import/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/#data-import';
+validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
+validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
+validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
+
 
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';
@@ -71,7 +75,7 @@ validurls['/docs/developer_guide/rest_api/tls_deprecation/'] = '/docs/help/relea
 validurls['/docs/developer_guide/rest_api/postman_collection/'] = '/docs/api/postman_collection/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
 
-validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates/'
+validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates/';
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification/';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
