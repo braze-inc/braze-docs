@@ -1,6 +1,6 @@
 ---
 nav_title: Tags
-page_order: 3
+page_order: 2
 ---
 # Tags
 
