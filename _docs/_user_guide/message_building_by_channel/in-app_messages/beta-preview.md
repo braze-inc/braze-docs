@@ -14,13 +14,13 @@ Learn about the new Beta Version of custom HTML In-App Messages.
 
 ### Interactive Preview
 
-The message preview screen now renders a more realistic preview, and will run Javascript included in your message.
+The message preview screen now shows a more realistic preview that renders the Javascript included in your message.
 
-This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, preview javascript animation, etc.)
+This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, watch javascript animations, etc.)
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
-All [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods are available, but will be replaced with "no-op" functions to avoid updating any actual user profiles.
+All [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods are available, but will not update any actual user profiles.
 
 
 ### Syntax Highlighting
@@ -31,6 +31,7 @@ This helps to easily spot potential code errors directly in the message composer
 
 ![New HTML In App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
+<!--
 ### Cross-Channel HTML Messages
 
 This new HTML message type can now be used across both mobile and web!
@@ -38,10 +39,16 @@ This new HTML message type can now be used across both mobile and web!
 As always, it's recommended to [nudge users to upgrade]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
-
+-->
 ## Upcoming Features
 
 The following features are planned and coming soon!
+
+### Mobile App Support
+
+* Adding this new preview feature to custom HTML In-App Messages for Mobile Apps
+
+* Send a custom HTML In-App Message to both mobile and web with the same campaign
 
 ### Asset Management
 
@@ -51,18 +58,17 @@ The following features are planned and coming soon!
 
 * Support for uploading additional file types (Fonts, SVG Images, Javascript, CSS)
 
-
 ## Migration Guide
 
 There are two steps required to migrate to the new HTML Beta
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features require upgrading to the following Braze SDK versions:
+These Beta features are supported on Web only, and require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/changelog/#250)
 
-* Android SDK v5.0+ [Changelog]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/changelog/#500)
+<!-- * Android SDK v5.0+ [Changelog]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/changelog/#500) -->
 
 ### New Message Type
 
