@@ -70,8 +70,8 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | API Key | Found in App Settings under the Manage App Group. |
 | External Identity Type | The mParticle User Identity type to forward as an External ID to Braze. We recommend leaving this to the default value, Customer ID. |
 | Braze Instance | Select Custom. |
-| Custom SDK Endpoint | Given to you by your Braze support or account representative. For example: `https://sdk.api.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
-|Custom REST Endpoint | Given to you by your Braze support or account representative. For example: `https://rest.iad.braze.com`. If you know which Braze Instance you’re on, you can find your endpoint [here]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). |
+| Custom SDK Endpoint | Given to you by your Braze support or account representative. For example: `sdk.api.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
+|Custom REST Endpoint | Given to you by your Braze support or account representative. For example: `rest.iad.braze.com`. If you know which Braze Instance you’re on, you can find your endpoint [here]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). |
 | Custom Javascript Endpoint | Same as Custom SDK endpoint. |
 {: .reset-td-br-1 .reset-td-br-2}
 
