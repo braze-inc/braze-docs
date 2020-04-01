@@ -11,7 +11,7 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
-The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
+The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend the integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
@@ -67,7 +67,7 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need to specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
 
 >  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster please ask your Customer Success Manager or email [open a support ticket][support].
 
@@ -155,7 +155,7 @@ Please see the following sections in order to enable [custom event tracking]({{ 
 ## Test Your Basic Integration
 
 ### Confirm Session Tracking Is Working
-At this point you should have session tracking working in your Braze integration.  To test this, go to the `App Usage` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.  Then open your app and refresh the page - your main metrics should all have increased by 1.
+At this point, you should have session tracking working in your Braze integration.  To test this, go to the `App Usage` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.  Then open your app and refresh the page - your main metrics should all have increased by 1.
 
 ![Sessions working][55]
 
@@ -165,7 +165,7 @@ You should continue to test your integration by navigating through your applicat
 If session tracking is behaving unexpectedly, turn on [Verbose Logging][56] and observe your app while you reproduce session triggering steps.  Observe Braze statements in the logcat to detect where you may have missed logging `openSession` and `closeSession` calls in your activities.
 
 ### Confirm Device Data is Collected
-At this point you should also have default device data collection working in your app.  To observe this working correctly navigate to the `Devices & Carriers` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.
+At this point, you should also have default device data collection working in your app.  To observe this working correctly navigate to the `Devices & Carriers` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.
 
 ![Android Device Data][57]
 
@@ -212,7 +212,7 @@ When debugging Braze behavior, set the Log level to `Verbose` before your first 
 
 ### Multiple API Keys
 
-The most common usecase for multiple API keys is separating API keys for debug and release build variants.
+The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
 To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 

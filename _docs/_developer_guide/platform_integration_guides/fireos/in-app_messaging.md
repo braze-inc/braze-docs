@@ -175,7 +175,7 @@ Create a class that implements [`IInAppMessageManagerListener`][21]
 
 The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
 
-For example, if you set a custom manager listener, when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
+For example, if you set a custom manager listener when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
@@ -203,7 +203,7 @@ However, if there is no in-app message being displayed, the following delegate m
   }
 ```
 
-The `InAppMessageOperation()` return value can be used to control when the message should be displayed. A suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
+The `InAppMessageOperation()` return value can be used to control when the message should be displayed. The suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
 
 | `InAppMessageOperation` return value | Behavior |
 | -------------------------- | -------- |
@@ -222,7 +222,7 @@ On Android, this is done by calling `logClick` and `logImpression` on in-app mes
 
 #### Setting a Custom View Factory
 
-Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
+Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
 ##### Step 1: Implement an In-App Message View Factory
 
@@ -255,7 +255,7 @@ The following image is an example custom In-App Message view from a Braze client
 
 #### Setting a Custom Animation Factory
 
-In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible via setting a custom animation factory.
+In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible by setting a custom animation factory.
 
 ##### Step 1: Implement an In-App Message Animation Factory
 
@@ -286,7 +286,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 
 ## Server-side Event Triggering
 
-By default in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
+By default, in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
 
 To enable this feature, a silent push is sent to the device which allows a custom push receiver to log an SDK based event. This SDK event will subsequently trigger the user-facing in-app message.
 
@@ -300,27 +300,27 @@ Your receiver will handle the intent broadcast by the silent push and log an SDK
 
 It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed example, please see our [EventBroadcastReceiver.java][72] in the linked gist.
 
->  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
+>  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 For further details on custom handling push receipts, opens, and key-value pairs please visit this section of our [Documentation][78].
 
 ### Step 3: Create a Push Campaign
 
-Create a silent push campaign which is triggered via the server sent event. You can learn how to to this with our page on [how to create a silent push campaign][73].
+Create a silent push campaign which is triggered via the server sent event. You can learn how to do this with our page on [how to create a silent push campaign][73].
 
 ![serverEventTrigger][75]
 
-The push campaign must include key value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
+The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
 
 ![kvpConfiguration][76]
 
-The [EventBroadcastReceiver.java][72] recognizes the key value pairs and logs the appropriate SDK custom event.
+The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
 ###  Step 4: Create an In-App Message Campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the custom [EventBroadcastReceiver.java][72].
+Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the custom [EventBroadcastReceiver.java][72].
 
 In the example below the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
@@ -344,7 +344,7 @@ Android Material Design specifies that Button text should be upper case by defau
 
 #### Youtube in HTML in-app messages
 
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also that hardware acceleration is only available on API versions 11 and above.
+Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also, that hardware acceleration is only available on API versions 11 and above.
 
 {% include archive/troubleshooting_iams.md platform="FireOS" %}
 

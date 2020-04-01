@@ -49,12 +49,13 @@ https://rest.iad-01.braze.com/templates/email/list?api_key=123abc-def5-3729-owod
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: number of templates returned
-  “templates”: [template with the following properties]:
-    “email_template_id”: (string) your email template's API Identifier,
-    “template_name”: (string) the name of your email template,
-    “created_at”: (string, in ISO 8601),
-    “updated_at”: (string, in ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601),
+    "tags": (array of strings) tags appended to the template
 }
 ```
 {% endapi %}

@@ -188,7 +188,7 @@ User export object (we will include the least data possible - if a field is miss
                 "opened_email" : (bool),
                 "opened_push" : (bool),
                 "clicked_email" : (bool),
-                "clicked_in_app_message" : (bool)
+                "clicked_triggered_in_app_message" : (bool)
             },
             "converted" : (bool),
             "api_campaign_id" : (string),

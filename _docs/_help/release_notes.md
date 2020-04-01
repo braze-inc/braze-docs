@@ -33,24 +33,58 @@ guide_featured_list:
 
 ---
 
-## Most Recent Braze Release Notes {#most-recent}
+# Most Recent Braze Release Notes {#most-recent}
 
 > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.
 > <br>
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{ site.baseurl }}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
-### January 2020
+## March 2020
 
-#### Added SMS Capability
+### Custom Attribute Filter Behavior
+
+The Dashboard has improved filters to include more intuitive behaviors.
+There have been two significant changes to how certain custom attributes filters work. 
+The custom attribute filter changes are reflected in the filters: 
+- Less than __X__ Days Ago
+- Less than __X__ Days in the Future
+- Day of Recurring Event<br>
+
+__If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__ 
+
+Check out our [documentation]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
+
+
+## February 2020
+
+### Retention Reports
+
+Braze is proud to now offer Retention Reports for Campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the Campaign Analytics page within the Dashboard. 
+
+Information on this new feature can be found in our [documentation]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
+
+![Full Report][4]
+
+{% alert important %}
+As of February 13th, 2020 this feature is not yet available to our client deployed in our EU region or our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
+{% endalert %}
+
+### New Email Content Block API Endpoint
+
+You can now [update]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/post_email_content_block/) your Email Content Blocks via API!
+
+## January 2020
+
+### Added SMS Capability
 
 Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages as well as implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
 
 In the SMS channel, the New User settings and behavior have been outlined and can be checked out [here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
 
-### November 2019
+## November 2019
 
-#### Intelligence Suite
+### Intelligence Suite
 
 Braze's [Intelligence Suite]({{ site.baseurl }}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{ site.baseurl }}/user_guide/intelligence/intelligent_selection/).
 
@@ -58,56 +92,56 @@ Braze's [Intelligence Suite]({{ site.baseurl }}/user_guide/intelligence/) helps 
 The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Delivery", and "multivariate and A/B testing".
 {% endalert %}
 
-#### Dark Mode Themes for In-App Messages
+### Dark Mode Themes for In-App Messages
 
 iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
 
 <img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-#### SMS Metrics in Engagement Reports
+### SMS Metrics in Engagement Reports
 
 SMS Metrics are now available in [Engagement Reports]({{ site.baseurl }}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
 
-#### Delete a Braze User's Teams
+### Delete a Braze User's Teams
 
 You can now delete a team from a Braze User's account!
 
-### October 2019
+## October 2019
 
-#### Improved Canvas Variant Analytics
+### Improved Canvas Variant Analytics
 
 Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. [Learn more here]({{ site.baseurl }}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant).
 
-#### SMS
+### SMS
 
 Braze now provides SMS with Campaigns, Canvas, and [Currents]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)! Check out our [Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/) to get started and our [SMS Sending Guide]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/) to learn more!
 
-#### Content Block Improvements
+### Content Block Improvements
 
 The API ID for a Content Block will now show on the selected Content Block page in the dashboard. Additionally, we will display where Content Blocks are being used.
 
-#### Alias-only User creation and Identification via the API
+### Alias-only User creation and Identification via the API
 
 You can now [use an API request]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification) with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.
 
-### September 2019
+## September 2019
 
-#### Braze App within OneLogin
+### Braze App within OneLogin
 
 Customers will be able to simply search and select Braze within [OneLogin]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
 
-#### Rokt Calendar Partnership
+### Rokt Calendar Partnership
 
 [Rokt Calendar]({{ site.baseurl }}/partners/additional_channels/calendar/rokt_calendar/) provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. Customers will be able to...
 
 - Send a calendar invite via Braze platform to 'save the date' and extend our communication
 - Update an existing invite if the contents of the event has changed.
 
-#### Passkit Partnership
+### Passkit Partnership
 
 With [Passkit]({{ site.baseurl }}/partners/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
 
-#### Dispatch ID Value Return via Messaging Endpoints
+### Dispatch ID Value Return via Messaging Endpoints
 
 A message's `dispatch_id` will be included in the following Messaging endpoint responses:
 
@@ -131,3 +165,5 @@ Did you even wonder more about the details of who is working on a Canvas in your
 [CCFeed]: {% image_buster /assets/img/cc-feed.png %}
 [cbm]: {% image_buster /assets/img/created_by_me2.png %}
 [plat_p]: {% image_buster /assets/img/iam_platforms.gif %}
+[4]: {% image_buster /assets/img/retention_report_full_report.png %}
+

@@ -48,7 +48,7 @@ To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app p
 pod install
 ```
 
-At this point you should be able to open the new Xcode project workspace created by CocoaPods.
+At this point, you should be able to open the new Xcode project workspace created by CocoaPods.
 
 ![New Workspace][apple_initial_setup_15]
 
@@ -110,15 +110,15 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 ### Compile-time Endpoint Configuration (Recommended)
 
-If given a pre-exisiting custom endpoint...
-- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+If given a pre-existing custom endpoint...
+- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### Runtime Endpoint Configuration
 
 If given a pre-existing custom endpoint...
-- Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+- Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert important %}
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
@@ -162,7 +162,10 @@ In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOpt
 In `AppDelegate.swift`, within your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, add the following Braze method:
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY", inApplication:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:appboyOptions)
 ```
 
 where `appboyOptions` is a `Dictionary` of startup configuration values.

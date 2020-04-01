@@ -77,6 +77,7 @@ These in-app messages are accepted by both mobile apps and web applications.
 |[Full-Screen]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#full-screen)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
 |[Modal]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#modal)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
 |[Slideup]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#slideup)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Advanced %}
@@ -90,6 +91,7 @@ These in-app messages are customizable to your needs.
 |[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | Must set `enableHtmlInAppMessages` initialization option to `true` for your In-App Message to work. |
 |[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
 |[Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
 If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: `<a href="appboy://close">X</a>`.
@@ -119,6 +121,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 |Position | __From Bottom of App Screen__ or __From Top of App Screen__. | This only exists in the Universal Slideup message builder.|
 |HTML & Assets | Completely custom via upload, URL, or copy and paste. | Copy and paste HTML into the available space and upload your assets via ZIP. |
 |Email Capture Input Placeholder | Custom copy. | This is used solely in the Web Email Capture Form and will direct your users to input the desired content into the space. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Buttons
 
@@ -162,6 +165,7 @@ The content of the Style tab vary based on your chosen Message Options in the la
 |Background Color | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. This is the background of the entire message and will clearly display behind your text body. |
 |Screen Overlay | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. Only available for newer Braze SDK versions. This is the frame around the entire message. |
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Always [preview and test]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
@@ -171,7 +175,23 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ## Step 5: Configure Additional Settings
 
-Add [key-value pairs][19] to your message if needed.
+### Key-Value Pairs
+
+Add [key-value pairs][19] to send extra custom fields to user devices. 
+
+### Re-evaluate Campaign Eligibility and Liquid
+
+In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include: campaigns that target a custom attribute that frequently changes, or messages that should reflect any last-minute profile changes.
+
+![Re-evaluate IAM Membership][27]
+
+When you enable this "Re-evaluate Campaign Eligibility" option, an additional request to Braze will be made to confirm that the user is still eligible for this message. Additionally, any [Liquid][25] variables or [Connected Content][26] will be templated at that moment before the message is displayed.
+
+{% alert note %}
+Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
+
+Do not use this option for messages that can be triggered while a user is offline, or when eligibility and liquid re-evaluation are not required.
+{% endalert %}
 
 ## Step 6: Build the Remainder of Your Campaign or Canvas
 
@@ -262,3 +282,6 @@ After you've finished building the last of your campaign or Canvas, review its d
 [19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/iam_compose.gif %}
+[25]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/
+[26]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/
+[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

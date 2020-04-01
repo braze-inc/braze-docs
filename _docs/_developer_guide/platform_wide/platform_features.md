@@ -27,11 +27,11 @@ The Braze Data API provides a web service where you can record actions taken by 
 ## Granular Targeting and Analysis
 
 ### App Analytics
-The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events which you instrument in your application.
+The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events that you instrument in your application.
 
 ### User Segmentation
 
-Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, social data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". Once a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, the below image shows a segment which includes all users who have spent money in-app and last used the app more than two weeks ago.
+Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, social data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". Once a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, the below image shows a segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
 
 ![Segmentation Example][2]
 
@@ -47,13 +47,13 @@ When your app opens, the Braze SDK automatically pulls down the user's News Feed
 - You can schedule a specific time-frame when cards will display, allowing for deep [dayparting][4]
 - Cards within the News Feed may be targeted at user segments just like any other message
 - In-app messages will automatically appear when a user has new items in their News Feed
-- News Feed Items can ["Deeply Link"][5] to in-app content enabling the marketer to provide individualized content navigation for each user. Every process from onboarding, to the surfacing of rich in-app content can be behaviorially targeted and customized using the News Feed and ["Deep Links"][5]
+- News Feed Items can ["Deeply Link"][5] to in-app content enabling the marketer to provide individualized content navigation for each user. Every process, from onboarding to the surfacing of rich in-app content, can be behaviorally targeted and customized using the News Feed and ["Deep Links"][5]
 
 ![News Feed Dashboard][6]
 
 ### Push Notifications {#platform-features-push}
 
-Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns, and news items.
+Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items.
 
 ![Example Push Dashboard][8]
 
@@ -65,7 +65,7 @@ Braze provides unobtrusive in-app notifications via our custom-built native user
 
 ### Email {#platform-features-email}
 
-Send your users rich HTML messages by adding your existing HTML templates or or using our rich text editor. Braze makes it easy to include email as part of your mobile engagement strategy.
+Send your users rich HTML messages by adding your existing HTML templates or using our rich text editor. Braze makes it easy to include email as part of your mobile engagement strategy.
 
 ![Email Dashboard][10]
 

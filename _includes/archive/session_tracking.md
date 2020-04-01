@@ -42,10 +42,10 @@ To customize the session timeout in versions prior to v3.14.1, set the [`ABKSess
 
 ```swift
 // Sets the session timeout to 60 seconds
-Appboy.startWithApiKey("YOUR-API-KEY",
-                       inApplication:application,
-                       withLaunchOptions:launchOptions,
-                       withAppboyOptions:[ ABKSessionTimeoutKey : 60 ]])
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:[ ABKSessionTimeoutKey : 60 ])
 ```
 {% endtab %}
 {% endtabs %}

@@ -21,15 +21,6 @@ Services Description:
   - Recommendations to improve email program performance and results utilizing data and established best practices
 - Crisis Triage - in the event of a deliverability issue, like a block or blacklist, our team will help mitigate and remediate
 
-## Enhanced Onboarding {#enhanced-onboarding}
-
-You can also have a deliverability expert help guide the first month of your email onboarding:
-
-- Audit of historical/current email sending practices with a review of targeting, cadence, and messaging strategies
-- Whitelabel configuration and customized IP warming plan created by an email deliverability expert
-  - Check-in calls three times per week during your first month
-
-
 [18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
 [19]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [20]: {% image_buster /assets/img_archive/Email_Sunset_Policies_new.png %}

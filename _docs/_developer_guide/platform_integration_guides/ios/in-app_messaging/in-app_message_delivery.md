@@ -12,7 +12,7 @@ page_order: 3
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert important %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the Rest APIs. If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Delivery Semantics
@@ -88,7 +88,7 @@ A triggered in-app message will be discarded in the following situations:
 - The in-app message is ready to be displayed but past the timeout duration
 - The device orientation doesn't match the triggered in-app message's orientation
 - The in-app message is a full in-app message but has no image
-- The in-app message is a image-only modal in-app message but has no image
+- The in-app message is an image-only modal in-app message but has no image
 
 #### Manually Queue In-App Message Display
 
@@ -180,4 +180,4 @@ In-app messages can also be locally created within the app and displayed via Bra
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}
 [44]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
-[45]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[45]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle

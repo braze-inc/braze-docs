@@ -19,6 +19,7 @@ Local Time Delivery | Allows you to deliver messages to a segment based on a use
 Intelligent Delivery | User's Optimal Time | Not Relevant | | |
 Re-eligibility | User is eligible again for the message in exactly x seconds | Not Relevant | If a user is re-eligible in 1 month, that's exactly 2592000 seconds, equal to approx 30 days | |
 Quiet Hours| Prevent messages from being sent during specified hours | User's Time Zone | | We use Company's Time Zone if User's Time Zone is not Set|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 Action-Based Delivery| Definition | Time Zone | Example | Notes |
@@ -27,8 +28,10 @@ Action-based Delay<br>Send "in x days at y am/pm" | Day of week + 1 calendar day
 Action-based Delay<br>Send "after x seconds/minutes/days/weeks" | The 'after' clause allows the user to specify x seconds, minutes, hours and days. | Not Relevant | If canvas step is sent after 1 day, then the user will receive the step exactly 24 hours after | |
 Global Frequency Capping | Calendar Day | User's Time Zone | User Time Zone set up a frequency capping rule of send no more than 1 campaign a day <br><br> If a user receives a message at 11 pm in their local time zone, he/she can receive another message an hour later.  | We use Company's Time Zone if User's Time Zone is not Set <br><br> It's possible a user does not have to wait 24 hours to get another message, since it's based on calendar days and not a 24-hour period. |
 Send Message in x Day using Intelligent Delivery | Calendar Day | Not Relevant | | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Conversions| Definition | Time Zone | Example | Notes |
 ----------------- | ---------- | --------- | ------- | ----- |
 Conversion Event Deadline | Window begins when the user receives the campaign | Not Relevant | | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

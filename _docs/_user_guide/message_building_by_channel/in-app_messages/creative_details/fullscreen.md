@@ -20,6 +20,7 @@ Full-screen messages take up the whole screen of the device! This message type i
 | Image Only - Image Size | 10:16 Aspect Ratio <br> 450px by 720px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
 | Copy | 20px Header Text - Bolded <br> 14px Message Text - Regular Weight | We cannot recommend character or word limits.|
 | Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Full-Screen Viewport
 

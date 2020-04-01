@@ -58,6 +58,7 @@ The requirements listed below are typical requirements you might need from Braze
 |---|---|---|---|
 |Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
 |Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## [Type of Integration] Integration
 
@@ -98,6 +99,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ### Step 3: How Many Steps
@@ -141,6 +143,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Use Cases

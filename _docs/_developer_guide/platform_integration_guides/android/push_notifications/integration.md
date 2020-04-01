@@ -45,13 +45,13 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 #### Step 2: Configure Token Registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token is registered. Firebase tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
 ##### Option 1: Automatic Registration
 
-To automatically register Firebase push tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
+To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
 
 In your `appboy.xml`:
 
@@ -104,7 +104,7 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     final Context applicationContext = this;
     new Thread(new Runnable() {
       @Override
@@ -113,7 +113,7 @@ public class MyApplication extends Application {
           String token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM");
           Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
         } catch (Exception e) {
-          Log.e(TAG, "Exception while registering Firebase token with Braze.", e);
+          Log.e(TAG, "Exception while registering FCM token with Braze.", e);
         }
       }
     }).start();
@@ -129,13 +129,13 @@ class MyApplication: Application() {
   override fun onCreate() {
     super.onCreate()
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     Thread(Runnable {
       try {
         val token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM")
         Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
       } catch (e: Exception) {
-        Log.e(TAG, "Exception while registering Firebase token with Braze.", e)
+        Log.e(TAG, "Exception while registering FCM token with Braze.", e)
       }
     }).start()
   }
@@ -145,7 +145,7 @@ class MyApplication: Application() {
 {% endtab %}
 {% endtabs %}
 
-> While we highly recommend you register your Firebase token in your application [`onCreate()`][67], the push token can be registered anywhere in your code.
+> While we highly recommend you register your FCM registration token in your application [`onCreate()`][67], the token can be registered anywhere in your code.
 
 #### Step 3: Migrate from GCM (Optional)
 
@@ -417,7 +417,7 @@ For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, 
 
 #### Testing Display
 
-At this point you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
+At this point, you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
 
 ![Android push test][55]
 
@@ -425,7 +425,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point, you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -450,7 +450,7 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 #### Step 1: Create your Custom Notification Factory
 
-In some scenarios you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
+In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
 If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 

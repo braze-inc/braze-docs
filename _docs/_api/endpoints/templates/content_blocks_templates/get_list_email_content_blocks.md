@@ -20,7 +20,7 @@ description: "This article outlines details about the List Available Content Blo
 /content_blocks/list
 {% endapimethod %}
 
-This endpoint will list your exiting [Email Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+This endpoint will list your existing [Content Blocks]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
@@ -34,8 +34,16 @@ This endpoint will list your exiting [Email Content Blocks]({{ site.baseurl }}/u
 | `limit` | No | Positive Number | Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset`  |  No | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
 
+### Example Request
+
+```
+https://rest.iad-01.braze.com/content_blocks/list?api_key=123abc-def5-3729-owod-23f9f3j30
+```
+
 ## Successful Response Properties
 ```json
+GET https://YOUR_REST_API_URL/content_blocks/list
+
 {
   "count": "integer",
   "content_blocks": [
@@ -46,7 +54,8 @@ This endpoint will list your exiting [Email Content Blocks]({{ site.baseurl }}/u
       "liquid_tag": "string",
       "inclusion_count" : integer,
       "created_at": "time-in-iso",
-      "last_edited": "time-in-iso"
+      "last_edited": "time-in-iso",
+      "tags" : "array of strings"
     }
   ]
 }

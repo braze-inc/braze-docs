@@ -14,7 +14,7 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 
 ![content cards in canvas][1]
 
-Two options which will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
+Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
 ## Content Card Expiration {#content-card-expiration}
 When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its canvas step and the card is sent.
@@ -23,7 +23,7 @@ If a sent card expires before a user has viewed it in your app, it will be remov
 
 
 {% alert important %}
- The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+ The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
 ## Advancement Behavior Options {#advancement-behavior-options}
@@ -32,14 +32,15 @@ The Advancement Behavior option allows you to control when a user should advance
 
 ### Steps with Content Cards Only {#steps-with-in-content-cards-only}
 
-If a step conatins only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
+If a step contains only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
 
 ![content-card-in-canvas-single-channel.png][2]
 
 | Option | Description |
 |---|---|
-| Advance When Message Sent | Users will advance to the next steps of the Canvas when the Content Card has been succesfully sent. Use this option when you want users to advance only if the card will be sent and not aborted. |
-| Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent succesfully or aborted. |
+| Advance When Message Sent | Users will advance to the next steps of the Canvas when the Content Card has been successfully sent. Use this option when you want users to advance only if the card will be sent and not aborted. |
+| Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 
@@ -52,12 +53,13 @@ Canvas steps with a Content Card and another messaging channel have the followin
 | Option | Description |
 |---|---|
 | Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
-| Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
+| Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria to advance to next steps._ |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Reporting & Analytics
 
-After launching a Content Cards step in Canvas you can begin to analyze a number of different metrics for this step. 
-These metrics include the number of messages sent, unique recipients, converion rates, total revenue, and more.
+After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. 
+These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
 
 
 

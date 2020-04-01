@@ -35,4 +35,4 @@ As you can see, the country codes for each listing are:
 
 ## Adding Users to SMS Subscription Groups
 
-For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{ site.basurl }}/user_guide/message_building_by_channel/sms/compliance/)).
+For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/compliance/)).

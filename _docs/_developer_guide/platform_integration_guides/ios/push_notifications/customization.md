@@ -77,7 +77,7 @@ Custom sounds must be under 30 seconds when played. If a custom sound is over th
 
 #### Step 2: Providing the Dashboard with a Protocol URL for the Sound
 
-Your sound must be hosted locally within the app. You must specify a Protocol URL which directs to the location of the sound file in the app within the "Sound" field in the push composer. Specifying “default” in this field will play the default notification sound on the device. This can be specified via our [Messaging API][25] or our dashboard under “Advanced Settings” in the push composer wizard as pictured below:
+Your sound must be hosted locally within the app. You must specify a Protocol URL that directs to the location of the sound file in the app within the "Sound" field in the push composer. Specifying “default” in this field will play the default notification sound on the device. This can be specified via our [Messaging API][25] or our dashboard under “Advanced Settings” in the push composer wizard as pictured below:
 
 ![Push Notification Sound][8]
 

@@ -307,6 +307,14 @@ hide_toc: true
                   </div>
                   <input type="email" class="form-control" id="doc_email" maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
               </div>
+              <div class="form-group" id="doc_pm_div">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
+                <label class="form-check-label" for="doc_is_pm">
+                Are you a Product Manager?
+              </label>
+              </div>
+              </div>
               <div class="form-group" id="doc_request_div">
                 <label for="doc_request" id="doc_request_label">    * What is your request about?</label>
                 <input type="text" name="Request_Subject" id="doc_request" maxlength="80" required="required" value="" placeholder="Enter your request" class="form-control" />

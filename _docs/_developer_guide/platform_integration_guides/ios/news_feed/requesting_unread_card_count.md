@@ -18,7 +18,7 @@ The method declarations in [ABKFeedController][44] below describe this in detail
 
 ```objc
 /*!
- * This method returns the number of currently active cards which have not been viewed in the given categories.
+ * This method returns the number of currently active cards that have not been viewed in the given categories.
  * A "view" happens when a card becomes visible in the feed view.  This differentiates
  * between cards which are off-screen in the scrolling view, and those which
  * are on-screen; when a card scrolls onto the screen, it's counted as viewed.
@@ -41,7 +41,7 @@ The method declarations in [ABKFeedController][44] below describe this in detail
 
 ![Badge Example][42]
 
-In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's News Feed. Updating the badge count based off unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
+In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's News Feed. Updating the badge count based on unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
 
 Call this method which records the badge count once the app is closed and the user's session ends.
 

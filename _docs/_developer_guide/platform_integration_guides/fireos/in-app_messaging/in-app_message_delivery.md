@@ -9,10 +9,10 @@ page_order: 3
 
 ## Trigger Types
 
-Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
+Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 {% alert important %}
-Triggered in-app messages only work with custom events logged through the SDK and not through the Rest APIs.  If you're working with Android, please check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs.  If you're working with Android, please check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). If you're working with iOS, check out how to log custom events [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Delivery Semantics
@@ -21,7 +21,7 @@ All in-app messages that a user is eligible for are delivered to the user's devi
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
-For in-app messages that display immediately on deliver (*i.e.*, session start, push click) there can be some latency due to assets not being prefetched.
+For in-app messages that display immediately on delivery (*i.e.*, session start, push click) there can be some latency due to assets not being prefetched.
 
 ## Minimum Time Interval Between Triggers
 
@@ -43,9 +43,9 @@ Register your custom `BroadcastReceiver` to listen for a specific silent push wi
 
 Your receiver will handle the intent broadcast by the silent push and log an SDK event. Starting in SDK 2.0.0, events can be logged in the background without issue. All clients implementing this solution must be on SDK v2.0.0+.
 
-It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed example, please see our [EventBroadcastReceiver.java][72] in the linked gist.
+It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed example, please see our [EventBroadcastReceiver.java][72].
 
->  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
+>  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 For further details on custom handling push receipts, opens, and key-value pairs please visit this section of our [Documentation][78].
 
@@ -55,13 +55,13 @@ Create a silent push campaign which is triggered via the server sent event. For 
 
 ![serverEventTrigger][75]
 
-The push campaign must include key value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
+The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
 
 ![kvpConfiguration][76]
 
-The [EventBroadcastReceiver.java][72] recognizes the key value pairs and logs the appropriate SDK custom event.
+The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
 ##  Step 4: Create an In-App Message Campaign
 
@@ -160,7 +160,7 @@ See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for exampl
 [83]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [84]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
 [85]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
-[86]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[86]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/analytics/tracking_sessions/#session-lifecycle
 [87]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
 [88]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
 [89]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events

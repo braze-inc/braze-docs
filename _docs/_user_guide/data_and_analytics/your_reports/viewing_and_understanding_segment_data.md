@@ -32,11 +32,11 @@ Braze also provides the ability to view data on [Custom Events over time for seg
 
 If you don't turn analytics tracking on for a segment, you will still be able to access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
 
-An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue and purchases.
+An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue, and purchases.
 
 ## Segment Statistics
 
-You will see the following segment statistics, which update in real time as you add or delete filters:
+You will see the following segment statistics, which update in real-time as you add or delete filters:
 
 | Statistic | Description |
 | --------- | --- |

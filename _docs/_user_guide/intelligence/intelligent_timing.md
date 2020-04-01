@@ -6,7 +6,7 @@ page_order: 2
 
 For more on Campaign Delivery, check out our [Campaign Set Up course on LAB](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that individual is most likely to engage. We calculate the optimal send time based on a statistical analysis of the user's past interactions with your app.
+When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage. We calculate the optimal send time based on a statistical analysis of the user's past interactions with your app.
 
 To use this feature, simply select __Intelligent Timing__ when scheduling a campaign. The only difference between this option and "Send at a designated time" is that the time of day each user receives your message will be determined by Braze. You can still choose the day(s) on which your message will send and create a recurring campaign.
 
@@ -24,6 +24,6 @@ So, it's important to be aware of the limitations of using Intelligent Timing ea
 
 ## Triggered Campaigns and Canvases
 
-If a triggered campaign or Canvas step are activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will send immediately.
+If a triggered campaign or Canvas step is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will send immediately.
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}

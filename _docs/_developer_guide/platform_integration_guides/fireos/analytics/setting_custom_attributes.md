@@ -48,7 +48,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 - Strings
 - Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
+  - Includes methods to set arrays, add items to existing arrays and delete items from existing arrays.
 - Integers
 - Booleans
 - Dates
@@ -110,7 +110,7 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFrom
 {% endalert %}
 
 #### Setting a Custom Attribute with an Array Value
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
 ```java
 // Setting a custom attribute with an array value

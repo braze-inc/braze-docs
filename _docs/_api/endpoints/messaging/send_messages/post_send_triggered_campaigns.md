@@ -52,6 +52,8 @@ Content-Type: application/json
   ]
 }
 ```
+The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
+
 For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
 
 ### Response Details
