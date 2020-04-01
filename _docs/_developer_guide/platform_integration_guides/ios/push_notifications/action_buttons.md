@@ -7,7 +7,7 @@ page_order: 0.2
 
 # Action Buttons {#push-action-buttons-integration}
 
-Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contain actions that a user can perform in response, which manifest as buttons on the push notification.
+Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contains actions that a user can perform in response, which manifest as buttons on the push notification.
 
 ![Illustration of Notification Action][13]
 

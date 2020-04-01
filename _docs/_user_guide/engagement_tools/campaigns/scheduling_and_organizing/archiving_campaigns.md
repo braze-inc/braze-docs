@@ -32,7 +32,7 @@ To view archived messages from the Campaigns page, click the "Archived" button:
 
 ![Include archived][2]
 
-While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. In order to unarchive a campaign, you must select the campaign within the Archived folder and click "Unarchive Selected":
+While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the Archived folder and click "Unarchive Selected":
 
 ![Unarchive Campaign][4]
 

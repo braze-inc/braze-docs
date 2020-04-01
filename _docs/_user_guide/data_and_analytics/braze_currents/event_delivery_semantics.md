@@ -12,7 +12,7 @@ tool: currents
 
 > This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners.
 
-Currents for Data Storage is a continuous stream of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Currents for Data Storage is a continuous streama of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
@@ -55,7 +55,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{ sit
 | `<integration-id>` | The unique ID for this Currents integration. |
 | `<event-type>` | The type of the event in the file (see event list below). |
 | `<date>` | The hour that events are queued in our system for processing. Formatted YYYY-MM-DD-HH. |
-| `<schema-id>` | Used to version `.avro` schemas for backwards-compatibility and schema evolution. Integer. |
+| `<schema-id>` | Used to version `.avro` schemas for backward-compatibility and schema evolution. Integer. |
 | `<zone>` | For internal use by Braze. Single letter. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. |
@@ -84,7 +84,7 @@ From time to time, Braze may make changes to the Avro schema when fields are add
 
 #### Non-breaking Changes
 
-When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should have no effect on existing ETL processes as the field will simply be ignored until it is added to your ETL process. **We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.**
+When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. **We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.**
 
 While we will strive to give advance warning in the case of all changes, we may include non-breaking changes to the schema at any time.
 

@@ -55,12 +55,13 @@ You can export the following data from Braze to Segment:
 | News Feed Viewed               | User viewed the native Braze News Feed. |
 | News Feed Card Viewed          | User viewed a Card within the native Braze News Feed. |
 | News Feed Card Clicked         | User clicked on a Card within the native Braze News Feed. |
-| Webhook Sent                   | A webhook message was sent. |                                                                 |
+| Webhook Sent                   | A webhook message was sent. |
 | Campaign Converted             | User performed a conversion event for a Campaign within its conversion window. |
 | Canvas Converted               | User performed a conversion event for a Canvas within its conversion window. |
 | Canvas Entered                 | User was entered into a Canvas. |
 | Campaign Control Group Entered | User was enrolled in a Campaign control group. |
 | Application Uninstalled        | User uninstalled the App. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 The following properties will be included with all Braze events sent to Segment:
 
@@ -83,6 +84,7 @@ The following properties will be included with all Braze events sent to Segment:
 | `card_id`              | `String` | For News Feed Card and Content Card events, the API Identifier of the Card. |
 | `subscription_group_id` | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group. |
 | `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).

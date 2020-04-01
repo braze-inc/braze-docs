@@ -66,7 +66,7 @@ In the title of an Android push, this might look like:
 
 The text you enter after `{% else %}` will display to users who:
 - Have a language that was not selected in Step 2.
-- Have a language that is not supported by Braze. Braze supports the languages represented by ISO 639-1 two-letter codes, as well as a few addditional ones not included in that set. For a complete list, check out our [iOS Localization page][8].
+- Have a language that is not supported by Braze. Braze supports the languages represented by ISO 639-1 two-letter codes, as well as a few additional ones not included in that set. For a complete list, check out our [iOS Localization page][8].
 - Have a device where the language is undetectable. (This is highly unlikely).
 A best practice is to enter text here that you think your users are most likely to understand. To ensure smooth delivery, you should always enter content after `{% else %}`.
 

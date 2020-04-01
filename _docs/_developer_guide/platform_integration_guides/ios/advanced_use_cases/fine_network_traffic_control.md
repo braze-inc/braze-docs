@@ -16,9 +16,9 @@ __*`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`*__
 
 - This is the **default request policy** value.
 - The Braze SDK will automatically handle all server communication, including:
-	- Flushing custom events and attributes data to Braze's servers
-	- Updating the News Feed, Content Cards, and Geofences
-	- Requesting new in-app messages
+    - Flushing custom events and attributes data to Braze's servers
+    - Updating the News Feed, Content Cards, and Geofences
+    - Requesting new in-app messages
 - Immediate server requests are performed when user-facing data is required for any of Braze's features, such as in-app messages.
 - To minimize server load, Braze performs periodic flushes of new user data every few seconds.
 
@@ -46,8 +46,8 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 __*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
 
 - This protocol is the same as Automatic Request Processing **EXCEPT**:
-	- Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in In-App Messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on request type.
+    - Custom attributes and custom event data is not automatically flushed to the server throughout the user session.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid Templating in In-App Messages, Geofences, and Location Tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 Data can be manually flushed to Braze's servers at any time using the following method:
 

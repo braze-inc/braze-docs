@@ -15,7 +15,7 @@ glossaries:
   - name: "Application Program Interface (API)"
     description: The <a href="https://www.braze.com/docs/api/basics/#api-overview">Braze API</a> provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile SDKs. This allows you to, for example, pass user data to Braze that is not tracked within your app or website.
   - name: "Braze (The Product)"
-    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, setup targeted messaging Campaigns, and view analytics or feedback. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
+    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, setup targeted messaging Campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
   - name: Braze Engagement Tools
     description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">tools</a> to reach your customers and users with our Campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
   - name: Braze Teams

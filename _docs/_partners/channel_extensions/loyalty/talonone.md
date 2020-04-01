@@ -15,9 +15,10 @@ This partnership is in early access beta. All features may not perform as exactl
 
 ## Pre-Requisites
 
-| Requirement    | Origin                                                | Description                                                             |
-| -------------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
+| Requirement | Origin | Description |
+| --------- | ------------ | ---------- |
 | Braze Account | [Braze Settings](https://dashboard.braze.com/sign_in) | You will need an account with Braze, as well as an active Braze campaign that vouchers and codes will be generated for. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert warning %}
 Talon.One **_requires_** a rate limit of 500 messages per minute.
