@@ -18,13 +18,13 @@ channel:
 
 # Phone Numbers
 
-> This article will walk you through important concepts involved in sending phone numbers with Braze. Included are the pros and cons of both short and long codes, an explanation of the application process for a short code, and other topics like handling unknown numbers and high volume and multi-country sending.
+> This article will walk you through important concepts involved in sending phone numbers with Braze. Included are considerations to keep in mind when using short codes and long codes, an explanation of the application process for a short code, and other topics like handling unknown numbers and high volume and multi-country sending.
 
 ## Short & Long Codes
 
 Short and long codes are the phone number from which you send your messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Whichever you want is up to you! Braze will take care of procuring either for you.
 
-Besides that the length difference between short and long codes, there are other specific benefits too and all factors should be considered before choosing whether you want a short code in addition to the long code you will already be assigned.
+Besides the length difference between short and long codes, there are other specific benefits too and all factors should be considered before choosing whether you want a short code in addition to the long code you will already be assigned.
 
 | Topic | Short Codes | Long Codes |
 |---|---|---|
@@ -34,7 +34,7 @@ Besides that the length difference between short and long codes, there are other
 | Sending Limits/Speed <br> _SMS are subject to Braze's own [rate limits]({{ site.baseurl }}//user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/)._ | 100 messages per second. | 1 message per second (US)<br> 10 messages per second (International) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-In addition, Short codes cost more than long codes and take longer to receive. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the send process, as you will have gone through all of the checks during your application for the short code.
+In addition, Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the send process, as you will have gone through all of the checks during your application for the short code.
 
 Besides these differences, know that a brand will usually have one short code, but multiple, back-up long codes, depending on how many recipients they plan to send SMS.
 

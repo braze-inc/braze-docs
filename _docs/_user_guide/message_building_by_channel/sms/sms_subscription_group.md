@@ -30,7 +30,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### How Users' SMS Subscription Groups get Set:
-- __Rest API Set__: User profiles can be programmatically set by the [/subscription/status/set [endpoint][4] by using Braze's REST API.
+- __Rest API Set__: User profiles can be programmatically set by the /subscription/status/set [endpoint][4] by using Braze's REST API.
 - __Automatically Handled Upon User Opt-In/Opt-Out__: By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users subscription state.
 
 ### How to Check a Users SMS Subscription Group:
@@ -54,7 +54,7 @@ During your SMS onboarding process, a Braze onboarding manager will setup Subscr
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
 [3]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention
-[4]: {{ site.baseurll}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [5]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [6]: {% image_buster /assets/img/sms/sms_subgroup_select.png %}
 [7]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/
