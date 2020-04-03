@@ -90,7 +90,7 @@ To include Movable Ink content into Braze messages, you must locate the source U
 To obtain the source URL, you must have set up the content in the Movable Ink Dashboard, and then from there, Finish & Export your content.
 2. On the Finish page, copy the source URL(`img src`) from the creative tag.
 3. In the Braze Platform, paste the URL in the appropriate field. Check out the next step to see appropriate fields. 
-4. Be sure to replace any merge tags (i.e. `&mi_u=%%email%%`) with the corresponding Liquid variable (i.e. `&mi_u={{${email_address}}}`).
+4. Be sure to replace any merge tags (i.e. {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (i.e. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Step 4: Braze Experience
 
@@ -111,7 +111,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink Da
 __Dynamic Images not showing correctly? What channel are you experiencing difficulties with?__<br>
 - __Push__: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 - __In-App Messages and Content Cards__: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
-- __Image Not Loading__: Be sure to replace any "merge tags" from with the corresponding Liquid fields in the Braze dashboard. For example: `https://mi-msg.com/p/rp/image.png?mi_u=%%email%%` with `https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}`.
+- __Image Not Loading__: Be sure to replace any "merge tags" from with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 <br><br>
 
 __Having trouble showing GIFs on Android?__<br>
