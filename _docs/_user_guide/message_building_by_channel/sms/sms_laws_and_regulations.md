@@ -1,15 +1,50 @@
 ---
-nav_title: Laws, Regulations, & Abuse Prevention
+nav_title: "SMS Laws & Regulations"
 page_order: 1
+description: "This reference article covers laws and regulations surrounding SMS."
+page_type: reference
+tool:
+  - Dashboard
+  - Docs
+  - Campaigns
+
+platform:
+  - iOS
+  - Android
+
+channel:
+  - SMS
 ---
 
 # SMS Laws, Regulations, & Abuse Prevention
 
-SMS is one of the most direct ways to reach your users and customers. Therefore, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. In this article, you'll be provided with some resources and practical guidance that will allow you to work within the bounds of regulations and laws while still communicating effectively and strategically with your customers.
+Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
 {% alert warning %}
-This article is not intended to provide, nor may it be relied upon as providing, legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your own legal counsel.
+This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
 {% endalert %}
+
+## General Guidelines
+
+In general, we encourage using your best judgment when approaching SMS sending. Braze, as well as our sending partners, have checks in place that prevent most SMS abuses.
+
+__There are a few general rules you should follow:__
+
+1. __Build a compliant database and maintain all consent records.__ Braze suggests that you document and save program opt-ins and messaging permissions. Anytime a user provides consent, it is your responsibility to log that information and hold onto it. According to basic legal guidelines, the most important information you need to retain regarding consent is:
+    - __The time and date the user gave consent.__
+    - __The type of SMS messaging they consented to. (e.g. marketing or transactional messaging)__
+    - __The users phone number__
+    - __The language in which they opted-in.__<br><br>
+
+2. __Clearly communicate to your users what they are signing up for__ (what sort of content, frequency, etc.) up-front to ensure customer satisfaction. Follow through on your promise and send what you said you would send to your customers.<br><br>
+
+3. __Add your SMS marketing privacy policy to your website__ for easy access by program participants.<br><br>
+
+4. __Work with your legal team__ to ensure your program offerings are legally compliant.<br><br>
+
+5. __Only send messages to legally obtained opted-in numbers.__<br><br>
+
+6. __Follow laws (e.g. SHAFT Compliance) for marketing__ based around alcohol, tobacco, sex, firearms, hate, and marketing directed towards children under 13. These topics are generally regarded as "illegal". Keep in mind that you may still be charged for messages even if they are blocked by various carriers.  
 
 ## Resources
 
@@ -18,7 +53,6 @@ Here are some links you might need to consult as you build up your SMS campaign:
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - Twilio's [Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - IBM's [Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
-
 
 ## Considerations for Compliance
 
@@ -34,7 +68,7 @@ The CTIA recommends that you maintain and conspicuously display a clear and easy
 
 Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
-The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" in order to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
+The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
@@ -44,7 +78,7 @@ Braze uses [Subscription Groups]({{ site.baseurl }}/user_guide/message_building_
 
 Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act to ensure compliance (in the U.S.)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
 
-Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's own rate limits. However, you should still take the compliance laws into consideration when planning your campaigns.
+Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider the compliance laws when planning your campaigns.
 
 ### Content
 
