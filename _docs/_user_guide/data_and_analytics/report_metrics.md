@@ -18,6 +18,7 @@ glossary_tags:
   - name: iOS Push
   - name: Android Push
   - name: Webhook
+  - name: SMS
 
 glossaries:
   - name: Variation
@@ -53,6 +54,11 @@ glossaries:
     calculation: Count
     tags:
       - All
+  - name: Sends to Carrier
+    description: This stat is the sum of Confirmed Deliveries, Rejections and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+    calculation: Count
+    tags:
+      - SMS
   - name: Deliveries
     description: The total number of messages successfully sent to and received by eligible users.
     calculation: (Sends - Bounces) / (Sends)
@@ -62,6 +68,11 @@ glossaries:
       - Web Push
       - iOS Push
       - Android Push
+  - name: Confirmed Deliveries
+    description: The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
+    calculation: Count
+    tags:
+      - SMS
   - name: Bounces
     description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
     calculation: (Bounces) / (Sends)
@@ -70,6 +81,16 @@ glossaries:
       - Email
       - Web Push
       - iOS Push
+  - name: Rejections
+    description: The SMS has been rejected by the carrier. This can happen for a number of reasons including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
+    calculation: Count
+    tags:
+      - SMS
+  - name: Delivery Failures
+    description: The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
+    calculation: (Sends) - (Sends to Carrier)
+    tags:
+      - SMS
   - name: Spam
     description: The total number of emails delivered that were marked as "spam."
     calculation: (Marked as Spam) / (Sends)

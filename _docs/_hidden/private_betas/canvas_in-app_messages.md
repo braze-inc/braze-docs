@@ -28,6 +28,7 @@ In the in-app message composer, you have the option to choose when the in-app me
 |---|---|---|
 | `Message Expires ... After` | The first option allows you to expire the in-app message relative to when the step becomes available to the user. <br> <br> _For example, an in-app message with a two day expiration would become available after the step's delay elapses and audience options are checked. It would then be available for 2 days (48 hours) and during those two days users may see the in-app message if they open the app._ |
 | `Message Expires By ...` | The second option allows you choose a specific date and time when the in-app message will longer be available. <br> <br> _For example, if you have a sale that ended at a specific date and time, you might select this option so that once the sale ends users no longer see the associated in-app message._ |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Use Cases
 
@@ -44,6 +45,7 @@ Promotions, coupons, and sales often have hard expiration dates. The Canvas outl
 | Day 1: 50% Off | None | All from Entry | Push | N/A | Entire Audience after Delay | Initial push that alerts your users of the promotion. <br>  <br> This is intended to drive users to your app to take advantage of the promotion. |
 | In-App: 50% Off | None | All from Entry | In-App Message | Expires by: <br> 2/28/2019 <br> 11:15 AM <br> Company Time | In-App Message Viewed | The user has now opened the app and will receive this message whether or not that was because of the push message before. |
 | 50% Off Reminder | 1 Day <br> After the user receives the previous step. | All from Entry <br> _Filter: Last made a purchase more than one week ago._ | In-App Message |  Expires by: <br> 2/28/2019 <br> 11:15 AM <br> Company Time  | None <br> _Last message in Canvas._ | The user has received the in-app message in the previous step, but has not made a purchase despite being in the app.  <br>  <br> This message is meant to further draw the user to make a purchase using the promotion. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 As you can see, the in-app messages expire when the promotion expires to prevent any discrepancies between the messaging and the customer experience.
 
@@ -59,6 +61,7 @@ Your first impression with a user is, perhaps, your most critical one. It can ma
 | Welcome Email | None | All from Entry | Email | N/A | Entire Audience after Delay | Initial email that welcomes your users to a project, membership, or other onboarding program. <br>  <br> This is intended to drive users to your app to begin their onboarding. |
 | Day 3-6 In-App Message | 3 Days <br> After the user receives the previous step. | All from Entry | In-App Message | Expires three days after the step becomes available. | In-App Message Live | If the user has acted upon the email and been driven to the app, they will receive the desired in-app message to continue or remind them of their onboarding and any requirements associated with it. |
 | Day 5 Push | 2 Days <br> After the user receives the previous step. | All from Entry | Push |  N/A  | Only Advance If Message Received | After users have received their in-app message, they will receive a follow-up push to continue their onboarding. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 As you can see, the push messages are spaced around an in-app message to ensure that the user has visited the app and begun their onboarding. This will prevent any annoying spam or out-of-order messaging that could dissuade users from visiting your app, and instead create a flowing, sensible order to their initial experiences with your app.
 
@@ -81,6 +84,7 @@ Steps with in-app messages have specific advancement options that allow you to s
 |---|---|---|
 | In-App Viewed | When "In-App Viewed" is selected, users will advance to the next steps of the Canvas when they view the in-app message in your application and log an in-app message impression.  <br> <br> _Users who do not view the in-app message before it expires will exit the Canvas and will not advance to subsequent steps._ |
 | In-App Live | When "In-App Live" is selected, users will advance to the next steps in the Canvas as soon as the in-app message becomes live. In-app messages are live once the delay for the step has elapsed and the audience options for the step have been checked.  <br> <br> _When this option is selected, all users who match the step's segment and filter criteria will be advanced to subsequent steps in the Canvas. Use this option when you want users to advance regardless of whether the in-app message is viewed or expires._ |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
   When "In-App Live" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -97,6 +101,7 @@ Steps with an in-app message and another channel have the following advancement 
 |---|---|---|
 | Message Received | When message received is selected, users must be sent an email/webhook/push or view the in-app message in order to advance to subsequent steps in the Canvas.  <br> <br>  _If the in-app message expires and the user hasn't received the email/webhook/push or viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps._ |
 | Advance Entire Audience After Delay | When this option is selected, everyone in the step's audience will advance to next steps after the delay elapses.  <br> <br> _Users must match the step's segment and filter criteria in order to advance to next steps._ |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
