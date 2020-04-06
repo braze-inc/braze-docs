@@ -102,6 +102,7 @@ __Frequency Capping by Tag Rule:__
 |---|---|
 | The `promotional` tag is removed from __Campaign A__ _after_ your user received the message, but _before_ __Campaign B has sent.__ | Your user will receive __Campaign B__.|
 | The `promotional` tag is mistakenly removed from __Campaign A__ after your user received the message. <br> The tag is added back to __Campaign A__ on Tuesday, before __Campaign B__ is sent. | Your user will not receive __Campaign B__. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Sending at Large Scales 
 If you send __more than one hundred (100) messages per channel__ from Campaigns/Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly. 

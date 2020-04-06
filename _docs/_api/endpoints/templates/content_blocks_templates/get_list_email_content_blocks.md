@@ -34,8 +34,16 @@ This endpoint will list your existing [Content Blocks]({{ site.baseurl }}/user_g
 | `limit` | No | Positive Number | Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset`  |  No | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
 
+### Example Request
+
+```
+https://rest.iad-01.braze.com/content_blocks/list?api_key=123abc-def5-3729-owod-23f9f3j30
+```
+
 ## Successful Response Properties
 ```json
+GET https://YOUR_REST_API_URL/content_blocks/list
+
 {
   "count": "integer",
   "content_blocks": [
@@ -46,7 +54,8 @@ This endpoint will list your existing [Content Blocks]({{ site.baseurl }}/user_g
       "liquid_tag": "string",
       "inclusion_count" : integer,
       "created_at": "time-in-iso",
-      "last_edited": "time-in-iso"
+      "last_edited": "time-in-iso",
+      "tags" : "array of strings"
     }
   ]
 }
