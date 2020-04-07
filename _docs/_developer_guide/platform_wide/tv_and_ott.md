@@ -95,7 +95,8 @@ Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
 Features include:
 
 - Data and Analytics collection for cross-channel engagement
-- Push Notifications (known as "Heads Up Notifications")
+- Push Notifications (known as ["Heads Up Notifications"][7])
+  - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - In-App Messages
 
@@ -153,3 +154,4 @@ For platforms that support In-App Messages via Custom UI, your app can be config
 [4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
 [6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
+[7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup

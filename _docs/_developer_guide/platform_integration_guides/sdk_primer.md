@@ -12,7 +12,7 @@ Before you begin to integrate the Braze SDKs, you may find yourself wondering wh
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
-All our our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
+All of our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
 {% endalert %}
 
 ### Device Properties

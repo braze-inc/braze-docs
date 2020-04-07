@@ -69,7 +69,7 @@ All of the below use cases can be accomplished within [Canvas][13], a tool built
 
 ### Delivery
 
-You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent delivery][12].
+You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
 
 
 ### Cadence

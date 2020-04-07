@@ -1,73 +1,77 @@
 ---
 nav_title: SMS FAQs
-page_order: 20
+page_order: 8
+description: "This reference article addresses some of the most frequently asked questions that arise when setting up SMS campaigns."
+page_type: reference
+tool:
+  - Dashboard
+  - Docs
+  - Campaigns
+
+platform:
+  - iOS
+  - Android
+
+channel:
+  - SMS
 ---
 
 # SMS Frequently Asked Questions
 
-On this page, we'll attempt to answer your most stringent questions about SMS!
-
-{% details What laws do I need to follow to send SMS with Braze? %}
-
-We recommend you use your best judgment, but we, as well as our sending partners, have checks in place that prevent most SMS abuses. There are a few general rules you should follow:
-
-- Do not SPAM.
-- Offer your recipients a way to opt-out and get help via SMS.
-- Send at a healthy cadence - do not overwhelm your customers.
-- Do not send abusive or inappropriate content (for example, sending marketing content to someone who only wants transactional content).
-
-You can see our [Compliance Best Practices here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/compliance/).
-
-{% enddetails %}
-
+> On this page, we'll attempt to answer your most stringent questions about SMS!
 
 {% details How will I be billed for SMS? %}
-
-Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. Overages will cost a bit more per message. Different providers and carriers down the send pipeline will charge different rates in different circumstances, so billing can vary per region.
-
-You should reach out to your Braze representative for more exact details.
+Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. 
+For overages, your account manager will reach out to let you know if you are close to reaching you maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
 {% enddetails %}
-
-{% details How do I get a short code? %}
-
-Getting a short code can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
-
-You can [learn more about Short Codes and Long Codes here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).
-{% enddetails %}
-
-
-
-{% details What is the difference between a short code and a long code? %}
-
-A short code has five (5) digits, while a long code has ten (10). Each come with their own benefits and you should consider all of the factors before choosing whether you want a short code in addition to the long code you will already be assigned.
-
-Short codes cost more than long codes and take longer to receive. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the send process, as you will have gone through all of the checks during your application for the short code.
-
-You can [learn more about long codes and the short code application process here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).
-
-{% enddetails %}
-
 
 {% details How can I avoid overages? %}
-
-While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease chances of going over your allotted limits:
+While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
 - Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages.
-- Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in usage of either of these features.
+- Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses UCS-2 encoding,  you can usually estimate that you can send a message with 67 characters per message segment.
 - Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
 {% enddetails %}
 
-
-
-{% details What keywords does Braze automatically process? %}
-
-Braze will only automatically process the following _exact, single-word, case-insensitive_ messages:
-
-- `START`, `YES`, `UNSTOP`: Subscribes user to messages from that number pool.
-- `STOP`, `STOPALL`, `UNSUBSCRIBE`, `CANCEL`, `END`, `QUIT`: Unsubscribes user from messages from that number pool.
-- `HELP`, `INFO`: Triggers custom "help" message built during onboarding process.
-
-[Learn more about Keyword Processing and Management here]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/).
+{% details Can you include links in an SMS? %}
+A client can include any link in any SMS campaign they would like. However, there are a few concerns to consider:
+- Links may make use of many characters and take up a lot of the 160 character limit for SMS. If you include a link and text, it may result in two SMS messages, instead of just one. 
+- Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block/deny the message as they may be suspicious of the link redirect.
+- Using a short code would be the most reliable number type for including links
 {% enddetails %}
+
+{% details Do test text messages count toward limits? %}
+Yes, they do. Please keep this in mind when testing messages. 
+{% enddetails %}
+
+{% details How many characters does a emoji utilize? %}
+Emojis can be a bit trickier, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool](http://chadselph.github.io/smssplit/). 
+{% enddetails %}
+
+{% details If a user texts STOP to our short code, are they unsubscribed from the subscription group?  %}
+What does that look like on the user profile? The subscription group will revert to 2 dashes (- -), and there will be custom events for subscribe and unsubscribe. 
+{% enddetails %}
+
+{% details Is there a way to see if an alias exists on a user profile? %}
+Aliases are not visible on the user profile, you would need to use an export API to confirm aliases being set.
+{% enddetails %}
+
+{% details How would a client create logic so that when a user opts in to SMS for VIP vs. Alerts, they are subscribed to the right subscription group?  %}
+Custom keywords would be written as custom events, so you would want to create segments based on the keywords customers can text in.
+{% enddetails %}
+
+{% details Does Braze de-dupe multiple users with the same phone number? %}
+Braze will de-dupe users on the canvas step level, so it should not be possible for a user to receive more than one SMS text for a canvas step, even if multiple users share the same phone number.  **Important to note, if you stagger your users into a canvas and have different schedule times for each canvas step, you can send a user with the same email/phone duplicate messages**
+{% enddetails %}
+
+{% details Do clients need to rate-limit how fast they send SMS messages? %}
+The default concurrency rate and throughput enables &#126;360k/hour per short code. Additional throughput requires additional short codes.
+{% enddetails %}
+
+{% details Is there a character limit to the sms_response event and the property for response? (e.g. will it capture if a user sends an entire sentence) %}
+Event properties have a character limit of 256, otherwise, there is no character limit. In order for a keyword to be recognized within a sentence, (e.g. "please stop texting me") you would have to utilize a Liquid statement in the message to recognize the specific word.
+{% enddetails %}
+
+
