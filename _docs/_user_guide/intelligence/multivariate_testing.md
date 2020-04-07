@@ -138,7 +138,7 @@ Keep in mind that if you’re using a Control Group, users in the Control Group 
 Choose a date and time when the Winning Variant should be sent out.
 
 {% alert note %}
-When sending in users’ local time or with Intelligent Delivery, the Winning Variant must be sent at least 24 hours after the A/B Test to ensure delivery to all users in the Winning Variant group.
+When sending in users’ local time or with Intelligent Timing, the Winning Variant must be sent at least 24 hours after the A/B Test to ensure delivery to all users in the Winning Variant group.
 {% endalert %}
 
 In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin. You'll read more about this in Understanding Confidence chapter of this module.
