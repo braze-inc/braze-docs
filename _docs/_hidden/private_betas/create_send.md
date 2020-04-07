@@ -86,6 +86,7 @@ US-03 | `https://rest.iad-03.braze.com/canvas/trigger/send`
 US-04 | `https://rest.iad-04.braze.com/canvas/trigger/send`
 US-06 | `https://rest.iad-06.braze.com/canvas/trigger/send`
 EU-01 | `https://rest.fra-01.braze.eu/canvas/trigger/send`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Send API-Triggered Canvas Sample Request Body
 

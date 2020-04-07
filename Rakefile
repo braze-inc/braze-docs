@@ -17,35 +17,6 @@ end
 
 task default: :serve
 
-
-
-namespace :academy do
-  task :puma do
-    Dir.chdir 'Archive' do
-      Dir.chdir 'academy' do
-        puts `bundle exec puma -t 0:4 -p 5000`
-      end
-    end
-  end
-  task :serve do
-    pipe 'cd Archive && cd academy && bundle exec jekyll s -q --skip-initial-build --port 5000'
-  end
-end
-
-namespace :documentation do
-  task :puma do
-    Dir.chdir 'Archive' do
-      Dir.chdir 'documentation' do
-        puts `bundle exec puma -t 0:4 -p 5004`
-      end
-    end
-  end
-  task :serve do
-    pipe 'cd Archive && cd documentation && bundle exec jekyll s -q --skip-initial-build --port 5004'
-  end
-end
-
-
 namespace :docs do
   task :index do
     if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
@@ -76,5 +47,5 @@ namespace :assets do
 end
 
 multitask serve: [
-  'academy:serve', 'documentation:serve', 'docs:serve', 'success:serve'
+  'docs:serve', 'success:serve'
 ]

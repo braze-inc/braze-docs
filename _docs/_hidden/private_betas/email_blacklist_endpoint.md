@@ -22,6 +22,7 @@ US-03 | `https://rest.iad-03.braze.com/email/blacklist`
 US-04 | `https://rest.iad-04.braze.com/email/blacklist`
 US-06 | `https://rest.iad-06.braze.com/email/blacklist`
 EU-01 | `https://rest.fra-01.braze.eu/email/blacklist`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Blacklisting Email Addresses
 
@@ -42,6 +43,7 @@ Content-Type: application/json
 | ---------------------| --------------- |
 | `api_key` | Yes | String | Your App Group REST API Key. |
 | `email` | Yes | String or Array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Email Blacklist CURL
 

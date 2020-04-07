@@ -588,6 +588,20 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 
 Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 
+The following is an example of an embedded Youtube video in an HTML snippet:
+
+```html
+<body>
+    <div class="box">
+        <div class="relativeTopRight">
+            <a href="appboy://close">X</a>
+        </div>
+        <iframe width="60%" height="50%" src="https://www.youtube.com/embed/_x45EB3BWqI">
+        </iframe>
+    </div>
+</body>
+```
+
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java

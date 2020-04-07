@@ -47,19 +47,19 @@ Segments targeted with local time zone campaigns should include, at minimum, a 2
 
 Designated time schedules are best suited for messages scheduled in advance and recurring campaigns - such as [onboarding][7] and retention - that run regularly on all qualified users.
 
-### Option 3: Intelligent Delivery
+### Option 3: Intelligent Timing
 
-Intelligent Delivery allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that intelligent delivery campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest. Read our [page on Intelligent Delivery][8] for more details on how this feature works.
+Intelligent Timing allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that intelligent timing campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest. Read our [page on Intelligent Timing][8] for more details on how this feature works.
 
-![Intelligent Delivery][14]
+![Intelligent Timing][14]
 
 #### Delivery Rules
 
-Because a user's optimal time can be anytime over the course of 24 hours, all Intelligent Delivery campaigns must be scheduled 24 hours in advance. In addition, similar to designated time campaigns, messages with a 1-day window will miss users who fall out of the segment before their optimal time in their time zone is reached. Segments for intelligent delivery campaigns should incorporate at minimum a 3-day window to account for this.
+Because a user's optimal time can be anytime over the course of 24 hours, all Intelligent Timing campaigns must be scheduled 24 hours in advance. In addition, similar to designated time campaigns, messages with a 1-day window will miss users who fall out of the segment before their optimal time in their time zone is reached. Segments for intelligent timing campaigns should incorporate at minimum a 3-day window to account for this.
 
 #### Use Cases
 
-Intelligent Delivery campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time - for instance, they aren't well suited for breaking news or timed announcements.
+Intelligent Timing campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time - for instance, they aren't well suited for breaking news or timed announcements.
 
 ## Action-Based Delivery (Event Triggered Campaigns)
 
@@ -109,7 +109,7 @@ Additionally, users who complete the trigger event after your campaign is launch
 
 ![triggered 2][19]
 
-You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Choose the time you wish the user to receive your message on that day. Alternatively, you may choose to send your message using the [Intelligent Delivery][40] feature instead of manually selecting a delivery time.
+You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Choose the time you wish the user to receive your message on that day. Alternatively, you may choose to send your message using the [Intelligent Timing][8] feature instead of manually selecting a delivery time.
 
 ![triggered 7][41]
 ![triggered 8][50]
@@ -282,7 +282,6 @@ Changing the rate at which your messages will send will go into effect at the be
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
 [38]: {% image_buster /assets/img_archive/api_trigger_photo_social_example_1.png %}
 [39]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[40]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
 [42]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [43]: {% image_buster /assets/img_archive/api-trigger-reeligible.png %}
