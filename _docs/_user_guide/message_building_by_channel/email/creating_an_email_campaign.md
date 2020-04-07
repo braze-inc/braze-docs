@@ -61,7 +61,7 @@ You can schedule your campaigns against three types of delivery:
 
 {% tabs %}
   {% tab Scheduled Delivery %}
-Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use Intelligent Delivery to send the message at the time the user is most likely to engaged. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
+Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use Intelligent Timing to send the message at the time the user is most likely to engaged. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
 
 Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
 

@@ -51,7 +51,7 @@ Fill in the form below to get started:
     * Webhook<br><br>
 
 *  __How__ will we reach them? (Great place to test different messaging configurations)
-    * Timing: Schedule or trigger messages using tools like Intelligent Delivery and delays after trigger events
+    * Timing: Schedule or trigger messages using tools like Intelligent Timing and delays after trigger events
     * Cadence & Channel: Use one channel and then another or sent messages on multiple channels simultaneously
     * Content: Build creative with strong appeals, value propositions, and CTAs
     * Targeting: Add additional segments and/or filters
