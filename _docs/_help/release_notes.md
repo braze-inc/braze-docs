@@ -61,7 +61,7 @@ Check out our [documentation]({{ site.baseurl }}/user_guide/intelligence/intelli
 
 ### Facebook Audience Export
 
-Braze provides the ability to manually export your users from the Braze Segments page. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
+Braze provides the ability to manually export your users from the Braze Segments page to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
 __Currently available for US-02 & US-04 clusters (more clusters coming soon)__, a new Braze Facebook Audience Export process exists, streamlining the process with simple integration steps. You will no longer need to whitelist OAuth Redirect URI's to send custom audiences or mess around within Facebook App Settings to integrate. 
 
