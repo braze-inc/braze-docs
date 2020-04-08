@@ -20,8 +20,8 @@ This means you can now preview _and interact_ with your custom messages (i.e. cl
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
-{% alert info %}
-Any [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods included in the HTML won't update user profiles while in the preview.
+{% alert tip %}
+We'll ensure that any [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
 {% endalert %}
 
 ### Syntax Highlighting
