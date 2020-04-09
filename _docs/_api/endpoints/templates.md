@@ -46,6 +46,9 @@ guide_menu_list:
   - name: "POST: Create Content Blocks"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/
     fa_icon: fas fa-th-large
+ -  name: "POST: Update Content Block"
+    link: /docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/
+    fa_icon: fas fa-th-large
 
 ---
 {% comment %}
