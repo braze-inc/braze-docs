@@ -131,7 +131,7 @@ Once content cards have been sent, similiar to emails, they sit waiting in an "i
 
 If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to  your content card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove content cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
 
-![Content Card][25]{: height="300px"}
+![Content Card][25]
 
 If you find you need to make changes to launched content cards, you must stop your campaign, remove active content cards from users' feeds, make your edits to the cards, and then restart your campaign.
 
