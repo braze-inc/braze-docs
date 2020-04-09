@@ -16,7 +16,7 @@ In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/me
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
+Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
 
 ## HTML In-App Messages {#custom-html-messages}
@@ -182,7 +182,7 @@ Click __Save Color Profile__ on the bottom right when you’re finished.
 
 #### Managing Color Profiles
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ### CSS Template
 
@@ -242,7 +242,7 @@ As you can see, you can edit everything from the background color to font size a
 
 #### Managing CSS Templates
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 
 ## Video {#video}

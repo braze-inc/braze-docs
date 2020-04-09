@@ -49,4 +49,4 @@ If the field is not green, please make sure that the **Templates** section check
 # Usage
 To use this integration, look for your new email template in [Templates & Media > Email Templates][1] in your Braze account, or begin to create your email and choose your template from those presented.  
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

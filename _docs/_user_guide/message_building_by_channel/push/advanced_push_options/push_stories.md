@@ -45,7 +45,7 @@ To create a page:
 * The previews will be reflected and are interactive.
 
 {% alert important %}
-If you are pulling in images with [Connected Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
+If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
 
 ### Push Stories Analytics

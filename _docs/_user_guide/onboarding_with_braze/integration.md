@@ -9,7 +9,7 @@ Integrating with Braze is a worth-while process. But you're smart. You're __here
 
 But what you probably don't know was that you and your engineers/developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
+{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
 
 ## The Technical Side of the Integration Process
 
@@ -23,9 +23,9 @@ Glad you asked!
 
 The Braze SDK (Software Development Kit) is how we send and get information to and from your app or site. Your engineers are, essentially, tying our apps together. To do this, they need a few pieces of key information:
 
-* [The API Keys]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/api_settings_tab/)
-* [Your Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so please use the [predefined SDK endpoints]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/). If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/), and [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+* [The API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/api_settings_tab/)
+* [Your Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
+  * Braze no longer gives out custom endpoints so please use the [predefined SDK endpoints]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). If you have been given a pre-exisiting custom endpoint, here you can find the set up steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them.
 
@@ -44,7 +44,7 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 | In-App Messages | Requires SDK implementation as well as these channel-specific steps. |
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
-| Email | This is an entirely different process. Check that out in [our Email Setup section]({{ site.baseurl }}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements). |
+| Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements). |
 
 ### Step 3: They Set Up Your Data
 
@@ -54,10 +54,10 @@ So, what do you need to do to get them this information?
 
 1. Work with your marketing team to define campaigns, goals, attributes, and events that you need to track. Define those use cases, share them with your teams.
 2. Define your Custom Data Requirements (Attributes, Events, etc.).
-3. From there, discuss [how that data should be tracked]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
-4. Define how many [App Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{ site.baseurl }}/developer_guide/platform_wide/app_group_configuration/) these.
+3. From there, discuss [how that data should be tracked]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
+4. Define how many [App Groups]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) these.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Step 4: They Customize Based on What You Want
 
@@ -65,14 +65,14 @@ If you want things like API Triggered launching and Connected Content, discuss t
 
 ### Step 5: QA Your Implementation
 
-Work together with your engineer to make sure everything is working. Send [test messages]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/), use our [test apps for Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/sample_apps/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/sample_apps/), check every box before you start sending!
+Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/sample_apps/), check every box before you start sending!
 
-We even have specific instructions for [testing your Android integration]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration), testing [push for iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/testing/) and [FireOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/testing/).
+We even have specific instructions for [testing your Android integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration), testing [push for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/) and [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/testing/).
 
 ## After Implementation
 
-Keep in mind that the Implementation Finish Line isn't also the green light to send a million messages at once! Sending a million push might break your app if every customer clicks the same link at once - we recommend discussing what your capacity of your internal set up is for handling requests from Braze before clicking that _Send_ button. Then, you can set your [rate limiting]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
+Keep in mind that the Implementation Finish Line isn't also the green light to send a million messages at once! Sending a million push might break your app if every customer clicks the same link at once - we recommend discussing what your capacity of your internal set up is for handling requests from Braze before clicking that _Send_ button. Then, you can set your [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) based on that.
 
-Now that you're more familiar with the integration process, check out the next article for [suggestions on where to go next]({{ site.baseurl }}/user_guide/onboarding_with_braze/learning_to_use_braze/)!
+Now that you're more familiar with the integration process, check out the next article for [suggestions on where to go next]({{site.baseurl}}/user_guide/onboarding_with_braze/learning_to_use_braze/)!
 
 After you're comfortable using Braze, consider becoming a Braze Firebrand! With Braze Firebrands, our customer engagement community, we're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? [Join now](https://brazefirebrands.splashthat.com/).

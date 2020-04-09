@@ -30,9 +30,9 @@ Confirm that your developers are passing location data to Braze. Normally the pa
 - [iOS][27]
 - [Web][28]
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 [25]: {% image_buster /assets/img_archive/trouble7.png %}
-[26]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
+[26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
+[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

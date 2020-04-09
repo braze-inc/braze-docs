@@ -25,7 +25,7 @@ Click __Create Campaign__ in the top right corner of the __Campaigns__ page. <br
 
 ## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{ site.baseurl }}/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{ site.baseurl }}/docs/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
+Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 
@@ -41,7 +41,7 @@ You also can Add Languages through the __Add Languages__ button. Braze offers th
 
 Braze allows you to specify what happens when a user clicks the body of a push notification. Whether you want to do something as simple as open the application, or redirect to a specified URL, we have many different ways to customize our push notifications, and therefore user experience. Here, you can also find the option to set up button prompts within your push notification, for example: yes/no prompt, confirm/cancel, more button, etc. 
 
-For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_android/).
+For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 
 ### Step 2b: Preview and Test Your Message
 
@@ -62,13 +62,13 @@ Messages can also be configured to recur on a daily, weekly (optionally on speci
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action you are able to use [custom events]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) as a trigger action. (selected from the __New Trigger Action__ dropdown.)
+Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action you are able to use [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) as a trigger action. (selected from the __New Trigger Action__ dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
 {% endtab %}
 {% tab API-Triggered Delivery %}
-Check out our [API-Triggered section of the Developer Guide]({{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
+Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
 
 ![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
   {% endtab %}
@@ -133,7 +133,7 @@ For push notifications, you'll be able to view statistics for the number of mess
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
 [7]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
-[8]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-push
+[8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
 [9]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
 [10]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
 [11]: https://play.google.com/about/privacy-security-deception/deceptive-behavior/unauthorized-system-functionality/

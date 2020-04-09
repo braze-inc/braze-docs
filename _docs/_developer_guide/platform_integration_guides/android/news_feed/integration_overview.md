@@ -22,6 +22,6 @@ See [`DroidBoyActivity.java`][5] in the Droidboy sample app.
 
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [28]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"

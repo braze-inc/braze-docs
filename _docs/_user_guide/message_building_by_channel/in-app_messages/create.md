@@ -7,7 +7,7 @@ page_order: 0
 
 # Creating an In-App Message
 
-You can create an in-app message using the Braze platform using Campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{ site.baseurl }}/help/best_practices/in-app_messages/prep_guide/).
+You can create an in-app message using the Braze platform using Campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/help/best_practices/in-app_messages/prep_guide/).
 
 
 ## Choose Where to Build Your Message {#create-new-campaign-in-app}
@@ -29,7 +29,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
  {% endtab %}
  {% tab Canvas %}
- After you have [created and set up your Canvas using the Canvas wizard]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
+ After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
 
 1. Name your step something clear and meaningful.
 2. Add a Delay, as necessary.
@@ -63,7 +63,7 @@ Choose a __Message Type__, __Layout__, and __Enforced Device Orientation__ as ne
 
 ### Message Types
 
-Once you've selected a sending platform, browse the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the tables.
+Once you've selected a sending platform, browse the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the tables.
 
 {% tabs local %}
 {% tab In-App Message Options %}
@@ -74,9 +74,9 @@ These in-app messages are accepted by both mobile apps and web applications.
 
 | Message Type | Type Description | Available Layouts| Other Options |
 |---|---|---|
-|[Full-Screen]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#full-screen)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
-|[Modal]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#modal)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
-|[Slideup]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/#slideup)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
+|[Full-Screen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#full-screen)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
+|[Modal]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#modal)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
+|[Slideup]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#slideup)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
@@ -88,9 +88,9 @@ These in-app messages are customizable to your needs.
 
 | Message Type | Type Description |Available Layouts| Other Options |
 |---|---|---|
-|[Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | Must set `enableHtmlInAppMessages` initialization option to `true` for your In-App Message to work. |
-|[Email Capture Form]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
-|[Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
+|[Custom Web Message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or Javascript).  |None | Must set `enableHtmlInAppMessages` initialization option to `true` for your In-App Message to work. |
+|[Email Capture Form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `enableHtmlInAppMessages` initialization option to `true` for your IAM to work. |
+|[Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
@@ -137,7 +137,7 @@ If you choose to only use one button, it will automatically adjust to take over 
 
 ### Generations
 
-Braze has three Generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support, in the [Preview]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) section which composing your in-app message.
+Braze has three Generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support, in the [Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section which composing your in-app message.
 
 ![In-App_Messages_Generations][22]{: height="50%" width="50%"}
 
@@ -167,10 +167,10 @@ The content of the Style tab vary based on your chosen Message Options in the la
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Always [preview and test]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
+Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
 
 {% alert important %}
-Some in-app message types do not have the option for styling beyond uploading custom HTML (and/or CSS and/or Javascript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all around custom-styled messaging.
+Some in-app message types do not have the option for styling beyond uploading custom HTML (and/or CSS and/or Javascript) and assets via ZIP, as described in the steps above. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all around custom-styled messaging.
 {% endalert %}
 
 ## Step 5: Configure Additional Settings
@@ -212,7 +212,7 @@ In-app message delivery is entirely based off of of the following action trigger
 
 A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
 
 ### Online vs. Offline Triggering
 
@@ -275,13 +275,13 @@ After you've finished building the last of your campaign or Canvas, review its d
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
-[11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
+[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
-[16]: {{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
+[16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/iam_compose.gif %}
-[25]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/
+[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
+[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
 [27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

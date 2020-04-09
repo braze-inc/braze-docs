@@ -119,7 +119,7 @@ Steam now!
 <br>
 
 
-[1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
 [14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
 [25]: https://docs.shopify.com/themes/liquid/basics/operators

@@ -8,7 +8,7 @@ page_order: 9
 
 Movable Ink provides Braze customers the ability to use Intelligent Creative features like __Countdown Timers, Polls, and Scratch Offs in their Push, In-App Message and Content Card campaigns__. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
-For more information on how to start integrating Movable Ink into your campaigns, check out our [documentation]({{ site.baseurl }}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/).
+For more information on how to start integrating Movable Ink into your campaigns, check out our [documentation]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/).
 
 ## Intelligent Timing
 
@@ -19,7 +19,7 @@ Updates to this feature include:
 - __Addition of Sending Window__ - the time in which Braze may send messages
 - __Addition of Preview Chart__ - you may now generate a chart to see how many users will receive messages based on Intelligent Timing for each hour of the day, as well as what portion of users have provided enough information to compute an optimal time.
 
-Check out our [documentation]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/) for more information. 
+Check out our [documentation]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) for more information. 
 
 ## Facebook Audience Export
 
@@ -31,8 +31,8 @@ __Currently available for US-02 & US-04 clusters (more clusters coming soon)__, 
 __Please note that all clients currently using Facebook Custom Audiences, MUST reintegrate their Braze Segments with these new steps once it becomes available to them.__
 {% endalert%}
 
-For access to the new simplified Facebook Audience Export steps, check out our documentation [here]({{ site.baseurl }}/hidden/private_betas/facebook_setup/).
+For access to the new simplified Facebook Audience Export steps, check out our documentation [here]({{site.baseurl}}/hidden/private_betas/facebook_setup/).
 
 ## Content Block and Email Template API Updates
 
-The [template/email/list]({{ site.baseurl }}/api/endpoints/templates/email_templates/get_list_email_templates/) and [content_block/list]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API endpoints have been updated to include a new `tags` field. This field will list as an array, any tags that apply to the current block or email template.
+The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) and [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API endpoints have been updated to include a new `tags` field. This field will list as an array, any tags that apply to the current block or email template.

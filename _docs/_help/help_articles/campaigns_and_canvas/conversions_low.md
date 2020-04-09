@@ -25,10 +25,10 @@ For each conversion event that you select per campaign, you set the [deadline][4
 
 Please ensure you’ve reviewed Braze's information on [calculating conversions][45] in order to understanding your campaign metrics.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{ site.baseurl }}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [43]: {% image_buster /assets/img_archive/trouble17.png %}
-[44]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events
-[45]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule
+[44]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events
+[45]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule

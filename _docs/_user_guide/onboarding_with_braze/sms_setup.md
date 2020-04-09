@@ -30,9 +30,9 @@ Before you start sending sms, there are some things you need. Refer to the basic
 
 |Requirement | Description | Acquirement |
 |---|---|---|
-| A Dedicated Phone Number (either a Short Code or Long Code) | A dedicated phone number provided exclusively to a single brand or host. | Braze handles acquiring these numbers for you. You can [read more about short and long codes here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).|
-| List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as 10-digit number, as well as a country area code. [Learn more here]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms/importing_numbers/). |
-| [Keywords and Responses to Them]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/) | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
+| A Dedicated Phone Number (either a Short Code or Long Code) | A dedicated phone number provided exclusively to a single brand or host. | Braze handles acquiring these numbers for you. You can [read more about short and long codes here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).|
+| List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as 10-digit number, as well as a country area code. [Learn more here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms/importing_numbers/). |
+| [Keywords and Responses to Them]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
 
 
 <br>

@@ -21,7 +21,7 @@ Be sure that both the Braze and Foursquare Pilgrim SDKs are integrated properly.
 
 After you integrate the Pilgrim SDK, you'll begin receiving location events on the device or to a webhook.
 
-To properly map between the Braze and Foursquare SDKs, set the same user ID in both systems, using the [`changeUser` method]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) in the Braze SDK and the `setUserId` method of [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) in the Pilgrim SDK.
+To properly map between the Braze and Foursquare SDKs, set the same user ID in both systems, using the [`changeUser` method]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) in the Braze SDK and the `setUserId` method of [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) in the Pilgrim SDK.
 
 Next, find your App Group and App IDs on the Developer Console section of your Braze account.
 

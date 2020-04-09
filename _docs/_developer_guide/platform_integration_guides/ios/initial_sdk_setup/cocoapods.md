@@ -105,7 +105,7 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 ## Step 5: Specify Your Data Cluster
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 ### Compile-time Endpoint Configuration (Recommended)
@@ -113,7 +113,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 If given a pre-existing custom endpoint...
 - Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### Runtime Endpoint Configuration
 
@@ -202,14 +202,14 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
+[apple_initial_setup_21]: {{site.baseurl}}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m
-[apple_initial_setup_30]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#overview
-[apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{ site.baseurl }}/support_contact/
+[apple_initial_setup_30]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#overview
+[apple_initial_setup_31]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[apple_initial_setup_32]: {{site.baseurl}}/support_contact/
 [1]: http://cocoapods.org/
 [2]: https://www.ruby-lang.org/en/installation/
 [3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
@@ -217,14 +217,14 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
 [6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
 [12]: #appboy-podfiles-for-non-64-bit-apps
 [13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
 [15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[21]: {{ site.baseurl }}/partners/
+[21]: {{site.baseurl}}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

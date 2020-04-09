@@ -27,4 +27,4 @@ newsFeed.setCategories:EnumSet.of(CardCategory.ANNOUNCEMENTS, CardCategory.NEWS)
 ```
 
 
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[14]: {{site.baseurl}}/help/best_practices/news_feed/

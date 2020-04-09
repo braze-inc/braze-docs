@@ -20,4 +20,4 @@ TwitterUser twitterUser = new TwitterUser(6253282, "Test", "User", "Tester",  ne
 Appboy.GetInstance(context).CurrentUser.SetTwitterData(twitterUser);
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/

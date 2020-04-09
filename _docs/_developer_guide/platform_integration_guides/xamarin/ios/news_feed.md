@@ -17,5 +17,5 @@ this.PresentViewController (m, true, null);
 
 in your ViewController.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
 [2]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples

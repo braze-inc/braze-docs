@@ -13,6 +13,6 @@ All events are logged by using the `EventLogger`, which is a property exposed in
 bool LogCustomEvent(string YOUR_EVENT_NAME)
 ```
 
-You should also check out our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-[0]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

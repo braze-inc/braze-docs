@@ -13,7 +13,7 @@ Sample push notification:
 
 ![Sample Push][19]
 
-Check out [Braze Academy]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
+Check out [Braze Academy]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
 
 ## Step 1: Configure the Apple Developer Settings
 
@@ -195,12 +195,12 @@ For additional information see the Apple Developer Documentation regarding ["Pre
 See our documentation on [Deep Linking in iOS][18].
 
 [1]: #manual-push-integration
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#transitioning-from-manual-to-automated-integration
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#transitioning-from-manual-to-automated-integration
 [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 [4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
 [5]: https://docs.unity3d.com/ScriptReference/iOS.NotificationServices.RegisterForNotifications.html
 [6]: #disabling-automatic-push-registration
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#step-2-setting-your-api-key
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#step-2-setting-your-api-key
 [9]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
 [10]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
 [11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
@@ -210,7 +210,7 @@ See our documentation on [Deep Linking in iOS][18].
 [15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/iOS/Roll-A-Ball-Ios/Classes/UnityAppController.mm "sample AppController.mm"
 [16]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [17]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html#//apple_ref/doc/uid/TP40008194-CH4-SW10
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [19]: {% image_buster /assets/img_archive/ios_push_sample.png %}
 [20]: {% image_buster /assets/img_archive/unity-ios-integrate-push.png %}
 [21]: {% image_buster /assets/img_archive/unity-ios-disable-registration.png %}

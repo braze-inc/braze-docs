@@ -42,10 +42,10 @@ You can read more about this:
   * [iOS][12] In-app message documentation
   * [Android][13] In-app message documentation
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 
 [10]: {% image_buster /assets/img_archive/trouble4.png %}
 [11]: {% image_buster /assets/img_archive/trouble5.png %}
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners

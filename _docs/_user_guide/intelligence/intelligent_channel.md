@@ -38,7 +38,7 @@ Intelligent Channel allows you to selectively target in advance the fraction of 
 ## Most Engaged Channel Update
 
 {% alert update %}
-As of the [November 2019 product release]({{ site.baseurl }}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to "Intelligent Channel".
+As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to "Intelligent Channel".
 {% endalert %}
 
 

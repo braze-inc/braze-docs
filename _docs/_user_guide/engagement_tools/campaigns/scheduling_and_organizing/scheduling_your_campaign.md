@@ -250,44 +250,44 @@ Changing the rate at which your messages will send will go into effect at the be
 [4]: #designated
 [5]: #local-time-zone-campaigns
 [6]: #local-use
-[7]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
-[8]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
+[7]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
+[8]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [11]: #delivery-rules
-[12]: {{ site.baseurl }}/user_guide/intelligence/intelligent_timing/
+[12]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [13]: #intelligent-use
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
 [15]: #triggered
 [16]: #setup
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
-[18]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
+[18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
 [20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
 [21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
 [22]: #use-cases-2
 [23]: #re-eligible
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[25]: {{ site.baseurl }}/help/faqs/#how-does-local-time-zone-delivery-work
+[25]: {{site.baseurl}}/help/faqs/#how-does-local-time-zone-delivery-work
 [26]: #why-did-a-user-not-receive-my-triggered-campaign
 [27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
 [28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{ site.baseurl }}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-delivery-rules
-[30]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
+[29]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-delivery-rules
+[30]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
-[32]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
-[33]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
+[32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
+[33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
 [38]: {% image_buster /assets/img_archive/api_trigger_photo_social_example_1.png %}
-[39]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[39]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[42]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[42]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [43]: {% image_buster /assets/img_archive/api-trigger-reeligible.png %}
 [45]: {% image_buster /assets/img_archive/api_triggered_creation_step.png %}
-[46]: {{ site.baseurl }}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[47]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#why-did-a-user-not-receive-my-triggered-campaign
-[48]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[49]: {{ site.baseurl }}/help/help_articles/campaigns_and_canvas/not_triggering/
+[46]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#why-did-a-user-not-receive-my-triggered-campaign
+[48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
+[49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}

@@ -186,21 +186,21 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 ![key-valueInput][23]
 
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [3]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/TheNotificationPayload.html
-[4]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/uninstall_tracking/
+[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [5]: https://developers.google.com/cloud-messaging/concept-options#common-message-options
-[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#sounds
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#sounds
 [11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
 [12]: https://sendgrid.com/docs/API_Reference/Event_Webhook/event.html
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
-[14]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
+[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
+[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
 [17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
 [18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
@@ -209,4 +209,4 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 [21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
 [22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
 [23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations

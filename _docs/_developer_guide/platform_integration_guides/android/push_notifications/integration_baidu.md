@@ -240,8 +240,8 @@ On the "App Settings Page" (where your API keys are located), select your Androi
 - [Baidu Integration Docs][43]
 
 [7]: https://www.baidu.com/
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [10]: {% image_buster /assets/img_archive/baidu_project.png %}
 [11]: http://developer.baidu.com/console#app/project
 [12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm

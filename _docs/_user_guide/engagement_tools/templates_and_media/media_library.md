@@ -26,7 +26,7 @@ Previously when composing a message, you would upload images for each respective
 
 ## Managing Content 
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## FAQ
 
@@ -52,5 +52,5 @@ This can happen for a variety of reasons, but a common solution is to make sure 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
 [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[4]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/about/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/about/
 [5]: https://imageoptim.com/mac

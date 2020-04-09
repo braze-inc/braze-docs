@@ -19,7 +19,7 @@ description: "This article outlines details about the Update Scheduled Canvases 
 
 Use this endpoint to trigger API Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
 
-This endpoint allows you to schedule Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{ site.baseurl }}/api/identifier_types/#canvas-api-identifier).
+This endpoint allows you to schedule Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCanvasExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2806cc2f-1ddf-4b84-a4c2-34aa9a53986c {% endapiref %}
@@ -52,8 +52,8 @@ Content-Type: application/json
   }
 }
 ```
-For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
+For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
-This endpoint uses the [Schedule Object]({{ site.baseurl }}/api/objects_filters/schedule_object/).
+This endpoint uses the [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/).
 
 {% endapi %}

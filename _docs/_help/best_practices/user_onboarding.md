@@ -123,13 +123,13 @@ Here's an example of a welcome email that Hailo sends to users after their first
 [13]: {% image_buster /assets/img_archive/Hailo_5.png %}
 [14]: {% image_buster /assets/img_archive/Hailo_6.png %}
 [15]: {% image_buster /assets/img_archive/Hailo_7.png %}
-[16]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
-[17]: {{ site.baseurl }}/help/best_practices/news_feed/
-[19]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
-[20]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[23]: {{ site.baseurl }}/help/best_practices/image_and_text_specifications/#in-app-messages
-[24]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
+[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
+[17]: {{site.baseurl}}/help/best_practices/news_feed/
+[19]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
+[20]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
+[23]: {{site.baseurl}}/help/best_practices/image_and_text_specifications/#in-app-messages
+[24]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
 [25]: {% image_buster /assets/img_archive/Hailo_email.png %}
-[27]: {{ site.baseurl }}/help/best_practices/email/email_styling_tips/
-[28]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/
-[29]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/
+[27]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/
+[28]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/
+[29]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/

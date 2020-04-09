@@ -94,7 +94,7 @@ The Neura SDK requires that you enable location services.
 [1]: https://www.theneura.com/
 [2]: https://dev.theneura.com/api-reference/persona/?ref=braze
 [3]: https://dev.theneura.com/api-reference/situations-and-moments/?ref=braze
-[4]: {{ site.baseurl }}/partners/insights/behavioral_analytics/neura_insights
+[4]: {{site.baseurl}}/partners/insights/behavioral_analytics/neura_insights
 [5]: https://dev.theneura.com/tutorials/ios/?ref=braze
 [6]: https://dev.theneura.com/tutorials/android/?ref=braze
 [7]: https://dev.theneura.com/console/

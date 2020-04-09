@@ -11,6 +11,6 @@ Additionally, Braze allows you to see how successful different links are within 
 
 ![email_analytics][63]
 
-If you want to see what our metrics mean, check out our [Email Analytics Glossary]({{ site.baseurl }}/user_guide/message_building_by_channel/email/analytics_glossary/).
+If you want to see what our metrics mean, check out our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/analytics_glossary/).
 
 [63]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}

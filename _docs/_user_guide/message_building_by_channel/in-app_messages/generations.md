@@ -5,7 +5,7 @@ hidden: true
 
 # In-App Messages Generations
 
-Braze currently has three generations of in-app messages. Each comes with it own level of support. To take advantage of the newest features of our in-app messages, we recommend upgrading to the newest [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), iOS, and Android SDKs.
+Braze currently has three generations of in-app messages. Each comes with it own level of support. To take advantage of the newest features of our in-app messages, we recommend upgrading to the newest [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), iOS, and Android SDKs.
 
 This chart highlights the features and message types that are currently available and when they were introduced in each generation. This chart also explicitly states what isn't supported within a given generation.
 

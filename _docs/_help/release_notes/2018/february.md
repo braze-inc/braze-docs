@@ -24,8 +24,8 @@ You can now create [multiple REST API keys][86] and configure access permissions
 
 You can also specify a [whitelist of IP addresses][85] and subnets that are allowed to make REST API requests for a given REST API Key.
 
-[85]: {{ site.baseurl }}/developer_guide/rest_api/basics/#api-ip-whitelisting
-[86]: {{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[87]: {{ site.baseurl }}/developer_guide/rest_api/email_templates/#email-templates
-[88]: {{ site.baseurl }}/developer_guide/rest_api/export/#user-export
-[89]: {{ site.baseurl }}/help/best_practices/utilizing_badge_count/#utilizing-badge-count
+[85]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-ip-whitelisting
+[86]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
+[87]: {{site.baseurl}}/developer_guide/rest_api/email_templates/#email-templates
+[88]: {{site.baseurl}}/developer_guide/rest_api/export/#user-export
+[89]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#utilizing-badge-count

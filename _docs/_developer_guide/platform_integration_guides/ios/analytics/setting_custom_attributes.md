@@ -8,7 +8,7 @@ page_order: 3
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning Standard User Attributes
 
@@ -298,13 +298,13 @@ Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificatio
 
 For more information on implementing subscriptions, visit our page on [managing user subscriptions][10].
 
-[1]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601
-[3]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
+[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesViewController.m
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesArrayViewController.m
-[8]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[12]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

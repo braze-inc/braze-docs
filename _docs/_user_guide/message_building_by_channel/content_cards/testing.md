@@ -15,7 +15,7 @@ In __Preview__, the view of your message might not be identical to its actual re
 
 ## Test
 
-To send a test to either [Content Test Groups]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
+To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
 
 ### Preview Message As User
 
@@ -26,7 +26,7 @@ You can also preview messages from the Test tab, as though you were a user. You 
 ### Test Checklist
 
 - Do the images and media show up and act as expected?
-- Does the liquid function as expected? Have you accounted for a [default attribute value]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the liquid returns no information?
+- Does the liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the liquid returns no information?
 - Is your copy clear, concise, and correct?
 - Do your links direct the user where they should go?
 

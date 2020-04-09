@@ -243,7 +243,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}
 [3]: {% image_buster /assets/img_archive/enable_background_mode.png %}
 [4]: {% image_buster /assets/img_archive/add_app_groups.png %}

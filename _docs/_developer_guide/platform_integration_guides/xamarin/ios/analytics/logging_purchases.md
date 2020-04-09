@@ -18,4 +18,4 @@ Appboy.SharedInstance ().LogPurchase ("myProduct", "USD", new NSDecimalNumber("1
 
 You can see user properties being set in the sample application's `EventsAndPurchasesButtonHandler` method inside `AppboySampleViewController.cs`.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/

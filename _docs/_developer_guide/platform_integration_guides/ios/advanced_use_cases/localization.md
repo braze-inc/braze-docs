@@ -80,6 +80,6 @@ Optionally, you can also override any of the following Key / String pairs within
 
 For more information see the [Apple Localization Developer Docs][3] as well as the [LOC standard language list][4].
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/
 [4]: http://www.loc.gov/standards/iso639-2/php/English_list.php

@@ -39,5 +39,5 @@ To customize your integration (like logging custom events or custom attributes),
 * To customize when the Braze SDK is loaded, click on the __Load Rules__ tab of your Tealium dashboard, then choose on which pages the SDK should initialize.
 
 {% alert warning %}
-If the data layer is not configured correctly, or you incorrectly enter your [Endpoint]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints), your integration may fail or not return correct results.
+If the data layer is not configured correctly, or you incorrectly enter your [Endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), your integration may fail or not return correct results.
 {% endalert %}
