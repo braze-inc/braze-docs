@@ -68,8 +68,8 @@ Connected Content does not consume data points - using Connected Content is a gr
 |Recent Devices | Device OS | No |
 |Custom Events | All Custom Events | Yes |
 |Purchases | All Purchases | Yes |
-|Amplitude Cohort Assignment | All Assignments | No |
-|Mixpanel Cohort Assignment | All Assignments | No |
+|Amplitude Cohort Assignment | All Assignments | Yes |
+|Mixpanel Cohort Assignment | All Assignments | Yes |
 
   {% endtab %}
 {% tab Location %}

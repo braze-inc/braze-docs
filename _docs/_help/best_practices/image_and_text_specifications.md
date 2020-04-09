@@ -55,7 +55,6 @@ While there are no limits to how many characters of text you can include in an i
 (iOS) Lock Screen | 110 Characters
 (iOS) Notification Center | 110 Characters
 (iOS) Banner Alert | 63 Characters
-(iOS) Pop Up Alert | 235 Characters
 (Android) Lock Screen | 49 Characters
 (Android) Notification Drawer | 597 Characters
 {: .reset-td-br-1 .reset-td-br-2}
