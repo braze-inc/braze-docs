@@ -120,6 +120,16 @@ The following capabilities are not yet supported for Content Cards:
 - Re-ordering Content Cards from the Braze UI
 - Post-launch Edits
 
+
+## Sending Behavior
+
+Once content cards have been sent, similiar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
+
+If you need to remove old cards, you must stop the campaign to do so. This can be done by and check the box to remove ay cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
+
+While Braze does not support edits to content cards that have been launched, 
+The closest you can get to updating a card would be to first stop & remove, then edit and resend a campaign. 
+
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
