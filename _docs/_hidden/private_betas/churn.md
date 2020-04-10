@@ -19,10 +19,14 @@ On the left navigation bar of the Braze dashboard, choose the Predictions page. 
 
 To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
 
+{% alert note %}
+During the beta of Predictive Churn, there is a limit of 3 concurrently active Predictions.
+{% endalert %}
+
 On the Edit page, give your new Prediction a unique name.
 
 ## Step 2: Define Churn
-In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
+In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. 	For example, you might consider users who haven’t opened your app in 7 days to be churned. 
 
 To implement this example, enter 7 days in the time window at the top of the panel.
 
@@ -90,6 +94,9 @@ Once you've decided what threshold to use for your Churn Score, you can use filt
 
 As a shortcut, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with a Churn Risk Score above the value currently displayed in the sentence.
 
+### Archived Predictions
+
+Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
