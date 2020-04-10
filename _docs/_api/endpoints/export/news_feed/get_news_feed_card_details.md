@@ -28,7 +28,7 @@ This endpoint allows you to retrieve relevant information on the card, which can
 | `card_id` | Yes      | String    | Card API Identifier    |
 
 {% alert tip %}
-The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{ site.baseurl }}/api/endpoints/export/news_feed/get_news_feed_cards/).
+The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).
 {% endalert %}
 
 ### Example URL

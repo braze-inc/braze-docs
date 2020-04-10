@@ -8,7 +8,7 @@ page_order: 3
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Assigning Standard User Attributes
 
@@ -292,7 +292,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
 
 {% alert important %}
-No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in our [User Guide]({{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
+No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in our [User Guide]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
 {% endalert %}
 
 #### Sample Code
@@ -337,6 +337,6 @@ Appboy.getInstance(context).currentUser?.setPushNotificationSubscriptionType(pus
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

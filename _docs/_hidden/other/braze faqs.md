@@ -40,5 +40,5 @@ Please contact your Customer Success Manager or [open a support ticket][support]
 ### If I email Appboy, will it bounce?
 **No.** Every `appboy.com` email address will get mapped to a new `braze.com` email address.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_wide/platform_features/
-[support]: {{ site.baseurl }}/support_contact/
+[1]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/
+[support]: {{site.baseurl}}/support_contact/

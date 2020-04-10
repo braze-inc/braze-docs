@@ -116,12 +116,12 @@ You can re-order your cards within Braze's News Feed page.
 [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
 [5]: {% image_buster /assets/img_archive/crosspromo.png %}
 [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
 [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}
-[10]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
 [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %}
-[13]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
+[13]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
 [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
-[15]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-[16]: {{ site.baseurl }}/help/best_practices/news_feed/#news-feed-best-practices
+[15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
+[16]: {{site.baseurl}}/help/best_practices/news_feed/#news-feed-best-practices

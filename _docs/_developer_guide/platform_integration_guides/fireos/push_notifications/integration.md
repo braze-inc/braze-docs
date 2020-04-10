@@ -147,8 +147,8 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 
 
 [2]: #step-1-enable-adm
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting/
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
 [10]: https://developer.amazon.com/public
 [11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
 [12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
@@ -157,10 +157,10 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 [15]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/05-requesting-an-access-token"
 [16]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/06-sending-a-message
 [17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
-[20]: {{ site.baseurl }}/download/amazon-device-messaging-1.0.1.jar
+[20]: {{site.baseurl}}/download/amazon-device-messaging-1.0.1.jar
 [26]: http://www.compiletimeerror.com/2013/03/android-broadcast-receiver-in-detail.html#.U5nCZxYmbww "Android Receiver Tutorial"
-[29]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages(java.lang.String) "registerAppboyPushMessages()"
-[52]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs

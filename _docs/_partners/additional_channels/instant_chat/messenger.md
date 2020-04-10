@@ -70,7 +70,7 @@ Once you are confident that you are receiving PSIDs, send it to Braze as a Custo
 
 ## Step 2: Send to Braze as a Custom Attribute
 
-Coordinate and share this with your developer to send the PSIDs to Braze as a [Custom Attribute]({{ site.baseurl }}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
+Coordinate and share this with your developer to send the PSIDs to Braze as a [Custom Attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
 # Usage
 
@@ -99,6 +99,6 @@ You may also use other segmentation to target your Messenger campaigns, and the 
 
 
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{ site.baseurl }}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
+[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}

@@ -14,4 +14,4 @@ An important step in setting yourself as a successful email sender is ensuring t
 3. __Don't import any suppression lists.__
 - If you are transitioning off an existing email provider, make certain that you do not import any users from a suppression list. Suppression lists feature email addresses which have either unsubscribed, marked your emails as spam, or hard bounced.
 
-[60]: {{ site.baseurl }}/help/best_practices/email/sunset_policies
+[60]: {{site.baseurl}}/help/best_practices/email/sunset_policies

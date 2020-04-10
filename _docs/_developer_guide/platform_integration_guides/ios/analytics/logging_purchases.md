@@ -10,7 +10,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][5], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][5], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Tracking Purchases & Revenue
 
@@ -102,8 +102,8 @@ You can also use our REST API to record purchases. Refer to the [user API docume
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/EventsViewController.m
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
 [3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a63d8c390bff05f87c7f8f86f2fc0deb6 "logpurchase:incurrency:atprice"
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[5]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties documentation"
 [7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity class documentation"
 [8]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties class documentation"

@@ -31,7 +31,7 @@ Besides the length difference between short and long codes, there are other spec
 | Length | Five (5) to six (6) digits | Ten (10) digits |
 | User Experience | Shorter, more memorable. | Longer, indistinguishable from typical 10-digit phone number. |
 | Access | Takes up to 12 weeks to receive permission. However, you are considered a "trusted" number by sending providers. | Available immediately, but subject to more vetting and gates before messages are cleared for send. |
-| Sending Limits/Speed <br> _SMS are subject to Braze's own [rate limits]({{ site.baseurl }}//user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/)._ | 100 messages per second. | 1 message per second (US)<br> 10 messages per second (International) |
+| Sending Limits/Speed <br> _SMS are subject to Braze's own [rate limits]({{site.baseurl}}//user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/)._ | 100 messages per second. | 1 message per second (US)<br> 10 messages per second (International) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 In addition, Short codes cost more than long codes and take longer to get approved for. However, once you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the send process, as you will have gone through all of the checks during your application for the short code.
@@ -46,7 +46,7 @@ Going through the short code application process can be a long process. However,
 
 While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
 
-Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/)) that you want for...
+Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/)) that you want for...
 
 | Flow Needed | Type | Example |
 | ----------- | ---- | ------- |
@@ -92,5 +92,5 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 
 For more information on Alphanumeric Sender ID, please reach out to your Customer Success Manager. 
 
-[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses
 [senderID]: {% image_buster /assets/img/sms/alphanumericsenderid.jpg %}

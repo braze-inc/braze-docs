@@ -97,9 +97,9 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 
 See [`PreferencesActivity.java`][2] and [`MainFragment.java`][7] in the Droidboy sample app.
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java
-[3]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
 [5]: http://developer.android.com/reference/java/util/Date.html
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int,%20com.appboy.models.outgoing.AppboyProperties)

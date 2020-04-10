@@ -60,7 +60,7 @@ Here are some links you might need to consult as you build up your SMS campaign:
 
 A customer's privacy is key to a meaningful and respectful relationship. Respecting a customer's privacy and information is just another opportunity to create a bond between them and your brand. Sometimes, using marketing tools can put data and privacy last.
 
-Luckily for you, Braze follows the guidelines of [many security regulations]({{ site.baseurl }}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{ site.baseurl }}/help/gdpr_compliance/).
+Luckily for you, Braze follows the guidelines of [many security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{site.baseurl}}/help/gdpr_compliance/).
 
 The CTIA recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
 
@@ -72,7 +72,7 @@ The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_19
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
-Braze uses [Subscription Groups]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/) to manage groups of users based on their level of consent.
+Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) to manage groups of users based on their level of consent.
 
 ### Spam and Cadence
 

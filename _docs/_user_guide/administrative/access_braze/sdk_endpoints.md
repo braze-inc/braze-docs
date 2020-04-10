@@ -40,4 +40,4 @@ To configure the Braze Web SDK to use the appropriate endpoint for your integrat
 A Software Development Kit (SDK) is a set of tools that can be used to develop software applications targeting a specific platform. Learn more about the Braze SDK in our LAB course, [Braze 101][85].
 
 [85]: https://lab.braze.com/braze-101
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

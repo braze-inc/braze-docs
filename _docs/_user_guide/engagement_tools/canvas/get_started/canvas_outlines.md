@@ -6,7 +6,7 @@ page_order: 3
 # Four Canvas Outlines
 
 {% alert update %}
-The Entry Steps displayed in each of these outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see the [Create a Canvas]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) page.
+The Entry Steps displayed in each of these outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see the [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) page.
 {% endalert %}
 
 ## Onboarding - Restaurant Reservation Example

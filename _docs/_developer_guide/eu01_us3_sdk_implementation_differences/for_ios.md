@@ -10,7 +10,7 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 ## Compile-time Endpoint Configuration (Recommended)
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 If given a pre-exisiting custom endpoint by Braze...

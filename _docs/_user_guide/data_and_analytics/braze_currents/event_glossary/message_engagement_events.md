@@ -12,7 +12,7 @@ description: "This glossary lists the various Message Engagement Events that Bra
 tool: currents
 ---
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Message Engagement Event Structure %}
 <br>
@@ -25,7 +25,7 @@ Message engagement events are comprised of __user specific__ properties, __campa
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
 {% endalert %}
 
 {% api %}
@@ -104,7 +104,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 Push, iOS, Sends
 {% endapitags %}
 
-This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
+This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
@@ -197,7 +197,7 @@ This event occurs when an email send request was successfully communicated betwe
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -238,7 +238,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -279,7 +279,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -322,7 +322,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -363,7 +363,7 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -403,7 +403,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -447,7 +447,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 ```
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -753,7 +753,7 @@ News Feed, Impressions
 This event occurs when a user views the News Feed.
 
 {% alert tip %}
-  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
+  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
 {% endalert %}
 
 ```json
@@ -786,7 +786,7 @@ News Feed, Clicks
 This event occurs when a user clicks the News Feed.
 
 {% alert tip %}
-  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
+  The [News Feed Impression schema (`users.behaviors.app.NewsFeedImpression`) is located in Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event), as this data is categorized as such, opposed to being categorized as a Message Engagement Event.
 {% endalert %}
 
 ```json
@@ -1100,4 +1100,4 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

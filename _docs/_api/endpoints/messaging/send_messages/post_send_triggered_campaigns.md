@@ -21,7 +21,7 @@ API Triggered Delivery allows you to house message content inside of the Braze d
 
 The send endpoint allows you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
-This endpoint allows you to send Campaign messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{ site.baseurl }}/api/api_campaigns/).
+This endpoint allows you to send Campaign messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendApiTriggeredDeliveryCampaignExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
@@ -54,12 +54,12 @@ Content-Type: application/json
 ```
 The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
 
-For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
+For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
 ### Response Details
-Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
 
 [41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[42]: {{ site.baseurl }}/api/parameters/#broadcast
+[42]: {{site.baseurl}}/api/parameters/#broadcast

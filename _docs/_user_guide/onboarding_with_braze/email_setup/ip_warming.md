@@ -88,8 +88,8 @@ Many ISPs and email access providers no longer only filter by IP address reputat
 {% endalert %}
 
 [18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
-[40]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
+[40]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/
 [45]: http://www.senderbase.org/
-[46]: {{ site.baseurl }}/help/best_practices/email/sunset_policies/
+[46]: {{site.baseurl}}/help/best_practices/email/sunset_policies/

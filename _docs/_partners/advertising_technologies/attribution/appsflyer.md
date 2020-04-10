@@ -70,7 +70,7 @@ Attribution data for Facebook, Snapchat, and Twitter campaigns is __not availabl
 For more information, please see Appsflyer's [documentation][31].
 
 [5]: #api-restrictions
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

@@ -59,4 +59,4 @@ This block allows you to see the message's performance over a set time period on
 If you select to only sent to users who can see the latest Braze version of in-app messages (Generation 3), your Target Audience will not adjust to reflect your choice.
 {% endcomment %}
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

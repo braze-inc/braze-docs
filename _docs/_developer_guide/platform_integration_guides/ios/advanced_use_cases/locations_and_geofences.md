@@ -6,7 +6,7 @@ page_order: 6
 ---
 # Locations & Geofences
 
-Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Docs]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
+Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
 
 To support geofences for iOS:
 
@@ -151,8 +151,8 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 __Note:__ There is a rate-limit of one geofence refresh per session.
 __Note:__ It is recommended to disable automatic geofence requests when using this method.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
 [4]: #customizing-appboy-on-startup
-[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
 [9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

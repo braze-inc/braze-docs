@@ -63,9 +63,9 @@ Formulas, especially when combined with custom events, allow you to better under
 * E-commerce apps: By configuring a function for purchases of a certain product ID / MAU, you can, for example, compare the popularity of a recently promoted product between segments, even if all of the promotions couldn't be tracked using Braze.
 * Media apps using ads: If the users' experience is interrupted by ads between video or audio clips, recording mid-ad exits as a custom event and calculating the ratio of mid-ad exits / DAU can help find the best segments to target with a campaign for ad-free premium subscriptions.
 
-[9]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
-[10]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[11]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
+[9]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
+[10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [15]: {% image_buster /assets/img_archive/KPI_formulas.png %}
 [16]: {% image_buster /assets/img_archive/KPI_Forms.png %}
-[17]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[17]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

@@ -97,7 +97,7 @@ You can also leverage the user's `{{${most_recent_locale}}}` if you want to incl
 [27]: http://blog.clearbit.com/logo
 [28]: http://api.tfl.gov.uk/#Line
 [29]: http://datamine.mta.info/
-[30]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [31]: https://docs.transifex.com/api/translation-strings
 [32]: {% image_buster /assets/img_archive/TransifexUI.png %}
 [33]: {% image_buster /assets/img_archive/terminal.png %}
@@ -114,7 +114,7 @@ You can also leverage the user's `{{${most_recent_locale}}}` if you want to incl
 [44]: https://open.fda.gov/api/
 [45]: https://ndb.nal.usda.gov/ndb/doc/index
 [46]: http://www.json.org
-[47]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
 [48]: https://developer.accuweather.com/accuweather-locations-api/apis
 [49]: https://developer.accuweather.com/accuweather-forecast-api/apis
 [50]: https://developer.accuweather.com/accuweather-current-conditions-api/apis
@@ -128,4 +128,4 @@ You can also leverage the user's `{{${most_recent_locale}}}` if you want to incl
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
 [61]: https://developer.accuweather.com/weather-icons
-[62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[62]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
