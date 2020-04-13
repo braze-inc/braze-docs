@@ -1,11 +1,11 @@
 ---
 nav_title: Facebook
-alias: /partners/facebook/
+alias: /partners/facebook2/
 hidden: true
 excerpt_separator: <!--end-excerpt-->
 description: "This article outlines the updated integration for Facebook Audience Exports through Segments."
 ---
-{% alert note %}
+{% alert update %}
 The updated Facebook activation flow for the Facebook Audience Export feature is currently in Beta. Upon agreeing to join the beta, your Facebook account will be disconnected and you will have to activate prior to exporting an audience into Facebook.
 {% endalert %}
 <!--end-excerpt-->
@@ -17,14 +17,19 @@ Common use cases for exporting Facebook Custom Audiences include:
 - Retarget users at specific points within their lifecycle
 - Create exclusion targeting lists
 - [Lookalike Audiences][4] to acquire new users more efficiently
+<br><br>
+{% alert note %}
+Facebook Audience Export uses the __User Access Token__ to authorize requests.<br> 
+If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature, Braze will default to using the more reliable __System User Token__ that you have already [generated]({{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token), to authorize requests.
+{% endalert %}
 
 ## Prerequisites
 
 {% raw %}
 Requirement   |Origin| Description
 --------------|------|-------------
-Facebook Business Manager|[Facebook][1]| A centralized tool to manage your brand's Facebook assets (i.e. ad accounts, pages, apps).|
-Facebook ad account|[Facebook][2]| An active Facebook ad account tied to your brand's Business Manager that you want to use your Custom Audiences from Braze. <br> Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions.|
+Facebook Business Manager|[Facebook][1]| A centralized tool to manage your brand's Facebook assets (e.g. ad accounts, pages, apps).|
+Facebook ad Account|[Facebook][2]| An active Facebook ad account tied to your brand's Business Manager that you want to use your Custom Audiences from Braze. <br> Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions.|
 Facebook Custom Audiences Terms|[Facebook][3]| You have accepted Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endraw %}
@@ -72,19 +77,21 @@ You can view the custom audience on the [Facebook Ads Manager][13].
 
 #### Lookalike Audiences
 
-Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][14]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
+Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][4]. This feature looks at demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
 
 ## Facebook Audience Export FAQ
-- What if I can't access any Facebook ad accounts within Braze?
-  - Please ensure that you work with your brand's Facebook Business Manager admin in order to get invited to Facebook Business Manager and become an admin for the ad accounts you wish to sync with Facebook.
 
-- Can I see the exact users that were successfully added to a Custom Audience?
-  - Facebook does **not** allow this for user privacy reasons. Learn more [here][14].
+{% details What if I can't access any Facebook ad accounts within Braze? %}
+- Please ensure that you work with your brand's Facebook Business Manager admin to get invited to Facebook Business Manager and become an admin for the ad accounts you wish to sync with Facebook.
+{% enddetails %}
 
-- Why can't I see the Custom Audience size?
-  - Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting][16].
+{% details Can I see the exact users that were successfully added to a Custom Audience? %}
+- Facebook does **not** allow this for user privacy reasons. Learn more [here](https://www.facebook.com/business/help/112061095610075).
+{% enddetails %}
 
-
+{% details Why can't I see the Custom Audience size? %}
+- Due to recent user privacy implications, Facebook announced that they will [stop showing audience reach estimates using Custom Audience targeting](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923).
+{% enddetails %}
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059
@@ -98,6 +105,4 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [11]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [12]: https://developers.facebook.com/docs/apps/#app-id
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
-[14]: https://www.facebook.com/business/help/112061095610075
 [15]: https://developer.android.com/training/articles/user-data-ids.html
-[16]: https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923
