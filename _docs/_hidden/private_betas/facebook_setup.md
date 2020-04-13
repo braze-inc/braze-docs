@@ -1,6 +1,6 @@
 ---
 nav_title: Facebook
-alias: /partners/facebook2/
+alias: /partners/facebook/
 hidden: true
 excerpt_separator: <!--end-excerpt-->
 description: "This article outlines the updated integration for Facebook Audience Exports through Segments."
