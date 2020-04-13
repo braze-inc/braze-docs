@@ -15,9 +15,9 @@ For more information on how to start integrating Movable Ink into your campaigns
 When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
 
 Updates to this feature include:
-- __Removal of Quiet Hours__ - the time in which Braze may not send messages
-- __Addition of Sending Window__ - the time in which Braze may send messages
-- __Addition of Preview Chart__ - you may now generate a chart to see how many users will receive messages based on Intelligent Timing for each hour of the day, as well as what portion of users have provided enough information to compute an optimal time.
+- __Clarification of Quiet Hours__ - Quiet Hours functionality remains the same, but the UI has been adjusted for clar
+- __Addition of Preview Chart__ - you may now generate a chart to see how many users will receive messages for each hour of the day with Intelligent Timing, as well as what proportion of users have enough data to compute an optimal time.
+- __Addition of Custom Fallback__ - you may now choose the local time at which to send users a message when they lack sufficient engagement data to compute an optimal time
 
 Check out our [documentation]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) for more information. 
 
