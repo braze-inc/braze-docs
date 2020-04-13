@@ -34,6 +34,6 @@ See the [Jsdocs][8] for more information.
 
 You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[3]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [8]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logPurchase

@@ -52,11 +52,11 @@ During your SMS onboarding process, a Braze onboarding manager will setup Subscr
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
-[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-[3]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention
 [4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
-[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [6]: {% image_buster /assets/img/sms/sms_subgroup_select.png %}
-[7]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/
-[8]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/

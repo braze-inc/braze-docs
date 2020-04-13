@@ -311,7 +311,7 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [6]: http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html
 [7]: #step-1-importing-the-braze-unity-package
 [8]: #step-2-setting-your-api-key
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-3-customize-push-notification-settings
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-3-customize-push-notification-settings
 [10]: {% image_buster /assets/img_archive/unity-ios-sysconfig.png %}
 [11]: {% image_buster /assets/img_archive/unity-ios-sysconfigreq.png %}
 [12]: {% image_buster /assets/img_archive/iosunitystep3part5.gif %}
@@ -333,11 +333,11 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [30]: {% image_buster /assets/img_archive/unity-ios-feed-listener.png %}
 [31]: #in-app-message-integration
 [32]: #news-feed-integration
-[33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#push-notifications
-[34]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/w_in-app_messaging/#in-app-messaging
-[35]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
+[33]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#push-notifications
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/w_in-app_messaging/#in-app-messaging
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [36]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
-[37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package
+[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package
 [38]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
 [39]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
 [40]: {% image_buster /assets/img_archive/unity-ios-content-cards-listener.png %}

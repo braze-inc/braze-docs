@@ -120,7 +120,7 @@ __Having trouble showing GIFs on Android?__<br>
 [1]: https://movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [support]: https://support.movableink.com/
-[GIFsupport]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs
-[Instructions]: {{ site.baseurl }}/hidden/private_betas/movable_ink/#step-4-braze-experience
+[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs
+[Instructions]: {{site.baseurl}}/hidden/private_betas/movable_ink/#step-4-braze-experience
 
 

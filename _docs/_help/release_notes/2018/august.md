@@ -6,7 +6,7 @@ page_order: 6
 
 ## iOS 12 Notification Groups
 
-The recent iOS 12 release supports grouping notifications (similar to Android Notification Channels) for applications. [Braze allows you to utilize this grouping feature in iOS this using our message composer.]({{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
+The recent iOS 12 release supports grouping notifications (similar to Android Notification Channels) for applications. [Braze allows you to utilize this grouping feature in iOS this using our message composer.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
 
 ## Push Story Triggering
 
@@ -18,6 +18,6 @@ Customers exporting data to Amazon S3 and Microsoft Azure can now include events
 
 ## Mixpanel Cohorts Integration
 
-Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{ site.baseurl }}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
+Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

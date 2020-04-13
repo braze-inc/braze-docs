@@ -3,7 +3,7 @@ nav_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
-guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always [test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) before launching. Check out the individual message type's Creative Specs or the global Creative Details below."
+guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always [test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) before launching. Check out the individual message type's Creative Specs or the global Creative Details below."
 
 guide_featured_title: "Specifications for Each Message Type"
 
@@ -33,14 +33,14 @@ Our guidelines for images are more structured than those for text, as we want to
 
 - __All images must be less than 5MB.__
 - We only accept `PNG`, `JPG`, and `GIF` file types.
-- We recommend hosting images in the [Braze Media Library]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
-- For full-screen messages, follow our guidelines for [Image Safe Zone]({{_site.baseurl_}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+- We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
+- For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
 
 
 {% tabs %}
   {% tab Full-Screen %}
-  [Further details for full-screens]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
+  [Further details for full-screens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
 
   | Layout | Asset Size | Notes |
   |--- | --- | --- |
@@ -51,7 +51,7 @@ Our guidelines for images are more structured than those for text, as we want to
 {% endtab %}
 {% tab Modal %}
 
-  [Further details for modals]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
+  [Further details for modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
   | Layout | Asset Size | Notes |
   |--- | --- | ------ |
@@ -62,7 +62,7 @@ Our guidelines for images are more structured than those for text, as we want to
 {% endtab %}
 {% tab Slideup %}
 
-[Further details for slideups]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
+[Further details for slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
@@ -77,15 +77,15 @@ Our guidelines for images are more structured than those for text, as we want to
 
 ### Gifs & Videos
 
-Braze currently supports gifs for Web (included), [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#gifs-IAMs), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze currently supports gifs for Web (included), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 
 ## Additional Considerations
 
-Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customize]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
+Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customize]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
 
 {% alert important %}
-  These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{ site.baseurl }}/help/best_practices/in-app_messages/previous_in-app_message_generations/) documentation.
+  These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{site.baseurl}}/help/best_practices/in-app_messages/previous_in-app_message_generations/) documentation.
 {% endalert %}
 
 <br>

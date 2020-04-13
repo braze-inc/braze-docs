@@ -12,4 +12,4 @@ See [the iOS integration instructions][1] for in depth discussion of attribute t
 ReactAppboy.setFirstName("firstName");
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/

@@ -10,4 +10,4 @@ Our Flutter integration is being tested with select customers.
 
 To join the preview program, please contact your account manager or our [support team][support].
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

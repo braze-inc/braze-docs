@@ -1,6 +1,6 @@
 ---
 nav_title: Templates
-page_order: 4
+page_order: 5
 layout: dev_guide
 
 #Required
@@ -9,7 +9,6 @@ page_type: landing
 tool:
   - Canvas
   - Campaigns
-  -
 
 #Use if applicable
 platform:
@@ -46,7 +45,9 @@ guide_menu_list:
   - name: "POST: Create Content Blocks"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/
     fa_icon: fas fa-th-large
-
+  - name: "POST: Update Content Block"
+    link: /docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/
+    fa_icon: fas fa-envelope-open
 ---
 {% comment %}
 redirect from email_templates.md

@@ -68,7 +68,7 @@ You should now be able to launch your application and see sessions being logged 
 [5]: #configure-appboyxml
 [6]: #configure-android-manifest
 [7]: #track-sessions
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
 [11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/Appboy.xml
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/

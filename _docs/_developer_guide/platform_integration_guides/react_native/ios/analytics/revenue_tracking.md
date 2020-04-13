@@ -14,4 +14,4 @@ properties["KeyOne"] = "ValueOne";
 ReactAppboy.logPurchase("testPurchaseWithNullCurrency", 10, null, 5, properties);
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/

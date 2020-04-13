@@ -20,8 +20,8 @@ This means you can now preview _and interact_ with your custom messages (i.e. cl
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
-{% alert info %}
-Any [`appboyBridge`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) methods included in the HTML won't update user profiles while in the preview.
+{% alert tip %}
+We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
 {% endalert %}
 
 ### Syntax Highlighting
@@ -41,9 +41,9 @@ There are two steps required to migrate to the new HTML Beta
 
 These Beta features are supported on Web only, and require upgrading to the following Braze SDK version:
 
-* Web SDK v2.5+ [Changelog]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/changelog/#250)
+* Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 
-<!-- * Android SDK v5.0+ [Changelog]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/changelog/#500) -->
+<!-- * Android SDK v5.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#500) -->
 
 ### New Message Type
 
@@ -56,7 +56,7 @@ Toggle the new "Custom Message" type when creating your HTML campaign, as shown 
 
 This new HTML message type can now be used across both mobile and web!
 
-As always, it's recommended to [nudge users to upgrade]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+As always, it's recommended to [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 -->

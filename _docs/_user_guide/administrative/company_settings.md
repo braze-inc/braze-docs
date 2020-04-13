@@ -35,5 +35,5 @@ Please note that whatever you edit in this section will apply to _every_ Braze u
 
 <br>
 
-[1]: {{ site.baseurl }}/user_guide/administrative/
+[1]: {{site.baseurl}}/user_guide/administrative/
 [2]: {% image_buster /assets/img/navigation_co_set.gif %}"

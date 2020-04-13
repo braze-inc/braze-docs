@@ -18,7 +18,7 @@ channel:
 
 # Default Opt-In/ Opt-Out Keywords
 
-Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
+Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
 
 Braze will process the following keywords automatically and update the Subscription Group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized. 
 
@@ -37,4 +37,4 @@ If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered 
 Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
 {% endalert %}
 
-[oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
+[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

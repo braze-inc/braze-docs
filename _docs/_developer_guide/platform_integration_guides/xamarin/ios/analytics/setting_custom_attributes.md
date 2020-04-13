@@ -18,4 +18,4 @@ Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
 
 You can see user properties being set in the sample application's `UserPropertyButtonHandler` method inside `AppboySampleViewController.cs`.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/

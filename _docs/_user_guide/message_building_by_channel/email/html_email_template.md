@@ -6,7 +6,7 @@ page_order: 2.1
 ---
 # How to Upload an HTML Email Template
 
-> Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also [create an Email Template]({{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
+> Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also [create an Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
 
 ## Step 1: Navigate to the Email Template Editor
 Click on the __Templates & Media__ tab under __Engagement__ in the navigation bar. This will open to the __Email Template Gallery__.
@@ -57,7 +57,7 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 ## Managing Email Templates
 
-You can [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 
 
@@ -65,9 +65,9 @@ You can [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and
 [2]: {% image_buster /assets/img_archive/email_templates2_new.png %}
 [3]: {% image_buster /assets/img_archive/email_templates3a_new.png %}
 [4]: {% image_buster /assets/img_archive/email_templates4-new.png %}
-[cf]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
-[5]: {{ site.baseurl }}/assets/img_archive/email_temlplates5.png
+[cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
+[5]: {{site.baseurl}}/assets/img_archive/email_temlplates5.png
 [6]: {% image_buster /assets/img_archive/email_templates3b_new.png %}
-[7]: {{ site.baseurl }}/help/best_practices/email/email_styling_tips/#email-size
-[8]: {{ site.baseurl }}/help/release_notes/2017/august/#mobile-responsive-email-templates
+[7]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
+[8]: {{site.baseurl}}/help/release_notes/2017/august/#mobile-responsive-email-templates
 [9]: {% image_buster /assets/img_archive/step1and2htmluploader.gif %}

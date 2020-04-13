@@ -60,25 +60,25 @@ Content-Type: application/json
    }
  }
 ```
-For more information on the "broadcast" flag, check out [Broadcast]({{ site.baseurl }}/api/parameters/#broadcast) within our [API Parameters]({{ site.baseurl }}/api/parameters) documentation.
+For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
 ### Available Messaging Objects
 
 You can use these objects in the [request body](#request-body) above.
 
-- [Android Objects]({{ site.baseurl }}/api/objects_filters/android_objects/)
-- [Apple Objects]({{ site.baseurl }}/api/objects_filters/apple_objects/)
-- [Content Cards Object]({{ site.baseurl }}/api/objects_filters/content_cards_object/)
-- [Email Object]({{ site.baseurl }}/api/objects_filters/email_object/)
-- [Kindle or FireOS Object]({{ site.baseurl }}/api/objects_filters/kindle_and_fireos_object/)
-- [SMS Object]({{ site.baseurl }}/api/objects_filters/sms_object/)
-- [Web Objects]({{ site.baseurl }}/api/objects_filters/web_objects/)
-- [Webhook Object]({{ site.baseurl }}/api/objects_filters/webhook_objects/)
-- [Windows Objects]({{ site.baseurl }}/api/objects_filters/windows_objects/)
+- [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
+- [Apple Objects]({{site.baseurl}}/api/objects_filters/apple_objects/)
+- [Content Cards Object]({{site.baseurl}}/api/objects_filters/content_cards_object/)
+- [Email Object]({{site.baseurl}}/api/objects_filters/email_object/)
+- [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
+- [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
+- [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
 ### Response Details
 
-Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
 

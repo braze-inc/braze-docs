@@ -15,7 +15,7 @@ page_type: partner
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
+If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
 ## Set Up Overview
 
@@ -43,11 +43,11 @@ To get going with your Segment/Braze integration,
 |---|---|
 | App Identifier| Previously called the API Key. Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
 | REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. <br> <br> __The REST API Key is not required for the Side-by-Side Integration.__ |
-| API Endpoint| Find and enter your [Braze SDK Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
-| Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
+| API Endpoint| Find and enter your [Braze SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
+| Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
 | Log Purchase when Revenue is present | Choose when to log purchases. |
-| Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/) in our documentation. Format without the `https` as `rest.iad-01.braze.com`. |
-|Safari Website Push ID| Safari requires a Website Push ID to send push. [More on this here]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push). |
+| Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. Format without the `https` as `rest.iad-01.braze.com`. |
+|Safari Website Push ID| Safari requires a Website Push ID to send push. [More on this here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push). |
 |Braze Web SDK Version| Which version of the Braze Web SDK you have integrated. You should have found this out during your initial integration process, but if you're unsure, reach out to your account manager or Braze support. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -78,7 +78,7 @@ You can integrate Segment's Web source (Analytics.js) and native client-side lib
 | Integration | Details |
 | ----------- | ------- |
 | [Side-by-Side / Device-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-Server / Cloud-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{ site.baseurl }}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Server-to-Server / Cloud-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -184,8 +184,8 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
 | [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event][13]. | `analytics.track("played_game");` > `appboy.logCustomEvent("played_game");`|
-| [Track with Properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` > `appboy.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with Product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
+| [Track with Properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` > `appboy.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
+| [Track with Product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Completed Order
@@ -218,7 +218,7 @@ If you use a server-to-server integration, filters related to automatically coll
 
 ## User Deletion & Suppression 
 
-If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to our [Users/Delete endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to our [Users/Delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
 
 You must ensure that that you select a common user identifier between Braze and Segment ( as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
 
@@ -227,7 +227,7 @@ You must ensure that that you select a common user identifier between Braze and 
 
 Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
 
-Segment will connect to our [users/track endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
+Segment will connect to our [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
 
 {% alert important %}
 If users do not have an external ID, they will not be imported into Braze, as our users/track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
@@ -284,7 +284,7 @@ Scenarios where data will not pass as expected:
 
 {% details Customization of Braze Initialization. %}
 
-There are several different ways that Braze can be customized: [push]({{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/), [in-app messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/), [Content Cards]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/), and initialization. With a side-by-side integration you can still customize push, in-app messages, and Content Cards as you would with a direct Braze integration.
+There are several different ways that Braze can be customized: [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/), [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/), [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/), and initialization. With a side-by-side integration you can still customize push, in-app messages, and Content Cards as you would with a direct Braze integration.
 
 However, customizing when the Braze SDK is integrated or specifying initialization configurations may be difficult and sometimes not possible. This is because Segment will initialize the Braze SDK for you when the Segment initialization occurs.
 
@@ -297,29 +297,29 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [4]: https://segment.com/docs/spec/ecommerce/v2/
 [5]: https://segment.com
 [11]: https://segment.com/docs/destinations/braze/
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
-[14]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[18]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[19]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[22]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
-[23]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[24]: {{ site.baseurl }}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
-[25]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
-[26]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{ site.baseurl }}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
-[28]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
+[19]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[22]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
+[23]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
+[25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
+[26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [29]: https://segment.com/docs/destinations/appboy/#android
 [30]: https://segment.com/docs/destinations/appboy/#ios
 [31]: https://github.com/appboy/appboy-segment-android
 [32]: https://github.com/appboy/appboy-segment-ios
 [33]: https://github.com/segment-integrations/analytics.js-integration-appboy
-[34]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[35]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
 [37]: https://segment.com/docs/destinations/appboy/#web
-[38]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[39]: {{ site.baseurl }}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[40]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
+[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+[39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
+[40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
 [44]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
 [45]: https://dashboard.braze.com/app_settings/developer_console

@@ -8,7 +8,7 @@ page_order: 11
 
 Braze is proud to now offer Retention Reports for Campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the Campaign Analytics page within the Dashboard. 
 
-Information on this new feature can be found in our [documentation]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
+Information on this new feature can be found in our [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
 
 ![Full Report][4]
 
@@ -18,6 +18,6 @@ As of January 13th, 2020 this feature is not yet available to our client deploye
 
 ## New Email Content Block API Endpoint
 
-You can now [update]({{ site.baseurl }}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) your Email Content Blocks via API!
+You can now [update]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) your Email Content Blocks via API!
 
 [4]: {% image_buster /assets/img/retention_report_full_report.png %}

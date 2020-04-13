@@ -5,7 +5,7 @@ page_order: 0
 
 # What happens when a user profile is deleted via the REST API?	
 
-When you [delete a user via the Braze API]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-endpoint)...	
+When you [delete a user via the Braze API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint)...	
 
 - The Lifetime Users count (i.e. "Users") will be updated to account for the newly deleted users.	
 - The __entire user profile__ will be deleted.	

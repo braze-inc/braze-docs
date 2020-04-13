@@ -95,7 +95,7 @@ The Neura SDK requires that you enable location services.
 [4]: https://dev.theneura.com/tutorials/android/?ref=braze
 [5]: https://dev.theneura.com/console/
 [6]: https://dev.theneura.com/pages/how-to-use-engagement-api/?ref=braze
-[7]: {{ site.baseurl }}/partners/data_augmentation/contextual_location/neura
+[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura
 [8]: https://dev.theneura.com/?ref=braze
 
 [9]: {% image_buster /assets/img/insights-bubble-graph.png %}

@@ -146,13 +146,13 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.
 [1]: {% image_buster /assets/img_archive/UONewsFeed.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
+[14]: {{site.baseurl}}/help/best_practices/news_feed/
 [16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
 [17]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/FeedUpdatedEvent.html#getUnreadCardCount()
 [18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
@@ -174,4 +174,4 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

@@ -23,7 +23,7 @@ Push tokens can either be uploaded for identified users or anonymous users. This
 When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
 {% endalert %}
 
-These tokens can be migrated by [importing them with our API]({{ site.baseurl }}/api/endpoints/user_data/#push-token-import).
+These tokens can be migrated by [importing them with our API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import).
 
 To do this, use the `users/track` endpoint and post the following information:
 

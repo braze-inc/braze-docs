@@ -17,5 +17,5 @@ For more information, see the [Uninstall Tracking][4] page in our User Guide.
 [1]: https://developer.android.com/reference/android/app/Application
 [2]: https://developer.android.com/reference/android/app/Application#onCreate()
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/push/AppboyNotificationUtils.html#isUninstallTrackingPush-android.os.Bundle-
-[4]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
+[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/push/AppboyNotificationUtils.html#APPBOY_NOTIFICATION_OPENED_SUFFIX

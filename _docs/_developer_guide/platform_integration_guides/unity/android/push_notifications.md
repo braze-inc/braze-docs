@@ -111,7 +111,7 @@ Although Braze can handle standard deep links (such as website urls, Android uri
 
 See Android's documentation on ["Deep Linking" to In-App Resources][26]
 
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [9]: https://firebase.google.com/docs/cloud-messaging/
 [11]: https://firebase.google.com/docs/unity/setup
 [12]: https://firebase.google.com/docs/android/setup

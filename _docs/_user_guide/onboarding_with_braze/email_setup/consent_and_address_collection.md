@@ -7,7 +7,7 @@ page_order: 2
 Before sending out your initial emails, it's important to get permission from your customers first. It's a common courtesy and does wonders for your open rates!
 
 ## Subscriber States / Categories
-There are three email subscription states for a user: __opted in__, __subscribed__, and __unsubscribed__. To change a user's subscription state, in addition to using the methods described above, you can use our [REST APIs]({{ site.baseurl }}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
+There are three email subscription states for a user: __opted in__, __subscribed__, and __unsubscribed__. To change a user's subscription state, in addition to using the methods described above, you can use our [REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 |Subscriber State | Description |
 |---|---|

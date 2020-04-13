@@ -42,7 +42,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
  {% endtab %}
  {% tab Canvas %}
- After you have [created and set up your Canvas using the Canvas wizard]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
+ After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
 
 1. Name your step something clear and meaningful.
 2. Add a Delay, as necessary.
@@ -416,7 +416,7 @@ $('#sms_split input[name=sms_type]').change(function(e){
 
 ## Step 4: Configure Message Delivery
 
-Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API for both [campaigns]({{ site.baseurl }}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [canvas]({{ site.baseurl }}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
+Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API for both [campaigns]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
 
 ![SMS Delivery]({% image_buster /assets/img/sms_campaign_delivery.gif %})
 

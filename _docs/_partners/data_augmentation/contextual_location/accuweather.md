@@ -202,7 +202,7 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 [27]: https://blog.clearbit.com/logo
 [28]: https://api.tfl.gov.uk/#Line
 [29]: https://datamine.mta.info/
-[30]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [31]: https://docs.transifex.com/api/translation-strings
 [32]: {% image_buster /assets/img_archive/TransifexUI.png %}
 [33]: {% image_buster /assets/img_archive/terminal.png %}
@@ -219,7 +219,7 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 [44]: https://open.fda.gov/api/
 [45]: https://ndb.nal.usda.gov/ndb/doc/index
 [46]: https://www.json.org
-[47]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
 [48]: https://apidev.accuweather.com/developers/locationsAPIguide
 [49]: https://apidev.accuweather.com/developers/forecastsAPIguide
 [50]: https://apidev.accuweather.com/developers/currentConditionsAPIGuide
@@ -232,4 +232,4 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 [57]: https://apidev.accuweather.com/developers/
 [58]: https://apidev.accuweather.com/developers/weatheralarms
 [59]: https://apidev.accuweather.com/developers/weatheralarms
-[60]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[60]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

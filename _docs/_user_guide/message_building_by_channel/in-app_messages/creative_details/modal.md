@@ -26,7 +26,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 | Image Only | Any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most sizes and dimensions |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
 ### Font Awesome
 

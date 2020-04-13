@@ -110,7 +110,7 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [37]: {% image_buster /assets/img_archive/fbk_4.png %}
 [38]: https://www.facebook.com/ads/manage/customaudiences/tos.php
 [39]: https://www.facebook.com/ads/manager/audiences/manage/
-[40]: {{ site.baseurl }}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-to-csv
+[40]: {{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-to-csv
 [41]: https://dashboard-01.braze.com/auth/facebook/callback
 [42]: https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923
 [43]: https://www.facebook.com/business/help/112061095610075

@@ -79,7 +79,7 @@ Unless you select the option to "Message Repeatedly", each user will only receiv
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
-Check out our [API-Triggered section of the Developer Guide]({{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
+Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
 
 ![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
   {% endtab %}
@@ -122,18 +122,18 @@ Braze will show you the number of emails sent, opened, clicked through, sent to 
 When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique). Braze also gives you the ability to visualize where users are clicking within a given email campaign.
 
 {% alert note %}
-Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
+Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
 {% endalert %}
 
 [1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[9]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-email
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
+[9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
+[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img_archive/Email2Overview.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{ site.baseurl }}/help/best_practices/email/email_styling_tips/#email-size
+[16]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
-[18]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#upload-an-html-email-template
+[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#upload-an-html-email-template

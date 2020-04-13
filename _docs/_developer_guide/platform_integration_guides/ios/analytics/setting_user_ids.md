@@ -88,8 +88,8 @@ Please note the following:
 
 {% include archive/aliasing.md platform="iOS" %}
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[2]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesViewController.m
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"

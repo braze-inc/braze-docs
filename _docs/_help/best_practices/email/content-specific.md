@@ -62,7 +62,7 @@ page_order: 1
 ![Allrecipes_email][31]
 
 
-[25]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
+[25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
 [27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
 [28]: {% image_buster /assets/img_archive/Restaurant_email.png %}

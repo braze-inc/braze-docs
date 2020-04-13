@@ -47,17 +47,17 @@ Admins can unarchive a team by selecting the archived team and then clicking the
 [8]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
-[24]: {{ site.baseurl }}/support_contact/
+[24]: {{site.baseurl}}/support_contact/
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/user_accesses_new.png %} "User Permissions"
 [31]: {% image_buster /assets/img_archive/permission_diff_apps_new.png %} "Permissions App to App"
 [33]: http://dashboard-01.braze.com/company_settings/manage_users/ "Manage Users Page"
 [34]: {% image_buster /assets/img_archive/delete_user_new.png %} "Delete a User"
 [37]: http://dashboard-01.braze.com/company_settings/account_settings/ "Account Settings Page"
-[43]: {{ site.baseurl }}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
+[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
+[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [45]: {% image_buster /assets/img_archive/Enable_reset.png %}
-[49]: {{ site.baseurl }}/user_guide/onboarding/platform_administrative_features/#user-permissions
+[49]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#user-permissions
 [50]: {% image_buster /assets/img_archive/security_settings_new.png %}
 [51]: {% image_buster /assets/img_archive/authentication_rules_new.png %}
 [52]: {% image_buster /assets/img_archive/dashboard_ip_whitelisting_new.png %}
@@ -89,7 +89,7 @@ Admins can unarchive a team by selecting the archived team and then clicking the
 
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
 
-[76]: {{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/user_permissions/
+[76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
 
 [83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632

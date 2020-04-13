@@ -54,5 +54,5 @@ Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. Wha
 
 [1]: {% image_buster /assets/img_archive/Usage_Page.png %}
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}
-[3]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {{ site.baseurl }}/help/faqs/
+[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
+[4]: {{site.baseurl}}/help/faqs/

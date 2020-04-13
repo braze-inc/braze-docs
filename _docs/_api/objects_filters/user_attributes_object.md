@@ -152,11 +152,11 @@ Content-Type: application/json
 This example contains two User Attribute objects of the allowed 75 per API call.
 
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: ({{ site.baseurl }}/help/help_articles/push/push_token_migration/
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[3]: ({{site.baseurl}}/help/help_articles/push/push_token_migration/
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
@@ -164,4 +164,4 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

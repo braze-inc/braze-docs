@@ -96,8 +96,8 @@ If you hadn't created this in `Templates & Media`, you can go to `Campaigns`, th
 
 [1]: https://www.inkit.com
 [2]: https://support.inkit.com/en/articles/2542557-braze-inkit-integration
-[3]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes
+[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes
 [4]: {% image_buster /assets/img/inkit-use.png %}
 [5]: {% image_buster /assets/img/inkit-integration.png %}
-[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[6]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [7]: {% image_buster /assets/img/inkit-webhook-template.png %}

@@ -104,6 +104,6 @@ See the JSDocs for [ab.ClassicCard][3], [ab.Banner][4], or [ab.CaptionedImage][5
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html
 [5]: https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[14]: {{site.baseurl}}/help/best_practices/news_feed/
 [17]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Feed.html
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

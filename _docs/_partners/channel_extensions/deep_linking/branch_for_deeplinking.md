@@ -13,7 +13,7 @@ description: "This article describes the partnership between Braze and Branch an
 
 Branch, with Braze, allows you to provide better experiences to your customers through allowing you to properly attribute the beginning of their user journey & connect them through deeplinks to the their intended location.
 
-Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust [attribution]({{ site.baseurl }}/partners/advertising_technologies/attribution/branch_for_attribution/) and deep linking.
+Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust [attribution]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) and deep linking.
 
 
 ## Install Attribution {#branch-install-attribution}
@@ -42,8 +42,8 @@ Depending on your ESP, additional customization is required in order to support 
 
 
 [1]: https://branch.io/
-[2]: {{ site.baseurl }}/partners/branch_for_attribution/
+[2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
 [5]: https://docs.branch.io/pages/emails/braze/
 [6]: https://docs.branch.io/pages/emails/braze-mailjet/

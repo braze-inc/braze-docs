@@ -13,7 +13,7 @@ Embed video on the right. Demos all of the topics mentioned on this page.
 {% endcomment %}
 
 {% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/generations/)!
+Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/)!
 {% endalert %}
 
 ## When to Use In-App Messages
@@ -78,7 +78,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a Javascript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages) for more details.
+[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a Javascript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages) for more details.
 
 {% alert important %}
 
@@ -102,12 +102,12 @@ The following example shows a paginated HTML in-app message:
 [6]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ModalMessage.html
 [7]: https://js.appboycdn.com/web-sdk/latest/doc/ab.FullScreenMessage.html
 [12]: https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
+[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
+[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
 [47]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
 [51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[52]: {{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages
-[53]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
+[52]: {{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages
+[53]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam

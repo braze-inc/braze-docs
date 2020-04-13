@@ -35,7 +35,7 @@ Be sure to save your template by clicking the “Save Template” button in the 
 
 ## Managing Webhook Templates
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) Webhook Templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) Webhook Templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 [1]: {% image_buster /assets/img_archive/Webhook_template_campaign.png %}
 [2]: {% image_buster /assets/img_archive/Webhook_template_test.png %}
