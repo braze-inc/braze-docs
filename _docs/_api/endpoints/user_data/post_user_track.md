@@ -34,7 +34,8 @@ Content-Type: application/json
    "api_key" : (required, string) see App Group REST API Key,
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
-   "purchases" : (optional, array of Purchase Object)
+   "purchases" : (optional, array of Purchase Object),
+   "partner" : (optional, string)
 }
 ```
 

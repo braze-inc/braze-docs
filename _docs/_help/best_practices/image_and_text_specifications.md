@@ -22,15 +22,13 @@ For every and any channel you use to communicate with your users, here are some 
 
 In general, Braze recommends using images that fit into a 16:10 screen.
 
-**Type** | **Aspect Ratio** | **Recommended Image Size** | **Max Image Size** | **File Types**
---- | --- | --- | --- | ---
-Portrait Full Screen with Text | 5:4 | 500KB | 5MB | PNG, JPG, GIF
-Portrait Full Screen (Image Only) | 10:16 | 500KB | 5MB | PNG, JPG, GIF
-Landscape Full Screen with Text | 16:5 | 500KB | 5MB | PNG, JPG, GIF
-Landscape Full Screen (Image Only) | 16:10 | 500KB | 5MB| PNG, JPG, GIF
-Slideup | 1:1 | 500KB | 5MB | PNG, JPG, GIF
-Modal (Image Only) | 1:1 | 500KB | 5MB | PNG, JPG, GIF
-Modal with Text | 29:10 | 500KB | 5MB | PNG, JPG, GIF
+| **Type** | **Aspect Ratio** | **Recommended Image Size** | **Max Image Size** | **File Types** |
+| --- | --- | --- | --- | --- |
+| Portrait Full Screen with Text | 6:5 | Hi-Res 1200 x 1000px<br>Min. 600 x 500px | 5MB | PNG, JPG, GIF |
+| Portrait Full Screen (Image Only) | 3:5 | Hi-Res 1200 x 2000px <br>Min. 600 x 1000px | 5MB | PNG, JPG, GIF |
+| Slideup | 1:1 | Hi-Res 150 x 150px<br>Min. 600 x 500px | 5MB | PNG, JPG, GIF |
+| Modal (Image Only) | 1:1 | Hi-Res __Max__ 1200 x 2000px<br>Min. 600 x 600px | 5MB | PNG, JPG, GIF |
+| Modal with Text | 29:10 | Hi-Res 1200 x 1000px<br>Min. 600 x 500px | 5MB | PNG, JPG, GIF |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Text
