@@ -141,7 +141,7 @@ Braze has three Generations of in-app messages available. You can fine-tune to w
 
 ![In-App_Messages_Generations][22]{: height="50%" width="50%"}
 
-Depending on what SDK Versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation. A Generation is defined as a collection of SDK Versions that contain a large quantity of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates. 
+Depending on what SDK Versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation. A Generation is defined as a collection of SDK Versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates. 
 
 By checking __Send to all Generations that support this message__, Braze will deliver to users that can receive any form of the message. For example, if you have users on all three Generations, a modal will deliver to users on Generations 2 and 3, as Generation 1 doesn't support modals. The message will look different for your two groups of users: Generation 3 users will receive the message in the latest styles, while Generation 2 users will see the older styles (cosmetic differences, and absence of button border).
 
@@ -156,7 +156,7 @@ The content of the Style tab vary based on your chosen Message Options in the la
 
 | Formatting | Input | Description |
 |---|---|---|
-|Color Profile | Apply from In-App Message Templates Gallery. | Click __Apply Template__ and select from gallery. Then, click __Save__. |
+|Color Profile | Apply from In-App Message Templates Gallery. | Click __Apply Template__ and select from the gallery. Then, click __Save__. |
 |Text Alignment | Left, Center, or Right.  | Only available for newer Braze SDK versions. |
 |Header | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color.  |
 |Text | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
@@ -181,7 +181,7 @@ Add [key-value pairs][19] to send extra custom fields to user devices.
 
 ### Re-evaluate Campaign Eligibility and Liquid
 
-In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include: campaigns that target a custom attribute that frequently changes, or messages that should reflect any last-minute profile changes.
+In some scenarios, you may want to re-evaluate a user's eligibility as they trigger an in-app message to display. Examples include campaigns that target a custom attribute that frequently changes, or messages that should reflect any last-minute profile changes.
 
 ![Re-evaluate IAM Membership][27]
 
@@ -200,7 +200,7 @@ Build the remainder of your campaign or Canvas, see the sections below for furth
 {% details Triggering %}
 ![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: height="50%" width="50%"}
 
-## Triggering 
+### Triggering 
 
 In-app message delivery is entirely based off of of the following action triggers:
 - Making a purchase
@@ -214,7 +214,7 @@ A start date and time must be selected, however, an end date is optional. An end
 
 Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
 
-### Online vs. Offline Triggering
+#### Online vs. Offline Triggering
 
 In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). When you stop a campaign, the trigger condition is set to null and updated on the user's next session. For a user's current session, they may still see the in-app messages until the triggers are updated on their next session. 
 
@@ -222,17 +222,18 @@ In-app messages's work by sending the message and triggers to the user's device.
 
 {% details Prioritize %}
 
-__Campaigns__
+### Prioritize
+
+#### Campaigns
 Finally, once you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities.
 
 ![Event Prioritization]({% image_buster /assets/img_archive/prioritization_options.png %}){: height="50%" width="50%"}
 
-The high, medium, and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click __Set Exact Priority__ and you will be able to drag and drop campaigns to order them with the correct priority.
+The high, medium and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click __Set Exact Priority__ and you will be able to drag and drop campaigns to order them with the correct priority.
 
 ![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: height="50%" width="50%"}
 
-__Canvas__
-
+#### Canvas
 A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
 ![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: height="50%" width="50%"}
@@ -246,6 +247,7 @@ By default, canvas step priority is set to medium with the most recently created
 {% enddetails %}
 
 {% details Choose Target Segment %}
+### Target Segment
 
 Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
@@ -254,7 +256,7 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 {% enddetails %}
 
 {% details Choose Conversion Events %}
-
+### Conversion Events
 Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
 
 - Opens App
@@ -271,6 +273,18 @@ You have the option of allowing up to a 30-day window during which a conversion 
 <br>
 
 After you've finished building the last of your campaign or Canvas, review its details, then send it!
+
+## Active In-App Message Campaign Limits
+
+Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend __turning off__ any campaigns that are no longer adding any value to your brand.
+
+Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers.
+
+This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-users’ devices, which impacts the end user’s experience.
+
+__We have implemented a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.__
+
+The average Braze customer has a total of 26 campaigns active at once - so it is unlikely that this limitation will impact you. 
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
