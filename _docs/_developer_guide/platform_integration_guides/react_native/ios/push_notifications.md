@@ -8,4 +8,4 @@ page_order: 1
 
 Follow [the iOS integration instructions][1]. 
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/

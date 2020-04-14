@@ -156,7 +156,7 @@ if #available(iOS 10, *) {
 {% endtabs %}
 
 {% alert important %}
-Please note that the code sample above includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_options_ios/).
+Please note that the code sample above includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/).
 {% endalert %}
 
 ### Without UserNotifications Framework
@@ -349,7 +349,7 @@ Verify the code modifications you made against this [sample AppDelegate.m file][
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [Advanced Use Cases section on Deep Linking for iOS][10].
 
 
-[0]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
+[0]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
 [1]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
 [2]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
 [3]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
@@ -357,11 +357,11 @@ Deep linking from a push into the app is automatically handled via our standard 
 [5]: https://dashboard-01.braze.com/app_settings/app_settings
 [6]: {% image_buster /assets/img_archive/push_cert_upload.png %} "push upload example image"
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L34-62 "sample AppController.mm"
-[10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [11]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3 "iOS Lifecycle Methods"
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
-[17]: {{ site.baseurl }}/assets/img_archive/push_example_category.png
+[17]: {{site.baseurl}}/assets/img_archive/push_example_category.png
 [18]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:
 [19]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
 [23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
@@ -375,5 +375,5 @@ Deep linking from a push into the app is automatically handled via our standard 
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: #push-action-buttons-integration
 [36]: #step-4-register-for-push-notifications
-[37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
+[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift

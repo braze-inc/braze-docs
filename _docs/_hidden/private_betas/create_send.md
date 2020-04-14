@@ -65,7 +65,7 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.
@@ -110,7 +110,7 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.

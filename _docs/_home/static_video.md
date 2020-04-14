@@ -127,7 +127,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
@@ -372,13 +372,13 @@ Additionally, the following keys are reserved and cannot be used as Custom Event
 
 If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
-[4]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
+[4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[10]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[9]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[10]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [11]: http://www.regextester.com/pregsyntax.html
 [12]: #integers
 [16]: #example-case
-[17]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"

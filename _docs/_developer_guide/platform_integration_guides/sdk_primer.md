@@ -9,7 +9,7 @@ Before you begin to integrate the Braze SDKs, you may find yourself wondering wh
 
 ## Feature Set Defaults
 
-If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
+If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
 All of our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
@@ -80,7 +80,7 @@ We highly recommend fully integrating the SDKs to take full advantage of our pro
 
 ### Web SDK
 
-You may either simply not integrate certain parts of the SDK, or use [`stopWebTracking`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking) for a user. This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
+You may either simply not integrate certain parts of the SDK, or use [`stopWebTracking`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking) for a user. This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
 
 ### Android SDK
 

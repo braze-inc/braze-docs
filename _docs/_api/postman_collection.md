@@ -76,5 +76,5 @@ Once your API request is ready to send, click on the 'Send' button next to the U
 [4]: {% image_buster /assets/img_archive/postman_post.png %}
 [5]: {% image_buster /assets/img_archive/postman_get.png %}
 [6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[8]: {{ site.baseurl }}/api/api_key/
+[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[8]: {{site.baseurl}}/api/api_key/

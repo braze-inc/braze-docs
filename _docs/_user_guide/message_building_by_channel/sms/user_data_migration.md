@@ -48,13 +48,13 @@ __Here's a quick summary of the user data you'll need to update in Braze:__
   - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
 
 [0]: https://en.wikipedia.org/wiki/E.164
-[userphone]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-[1]: {{ site.baseurl }}/api/endpoints/user_data/post_user_track/
-[2]: {{ site.baseurl }}/api/endpoints/user_data/post_user_alias/
-[3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
-[5]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
-[6]: {{ site.baseurl }}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[userphone]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
+[1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[2]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
+[6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [picture]: {% image_buster /assets/img/sms/e164.jpg %}
-[customkeyword]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-[subscriptionstate]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+[customkeyword]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+[subscriptionstate]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

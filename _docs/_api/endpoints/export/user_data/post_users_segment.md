@@ -67,7 +67,7 @@ Larger user bases will result in longer export times. For example, an app with 2
 }
 ```
 
-The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{ site.baseurl }}/api/endpoints/export/get_segment/).
+The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/get_segment/).
 
 {% alert warning %}
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).

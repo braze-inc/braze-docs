@@ -50,13 +50,13 @@ There is a minimum interval at which we’ll allow In-App messages to be consecu
 
 These are customizable, however we have them in place to avoid over-messaging your users.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 [14]: {% image_buster /assets/img_archive/trouble6.png %}
-[15]: {{ site.baseurl }}/help/best_practices/in-app_messages/in-app_message_specs/
-[16]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout
-[19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
-[20]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
-[21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#in-app-message-delivery
+[15]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_specs/
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+[20]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+[21]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#in-app-message-delivery

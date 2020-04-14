@@ -40,4 +40,4 @@ Content Cards have a maximum size of **2kb** (including images, links, and all
 
 In a Cordova app, Content Cards can be accessed and displayed directly in JavaScript. To learn more visit our [Integration Guide][1].
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/cordova/content_cards/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/cordova/content_cards/integration/

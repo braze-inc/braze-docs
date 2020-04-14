@@ -36,12 +36,12 @@ You can use and manage templates and creative content in Templates & Media for t
 
 <br>
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 [1]: {% image_buster /assets/img_archive/templates_and_media.png %}
-[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
+[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
+[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
+[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

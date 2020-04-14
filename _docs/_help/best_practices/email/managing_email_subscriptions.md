@@ -25,5 +25,5 @@ Braze automatically checks for and removes duplicate email addresses when an ema
 This only applies for campaigns triggered from our UI. If you send a campaign through an API call, and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times as are listed in the call. This is because we assume that API calls are purposefully constructed.
 {% endalert %}
 
-[22]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[23]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
+[22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[23]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations

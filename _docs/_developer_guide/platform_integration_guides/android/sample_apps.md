@@ -43,7 +43,7 @@ The Hello Appboy test application shows a minimal use case of the Braze SDK, and
 
 For more information on the Android SDK build system see the [Github Repository readme][26].
 
-[25]: {{ site.baseurl }}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
+[25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [27]: https://github.com/JakeWharton/sdk-manager-plugin
 [3]: https://github.com/appboy/appboy-android-sdk "Appboy Android Github Repository"

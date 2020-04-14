@@ -8,4 +8,4 @@ page_order: 1
 
 Follow [the Android integration instructions][1]. 
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/

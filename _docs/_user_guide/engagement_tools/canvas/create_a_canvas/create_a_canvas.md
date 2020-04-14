@@ -67,7 +67,7 @@ The Entry Wizard will guide you through setting up your Canvas - everything from
 
 ### Set Up Your Canvas Basics
 
-Here, you'll name your Canvas, assign [Teams]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{ site.baseurl }}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
+Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
 
 ![Basics][51]
 
@@ -224,7 +224,7 @@ journey as they come in:
 [1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
 [5]:{% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %}
 [6]:{% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %}
-[6b]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
@@ -233,7 +233,7 @@ journey as they come in:
 [16]:{% image_buster /assets/img_archive/Canvas_Message_Edit.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
 [18]:{% image_buster /assets/img_archive/Canvas_Multivariate.png %}
-[18a]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
+[18a]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
@@ -248,7 +248,7 @@ journey as they come in:
 [34]:{% image_buster /assets/img_archive/Canvas_Branch_4.png %}
 [35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
 [36]: https://www.braze.com/contact/
-[37]: {{ site.baseurl }}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
+[37]: {{site.baseurl}}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
 [41]: {% image_buster /assets/img_archive/Journey_8-audience_options.png %}
 [42]: {% image_buster /assets/img_archive/Journey_11-audience_options.png %}
 [45]: {% image_buster /assets/img_archive/step_priority.png %}

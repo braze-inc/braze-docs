@@ -43,20 +43,20 @@ guide_featured_list:
 ## Currents Capabilities
 
 Currents allows you to…
-* Send Braze event data into a data warehouse or to one of [our analytics partners]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.
+* Send Braze event data into a data warehouse or to one of [our analytics partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.
 * Export Braze event data in a continuous stream to power business intelligence tools, machine learning algorithms, and more.
-* Route Braze event data to a variety of other systems using [Segment]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/) or [mParticle]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
-* There’s so much more you can do with event data, accessed by Currents. Trust us - [we use Currents, too]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
+* Route Braze event data to a variety of other systems using [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/) or [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
+* There’s so much more you can do with event data, accessed by Currents. Trust us - [we use Currents, too]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
 
 ## Access Currents
 
 Currents are already included in some of our pro- and enterprise-level packages. If you’re interested in adding it to your plan, reach out to your account manager for access.
 
-From there, your account manager and our data specialists will assist in your Currents [set up and integration]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
+From there, your account manager and our data specialists will assist in your Currents [set up and integration]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 
 Currents come included with certain Braze packages. Please contact your Customer Success Manager or [open a support ticket][support] if you want access.
 
 
 <br>
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

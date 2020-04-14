@@ -26,7 +26,7 @@ Braze notes the number of times these events have occurred as well as the last t
 ![custom_event_analytics_example.png][8]
 
 {% alert tip %}
-[Incrementing Custom Attributes]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+[Incrementing Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 {% endalert %}
 
 ## Custom Event Storage
@@ -53,7 +53,7 @@ Triggered in-app messages with templated custom event properties (for example, `
 
 Custom Event Properties are designed to help you personalize your messaging or build granular Action-Based Delivery Campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 
-You can change the data type of your custom event, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
+You can change the data type of your custom event, but you should be aware of [what other changes this action entails]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
 {% alert important %}
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
@@ -63,12 +63,12 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [9]: http://www.regextester.com/pregsyntax.html
 [10]: #integers
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
 [12]: #automatic-data-collection
-[13]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging
+[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging
 [14]: #taxiride-sharing-app-use-case
 [15]: #customeventproperties
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [17]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
-[18]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
+[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns

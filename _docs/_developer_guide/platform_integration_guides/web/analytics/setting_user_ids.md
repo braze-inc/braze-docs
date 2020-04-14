@@ -69,6 +69,6 @@ Please note the following:
 
 {% include archive/aliasing.md platform="Web" %}
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[2]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.changeUser "Javadocs"

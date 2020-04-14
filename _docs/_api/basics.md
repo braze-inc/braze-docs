@@ -19,7 +19,7 @@ platform:
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data. 
 
 {% alert note %}
-Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
+Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
 {% endalert %}
 
 ## API Definitions
@@ -54,7 +54,7 @@ The `company_secret` was formerly included with all API requests but has been de
 ### App Group REST API Keys
 
 {% alert note %}
-For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{ site.baseurl }}/api/api_key/">API Keys</a> and <a href="{{ site.baseurl }}/api/identifier_types/">API Identifier Types</a> reference articles.
+For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
 
 {% endalert %}
 
@@ -152,13 +152,13 @@ Header Name             | Description
 If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
 
 
-[7]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#connected-audience-object
+[7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
-[10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[18]: {{ site.baseurl }}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[support]: {{ site.baseurl }}/support_contact/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
+[18]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
+[support]: {{site.baseurl}}/support_contact/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

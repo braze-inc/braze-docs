@@ -12,7 +12,7 @@ tool:
   - Campaigns
 ---
 {% alert important %}
-Push Primer campaigns require backend set up from your developers. <br>Check out the neccesary Push Primer Integrations [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_primer/).
+Push Primer campaigns require backend set up from your developers. <br>Check out the neccesary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
 
 
@@ -27,12 +27,12 @@ Push Primer campaigns are useful because they address the issue of the dreaded i
 To address this, Braze offers steps on how to set up Push Primer Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message as well as offer re-deliverability, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers should provide users valuable information on why notifications for your application are important.
 
 For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
-- [Android Push Enabled]({{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
-- [iOS Push Enabled]({{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
+- [Android Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
+- [iOS Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 
 {% alert note %}
 __Should I be using Push Primers?__ Depends on your iOS version.<br><br>
-- __iOS 12__: With the iOS 12 update offering [provisional authorization]({{ site.baseurl }}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), allowing this initial push prompt to be delivered silently to your notification center, some may find Push Primers no longer needed, while others may continue its use. We recognize not every iOS app will have its developers incorporate provisional authorization, so push primers are still a great approach for those applications. We recommend meeting with your Customer Success Manager to discuss if incorporating push primers are the right move.
+- __iOS 12__: With the iOS 12 update offering [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), allowing this initial push prompt to be delivered silently to your notification center, some may find Push Primers no longer needed, while others may continue its use. We recognize not every iOS app will have its developers incorporate provisional authorization, so push primers are still a great approach for those applications. We recommend meeting with your Customer Success Manager to discuss if incorporating push primers are the right move.
 - __iOS 11 and Later__: Because these iOS versions only allow foreground Push, the intrusive native iOS Push opt-in prompt will still get sent, in turn sacrificing your marketability to those users. We strongly suggest setting up Push Primers for these versions. 
 {% endalert %}
 
@@ -94,8 +94,8 @@ If you are not sure the best way to segment, you may also select All Users. This
 ## Step 7: Conversions
 Braze suggests default settings for conversions, but you may want to set up conversion events surrounding push primers.
 
-[deeplink]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[integrations]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_primer/
+[deeplink]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
+[integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/
 [push_primer1]: {% image_buster /assets/img/push_primer/push_primer_1.jpg %}
 [push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.jpg %}
 [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %}
@@ -103,5 +103,5 @@ Braze suggests default settings for conversions, but you may want to set up conv
 [push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %}
 [push_primer6]: {% image_buster /assets/img/push_primer/push_primer_6.jpg %}
 [push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.jpg %}
-[ioslink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/ios/rich_notifications/#requirements
-[androidlink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/android/rich_notifications/#requirements
+[ioslink]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#requirements
+[androidlink]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/#requirements

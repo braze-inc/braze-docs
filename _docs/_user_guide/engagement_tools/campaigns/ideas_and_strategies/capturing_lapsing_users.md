@@ -47,5 +47,5 @@ Now, you’re ready to send the campaign. Confirm the settings on the last page 
 [1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
 [2]: {% image_buster /assets/img_archive/2weeklapse3.png %}
 [3]: {% image_buster /assets/img_archive/2weeklapse4.png %}
-[4]: {{ site.baseurl }}/help/faqs/#what-does-local-time-zone-delivery-offer
+[4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
 [5]: {% image_buster /assets/img_archive/2weeklapse2.png %}

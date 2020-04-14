@@ -39,6 +39,6 @@ guide_featured_list:
 
 <br>
 
-Not ready for any of the topics above? Head to our [SMS Set Up section]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
+Not ready for any of the topics above? Head to our [SMS Set Up section]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
 
 <br>

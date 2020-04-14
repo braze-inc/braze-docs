@@ -84,7 +84,7 @@ These data types are accepted in User Import:
 Arrays, Push Tokens, and Custom Event data types are not supported in User Import.
 Especially for Arrays, commas in your CSV file will be interpreted as a column separator; therefore, any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, please use Braze’s [User/Track REST API]({{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint).
+For uploading these kinds of values, please use Braze’s [User/Track REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
 {% endalert %}
 
 ### Importing a CSV
@@ -160,16 +160,16 @@ If you are seeing a piece of Standard User Data (e.g. `email` or `first_name` im
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[fields]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#custom-attribute-data-types
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[fields]: {{site.baseurl}}/developer_guide/rest_api/user_data/#custom-attribute-data-types
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-upsers.png %}
-[12]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+[12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
 [date]: https://en.wikipedia.org/wiki/ISO_8601
 [utf8]: https://en.wikipedia.org/wiki/UTF-8
-[CAO]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[filtering]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[CAO]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[filtering]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}

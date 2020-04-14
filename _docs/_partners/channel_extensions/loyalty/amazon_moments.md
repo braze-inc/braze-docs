@@ -67,7 +67,7 @@ You will need to ensure your Moments campaign is live before proceeding further.
 
 ### Using Amazon Moments in Your Braze Campaigns & Canvases
 
-Through Braze’s [Connected Content]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/), you will be able to make outbound API requests, at time of message send, to fetch data outside of Braze for further personalization. This can allow you to dynamically insert copy, images, urls, and more with data not actively stored in Braze’s user profiles.  
+Through Braze’s [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), you will be able to make outbound API requests, at time of message send, to fetch data outside of Braze for further personalization. This can allow you to dynamically insert copy, images, urls, and more with data not actively stored in Braze’s user profiles.  
 
 There are two Amazon Moments REST API Endpoints:
 

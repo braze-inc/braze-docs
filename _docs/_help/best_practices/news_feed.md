@@ -47,7 +47,7 @@ The content you choose to show through the News Feed can range widely and work i
 
 You can view more examples of News Feeds in our [Client Integration Gallery][3].
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
 [2]: {% image_buster /assets/img_archive/18F_newsfeed.png %}
-[3]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
-[4]: {{ site.baseurl }}/user_guide/engagement_tools/news_feed/
+[3]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
+[4]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/

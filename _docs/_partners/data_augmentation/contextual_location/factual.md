@@ -19,14 +19,14 @@ Leverage Factual to better understand and uplevel mobile experiences through loc
 | Requirement   |Origin| Description |
 | --------------|------|------------- |
 | Engine SDK    |[Factual Engine SDK](http://developer.factual.com/engine/ios/)| In order to successfully integrate Factual's Engine SDK with Braze, ensure the Engine client has been configured properly and starts successfully. This requires confirming an API key has been acquired and the Engine SDK has been properly imported into the project. |
-|Appboy Client|[Braze SDK iOS Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/) | Also ensure the Appboy client is properly configured. |
+|Appboy Client|[Braze SDK iOS Setup]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/) | Also ensure the Appboy client is properly configured. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% tab Android %}
 | Requirement   |Origin | Description |
 | --------------|-------|------------- |
 | Engine SDK    |[Factual Engine SDK](http://developer.factual.com/engine/android/) | In order to successfully integrate Factual's Engine SDK with Braze, ensure the Engine client has been configured properly and starts successfully. This requires confirming an api key has been acquired and the Engine SDK has been properly imported into the project. |
-| Appboy Client|[Braze SDK Android Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true#step-2-configure-the-braze-sdk-in-appboyxml) | Also ensure the Appboy client is properly configured. |
+| Appboy Client|[Braze SDK Android Setup]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true#step-2-configure-the-braze-sdk-in-appboyxml) | Also ensure the Appboy client is properly configured. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% endtabs %}

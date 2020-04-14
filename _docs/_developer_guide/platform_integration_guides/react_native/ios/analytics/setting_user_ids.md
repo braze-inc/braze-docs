@@ -12,4 +12,4 @@ See [the iOS integration instructions][1] for an in depth discussion of when to 
  ReactAppboy.changeUser("YOUR_USER_ID");
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/

@@ -15,7 +15,7 @@ page_type: partner
 
 You can improve your data flow by marrying mParticle and Braze for a seamless way to control the flow of information between systems. What's more, with Currents, Braze's real-time data export, connect data to mParticle and make it actionable across the entire growth stack.
 
-If you're looking for information on the Currents integration with mParticle, [click here]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
+If you're looking for information on the Currents integration with mParticle, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
 
 ## Pre-Requisites
 
@@ -55,9 +55,9 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | Messaging Need | Details |
 |---|---|
 | In-App Messaging | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
-| News Feed / Content Cards | Implemented directly via Braze SDK ([iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/content_cards/overview/), [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/overview/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/overview/)).
+| News Feed / Content Cards | Implemented directly via Braze SDK ([iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/overview/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/overview/)).
 | Push for Android | Follow the [mParticle Android Push Notification Integration Documentation](https://docs.mparticle.com/developers/sdk/android/push-notifications). |
-| Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
+| Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
 |Push for Web | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -71,7 +71,7 @@ Integrate the appropriate Braze SDKs into your app based on your messaging needs
 | External Identity Type | The mParticle User Identity type to forward as an External ID to Braze. We recommend leaving this to the default value, Customer ID. |
 | Braze Instance | Select Custom. |
 | Custom SDK Endpoint | Given to you by your Braze support or account representative. For example: `sdk.api.braze.com`. If you were not given a custom API Endpoint, leave this setting blank. |
-|Custom REST Endpoint | Given to you by your Braze support or account representative. For example: `rest.iad.braze.com`. If you know which Braze Instance you’re on, you can find your endpoint [here]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). |
+|Custom REST Endpoint | Given to you by your Braze support or account representative. For example: `rest.iad.braze.com`. If you know which Braze Instance you’re on, you can find your endpoint [here]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 | Custom Javascript Endpoint | Same as Custom SDK endpoint. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -94,15 +94,15 @@ The App Group REST API Key required to input in mParticle’s dashboard can be f
 
 ![Braze Developer Console - API Settings][2]
 
-Custom REST Endpoint: Set this to your relevant [REST API endpoint]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints). This should match the “Custom REST Endpoint” field in the Event Configuration for Braze found in your mParticle Dashboard in the “Setup” tab under “Outputs”.
+Custom REST Endpoint: Set this to your relevant [REST API endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the “Custom REST Endpoint” field in the Event Configuration for Braze found in your mParticle Dashboard in the “Setup” tab under “Outputs”.
 
 {% alert warning %}
 
 On Data Mapping - Not all data types that are supported on mParticle are supported by Braze.
 
-[Custom Event Properties]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
+[Custom Event Properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
 
-[Custom Attributes]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
+[Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
 
 
 {% endalert %}

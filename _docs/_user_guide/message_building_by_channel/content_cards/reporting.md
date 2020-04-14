@@ -68,5 +68,5 @@ This block will show you the performance of your conversion events for an indivi
 
 {% endtabs %}
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
-[2]: {{ site.baseurl }}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+[2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants

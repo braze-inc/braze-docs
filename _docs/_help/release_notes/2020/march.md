@@ -15,4 +15,4 @@ The custom attribute filter changes are reflected in the filters:
 
 __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__ 
 
-Check out our [documentation]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
+Check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.

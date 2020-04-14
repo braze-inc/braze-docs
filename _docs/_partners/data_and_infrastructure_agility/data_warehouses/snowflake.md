@@ -93,6 +93,6 @@ Our benchmarking data will also be available directly in the Snowflake Data Exch
 
 > For a set of example queries to reference when setting up snowflake, check out our [Sample Queries][SQ] and [ETL Event Pipleine Setup][ETL] examples.
 
-[SQ]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
-[ETL]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
+[SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
+[ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
 [schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}

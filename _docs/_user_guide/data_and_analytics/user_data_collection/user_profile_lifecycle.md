@@ -71,13 +71,13 @@ Aside from acting as a mechanism to organize user data and reference user profil
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
-[23]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
-[24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
-[25]: {{ site.baseurl }}/developer_guide/home/
+[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[25]: {{site.baseurl}}/developer_guide/home/
 [26]: {% image_buster /assets/img_archive/Braze_User_flowchart.png %}
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#new-user-alias-endpoint
-[28]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint
+[28]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
 [29]: {% image_buster /assets/img_archive/Braze_User_aliases.png %}
-[30]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[31]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[32]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#new-user-alias-endpoint
+[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
+[31]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
+[32]: {{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint

@@ -55,7 +55,7 @@ The requirements listed below are typical requirements you might need from Braze
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
 |Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
+|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
 
 ## [Type of Integration] Integration
 

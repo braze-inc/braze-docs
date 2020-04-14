@@ -15,4 +15,4 @@ Uninstalls per Canvas Steps are now tracked and viewable as a stat.
 ![uninstall_tracking][1]
 
 [1]: {% image_buster /assets/img/uninstall_tracking_canvas_step.png %}
-[98]: {{ site.baseurl }}/user_guide/onboarding/platform_administrative_features/#authentication-rules
+[98]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

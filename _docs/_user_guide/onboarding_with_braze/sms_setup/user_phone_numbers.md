@@ -8,13 +8,13 @@ channel: SMS
 
 # User Phone Numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [Short & Long Codes]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [Short & Long Codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
 Phone numbers are shown in the User Profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
 ## Importing Phone Numbers
 
-You can import phone numbers by uploading a [CSV]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) or via [API]({{ site.baseurl }}/api/endpoints/user_data/#user-track-endpoint) to create a user.
+You can import phone numbers by uploading a [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) or via [API]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to create a user.
 
 ### Formatting
 
@@ -43,9 +43,9 @@ As you can see, the country codes for each listing are:
 
 ### Adding Users to SMS Subscription Groups
 
-For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
+For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [picture]: {% image_buster /assets/img/sms/e164.jpg %}
 
 
