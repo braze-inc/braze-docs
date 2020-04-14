@@ -36,8 +36,6 @@ Our guidelines for images are more structured than those for text, as we want to
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
 - For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
-
-
 {% tabs %}
   {% tab Full-Screen %}
   [Further details for full-screens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
@@ -46,7 +44,7 @@ Our guidelines for images are more structured than those for text, as we want to
   |--- | --- | --- |
   | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping may occur on all sides, but the image will always fill the top 50% of the viewport |
   | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping may occur on the left and right edges on taller devices |
-
+  {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Modal %}
@@ -57,7 +55,7 @@ Our guidelines for images are more structured than those for text, as we want to
   |--- | --- | ------ |
   | Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Tall images will scale down and be horizontally centered |
   | Image Only | Any aspect ratio<br>Hi-Res __Max__ 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most sizes and dimensions |
-
+  {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Slideup %}
@@ -67,12 +65,10 @@ Our guidelines for images are more structured than those for text, as we want to
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
 | Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 600 x 500px | Images of various aspect ratios will fill a square image container, without cropping. |
-
-
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% endtabs %}
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ### Gifs & Videos
