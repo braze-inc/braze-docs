@@ -459,7 +459,7 @@ _Update noted in August 2019._
 ## Subscription Events
 
 {% apitags %}
-Subscription
+Subscription, Email, SMS
 {% endapitags %}
 
 This event occurs when the subscription state of a user in a subscription group changes. 
