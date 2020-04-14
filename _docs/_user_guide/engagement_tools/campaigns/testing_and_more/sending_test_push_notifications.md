@@ -2,7 +2,7 @@
 nav_title: Sending Test Messages
 platform: Campaigns
 subplatform: Testing and More
-page_order: 12
+page_order: 4
 
 tools: campaigns
 page_type: reference

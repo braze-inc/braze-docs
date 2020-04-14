@@ -2,7 +2,7 @@
 nav_title: Comparing Campaigns
 platform: Campaigns
 subplatform: Testing and More
-page_order: 7
+page_order: 2
 
 tools: campaigns
 page_type: reference
