@@ -10,9 +10,11 @@ This feature is currently in Beta. Please reach out to your Braze account manage
 {% endalert %}
 
 # Predictive Churn
-> Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Churn Prediction, providing a proactive approach toward minimizing future churn.
+> Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn.
 
-Churn Prediction allows you to create custom machine-learning models of user churn, and use them to predict and respond to predicted future churn before it happens. You can also tailor these models to specific audiences within your user base. Predictive Churn will generate new predictions on a regular schedule as well as keep its understanding of actual user churn updated automatically.
+With Predictive Churn, you can define what churn means for your business ([Churn Definition](#step-2-define-churn)) as well as the users you'd like to prevent from churning ([Retainable Users](#step-3-choose-the-users-you-want-to-keep-from-churning)). When you Build the Prediction, Braze will train a machine learning model to predict Churn by comparing historical Churners and Retainable Users. 
+
+Once the model is built and done training, users that currently fit the definition of Retainable Users will be assigned a Churn Risk Score between 0 and 100 denoting how likely they are to Churn according to your definition. Updating current Retainable Users' risk scores can be done with a [frequency you choose](#step-4-choose-the-update-frequency-for-churn-predictions). This way, you can reach out to users who are at risk of Churning before they actually do and try to prevent it from happening in the first place.
 
 ## Step 1: Create a New Prediction
 On the left navigation bar of the Braze dashboard, choose the Predictions page.  A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
