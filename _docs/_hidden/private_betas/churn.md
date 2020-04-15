@@ -102,7 +102,7 @@ As a shortcut, you can use the "Create Segment" or "Create Campaign" buttons bel
 
 Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
 
-### What To Do Next? {what-do-next}
+### What To Do Next? {#what-do-next}
 
 Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep ‘em active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Here’s a few ideas to consider:
 
@@ -122,8 +122,7 @@ Keep in mind that you can message different levels of at-risk users differently!
 For the Churn definitions we outlined above, here might be some corresponding “Retainable Users” definitions:
 - Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago. You might want to create 2 predictions in this case, and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”
 - For uninstallers, you might focus on customers who have purchased something in the recent past or used the app very recently.
-- For those at risk of not purchasing as a definition of churn, you may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention wi
-
+- For those at risk of not purchasing as a definition of churn, you may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
