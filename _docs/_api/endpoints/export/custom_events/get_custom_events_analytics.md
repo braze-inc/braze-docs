@@ -29,6 +29,7 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 | `ending_at`  | No       | DateTime (ISO 8601 string) | Point in time when the data series should end - defaults to time of the request |
 | `app_id`     | No       | String | App API Identifier retrieved from the Developer Console to limit analytics to a specific app |
 | `segment_id` | No       | String | Segment API Identifier indicating the analytics enabled segment for which event analytics should be returned |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
 `https://rest.iad-01.braze.com/events/data_series?event=event name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=segment identifier`

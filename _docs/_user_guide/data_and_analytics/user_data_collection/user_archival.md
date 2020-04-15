@@ -6,7 +6,7 @@ page_order: 0
 
 ## Inactive Users
 
-"Inactive Users" are users that are unreachable and have likely churned from your customer's mobile application or website. Inactive Users are those that meet all of these criteria:
+"Inactive Users" are users that are unreachable and have likely churned. Inactive Users are those that meet all of these criteria:
 
 - Cannot be sent email. For example, they do not have an email address or they are unsubscribed from all email lists.
 - Cannot be sent push. For example, they have uninstalled the app or disabled push permissions.
@@ -14,7 +14,7 @@ page_order: 0
 - Have not received any messages from an app group in more than six months.
 - Braze has not processed any data points for this user profile in more than six months.
 
-In this case, these users cannot be messaged and are not engaging with the mobile app or website. These users have effectively churned.
+In this case, these users cannot be messaged and are not engaging with your brand. These users have effectively churned.
 
 ## Dormant Users
 
@@ -33,10 +33,10 @@ This process ensures that Braze provides accurate statistics regarding campaign 
 
 That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes.
 
-If you have a user that meets the above criteria that you do not want to become Inactive or Dormant, you may simply register a single data point for that profile once every six or twelve months.
+If you have a user that meets the above criteria that you do not want to become Inactive or Dormant, you may simply register a single data point for that profile once every six months.
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block individual users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of an incorrect integration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
 [1]: {{site.baseurl}}/help/gdpr_compliance/#braze-recommendation

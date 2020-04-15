@@ -25,6 +25,7 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 | Parameter    | Required | Data Type | Description            |
 | ------------ | -------- | --------- | ---------------------- |
 | `segment_id` | Yes      | String    | Segment API Identifier |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
 The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).

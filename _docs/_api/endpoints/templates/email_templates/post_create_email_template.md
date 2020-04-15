@@ -64,5 +64,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 
 - `All Tags must be Strings.`
 
-- `Some Tags could not be found.`
+- `Some Tags could not be found.` - A tag was specified which doesn't exist in this environment.
+
+- `Email must have valid content block names.` - The email contains Content Blocks which do not exist in this environment.
+
 {% endapi %}

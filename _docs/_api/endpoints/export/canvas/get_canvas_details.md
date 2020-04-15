@@ -25,6 +25,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 | Parameter   | Required | Data Type | Description            |
 | ----------- | -------- | --------- | ---------------------- |
 | `canvas_id` | Yes      | String    | Canvas API Identifier  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request
 ```
@@ -48,6 +49,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/canvas/details?canv
   "variants": [
     {
       "name": (string) name of variant,
+      "id": (string) API identifier of the variant,
       "first_step_ids": (array of strings) API identifiers for first steps in variant,
       "first_step_id": (string) API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
     },
