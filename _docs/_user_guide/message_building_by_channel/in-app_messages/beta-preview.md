@@ -66,9 +66,10 @@ The following features are planned and coming soon!
 
 ### Mobile App Support
 
-* Adding support to preview custom HTML In-App Messages for Mobile Apps
+* Adding the same preview support for custom HTML In-App Messages send to Mobile Apps
+  - At first, for eligible campaigns that do not use the zip uploader
 
-* Send a custom HTML In-App Message to both mobile and web with the same campaign
+* Create and send a single custom HTML In-App Message to both mobile _and_ web
 
 ### Asset Management
 
