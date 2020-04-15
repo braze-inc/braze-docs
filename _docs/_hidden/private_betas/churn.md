@@ -28,7 +28,7 @@ During the beta of Predictive Churn, there is a limit of 3 concurrently active P
 On the Edit page, give your new Prediction a unique name.
 
 ## Step 2: Define Churn
-In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. 	For example, you might consider users who haven’t opened your app in 7 days to be churned. 
+In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has.     For example, you might consider users who haven’t opened your app in 7 days to be churned. 
 
 To implement this example, enter 7 days in the time window at the top of the panel.
 
@@ -88,11 +88,11 @@ Here’s what we recommend for various different ranges of Lift Quality:
 
 Users in the Retainable Users audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be placed in the Low Churn Risk category. Users with scores between 50 and 75, and 75 and 100 will be placed in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
 
-Below the chart of Churn Scores, three sentences will help you decide who to target in your Retainable Users population, and what the risks are. Based on the data used during creation of the Prediction, the sentences with editable fields will help you determine what accuracy (true positive rate) and number of false positives or false alarms to expect based on the number of users you target for messaging.
+Below the chart of Churn Scores, three sentences will help you decide who to target in your Retainable Users population, and what the risks are. Based on the data used during the creation of the Prediction, the sentences with editable fields will help you determine what accuracy (true positive rate) and number of false positives or false alarms to expect based on the number of users you target for messaging.
 
 The first sentence allows you to set the number of users out of the Retainable Users audience that you could potentially target with a message. (100% would mean sending a message to everyone in the Retainable Users group. Of course, this is not the goal.) Once you set this percentage, the other editable field will change to what percentage of actual churners this is likely to successfully identify based on previously estimated accuracy. Notice both fields are editable and change when the other is changed. The second sentence will identify what threshold for the churn score corresponds to the audience percentage and accuracy currently populated in the editable fields, i.e. the churn score cutoff above which to send users a message.
 
- The third sentence will also identify how many users are likely to be misidentified as churners (again based on previous estimates.) Because no predictions are perfect, this allows you to gauge the trade off between correctly targeting more actual churners and falsely identifying users who seem like they may churn but ultimately would not have in truth. The better the model, the fewer users you'll need to message to capture more of the true churners.
+ The third sentence will also identify how many users are likely to be misidentified as churners (again based on previous estimates.) Because no predictions are perfect, this allows you to gauge the trade-off between correctly targeting more actual churners and falsely identifying users who seem like they may churn but ultimately would not have in truth. The better the model, the fewer users you'll need to message to capture more of the true churners.
 
 ### Target Users
 
@@ -106,7 +106,7 @@ Archived Predictions will cease updating user scores. Any archived Prediction th
 
 ### What To Do Next? {#what-do-next}
 
-Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep ‘em active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Here’s a few ideas to consider:
+Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep ‘em active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Here are a few ideas to consider:
 
 - Target your predicted medium-to-high-risk users with a special discount, free merchandise (physical gift or digital credits), exclusive content, or early access to a new experience (product, app feature, level).
 - You could drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or Send a message from a real person, asking for brand feedback or offering a pro tip.
@@ -116,12 +116,12 @@ Keep in mind that you can message different levels of at-risk users differently!
 
 ### Sample Churn and Retainable Users definitions {#sample-definitions}
 
-- “Cancelled Subscription within the past 7 days.” This might look something like “last did custom event ‘Subscription Cancellation’ less than one weeks ago.”
+- “Cancelled Subscription within the past 7 days.” This might look something like “last did custom event ‘Subscription Cancellation’ less than one week ago.”
 - “Free Trial Expired within the past 14 days.” This might look something like “last did custom event ‘Trial Expired’ less than two weeks ago.”
 - “Uninstalled the app in the last 24 hours.” This might look something like “Uninstalled less than 1 days ago.” 
 - “Purchased more than 14 days ago.” This might look something like “Last made purchase more than 2 weeks ago.”
 
-For the Churn definitions we outlined above, here might be some corresponding “Retainable Users” definitions:
+For the Churn definitions we outlined above, there might be some corresponding “Retainable Users” definitions:
 - Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago. You might want to create 2 predictions in this case, and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”
 - For uninstallers, you might focus on customers who have purchased something in the recent past or used the app very recently.
 - For those at risk of not purchasing as a definition of churn, you may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
