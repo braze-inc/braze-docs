@@ -34,6 +34,8 @@ To implement this example, enter 7 days in the time window at the top of the pan
 
 Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select “Last Used App.” The time window automatically matches the one selected above. Any other filters you select will do the same. Note that not all filters available in Braze segments will be available here.
 
+Interested in some potential churn definitions to consider? You’ll find some inspiration at the [bottom of this page](#sample-definitions).
+
 ## Step 3: Choose the Users you Want to Keep from Churning
 Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if we narrow down the group of users we want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, we might want to retain users who first used the app more than a month ago or have ever made a purchase.
 
@@ -42,6 +44,8 @@ During the beta of Predictive Churn, the Retainable Users audience cannot exceed
 {% endalert %}
 
 For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters cannot exceed 30 days - the # of days of the window specified in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+
+For a sample list of Retainable User definitions, check out the [bottom of the page](#sample-definitions)! 
 
 ## Step 4: Choose the Update Frequency for Churn Predictions
 
@@ -97,6 +101,29 @@ As a shortcut, you can use the "Create Segment" or "Create Campaign" buttons bel
 ### Archived Predictions
 
 Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
+
+### What To Do Next? {what-do-next}
+
+Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep ‘em active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Here’s a few ideas to consider:
+
+- Target your predicted medium-to-high-risk users with a special discount, free merchandise (physical gift or digital credits), exclusive content, or early access to a new experience (product, app feature, level).
+- You could drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or Send a message from a real person, asking for brand feedback or offering a pro tip.
+- Maybe you just need a new, fun way to reiterate the value of your brand, and all the ways these customers have found value in yours before. This could look like a persona-specific weekly newsletter, a series of real stories from real users about your brand, or some other content marketing play.
+
+Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments, to further qualify who gets what offers, messages, etc.
+
+### Sample Churn and Retainable Users definitions {#sample-definitions}
+
+- “Cancelled Subscription within the past 7 days.” This might look something like “last did custom event ‘Subscription Cancellation’ less than one weeks ago.”
+- “Free Trial Expired within the past 14 days.” This might look something like “last did custom event ‘Trial Expired’ less than two weeks ago.”
+- “Uninstalled the app in the last 24 hours.” This might look something like “Uninstalled less than 1 days ago.” 
+- “Purchased more than 14 days ago.” This might look something like “Last made purchase more than 2 weeks ago.”
+
+For the Churn definitions we outlined above, here might be some corresponding “Retainable Users” definitions:
+- Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago. You might want to create 2 predictions in this case, and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”
+- For uninstallers, you might focus on customers who have purchased something in the recent past or used the app very recently.
+- For those at risk of not purchasing as a definition of churn, you may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention wi
+
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
