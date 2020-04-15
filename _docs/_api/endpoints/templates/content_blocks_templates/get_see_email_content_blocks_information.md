@@ -31,6 +31,7 @@ This endpoint will call information for your exiting [Email Content Blocks]({{si
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `content_block_id`  | Yes | String | The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Successful Response Properties
 ```json
@@ -49,13 +50,10 @@ This endpoint will call information for your exiting [Email Content Blocks]({{si
 ```
 
 ## Possible Errors
-- `Content Block ID cannot be blank.`
-A Content Block has not been listed or is not encapsulated in quotes.
+- `Content Block ID cannot be blank.` - A Content Block has not been listed or is not encapsulated in quotes.
 
-- `Content Block ID is invalid for this App Group.`
-This Content Block does not exist or is in a different company account or app group.
+- `Content Block ID is invalid for this App Group.` - This Content Block does not exist or is in a different company account or app group.
 
-- `Content Block has been deleted - content not available.`
-This Content Block, though it may have existed earlier, has been deleted.
+- `Content Block has been deleted - content not available.` - This Content Block, though it may have existed earlier, has been deleted.
 
 {% endapi %}
