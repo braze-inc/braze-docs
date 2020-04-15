@@ -25,7 +25,6 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `campaign_id` | Yes | String | Campaign API Identifier |
 | `length` | Yes | Integer | Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
@@ -35,7 +34,13 @@ The `campaign_id` for API campaigns can be found on the Developer Console page a
 {% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/campaigns/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2014-12-10T23:59:59-05:00`
+`https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00`
+
+### Example Request 
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ### Responses
 

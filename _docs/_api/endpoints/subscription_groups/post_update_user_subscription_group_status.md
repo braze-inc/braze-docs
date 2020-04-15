@@ -41,7 +41,6 @@ Content-Type: application/json
 
 ```json
 {
-   "api_key": (required, string) your App Group REST API Key,
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
@@ -55,26 +54,52 @@ Content-Type: application/json
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
 \* Email subscription groups: Either `email` or `external_id` is required. 
 
-### Example Requests
-
 #### Using Email
 ```json
 {
-  "api_key": "12345",
-  "subscription_group_id": "111-222-333",
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "email": "john@braze.com"
-  }
+  "email": "your.user@email.com"
+}
+
 ```
 
 #### Using Phone Number
 ```json
 {
-  "api_key": "12345",
-  "subscription_group_id": "111-222-333",
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "phone": "+14152342671"
-  }
+  "phone": "+12223334444"
+}
+
+```
+
+### Example Requests Email
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set?subscription_group_id=pto81fff-734f-80e5-b7b2-b880562888ww&subscription_state=unsubscribed&external_id=user123&email=your.user@email.com' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_state": "unsubscribed",
+  "external_id": "user123",
+  "email": "your.user@email.com"
+}
+'
+```
+
+### Example Requests SMS
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set?subscription_group_id=pto81fff-734f-80e5-b7b2-b880562888ww&subscription_state=unsubscribed&external_id=user123&phone=+12223334444' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_state": "unsubscribed",
+  "external_id": "user123",
+  "phone": "+12223334444"
+}
+'
 ```
 
 ### Example Successful Response

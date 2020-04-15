@@ -24,7 +24,6 @@ This endpoint allows you to retrieve relevant information on the card, which can
 
 | Parameter | Required | Data Type | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `api_key` | Yes      | String    | App Group REST API Key |
 | `card_id` | Yes      | String    | Card API Identifier    |
 
 {% alert tip %}
@@ -32,7 +31,13 @@ The `card_id` for a given card can be found in the Developer Console page and on
 {% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/feed/details?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+`https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

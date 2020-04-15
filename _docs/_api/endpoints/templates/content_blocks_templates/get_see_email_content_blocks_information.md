@@ -29,8 +29,13 @@ This endpoint will call information for your exiting [Email Content Blocks]({{si
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `content_block_id`  | Yes | String | The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.|
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ### Successful Response Properties
 ```json

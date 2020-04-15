@@ -37,7 +37,6 @@ Content-Type: application/json
 
 ```json
 {
-   "api_key" : (required, string) see App Group REST API Key,
    "user_aliases" : (required, array of New User Alias Object)
 }
 ```
@@ -83,7 +82,6 @@ EU-01  | `https://rest.fra-01.braze.eu/users/identify`
 POST https://YOUR_REST_API_URL/users/identify
 Content-Type: application/json
 {
-   "api_key" : (required, string) see App Group REST API Key,
    "aliases_to_identify" : (required, array of Aliases to Identify Object)
 }
 ```
@@ -103,6 +101,24 @@ Content-Type: application/json
 ```
 
 For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new?user_aliases' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "user_aliases" : 
+  [
+    {
+      "external_id": "user_id",
+      "alias_name" : "name",
+      "alias_label" : "label"
+    }
+  ]
+}'
+```
+
 
 {% endapi %}
 

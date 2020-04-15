@@ -31,16 +31,20 @@ Use the Template REST APIs to programmatically manage the email templates that y
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `modified_after`  | No | String in ISO 8601 | Retrieve only templates updated at or after the given time. |
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 
-### Example Request
-
+### Example URL
 ```
-https://rest.iad-01.braze.com/templates/email/list?api_key=123abc-def5-3729-owod-23f9f3j30
+https://est.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset
+```
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ## Successful Response Properties

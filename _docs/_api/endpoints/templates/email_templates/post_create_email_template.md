@@ -33,7 +33,6 @@ Use the endpoints below to create email templates on the Braze dashboard. These 
 
 ```json
 {
-   "api_key": (required, string) your App Group REST API Key,
    "template_name": (required, string) the name of your email template,
    "subject": (required, string) the email template subject line,
    "body": (required, string) the email template body that may include HTML,
@@ -41,6 +40,21 @@ Use the endpoints below to create email templates on the Braze dashboard. These 
    "preheader": (optional, string) the email preheader used to generate previews in some clients,
    "tags": (optional, Array of Strings) Tags must already exist.
  }
+```
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create?template_name=Template%20Name&subject=Subject&body=Body&plaintext_body=Plaintext_Body&preheader=Header&tags=[%22Tag1%22,%20%22Tag2%22]' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "template_name": "email_template_name",
+  "subject": "Welcome to my email template!",
+  "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
+  "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
+  "preheader": "My preheader is pretty cool.",
+  "tags": ["Tag1", "Tag2"]
+}'
 ```
 
 ### Possible Errors

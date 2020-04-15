@@ -27,7 +27,6 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 ## Request Body
 ```json
 {
-  "api_key": "YOUR_API_KEY_HERE",
   "content_block_id" :"123a45b6-cd78-9e01-g234-hi56j7k8l9m0", 
   "name": "content-block-1",
   "description": "This is my content block",
@@ -41,13 +40,27 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 |`content_block_id`|	Yes |	String |	Your Content Block's API Identifier.|
 | `name` | Yes | String | Can only be provided when the content block is in a draft state. Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
+| `state` | No | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
 | `tags` | No | Array of Strings. | Tags must already exist.
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update?content_block_id=123a45b6-cd78-9e01-g234-hi56j7k8l9m0&name=content-block-1&description=This%20is%20my%20content%20block&content=HTML%20or%20text%20content%20within%20block&state=draft&tags=[%22tag1%22,%20%22tag2%22]' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "content_block_id" :"123a45b6-cd78-9e01-g234-hi56j7k8l9m0", 
+  "name": "content-block-1",
+  "description": "This is my content block",
+  "content": "HTML or text content within block",
+  "state": "draft",
+  "tags": ["",""]
+}'
+```
 
 ### Successful Response Properties
 

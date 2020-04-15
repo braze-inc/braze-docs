@@ -32,7 +32,6 @@ You can set the email subscription state for an email address that is not yet as
 
 ```json
 {
-  "api_key": "{{api_key}}",
   "email": "example@123.com",
   "subscription_state": "subscribed"
 }
@@ -42,8 +41,19 @@ You can set the email subscription state for an email address that is not yet as
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 | `subscription_state` | Yes | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
+
+### Sample Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/email/status?email=&subscription_state=' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "email": "example@123.com",
+  "subscription_state": "subscribed"
+}'
+```
+
 
 {% endapi %}

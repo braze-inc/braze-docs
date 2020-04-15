@@ -31,13 +31,16 @@ Use the Template REST APIs to programmatically manage the email templates that y
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
 
-### Example Request
+### Example URL
+`https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935
+`
 
+### Example Request
 ```
-https://rest.iad-01.braze.com/templates/email/info?api_key=123abc-def5-3729-owod-23f9f3j30& email_template_id=759c2ad9-eefc-4af1-bde4-602630644935
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ## Successful Response Properties

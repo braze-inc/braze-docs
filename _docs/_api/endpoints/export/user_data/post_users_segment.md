@@ -59,7 +59,6 @@ Larger user bases will result in longer export times. For example, an app with 2
 
 ```json
 {
-    "api_key" : (required, string) App Group REST API Key,
     "segment_id" : (required, string) identifier for the segment to be exported,
     "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
     "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases']. Defaults to all if not provided.
@@ -72,6 +71,28 @@ The `segment_id` for a given segment can be found in your Developer Console with
 {% alert warning %}
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
+
+## Parameters
+
+| Key | Requirement | Data Type | Details |
+|---|---|---|---|
+|`segment_id` | Required | String | Identifier for the segment to be exported |
+|`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
+|`fields_to_export` | Optional | Array of Strings  | Name of user data fields to export. You may export custom attributes. Defaults to all if not provided.|
+|`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment?segment_id&callback_endpoint&fields_to_export&output_format' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+    "segment_id" : "",
+    "callback_endpoint" : "",
+    "fields_to_export" : ["field1", "field2", "field3"],
+    "output_format" : ""
+}'
+```
 
 ### Response
 

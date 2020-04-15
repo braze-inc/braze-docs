@@ -24,7 +24,6 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 
 | Parameter    | Required | Data Type | Description            |
 | ------------ | -------- | --------- | ---------------------- |
-| `api_key`    | Yes      | String    | App Group REST API Key |
 | `segment_id` | Yes      | String    | Segment API Identifier |
 
 {% alert tip %}
@@ -32,7 +31,13 @@ The `segment_id` for a given segment can be found in your Developer Console with
 {% endalert %}
 
 ## Example URL
-`https://rest.iad-01.braze.com/segments/details?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+`https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+
+## Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

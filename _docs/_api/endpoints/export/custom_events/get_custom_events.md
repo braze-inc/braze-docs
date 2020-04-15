@@ -23,11 +23,16 @@ This endpoint allows you to export a list of custom events that have been record
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
 
 ### Example URL
-`https://rest.iad-01.braze.com/events/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+`https://rest.iad-01.braze.com/events/list?page=3`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

@@ -37,14 +37,12 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
 | `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
 | `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
 | `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
 
 Generally, either `external_id` or `email` is required.
-
 
 For SMS subscription groups, either `external_id` or `phone` is required.
 
@@ -53,13 +51,25 @@ Your request must include `phone` or `email` value, _but not both_.
 ### Example Request
 
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&email=example%2B1%40braze.com
+https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone=+11112223333
 ```
 
 ### Example Request for multiple users
 
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&subscription_group_id=1f3-33203-3dd3-d323d3&&external_id[]=1&external_id[]=2
+https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id[]=1&external_id[]=2
+```
+
+### Example Request for SMS
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
+
+### Example Request for Email
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=1234&email=example.email@braze.com' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ### Response

@@ -24,7 +24,6 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `api_key`     | Yes      | String    | App Group REST API Key  |
 | `campaign_id` | Yes      | String    | Campaign API Identifier |
 
 {% alert tip %}
@@ -32,7 +31,13 @@ The `campaign_id` for API campaigns can be found on the Developer Console page a
 {% endalert %}
 
 ### Example Request URL
-`https://rest.iad-01.braze.com/campaigns/details?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+`https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+
+### Example Request 
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+```
 
 ### Campaign Details Endpoint API Response
 

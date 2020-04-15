@@ -31,7 +31,6 @@ Content-Type: application/json
 
 ```json
 {
-   "api_key" : (required, string) see App Group REST API Key,
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
    "purchases" : (optional, array of Purchase Object),
@@ -56,7 +55,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
   "events": [
     {
       "external_id": "string",
@@ -68,6 +66,18 @@ Content-Type: application/json
 ```
 
 You can see this example in action [in our Swagger documentation]({{site.baseurl}}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track?attributes&events=&purchases' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+   "attributes" : (optional, array of Attributes Object),
+   "events" : (optional, array of Event Object), 
+   "purchases" : (optional, array of Purchase Object)
+}'
+```
 
 ### User Track Responses
 

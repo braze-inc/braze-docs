@@ -26,10 +26,15 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String    | App Group REST API Key |
 | `page` | No | Integer   | The page of Canvases to return, defaults to `0` (returns the first set of up to 100) |
 | `include_archived` | No | Boolean | Whether or not to include archived Canvases, defaults to `false`. |
 | `sort_direction`   | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
+
+## Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

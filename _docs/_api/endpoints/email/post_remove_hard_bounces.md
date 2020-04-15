@@ -30,7 +30,6 @@ This endpoint allows you to remove email addresses from your Braze bounce list. 
 
 ```json
 {
-  "api_key": "{{api_key}}",
   "email": "example@123.com"
 }
 ```
@@ -39,7 +38,16 @@ This endpoint allows you to remove email addresses from your Braze bounce list. 
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove?email' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "email": "example@xyz.abc"
+}'
+```
 
 {% endapi %}

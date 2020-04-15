@@ -38,9 +38,9 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `external_id`  | Yes | String | The external_id of the user (must include at least one and at most 50 `external_ids`). |
-| `email`  |  Yes | String | The email address of the user (must include at least one address and at most 50 addresses). |
+| `email`  |  Yes* | String | The email address of the user (must include at least one address and at most 50 addresses). |
+| `phone` | Yes* | The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format. |
 | `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
 | `offset`  |  No | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
 
@@ -50,14 +50,23 @@ If there are multiple users (multiple external ids) who share the same email add
 
 ### Example Request
 
-```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&email=example%2B1%40braze.com&subscription_group_id=14386d4a-60dd-42e2-9c94-5f2423b91d9f
-```
-
+`https://rest.iad-03.braze.com/subscription/user/status?external_id=12345&email=Example&limit=100&offset=1`
 
 ### Example Request for multiple users
+```
+https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2
+```
 
+### Example Request for SMS
 ```
-https://rest.iad-03.braze.com/subscription/user/status?api_key=23abc-def5-3729-owod-23f9f3j30&external_id[]=1&external_id[]=2
+curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id&limit&offset&phone' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
+
+### Example Request for Email
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id&email&limit&offset' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
+
 {% endapi %}

@@ -30,7 +30,6 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 
 ```json
 {
-  "api_key": "{{api_key}}",
   "email": "example@123.com"
 }
 ```
@@ -39,14 +38,15 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 
-## Example Unsubscribe CURL
-
-The following example CURL demonstrates how to unsubscribe a user from receiving email via the Braze APIs:
-
+## Example Request
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"api_key":"YOUR_APP_GROUP_REST_API_KEY","email":"EMAIL_TO_UNSUBSCRIBE","subscription_state":"unsubscribed"}' https://rest.iad-01.braze.com/email/status
+curl --location --request POST 'https://rest.iad-01.braze.com/email/spam/remove?email' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "email": "example@xyz.abc"
+}'
 ```
 {% endapi %}

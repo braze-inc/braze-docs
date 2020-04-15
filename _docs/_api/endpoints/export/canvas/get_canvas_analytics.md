@@ -24,7 +24,6 @@ This endpoint allows you to export time series data for a Canvas.
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `canvas_id` | Yes | String | Canvas API Identifier |
 | `ending_at` | Yes | DateTime (ISO 8601 string) | Date on which the data export should end - defaults to time of the request |
 | `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or starting_at are required) |
@@ -32,6 +31,12 @@ This endpoint allows you to export time series data for a Canvas.
 | `include_variant_breakdown` | No | Boolean | Whether or not to include variant stats (defaults to false) |
 | `include_step_breakdown` | No | Boolean | Whether or not to include step stats (defaults to false) |
 | `include_deleted_step_data` | No | Boolean | Whether or not to include step stats for deleted steps (defaults to false) |
+
+## Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=30&ending_at=2014-12-10T23:59:59-05:00' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

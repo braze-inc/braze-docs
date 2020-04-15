@@ -29,17 +29,49 @@ This endpoint allows you to export data from any user profile by specifying a fo
 
 ```json
 {
-    "api_key" : (required, string) App Group REST API Key,
-    // Either "external_ids," "user_aliases," "device_id," "braze_id," or "email_address" are required. Requests must specify only one.
-    "external_ids" : (optional, array of string) external ids for users to export,
-    "user_aliases" : (optional, array of User Alias Object) user aliases for users to export,
-    "device_id" : (optional, string) device id as returned by various SDK methods such as getDeviceId,
-    "braze_id" : (optional, string) Braze ID for a particular user,
-    "email_address" : (optional, string) email address of a user,
-    "phone" : (optional, string) phone number of a user,
-    "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'], defaults to all if not provided
+  "external_ids": ["user_id1", "user_id2"],
+  "user_aliases": {
+    "alias_name": "",
+    "alias_label": ""
+  },
+  "device_id": "123456",
+  "braze_id": "braze_user_id",
+  "email_address": "email_example@braze.com",
+  "phone": "+12223334444",
+  "fields_to_export": ["first_name", "email", "purchases"]
 }
 ```
+
+## Parameters
+
+| Key | Requirement | Data Type | Details |
+|---|---|---|---|
+|`external_ids` | Optional | Array of Strings | External ids for users to export |
+|`user_aliases` | Optional | Array of User Alias Object. | User aliases for users to export |
+|`device_id` | Optional | String | Device ID as returned by various SDK methods such as getDeviceId |
+|`braze_id` | Optional | String | Braze ID for a particular user |
+|`email_address` | Optional | String | Email address of a user |
+|`fields_to_export` | Optional | Array of Strings | Name of user data fields to export. Defaults to all if not provided |
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids?external_ids=%22user_id1%22&user_aliases&device_id=123456&braze_id=braze_user_id&email_address=email_example@braze.com&fields_to_export=first_name' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "external_ids": ["user_id1", "user_id2"],
+  "user_aliases": {
+    "alias_name": "",
+    "alias_label": ""
+  },
+  "device_id": "123456",
+  "braze_id": "braze_user_id",
+  "email_address": "email_example@braze.com",
+  "phone": "+12223334444",
+  "fields_to_export": ["first_name", "email", "purchases"]
+}'
+```
+
+
 ### Fields to Export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:

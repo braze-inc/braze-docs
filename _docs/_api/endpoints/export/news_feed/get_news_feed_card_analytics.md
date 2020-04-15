@@ -22,20 +22,25 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 ## Parameters
 
-| Parameter   | Required | Data Type                  | Description                                                                                                                  |
-| ----------- | -------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `api_key`   | Yes      | String                     | App Group REST API Key                                                                                                       |
-| `card_id`   | Yes      | String                     | Card API Identifier                                                                                                          |
-| `length`    | Yes      | Integer                    | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
-| `unit`      | No       | String                     | Unit of time between data points - can be "day" or "hour" (defaults to "day")                                                |
-| `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request                                                   |
+| Parameter   | Required | Data Type | Description |
+| ----------- | -------- | --------- | ----------- |
+| `card_id`   | Yes      | String    | Card API Identifier |
+| `length`    | Yes      | Integer   | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
+| `unit`      | No       | String   | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
+| `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
 
 {% alert tip %}
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 {% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/feed/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00`
+`https://rest.iad-01.braze.com/feed/data_series?card_id=card identifier&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id=card%20identifier&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
+```
 
 ## Response
 

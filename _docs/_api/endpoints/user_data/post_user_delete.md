@@ -35,13 +35,24 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key" : (required, string) App Group REST API Key,
   "external_ids" : (optional, array of string) external ids for the users to delete,
   "user_aliases" : (optional, array of User Alias objects) User Aliases for the users to delete,
   "braze_ids" : (optional, array of string) Braze User Identifiers for the users to delete
 }
 ```
 Learn more about the [User Alias Object here]({{site.baseurl}}/api/objects_filters/user_alias_object/).
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/delete?external_ids&user_aliases&braze_ids' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "external_ids": ["user_id1", "user_id2"],
+  "user_aliases": ["user_alias1", "user_alias2"],
+  "braze_ids": ["braze_id1", "braze_id2"]
+}'
+```
 
 ### Response
 
