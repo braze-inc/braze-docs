@@ -116,7 +116,7 @@ __Potential causes of errors__:<br>
 
 {% details What if my App Review was rejected by Facebook? %}
 - For common reasons around why your App Review was rejected, please go [here](https://developers.facebook.com/docs/apps/review/common-rejection-reasons/).
-- If you think that your app should have been approved, go to your App Review request in the Facebook Developer Console and click on the Messenger icon to get in touch with a Facebook representative:<br>![audience sync]({% image_buster /assets/img/FB_audience_sync/FB1.png %}){:height="200px"}
+- If you think that your app should have been approved, go to your App Review request in the Facebook Developer Console and click on the Messenger icon to get in touch with a Facebook representative:<br>![audience sync]({% image_buster /assets/img/fb_audience_sync/FB1.png %}){:height="200px"}
 {% enddetails %}
 
 {% details What if my system user token is invalid? %}
@@ -147,15 +147,15 @@ __Potential causes of errors__:<br>
 [11]: https://developers.facebook.com/docs/apps/review/#supplemental-terms
 [12]: https://developers.facebook.com/docs/audience-network/guides/reporting/system-user/
 [13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
-[15]: {% image_buster /assets/img/FB_audience_sync/FB1.png %}
-[16]: {% image_buster /assets/img/FB_audience_sync/FB2.png %}
-[17]: {% image_buster /assets/img/FB_audience_sync/FB3.png %}
-[18]: {% image_buster /assets/img/FB_audience_sync/FB4.png %}
-[19]: {% image_buster /assets/img/FB_audience_sync/FB5.png %}
-[20]: {% image_buster /assets/img/FB_audience_sync/FB6.png %}
-[21]: {% image_buster /assets/img/FB_audience_sync/FB7.png %}
-[22]: {% image_buster /assets/img/FB_audience_sync/FB8.png %}
-[23]: {% image_buster /assets/img/FB_audience_sync/FB9.png %}
+[15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
+[16]: {% image_buster /assets/img/fb_audience_sync/FB2.png %}
+[17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
+[18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
+[19]: {% image_buster /assets/img/fb_audience_sync/FB5.png %}
+[20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
+[21]: {% image_buster /assets/img/fb_audience_sync/FB7.png %}
+[22]: {% image_buster /assets/img/fb_audience_sync/FB8.png %}
+[23]: {% image_buster /assets/img/fb_audience_sync/FB9.png %}
 [24]: {{site.baseurl}}/fb_app_review/
 [25]: https://developers.facebook.com/docs/apps/review/
 [26]: {{site.baseurl}}/audience_sync_facebook/#facebook-app-review-process
