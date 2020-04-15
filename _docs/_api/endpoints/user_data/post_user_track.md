@@ -137,6 +137,7 @@ The following status codes and associated error messages will be returned if you
 | `404 Not Found` | Unknown REST API Key (if provided). |
 | `429 Rate Limited` | Over rate limit. |
 | `5XX` | Internal server error, you should retry with exponential backoff. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ###  Importing Legacy User Data

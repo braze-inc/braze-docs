@@ -26,6 +26,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 | ----------- | -------- | --------- | ---------------------- |
 | `api_key`   | Yes      | String    | App Group REST API Key |
 | `canvas_id` | Yes      | String    | Canvas API Identifier  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Response
 
