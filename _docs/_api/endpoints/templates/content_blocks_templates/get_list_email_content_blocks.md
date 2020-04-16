@@ -33,6 +33,7 @@ This endpoint will list your existing [Content Blocks]({{site.baseurl}}/user_gui
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only content blocks updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset`  |  No | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 
@@ -62,27 +63,20 @@ GET https://YOUR_REST_API_URL/content_blocks/list
 ```
 
 ### Possible Errors
-- `Modified after time is invalid.`
-The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
+- `Modified after time is invalid.` - The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
 
-- `Modified before time is invalid.`
-The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
+- `Modified before time is invalid.` - The date you have provided is not a valid or parsable date. Please reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`).
 
 - `Modified after time must be earlier than or the same as modified before time.`
 
-- `Content Block number limit is invalid.`
-The `limit` parameter must be an integer (positive number) greater than 0.
+- `Content Block number limit is invalid.` - The `limit` parameter must be an integer (positive number) greater than 0.
 
-- `Content Block number limit must be greater than 0.`
-The `limit` parameter must be an integer (positive number) greater than 0.
+- `Content Block number limit must be greater than 0.` - The `limit` parameter must be an integer (positive number) greater than 0.
 
-- `Content Block number limit exceeds maximum of 1000.`
-The `limit` parameter must be an integer (positive number) greater than 0.
+- `Content Block number limit exceeds maximum of 1000.` - The `limit` parameter must be an integer (positive number) greater than 0.
 
-- `Offset is invalid.`
-The `offset` parameter must be an integer (positive number) greater than 0.
+- `Offset is invalid.` - The `offset` parameter must be an integer (positive number) greater than 0.
 
-- `Offset must be greater than 0.`
-The `offset` parameter must be an integer (positive number) greater than 0.
+- `Offset must be greater than 0.` - The `offset` parameter must be an integer (positive number) greater than 0.
 
 {% endapi %}

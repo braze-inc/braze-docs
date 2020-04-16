@@ -33,6 +33,7 @@ Content-Type: application/json
 | --------- | -------- | --------- | ----------- |
 | `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `end_time` | Yes | String in ISO 8601 format | End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 

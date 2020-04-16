@@ -127,6 +127,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
 |Requests of any other kind|250,000 per hour. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
 API Rate Limits and their Values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.

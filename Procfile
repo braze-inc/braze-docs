@@ -1,1 +1,1 @@
-web: bin/start-nginx bundle exec rake docs:puma
+web: bin/start-nginx bundle exec puma -t 8:32

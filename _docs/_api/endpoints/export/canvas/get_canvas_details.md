@@ -26,6 +26,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 | ----------- | -------- | --------- | ---------------------- |
 | `api_key`   | Yes      | String    | App Group REST API Key |
 | `canvas_id` | Yes      | String    | Canvas API Identifier  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Response
 
@@ -43,6 +44,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
   "variants": [
     {
       "name": (string) name of variant,
+      "id": (string) API identifier of the variant,
       "first_step_ids": (array of strings) API identifiers for first steps in variant,
       "first_step_id": (string) API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
     },
