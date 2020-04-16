@@ -75,6 +75,7 @@ US-03  | `https://rest.iad-03.braze.com/users/identify`
 US-04  | `https://rest.iad-04.braze.com/users/identify`
 US-06  | `https://rest.iad-06.braze.com/users/identify`
 EU-01  | `https://rest.fra-01.braze.eu/users/identify`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### New User Identify Request
 

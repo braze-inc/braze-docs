@@ -36,6 +36,7 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 | `offset` | No | Integer | Optional beginning point in the list to retrieve from |
 | `sort_direction` | No | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest. |
 | `email` | No * | String | If provided, we will return whether or not the user has unsubscribed |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 

@@ -34,6 +34,7 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 ### Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete?schedule_id=248762133332' \

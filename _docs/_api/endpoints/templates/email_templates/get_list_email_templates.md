@@ -35,6 +35,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
 ```

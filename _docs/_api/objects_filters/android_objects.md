@@ -57,6 +57,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 | `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent that outside of that integer range will default to 0. For more information on which priority level to use, please see our section on [Android Notification Priority][29]. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
 | `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more information on `notification_channel` please see our [developer documentation][43] and our [user guide article on Android Push notification channels][44]. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 > For more information on collapsing notifications using the `collapse_key` please see the [Android Developer Docs][35].
 >

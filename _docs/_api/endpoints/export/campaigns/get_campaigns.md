@@ -27,6 +27,7 @@ This endpoint allows you to export a list of campaigns, each of which will inclu
 | `page` | No | Integer   | The page of campaigns to return, defaults to 0 (returns the first set of up to 100) |
 | `include_archived` | No | Boolean | Whether or not to include archived campaigns, defaults to false |
 | `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
 `https://{{instance_url}}/campaigns/list?page=0&include_archived=false&sort_direction=desc`

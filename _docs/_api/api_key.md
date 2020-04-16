@@ -50,6 +50,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `users.identify` | Query for user profile information by user ID.  |
 | `users.export.ids` | The language the browser is set to use.  |
 | `users.export.segment` | Query for user profile information by Segment. |
+{: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
  {% tab Email %}
@@ -62,6 +63,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `email.bounce.remove` | Remove email addresses from your hard bounce list. |
 | `email.spam.remove` | Remove email addresses from your spam list. |
 | `email.blacklist` | Blacklist email addresses. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Messages %}
@@ -73,6 +75,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `messages.schedule.update` | Update a scheduled message. |
 | `messages.schedule.delete` | Delete a scheduled message. |
 | `messages.schedule_broadcasts` | Query all scheduled broadcast messages. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Campaigns %}
@@ -88,6 +91,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `campaigns.details` | Query for details of a specific Campaign. |
 | `sends.data_series` | Query for message send analytics over a time range. |
 | `sends.id.create` | Create Send ID for message blast tracking. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Canvas %}
@@ -102,6 +106,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `canvas.data_series` | Query for Canvas analytics over a time range. |
 | `canvas.details` | Query for details of a specific Canvas. |
 | `canvas.data_summary` | Query for rollups of Canvas analytics over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Segments %}
@@ -111,6 +116,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `segments.list` | Query for a list of Segments. |
 | `segments.data_series` | Query for Segment analytics over a time range. |
 | `segments.details` | Query for details of a specific Segment. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Purchases %}
@@ -120,6 +126,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `purchases.product_list` | Query for a list of products purchased in your app. |
 | `purchases.revenue_series` | Query for total money spent per day in your app over a time range. |
 | `purchases.quantity_series` | Query for the total number of purchases per day in your app over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Events %}
@@ -128,6 +135,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 |---|---|---|
 | `events.list` | Query for a list of Custom Events. |
 | `events.data_series` | Query occurrences of a Custom Event over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab News Feed %}
@@ -137,6 +145,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `feed.list` | Query for a list of News Feed cards. |
 | `feed.data_series` | Query for News Feed analytics over a time range. |
 | `feed.details` | Query for details of a specific News Feed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Sessions %}
@@ -144,6 +153,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Name | Description |
 |---|---|---|
 | `sessions.data_series` | Query for sessions per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab KPIs %}
@@ -154,6 +164,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `kpi.dau.data_series` |  Query for unique active users per day over a time range. |
 | `kpi.new_users.data_series` | Query for new users per day over a time range. |
 | `kpi.uninstalls.data_series` | Query for app uninstalls per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Templates %}
@@ -164,6 +175,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `templates.email.update` | Update an email template stored on the Dashboard. |
 | `templates.email.info` | Query for information of a specific template. |
 | `templates.email.list` | Query for a list of email templates. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab SSO %}
@@ -171,6 +183,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Name | Description |
 |---|---|---|
 | `sso.saml.login` |  Setup identity provider-initiated login. Read our documentation for more info. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Content Blocks %}
@@ -180,6 +193,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `content_blocks.info` | Query for information of a specific template. |
 | `content_blocks.list` | Query for a list of Content Blocks. |
 | `content_blocks.create` | Create a new Content Block on the Dashboard. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Subscription %}
@@ -189,6 +203,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `subscription.status.set` | Set subscription group status. |
 | `subscription.status.get` | Get subscription group status. |
 | `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed/unsubscribed to. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}

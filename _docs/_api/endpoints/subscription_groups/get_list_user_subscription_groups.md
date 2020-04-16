@@ -43,6 +43,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 | `phone` | Yes* | The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format. |
 | `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
 | `offset`  |  No | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
