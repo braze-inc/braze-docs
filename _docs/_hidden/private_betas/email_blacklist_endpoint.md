@@ -34,19 +34,21 @@ Content-Type: application/json
 ```
 ```
 {
-  "api_key": "YOUR-API-KEY-HERE",
   "email": "email@address.com"
 }
 ```
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | Your App Group REST API Key. |
 | `email` | Yes | String or Array | String email address to blacklist, or an array of up to 50 email addresses to blacklist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Email Blacklist CURL
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"api_key":"YOUR_APP_GROUP_REST_API_KEY","email":["EMAIL_TO_BLACKLIST_1","EMAIL_TO_BLACKLIST_2"]}' https://YOUR_REST_API_URL/email/blacklist
+curl --location --request POST 'https://YOUR_REST_API_URL/email/blacklist'
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "email": ["EMAIL_TO_BLACKLIST_1","EMAIL_TO_BLACKLIST_2"]}'
 ```

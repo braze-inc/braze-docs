@@ -35,7 +35,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "schedule_id": (required, string) the schedule_id to update (obtained from the response to create schedule),
   "schedule": {
@@ -44,6 +43,24 @@ Content-Type: application/json
 }
 ```
 
-This endpoint uses the [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/).
+## Request Components
+
+- [Campaign ID]({{site.baseurl}}/api/identifier_types/)
+- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update?campaign_id&schedule_id&schedule' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "campaign_id": "campaign identifier",
+  "schedule_id": "schedule identifier",
+  "schedule": {
+    "time": "2017-05-24T21:30:00Z",
+    "in_local_time": true
+  }
+}'
+```
 
 {% endapi %}

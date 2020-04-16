@@ -35,10 +35,23 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (required, string) see Send Identifier
 }
+```
+
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create?campaign_id=&send_id=' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+"campaign_id": "",
+"send_id": ""
+}'
 ```
 
 ## Response

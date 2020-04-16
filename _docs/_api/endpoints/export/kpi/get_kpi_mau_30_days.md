@@ -29,7 +29,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 | `app_id`    | No | String | App API Identifier; if excluded, results for all apps in app group will be returned |
 
 ### Example URL
-`https://rest.iad-01.braze.com/kpi/mau/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&length=7&ending_at=2014-12-10T23:59:59-05:00`
+`https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id=app identifier`
 
 ### Example Request
 ```

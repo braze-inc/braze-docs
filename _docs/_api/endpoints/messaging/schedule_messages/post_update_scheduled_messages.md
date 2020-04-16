@@ -32,17 +32,18 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "schedule_id": (required, string) the schedule_id to update (obtained from the response to create schedule),
   "schedule": {
     // optional, see create schedule documentation
   },
   "messages": {
-    // optional, see create schedule documentation
+    // optional, see available messaging objects documentation
   }
 }
 ```
-This endpoint uses the [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/).
+## Request Components
+
+- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ### Available Messaging Objects
 
@@ -57,5 +58,34 @@ You can use these objects in the [request body](#request-body) above.
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
+
+### Request Example
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update?schedule_id=&schedule=&messages=' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "schedule_id": "schedule identifier",
+  "schedule": {
+    "time": "2017-05-24T20:30:36Z"
+   },
+  "messages": {
+     "apple_push": {
+       "alert": "Updated Message!",
+       "badge": 1
+     },
+     "android_push": {
+       "title": "Updated title!",
+       "alert": "Updated message!"
+     },
+     "sms": {  
+      	"subscription_group_id": "23894012",
+      	"message_variation_id": "3728490",
+      	"body": "This is my SMS body.",
+      	"app_id": "sdj23-234bd-23bdjask"
+      }
+  }
+}'
+```
 
 {% endapi %}

@@ -60,7 +60,6 @@ The response from this endpoint includes a field for `email_template_id`, which 
 #### REQUEST BODY
 ```
 {
-  "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
   "template_name": "email_template_name",
   "subject": "Welcome to my email template!",
   "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
@@ -73,7 +72,6 @@ The response from this endpoint includes a field for `email_template_id`, which 
 #### SAMPLE RESPONSE
 ```
 {
-  "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
   "template_name": "email_template_name",
   "subject": "Welcome to my email template!",
   "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
@@ -87,7 +85,6 @@ The response from this endpoint includes a field for `email_template_id`, which 
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `modified_after`  | No | String in ISO 8601 | Retrieve only templates updated at or after the given time. |
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
@@ -144,7 +141,6 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -166,7 +162,6 @@ API Triggered Delivery allows you to house message content inside of the Braze d
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
@@ -191,7 +186,6 @@ Content-Type: application/json
 POST https://YOUR_REST_API_URL/canvas/trigger/send
 Content-Type: application/json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) see Canvas Identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
@@ -214,7 +208,6 @@ Content-Type: application/json
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -236,7 +229,6 @@ This endpoint can be used to record custom events, user attributes, and purchase
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
-   "api_key" : (required, string) see App Group REST API Key,
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
    "purchases" : (optional, array of Purchase Object)

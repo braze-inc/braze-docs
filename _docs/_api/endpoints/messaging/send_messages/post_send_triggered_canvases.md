@@ -33,7 +33,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) see Canvas Identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
@@ -50,7 +49,15 @@ Content-Type: application/json
   ]
 }
 ```
-For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
+
+### Request Components
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
+- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
+- [Canvas Entry Properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+- [API Parameters]({{site.baseurl}}/api/parameters)
 
 The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and `canvas_entry_properties` object.
 
@@ -58,7 +65,75 @@ Customers using the API for server-to-server calls may need to whitelist the app
 
 If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
 
-### Response Details
+### Example Response
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/send?canvas_id&canvas_entry_properties&broadcast&audience&recipients' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "canvas_id": "",
+  "canva_entry_properties": "",
+  "broadcast": false,
+  "audience": {
+    "AND": [
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "eye_color",
+          "comparison": "equals",
+          "value": "blue"
+        }
+      },
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "favorite_foods",
+          "comparison": "includes_value",
+          "value": "pizza"
+        }
+      },
+      {
+        "OR": [
+          {
+            "custom_attribute": {
+              "custom_attribute_name": "last_purchase_time",
+              "comparison": "less_than_x_days_ago",
+              "value": 2
+            }
+          },
+          {
+            "push_subscription_status": {
+              "comparison": "is",
+              "value": "opted_in"
+            }
+          }
+        ]
+      },
+      {
+        "email_subscription_status": {
+          "comparison": "is_not",
+          "value": "subscribed"
+        }
+      },
+      {
+        "last_used_app": {
+          "comparison": "after",
+          "value": "2019-07-22T13:17:55+0000"
+        }
+      }
+    ]
+  },
+  "recipients": {
+    "user_alias": {
+      "alias_name" : "",
+      "alias_label" : ""
+    },
+    "external_user_id": "",
+    "trigger_properties": "",
+    "canvas_entry_properties": ""
+    }
+}'
+```
+
+## Response Details
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}

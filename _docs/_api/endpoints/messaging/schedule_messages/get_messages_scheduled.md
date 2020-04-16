@@ -31,13 +31,16 @@ Content-Type: application/json
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `end_time` | Yes | String in ISO 8601 format | End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API. |
 
-### Example Request
+### Example URL
 
-```json
-https://rest.iad-01.braze.com/messages/scheduled_broadcasts?api_key=X&end_time=2017-09-01T00:00:00-04:00
+`https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ## Response

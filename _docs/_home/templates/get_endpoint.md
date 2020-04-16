@@ -34,7 +34,6 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
 | `start_date` | No * | String in YYYY-MM-DD format| Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
 | `end_date` | No * | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
 | `limit` | No | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |

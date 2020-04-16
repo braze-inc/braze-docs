@@ -33,7 +33,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) see Canvas Identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
   "recipients": (optional, Array of Recipient Object),
@@ -52,8 +51,85 @@ Content-Type: application/json
   }
 }
 ```
-For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
-This endpoint uses the [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/).
+## Request Components
+
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
+- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
+- [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
+- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/create?canvas_id=&recipients=&audience=&broadcast=&canvas_entry_properties=&schedule=' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "canvas_id": "",
+  "recipients": {
+    "user_alias": "",
+    "external_user_id": "",
+    "trigger_properties": "",
+    "canvas_entry_properties": ""
+  },
+  "audience": {
+    "AND": [
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "eye_color",
+          "comparison": "equals",
+          "value": "blue"
+        }
+      },
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "favorite_foods",
+          "comparison": "includes_value",
+          "value": "pizza"
+        }
+      },
+      {
+        "OR": [
+          {
+            "custom_attribute": {
+              "custom_attribute_name": "last_purchase_time",
+              "comparison": "less_than_x_days_ago",
+              "value": 2
+            }
+          },
+          {
+            "push_subscription_status": {
+              "comparison": "is",
+              "value": "opted_in"
+            }
+          }
+        ]
+      },
+      {
+        "email_subscription_status": {
+          "comparison": "is_not",
+          "value": "subscribed"
+        }
+      },
+      {
+        "last_used_app": {
+          "comparison": "after",
+          "value": "2019-07-22T13:17:55+0000"
+        }
+      }
+    ]
+  },
+  "broadcast": false,
+  "canvas_entry_properties": "",
+  "schedule": {
+    "time": "",
+    "in_local_time": false,
+    "at_optimal_time": false
+  }
+}
+'
+```
 
 {% endapi %}

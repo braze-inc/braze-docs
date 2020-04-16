@@ -33,7 +33,6 @@ Content-Type: application/json
 
 ```json
 {
-   "api_key": (required, string) see App Group REST API Key,
    // You will need to include at least one of 'segment_id', 'external_user_ids', and 'audience'
    // Including 'segment_id' will send to members of that segment
    // Including 'external_user_ids' and/or 'user_aliases' will send to those users
@@ -60,7 +59,15 @@ Content-Type: application/json
    }
  }
 ```
-For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
+
+### Request Components
+- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
+- [API Parameters]({{site.baseurl}}/api/parameters)
 
 ### Available Messaging Objects
 
@@ -76,7 +83,84 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-### Response Details
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/send?broadcast=&external_user_ids=&user_aliases=&segment_id=&audience=&campaign_id=&send_id=&override_frequency_capping=&recipient_subscription_state=&messages=' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "broadcast": "",
+  "external_user_ids": "",
+  "user_aliases": {
+    "alias_name": "",
+    "alias_label": ""
+  },
+  "segment_id": "",
+  "audience": {
+    "AND": [
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "eye_color",
+          "comparison": "equals",
+          "value": "blue"
+        }
+      },
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "favorite_foods",
+          "comparison": "includes_value",
+          "value": "pizza"
+        }
+      },
+      {
+        "OR": [
+          {
+            "custom_attribute": {
+              "custom_attribute_name": "last_purchase_time",
+              "comparison": "less_than_x_days_ago",
+              "value": 2
+            }
+          },
+          {
+            "push_subscription_status": {
+              "comparison": "is",
+              "value": "opted_in"
+            }
+          }
+        ]
+      },
+      {
+        "email_subscription_status": {
+          "comparison": "is_not",
+          "value": "subscribed"
+        }
+      },
+      {
+        "last_used_app": {
+          "comparison": "after",
+          "value": "2019-07-22T13:17:55+0000"
+        }
+      }
+    ]
+  },
+  "campaign_id": "",
+  "send_id": "",
+  "override_frequency_capping": "",
+  "recipient_subscription_state": "",
+  "messages": {
+    "android_push": "(optional, Android Push Object)",
+    "apple_push": "(optional, Apple Push Object)",
+    "content_card": "(optional, Content Card Object)",
+    "email": "(optional, Email Object)",
+    "kindle_push": "(optional, Kindle/FireOS Push Object)",
+    "web_push": "(optional, Web Push Object)",
+    "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
+    "windows_universal_push": "(optional, Windows Universal Push Object)"
+  }
+}'
+```
+
+## Response Details
 
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 

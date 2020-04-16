@@ -58,7 +58,6 @@ While uncommon, if you require these properties to persist past the 30-day limit
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
-  "api_key" : "your App Group REST API Key",
   "events" : [
     {
       "external_id" : "user1",

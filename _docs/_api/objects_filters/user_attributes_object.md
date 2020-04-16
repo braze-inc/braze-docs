@@ -124,7 +124,6 @@ The Profile Field `bio` was removed several years ago and will not be processed 
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 {
-  "api_key" : "your App Group REST API Key",
   "attributes" : [
     {
       "external_id" : "user1",

@@ -35,7 +35,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) see Canvas Identifier,
   "schedule_id": (required, string) the schedule_id to update (obtained from the response to create schedule),
   "schedule": {
@@ -44,6 +43,24 @@ Content-Type: application/json
 }
 ```
 
-This endpoint uses the [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/).
+## Request Components
+
+- [Canvas ID]({{site.baseurl}}/api/identifier_types/)
+- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
+
+### Request Example
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/update' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "canvas_id": "canvas identifier",
+  "schedule_id": "schedule identifier",
+  "schedule": {
+    "time": "2017-05-24T21:30:00Z",
+    "in_local_time": true
+  }
+}'
+```
 
 {% endapi %}
