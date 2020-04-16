@@ -22,13 +22,12 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 ## Parameters
 
-<<<<<<< HEAD
 | Parameter   | Required | Data Type | Description |
 | ----------- | -------- | --------- | ----------- |
 | `card_id`   | Yes      | String    | Card API Identifier |
 | `length`    | Yes      | Integer   | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `unit`      | No       | String   | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
-| `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |                                              |
+| `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}

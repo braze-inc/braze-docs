@@ -44,10 +44,9 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 | `name` | Yes | String | Can only be provided when the content block is in a draft state. Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `state` | No | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
-| `tags` | No | Array of Strings. | Tags must already exist.
+| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
+| `tags` | No | Array of Strings. | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
 
 ### Example Request
 ```
