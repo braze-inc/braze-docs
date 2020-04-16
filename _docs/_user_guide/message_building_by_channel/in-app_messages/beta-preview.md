@@ -90,3 +90,4 @@ Feedback is encouraged and welcome!
 
 Please send any feedback or suggestions through to your Braze Customer Success Team.
 
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
