@@ -3,7 +3,6 @@ nav_title: Facebook
 alias: /partners/facebook/
 description: "This article outlines the partnership between Braze and Facebook, a leading social platform for brands to reach and engage with their customers."
 page_type: partner
-
 ---
 
 # Facebook Audience Export
@@ -15,9 +14,10 @@ Common use cases for exporting Facebook Custom Audiences include:
 - Create exclusion targeting lists
 - [Lookalike Audiences][4] to acquire new users more efficiently
 <br><br>
+
 {% alert note %}
 Facebook Audience Export uses the __User Access Token__ to authorize requests.<br>
-If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature, Braze will default to using the more reliable __System User Token__ that you have already [generated]({{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token), to authorize requests.
+If you are using this feature alongside the [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/) feature (currently in Beta), Braze will default to using the more reliable __System User Token__ that you have already generated, to authorize requests.
 {% endalert %}
 
 ## Prerequisites
