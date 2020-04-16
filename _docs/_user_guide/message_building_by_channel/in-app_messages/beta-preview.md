@@ -21,7 +21,7 @@ This means you can now preview _and interact_ with your custom messages (i.e. cl
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
-We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
+We'll ensure that any [`appboyBridge`][1] javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
 {% endalert %}
 
 ### Syntax Highlighting
@@ -32,6 +32,11 @@ This helps to easily spot potential code errors directly in the message composer
 
 ![New HTML In App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
+### Button Tracking Improvements
+
+We've introduced a new [`appboyBridge`][1] Javascript method (`appboyBridge.logClick(button_id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign.
+
+Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
 
 ## Migration Guide
 
@@ -84,3 +89,5 @@ The following features are planned and coming soon!
 Feedback is encouraged and welcome! 
 
 Please send any feedback or suggestions through to your Braze Customer Success Team.
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
