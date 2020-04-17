@@ -18,7 +18,7 @@ channel:
 
 # SMS Subscription Groups
 
-> SMS Subscription Groups are the foundation for sending SMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS Subscription States
 There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional Subscription Group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
@@ -50,6 +50,10 @@ Some brands may wish to send to a group of users that have phone numbers from va
 ## Setup Process
 During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions on your Braze dashboard setup, please reach out to your Braze representative for support.  
 
+## Subscription Group MMS Enablement
+In order to send an MMS message, atleast one number within your Subscription Group has to be enabled to send MMS.  This is indicated by a tag located next to the Subscription Group. 
+![picture][10]
+
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
@@ -60,3 +64,4 @@ During your SMS onboarding process, a Braze onboarding manager will setup Subscr
 [7]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/
 [8]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[10]: {% image_buster /assets/img/mms/mms_sub_group_tag.png %}
