@@ -45,6 +45,7 @@ US-03 | `https://rest.iad-03.braze.com/trigger/schedule/delete`
 US-04 | `https://rest.iad-04.braze.com/trigger/schedule/delete`
 US-06 | `https://rest.iad-06.braze.com/trigger/schedule/delete`
 EU-01 | `https://rest.fra-01.braze.eu/trigger/schedule/delete`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/schedule/delete

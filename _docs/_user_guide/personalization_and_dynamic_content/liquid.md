@@ -41,11 +41,11 @@ _For more on Dynamic Personalization with Liquid, check out our [detailed, guide
 
 Liquid templating language supports the use of objects, tags and filters.
 
-- [Objects]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
+- [Objects]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
 
-- [Tags]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+- [Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 
-- [Filters]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
+- [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
 
 
 ## Terms to Know
@@ -67,9 +67,10 @@ Braze does not currently support 100% of Shopify's Liquid, only certain portions
 | Conditional Logic Tag | Tags create logic and control the flow for templates. In Braze's case, Conditional Logic Tags are Liquid used to consider intelligent or programming logic to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
 | Filters | Used to change, narrow, or reformat the output of the Liquid Object. It is often used to create mathematical operations. |  ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
 | Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | Is a user meets the defined criteria in a messaged tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}
 
 <br>
 
-[1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

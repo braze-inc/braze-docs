@@ -29,7 +29,7 @@ Within the "Application" tab, ensure that `Toast Capable` is set to `YES`.
 
 ### Step 3: Update for Background Open Logging
 
-In your `OnLaunched` method, after your have called `OpenSession` add the following code snippet.
+In your `OnLaunched` method, after you have called `OpenSession` add the following code snippet.
 
 ```
 string campaignId = e.Arguments.Split(new[] { "_ab_pn_cid" }, StringSplitOptions.None)[0];
@@ -57,9 +57,9 @@ Your event handlers should have the signatures:
 
 #### Part 1: Creating deep links for your app
 
-Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a url scheme (e.g. myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a url of that format it transfers control to your application.
+Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a URL scheme (e.g. myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a URL of that format it transfers control to your application.
 
-WNS deep link support differs from this as it launches your application with data about where to send the user. When WNS push is created it can include a launch string that is passed through to your application's `OnLaunched` when the push is clicked and your application is opened. We already use this launch string to do campaign tracking, and we give users the ability append their own data that can be parsed and used to navigate the user when the app is launched.
+WNS deep link support differs from this as it launches your application with data about where to send the user. When WNS push is created it can include a launch string that is passed through to your application's `OnLaunched` when the push is clicked and your application is opened. We already use this launch string to do campaign tracking, and we give users the ability to append their own data that can be parsed and used to navigate the user when the app is launched.
 
 If you specify an extra launch string in the Dashboard or the REST API, it will be added to the end of the launch string that we create, after the key "abextras=". So, an example launch string might look like `ab_cn_id=_trackingid_abextras=page=settings`, in which you specified `page=settings` in the extra launch string parameter so you can parse it and navigate the user to the settings page.
 
@@ -75,10 +75,10 @@ Braze also allows sending deep links through the REST API. Windows Universal Pus
 
 [4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
 [6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID Dashboard"
-[9]: {{ site.baseurl }}/help/best_practices/push/
+[9]: {{site.baseurl}}/help/best_practices/push/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
 [11]: https://msdn.microsoft.com/en-us/library/windows/apps/hh465448.aspx#specify_app_launch_parameters "Windows App Launch Parameters Documentation"
-[12]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[13]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#windows-universal-push-object
+[12]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
+[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/#windows-universal-push-object
 [14]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx "WINDOWS Toast Template Catalog"
 [15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"

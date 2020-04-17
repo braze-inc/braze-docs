@@ -24,7 +24,7 @@ An API request with any fields in the Attributes Object will create or update an
   "user_alias" : (optional, User Alias Object),
   "braze_id" : (optional, string) Braze User Identifier,
   // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
+  // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
   // See note below regarding anonymous push token imports
   "push_token_import" : (optional, boolean),
@@ -45,15 +45,26 @@ An API request with any fields in the Attributes Object will create or update an
 To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
 #### Push Token Import
-When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying this parameter.
+
+Before you import push tokens to Braze, double check if you need to. When the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them via the API.
+
+If you do find you need to upload them via the API, they can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
+
+{% alert note %}
+When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
+{% endalert %}
 
 When specifying `push_token_import` as `true`:
 
 * `external_id` and `braze_id` should __not__ be specified
-* The attribute object must contain a push token
+* The attribute object __must__ contain a push token
 * If the token already exists in Braze, the request is ignored; otherwise, Braze will create a temporary, anonymous user profile for each token to enable you to continue to message these individuals
 
 After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
+
+Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
+
+For more information, check out [Push Token Migration][3].
 
 #### Custom Attribute Data Types
 
@@ -71,7 +82,7 @@ The following data types can be stored as a custom attribute:
 - Arrays
   - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
   - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
-  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
 For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
 
@@ -100,6 +111,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
@@ -126,7 +138,8 @@ Content-Type: application/json
       "external_id" : "user2",
       "first_name" : "Jill",
       "has_profile_picture" : false,
-      "push_tokens": [{"app_id": App Identifier, "token": "abcd"}]
+      "push_tokens": [{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]
+
     },
     {
       "user_alias" : { "alias_name" : "device123", "alias_label" : "my_device_identifier"},
@@ -140,14 +153,16 @@ Content-Type: application/json
 This example contains two User Attribute objects of the allowed 75 per API call.
 
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[3]: ({{site.baseurl}}/help/help_articles/push/push_token_migration/
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
+[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
 [22]: https://rubygems.org/gems/multi_json "multiJSON"
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

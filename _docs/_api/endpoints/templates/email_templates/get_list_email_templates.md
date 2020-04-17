@@ -36,6 +36,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `modified_before`  |  No | String in ISO 8601 | Retrieve only templates updated at or before the given time. |
 | `limit` | No | Positive Number | Maximum number of templates to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
 | `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 
@@ -49,12 +50,13 @@ https://rest.iad-01.braze.com/templates/email/list?api_key=123abc-def5-3729-owod
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: number of templates returned
-  “templates”: [template with the following properties]:
-    “email_template_id”: (string) your email template's API Identifier,
-    “template_name”: (string) the name of your email template,
-    “created_at”: (string, in ISO 8601),
-    “updated_at”: (string, in ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601),
+    "tags": (array of strings) tags appended to the template
 }
 ```
 {% endapi %}

@@ -34,19 +34,22 @@ Content-Type: application/json
    "api_key" : (required, string) see App Group REST API Key,
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
-   "purchases" : (optional, array of Purchase Object)
+   "purchases" : (optional, array of Purchase Object),
+   "partner" : (optional, string)
 }
 ```
 
 >  Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
 ### Objects Used
-- [User Attributes Object]({{ site.baseurl }}/api/objects_filters/user_attributes_object/)
-- [Events Object]({{ site.baseurl }}/api/objects_filters/event_object/)
-- [Purchases Object]({{ site.baseurl }}/api/objects_filters/purchase_object/)
+- [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
+- [Events Object]({{site.baseurl}}/api/objects_filters/event_object/)
+- [Purchases Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
 
 {% alert note %}
-Note that when creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
+- When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
+<br><br>
+- Updating the subscription status with this endpoint will not only update the user specified by their external_id (e.g User 123), but it will also update the subscription status of any users with the same email as that user (User 123).
 {% endalert %}
 
 ### Example Request Body for Event Tracking
@@ -64,7 +67,7 @@ Note that when creating alias-only users through this endpoint, you must explici
 }
 ```
 
-You can see this example in action [in our Swagger documentation]({{ site.baseurl }}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
+You can see this example in action [in our Swagger documentation]({{site.baseurl}}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
 
 ### User Track Responses
 
@@ -134,6 +137,7 @@ The following status codes and associated error messages will be returned if you
 | `404 Not Found` | Unknown REST API Key (if provided). |
 | `429 Rate Limited` | Over rate limit. |
 | `5XX` | Internal server error, you should retry with exponential backoff. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ###  Importing Legacy User Data
@@ -144,9 +148,9 @@ The segmentation tool will include these users regardless of whether they have e
 
 {% endapi %}
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [16]: #not-used-app
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
@@ -154,4 +158,4 @@ The segmentation tool will include these users regardless of whether they have e
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

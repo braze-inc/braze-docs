@@ -41,11 +41,11 @@ When two-factor authentication is enabled, in addition to entering a password, u
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account.
 
 {% alert tip %}
-Any Braze account user can set up two-factor authentication (under Account Settings in the dropdown) on their own, even if not required by the administrator.
+Any Braze account user can set up two-factor authentication (under Account Settings in the drop-down) on their own, even if not required by the administrator.
 {% endalert %}
 
 
 Be sure to save your changes before leaving the page!
 
 
-[1]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/
+[1]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/

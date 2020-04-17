@@ -74,10 +74,10 @@ The Set Up Report tab allows you to enter your report name, select the compressi
 ![engagement_reports_data_coverage][4]
 
 ### Time Frame
-By default the data range shown will go from the earliest message selected till present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available.
+By default, the data range shown will go from the earliest message selected until the present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available.
 
 ### Data Display
-By default the data displayed in the engagement reports is daily (1 day). Should you like to view this data across different intervals, you can choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can look at your engagement by week, month, quarter, etc. Should a time-centric aggregation not suffice, you can also elect to export data at the Campaign or Canvas level.
+By default, the data displayed in the engagement reports is daily (1 day). Should you like to view this data across different intervals, you can choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can look at your engagement by week, month, quarter, etc. Should a time-centric aggregation not suffice, you can also elect to export data at the Campaign or Canvas level.
 
 
 ## Schedule Your Report
@@ -90,11 +90,11 @@ There are two options when scheduling your report:
 After the report is saved, Braze will send this report Immediately
 
 ### Send at a Designated Time
-This option gives you flexibility to choose how frequently you would like to receive this report.  You can choose to send this report every X days, weeks or months.  Additionally you can define when to stop sending the report.
+This option gives you the flexibility to choose how frequently you would like to receive this report.  You can choose to send this report every X days, weeks or months.  Additionally, you can define when to stop sending the report.
 
 ## Open Report  
 
-You will receive an email with links to your reports. When you click on the provided links you will automatically download a `.zip` file containing your `.csv` files - one for all Campaigns se
+You will receive an email with links to your reports. When you click on the provided links you will automatically download a `.zip` file containing your `.csv` files - one for all Campaigns.
 
 The report, when opened, will contain all the statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 
@@ -104,8 +104,8 @@ The report, when opened, will contain all the statistics selected in the [Add St
 [3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
 [4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
 [5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}
-[6]: {{ site.baseurl }}/developer_guide/rest_api/export/#canvas-data-export
-[7]: {{ site.baseurl }}/developer_guide/rest_api/export/#canvas-details-endpoint
-[8]: {{ site.baseurl }}/developer_guide/rest_api/export/#canvas-data-series-endpoint
-[9]: {{ site.baseurl }}/developer_guide/rest_api/export/#canvas-data-summary-endpoint
-[10]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens
+[6]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-export
+[7]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-details-endpoint
+[8]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-series-endpoint
+[9]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-summary-endpoint
+[10]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens

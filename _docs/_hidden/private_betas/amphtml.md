@@ -16,6 +16,7 @@ Requirement   | Description
 Gmail Account Enablement | [See below.](#enabling-gmail-account)
 Google Sender Authentication | Gmail authenticates the sender of AMP emails with [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail), [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework), and [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC). <br> Learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication).
 AMP Email Elements | Check out the Essentials tab in the [Components](#components) section below. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 At this time, only Gmail provides support for AMP for Email. [Register with Google here](https://developers.google.com/gmail/ampemail/register).
@@ -29,7 +30,7 @@ Go into your Gmail Settings and select `Enable Dynamic Content`.
 
 ## API Usage
 
-You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
 ### Email Object Specification
 
@@ -70,6 +71,7 @@ These are what makes an AMPHTML Email... AMP'ed! Each of these elements are requ
 | Identification <br> `⚡4email` or `amp4email`| Identifies your email as an AMPHTML email. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
 | Load AMP runtime <br> `<script>` | Allows AMP to fun within your email using javascript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
 | CSS Boilerplate | Hides content until AMP is loaded. <br> Email providers who support AMP emails enforce fierce security checks that only allow vetted AMP scripts to run in their clients| `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
   {% endtab %}
   {% tab Dynamic %}
@@ -80,6 +82,7 @@ Want to see something cool? Oh wait - that's your email. Use these components to
 |---------|--------------|---------|
 | [Accordion](https://amp.dev/documentation/components/amp-accordion?format=email) <br> `amp-accordion`| Lets your users glance at the content outline and jump to any section. | `<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>` |
 | [Forms](https://amp.dev/documentation/components/amp-form?format=email) <br> `amp-form`| Create forms to submit input fields in an AMP document. | `<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
 Any component that requires authenticating the user must use [Google Access Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens) or [Proxy Assertion Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens).
@@ -94,6 +97,7 @@ Any component that requires authenticating the user must use [Google Access Toke
 | [Animated Image](https://amp.dev/documentation/components/amp-anim?format=email) <br> `amp-anim`| Display an animated image (usually a GIF) managed via runtime. | `<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>` |
 | [Carousel](https://amp.dev/documentation/components/amp-carousel?format=email) <br> `amp-carousel`| Display multiple similar pieces of content along a horizontal axis. | `<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>` |
 | [Image](https://amp.dev/documentation/components/amp-img?format=email) | A runtime-managed replacement for the HTML `img` tag. <br>  You can also create a [lightbox for your image](https://amp.dev/documentation/components/amp-image-lightbox?format=email). | `<amp-img alt="A view of the sea"` <br> `src="images/sea.jpg"` <br> `width="900"` <br>  `height="675"` <br>  `layout="responsive">`  <br> `</amp-img>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
 Any component that requires authenticating the user must use [Google Access Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens) or [Proxy Assertion Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens).
@@ -107,6 +111,7 @@ Any component that requires authenticating the user must use [Google Access Toke
 | Component | What It Does |
 |---------|--------------|
 | [Data Binding & Expressions](https://amp.dev/documentation/components/amp-anim?format=email) <br> `amp-bind`| Adds custom stateful interactivity to your AMP pages via data binding and JS-like expressions. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 Any component that requires authenticating the user must use [Google Access Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens) or [Proxy Assertion Tokens](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens).
@@ -122,7 +127,8 @@ Any component that requires authenticating the user must use [Google Access Toke
 | Total Opens | Total opens for the HTML and plaintext versions of your AMP Email. |
 | Total Clicks | Total clicks in the HTML and plaintext versions of your AMP Email. |
 | AMP Opens | Total count for opens in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
-| AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |  
+| AMP Clicks | Total count for clicks in your AMP HTML Email, cumulative count of the HTML, plaintext, and AMPHTML versions of the email. |
+{: .reset-td-br-1 .reset-td-br-2}  
 
 ### Testing & Troubleshooting
 
@@ -137,4 +143,4 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 If none of these conditions are causing error, reach out to [support][support].
 
  [1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"
- [support]: {{ site.baseurl }}/support_contact/
+ [support]: {{site.baseurl}}/support_contact/

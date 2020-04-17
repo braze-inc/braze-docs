@@ -8,29 +8,9 @@ page_order: 1
 
 Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
-<br>
 
-![Modal Specs][1a]{: style="max-width: 80%; border: none;"}
+![Modal Specs][1a]{: style="max-width: 801px; border: none;"}
 
-<br>
-
-| Element | Specification | Details |
-|---|---|---|
-| Modal Size |450px Maximum Width <br> 720px Maximum Height | There is a 720px maximum height, at which point the message scrolls vertically.|
-| Image Size | 29:10 Aspect Ratio <br> 450px by 155px Image Container | Accepts high resolution, PNG, JPEG, GIF. |
-| Copy | 20px Header Text - Bolded <br> 14px Message Text - Regular Weight | We cannot recommend character or word limits.|
-| Primary & Secondary Action Buttons | Secondary on the Left <br> Primary on the Right | We recommend contrasting your buttons to present the desired choice to the user with the right button, designating it as the Primary Action. |
-| Screen Overlay | Transparent | This is a customizable, transparent film that lays between your app and the message.
-
-## Modal Viewport
-
-On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
-
-<br>
-
-![Modal Viewport][1b]{: style="max-width: 80%; border: none;"}
-
-<br>
 
 ## Image and Copy Behavior
 
@@ -40,13 +20,25 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
-You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+| Layout | Asset Size | Notes |
+|--- | --- | ------ |
+| Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 415px<br> Min. 600 x 500px | Tall images will scale down and be horizontally centered |
+| Image Only | Any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most sizes and dimensions |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
 ### Font Awesome
 
-Though Braze supports using [Font Awesome v4.7.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
-
-
+Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
 [1a]: {% image_buster /assets/img/modal-spec.png %}
 [1b]: {% image_buster /assets/img/modal-large-viewport.png %}
+
+
+## Larger Screens
+
+On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
+
+
+![Modal Viewport][1b]{: style="max-width: 800px; border: none;"}

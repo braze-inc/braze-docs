@@ -175,7 +175,7 @@ Create a class that implements [`IInAppMessageManagerListener`][21]
 
 The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
 
-For example, if you set a custom manager listener, when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
+For example, if you set a custom manager listener when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
@@ -203,7 +203,7 @@ However, if there is no in-app message being displayed, the following delegate m
   }
 ```
 
-The `InAppMessageOperation()` return value can be used to control when the message should be displayed. A suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
+The `InAppMessageOperation()` return value can be used to control when the message should be displayed. The suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
 
 | `InAppMessageOperation` return value | Behavior |
 | -------------------------- | -------- |
@@ -222,7 +222,7 @@ On Android, this is done by calling `logClick` and `logImpression` on in-app mes
 
 #### Setting a Custom View Factory
 
-Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
+Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
 ##### Step 1: Implement an In-App Message View Factory
 
@@ -255,7 +255,7 @@ The following image is an example custom In-App Message view from a Braze client
 
 #### Setting a Custom Animation Factory
 
-In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible via setting a custom animation factory.
+In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible by setting a custom animation factory.
 
 ##### Step 1: Implement an In-App Message Animation Factory
 
@@ -286,7 +286,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 
 ## Server-side Event Triggering
 
-By default in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
+By default, in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
 
 To enable this feature, a silent push is sent to the device which allows a custom push receiver to log an SDK based event. This SDK event will subsequently trigger the user-facing in-app message.
 
@@ -300,27 +300,27 @@ Your receiver will handle the intent broadcast by the silent push and log an SDK
 
 It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed example, please see our [EventBroadcastReceiver.java][72] in the linked gist.
 
->  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
+>  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
 
 For further details on custom handling push receipts, opens, and key-value pairs please visit this section of our [Documentation][78].
 
 ### Step 3: Create a Push Campaign
 
-Create a silent push campaign which is triggered via the server sent event. You can learn how to to this with our page on [how to create a silent push campaign][73].
+Create a silent push campaign which is triggered via the server sent event. You can learn how to do this with our page on [how to create a silent push campaign][73].
 
 ![serverEventTrigger][75]
 
-The push campaign must include key value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
+The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message
 
 ![kvpConfiguration][76]
 
-The [EventBroadcastReceiver.java][72] recognizes the key value pairs and logs the appropriate SDK custom event.
+The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
 ###  Step 4: Create an In-App Message Campaign
 
-Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the custom [EventBroadcastReceiver.java][72].
+Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the custom [EventBroadcastReceiver.java][72].
 
 In the example below the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
@@ -344,29 +344,29 @@ Android Material Design specifies that Button text should be upper case by defau
 
 #### Youtube in HTML in-app messages
 
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also that hardware acceleration is only available on API versions 11 and above.
+Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also, that hardware acceleration is only available on API versions 11 and above.
 
 {% include archive/troubleshooting_iams.md platform="FireOS" %}
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
-[4]: {{ site.baseurl }}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
-[5]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
+[4]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/values/styles.xml
 [7]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageImmersive.html
 [9]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageAnimationFactory.java
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-view-factory
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
-[14]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-view-factory
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
 [15]: http://fortawesome.github.io/Font-Awesome/
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#modal-in-app-messages
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#modal-in-app-messages
 [18]: http://developer.android.com/reference/android/view/View.html
-[19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-manager-listener
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-manager-listener
 [20]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/IInAppMessageAnimationFactory.java
 [21]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.java
-[22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-animation-factory
+[22]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-animation-factory
 [23]: http://developer.android.com/reference/android/R.integer.html#config_shortAnimTime
 [24]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/IInAppMessageImmersiveView.java
 [25]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/IInAppMessageView.java
@@ -374,13 +374,13 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageBase.html
 [28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageImmersiveBase.html
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
-[30]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
+[30]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [33]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html
 [36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
-[41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
+[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/inappmessage/IInAppMessageViewFactory.java
 [43]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageViewFactory.java
 [44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html#getExtras()
@@ -388,25 +388,25 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/MessageButton.html
 [51]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html
 [52]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageHtml.html
-[53]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
-[54]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#in-app-message-customization
-[55]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/#gifs-iams
-[59]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#activity-lifecycle-callback-integration-api-14
+[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
+[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#in-app-message-customization
+[55]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#gifs-iams
+[59]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#activity-lifecycle-callback-integration-api-14
 [60]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values-xlarge/styles.xml
-[65]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
+[65]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestInAppMessageRefresh--
 [67]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--
-[68]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/
+[68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[70]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[70]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [71]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [72]: https://gist.github.com/robbiematthews/1d037e2c366e523b2dda5f2e053ea2a9
-[73]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
+[73]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
 [77]: {% image_buster /assets/img_archive/IAMeventTrigger.png %}
-[78]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-1-register-your-broadcastreceiver
-[79]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-1-register-your-broadcastreceiver
+[79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
 [81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()

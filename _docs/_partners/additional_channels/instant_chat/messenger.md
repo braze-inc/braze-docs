@@ -25,6 +25,7 @@ Please note that Facebook does not allow usage of the Messenger Platform to send
 | App Bot Review and Approval | Facebook | https://developers.facebook.com/docs/messenger-platform/app-review | When you are ready to release your bot to the public, you must submit it to Facebook for review and approval. This review process allows us to ensure your Messenger bot abides by our policies and functions as expected before it is made available to everyone on Messenger. |
 | Page-Scope IDs (PSIDs) | Facebook | https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages | You need to have users PSIDs in order to send messages on Facebook Messenger. Once a user interacts with  your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
 | Page Access Token | Facebook | https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token | These access tokens are similar to user access tokens, except that they provide permission to APIs that read, write or modify the data belonging to a Facebook Page. To obtain a page access token you need to start by obtaining a user access token and asking for the `manage_pagespermission`. Once you have the user access token you then get the page access token via the Graph API.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 You need the user's explicit permission for messages from your page.
 
@@ -69,7 +70,7 @@ Once you are confident that you are receiving PSIDs, send it to Braze as a Custo
 
 ## Step 2: Send to Braze as a Custom Attribute
 
-Coordinate and share this with your developer to send the PSIDs to Braze as a [Custom Attribute]({{ site.baseurl }}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
+Coordinate and share this with your developer to send the PSIDs to Braze as a [Custom Attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
 # Usage
 
@@ -98,6 +99,6 @@ You may also use other segmentation to target your Messenger campaigns, and the 
 
 
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{ site.baseurl }}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
+[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}

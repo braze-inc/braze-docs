@@ -64,7 +64,8 @@ The custom attribute's type determines the comparisons that are valid for a give
 | Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numeric | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist`
+| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.

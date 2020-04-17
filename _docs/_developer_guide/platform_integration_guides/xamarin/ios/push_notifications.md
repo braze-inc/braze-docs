@@ -43,7 +43,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 ## Badge Count
 
-If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from an Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
+If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 
 **Xamarin C#**
 
@@ -53,6 +53,6 @@ UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
 
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {{ site.baseurl }}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications

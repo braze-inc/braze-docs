@@ -23,7 +23,7 @@ guide_featured_list:
 
 If you're looking for more information about your own account settings, look [here][1].
 
-You can get to the __Company Settings__ section by clicking on your name, then clicking `Company Settings` in the dropdown.
+You can get to the __Company Settings__ section by clicking on your name, then clicking `Company Settings` in the drop-down.
 
 Then, click on the tab in the top bar to navigate to the settings you want to manage.
 
@@ -35,5 +35,5 @@ Please note that whatever you edit in this section will apply to _every_ Braze u
 
 <br>
 
-[1]: {{ site.baseurl }}/user_guide/administrative/
+[1]: {{site.baseurl}}/user_guide/administrative/
 [2]: {% image_buster /assets/img/navigation_co_set.gif %}"

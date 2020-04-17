@@ -29,21 +29,13 @@ http {
   include mime.types;
 	default_type application/octet-stream;
 
-
   sendfile on;
 
   # Must read the body in 5 seconds.
   client_body_timeout 5;
 
-  upstream academy {
-    server 127.0.0.1:5000 fail_timeout=0;
-  }
-
-  upstream documentation {
-    server 127.0.0.1:5004 fail_timeout=0;
-  }
   upstream docs {
-    server 127.0.0.1:5006 fail_timeout=0;
+    server unix:/tmp/nginx.socket fail_timeout=0;
   }
 
   server {
@@ -75,111 +67,6 @@ http {
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/customer_behavior_events/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/ permanent;
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/transferring_data_to_redshift/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/ permanent;
     rewrite ^/docs/developer_guide/platform_integration_guides/web/in_app_messaging/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/ permanent;
-
-    rewrite ^/documentation$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
-    rewrite ^/documentation/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/home/;
-
-    rewrite ^/documentation/Auto_Advance$ <%= ENV['SITE_URL'] || ''%>/docs/ permanent;
-    rewrite ^/documentation/Enabling_Message_Channels/Push_Notifications/Baidu$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/ permanent;
-    rewrite ^/documentation/Enabling_Message_Channels/Push_Notifications/iOS$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/ permanent;
-    rewrite ^/documentation/iOS/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/ permanent;
-    rewrite ^/documentation/Web/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/ permanent;
-
-
-    rewrite ^/documentation/support_contact/$ <%= ENV['SITE_URL'] || ''%>/docs/support_contact/ permanent;
-    rewrite ^/documentation/support_contact$ <%= ENV['SITE_URL'] || ''%>/docs/support_contact/ permanent;
-
-    rewrite ^/documentation/request$ <%= ENV['SITE_URL'] || ''%>/docs/request/ permanent;
-    rewrite ^/documentation/request/$ <%= ENV['SITE_URL'] || ''%>/docs/request/ permanent;
-
-    rewrite ^/documentation/attribute_triggers/$ <%= ENV['SITE_URL'] || ''%>/docs/attribute_triggers/ permanent;
-    rewrite ^/documentation/Auto_Advance/$ <%= ENV['SITE_URL'] || ''%>/docs/auto_advance/ permanent;
-    rewrite ^/documentation/content_cards_android/$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_android/ permanent;
-    rewrite ^/documentation/content_cards_ios/$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_ios/ permanent;
-    rewrite ^/documentation/content_cards_web/$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_web/ permanent;
-    rewrite ^/documentation/content_cards/$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards/ permanent;
-    rewrite ^/documentation/email_attachments/$ <%= ENV['SITE_URL'] || ''%>/docs/email_attachments/ permanent;
-    rewrite ^/documentation/Email_Configuration/$ <%= ENV['SITE_URL'] || ''%>/docs/braze_email_Configuration/ permanent;
-    rewrite ^/documentation/gmail_promotion_tool/$ <%= ENV['SITE_URL'] || ''%>/docs/gmail_promotion_tool/ permanent;
-    rewrite ^/documentation/IAM_vs_Original/$ <%= ENV['SITE_URL'] || ''%>/docs/triggered_vs_original/ permanent;
-
-    rewrite ^/documentation/subscription_group_rest_apis/$ <%= ENV['SITE_URL'] || ''%>/docs/subscription_group_rest_apis/ permanent;
-    rewrite ^/documentation/sdk_changelogs/$ <%= ENV['SITE_URL'] || ''%>/docs/sdk_changelogs/ permanent;
-    rewrite ^/documentation/raw_event_stream/$ <%= ENV['SITE_URL'] || ''%>/docs/raw_event_stream/ permanent;
-    rewrite ^/documentation/programmatic_message_sending/$ <%= ENV['SITE_URL'] || ''%>/docs/programmatic_message_sending/ permanent;
-    rewrite ^/documentation/okta_single_sign_on/$ <%= ENV['SITE_URL'] || ''%>/docs/okta_single_sign_on/ permanent;
-    rewrite ^/documentation/creating_link_templates/$ <%= ENV['SITE_URL'] || ''%>/docs/creating_link_templates/ permanent;
-    rewrite ^/documentation/email_spam_testing/$ <%= ENV['SITE_URL'] || ''%>/docs/email_spam_testing/ permanent;
-    rewrite ^/documentation/eclipse_setup/$ <%= ENV['SITE_URL'] || ''%>/docs/eclipse_setup/ permanent;
-    rewrite ^/documentation/delayed_braze_initialization_ios/$ <%= ENV['SITE_URL'] || ''%>/docs/delayed_braze_initialization_ios/ permanent;
-    rewrite ^/documentation/currents/$ <%= ENV['SITE_URL'] || ''%>/docs/currents/ permanent;
-
-    rewrite ^/documentation/attribute_triggers$ <%= ENV['SITE_URL'] || ''%>/docs/attribute_triggers/ permanent;
-    rewrite ^/documentation/Auto_Advance$ <%= ENV['SITE_URL'] || ''%>/docs/auto_advance/ permanent;
-    rewrite ^/documentation/content_cards_android$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_android/ permanent;
-    rewrite ^/documentation/content_cards_ios$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_ios/ permanent;
-    rewrite ^/documentation/content_cards_web$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards_web/ permanent;
-    rewrite ^/documentation/content_cards$ <%= ENV['SITE_URL'] || ''%>/docs/content_cards/ permanent;
-    rewrite ^/documentation/email_attachments$ <%= ENV['SITE_URL'] || ''%>/docs/email_attachments/ permanent;
-    rewrite ^/documentation/Email_Configuration$ <%= ENV['SITE_URL'] || ''%>/docs/braze_email_Configuration/ permanent;
-    rewrite ^/documentation/gmail_promotion_tool$ <%= ENV['SITE_URL'] || ''%>/docs/gmail_promotion_tool/ permanent;
-    rewrite ^/documentation/IAM_vs_Original$ <%= ENV['SITE_URL'] || ''%>/docs/triggered_vs_original/ permanent;
-
-    rewrite ^/documentation/subscription_group_rest_apis$ <%= ENV['SITE_URL'] || ''%>/docs/subscription_group_rest_apis/ permanent;
-    rewrite ^/documentation/sdk_changelogs$ <%= ENV['SITE_URL'] || ''%>/docs/sdk_changelogs/ permanent;
-    rewrite ^/documentation/raw_event_stream$ <%= ENV['SITE_URL'] || ''%>/docs/raw_event_stream/ permanent;
-    rewrite ^/documentation/programmatic_message_sending$ <%= ENV['SITE_URL'] || ''%>/docs/programmatic_message_sending/ permanent;
-    rewrite ^/documentation/okta_single_sign_on$ <%= ENV['SITE_URL'] || ''%>/docs/okta_single_sign_on/ permanent;
-    rewrite ^/documentation/creating_link_templates$ <%= ENV['SITE_URL'] || ''%>/docs/creating_link_templates/ permanent;
-    rewrite ^/documentation/email_spam_testing$ <%= ENV['SITE_URL'] || ''%>/docs/email_spam_testing/ permanent;
-    rewrite ^/documentation/eclipse_setup$ <%= ENV['SITE_URL'] || ''%>/docs/eclipse_setup/ permanent;
-    rewrite ^/documentation/delayed_braze_initialization_ios$ <%= ENV['SITE_URL'] || ''%>/docs/delayed_braze_initialization_ios/ permanent;
-    rewrite ^/documentation/currents$ <%= ENV['SITE_URL'] || ''%>/docs/currents/ permanent;
-    rewrite ^/documentation/Push_Stories/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/message_building_by_channel/push/push_stories/ permanent;
-    rewrite ^/documentation/SDK_Changelogs$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/sdk_changelogs/ permanent;
-
-    rewrite ^/documentation/REST_API/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/rest_api/basics/ permanent;
-
-    location /documentation/ {
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_redirect off;
-      proxy_pass http://documentation/;
-    }
-
-    # old site redirects
-    rewrite ^/academy$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/introduction/;
-    rewrite ^/academy/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/introduction/;
-    rewrite ^/academy/Scheduling_and_Organizing_Campaigns/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
-    rewrite ^/academy/Troubleshooting_Guide/$ <%= ENV['SITE_URL'] || ''%>/docs/help/home/ permanent;
-    rewrite ^/academy/Deep_Dives/Conversion_Events/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/ permanent;
-    rewrite ^/academy/Deep_Dives/Creating_a_Webhook/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/ permanent;
-    rewrite ^/academy/Quick_Wins/Optimal_Send_Time/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
-
-
-    rewrite ^/academy/Deep_Dives/Conversion_Events$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/ permanent;
-    rewrite ^/academy/Deep_Dives/Creating_a_Webhook$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/ permanent;
-    rewrite ^/academy/Quick_Wins/Optimal_Send_Time$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
-
-    rewrite ^/academy/Scheduling_and_Organizing_Campaigns$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/intelligence/intelligent_timing/ permanent;
-    rewrite ^/academy/Troubleshooting_Guide$ <%= ENV['SITE_URL'] || ''%>/docs/help/home/ permanent;
-
-    rewrite ^/academy/email_open_tracking/$ <%= ENV['SITE_URL'] || ''%>/docs/email_open_tracking_pixel/ permanent;
-    rewrite ^/academy/email_open_tracking$ <%= ENV['SITE_URL'] || ''%>/docs/email_open_tracking_pixel/ permanent;
-
-    rewrite ^/academy/Deep_Dives/User_Import$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/data_and_analytics/user_data_collection/user_import/ permanent;
-    rewrite ^/academy/Deep_Dives/News_Feed_Categories <%= ENV['SITE_URL'] || ''%>/docs/user_guide/engagement_tools/news_feed/news_feed_categories/ permanent;
-
-
-
-    location /academy/ {
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_redirect off;
-      proxy_pass http://academy/;
-    }
 
     rewrite ^/docs$ /docs/;
 

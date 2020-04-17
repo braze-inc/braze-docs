@@ -7,7 +7,7 @@ hidden: true
 ---
 
 {% alert Update %}
-Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{ site.baseurl }}/help/release_notes/deprecations/#feedback).
+Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{site.baseurl}}/help/release_notes/deprecations/#feedback).
 {% endalert %}
 
 # Customer Feedback
@@ -23,7 +23,7 @@ The Braze feedback form allows users to submit feedback about your app that is i
 In Android, the News Feed and feedback form are implemented as [Fragments][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 
 {% alert important %}
-The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened. Learn more about [tracking user sessions]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/).
+The Android UI Fragments do not automatically track session analytics. To ensure that sessions are tracked correctly, you should call `IAppboy.openSession()` when your app is opened. Learn more about [tracking user sessions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/).
 {% endalert %}
 
 ## Braze Feedback Form
@@ -116,14 +116,14 @@ If you would prefer, you can override these styles to create a look and feel tha
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#submitFeedback-java.lang.String-java.lang.String-boolean- "Feedback documentation"
-[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/customer_feedback/#manual-feedback-collection
-[10]: {{ site.baseurl }}/user_guide/data_and_analytics/uninstall_tracking/#implementation
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#manual-feedback-collection
+[10]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#implementation
 [13]: http://www.desk.com
 [14]: http://www.zendesk.com
-[16]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/customer_feedback/#third-party-provider-integrations
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/customer_feedback/#theming-the-braze-feedback-ui
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/news_feed/#overriding-styles
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#third-party-provider-integrations
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#theming-the-braze-feedback-ui
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#overriding-styles
 [20]: {% image_buster /assets/img_archive/Image31Theming.png %} "Android Feedback"

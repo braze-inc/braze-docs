@@ -16,4 +16,4 @@ You can now choose to send a message at your company's local time, or your user'
 
 ## Campaign Alerts
 
-Braze Campaigns now allows you to set parameters around the number of sends within a campaign, enabling you to receive notifications about your campaign if it's sends dip below or rise above your chosen numbers. Click into the campaign you would like to monitor, then look to the first block, called "Campaign Monitoring." Click "Set Up Alert", then set and save your alert! Learn more about Campaign Alerts [here]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/#campaign-alerts).
+Braze Campaigns now allows you to set parameters around the number of sends within a campaign, enabling you to receive notifications about your campaign if it's sends dip below or rise above your chosen numbers. Click into the campaign you would like to monitor, then look to the first block, called "Campaign Monitoring." Click "Set Up Alert", then set and save your alert! Learn more about Campaign Alerts [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/#campaign-alerts).

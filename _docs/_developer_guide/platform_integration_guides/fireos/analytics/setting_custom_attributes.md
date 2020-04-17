@@ -8,7 +8,7 @@ page_order: 3
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Assigning Standard User Attributes
 
@@ -48,7 +48,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 - Strings
 - Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
+  - Includes methods to set arrays, add items to existing arrays and delete items from existing arrays.
 - Integers
 - Booleans
 - Dates
@@ -110,7 +110,7 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFrom
 {% endalert %}
 
 #### Setting a Custom Attribute with an Array Value
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
 ```java
 // Setting a custom attribute with an array value
@@ -171,7 +171,7 @@ Appboy.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
 [3]: http://en.wikipedia.org/wiki/ISO_8601
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

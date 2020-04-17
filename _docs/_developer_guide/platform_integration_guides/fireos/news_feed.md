@@ -119,7 +119,7 @@ See [PreferencesActivity.java][39] in our Droidboy sample application for an exa
 
 ### Fully Custom Feed Display
 
-If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe to News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Feed Updates
 
@@ -204,7 +204,7 @@ In order to enable this functionality add the following line to your `appboy.xml
 These indicators can be customized by altering the values in [android-sdk-ui/src/main/res/drawable-hdpi/icon_unread.png][26] and [android-sdk-ui/src/main/res/drawable-hdpi/icon_read.png][27].
 
 ## Card Types
-Braze has 5 unique News Feed card types which share a base model. Each card type also has additional card-specific properties which are listed below.
+Braze has 5 unique News Feed card types that share a base model. Each card type also has additional card-specific properties which are listed below.
 
 #### Base Card
 
@@ -290,13 +290,13 @@ See the [Javadoc][36] for more information.
 [1]: {% image_buster /assets/img_archive/UONewsFeed.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/news_feed/card_types/#card-types
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/news_feed/card_types/#card-types
+[14]: {{site.baseurl}}/help/best_practices/news_feed/
 [16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
 [17]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/FeedUpdatedEvent.html#getUnreadCardCount()
 [18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
@@ -317,4 +317,4 @@ See the [Javadoc][36] for more information.
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

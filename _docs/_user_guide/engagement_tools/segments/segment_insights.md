@@ -27,6 +27,7 @@ Segment Insights allows you to quickly and easily see how a segment is performin
 | Lifetime Revenue | Average lifetime revenue for segment users | user lifetime spend |
 | Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase - date of first session |
 | Time Since Last Purchase | Average time between segment users' last purchase and now | today - date of last purchase |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 You can easily share specific comparisons with the page’s unique URL, and users can also click beneath each segment to reveal more information about that segment. These comparisons will reset when a user changes app groups.
 
@@ -71,8 +72,8 @@ We can see that relatively few users are currently signed up for the newsletter,
 [4]: https://braze.com/blog/
 [5]: {% image_buster /assets/img_archive/Segment_Language_Insights.png %}
 [7]: {% image_buster /assets/img_archive/Segment_Insights_Events1.png %}
-[8]: {{ site.baseurl }}/help/best_practices/user_onboarding/#user-onboarding
-[9]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[10]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[11]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#creating-tests
-[12]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter
+[8]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
+[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
+[10]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
+[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#creating-tests
+[12]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter

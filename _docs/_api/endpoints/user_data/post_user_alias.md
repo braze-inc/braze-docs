@@ -76,6 +76,7 @@ US-03  | `https://rest.iad-03.braze.com/users/identify`
 US-04  | `https://rest.iad-04.braze.com/users/identify`
 US-06  | `https://rest.iad-06.braze.com/users/identify`
 EU-01  | `https://rest.fra-01.braze.eu/users/identify`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### New User Identify Request
 
@@ -102,14 +103,14 @@ Content-Type: application/json
 }
 ```
 
-For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
 {% endapi %}
 
 
-[1]: {{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [16]: #not-used-app
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
@@ -117,4 +118,4 @@ For more information on `alias_name` and `alias_label`, check out our [User Alia
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

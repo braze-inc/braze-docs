@@ -153,13 +153,13 @@ For values ≤ 50, the regex would then be ^([5-9][0-9]|[0-4][0-9])$
 Use the __^__ to character to denote what the string starts with and enter the name of you're trying to specify. 
 
 __Example__<br>
-If you're trying to target users who live in cities that start with "San", your regex would be __^San \w__. In such case, you would successfully target users from cities like San Francisco, San Diego, San Jose, etc.
+If you're trying to target users who live in cities that start with "San", your regex would be __^San \w__. In such a case, you would successfully target users from cities like San Francisco, San Diego, San Jose, etc.
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
 {% enddetails %}
 {% details How to filter for certain pone numbers with RegEx %}
 
-Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/).
+Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
 
 Assuming US phone numbers, the regex you'll want to use is in the format __1?\d\d\d\d\d\d\d\d\d\d__, where each "\d" is a digit you want to specify - the first 3 of which would be the area code.
 
@@ -177,4 +177,4 @@ Let's say you wanted to filter users by phone number for a specific area code, 7
 [regex]: https://regex101.com/
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
-[phonenumbers]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/
+[phonenumbers]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/

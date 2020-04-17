@@ -40,7 +40,7 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion Code Upload
 
-You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 10MB and the total number of codes allowed in one list is 10MM codes. 
+You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 100MB and the total number of codes allowed in one list is 10MM codes. 
 If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
 ![Promo Codes 6][6]
@@ -70,7 +70,7 @@ From there, this code can be pasted into a message within the Dashboard.
 
 ![Promo Codes 10][10]{:height="200px"}
 
-Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as used on the Braze backend to ensure no other message receives that same code.
+Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
 
 {% alert important %}
 
@@ -100,7 +100,7 @@ This code count can also be found when revisited a pre-existing promotion code l
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/
+[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}
 

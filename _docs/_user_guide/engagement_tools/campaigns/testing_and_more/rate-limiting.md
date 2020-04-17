@@ -5,7 +5,7 @@ platform:
   - Android
   - Web
 subplatform: Testing and More
-page_order: 4
+page_order: 1
 tools:
   - Campaigns
   - Canvas
@@ -95,7 +95,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
 
 #### Multi-Platform Push Campaigns
-For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate limit per minute will equally distribute the 10K messages across the 3 platforms.
+For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate-limit per minute will equally distribute the 10K messages across the 3 platforms.
 
 ## Frequency Capping
 
@@ -138,8 +138,8 @@ Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Step
 [2]: {% image_buster /assets/img_archive/total_limit.png %}
 [3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
 [14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#messaging
-[16]: {{ site.baseurl }}/developer_guide/rest_api/api_campaigns/#api-campaigns
+[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
+[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
 [18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-[20]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

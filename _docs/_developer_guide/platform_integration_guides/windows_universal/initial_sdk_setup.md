@@ -5,7 +5,7 @@ page_order: 0
 ---
 # Initial SDK Integration
 
-The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notification.
+The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notifications.
 
 >  The Windows Universal SDK is also compatible with Xamarin Windows Apps.
 
@@ -13,7 +13,7 @@ The Braze SDK will provide you with an API to report information to be used in a
 
 The Windows Universal SDK is installed via the [Nuget Package Manager][14]. To install the Braze Windows SDK via Nuget:
 
-1. Right click on the project file
+1. Right-click on the project file
 2. Click on "Manage Nuget Packages"
 3. Click "Online" in the dropdown menu on the left
 4. Search in "Nuget.org" for "Appboy"
@@ -67,7 +67,7 @@ Appboy.SharedInstance.CloseSession();
 
 ## Basic SDK Integration Complete
 
-Braze should now be collecting data from your application. Please see the following sections on how to log attributes, events, and purchases to our SDK and how instrument push messaging.
+Braze should now be collecting data from your application. Please see the following sections on how to log attributes, events, and purchases to our SDK and how to instrument push messaging.
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as “AppboyPlatform.Universal.Appboy”
 

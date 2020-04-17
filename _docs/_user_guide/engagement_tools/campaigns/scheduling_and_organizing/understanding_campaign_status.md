@@ -21,7 +21,7 @@ On your Braze Dashboard, your campaigns are grouped by their status. Below are t
 - __Active__
 	- Campaigns that are in the process of sending and fall under one of the following behaviors:
 		- Scheduled to send once and has not yet begun sending
-		- Scheduled to send once and is currently sending (local time zone and Intelligent Delivery campaigns send over the course of 24 hours)
+		- Scheduled to send once and is currently sending (local time zone and Intelligent Timing campaigns send over the course of 24 hours)
 		- Scheduled to send on a recurring schedule and has at least one occurrence that hasn't finished sending
 
 
@@ -48,5 +48,5 @@ On your Braze Dashboard, your campaigns are grouped by their status. Below are t
 
 
 
-[1]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
-[2]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns
+[1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
+[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns

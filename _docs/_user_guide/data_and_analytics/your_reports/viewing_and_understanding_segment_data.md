@@ -32,11 +32,11 @@ Braze also provides the ability to view data on [Custom Events over time for seg
 
 If you don't turn analytics tracking on for a segment, you will still be able to access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
 
-An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue and purchases.
+An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue, and purchases.
 
 ## Segment Statistics
 
-You will see the following segment statistics, which update in real time as you add or delete filters:
+You will see the following segment statistics, which update in real-time as you add or delete filters:
 
 | Statistic | Description |
 | --------- | --- |
@@ -64,16 +64,16 @@ On this page, you can view a number of user-specific attributes as shown below:
 
 [1]: {% image_buster /assets/img_archive/Segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
-[3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [4]: {% image_buster /assets/img_archive/Historical_Membership2.png %}
-[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
-[6]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
+[6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [7]: {% image_buster /assets/img_archive/Preview_Users.png %}
 [8]: {% image_buster /assets/img_archive/User_Preview.png %}
 [11]: #segment-statistics
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
-[14]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
 [18]: {% image_buster /assets/img_archive/Events_Over_Time2.png %}
-[20]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
+[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

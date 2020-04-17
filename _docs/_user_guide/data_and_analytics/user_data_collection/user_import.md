@@ -14,13 +14,13 @@ Braze’s User Import feature allows users to upload and update user profiles vi
 
 When importing your customer data it is necessary to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
 
-When you provide an `external_id`, Braze will update any existing user with the same `external_id` or create a new identified user with that `external_id` set if one is not found.
+When you provide an `external_id`, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
 [Download a CSV Import Template here.][template]
 
 ### Constructing Your CSV
 
-Braze has a number of data types in Braze. When importing or updating user profiles via CSV, you can create or update Standard User Attributes or Custom Attributes.
+Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update Standard User Attributes or Custom Attributes.
 
 Standard User Attributes are reserved keys in Braze, for example: `first_name` or `email`.
 
@@ -42,9 +42,9 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 
 ### Standard User Data Column Headers
 
-| USER PROFILE FIELD | DATA TYPE | INFORMATION | Mandatory |
+| USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
-| `external_id` | String | A unique user identifier for your customer. | Yes, see following note |
+| `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
 | `first_name` | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
@@ -58,7 +58,8 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g. `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g. `2019-11-20T18:38:57`) | No |
-| `image_url` | String | A URL of an image  | No |
+| `image_url` | String | A URL of an image.  | No |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 {% alert note %}
@@ -70,7 +71,7 @@ While `external_id` itself is not mandatory, you __must__ include one of these f
 
 ### Importing Custom Data via CSV
 
-Any headers which do not exactly match non Standard User Data will create a Custom Attribute within Braze.
+Any headers which do not exactly match nonstandard User Data will create a Custom Attribute within Braze.
 
 These data types are accepted in User Import:
 - Datetime (Must be stored in the ISO 8601  format)
@@ -83,12 +84,12 @@ These data types are accepted in User Import:
 Arrays, Push Tokens, and Custom Event data types are not supported in User Import.
 Especially for Arrays, commas in your CSV file will be interpreted as a column separator; therefore, any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, please use Braze’s [User/Track REST API]({{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint).
+For uploading these kinds of values, please use Braze’s [User/Track REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
 {% endalert %}
 
 ### Importing a CSV
 
-To import your CSV file, navigate to the User Import page under the Users section on the left hand toolbar. In the lower text box, “Recent Imports”, there will be a table which lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+To import your CSV file, navigate to the User Import page under the Users section on the left-hand toolbar. In the lower text box, “Recent Imports”, there will be a table which lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
 [Download a CSV Import Template here.][template]
 
@@ -142,7 +143,7 @@ There must be a header row in order to properly import data. Each row must have 
 
 ### Multiple Data Types
 
-Braze expects each value in a column to be of the same data type. Values which do not match their attribute’s data type will cause errors in segmenting.
+Braze expects each value in a column to be of the same data type. Values that do not match their attribute’s data type will cause errors in segmenting.
 
 ### Incorrectly Formatted Dates
 Dates not in the ISO 8601 format will not be read as datetimes on import.
@@ -159,16 +160,16 @@ If you are seeing a piece of Standard User Data (e.g. `email` or `first_name` im
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[fields]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#custom-attribute-data-types
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[fields]: {{site.baseurl}}/developer_guide/rest_api/user_data/#custom-attribute-data-types
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-upsers.png %}
-[12]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-endpoint
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+[12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
 [date]: https://en.wikipedia.org/wiki/ISO_8601
 [utf8]: https://en.wikipedia.org/wiki/UTF-8
-[CAO]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[filtering]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[CAO]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[filtering]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}

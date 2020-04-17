@@ -7,7 +7,7 @@ page_order: 6
 
 ## Locations & Geofences
 
-Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
+Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
 
 To support geofences for Android:
 
@@ -104,15 +104,15 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ### Note about Push to Sync
 
-Note that Braze syncs geofences to devices using background push. In most cases this will involve no code changes, as this feature requires no further integration on the part of the app.
+Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
 
-However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want triggered by background push.
+However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [5]: https://developer.android.com/training/location/geofencing.html
-[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
 [9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [10]: https://developers.google.com/android/guides/setup

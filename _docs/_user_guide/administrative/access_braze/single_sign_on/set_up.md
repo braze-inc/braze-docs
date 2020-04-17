@@ -11,9 +11,10 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
+| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br> *For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI.* |
 | **Entity ID** | `braze_dashboard` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Configure Your Identity Provider
 
@@ -60,5 +61,5 @@ To enable IdP initiated login, you will first need to create an API Key in `Deve
 Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identity which company the user is trying to log into.
 
 {% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
 {% endalert %}

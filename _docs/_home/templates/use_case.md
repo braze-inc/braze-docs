@@ -58,6 +58,7 @@ It's time to talk about measurement! How should the Braze User look to measure t
 | Conversion 1 | This is a conversion. You should measure it because "reasons". | Boolean. |
 | Conversion 2 | This is another conversion. You should measure it because "reasons". | Boolean. |
 | Age | This is a user attribute. You should measure it because "reasons". | Integer. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## How to Build This Campaign/Canvas
 
@@ -98,4 +99,4 @@ If you want to learn more about things that were discussed in the article, check
 
 If this article didn't help, leave feedback below or [open a support ticket][support]!
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

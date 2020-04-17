@@ -6,7 +6,7 @@ page_order: 3
 
 ## Overview
 
-The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high level understanding of your app's userbase. Below are the definitions of these statistics, how we calculate them, and why they should be important to you.
+The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. Below are the definitions of these statistics, how we calculate them, and why they should be important to you.
 
 ![Dashboard Screenshot][1]
 
@@ -54,5 +54,5 @@ Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. Wha
 
 [1]: {% image_buster /assets/img_archive/Usage_Page.png %}
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}
-[3]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {{ site.baseurl }}/help/faqs/
+[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
+[4]: {{site.baseurl}}/help/faqs/

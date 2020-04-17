@@ -6,12 +6,12 @@ page_order: 20
 # Message Type Details
 
 {% alert important %}
-This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
 {% endalert %}
 
 ## Universal
 
-This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
 
 
 {% details Full-Screen %}
@@ -63,7 +63,7 @@ __Customizable Features__
 
 ## Web
 
-This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [Customization documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/).
+This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 {% details Email Capture Message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
@@ -116,7 +116,7 @@ __Customizable Features__
 
 # Specs
 
-This will review previous information around our in-app message creative specifications. To see the most up-to date information on our current in-app message generation, see our [Creative Specs documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+This will review previous information around our in-app message creative specifications. To see the most up-to date information on our current in-app message generation, see our [Creative Specs documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 
 ## Character and Image Limits:
@@ -130,6 +130,7 @@ This will review previous information around our in-app message creative specifi
 | Slideup                            |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
 | Modal (Image Only)                 |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
 | Modal (With Text)                  |     29:10    |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Keeping In-App Message File Sizes Small

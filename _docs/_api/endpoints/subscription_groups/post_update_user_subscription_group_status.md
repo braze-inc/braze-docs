@@ -93,4 +93,4 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 
 {% endapi %}
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

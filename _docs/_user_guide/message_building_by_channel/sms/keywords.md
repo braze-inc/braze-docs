@@ -1,32 +1,29 @@
 ---
-nav_title: Keyword Processing & Management
-page_order: 2
+nav_title: Keyword Processing & Use Cases
+page_order: 6
+layout: featured
+guide_top_header: "Keyword Processing and Use Cases"
+guide_top_text: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords that can be leveraged for more marketing options. This topic will cover how Braze approaches Keyword Processing and Management, as well as some best practices."
+
+guide_featured_title: "Section Articles"
+guide_featured_list:
+- name: Default Opt-In/Opt-Out
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
+  fa_icon: fas fa-commenting
+- name: Handling Unknown Phone Numbers
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
+  fa_icon: fas fa-phone-volume
+- name: Custom Keyword Handing
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+  fa_icon: fas fa-mobile-alt
+- name: Multi-Country SMS Sending
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/multi_county_sms_sending/
+  fa_icon: fas fa-globe-americas
+- name: High Volume Sending
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/
+  fa_icon: fas fa-paper-plane
+- name: Double Opt-In Process
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
+  fa_icon: fas fa-check-double
 ---
-
-# Keyword Processing & Management
-
-Braze will process the following keywords automatically and update the [Subscription Group state]({{ site.basurl }}/) for the phone number on all inbound requests.
-
-|| Keyword | Change |
-|-|-------|---|
-|Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. |
-|Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer. |
-
-{% alert warning %}
-Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
-{% endalert %}
-
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. If you need to change this response, please reach out to your Braze representative.
-
-{% alert important %}
-Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
-{% endalert %}
-
-## New users
-
-Braze  automatically creates a user when a user with a new phone number responds with a START or STOP (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the E.164 number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
-
-[oblink]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-states
-[ualink]: {{ site.baseurl }}/api/objects_filters/user_alias_object/
-[telink]: {{ site.baseurl }}/api/endpoints/user_data/post_user_track/
-[uaolink]: {{ site.baseurl }}/api/objects_filters/user_attributes_object/
+<br><br>

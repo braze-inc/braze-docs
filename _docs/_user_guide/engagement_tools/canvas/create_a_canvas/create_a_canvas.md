@@ -21,7 +21,7 @@ underneath the "Campaigns" link, then click __Create a New Canvas__.
 The Entry Wizard will guide you through setting up your Canvas - everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
 
 {% tabs %}
-	{% tab Basics %}
+    {% tab Basics %}
   Here, you'll set up the basics of your Canvas.
   - Name Your Canvas.
   - Add Teams to Your Canvas.
@@ -30,44 +30,44 @@ The Entry Wizard will guide you through setting up your Canvas - everything from
 
 
   [Learn more about the Basics step.](#set-up-your-canvas-basics)
-	{% endtab %}
+    {% endtab %}
 
-	{% tab Entry Schedule %}
+    {% tab Entry Schedule %}
     Here, you'll decide how your users will enter your Canvas.
     - Scheduled: This is a time-based Canvas entry.
     - Action-Based: Your user will enter your Canvas after they perform a defined action.
     - API Triggered: Use an API request to enter users into your Canvas.
 
   [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
-	{% endtab %}
+    {% endtab %}
 
-	{% tab Entry Audience %}
+    {% tab Entry Audience %}
     - Create Your Audience by Adding Segments and Filters.
     - Fine-tune Canvas Re-Entry and Entry Limits.
     - See a Summary of Your Target Audience.
 
   [Learn more about the Entry Audience step.](#set-your-target-entry-audience)
-	{% endtab %}
+    {% endtab %}
 
-	{% tab Send Settings %}
+    {% tab Send Settings %}
     - Select Your Subscription Settings.
     - Set a Send Rate Limit for Your Canvas Messages.
     - Enable and Set Quiet Hours.
 
   [Learn more about the Send Settings step.](#select-your-send-settings)
-	{% endtab %}
+    {% endtab %}
 
-	{% tab Build Canvas %}
-		Clicking on this tab will take you to the Canvas builder.
+    {% tab Build Canvas %}
+        Clicking on this tab will take you to the Canvas builder.
 
     [Learn how to build your Canvas using the Canvas builder.](#step-3-build-your-canvas)
-	{% endtab %}
-	{% endtabs %}
+    {% endtab %}
+    {% endtabs %}
 
 
 ### Set Up Your Canvas Basics
 
-Here, you'll name your Canvas, assign [Teams]({{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{ site.baseurl }}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
+Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
 
 ![Basics][51]
 
@@ -102,7 +102,7 @@ recurring basis.
 Additionally, you can choose to enter users into a Canvas when they perform
 certain triggers using Action-Based Delivery.  Users will enter your Canvas
 and begin receiving messages when they take particular actions, such as opening
-your app, making a purchase, or triggering a custom event.
+your app, making a purchase or triggering a custom event.
 
 ![Canvas Action-Based Delivery][6]
 
@@ -159,7 +159,7 @@ strategies:
 ### Editing a Step
 
 Click anywhere on a Step, and Braze will open the Step editing interface.
-Steps can be configured to send messages after either a fixed delay, or when a
+Steps can be configured to send messages after either a fixed delay or when a
 user performs a particular action.  For example, you can use Canvas to configure
 a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
 
@@ -198,7 +198,7 @@ Control Group, although they will not receive any messages.  In order to
 preserve an accurate test, we will track the number of Conversions for your
 variants and the Control Group for exactly the same amount of time, as shown on the
 Conversion Event selection screen.  Adjust the distribution between your
-messages by double clicking the variant Name headers.
+messages by double-clicking the variant Name headers.
 
 ![Canvas Multivariate][18]
 
@@ -224,7 +224,7 @@ journey as they come in:
 [1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
 [5]:{% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %}
 [6]:{% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %}
-[6b]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
+[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
@@ -233,7 +233,7 @@ journey as they come in:
 [16]:{% image_buster /assets/img_archive/Canvas_Message_Edit.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
 [18]:{% image_buster /assets/img_archive/Canvas_Multivariate.png %}
-[18a]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
+[18a]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
@@ -248,7 +248,7 @@ journey as they come in:
 [34]:{% image_buster /assets/img_archive/Canvas_Branch_4.png %}
 [35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
 [36]: https://www.braze.com/contact/
-[37]: {{ site.baseurl }}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
+[37]: {{site.baseurl}}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
 [41]: {% image_buster /assets/img_archive/Journey_8-audience_options.png %}
 [42]: {% image_buster /assets/img_archive/Journey_11-audience_options.png %}
 [45]: {% image_buster /assets/img_archive/step_priority.png %}

@@ -13,7 +13,7 @@ In particular, look at:
 - [Appboy.xml][5] to see how to set up credentials and set up automatic deep link handling
 - [AndroidManifest.xml][6] to see how to set permissions for Braze FCM.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [2]: https://github.com/Appboy/appboy-xamarin-bindings
 [5]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/android/TestApp.XamarinAndroid/Resources/values/Appboy.xml
 [6]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/android/TestApp.XamarinAndroid/Properties/AndroidManifest.xml

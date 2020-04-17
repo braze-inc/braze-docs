@@ -23,7 +23,7 @@ __Step 1: Integration Requirements__
 
 __Step 2: Getting the Attribution ID__
 
-Go to your Braze account, navigate to ["Technology Partners", then "Attribution"][14] and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
+Go to your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
 
 __Step 3: Setting Up A Postback from Kochava__
 
@@ -31,7 +31,7 @@ Follow [these instructions][18] to add a postback in Kochava's dashboard. You wi
 
 __Step 4: Confirming the Integration__
 
-Once Braze receives attribution data from Kochava, the status connection indicator on ["Technology Partners" , then "Attribution"][14] will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from Kochava, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
 
 Note for Android and Windows Support: If you are planning to leverage the server side integration between Braze and Kochava, you'll need to ensure that you utilize the 'Identity Link' method of the Kochava SDK to capture the 'Braze ID' for [Android][29] and [Windows][30]. Please ensure that you instrument this method to capture/pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server side integration.
 
@@ -41,7 +41,7 @@ Attribution data for Facebook and Twitter campaigns is __not available through o
 
 
 [5]: #api-restrictions
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

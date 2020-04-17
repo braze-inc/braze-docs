@@ -19,6 +19,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [NYT Article Search][8] | Provides NYT article data which includes headline, topic, URL, date, abstract, etc. |
 | [The Guardian API][9] | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
 | [Alchemy][10] | Provides data from an index of 250-300 thousand news articles and blogs. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Events and Ticketing
 
@@ -29,6 +30,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Eventbrite][19] | Provides data on a variety of public events. |
 | [Eventful][20] | Provides data on a variety of public events |
 | [Ticketmaster][38] | Provides data on public events, venues, and prices |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Food & Drink
 
@@ -36,6 +38,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | --------- | --- |
 | [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
 | [Zomato][41] | Provides a variety of restaurant information, including ratings, locations, and cuisine. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Finance
 
@@ -44,6 +47,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Barchart OnDemand][36] | Provides a variety of stock, futures, and foreign exchange data. |
 | [CoinDesk][37] | Provides a variety of cryptocurrency data. |
 | [Yahoo Finance][23] | Provides a variety of stock data. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Health
 
@@ -53,6 +57,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Nutritionix Worlds][43] | Provides verified nutrition data. |
 | [openFDA][44] | Provides FDA data on drugs, devices, and foods |
 | [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Music
 
@@ -63,6 +68,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Bandsintown][13] | Provides local concert information and recommends live music events. |
 | [Songkick][22] | Provides live music information with artists, venues, locations, etc. |
 | [Discogs][21] | Provides information on artists, labels, and recordings. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Product Information
 
@@ -71,6 +77,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Semantics3][25] | Provides product metadata in a variety of categories. |
 | [Factual][26] | Provides various product data including nutrition and ingredients data. |
 | [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Miscellaneous
 
@@ -80,6 +87,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Clearbit][27] | Provides company logo images. |
 | [London Unified][28] and [NYC MTA][29] | Provide realtime public transit data including line statuses, arrival times, etc. |
 | [Sunrise and Sunset][39] | Provides Sunset and sunrise times for a given latitude and longitude. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 [1]: #aborting-connected-content
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
@@ -106,7 +114,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 [27]: http://blog.clearbit.com/logo
 [28]: http://api.tfl.gov.uk/#Line
 [29]: http://datamine.mta.info/
-[30]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [31]: https://docs.transifex.com/api/translation-strings
 [32]: {% image_buster /assets/img_archive/TransifexUI.png %}
 [33]: {% image_buster /assets/img_archive/terminal.png %}
@@ -123,7 +131,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 [44]: https://open.fda.gov/api/
 [45]: https://ndb.nal.usda.gov/ndb/doc/index
 [46]: http://www.json.org
-[47]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
 [48]: https://developer.accuweather.com/accuweather-locations-api/apis
 [49]: https://developer.accuweather.com/accuweather-forecast-api/apis
 [50]: https://developer.accuweather.com/accuweather-current-conditions-api/apis
@@ -137,4 +145,4 @@ There are a variety of publicly available APIs that can be used for Connected Co
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
 [61]: https://developer.accuweather.com/weather-icons
-[62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[62]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

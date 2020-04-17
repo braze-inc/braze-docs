@@ -71,6 +71,7 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the custom events analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
@@ -126,7 +127,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
@@ -148,7 +149,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 ```
 
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under “Manage App Group -> Custom Attributes”, as shown in the screen capture below. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -371,13 +372,13 @@ Additionally, the following keys are reserved and cannot be used as Custom Event
 
 If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
-[4]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
+[4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[10]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[9]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[10]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [11]: http://www.regextester.com/pregsyntax.html
 [12]: #integers
 [16]: #example-case
-[17]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"

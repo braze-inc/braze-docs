@@ -9,10 +9,10 @@ Before you begin to integrate the Braze SDKs, you may find yourself wondering wh
 
 ## Feature Set Defaults
 
-If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
+If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
-All our our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
+All of our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
 {% endalert %}
 
 ### Device Properties
@@ -40,12 +40,13 @@ These properties are collected by the Android SDK upon proper integration.
 | Name | Description |
 |---|---|
 | ANDROID_VERSION <br> `os_version` | The version of the Android OS installed on the device. |
-| CARRIER | The mobile carrier.
-| MODEL | The specific hardware of the device.
-| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`".
-| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g. "en_US").
-| TIMEZONE <br> `time_zone` | The device time zone.
-| NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.
+| CARRIER | The mobile carrier. |
+| MODEL | The specific hardware of the device. | 
+| RESOLUTION | The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |
+| LOCALE | The default locale of the device. The format of this value is "`<language>`_`<COUNTRY>`" (e.g. "en_US"). |
+| TIMEZONE <br> `time_zone` | The device time zone. |
+| NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Whether this app has notifications enabled.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab iOS SDK %}
@@ -79,7 +80,7 @@ We highly recommend fully integrating the SDKs to take full advantage of our pro
 
 ### Web SDK
 
-You may either simply not integrate certain parts of the SDK, or use [`stopWebTracking`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking) for a user. This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
+You may either simply not integrate certain parts of the SDK, or use [`stopWebTracking`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking) for a user. This method will sync data logged prior to when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
 
 ### Android SDK
 

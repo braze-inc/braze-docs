@@ -10,5 +10,5 @@ In-App messages will work by default if you've included the Appboy.bundle folder
 
 See [the iOS integration instructions][1] for information on In-App best practices.  Furthermore, you can look at the [sample application][2] for implementation samples.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/#in-app-messaging
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#in-app-messaging
 [2]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples

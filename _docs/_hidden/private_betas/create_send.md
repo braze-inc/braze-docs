@@ -65,7 +65,7 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.
@@ -86,6 +86,7 @@ US-03 | `https://rest.iad-03.braze.com/canvas/trigger/send`
 US-04 | `https://rest.iad-04.braze.com/canvas/trigger/send`
 US-06 | `https://rest.iad-06.braze.com/canvas/trigger/send`
 EU-01 | `https://rest.fra-01.braze.eu/canvas/trigger/send`
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Send API-Triggered Canvas Sample Request Body
 
@@ -109,7 +110,7 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.

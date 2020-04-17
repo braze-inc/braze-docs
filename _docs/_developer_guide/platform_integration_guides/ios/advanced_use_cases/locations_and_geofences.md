@@ -6,7 +6,7 @@ page_order: 6
 ---
 # Locations & Geofences
 
-Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Docs]({{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
+Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
 
 To support geofences for iOS:
 
@@ -38,10 +38,10 @@ By default, geofences are enabled based on whether automatic location collection
 {% tab swift %}
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY",
-inApplication:application,
-withLaunchOptions:launchOptions,
-withAppboyOptions:[ ABKEnableGeofencesKey : true ]])
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:[ ABKEnableGeofencesKey : true ])
 ```
 
 {% endtab %}
@@ -115,10 +115,10 @@ Starting in iOS SDK version 3.21.3, you can disable geofences from being automat
 {% tab swift %}
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY",
-inApplication:application,
-withLaunchOptions:launchOptions,
-withAppboyOptions:[ ABKDisableAutomaticGeofenceRequestsKey : true ]])
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:[ ABKDisableAutomaticGeofenceRequestsKey : true ])
 ```
 
 {% endtab %}
@@ -128,7 +128,7 @@ If you choose to use this option, you will need to manually request geofences fo
 
 ## Manually Requesting Geofences
 
-When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and in turn receives geofences that are determined to be optimally relevant based on the location reported. To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3 you can manually request geofences by providing latitude and longitude of a location. To do so, use the following code:
+When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and in turn, receives geofences that are determined to be optimally relevant based on the location reported. To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3 you can manually request geofences by providing latitude and longitude of a location. To do so, use the following code:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -151,8 +151,8 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 __Note:__ There is a rate-limit of one geofence refresh per session.
 __Note:__ It is recommended to disable automatic geofence requests when using this method.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
 [4]: #customizing-appboy-on-startup
-[6]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
 [9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

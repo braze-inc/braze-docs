@@ -26,9 +26,6 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/dpiddy/heroku-buildpack-runit.git"
-    },
-    {
       "url": "https://github.com/beanieboi/nginx-buildpack.git"
     },
     {

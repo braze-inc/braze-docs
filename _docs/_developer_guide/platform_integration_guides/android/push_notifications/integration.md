@@ -45,13 +45,13 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 #### Step 2: Configure Token Registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token is registered. Firebase tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
 ##### Option 1: Automatic Registration
 
-To automatically register Firebase push tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
+To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
 
 In your `appboy.xml`:
 
@@ -104,7 +104,7 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     final Context applicationContext = this;
     new Thread(new Runnable() {
       @Override
@@ -113,7 +113,7 @@ public class MyApplication extends Application {
           String token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM");
           Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
         } catch (Exception e) {
-          Log.e(TAG, "Exception while registering Firebase token with Braze.", e);
+          Log.e(TAG, "Exception while registering FCM token with Braze.", e);
         }
       }
     }).start();
@@ -129,13 +129,13 @@ class MyApplication: Application() {
   override fun onCreate() {
     super.onCreate()
 
-    // Firebase tokens cannot be obtained on the main thread.
+    // FCM Registration tokens cannot be obtained on the main thread.
     Thread(Runnable {
       try {
         val token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM")
         Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
       } catch (e: Exception) {
-        Log.e(TAG, "Exception while registering Firebase token with Braze.", e)
+        Log.e(TAG, "Exception while registering FCM token with Braze.", e)
       }
     }).start()
   }
@@ -145,7 +145,7 @@ class MyApplication: Application() {
 {% endtab %}
 {% endtabs %}
 
-> While we highly recommend you register your Firebase token in your application [`onCreate()`][67], the push token can be registered anywhere in your code.
+> While we highly recommend you register your FCM registration token in your application [`onCreate()`][67], the token can be registered anywhere in your code.
 
 #### Step 3: Migrate from GCM (Optional)
 
@@ -417,7 +417,7 @@ For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, 
 
 #### Testing Display
 
-At this point you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
+At this point, you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
 
 ![Android push test][55]
 
@@ -425,7 +425,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point, you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 
@@ -450,7 +450,7 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 #### Step 1: Create your Custom Notification Factory
 
-In some scenarios you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
+In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
 If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 
@@ -610,20 +610,20 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [4]: #displaying-push
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomAppboyNotificationFactory-com.appboy.IAppboyNotificationFactory-
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNotificationFactory.html
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
-[8]: {{ site.baseurl }}/help/best_practices/push/overview/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[8]: {{site.baseurl}}/help/best_practices/push/overview/
 [10]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [11]: https://support.google.com/cloud/answer/6158840?hl=en
 [12]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
 [13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
 [14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "Custom Broadcast Sample Project"
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
-[22]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [23]: #step-4-registering-opens-and-receipts
 [26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
 [27]: {% image_buster /assets/img_archive/Push_Android_2.png %}
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
+[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
 [29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
 [30]: #step-3-enable-automatic-registration
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
@@ -632,30 +632,30 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [38]: {% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon"
 [40]: http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation"
 [41]: {% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action"
-[42]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
+[42]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [43]: https://developer.android.com/training/permissions/index.html
 [45]: https://firebase.google.com/docs/cloud-messaging/
 [46]: https://firebase.google.com/docs/cloud-messaging/android/client
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
-[50]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
-[52]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
+[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
-[56]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[57]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[56]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
+[57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [60]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push
-[61]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
+[61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
 [62]: https://developer.android.com/preview/features/notification-channels.html
-[63]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#android-push-object
-[64]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel
-[65]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/runtime_configuration/#runtime-configuration
-[66]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only
+[63]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
+[64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel
+[65]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/runtime_configuration/#runtime-configuration
+[66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[68]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[69]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration
+[68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
+[69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-

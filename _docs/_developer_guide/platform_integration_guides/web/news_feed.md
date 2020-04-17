@@ -14,7 +14,7 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 ## News Feed Integration
 
-To toggle display of the News Feed through the Braze Web SDK, simply call
+To toggle the display of the News Feed through the Braze Web SDK, simply call
 
 ``` javascript
 appboy.display.toggleFeed();
@@ -52,7 +52,7 @@ body .ab-feed {
 
 ## Categories
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for effective integration of multiple News Feed streams within a single application. For more information on this feature see [Braze Academy][14]
+Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature see [Braze Academy][14]
 
 News Feed Categories can be defined by providing the third "allowedCategories" parameter to `toggleFeed`:
 
@@ -104,6 +104,6 @@ See the JSDocs for [ab.ClassicCard][3], [ab.Banner][4], or [ab.CaptionedImage][5
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html
 [5]: https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[14]: {{site.baseurl}}/help/best_practices/news_feed/
 [17]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Feed.html
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

@@ -4,13 +4,13 @@ platform: Android
 page_order: 4
 
 ---
-## Advanced Settings
+# Advanced Settings
 
 There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![Advanced Settings][1]
 
-### Notification Priority
+## Notification Priority
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life whereas high priority messages are always sent immediately.
 
@@ -22,18 +22,19 @@ To message your full userbase with a specific priority, we recommend that you in
 
 The priority levels that you can set on Android or Fire OS push notifications are:
 
-| Priority | Description/Intended Use                                                                               | `priority` value (for API messages) |
-|----------|--------------------------------------------------------------------------------------------------------|-------------------------------------|
-| Max      | Urgent or time-critical messages                                                                       | `2`                                 |
-| High     | Important communication, such as a new message from a friend                                           | `1`                                 |
-| Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0`                                 |
-| Low      | Information that you want users to know about, but does not require immediate action                   | `-1`                                |
-| Min      | Contextual or background information.                                                                  | `-2`                                |
+| Priority | Description/Intended Use | `priority` value (for API messages) |
+|----------|--------------------------|-------------------------------------|
+| Max      | Urgent or time-critical messages | `2` |
+| High     | Important communication, such as a new message from a friend | `1` |
+| Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0` |
+| Low      | Information that you want users to know about, but does not require immediate action | `-1` |
+| Min      | Contextual or background information. | `-2` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 For more information, please consult [Google's documentation on Android notifications][2].
 
-### Delivery Options
+## Delivery Options
 
 Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
 
@@ -47,7 +48,7 @@ For example, say that a user of a sports news app had their device offline the d
 
 For more information on these delivery options, please see the [Firebase Cloud Messaging][7] and [Amazon Device Messaging][8] documentation.
 
-### Summary Text
+## Summary Text
 
 Summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
 
@@ -59,7 +60,7 @@ For push notifications that include images, the message text will be shown in th
 
 ![Summary Text Behavior][15]
 
-### Custom URIs
+## Custom URIs
 
 The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
@@ -67,7 +68,7 @@ The __"Custom URI"__ feature allows you to specify a Web URL or an Android resou
 
 ![Custom URI][12]
 
-### Sounds
+## Sounds
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notifications.
 
@@ -86,7 +87,7 @@ To message your full userbase with a specific sound, we recommend that you indir
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link_image_android.png %}
-[13]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance

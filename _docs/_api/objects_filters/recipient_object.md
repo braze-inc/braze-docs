@@ -20,7 +20,7 @@ The Recipient Object allows you to request or write information in our endpoints
 
 Either `external_user_id` or `user_alias` is required in this object. __Requests must specify only one.__
 
-The Recipient object allows you to combine the [User Alias object]({{ site.baseurl }}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{ site.baseurl }}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{ site.baseurl }}/api/objects_filters/canvas_entry_properties_object/).
+The Recipient object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object Body
 ```json

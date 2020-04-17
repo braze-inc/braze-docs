@@ -10,6 +10,6 @@ The News Feed is a fully customizable in-app content feed for your users. Our ta
 
 ## Example News Feed
 
-![Sample News Feed][23]
+![Sample News Feed][23]{: height="600px"}
 
 [23]: {% image_buster /assets/img_archive/android_news_feed.png %}

@@ -61,9 +61,6 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
       </intent-filter>
     </activity>
 
-    <!-- Overlay Activity used to display in-app messages. -->
-    <activity android:name="com.appboy.unity.AppboyOverlayActivity" android:theme="@style/Appboy.Theme.Transparent" />
-
     <!-- A Braze specific FirebaseMessagingService used to handle push notifications. -->
     <service android:name="com.appboy.AppboyFirebaseMessagingService">
       <intent-filter>
@@ -98,66 +95,17 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME` should be replaced with your `Package Name` from the previous step.
 
 ## Step 4: Configure the SDK {#unity-static-configuration}
+Braze provides a native Unity solution for automating the Unity Android integration. This solution modifies the built Gradle project using Unity's [`OnPostGenerateGradleAndroidProject`][35] and auto-generates a resource file called `/unity-android-resources/res/values/appboy-generated.xml` in your temporary `gradleOut` directory.
 
-A static configuration file called `appboy.xml` is used to configure the Braze Android SDK. This file should exist under `Assets/Plugins/Android/res/values/appboy.xml`.
-
-### Part 1: Adding the appboy.xml
-
-If your app does not have an `appboy.xml`, you can use the following as a template. Otherwise, if you already have an `appboy.xml`, ensure that any missing sections below are added to your existing `appboy.xml`.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- General configuration -->
-  <string name="com_appboy_api_key">REPLACE_WITH_YOUR_BRAZE_API_KEY</string>
-
-  <!-- FCM Push Notification configuration (optional) -->
-  <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
-  <string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
-
-  <!-- Push deep link configuration (optional) -->
-  <bool name="com_appboy_handle_push_deep_links_automatically">true</bool> <!-- Whether to open push deep links from Braze automatically. -->
-
-  <!-- In-app message configuration (optional) -->
-  <bool name="com_appboy_inapp_show_inapp_messages_automatically">true</bool> <!-- Whether to display in-app messages from Braze using the Braze native UI. -->
-
-  <!-- A custom endpoint, IF applicable. Please ask your Customer Success Manager if this applies to your integration -->
-  <!-- <string translatable="false" name="com_appboy_custom_endpoint"></string> -->
-
-  <!-- Optional -->
-  <!-- <string name="com_appboy_inapp_listener_game_object_name"></string> --> <!-- The Unity game object to receive inapp messages. -->
-  <!-- <string name="com_appboy_inapp_listener_callback_method_name"></string> --> <!-- The callback method to be called when an inapp message is received. -->
-  <!-- <string name="com_appboy_feed_listener_game_object_name"></string> --> <!-- The Unity game object to receive the news feed. -->
-  <!-- <string name="com_appboy_feed_listener_callback_method_name"></string> --> <!-- The callback method to be called when the news feed is received. -->
-  <!-- <string name="com_appboy_content_cards_updated_listener_game_object_name"></string> --> <!-- The Unity game object to receive Content Cards. -->
-  <!-- <string name="com_appboy_content_cards_updated_listener_callback_method_name"></string> --> <!-- The callback method to be called when Content Cards are received. -->
-  <!-- <string name="com_appboy_push_received_game_object_name"></string> --> <!-- The Unity game object to receive push received messages. -->
-  <!-- <string name="com_appboy_push_received_callback_method_name"></string> --> <!-- The callback method to be called when a push received message is received. -->
-  <!-- <string name="com_appboy_push_opened_game_object_name"></string> --> <!-- The Unity game object to receive push opened messages. -->
-  <!-- <string name="com_appboy_push_opened_callback_method_name"></string> --> <!-- The callback method to be called when a push opened message is received. -->
-  <!-- <string name="com_appboy_push_deleted_game_object_name"></string> --> <!-- The Unity game object to receive push deleted messages. -->
-  <!-- <string name="com_appboy_push_deleted_callback_method_name"></string> --> <!-- The callback method to be called when a push deleted message is received. -->
-
-  <!--- Internal Braze Usage -->
-  <string name="com_appboy_sdk_flavor">UNITY</string>
-</resources>
-```
-
-### Part 2: Make Replacements in appboy.xml
-
-* Replace `REPLACE_WITH_YOUR_BRAZE_API_KEY` with your Braze API Key.
-* Replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Messaging Sender ID. Please see [Registering for Push][31] for more information.
+1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
+2. Check the "Automate Unity Android Integration" box.
+3. In the "Braze API Key" field, input your application's API key from the Braze Dashboard.
 
 >  Your Braze API key can be found within the App Settings page of the Braze dashboard. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][30].
 
-### Part 3: Configure ADM in appboy.xml (optional)
-
-If using ADM, please add the following to your `appboy.xml`:
-
-```xml
-<bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool> <!-- Whether or not Braze should handle registering the device to receive ADM push notifications. Default is false. -->
-<bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">false</bool>
-```
+{% alert note %}
+This automatic integration should not be used in conjunction with a manually created `appboy.xml` file since the configuration values may conflict during project building.
+{% endalert %}
 
 ## Advanced Android Integration Options
 
@@ -290,6 +238,68 @@ If you do not wish to import the Unity package, you may also manually copy the p
   | __YES__ | `Assets/Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
   | __YES__ | `Assets/Plugins/Android` | `/<your-project>/Assets/Plugins/Android` |
 
+### Configure the SDK in XML {#unity-android-xml-configuration}
+
+A static configuration file called `appboy.xml` can be used to configure the Braze Android SDK. This file should exist under `Assets/Plugins/Android/res/values/appboy.xml`.
+
+#### Part 1: Adding The XML File
+
+If your app does not have an `appboy.xml`, you can use the following as a template. Otherwise, if you already have an `appboy.xml`, ensure that any missing sections below are added to your existing `appboy.xml`.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- General configuration -->
+  <string name="com_appboy_api_key">REPLACE_WITH_YOUR_BRAZE_API_KEY</string>
+
+  <!-- FCM Push Notification configuration (optional) -->
+  <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
+  <string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
+
+  <!-- Push deep link configuration (optional) -->
+  <bool name="com_appboy_handle_push_deep_links_automatically">true</bool> <!-- Whether to open push deep links from Braze automatically. -->
+
+  <!-- In-app message configuration (optional) -->
+  <bool name="com_appboy_inapp_show_inapp_messages_automatically">true</bool> <!-- Whether to display in-app messages from Braze using the Braze native UI. -->
+
+  <!-- A custom endpoint, IF applicable. Please ask your Customer Success Manager if this applies to your integration -->
+  <!-- <string translatable="false" name="com_appboy_custom_endpoint"></string> -->
+
+  <!-- Optional -->
+  <!-- <string name="com_appboy_inapp_listener_game_object_name"></string> --> <!-- The Unity game object to receive inapp messages. -->
+  <!-- <string name="com_appboy_inapp_listener_callback_method_name"></string> --> <!-- The callback method to be called when an inapp message is received. -->
+  <!-- <string name="com_appboy_feed_listener_game_object_name"></string> --> <!-- The Unity game object to receive the news feed. -->
+  <!-- <string name="com_appboy_feed_listener_callback_method_name"></string> --> <!-- The callback method to be called when the news feed is received. -->
+  <!-- <string name="com_appboy_content_cards_updated_listener_game_object_name"></string> --> <!-- The Unity game object to receive Content Cards. -->
+  <!-- <string name="com_appboy_content_cards_updated_listener_callback_method_name"></string> --> <!-- The callback method to be called when Content Cards are received. -->
+  <!-- <string name="com_appboy_push_received_game_object_name"></string> --> <!-- The Unity game object to receive push received messages. -->
+  <!-- <string name="com_appboy_push_received_callback_method_name"></string> --> <!-- The callback method to be called when a push received message is received. -->
+  <!-- <string name="com_appboy_push_opened_game_object_name"></string> --> <!-- The Unity game object to receive push opened messages. -->
+  <!-- <string name="com_appboy_push_opened_callback_method_name"></string> --> <!-- The callback method to be called when a push opened message is received. -->
+  <!-- <string name="com_appboy_push_deleted_game_object_name"></string> --> <!-- The Unity game object to receive push deleted messages. -->
+  <!-- <string name="com_appboy_push_deleted_callback_method_name"></string> --> <!-- The callback method to be called when a push deleted message is received. -->
+
+  <!--- Internal Braze Usage -->
+  <string name="com_appboy_sdk_flavor">UNITY</string>
+</resources>
+```
+
+#### Part 2: Make Replacements in appboy.xml
+
+* Replace `REPLACE_WITH_YOUR_BRAZE_API_KEY` with your Braze API Key.
+* Replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Messaging Sender ID. Please see [Registering for Push][31] for more information.
+
+>  Your Braze API key can be found within the App Settings page of the Braze dashboard. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][30].
+
+#### Part 3: Configure ADM in appboy.xml (optional)
+
+If using ADM, please add the following to your `appboy.xml`:
+
+```xml
+<bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool> <!-- Whether or not Braze should handle registering the device to receive ADM push notifications. Default is false. -->
+<bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">false</bool>
+```
+
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
@@ -297,17 +307,17 @@ Braze should now be collecting data from your application and your basic integra
 [1]: https://github.com/appboy/appboy-unity-sdk
 [2]: {% image_buster /assets/img_archive/UnityPackageName.png %}
 [3]: https://dashboard-01.braze.com/app_settings/app_settings/settings
-[4]: {{ site.baseurl }}/app_group_configuration "dashboard setup api keys"
+[4]: {{site.baseurl}}/app_group_configuration "dashboard setup api keys"
 [5]: #clone-unity
 [6]: #copy-plugins
 [7]: #add-bundle-id
 [8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [13]: #android-advanced
-[14]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [15]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Android
 [16]: https://github.com/Appboy/appboy-unity-sdk/releases
 [17]: #prime-31
@@ -315,16 +325,17 @@ Braze should now be collecting data from your application and your basic integra
 [19]: #game-objects
 [20]: #inapp-disabling-native
 [21]: https://github.com/Appboy/appboy-android-sdk/tree/master/android-sdk-ui/assets
-[22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
+[22]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
 [23]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
 [24]: https://github.com/Appboy/appboy-android-sdk#version-information
-[25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
+[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
 [26]: https://docs.unity3d.com/Manual/AssetPackages.html
 [27]: https://developer.android.com/jetpack/androidx
 [28]: https://firebase.google.com/docs/unity/setup
 [29]: https://docs.unity3d.com/Manual/android-manifest.html
-[30]: {{ site.baseurl }}/support_contact/
-[31]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push
+[30]: {{site.baseurl}}/support_contact/
+[31]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push
 [32]: https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java
 [33]: https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html
 [34]: #extending-braze-unity-player
+[35]: https://docs.unity3d.com/ScriptReference/Android.IPostGenerateGradleAndroidProject.html

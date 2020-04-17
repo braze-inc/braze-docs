@@ -12,7 +12,7 @@ To toggle display of Content Cards through the Braze Web SDK, call:
 [`appboy.display.toggleContentCards();`](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
 
 
-This method will toggle the visility of the Content Cards. By default, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
+This method will toggle the visibility of the Content Cards. By default, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
 
 |Parameters | Description |
 |---|---|
@@ -20,6 +20,20 @@ This method will toggle the visility of the Content Cards. By default, if no arg
 |`filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed. |
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
+
+### Control Group 
+
+If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
+
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card _would have been seen_.
+
+Here is an example of how to determine if a Content Card is a "Control" card:
+
+```javascript
+function isControlCard(card) {
+    return card instanceof appboy.ab.ControlCard;
+}
+```
 
 ## Other Methods to Note
 

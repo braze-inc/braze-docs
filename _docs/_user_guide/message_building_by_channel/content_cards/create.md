@@ -7,7 +7,7 @@ page_order: 0
 
 # Creating a Content Card
 
-You can create a Content Card using the Braze platform using Campaigns. Content Cards have a maximum size of __2kb__ (including images, links, and all content), and will appear as a [Classic Card, Banner Card, or Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/) in a feed.
+You can create a Content Card using the Braze platform using Campaigns.
 
 ## Build Your Message
 
@@ -30,15 +30,16 @@ Choose a __Platform__, __Message Type__, __Layout__, and __Enforced Device Orien
 
 ### Message Types
 
-Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
+Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
 
 These Content Card types are accepted by both mobile apps and web applications.
 
 | Message Type | Type Description |
 |---|---|---|
-|[Classic]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card. |
-|[Captioned Image]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| This Card allows you to showcase your content with copy and an attention-grabbing image! |
-|[Banner]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content. |
+|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card. |
+|[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| This Card allows you to showcase your content with copy and an attention-grabbing image! |
+|[Banner]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Step 2: Compose a Content Card
 
@@ -51,14 +52,15 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
-|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card messages are limited to 2kb in total size (including images, links, and other content), calculated by adding the byte-size length of the following fields. |
+|Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card message fields are limited to 2kb in total size as noted in the section below. |
 |Pinning | A pinned card will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Once a card has been sent you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
 |Expiration | Set the specific expiration date or the days until a Card expires. | Currently, Braze supports a maximum expiration time of __30 days__. <br> <br> All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the Card, your link can either lead them deeper into your app or to another site. |
 |Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert warning %}
-Content Card messages are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent.
+Content Card message fields are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image, but rather the length of the Image URL.
 {% endalert %}
 
 {% alert note %}
@@ -71,7 +73,7 @@ Each user is eligible to receive up to 100 non-expired Content Cards. As a user 
 
 Add [key-value pairs][19] to your message, if needed.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas
 
@@ -107,27 +109,39 @@ You have the option of allowing up to a 30-day window during which a conversion 
 
 <br>
 
-After you've finished building the last of your campaign, review its details, [test it]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
-
-## Things to Know
-
-The following capabilities are not yet supported for Content Cards:
-
-- Vouchers
-- Frequency Capping
-- Re-ordering Content Cards from the Braze UI
-- Post-launch Edits
+After you've finished building the last of your campaign, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
 
+## Things to Know
+
+### Capabilities Not Yet Supported
+The following capabilities are not yet supported for Content Cards:
+- Vouchers
+- Frequency Capping
+- Re-ordering Content Cards from the Braze UI
+- Post-launch Edits
+
+
+### Sending Behavior
+
+Once content cards have been sent, similiar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
+
+If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to  your content card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove content cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
+
+![Content Card][25]
+
+If you find you need to make changes to launched content cards, you must stop your campaign, remove active content cards from users' feeds, make your edits to the cards, and then restart your campaign.
+
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
 [10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
-[11]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/#client-integration-iam
+[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
-[18]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/key_value_pairs/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/compose-cc.gif %}
+[25]: {% image_buster /assets/img/cc_remove.png %}

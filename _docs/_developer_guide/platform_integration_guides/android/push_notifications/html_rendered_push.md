@@ -4,7 +4,7 @@ platform: Android
 page_order: 6
 
 ---
-## HTML Push Notifications
+# HTML Push Notifications
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
 
@@ -22,7 +22,7 @@ The above example is rendered with the following HTML:
 
 > Android OS limits what HTML elements/tags are valid in push notifications. For example, `marquee` is not allowed.
 
-### Implementation
+## Implementation
 
 In your `appboy.xml`:
 
@@ -56,4 +56,4 @@ Appboy.configure(this, appboyConfig)
 {% endtabs %}
 
 [1]: {% image_buster /assets/img/multicolor_android_push.png %}
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration

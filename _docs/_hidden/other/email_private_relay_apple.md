@@ -23,7 +23,7 @@ For example: `bounces+1234567@braze.online.docs.com`.
 
 Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
 
-If you have any further questions, please [submit a support ticket]({{ site.baseurl }}/support_contact/).
+If you have any further questions, please [submit a support ticket]({{site.baseurl}}/support_contact/).
 
 {% alert important %}
 If your desired `From` address is an `abmail` address, please include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
@@ -45,3 +45,9 @@ This might not be the case for your address. Please check your DNS records in Se
 ## What is the Apple Private Relay System?
 
 With the recent iOS 13 release, Apple has introduced new functionality for Apple customers, which impacts how email is sent to them. The new Apple single sign-on (SSO) feature allows Apple customers to share their email address (`example@icloud.com`) or to hide their email address, in which case a "masked" email address (`tq1234snin@privaterelay.appleid.com`) will be provided to brands (as opposed to the user's personal email address).
+
+### Disable forwarding
+
+Users can manage the apps using Sign In With Apple from from their Apple ID settings page (see [Apple's Documentation](https://support.apple.com/en-us/HT210426)).
+
+Should a user choose to disable the email forwarding to _your_ app's relay email, Braze will receive email bounce information as usual.

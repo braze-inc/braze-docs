@@ -61,10 +61,10 @@ In some cases (e.g., on session start), the in-app message may be triggered and 
 {% tab swift %}
 
 ```swift
-Appboy.startWithApiKey("YOUR-API-KEY",
-                       inApplication:application,
-                       withLaunchOptions:launchOptions,
-                       withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
 ```
 {% endtab %}
 {% endtabs %}
@@ -302,7 +302,7 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 {% endtabs %}
 
 ## Customizing In-App Message Behavior on Click
-The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
+The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read-only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -333,7 +333,7 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 
 >  This method cannot be used when using the `Core` subspec.
 
-The following UI delegate method is called when the in-app message is clicked, and can be used to customize in-app message on-click behavior:
+The following UI delegate method is called when the in-app message is clicked and can be used to customize in-app message on-click behavior:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -444,15 +444,15 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-All of our in-app message view controllers are open-sourced. You can use subclasses or categories to customize display or behavior of in-app messages.
+All of our in-app message view controllers are open-sourced. You can use subclasses or categories to customize the display or behavior of in-app messages.
 
 See the [in-app message view controllers][37] for more details.
 
 ## Custom In-App Message Triggering
 
-By default in-app messages are triggered by event types which are logged by the SDK. If you would like to trigger in-app messages by server-sent events you are also able to achieve this.
+By default, in-app messages are triggered by event types that are logged by the SDK. If you would like to trigger in-app messages by server-sent events you are also able to achieve this.
 
-To enable this feature you would send a silent push to the device which allows the device to log a SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
+To enable this feature you would send a silent push to the device which allows the device to log an SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ### Step 1: Handle Silent Push and Key Value Pairs
 Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
@@ -484,7 +484,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 {% endtab %}
 {% endtabs %}
 
-When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in foreground.
+When the silent push is received an SDK recorded event "In-App Message Trigger" will be logged against the user profile. Note that these In-App Messages will only trigger if the silent push is received while the application is in the foreground.
 
 ### Step 2: Create a Push Campaign
 
@@ -492,13 +492,13 @@ Create a silent push campaign which is triggered via the server sent event. For 
 
 ![serverEventTrigger][40]
 
-The push campaign must include key value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message:
+The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message:
 
 ![IAMSilentPush][41]
 
 The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
-You are able to alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name, or as an event property, when logging the custom event.
+You can alter either the event name or event properties by sending the desired value within the key-value pair extras of the push payload. These extras can be used as the parameter of either the event name or as an event property when logging the custom event.
 
 ### Step 3: Create an In-App Message Campaign
 
@@ -508,7 +508,7 @@ In the example below the specific in-app message to be trigger has been configur
 
 ![IAMPushTrigger][42]
 
->  Due to a push message being used to to record an SDK logged custom event, Braze will need to store a push token for each user in order to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Prior to this the user will not be reachable using push and the above solution will not be possible.
+>  Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push and the above solution will not be possible.
 
 ## Method Declarations
 
@@ -536,7 +536,7 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [10]: #custom-inAppMessage
 [11]: #custom-complete
 [12]: #method-declarations
-[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
+[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
@@ -546,18 +546,18 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates
 [26]: http://fortawesome.github.io/Font-Awesome/
-[27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
+[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
-[33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
+[33]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
 [37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
 [38]: #in-app-mssage-ui-delegate
-[39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

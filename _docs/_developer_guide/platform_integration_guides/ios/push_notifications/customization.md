@@ -77,7 +77,7 @@ Custom sounds must be under 30 seconds when played. If a custom sound is over th
 
 #### Step 2: Providing the Dashboard with a Protocol URL for the Sound
 
-Your sound must be hosted locally within the app. You must specify a Protocol URL which directs to the location of the sound file in the app within the "Sound" field in the push composer. Specifying “default” in this field will play the default notification sound on the device. This can be specified via our [Messaging API][25] or our dashboard under “Advanced Settings” in the push composer wizard as pictured below:
+Your sound must be hosted locally within the app. You must specify a Protocol URL that directs to the location of the sound file in the app within the "Sound" field in the push composer. Specifying “default” in this field will play the default notification sound on the device. This can be specified via our [Messaging API][25] or our dashboard under “Advanced Settings” in the push composer wizard as pictured below:
 
 ![Push Notification Sound][8]
 
@@ -154,15 +154,15 @@ func application(_ application: UIApplication,
 Braze allows you to send custom-defined string key-value pairs, known as extras, along with a push notification to your application. Extras can be defined via the dashboard or API and will be available as key-value pairs within the notification dictionary passed to your push delegate implementations.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
 [4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
-[12]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[12]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[17]: {{ site.baseurl }}/assets/img_archive/push_example_category.png
+[17]: {{site.baseurl}}/assets/img_archive/push_example_category.png
 [20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
 [21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1
-[22]: {{ site.baseurl }}/help/best_practices/utilizing_badge_count/#utilizing-badge-count
-[25]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#messaging
+[22]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#utilizing-badge-count
+[25]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
 [31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory

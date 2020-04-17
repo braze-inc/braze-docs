@@ -16,10 +16,10 @@ platform:
 
 ## What is a REST API?
 
-A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
+A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data. 
 
 {% alert note %}
-Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
+Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
 {% endalert %}
 
 ## API Definitions
@@ -39,6 +39,7 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located on this page.
@@ -53,7 +54,7 @@ The `company_secret` was formerly included with all API requests but has been de
 ### App Group REST API Keys
 
 {% alert note %}
-For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{ site.baseurl }}/api/api_key/">API Keys</a> and <a href="{{ site.baseurl }}/api/identifier_types/">API Identifier Types</a> reference articles.
+For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
 
 {% endalert %}
 
@@ -105,10 +106,6 @@ Keep in mind that once you create a new API Key, you cannot edit the scope of pe
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-### User Alias Object
-
-{% include archive/aliasing.md platform="REST" %}
-
 ###  Braze User ID Explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
@@ -121,7 +118,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 ##  API Limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
 |Default API Rate Limit | Value|
 |---|---|
@@ -130,6 +127,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
 |Requests of any other kind|250,000 per hour. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
 API Rate Limits and their Values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
@@ -150,17 +148,18 @@ Header Name             | Description
 `X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per hour.
 `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.
 `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
+{: .reset-td-br-1 .reset-td-br-2}
 
 If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
 
 
-[7]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#connected-audience-object
+[7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
-[10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[18]: {{ site.baseurl }}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[support]: {{ site.baseurl }}/support_contact/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
+[18]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
+[support]: {{site.baseurl}}/support_contact/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

@@ -8,7 +8,7 @@ page_order: 3
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning Standard User Attributes
 
@@ -53,7 +53,7 @@ __We strongly recommend collecting email addresses__ even if you're not sending 
 ## Assigning Custom User Attributes
 
 Beyond the attributes above, Braze also allows you to define Custom Attributes using a number of different data types:
-For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
+For more information regarding the segmentation options, each of these attributes will afford you, see our ["Best Practices" documentation][1] within this section.
 
 ### Custom Attribute with a String Value
 
@@ -112,7 +112,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 {% endtab %}
 {% endtabs %}
 
->  Braze treats `float` and `double` values exactly the same within our database.
+>  Braze treats `float` and `double` values the same within our database.
 
 ### Custom Attribute with a Boolean Value
 
@@ -155,7 +155,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 >  Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
 ### Custom Attribute with an Array Value
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][8].
+The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][8].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -241,7 +241,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 User Attributes are set within the [`UserAttributesViewController.m` file][4] within the Stopwatch sample application.
 
 - More details can be found within the [`ABKUser.h` file][5].
-- In addition, you may refer to the [ABKUser documentation][6] for more information.
+- Besides, you may refer to the [ABKUser documentation][6] for more information.
 - Additional examples of setting arrays as user attributes can be found within [`UserAttributesArrayViewController.m`][7] in the Stopwatch sample application.
 
 ## Setting Up User Subscriptions
@@ -254,9 +254,9 @@ To set up a subscription for your users (either email or push), call the functio
 | `ABKSubscribed` | Subscribed, but not explicitly opted in |
 | `ABKUnsubscribed` | Unsubscribed and/or explicitly opted out |
 
-Users who grant permission for an app to send them push notifications are defaulted to the status of `ABKOptedin` as iOS requires an explicit opt in.
+Users who grant permission for an app to send them push notifications default to the status of `ABKOptedin` as iOS requires an explicit opt-in.
 
-> Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See the User Guide for details][12].
+> Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See the User Guide for details][12].
 
 ### Setting Email Subscriptions
 
@@ -298,13 +298,13 @@ Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificatio
 
 For more information on implementing subscriptions, visit our page on [managing user subscriptions][10].
 
-[1]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601
-[3]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
+[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesViewController.m
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesArrayViewController.m
-[8]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[12]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

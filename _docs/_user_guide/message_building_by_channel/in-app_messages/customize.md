@@ -16,7 +16,7 @@ In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/me
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
+Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
 
 ## HTML In-App Messages {#custom-html-messages}
@@ -51,6 +51,8 @@ For example, to log a custom attribute, custom event, and then close the message
 window.addEventListener("ab.BridgeReady", function(){
   // event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
+    // track Button 1 clicks for analytics
+    appboyBridge.logClick("0");
     // set the user's custom attribute
     appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");
     // track a custom event
@@ -76,6 +78,9 @@ The following javascript methods are supported within Braze's HTML in-app messag
 #article-main > table:first-of-type > tbody > tr td:first-child code {
     font-size:12px !important;
 }
+#article-main > table:first-of-type td {
+  word-break: break-word;
+}
 </style>
 
 {% include archive/appboyBridge.md %}
@@ -99,8 +104,6 @@ As with other URL parameters, the first parameter should begin with a `?`, while
 - `https://example.com/?utm_source=braze&abButtonId=0` - Button 1 click with other existing URL parameters
 - `myApp://deep-link?page=home&abButtonId=1` - Mobile deeplink with Button 2 click
 - `<a href="https://example.com/?abButtonId=1">` - `<a>` tag with Button 2 click
-
-In addition to URL parameters, you can also set a `<button>` tag's `id` attribute to log a button click. For example, `<button id="1">` will log a Button 2 click.
 
 {% alert note %}
 In-app messages support only Button 1 and Button 2 clicks. URLs which do not specify one of these two button IDs will be logged as generic "body clicks".
@@ -179,7 +182,7 @@ Click __Save Color Profile__ on the bottom right when you’re finished.
 
 #### Managing Color Profiles
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ### CSS Template
 
@@ -239,61 +242,31 @@ As you can see, you can edit everything from the background color to font size a
 
 #### Managing CSS Templates
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 
 ## Video {#video}
 
-You are able to display HTML5 videos in our customizable in-app message types with sound included. You can either use an embedded link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) using a custom HTML5 file or upload a video to your Braze account in the `assets.zip` folder. This uploaded video will then be sent to the device for local playback, so there is no need for a network connection to play the video. This second option is recommended mostly for shorter videos.
+To play a video in an HTML In-App Message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). 
 
-{% tabs %}
-  {% tab Android %}
+To use a local video asset, be sure to include this file when uploading assets to your campaign.
 
-__Android__
+To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
-To use a video in Android in-app messages, all you need to do is create a custom HTML5 file [using one of our templates on Github](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates).
-
-Then, copy and paste the following `HTML` snippet into your code, replacing the source parameters with your actual file names.
+Other `<video>` options that can be used can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```
 <video class="video" autoplay muted playsinline controls>
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-  Your device does not support HTML5 video.
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
+  <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
+  Your device does not support playing this video.
 </video>
 ```
 
-Then, in your working directory, add the video file and zip all the files. Make sure to include the `CSS/JavaScript` but exclude the `HTML`.
+{% alert warning %}
+Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
+{% endalert %}
 
-Finally, upload the files to your Braze account using the HTML + Asset Zip in your In-App Message Compose tab. You can either upload the ZIP or enter its URL.
-
-![Video_IAM]({% image_buster /assets/img/video_iam.png %})
-{% endtab %}
-
-{% tab iOS %}
-__iOS__
-
-By default, the `WKWebView` in our default view controller [here](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m) allows inline media playback, including videos, but does not support autoplay.
-
-Example `HTML` snippet:
-
-```
-<video class="video" playsinline>
-  <source src="mov_bbb.mp4" type="video/mp4">
-  <source src="mov_bbb.ogg" type="video/ogg">
-  Your device does not support HTML5 video.
-</video>
-```
-
-![Video_IAM]({% image_buster /assets/img/video_iam.png %})
-
-{% endtab %}
-
-{% tab Web %}
-
-__Web__
-
-To use a video in Web in-app messages, embed a link from a third party (like [Youtube](https://support.google.com/youtube/answer/171780?hl=en)) into your [Custom Web Message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-message).
-
-{% endtab %}
-{% endtabs %}
+{% alert note %}
+iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+{% endalert %}

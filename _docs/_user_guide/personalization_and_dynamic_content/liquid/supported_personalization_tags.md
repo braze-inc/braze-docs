@@ -20,6 +20,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
 | Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
 
@@ -28,7 +29,7 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 {% endalert %}
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -52,6 +53,8 @@ You can template in the following attributes for the user's most recent device a
 | `{{most_recently_used_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{most_recently_used_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
 | `{{most_recently_used_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
@@ -70,6 +73,8 @@ For push notification and in-app message channels, you can template in the follo
 | `{{targeted_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{targeted_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
 | `{{targeted_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 {% endraw %}
 
@@ -210,11 +215,11 @@ It is between 2:00:00pm and 2:59:59pm PT!
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[38]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[17]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[18]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
+[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
-[43]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[47]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
+[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/

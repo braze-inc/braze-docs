@@ -12,4 +12,4 @@ See [the Android integration instructions][1] for in depth discussion of attribu
 ReactAppboy.setFirstName("firstName");
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/

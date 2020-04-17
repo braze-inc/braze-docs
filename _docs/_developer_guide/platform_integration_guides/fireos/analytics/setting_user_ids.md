@@ -25,7 +25,7 @@ These User IDs should be private and not easily obtained (e.g. not a plain email
 
 At Braze, we __strongly suggest__ naming User IDs also known as `external_user_ids`, in a [UUIDs/GUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) format. UUIDs/GUIDs are Universally Unique Identifiers that consist of a 128-bit number used to identify information in computer systems. This means that these UUIDs are long, random and well distributed. If you choose a different method in which to name your User IDs, they must also be long, random and well distributed. It is also important to note, that User IDs are __case sensitive__. For example, "Abcdef" is a different user from "abcdef". 
 
-If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
+If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new and more secure naming method. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
 
 Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
 
@@ -79,8 +79,8 @@ Please note the following:
 
 {% include archive/aliasing.md platform="Android" %}
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[2]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

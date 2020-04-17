@@ -47,7 +47,7 @@ You can also personalize the message body with the customer's new loyalty tier s
 
 ### Custom Attribute Values Change to A Specific Value
 
-Use the "change custom attribute value" trigger with the "specific value" option to target users when a boolean, integer, or string custom attribute changes to a specific value. For example, target users when their loyalty tier changes to the best tier. For this example, let's say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to "Super VIP" so that you can congratulate the user on becoming a Super VIP.
+Use the "change custom attribute value" trigger with the "specific value" option to target users when a boolean, integer or string custom attribute changes to a specific value. For example, target users when their loyalty tier changes to the best tier. For this example, let's say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to "Super VIP" so that you can congratulate the user on becoming a Super VIP.
 
 ![super vip][4]
 

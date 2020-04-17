@@ -43,7 +43,7 @@ If we look back to the Entry Audience (active users), we can see that even thoug
 
 This means that even though we specified 90% of users to enter the variant, not all of those users are actually **able to** receive a push notification. This means that those users will not be able to enter the variant and will default to the control group.
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 [1]: {{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas
 [41]: {% image_buster /assets/img_archive/trouble15.png %}

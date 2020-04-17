@@ -21,6 +21,7 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 |Gimbal SDK | Gimbal | https://docs.gimbal.com/index.html | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 # SDK Integration
 
@@ -40,7 +41,7 @@ The integrations for Android, FireOS, and iOS above will create a unique custom 
 [3]: https://docs.gimbal.com/
 [4]: https://docs.gimbal.com/rest.html
 [5]: https://manager.gimbal.com/apps
-[6]: {{ site.baseurl }}/user_guide/data_and_analytics/Custom_Data/custom_events/
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration/#gimbal-beacons
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/#gimbal-beacons
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/beacon_integration/#gimbal-beacons
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/Custom_Data/custom_events/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration/#gimbal-beacons
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/#gimbal-beacons
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/beacon_integration/#gimbal-beacons

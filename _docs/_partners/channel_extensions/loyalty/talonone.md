@@ -15,14 +15,15 @@ This partnership is in early access beta. All features may not perform as exactl
 
 ## Pre-Requisites
 
-| Requirement    | Origin                                                | Description                                                             |
-| -------------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
+| Requirement | Origin | Description |
+| --------- | ------------ | ---------- |
 | Braze Account | [Braze Settings](https://dashboard.braze.com/sign_in) | You will need an account with Braze, as well as an active Braze campaign that vouchers and codes will be generated for. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert warning %}
 Talon.One **_requires_** a rate limit of 500 messages per minute.
 
-You can modify your rate limit using Braze. Find out how [here]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
+You can modify your rate limit using Braze. Find out how [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting).
 {% endalert %}
 
 ## API Integration
@@ -36,7 +37,7 @@ You can modify the form of generated codes for any campaign by navigating to the
 ### Endpoint Usage
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 Because Braze's connected content only supports **string** data types, a custom endpoint must be used to convert everything to the correct data type.
@@ -104,7 +105,7 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 
 ## Using Talon.One in Your Braze Campaign
 
-To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any canvas message body.
+To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any canvas message body.
 
 Place the code snippets below in your message body to configure your Campaign or Canvas to call Talon.One coupons into your message. 
 
@@ -192,7 +193,7 @@ Add the **save** parameter at the end to store the Talon.One response as a Braze
 
 #### Step Six: Show the Value of the Code in the Message
 
-Use a [liquid tag]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
+Use a [liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
 
 {% raw %}
 ```liquid

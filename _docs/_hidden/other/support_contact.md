@@ -5,9 +5,6 @@ hide_nav: true
 layout: basic
 hide_toc: true
 ---
-{% alert service-notice %}
-Braze will be holding its annual, company-wide kick-off event in New York City during the week of February 10, 2020. During this once-a-year event, all teams receive intensive training sessions allowing us to serve you even better. The Technical Support Team will also be attending the event and receiving critical product training in order to provide you with the best possible service. During this timeframe, critical issues response (to Critical severity cases) will remain normal. Response times for non-critical cases may be slightly delayed depending on the time of issue submission. Rest assured, our aim is to provide a quick, accurate response, but please bear with us as we conduct these important training sessions. If you have any questions or concerns, please reach out to your CSM.
-{% endalert %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
 
@@ -315,75 +312,75 @@ var ticket_lookuptable = {
   'Label': '* What can we help you with?',
   'SelectDefault': 'Select a topic...',
   'LinksTitle': ['Marketer documentation','Developer documentation','Marketer troubleshooting guide','FAQs'],
-  'Links': ['{{ site.baseurl }}/user_guide/introduction/','{{ site.baseurl }}/developer_guide/platform_wide/platform_features/','{{ site.baseurl }}/help/home/','{{ site.baseurl }}/help/faqs/'],
+  'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/'],
   'SelectOption': {
     'Technical Question': {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Platform wide integration steps'],
-      'Links' : ['{{ site.baseurl }}/developer_guide/platform_wide/platform_features/','{{ site.baseurl }}/help/faqs/'],
+      'Links' : ['{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/faqs/'],
       'SelectOption' : {
         'SDK Integration' : {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['iOS Initial SDK Setup','Android Initial SDK Setup','Web Initial SDK Setup'],
-          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
+          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/'],
           'SelectOption' : {
             'Push' : {
               'SelectDefault': 'Select a platform...',
               'LinksTitle': ['iOS: push integration','Android: push integration'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/'],
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/'],
               'Label': '* Platform',
               'SelectOption' : {
                 'Android' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['Android: push integration','Android: push troubleshooting','Android: silent push notifications'],
-                  'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/']
                 },
                 'iOS' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: push integration','iOS: push troubleshooting','iOS 10: rich notifications','iOS: silent push notifications'],
-                  'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications','{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/']
+                  'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications','{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/']
                 },
                 'Other' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['Xamarin iOS: push integration','Xamarin Android and FireOS: push integration'],
-                  'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/xamarin/ios/push_notifications/','{{ site.baseurl }}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/push_notifications/']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/push_notifications/','{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/push_notifications/']
                 }
               }
             },
             'User data and external IDs': {
               'LinksTitle': ['iOS: data tracking','Android: data tracking','Web: data tracking'],
-              'Links':  ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/','{{ site.baseurl }}//developer_guide/platform_integration_guides/android/analytics/tracking_sessions/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/'],
+              'Links':  ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/','{{site.baseurl}}//developer_guide/platform_integration_guides/android/analytics/tracking_sessions/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/'],
               'Label': '* Type of Data',
               'SelectDefault': 'Select data type...',
               'SelectOption' : {
                 'Setting external IDs' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: setting user IDs','Android: setting user IDs','User ID FAQs'],
-                  'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{ site.baseurl }}/developer_guide/rest_api/basics/#external-user-id-explanation']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#setting-user-ids','{{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation']
                 },
                 'Custom events and event properties' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom events','Android: tracking custom events'],
-                  'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events']
                 },
                 'Custom attributes' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['iOS: tracking custom attributes','Android: tracking custom attributes'],
-                  'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes','{{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes']
                 }
               }
             },
             'Web SDK' :{
               'ShowSubmit': true,
               'LinksTitle': ['Web SDK integration','Web: push integration','Web: soft push prompts','Web: in-browser messaging','Web: data tracking'],
-              'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/integration/#soft-push-prompts','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/'],
+              'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#soft-push-prompts','{{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging','{{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/'],
             },
             'Other' :{
               'ShowSubmit': true,
               'LinksTitle': ['iOS: push integration','Android: push integration'],
-              'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/']
+              'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/']
             }
           }
         },
@@ -391,32 +388,32 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['REST APIs','REST APIs: updating user data','REST APIs: messaging','REST APIs: exporting Braze data'],
-          'Links': ['{{ site.baseurl }}/developer_guide/rest_api/basics/','{{ site.baseurl }}/developer_guide/rest_api/user_data/','{{ site.baseurl }}/developer_guide/rest_api/messaging/','{{ site.baseurl }}/developer_guide/rest_api/export/'],
+          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/developer_guide/rest_api/messaging/','{{site.baseurl}}/developer_guide/rest_api/export/'],
           'SelectOption' : {
             'Importing data' : {
               'ShowSubmit': true,
               'LinksTitle': ['REST APIs: updating user data','REST APIs: updating user attributes','REST APIs: updating user events','REST APIs: updating user purchases','REST APIs: deleting users'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/user_data/','{{ site.baseurl }}/developer_guide/rest_api/user_data/#user-attributes-object-specification',	'{{ site.baseurl }}/developer_guide/rest_api/user_data/#event-object-specification',	'{{ site.baseurl }}/developer_guide/rest_api/user_data/#purchase-object-specification','{{ site.baseurl }}/developer_guide/rest_api/user_data/#user-delete-endpoint']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification',	'{{site.baseurl}}/developer_guide/rest_api/user_data/#event-object-specification',	'{{site.baseurl}}/developer_guide/rest_api/user_data/#purchase-object-specification','{{site.baseurl}}/developer_guide/rest_api/user_data/#user-delete-endpoint']
             },
             'Exporting data' : {
               'ShowSubmit': true,
               'LinksTitle': ['REST APIs: exporting Braze data','REST APIs: exporting your user data','REST APIs: exporting campaign data'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/export/','{{ site.baseurl }}/developer_guide/rest_api/export/#user-export','{{ site.baseurl }}/developer_guide/rest_api/export/#campaign-export']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/export/','{{site.baseurl}}/developer_guide/rest_api/export/#user-export','{{site.baseurl}}/developer_guide/rest_api/export/#campaign-export']
             },
             'API campaigns' : {
               'ShowSubmit': true,
               'LinksTitle': ['Sending messages immediately via REST API','Sending messages via API-triggered delivery','Tracking API campaigns via Braze\'s dashboard'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only','{{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery','{{ site.baseurl }}/developer_guide/rest_api/api_campaigns/']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only','{{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery','{{site.baseurl}}/developer_guide/rest_api/api_campaigns/']
             },
             'Rate limits' : {
               'ShowSubmit': true,
               'LinksTitle': ['REST API rate limits'],
-               'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/basics/#api-limits']
+               'Links' : ['{{site.baseurl}}/developer_guide/rest_api/basics/#api-limits']
              },
              'Other' : {
                'ShowSubmit': true,
                'LinksTitle': ['REST API parameter definitions','What is a REST API?'],
-               'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/basics/#api-definitions','{{ site.baseurl }}/developer_guide/rest_api/basics/#what-is-a-rest-api']
+               'Links' : ['{{site.baseurl}}/developer_guide/rest_api/basics/#api-definitions','{{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api']
              }
           }
         },
@@ -424,27 +421,27 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Braze partner integrations instructions'],
-          'Links': ['{{ site.baseurl }}/partners/home/'],
+          'Links': ['{{site.baseurl}}/partners/home/'],
           'SelectOption' : {
             'mParticle' : {
               'ShowSubmit': true,
               'LinksTitle': ['mParticle integration instructions'],
-              'Links': ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
+              'Links': ['{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/']
             },
             'Segment' : {
               'ShowSubmit': true,
               'LinksTitle': ['Segment integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
+              'Links' : ['{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/']
             },
             'Install attribution' : {
               'ShowSubmit': true,
               'LinksTitle': ['Attribution partner integrations','Attribution partner integration instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/','{{ site.baseurl }}/partners/home/']
+              'Links' : ['{{site.baseurl}}/partners/advertising_technologies/attribution/adjust/','{{site.baseurl}}/partners/home/']
             },
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle': ['Braze partner integrations instructions'],
-              'Links' : ['{{ site.baseurl }}/partners/home/']
+              'Links' : ['{{site.baseurl}}/partners/home/']
             }
           }
         },
@@ -452,32 +449,32 @@ var ticket_lookuptable = {
           'SelectDefault': 'Select a type...',
           'Label': '*  My question is about...',
           'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-          'Links' : ['{{ site.baseurl }}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
+          'Links' : ['{{site.baseurl}}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
           'SelectOption': {
             'Setup (whitelabeled IPs, DNS records)' : {
               'ShowSubmit': true,
               'LinksTitle': ['LAB course: Achieving High Email Deliverability','IP warming'],
-              'Links' : ['https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{ site.baseurl }}/help/best_practices/email/ip_warming/#ip-warming']
+              'Links' : ['https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming']
             },
             'Deliverability' :{
               'ShowSubmit': true,
               'LinksTitle': ['IP warm','LAB course: Achieving High Email Deliverability'],
-               'Links' : ['{{ site.baseurl }}/help/best_practices/email/ip_warming/#ip-warming','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+               'Links' : ['{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             },
             'IP warmup' : {
               'ShowSubmit': true,
               'LinksTitle': ['IP warming','IP warming best practices'],
-              'Links' : ['{{ site.baseurl }}/help/best_practices/email/ip_warming/#ip-warming','{{ site.baseurl }}/help/best_practices/email/ip_warming/#ip-warming-best-practices']
+              'Links' : ['{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming','{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming-best-practices']
             },
             'Managing unsubscribes and opt-ins' : {
               'ShowSubmit': true,
               'LinksTitle': ['Managing email subscription states','Email subscription state definitions','Changing email subscription states'],
-              'Links' : ['{{ site.baseurl }}/help/best_practices/email/managing_email_subscriptions/#managing-email-subscriptions','{{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states','{{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions']
+              'Links' : ['{{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/#managing-email-subscriptions','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions']
             },
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-              'Links' : ['{{ site.baseurl }}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+              'Links' : ['{{site.baseurl}}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             }
           }
         },
@@ -486,14 +483,14 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Creating webhooks'],
-          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/']
+          'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/']
         },
         'Other' :{
           'ShowSubmit': true,
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Developer documentation','Troubleshooting guide','FAQs'],
-          'Links': ['{{ site.baseurl }}/developer_guide/platform_wide/platform_features/','{{ site.baseurl }}/help/home/','{{ site.baseurl }}/help/faqs/']
+          'Links': ['{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/']
         }
       }
     },
@@ -502,18 +499,18 @@ var ticket_lookuptable = {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Braze SDK changelogs','Braze status page'],
-      'Links': ['{{ site.baseurl }}/help/release_notes/most_recent/','https://braze.statuspage.io/'],
+      'Links': ['{{site.baseurl}}/help/release_notes/most_recent/','https://braze.statuspage.io/'],
       'SelectOption': {
         'SDK issue or error' :{
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Sending test messages','LAB course: technical integration checklists','Android: test your integration'],
-          'Links': ['{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration'],
+          'Links': ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration'],
           'SelectOption': {
             'I\'m running into an issue during SDK integration.' :{
               'ShowSubmit': true,
               'LinksTitle': ['iOS: push troubleshooting','Android: push troubleshooting','Web: error logging'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#troubleshooting','{{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging']
             },
             'I\'m seeing a bug.' : {
               'ShowSubmit': true,
@@ -523,7 +520,7 @@ var ticket_lookuptable = {
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle': ['Sending test messages','LAB course: technical integration checklists','Android: test your integration'],
-              'Links': ['{{ site.baseurl }}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration']
+              'Links': ['{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages','https://lab.braze.com/technical-integration-checklists-and-toolkits','{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#test-your-basic-integration']
             }
           }
         },
@@ -531,27 +528,27 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['REST APIs'],
-          'Links': ['{{ site.baseurl }}/developer_guide/rest_api/basics/'],
+          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/'],
           'SelectOption': {
             'I\'m seeing an issue when using REST APIs.' : {
               'ShowSubmit': true,
               'LinksTitle': ['REST APIs','REST API limits'],
-              'Links': ['{{ site.baseurl }}/developer_guide/rest_api/basics/','{{ site.baseurl }}/developer_guide/rest_api/basics/#api-limits']
+              'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/basics/#api-limits']
             },
             'I see an error I don’t understand.' :{
               'ShowSubmit': true,
               'LinksTitle': ['REST API fatal errors','REST API user track endpoint responses'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/messaging/#fatal-errors','{{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-responses']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/messaging/#fatal-errors','{{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-responses']
             },
             'I\'m running into rate limits.' :  {
               'ShowSubmit': true,
               'LinksTitle':['REST API limits'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/basics/#api-limits']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/basics/#api-limits']
             },
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle':['REST APIs'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/rest_api/basics/']
+              'Links' : ['{{site.baseurl}}/developer_guide/rest_api/basics/']
             }
           }
         },
@@ -559,27 +556,27 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Troubleshoting guide'],
-          'Links': ['{{ site.baseurl }}/help/home/'],
+          'Links': ['{{site.baseurl}}/help/home/'],
           'SelectOption' : {
             'I\'m experiencing an issue when working within the dashboard.' : {
               'ShowSubmit': true,
               'LinksTitle': ['Troubleshooting guide','Braze status page'],
-              'Links': ['{{ site.baseurl }}/help/home/','https://braze.statuspage.io/']
+              'Links': ['{{site.baseurl}}/help/home/','https://braze.statuspage.io/']
             },
             'My campaign, Canvas or segment is displaying unexpected behavior.' :{
               'ShowSubmit': true,
               'LinksTitle': ['Sending test messages'],
-              'Links' : ['{{ site.baseurl }}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages']
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-test-messages']
             },
             'I\'m seeing unexpected reporting or data.' : {
               'ShowSubmit': true,
               'LinksTitle': ['Data and analytics reporting','Email reporting','Push reporting','In-app message reporting','Exporting data from Braze\'s dashboard'],
-              'Links':['{{ site.baseurl }}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{ site.baseurl }}/help/best_practices/email/email_reporting/','{{ site.baseurl }}/help/best_practices/push/push_reporting/#push-reporting','{{ site.baseurl }}/help/best_practices/in-app_messages/reporting/#reporting','{{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/overview/']
+              'Links':['{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/help/best_practices/email/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/help/best_practices/in-app_messages/reporting/#reporting','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/overview/']
             },
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle': ['Troubleshooting guide','Braze status page'],
-              'Links': ['{{ site.baseurl }}/help/home/','https://braze.statuspage.io/']
+              'Links': ['{{site.baseurl}}/help/home/','https://braze.statuspage.io/']
             }
           }
         },
@@ -588,14 +585,14 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Troubleshooting guide'],
-          'Links': ['{{ site.baseurl }}/help/home/']
+          'Links': ['{{site.baseurl}}/help/home/']
         },
         'Other' : {
           'ShowSubmit': true,
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['Troubleshooting guide','Braze status page'],
-          'Links': ['{{ site.baseurl }}/help/home/','https://braze.statuspage.io/']
+          'Links': ['{{site.baseurl}}/help/home/','https://braze.statuspage.io/']
         }
       }
     },
@@ -603,42 +600,42 @@ var ticket_lookuptable = {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Getting started guide'],
-      'Links': ['{{ site.baseurl }}/user_guide/introduction/'],
+      'Links': ['{{site.baseurl}}/user_guide/introduction/'],
       'SelectOption' : {
         'Creating Campaigns and Canvases' : {
           'ShowSubmit': true,
           'LinksTitle': ['Canvas','Importing users','LAB course: Canvas','Getting started guide','Scheduling and organizing campaigns'],
-          'Links':  ['{{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{ site.baseurl }}/user_guide/introduction/','{{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign']
         },
         'Understanding reporting' : {
           'ShowSubmit': true,
           'LinksTitle': ['Email reporting','Push reporting','In-app message reporting','Data and analytics reporting','Exporting data from Braze\'s dashboard'],
-          'Links' :  ['{{ site.baseurl }}/help/best_practices/email/email_reporting/','{{ site.baseurl }}/help/best_practices/push/push_reporting/#push-reporting','{{ site.baseurl }}/help/best_practices/in-app_messages/reporting/#reporting','{{ site.baseurl }}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data']
+          'Links' :  ['{{site.baseurl}}/help/best_practices/email/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/help/best_practices/in-app_messages/reporting/#reporting','{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data']
         },
         'Personalization, Liquid and Connected Content' : {
           'ShowSubmit': true,
           'LinksTitle': ['Personalization and Liquid','Connected Content','LAB course: dynamic personalization and liquid'],
-          'Links':  ['{{ site.baseurl }}/user_guide/personalization_and_dynamic_content/overview/','{{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/','https://lab.braze.com/dynamic-personalization-with-liquid']
+          'Links':  ['{{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/','{{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/','https://lab.braze.com/dynamic-personalization-with-liquid']
         },
         'Webhooks' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Creating a webhook','Sending SMS via Twilio'],
-          'Links': ['{{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{ site.baseurl }}/partners/additional_channels/sms/twilio/']
+          'Links': ['{{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/','{{site.baseurl}}/partners/additional_channels/sms/twilio/']
         },
         'Currents' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Braze Currents'],
-          'Links': ['{{ site.baseurl }}/partners/braze_currents/how_it_works/']
+          'Links': ['{{site.baseurl}}/partners/braze_currents/how_it_works/']
         },
         'Location Targeting and Geofencing' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Targeting users based on location','Geofencing'],
-          'Links': ['{{ site.baseurl }}/user_guide/engagement_tools/segments/location_targeting/#step-2-customize-your-location','{{ site.baseurl }}/user_guide/engagement_tools/locations_and_geofences/about/']
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/#step-2-customize-your-location','{{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/about/']
         },
         'Other' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Marketer documentation','Marketer troubleshooting guide','FAQs'],
-          'Links': ['{{ site.baseurl }}/user_guide/introduction/','{{ site.baseurl }}/help/home/','{{ site.baseurl }}/help/faqs/']
+          'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/']
         }
       }
     },
@@ -647,32 +644,32 @@ var ticket_lookuptable = {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-      'Links': ['{{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{ site.baseurl }}/help/best_practices/news_feed/#news-feed'],
+      'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/help/best_practices/news_feed/#news-feed'],
       'SelectOption' : {
         'Campaign and Canvas strategies' : {
           'ShowSubmit': true,
           'LinksTitle': ['Campaign ideas and strategies','LAB course: Canvas'],
-          'Links': ['{{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','https://lab.braze.com/canvas-course']
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','https://lab.braze.com/canvas-course']
         },
         'Segmentation and targeting' : {
           'ShowSubmit': true,
           'LinksTitle': ['Creating a segment','Segment insights','LAB course: segmentation'],
-          'Links': ['{{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment','{{ site.baseurl }}/user_guide/engagement_tools/segments/segment_insights/#segment-insights','https://lab.braze.com/segmentation-course']
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment','{{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/#segment-insights','https://lab.braze.com/segmentation-course']
         },
         'Managing push opt-ins' : {
           'ShowSubmit': true,
           'LinksTitle': ['Creating custom opt-in prompts','Push subscription states'],
-          'Links': ['{{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts','{{ site.baseurl }}/help/best_practices/push/push_subscription_status/#subscribed-opted-in-and-unsubscribed']
+          'Links': ['{{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts','{{site.baseurl}}/help/best_practices/push/push_subscription_status/#subscribed-opted-in-and-unsubscribed']
         },
         'Setting up custom events, attributes and purchases' :{
           'ShowSubmit': true,
           'LinksTitle': ['Data automatically tracked by Braze SDK','Custom events','Custom event properties','Custom attributes'],
-          'Links':  ['{{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data','{{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-events','{{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-event-properties','{{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-attributes']
+          'Links':  ['{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-events','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-event-properties','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes']
         },
         'Other' :{
           'ShowSubmit': true,
           'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-          'Links':  ['{{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{ site.baseurl }}/help/best_practices/news_feed/#news-feed']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/help/best_practices/news_feed/#news-feed']
         }
       }
     },
@@ -705,7 +702,7 @@ var ticket_lookuptable = {
       'ShowSubmit': true,
       'Label': '* Category',
       'LinksTitle': ['Marketer documentation','Developer documentation','Marketer troubleshooting guide','FAQs'],
-      'Links': ['{{ site.baseurl }}/user_guide/introduction/','{{ site.baseurl }}/developer_guide/platform_wide/platform_features/','{{ site.baseurl }}/help/home/','{{ site.baseurl }}/help/faqs/']
+      'Links': ['{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/developer_guide/platform_wide/platform_features/','{{site.baseurl}}/help/home/','{{site.baseurl}}/help/faqs/']
     }
   }
 }
@@ -1296,10 +1293,10 @@ $( document ).ready(function() {
             <legend>Useful Resources</legend>
 
             <div id="ticket_usefulresources">
-              <a target="" href="{{ site.baseurl }}/user_guide/introduction/">User Guide</a><br />
-              <a target="" href="{{ site.baseurl }}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
-              <a target="" href="{{ site.baseurl }}/help/home/">Help & Troubleshooting Guides</a><br />
-              <a target="" href="{{ site.baseurl }}/help/faqs/">FAQs</a><br />
+              <a target="" href="{{site.baseurl}}/user_guide/introduction/">User Guide</a><br />
+              <a target="" href="{{site.baseurl}}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
+              <a target="" href="{{site.baseurl}}/help/home/">Help & Troubleshooting Guides</a><br />
+              <a target="" href="{{site.baseurl}}/help/faqs/">FAQs</a><br />
               <a target="" href="https://lab.braze.com/">LAB</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
             </div>

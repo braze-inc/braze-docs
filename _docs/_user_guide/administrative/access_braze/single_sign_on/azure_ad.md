@@ -17,9 +17,10 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
+| **Sign-On URL** | `https://<SUBDOMAIN>.braze.com/sign_in` <br> For the subdomain, use the coordinating subdomain listed in [your Braze instance URL]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). For example, if your instance is `US-01`, your URL is `https://dashboard-01.braze.com`. This means that your subdomain will be `dashboard-01`. |
 | **Assertion Consumer Service (ACS) URL** | `https://<SUBDOMAIN>/auth/saml/callback` <br> *For some IdPs, this can also be referred to as the Reply URL, Audience URL, or Audience URI.* |
 | **Entity ID** | `braze_dashboard`|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Service Provider (SP) Initiated Login within Azure AD
@@ -61,12 +62,12 @@ From there, click the `Edit` icon to open the `Basic SAML Configuration` dialog.
 ![Azure_AD7]({% image_buster /assets/img/azure_ad7.png %})
 
 #### Step 2d: Configure in IDP Mode
-If you wish to configure the application in IDP initiated mode, enter a URL that combines [your Braze instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
+If you wish to configure the application in IDP initiated mode, enter a URL that combines [your Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
 ![Azure_AD8]({% image_buster /assets/img/azure_ad8.png %})
 
 #### Step 2e: Configure in SP Mode
-If you wish to configure the application in SP initiated mode, click `Set additional URLs` and enter a URL that combines [your Braze instance]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
+If you wish to configure the application in SP initiated mode, click `Set additional URLs` and enter a URL that combines [your Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
 
 ![Azure_AD9]({% image_buster /assets/img/azure_ad9.png %})
 
@@ -115,5 +116,5 @@ To enable IdP initiated login, you will first need to create an API Key in `Deve
 Input the generated API Key as the `RelayState` parameter within Azure AD, which will be used to identity which company the user is trying to log into.
 
 {% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{ site.baseurl }}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
 {% endalert %}

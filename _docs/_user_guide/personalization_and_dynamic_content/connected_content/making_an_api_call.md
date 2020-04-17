@@ -9,10 +9,11 @@ page_order: 0
 
 {% raw %}
 
-Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
+Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2]. For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
 
 ```
-Hi there, here is fun some trivia for you!: {% connected_content http://numbersapi.com/random/trivia %}
+{% connected_content http://numbersapi.com/random/trivia :save result %}
+Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
 You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as @, make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the e-mail address attribute below.
@@ -36,7 +37,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% endalert %}
 
 {% raw %}
-### Using Basic Authentication
+## Using Basic Authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.
 
@@ -54,6 +55,27 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 
 >  If you delete a credential, keep in mind that any Connected Content calls trying to use it will be aborted.
 
+{% endraw %}
+
+## Using Token Authentication 
+
+When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of. 
+
+{% raw %}
+```
+{% assign campaign_name="New Year Sale" %}
+{% connected_content
+     https://your_API_link_here/
+     :method post
+     :headers {
+       "X-App-Id": "YOUR-APP-ID",
+       "X-App-Token": "YOUR-APP-TOKEN"
+ 	}
+     :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
+     :content_type application/json
+     :save publication
+%}
+```
 {% endraw %}
 
 ## Connected Content IP Whitelisting
@@ -84,6 +106,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 
 
 [1]: #aborting-connected-content
+[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
 [7]: http://openweathermap.org/api
 [8]: http://developer.nytimes.com/docs/read/article_search_api_v2
@@ -108,7 +131,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 [27]: http://blog.clearbit.com/logo
 [28]: http://api.tfl.gov.uk/#Line
 [29]: http://datamine.mta.info/
-[30]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [31]: https://docs.transifex.com/api/translation-strings
 [32]: {% image_buster /assets/img_archive/TransifexUI.png %}
 [33]: {% image_buster /assets/img_archive/terminal.png %}
@@ -125,7 +148,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 [44]: https://open.fda.gov/api/
 [45]: https://ndb.nal.usda.gov/ndb/doc/index
 [46]: http://www.json.org
-[47]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
+[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
 [48]: https://developer.accuweather.com/accuweather-locations-api/apis
 [49]: https://developer.accuweather.com/accuweather-forecast-api/apis
 [50]: https://developer.accuweather.com/accuweather-current-conditions-api/apis
@@ -139,4 +162,4 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 [58]: https://developer.accuweather.com/user/me/apps
 [59]: https://developer.accuweather.com/weather-alarm-thresholds
 [61]: https://developer.accuweather.com/weather-icons
-[62]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[62]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

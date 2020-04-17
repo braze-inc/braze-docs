@@ -48,7 +48,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 ### Step 2: Browser Registration
 
-In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This this will immediately request push permission from the user. 
+In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This will immediately request push permission from the user. 
 
 If you wish to show your own push-related UI to the user _before_ requesting push permission (known as a soft push prompt), you can test to see if push is supported in the user's browser with ```appboy.isPushSupported()```. See [below for a soft push prompt example](#soft-push-prompts) using Braze In-App Messages. 
 
@@ -75,7 +75,7 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 
 ## Soft Push Prompts
 
-It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered In-App Messages]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
+It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered In-App Messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
 
 1. Create a "Prime for Push" in-app messaging Campaign on the Braze dashboard.
   - Make it a "Modal" In-App Message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?")
@@ -128,5 +128,5 @@ appboy.logCustomEvent("prime-for-push");
 [1]: http://www.w3.org/TR/push-api/
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
 [4]: http://abbeybond.com/modal-test.html
-[7]: {{ site.baseurl }}/help/best_practices/web_sdk/#web-push
-[27]: {{ site.baseurl }}/assets/img_archive/web_push2.png
+[7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[27]: {{site.baseurl}}/assets/img_archive/web_push2.png

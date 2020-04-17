@@ -5,9 +5,11 @@ page_order: 0
 
 ---
 
-# Content Cards Overview
+# Content Cards Overview 
 
 ## When to Use Content Cards
+
+{% include video.html id="4FUPxkIq2xc" align="right" %}
 
 Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 

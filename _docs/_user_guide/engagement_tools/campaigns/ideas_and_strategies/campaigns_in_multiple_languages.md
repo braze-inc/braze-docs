@@ -66,7 +66,7 @@ In the title of an Android push, this might look like:
 
 The text you enter after `{% else %}` will display to users who:
 - Have a language that was not selected in Step 2.
-- Have a language that is not supported by Braze. Braze supports the languages represented by ISO 639-1 two-letter codes, as well as a few addditional ones not included in that set. For a complete list, check out our [iOS Localization page][8].
+- Have a language that is not supported by Braze. Braze supports the languages represented by ISO 639-1 two-letter codes, as well as a few additional ones not included in that set. For a complete list, check out our [iOS Localization page][8].
 - Have a device where the language is undetectable. (This is highly unlikely).
 A best practice is to enter text here that you think your users are most likely to understand. To ensure smooth delivery, you should always enter content after `{% else %}`.
 
@@ -86,9 +86,9 @@ __Continue through the remaining steps of message creation.__ This includes fini
 
 [1]: {% image_buster /assets/img_archive/languages_1.png %}
 [2]: {% image_buster /assets/img_archive/languages_2.png %}
-[3]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [4]: {% image_buster /assets/img_archive/languages_3.png %}
 [5]: http://www.loc.gov/standards/iso639-2/php/code_list.php
 [6]: {% image_buster /assets/img_archive/languages_5.png %}
 [7]: {% image_buster /assets/img_archive/languages_6.png %}
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/

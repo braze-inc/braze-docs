@@ -19,20 +19,20 @@ If such an identifier is not available, Braze will assign a unique identifier to
 These User IDs should be private and not easily obtained (e.g. not a plain email address or username).
 {% endalert %}
 
-You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:
+You should make the following call as soon as the user is identified (generally after logging in) to set the user ID:
 
 ```csharp
 Appboy.SharedInstance.ChangeUser(YOUR_USER_ID_STRING);
 ```
 
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
-Additionally, we recommend against changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
+Additionally, we recommend against changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
 ## Suggested User ID Naming Convention
 
 At Braze, we __strongly suggest__ naming User IDs also known as `external_user_ids`, in a [UUIDs/GUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) format. UUIDs/GUIDs are Universally Unique Identifiers that consist of a 128-bit number used to identify information in computer systems. This means that these UUIDs are long, random and well distributed. If you choose a different method in which to name your User IDs, they must also be long, random and well distributed. It is also important to note, that User IDs are __case sensitive__. For example, "Abcdef" is a different user from "abcdef". 
 
-If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
+If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new and more secure naming method. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
 
 Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
 
@@ -60,12 +60,12 @@ Please note the following:
 - __If your app is used by multiple people, you can assign each user a unique identifier to track them.__
 - __Once a user ID has been set, you cannot revert that user to an anonymous profile__
 - __Do Not change the user ID upon a user "log out".__
-  - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
+  - Doing so separates the device from the user profile. You will be unable to target the previously logged out user with re-engagement messages. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process. By default, only the last user that was logged in will receive push notifications from your app.
 - __Switching from one identified user to another is a relatively costly operation.__
   - When you request the user switch, the current session for the previous user is automatically closed and a new session is started. Furthermore, Braze will automatically make a data refresh request for the News Feed, in-app messages, and other Braze resources for the new user.
 
 > If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking [localization problems][6] into account.
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[2]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

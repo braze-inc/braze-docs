@@ -57,7 +57,7 @@ Include:
 
 ## Topic 1 Regarding this Concept
 
-This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, please check out [this link to that tutorial]({{ site.baseurl }}/home/templates/tutorial_video.md).
+This should explain a specific aspect of this concept, like how a specific type of Canvas Step is used in combination with a channel. If you would like to see an example of how to do this thing in the wild, please check out [this link to that tutorial]({{site.baseurl}}/home/templates/tutorial_video.md).
 
 
 ### Code Sample
@@ -85,6 +85,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Topic 2 Regarding this Concept
 

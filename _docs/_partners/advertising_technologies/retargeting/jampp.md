@@ -32,6 +32,7 @@ Android App ID | Braze | Your unique application identifier for Android (i.e. �
 iOS App ID | Braze | Your unique application identifier for iOS (i.e. “012345678”).
 Enable IDFA Collection in Braze SDK | Braze | [IDFA Collection][4] is optional within the Braze SDK and disabled by default.
 Collection of Google Advertising ID via Custom Attribute | Google | Google Advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID so you must store these values yourself. Please be aware that you may require user consent to collect this data.
@@ -97,9 +98,9 @@ To ensure the request is rendering properly for different users, use the Message
 Remember to save your template before leaving the page!
 {% endalert %}
 
-[1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
 [2]: {% image_buster /assets/img/jampp_webhook.png %}
 [3]: {% image_buster /assets/img/jampp_method.png %}
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
-[5]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [6]: {% image_buster /assets/img/jampp_webhook_template.png %}

@@ -1,1 +1,1 @@
-web: bin/runsvdir-dyno
+web: bin/start-nginx bundle exec puma -t 8:32

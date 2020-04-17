@@ -10,13 +10,13 @@ page_order: 4
 ## Custom App Store Review Prompt
 
 {% alert note %}
-Once you implement this prompt, Braze stops automatically tracking impressions and you must log analytics with the methods found [here]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks).
+Once you implement this prompt, Braze stops automatically tracking impressions and you must log analytics with the methods found [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks).
 
 {% endalert %}
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
 
-Start by [setting the In-App Message delegate][30] in your app. Next,implement the following delegate method to disable the default App Store review message:
+Start by [setting the In-App Message delegate][30] in your app. Next, implement the following delegate method to disable the default App Store review message:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -92,7 +92,7 @@ Next, create an In-App Messaging campaign with the following:
 {% endraw %}
 
 {% alert tip %}
-  Apple limits App Store review prompts to a maximum of three (3) times per year for each user, so your campaign should be [rate-limited]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#user-centric-rate-limiting) to three times per year per user.
+  Apple limits App Store review prompts to a maximum of three (3) times per year for each user, so your campaign should be [rate-limited]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#user-centric-rate-limiting) to three times per year per user.
 
   Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear, or directly ask for a review.
 {% endalert %}
@@ -109,7 +109,7 @@ Next, create an In-App Messaging campaign with the following:
 [10]: #custom-inAppMessage
 [11]: #custom-complete
 [12]: #method-declarations
-[13]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
+[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
@@ -120,18 +120,18 @@ Next, create an In-App Messaging campaign with the following:
 [23]: #setting-delegates
 [25]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#2121
 [26]: http://fortawesome.github.io/Font-Awesome/
-[27]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
+[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: #in-app-message-controller-delegate
 [31]: #customizing-appboy-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
-[33]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
+[33]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
 [37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
 [38]: #in-app-mssage-ui-delegate
-[39]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

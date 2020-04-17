@@ -11,7 +11,7 @@ page_order: 0
 
 In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
 
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
+In-app messages don't deliver outside of the user's app and won't intrude on their home screen like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
 
 ### Great Use Cases
 
@@ -27,10 +27,10 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 
 To see examples of in-app messages, check out our [Client Integration Gallery][31].
 
-[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
+[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
 ## In-App Message Types
-Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display and delivery.
+Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
 
 All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class structures as following:
 
@@ -109,14 +109,14 @@ The following example shows a paginated HTML Full in-app message:
 [11]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [12]: {% image_buster /assets/img_archive/HTML5.gif %}
 [13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
-[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
+[15]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
-[19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
 [23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
-[25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
+[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/
+[30]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
+[31]: {{site.baseurl}}/help/best_practices/client_integration_gallery/

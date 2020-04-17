@@ -54,7 +54,7 @@ A general walkthrough of an instructional concept. Should contain PRACTICAL KNOW
 
 This is what you'll be accomplishing in this step. Here is how you can reproduce it.
 
-Make sure you [link to other references as you need them]({{ site.baseurl }}/home/templates/reference_video/).
+Make sure you [link to other references as you need them]({{site.baseurl}}/home/templates/reference_video/).
 
 ### Code Sample
 
@@ -81,6 +81,7 @@ Make sure you define parameters or elements that users might have to adjust from
 | -------- | ----------- |
 | Page Title | You can title your page anything. You have to have this. |
 | My First Heading | We recommend putting this in caps. This is also optional. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Step 2: Do the next thing
@@ -121,4 +122,4 @@ If you want to learn more about things that were discussed in the article, check
 
 If this article didn't help, leave feedback below or [open a support ticket][support]!
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/
