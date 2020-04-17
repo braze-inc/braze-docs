@@ -42,3 +42,19 @@ guide_featured_list:
 Not ready for any of the topics above? Head to our [SMS Set Up section]({{ site.baseurl }}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
 
 <br>
+
+guide_top_header: "MMS"
+guide_top_text: "MMS (Multimedia Messaging Service) is a standard way to send messages with multimedia content over a cellular network. Check out the topics below to get started with Braze MMS!"
+
+guide_featured_title: "Popular Articles"
+guide_featured_list:
+- name: "About MMS"
+  link: /docs/user_guide/message_building_by_channel/mms/about_mms/
+  fa_icon: fas fa-paint-brush
+- name: "MMS Subscription Group"
+  link: /docs/user_guide/message_building_by_channel/mms/mms_subscription_group/
+  fa_icon: fas fa-table
+- name: "Create an MMS"
+  link: /docs/user_guide/message_building_by_channel/mms/create/
+  fa_icon: fas fa-table
+
