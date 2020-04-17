@@ -13,32 +13,37 @@ If you are looking for a complete list of supported languages you may attribute 
 ## Languages Supported
 - Arabic
 - Burmese
-- Chinese - Simplified
-- Chinese - Traditional
+- Catalan
+- Chinese
 - Czech (coming soon)
 - Danish
 - Dutch
+- English
+- Esperanto
 - Estonian
+- Ewe
+- Filipino
 - Finnish
 - French
+- Georgian
 - German
+- Greek
+- Hebrew
 - Hindi
+- Hungarian
 - Indonesian
+- Irish
 - Italian
 - Japanese
-- Khmer
 - Korean
-- Lao
 - Malay
 - Norwegian
+- Nynorsk
 - Polish
-- Portuguese - Brazil
-- Portuguese - Portugal
+- Portuguese 
 - Russian
-- Spanish - Latin America
-- Spanish - Spain
+- Spanish
 - Swedish
-- Tagalog
 - Thai
 - Ukrainian (coming soon)
 - Vietnamese
