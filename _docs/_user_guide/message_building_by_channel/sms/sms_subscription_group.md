@@ -64,4 +64,4 @@ In order to send an MMS message, atleast one number within your Subscription Gro
 [7]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/keywords/
 [8]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{ site.baseurl }}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[10]: {% image_buster /assets/img/mms/mms_sub_group_tag.png %}
+[10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
