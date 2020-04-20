@@ -12,6 +12,8 @@ This feature is currently in Beta. Please reach out to your Braze account manage
 # Predictive Churn
 > Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn.
 
+![Churn Overview][3]
+
 With Predictive Churn, you can define what churn means for your business ([Churn Definition](#step-2-define-churn)) as well as the users you'd like to prevent from churning ([Retainable Users](#step-3-choose-the-users-you-want-to-keep-from-churning)). When you Build the Prediction, Braze will train a machine learning model to predict Churn by comparing historical Churners and Retainable Users. 
 
 Once the model is built and done training, users that currently fit the definition of Retainable Users will be assigned a Churn Risk Score between 0 and 100 denoting how likely they are to Churn according to your definition. Updating current Retainable Users' risk scores can be done with a [frequency you choose](#step-4-choose-the-update-frequency-for-churn-predictions). This way, you can reach out to users who are at risk of Churning before they actually do and try to prevent it from happening in the first place.
@@ -128,3 +130,5 @@ For the Churn definitions we outlined above, there might be some corresponding â
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
+[3]: {% image_buster /assets/img/churn/churn_overview.png %}
+
