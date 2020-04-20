@@ -201,7 +201,6 @@ validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/cu
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
 
-
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';
 validurls['/docs/help/best_practices/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/reporting/';
@@ -226,6 +225,19 @@ validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attrib
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/';
+
+validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
+validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
+validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
+validurls['/docs/hidden/private_betas/create_send/'] = '/docs/create_send/';
+validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
+validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
+validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
+validurls['/docs/hidden/private_betas/funnel_report/'] = '/docs/funnel_report/';
+validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/frequency_capping_tag/';
+validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
+validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
+validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 
