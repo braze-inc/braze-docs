@@ -43,10 +43,10 @@ You can also limit this message to only send to users who have a device that run
 ### Step 3: Continue Creating Your Campaign
 Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [4]: {% image_buster /assets/img_archive/RichNot_AddImage.png %}
 [5]: {% image_buster /assets/img_archive/RichNot_iOS10_select.png %}
-[6]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
+[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
 [7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %}

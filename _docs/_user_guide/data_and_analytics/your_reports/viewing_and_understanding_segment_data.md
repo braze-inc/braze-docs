@@ -64,16 +64,16 @@ On this page, you can view a number of user-specific attributes as shown below:
 
 [1]: {% image_buster /assets/img_archive/Segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
-[3]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [4]: {% image_buster /assets/img_archive/Historical_Membership2.png %}
-[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
-[6]: {{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
+[6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [7]: {% image_buster /assets/img_archive/Preview_Users.png %}
 [8]: {% image_buster /assets/img_archive/User_Preview.png %}
 [11]: #segment-statistics
-[13]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
-[14]: {{ site.baseurl }}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
 [18]: {% image_buster /assets/img_archive/Events_Over_Time2.png %}
-[20]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
+[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

@@ -27,8 +27,8 @@ This partnership is in early access beta. All features may not perform as exactl
 | ----------- | ------- | ----------- |
 | Rokt Calendar Setup | Rokt Calendar account manager | A client specific Rokt Calendar account will be setup. |
 | Rokt Calendar OAuth Credentials | Rokt Calendar account manager | This key will enable you to connect your Braze and Rokt Calendar accounts. It’s setup for each new Braze client and added to ‘Connected content’ in Braze <br> `Manage App Group` > `Connected Content` > `+Add Credential` |
-| [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
-| [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
+| [Braze REST Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
+| [Braze REST Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your Rokt account manager to pass subscriber data into Braze.|
 | Braze API Key | Braze | You will need to create a new API Key can be created in the `Developer Console` > `API Settings` > `+Create New API Key` with `users.track` permissions. The Braze API key will need to be provided to your Rokt account manager.|
 | External Subscriber ID | Customer | This is the identifier that will be used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something that is passed through by the client to Rokt Calendar or email is used.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -49,7 +49,7 @@ Your Rokt account manager will provide you with a link to your new calendar whic
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-If a subscriber is not a Braze user, Rokt will create a new user. When the user logs into your app, a new Braze profile will also be created. In order to merge these user profiles, you will have to migrate the Rokt created user to the new app-created user through the [`changeUser`]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id) through the SDKs. (Optional) Your team can also choose to delete the orphaned profile (email only profile created by Rokt).
+If a subscriber is not a Braze user, Rokt will create a new user. When the user logs into your app, a new Braze profile will also be created. In order to merge these user profiles, you will have to migrate the Rokt created user to the new app-created user through the [`changeUser`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id) through the SDKs. (Optional) Your team can also choose to delete the orphaned profile (email only profile created by Rokt).
 {% endalert %}
 
 ### Audience Segmentation in Braze

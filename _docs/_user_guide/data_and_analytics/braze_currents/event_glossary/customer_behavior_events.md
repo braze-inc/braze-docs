@@ -12,7 +12,7 @@ description: "This glossary lists the various Customer Behavior Events that Braz
 tool: currents
 ---
 
-Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Customer Behavior Event Structure %}
 <br>
@@ -25,7 +25,7 @@ Customer Behavior Events events are comprised of __user specific__ properties, _
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 {% endalert %}
 
 {% api %}
@@ -230,7 +230,7 @@ Impression, News Feed
 This event occurs when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
-We do track other News Feed events; these are located in [Message Engagement Events]({{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
+We do track other News Feed events; these are located in [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
 {% endalert %}
 
 ```json
@@ -297,4 +297,4 @@ This event occurs when an app installation is attributed to a source. Use this t
 ```
 {% endapi %}
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

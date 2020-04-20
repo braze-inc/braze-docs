@@ -32,6 +32,6 @@ Next, we recommend sending an SMS campaign a few seconds later, with clear call-
 
 ![picture][IMAGE]{: style="border: 0"}
 
-[SSSendpoint]: {{ site.baseurl }}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
+[SSSendpoint]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [IMAGE]: {% image_buster /assets/img/sms/sms_cta.png %}
 [IMAGE1]: {% image_buster /assets/img/sms/sms_canvas.png %}

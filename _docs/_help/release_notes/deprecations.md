@@ -28,12 +28,12 @@ _Braze Partnership_
 
 _Support withdrawn: August 2019_
 
-If you are currently using [Apptimize with Braze]({{ site.baseurl }}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+If you are currently using [Apptimize with Braze]({{site.baseurl}}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
 
 ## Original In-App Messages
 
-_Replaced by: [In-App Messaging]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)_
+_Replaced by: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)_
 
 _Braze Feature_
 
@@ -62,7 +62,7 @@ The Braze SDK provided a feedback widget that could be added to your app to allo
 
 ## Google Cloud Messaging (GCM)
 
-_Replaced by: [Firebase Cloud Messaging (FCM)]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration)_
+_Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration)_
 
 _Integration_
 
@@ -70,29 +70,29 @@ _Support withdrawn: July 2018 (Braze removal of support) and May 29, 2019 (Googl
 
 [Google has removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze removed support for GCM from the Android SDKs in July 2018, which was noted within [our Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
 
-Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration) may be affected by this change.
+Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration) may be affected by this change.
 
 If you have not transitioned to FCM, all GCM push tokens registrations will fail. If your apps are currently supporting GCM, you’ll need to work with your development teams on [transitioning from GCM to Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
 
 ## Eclipse
 
-_Replaced by: [Android Studio]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)_
+_Replaced by: [Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)_
 
 _Integration_
 
 _Support withdrawn: 2014-2015_
 
-Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{ site.baseurl }}/support_contact/) for assistance.
+Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{site.baseurl}}/support_contact/) for assistance.
 
 ## The Raw Event Stream (RES)
 
-_Replaced by: [Currents]({{ site.baseurl }}/partners/braze_currents/about/)_
+_Replaced by: [Currents]({{site.baseurl}}/partners/braze_currents/about/)_
 
 _Braze Feature_
 
 _Support withdrawn: July 2018_
 
-The Raw Event Stream was the predecessor to [Currents]({{ site.baseurl }}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/partners/braze_currents/about/) and was deprecated to make room for the future of Braze data.
 
 ## Delay While Idle
 

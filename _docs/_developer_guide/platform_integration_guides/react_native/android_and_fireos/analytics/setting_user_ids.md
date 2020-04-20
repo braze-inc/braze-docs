@@ -12,4 +12,4 @@ See [the Android integration instructions][1] for an in depth discussion of when
  ReactAppboy.changeUser("YOUR_USER_ID");
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/

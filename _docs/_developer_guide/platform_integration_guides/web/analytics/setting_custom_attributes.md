@@ -161,7 +161,7 @@ appboy.getUser().setPushNotificationSubscriptionType(appboy.ab.User.Notification
 ```
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html "ab.User"
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

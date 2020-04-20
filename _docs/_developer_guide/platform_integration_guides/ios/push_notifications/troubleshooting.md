@@ -90,7 +90,7 @@ On iOS versions that do not integrate push via the UserNotifications framework, 
 
 ##### Test Notification Scheduled Incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{ site.baseurl }}/user_guide/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 #### User Not "Push Registered" For the App Being Tested
 
@@ -131,7 +131,7 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 
 [1]: {% image_buster /assets/img_archive/push_changelog.png %}
 [20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1
-[21]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[21]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [23]: {% image_buster /assets/img_archive/prov_profile_refresh_step1.png %}
 [24]: {% image_buster /assets/img_archive/prov_profile_refresh_step2.png %}
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}
@@ -140,11 +140,11 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [28]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html
 [14]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html
 [2]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html
-[29]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities
-[30]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[32]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
+[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities
+[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
+[32]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [34]: #push-clicks-not-logged
 [35]: #received-unregistered-sending
-[37]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[38]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#app-transport-security-ats
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing
+[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
+[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#app-transport-security-ats
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing

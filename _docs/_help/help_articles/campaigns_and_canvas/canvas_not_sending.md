@@ -14,13 +14,13 @@ Canvases are robust and complex, and we know you dedicate time and care when cre
 
 ## Schedule
 
-* Is the Canvas [scheduled correctly]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
+* Is the Canvas [scheduled correctly]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
 * Have you chosen the correct date and time?
-* For [Action-Based]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery), have users performed specified actions since you launched the Canvas?
+* For [Action-Based]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery), have users performed specified actions since you launched the Canvas?
 
 ## Segment
 
-It is important to check your [Entry Audience]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#set-your-target-entry-audience):
+It is important to check your [Entry Audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#set-your-target-entry-audience):
 * Have you chosen the correct Segment?
 * How is the Segment set up?
 * Have you ensured that the Segment contains any users?
@@ -29,9 +29,9 @@ It is important to check your [Entry Audience]({{ site.baseurl }}/user_guide/eng
 
 ## Settings
 
-The [Entry Settings]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important, have you limited the number of people who will potentially enter the Canvas?
+The [Entry Settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important, have you limited the number of people who will potentially enter the Canvas?
 
 Users may also drop out of a Canvas if they are no longer eligible to receive messages. For example, if the Canvas only contained push notifications, and a user opted out of push after receiving the First Step - that user would drop out of the Canvas. Consider preempting this by using branching to add in alternative user journeys.
 
 
-Still need help? [Open a support ticket]({{ site.baseurl }}/support_contact/) or review our comprehensive [Canvas documentation]({{ site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/) or review our comprehensive [Canvas documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).

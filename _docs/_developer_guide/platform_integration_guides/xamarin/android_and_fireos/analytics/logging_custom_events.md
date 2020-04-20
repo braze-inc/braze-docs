@@ -12,4 +12,4 @@ See [the Android integration instructions][1] for in depth discussion of event t
 Appboy.GetInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

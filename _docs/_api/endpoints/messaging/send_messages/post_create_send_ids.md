@@ -20,7 +20,7 @@ description: "This article outlines details about the Create Send IDs Braze endp
 
 Braze’s Send Identifier adds the ability to send messages and track message performance entirely programmatically, without campaign creation for each send. Using the Send Identifier to track and send messages is useful if you are planning to programmatically generate and send content.
 
-The daily maximum number of custom send identifiers that can be created via this endpoint for a given app group is 100. Each send id - campaign id combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API Limits]({{ site.baseurl }}/api/basics/#api-limits).
+The daily maximum number of custom send identifiers that can be created via this endpoint for a given app group is 100. Each send id - campaign id combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
 
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateSendIdsForMessageSendTracking {% endapiref %}

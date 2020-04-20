@@ -13,32 +13,37 @@ If you are looking for a complete list of supported languages you may attribute 
 ## Languages Supported
 - Arabic
 - Burmese
-- Chinese - Simplified
-- Chinese - Traditional
+- Catalan
+- Chinese
 - Czech (coming soon)
 - Danish
 - Dutch
+- English
+- Esperanto
 - Estonian
+- Ewe
+- Filipino
 - Finnish
 - French
+- Georgian
 - German
+- Greek
+- Hebrew
 - Hindi
+- Hungarian
 - Indonesian
+- Irish
 - Italian
 - Japanese
-- Khmer
 - Korean
-- Lao
 - Malay
 - Norwegian
+- Nynorsk
 - Polish
-- Portuguese - Brazil
-- Portuguese - Portugal
+- Portuguese 
 - Russian
-- Spanish - Latin America
-- Spanish - Spain
+- Spanish
 - Swedish
-- Tagalog
 - Thai
 - Ukrainian (coming soon)
 - Vietnamese
@@ -80,6 +85,6 @@ Optionally, you can also override any of the following Key / String pairs within
 
 For more information see the [Apple Localization Developer Docs][3] as well as the [LOC standard language list][4].
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/
 [4]: http://www.loc.gov/standards/iso639-2/php/English_list.php

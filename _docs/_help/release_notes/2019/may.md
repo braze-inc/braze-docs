@@ -22,7 +22,7 @@ You will need to update to a supported Braze SDK version:
 - __Android__: 2.6.0 or above
 - __Web__: 2.2.0 or above
 
-[Learn more about Content Cards here!]({{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/overview/)
+[Learn more about Content Cards here!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
 
 {% alert update %}
 Content Cards for Currents, as well as our API documentation for Content Cards, will be launched later this week. Stay tuned!
@@ -34,17 +34,17 @@ Braze has added a new channel to our capabilities! By expanding into new channel
 
 You can now retrieve data from Roku devices for data enrichment and custom event tracking.
 
-[Check out the documentation here!]({{ site.baseurl }}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
+[Check out the documentation here!]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
 
 ## Notification Preferences for Canvas & Campaign Updates
 
-This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{ site.baseurl }}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
+This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
 
 ## Jampp Technology Partner Documentation
 
 Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
 
-[Braze customers can integrate with Jampp]({{ site.baseurl }}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
+[Braze customers can integrate with Jampp]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
 ## Platform Picker for In-App Messages
 
@@ -55,7 +55,7 @@ We've made it easier to select where your in-app messages are going and which pl
 ## Dispatch ID Currents Field for Email
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -76,7 +76,7 @@ Also, the Campaign grid sidebar is now resizable!
 
 ## Delete Users by Alias
 
-You can now use the `users/delete` endpoint to [delete users by alias]({{ site.baseurl }}/api/endpoints/user_data/#user-delete-request)!
+You can now use the `users/delete` endpoint to [delete users by alias]({{site.baseurl}}/api/endpoints/user_data/#user-delete-request)!
 
 ## Unique Calculation for Email Clicks and Opens
 
@@ -89,7 +89,7 @@ Any users also using Mailjet will see a spike in these numbers, since the previo
 You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{ site.baseurl }}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -98,7 +98,7 @@ _Update noted in August 2019._
 ## Most Engaged Channel
 
 {% alert update %}
-As of the [November 2019 product release]({{ site.baseurl }}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{ site.baseurl }}/user_guide/intelligence/intelligent_channel/).
+As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
 {% endalert %}
 
 The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.

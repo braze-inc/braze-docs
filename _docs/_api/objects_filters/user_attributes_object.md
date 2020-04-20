@@ -111,6 +111,7 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, e.g., `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (e.g., "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
@@ -152,11 +153,11 @@ Content-Type: application/json
 This example contains two User Attribute objects of the allowed 75 per API call.
 
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[2]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: ({{ site.baseurl }}/help/help_articles/push/push_token_migration/
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[3]: ({{site.baseurl}}/help/help_articles/push/push_token_migration/
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
@@ -164,4 +165,4 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

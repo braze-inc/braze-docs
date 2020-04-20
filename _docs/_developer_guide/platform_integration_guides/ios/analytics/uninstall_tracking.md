@@ -45,9 +45,9 @@ Follow the instructions for enabling uninstall tracking using our [article on Un
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
-[5]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[6]: {{ site.baseurl }}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [7]: https://dashboard-01.braze.com/
 [9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
 [10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

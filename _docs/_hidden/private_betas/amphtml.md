@@ -30,7 +30,7 @@ Go into your Gmail Settings and select `Enable Dynamic Content`.
 
 ## API Usage
 
-You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
 ### Email Object Specification
 
@@ -143,4 +143,4 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 If none of these conditions are causing error, reach out to [support][support].
 
  [1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"
- [support]: {{ site.baseurl }}/support_contact/
+ [support]: {{site.baseurl}}/support_contact/

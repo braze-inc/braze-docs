@@ -307,17 +307,17 @@ Braze should now be collecting data from your application and your basic integra
 [1]: https://github.com/appboy/appboy-unity-sdk
 [2]: {% image_buster /assets/img_archive/UnityPackageName.png %}
 [3]: https://dashboard-01.braze.com/app_settings/app_settings/settings
-[4]: {{ site.baseurl }}/app_group_configuration "dashboard setup api keys"
+[4]: {{site.baseurl}}/app_group_configuration "dashboard setup api keys"
 [5]: #clone-unity
 [6]: #copy-plugins
 [7]: #add-bundle-id
 [8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [13]: #android-advanced
-[14]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [15]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Android
 [16]: https://github.com/Appboy/appboy-unity-sdk/releases
 [17]: #prime-31
@@ -325,16 +325,16 @@ Braze should now be collecting data from your application and your basic integra
 [19]: #game-objects
 [20]: #inapp-disabling-native
 [21]: https://github.com/Appboy/appboy-android-sdk/tree/master/android-sdk-ui/assets
-[22]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
+[22]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
 [23]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
 [24]: https://github.com/Appboy/appboy-android-sdk#version-information
-[25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
+[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
 [26]: https://docs.unity3d.com/Manual/AssetPackages.html
 [27]: https://developer.android.com/jetpack/androidx
 [28]: https://firebase.google.com/docs/unity/setup
 [29]: https://docs.unity3d.com/Manual/android-manifest.html
-[30]: {{ site.baseurl }}/support_contact/
-[31]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push
+[30]: {{site.baseurl}}/support_contact/
+[31]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push
 [32]: https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java
 [33]: https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html
 [34]: #extending-braze-unity-player

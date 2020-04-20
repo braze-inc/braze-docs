@@ -38,6 +38,7 @@ The `send_id` is only generated for API campaign sends targeting segments, conne
 | `send_id` | Yes | String | Send API Identifier. |
 | `length` | Yes | Integer | Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 inclusive. |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
 The `send_id` is only generated for API campaign sends targeting segments, connected audiences or broadcasts. When relevant, the `send_id` is included in response for the `messages/send`, `messages/schedule`, `campaign/trigger/send` and campaign/trigger/schedule endpoints.

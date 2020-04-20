@@ -54,8 +54,8 @@ Note: This feature relies on user aliases in order to properly assign custom eve
 1. alias_label: `phone` and alias_name: `users_phone_number`
 2. Phone numbers must be in the E.164 format (e.g +19173337578)
 
-[unknown]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
-[endpoint]: {{ site.baseurl }}/api/endpoints/user_data/post_user_alias/
+[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
+[endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
 [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
 
 

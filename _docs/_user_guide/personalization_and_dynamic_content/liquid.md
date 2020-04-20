@@ -41,11 +41,11 @@ _For more on Dynamic Personalization with Liquid, check out our [detailed, guide
 
 Liquid templating language supports the use of objects, tags and filters.
 
-- [Objects]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
+- [Objects]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
 
-- [Tags]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+- [Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 
-- [Filters]({{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
+- [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
 
 
 ## Terms to Know
@@ -73,4 +73,4 @@ Braze does not currently support 100% of Shopify's Liquid, only certain portions
 
 <br>
 
-[1]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

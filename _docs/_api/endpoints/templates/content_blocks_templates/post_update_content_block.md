@@ -20,7 +20,7 @@ description: "This article outlines details about the Update Email Content Block
 /content_blocks/update
 {% endapimethod %}
 
-Use this endpoint below to update an [Email Content Block]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
@@ -47,7 +47,8 @@ Use this endpoint below to update an [Email Content Block]({{ site.baseurl }}/us
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
 | `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
-| `tags` | No | Array of Strings. | Tags must already exist.
+| `tags` | No | Array of Strings. | Tags must already exist. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Successful Response Properties
 
@@ -65,11 +66,9 @@ Use this endpoint below to update an [Email Content Block]({{ site.baseurl }}/us
 
 - `Content must be a string.`
 
-- `Content must be smaller than 50kb.`
-The content in your content block must be less than 50kb total.
+- `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.`
-The liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The liquid provided is not valid or parsable. Please try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 
@@ -77,15 +76,13 @@ The liquid provided is not valid or parsable. Please try again or reach out to s
 
 - `Content Block description must be a string.`
 
-- `Content block description must be shorter than 250 characters.`
-Your content block description must be less than 250 characters.
+- `Content block description must be shorter than 250 characters.` - Your content block description must be less than 250 characters.
 
 - `Content Block name cannot be blank.`
 
 - `Content Block name must be a shorter than 100 characters.`
 
-- `Content Block name can only contain alphanumeric characters.`
-Content Block names can include any of the following characters: the letters (capitalized or lowercase) `A` through `Z`, the numbers `0` through `9`, dashes `-`, and underscores `_`. It cannot contain non-alphanumeric characters like emojis, `!`, `@`, `~`, `&`, and other "special" characters.
+- `Content Block name can only contain alphanumeric characters.` - Content Block names can include any of the following characters: the letters (capitalized or lowercase) `A` through `Z`, the numbers `0` through `9`, dashes `-`, and underscores `_`. It cannot contain non-alphanumeric characters like emojis, `!`, `@`, `~`, `&`, and other "special" characters.
 
 - `Content Block with this name already exists.`
 

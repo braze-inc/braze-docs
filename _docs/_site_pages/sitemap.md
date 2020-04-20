@@ -17,7 +17,7 @@ layout: bare
   {%- endif -%}
   {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' %}
   <url>
-    <loc>{{site.homeurl}}{{ site.baseurl }}{{ page.url }}</loc>
+    <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>
     <lastmod>{{site.time | date: "%Y-%m-%d"}}</lastmod>
   </url>
   {%- endunless -%}

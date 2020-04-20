@@ -39,7 +39,8 @@ This endpoint allows you to remove email addresses from your Braze bounce list. 
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | see App Group REST API Key in Parameter Definitions |
+| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endapi %}

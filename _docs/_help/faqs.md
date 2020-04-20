@@ -11,12 +11,12 @@ Yes. We have done internal testing and verified that we are compatible with Urba
 
 
 {% details What is my dashboard URL and REST endpoint? %}
-Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs mentioned in the [Access Braze article]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/). Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs mentioned in the [Access Braze article]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 {% enddetails %}
 
 
 {% details Which SDK endpoint do I use? %}
-If your company was set up with a custom endpoint, please reach out to your Customer Success Manager or [open a support ticket][support]. If not, one of the corresponding endpoints mentioned in the [Access Braze article]({{ site.baseurl }}/user_guide/administrative/access_braze/braze_instances/).
+If your company was set up with a custom endpoint, please reach out to your Customer Success Manager or [open a support ticket][support]. If not, one of the corresponding endpoints mentioned in the [Access Braze article]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/).
 {% enddetails %}
 
 
@@ -224,4 +224,4 @@ Braze Firebrands is our customer engagement community. We're building a communit
 {% enddetails %}
 
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

@@ -33,6 +33,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 |---|---|---|---|
 | `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 

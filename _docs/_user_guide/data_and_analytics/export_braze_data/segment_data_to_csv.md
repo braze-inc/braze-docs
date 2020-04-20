@@ -15,7 +15,7 @@ You can also request a CSV export from the main Segments page by clicking the ge
 
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by clicking the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
-If you have [linked your Amazon S3 credentials to Braze][26], then the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire in a few hours and requires that you are logged into the dashboard to access it.
+If you have [linked your Amazon S3 credentials to Braze][26], then the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after 1 day of exporting and requires that you are logged into the dashboard to access it.
 
 Data included in the exports:
 
@@ -53,4 +53,4 @@ Data included in the exports:
 
 [1]: {% image_buster /assets/img_archive/csvexport.png %}
 [2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{ site.baseurl }}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
+[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

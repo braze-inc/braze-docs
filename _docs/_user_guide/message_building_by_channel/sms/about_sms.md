@@ -42,5 +42,5 @@ This article discusses some common use cases to draw from and terms to know that
 
 
 [picture]: {% image_buster /assets/img/sms/sms_about.jpg %}
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-[2]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/#message-copy-limits
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/create/#message-copy-limits

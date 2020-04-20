@@ -50,5 +50,8 @@ Use the endpoints below to create email templates on the Braze dashboard. These 
 
 - `All Tags must be Strings.`
 
-- `Some Tags could not be found.`
+- `Some Tags could not be found.` - A tag was specified which doesn't exist in this environment.
+
+- `Email must have valid content block names.` - The email contains Content Blocks which do not exist in this environment.
+
 {% endapi %}
