@@ -1,6 +1,7 @@
 ---
 nav_title: In-App Messages in Canvas
 permalink: "/canvas_in-app_messages/"
+hidden: true
 ---
 
 # In-App Messages In Canvas
