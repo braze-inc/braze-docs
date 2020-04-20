@@ -51,8 +51,9 @@ Some brands may wish to send to a group of users that have phone numbers from va
 During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions on your Braze dashboard setup, please reach out to your Braze representative for support.  
 
 ## Subscription Group MMS Enablement
-In order to send an MMS message, atleast one number within your Subscription Group has to be enabled to send MMS.  This is indicated by a tag located next to the Subscription Group. 
-![picture][10]
+In order to send an MMS message, at least one number within your Subscription Group has to be enabled to send MMS. This is indicated by a tag located next to the Subscription Group. 
+
+![picture][10]{: style="max-width:40%"}
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
