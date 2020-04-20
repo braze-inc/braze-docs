@@ -134,6 +134,16 @@ Captioned Image Card | 4:3 (600 pixels wide minimum) | 500KB | 1MB | PNG, JPG, G
 Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### MMS
+
+#### Images
+**Image Specifications** | **Recommended Properties**
+--- | ---
+Size | 5MB maximum
+File Types | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2}
+
+
 ### Email
 
 #### Images

@@ -46,7 +46,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Last Received SMS
-    description: Segments your users by the last time that they have received a SMS. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Timezone:<br>UTC
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
