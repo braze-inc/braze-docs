@@ -35,8 +35,7 @@ This endpoint will list your existing [Content Blocks]({{site.baseurl}}/user_gui
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://rest.iad-01.braze.com/content_blocks/list?modified_after&modified_before&limit&offset
-`
+`https://rest.iad-01.braze.com/content_blocks/list?modified_after&modified_before&limit&offset`
 
 ### Example Request
 ```

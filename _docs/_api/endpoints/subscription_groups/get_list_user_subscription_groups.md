@@ -50,13 +50,10 @@ If there are multiple users (multiple external ids) who share the same email add
 {% endalert %}
 
 ### Example Request
-
 `https://rest.iad-03.braze.com/subscription/user/status?external_id=12345&email=Example&limit=100&offset=1`
 
 ### Example Request for multiple users
-```
-https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2
-```
+`https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 
 ### Example Request for SMS
 ```

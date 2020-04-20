@@ -81,6 +81,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 |`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
 |`fields_to_export` | Optional | Array of Strings  | Name of user data fields to export. You may export custom attributes. Defaults to all if not provided.|
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 ```

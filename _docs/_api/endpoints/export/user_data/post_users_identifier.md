@@ -52,6 +52,7 @@ This endpoint allows you to export data from any user profile by specifying a fo
 |`braze_id` | Optional | String | Braze ID for a particular user |
 |`email_address` | Optional | String | Email address of a user |
 |`fields_to_export` | Optional | Array of Strings | Name of user data fields to export. Defaults to all if not provided |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 ```

@@ -38,9 +38,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-```
-https://est.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset
-```
+`https://est.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset`
 
 ### Example Request
 ```

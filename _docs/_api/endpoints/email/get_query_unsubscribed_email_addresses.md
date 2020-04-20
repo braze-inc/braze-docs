@@ -40,13 +40,10 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-### Sample Request 
+### Example Request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=&end_date=&limit=&offset=&sort_direction=&email' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
-```
-
-### Example Request
 ```
 
 ### Sample Response
