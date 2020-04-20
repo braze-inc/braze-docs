@@ -40,14 +40,14 @@ You can set the email subscription state for an email address that is not yet as
 ### Parameters
 
 | Parameter | Required | Data Type | Description |
-| ---------------------| --------------- |
+| --------- | ---------| --------- | ----------- |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 | `subscription_state` | Yes | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Sample Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/email/status?email=&subscription_state=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/email/status' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

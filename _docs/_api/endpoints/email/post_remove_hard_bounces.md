@@ -43,7 +43,7 @@ This endpoint allows you to remove email addresses from your Braze bounce list. 
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove?email' \
+curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

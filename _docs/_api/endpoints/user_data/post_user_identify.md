@@ -28,6 +28,12 @@ You can add up to 50 user aliases per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
+## Parameters
+| Parameter | Required | Data Type | Description |
+| ---------------------| --------------- |
+| `aliases_to_identify` | Yes | Array of Aliases to Identify Objects | See Alias to Identify Object |
+
+
 ## Request Body
 
 ```
