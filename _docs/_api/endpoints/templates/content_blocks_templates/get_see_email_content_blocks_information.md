@@ -34,7 +34,7 @@ This endpoint will call information for your exiting [Email Content Blocks]({{si
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id' \
+curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id=12345678910' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

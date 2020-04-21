@@ -20,16 +20,19 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Request Parameter Details
+## Request Parameters
 
 | Parameter   | Required | Data Type | Description            |
 | ----------- | -------- | --------- | ---------------------- |
 | `canvas_id` | Yes      | String    | Canvas API Identifier  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ## Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id=canvas%20identifier' \
+curl --location --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

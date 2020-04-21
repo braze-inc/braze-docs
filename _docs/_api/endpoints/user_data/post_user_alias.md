@@ -41,7 +41,18 @@ Content-Type: application/json
 }
 ```
 
-This endpoint uses the New User Alias Object Specification.
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `user_aliases` | Yes | Array of New User Alias Objects | See New User Alias Object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+<br><br>
+For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+
 
 ###  Endpoint Request Body with New User Alias Object Specification
 
@@ -55,57 +66,9 @@ This endpoint uses the New User Alias Object Specification.
 
 If an `external_id` is not present, a user will still be created, but will need to be identified later. You can do this using the "Identifying Users" and the `users/identify` endpoint.
 
-## User Identification Endpoint
-
-Use this endpoint to identify an unidentified (alias-only) user.
-
-Identifying a user requires an `external_id` to be included in the aliases to identify the object. If the `external_id` is not a valid or known ID, it will simply be added to the aliases user's record, and the user will be considered identified.
-
-Subsequently, you can associate multiple additional user aliases with a single `external_id`. When these subsequent associations are made, only the push tokens and message history associated with the user alias are retained; any attributes, events or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the `/users/export/ids` endpoint, then re-associate the attributes, events, and purchases with the identified user.
-
-You can add up to 50 user aliases per request.
-
-Your Endpoint will correspond to your [Braze Instance][1].
-
-Instance  | REST Endpoint
-----------|----------------------------------------------
-US-01  | `https://rest.iad-01.braze.com/users/identify`
-US-02  | `https://rest.iad-02.braze.com/users/identify`
-US-03  | `https://rest.iad-03.braze.com/users/identify`
-US-04  | `https://rest.iad-04.braze.com/users/identify`
-US-06  | `https://rest.iad-06.braze.com/users/identify`
-EU-01  | `https://rest.fra-01.braze.eu/users/identify`
-{: .reset-td-br-1 .reset-td-br-2}
-
-### New User Identify Request
-
-```json
-POST https://YOUR_REST_API_URL/users/identify
-Content-Type: application/json
-{
-   "aliases_to_identify" : (required, array of Aliases to Identify Object)
-}
-```
-
-###  Aliases to Identify Object Specification
-
-```json
-{
-  "external_id" : (required, string) see External User ID below,
-  // external_ids for users that do not exist will return a non-fatal error.
-  // See Server Responses for details.
-  "user_alias" : {
-    "alias_name" : (required, string),
-    "alias_label" : (required, string)
-  }
-}
-```
-
-For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new?user_aliases' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
@@ -120,9 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new?us
 }'
 ```
 
-
 {% endapi %}
-
 
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays

@@ -38,9 +38,19 @@ Content-Type: application/json
 }
 ```
 
->  Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
+Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
-### Objects Used
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `attributes` | Optional | Array of Attributes Object | See User Attributes Object |
+| `events` | Optional | Array of Event Object | See Events Objects |
+| `purchases` | Optional | Array of Purchase Object | See Purchase Object |
+| `partner` | Optional | String | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
 - [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 - [Events Object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchases Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
@@ -69,7 +79,7 @@ You can see this example in action [in our Swagger documentation]({{site.baseurl
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track?attributes&events=&purchases' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

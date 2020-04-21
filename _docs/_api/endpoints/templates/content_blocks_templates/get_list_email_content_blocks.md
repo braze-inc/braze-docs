@@ -35,11 +35,11 @@ This endpoint will list your existing [Content Blocks]({{site.baseurl}}/user_gui
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://rest.iad-01.braze.com/content_blocks/list?modified_after&modified_before&limit&offset`
+`https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2029-03-01T01:01:01.000000&limit=1&offset=0`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after&modified_before&limit&offset' \
+curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2029-03-01T01:01:01.000000&limit=1&offset=0' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

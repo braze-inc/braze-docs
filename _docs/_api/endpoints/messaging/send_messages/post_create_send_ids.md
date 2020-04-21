@@ -40,12 +40,20 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`campaign_id`|Required|String|See Campaign Identifier|
+|`send_id`| Optional | String | See Send Identifier |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create?campaign_id=&send_id=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

@@ -20,7 +20,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Kpi%20export%20%20mau%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -30,11 +30,11 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id=app identifier`
+`https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id=app_identifier`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id=app%20identifier%20' \
+curl --location --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id=app_identifier' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

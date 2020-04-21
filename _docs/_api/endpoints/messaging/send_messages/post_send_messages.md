@@ -60,6 +60,22 @@ Content-Type: application/json
  }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
+|`external_user_ids` | Optional | Array of Strings | See External ID |
+|`user_aliases`|Optional|Array of USer Alias Objects|See User Alias Object|
+|`segment_id `| Optional | String | See Segment Identifier |
+|`audience`|Optional|Connected Audience Object|See Connected Audience|
+|`campaign_id`|Required|String|See Campaign Identifier|
+|`send_id`| Optional | String | See Send Identifier |
+|`override_frequency_capping`|Optional|Boolean|Ignore frequency_capping for campaigns, defaults to false |
+|`recipient_subscription_state`|Optional|String|Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed'|
+|`messages`| Optional | Messaging Objects | See Available Messaging Objects|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Components
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
@@ -85,7 +101,7 @@ You can use these objects in the [request body](#request-body) above.
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/send?broadcast=&external_user_ids=&user_aliases=&segment_id=&audience=&campaign_id=&send_id=&override_frequency_capping=&recipient_subscription_state=&messages=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

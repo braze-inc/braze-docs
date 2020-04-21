@@ -28,14 +28,7 @@ You can add up to 50 user aliases per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-## Parameters
-| Parameter | Required | Data Type | Description |
-| ---------------------| --------------- |
-| `aliases_to_identify` | Yes | Array of Aliases to Identify Objects | See Alias to Identify Object |
-
-
 ## Request Body
-
 ```
 Content-Type: application/json
 ```
@@ -45,6 +38,18 @@ Content-Type: application/json
    "aliases_to_identify" : (required, array of Aliases to Identify Object)
 }
 ```
+
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| -----------|----------| --------|------- |
+| `aliases_to_identify` | Yes | Array of Aliases to Identify Objects | See Alias to Identify Object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+
+### Request Components
+- [Alias to Identify Object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ###  Request Body with Aliases to Identify Object
 
@@ -66,7 +71,7 @@ Content-Type: application/json
 
 ### Request Example
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/identify?aliases_to_identify' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

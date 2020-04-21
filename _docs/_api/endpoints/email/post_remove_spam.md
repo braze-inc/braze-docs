@@ -34,10 +34,10 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 }
 ```
 
-## Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
-| ---------------------| --------------- |
+| ----------|-----------| --------|------- |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

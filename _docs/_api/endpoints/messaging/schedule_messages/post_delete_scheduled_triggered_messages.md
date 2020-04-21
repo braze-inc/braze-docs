@@ -38,12 +38,20 @@ Scheduled messages or triggers that are deleted very close to or during the time
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `campaign_id`|Required|String| See Campaign Identifier|
+| `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ## Request Components
-- [Campaign Identifier](({{site.baseurl}}/api/identifier_types/)
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/delete?campaign_id=123456789&schedule_id=123456789' \
+curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

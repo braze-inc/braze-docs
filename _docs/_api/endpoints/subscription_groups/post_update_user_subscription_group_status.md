@@ -54,6 +54,17 @@ Content-Type: application/json
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
 \* Email subscription groups: Either `email` or `external_id` is required. 
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `subscription_group_id` | Yes | String | The id of your subscription group, |
+| `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
+| `external_id` | Yes* | String | The external_id of the user |
+| `email` | Yes* | String | The email address of the user |
+| `phone` | Optional | String in E.164 format | Tags must already exist. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 #### Using Email
 ```json
 {
@@ -76,7 +87,7 @@ Content-Type: application/json
 
 ### Example Requests Email
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set?subscription_group_id=pto81fff-734f-80e5-b7b2-b880562888ww&subscription_state=unsubscribed&external_id=user123&email=your.user@email.com' \
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
@@ -90,7 +101,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 
 ### Example Requests SMS
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set?subscription_group_id=pto81fff-734f-80e5-b7b2-b880562888ww&subscription_state=unsubscribed&external_id=user123&phone=+12223334444' \
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

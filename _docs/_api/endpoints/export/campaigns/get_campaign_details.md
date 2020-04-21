@@ -20,16 +20,17 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## Request Parameter Details
+## Request Parameter
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
 | `campaign_id` | Yes      | String    | Campaign API Identifier |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-{% endalert %}
 
 ### Example Request URL
 `https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`

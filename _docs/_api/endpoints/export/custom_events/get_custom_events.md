@@ -19,7 +19,7 @@ This endpoint allows you to export a list of custom events that have been record
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## Parameters
+## Request Parameter
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |

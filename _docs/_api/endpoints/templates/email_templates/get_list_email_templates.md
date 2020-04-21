@@ -38,11 +38,11 @@ Use the Template REST APIs to programmatically manage the email templates that y
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://est.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset`
+`https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=0`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=&modified_before&limit&offset' \
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=0' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

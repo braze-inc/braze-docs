@@ -50,6 +50,17 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`canvas_id`|Required|String|See Canvas Identifier|
+|`canvas_entry_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
+|`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
+|`audience`|Optional|Connected Audience Object|See Connected Audience|
+|`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Components
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
@@ -58,16 +69,16 @@ Content-Type: application/json
 - [Canvas Entry Properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
-
+<br><br>
 The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and `canvas_entry_properties` object.
-
+<br><br>
 Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
-
+<br><br>
 If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
 
 ### Example Response
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/send?canvas_id&canvas_entry_properties&broadcast&audience&recipients' \
+curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/send' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

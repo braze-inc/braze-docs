@@ -20,7 +20,7 @@ This endpoint allows you to retrieve a series of the number of sessions for your
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Session%20analytics%20export%20%20session%20series%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -31,12 +31,15 @@ This endpoint allows you to retrieve a series of the number of sessions for your
 | `segment_id` | No | String | Segment API Identifier indicating the analytics enabled segment for which sessions should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example URL
-`https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=segment identifier`
+`https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=12345678901234`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id=app%20identifier&segment_id=segment%20identifier' \
+curl --location --request GET 'https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=12345678901234' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

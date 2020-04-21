@@ -20,7 +20,7 @@ This endpoint allows you to export time series data for a Canvas.
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20data%20series%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -32,6 +32,9 @@ This endpoint allows you to export time series data for a Canvas.
 | `include_step_breakdown` | No | Boolean | Whether or not to include step stats (defaults to false) |
 | `include_deleted_step_data` | No | Boolean | Whether or not to include step stats for deleted steps (defaults to false) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
 ```

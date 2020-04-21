@@ -50,20 +50,18 @@ For SMS subscription groups, either `external_id` or `phone` is required.
 Your request must include `phone` or `email` value, _but not both_.
 
 ### Example Request
-
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone=+11112223333
 ```
 
 ### Example Request for multiple users
-
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id[]=1&external_id[]=2
 ```
 
 ### Example Request for SMS
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone' \
+curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone=+11112223333' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
@@ -73,7 +71,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-### Response
+## Response
 
 All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
 

@@ -21,7 +21,7 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
 
-## Request Parameter Details
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -30,9 +30,10 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-{% endalert %}
 
 ### Example URL
 `https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00`

@@ -73,7 +73,7 @@ The `segment_id` for a given segment can be found in your Developer Console with
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
 
-## Parameters
+## Request Parameters
 
 | Key | Requirement | Data Type | Details |
 |---|---|---|---|
@@ -83,9 +83,12 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment?segment_id&callback_endpoint&fields_to_export&output_format' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

@@ -17,7 +17,7 @@ description: "This article outlines details about the delete User Information Br
 {% apimethod post %}
 /users/delete
 {% endapimethod %}
-
+<br><br>
 {% alert warning %}
 Deleting user profiles CANNOT be undone. It will PERMANENTLY remove users which may cause discrepancies in your data. Learn more about [what happens when you delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
 {% endalert %}
@@ -40,11 +40,21 @@ Content-Type: application/json
   "braze_ids" : (optional, array of string) Braze User Identifiers for the users to delete
 }
 ```
-Learn more about the [User Alias Object here]({{site.baseurl}}/api/objects_filters/user_alias_object/).
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `external_ids` | Optional | Array of Strings | External ids for the users to delete |
+| `user_aliases` | Optional | Array of User Alias Objects | User Aliases for the users to delete |
+| `braze_ids` | Optional | Array of Strings | Braze User Identifiers for the users to delete |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [User Alias Object here]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/delete?external_ids&user_aliases&braze_ids' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

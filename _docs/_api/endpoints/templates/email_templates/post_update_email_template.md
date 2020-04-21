@@ -47,9 +47,25 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`email_template_id`| Required |String|Your email template's API Identifier.|
+|`template_name`|Optional|String|The name of your email template|
+|`subject`|Optional|String|The email template subject line|
+|`body`|Optional|String|The email template body that may include HTML|
+|`plaintext_body`|Optional|String|A plaintext version of the email template body|
+|`preheader`|Optional|String|The email preheader used to generate previews in some clients|
+|`tags`|Optional|String|Tags must already exist|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Request Example
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update?email_template_id=ab1cde55-fg47-4h3i-8297-158jk3l2466m&template_name=Weekly%20Newsletter&subject=This%20Week%27s%20Styles&body=Check%20out%20this%20week%27s%20digital%20lookbook%20to%20inspire%20your%20outfits.%20Take%20a%20look%20at%20https://www.braze.com/&plaintext_body=This%20is%20the%20updated%20text%20within%20my%20email%20body%20and%20here%20is%20a%20link%20to%20https://www.braze.com/.&preheader=We%20want%20you%20to%20have%20the%20best%20looks%20this%20Summer&tags=[%22Tag1%22,%20%22Tag2%22]' \
+curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

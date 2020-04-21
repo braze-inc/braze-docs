@@ -36,7 +36,7 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 }
 ```
 
-### Request Parameter Details
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -44,13 +44,13 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 | `name` | Yes | String | Can only be provided when the content block is in a draft state. Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
+| `state` | Optional | "active" or "draft" | Choose "active" or "draft". Defaults to `active` if not specified. |
 | `tags` | No | Array of Strings. | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update?content_block_id=123a45b6-cd78-9e01-g234-hi56j7k8l9m0&name=content-block-1&description=This%20is%20my%20content%20block&content=HTML%20or%20text%20content%20within%20block&state=draft&tags=[%22tag1%22,%20%22tag2%22]' \
+curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

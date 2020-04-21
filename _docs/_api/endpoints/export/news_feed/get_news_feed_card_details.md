@@ -20,16 +20,18 @@ This endpoint allows you to retrieve relevant information on the card, which can
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description            |
 | --------- | -------- | --------- | ---------------------- |
 | `card_id` | Yes      | String    | Card API Identifier    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Card ID](https://www.braze.com/docs/api/identifier_types/)
+- [News Feed List](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/)
+<br><br>
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).
-{% endalert %}
 
 ### Example URL
 `https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`

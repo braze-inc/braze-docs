@@ -27,12 +27,12 @@ This endpoint allows you to pull a list of email addresses that have "hard bounc
 __Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request Header, please see Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
-## Query Parameters
+## Request Parameters
 
 You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
-| ---------------------| --------------- |
+| ----------|-----------| ----------|----- |
 | `start_date` | No * | String in YYYY-MM-DD format| Start date of the range to retrieve hard bounces, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
 | `end_date` | No * | String in YYYY-MM-DD format | End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API. |
 | `limit` | No | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |

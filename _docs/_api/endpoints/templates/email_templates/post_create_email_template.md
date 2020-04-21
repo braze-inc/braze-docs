@@ -42,9 +42,21 @@ Use the endpoints below to create email templates on the Braze dashboard. These 
  }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`template_name`|Optional|String|The name of your email template|
+|`subject`|Optional|String|The email template subject line|
+|`body`|Optional|String|The email template body that may include HTML|
+|`plaintext_body`|Optional|String|A plaintext version of the email template body|
+|`preheader`|Optional|String|The email preheader used to generate previews in some clients|
+|`tags`|Optional|String|Tags must already exist|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create?template_name=Template%20Name&subject=Subject&body=Body&plaintext_body=Plaintext_Body&preheader=Header&tags=[%22Tag1%22,%20%22Tag2%22]' \
+curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

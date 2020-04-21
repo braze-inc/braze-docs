@@ -20,16 +20,17 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter    | Required | Data Type | Description            |
 | ------------ | -------- | --------- | ---------------------- |
 | `segment_id` | Yes      | String    | Segment API Identifier |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).
-{% endalert %}
 
 ## Example URL
 `https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`

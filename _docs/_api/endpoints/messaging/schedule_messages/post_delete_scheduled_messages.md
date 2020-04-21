@@ -34,9 +34,19 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete?schedule_id=248762133332' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

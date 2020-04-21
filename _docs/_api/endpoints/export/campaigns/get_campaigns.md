@@ -20,7 +20,7 @@ This endpoint allows you to export a list of campaigns, each of which will inclu
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
-## Request Parameter Details
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -55,6 +55,5 @@ Content-Type: application/json
     ]
 }
 ```
-
 
 {% endapi %}

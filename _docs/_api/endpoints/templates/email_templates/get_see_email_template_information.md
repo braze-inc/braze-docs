@@ -34,12 +34,15 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example URL
 `https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id' \
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

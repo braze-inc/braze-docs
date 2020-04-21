@@ -51,8 +51,20 @@ Content-Type: application/json
   }
 }
 ```
-## Request Components
+### Request Parameters
 
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`campaign_id`|Required|String| See Campaign Identifier|
+|`send_id` | Optional | String | See Send Identifier |
+|`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
+|`audience` | Optional | Connected Audience Object | See Connected Audience | 
+|`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see Trigger Properties |
+| `schedule` | Required | Schedule Object | See Schedule Object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
@@ -62,7 +74,7 @@ Content-Type: application/json
 
 ### Exmaple Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create?campaign_id=&send_id&recipients=&audience=&broadcast=&trigger_properties=&schedule=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

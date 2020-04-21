@@ -67,6 +67,24 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
+| `external_user_ids` | Optional | Array of Strings | See External User ID |
+| `user_aliases` | Optional | Array of User Alias Objects | See User Alias Object |
+| `audience` | Optional | Connected Audience Object | See Connected Audience |
+| `segment_id` | Optional | String | See Segment Identifier |
+| `campaign_id`|Required|String| See Campaign Identifier|
+| `recipients` | Optional | Array of Recipient Objects | See Recipients Object |
+| `send_id` | Optional | String | See Send Identifier | 
+| `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
+| `recipient_subscription_state` | Optional | String | Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed' |
+| `schedule` | Required | Schedule Object | See Schedule Object |
+| `messages` | Optional | Messaging Object | See Messaging Object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Components
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
@@ -75,8 +93,6 @@ Content-Type: application/json
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
-
-For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
 ### Available Messaging Objects
 
@@ -93,7 +109,7 @@ You can use these objects in the [request body](#request-body) above.
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create?broadcast&external_user_ids&user_aliases&audience&segment_id&campaign_id&send_id&override_messaging_limits&recipient_subscription_state&schedule&messages' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

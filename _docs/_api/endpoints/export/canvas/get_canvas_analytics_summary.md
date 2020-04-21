@@ -20,7 +20,7 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20data%20summary%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
-## Request Parameter Details
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -33,9 +33,12 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 | `include_deleted_step_data` | No | Boolean | Whether or not to include step stats for deleted steps (defaults to false) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ## Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id=canvas%20identifier&ending_at=2018-06-28T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+curl --location --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&ending_at=2018-06-28T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

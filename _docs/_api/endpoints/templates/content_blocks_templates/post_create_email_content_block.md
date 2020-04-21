@@ -35,20 +35,20 @@ This endpoint will create an [Email Content Block]({{site.baseurl}}/user_guide/e
 }
 ```
 
-### Request Parameter Details
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `name` | Yes | String | Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. |
+| `state` | Optional | "active" or "draft" | Choose "active" or "draft". Defaults to `active` if not specified. |
 | `tags` | No | Array of Strings. | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create?name=content-block-1&description=This%20is%20my%20content%20block&content=HTML%20or%20text%20content%20within%20block&state=draft&tags=[%22tag1%22,%20%22tag2%22]' \
+curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

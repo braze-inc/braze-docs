@@ -42,10 +42,10 @@ This endpoint allows you to export data from any user profile by specifying a fo
 }
 ```
 
-## Parameters
+## Request Parameters
 
 | Key | Requirement | Data Type | Details |
-|---|---|---|---|
+|-----|-----|-----|-----|
 |`external_ids` | Optional | Array of Strings | External ids for users to export |
 |`user_aliases` | Optional | Array of User Alias Object. | User aliases for users to export |
 |`device_id` | Optional | String | Device ID as returned by various SDK methods such as getDeviceId |
@@ -54,9 +54,12 @@ This endpoint allows you to export data from any user profile by specifying a fo
 |`fields_to_export` | Optional | Array of Strings | Name of user data fields to export. Defaults to all if not provided |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Component
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids?external_ids=%22user_id1%22&user_aliases&device_id=123456&braze_id=braze_user_id&email_address=email_example@braze.com&fields_to_export=first_name' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "external_ids": ["user_id1", "user_id2"],
@@ -71,7 +74,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids?e
   "fields_to_export": ["first_name", "email", "purchases"]
 }'
 ```
-
 
 ### Fields to Export
 

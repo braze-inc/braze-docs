@@ -37,7 +37,7 @@ You can set the email subscription state for an email address that is not yet as
 }
 ```
 
-### Parameters
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |

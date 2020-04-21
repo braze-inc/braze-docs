@@ -19,7 +19,7 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20series%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -31,12 +31,15 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 | `segment_id` | No       | String | Segment API Identifier indicating the analytics enabled segment for which event analytics should be returned |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example URL
-`https://rest.iad-01.braze.com/events/data_series?event=event name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=segment identifier`
+`https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=123456789`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event%20name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=segment%20identifier' \
+curl --location --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=123456789%20identifier' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ``` 
 

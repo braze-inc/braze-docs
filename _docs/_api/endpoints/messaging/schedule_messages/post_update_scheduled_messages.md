@@ -41,12 +41,19 @@ Content-Type: application/json
   }
 }
 ```
-## Request Components
+### Request Parameters
 
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`schedule_id`|Required|String| The schedule_id to update (obtained from the response to create schedule)|
+|`schedule` | Optional | Object | See Schedule Object |
+|`messages` | Optional | Object | See Available Message Object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Request Components
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ### Available Messaging Objects
-
 You can use these objects in the [request body](#request-body) above.
 
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
@@ -61,7 +68,7 @@ You can use these objects in the [request body](#request-body) above.
 
 ### Request Example
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update?schedule_id=&schedule=&messages=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{

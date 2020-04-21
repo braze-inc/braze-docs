@@ -20,7 +20,7 @@ This endpoint allows you to retrieve a daily series of the total number of unins
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Kpi%20export%20%20uninstalls%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 
-## Parameters
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -30,11 +30,11 @@ This endpoint allows you to retrieve a daily series of the total number of unins
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://rest.iad-01.braze.com/kpi/uninstalls/data_series?length=14&ending_at=2018-06-28T23:59:59-5:00&app_id=app identifier`
+`https://rest.iad-01.braze.com/kpi/uninstalls/data_series?length=14&ending_at=2018-06-28T23:59:59-5:00&app_id=app_identifier`
 
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/data_series?length=14&ending_at=2018-06-28T23:59:59-5:00&app_id=app%20identifier' \
+curl --location --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/data_series?length=14&ending_at=2018-06-28T23:59:59-5:00&app_id=app_identifier' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

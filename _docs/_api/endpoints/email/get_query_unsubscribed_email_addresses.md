@@ -24,12 +24,12 @@ Users' email subscription status can be updated and retrieved via Braze using a 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/QueryingAllEmailUnsubscribesExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
-## Query Parameters
+## Request Parameters
 
 You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
-| ---------------------| --------------- |
+| ----------|-----------| ---------|------ |
 | `start_date` | No * | String in YYYY-MM-DD format| Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
 | `end_date` | No * | String in YYYY-MM-DD format | End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. |
 | `limit` | No | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |

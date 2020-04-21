@@ -52,6 +52,18 @@ Content-Type: application/json
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`campaign_id`|Required|String|See Campaign Identifier|
+|`send_id`| Optional | String | See Send Identifier |
+|`trgger_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
+|`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
+|`audience`|Optional|Connected Audience Object|See Connected Audience|
+|`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Campaign|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
@@ -59,14 +71,12 @@ Content-Type: application/json
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
-
+<br><br>
 The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
-
-For more information on the "broadcast" flag, check out [Broadcast]({{site.baseurl}}/api/parameters/#broadcast) within our [API Parameters]({{site.baseurl}}/api/parameters) documentation.
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/send?campaign_id=&send_id=&trigger_properties=&broadcast=&audience=&recipients=' \
+curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/send' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
