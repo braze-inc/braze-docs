@@ -155,7 +155,7 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: ({{site.baseurl}}/help/help_articles/push/push_token_migration/
+[3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"

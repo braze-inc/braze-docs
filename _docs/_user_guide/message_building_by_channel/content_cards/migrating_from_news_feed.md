@@ -24,6 +24,7 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 | Multivariate and Multi-Channel Campaigns | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | Scheduled, Action-Based, and API-Based Delivery | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | API-Created Messages | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| A/B Testing | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Dismissing and Pinning Cards][4] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Rich Analytics][3] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | [Available in Canvas][2] | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |

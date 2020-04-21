@@ -1,6 +1,7 @@
 ---
 nav_title: Frequency Capping By Tag
 permalink: "/frequency_capping_tag/"
+hidden: true
 ---
 
 # Updated Frequency Capping Rules

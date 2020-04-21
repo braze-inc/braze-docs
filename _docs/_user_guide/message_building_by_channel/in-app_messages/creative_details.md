@@ -42,9 +42,10 @@ Our guidelines for images are more structured than those for text, as we want to
 
   | Layout | Asset Size | Notes |
   |--- | --- | --- |
-  | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping may occur on all sides, but the image will always fill the top 50% of the viewport |
-  | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping may occur on the left and right edges on taller devices |
+  | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+  | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
   {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
 
 {% endtab %}
 {% tab Modal %}
@@ -53,8 +54,8 @@ Our guidelines for images are more structured than those for text, as we want to
 
   | Layout | Asset Size | Notes |
   |--- | --- | ------ |
-  | Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Tall images will scale down and be horizontally centered |
-  | Image Only | Any aspect ratio<br>Hi-Res __Max__ 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most sizes and dimensions |
+  | Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 415px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+  | Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
   {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
@@ -64,7 +65,7 @@ Our guidelines for images are more structured than those for text, as we want to
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
-| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 600 x 500px | Images of various aspect ratios will fill a square image container, without cropping. |
+| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}

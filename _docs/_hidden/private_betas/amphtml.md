@@ -1,6 +1,7 @@
 ---
 nav_title: AMP for Email
 permalink: /amphtml/
+hidden: true
 ---
 
 # AMP for Email

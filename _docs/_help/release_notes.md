@@ -75,6 +75,12 @@ For access to the new simplified Facebook Audience Export steps, check out our d
 
 The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) and [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API endpoints have been updated to include a new `tags` field. This field will list as an array, any tags that apply to the current block or email template.
 
+### Personalized From-Address
+
+When creating an email message within Braze, you can now personalize the From Address of the message in the "Sending Info" section of email composition. You can use any of [our supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
+
+![Personalized From Address][0]{: style="max-width:80%"}
+
 ## March 2020
 
 ### Custom Attribute Filter Behavior
@@ -119,4 +125,5 @@ In the SMS channel, the New User settings and behavior have been outlined and ca
 
 [support]: {{site.baseurl}}/support_contact/
 [4]: {% image_buster /assets/img/retention_report_full_report.png %}
+[0]: {% image_buster /assets/img/personalized-from-name.png %}
 

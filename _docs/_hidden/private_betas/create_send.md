@@ -1,6 +1,7 @@
 ---
 nav_title: Attributes Object in Campaigns & Canvas
 permalink: "/create_send/"
+hidden: true
 ---
 
 # Attributes Object in Campaigns & Canvas

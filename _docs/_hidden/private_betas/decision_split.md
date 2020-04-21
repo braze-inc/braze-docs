@@ -1,6 +1,7 @@
 ---
 nav_title: Decision Split Step for Canvas
 permalink: /decision_split/
+hidden: true
 ---
 
 # Decision Split Step for Canvas
