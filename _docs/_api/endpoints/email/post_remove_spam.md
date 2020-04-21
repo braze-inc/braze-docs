@@ -24,9 +24,15 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/RemovingSpamListEmailExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
-## Request Body
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
-`Content-Type: application/json`
+## Request Body
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
 
 ```json
 {

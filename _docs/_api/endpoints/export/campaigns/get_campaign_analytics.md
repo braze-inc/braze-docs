@@ -20,6 +20,9 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20analytics%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
 ## Request Parameters
 
@@ -50,6 +53,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/data_seri
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -136,6 +140,7 @@ Content-Type: application/json
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "data" : [
         {

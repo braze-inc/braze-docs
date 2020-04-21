@@ -26,11 +26,16 @@ Any schedule will completely overwrite the one that you provided in the create s
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json

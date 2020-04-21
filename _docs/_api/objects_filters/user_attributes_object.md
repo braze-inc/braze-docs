@@ -124,6 +124,7 @@ The Profile Field `bio` was removed several years ago and will not be processed 
 ```json
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "attributes" : [
     {

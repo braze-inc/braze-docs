@@ -19,6 +19,10 @@ description: "This article outlines the usage of and parameters for changing a U
 /email/status
 {% endapimethod %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 This endpoint allows you to set the email subscription state for your users. Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
 
 You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded will be automatically set.
@@ -26,9 +30,16 @@ You can set the email subscription state for an email address that is not yet as
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/ChangingEmailSubscriptionStatusExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
 
-`Content-Type: application/json`
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
 
 ```json
 {

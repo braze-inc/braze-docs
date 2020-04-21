@@ -31,6 +31,7 @@ Blacklisting an email address will unsubscribe the user from email and mark them
 ```json
 POST https://YOUR_REST_API_URL/email/blacklist
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 ```
 {

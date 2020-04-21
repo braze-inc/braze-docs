@@ -29,6 +29,10 @@ The `send_id` is only generated for API campaign sends targeting segments, conne
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
@@ -57,6 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?c
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
             "variation_name": (string) variation name,
             "sent": (int) the number of sends,

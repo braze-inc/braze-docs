@@ -46,6 +46,7 @@ EU-01 | `https://rest.fra-01.braze.eu/campaigns/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
   "campaign_id": (required, string) see Campaign Identifier,
@@ -91,6 +92,7 @@ EU-01 | `https://rest.fra-01.braze.eu/canvas/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
   "canvas_id": (required, string) your Canvas Identifier,

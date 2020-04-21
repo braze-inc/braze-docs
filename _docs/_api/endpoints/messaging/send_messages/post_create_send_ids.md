@@ -26,11 +26,16 @@ The daily maximum number of custom send identifiers that can be created via this
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateSendIdsForMessageSendTracking {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -65,6 +70,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ## Response
 
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "message": "success",
   "send_id" : "example_send_id"

@@ -24,7 +24,17 @@ This endpoint will create an [Email Content Block]({{site.baseurl}}/user_guide/e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
 ```json
 {
   "name": "content-block-1",
@@ -64,6 +74,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 ### Successful Response Properties
 
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": "newly-generated-block-id",
   "liquid_tag": "generated-block-tag-from-content_block_name",

@@ -23,11 +23,11 @@ You can view a JSON list of upcoming and scheduled Campaigns and Canvases using 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/GetUpcomingScheduledCampaignsAndCanvases {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
-## Request Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
-```
-Content-Type: application/json
-```
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -45,7 +45,10 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ```
 
 ## Response
+
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "scheduled_broadcasts": [
       # Example Canvas
