@@ -16,13 +16,13 @@ page_type: partner
   
   You can filter them by the time of occurence. Event tables are clustered by `time` which makes filtering by `time` performant.
 ```
--- find custom events that occured after time 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
+-- find custom events that occured after 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
 select *
 from users_behaviors_customevent_shared
 where time > 1555354920
 limit 10;
 ```
-  Or you can filter them by time at which they were persisted in the snowflake datawarehouse. `sf_created_at` and `time` are not the same but usually close. So this should have similar performance characteristics
+  Or you can filter them by time at which they were persisted in the snowflake datawarehouse i.e. `sf_created_at`. `sf_created_at` and `time` are not the same but usually close, so this query should have similar performance characteristics
 ```
 -- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
 select *
@@ -46,8 +46,8 @@ qualify row_number() over (partition by e.id order by ccs.time desc) = 1;
 ```
 Note:
 - We are using Snowflake's [window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) functions here.
-- The left join will include events that may not have a campaign_id.
-- If you see events with campaign_api_ids but no campaign names then there is a possibility that the campaign was created with a name before data sharing existed as a product.
+- The left join will include events that may not have a `campaign_id`.
+- If you see events with `campaign_api_id`s but no campaign names then there is a possibility that the campaign was created with a name before data sharing existed as a product.
 - You can see canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
 
 If you want to see both campaign and canvas names, you may have to use a sub-query as shown below.
