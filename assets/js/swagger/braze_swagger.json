@@ -7,17 +7,15 @@
   },
   "components": {
     "securitySchemes": {
-      "ApiKeyAuth": {
-        "description": "For get request. For post, place inline in body",
-        "type": "apiKey",
-        "in": "query",
-        "name": "api_key"
+      "BearerAuth":{
+        "type": "http",
+        "scheme" : "bearer"
       }
     }
   },
   "security": [
     {
-      "ApiKeyAuth": []
+      "BearerAuth": []
     }
   ],
   "servers": [
@@ -54,9 +52,9 @@
         ],
         "summary": "User Export - User IDs Example",
         "description": "Example of exporting user data documents by specifying individual user IDs using the /users/export/ids endpoint. This endpoint allows you to export data from any user profile by specifying a form of user identifier. Up to 75 external_ids or user_aliases can be included in a single request. Should you want to specify device_id or email_address, only one of either identifier can be included per request.",
-        "operationId": "User export  user ids example",
+        "operationId": "User export user ids example",
         "requestBody": {
-          "description": "Exports the details about the user with the specified exterenal ID",
+          "description": "Exports the details about the user with the specified external ID",
           "required": true,
           "content": {
             "application/json": {
