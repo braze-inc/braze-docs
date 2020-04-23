@@ -22,7 +22,7 @@ from users_behaviors_customevent_shared
 where time > 1555354920
 limit 10;
 ```
-  Or you can filter them by time at which they were persisted in the snowflake datawarehouse i.e. `sf_created_at`. `sf_created_at` and `time` are not the same but usually close, so this query should have similar performance characteristics
+  Or you can filter events by the time at which they were persisted in the Snowflake data warehouse by using `sf_created_at`. `sf_created_at` and `time` are not the same but are usually close, so this query should have similar performance characteristics
 ```
 -- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
 select *
