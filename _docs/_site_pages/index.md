@@ -49,5 +49,7 @@ popular_topic_list:
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
   - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-
+  - name: Success & Support Services Handbook
+    link: /docs/assets/download_file/Braze_Success_and_Support_Services_Handbook.pdf
 ---
+
