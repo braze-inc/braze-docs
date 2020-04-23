@@ -49,8 +49,8 @@ qualify row_number() over (partition by e.id ORDER BY ccs.time DESC) = 1;
 ```
 Note:
 - We are using Snowflake's [window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) functions here.
-- The left join will include events that may not have a `campaign_id`.
-- If you see events with `campaign_api_id`s but no campaign names then there is a possibility that the campaign was created with a name before Data Sharing existed as a product.
+- The left join will ensure that events that were not related to a campaign will also be included.
+- If you see events with `campaign_id`s but no campaign names then there is a possibility that the campaign was created with a name before Data Sharing existed as a product.
 - You can see canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
 
 If you want to see both campaign and canvas names, you may have to use a sub-query as shown below.
@@ -65,7 +65,7 @@ FROM
   LEFT JOIN CHANGELOGS_CAMPAIGN_SHARED AS campaign ON campaign.id = e.campaign_id
   WHERE e.time >= 1574830800 AND e.time <= 1575176399
   qualify row_number() over (partition by e.id ORDER BY campaign.time DESC) = 1) AS campaign_join
-LEFT JOIN CHANGELOGS_CANVAS_SHARED AS canvas ON canvas.id = campaign_join.canvas_api_id
+LEFT JOIN CHANGELOGS_CANVAS_SHARED AS canvas ON canvas.id = campaign_join.canvas_id
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
   {% endtab %}
