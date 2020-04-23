@@ -64,7 +64,7 @@ _These reading paths assume that you've already completed your integration and s
 |---|---|---|
 | 1 | [Personalization Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) | How to use dynamic content in your messages. |
 | 2 | [Liquid Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) | What Liquid is and common terms with it. |
-| 3 | [Using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | How to use Liquid to create personalization in your messages. |
+| 3 | [Using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) | How to use Liquid to create personalization in your messages. |
 | 4 | [Supported Personalization Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | A summary of supported personalization tags. |
 | 5 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
 | 6 | [Key-Value Pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key-value pairs. |
