@@ -14,35 +14,38 @@ page_type: partner
   
   A common query might be to filter events by time.
   
-  You can filter them by the time of occurence. Event tables are clustered by `time` which makes filtering by `time` performant.
-```
--- find custom events that occured after 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
-select *
-from users_behaviors_customevent_shared
-where time > 1555354920
-limit 10;
+  You can filter them by the time of occurrence. Event tables are clustered by `time` which makes filtering by `time` performant.
+
+```sql
+-- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e. timestamp=1555354920
+SELECT *
+FROM users_behaviors_customevent_shared
+WHERE time > 1555354920
+LIMIT 10;
 ```
   Or you can filter events by the time at which they were persisted in the Snowflake data warehouse by using `sf_created_at`. `sf_created_at` and `time` are not the same but are usually close, so this query should have similar performance characteristics
-```
+
+```sql
 -- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
-select *
-from users_behaviors_customevent_shared
-where sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
-limit 10;
+SELECT *
+FROM users_behaviors_customevent_shared
+WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
+LIMIT 10;
 ```
   {% endtab %}
   {% tab Querying Changelogs%}
   
-Campaign names and Canvas names are not present in the events themselves. Instead they are published in a changelog table. 
+Campaign names and Canvas names are not present in the events themselves. Instead, they are published in a changelog table. 
 
 You can see campaign names for events related to a campaign by joining with the campaign changelog table using a query like
-```
-select e.id, e.time, ccs.time, ccs.name, ccs.conversion_behaviors[e.conversion_behavior_index]
-from USERS_CAMPAIGNS_CONVERSION_SHARED e
-left join CHANGELOGS_CAMPAIGN_SHARED ccs
-on ccs.id = e.campaign_id
-and ccs.time < e.time
-qualify row_number() over (partition by e.id order by ccs.time desc) = 1;
+
+```sql
+SELECT e.id, e.time, ccs.time, ccs.name, ccs.conversion_behaviors[e.conversion_behavior_index]
+FROM USERS_CAMPAIGNS_CONVERSION_SHARED e
+LEFT JOIN CHANGELOGS_CAMPAIGN_SHARED ccs
+ON ccs.id = e.campaign_id
+AND ccs.time < e.time
+qualify row_number() over (partition by e.id ORDER BY ccs.time DESC) = 1;
 ```
 Note:
 - We are using Snowflake's [window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) functions here.
@@ -51,23 +54,24 @@ Note:
 - You can see canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
 
 If you want to see both campaign and canvas names, you may have to use a sub-query as shown below.
-```
-select campaign_join.*, canvas.name as canvas_name
-from 
+
+```sql
+SELECT campaign_join.*, canvas.name AS canvas_name
+FROM 
 (SELECT e.id AS event_id, e.external_user_id, e.time, e.user_id, e.device_id, e.sf_created_at,
     e.campaign_api_id, e.canvas_api_id, e.canvas_step_api_id, 
     campaign.name AS campaign_name
   FROM USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED AS e
   LEFT JOIN CHANGELOGS_CAMPAIGN_SHARED AS campaign ON campaign.id = e.campaign_id
   WHERE e.time >= 1574830800 AND e.time <= 1575176399
-  qualify row_number() over (partition by e.id order by campaign.time desc) = 1) as campaign_join
-left join CHANGELOGS_CANVAS_SHARED AS canvas ON canvas.id = campaign_join.canvas_api_id
-qualify row_number() over (partition by campaign_join.event_id order by canvas.time desc) = 1;
+  qualify row_number() over (partition by e.id ORDER BY campaign.time DESC) = 1) AS campaign_join
+LEFT JOIN CHANGELOGS_CANVAS_SHARED AS canvas ON canvas.id = campaign_join.canvas_api_id
+qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
   {% endtab %}
   {% tab Push Funnel %}
 
-  You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined, since each raw event typically has a separate table.
+  You can use this Push Funnel query to aggregate push sends raw event data, through to deliveries raw event data, through to opens raw event data. This query shows how all the tables should be joined since each raw event typically has a separate table.
 
 ```sql
 
@@ -100,26 +104,26 @@ You can use this daily Email Messaging Cadence query to analyze the time between
 For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
 
 ```sql
-WITH email_messaging_cadence AS (with deliveries as
-      (select TO_TIMESTAMP(time) AS delivered_timestamp,
+WITH email_messaging_cadence AS (WITH deliveries AS
+      (SELECT TO_TIMESTAMP(time) AS delivered_timestamp,
       email_address AS delivered_address,
-      message_variation_api_id as d_message_variation_api_id,
-      canvas_step_api_id as d_canvas_step_api_id,
-      campaign_api_id as d_campaign_api_id,
-      canvas_api_id as d_canvas_api_id,
-      id as delivered_id,
-      rank() over (partition by delivered_address order by delivered_timestamp asc) as delivery_event,
-      min(delivered_timestamp) over (partition by delivered_address order by delivered_timestamp asc) as first_delivered,
-      datediff(day, lag(delivered_timestamp) over (partition by delivered_address order by delivered_timestamp asc), delivered_timestamp) as diff_days,
-      datediff(week, lag(delivered_timestamp) over (partition by delivered_address order by delivered_timestamp asc), delivered_timestamp) as diff_weeks
-      from USERS_MESSAGES_EMAIL_DELIVERY_SHARED group by 1,2,3,4,5,6,7),      opens as
-      (select distinct email_address as open_address,
-      message_variation_api_id as o_message_variation_api_id,
-      canvas_step_api_id as o_canvas_step_api_id
-      FROM USERS_MESSAGES_EMAIL_OPEN_SHARED),      clicks as
-      (select distinct email_address as click_address,
-      message_variation_api_id as c_message_variation_api_id,
-      canvas_step_api_id as c_canvas_step_api_id
+      message_variation_api_id AS d_message_variation_api_id,
+      canvas_step_api_id AS d_canvas_step_api_id,
+      campaign_api_id AS d_campaign_api_id,
+      canvas_api_id AS d_canvas_api_id,
+      id AS delivered_id,
+      rank() over (partition by delivered_address ORDER BY delivered_timestamp ASC) AS delivery_event,
+      min(delivered_timestamp) over (partition by delivered_address ORDER BY delivered_timestamp ASC) AS first_delivered,
+      datediff(day, lag(delivered_timestamp) over (partition by delivered_address ORDER BY delivered_timestamp ASC), delivered_timestamp) AS diff_days,
+      datediff(week, lag(delivered_timestamp) over (partition by delivered_address ORDER BY delivered_timestamp ASC), delivered_timestamp) AS diff_weeks
+      from USERS_MESSAGES_EMAIL_DELIVERY_SHARED GROUP BY 1,2,3,4,5,6,7),      opens AS
+      (SELECT DISTINCT email_address AS open_address,
+      message_variation_api_id AS o_message_variation_api_id,
+      canvas_step_api_id AS o_canvas_step_api_id
+      FROM USERS_MESSAGES_EMAIL_OPEN_SHARED),      clicks AS
+      (SELECT DISTINCT email_address AS click_address,
+      message_variation_api_id AS c_message_variation_api_id,
+      canvas_step_api_id AS c_canvas_step_api_id
       FROM USERS_MESSAGES_EMAIL_CLICK_SHARED)      SELECT * FROM deliveries
       LEFT JOIN opens
       ON (deliveries.delivered_address)=(opens.open_address)
