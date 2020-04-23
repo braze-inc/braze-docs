@@ -136,7 +136,7 @@ SELECT
     email_messaging_cadence."DIFF_DAYS"  AS "email_messaging_cadence.days_since_last_received",
     (count(distinct email_messaging_cadence."OPEN_ADDRESS", email_messaging_cadence."O_MESSAGE_VARIATION_API_ID")
       +count(distinct email_messaging_cadence."OPEN_ADDRESS", email_messaging_cadence."O_CANVAS_STEP_API_ID"))/(COUNT(DISTINCT email_messaging_cadence."DELIVERED_ID" ))  AS "email_messaging_cadence.unique_open_rate"
-FROM email_messaging_cadenceGROUP BY 1
+FROM email_messaging_cadence GROUP BY 1
 ORDER BY 1
 LIMIT 500;
 ```
