@@ -32,6 +32,8 @@ FROM users_behaviors_customevent_shared
 WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
+
+Note: Events where value of `sf_created_at` is before `Nov 15th 9:31 pm UTC` may not be reliable. The event data itself is fine.
   {% endtab %}
   {% tab Querying Changelogs%}
   
@@ -40,12 +42,12 @@ Campaign names and Canvas names are not present in the events themselves. Instea
 You can see campaign names for events related to a campaign by joining with the campaign changelog table using a query like
 
 ```sql
-SELECT e.id, e.time, ccs.time, ccs.name, ccs.conversion_behaviors[e.conversion_behavior_index]
-FROM USERS_CAMPAIGNS_CONVERSION_SHARED e
+SELECT event.id, event.time, ccs.time, ccs.name, ccs.conversion_behaviors[event.conversion_behavior_index]
+FROM USERS_CAMPAIGNS_CONVERSION_SHARED event
 LEFT JOIN CHANGELOGS_CAMPAIGN_SHARED ccs
-ON ccs.id = e.campaign_id
-AND ccs.time < e.time
-qualify row_number() over (partition by e.id ORDER BY ccs.time DESC) = 1;
+ON ccs.id = event.campaign_id
+AND ccs.time < event.time
+qualify row_number() over (partition by event.id ORDER BY ccs.time DESC) = 1;
 ```
 Note:
 - We are using Snowflake's [window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) functions here.
@@ -76,24 +78,24 @@ qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.t
 ```sql
 
 SELECT
-    COUNT(DISTINCT s."ID" ) AS "users_messages_pushnotification_send.push_sent",
-    COALESCE((COUNT(DISTINCT s."ID" )),0)-COALESCE((COUNT(DISTINCT b."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
-    COUNT(DISTINCT o."ID" ) AS "users_messages_pushnotification_open.push_opens"
-FROM users_messages_pushnotification_send_shared AS s
-LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_OPEN_shared AS o ON (s."USER_ID")=(o."USER_ID")
+    COUNT(DISTINCT send."ID" ) AS "users_messages_pushnotification_send.push_sent",
+    COALESCE((COUNT(DISTINCT send."ID" )),0)-COALESCE((COUNT(DISTINCT bounce."ID" )),0) AS "users_messages_pushnotification_send.push_delivered",
+    COUNT(DISTINCT open."ID" ) AS "users_messages_pushnotification_open.push_opens"
+FROM users_messages_pushnotification_send_shared AS send
+LEFT JOIN USERS_MESSAGES_PUSHNOTIFICATION_OPEN_shared AS open ON (send."USER_ID")=(open."USER_ID")
     AND
-    (s."DEVICE_ID")=(o."DEVICE_ID")
+    (send."DEVICE_ID")=(open."DEVICE_ID")
     AND
-    ((s."MESSAGE_VARIATION_API_ID")=(o."MESSAGE_VARIATION_API_ID")
+    ((send."MESSAGE_VARIATION_API_ID")=(open."MESSAGE_VARIATION_API_ID")
     OR
-    (s."CANVAS_STEP_API_ID")=(o."CANVAS_STEP_API_ID"))
-LEFT JOIN users_messages_pushnotification_bounce_shared AS b ON (s."USER_ID")=(b."USER_ID")
+    (send."CANVAS_STEP_API_ID")=(open."CANVAS_STEP_API_ID"))
+LEFT JOIN users_messages_pushnotification_bounce_shared AS bounce ON (send."USER_ID")=(bounce."USER_ID")
     AND
-    (s."DEVICE_ID")=(b."DEVICE_ID")
+    (send."DEVICE_ID")=(bounce."DEVICE_ID")
     AND
-    ((s."MESSAGE_VARIATION_API_ID")=(b."MESSAGE_VARIATION_API_ID")
+    ((send."MESSAGE_VARIATION_API_ID")=(bounce."MESSAGE_VARIATION_API_ID")
     OR
-    (s."CANVAS_STEP_API_ID")=(b."CANVAS_STEP_API_ID"))
+    (send."CANVAS_STEP_API_ID")=(bounce."CANVAS_STEP_API_ID"))
 LIMIT 500;
 ```
 
