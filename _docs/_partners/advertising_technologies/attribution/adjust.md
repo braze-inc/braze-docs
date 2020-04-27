@@ -41,7 +41,7 @@ To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
 2. Select __Braze (formerly Appboy)__.
 3. Copy the Braze API Key into the `Install API Key` field.
-- There is a separate `Event API Key` field available in the Adjust dashboard. Please contact your success manager for more information.
+- This Braze API Key is available in the Braze Dashboard. This can be found by naviagting to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Custom Events__ section.
 4. Copy the Braze REST Endpoint into the `REST_endpoint` field.
 5. Click __Save & Close__.
 
