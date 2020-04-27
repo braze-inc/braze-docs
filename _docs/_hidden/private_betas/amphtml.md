@@ -121,6 +121,13 @@ Any component that requires authenticating the user must use [Google Access Toke
   {% endtab %}
 {% endtabs %}
 
+### Using amp-mustache
+
+Similar to Liquid, AMP supports a scripting language for more advanced use cases.  This component is called [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  When including any Mustache mark-up language you will need to wrap it around the [raw](https://shopify.github.io/liquid/tags/raw/) tag from Liquid.  Unfortunately Liquid (the markup language used here at Braze) and Mustache share syntax styling. 
+
+By wrapping your content around the Raw tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
+
+
 ### Metrics and Analytics
 
 | Metric | Details |
