@@ -123,21 +123,10 @@ Any component that requires authenticating the user must use [Google Access Toke
 
 ### Using amp-mustache
 
-Similar to Liquid, AMP supports a scripting language for more advanced use cases.  This component is called [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  AMP leverages a templating language called Handlebars, which has a similar syntax language to Liquid.  
+Similar to Liquid, AMP supports a scripting language for more advanced use cases.  This component is called [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  When including any Mustache mark-up language you will need to wrap it around the [raw](https://shopify.github.io/liquid/tags/raw/) tag from Liquid.  Unfortunately Liquid (the markup language used here at Braze) and Mustache share syntax styling. 
 
-In order to properly distinguish between the two, when using any syntax related to amp-mustache, it is recommended that you use the [raw](https://shopify.github.io/liquid/tags/raw/) which will prevent Braze from processing the AMP language in your email.
+By wrapping your content around the Raw tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
 
-{% alert note %}
-Using [raw](https://shopify.github.io/liquid/tags/raw/) will prevent Braze from processing the amp-mustache template. 
-
-| Input | Output |
-|_{% raw %}
-  In Handlebars, {{ this }} will be HTML-escaped, but
-  {{{ that }}} will not.
-{% endraw %}_|
-
-|_In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not._|
-{% endalert %}
 
 ### Metrics and Analytics
 
