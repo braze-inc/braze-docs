@@ -33,7 +33,7 @@ WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 
-Note: Events where value of `sf_created_at` is before `Nov 15th 9:31 pm UTC` may not be reliable. The event data itself is fine.
+Note: The value of `sf_created_at` is reliable only for events that were persisted after `Nov 15th 9:31 pm UTC`.
   {% endtab %}
   {% tab Querying Changelogs%}
   
