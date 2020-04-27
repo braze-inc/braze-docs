@@ -50,6 +50,6 @@ popular_topic_list:
   - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
   - name: Support & Success Services Handbook
-    link: /docs/success_and_support_services_handbook/
+    link: /docs/services_handbook/
 ---
 
