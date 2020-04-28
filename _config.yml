@@ -191,7 +191,6 @@ asset_pipeline:
   output_path: assets
   display_path: docs/assets
   gzip: false
-  staging_path: '../.documentation_asset_pipeline'
 
 # Algolia Search index
 algolia:
