@@ -11,51 +11,49 @@ Follow this guide, or check out our [LAB course](http://lab.braze.com/quick-over
 
 ## Step 1: Navigate to the Canvas Page and Create a New Canvas ![Canvas][1]{: style="float:right;max-width:15%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
-Click on the "Canvas" link on the Dashboard's side navigation located
-underneath the "Campaigns" link, then click __Create a New Canvas__.
+Click on the "Canvas" link on the Dashboard's side navigation located underneath the "Campaigns" link, then click __Create a New Canvas__.
 
 ## Step 2: Use the Entry Wizard to Set Up Your Canvas
 
 The Entry Wizard will guide you through setting up your Canvas - everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
 
-{% tabs %}
+{% tabs local %}
   {% tab Basics %}
-    Here, you'll set up the basics of your Canvas.
-    - Name Your Canvas.
-    - Add Teams to Your Canvas.
-    - Add Tags to Your Canvas.
-    - Assign Conversion Events and Choose Their Event Types and Deadlines.
-
+    Here, you will set up the basics of your Canvas:
+    - Name Your Canvas
+    - Add Teams to Your Canvas
+    - Add Tags to Your Canvas
+    - Assign Conversion Events and Choose Their Event Types and Deadlines
 
     [Learn more about the Basics step.](#set-up-your-canvas-basics)
   {% endtab %}
-
   {% tab Entry Schedule %}
-    Here, you'll decide how your users will enter your Canvas.
-    - Scheduled: This is a time-based Canvas entry.
-    - Action-Based: Your user will enter your Canvas after they perform a defined action.
-    - API Triggered: Use an API request to enter users into your Canvas.
+    Here, you will decide how your users will enter your Canvas:
+    - Scheduled: This is a time-based Canvas entry
+    - Action-Based: Your user will enter your Canvas after they perform a defined action
+    - API Triggered: Use an API request to enter users into your Canvas
 
     [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
   {% endtab %}
-
   {% tab Entry Audience %}
-    - Create Your Audience by Adding Segments and Filters.
-    - Fine-tune Canvas Re-Entry and Entry Limits.
-    - See a Summary of Your Target Audience.
+    Here, you will select your Canvas Entry Audience:
+    - Create Your Audience by Adding Segments and Filters
+    - Fine-tune Canvas Re-Entry and Entry Limits
+    - See a Summary of Your Target Audience
 
     [Learn more about the Entry Audience step.](#set-your-target-entry-audience)
   {% endtab %}
-
   {% tab Send Settings %}
-    - Select Your Subscription Settings.
-    - Set a Send Rate Limit for Your Canvas Messages.
-    - Enable and Set Quiet Hours.
+    Here, you will select your Canvas Send Settings:
+    - Select Your Subscription Settings
+    - Set a Send Rate Limit for Your Canvas Messages
+    - Enable and Set Quiet Hours
 
     [Learn more about the Send Settings step.](#select-your-send-settings)
   {% endtab %}
-
   {% tab Build Canvas %}
+    Here you will build your Canvas.
+
     [Learn how to build your Canvas using the Canvas builder.](#step-3-build-your-canvas)
   {% endtab %}
 {% endtabs %}
@@ -85,14 +83,14 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
 
 #### Entry Schedule Types
 
-{% tabs %}
+
+{% tabs local %}
   {% tab Scheduled Delivery %}
     __Scheduled Delivery__<br>
     With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a Campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
 
     ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
-
   {% tab Action-Based Delivery %}
     __Action-Based Delivery__<br>
     Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
@@ -100,6 +98,18 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
     You can control other aspects of your Canvas' behavior from the Entry Audience window, including rules for re-eligibility and frequency capping settings.
+  {% endtab %}
+  {% tab API-Triggered Delivery %}
+    __API-Triggered Delivery__<br>
+    You may also choose to enter users into a Canvas via an API request. In the Dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
+
+    ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
+
+    API-Triggered Delivery Endpoints:
+    - [POST: Send Canvas Messages via API Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
+    - [POST: Schedule API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+    - [POST: Update Scheduled API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
+
   {% endtab %}
 {% endtabs %}
 
@@ -157,11 +167,37 @@ You can also apply Filters to each Step of a Canvas. Use this to add additional 
 
 ![Canvas Additional Engagement][15]
 
-Edit the Messages in a Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+#### Messages in Canvas
+
+Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+
+Similar to Campaign messages, you may use certain Liquid templating.<br>
+__Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
 Press the "Done" button once you've finished configuring your Step.
+
+{% tabs local %}
+{% tab Canvas Entry Properties %}
+Canvas Entry Properties are the properties mapped by you when triggering or scheduling a canvas via the API.
+{% raw %}
+- For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
+
+__Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
+
+For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+{% endraw %}
+{% endtab %}
+{% tab Custom Entry Properties %}
+Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
+
+__Custom Event Properties can be referenced in the first step of a canvas - but only the first step__! 
+
+For more information on Custom Event Properties, check out our [Documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+
+{% endtab %}
+{% endtabs %}
 
 ### Add More Steps
 
