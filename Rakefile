@@ -27,12 +27,12 @@ namespace :docs do
       puts `bundle exec jekyll build`
   end
   task :serve do
-    if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
-      pipe 'bundle exec jekyll s --port 5006'
-    else
+    if ENV["USE_INCREMENTAL"]
       # Force a clean build of the site and the pipeline assets
       puts `rm .jekyll-metadata`
-      pipe 'bundle exec jekyll s --port 5006 --incremental'
+      pipe 'bundle exec jekyll s --port 5006 --incremental --config _config.yml,_incremental_config.yml'
+    else
+      pipe 'bundle exec jekyll s --port 5006'
     end
   end
 end

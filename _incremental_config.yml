@@ -1,0 +1,3 @@
+# Image asset pipeline setting for japr
+asset_pipeline:
+  staging_path: '../.documentation_asset_pipeline'
