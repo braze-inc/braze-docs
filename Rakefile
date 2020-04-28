@@ -27,7 +27,7 @@ namespace :docs do
       puts `bundle exec jekyll build`
   end
   task :serve do
-    if ENV["USE_INCREMENTAL"]
+    if ENV["RACK_ENV"] == 'staging'
       # Force a clean build of the site and the pipeline assets
       puts `rm .jekyll-metadata`
       pipe 'bundle exec jekyll s --port 5006 --incremental --config _config.yml,_incremental_config.yml'
