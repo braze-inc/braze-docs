@@ -28,11 +28,11 @@ At the bottom of the Canvas Details page, click `Analyze Variants`, where you ca
 You will then see a table which shows you a breakdown of each variant at several levels:
 
 Basic Metrics:  
-- Variant API Identifier,
-- Total Entries,
-- Total Sends,
-- Total Steps,
-- Total Revenue.
+- Variant API Identifier
+- Total Entries
+- Total Sends
+- Total Steps
+- Total Revenue
 
 Beyond that, you'll see a more explicit breakdown of Conversion Events:
 - conversion totals and conversion rates for each conversion event,
