@@ -13,7 +13,7 @@ page_type: partner
 
 > [Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
 
-We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
+We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
 If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
@@ -73,7 +73,7 @@ To get going with your Segment/Braze integration,
 
 ## Step 2A: Choose Integration Type and Implement {#integration-options}
 
-You can integrate Segment's Web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Device-mode") integration, or a server-to-server ("Cloud-mode") integration.
+You can integrate Segment's Web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side ("Device-mode") integration or a server-to-server ("Cloud-mode") integration.
 
 | Integration | Details |
 | ----------- | ------- |
@@ -162,10 +162,10 @@ All other traits will be recorded as [custom attributes][14].
 
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
-| Identify with User ID	| Set External ID	| analytics.identify("dawei");	appboy.changeUser("dawei")
-| Identify with Reserved Traits	| Set User Attributes | 	analytics.identify({email: "dawei@braze.com"});	appboy.getUser().setEmail("dawei@braze.com");
-| Identify with Custom Traits	| Set Custom Attributes | 	analytics.identify({fav_cartoon: "Naruto"});	appboy.getUser().setCustomAttribute("fav_cartoon": "Naruto");
-| Identify with User ID and Traits |	Set External ID and Attribute | Combine methods above. |
+| Identify with User ID    | Set External ID    | analytics.identify("dawei");    appboy.changeUser("dawei")
+| Identify with Reserved Traits    | Set User Attributes |     analytics.identify({email: "dawei@braze.com"});    appboy.getUser().setEmail("dawei@braze.com");
+| Identify with Custom Traits    | Set Custom Attributes |     analytics.identify({fav_cartoon: "Naruto"});    appboy.getUser().setCustomAttribute("fav_cartoon": "Naruto");
+| Identify with User ID and Traits |    Set External ID and Attribute | Combine methods above. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
@@ -198,13 +198,13 @@ The [page](https://segment.com/docs/spec/page/) or [screen](https://segment.com/
 
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
-| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) without name	| Logged as a [Custom Event][13] |	`analytics.page();` > 	`appboy.logCustomEvent("Loaded a Page");` |
-| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) with name |	Logged as a [Custom Event][13]	| `analytics.page("Home");`	> `appboy.logCustomEvent("Viewed Home Page");` |
+| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) without name    | Logged as a [Custom Event][13] |    `analytics.page();` >     `appboy.logCustomEvent("Loaded a Page");` |
+| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) with name |    Logged as a [Custom Event][13]    | `analytics.page("Home");`    > `appboy.logCustomEvent("Viewed Home Page");` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Test Your Integration
 
-Most of your [app usage dashboard][27] (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
+Most of your [app usage dashboard][27] (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions, and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
 You can view your data in the [custom event dashboard][22], the [revenue dashboard][28] or by [creating a segment][23]. The custom event dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
@@ -243,22 +243,24 @@ Segment __does not__ have a limit on the number of data elements clients send to
 
 {% details Understand the Difference between ‘Custom API Endpoint’ vs ‘Custom REST API Endpoint’. %}
 
-{% alert important %}
-Braze no longer provides _custom_ endpoints or instances. Please see our Instance documentation for more information and to see which instances, SDK endpoints, and REST endpoints you have available to you.
-{% endalert %}
+| Braze Terminology | Segment Equivalent |
+| ----------------- | ------------------ |
+| Braze SDK Endpoint | Custom API Endpoint |
+| Braze REST Endpoint | Custom REST API Endpoint |
 
-Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API Endpoint
+Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API Endpoint (for example, `https://rest.iad-03.braze.com`)
 {% enddetails %}
-
 
 {% details Ensure ‘Custom API Endpoint’ is Input into Segment Correctly. %}
 
-Ensure that you input your proper API Endpoint in the proper format (for example, `customer.iad-03.braze.com`) into the Segment dashboard.
+| Braze Terminology | Segment Equivalent |
+| ----------------- | ------------------ |
+| Braze SDK Endpoint | Custom API Endpoint |
+| Braze REST Endpoint | Custom REST API Endpoint |
 
-The Braze integration will break if it has been entered as the Custom REST API Endpoint (for example: `sdk.iad-03.braze.com`), as Segment will automatically add `https://` to the beginning of the endpoint for you, resulting in Braze initializing with the custom endpoint of `https://https://sdk.iad-03.braze.com`.
+To ensure that you input your Braze SDK Endpoint correctly, the proper format must be followed. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with invalid endpoint `https://https://sdk.iad-03.braze.com`.
 
 {% enddetails %}
-
 
 {% details Ensure API Key is Input Correctly. %}
 

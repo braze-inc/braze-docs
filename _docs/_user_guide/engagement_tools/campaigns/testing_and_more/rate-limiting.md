@@ -54,7 +54,7 @@ Additionally, in the 'Target Users' section of your campaign composition, you ca
 
 ![Total Limit Example][2]
 
-Using the filters in this way, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
+By using the max user cap checkbox, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
 #### Setting a Max Impression Cap
 
