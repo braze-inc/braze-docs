@@ -16,7 +16,7 @@ To initialize the Braze Android SDK, please follow [Initial SDK Setup][1].
 
 In your app, first setup [Google Tag Manager for Android][2]. 
 
-Next, add the following custom tag provider to use the Braze SDK. Be sure to note the classpath to the file for later use in the Google Tag Manager console.
+Next, add the following custom tag provider to use the Braze SDK. Be sure to note the classpath to the file for later use in the [Google Tag Manager][5] console.
 
 {% tabs %}
 {% tab JAVA %}
@@ -298,6 +298,10 @@ Next, create a "Function Call" tag that uses the classpath of the custom tag pro
 
 ![Function Call Tag][4]
 
+In the above tag are templated variables, such as `eventName` that allow you to use the same tag for multiple events on the fly without having to create a separate tag for each event in your app. The below variable is a "Firebase - Event Parameter" variable since Google Tag Manager for Android uses Firebase as the data layer.
+
+![Tag Variable Event Name][6]
+
 Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name `logEvent`.
 
 {% tabs %}
@@ -382,3 +386,5 @@ mFirebaseAnalytics!!.logEvent("changeUser", params)
 [2]: https://developers.google.com/tag-manager/android/v5/
 [3]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %}
 [4]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %}
+[5]: https://tagmanager.google.com/
+[6]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %}
