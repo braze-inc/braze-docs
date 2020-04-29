@@ -17,6 +17,10 @@ So, if a user only has data for one (1) channel, or less than three (3) messages
 
 For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Intelligent Channel" filter as "Mobile" and use __OR__ to add a second "Intelligent Channel" filter set to "Not Enough Data". This way users who prefer push will receive one as well as users for whom there isn't enough data to know. A separate campaign with the Most Engaged filter set to "Email" could address users who prefer email.
 
+{% alert note %}
+Campaigns and Canvas Steps that ignore [Frequency Capping](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
+{% endalert %}
+
 ## The "Mobile Push" Option
 
 Mobile Push incorporates Android, iOS, Windows, Kindle, and all other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately, but then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against Email and Web Push. So a user with an iPhone, Android phone, and iPad with engagement rates of 0.1, 0.2, and 0.45, respectively would have their Mobile Push engagement rate calculated as the best of all those devices: 0.45. This would not, however, force that user to receive Push notifications on the iPad— they can still be considered as preferring “Mobile Push” even when using the filter on an Android push message.
