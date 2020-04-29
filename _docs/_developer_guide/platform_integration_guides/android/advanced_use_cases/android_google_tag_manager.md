@@ -325,7 +325,7 @@ The `genre` event property is sent to Google Tag Manager a "Firebase - Event Par
 
 ![Tag Variable Event Name][6]
 
-Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name that matches our tag's trigger name, `played song`.
+Lastly, when a user plays a song in our app, we will log an event through Firebase/Google Tag Manager using the Firebase Analytics event name that matches our tag's trigger name, `played song`.
 
 {% tabs %}
 {% tab JAVA %}
