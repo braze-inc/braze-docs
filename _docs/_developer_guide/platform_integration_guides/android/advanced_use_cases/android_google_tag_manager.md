@@ -302,7 +302,7 @@ In the above tag are templated variables, such as `eventName` that allow you to 
 
 ![Tag Variable Event Name][6]
 
-Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name `logEvent`.
+Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name `logEvent`. Note that `eventName` is the name of the Braze event being logged. All other keys present, such as `My Boolean Parameter` will be added as event properties to the logged event.
 
 {% tabs %}
 {% tab JAVA %}
@@ -331,7 +331,7 @@ mFirebaseAnalytics!!logEvent("logEvent", params)
 
 #### Logging Custom Attributes
 
-Custom attributes are set via an `actionType` set to `customAttribute`.
+Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey/customAttributeValue`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -358,7 +358,7 @@ mFirebaseAnalytics!!.logEvent("customAttribute", params)
 
 #### Calling ChangeUser
 
-Calls to `changeUser()` are made via an `actionType` set to `changeUser`.
+Calls to `changeUser()` are made via an `actionType` set to `changeUser`.  The Braze custom tag provider is expecting the Braze user ID to be set via `externalUserId`.
 
 {% tabs %}
 {% tab JAVA %}
