@@ -19,4 +19,6 @@ This extra time needed to process these large numbers of idle campaigns means th
 
 __We have implemented a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.__
 
+The 200 count includes active IAM campaigns that have not yet reached end time and those that have no end time. Active IAM campaigns that have passed their end times will not be counted.
+
 The average Braze customer has a total of 26 campaigns active at once - so it is unlikely that this limitation will impact you. 
