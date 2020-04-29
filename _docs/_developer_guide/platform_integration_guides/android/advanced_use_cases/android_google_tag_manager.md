@@ -4,19 +4,24 @@ platform: Android
 page_order: 8
 
 ---
-### Google Tag Manager
+## Google Tag Manager
 
-#### Initializing the SDK {#initializing-android-google-tag-provider}
+### Initializing the SDK {#initializing-android-google-tag-provider}
 
-Braze's SDK can be initialized and controlled within tags configured from [Google Tag Manager][5].
+Braze's Android SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
 
-To initialize the Braze Android SDK, please follow [Initial SDK Setup][1].
+But first - before using Google Tag Manager - be sure to first follow our [Initial SDK Setup][1].
 
-#### Braze SDK Custom Tag Provider {#adding-android-google-tag-provider}
 
-In your app, first setup [Google Tag Manager for Android][2]. 
+### Braze SDK Custom Tag Provider {#adding-android-google-tag-provider}
 
-Next, add the following custom tag provider to use the Braze SDK. Be sure to note the classpath to the file for later use in the [Google Tag Manager][5] console.
+To begin, follow Google's instructions to [setup Google Tag Manager for Android][2]. 
+
+Next, add a custom tag provider to call Braze SDK methods based on your Google Tag Manager configuration. 
+
+Be sure to note the "Class Path" to the file which you will need when setting up a Tag in the [Google Tag Manager][5] console.
+
+This example shows one of many ways to structure your custom tag provider:
 
 {% tabs %}
 {% tab JAVA %}
@@ -286,33 +291,50 @@ BrazeGtmTagProvider.setApplicationContext(this.applicationContext)
 {% endtab %}
 {% endtabs %}
 
-#### Configuring Your Google Tag Manager {#configuring-android-google-tag-manager}
+### Configuring Your Google Tag Manager {#configuring-android-google-tag-manager}
 
-While your integration can be customized, the following is how our sample Google Tag Manager integration was setup for logging events.
+The following code shows how to log events to Google Tag Manager so that they trigger the appropriate "tags" in the GTM dashboard. These "tags" will be set up to forward Custom Events, Custom Attributes, and set External User ID within the Braze custom tag provider.
 
-First, create an "Event Name" trigger for `logEvent`:
+In our example, we'll use a music streaming app that will log different events as users listen to songs:
+
+#### Custom Events
+
+Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
+
+To get started, create a trigger that looks for an "Event Name" that equals `played song`
 
 ![Event Name Trigger for events][3]
 
-Next, create a "Function Call" tag that uses the classpath of the custom tag provider from before. This tag will be triggered using the `logEvent` trigger we just created. Note the `actionType` key being set to `logEvent` here. The custom Braze tag provider will use this key to determine what action to take with the Google Tag Manager data.
+Next, create a new Tag ("Function Call") and enter the Class Path of your custom tag provider from earlier. 
+
+This tag will be triggered when you log the `played song` event we just created. 
+
+In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+
+{% alert important %}
+When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 
+
+The custom tag provider in our exmaple will use these key to determine what action to take, and what event name to send to braze when it receives data from Google Tag Manager.
+{% endalert %}
 
 ![Function Call Tag][4]
 
-In the above tag are templated variables, such as `eventName` that allow you to use the same tag for multiple events on the fly without having to create a separate tag for each event in your app. The below variable is a "Firebase - Event Parameter" variable since Google Tag Manager for Android uses Firebase as the data layer.
+You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In our example tag below, we'll pass in `genre` which was defined using a tag Variable in Google Tag Manager - sourced from the custom event we logged in our app.
+
+The `genre` event property is sent to Google Tag Manager a "Firebase - Event Parameter" variable since Google Tag Manager for Android uses Firebase as the data layer.
 
 ![Tag Variable Event Name][6]
 
-Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name `logEvent`. Note that `eventName` is the name of the Braze event being logged. All other keys present, such as `My Boolean Parameter` will be added as event properties to the logged event.
+Lastly, log an event through Firebase/Google Tag Manager using the Firebase Analytics event name that matches our tag's trigger name, `played song`.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
 Bundle params = new Bundle();
-params.putString("eventName", "played song event");
-params.putBoolean("My Boolean Parameter", true);
-params.putString("My String Parameter", "hello");
-mFirebaseAnalytics.logEvent("logEvent", params);
+params.putString("genre", "pop");
+params.putInt("number of times listened", 42);
+mFirebaseAnalytics.logEvent("played song", params);
 ```
 
 {% endtab %}
@@ -320,10 +342,9 @@ mFirebaseAnalytics.logEvent("logEvent", params);
 
 ```kotlin
 val params = Bundle()
-params.putString("eventName", "played tune event")
-params.putBoolean("My Boolean Parameter", true)
-params.putString("My String Parameter", "world")
-mFirebaseAnalytics!!logEvent("logEvent", params)
+params.putString("genre", "pop")
+params.putInt("number of times listened", 42);
+mFirebaseAnalytics!!logEvent("played song", params)
 ```
 
 {% endtab %}
@@ -331,7 +352,7 @@ mFirebaseAnalytics!!logEvent("logEvent", params)
 
 #### Logging Custom Attributes
 
-Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey/customAttributeValue`.
+Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey` and `customAttributeValue`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -358,7 +379,7 @@ mFirebaseAnalytics!!.logEvent("customAttribute", params)
 
 #### Calling ChangeUser
 
-Calls to `changeUser()` are made via an `actionType` set to `changeUser`.  The Braze custom tag provider is expecting the Braze user ID to be set via `externalUserId`.
+Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag.
 
 {% tabs %}
 {% tab JAVA %}
