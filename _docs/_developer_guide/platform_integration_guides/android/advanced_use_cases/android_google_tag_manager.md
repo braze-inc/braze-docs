@@ -295,9 +295,7 @@ BrazeGtmTagProvider.setApplicationContext(this.applicationContext)
 
 ### Configuring Your Google Tag Manager {#configuring-android-google-tag-manager}
 
-The following code shows how to log events to Google Tag Manager so that they trigger the appropriate "tags" in the GTM dashboard. These "tags" will be set up to forward Custom Events, Custom Attributes, and set External User ID within the Braze custom tag provider.
-
-In our example, we'll use a music streaming app that will log different events as users listen to songs:
+In our example, we'll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for Android, we can control which of our 3rd party vendors receive this event, and create tags specific to Braze.
 
 #### Custom Events
 
