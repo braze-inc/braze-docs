@@ -8,7 +8,7 @@ page_order: 8
 
 #### Initializing the SDK {#initializing-android-google-tag-provider}
 
-Braze's SDK can be initialized and controlled within tags configured from Google Tag Manager.
+Braze's SDK can be initialized and controlled within tags configured from [Google Tag Manager][5].
 
 To initialize the Braze Android SDK, please follow [Initial SDK Setup][1].
 
