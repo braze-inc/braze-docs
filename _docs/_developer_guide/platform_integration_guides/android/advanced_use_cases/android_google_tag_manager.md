@@ -21,7 +21,9 @@ Next, add a custom tag provider to call Braze SDK methods based on your Google T
 
 Be sure to note the "Class Path" to the file which you will need when setting up a Tag in the [Google Tag Manager][5] console.
 
-This example shows one of many ways to structure your custom tag provider:
+This example shows one of many ways to structure your custom tag provider, where we determine which Braze SDK method to call based on the `actionType` key-value pair sent down from the GTM Tag.
+
+The `actionType` we've supported in our example are `logEvent`, `customAttribute`, and `changeUser`, but you may prefer to change how your tag provider handles data from Google Tag Manager.
 
 {% tabs %}
 {% tab JAVA %}
