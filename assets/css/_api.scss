@@ -1,11 +1,7 @@
 #api-main {
-  padding-top: 15px;
-  margin-top: 15px;
-  margin-bottom: 30px;
   font-size: 14px;
-  @media (min-width: $window-large-px) {
-    margin-top:30px;
-  }
+  margin-bottom: 30px;
+  margin-top: 30px;
   @media (min-width: $window-xlarge-px) {
     max-width: $main_max_width;
     margin-left: auto;
