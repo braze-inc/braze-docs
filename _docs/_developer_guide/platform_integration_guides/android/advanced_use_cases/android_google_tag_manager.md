@@ -1,10 +1,10 @@
 ---
-nav_title: Google Tag Manager
+nav_title: Google Tag Manager for Android
 platform: Android
 page_order: 8
 
 ---
-## Google Tag Manager
+## Google Tag Manager for Android
 
 ### Initializing the SDK {#initializing-android-google-tag-provider}
 
