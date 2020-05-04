@@ -34,7 +34,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 
@@ -62,13 +62,13 @@ If there are multiple users (multiple external ids) who share the same email add
 ### Example Request for SMS
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id=123456789&limit=100&offset=0&phone=+11112223334' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ### Example Request for Email
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id=123456789&email=foo@bar.com&limit=100&offset=0' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 {% endapi %}

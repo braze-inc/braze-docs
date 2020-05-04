@@ -23,7 +23,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Parameters
@@ -38,7 +38,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 ## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Response

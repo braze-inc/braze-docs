@@ -25,7 +25,7 @@ Users' email subscription status can be updated and retrieved via Braze using a 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Parameters
@@ -47,7 +47,7 @@ If your date range has more than `limit` number of unsubscribes, you will need t
 ### Example Request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=0&offset=1&sort_direction=desc&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ### Sample Response

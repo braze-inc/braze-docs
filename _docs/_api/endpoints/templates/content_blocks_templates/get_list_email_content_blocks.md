@@ -25,7 +25,7 @@ This endpoint will list your existing [Content Blocks]({{site.baseurl}}/user_gui
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Parameters
@@ -44,7 +44,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 ### Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2029-03-01T01:01:01.000000&limit=1&offset=0' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Successful Response Properties

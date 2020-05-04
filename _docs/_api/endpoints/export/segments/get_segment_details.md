@@ -1,4 +1,3 @@
-
 ---
 nav_title: "GET: Segment Details"
 page_order: 4
@@ -22,7 +21,7 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Parameters
@@ -43,7 +42,7 @@ The `segment_id` for a given segment can be found in your Developer Console with
 ## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR-REST-API-KEY'
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Response
