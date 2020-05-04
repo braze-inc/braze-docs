@@ -26,7 +26,7 @@ This endpoint will call information for your exiting [Email Content Blocks]({{si
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Parameters
@@ -39,7 +39,7 @@ __Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed 
 ### Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id=12345678910' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ### Successful Response Properties

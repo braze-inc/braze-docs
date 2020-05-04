@@ -26,7 +26,7 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74fc3f0d-11f1-40f6-93f4-2eacb0ed459a {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of April 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the Example Request below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-API-KEY-HERE` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
 ## Request Body
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
 |`external_user_ids` | Optional | Array of Strings | See External ID |
-|`user_aliases`|Optional|Array of USer Alias Objects|See User Alias Object|
+|`user_aliases`|Optional|Array of User Alias Objects|See User Alias Object|
 |`segment_id `| Optional | String | See Segment Identifier |
 |`audience`|Optional|Connected Audience Object|See Connected Audience|
 |`campaign_id`|Required|String|See Campaign Identifier|
@@ -108,7 +108,7 @@ You can use these objects in the [request body](#request-body) above.
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "broadcast": "",
   "external_user_ids": "",
