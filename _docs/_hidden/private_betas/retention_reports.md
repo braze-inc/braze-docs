@@ -43,6 +43,26 @@ Once the report is generated, it can't be re-run with the same Retention event f
 
 The report will only show days down the left column on which the campaign was sending messages. For some campaigns, that may mean the report only shows one day if it was a one-and-done campaign. If it's recurring or triggered, you may/will see multiple days down the left. 
 
+## Report by Variant
+
+Compare rolling retention for each variant or message variation for the selected time period, as well as the Control Group. 
+
+Answer all the same questions as our original retention report, but one level deeper.
+
+Have some variants or experiments in which the results seem like a wash or have no statistical significance? Take another look and see if one or the other had a longer-tail impact. 
+
+See what retention looks like if you didn’t send that message at all by digging into the Control group’s retention data.
+
+The date range selected applies to the retention report in two ways
+
+Only users who received the message/entered Canvas in the time period are included in the report
+
+Only data from the date range will appear in the report (e.g if a user received the message on May 1 and did the retention event on May 15 but the date range is May 1 - May 10, we will not include the retention event in the report)
+
+
+
+
+
 ## Report Explanation
 
 Our Retention Report uses the Rolling Retention formula, which measures how many users come back and do the retention event __on or after__ any of the days listed across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the campaign was sent on the date in the left column will be counted under the "30 days" column in that row.
