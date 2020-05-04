@@ -92,8 +92,8 @@ Content-Type: application/json
 Using the example provided above, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Beth__, Thanks for renting __The Sad Egg__ by __Dan Alexander__, here are some recommended movies based on your rental..."
 
 
-[1]: https://www.braze.com/docs/developer_guide/home/
-[2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
-[4]: https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
+[1]: {{site.baseurl}}/developer_guide/home/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
