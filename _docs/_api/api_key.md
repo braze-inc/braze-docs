@@ -23,11 +23,17 @@ A REST Application Programming Interface key (REST API key) is a unique code tha
 
 App Groups and API Keys go hand in hand at Braze. App Groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these app groups are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API Key and App Group API Key as the `api_key`. The `api_key` is included in each request and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
+We refer to both the REST API Key and App Group API Key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
 ### Where can I find it?
 
 Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
+
+### How can I use it?
+
+Prior to April 2020, API keys would be included as a part of the API request body or within the request URL as a parameter. Braze now has updated the way in which we read API keys. API keys are now set with the HTTP Authorization request header, making your API keys more secure.
+
+While the old way of passing API keys continues to work, after a period of time this will be permenatly removed so we urge users to update API calls accordingly. 
 
 ### API Key Permissions
 

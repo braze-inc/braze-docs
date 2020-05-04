@@ -252,7 +252,6 @@ public void onResume() {
 # Code Test json
 ```json
 {
-   "api_key" :  "string",
    "attributes" : "Attributes" ,
    "events" : ["Array", "Of", "Object"],
    "purchases" : ["Array" ,"Of" ,"Purchase" ,"Object"]

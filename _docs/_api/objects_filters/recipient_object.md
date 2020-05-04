@@ -39,7 +39,7 @@ When making an API call with the Recipient Object, __if there exists a duplicate
 For example, if the same `external_user_id` is used, then only 1 message will be received. Consider making multiple API calls if you need a work-around for this behavior.
 
 ```json
-{"api_key":"#####","campaign_id":"#####","recipients":[
+{"campaign_id":"#####","recipients":[
 {"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 1"}},
 {"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 2"}} 
 ]}
