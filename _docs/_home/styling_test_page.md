@@ -262,7 +262,7 @@ public void onResume() {
 
 
 
-# Code Test Javascript
+# Code Test JavaScript
 ```javascript
 appboy.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;

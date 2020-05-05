@@ -70,7 +70,7 @@ These are what makes an AMPHTML Email... AMP'ed! Each of these elements are requ
 | Component | What It Does | Example |
 |---------|--------------|---------|
 | Identification <br> `⚡4email` or `amp4email`| Identifies your email as an AMPHTML email. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
-| Load AMP runtime <br> `<script>` | Allows AMP to fun within your email using javascript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| Load AMP runtime <br> `<script>` | Allows AMP to fun within your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
 | CSS Boilerplate | Hides content until AMP is loaded. <br> Email providers who support AMP emails enforce fierce security checks that only allow vetted AMP scripts to run in their clients| `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
