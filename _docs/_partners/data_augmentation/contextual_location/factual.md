@@ -156,7 +156,7 @@ When a user/device meets the `engine_circumstance_braze_near` (or other specifie
 {% tabs %}
 {% tab iOS %}
 ### iOS Installation
-#### Installation via Cocoapods
+#### Installation via CocoaPods
 {% raw %}
 ```
 source 'https://github.com/Factual/cocoapods.git'

@@ -64,7 +64,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
 
 {% alert important %}
-If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on Cocoapods, __don't__ do this step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
+If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on CocoaPods, __don't__ do this step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
 {% endalert %}
 
 ![New Copy File Phase][ios_pushstory_01]
