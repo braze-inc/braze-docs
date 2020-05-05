@@ -23,23 +23,65 @@ This endpoint allows you to export data from any user profile by specifying a fo
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20user%20ids%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
 
-`Content-Type: application/json`
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
 
 ```json
 {
-    "api_key" : (required, string) App Group REST API Key,
-    // Either "external_ids," "user_aliases," "device_id," "braze_id," or "email_address" are required. Requests must specify only one.
-    "external_ids" : (optional, array of string) external ids for users to export,
-    "user_aliases" : (optional, array of User Alias Object) user aliases for users to export,
-    "device_id" : (optional, string) device id as returned by various SDK methods such as getDeviceId,
-    "braze_id" : (optional, string) Braze ID for a particular user,
-    "email_address" : (optional, string) email address of a user,
-    "phone" : (optional, string) phone number of a user,
-    "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'], defaults to all if not provided
+  "external_ids": ["user_id1", "user_id2"],
+  "user_aliases": {
+    "alias_name": "",
+    "alias_label": ""
+  },
+  "device_id": "123456",
+  "braze_id": "braze_user_id",
+  "email_address": "email_example@braze.com",
+  "phone": "+12223334444",
+  "fields_to_export": ["first_name", "email", "purchases"]
 }
 ```
+
+## Request Parameters
+
+| Key | Requirement | Data Type | Details |
+|-----|-----|-----|-----|
+|`external_ids` | Optional | Array of Strings | External ids for users to export |
+|`user_aliases` | Optional | Array of User Alias Object. | User aliases for users to export |
+|`device_id` | Optional | String | Device ID as returned by various SDK methods such as getDeviceId |
+|`braze_id` | Optional | String | Braze ID for a particular user |
+|`email_address` | Optional | String | Email address of a user |
+|`fields_to_export` | Optional | Array of Strings | Name of user data fields to export. Defaults to all if not provided |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Component
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "external_ids": ["user_id1", "user_id2"],
+  "user_aliases": {
+    "alias_name": "",
+    "alias_label": ""
+  },
+  "device_id": "123456",
+  "braze_id": "braze_user_id",
+  "email_address": "email_example@braze.com",
+  "phone": "+12223334444",
+  "fields_to_export": ["first_name", "email", "purchases"]
+}'
+```
+
 ### Fields to Export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
@@ -84,9 +126,9 @@ Depending on the data requested, this API endpoint may have not be able to fulfi
 
 ### Response
 
-`Content-Type: application/json`
-
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,

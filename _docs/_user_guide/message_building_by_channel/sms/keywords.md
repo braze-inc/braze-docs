@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: fas fa-mobile-alt
 - name: Multi-Country SMS Sending
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/multi_county_sms_sending/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/multi_country_sms_sending/
   fa_icon: fas fa-globe-americas
 - name: High Volume Sending
   link: /docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/

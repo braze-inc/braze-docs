@@ -28,14 +28,11 @@
 
 
   #article-main{
-    padding-top: $base_font_size;
     padding-bottom: $base_font_size * 6;
     @media (min-width: $window-small-px) {
     }
     @media (min-width: $window-medium-px) {
-      padding-top: 40px;
       min-height: calc(100vh - #{$calc_offset_view + $footer_height + ($base_font_size * 4)});
-
     }
     @media (min-width: $window-xlarge-px) {
       max-width: $main_max_width;

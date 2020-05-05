@@ -25,6 +25,10 @@ This endpoint allows you to export all the users within a segment. User data is 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20segment%20id%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Credentials-Based Response Details
 If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
@@ -56,11 +60,13 @@ Larger user bases will result in longer export times. For example, an app with 2
 
 ## Request Body
 
-`Content-Type: application/json`
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
 
 ```json
 {
-    "api_key" : (required, string) App Group REST API Key,
     "segment_id" : (required, string) identifier for the segment to be exported,
     "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
     "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases']. Defaults to all if not provided.
@@ -74,10 +80,37 @@ The `segment_id` for a given segment can be found in your Developer Console with
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
 
+## Request Parameters
+
+| Key | Requirement | Data Type | Details |
+|---|---|---|---|
+|`segment_id` | Required | String | Identifier for the segment to be exported |
+|`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
+|`fields_to_export` | Optional | Array of Strings  | Name of user data fields to export. You may export custom attributes. Defaults to all if not provided.|
+|`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+    "segment_id" : "",
+    "callback_endpoint" : "",
+    "fields_to_export" : ["field1", "field2", "field3"],
+    "output_format" : ""
+}'
+```
+
 ### Response
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',

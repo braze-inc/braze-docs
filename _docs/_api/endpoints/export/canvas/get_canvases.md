@@ -22,21 +22,30 @@ Archived Canvases will not be included in the API response unless the `include_a
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
-## Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String    | App Group REST API Key |
 | `page` | No | Integer   | The page of Canvases to return, defaults to `0` (returns the first set of up to 100) |
 | `include_archived` | No | Boolean | Whether or not to include archived Canvases, defaults to `false`. |
 | `sort_direction`   | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+## Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
+
 ## Response
 
-`Content-Type: application/json`
-
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "canvases" : [
   	{

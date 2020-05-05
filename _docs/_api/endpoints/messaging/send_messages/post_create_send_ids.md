@@ -26,24 +26,52 @@ The daily maximum number of custom send identifiers that can be created via this
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateSendIdsForMessageSendTracking {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (required, string) see Send Identifier
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`campaign_id`|Required|String|See Campaign Identifier|
+|`send_id`| Optional | String | See Send Identifier |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+"campaign_id": "",
+"send_id": ""
+}'
+```
+
 ## Response
 
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "message": "success",
   "send_id" : "example_send_id"
