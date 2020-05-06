@@ -73,7 +73,7 @@ And so much more!
 [Download the raw table schemas here.][schemas]
 
 ## Important Information and Limitations
-Data Sharing is currently only supported between accounts in the same region. Since Braze currently hosts all of our data in Snowflake's US East region, only clients with an account on that region will be able to have a share provisioned. We are working closely with Snowflake on a product solution to overcome this limitation, so stay tuned for more.
+Data Sharing is currently only supported between accounts in the same region. Since Braze currently hosts all our data in Snowflake's US East and EU Frankfurt region, only clients with an account in these regions will be able to have a share provisioned. We are working closely with Snowflake on a product solution to overcome this limitation, so stay tuned for more.
 
 Braze's historical event data in Snowflake only goes back to April of 2019. In the first few months of us storing data there, we made some product changes that may result in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start.) It's best to assume that any results that include data prior to August 2019 may look slightly different from expectations.
 
