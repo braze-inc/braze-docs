@@ -7,6 +7,15 @@ page_type: partner
 
 ---
 
+Specifically, they made some updates to reflect their new API domain (changing CalReply references to Rokt). This will require both Rokt Calendar webhook templates in Braze as well as the online Braze docs be updated by your team.
+
+Theh following has been updated in their integration guide which should reflect our documentation:
+Webhook request header - Authorization
+Webhook url
+Webhook request body
+Audience Segmentation
+Note: there will also need to be some product updates here with the webhook template. I will be aiming to release by end of sprint (5/12)
+
 # Rokt Calendar
 
 > Rokt Calendar is a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications, in the form of calendar events and notifications, across a proprietary network of subscriber calendars.
