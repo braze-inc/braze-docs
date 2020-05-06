@@ -71,7 +71,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
+If you are integrating the Braze SDK with CocoaPods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
 {% if include.platform == 'iOS' %}import Appboy_iOS_SDK{% else %}import AppboyTVOSKit{% endif %}
