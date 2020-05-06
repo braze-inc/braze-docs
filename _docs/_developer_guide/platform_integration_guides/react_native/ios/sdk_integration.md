@@ -26,7 +26,7 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 
 ### iOS Completing the Integration
 1.  Complete your [iOS SDK integration][3].  You must pass your Braze API key to the SDK in `startWithApiKey` in your App delegate's `didFinishLaunchingWithOptions:` method. While custom endpoints are no longer assigned by Braze, if you have been given a pre-existing custom endpoint, you need to set up your custom endpoint in your `Info.plist` file.
-2.  When you need to make Braze calls from javascript, use the following declaration to import the javascript module:
+2.  When you need to make Braze calls from JavaScript, use the following declaration to import the JavaScript module:
 
 ```
 const ReactAppboy = require('react-native-appboy-sdk');

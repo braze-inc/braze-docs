@@ -105,7 +105,7 @@ appboy.getUser().setCustomUserAttribute(
   new Date(secondsFromEpoch * 1000)
 );
 ```
->  Dates passed to Braze with this method must be javascript Date objects.
+>  Dates passed to Braze with this method must be JavaScript Date objects.
 
 #### Setting a Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].

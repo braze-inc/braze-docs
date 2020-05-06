@@ -78,11 +78,11 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a Javascript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages) for more details.
+[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html) in-app messages are useful for creating fully customized user content. User-defined HTML is displayed in an iframe and may contain rich content, such as images, fonts, videos, and interactive elements, allowing for full control over message appearance and functionality. These support a JavaScript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see [Best Practices]({{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages) for more details.
 
 {% alert important %}
 
-To enable HTML in-app messages, your SDK integration __must__ supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+To enable HTML in-app messages, your SDK integration __must__ supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 <br> <br>
 At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message, therefore the same `enableHtmlInAppMessages` option must be set. 
 
