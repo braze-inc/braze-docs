@@ -11,7 +11,7 @@ page_order: 0
 {% include archive/apple/initial_setup.md platform="tvOS" %}
 
 ## TVML Example
-See the [TVML target][2] of our sample application for an example of creating a javascript bridge to the Braze interface.
+See the [TVML target][2] of our sample application for an example of creating a JavaScript bridge to the Braze interface.
 
 ## Manual Integration Options
 

@@ -17,7 +17,7 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 
 ### iOS without podspec
 
-1.  Install the Braze iOS SDK into your iOS project.  See instructions for Cocoapods [here][1]. For manual integration, please check [here][2].  See notes below for further information.
+1.  Install the Braze iOS SDK into your iOS project.  See instructions for CocoaPods [here][1]. For manual integration, please check [here][2].  See notes below for further information.
 2. `npm install react-native-appboy-sdk@latest --save`
 3. In the Xcode's "Project navigator", right-click on your project's Libraries folder ➜ `Add Files to <...>`
 4. Go to `node_modules` ➜ `react-native-appboy-sdk` ➜ `ios` ➜ `AppboyReactBridge` ➜ select `AppboyReactBridge.xcodeproj`
@@ -26,7 +26,7 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 
 ### iOS Completing the Integration
 1.  Complete your [iOS SDK integration][3].  You must pass your Braze API key to the SDK in `startWithApiKey` in your App delegate's `didFinishLaunchingWithOptions:` method. While custom endpoints are no longer assigned by Braze, if you have been given a pre-existing custom endpoint, you need to set up your custom endpoint in your `Info.plist` file.
-2.  When you need to make Braze calls from javascript, use the following declaration to import the javascript module:
+2.  When you need to make Braze calls from JavaScript, use the following declaration to import the JavaScript module:
 
 ```
 const ReactAppboy = require('react-native-appboy-sdk');

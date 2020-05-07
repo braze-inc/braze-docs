@@ -65,7 +65,7 @@ The approximate iOS SDK framework file size is 30MB and the approximate .ipa (ad
 
 Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` size, per [Apple's recommendations on app sizing][31]. If you are calculating the iOS SDK's size addition to your application, we recommend following the steps under ["Getting an App Size Report"][31] to compare the size difference in your `.ipa` before and after integrating the Braze iOS SDK. When comparing sizes from the App Thinning Size Report, we also recommend looking at app sizes for thinned `.ipa` files, as universal `.ipa` files will be larger than the binaries downloaded from the App Store and installed onto user devices.
 
-> If you are integrating via Cocoapods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
+> If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
 ## Verbose Logging
 
