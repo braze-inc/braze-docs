@@ -1,12 +1,12 @@
 ---
-nav_title: Braze Javascript Interface
+nav_title: Braze JavaScript Interface
 platform: Android
 page_order: 9
 
 ---
-## Adding The Braze Javascript Interface to Webviews
+## Adding The Braze JavaScript Interface to Webviews
 
-Using Braze functionality within a custom WebView in your app can be done by adding the Braze javascript interface. Then, the same API used with [HTML In-App Messages][1] can be used within your custom WebView.
+Using Braze functionality from a WebView in your app can be done by adding the Braze JavaScript interface to your WebView as shown below. Once the interface has been added, the same API available for [HTML In-App Messages][1] will be available within your custom WebView.
 
 {% tabs %}
 {% tab JAVA %}
