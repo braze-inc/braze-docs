@@ -11,7 +11,7 @@ page_order: 4
 Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 #### Delivery Semantics
-All in-app messages that a user is eligible for are automatically delivered to the user upon a session start event. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
+All in-app messages that a user is eligible for are automatically downloaded to the user's device/browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
 
 #### Minimum Time Interval Between Triggers
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function.
