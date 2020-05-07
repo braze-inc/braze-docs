@@ -58,6 +58,10 @@ Toggle the new "Custom Message" type when creating your HTML campaign, as shown 
 
 ![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
 
+{% alert warning %}
+Because this new message type has SDK version depdendencies, be sure to use the new option when enough of your user base has upgraded. Users on older SDK versions will not be served the message.
+{% endalert %}
+
 <!--
 ### Cross-Channel HTML Messages
 
