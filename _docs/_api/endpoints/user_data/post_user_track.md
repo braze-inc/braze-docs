@@ -52,7 +52,7 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 | `attributes` | Optional | Array of Attributes Object | See User Attributes Object |
 | `events` | Optional | Array of Event Object | See Events Objects |
 | `purchases` | Optional | Array of Purchase Object | See Purchase Object |
-| `partner` | Optional | String | |
+| `partner` | Optional | String | For use by Braze Partners to aid in tracking inbound requests and API usage |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
