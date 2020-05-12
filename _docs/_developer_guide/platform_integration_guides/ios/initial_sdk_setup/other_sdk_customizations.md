@@ -1,9 +1,35 @@
 ---
-nav_title: Optional IDFA Collection
+nav_title: Other SDK Customizations
 platform: iOS
+description: "This document covers Log Level, IDFA Collection, and other customizations"
 page_order: 3
 
 ---
+
+# Braze Log Level
+
+The default LogLevel for the Braze iOS SDK is `8`. This level suppresses all logs so that nothing is logged in a production released application.
+
+To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` String subentry and set the value to `0`.
+
+LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
+
+Example `Info.plist` contents:
+
+```
+<key>Appboy</key>
+<dict>
+	<key>LogLevel</key>
+	<string>0</string>
+</dict>
+```
+
+## Description of Log Levels
+
+| LogLevel | Description |
+|----------|-------------|
+| 0        | All log information will be logged to the iOS console  |
+| 8        | No information will be logged to the console.          |
 
 # Optional IDFA Collection
 
@@ -67,21 +93,6 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 
 > If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
-## Verbose Logging
-
-To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` String subentry and set the value to "0".
-
-This feature is only intended to be used in development environments and should not be set in a released application.
-
-Example `Info.plist` contents:
-
-```
-<key>Appboy</key>
-<dict>
-	<key>LogLevel</key>
-	<string>0</string>
-</dict>
-```
 
 [1]: http://cocoapods.org/
 [2]: https://www.ruby-lang.org/en/installation/
