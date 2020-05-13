@@ -28,4 +28,7 @@ guide_featured_list:
   - name: Active In-App Message Campaign Limits
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/active_in_app_messaging_limit/
     fa_icon: fas fa-exclamation-triangle
+  - name: Retention Reports
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+    fa_icon: fas fa-chart-pie
 ---
