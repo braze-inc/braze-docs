@@ -6,7 +6,9 @@ page_order: 3
 
 ---
 
-# Braze Log Level
+# Other SDK Customizations
+
+## Braze Log Level
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses all logs so that nothing is logged in a production released application.
 
@@ -24,14 +26,14 @@ Example `Info.plist` contents:
 </dict>
 ```
 
-## Description of Log Levels
+### Description of Log Levels
 
 | LogLevel | Description |
 |----------|-------------|
 | 0        | All log information will be logged to the iOS console  |
 | 8        | No information will be logged to the console.          |
 
-# Optional IDFA Collection
+## Optional IDFA Collection
 
 IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is required if you intend to utilize our [install attribution integrations][21]. However, we may develop additional features in the future which would benefit from the collection of your IDFA. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
@@ -85,7 +87,7 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 {% endtab %}
 {% endtabs %}
 
-## Approximate iOS SDK Size {#ios-sdk-size}
+### Approximate iOS SDK Size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
 
