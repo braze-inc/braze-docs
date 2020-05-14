@@ -33,11 +33,13 @@ This is the description of the endpoint. For example: "This endpoint allows you 
 
 This is where you can give more information about your endpoint request body, including an example of what one would look like.
 
-`Content-Type: application/json`
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
 
 ```json
 {
-  "api_key": "{{api_key}}",
   "email": "example@123.com"
 }
 ```
@@ -48,7 +50,6 @@ This is a place for you to describe additional details for the parameters above.
 
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
-| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
 
 ## Example Unsubscribe CURL
@@ -56,6 +57,6 @@ This is a place for you to describe additional details for the parameters above.
 The following example CURL demonstrates how to unsubscribe a user from receiving email via the Braze APIs:
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"api_key":"YOUR_APP_GROUP_REST_API_KEY","email":"EMAIL_TO_UNSUBSCRIBE","subscription_state":"unsubscribed"}' https://rest.iad-01.braze.com/email/status
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{"email":"EMAIL_TO_UNSUBSCRIBE","subscription_state":"unsubscribed"}' https://rest.iad-01.braze.com/email/status
 ```
 {% endapi %}

@@ -7,7 +7,7 @@ This is where you can contribute to the [Braze Documentation site](http://www.br
 - This is a [Jekyll](https://github.com/Appboy/braze-docs/wiki/Jekyll-Overview) site.
 - This branch is merged to our master branch and the production site at least weekly on Tuesdays.
 
-If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs Github Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at http://www.braze.com/docs/cla.
+If you would like us to incorporate your changes into the official version of the document, you can submit changes to the Appboy/docs Github Repo and we will review the changes.  If we accept any such changes, they will be licensed to us under the CLA found at https://www.braze.com/docs/cla.
 
 ## Table of Contents
 - [About Braze](#about-braze)
@@ -24,7 +24,7 @@ If you would like us to incorporate your changes into the official version of th
 ### Braze CLA
 Before you get started, Braze requires that a Braze Contributor License Agreement (CLA) be filled out by every contributor to the Braze Docs open source project.
 
-Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](http://www.braze.com/docs/cla).
+Braze will not merge a pull request made against a Braze Docs open source project until that pull request is associated with a signed CLA. [Sign a CLA here](https://www.braze.com/docs/cla).
 
 ### Code of Conduct
 
@@ -39,7 +39,7 @@ We expect respectful behavior from our administrators and contributors as define
 Braze Documentation is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ### Before You Contribute
-1. Complete our [CLA](http://www.braze.com/docs/cla).
+1. Complete our [CLA](https://www.braze.com/docs/cla).
 2. Take the [Braze Docs Tour](https://www.braze.com/docs/tour).
 3. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 4. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…

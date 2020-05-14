@@ -70,8 +70,8 @@ While uncommon, if you require these properties to persist past the 30-day limit
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
-  "api_key" : "your App Group REST API Key",
   "purchases" : [
     {
       "external_id" : "user1",

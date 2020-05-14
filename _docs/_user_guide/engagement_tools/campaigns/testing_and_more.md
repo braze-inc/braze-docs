@@ -31,4 +31,7 @@ guide_featured_list:
   - name: Retention Reports
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
     fa_icon: fas fa-chart-pie
+  - name: Campaign Calendar
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_calendar/
+    fa_icon: fas fa-calendar
 ---

@@ -61,7 +61,7 @@ See the [Android Cordova Plugin][2] for more details.
 
 ### Customized Setup
 
-Note that this plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the javascript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
+Note that this plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the JavaScript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
 
 Users that check their platform directory into version control (enabling them to make permanent code edits there) will be able to further leverage Braze's UI elements by calling them directly from their platform specific project.
 
@@ -94,7 +94,7 @@ cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
 
 ### Initial Setup Complete
 
-Once the initial setup is complete, you can access the `AppboyPlugin` javascript interface in your app.
+Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
 [2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/AppboyPlugin.java

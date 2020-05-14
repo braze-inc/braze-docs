@@ -20,23 +20,32 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20analytics%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
-## Request Parameter Details
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `campaign_id` | Yes | String | Campaign API Identifier |
 | `length` | Yes | Integer | Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-{% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/campaigns/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2014-12-10T23:59:59-05:00`
+`https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00`
+
+### Example Request 
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
 
 ### Responses
 
@@ -44,6 +53,7 @@ The `campaign_id` for API campaigns can be found on the Developer Console page a
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -130,6 +140,7 @@ Content-Type: application/json
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "data" : [
         {

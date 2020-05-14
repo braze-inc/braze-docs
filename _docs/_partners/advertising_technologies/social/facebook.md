@@ -98,8 +98,8 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [6]: {% image_buster /assets/img/fb_activate.png %}
 [7]: {% image_buster /assets/img/fb_dialog.png %}
 [8]: {% image_buster /assets/img/fb_connected.png %}
-[10]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
-[11]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [12]: https://developers.facebook.com/docs/apps/#app-id
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
 [15]: https://developer.android.com/training/articles/user-data-ids.html

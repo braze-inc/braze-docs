@@ -14,9 +14,9 @@ Learn about the new Beta Version of custom HTML In-App Messages.
 
 ### Interactive Preview
 
-The message preview screen now shows a more realistic preview that renders the Javascript included in your message.
+The message preview screen now shows a more realistic preview that renders the JavaScript included in your message.
 
-This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, watch javascript animations, etc.)
+This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
@@ -34,7 +34,7 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] Javascript method (`appboyBridge.logClick(button_id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our Javascript [documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logClick) for more details.
+We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(button_id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our JavaScript [documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logClick) for more details.
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
 
@@ -47,6 +47,8 @@ There are two steps required to migrate to the new HTML Beta
 These Beta features are supported on Web only, and require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
+* iOS SDK - coming soon!
+* Android SDK - coming soon!
 
 <!-- * Android SDK v5.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#500) -->
 
@@ -55,6 +57,10 @@ These Beta features are supported on Web only, and require upgrading to the foll
 Toggle the new "Custom Message" type when creating your HTML campaign, as shown below:
 
 ![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
+
+{% alert warning %}
+Because this new message type has SDK version depdendencies, be sure to use the new option when enough of your user base has upgraded. Users on older SDK versions will not be served the message.
+{% endalert %}
 
 <!--
 ### Cross-Channel HTML Messages
@@ -82,7 +88,7 @@ The following features are planned and coming soon!
 
 * List assets associated with this campaign, and quickly copy their URLs to use within your HTML
 
-* Support for uploading additional file types (Fonts, SVG Images, Javascript, CSS)
+* Support for uploading additional file types (Fonts, SVG Images, JavaScript, CSS)
 
 ## Providing Feedback
 

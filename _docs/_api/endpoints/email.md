@@ -36,6 +36,9 @@ guide_featured_list:
   - name: "POST: Remove Spam"
     link: /docs/api/endpoints/email/post_remove_spam/
     fa_icon: fas fa-envelope-open
+  - name: "POST: Blacklist Email"
+    link: /docs/api/endpoints/email/post_blacklist/
+    fa_icon: fas fa-envelope-open
 ---
 {% comment %}
 redirect from email_sync.md

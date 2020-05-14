@@ -47,9 +47,9 @@ EU-01 | `https://rest.fra-01.braze.eu/campaigns/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
@@ -74,7 +74,6 @@ The Attributes Object should be populated with fields listed [here]({{site.baseu
 {% endalert %}
 
 
-
 ## Send Canvas Messages Immediately via API Triggered Delivery
 
 API-Triggered Delivery allows you to house message content inside of the Braze dashboard, while dictating when a message is sent, and to whom via API.
@@ -94,9 +93,9 @@ EU-01 | `https://rest.fra-01.braze.eu/canvas/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) your Canvas Identifier,
   "canvas_entry_properties": (optional, string) sets of key value pairs which define your Canvas Entry,
   "broadcast": (optional, boolean) defaults to false,

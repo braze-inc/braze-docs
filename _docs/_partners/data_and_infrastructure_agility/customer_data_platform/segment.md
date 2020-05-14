@@ -58,7 +58,7 @@ To get going with your Segment/Braze integration,
 |Automatically Send In-App Messages| On/Off (True/False) | Braze automatically enables you to send push to your users upon proper integration. |
 |Do Not Load Font Awesome| On/Off (True/False) | Braze uses FontAwesome for our in-app message icons, but you may disallow this feature at any time. |
 |Enable HTML In-App Messages| On/Off (True/False) | Enables Braze platform users to write HTML in-app messages. More information in the [JS Docs](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).|
-|Enable Logging| On/Off (True/False) | [Log to the Javascript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
+|Enable Logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
 |Minimum Interval Between Trigger Actions In Seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open In-App Messages in New Tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab as specified in the Braze platform. |
 |Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from news feed cards or content cards load in the current tab or a new tab as specified in the Braze platform. |
@@ -106,7 +106,7 @@ To complete the side-by-side integration, please refer to Segment's detailed ins
 {% endtab %}
 {% tab Web or Javascript %}
 
-See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's Javascript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
+See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
 
 For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
 
@@ -188,9 +188,9 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | [Track with Product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Completed Order
+#### Order Completed
 
-When you _track_ an event with the name `Completed Order` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
+When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
 
 ### Page / Screen {#page-screen}
 

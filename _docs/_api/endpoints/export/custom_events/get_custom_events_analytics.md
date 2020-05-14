@@ -19,27 +19,39 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20series%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
-## Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `api_key`    | Yes      | String | App Group REST API Key |
 | `event`      | Yes      | String | The name of the custom event for which to return analytics                                                                   |
 | `length`     | Yes      | Integer | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
-| `unit`       | No       | String | Unit of time between data points - can be "day" or "hour" (defaults to "day")                                                |
+| `unit`       | No       | String | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
 | `ending_at`  | No       | DateTime (ISO 8601 string) | Point in time when the data series should end - defaults to time of the request |
 | `app_id`     | No       | String | App API Identifier retrieved from the Developer Console to limit analytics to a specific app |
 | `segment_id` | No       | String | Segment API Identifier indicating the analytics enabled segment for which event analytics should be returned |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+### Request Components
+- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
+
 ### Example URL
-`https://rest.iad-01.braze.com/events/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&event=Event%20A&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+`https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=123456789`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&segment_id=123456789%20identifier' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+``` 
 
 ## Response
 
-`Content-Type: application/json`
-
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

@@ -24,10 +24,19 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
+
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
 ```json
 {
-  "api_key": "YOUR_API_KEY_HERE",
   "content_block_id" :"123a45b6-cd78-9e01-g234-hi56j7k8l9m0", 
   "name": "content-block-1",
   "description": "This is my content block",
@@ -37,22 +46,38 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 }
 ```
 
-### Request Parameter Details
+### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 |`content_block_id`|	Yes |	String |	Your Content Block's API Identifier.|
 | `name` | Yes | String | Can only be provided when the content block is in a draft state. Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
 | `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | Choose "active" or "draft". Defaults to `active` if not specified. Can not set an active content block to draft. |
+| `state` | Optional | "active" or "draft" | Choose "active" or "draft". Defaults to `active` if not specified. |
 | `tags` | No | Array of Strings. | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "content_block_id" :"123a45b6-cd78-9e01-g234-hi56j7k8l9m0", 
+  "name": "content-block-1",
+  "description": "This is my content block",
+  "content": "HTML or text content within block",
+  "state": "draft",
+  "tags": ["",""]
+}'
+```
 
 ### Successful Response Properties
 
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": "newly-generated-block-id",
   "liquid_tag": "generated-block-tag-from-content_block_name",
