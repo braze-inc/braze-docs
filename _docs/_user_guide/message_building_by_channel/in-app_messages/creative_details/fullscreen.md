@@ -23,16 +23,25 @@ Full-screen in-app messages will fill the entire height of a device and crop hor
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
+#### Portrait
+
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
 | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
 | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+
+#### Landscape
+
+| Layout | Asset Size | Notes |
+|--- | --- | --- |
+| Image + Text | 10:3 aspect ratio<br>Hi-Res 2000 x 600px<br> Min. 1000 x 300px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+| Image Only | 5:3 aspect ratio<br>Hi-Res 2000 x 1200px<br> Min. 1000 x 600px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 ### Image Safe Zone
 
-When previewing a full-screen in-app message in the Braze platform, you can enable the Image Safe Zone to the area of the message that is safe from cropping when displayed across devices. In addition to testing the Image Safe Zone in the preview pane, we recommend you [test your message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) as always.
+When previewing a full-screen in-app message in the Braze platform, you can enable the Image Safe Zone to the area of the message that is safe from cropping when displayed across devices. In addition to testing the Image Safe Zone in the preview pane, we recommend you [test your message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) as always.
 
 ![Image Safe Zone][3c]
 

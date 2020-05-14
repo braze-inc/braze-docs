@@ -8,7 +8,7 @@ page_order: 2
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Adding A Custom Event
 
@@ -43,7 +43,7 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Prope
 
 See the [Javadoc][6] for more information.
 
-[0]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String) "Javadocs"
 [3]: http://developer.android.com/reference/java/util/Date.html
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html

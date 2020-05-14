@@ -59,8 +59,8 @@ This is the end of the tour! Not sure where you want to go first? How about [Doc
 [3]: {% image_buster /assets/img/docssitehelp.gif %}
 [4]: {% image_buster /assets/img/docssitefeedback.gif %}
 [5]: https://www.algolia.com/doc/api-client/search/
-[6]: {{ site.baseurl }}
-[7]: {{ site.baseurl }}/user_guide/introduction/
-[8]: {{ site.baseurl }}/developer_guide/home/
-[9]: {{ site.baseurl }}/partners/home/
-[10]: {{ site.baseurl }}/help/home/
+[6]: {{site.baseurl}}
+[7]: {{site.baseurl}}/user_guide/introduction/
+[8]: {{site.baseurl}}/developer_guide/home/
+[9]: {{site.baseurl}}/partners/home/
+[10]: {{site.baseurl}}/help/home/

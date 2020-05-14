@@ -22,42 +22,42 @@ The delete scheduled messages endpoint allows you to cancel a message that you p
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-  "api_key": (required, string) see App Group REST API Key,
   "schedule_id": (required, string) the schedule_id to delete (obtained from the response to create schedule)
 }
 ```
 
-#### Delete Scheduled API Trigger Campaign
+### Request Parameters
 
-Instance  | REST Endpoint
-----------|-----------------------------------------------------------
-US-01 | `https://rest.iad-01.braze.com/trigger/schedule/delete`
-US-02 | `https://rest.iad-02.braze.com/trigger/schedule/delete`
-US-03 | `https://rest.iad-03.braze.com/trigger/schedule/delete`
-US-04 | `https://rest.iad-04.braze.com/trigger/schedule/delete`
-US-06 | `https://rest.iad-06.braze.com/trigger/schedule/delete`
-EU-01 | `https://rest.fra-01.braze.eu/trigger/schedule/delete`
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-```json
-POST https://YOUR_REST_API_URL/campaigns/trigger/schedule/delete
-Content-Type: application/json
-{
-  "api_key": (required, string) see App Group REST API Key,
-  "campaign_id": (required, string) see Campaign Identifier,
-  "schedule_id": (required, string) the schedule_id to delete (obtained from the response to create schedule)
-}
+## Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+
+### Example Request
 ```
-
-Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
-
-
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/delete' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "schedule_id": "248762133332"
+}
+'
+```
 
 {% endapi %}

@@ -22,10 +22,10 @@ Slideup messages can contain up to three lines of copy before truncation with el
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
-| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 600 x 500px | Images of various aspect ratios will fill a square image container, without cropping. |
+| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should __always__ [preview and test your messages]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
+You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
 [2a]: {% image_buster /assets/img/slideup-spec.png %}
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}

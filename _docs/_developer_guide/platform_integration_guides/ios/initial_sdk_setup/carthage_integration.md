@@ -39,7 +39,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
+If you are integrating the Braze SDK with CocoaPods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
 import Appboy_iOS_SDK
@@ -84,12 +84,12 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 
 ## Specifying Your Custom Endpoint or Data Cluster
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### Compile-time Endpoint Configuration (Recommended)
 
 {% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{ site.baseurl }}/api/basics/#endpoints">click here</a>.
+Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
 If given a pre-existing custom endpoint...
@@ -120,7 +120,7 @@ See the {% if include.platform == 'iOS' %}
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
 [6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-
 [9]: https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos
 [12]: #appboy-podfiles-for-non-64-bit-apps
 [13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
@@ -128,7 +128,7 @@ See the {% if include.platform == 'iOS' %}
 [15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[21]: {{ site.baseurl }}/partners/
+[21]: {{site.baseurl}}/partners/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

@@ -70,8 +70,8 @@ While uncommon, if you require these properties to persist past the 30-day limit
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
-  "api_key" : "your App Group REST API Key",
   "purchases" : [
     {
       "external_id" : "user1",
@@ -123,5 +123,5 @@ If you do want to save, store and track properties to segment with, you need to 
 
 For info on how to set up webhooks, check out our [Webhook][1] documentation.
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"

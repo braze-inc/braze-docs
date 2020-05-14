@@ -26,12 +26,12 @@ This partnership is in early access beta. All features may not perform as exactl
 | Custom API Proxy | PassKit | This is required for basic authentication within the HTTP header of your webhook requests. |
 | userDefinedID | Client | In order to appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the userDefinedID.|
 | Braze API Key | Braze | You will need to create a new API Key can be created in the Developer Console -> API Settings -> +Create New API Key with *users.track* permissions. The Braze API key will need to be provided to your Rokt account manager.|
-| [Braze REST Endpoint]({{ site.baseurl }}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your PassKit account manager to pass subscriber data into Braze.|
+| [Braze REST Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL will need to be provided to your PassKit account manager to pass subscriber data into Braze.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## API Integration
 
-To further enrich your customers’ mobile wallet experiences, you can work with your PassKit account manager to pass data into Braze through Braze’s [Users Track Endpoint]({{ site.baseurl }}/api/endpoints/user_data/#user-track-endpoint). Examples of data to share from PassKit includes:
+To further enrich your customers’ mobile wallet experiences, you can work with your PassKit account manager to pass data into Braze through Braze’s [Users Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint). Examples of data to share from PassKit includes:
 
 - Pass Issue: when a customer clicks on a pass link and is first shown a pass.
 - Pass Installs: when the customer adds/saves the pass to their wallet app.
@@ -60,7 +60,7 @@ Before you get started, here are the common JSON Payload Parameters that you can
 | `templateName` <br> _Required._ | string | Required. This is the name of the template you created. For more detail, please see [Create Template](https://dev.passkit.net/v3/#create-a-template).|
 | `dynamicData` | object | A key pair value JSON object. This is the user’s unique data. For example, customer name, date of birth, membership number. etc. The data will not show on the pass until it is defined in the template. See the example json for an example of the format. |
 | `dynamicImages` | object | This is used to define a dynamic image for a pass, like a profile image on a membership pass. The value is the image path from Images Upload Endpoint. Please also see the sections Passbook Image Types and Dynamic Image Keys for more information regarding pass images. |
-| `userDefinedId` | string | This allows a unique Id to be added to the pass record that can provide easy compatible with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via [userDefinedId](https://dev.passkit.net/v3/#retrieve-a-pass-with-user-defined-id) and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed. <br> For the Braze integration, we would recommend using the [Braze external ID]({{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). |
+| `userDefinedId` | string | This allows a unique Id to be added to the pass record that can provide easy compatible with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via [userDefinedId](https://dev.passkit.net/v3/#retrieve-a-pass-with-user-defined-id) and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed. <br> For the Braze integration, we would recommend using the [Braze external ID]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). |
 | `recoveryEmail` | string | The user’s email address. If this parameter is used, the user will receive an email containing a link to the pass. |
 | `isVoided` | bool | When this field set to true, the pass will be voided. When the pass is voided the barcode will be greyed out and beacon and location notification will be turned off. Default value is false. |
 | `isRedeemed` | bool | When this field set to true, the pass will be marked as redeemed. Default value is false. |

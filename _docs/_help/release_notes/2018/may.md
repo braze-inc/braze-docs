@@ -27,4 +27,4 @@ Check them out in __Templates & Media__, in the basic [Email Templates section][
 
 
 
-[97]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template
+[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

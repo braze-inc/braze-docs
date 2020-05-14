@@ -252,7 +252,6 @@ public void onResume() {
 # Code Test json
 ```json
 {
-   "api_key" :  "string",
    "attributes" : "Attributes" ,
    "events" : ["Array", "Of", "Object"],
    "purchases" : ["Array" ,"Of" ,"Purchase" ,"Object"]
@@ -263,7 +262,7 @@ public void onResume() {
 
 
 
-# Code Test Javascript
+# Code Test JavaScript
 ```javascript
 appboy.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
@@ -497,7 +496,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with Cocoapods or Carthage, add the following line of code to your `AppDelegate.swift` file:
+If you are integrating the Braze SDK with CocoaPods or Carthage, add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}

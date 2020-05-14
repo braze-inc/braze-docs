@@ -83,12 +83,12 @@ Using Canvas, you can add a step that sends both a Content Card and Push Notific
 
 You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using Key Value Pairs:
 
-* [Multiple Feeds for Web SDK]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
-* [Multiple Feeds for Android SDK]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
+* [Multiple Feeds for Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
+* [Multiple Feeds for Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
 [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[5]: {{ site.baseurl }}/user_guide/message_building_by_channel/content_cards/reporting/#IAM-Reporting
-[6]: {{ site.baseurl }}/user_guide/data_and_analytics/report_metrics/
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/#IAM-Reporting
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

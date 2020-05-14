@@ -10,28 +10,51 @@ For every and any channel you use to communicate with your users, here are some 
 
 ### General Tips
 
-1. PNG files are recommended.
-
-2. Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
-
-3. A custom image library is required in order to display Gifs on Android. We recommend Glide.
-
 ### In-App Messages
 
 #### Images
 
 In general, Braze recommends using images that fit into a 16:10 screen.
 
-**Type** | **Aspect Ratio** | **Recommended Image Size** | **Max Image Size** | **File Types**
---- | --- | --- | --- | ---
-Portrait Full Screen with Text | 5:4 | 500KB | 5MB | PNG, JPG, GIF
-Portrait Full Screen (Image Only) | 10:16 | 500KB | 5MB | PNG, JPG, GIF
-Landscape Full Screen with Text | 16:5 | 500KB | 5MB | PNG, JPG, GIF
-Landscape Full Screen (Image Only) | 16:10 | 500KB | 5MB| PNG, JPG, GIF
-Slideup | 1:1 | 500KB | 5MB | PNG, JPG, GIF
-Modal (Image Only) | 1:1 | 500KB | 5MB | PNG, JPG, GIF
-Modal with Text | 29:10 | 500KB | 5MB | PNG, JPG, GIF
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+- __All images must be less than 5MB.__
+- We only accept `PNG`, `JPG`, and `GIF` file types.
+- We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
+- For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+<br><br>
+{% tabs %}
+  {% tab Full-Screen %}
+  [Further details for full-screens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
+
+  | Layout | Asset Size | Notes |
+  |--- | --- | --- |
+  | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
+  | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+  {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+
+{% endtab %}
+{% tab Modal %}
+
+  [Further details for modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
+
+  | Layout | Asset Size | Notes |
+  |--- | --- | ------ |
+  | Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 415px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+  | Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
+  {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab Slideup %}
+
+[Further details for slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
+
+| Layout | Asset Size | Notes |
+|--- | --- | --- |
+| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% endtabs %}
 
 #### Text
 
@@ -55,7 +78,6 @@ While there are no limits to how many characters of text you can include in an i
 (iOS) Lock Screen | 110 Characters
 (iOS) Notification Center | 110 Characters
 (iOS) Banner Alert | 63 Characters
-(iOS) Pop Up Alert | 235 Characters
 (Android) Lock Screen | 49 Characters
 (Android) Notification Drawer | 597 Characters
 {: .reset-td-br-1 .reset-td-br-2}
@@ -111,6 +133,16 @@ Classic Card | 1:1 (110 pixels wide minimum) | 500KB | 1MB | PNG, JPG, GIF
 Captioned Image Card | 4:3 (600 pixels wide minimum) | 500KB | 1MB | PNG, JPG, GIF
 Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### MMS
+
+#### Images
+**Image Specifications** | **Recommended Properties**
+--- | ---
+Size | 5MB maximum
+File Types | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 ### Email
 

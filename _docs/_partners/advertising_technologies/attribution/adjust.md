@@ -18,10 +18,10 @@ This integration supports iOS and Android apps.
 
 | Requirement | Description |
 |---|---|
-| Braze SDK | Be sure to enable the proper SDK for your needs - either [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).|
+| Braze SDK | Be sure to enable the proper SDK for your needs - either [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).|
 | Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll find the Install API Key and the REST Endpoint. The Install API Key and REST Endpoint will used to set up a postback in Adjust’s dashboard. |
 | Adjust SDK | Please see the [Adjust docs](https://docs.adjust.com/en/getting-started/#integrate-the-adjust-sdk) for more information on this requirement. |
-| Enable IDFA Collection in Braze SDK | [IDFA Collection]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) is optional within the Braze SDK and disabled by default. This is required to be enabled for all of our Attribution partner integrations. |
+| Enable IDFA Collection in Braze SDK | [IDFA Collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) is optional within the Braze SDK and disabled by default. This is required to be enabled for all of our Attribution partner integrations. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device ID to Adjust. You should call the following before initializing the SDK on `Adjust.onCreate.`:
@@ -41,7 +41,7 @@ To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
 2. Select __Braze (formerly Appboy)__.
 3. Copy the Braze API Key into the `Install API Key` field.
-- There is a separate `Event API Key` field available in the Adjust dashboard. Please contact your success manager for more information.
+- This Braze API Key is available in the Braze Dashboard. This can be found by naviagting to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Custom Events__ section.
 4. Copy the Braze REST Endpoint into the `REST_endpoint` field.
 5. Click __Save & Close__.
 

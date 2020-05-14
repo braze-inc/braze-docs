@@ -71,7 +71,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 >  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing Push with Android Apps via CURL
@@ -86,7 +86,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 >  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing Push with Kindle Apps via CURL
@@ -99,7 +99,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"kindle_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"kindle_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing Push with Windows Universal Apps via CURL
@@ -114,7 +114,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 >  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast_text_01\",\"toast_text1\":\"test_title\"}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast_text_01\",\"toast_text1\":\"test_title\"}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
 ### Testing Push with Windows Phone Apps via CURL
@@ -129,21 +129,21 @@ You can send a single notification through the terminal via cURL and the [Messag
 >  The examples below demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast\",\"toast_title\":\"test_title\",\"toast_content\":\"message_goes_here\",\"toast_navigation_uri\":\"uri_goes_here\"}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast\",\"toast_title\":\"test_title\",\"toast_content\":\"message_goes_here\",\"toast_navigation_uri\":\"uri_goes_here\"}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
 [1]: {% image_buster /assets/img_archive/testmessages1.png %}
-[2]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#setting-user-ids
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}
 [7]: #test-segment
 [8]: #email-test
-[9]: {{ site.baseurl }}/developer_guide/platform_wide/platform_features/#user-segmentation
+[9]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/#user-segmentation
 [10]: #push-inapp-test
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
 [12]: #curl
-[13]: {{ site.baseurl }}/developer_guide/rest_api/messaging/
+[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [14]: https://dashboard-01.braze.com/app_settings/api_settings/
 [15]: https://dashboard-01.braze.com/users/user_search/user-search/
-[66]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery

@@ -37,7 +37,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
@@ -58,7 +58,7 @@ Array attributes are good for storing related lists of information about your us
 For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on RegEx:
-- [RegEx with Braze]({{ site.baseurl }}/user_guide/engagement_tools/segments/regex/)
+- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [RegEx Debugger and Tester](https://regex101.com/)
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
@@ -154,7 +154,7 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
+If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
 
 {% alert important %}
@@ -168,4 +168,4 @@ When using the "Day of Recurring Event" filter, and are then prompted to select 
 For example, if on March 10, 2020, you select the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and __including__ March 10, 2020. 
 {% endalert %}
 
-You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{ site.baseurl }}/help/help_articles/data/change_custom_data_type/).
+You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).

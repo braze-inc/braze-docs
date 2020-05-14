@@ -23,11 +23,17 @@ A REST Application Programming Interface key (REST API key) is a unique code tha
 
 App Groups and API Keys go hand in hand at Braze. App Groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their applications on the same platform. As you may notice, these app groups are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API Key and App Group API Key as the `api_key`. The `api_key` is included in each request and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
+We refer to both the REST API Key and App Group API Key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to utilize our REST APIs. These REST APIs are used to track users, send messages, export user data, and more.  When you create a new REST API Key, you will need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
 ### Where can I find it?
 
 Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
+
+### How can I use it?
+
+Prior to April 2020, API keys would be included as a part of the API request body or within the request URL as a parameter. Braze now has updated the way in which we read API keys. API keys are now set with the HTTP Authorization request header, making your API keys more secure.
+
+While the old way of passing API keys continues to work, after a period of time this will be permenatly removed so we urge users to update API calls accordingly. 
 
 ### API Key Permissions
 
@@ -44,6 +50,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `users.identify` | Query for user profile information by user ID.  |
 | `users.export.ids` | The language the browser is set to use.  |
 | `users.export.segment` | Query for user profile information by Segment. |
+{: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
  {% tab Email %}
@@ -56,6 +63,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `email.bounce.remove` | Remove email addresses from your hard bounce list. |
 | `email.spam.remove` | Remove email addresses from your spam list. |
 | `email.blacklist` | Blacklist email addresses. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Messages %}
@@ -67,6 +75,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `messages.schedule.update` | Update a scheduled message. |
 | `messages.schedule.delete` | Delete a scheduled message. |
 | `messages.schedule_broadcasts` | Query all scheduled broadcast messages. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Campaigns %}
@@ -82,6 +91,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `campaigns.details` | Query for details of a specific Campaign. |
 | `sends.data_series` | Query for message send analytics over a time range. |
 | `sends.id.create` | Create Send ID for message blast tracking. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Canvas %}
@@ -96,6 +106,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `canvas.data_series` | Query for Canvas analytics over a time range. |
 | `canvas.details` | Query for details of a specific Canvas. |
 | `canvas.data_summary` | Query for rollups of Canvas analytics over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Segments %}
@@ -105,6 +116,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `segments.list` | Query for a list of Segments. |
 | `segments.data_series` | Query for Segment analytics over a time range. |
 | `segments.details` | Query for details of a specific Segment. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Purchases %}
@@ -114,6 +126,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `purchases.product_list` | Query for a list of products purchased in your app. |
 | `purchases.revenue_series` | Query for total money spent per day in your app over a time range. |
 | `purchases.quantity_series` | Query for the total number of purchases per day in your app over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Events %}
@@ -122,6 +135,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 |---|---|---|
 | `events.list` | Query for a list of Custom Events. |
 | `events.data_series` | Query occurrences of a Custom Event over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab News Feed %}
@@ -131,6 +145,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `feed.list` | Query for a list of News Feed cards. |
 | `feed.data_series` | Query for News Feed analytics over a time range. |
 | `feed.details` | Query for details of a specific News Feed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Sessions %}
@@ -138,6 +153,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Name | Description |
 |---|---|---|
 | `sessions.data_series` | Query for sessions per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab KPIs %}
@@ -148,6 +164,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `kpi.dau.data_series` |  Query for unique active users per day over a time range. |
 | `kpi.new_users.data_series` | Query for new users per day over a time range. |
 | `kpi.uninstalls.data_series` | Query for app uninstalls per day over a time range. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Templates %}
@@ -158,6 +175,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `templates.email.update` | Update an email template stored on the Dashboard. |
 | `templates.email.info` | Query for information of a specific template. |
 | `templates.email.list` | Query for a list of email templates. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab SSO %}
@@ -165,6 +183,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Name | Description |
 |---|---|---|
 | `sso.saml.login` |  Setup identity provider-initiated login. Read our documentation for more info. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Content Blocks %}
@@ -174,6 +193,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `content_blocks.info` | Query for information of a specific template. |
 | `content_blocks.list` | Query for a list of Content Blocks. |
 | `content_blocks.create` | Create a new Content Block on the Dashboard. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% tab Subscription %}
@@ -183,6 +203,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `subscription.status.set` | Set subscription group status. |
 | `subscription.status.get` | Get subscription group status. |
 | `subscription.groups.get` | Get status of subscription groups that specific users are explicitly subscribed/unsubscribed to. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
@@ -230,9 +251,9 @@ A good security practice is to assign a user only as much access as is necessary
 
 With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
 
-[2]: {{ site.baseurl }}/api/identifier_types/
+[2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
 [4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
-[5]: http://www.braze.com/docs/api/basics/
+[5]: {{site.baseurl}}/api/basics/
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types

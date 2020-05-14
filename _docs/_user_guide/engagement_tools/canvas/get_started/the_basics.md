@@ -64,33 +64,31 @@ Replace all images below. Thinking of restructuring section with one labeled ima
 {% endcomment %}
 
 {% tabs %}
-    {% tab Canvas %}
-        __Canvas__ refers to the workspace and overall visualization.
-        ![Journey]({% image_buster /assets/img/Canvas2.png %})
-    {% endtab %}
+  {% tab Canvas %}
+    __Canvas__ refers to the workspace and overall visualization.
+    ![Journey]({% image_buster /assets/img/Canvas2.png %})
+  {% endtab %}
 
-    {% tab Journey %}
-        A __journey or customer journey__ is an individual user's experience within the Canvas.
-        ![Journey_2]({% image_buster /assets/img_archive/Journey_2.png %})
-    {% endtab %}
+  {% tab Journey %}
+    A __journey or customer journey__ is an individual user's experience within the Canvas.
+    ![Journey_2]({% image_buster /assets/img_archive/Journey_2.png %})
+  {% endtab %}
 
-    {% tab Entry Step %}
-        __The Entry Step__ and __The Entry Wizard__ is the first step you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.
-        ![Journey_3]({% image_buster /assets/img/entry-wizard.gif %})
-    {% endtab %}
+  {% tab Entry Step %}
+    __The Entry Step__ and __The Entry Wizard__ is the first step you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.
+    ![Journey_3]({% image_buster /assets/img/entry-wizard.gif %})
+  {% endtab %}
 
-    {% tab Variants %}
-        __Variants__ are the variant flows marketers build that create personalized journeys.
-        ![Journey_3]({% image_buster /assets/img/variants.gif %})
-    {% endtab %}
+  {% tab Variants %}
+    __Variants__ are the variant flows marketers build that create personalized journeys.
+    ![Journey_3]({% image_buster /assets/img/variants.gif %})
+  {% endtab %}
 
-    {% tab Steps %}
-        __Steps__ are individual decision points (like messages) within a variant.
-        ![Journey_4]({% image_buster /assets/img/steps.gif %})
-    {% endtab %}
-    {% endtabs %}
-
-
+  {% tab Steps %}
+    __Steps__ are individual decision points (like messages) within a variant.
+    ![Journey_4]({% image_buster /assets/img/steps.gif %})
+  {% endtab %}
+{% endtabs %}
 
 
 ## Building The Customer Journey In Canvas

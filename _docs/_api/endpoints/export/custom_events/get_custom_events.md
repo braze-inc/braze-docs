@@ -19,22 +19,31 @@ This endpoint allows you to export a list of custom events that have been record
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameter
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
-`https://rest.iad-01.braze.com/events/list?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&page=1`
+`https://rest.iad-01.braze.com/events/list?page=3`
+
+### Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
 
 ## Response
 
-`Content-Type: application/json`
-
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

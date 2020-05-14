@@ -17,5 +17,5 @@ Braze's test application within the [iOS SDK Github repository][1] is called Sto
 >  Push notifications for the iOS test application requires additional configuration. See the [iOS Push Documentation][7] for details.
 
 [1]: https://github.com/appboy/appboy-ios-sdk "Appboy iOS Github Repository"
-[25]: {{ site.baseurl }}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
-[7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/

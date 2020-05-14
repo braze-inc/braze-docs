@@ -37,18 +37,18 @@ AppsFlyerLib.setAdditionalData(customData);
 
 ### Step 2: Getting the Braze API Key
 
-In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in Appsflyer's dashboard.
+In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.
 
-### Step 3: Configure Braze in Appsflyer's Dashboard
+### Step 3: Configure Braze in AppsFlyer's Dashboard
 
-- In Appsflyer's dashboard, navigate to the "Integrated Partners" page.
+- In AppsFlyer's dashboard, navigate to the "Integrated Partners" page.
 - On that page, search for Braze and click on Braze's logo to open up a configuration window.
 - Under "Integration Parameters" select "enable".
 - Copy the Braze API key (obtained in the prior step) into the "API_key" field.
 - Copy the Braze Rest Endpoint url (obtained in the prior step) into the "REST_endpoint" field.
 - Click "Save & Close".
 
-Additional information on these instructions is available in [Appsflyer's documentation][16].
+Additional information on these instructions is available in [AppsFlyer's documentation][16].
 
 Braze maps AppsFlyer's data fields to segment filters in the following way
 
@@ -67,10 +67,10 @@ Once Braze receives attribution data from AppsFlyer, the status connection indic
 
 Attribution data for Facebook, Snapchat, and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
 
-For more information, please see Appsflyer's [documentation][31].
+For more information, please see AppsFlyer's [documentation][31].
 
 [5]: #api-restrictions
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"

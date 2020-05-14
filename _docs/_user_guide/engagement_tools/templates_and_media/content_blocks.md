@@ -44,7 +44,7 @@ If you want to update a Content Block for a single message or make a copy of a C
 
 ![copy-content-block][2]{: height="70%" width="70%"}
 
-You can also [duplicate a Content Block with our Templates & Media feature]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
+You can also [duplicate a Content Block with our Templates & Media feature]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
 
 ## Nesting Content Blocks
 
@@ -58,7 +58,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ## Archiving Content Blocks
 
-Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/).
+Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
 
 ![Archive_CB][3]{: height="80%" width="80%"}
 
@@ -91,5 +91,5 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/archive-content-block.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{ site.baseurl }}/api/endpoints/templates/
-[6]: {{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/
+[5]: {{site.baseurl}}/api/endpoints/templates/
+[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

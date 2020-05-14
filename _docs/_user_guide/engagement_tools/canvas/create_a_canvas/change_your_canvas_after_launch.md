@@ -20,14 +20,14 @@ tool:
 |----------------------------------|-------------------|
 | Initial Condition                | Conversion Events |
 | Target Audience                  |                   |
-| Pause / Resume Initial Condition |                   |
+| Stop / Resume Initial Condition |                   |
 | Workflow Name                    |                   |
 
 ## Canvas Graph
 
 | **Editable**                                     | **Not-Editable**         |
 |------------------------------------------------|----------------------|
-| Pause / Resume Execution of All Workflow Steps | Deleting Steps       |
+| Stop / Resume Execution of All Workflow Steps | Deleting Steps       |
 | Insert Workflow Steps                          | Deleting Variants    |
 | Add New Connections                            | Deleting Connections |
 | Add New Variants                               |                      |
@@ -51,6 +51,7 @@ There are a number of things to know if you plan to edit or add more steps to an
 - Users who have already passed newly created steps __will__ be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
 - Users who are currently in a Canvas, but have not reached the points where new steps are added __will__ be eligible to receive those new steps.
 - You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
+- Users already in the Canvas will fall out when a Canvas is stopped.
 
 ## Canvas Variant Percentages
 

@@ -68,7 +68,7 @@ iOS users are considered "Push Enabled" only if they have allowed notifications 
   {% tab Android %}
 __Android Push__
 
-You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving that token, an update to the user’s push enabled state will happen. At this point, a user has push enabled at both the app-level and the device-level.
+You do not need to request permission to send push notifications to Android users. As the user has not explicitly requested to receive push, Braze will not automatically [update the user's opt-in state]({{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields). Upon a user’s first session on Android, Braze will automatically request a new token and upon successfully receiving that token, an update to the user’s push enabled state will happen. At this point, a user has push enabled at both the app-level and the device-level.
 
 If the user disables push, Braze will mark them as __foreground__ push disabled no longer attempt to send them push messages. The filter `Push Enabled` will result in `false` for this user. You may continue to send __background__ (silent) push notifications with the segmenting filter `Background Push Enabled = true`.
 
@@ -89,6 +89,6 @@ Here are some details you should know if you aren't using our most up to date An
 
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
 [2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
-[identifier]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{ site.baseurl }}/api/endpoints/export/user_data/post_users_segment/
+[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}

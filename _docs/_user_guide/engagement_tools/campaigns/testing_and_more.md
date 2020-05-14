@@ -25,4 +25,13 @@ guide_featured_list:
   - name: Sending Test Messages
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
     fa_icon: fas fa-envelope
+  - name: Active In-App Message Campaign Limits
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/active_in_app_messaging_limit/
+    fa_icon: fas fa-exclamation-triangle
+  - name: Retention Reports
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+    fa_icon: fas fa-chart-pie
+  - name: Campaign Calendar
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_calendar/
+    fa_icon: fas fa-calendar
 ---

@@ -7,7 +7,7 @@ page_order: 4
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. User Attributes vs Purchase Events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{ site.baseurl }}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. User Attributes vs Purchase Events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 User attributes will be assigned to the currently active user. The following default fields may be set:
 
@@ -116,7 +116,7 @@ Example usage:
 m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
 ```
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/roku/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_user_ids/#user-id-integration-best-practices--notes
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

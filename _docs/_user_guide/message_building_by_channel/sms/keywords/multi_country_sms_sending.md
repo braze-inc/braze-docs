@@ -22,4 +22,4 @@ In order to send an SMS message to a phone number in a particular country, it is
 
 To overcome this limitation, Subscription Groups can hold long and short codes from multiple different countries and will automatically use the appropriate short code or long code when targeting a user for SMS. Check out our [SMS Subscription Group][1] docs for more information.
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

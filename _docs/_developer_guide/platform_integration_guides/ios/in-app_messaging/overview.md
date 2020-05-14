@@ -27,7 +27,7 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 
 To see examples of in-app messages, check out our [Client Integration Gallery][31].
 
-[Create an in-app message]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/) now!
+[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
 ## In-App Message Types
 Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
@@ -82,7 +82,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a Javascript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see <a href="https://www.braze.com/docs/help/best_practices/in-app_messages/previous_in-app_message_generations/">Best Practices</a> for more details.
+[`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a `WKWebView`and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>iOS in-app messages support a JavaScript `appboyBridge` interface to call methods on the Braze Web SDK from within your HTML, see <a href="https://www.braze.com/docs/help/best_practices/in-app_messages/previous_in-app_message_generations/">Best Practices</a> for more details.
 
 The following example shows a paginated HTML Full in-app message:
 
@@ -90,7 +90,7 @@ The following example shows a paginated HTML Full in-app message:
 
 > Full in-app message content is displayed in a WKWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
 
-> **Starting in iOS SDK version 3.19.0, the following javascript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.**
+> **Starting in iOS SDK version 3.19.0, the following JavaScript methods are no-ops in HTML in-app messages: `alert`, `confirm`, `prompt`.**
 
 {% endtab %}
 {% endtabs %}
@@ -109,14 +109,14 @@ The following example shows a paginated HTML Full in-app message:
 [11]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [12]: {% image_buster /assets/img_archive/HTML5.gif %}
 [13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
-[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
+[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
+[15]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
-[19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
 [23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
-[25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
+[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
+[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{ site.baseurl }}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{ site.baseurl }}/help/best_practices/client_integration_gallery/
+[30]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
+[31]: {{site.baseurl}}/help/best_practices/client_integration_gallery/

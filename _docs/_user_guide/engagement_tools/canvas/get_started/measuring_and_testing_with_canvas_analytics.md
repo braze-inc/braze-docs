@@ -28,11 +28,11 @@ At the bottom of the Canvas Details page, click `Analyze Variants`, where you ca
 You will then see a table which shows you a breakdown of each variant at several levels:
 
 Basic Metrics:  
-- Variant API Identifier,
-- Total Entries,
-- Total Sends,
-- Total Steps,
-- Total Revenue.
+- Variant API Identifier
+- Total Entries
+- Total Sends
+- Total Steps
+- Total Revenue
 
 Beyond that, you'll see a more explicit breakdown of Conversion Events:
 - conversion totals and conversion rates for each conversion event,
@@ -41,7 +41,11 @@ Beyond that, you'll see a more explicit breakdown of Conversion Events:
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more!
 
+## Retention Report
 
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the Canvas Analytics page. For more information on how to read and interpret your retention report, visit our Canvas [Retention Report][1] page.
+
+[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
 [26]:{% image_buster /assets/img/canvas_var_analysis.png %}

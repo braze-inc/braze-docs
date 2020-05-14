@@ -23,14 +23,17 @@ namespace :docs do
       puts `bundle exec jekyll algolia`
     end
   end
-  task :build do
+  task build: [:index] do
       puts `bundle exec jekyll build`
   end
-  task puma: [:build,:index] do
-      puts `bundle exec puma -t 8:32 -p 5006`
-  end
   task :serve do
-    pipe 'bundle exec jekyll s --port 5006'
+    if ENV["RACK_ENV"] == 'staging'
+      pipe 'bundle exec jekyll s --port 5006'
+    else
+      # Force a clean build of the site and the pipeline assets
+      puts `rm .jekyll-metadata`
+      pipe 'bundle exec jekyll s --port 5006 --incremental --config _config.yml,_incremental_config.yml'
+    end
   end
 end
 

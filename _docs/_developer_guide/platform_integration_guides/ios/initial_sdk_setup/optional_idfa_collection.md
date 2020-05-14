@@ -65,7 +65,7 @@ The approximate iOS SDK framework file size is 30MB and the approximate .ipa (ad
 
 Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` size, per [Apple's recommendations on app sizing][31]. If you are calculating the iOS SDK's size addition to your application, we recommend following the steps under ["Getting an App Size Report"][31] to compare the size difference in your `.ipa` before and after integrating the Braze iOS SDK. When comparing sizes from the App Thinning Size Report, we also recommend looking at app sizes for thinned `.ipa` files, as universal `.ipa` files will be larger than the binaries downloaded from the App Store and installed onto user devices.
 
-> If you are integrating via Cocoapods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
+> If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
 ## Verbose Logging
 
@@ -90,14 +90,14 @@ Example `Info.plist` contents:
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
 [6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
 [12]: #appboy-podfiles-for-non-64-bit-apps
 [13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
 [15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[21]: {{ site.baseurl }}/partners/advertising_technologies/attribution/adjust/
+[21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
 [25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk

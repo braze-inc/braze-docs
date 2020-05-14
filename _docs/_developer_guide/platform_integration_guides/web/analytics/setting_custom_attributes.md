@@ -105,7 +105,7 @@ appboy.getUser().setCustomUserAttribute(
   new Date(secondsFromEpoch * 1000)
 );
 ```
->  Dates passed to Braze with this method must be javascript Date objects.
+>  Dates passed to Braze with this method must be JavaScript Date objects.
 
 #### Setting a Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
@@ -161,7 +161,7 @@ appboy.getUser().setPushNotificationSubscriptionType(appboy.ab.User.Notification
 ```
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html "ab.User"
-[4]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-data
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{ site.baseurl }}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

@@ -20,24 +20,36 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## Request Parameter Details
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameter
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `api_key`     | Yes      | String    | App Group REST API Key  |
 | `campaign_id` | Yes      | String    | Campaign API Identifier |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert tip %}
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-{% endalert %}
 
 ### Example Request URL
-`https://rest.iad-01.braze.com/campaigns/details?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+`https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
+
+### Example Request 
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+```
 
 ### Campaign Details Endpoint API Response
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) date created as ISO 8601 date,

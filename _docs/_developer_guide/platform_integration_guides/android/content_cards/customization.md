@@ -540,13 +540,13 @@ Content Cards have a maximum size of **2kb** (including images, links, and all
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 
-[4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/news_feed/#card-types
-[14]: {{ site.baseurl }}/help/best_practices/news_feed/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/news_feed/#card-types
+[14]: {{site.baseurl}}/help/best_practices/news_feed/
 [16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
 [18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
@@ -566,7 +566,7 @@ Content Cards have a maximum size of **2kb** (including images, links, and all
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
-[40]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html

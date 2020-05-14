@@ -29,27 +29,39 @@ The `send_id` is only generated for API campaign sends targeting segments, conne
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-## Request Parameter Details
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- |------------ |
-| `api_key` | Yes | String | App Group REST API Key. |
 | `campaign_id` | Yes | String | Campaign API Identifier. |
 | `send_id` | Yes | String | Send API Identifier. |
 | `length` | Yes | Integer | Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 inclusive. |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert important %}
+### Request Components
+- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+<br><br>
 The `send_id` is only generated for API campaign sends targeting segments, connected audiences or broadcasts. When relevant, the `send_id` is included in response for the `messages/send`, `messages/schedule`, `campaign/trigger/send` and campaign/trigger/schedule endpoints.
-{% endalert %}
 
 ### Example URL
-`https://rest.iad-01.braze.com/sends/data_series?api_key=75480f9a-4db8-4057-8b7e-4d59bfd73709&campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=7&ending_at=2014-12-10T23:59:59-05:00`
+`https://rest.iad-01.braze.com/sends/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=30&ending_at=2014-12-10T23:59:59-05:00`
+
+### Example Request 
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=30&ending_at=2014-12-10T23:59:59-05:00' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
 
 ### Send Analytics Endpoint API Response
 
 ```json
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
             "variation_name": (string) variation name,
             "sent": (int) the number of sends,

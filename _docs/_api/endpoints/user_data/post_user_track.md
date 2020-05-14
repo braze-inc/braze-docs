@@ -23,27 +23,42 @@ This endpoint can be used to record custom events, user attributes, and purchase
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/User%20Data/User%20track%20%E2%80%93%20attributes%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-   "api_key" : (required, string) see App Group REST API Key,
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
-   "purchases" : (optional, array of Purchase Object)
+   "purchases" : (optional, array of Purchase Object),
+   "partner" : (optional, string)
 }
 ```
 
->  Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
+Customers using the API for server-to-server calls may need to whitelist `rest.iad-01.braze.com` if they're behind a firewall.
 
-### Objects Used
-- [User Attributes Object]({{ site.baseurl }}/api/objects_filters/user_attributes_object/)
-- [Events Object]({{ site.baseurl }}/api/objects_filters/event_object/)
-- [Purchases Object]({{ site.baseurl }}/api/objects_filters/purchase_object/)
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `attributes` | Optional | Array of Attributes Object | See User Attributes Object |
+| `events` | Optional | Array of Event Object | See Events Objects |
+| `purchases` | Optional | Array of Purchase Object | See Purchase Object |
+| `partner` | Optional | String | For use by Braze Partners to aid in tracking inbound requests and API usage |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
+- [Events Object]({{site.baseurl}}/api/objects_filters/event_object/)
+- [Purchases Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
 
 {% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
@@ -55,7 +70,6 @@ Content-Type: application/json
 
 ```json
 {
-  "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
   "events": [
     {
       "external_id": "string",
@@ -66,7 +80,50 @@ Content-Type: application/json
 }
 ```
 
-You can see this example in action [in our Swagger documentation]({{ site.baseurl }}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
+You can see this example in action [in our Swagger documentation]({{site.baseurl}}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
+
+### Example Request
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "attributes": [ 
+  {
+    "external_id":"user_id",
+      "string_attribute": "sherman",
+      "boolean_attribute_1": true,
+      "integer_attribute": 25,
+      "array_attribute": ["banana", "apple"]
+    }
+    ],
+  "events": [
+    {
+      "external_id": "user_id",
+      "app_id" : "app_identifier",
+      "name": "watched_trailer",
+      "time": "2013-07-16T19:20:30+1:00"
+    }  
+    ],
+  "purchases": [
+     {
+      "external_id": "user_id",
+      "app_id": "app_identifier",
+      "product_id": "product_name",
+      "currency": "USD",
+      "price": 12.12,
+      "quantity": 6,
+      "time": "2017-05-12T18:47:12Z",
+      "properties": {
+         "integer_property": 3,
+         "string_property": "Russell",
+         "date_property": "2014-02-02T00:00:00Z"
+       } 
+     }
+  ],
+  "partner" : "partner1"
+}'
+```
 
 ### User Track Responses
 
@@ -136,6 +193,7 @@ The following status codes and associated error messages will be returned if you
 | `404 Not Found` | Unknown REST API Key (if provided). |
 | `429 Rate Limited` | Over rate limit. |
 | `5XX` | Internal server error, you should retry with exponential backoff. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ###  Importing Legacy User Data
@@ -146,9 +204,9 @@ The segmentation tool will include these users regardless of whether they have e
 
 {% endapi %}
 
-[1]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[6]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
 [16]: #not-used-app
 [17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
 [21]: http://docs.python-requests.org/en/latest/ "Requests"
@@ -156,4 +214,4 @@ The segmentation tool will include these users regardless of whether they have e
 [23]: https://rubygems.org/gems/rest-client "Rest Client"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

@@ -16,7 +16,7 @@ Substitute the API key found within the "App Settings" page (labeled "API Key" i
 
 ![API Key Location][14]
 
-Your Braze representative should have already advised you of the [correct endpoint]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
+Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
 *For US-03* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
 *For EU-01* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.fra-01.braze.eu/api/v3’})`
@@ -24,7 +24,7 @@ Your Braze representative should have already advised you of the [correct endpoi
 
 ## Enable Error Logging {#error-logging}
 
-To enable logging, you can pass the option `enableLogging: true` to your initialize function (or call `appboy.toggleAppboyLogging()` after initialization), which will cause Braze to log to the javascript console. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` before you release your page to production.
+To enable logging, you can pass the option `enableLogging: true` to your initialize function (or call `appboy.toggleAppboyLogging()` after initialization), which will cause Braze to log to the JavaScript console. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` before you release your page to production.
 
 ## Initialize Tag Managers
 
@@ -34,7 +34,7 @@ To enable logging, you can pass the option `enableLogging: true` to your initial
 
 Braze's SDK can be initialized and controlled within tags configured from Google Tag Manager.
 
-To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Tag Manager workspace.  Place Braze’s [Web SDK/javascript code from the Google Tag Manager integration instructions][13] within the tag.
+To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Tag Manager workspace.  Place Braze’s [Web SDK/JavaScript code from the Google Tag Manager integration instructions][13] within the tag.
 
 > This is instead of directly placing the snippet directly within the <head> section of your website.
 
@@ -63,7 +63,7 @@ For further instruction on this please see the appropriate section of our [Braze
 
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, just search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{ site.baseurl }}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
+For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
 ### Other Tag Managers
 
@@ -80,7 +80,7 @@ You can keep up-to-date with our latest release [following our release feed](htt
 
 These files must be updated in coordination with each other to ensure proper functionality.
 
-[1]: {{ site.baseurl }}/user_guide/introduction/
+[1]: {{site.baseurl}}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
 [3]: https://www.google.com/analytics/tag-manager/ "Google Tag Manager"
 [6]: https://github.com/Appboy/appboy-web-sdk#getting-started "Web SDK Documentation"

@@ -1,6 +1,7 @@
 ---
 nav_title: Attributes Object in Campaigns & Canvas
 permalink: "/create_send/"
+hidden: true
 ---
 
 # Attributes Object in Campaigns & Canvas
@@ -46,9 +47,9 @@ EU-01 | `https://rest.fra-01.braze.eu/campaigns/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
-  "api_key": (required, string) see App Group REST API Key,
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
@@ -65,13 +66,12 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.
 - When `send_to_existing_only` is `true`, Braze will only send the message to existing users. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that id and attributes before sending the message.
 {% endalert %}
-
 
 
 ## Send Canvas Messages Immediately via API Triggered Delivery
@@ -93,9 +93,9 @@ EU-01 | `https://rest.fra-01.braze.eu/canvas/trigger/send`
 ```json
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 
 {
-  "api_key": (required, string) see App Group REST API Key,
   "canvas_id": (required, string) your Canvas Identifier,
   "canvas_entry_properties": (optional, string) sets of key value pairs which define your Canvas Entry,
   "broadcast": (optional, boolean) defaults to false,
@@ -110,7 +110,7 @@ Content-Type: application/json
 }
 ```
 
-The Attributes Object should be populated with fields listed [here]({{ site.baseurl }}/api/endpoints/user_data/#user-attributes-object-specification).
+The Attributes Object should be populated with fields listed [here]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification).
 
 {% alert important %}
 - Either `external_user_id` or `user_alias` is required for this call. Requests must specify only one.

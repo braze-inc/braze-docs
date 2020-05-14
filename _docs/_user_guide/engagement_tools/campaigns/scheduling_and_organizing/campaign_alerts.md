@@ -45,5 +45,5 @@ The following is a sample payload for the body of a campaign alert webhook. This
 ```
 
 
-[1]: {{ site.baseurl }}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
+[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
 [2]: {% image_buster /assets/img_archive/campaign_alerts.png %}

@@ -19,14 +19,14 @@ Leverage Factual to better understand and uplevel mobile experiences through loc
 | Requirement   |Origin| Description |
 | --------------|------|------------- |
 | Engine SDK    |[Factual Engine SDK](http://developer.factual.com/engine/ios/)| In order to successfully integrate Factual's Engine SDK with Braze, ensure the Engine client has been configured properly and starts successfully. This requires confirming an API key has been acquired and the Engine SDK has been properly imported into the project. |
-|Appboy Client|[Braze SDK iOS Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/) | Also ensure the Appboy client is properly configured. |
+|Appboy Client|[Braze SDK iOS Setup]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/) | Also ensure the Appboy client is properly configured. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% tab Android %}
 | Requirement   |Origin | Description |
 | --------------|-------|------------- |
 | Engine SDK    |[Factual Engine SDK](http://developer.factual.com/engine/android/) | In order to successfully integrate Factual's Engine SDK with Braze, ensure the Engine client has been configured properly and starts successfully. This requires confirming an api key has been acquired and the Engine SDK has been properly imported into the project. |
-| Appboy Client|[Braze SDK Android Setup]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true#step-2-configure-the-braze-sdk-in-appboyxml) | Also ensure the Appboy client is properly configured. |
+| Appboy Client|[Braze SDK Android Setup]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true#step-2-configure-the-braze-sdk-in-appboyxml) | Also ensure the Appboy client is properly configured. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% endtabs %}
@@ -142,7 +142,7 @@ To test in-app and push notifications via command-line, you can send a single no
 Curl Command:
 {% raw %}
 ```
-curl -X POST -H "Content-Type: application/json" -d "{\"api_key\":\"YOUR_API_KEY\",\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 {% endraw %}
 
@@ -156,7 +156,7 @@ When a user/device meets the `engine_circumstance_braze_near` (or other specifie
 {% tabs %}
 {% tab iOS %}
 ### iOS Installation
-#### Installation via Cocoapods
+#### Installation via CocoaPods
 {% raw %}
 ```
 source 'https://github.com/Factual/cocoapods.git'

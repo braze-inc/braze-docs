@@ -11,7 +11,7 @@ page_order: 4
 Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 #### Delivery Semantics
-All in-app messages that a user is eligible for are automatically delivered to the user upon a session start event. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
+All in-app messages that a user is eligible for are automatically downloaded to the user's device/browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].
 
 #### Minimum Time Interval Between Triggers
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function.
@@ -62,29 +62,29 @@ Exit-intent in-app messages appear when visitors are about to navigate away from
 [1]: https://github.com/Appboy/appboy-web-sdk#getting-started
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html
-[4]: {{ site.baseurl }}//help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
+[4]: {{site.baseurl}}//help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
 [5]: #display-in-app
 [6]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ModalMessage.html
 [7]: https://js.appboycdn.com/web-sdk/latest/doc/ab.FullScreenMessage.html
 [8]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ControlMessage.html
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
-[10]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
 [11]: #inapp-customization
 [12]: https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
 [14]: #key-value
 [15]: http://fortawesome.github.io/Font-Awesome/
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
 [30]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
 [32]: #in-app-messages-triggered
 [33]: #original-in-app-messages-deprecated
 [35]: #styling
 [40]: #message-types
-[41]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
+[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
+[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
 [46]: #inapp-control
 [47]: {% image_buster /assets/img_archive/In-App_Full.png %}
 [48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
 [50]: https://github.com/carlsednaoui/ouibounce
 [51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[52]: {{ site.baseurl }}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages
+[52]: {{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages

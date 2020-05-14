@@ -152,16 +152,16 @@ _Sample of the Outgoing API which will be sent to the [/user/track/][10] endpoin
 }
 ```
 
-[1]: {{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
-[4]: {{ site.baseurl }}//user_guide/onboarding_with_braze/integration/
-[5]: {{ site.baseurl }}/partners/braze_currents/about/
-[6]: {{ site.baseurl }}/user_guide/data_and_analytics/braze_currents/integration/available_partners/
+[4]: {{site.baseurl}}//user_guide/onboarding_with_braze/integration/
+[5]: {{site.baseurl}}/partners/braze_currents/about/
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct
 [8]: https://dashboard.braze.com/app_settings/developer_console/
-[9]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[10]: {{ site.baseurl }}/developer_guide/rest_api/user_data/#user-track-request
+[9]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+[10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-request
 [11]: {% image_buster /assets/img/user-track-api.gif %}
 [12]: {% image_buster /assets/img/braze-looker-action.png %}
 [13]: {% image_buster /assets/img/send-looker-action.png %}

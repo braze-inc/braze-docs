@@ -13,6 +13,7 @@ module JekyllAssetPipeline
       return Sass::Engine.new(@content, syntax: :scss, load_paths: [@dirname]).render
     end
   end
+
   class CssCompressor < JekyllAssetPipeline::Compressor
     require 'yui/compressor'
 

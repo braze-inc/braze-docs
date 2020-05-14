@@ -29,4 +29,4 @@ _Please note that your push messages must fall within the guidelines of the Appl
 
 _[Learn more here][59]._
 
-[59]: {{ site.baseurl }}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
+[59]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

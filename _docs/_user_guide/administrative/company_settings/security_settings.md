@@ -48,4 +48,4 @@ Any Braze account user can set up two-factor authentication (under Account Setti
 Be sure to save your changes before leaving the page!
 
 
-[1]: {{ site.baseurl }}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/
+[1]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/

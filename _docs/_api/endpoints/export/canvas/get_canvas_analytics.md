@@ -20,11 +20,14 @@ This endpoint allows you to export time series data for a Canvas.
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20data%20series%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 
-## Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | App Group REST API Key |
 | `canvas_id` | Yes | String | Canvas API Identifier |
 | `ending_at` | Yes | DateTime (ISO 8601 string) | Date on which the data export should end - defaults to time of the request |
 | `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or starting_at are required) |
@@ -32,12 +35,22 @@ This endpoint allows you to export time series data for a Canvas.
 | `include_variant_breakdown` | No | Boolean | Whether or not to include variant stats (defaults to false) |
 | `include_step_breakdown` | No | Boolean | Whether or not to include step stats (defaults to false) |
 | `include_deleted_step_data` | No | Boolean | Whether or not to include step stats for deleted steps (defaults to false) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+
+## Example Request
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=30&ending_at=2014-12-10T23:59:59-05:00' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
 
 ## Response
 
-`Content-Type: application/json`
-
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   "data": {
     "name": (string) Canvas name,

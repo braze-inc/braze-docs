@@ -12,7 +12,7 @@ channel:
 # Twilio
 
 {% alert warning %}
-Please note that support for the Twilio Webhook Integration will be discontinued on January 31, 2020. If you wish to still access SMS services with Braze, please see our [SMS documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/). 
+Please note that support for the Twilio Webhook Integration will be discontinued on January 31, 2020. If you wish to still access SMS services with Braze, please see our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/). 
 {% endalert %}
 
 For this example, we'll configure the Braze webhook channel to send SMS and MMS to your users, via Twilio's [message sending API][20]. For your convenience, a Twilio webhook template is included on the dashboard.
@@ -56,11 +56,11 @@ Use the webhook composer to preview the request for a random user, or for a user
 ![Webhook Preview][31]
 
 [14]: https://sendgrid.com/blog/whats-webhook
-[15]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[16]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{ site.baseurl }}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
+[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
+[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
 [21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
@@ -73,20 +73,20 @@ Use the webhook composer to preview the request for a random user, or for a user
 [41]: https://en.wikipedia.org/wiki/JSON#Example
 [42]: https://dashboard-01.braze.com/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[44]: {{ site.baseurl }}/partners/messenger
+[44]: {{site.baseurl}}/partners/messenger
 [45]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup
 [46]: https://github.com/Appboy/appboy-fb-messenger-bot
 [47]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup#page_access_token
 [48]: https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable
 [49]: https://developers.facebook.com/docs/messenger-platform/guidelines
-[50]: {{ site.baseurl }}/developer_guide/platform_wide/analytics_overview/#custom-attributes
+[50]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes
 [51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[54]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[55]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[54]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
 [60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{ site.baseurl }}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
+[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
+[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}
 [64]: {% image_buster /assets/img_archive/webhook_test_send.png %}
 [65]: https://www.remerge.io/

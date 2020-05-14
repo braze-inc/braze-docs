@@ -1,6 +1,7 @@
 ---
 nav_title: AMP for Email
 permalink: /amphtml/
+hidden: true
 ---
 
 # AMP for Email
@@ -30,7 +31,7 @@ Go into your Gmail Settings and select `Enable Dynamic Content`.
 
 ## API Usage
 
-You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{ site.baseurl }}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can utilize AMP for Email using our API. When you use any of [our Messaging Endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
 
 ### Email Object Specification
 
@@ -69,7 +70,7 @@ These are what makes an AMPHTML Email... AMP'ed! Each of these elements are requ
 | Component | What It Does | Example |
 |---------|--------------|---------|
 | Identification <br> `⚡4email` or `amp4email`| Identifies your email as an AMPHTML email. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
-| Load AMP runtime <br> `<script>` | Allows AMP to fun within your email using javascript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| Load AMP runtime <br> `<script>` | Allows AMP to fun within your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
 | CSS Boilerplate | Hides content until AMP is loaded. <br> Email providers who support AMP emails enforce fierce security checks that only allow vetted AMP scripts to run in their clients| `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -120,6 +121,13 @@ Any component that requires authenticating the user must use [Google Access Toke
   {% endtab %}
 {% endtabs %}
 
+### Using amp-mustache
+
+Similar to Liquid, AMP supports a scripting language for more advanced use cases.  This component is called [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  When including any Mustache mark-up language you will need to wrap it around the [raw](https://shopify.github.io/liquid/tags/raw/) tag from Liquid.  Unfortunately Liquid (the markup language used here at Braze) and Mustache share syntax styling. 
+
+By wrapping your content around the Raw tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
+
+
 ### Metrics and Analytics
 
 | Metric | Details |
@@ -143,4 +151,4 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 If none of these conditions are causing error, reach out to [support][support].
 
  [1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"
- [support]: {{ site.baseurl }}/support_contact/
+ [support]: {{site.baseurl}}/support_contact/

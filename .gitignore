@@ -9,4 +9,5 @@ _algolia_api_key
 jekyll-algolia-*
 **/.asset_pipeline
 .jekyll-cache
-
+.vscode
+.jekyll-metadata

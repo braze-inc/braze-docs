@@ -27,23 +27,35 @@ Use the Template REST APIs to programmatically manage the email templates that y
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/SeeEmailTemplateInformation {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `api_key`  | Yes | String | Your App Group REST API Key. |
 | `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Request Components
+- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
+
+### Example URL
+`https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935`
 
 ### Example Request
-
 ```
-https://rest.iad-01.braze.com/templates/email/info?api_key=123abc-def5-3729-owod-23f9f3j30& email_template_id=759c2ad9-eefc-4af1-bde4-602630644935
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Successful Response Properties
 
 ```json
 GET https://YOUR_REST_API_URL/templates/email/info
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
   “email_template_id”: (string) your email template's API Identifier,
   “template_name”: (string) the name of your email template,

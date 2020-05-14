@@ -35,7 +35,7 @@ http {
   client_body_timeout 5;
 
   upstream docs {
-    server 127.0.0.1:5006 fail_timeout=0;
+    server unix:/tmp/nginx.socket fail_timeout=0;
   }
 
   server {
@@ -67,6 +67,7 @@ http {
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/customer_behavior_events/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/ permanent;
     rewrite ^/docs/partners/braze_currents/data_storage_integrations/transferring_data_to_redshift/$ <%= ENV['SITE_URL'] || ''%>/docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/ permanent;
     rewrite ^/docs/developer_guide/platform_integration_guides/web/in_app_messaging/$ <%= ENV['SITE_URL'] || ''%>/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/ permanent;
+    rewrite ^/docs/services_handbook/$ <%= ENV['SITE_URL'] || ''%>/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook.pdf permanent;
 
     rewrite ^/docs$ /docs/;
 

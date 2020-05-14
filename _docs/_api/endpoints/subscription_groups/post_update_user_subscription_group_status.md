@@ -33,15 +33,19 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ## Request Body
 
 ```
 Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
 {
-   "api_key": (required, string) your App Group REST API Key,
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
@@ -55,26 +59,63 @@ Content-Type: application/json
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
 \* Email subscription groups: Either `email` or `external_id` is required. 
 
-### Example Requests
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `subscription_group_id` | Yes | String | The id of your subscription group, |
+| `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
+| `external_id` | Yes* | String | The external_id of the user |
+| `email` | Yes* | String | The email address of the user |
+| `phone` | Optional | String in E.164 format | Tags must already exist. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Using Email
 ```json
 {
-  "api_key": "12345",
-  "subscription_group_id": "111-222-333",
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "email": "john@braze.com"
-  }
+  "email": "your.user@email.com"
+}
+
 ```
 
 #### Using Phone Number
 ```json
 {
-  "api_key": "12345",
-  "subscription_group_id": "111-222-333",
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "phone": "+14152342671"
-  }
+  "phone": "+12223334444"
+}
+
+```
+
+### Example Requests Email
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_state": "unsubscribed",
+  "external_id": "user123",
+  "email": "your.user@email.com"
+}
+'
+```
+
+### Example Requests SMS
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_state": "unsubscribed",
+  "external_id": "user123",
+  "phone": "+12223334444"
+}
+'
 ```
 
 ### Example Successful Response
@@ -93,4 +134,4 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 
 {% endapi %}
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

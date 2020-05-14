@@ -6,12 +6,12 @@ page_order: 20
 # Message Type Details
 
 {% alert important %}
-This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
 {% endalert %}
 
 ## Universal
 
-This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
 
 
 {% details Full-Screen %}
@@ -63,14 +63,14 @@ __Customizable Features__
 
 ## Web
 
-This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [Customization documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/customize/).
+This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 {% details Email Capture Message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
 ![Email Capture Message]({% image_buster /assets/img_archive/web-email-capture.png %})
 
->  To enable Email Capture in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+>  To enable Email Capture in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
 __Customizable Features__
 
@@ -84,17 +84,17 @@ __Customizable Features__
 
 {% details Custom HTML Message %}
 
-While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
+While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
 __JavaScript Bridge (appboyBridge)__
 
-HTML in-app messages support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following javascript methods are supported in Braze's HTML in-app messages:
+HTML in-app messages support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following JavaScript methods are supported in Braze's HTML in-app messages:
 
 {% include archive/appboyBridge.md platform="web" %}
 
 Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
 
->  To enable HTML in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+>  To enable HTML in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
 {% enddetails %}
 
@@ -116,7 +116,7 @@ __Customizable Features__
 
 # Specs
 
-This will review previous information around our in-app message creative specifications. To see the most up-to date information on our current in-app message generation, see our [Creative Specs documentation]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+This will review previous information around our in-app message creative specifications. To see the most up-to date information on our current in-app message generation, see our [Creative Specs documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 
 ## Character and Image Limits:

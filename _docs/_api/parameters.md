@@ -14,7 +14,7 @@ platform:
 
 glossaries:
   - name: App Group REST API Key
-    description: The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request. It can be found in the Developer Console section of the Braze dashboard.
+    description: The `api_key` indicates the app title with which the data in this request is associated and authenticates the requester as someone who is allowed to send messages to the app. It must be included with every request as a HTTP Authorization header. It can be found in the Developer Console section of the Braze dashboard.
     field: "api_key"
   - name: App Identifier
     description: If you want to send push to a set of device tokens (instead of users), you need to indicate on behalf of which specific app you are messaging. In that case, you will provide the appropriate App Identifier in a Tokens Object. It can be found in the Developer Console section of the Braze dashboard.

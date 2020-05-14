@@ -5,7 +5,7 @@ platform:
   - Android
   - Web
 subplatform: Testing and More
-page_order: 4
+page_order: 1
 tools:
   - Campaigns
   - Canvas
@@ -54,7 +54,7 @@ Additionally, in the 'Target Users' section of your campaign composition, you ca
 
 ![Total Limit Example][2]
 
-Using the filters in this way, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
+By using the max user cap checkbox, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
 #### Setting a Max Impression Cap
 
@@ -64,7 +64,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Delivery Speed Rate-Limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per minute rate limit for sending messages. While targeting users during campaign creation, you can click into Advanced Options and select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute).
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute). Note that non rate-limited campaigns may exceed these delivery limits.
 
 ![Per Minute Rate Limit Example][3]
 
@@ -138,8 +138,8 @@ Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Step
 [2]: {% image_buster /assets/img_archive/total_limit.png %}
 [3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
 [14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{ site.baseurl }}/developer_guide/rest_api/messaging/#messaging
-[16]: {{ site.baseurl }}/developer_guide/rest_api/api_campaigns/#api-campaigns
+[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
+[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
 [18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-[20]: {{ site.baseurl }}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
+[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
+[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

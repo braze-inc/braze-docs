@@ -13,7 +13,7 @@ page_type: partner
 
 > [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with braze to support your attribution needs.
 
-Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{ site.baseurl }}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
+Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
 
 ## Integration
 
@@ -48,6 +48,6 @@ Once Braze receives attribution data from Branch, the status connection indicato
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
 
-[5]: {{ site.baseurl }}/developer_guide/rest_api/basics/#api-limits
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"
+[5]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-limits
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"

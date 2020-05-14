@@ -107,7 +107,7 @@ You must insert a legally compliant footer with an unsubscribe link at the botto
 
 {% raw %}
 
-Braze provides the ability to set an app group wide custom email footer which you can template into every email using the ``{{ ${email_footer} }}`` attribute. In this way, you do not have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in every email campaign that starts after the changes are saved. Remember that compliance with the [CAN-SPAM Act of 2003][8] requires you to include a physical address for your company and an unsubscribe link in your emails. It is your responsibility to make sure that your custom footer meets those requirements.
+Braze provides the ability to set an app group wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` attribute. In this way, you do not have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in every email campaign that starts after the changes are saved. Remember that compliance with the [CAN-SPAM Act of 2003][8] requires you to include a physical address for your company and an unsubscribe link in your emails. It is your responsibility to make sure that your custom footer meets those requirements.
 
 To create or edit your custom footer, go to the Manage App Group page under App Settings, and select the Email Settings tab.
 
@@ -178,7 +178,7 @@ Braze supports three targeting states:
 - All users, including those who have unsubscribed.
 
 {% alert important %}
-It is your responsibility to comply with any applicable [spam laws]({{ site.baseurl }}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
+It is your responsibility to comply with any applicable [spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations) when using these targeting settings.
 {% endalert %}
 
 ![Campaign Targeting Subscription UI][17]
@@ -199,9 +199,9 @@ This can be useful - for example, if you want to target users who have neither o
 [7]: #segmenting-by-user-subscriptions
 [10]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[13]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[14]: {{ site.baseurl }}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/#managing-notification-subscription-statuses
+[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/#managing-notification-subscription-statuses
 [16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}
@@ -211,9 +211,9 @@ This can be useful - for example, if you want to target users who have neither o
 [22]: {% image_buster /assets/img_archive/no_footer_test.png %}
 [23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
 [24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}
-[25]: {{ site.baseurl }}/developer_guide/rest_api/subscription_group_api/
+[25]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
 [26]: {% image_buster /assets/img/sub_group_create.png %}
 [27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{ site.baseurl }}/developer_guide/rest_api/subscription_group_api/
+[28]: {{site.baseurl}}/developer_guide/rest_api/subscription_group_api/
 [29]: {% image_buster /assets/img/user-sub-state-export.png %}
 [30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}

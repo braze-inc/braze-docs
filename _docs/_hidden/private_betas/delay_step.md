@@ -1,6 +1,7 @@
 ---
 nav_title: Canvas Delay Step
 permalink: "/delay_step/"
+hidden: true
 ---
 
 # Canvas Delay Step

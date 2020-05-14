@@ -44,7 +44,7 @@ If an email is bounced, Braze marks the email as invalid and the subscription st
 - Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
 - Div tags should not be used as most email clients do not support their use. Instead, use nested tables.
-- Don’t use Javascript because it does not work with any ESP.
+- Don’t use JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
 
 ## Disallowed HTML Tags

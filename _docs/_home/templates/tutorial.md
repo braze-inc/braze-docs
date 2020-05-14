@@ -50,7 +50,7 @@ A general walkthrough of an instructional concept. Should contain PRACTICAL KNOW
 
 This is what you'll be accomplishing in this step. Here is how you can reproduce it.
 
-Make sure you [link to other references as you need them]({{ site.baseurl }}/home/templates/reference_video/).
+Make sure you [link to other references as you need them]({{site.baseurl}}/home/templates/reference_video/).
 
 ### Code Sample
 
@@ -115,4 +115,4 @@ If you want to learn more about things that were discussed in the article, check
 
 If this article didn't help, leave feedback below or [open a support ticket][support]!
 
-[support]: {{ site.baseurl }}/support_contact/
+[support]: {{site.baseurl}}/support_contact/

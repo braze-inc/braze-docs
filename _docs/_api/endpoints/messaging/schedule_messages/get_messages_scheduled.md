@@ -23,25 +23,32 @@ You can view a JSON list of upcoming and scheduled Campaigns and Canvases using 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/GetUpcomingScheduledCampaignsAndCanvases {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
-## Request Parameters
+{% alert important %}
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
-```
-Content-Type: application/json
-```
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `api_key` | Yes | String | See App Group REST API Key in Parameter Definitions. |
 | `end_time` | Yes | String in ISO 8601 format | End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Example URL
+
+`https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00`
 
 ### Example Request
-
-```json
-https://rest.iad-01.braze.com/messages/scheduled_broadcasts?api_key=X&end_time=2017-09-01T00:00:00-04:00
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
 ## Response
+
 ```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "scheduled_broadcasts": [
       # Example Canvas

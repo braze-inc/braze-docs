@@ -16,11 +16,11 @@ In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/me
 - [Video](#video) - add video to a custom in-app message.
 
 {% alert tip %}
-Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
+Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
 
 ## HTML In-App Messages {#custom-html-messages}
-While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and Javascript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
+While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
 
 - Custom Fonts and Styles
 - Videos
@@ -29,7 +29,7 @@ While Braze’s out-of-the-box in-app messages can be customized in a variety of
 - Interactive Components
 - Custom Animations
 
-Custom HTML messages can use the [Javascript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more!
+Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more!
 
 Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
@@ -40,9 +40,9 @@ To enable HTML in-app messages in the Web SDK, your SDK integration must supply 
 
 ### JavaScript Bridge {#javascript-bridge}
 
-HTML in-app messages for Web, Android, and iOS support a Javascript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
+HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
-For example, to log a custom attribute, custom event, and then close the message, you could use the following Javascript within your HTML in-app message:
+For example, to log a custom attribute, custom event, and then close the message, you could use the following JavaScript within your HTML in-app message:
 
 ```html
 <button id="button">Set Favorite Color</button>
@@ -67,7 +67,7 @@ window.addEventListener("ab.BridgeReady", function(){
 ```
 #### appboyBridge methods
 
-The following javascript methods are supported within Braze's HTML in-app messages:
+The following JavaScript methods are supported within Braze's HTML in-app messages:
 
 <style>
 /* makes first column wider */
@@ -87,7 +87,7 @@ The following javascript methods are supported within Braze's HTML in-app messag
 
 ### Link-Based Actions
 
-In addition to custom javascript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all **case sensitive**.
+In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all **case sensitive**.
 
 #### Button Click Tracking
 
@@ -182,7 +182,7 @@ Click __Save Color Profile__ on the bottom right when you’re finished.
 
 #### Managing Color Profiles
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 ### CSS Template
 
@@ -242,7 +242,7 @@ As you can see, you can edit everything from the background color to font size a
 
 #### Managing CSS Templates
 
-You can also [duplicate]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{ site.baseurl }}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
 
 
 ## Video {#video}

@@ -52,6 +52,6 @@ You can use the Engagement Tab to verify whether a certain user received a campa
 [8]: {% image_buster /assets/img_archive/User_Profile2.png %}
 [9]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
 [11]: {% image_buster /assets/img_archive/User_Profile_Social.png %}
-[12]: {{ site.baseurl }}/user_guide/data_and_analytics/user_data_collection/overview/
-[13]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
+[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/
+[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [14]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
