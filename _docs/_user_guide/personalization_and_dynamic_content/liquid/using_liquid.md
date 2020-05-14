@@ -56,7 +56,9 @@ If you're using a custom tag, you can copy and paste the tag into whatever messa
 
 {% alert note %}
 
-If you choose to use Liquid in your Email messages, be sure to insert it using the HTML editor, as opposed to the classic editor. The Classic Editor may parse the liquid as plaintext.
+If you choose to use Liquid in your Email messages, be sure to: 
+1. Insert it using the HTML editor as opposed to the classic editor. The Classic Editor may parse the liquid as plaintext.
+2. Place Liquid code within the `<body>` tag only. Placing it outside this tag may cause inconsistent rendering upon delivery. 
 
 {% endalert %}
 

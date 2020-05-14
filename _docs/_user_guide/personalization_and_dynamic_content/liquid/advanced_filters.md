@@ -15,7 +15,7 @@ page_order: 4
 `sha2` | returns sha2 encoded string | `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba8a8977b57e40fcb77d1a7a28b26cba62591204 |
 `base64` | encodes string into base64 | `{{'blah' | base64_encode}}` | YmxhaA== |
 `hmac_sha1` | returns hmac-sha1 encoded string | `{{'hey' | hmac_sha1: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## URL Filters
 
@@ -24,7 +24,7 @@ page_order: 4
 | `url_escape` | identifies all characters in a string that are not allowed in URLS, and replaces the characters with their escaped variants | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
 | `url_param_escape` | replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | encodes a string that is url friendly | `{{ 'google search' | url_encode }}` | google+search |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Property Accessor Filter
 
@@ -46,7 +46,7 @@ Additionally, the property accessor filter allows you to template a custom attri
 | filter name | filter description | example input | example output |
 |---|---|---|---|
 | `number_with_delimiter` | Formats a number with commas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## JSON Escape / String Escape Filter
 

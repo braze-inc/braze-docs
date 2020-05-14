@@ -19,7 +19,7 @@ Note that if an Email link contains liquid or personalization, Braze __cannot__ 
 
 ## Creating a Link Template
 
-On the Braze dashboard, Link Templates are found in the Templates & Media section. Dashboard users can create an unlimited number of Link Templates to support their various needs.
+On the Braze dashboard, Link Templates are found in the Templates & Media section. Dashboard users can create an unlimited number of Link Templates to support their various needs. Note that when using Link Templates and [Liquid][4], Liquid code must only be added within the body tag to ensure consistent rendering. 
 
 There are two types of Link Templates a user can create.
 
@@ -63,3 +63,4 @@ Once you have applied the Link Template, you can send yourself a test email to v
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
 [3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
+[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/

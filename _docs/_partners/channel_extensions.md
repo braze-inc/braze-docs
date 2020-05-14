@@ -17,11 +17,11 @@ valid_partner_list:
     title: Deeplinking
     url: /docs/partners/channel_extensions/deep_linking/branch_for_deeplinking/
   - name: Stensul
-    url: /docs/partners/channel_extensions/email_orchestration/stensul/
+    url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stensul/
   - name: Stripo
-    url: /docs/partners/channel_extensions/email_orchestration/stripo/
+    url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stripo/
   - name: Taxi for Email
-    url: /docs/partners/channel_extensions/email_orchestration/taxi_for_email/
+    url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/taxi_for_email/
   - name: Transifex
     url: /docs/partners/channel_extensions/localization/transifex/
   - name: Talon.One

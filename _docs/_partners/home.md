@@ -61,11 +61,11 @@ valid_partner_list:
 - name: Apteligent
   url: /docs/partners/insights/crash_analytics/apteligent/
 - name: Taxi for Email
-  url: /docs/partners/channel_extensions/email_orchestration/taxi_for_email/
+  url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/taxi_for_email/
 - name: Stripo
-  url: /docs/partners/channel_extensions/email_orchestration/Stripo/
+  url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stripo/
 - name: Stensul
-  url: /docs/partners/channel_extensions/email_orchestration/stensul/
+  url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stensul/
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
   alt:
