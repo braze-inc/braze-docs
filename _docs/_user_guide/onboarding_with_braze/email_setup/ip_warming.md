@@ -35,7 +35,7 @@ All of __the above consequences are entirely avoidable__ if you follow the follo
 5. __Ensure that your email list is clean, and doesn't have old or un-verified emails.__ Ensuring that you're both [CASL and CAN-SPAM][40] compliant is ideal.
 6. __Carefully monitor your Sender Reputation while you conduct the IP warming process.__ The following metrics are important:
   - Bounce Rates - If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our ["Keep It Clean: The Importance of Email List Hygiene" article][43]. Additionally you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
-  - Spam Reports - If any campaign is reported as spam at a rate of more than 5-10%, you should re-evaluate the content you're sending, and ensure that it is targeted to an interested audience, and is appropriately worded to pique their interest.
+  - Spam Reports - If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, and ensure that it is targeted to an interested audience, and is appropriately worded to pique their interest.
   - Sender Reputation Scores - The following services are useful for checking how your reputation is progressing: [ReturnPath's SenderScore][44] & Cisco's IronPort [SenderBase][45]
 
 ## IP Warming Schedules
