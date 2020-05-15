@@ -39,13 +39,13 @@ Examples of data to share from PassKit includes:
 
 Once the data is passed into Braze, you can build audiences, personalize content via liquid, and trigger campaigns or Cavanses once these actions have been performed.
 
-### PassKit Integrations
+### Connect PassKit to Braze
 
 To pass data from PassKit, please ensure that you have set your Braze external ID as PassKit’s externalId.
 
-1. Within Settings, under Integrations within your PassKit Pass Project or Program click Connect under the Braze Tab.
+1. Within Settings, under Integrations within your PassKit Pass Project or Program click Connect under the Braze Tab.<br>![Settings Button][5]{: style="max-width:60%"}
 2. Fill out your Braze API Key, Endpoint URL, and provide a name for your connector.
-3. Toggle Enable Integration, and whichever events you want in Braze to trigger or personalize your messages with.
+3. Toggle Enable Integration, and whichever events you want in Braze to trigger or personalize your messages with.<br>![Connect to Braze][4]{: style="max-width:50%"}
 
 ## Create Pass using a SmartPass Link
 
@@ -106,9 +106,9 @@ For a detailed description of available fields, have a look at:<br>
 
 First, create and name a new content block by navigating to `Templates & Media` within the Braze Dashboard. Here you can find the Content Block Library tab, select `Create Content Block` to get started.
 
-While creating this content block you must represent the payload as a {% raw %}`{{passData}}`{% endraw %} variable. 
+Next, you must define your Content Block Liquid Tag. After saving this content block, this liquid tag can be referenced when composing a message. In this example, we have assigned the liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-The first code snippet you must add to your content block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+Within this content block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your content block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
@@ -117,7 +117,7 @@ The first code snippet you must add to your content block captures a Base64 enco
 
 #### Step 3: Create Your Encryption Signature using a SHA1 HMAC Hash
 
-You will be creating your encryption signature using a SHA1 HMAC hash of the project URL and the payload. 
+Mext, you will be creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
 
 The second code snippet you must add to your content block captures the URL to be used for hashing.
 {% raw %}
@@ -142,7 +142,7 @@ Finally, append the signature to the full URL using the fifth code snippet, show
 
 #### Step 4: Print Your URL
 
-Lastly, make sure you call your final URL so that it prints your SmartPass URL in whatever messaging channel you use.
+Lastly, make sure you call your final URL so that it prints your SmartPass URL within your message.
 {% raw %}
 ```liquid
 {{longURL}}
@@ -164,36 +164,40 @@ At this point you will have created a content block that looks something like th
 
 In this example, UTM parameters have been added to track the source of these installs back to Braze and this campaign.
 
+{% alert important %}
+Remember to save your content block before leaving the page!
+{% endalert %}
+
 #### Step 5: Putting it All Together
 
 Once this content block has been made it can be reused again in the future. 
 
 You may notice there are two variables left undefined in the above content block.<br> 
-{% raw %}`{{passData}}`{% endraw %} - your JSON pass data payload defined in Step 1. <br>
-{% raw %}`{{projectUrl}}`{% endraw %} - your project or program's URL which you find on the distribution tab of your Passkit project.
+{% raw %}`{{passData}}`{% endraw %} - Your JSON pass data payload defined in [step 1](#passkit-integrations) <br>
+{% raw %}`{{projectUrl}}`{% endraw %} - Your project or program's URL which you find on the distribution tab of your Passkit project.
 
 This decision was purposeful and ensures the reusability of the content block. Because these variables are only referenced, not created within the content block, it allows for these variables to change without remaking the content block. For example, maybe you want to change the introductory offer to include more initial points in your loyalty program, or perhaps you want to create a secondary member card or coupon. These scenarios would require different Passkit projectURLs or different pass payload which you would define per campaign in Braze.  
 
 ### Composing the Message Body
 
 In your message body, you’ll want to capture both of these variables and then call your content block. 
-Capture your minified JSON payload from step 1 above:
+Capture your minified JSON payload from [step 1](#passkit-integrations) above:
 
-1. Assign the Project URL
+__1.__ Assign the Project URL
 {% raw %}
 ```liquid
 {% assign projectUrl = "https://pub1.pskt.io/c/ww0jir" %}
 ```
 {% endraw %}
 
-2. Capture the JSON created in Step 1.
+__2.__ Capture the JSON created in Step 1.
 {% raw %}
 ```liquid
 {% capture passData %}{"members.member.externalId": "{{${user_id}}}","members.member.points": "100","members.tier.name": "current_customer","person.displayName": "{{${first_name}}} {{${last_name}}}","person.externalId": "{{${user_id}}}","universal.expiryDate": "{{ "now" | date: "%s" | plus: 31622400 | date: "%FT%TZ" }}"}{% endcapture %}
 ```
 {% endraw %}
 
-3. Reference the content block you just made. 
+__3.__ Reference the content block you just made. 
 {% raw %}
 ```liquid
 {{content_block.${passkit_SmartPass_url}}}
@@ -304,3 +308,5 @@ UNREDEEMED
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}
 [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
+[4]: {% image_buster /assets/img/passkit/passkit4.png %}
+[5]: {% image_buster /assets/img/passkit/passkit5.png %}
