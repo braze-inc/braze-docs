@@ -34,6 +34,8 @@ Once your new Braze App has been created, you will be shown an `API Key`, and a 
 
 Using the credentials from your Huawei Developer account, enter the `Huawei App ID` and `Huawei App Secret` within your newly created Huawei Braze App. When you're done, save your changes.
 
+![Huawei Dashboard Credentials][12]
+
 ## 4. Integrate the Braze Android SDK into your App
 
 _hocus pocus julian's focus_
@@ -90,3 +92,4 @@ Once you campaign has been launched, you will see analytics for your campaign or
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#results-data-push
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
