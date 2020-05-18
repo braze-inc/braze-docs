@@ -15,21 +15,21 @@ This partnership is in early access beta. All features may not perform as exactl
 
 > PassKit enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customer's experience. Easily create, manage, distribute, and analyze the performance of digital coupons, loyalty cards, membership cards, tickets, and much more; without your customers needing another app.
 
-Deliver seamless, connected online to offline customer experiences with Braze and PassKit. Increase engagement with and measure the engagement of your online campaigns by instantly delivering Apple Wallet and Google Pay passes. Analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet.
+Deliver seamless, connected online to offline customer experiences with Braze and PassKit. Increase and measure the engagement of your online campaigns by instantly delivering Apple Wallet and Google Pay passes. Analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet.
 
 ## Pre-Requisites
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | PassKit Account | PassKit | You will need to have a PassKit account and a PassKit account manager.|
-| userDefinedID | Client | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the userDefinedID. |
+| userDefinedID | Client | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the userDefinedID. This userDefinedID will be used when making API calls to the PassKit Endpoints. |
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. |
-| [Braze REST Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) | Braze | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| [Braze REST Endpoint][6] | Braze | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## API Integration
 
-To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard  you can opt to pass data into Braze through Braze’s [Users Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint). 
+To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard  you can opt to pass data into Braze through Braze’s [Users Track Endpoint][7]. 
 
 Examples of data to share from PassKit includes:
 - __Pass Created__: when a customer clicks on a pass link and is first shown a pass.
@@ -55,16 +55,16 @@ Within Braze, you can setup a SmartPass Link to generate a unique URL for your c
 
 | Requirement | Origin | Description | Example | 
 | ----------- | ------ | ----------- | ------- |
-| __PassKit URL__ | PassKit | Your PassKit URL is a unique URL for your passkit program.  <br><br>Each program has a unique URL, and you can find it under the Distribution tab of your PassKit Project. | https://pub1.pskt.io/c/ww0jir |
-| __PassKit Secret__| PassKit | Along with the URL, you will need to have the PassKit Key for this program handy.  <br><br>It is found on the same page as your URL. | 5AuNonZoFHejGXmHNATz4l |
-| __Program (or Project) ID__| PassKit | Your PassKit Program ID will be required to create the SmartPass URL. <br><br>You can find it under the Settings tab of your project or program. | 1x3j9vWjSGx2UwUblYlcue |
+| __PassKit URL__ | PassKit | Your PassKit URL is a unique URL for your passkit program.  <br><br>Each program has a unique URL, and you can find it under the __Distribution__ tab of your PassKit Program/Project. | https://pub1.pskt.io/c/ww0jir |
+| __PassKit Secret__| PassKit | Along with the URL, you will need to have the PassKit Key for this program handy.  <br><br>This can be found on the same page as your PassKit URL. | 5AuNonZoFHejGXmHNATz4l |
+| __Program (or Project) ID__| PassKit | Your PassKit Program ID will be required to create the SmartPass URL. <br><br>You can find it under the __Settings__ tab of your project or program. | 1x3j9vWjSGx2UwUblYlcue |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### PassKit Integrations
 
-For more information on creating encrypted SmartPass Links, check out this [PassKit Article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links ).
+For more information on creating encrypted SmartPass Links, check out this [PassKit Article][8].
 
-To begin creating a SmartPass URL, you should create this encryption within a Braze [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks). Creating it this way will allow you to re-use the block for future passes and coupons. 
+To begin creating a SmartPass URL, you should create this encryption within a Braze [Content Block][9]. Creating it this way will allow you to re-use the block for future passes and coupons. 
 
 #### Step 1: Define your Pass Data Payload
 First, you must define the coupon or member payload. 
@@ -73,16 +73,16 @@ Pass Data Payload Components
 
 | Component | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
-|`person.externalId​` | Required | String | Set as your Braze External ID, this is critical for the callbacks from PassKit back to Braze to work. |
-| `members.member.externalId​` | Optional | String | Set as your Braze External ID, you may use your External ID to update the membership pass. |
+|`person.externalId​` | Required | String | Set as the Braze External ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
+| `members.member.externalId​` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the mebership program.|
+| members.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 .....In this case, all fields are strings. Ensure the expiryDate is a valid ISO8601 date.
 
-__What is the Difference?__<br>
-The difference between​ `person.externalId​` and ​`members.member.externalId​`, is that the latter is enforced as unique within the Membership Program.
-
-The ​`person.externalId​` field is purely used by the Braze integration to make the callbacks to Braze and is not enforced as unique; this allows a Braze user to have coupons for multiple offers in one campaign.
+For a detailed description of available fields, have a look at:<br>
+[Member Enrol PassKit Page][10]<br>
+[Coupon Create PassKit Page][11]
 
 Example Payload
 {% raw %}
@@ -98,17 +98,13 @@ Example Payload
 ```
 {% endraw %}
 
-For a detailed description of available fields, have a look at:<br>
-[Member Enrol PassKit Page](https://docs.passkit.io/protocols/member/#operation/enrolMember)<br>
-[Coupon Create PassKit Page](https://docs.passkit.io/protocols/coupon/#operation/createCoupon)
-
 #### Step 2: Create and Encode an Undefined Payload Variable
 
 First, create and name a new content block by navigating to `Templates & Media` within the Braze Dashboard. Here you can find the Content Block Library tab, select `Create Content Block` to get started.
 
-Next, you must define your Content Block Liquid Tag. After saving this content block, this liquid tag can be referenced when composing a message. In this example, we have assigned the liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
+Next, you must define your __Content Block Liquid Tag__. After saving this content block, this liquid tag can now be referenced when composing messages. In this example, we have assigned the liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Within this content block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your content block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+Within this content block, we will not directly include the payload written above, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your content block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
@@ -117,7 +113,7 @@ Within this content block, we will not directly include the payload, but referen
 
 #### Step 3: Create Your Encryption Signature using a SHA1 HMAC Hash
 
-Mext, you will be creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
+Next, you will be creating your encryption signature using a [SHA1 HMAC][16] hash of the project URL and the payload. 
 
 The second code snippet you must add to your content block captures the URL to be used for hashing.
 {% raw %}
@@ -147,7 +143,10 @@ Lastly, make sure you call your final URL so that it prints your SmartPass URL w
 ```liquid
 {{longURL}}
 ```
+{% endraw %}
+
 At this point you will have created a content block that looks something like this:
+
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passdata|base64_encode}}{% endcapture %}
@@ -176,7 +175,9 @@ You may notice there are two variables left undefined in the above content block
 {% raw %}`{{passData}}`{% endraw %} - Your JSON pass data payload defined in [step 1](#passkit-integrations) <br>
 {% raw %}`{{projectUrl}}`{% endraw %} - Your project or program's URL which you find on the distribution tab of your Passkit project.
 
-This decision was purposeful and ensures the reusability of the content block. Because these variables are only referenced, not created within the content block, it allows for these variables to change without remaking the content block. For example, maybe you want to change the introductory offer to include more initial points in your loyalty program, or perhaps you want to create a secondary member card or coupon. These scenarios would require different Passkit projectURLs or different pass payload which you would define per campaign in Braze.  
+This decision was purposeful and ensures the reusability of the content block. Because these variables are only referenced, not created within the content block, it allows for these variables to change without remaking the content block. 
+
+For example, maybe you want to change the introductory offer to include more initial points in your loyalty program, or perhaps you want to create a secondary member card or coupon. These scenarios would require different Passkit projectURLs or different pass payload which you would define per campaign in Braze.  
 
 ### Composing the Message Body
 
@@ -215,9 +216,9 @@ If using SMS to distribute this URL, you may want to run it through a link short
 ## Update Pass Using the PassKit Webhook
 
 Within Braze, you can setup a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the links below for information on useful PassKit Endpoints. 
-- [Member Projects](https://docs.passkit.io/protocols/member/)
-- [Coupon Projects](https://docs.passkit.io/protocols/coupon/)
-- [Flights Projects](https://docs.passkit.io/protocols/boarding/)
+- [Member Projects][12]
+- [Coupon Projects][13]
+- [Flights Projects][14]
 
 ### Prerequisites
 Before you get started, here are the common JSON Payload Parameters that you can include within your Create and Update webhooks to PassKit.
@@ -225,8 +226,8 @@ Before you get started, here are the common JSON Payload Parameters that you can
 | Data | Type | Description |
 | ---- | ---- | ----------- |
 | `externalId` | String | This allows a unique Id to be added to the pass record that can provide compatibility with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via userDefinedId  and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}{{${user_id}}}{% endraw %} |
-| `campaignId` | String | This is the ID for the campaign template you created in PassKit. To find this, head to the settings tab in your PassKit pass project. |
-| `expiryDate` | ISO8601 DateTime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
+| `campaignId` | String | This is the ID for the campaign template you created in PassKit. To find this, head to the __Settings__ tab in your PassKit pass project. |
+| `expiryDate` | IO8601 DateTime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
 | `status` | String | This is the current status of a coupon, such as “REDEEMED” or “UNREDEEMED”. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -256,11 +257,15 @@ To set up the webhook, fill out the details of the new event within the Request 
 
 | HTTP Header       | Definition       |
 | ----------------  | ---------------- |
-| Authorization  | Basic [INSERT_YOUR_LONG_LIVED_TOKEN] |
+| Authorization  | Bearer [INSERT_YOUR_LONG_LIVED_TOKEN] |
 | Content-Type  | application/json |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Ensure that your `HTTP Method` is set to **PUT**.
+
+__Retrieve Your PassKit Long Lived Token__
+
+To retrieve your token, navigate to your PassKit Project/Program within the PassKit Admit Account. From here, go to Integrations within Settings, and select "Love Lived Integration Token" from the left hand side bar. Here, you find your long lived token. 
 
 #### Step 4: Preview Your Request
 
@@ -274,7 +279,10 @@ Remember to save your template before leaving the page!
 
 ## Retrieve Pass Details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users’ pass metadata via Braze’s Connected Content in order to incorporate personalized pass details within your messaging campaigns.
+In addition to creating and updating passes, you can also retrieve your users’ pass metadata via Braze’s Connected Content in order to incorporate personalized pass details within your messaging campaigns. For more information on how to run connected content calls, check out our [documentation][15]. 
+
+__PassKit Connected Content Call__
+
 {% raw %}
 ```liquid
 {% connected_content  https://api-pub1.passkit.io/coupon/singleUse/coupon/externalId/{{${user_id}}} :headers {"Authorization": "Bearer [INSERT_YOUR_LONG_LIVED_TOKEN]","Content-Type": "application/json"} :save passes %}
@@ -283,11 +291,12 @@ In addition to creating and updating passes, you can also retrieve your users’
 ```
 {% endraw %}
 
-Liquid Examples Response:
+__Liquid Example Responses:__
 
-{% raw %}`{{passes.redemptionDetails}}`{% endraw %} 
+{% tabs local %}
+{% tab {{passes.redemptionDetails}} %}
 
-```
+```json
 {
     "redemptionDate": null,
     "redemptionCode": "",
@@ -296,17 +305,32 @@ Liquid Examples Response:
     "alt": 0,
     "redemptionSource": "",
     "redemptionReference": "",
-   "transactionReference": "",
-   "transactionAmount": 0
+    "transactionReference": "",
+    "transactionAmount": 0
 }
 ```
 
-{% raw %}`{{passes.status}}` {% endraw %} 
-
+{% endtab %}
+{% tab {{passes.status}} %}
+```
 UNREDEEMED 
+```
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/passkit/passkit1.png %}
 [2]: {% image_buster /assets/img/passkit/passkit2.png %}
 [3]: https://dev.bitly.com/v4/#operation/createFullBitlink
 [4]: {% image_buster /assets/img/passkit/passkit4.png %}
 [5]: {% image_buster /assets/img/passkit/passkit5.png %}
+[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
+[7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
+[8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
+[9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
+[10]: https://docs.passkit.io/protocols/member/#operation/enrolMember
+[11]: https://docs.passkit.io/protocols/coupon/#operation/createCoupon
+[12]: https://docs.passkit.io/protocols/member/
+[13]: https://docs.passkit.io/protocols/coupon/
+[14]: https://docs.passkit.io/protocols/boarding/
+[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
+[16]: https://en.wikipedia.org/wiki/HMAC
