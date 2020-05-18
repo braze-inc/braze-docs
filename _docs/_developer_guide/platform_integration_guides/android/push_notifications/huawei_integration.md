@@ -1,7 +1,7 @@
 ---
 nav_title: Huawei Integration
 platform: Android
-page_order: 1
+page_order: 9
 
 ---
 # Huawei Integration
@@ -36,13 +36,76 @@ Using the credentials from your Huawei Developer account, enter the `Huawei App 
 
 ![Huawei Dashboard Credentials][12]
 
-## 4. Integrate the Braze Android SDK into your App
+## 4. Integrate the Huawei Messaging SDK into your App
 
-_hocus pocus julian's focus_
+Huawei has provided an [Android Integration codelab][13] detailing how to integrate the Huawei Messaging Service into your application.
+
+After completing those steps, you will need to create a custom [Huawei Message Service][14] to obtain push tokens and forward messages to the Braze SDK.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomPushService extends HmsMessageService {
+  @Override
+  public void onNewToken(String s) {
+    super.onNewToken(s);
+    String appId = AGConnectServicesConfig.fromContext(this.getApplicationContext()).getString("client/app_id");
+    try {
+      String pushToken = HmsInstanceId.getInstance(this.getApplicationContext()).getToken(appId, "HCM");
+      Appboy.getInstance(this.getApplicationContext()).registerAppboyPushMessages(pushToken);
+    } catch (ApiException e) {}
+  }
+
+  @Override
+  public void onMessageReceived(RemoteMessage remoteMessage) {
+    super.onMessageReceived(remoteMessage);
+    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getData())) {
+      // Braze has handled the Huawei push notification
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomPushService: HmsMessageService() {
+  override fun onNewToken(token: String?) {
+    super.onNewToken(token)
+    val appId = AGConnectServicesConfig.fromContext(applicationContext).getString("client/app_id")
+    val pushToken = HmsInstanceId.getInstance(applicationContext).getToken(appId, "HCM")
+    Appboy.getInstance(applicationContext).registerAppboyPushMessages(token!!)
+  }
+
+  override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {
+    super.onMessageReceived(hmsRemoteMessage)
+    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.data)) {
+      // Braze has handled the Huawei push notification
+    }
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+After adding your custom push service, add the following to your `AndroidManifest.xml`.
+
+```xml
+<service
+  android:name="package.of.your.CustomPushService"
+  android:exported="false">
+  <intent-filter>
+    <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+  </intent-filter>
+</service>
+```
 
 ## 5. Sending Huawei Push
 
-At this point, you've created a new Huawei Android app in the Braze Dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze SDK into your app.
+At this point, you've created a new Huawei Android app in the Braze Dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 
 Next, we can test out the integration by testing out a new Push campaign in Braze.
 
@@ -93,3 +156,5 @@ Once you campaign has been launched, you will see analytics for your campaign or
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#results-data-push
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
+[13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html
+[14]: https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls
