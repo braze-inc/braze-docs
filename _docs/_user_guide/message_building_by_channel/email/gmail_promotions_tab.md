@@ -3,6 +3,7 @@ nav_title: Gmail Promotions Tab
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 7
+description: "Gmail is updating [the mobile Promotions tab to allow marketers to send more information via annotations in a ‘card’, rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product."
 ---
 
 # Gmail Promotion Tool

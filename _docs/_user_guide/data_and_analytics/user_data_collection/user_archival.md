@@ -1,6 +1,7 @@
 ---
 nav_title: User Archival Definitions
 page_order: 0
+description: "This reference article covers user archival definitions."
 ---
 # User Archival Definitions
 

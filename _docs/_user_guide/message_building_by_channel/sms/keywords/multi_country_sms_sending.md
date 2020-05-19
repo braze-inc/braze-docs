@@ -1,7 +1,7 @@
 ---
 nav_title: "Multi-Country SMS Sending"
 page_order: 3
-description: "description"
+description: "This reference article covers multi-country sending best practices."
 page_type: reference
 tool:
   - Dashboard

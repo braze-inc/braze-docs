@@ -4,6 +4,7 @@ page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always [test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) before launching. Check out the individual message type's Creative Specs or the global Creative Details below."
+description: "This in-app messaging landing page is a hub for all things creative."
 
 guide_featured_title: "Specifications for Each Message Type"
 

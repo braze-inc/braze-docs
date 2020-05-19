@@ -1,6 +1,7 @@
 ---
 nav_title: Collection Use Case
 page_order: 3
+description: "This reference article covers a user data collection use case example."
 ---
 
 # Taxi/Ride-Sharing App Use Case

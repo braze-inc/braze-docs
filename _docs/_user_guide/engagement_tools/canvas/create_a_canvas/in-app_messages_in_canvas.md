@@ -3,6 +3,7 @@ nav_title: In-App Messages In Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 4
+description: "In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages."
 ---
 
 # In-App Messages In Canvas

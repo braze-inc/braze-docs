@@ -4,6 +4,7 @@ page_order: 1
 layout: dev_guide
 guide_top_header: "Creating a Canvas"
 guide_top_text: "The following articles will help you create and launch a multi-dimensional Canvas."
+description: "The following articles will help you create and launch a multi-dimensional Canvas."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
