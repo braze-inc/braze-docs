@@ -129,7 +129,7 @@ In the Test tab, enter your user ID which you've set in your app using the [`cha
 
 At this point, you should receive a test push notification on your Huawei (HMS) device from Braze!
 
-### Setting up Huawei Segmentation
+### Setting up Huawei Segmentation (optional)
 
 Since your Huawei App in the Braze dashboard is built upon the Android Push platform, you have the flexibility to send push to all android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
 
