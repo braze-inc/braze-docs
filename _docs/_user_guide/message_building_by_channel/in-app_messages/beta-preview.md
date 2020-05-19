@@ -11,7 +11,7 @@ hidden: true
 Learn about the new Beta Version of custom HTML In-App Messages.
 
 {% alert important %}
-This feature is in *Beta*. Ask your Braze team for more information to get access.
+This feature is in *Beta*. Ask your Braze team for more information on how to get access.
 {% endalert %}
 
 ## New Features
@@ -73,7 +73,7 @@ Toggle the new "Custom Message" type when creating your HTML campaign, as shown 
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions in order to receive this message. 
 
-We recommend to [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
+We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
 
 ## Upcoming Features
 
