@@ -1,6 +1,7 @@
 ---
 nav_title: Deep-Linking to In-App Content
 page_order: 2
+description: "Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content."
 ---
 # Deep-Linking to In-App Content
 

@@ -1,6 +1,7 @@
 ---
 nav_title: Setting Default Values
 page_order: 5
+description: "Set default fallback values for any personalization attribute that you use in your messages."
 ---
 
 # Setting Default Values

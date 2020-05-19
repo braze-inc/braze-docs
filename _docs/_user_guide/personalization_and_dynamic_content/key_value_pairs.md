@@ -1,6 +1,7 @@
 ---
 nav_title: Key-Value Pairs
 page_order: 3
+description: "Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels."
 ---
 # Key-Value Pairs
 
