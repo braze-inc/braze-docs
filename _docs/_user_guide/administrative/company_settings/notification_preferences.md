@@ -1,6 +1,7 @@
 ---
 nav_title: Notification Preferences
 page_order: 1
+description: "If you would like to monitor the messaging and activity in your company account, you can choose to set up specific notifications and elect where they go."
 ---
 
 # Notification Preferences

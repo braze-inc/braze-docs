@@ -1,6 +1,7 @@
 ---
 nav_title: Export Segment Data to CSV
 page_order: 2
+description: "This reference article covers how to export segment data to CSV."
 ---
 
 # Exporting to CSV

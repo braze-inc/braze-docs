@@ -1,6 +1,7 @@
 ---
 nav_title: Event Naming Conventions
 page_order: 0
+description: "This reference article covers proper event naming conventions and best practices."
 ---
 
 # Event Naming Conventions

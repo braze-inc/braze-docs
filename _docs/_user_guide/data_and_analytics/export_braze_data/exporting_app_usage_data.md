@@ -1,6 +1,8 @@
 ---
 nav_title: Export App Usage Data
 page_order: 3
+description: "This reference article covers how to export app usage data."
+
 ---
 
 # Exporting App Usage Data

@@ -1,6 +1,7 @@
 ---
 nav_title: Security Settings
 page_order: 2
+description: "This reference article can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication."
 ---
 
 # Security Settings

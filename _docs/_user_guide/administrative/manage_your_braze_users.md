@@ -4,6 +4,8 @@ page_order: 2
 layout: dev_guide
 guide_top_header: "Manage Your Braze Users"
 guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case by case basis. Braze can help you do that with Team and User permissions, as well as managing your company-wide Settings."
+description: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case by case basis. Braze can help you do that with Team and User permissions, as well as managing your company-wide Settings."
+
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
