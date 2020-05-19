@@ -70,13 +70,12 @@ From there, this code can be pasted into a message within the Dashboard.
 
 ![Promo Codes 10][10]{:height="200px"}
 
-Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
+Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used a multi-channel campaign or Canvas step, the same unique code will be sent to each user across the channels.
 
 {% alert important %}
 
 __Please note that promotion codes cannot be sent in In-App Messages.__
 <br><br>
-__Additionally, if the code snippet is used across messages in a multichannel campaign, different codes will be sent in each channel's message.__
 
 {% endalert %}
 
