@@ -31,7 +31,7 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 
 ### Cross-Channel HTML Messages
 
-This new HTML message type can now be used across both mobile and web!
+This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
@@ -45,7 +45,7 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(button_id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our JavaScript [documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logClick) for more details.
+We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
 
@@ -67,7 +67,7 @@ Because this new message type has SDK version depdendencies, be sure to use the 
 
 ### New Message Type
 
-Toggle the new "Custom Message" type when creating your HTML campaign, as shown below:
+When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
 ![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
 
