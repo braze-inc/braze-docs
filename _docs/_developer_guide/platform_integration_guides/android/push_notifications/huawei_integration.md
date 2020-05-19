@@ -60,7 +60,7 @@ public class CustomPushService extends HmsMessageService {
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
-    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getData())) {
+    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getDataOfMap())) {
       // Braze has handled the Huawei push notification
     }
   }
@@ -81,7 +81,7 @@ class CustomPushService: HmsMessageService() {
 
   override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {
     super.onMessageReceived(hmsRemoteMessage)
-    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.data)) {
+    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.dataOfMap)) {
       // Braze has handled the Huawei push notification
     }
   }
