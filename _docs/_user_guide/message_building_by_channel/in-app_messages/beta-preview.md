@@ -44,7 +44,7 @@ There are two steps required to migrate to the new HTML Beta
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features are supported on Web only, and require upgrading to the following Braze SDK version:
+These Beta features are currently supported on *Web only* and require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - coming soon!
@@ -67,7 +67,9 @@ Because this new message type has SDK version depdendencies, be sure to use the 
 
 This new HTML message type can now be used across both mobile and web!
 
-As always, it's recommended to [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+As always, it's recommended to [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
+
+<!-- Keep in mind that your mobile app users need to upgrade after you've upgraded your Braze SDK version -->
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 -->
