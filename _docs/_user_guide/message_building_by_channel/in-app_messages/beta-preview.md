@@ -55,7 +55,7 @@ There are two steps required to migrate to the new HTML Beta
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features are supported on Web only, and require upgrading to the following Braze SDK version:
+These Beta features are currently supported on *Web only* and require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
@@ -71,6 +71,9 @@ Toggle the new "Custom Message" type when creating your HTML campaign, as shown 
 
 ![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
 
+Keep in mind that your mobile app users need to upgrade to the supported SDK versions in order to receive this message. 
+
+We recommend to [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
 
 ## Upcoming Features
 
