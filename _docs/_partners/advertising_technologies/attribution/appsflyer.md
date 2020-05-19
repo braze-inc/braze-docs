@@ -57,7 +57,7 @@ AppsFlyer.setAdditionalData(customData);
 
 ### Step 2: Getting the Braze API Key
 
-In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.
+In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.
 
 ### Step 3: Configure Braze in AppsFlyer's Dashboard
 
@@ -79,7 +79,7 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 
 ### Step 4: Confirming the Integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from AppsFlyer, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ### Step 5: Viewing User Attribution Data
 
@@ -87,34 +87,23 @@ Your user-base can be segmented by attribution data in the Braze dashboard using
 
 ![User Attributes 1][2]{: style="max-width:80%;margin-right:15px;"} 
 
-Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
+Additionally, attribution data for a particular user is available on each user’s profile in the Braze Dashboard.
 
 ## Facebook, Snapchat, and Twitter Attribution Data
 
-Attribution data for Facebook, Snapchat, and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook, Snapchat, and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
 For more information, please see AppsFlyer's [documentation][31].
 
-## Universal Linking and Click Tracking
+## Email Deep-Linking and Click Tracking
 
-Click tracking/recording is a crucial part of getting accurate user data. Oftentimes, when click tracking is used in tandem with universal linking, the universal link is prone to breaking. This is caused by Email Service Providers wrapping the deep link in their own click recording domain, causing the original link to break. 
+Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid  email system in order to seamlessly deep link from emails. <br>To get started, check out AppsFlyer's [documentation][3].
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}
+[3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
 [5]: #api-restrictions
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
