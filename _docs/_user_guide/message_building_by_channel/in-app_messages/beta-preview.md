@@ -10,7 +10,7 @@ hidden: true
 
 Learn about the new Beta Version of custom HTML In-App Messages.
 
-{% alert info %}
+{% alert important %}
 This feature is in *Beta*. Ask your Braze team for more information to get access.
 {% endalert %}
 
