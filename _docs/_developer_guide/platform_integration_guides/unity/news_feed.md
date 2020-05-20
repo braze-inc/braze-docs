@@ -49,7 +49,7 @@ Check out the [`FeedReceivedCallback`][7] implementation in `AppboyBindingTester
 [7]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
 [11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Feed.cs
 [12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs
-[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Plugins/Appboy/models/Cards
+[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Appboy/models/Cards
 [14]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/CardCategory.cs
 [15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs#L55
 [16]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs#L73
