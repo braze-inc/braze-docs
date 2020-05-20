@@ -22,10 +22,10 @@ tool:
 | ![AndroidPreview][1] | ![IOSPreview][2] |
 
 {% alert note %}
-On iOS versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. You should ensure that your message copy prompts users to expand the push to see the images.
+On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. You should ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
-__Pre-requsites__: Users must update to the latest version of Android(version:2.2.0+) and IOS (version: 3.2.0+)
+__Pre-requisites__: Users must update to the latest version of Android(version:2.2.0+) and IOS (version: 3.2.0+)
 
 ## Dashboard Changes
 
