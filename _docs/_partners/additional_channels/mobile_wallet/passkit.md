@@ -29,7 +29,7 @@ Deliver seamless, connected online to offline customer experiences with Braze an
 
 ## API Integration
 
-To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard  you can opt to pass data into Braze through Braze’s [Users Track Endpoint][7]. 
+To further enrich your customers’ mobile wallet experiences, from within your PassKit dashboard you can opt to pass data into Braze through Braze’s [Users Track Endpoint][7]. 
 
 Examples of data to share from PassKit includes:
 - __Pass Created__: when a customer clicks on a pass link and is first shown a pass.
@@ -69,18 +69,15 @@ To begin creating a SmartPass URL, you should create this encryption within a Br
 #### Step 1: Define your Pass Data Payload
 First, you must define the coupon or member payload. 
 
-Pass Data Payload Components
+There are many different components you can include in your payload, but here as two important ones to note:
 
 | Component | Required | Type | Description |
 | --------- | -------- | ---- | ----------- |
 |`person.externalId​` | Required | String | Set as the Braze External ID, this is crucial for the callbacks from PassKit back to Braze to work, allowing Braze users to have coupons for multiple offers in one campaign. Not enforced as unique. |
-| `members.member.externalId​` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the mebership program.|
-| members.
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| `members.member.externalId​` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-.....In this case, all fields are strings. Ensure the expiryDate is a valid ISO8601 date.
-
-For a detailed description of available fields, have a look at:<br>
+For a full list of available fields, their types, and helpful descriptions have a look at:<br>
 [Member Enrol PassKit Page][10]<br>
 [Coupon Create PassKit Page][11]
 
@@ -122,7 +119,7 @@ The second code snippet you must add to your content block captures the URL to b
 ```
 {% endraw %}
 
-Next, you must generate a signature using this hash and your program or project's `Project Secret`. This can be done by including a third code snippet, shown below. 
+Next, you must generate a signature using this hash and your `Project Secret`. This can be done by including a third code snippet, shown below. 
 {% raw %}
 ```liquid
 {% capture sig %}{{url | hmac_sha1: "Project_Secret"}}{% endcapture %}
@@ -211,7 +208,7 @@ Your Message Body should look something like this:
 The output URL for the sample above is:
 ![Output URL][2]{: style="max-width:70%"}
 
-If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a connected content call to a bit.ly endpoint!
+That looks long doesn’t it? The reason for this is due to it containing all the pass data in addition to incorporating best in class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a connected content call to a bit.ly endpoint!
 
 ## Update Pass Using the PassKit Webhook
 
@@ -225,8 +222,8 @@ Before you get started, here are the common JSON Payload Parameters that you can
 
 | Data | Type | Description |
 | ---- | ---- | ----------- |
-| `externalId` | String | This allows a unique Id to be added to the pass record that can provide compatibility with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via userDefinedId  and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}{{${user_id}}}{% endraw %} |
-| `campaignId` | String | This is the ID for the campaign template you created in PassKit. To find this, head to the __Settings__ tab in your PassKit pass project. |
+| `externalId` | String | This allows a unique Id to be added to the pass record that can provide compatibility with an existing system using unique customer identifiers (e.g. membership numbers). You can retrieve pass data by using this endpoint via userDefinedId and campaignName instead of pass ID. This value must be unique within a campaign, and once this value is set, it cannot be changed.<br><br>For the Braze integration, we would recommend using the Braze external ID: {% raw %}{{${user_id}}}{% endraw %} |
+| `campaignId` (coupon) <br><br> `programId` (membership) | String | This is the ID for the campaign/program template you created in PassKit. To find this, head to the __Settings__ tab in your PassKit pass project. |
 | `expiryDate` | IO8601 DateTime | This is the pass expiry date. After the expiry date, the pass is automatically voided (see isVoided). This value will override the template and campaign end date value. |
 | `status` | String | This is the current status of a coupon, such as “REDEEMED” or “UNREDEEMED”. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -238,7 +235,7 @@ Before you get started, here are the common JSON Payload Parameters that you can
 You can create this from the `Templates & Media` section, or create a new Webhook Campaign or Canvas in Braze. Next, select the PassKit - Update Pass webhook template, you should see the following in the composer:
 
 __Webhook URL__ (Compose Tab): https://api-pub1.passkit.io/coupon/singleUse/coupon<br>
-__Request Body__ (Compose Tab): Raw Text<br>
+__Request Body__ (Compose Tab): application/json<br>
 __HTTP Method__ (Settings Tab): PUT
 
 #### Step 2: Fill Out Your Template
@@ -263,9 +260,8 @@ To set up the webhook, fill out the details of the new event within the Request 
 
 Ensure that your `HTTP Method` is set to **PUT**.
 
-__Retrieve Your PassKit Long Lived Token__
-
-To retrieve your token, navigate to your PassKit Project/Program within the PassKit Admit Account. From here, go to Integrations within Settings, and select "Love Lived Integration Token" from the left hand side bar. Here, you find your long lived token. 
+__Retrieve Your PassKit Long Lived Token__<br>
+To retrieve your token, navigate to your PassKit Project/Program within the PassKit Admit Account. From here, go to Integrations within Settings, and select "Love Lived Integration Token" from the left-hand sidebar. Here, you find your long lived token. 
 
 #### Step 4: Preview Your Request
 
