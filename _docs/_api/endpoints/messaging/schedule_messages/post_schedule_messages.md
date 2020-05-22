@@ -18,7 +18,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 /messages/schedule/create
 {% endapimethod %}
 
-The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
+The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future) and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
 Use this endpoint to send messages directly from the API.
 
@@ -52,8 +52,8 @@ Authorization: Bearer YOUR_REST_API_KEY
   "send_id": (optional, string) see Send Identifier,
   "override_messaging_limits": (optional, bool) ignore global rate limits for campaigns, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+  "schedule": { 
+    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
