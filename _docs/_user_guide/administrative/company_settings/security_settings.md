@@ -25,12 +25,11 @@ Use this field to set when you want your Braze account users to reset their pass
 Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 1440 (equal to 24 hours).
 
 ### Restrict SSO
-You can restrict your users from logging in using a password or Okta.
+You can restrict your users from logging in using a password or SSO.
 
-For those clients that use [Okta SSO Login][1], there is a form on this page that allows them to configure that login service by providing their Okta URL and certificate.
+For [SAML SSO][1], customers will need to setup their SAML settings prior to enforcing. If customers are using Google SSO, they will simply have to enforce on the security settings page with no additional lift.
 
 ## Dashboard IP Whitelisting
-
 Use the field shown to whitelist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma separated list. If not specified, users will be able to log in from any IP address.
 
 ## Two-Factor Authentication
@@ -48,4 +47,4 @@ Any Braze account user can set up two-factor authentication (under Account Setti
 Be sure to save your changes before leaving the page!
 
 
-[1]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/
+[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
