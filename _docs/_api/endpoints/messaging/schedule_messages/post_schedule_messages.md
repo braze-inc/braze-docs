@@ -18,16 +18,12 @@ description: "This article outlines details about the Schedule Messages Braze en
 /messages/schedule/create
 {% endapimethod %}
 
-The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
+The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future) and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
 Use this endpoint to send messages directly from the API.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8f813eee-7db3-4a99-b2ec-e972235d55b9 {% endapiref %}
-
-{% alert note %}
-Messages cannot be scheduled more than 90 days in the future.
-{% endalert %}
 
 {% alert important %}
 __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
@@ -56,8 +52,8 @@ Authorization: Bearer YOUR_REST_API_KEY
   "send_id": (optional, string) see Send Identifier,
   "override_messaging_limits": (optional, bool) ignore global rate limits for campaigns, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+  "schedule": { 
+    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
