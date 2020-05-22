@@ -25,6 +25,10 @@ Use this endpoint to send messages directly from the API.
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8f813eee-7db3-4a99-b2ec-e972235d55b9 {% endapiref %}
 
+{% alert note %}
+Messages cannot be scheduled more than 90 days in the future.
+{% endalert %}
+
 {% alert important %}
 __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}

@@ -20,6 +20,10 @@ If you set `in_local_time` to be `true`, your users will receive the message at 
 
 The response will provide you with a `schedule_id` that you should save in case you later need to cancel or update the message you schedule:
 
+{% alert note %}
+Campaigns, canvases, and messages cannot be scheduled more than 90 days in the future.
+{% endalert %}
+
 ## Object Body
 
 Insert this object as needed to schedule your messages.
