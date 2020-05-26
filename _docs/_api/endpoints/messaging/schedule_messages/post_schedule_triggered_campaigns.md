@@ -77,7 +77,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Exmaple Request
+### Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \
