@@ -1,7 +1,7 @@
 ---
 nav_title: Tealium
 page_order: 1
-alias: /partners/tealium/
+alias: /partners/tealium2/
 
 description: "This article outlines the partnership between Braze and Tealium, a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources."
 page_type: partner
@@ -66,6 +66,7 @@ See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Se
 For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106) documentation.
 
 {% endtab %}
+{% endtabs %}
 
 {% alert important %}
 For the side-by-side integration, inputting the "Braze REST API Key" into your [Braze's Connection Settings](#connection-settings) in the Segment Dashboard is **not** necessary.
@@ -84,12 +85,13 @@ Unlike the side-by-side integration, however, the server-to-server integration d
 
 
 | Name | Description |
+| ---- | ----------- |
 | Tealium Username and Password | You will need your Tealium Username and Password to 
 
 
 ### Add a Connector in Tealium
 
-1. In the leftside bar, go to __EventStream__ -> __Event Connectors__
+1. In the leftside bar, go to __EventStream__ -> __Event Connectors__<br>
 For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
 2. In the left sidebar, use spotlight search to find the Braze Connector.
 3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connectory summary, here Tealium provides a list of required information, supported actions, vendor documentation and configuration instructions. <br><br> Click Continue.
@@ -104,10 +106,11 @@ For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
 
 #### Part 2: Configuration
 Next a __Create Configure__ window will appear, here you must fill in certain Values requested by Tealium and Braze:
+
 | Name | Description |
 | ---- | ----------- |
-| Username | 
-| Password | 
+| Username | Username info |
+| Password |  Password Info |
 
 (Optional) Add another connector to use the same configuration, wdit the connector settings by clicking the pencil icon, or delete the connector by clikceing the trash icon.
 
@@ -175,23 +178,26 @@ When you create a new REST API Key, you need to gve it access to specific endpoi
 Action Settings - Parameters and Options
 
 __Action - Track User by External ID__
+
 | Parameters | Description |
 | ---------- | ----------- |
 | Endpoint URL | (Required) This endpoint can be used to record custom events, user attributes and purcahses for users. Your endpoint will coorepsond to your Braze instance, [check here][5] for more information |
 | External ID | The External ID serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze mobile SDK in order to avoid creating multiple profiles for the same user. External IDs that Braze is unaware of will return a non-fatal error. See Server Responses for details. |
-| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.<br>Use the Braze User Profile Field names or your own custom attribute data. For more Information, [see here](https://www.braze.com/documentation/REST_API/#user-track-request).
+| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.<br>Use the Braze User Profile Field names or your own custom attribute data. For more Information, [see here](https://www.braze.com/documentation/REST_API/#user-track-request). |
 
 
 __Action - Track User by User Alias__
+
 | Parameters | Description |
 | ---------- | ----------- |
 | Endpoint URL | (Required) This endpoint can be used to record custom events, user attributes and purcahses for users. Your endpoint will coorepsond to your Braze instance, [check here][5] for more information |
 | User Alias Value | Map the actual identifier value for Alias. Example: "Bobby". An Alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID. When using a User Alias, the "Update Only" mode is always true. |
 | User Alias Label | The Label for the Alias, Example: "my_internal_ids". An Alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID. When using a User Alias, "Update Only" mode is always true. |
-| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.<br>Use the Braze User Profile Field names or your own custom attribute data. For more Information, [see here](https://www.braze.com/documentation/REST_API/#user-track-request).
+| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.<br>Use the Braze User Profile Field names or your own custom attribute data. For more Information, [see here](https://www.braze.com/documentation/REST_API/#user-track-request). |
 
 
 __Action - Delete User by External ID or Braze ID__
+
 | Parameters | Description |
 | ---------- | ----------- |
 | Endpoint URL | (Required) This endpoint can be used to record custom events, user attributes and purcahses for users. Your endpoint will coorepsond to your Braze instance, [check here][5] for more information |
@@ -200,6 +206,7 @@ __Action - Delete User by External ID or Braze ID__
 
 
 __Action - Delete User by User Alias__
+
 | Parameters | Description |
 | ---------- | ----------- |
 | Endpoint URL | (Required) This endpoint can be used to record custom events, user attributes and purcahses for users. Your endpoint will coorepsond to your Braze instance, [check here][5] for more information |
