@@ -55,7 +55,7 @@ There are two steps required to migrate to the new HTML Beta
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features are currently supported on *Web only* and require upgrading to the following Braze SDK version:
+These Beta features require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
