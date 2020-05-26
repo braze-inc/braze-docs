@@ -34,7 +34,16 @@ end
 ```
 
 __Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-iOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-iOS-SDK'` in your Podfile.
-__Note__: If you would like to import one of our UI subspecs instead of the full SDK, please point your Braze dependency in your Podfile to the desired subspec: `pod 'Appboy-iOS-SDK/InAppMessage'`, `pod 'Appboy-iOS-SDK/ContentCards'` or `pod 'Appboy-iOS-SDK/NewsFeed'`. If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec by adding `pod 'Appboy-iOS-SDK/Core'` to your Podfile.
+
+> We recommend that integrators import our full SDK as outlined above. However, if you are certain that you are only going to integrate a particular Braze feature then you have the option to import just the desired UI subspec instead of the full SDK.
+
+| Subspec | Details |
+| ------- | ------- |
+| `pod 'Appboy-iOS-SDK/InAppMessage'` | The `InAppMessage` subspec contains the Braze In-App Message UI and the Core SDK.|
+| `pod 'Appboy-iOS-SDK/ContentCards'` | The `ContentCards` subspec contains the Braze Content Card UI and the Core SDK. |
+| `pod 'Appboy-iOS-SDK/NewsFeed'` | The `NewsFeed` subspec contains the Braze News Feed UI and the Core SDK. |
+| `pod 'Appboy-iOS-SDK/Core'` | Point your Braze dependency in your Podfile to our Core subspec if you do not use any Braze default UI and don't want to introduce the SDWebImage dependency. |
+{: .ws-td-nw-1}
 
 ### Example Podfile
 
