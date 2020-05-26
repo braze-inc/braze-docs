@@ -42,7 +42,7 @@ __Note__: We suggest you version Braze so pod updates automatically grab anythin
 | `pod 'Appboy-iOS-SDK/InAppMessage'` | The `InAppMessage` subspec contains the Braze In-App Message UI and the Core SDK.|
 | `pod 'Appboy-iOS-SDK/ContentCards'` | The `ContentCards` subspec contains the Braze Content Card UI and the Core SDK. |
 | `pod 'Appboy-iOS-SDK/NewsFeed'` | The `NewsFeed` subspec contains the Braze News Feed UI and the Core SDK. |
-| `pod 'Appboy-iOS-SDK/Core'` | Point your Braze dependency in your Podfile to our Core subspec if you do not use any Braze default UI and don't want to introduce the SDWebImage dependency. |
+| `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |
 {: .ws-td-nw-1}
 
 ### Example Podfile
