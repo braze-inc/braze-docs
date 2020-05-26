@@ -19,7 +19,7 @@ description: "This article outlines details about the Update Scheduled Canvases 
 
 Use this endpoint to trigger API Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
 
-This endpoint allows you to schedule Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCanvasExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2806cc2f-1ddf-4b84-a4c2-34aa9a53986c {% endapiref %}
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see Trigger Properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }
