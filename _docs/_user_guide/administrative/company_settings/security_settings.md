@@ -41,9 +41,9 @@ Two-factor authentication is optional by default. However, when enabled, users w
 
 ### __Remember Me Feature__
 ![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
-Braze offers a __Remember Me__ checkbox displayed upon logging in with two-factor authentication. This feature stores the 'remember me' cookie on your device, only requiring you to login with two-factor authentication __once__ over the course of 30 days. 
+Braze offers a __Remember Me__ checkbox displayed upon logging in with two-factor authentication. This feature stores the 'remember me' cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
 
-- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the 'remember me' cookie being tied to a device. If users use the same device to login to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
+- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the 'remember me' cookie being tied to a device. If users use the same device to log in to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
 
 
 {% alert tip %}
