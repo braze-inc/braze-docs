@@ -4,10 +4,6 @@ platform: Flutter
 page_order: 0
 ---
 
-# Preview
+# Flutter SDK
 
-Our Flutter integration is being tested with select customers.
-
-To join the preview program, please contact your account manager or our [support team][support].
-
-[support]: {{site.baseurl}}/support_contact/
+To learn more about integrating Braze's Flutter SDK, view our [`pub.dev` documentation](https://pub.dev/packages/braze_plugin).
