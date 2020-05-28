@@ -32,8 +32,6 @@ valid_partner_list:
   url: /docs/partners/advertising_technologies/attribution/tune/
 - name: Foursquare
   url: /docs/partners/data_augmentation/contextual_location/foursquare/
-- name: Factual
-  url: /docs/partners/data_augmentation/contextual_location/factual/
 - name: Kochava
   url: /docs/partners/advertising_technologies/attribution/kochava/
 - name: Appsflyer
