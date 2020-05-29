@@ -113,8 +113,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/calendar/rokt_calendar/
 - name: Passkit
   url: /docs/partners/additional_channels/mobile_wallet/passkit/
-- name: Amazon Moments
-  url: /docs/partners/channel_extensions/loyalty/amazon_moments/
 - name: Voucherify
   url: /docs/partners/channel_extensions/loyalty/voucherify/
 - name: Movable Ink
