@@ -42,16 +42,15 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
-| `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
-| `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. |
-| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`.|
+| `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). Do not submit external_id and email/phone, as only the external_id will be accepted. |
+| `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. Do not submit external_id and email, as only the external_id will be accepted. |
+| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`. Do not submit external_id and phone, as only the external_id will be accepted.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Generally, either `external_id` or `email` is required.
 
+One of `external_id` or `email` or `phone` is required.
 For SMS subscription groups, either `external_id` or `phone` is required.
-
-Your request must include `phone` or `email` value, _but not both_.
+For EMAIL subscription groups, either `external_id` or `email` is required.
 
 ### Example Request
 ```
