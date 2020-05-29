@@ -152,6 +152,11 @@ Header Name             | Description
 
 If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
 
+### Optimal Delay Between Endpoints
+
+Understanding Optimal Delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our New User Alias endpoint, and then hitting that alias to send a custom event via our Usertrack endpoint, how long should you wait?
+
+Under normal conditions, the time for our data eventual-consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5 minute delay__ between making subsequent calls to minimize the probability of error.
 
 [7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"

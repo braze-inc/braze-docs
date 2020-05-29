@@ -77,9 +77,7 @@ There are many different components you can include in your payload, but here as
 | `members.member.externalId​` | Optional | String | Set as the Braze External ID, you may use your External ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-For a full list of available fields, their types, and helpful descriptions have a look at:<br>
-[Member Enrol PassKit Page][10]<br>
-[Coupon Create PassKit Page][11]
+For a full list of available fields, their types, and helpful descriptions have a look at the [PassKit Github Documentation][10].
 
 Example Payload
 {% raw %}
@@ -323,7 +321,7 @@ UNREDEEMED
 [7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
-[10]: https://docs.passkit.io/protocols/member/#operation/enrolMember
+[10]: https://github.com/PassKit/smart-pass-link-from-csv-generator
 [11]: https://docs.passkit.io/protocols/coupon/#operation/createCoupon
 [12]: https://docs.passkit.io/protocols/member/
 [13]: https://docs.passkit.io/protocols/coupon/
