@@ -33,14 +33,17 @@ Yout partnership template is composed of three main components, the metadata, th
 This information helps the Braze search properly find and label your docs page. 
 ```
 ---
-nav_title: Your Partner Name
+nav_title: Your Partner Page
 page_order: 1
+
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-page_type: partner
 perma_link: /your_perma_link/
+
+page_type: partner
+hidden: true
 ---
 ```
-Note that we require to fill out all metadata fields __except__ `page_order` and `page_type`. Please reference [this doc] for a fleshed out example of these field.
+Note that we require to fill out all metadata fields __except__ `page_order` and `page_type`. Please reference the provided [template](https://www.braze.com/doc/hidden/wip_partnerships/partnership_template.md) for a fleshed out example of these fields.
 
 {% endtab %}
 {% tab Content %}
