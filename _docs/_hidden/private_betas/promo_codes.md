@@ -11,7 +11,7 @@ This Promotion Codes feature is currently in Beta. Please reach out to your Braz
 
 # Promotion Codes
 
-> Promotional codes or Promo Codes are a great way to keep users engaged and interested in your application and service. Incentives like these drive user interaction with a heavy emphasis on purchases. <br><br>With Braze's Liquid Logic functionality, we offer a simple and easy way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
+> Promotion codes - also called Promo codes -  are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid Logic functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
 ## Creating a Promotion Code List
 
