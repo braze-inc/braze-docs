@@ -122,7 +122,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 
 |Default API Rate Limit | Value|
 |---|---|
-|Requests to the `/users/track` endpoint|Unlimited, though this is subject to change as noted below. |
+|Requests to the `/users/track` endpoint|Default of 50,000 API requests per minute for Dashboard companies created after June 2, 2020 and default of Unlimited API requests for Dashboard companies created before then. These limits are subject to change as noted below. |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
