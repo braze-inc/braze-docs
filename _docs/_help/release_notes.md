@@ -40,6 +40,16 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## June 2020
+
+### Retention Reports 
+
+Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a retention event in the range of days listed across the top of a report. To read more about Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
+
+### User/Track API Updates
+
+The [/users/track][3] endpoint now has a default of 50,000 API requests per minute for Dashboard companies created after June 2nd, 2020. Companies created before this date will still be subject to their original value of unlimited API requests per minute. 
+
 ## May 2020
 
 ### Google Tag Manager
@@ -196,4 +206,7 @@ In the SMS channel, the New User settings and behavior have been outlined and ca
 [support]: {{site.baseurl}}/support_contact/
 [4]: {% image_buster /assets/img/retention_report_full_report.png %}
 [0]: {% image_buster /assets/img/personalized-from-name.png %}
+[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 
