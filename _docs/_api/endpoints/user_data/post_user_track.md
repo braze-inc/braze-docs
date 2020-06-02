@@ -18,7 +18,7 @@ description: "This article outlines details about the User Track Braze endpoint.
 /users/track
 {% endapimethod %}
 
-This endpoint can be used to record custom events, user attributes, and purchases for users. Default of 50,000 API requests per minute for Dashboard companies created after June 2, 2020 and default of Unlimited API requests for Dashboard companies created before then. These limits are subject to change. You can include up to 75 Attributes, Event, and Purchase Objects per request. That is, you can only post attributes for up to 75 users at a time, but in the same API call you can also provide up to 75 events and up to 75 purchases.
+This endpoint can be used to record custom events, user attributes, and purchases for users. There exists a default of 50,000 API requests per minute for Dashboard companies created after June 2, 2020 and a default of Unlimited API requests for Dashboard companies created before then. These limits are subject to change; reach out to your Customer Success Manager to request an increase if needed. With this endpoint, you can include up to 75 Attributes, Event, and Purchase Objects per request. That is, you can only post attributes for up to 75 users at a time, but in the same API call you can also provide up to 75 events and up to 75 purchases.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/User%20Data/User%20track%20%E2%80%93%20attributes%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
