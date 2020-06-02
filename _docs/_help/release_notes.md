@@ -44,11 +44,13 @@ guide_featured_list:
 
 ### Retention Reports 
 
-Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a retention event in the range of days listed across the top of a report. To read more about Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
+Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. To read more about Range Retention and Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
 
 ### User/Track API Updates
 
-The [/users/track][3] endpoint now has a default of 50,000 API requests per minute for Dashboard companies created after June 2nd, 2020. Companies created before this date will still be subject to their original value of unlimited API requests per minute. 
+The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2nd, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
+
+Braze is imposing this default on our most heavily used customer-facing endpoint as a step toward our stability and reliability goals for our API and infrastructure. The limit imposed is very liberal, and will affect very few dashboard companies and their regular operations. In the event that you need an increase to this limit, please reach out to your Customer Success Manager to request an increase.
 
 ## May 2020
 
