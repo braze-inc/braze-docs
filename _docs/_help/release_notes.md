@@ -40,6 +40,18 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## June 2020
+
+### Retention Reports 
+
+Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. To read more about Range Retention and Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
+
+### Users/Track API Updates
+
+The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2nd, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
+
+Braze is imposing this default on our most heavily used customer-facing endpoint as a step toward our stability and reliability goals for our API and infrastructure. The limit imposed is very liberal, and will affect very few dashboard companies and their regular operations. In the event that you need an increase to this limit, please reach out to your Customer Success Manager to request an increase.
+
 ## May 2020
 
 ### Google Tag Manager
@@ -196,4 +208,7 @@ In the SMS channel, the New User settings and behavior have been outlined and ca
 [support]: {{site.baseurl}}/support_contact/
 [4]: {% image_buster /assets/img/retention_report_full_report.png %}
 [0]: {% image_buster /assets/img/personalized-from-name.png %}
+[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 
