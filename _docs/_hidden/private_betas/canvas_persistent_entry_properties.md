@@ -14,9 +14,13 @@ When a Canvas is triggered by a custom event or an API call, customers will now 
 
 Currently, persistent entry properties are only available on API-Triggered Canvases. The Beta release supports every channel __except__ in-app messages. Support for in-app messages and Action-based campaigns will be included in future releases.
 
+## Setting Entry Properties
+
 These entry properties are defined when you send a Canvas message via the API. Check out our documentation to learn more about [API triggered canvas messages][3] and the [Canvas Entry Properties Object][4].
 
 Braze will begin saving the values associated with those properties once a Liquid snippet for personalization has been defined in the message.
+
+## Updated Entry Property Expected Behavior
 
 If an active Canvas is edited to include a new entry property, the Canvas corresponding to that property will not be available for users who entered the Canvas before the entry property key was added to the Canvas. The values will only be saved for users that enter the Canvas after the change is made. 
 
