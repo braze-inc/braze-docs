@@ -75,7 +75,6 @@ There are a variety of publicly available APIs that can be used for Connected Co
 |	 API 	| Description |
 | --------- | --- |
 | [Semantics3][25] | Provides product metadata in a variety of categories. |
-| [Factual][26] | Provides various product data including nutrition and ingredients data. |
 | [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -110,7 +109,6 @@ There are a variety of publicly available APIs that can be used for Connected Co
 [23]: http://www.enclout.com/api/v1/yahoo_finance
 [24]: http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
 [25]: http://www.semantics3.com/products/pull
-[26]: http://factual.com/products/cpg
 [27]: http://blog.clearbit.com/logo
 [28]: http://api.tfl.gov.uk/#Line
 [29]: http://datamine.mta.info/

@@ -44,6 +44,14 @@ An API request with any fields in the Attributes Object will create or update an
 
 To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
+#### Update Existing Profiles Only
+
+If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the external_id does not already exist.
+
+{% alert note %}
+If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+{% endalert %}
+
 #### Push Token Import
 
 Before you import push tokens to Braze, double check if you need to. When the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them via the API.

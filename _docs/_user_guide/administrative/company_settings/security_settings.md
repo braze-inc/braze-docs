@@ -39,6 +39,13 @@ When two-factor authentication is enabled, in addition to entering a password, u
 
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account.
 
+### __Remember Me Feature__
+![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
+Braze offers a __Remember Me__ checkbox displayed upon logging in with two-factor authentication. This feature stores the 'remember me' cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
+
+- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the 'remember me' cookie being tied to a device. If users use the same device to log in to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
+
+
 {% alert tip %}
 Any Braze account user can set up two-factor authentication (under Account Settings in the drop-down) on their own, even if not required by the administrator.
 {% endalert %}
@@ -46,5 +53,5 @@ Any Braze account user can set up two-factor authentication (under Account Setti
 
 Be sure to save your changes before leaving the page!
 
-
+[0]: {% image_buster /assets/img/remember_me.png %}
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

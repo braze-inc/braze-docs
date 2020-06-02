@@ -14,8 +14,6 @@ partner_top_header: "Contextual Location"
 valid_partner_list:
   - name: Accuweather
     url: /docs/partners/data_augmentation/contextual_location/accuweather/
-  - name: Factual
-    url: /docs/partners/data_augmentation/contextual_location/factual/
   - name: Foursquare
     url: /docs/partners/data_augmentation/contextual_location/foursquare/
   - name: Gimbal
