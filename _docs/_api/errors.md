@@ -90,6 +90,7 @@ The following status codes and associated error messages will be returned if you
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
 | `401 Unauthorized` | Unknown or missing REST API Key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
+| `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|
 | `429 Rate Limited` | Over rate limit.|
 | `5XX Internal Server Error` | You should retry your request with exponential backoff.|
