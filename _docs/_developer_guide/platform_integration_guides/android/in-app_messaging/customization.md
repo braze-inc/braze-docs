@@ -145,7 +145,6 @@ However, if there is no in-app message being displayed, the following delegate m
 {% tabs %}
 {% tab JAVA %}
 
-
 ```java
 @Override
 public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessageBase) {
@@ -185,6 +184,40 @@ On Android, this is done by calling `logClick` and `logImpression` on in-app mes
 {% alert tip %}
 Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
+
+### Step 4: Customizing Dark Theme Behavior (Optional) {#android-in-app-message-dark-theme-customization}
+
+In the default `IInAppMessageManagerListener` logic, in `beforeInAppMessageDisplayed()`, the system settings are checked and conditionally enable Dark Theme styling on the message with the following code:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+@Override
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
+  if (inAppMessage instanceof IInAppMessageThemeable && ViewUtils.isDeviceInNightMode(AppboyInAppMessageManager.getInstance().getApplicationContext())) {
+    ((IInAppMessageThemeable) inAppMessage).enableDarkTheme();
+  }
+  return InAppMessageOperation.DISPLAY_NOW;
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+  if (inAppMessage is IInAppMessageThemeable && ViewUtils.isDeviceInNightMode(AppboyInAppMessageManager.getInstance().applicationContext!!)) {
+    (inAppMessage as IInAppMessageThemeable).enableDarkTheme()
+  }
+  return InAppMessageOperation.DISPLAY_NOW
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+If you would like to use your own conditional logic, then you can call [`enableDarkTheme`][97] at any step in the pre-display process.
 
 ## Setting a Custom View Factory
 
@@ -602,7 +635,6 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 </body>
 ```
 
-
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
@@ -679,3 +711,4 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 [94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.appboy.models.IInAppMessage-
 [95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.appboy.models.IInAppMessage-
 [96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-
+[97]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageThemeable.html#enableDarkTheme--
