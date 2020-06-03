@@ -95,13 +95,9 @@ See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementa
 
 ### Step 4: Tracking User Sessions in Android
 
-#### Activity Lifecycle Callback Integration (API 14+)
+#### Activity Lifecycle Callback Integration
 
-{% alert warning %}
-Our minimum supported version is `API 16`.
-{% endalert %}
-
-Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically. See the [HelloBraze sample application][62] for a full example.
+Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically.
 
 ##### Instructions
 Add the following code to the `onCreate()` method of your Application class:
@@ -207,7 +203,6 @@ Our Unity SDK integration for Android requires [the same support library version
 [59]: https://github.com/Appboy/appboy-android-sdk
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
 [61]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
-[62]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/src/main/java/com/appboy/helloworld/HelloAppboyApplication.java
 [63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [65]: https://developer.android.com/topic/libraries/support-library/setup.html#add-library
