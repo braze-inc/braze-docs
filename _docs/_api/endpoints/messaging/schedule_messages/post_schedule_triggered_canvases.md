@@ -83,12 +83,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "canvas_id": "",
-  "recipients": {
+  "recipients": [{
     "user_alias": "",
     "external_user_id": "",
     "trigger_properties": "",
-    "canvas_entry_properties": ""
-  },
+    "canvas_entry_properties": {}
+  }],
   "audience": {
     "AND": [
       {
@@ -137,7 +137,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": "",
+  "canvas_entry_properties": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

@@ -15,8 +15,6 @@ partner_top_text: "These partners allow you to pull data from multiple resources
 valid_partner_list:
   - name: Accuweather
     url: /docs/partners/data_augmentation/contextual_location/accuweather/
-  - name: Factual
-    url: /docs/partners/data_augmentation/contextual_location/factual/
   - name: Foursquare
     url: /docs/partners/data_augmentation/contextual_location/foursquare/
   - name: Gimbal
