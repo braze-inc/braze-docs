@@ -13,12 +13,14 @@ Iterate integrates with Braze by recording survey responses as custom user attri
 
 ## Requirements
 
-To connect Braze with Iterate you'll need the following two items:
+To connect Braze with Iterate you'll need the following three items:
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | An API key with the `users.track` permission. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Your cluster REST endpoint. |
+| Requirement | Origin | Description |
+|---|---|---|
+| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions.
+| [Braze REST Endpoint][6] | Braze | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| Iterate Account | Iterate | You will need to have a Iterate account. Visit their [website](https://iteratehq.com/) to get started. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration Details
 
@@ -26,13 +28,13 @@ Fill in gaps and enrich your customer data by sending out a link to your Iterate
 
 ### Step 1: Connect Braze with Iterate
 
-Log in to your Iterate account and add both your **cluster REST endpoint** and **API key with the `users.track`** permission to your company settings page.
+Log in to your Iterate account and add both your **Braze REST Endpoint** and **API key with the `users.track`** permission to your company settings page.
 
 ### Step 2: Create your Survey
 
 Create the link survey you'll be sending out. Once the questions have been written and you've customized the design, go to *Send survey* and select *Integrations*, then *Braze*. You'll then see the configuration options to send responses to Braze.
 
-Toggle on the integration to begin sending responses for that survey into Braze. Copy the survey link listed, this is what you'll include in your campaign. Note the `?user_braze_id={{${braze_id}}}` which Braze will automatically replace with the correct braze id of the user you're sending to in the campaign.
+Toggle on the integration to begin sending responses for that survey into Braze. Copy the survey link listed, this is what you'll include in your campaign. Note the {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} which Braze will automatically replace with the correct braze id of the user you're sending to in the campaign.
 
 ### Step 3: Share your Survey
 
@@ -40,8 +42,10 @@ Next, simply start your campaign including that link and as users respond you'll
 
 ## Customize User Attribute Names
 
-By default, the user attribute created for a question is the same as it's prompt. For example a question with the prompt: "Overall, how satisfied are you with Iterate?" will be added as the user attribute `Overall, how satisfied are you with Iterate?` in Braze. In some cases you may want to customize that, to do that click on the *Customize user attribute names* dropdown in the **Create your Survey** step above and enter any custom names you'd like.
+By default, the user attribute created for a question is the same as it's prompt. For example, a question with the prompt: "Overall, how satisfied are you with Iterate?" will be added as the user attribute `Overall, how satisfied are you with Iterate?` in Braze. In some cases you may want to customize that, to do that, click on the *Customize user attribute names* dropdown in the **Create your Survey** step above and enter any custom names you'd like.
 
 ## Use Cases
 
 With Iterate you can collect nearly any type of data. Ranging from personal info (name, age, email), performance data (NPS, Customer Satisfaction, star ratings), preferences (preferred device, preferred frequency of communication), or personality (favorite book, dog or cat person). What you ask is entirely up to you and what kind of audiences you're looking to build.
+
+[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
