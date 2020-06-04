@@ -20,7 +20,7 @@ description: "This article outlines details about the User Track Braze endpoint.
 
 Use this endpoint to record Custom Events, Purchases, and update user profile attributes.
 
-User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain data for up to 75 users, including up to 75 events, 75 attribute updates, and 75 purchases per user. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need a higher limit.
+User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain data for up to 75 users, including up to 75 events, 75 attribute updates, and 75 purchases per user. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/User%20Data/User%20track%20%E2%80%93%20attributes%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
