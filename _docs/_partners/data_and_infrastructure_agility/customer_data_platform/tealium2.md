@@ -10,7 +10,7 @@ page_type: partner
 
 # About Tealium
 
-> Tealium is a universal data hub and customer data platform that enables you to connect mobile, web and alternative data to other third-party sources.
+> Tealium is a universal data hub and customer data platform that enables you to connect mobile, web, and alternative data to other third-party sources.
 
 Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
@@ -20,30 +20,29 @@ We offer [both](#integration-options) a side-by-side SDK integration for your An
 
 To get going with your Tealium/Braze integration,
 1. Take note of and prepare for your integration by [adhering to the requirements and pre-requisites](#pre-requisites).
-2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
-3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
+2. Pick your integration type.
 4. Set up [mappings](#methods) for your integration.
-5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Segment.
+5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Tealium.
 
 ## Pre-Requisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Tealium Account & Account Information | Tealium | https://my.tealiumiq.com/ | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
+| Tealium Account & Account Information | Tealium | https://my.tealiumiq.com/ | You must have an active Tealium Account with both Server and Client-Side Access to utilize their services with Braze. |
 | Install Source and Tealium Source Libraries | Tealium | https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933 | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector |
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2] and [Web][3] documentation | Braze must successfully be installed onto your app or site |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Tealium EventStream 
-Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation, to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).  
+Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).  
 - Data Sources (Installation and Data Collection)
-- Live Events] (Real-time Data Inspection)
+- Live Events (Real-time Data Inspection)
 - Event Specifications and Attributes (Data Layer Requirements and Validation)
 - Event Feeds (Filtered Event Types)
 - Event Connectors (API Hub Actions)
 
 ## Tealium AudienceStream
-Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. These visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudeinceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
+Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. These visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
 ## Step 1: Configure Braze Settings in Tealium
 
@@ -53,8 +52,8 @@ Tealium AudienceStream is an Omnichannel customer segmentation and real-time act
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-Side](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-Server](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Side-by-Side](#side-by-side-sdk-integration) | Maps Tealiums's SDK to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration. |
+| [Server-to-Server](#server-to-server-integration) | Forwards data from Tealium to Braze's [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Remote Commands
@@ -74,166 +73,192 @@ This integration forwards data from Tealium to Braze's REST API. Similar to the 
 
 ## Step 1: Configure Braze Settings in Tealium {#connection-settings}
 
-Pre-Requisites
+### Pre-Requisites
 
 | Name | Description |
 | ---- | ----------- |
 | REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within the __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__ |
+| Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Add a Connector in Tealium
 
 ![Connector MarketPlace][5]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-1. In the left sidebar, go to __EventStream__ -> __Event Connectors__<br>
+A connector is an integration between Tealium and another vendor that is used to transmit data. These connectors contain actions that represent the vendor's supported APIs. We can create a connector between Tealium and Braze by locating and configuring the Braze Connector.
+
+1. From the left sidebar within Tealium under `Server-Side`, navigate to __EventStream__ -> __Event Connectors__<br>
 For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
-2. In the left sidebar, use the spotlight search to find the Braze Connector.
-3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__.
+2. Select the blue `+ Add Connector` button to look through the Connector Marketplace.
+2. In the new dialogue box that appears, use the spotlight search to find the Braze Connector.
+3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__ to begin configuring.
 
 ### Configure your Connector Settings
 
-#### Part 1: Source
+The Braze Tealium connector setup is composed of four steps: Source, Configuration, Action, and Summary.
+
+#### Part 1a: Set Up Source
+
+Tealium requires that you first set up a valid source of data for your connector to draw from. 
 
 __Setting up Your Data Source__
-1. From the Server Side on Tealium, navigate to __Sources__ -> __Data Source__
+1. From the left sidebar within Tealium under `Server-Side`, navigate to __Sources__ -> __Data Sources__
 2. Click the __+ Add Data Source__ Button
-3. Locate within the Catagories, __HTTP API__, name your HTTP API APP, this is a required field.![Data Source][6]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
-4. From the __Event Specifications__ Options, choose the event specs. Event specifications help you identify the event names and required attributes to track in your installation.![Event Specs][7]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
-5. The next dialogue advances to the __Get Code step__ and displays the data source key and installation code. Save this code as a PDF, because you will not be able to return to this window. ![Get Code][8]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
-Data Source Key, Base Code, and Event Tracking Code. 
-6. Click Save and Continue. ![Data Sourrce Summary][9]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
-7. Save and Publish ![Save/Publish][17]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
-
-
-Note: From the detailed data source view you can perform the following actions:
+3. Locate __HTTP API__ platform within the available catagories, and name your HTTP API APP, this is a required field.<br><br>![Data Source][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+4. From the __Event Specifications__ Options, choose the event specs you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events. <br><br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. Note that you also have the option of creating custom event specifications, check out the [Tealium documentation][19] to learn more. <br><br>![Event Specs][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+5. The next dialogue advances to the __Get Code step__. This displays the data source key and installation code. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. <br><br>![Get Code][8]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>
+6. Click __Save & Continue__ <br><br>![Data Source Summary][9]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+7. Once saved, you will now be able to view your saved source as well as add or remove event specs. <br><br>![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
 - Return to the Get Code page
 - Add or remove event specifications
 - View live events related to an event specification
-- And more...
+- And more...<br>
+8. ![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}Lastly, make sure to Save and Publish. If you do not save and publish your data source you will not be able to find it when configuring your Braze connector.
 
 For further instruction on setting up and editing your data source, check out [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933).
 
+#### Part 1b: Configure Braze Connector Source
 
-1. From the Data Source Dropdown list, select the Braze data source.
-2. Next, from the Event Feed drop-down list, select an event specification.
-3. Name this action and click __Add Connector__.
+Once configured, navigate back to the Braze Connector and select your data source. 
+
+1. From the Data Source Dropdown list, select the Braze data source you created.
+2. Next, from the Event Feed drop-down list, select an event specification you would like to configure.
+3. Name this action and click __Continue__.
 
 #### Part 2: Configuration
 ![Create Configuration][15]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
-Next, a __Create Configure__ dialogue will appear. Here, you must fill in certain Values requested by Tealium and Braze:
+Next, a __Create Configuration__ dialogue will appear. Here, you must fill in certain values requested by Tealium and Braze:
 
 | Name | Description |
 | ---- | ----------- |
 | Name | The name of the Connector | 
-| REST API Key | A Braze REST API Key with users.track permissions. <br><br>This can be set within the Braze Dashboard -> Developer Console -> REST API Keys -> Create New API Key |
+| REST API Key | A Braze REST API Key with __users.track__ permissions. <br><br>This can be set within the __Braze Dashboard -> Developer Console -> REST API Keys -> Create New API Key__ |
+{: .reset-td-br-1 .reset-td-br-2}
 
-If you have created a connector before, you may optionally use one from the existing connector list and just modify it to fit your needs with the pencil icon or delete it with the trash icon. 
-
-Click Continue. 
+If you have created a connector before, you may optionally use an existing from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
 #### Part 3: Action
+
+Next, you must select a connector action. A connector action sends data according to the mapping that gets configured. The Braze connector allows you to map Braze attributes to Tealium attribute names. 
 
 1. From the __Add Action__ dialogue, select one of the actions to set up.
 2. Depending on which action you chose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
 
-| Action Name | AudienceStream | EventStream |
-| ----------- | -------------- | ----------- |
-| Track User by External ID | Yes | Yes |
-| Track User by User Alias | Yes | Yes |
-| Delete User by External User ID | Yes | Yes |
-| Delete User by User Alias | Yes | Yes |
+{% tabs local %}
+{% tab Track User - User %}
 
-{% details Track User by External ID %}
+__Action: Track User - Users__
 
-__Action - Track User by External ID__
+This action allows you to track and map user attributes like those in the Braze User Attributes Object. To read more about the User Attributes Object, check out [our documentation](https://www.braze.com/docs/api/objects_filters/user_attributes_object/).
 
 | Parameters | Description |
 | ---------- | ----------- |
-| Endpoint URL | (Required) Your [Braze REST endpoint URL]({{site.baseurl}}/api/basics?redirected=true#endpoints). Your endpoint must be manually entered as custom text into the given drop-down box. |
-| External ID | The External ID serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze mobile SDK in order to avoid creating multiple profiles for the same user. <br><br> External IDs which Braze is unaware of will return a non-fatal error. See Server Responses for details. |
-| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use the Braze User Profile Field names or your own custom attribute data. |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+| User Attribute | Use Braze's existing User Profile Attribute names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles. |
+| Modify User Attributes | Integer attributes may be incremented by positive or negative integers.<br>Array attributes may be modified by adding or removing values from existing arrays. |
+| User Attributes Update Strategy | Choose a strategy for updating or creating User Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-![Track User by External ID][11]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
+{% endtab %}
+{% tab Track User - Event %}
 
+__Action: Track User - Event__
 
-{% enddetails %}
-
-{% details Track User by User Alias %}
-
-__Action - Track User by User Alias__
-
-| Parameters | Description |
-| ---------- | ----------- |
-| Endpoint URL | (Required) Your [Braze REST endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints). Your endpoint will need to be manually entered as custom text into the given drop-down box. |
-| User Alias Value | Map the actual identifier value for Alias. Example: "Bobby". An Alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID. <br><br>When using a User Alias, the "Update Only" mode is always true. |
-| User Alias Label | The Label for the Alias, Example: "my_internal_ids". An Alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID. When using a User Alias, "Update Only" mode is always true. |
-| User Attributes | An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use the Braze User Profile Field names or your own custom attribute data. |
-
-![Track User by Alias][13]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
-![Track User by Alias][14]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
-
-
-{% enddetails %}
-
-{% details Delete User by External ID or Braze ID %}
-
-__Action - Delete User by External ID or Braze ID__
+This action allows you to track and map event attributes like those in the Braze Event Object. To read more about the Braze Event Object, check out [our documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
 
 | Parameters | Description |
 | ---------- | ----------- |
-| Endpoint URL | (Required) Your [Braze REST endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints). Your endpoint will need to be manually entered as custom text into the given drop-down box. |
-| External ID | (Optional*) External ID of the user to delete. Must include either External ID or Braze ID. |
-| Braze ID | (Optional*) Braze ID of the user to delete. Must include either External ID or Braze ID. |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value.<br><br>If sending an Event Object, __Name (tealium_event)__, and __Time (Last event timestamp)__ are both required. | 
+| Event Attributes Strategy | Choose a strategy for updating or creating Event Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting`Create or Update` will create or update a user profile as needed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-![Delete User by External ID or Braze ID][12]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![Track Event]({% image_buster /assets/img/tealium/track_user_event.png %})
 
-{% enddetails %}
+{% endtab %}
+{% tab Track User - Purchase %}
 
-{% details Delete User by User Alias %}
-__Action - Delete User by User Alias__
+__Action: Track User - Purchase__
+
+This action allows you to track and map user purchase attributes like those in the Braze Purchase Object. To read more about the Braze Purchase Object, check out our [Documentation](https://www.braze.com/docs/api/objects_filters/purchase_object/).
 
 | Parameters | Description |
 | ---------- | ----------- |
-| Endpoint URL | (Required) Your [Braze REST endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints). Your endpoint will need to be manually entered as custom text into the given drop-down box. |
-| Alias Name | The Alias name of the user to be deleted. |
-| Alias Label | The Alias label of the user to be deleted. |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+| Purchase Attributes | A Purchase represents a single purchase by a particular user at a particular time.<br><br> If sending a purchase, the __Product ID (braze_product_id), Currency (currency), Price (product_list_price)__, and __Time (Last event timestamp)__ attributes are required. |
+| Purchase Attributes Update Strategy | Choose a strategy for updating or creating Purchase Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-![Delete User by Alias][10]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![Track Purchases]({% image_buster /assets/img/tealium/track_user_purchase.png %})
 
-{% enddetails %}
+{% endtab %}
+{% tab Track User (Advanced) %}
 
-When done, required fields for an item display __Completed__ on the right. 
+__Action: Track User (Advanced)__
+
+This action allows you to track user, event, and purchase attributes all in one action.
+
+| Parameters | Description |
+| ---------- | ----------- |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+| User Attributes | Use Braze's existing User Profile Attribute names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles. |
+| Modify User Attributes | Integer attributes may be incremented by positive or negative integers.<br>Array attributes may be modified by adding or removing values from existing arrays. |
+| User Attributes Update Strategy | Choose a strategy for updating or creating User Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value.<br><br>If sending an Event Object, __Name (tealium_event)__, and __Time (Last event timestamp)__ are both required. |
+| Event Attributes Update Strategy | Choose a strategy for updating or creating Event Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+| Purchase Attributes | A Purchase represents a single purchase by a particular user at a particular time.<br><br> If sending a purchase, the __Product ID (braze_product_id), Currency (currency), Price (product_list_price)__, and __Time (Last event timestamp)__ attributes are required. |
+| Purchase Attributes Update Strategy | Choose a strategy for updating or creating Purchase Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+
+{% tab Delete User %}
+
+__Action: Delete Users__
+
+This action allows you to delete users from the Braze Dashboard. To read more about the Braze /users/delete endpoint this action maps to, check out [our documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/).
+
+| Parameters | Description |
+| ---------- | ----------- |
+| User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+![Track Purchases]({% image_buster /assets/img/tealium/track_user_delete.png %})
+
+{% endtab %}
+{% endtabs %}
+
+When completed, required fields for an action display __Completed__ on the right. 
 
 Select __Continue__.
 
 #### Part 4: Summary
 
-Here you can view the summary for the connector you created. If you would like to modify the options you chose, select __Back__ or select __Finish__ to complete.
+Here, you can view the summary of the connector you created. If you would like to modify the options you chose, select __Back__ to edit or __Finish__ to complete.
 
-![Connector Summary][16]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![Connector Summary][16]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 
 Your connector now displays in the list of connectors on your Tealium Home page. 
 
-![Connector][18]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 
 #### Part 5: Save and Publish
-
+![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 The actions you configured will now fire when the trigger connections are met. The data populates, in real-time as each action fires. 
 
-![Save/Publish][17]{: style="max-width:40%;margin-left:15px;margin-bottom:15px;"}
+## Step 2: Test your Tealium Connector
 
-## Step 3: Test your Tealium Connector
+After your connector is up and running, you should test it to make sure it's working properly. The most simple way to test this is to use the Tealium __Trace Tool__.
 
-After your connector is up and running, you should test it to make sure it's working properly. The most simple way to test this is to use a __Trace Tool__.
-
-1. Start a new trace.
+1. Start a new trace. This can be done by selecting Trace on the left sidebar under `Server-Side` options.
 2. Examine the real-time log.
 3. Check for the action you want to validate by clicking __Actions Triggered__ entry to expand.
 4. Look for the action you want to validate and view the log status. 
 
-To learn more about Tealium connector, check out the Tealium documentation, [here][4].
+For more detailed instructions on how to implement Tealium's Trace tool, check out their [Trace documentation][21]. 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
@@ -244,12 +269,14 @@ To learn more about Tealium connector, check out the Tealium documentation, [her
 [7]: {% image_buster /assets/img/tealium/event_specs.png %}
 [8]: {% image_buster /assets/img/tealium/get_code.png %}
 [9]: {% image_buster /assets/img/tealium/summary.png %}
-[10]: {% image_buster /assets/img/tealium/delete_user_by_alias.png %}
-[11]: {% image_buster /assets/img/tealium/track_user_by_user_id.png %}
-[12]: {% image_buster /assets/img/tealium/delete_user_by_external_id.png %}
-[13]: {% image_buster /assets/img/tealium/track_user_by_alias.png %}
-[14]: {% image_buster /assets/img/tealium/track_by_alias_pt2.png %}
+[10]: {% image_buster /assets/img/tealium/track_user_event.png %}
+[11]: {% image_buster /assets/img/tealium/track_user_purchase.png %}
+[12]: {% image_buster /assets/img/tealium/track_user_delete.png %}
+
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
 [18]: {% image_buster /assets/img/tealium/braze_connection.png %}
+[19]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329#toc-hId--2078027338
+[20]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
+[21]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Trace/ta-p/12058
