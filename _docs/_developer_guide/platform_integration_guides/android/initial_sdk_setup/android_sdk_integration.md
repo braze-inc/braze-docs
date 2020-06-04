@@ -39,7 +39,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Add Braze Dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
+Add the non-AndroidX `android-sdk-ui` dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
