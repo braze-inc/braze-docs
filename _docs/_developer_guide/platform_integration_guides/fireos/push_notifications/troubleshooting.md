@@ -22,6 +22,7 @@ Braze provides a log of Push Notification Errors within the "Message Activity Lo
 There are a few scenarios why this could be occurring:
 
   - If you force-quit your application, your push notifications will not be displayed while your app is not running.
+  - Make sure the ["Notification Priority"][15] setting is set to "HIGH" in your campaign
   - The ADM API Key in your `api_key.txt` is incorrect or contins invalid characters.
   - The AppboyAdmReceiver is not properly registered in `AndroidManifest.xml` with intent filters for `<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` and `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />`.
 
@@ -34,3 +35,4 @@ There are a few scenarios why this could be occurring:
 [9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [14]: http://tcpiputils.com/browse/as/15169
+[15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#notification-priority

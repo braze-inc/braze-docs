@@ -122,7 +122,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 
 |Default API Rate Limit | Value|
 |---|---|
-|Requests to the `/users/track` endpoint|Default of 50,000 API requests per minute for Dashboard companies created after June 2, 2020, and default of Unlimited API requests for Dashboard companies created before then. These limits are subject to change; please reach out to your Customer Success Manager to request an increase if needed.  |
+|Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. These limits are subject to change and can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
@@ -158,6 +158,7 @@ Understanding Optimal Delay between endpoints is crucial when making consecutive
 
 Under normal conditions, the time for our data eventual-consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5 minute delay__ between making subsequent calls to minimize the probability of error.
 
+[1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
