@@ -91,7 +91,7 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 
 ### Braze SDK Custom Tag Provider {#adding-ios-google-tag-provider}
 
-With the tags and triggers set up, you will also need to implement Google Tag Manager in your iOS app which can be found in Google's [documentation][2]
+With the tags and triggers set up, you will also need to implement Google Tag Manager in your iOS app which can be found in Google's [documentation][2].
 
 Once Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager. 
 
@@ -198,7 +198,7 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
       [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
                                                andDoubleValue:[(NSNumber *)customAttributeValue doubleValue]];
     } else {
-      NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@]", customAttributeValue);
+      NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@", customAttributeValue);
     }
   } else if ([customAttributeValue isKindOfClass:[NSArray class]]) {
     [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:customAttributeKey
