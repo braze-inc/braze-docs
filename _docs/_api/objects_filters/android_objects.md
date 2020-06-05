@@ -76,7 +76,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 ```
 
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/#silent-push-notifications
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [35]: https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages "collapse key documentation"
 [44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
 [43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-4-define-notification-channels
