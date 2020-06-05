@@ -42,9 +42,9 @@ You will need to ensure that you have the following items created and/or complet
 
 Customers looking to use the Audience Sync to Facebook step in Canvas will need to undergo [Facebook’s App Review][25] process for the following permissions. This ensures each customer is adhering to Facebook’s permission and authorization protocols when using the Facebook marketing API. 
 
-- Ads Management Standard Access
-- Ads Management
-- Business Management
+- [Ads Management Standard Access][28]
+- [Ads Management][29]
+- [Business Management][30]
 
 Granting these permissions enables Braze to sync data seamlessly into Facebook. The Audience Sync to Facebook feature __will not__ have access to perform any of the following actions: <br>- Manage or edit a customer’s Facebook Campaigns<br>- Manage or edit a customer’s Facebook page<br>- Manage or edit a customer’s Facebook business assets 
 
@@ -82,10 +82,25 @@ Add a step in your Canvas, select the dropdown at the top of the step, and selec
 
 ### Step 3: Sync Setup
 
-Click on the “Custom Audience” button to open the step editor. Currently, functionality in the beta allows brands to create a new custom audience with users who flow through the step.
+Click on the “Custom Audience” button to open the step editor.
 
-Select the desired ad account, enter a name for the new custom audience, and select the first-party user field data to send to Facebook. Facebook uses this information to determine who the user is in their database.<br>
-![audience sync][19]{:style="max-width:75%"}
+Select the desired ad account. Then you will have to option to Sync with an Existing Audience or Create a New Audience.
+
+#### Sync with an Existing Audience
+
+To sync with an existing audience, select an existing custom audience to sync to and then choose whether you want to __Add to the audience__ or __Remove from the audience__. Please note that value-based custom audiences are not supported.
+
+![Sync Setup Existing][32]{:style="max-width:70%"}
+
+It's important to note that Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000). As a result, Braze will be unable to sync users for a Remove from Audience step until the audience reaches the appropriate audience size. 
+
+#### Create a New Audience
+
+Enter a name for the new custom audience. 
+
+![Sync Setup New][33]{:style="max-width:70%"}
+
+Next, select the first-party user field data to send to Facebook. Facebook uses this information to determine who the user is in their database.<br>
 
 ![audience sync][18]{: style="float:left;max-width:15%;margin-right:15px;"}
 Click the “Done” button to return back to your Canvas. <br>This is what your step should look like after completion of the sync step. 
@@ -134,7 +149,7 @@ __Potential causes of errors__:<br>
 {% enddetails %}
 
 [0]: https://www.braze.com/privacy
-[1]: https://developers.facebook.com/docs/audience-network/guides/reporting/system-user/
+[1]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
 [2]: https://developers.facebook.com/
 [3]: https://www.facebook.com/business/help/113163272211510
 [4]: https://www.facebook.com/business/help/910137316041095
@@ -145,7 +160,7 @@ __Potential causes of errors__:<br>
 [9]: http://developer.facebook.com/
 [10]: https://developers.facebook.com/docs/apps/review/#business-verification
 [11]: https://developers.facebook.com/docs/apps/review/#supplemental-terms
-[12]: https://developers.facebook.com/docs/audience-network/guides/reporting/system-user/
+[12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
 [13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
 [15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.png %}
@@ -160,3 +175,9 @@ __Potential causes of errors__:<br>
 [25]: https://developers.facebook.com/docs/apps/review/
 [26]: {{site.baseurl}}/audience_sync_facebook/#facebook-app-review-process
 [27]: {{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token
+[28]: https://developers.facebook.com/docs/marketing-api/access#standard
+[29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
+[30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
+[31]: {% image_buster /assets/img/fb_audience_sync/sync_setup.png %}
+[32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
+[33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
