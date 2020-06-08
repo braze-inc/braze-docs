@@ -143,6 +143,12 @@ Next, you must select a connector action. A connector action sends data accordin
 1. From the __Add Action__ dialogue, select one of the actions to set up.
 2. Depending on which action you chose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
 
+{% alert important %}
+__Note that not all fields offered are required__. <br>If you wish to skip over a field, Tealium requires that you minimize it before continuing onto the next step.
+
+![Minimize]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
+{% endalert %}
+
 {% tabs local %}
 {% tab Track User - User %}
 
@@ -157,6 +163,8 @@ This action allows you to track and map user attributes like those in the Braze 
 | Modify User Attributes | Integer attributes may be incremented by positive or negative integers.<br>Array attributes may be modified by adding or removing values from existing arrays. |
 | User Attributes Update Strategy | Choose a strategy for updating or creating User Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+![Track User]({% image_buster /assets/img/tealium/track_user_user.png %})
 
 {% endtab %}
 {% tab Track User - Event %}
@@ -227,8 +235,6 @@ This action allows you to delete users from the Braze Dashboard. To read more ab
 {% endtab %}
 {% endtabs %}
 
-When completed, required fields for an action display __Completed__ on the right. 
-
 Select __Continue__.
 
 #### Step 2e: Summary
@@ -269,6 +275,7 @@ For more detailed instructions on how to implement Tealium's Trace tool, check o
 [11]: {% image_buster /assets/img/tealium/track_user_purchase.png %}
 [12]: {% image_buster /assets/img/tealium/track_user_delete.png %}
 [13]: {% image_buster /assets/img/tealium/summary_list.png %}
+[14]: {% image_buster /assets/img/tealium/track_user_user.png %}
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
