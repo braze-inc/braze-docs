@@ -69,7 +69,7 @@ The Braze integration uses the native Braze SDK, a remote command module that wr
 
 This integration forwards data from Tealium to Braze's REST API. Similar to the side-by-side integration, you may need to map Tealium methods to Braze.
 
-__Pre-Requisites__
+### Pre-Requisites
 
 | Name | Description |
 | ---- | ----------- |
