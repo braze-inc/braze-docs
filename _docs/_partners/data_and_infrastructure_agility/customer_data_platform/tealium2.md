@@ -239,7 +239,7 @@ Here, you can view the summary of the connector you created. If you would like t
 
 Your connector now displays in the list of connectors on your Tealium Home page. 
 
-![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+![Connector][13]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 
 #### Step 2f: Save and Publish
 ![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
@@ -268,7 +268,7 @@ For more detailed instructions on how to implement Tealium's Trace tool, check o
 [10]: {% image_buster /assets/img/tealium/track_user_event.png %}
 [11]: {% image_buster /assets/img/tealium/track_user_purchase.png %}
 [12]: {% image_buster /assets/img/tealium/track_user_delete.png %}
-
+[13]: {% image_buster /assets/img/tealium/summary_list.png %}
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
