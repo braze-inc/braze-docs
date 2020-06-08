@@ -44,7 +44,7 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 ## Tealium AudienceStream
 Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. These visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
-## Step 1: Choose Integration Type
+## Choose your Integration Type
 
 | Integration | Details |
 | ----------- | ------- |
@@ -69,9 +69,7 @@ The Braze integration uses the native Braze SDK, a remote command module that wr
 
 This integration forwards data from Tealium to Braze's REST API. Similar to the side-by-side integration, you may need to map Tealium methods to Braze.
 
-### Step 1: Configure Braze Settings in Tealium {#connection-settings}
-
-#### Pre-Requisites
+__Pre-Requisites__
 
 | Name | Description |
 | ---- | ----------- |
@@ -79,7 +77,7 @@ This integration forwards data from Tealium to Braze's REST API. Similar to the 
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Add a Connector in Tealium
+### Step 1: Add a Connector in Tealium
 
 ![Connector MarketPlace][5]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
@@ -91,11 +89,11 @@ For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
 2. In the new dialogue box that appears, use the spotlight search to find the Braze Connector.
 3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__ to begin configuring.
 
-#### Configure your Connector Settings
+### Step 2: Configure your Connector Settings
 
 The Braze Tealium connector setup is composed of four steps: Source, Configuration, Action, and Summary.
 
-##### Part 1a: Set Up Source
+#### Step 2a: Set Up Source
 
 Tealium requires that you first set up a valid source of data for your connector to draw from. 
 
@@ -117,7 +115,7 @@ __Setting up Your Data Source__
 
 For further instruction on setting up and editing your data source, check out [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933).
 
-##### Part 1b: Configure Braze Connector Source
+#### Step 2b: Configure Braze Connector Source
 
 Once configured, navigate back to the Braze Connector and select your data source. 
 
@@ -125,7 +123,7 @@ Once configured, navigate back to the Braze Connector and select your data sourc
 2. Next, from the Event Feed drop-down list, select an event specification you would like to configure.
 3. Name this action and click __Continue__.
 
-##### Part 2: Configuration
+#### Step 2c: Configuration
 ![Create Configuration][15]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
 Next, a __Create Configuration__ dialogue will appear. Here, you must fill in certain values requested by Tealium and Braze:
@@ -138,7 +136,7 @@ Next, a __Create Configuration__ dialogue will appear. Here, you must fill in ce
 
 If you have created a connector before, you may optionally use an existing from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
-##### Part 3: Action
+#### Step 2d: Action
 
 Next, you must select a connector action. A connector action sends data according to the mapping that gets configured. The Braze connector allows you to map Braze attributes to Tealium attribute names. 
 
@@ -233,7 +231,7 @@ When completed, required fields for an action display __Completed__ on the right
 
 Select __Continue__.
 
-##### Part 4: Summary
+#### Step 2e: Summary
 
 Here, you can view the summary of the connector you created. If you would like to modify the options you chose, select __Back__ to edit or __Finish__ to complete.
 
@@ -243,11 +241,11 @@ Your connector now displays in the list of connectors on your Tealium Home page.
 
 ![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 
-##### Part 5: Save and Publish
+#### Step 2f: Save and Publish
 ![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 The actions you configured will now fire when the trigger connections are met. The data populates, in real-time as each action fires. 
 
-### Step 2: Test your Tealium Connector
+### Step 3: Test your Tealium Connector
 
 After your connector is up and running, you should test it to make sure it's working properly. The most simple way to test this is to use the Tealium __Trace Tool__.
 
