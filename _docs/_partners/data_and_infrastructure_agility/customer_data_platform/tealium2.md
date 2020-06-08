@@ -28,8 +28,8 @@ To get going with your Tealium/Braze integration,
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Tealium Account & Account Information | Tealium | https://my.tealiumiq.com/ | You must have an active Tealium Account with both Server and Client-Side Access to utilize their services with Braze. |
-| Install Source and Tealium Source Libraries | Tealium | https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933 | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector |
+| Tealium Account & Account Information | Tealium | [https://my.tealiumiq.com/](https://my.tealiumiq.com/) | You must have an active Tealium Account with both Server and Client-Side Access to utilize their services with Braze. |
+| Install Source and Tealium Source Libraries | Tealium | [Tealium Source Libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector |
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2] and [Web][3] documentation | Braze must successfully be installed onto your app or site |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -44,11 +44,7 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 ## Tealium AudienceStream
 Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. These visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
-## Step 1: Configure Braze Settings in Tealium
-
-## Step 2a: Choose Integration Type and Implement
-
-### Side-by-Side SDK Integration
+## Step 1: Choose Integration Type
 
 | Integration | Details |
 | ----------- | ------- |
@@ -56,24 +52,26 @@ Tealium AudienceStream is an Omnichannel customer segmentation and real-time act
 | [Server-to-Server](#server-to-server-integration) | Forwards data from Tealium to Braze's [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Remote Commands
+## Side-by-Side SDK Integration
+
+### Remote Commands
 
 Remote Commands is a feature of the Tealium iOS and Android libraries that allows native code to be triggered with the Tealium iQ Tag Management.
 
 The Braze integration uses the native Braze SDK, a remote command module that wraps the Braze methods, and the Braze Remote Command tag that translates event tracking into native Braze calls. This solution leverages the convenience of Tag Management to configure a native Braze implementation without having to add vendor-specific code to your app.
 
-#### Tealium's Side-by Side Integrations with Braze
+### Tealium's Side-by Side Integrations with Braze
 - [iOS](https://docs.tealium.com/platforms/remote-commands/integrations/braze/) 
 - [Android](https://docs.tealium.com/platforms/remote-commands/integrations/braze/)
 - [Web](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106)
 
-### Server-to-Server Integration
+## Server-to-Server Integration
 
 This integration forwards data from Tealium to Braze's REST API. Similar to the side-by-side integration, you may need to map Tealium methods to Braze.
 
-## Step 1: Configure Braze Settings in Tealium {#connection-settings}
+### Step 1: Configure Braze Settings in Tealium {#connection-settings}
 
-### Pre-Requisites
+#### Pre-Requisites
 
 | Name | Description |
 | ---- | ----------- |
@@ -81,7 +79,7 @@ This integration forwards data from Tealium to Braze's REST API. Similar to the 
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Add a Connector in Tealium
+#### Add a Connector in Tealium
 
 ![Connector MarketPlace][5]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
@@ -93,11 +91,11 @@ For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
 2. In the new dialogue box that appears, use the spotlight search to find the Braze Connector.
 3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__ to begin configuring.
 
-### Configure your Connector Settings
+#### Configure your Connector Settings
 
 The Braze Tealium connector setup is composed of four steps: Source, Configuration, Action, and Summary.
 
-#### Part 1a: Set Up Source
+##### Part 1a: Set Up Source
 
 Tealium requires that you first set up a valid source of data for your connector to draw from. 
 
@@ -119,7 +117,7 @@ __Setting up Your Data Source__
 
 For further instruction on setting up and editing your data source, check out [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933).
 
-#### Part 1b: Configure Braze Connector Source
+##### Part 1b: Configure Braze Connector Source
 
 Once configured, navigate back to the Braze Connector and select your data source. 
 
@@ -127,7 +125,7 @@ Once configured, navigate back to the Braze Connector and select your data sourc
 2. Next, from the Event Feed drop-down list, select an event specification you would like to configure.
 3. Name this action and click __Continue__.
 
-#### Part 2: Configuration
+##### Part 2: Configuration
 ![Create Configuration][15]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
 Next, a __Create Configuration__ dialogue will appear. Here, you must fill in certain values requested by Tealium and Braze:
@@ -140,7 +138,7 @@ Next, a __Create Configuration__ dialogue will appear. Here, you must fill in ce
 
 If you have created a connector before, you may optionally use an existing from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
-#### Part 3: Action
+##### Part 3: Action
 
 Next, you must select a connector action. A connector action sends data according to the mapping that gets configured. The Braze connector allows you to map Braze attributes to Tealium attribute names. 
 
@@ -235,7 +233,7 @@ When completed, required fields for an action display __Completed__ on the right
 
 Select __Continue__.
 
-#### Part 4: Summary
+##### Part 4: Summary
 
 Here, you can view the summary of the connector you created. If you would like to modify the options you chose, select __Back__ to edit or __Finish__ to complete.
 
@@ -245,11 +243,11 @@ Your connector now displays in the list of connectors on your Tealium Home page.
 
 ![Connector][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 
-#### Part 5: Save and Publish
+##### Part 5: Save and Publish
 ![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 The actions you configured will now fire when the trigger connections are met. The data populates, in real-time as each action fires. 
 
-## Step 2: Test your Tealium Connector
+### Step 2: Test your Tealium Connector
 
 After your connector is up and running, you should test it to make sure it's working properly. The most simple way to test this is to use the Tealium __Trace Tool__.
 
