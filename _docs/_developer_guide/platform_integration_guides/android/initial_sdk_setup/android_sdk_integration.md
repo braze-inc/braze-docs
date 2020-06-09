@@ -39,7 +39,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Add Braze Dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
+Add the non-AndroidX `android-sdk-ui` dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
@@ -50,6 +50,16 @@ dependencies {
 The below example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example below uses an old version. Please visit [Braze Android SDK Releases][60] for the most up to date version of the Braze Android SDK.
 
 ![MavenScreen2][32]
+
+##### Using AndroidX Dependencies (Optional)
+
+If using [AndroidX][70] in your project, use the jetified dependency instead of the above. All published artifacts of the Braze SDK ship with this fully jetified option.
+
+```gradle
+dependencies {
+  implementation "com.appboy:android-sdk-ui-jetified:+"
+}
+```
 
 ##### Perform Gradle Sync
 
@@ -210,3 +220,4 @@ Our Unity SDK integration for Android requires [the same support library version
 [67]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{site.baseurl}}/support_contact/
 [69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
+[70]: https://developer.android.com/jetpack/androidx

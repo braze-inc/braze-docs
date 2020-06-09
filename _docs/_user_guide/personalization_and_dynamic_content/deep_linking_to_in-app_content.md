@@ -68,7 +68,7 @@ Similarly to push notifications and news feed cards, you can include UTM tags in
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/deep_linking_to_in-app_resources/#android_deep_advance
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
 [4]: https://support.google.com/analytics/answer/1033863?hl=en
 [5]: https://developers.google.com/analytics/devguides/collection/
 [6]: https://support.google.com/analytics/answer/1033867

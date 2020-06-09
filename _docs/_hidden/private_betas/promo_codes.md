@@ -11,7 +11,7 @@ This Promotion Codes feature is currently in Beta. Please reach out to your Braz
 
 # Promotion Codes
 
-> Promotion codes - also called Promo codes -  are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid Logic functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
+> Promotion codes - also called Promo codes -  are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
 ## Creating a Promotion Code List
 
@@ -24,7 +24,7 @@ Click on the “Promotion Codes” link on the Dashboard’s side navigation loc
 ![Promo Codes 2][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 Name your promotion code list and add an optional description.
 
-Next, create a code snippet for the promotion code. This code snippet will be what you will reference in your Liquid Logic to display this specific set of promotion codes. __Make sure that it is a code snippet that is not already being used in another list.__<br><br> Snippets are __case sensitive__, so for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets. <br>Note that you __will not__ be able to change the code snippet after saving.
+Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. __Make sure that it is a code snippet that is not already being used in another list.__<br><br> Snippets are __case sensitive__, so for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets. <br>Note that you __will not__ be able to change the code snippet after saving.
 
 ![Promo Codes 3][3]{:height="200px"}
 
