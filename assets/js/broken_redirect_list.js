@@ -244,3 +244,6 @@ validurls['/docs/services_handbook/'] = '/docs/assets/download_file/Braze_Succes
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 
 validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs/';
+
+validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
+

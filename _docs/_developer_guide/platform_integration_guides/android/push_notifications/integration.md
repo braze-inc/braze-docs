@@ -618,7 +618,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
 [14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "Custom Broadcast Sample Project"
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [23]: #step-4-registering-opens-and-receipts
 [26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
