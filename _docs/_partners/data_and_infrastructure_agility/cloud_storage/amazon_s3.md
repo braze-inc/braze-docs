@@ -157,12 +157,12 @@ Open the "JSON" tab and input the code below into the “Policy Document” sect
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": ["s3:GetBucketLocation"],
+            "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:PutObject", "s3:ListObject"],
+            "Action": ["s3:PutObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
