@@ -3,7 +3,7 @@ nav_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-perma_link: /your_perma_link/
+permalink: "/partnership_template/"
 
 page_type: partner
 hidden: true
@@ -11,7 +11,7 @@ hidden: true
 
 # [Partner Name]
 
-> Welcome to the Partner Page  Template! Here, you'll find everything you need to create your own partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
 
 In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
 
@@ -20,19 +20,18 @@ In the second paragraph, you should explore and explain the relationship between
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements are used to do.
+The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
 {% endalert %}
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints][1] or open a support ticket. | Description pending. |
+| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
+| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## [Type of Integration] Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents which will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of the Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
-
-If this is a Currents Integration, this page should be located in the Currents section, and a corresponding Nav Page should be build that redirects to that location in Currents.
+This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of-the-Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
 
 ### Step 1: This Is a Short Description of Step One
 
@@ -44,7 +43,7 @@ You have the option to put images in your documentation, so we recommend you do 
 
 ### Step 3: How Many Steps
 
-Outline through usage of the integration - especially if it means inserting liquid into our message composer.
+Outline thorough usage of the integration - especially if it means inserting liquid into our message composer.
 
 ## Customization
 

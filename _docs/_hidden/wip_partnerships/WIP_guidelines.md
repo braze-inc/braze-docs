@@ -19,7 +19,7 @@ Partnership Documentation Overview
 - [Review Process](#review)
 
 {% alert important %}
-Note that this Partnership guide is for __new Braze partners that do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update as you normally would. 
+Note that this partnership guide is for NEW Braze partners that do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update your pages as you normally would. 
 {% endalert %}
 
 ## Step 1: Set up Your Local Environment {#setup_env}
@@ -34,16 +34,17 @@ After setting up your local environment, make sure to sign our [CLA](https://www
 
 To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
 
-Here, you will find a partnership template. Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
+Here, you will find a [Partnership Template]({{site.baseurl}}/partnership_template). Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
+
+### Useful Resources
+
+Useful links to reference as you write:
+- [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices): A quick skim of our writing style and best practices helps align your documentation with our voice.<br>
+- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add chart, tabs, downloadable files, and more? Check out our Styling test page and Special Formatting pages to get started.
 
 ### Template Components
 
-Your partnership template is composed of three main components, the metadata, the content, and the references. 
-
-Useful links to reference as you write:
-- [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices): A quick skim of our writing style and best practices helps align your doc with our voice.
-- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Charts? Tabs? Downloadable Files? Check out our Styling test page and Special Formatting pages to get started.
-
+Your [Partnership Template]({{site.baseurl}}/partnership_template) is composed of three main components, the metadata, the content, and the references. 
 
 {% tabs %}
 {% tab MetaData %}
@@ -54,7 +55,7 @@ nav_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-perma_link: /your_perma_link/
+permalink: /your_perma_link/
 
 page_type: partner
 hidden: true
@@ -68,11 +69,11 @@ Note that we require you to fill out all metadata fields __except__ `page_order`
 {% endtab %}
 {% tab Content %}
 This information is the meat of the document. Here you cover the pre-requisites, integration steps, use cases, etc...
-For more information on what to include in the content, check out our Partnership [Template](https://www.braze.com/docs/hidden/wip_partnerships/partnership_template.md) that breaks down what should be included.
+For more information on what to include in the content, check out our Partnership [Template]({{site.baseurl}}/partnership_template) that breaks down what should be included.
 ```
 # [Partner Name]
 
-> Welcome to the Partner Page  Template! Here, you'll find everything you need to create your own partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
 
 In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
 
@@ -86,12 +87,12 @@ The requirements listed below are typical requirements you might need from Braze
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints][1] or open a support ticket. | Description pending. |
+| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
+| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 
 ## [Type of Integration] Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the ... Continued in the Partnerships Template.
+This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents... Continued in the Partnership Template.
 ```
 
 {% endtab %}
@@ -151,13 +152,13 @@ And at the end of your document, add your link.
 
 ### Liquid
 
-Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including liquid code snippets, they must be wrapped between {% raw %} and {% endraw %} or you'll get a liquid warning in markdown.
+Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a liquid warning in markdown.
 {% raw %}
-```
-{% raw %}
-Toggle on the integration to begin sending responses for that survey into Braze. Copy the survey link listed, this is what you'll include in your campaign. Note the `?user_braze_id={{${braze_id}}}` which Braze will automatically replace with the correct braze id of the user you're sending to in the campaign.
-{% endraw %}
-```
+
+{&#37; raw &#37;}<br>
+?user_braze_id={{&#36;{braze_id}}}<br>
+{&#37; endraw &#37;}
+
 {% endraw %}
 ## Reviewing and Testing {#testing}
 
@@ -188,7 +189,7 @@ Within the Braze docs GitHub repository, you will be able to find your branch. I
 
 ## Review Process {#review}
 
-The review process may take several days to a week to get approved. We understand other companies may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
+The review process may take several days to a week to get approved. We understand other companies and writers may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
 
 Once the Pull Request has been approved by our writers, we will move it out of `wip_partnerships` to the correct location in our repository.
 
