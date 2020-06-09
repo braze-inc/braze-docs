@@ -8,29 +8,46 @@ page_type: reference
 
 # Partnership Documentation
 
-Welcome Braze Partners and thank you for contributing to our customer knowledge base. Creating and adding partner pages to the Braze docs repo can be quick and simple with the right tools and set up.
+Welcome Braze Partners and thank you for contributing to our customer knowledge base. Creating and adding partner pages to the Braze docs repository can be quick and simple with the right tools and set up.
 
-## Step 1: Set up Your Local Environment
+Partnership Documentation Overview
+- [Set up Your Local Environment](#setup_env)
+- [Create and Add Content to Your Page](#create_page)
+- [Image, Link and Code Snippet Formatting](#image_links)
+- [Reviewing and Testing](#testing)
+- [Commiting to Github](#committing)
+- [Review Process](#review)
+
+{% alert important %}
+Note that this Partnership guide is for __new Braze partners that do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update as you normally would. 
+{% endalert %}
+
+## Step 1: Set up Your Local Environment {#setup_env}
 
 To contribute to Braze docs, you must have a Github account with which you can commit changes and edits. 
 
-Follow our instructions here on how to set up you [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
+Follow our instructions here on how to set up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
 
-After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), this step is Required.
+After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
 
-## Step 2: Create Your Page
+## Step 2: Create and Add Content to Your Page {#create_page}
 
-To create your partner page, open the Braze-docs repo and navigate to the `wip_partnerships` folder within the directory. <br>This can be found by in following this file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
+To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
 
-Here you will find a partnership template. Navigate to the partnerships_files folder, create a new folder, name it and copy this template into this folder and get to work!
+Here, you will find a partnership template. Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
 
 ### Template Components
 
-Yout partnership template is composed of three main components, the metadata, the content, and the references. 
+Your partnership template is composed of three main components, the metadata, the content, and the references. 
+
+Useful links to reference as you write:
+- [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices): A quick skim of our writing style and best practices helps align your doc with our voice.
+- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Charts? Tabs? Downloadable Files? Check out our Styling test page and Special Formatting pages to get started.
+
 
 {% tabs %}
 {% tab MetaData %}
-This information helps the Braze search properly find and label your docs page. 
+This information helps our Braze search properly find, label, and categorize your docs page. 
 ```
 ---
 nav_title: Your Partner Page
@@ -43,12 +60,15 @@ page_type: partner
 hidden: true
 ---
 ```
-Note that we require to fill out all metadata fields __except__ `page_order` and `page_type`. Please reference the provided [template](https://www.braze.com/doc/hidden/wip_partnerships/partnership_template.md) for a fleshed out example of these fields.
+
+{% alert note %}
+Note that we require you to fill out all metadata fields __except__ `page_order`, `page_type`, and `hidden`.
+{% endalert %}
 
 {% endtab %}
 {% tab Content %}
 This information is the meat of the document. Here you cover the pre-requisites, integration steps, use cases, etc...
-For more information on what to include in the content, check out our Partnership Template that breaks down what should be included, as well as a completed partnership docs [here].
+For more information on what to include in the content, check out our Partnership [Template](https://www.braze.com/docs/hidden/wip_partnerships/partnership_template.md) that breaks down what should be included.
 ```
 # [Partner Name]
 
@@ -76,35 +96,32 @@ This is where you break down the integration into steps. Do not just write endle
 
 {% endtab %}
 {% tab References %}
-This last section, while the shortest is located at the end of the document. Here you will list out all references you need to links and images that you want to include in your doc. Please see the next step on best practices for adding images and links to your doc.
+This last section is located at the very end of your document. Here you will list out all references you need to links and images that you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
 ```
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
 ```
 {% endtab %}
 {% endtabs %}
 
-Useful links to reference as you write:
-- [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices)
-- Other thing 1
-- Other thing 2
+## Step 3: Image, Link and Code Snippet Formatting {#image_links}
 
-## Step 3: Add Images and Links
-
-Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, helping communicate to users information that might be hard to explain in words. 
+Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, helping communicate information to users that might be hard or unnecessary to explain in words. 
 
 ### Images
 
-The higher quality the images you can provide the better. Images should not include important information such as API keys or employee names, we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. If you are unsure of the best way to display, crop, or blur images, check out some [examples].
+The higher quality the images you can provide the better. Images should not include important information such as API keys or employee names, we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process. If in serious doubt, please reach out to @KellieHawks on Github.
 
-To add images to your partner doc, you must place them in the correct directory, to locate this directory, navigate to `braze-docs` -> `assets` -> `img`
+To add images to your partner doc, you must place them in the `img` folder in our repository. This folder can be found by following the file path: `braze-docs` -> `assets` -> `img`.
 
-Within this new directory, create a folder to keep your partnership images in, name this folder the name of your Braze partner.
+Within this new folder, create a folder to keep your partnership images in, name this folder your partner name.
 
-To reference your images in your document use this format:
+![Braze Partner Folder][1]{: style="max-width:70%"}
+
+To reference your images in your document use the format listed below. 
 
 {% raw %}
 ```
-![topic_name][1]{: style="max-width:60%"}
+![topic_name][1]
 ```
 {% endraw %}
 
@@ -112,7 +129,7 @@ And at the end of your document, link out to your image
 
 {% raw %}
 ```
-[1]: {% image_buster /assets/img/your_partner_file/image_name.png %}
+[1]: {% image_buster /assets/img/partner_file/image_name.png %}
 ```
 {% endraw %}
 
@@ -121,28 +138,30 @@ And at the end of your document, link out to your image
 To add links to your document you must follow this format:
 {% raw %}
 ```
-For more information, check out [this website][1].
+For more information, check out [this website or page][1].
 ```
 {% endraw %}
 
-If your link references a pre-existing braze document, you must follow this format:
+And at the end of your document, add your link.
 {% raw %}
 ```
-{{site.baseurl}} = https://www.braze.com/docs/
-
-[1]: {{site.baseurl}} + rest of link after /docs/
+[1]: https://www.braze.com/docs/user_guide/onboarding_with_braze/integration/
 ```
 {% endraw %}
 
-If your link comes from outside braze docs:
+### Liquid
+
+Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including liquid code snippets, they must be wrapped between {% raw %} and {% endraw %} or you'll get a liquid warning in markdown.
 {% raw %}
 ```
-[1]: https://www.yourlinkgoeshere.com/
+{% raw %}
+Toggle on the integration to begin sending responses for that survey into Braze. Copy the survey link listed, this is what you'll include in your campaign. Note the `?user_braze_id={{${braze_id}}}` which Braze will automatically replace with the correct braze id of the user you're sending to in the campaign.
+{% endraw %}
 ```
 {% endraw %}
-### Testing
+## Reviewing and Testing {#testing}
 
-One of the most important things you can do before committing your changes is to test it. This can be done by running a `rake` command in your terminal.
+One of the most important things you can do before committing your changes is to test that everything looks and functions as it should. This can be done by running a `rake` command in your terminal.
 
 In your terminal, you will see the command begin to work. This process may take several minutes. You will know when the command is done when you see "done in x seconds, press ctrl-c to stop" appear in the terminal.
 
@@ -152,25 +171,27 @@ Here you can navigate to your page that you created through your perma_link you 
 
 Example: `http://localhost:4000/docs/` + `/your_perma_link/`
 
-Your page will be viewable at: `http://localhost:4000/docs/your_perma_link/`
+Your page will be viewable at `http://localhost:4000/docs/your_perma_link/`
 
-Once you are done checking press Ctrl-C in the terminal, ending the rake command.
+Once you are done reviewing your edits, press Ctrl-C in the terminal, ending the rake command.
 
-### Commiting
+## Commiting to Github {#committing}
 
 Once you have made the adequate changes to your partnership doc, save your document, and commit your changes. 
 
-Within the Braze docs GitHub repo, you will be able to find your branch. If your document is completed and ready to review, Select `New Pull Request`, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
+Within the Braze docs GitHub repository, you will be able to find your branch. If your document is completed and ready to review, Select `New Pull Request`, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
 
 1. Name your Pull Request as your Partnership Name
-2. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes, if needed.
+2. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.
 3. Tag @KellieHawks and the @Growth team, and our team will take a look.
 4. Add a `Done` label so that we can go ahead and evaluate your addition to the docs website.
 
-### Review Process
+## Review Process {#review}
 
-The review process may take several days, we understand other companies may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
+The review process may take several days to a week to get approved. We understand other companies may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
 
-Once the Pull Request has been approved by our writers, we will move it out of `WIP_partnerships` to the correct location in the Directory.
+Once the Pull Request has been approved by our writers, we will move it out of `wip_partnerships` to the correct location in our repository.
 
 And you are done! Thanks for contributing to Braze Docs! 
+
+[1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
