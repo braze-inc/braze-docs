@@ -101,7 +101,7 @@ Firebase Cloud Messaging (FCM) allows you to send send additional data payloads 
 | title | string     | The title of the push notification            |
 | icon  | string     | The file name of the desired image to display |
 
-Braze's message composer automatically handles the creation of the notifcation payload.
+Braze's message composer automatically handles the creation of the notification payload.
 
 ##### Data Payload
 
