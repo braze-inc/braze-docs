@@ -230,7 +230,6 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
-validurls['/docs/hidden/private_betas/create_send/'] = '/docs/create_send/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
 validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
 validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
