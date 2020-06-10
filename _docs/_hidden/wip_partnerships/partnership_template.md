@@ -3,7 +3,7 @@ nav_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-permalink: "/partnership_template/"
+alias: /partners/your_partner_name/
 
 page_type: partner
 hidden: true

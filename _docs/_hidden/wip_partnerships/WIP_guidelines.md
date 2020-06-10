@@ -1,5 +1,5 @@
 ---
-permalink: "/partner_docs/"
+alias: /partners/partner_walkthrough/
 title: Partner Documentation
 nav_title: Partner Docs
 hidden: true
@@ -34,7 +34,7 @@ After setting up your local environment, make sure to sign our [CLA](https://www
 
 To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
 
-Here, you will find a [Partnership Template]({{site.baseurl}}/partnership_template). Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
+Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_partner_name/). Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
 
 ### Useful Resources
 
@@ -44,7 +44,7 @@ Useful links to reference as you write:
 
 ### Template Components
 
-Your [Partnership Template]({{site.baseurl}}/partnership_template) is composed of three main components, the metadata, the content, and the references. 
+Your [Partnership Template]({{site.baseurl}}/partners/your_partner_name/) is composed of three main components, the metadata, the content, and the references. 
 
 {% tabs %}
 {% tab MetaData %}
@@ -55,7 +55,7 @@ nav_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-permalink: /your_perma_link/
+alias: /partners/your_partnership_name/
 
 page_type: partner
 hidden: true
@@ -69,7 +69,7 @@ Note that we require you to fill out all metadata fields __except__ `page_order`
 {% endtab %}
 {% tab Content %}
 This information is the meat of the document. Here you cover the pre-requisites, integration steps, use cases, etc...
-For more information on what to include in the content, check out our Partnership [Template]({{site.baseurl}}/partnership_template) that breaks down what should be included.
+For more information on what to include in the content, check out our Partnership [Template]({{site.baseurl}}/partners/your_partner_name/) that breaks down what should be included.
 ```
 # [Partner Name]
 
@@ -168,11 +168,11 @@ In your terminal, you will see the command begin to work. This process may take 
 
 Next, you can check your [localhost](http://localhost:4000/docs/).
 
-Here you can navigate to your page that you created through your perma_link you assigned earlier. Once you open the localhost, append the permalink to access your page.
+Here you can navigate to your page that you created through alias you assigned earlier. Once you open the localhost, append the alias to access your page.
 
-Example: `http://localhost:4000/docs/` + `/your_perma_link/`
+Example: `http://localhost:4000/docs/` + `/partner/your_partner_name/`
 
-Your page will be viewable at `http://localhost:4000/docs/your_perma_link/`
+Your page will be viewable at `http://localhost:4000/docs/partner/your_partner_name/`
 
 Once you are done reviewing your edits, press Ctrl-C in the terminal, ending the rake command.
 
@@ -185,7 +185,7 @@ Within the Braze docs GitHub repository, you will be able to find your branch. I
 1. Name your Pull Request as your Partnership Name
 2. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.
 3. Tag @KellieHawks and the @Growth team, and our team will take a look.
-4. Add a `Done` label so that we can go ahead and evaluate your addition to the docs website.
+4. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.
 
 ## Review Process {#review}
 
