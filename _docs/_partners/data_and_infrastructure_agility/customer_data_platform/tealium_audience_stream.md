@@ -1,5 +1,5 @@
 ---
-nav_title: Tealium
+nav_title: Tealium AudienceStream
 page_order: 1
 alias: /partners/tealium_audience_stream/
 
@@ -22,6 +22,8 @@ Tealium AudienceStream is an Omnichannel customer segmentation and real-time act
 
 ## Understanding Attributes
 
+Attributes allow you to define the important characteristics that represent a visitor's habits, preferences, actions, and engagement with your brand.
+
 __Visit Attributes__
 Visit attributes relate to the current visit (or session) of the user. The data stored in these attributes persists for the length of the visit. Some example visit attributes:
 - Visit Duration (Number)
@@ -42,9 +44,16 @@ To look at a full list of data types, check out this [Tealium documentation][1].
 Once you identify you desired sttributes, you will configure them with enrichments, rules that determine when and how to update the values of attributes. Each data type offers its own selection of enrichments for manipulating the attribute's vlaue. 
 
 
+## Step 0: Create Attributes
+
+The first step in using AudienceStream is to create attributes. 
+
+
+
+
 ## Step 1: Create Audience
 
-From the Tealium customer data hub main page, select __Audeince__ under __Audience Stream__ from the left side of the page. Here you will be able to create an audience of users that have common attributes you select. 
+From the Tealium customer data hub main page, select __Audience__ under __Audience Stream__ from the left side of the page. Here you will be able to create an audience of users that have common attributes you select. 
 
 First, name your audience and then take some time to think about what kind of attributes would be applicable for the type of audience you are trying to create. For example, to create an audience of visitors that frequently use your service, you could create an audience of returning visitors, or perhaps visitors that have an average of more than 2 visits per week.  
 
@@ -84,7 +93,7 @@ Next, you must select a connector action. A connector action sends data accordin
 2. Depending on which action you chose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
 
 {% alert important %}
-__Note that not all fields offered are required__. <br>If you wish to skip over a field, Tealium requires that you minimize it before continuing onto the next step.
+__Note that not all fields offered are required__. <br>If you wish to skip over a field, Tealium requires that you __minimize it__ before continuing onto the next step.
 
 ![Minimize]({% image_buster /assets/img/tealium/minimize.gif %}){: style="max-width:80%"}
 {% endalert %}
