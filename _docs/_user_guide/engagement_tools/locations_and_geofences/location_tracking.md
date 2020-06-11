@@ -1,5 +1,5 @@
 ---
-nav_title: Mobile Integrations
+nav_title: Location Tracking
 page_order: 0
 ---
 # Location Tracking
