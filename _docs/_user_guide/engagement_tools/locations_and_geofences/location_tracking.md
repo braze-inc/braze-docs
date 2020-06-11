@@ -25,9 +25,20 @@ Using location tracking data, you can set up location-based campaigns and strate
 See [this article][1] for more information on location targeting.
 
 ## Hard Setting the Default Location Attribute
-You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute. 
-
-![users_Track_endpoint][10]
+You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute—for example: 
+```
+https://[your_braze_rest_endpoint]/users/track
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "attributes": [ 
+ 	{
+ 	  "external_id" : "XXX",
+ 	  "current_location" : {"longitude":-0.118092, "latitude": 51.509865}
+      }
+   ]
+}
+```
 
 ## Technology Partners
 You can also leverage location tracking with some of our partners, for example: 
@@ -45,4 +56,3 @@ You can also leverage location tracking with some of our partners, for example:
 [7]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/foursquare/
 [8]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/
 [9]: https://www.braze.com/docs/api/objects_filters/user_attributes_object/
-[10]: {% image_buster /assets/img/users_track_endpoint.png %}
