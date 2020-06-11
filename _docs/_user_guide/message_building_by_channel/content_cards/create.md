@@ -39,7 +39,7 @@ Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to o
 4. __Set up your Entry Schedule__ - Canvas offers Scheduled, Action-Based and API-Triggered entry. <br><br>
 5. __Select your Entry Audience__ - Here you can determine who will enter this Canvas, and target users by segments and filters, these conditions will not be re-evaluated at each step. Within this dialogue, you also have the option to select Entry Controls such as allowing users to re-enter this Canvas and set an entry limit. You'll also automatically be given a snapshot of what that approximate target population looks like right now.<br><br>
 6. __Set your Send Settings__ - Here you can set messages sending options for all steps within Canvas. Some of these options include setting subscription settings, adjusting the rate limit, toggle frequency capping, and more.<br><br>
-7. __Add a Step in the Canvas Builder__ - Within this step, click Messages and then select the Content Card Messaging Channel. Here you will create and configure your Content Card.
+7. __Add a Step in the Canvas Builder__ - Within this step, click Messages and then select the Content Card Messaging Channel. Here you will create and configure your Content Card.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
 
 For more in-depth details on setting up and configuring your Canvas, check out our [Canvas documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/). 
 
