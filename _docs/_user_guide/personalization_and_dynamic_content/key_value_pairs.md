@@ -139,8 +139,6 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 
 For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
 
-{% endraw %}
-
 {% alert note %}
 Note that bounced emails will not deliver key-value pairs to SendGrid.
 {% endalert %}
