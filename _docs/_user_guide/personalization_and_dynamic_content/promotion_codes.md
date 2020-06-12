@@ -1,7 +1,6 @@
 ---
 nav_title: Promotion Codes
 page_order: 5
-permalink: "/promotion_codes/"
 ---
 
 # Promotion Codes
