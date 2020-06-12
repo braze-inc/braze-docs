@@ -1,6 +1,7 @@
 ---
 nav_title: Promotion Codes
 page_order: 5
+alias: "/promotion_codes/"
 ---
 
 # Promotion Codes
