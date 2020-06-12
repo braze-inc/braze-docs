@@ -35,6 +35,16 @@ This new HTML message type now lets you create one message that can be sent to b
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
+### Asset Management
+
+Upload campaign assets to the Media Library directly from your campaign using a simple drag-and-drop interface.
+
+This new workflow makes it easy to upload a file, copy its URL, and paste directly into your HTML.
+
+We've also added support for additional file types, including Fonts (.ttf, .woff, .otf, .woff2), SVG images (.svg), Javascript (.js), and CSS (.css) files.
+
+Uploading files to campaigns will ensure they are cached on mobile devices in case your message is shown while a user has a poor internet connection.
+
 ### Syntax Highlighting
 
 The code editor now includes Syntax Highlighting with a number of different color themes to choose from.
@@ -67,7 +77,7 @@ Because this new message type has SDK version depdendencies, be sure to use the 
 Did you know you can create segments to target greater-than or less-than certain app versions? [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
-### New Message Type
+### New Message Type {#new-message-type}
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
@@ -77,17 +87,21 @@ Keep in mind that your mobile app users need to upgrade to the supported SDK ver
 
 We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
 
-## Upcoming Features
+### Uploading Asset Files {#upload-assets}
 
-The following features are planned and coming soon!
+Uploading assets to a custom HTML message is optional, although it's recommended if there's a chance your user is offline or has a poor connection when displaying the message.
 
-### Asset Management
+There are three ways you can upload assets to a campaign:
 
-* Upload assets directly to the Media Library from within a campaign via simple drag-and-drop interface
+1. Drag-and-drop one or more assets into the Campaign Assets section, or
+2. Click the upload area to choose files from your computer, or
+3. Use the Media Library button to choose assets you've already uploaded to our Media Library
 
-* List assets associated with this campaign, and quickly copy their URLs to use within your HTML
+Once your assets are added to a campaign, you can use the Copy Link button to get the asset's location on Braze's CDN.
 
-* Support for uploading additional file types (Fonts, SVG Images, JavaScript, CSS)
+Then, paste the copied asset URL into your HTML as you normally would.
+
+![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.png %})
 
 ## Providing Feedback
 
