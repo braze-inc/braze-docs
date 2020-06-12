@@ -1,17 +1,12 @@
 ---
 nav_title: Promotion Codes
-title: Promotion Code
-description: ""
-permalink: "/promotion_codes/"
-hidden: true
+page_order: 5
+alias: "/promotion_codes/"
 ---
-{% alert note %}
-This Promotion Codes feature is currently in Beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
 
 # Promotion Codes
 
-> Promotion codes - also called Promo codes -  are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
+> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
 ## Creating a Promotion Code List
 
@@ -40,8 +35,9 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion Code Upload
 
-You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 100MB and the total number of codes allowed in one list is 20MM codes. 
-If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
+Braze does not manage code creation or redemption, so as a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. Make sure that  there is only one code on each row. 
+
+Note that the max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
 ![Promo Codes 6][6]
 
