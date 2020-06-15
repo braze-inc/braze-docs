@@ -99,7 +99,7 @@ This is where you break down the integration into steps. Do not just write endle
 {% tab References %}
 This last section is located at the very end of your document. Here you will list out all references you need to links and images that you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
 ```
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints)
 ```
 {% endtab %}
 {% endtabs %}
