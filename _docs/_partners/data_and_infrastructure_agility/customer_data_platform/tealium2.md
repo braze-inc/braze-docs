@@ -10,11 +10,21 @@ page_type: partner
 
 # About Tealium
 
-> Tealium is a universal data hub and customer data platform that enables you to connect mobile, web, and alternative data to other third-party sources.
+> Tealium is a universal data hub and customer data platform that enables you to connect mobile, web, and alternative data to other third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
-Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
+Braze offers [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
+## Understanding the EventStream
+
+Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).  
+- Data Sources (Installation and Data Collection)
+- Live Events (Real-time Data Inspection)
+- Event Specifications and Attributes (Data Layer Requirements and Validation)
+- Event Feeds (Filtered Event Types)
+- Event Connectors (API Hub Actions)
+
+## Tealium AudienceStream
+Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. To read more about how to set up Tealium AudienceStream, check out our [documentation]().
 
 ## Set Up Overview
 
@@ -32,17 +42,6 @@ To get going with your Tealium/Braze integration,
 | Install Source and Tealium Source Libraries | Tealium | [Tealium Source Libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector |
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2] and [Web][3] documentation | Braze must successfully be installed onto your app or site |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-## Tealium EventStream 
-Tealium EventStream is a data collection and API hub that sits at the center of your data. EventStream handles the entire data supply chain from setup and installation to identifying, validating, and enhancing incoming user data. EventStream takes real-time action with event feeds and connectors. Listed below are the features that make up the [EventStream](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-EventStream/ta-p/20387#toc-hId--2077371752).  
-- Data Sources (Installation and Data Collection)
-- Live Events (Real-time Data Inspection)
-- Event Specifications and Attributes (Data Layer Requirements and Validation)
-- Event Feeds (Filtered Event Types)
-- Event Connectors (API Hub Actions)
-
-## Tealium AudienceStream
-Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. These visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
 ## Choose your Integration Type
 
