@@ -43,12 +43,84 @@ To look at a full list of data types, check out this [Tealium documentation][1].
 ## Enrichments
 Once you identify you desired sttributes, you will configure them with enrichments, rules that determine when and how to update the values of attributes. Each data type offers its own selection of enrichments for manipulating the attribute's vlaue. 
 
+### Encrichment Conditions
+Each enrichment is set to occur at a specific time. This is the "WHEN" setting. The following options are available for each visit and visitor attribute:
 
-## Step 0: Create Attributes
+- New Visitor – occurs the first time a visitor comes to your site
+- New Visit – occurs on a new visit by a visitor
+- Any Event – occurs on any event
+- Visit Ended – occurs when a visit ends
 
-The first step in using AudienceStream is to create attributes. 
 
+## Step 0: Set up Attributes and Visitor Stitching
 
+The first step in using AudienceStream is to create attributes. Attributes allow you to define the important characteristics that represent a visitor's habits, preferences, actions, and engagement with your brand. 
+
+__Enrichments__: Once you identify your desired attributes, you can configure them with enrichments -  business rules that determine when and how to update the values of attributes. Each data type offers its own selection of enrichments for manipulating the attribute's value. This is associated with the "WHEN" setting. 
+
+{% details Attributes Example %}
+
+Example: Looking at the visitor attribute `Lifetime Order Value`, this visitor attribute caluclates the cumulative amount spent by the customer for all completed orders. To calculate this value, we need to know when purchases happen, and the amount of those purchases. 
+
+- `order_total` – event attribute for order total amounts.
+- `purchase` – an event to track completed purchases.
+
+1. Navigate to __AudienceStream -> Visitor/Visit Attributes__ and click __Add Attribute__.
+2. Select the scope as __Visitor__ and click __Continue__.
+3. Select the data type __Number__ and click __Continue__.
+4. Enter the name of the attribute, "Lifetime Order Value".
+5. Click __Add Enrichment__ and select __Increment or Decrement Number__.
+6. Select the attribute containing the value to increment by (order_total).
+7. Leave the "WHEN" set to "Any Event" and then click __Create a New Rule__.
+8. Create a rule that identifies when a purchase event has occurred, for example: `tealium_event EQUALS purchase`
+9. Click __Save__, then __Finish__.
+
+To read more about creating an attribute, check out thhe [Tealium documentation](https://community.tealiumiq.com/t5/Getting-Started-with/Attributes-Enrichments/ta-p/25786). 
+
+{% enddetails %}
+
+{% details Visitor Stitching %}
+
+The visitor ID attribute is used to identify customers using a value that is guaranteed to be unique to each customer. The value is usually set during a qualifying event -- one that would only occur when a customer provides a reliable means of identification, such as registering or completing a purchase.
+
+- Event Attribute (String) - email_address: An email address must be part of the data collection as an event attribute.
+- Qualifying Event - user_register: Not all events that send an email address value should be used for identity resolution. Only specific events that have a high likelihood of accurately identifying the customer should be used.
+- Visitor Attribute (String) - Email Address: A visitor string attribute for the email address will associate it with the customer profile for any event that sends the corresponding event attribute.
+- Visitor ID - Email Address: Identity resolution only occurs when Email Address is set and a qualifying event has occurred.
+
+Example: This example illustrates how to safely create a visitor ID attribute and introduce Audience Discovery. In this example, we will capture email addresses during user registration events.
+
+1. Navigate to __AudienceStream > Visitor/Visit Attributes__ and click __+ Add Attribute__.
+2. Select the scope of __Visitor__ and click __Continue__.
+3. Select the data type __String__ and click __Continue.__
+4. Enter the name of the attribute, "Email Address".
+5. Click __Add Enrichment__ and select __Set String__, and set the Visitor String to the event variable `email_address`
+6. Leave the "WHEN" set to "Any Event", then click __Create a New Rule__.
+7. Create a rule that identifies the qualifying event, for example:
+`tealium_event equals user_register`
+8. Click Finish, then Save.
+
+You now have a vistor attribute that captures the email address of cusotmers during qalifying events. You can easily extend this logic to other qualifying events (such as purchase or lead forms) as you encounter them. 
+
+At this point you'll want to save and publish your account and wait a few days for AudienceStream to start collecting this data. Once we have enough sample data we'll use Audience Discovery to validate our identity resolution strategy before finalizing it with the visitor ID attribute.
+
+For information on how to verify your attributes are working correctly check out this tealium documentation to verify with [Audince Delivery](https://community.tealiumiq.com/t5/Getting-Started-with/Visitor-ID-Discovery/ta-p/25792). 
+
+Apply Email Attribute to Vsitor ID:
+Since we now that the string attribute, "Email Address", is working as expected, we can use the same rule from that attribute to configure this visitor ID attribute.
+
+To create a visitor ID attribute:
+
+Navigate to AudienceStream > Visitor/Visit Attributes and click + Add Attribute.
+Select the scope of Visitor and click Continue.
+Select the data type Visitor ID and click Continue.
+Enter the name of the attribute, "Email Address".
+Click Add Enrichment.
+In the drop-down-list, select the Email Address string attribute.
+In the Rule drop-down list, select the previously created rule for user registration events.
+Click Finish.
+
+{% enddetails %}
 
 
 ## Step 1: Create Audience
