@@ -137,11 +137,11 @@ At this point, you should receive a test push notification on your Huawei (HMS) 
 
 Since your Huawei App in the Braze dashboard is built upon the Android Push platform, you have the flexibility to send push to all android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
 
-To segment your campaign, you can use the `Has App` filter to specify which of your Android apps should receive the message.
+To send push to only Huawei apps, [create a new Segment][15] and select your Huawei App within the "Apps" section.
 
 ![Huawei Segmentation][8]
 
-Of course, if you want to send the same push to all Android devices, you can choose to not specify the app which will send to all Android apps configured within the current App Group.
+Of course, if you want to send the same push to all Android push providers, you can choose to not specify the app which will send to all Android apps configured within the current App Group.
 
 ### Analytics
 
@@ -161,3 +161,4 @@ Once you campaign has been launched, you will see analytics for your campaign or
 [12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
 [13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html
 [14]: https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls
+[15]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform
