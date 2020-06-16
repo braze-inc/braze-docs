@@ -356,7 +356,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 [4]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
 [5]: https://dashboard-01.braze.com/app_settings/app_settings
 [6]: {% image_buster /assets/img_archive/push_cert_upload.png %} "push upload example image"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L34-62 "sample AppController.mm"
+[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m "sample AppController.mm"
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [11]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3 "iOS Lifecycle Methods"
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
