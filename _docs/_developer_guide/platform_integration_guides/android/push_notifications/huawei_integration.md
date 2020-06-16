@@ -143,7 +143,6 @@ Of course, if you want to send the same push to all Android devices, you can cho
 
 Once you campaign has been launched, you will see analytics for your campaign or canvas aggregated for Android Push. For more information on Android Push analytics and settings, see our our [User Guide for Push][10].
 
-
 [1]: https://huaweimobileservices.com/
 [2]: https://developer.huawei.com/consumer/en/console
 [3]: {% image_buster /assets/img/huawei/huawei-credentials.png %}
