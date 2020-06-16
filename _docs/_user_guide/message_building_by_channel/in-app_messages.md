@@ -1,6 +1,7 @@
 ---
 nav_title: "In-App Messages"
 page_order: 2
+alias: /in-app_messages/
 layout: featured
 guide_top_header: "In-App Messages"
 guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
