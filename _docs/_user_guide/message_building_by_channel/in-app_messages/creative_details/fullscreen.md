@@ -23,6 +23,8 @@ Full-screen in-app messages will fill the entire height of a device and crop hor
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
+{% alert tip %}Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+
 #### Portrait
 
 | Layout | Asset Size | Notes |
