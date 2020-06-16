@@ -20,6 +20,8 @@ Slideup messages can contain up to three lines of copy before truncation with el
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
+{% alert tip %}Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
 | Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
