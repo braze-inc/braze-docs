@@ -219,6 +219,7 @@ validurls['/docs/developer_guide/rest_api/api_network_connectivity_issues/'] = '
 validurls['/docs/developer_guide/rest_api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 validurls['/docs/developer_guide/rest_api/postman_collection/'] = '/docs/api/postman_collection/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/';
 
 validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates';
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification/';
@@ -229,7 +230,6 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
-validurls['/docs/hidden/private_betas/create_send/'] = '/docs/create_send/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
 validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
 validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
@@ -243,3 +243,6 @@ validurls['/docs/services_handbook/'] = '/docs/assets/download_file/Braze_Succes
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 
 validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs/';
+
+validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
+

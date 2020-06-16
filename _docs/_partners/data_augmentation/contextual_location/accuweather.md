@@ -198,7 +198,6 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 [23]: https://www.enclout.com/api/v1/yahoo_finance
 [24]: https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
 [25]: https://www.semantics3.com/products/pull
-[26]: http://factual.com/products/cpg
 [27]: https://blog.clearbit.com/logo
 [28]: https://api.tfl.gov.uk/#Line
 [29]: https://datamine.mta.info/

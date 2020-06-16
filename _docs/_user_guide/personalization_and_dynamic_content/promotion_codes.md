@@ -1,17 +1,12 @@
 ---
 nav_title: Promotion Codes
-title: Promotion Code
-description: ""
-permalink: "/promotion_codes/"
-hidden: true
+page_order: 5
+alias: "/promotion_codes/"
 ---
-{% alert note %}
-This Promotion Codes feature is currently in Beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
 
 # Promotion Codes
 
-> Promotional codes or Promo Codes are a great way to keep users engaged and interested in your application and service. Incentives like these drive user interaction with a heavy emphasis on purchases. <br><br>With Braze's Liquid Logic functionality, we offer a simple and easy way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 10MM individual codes per list.
+> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
 ## Creating a Promotion Code List
 
@@ -24,7 +19,7 @@ Click on the “Promotion Codes” link on the Dashboard’s side navigation loc
 ![Promo Codes 2][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 Name your promotion code list and add an optional description.
 
-Next, create a code snippet for the promotion code. This code snippet will be what you will reference in your Liquid Logic to display this specific set of promotion codes. __Make sure that it is a code snippet that is not already being used in another list.__<br><br> Snippets are __case sensitive__, so for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets. <br>Note that you __will not__ be able to change the code snippet after saving.
+Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. __Make sure that it is a code snippet that is not already being used in another list.__<br><br> Snippets are __case sensitive__, so for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets. <br>Note that you __will not__ be able to change the code snippet after saving.
 
 ![Promo Codes 3][3]{:height="200px"}
 
@@ -40,8 +35,9 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion Code Upload
 
-You will now need to supply the promotion codes. To do this, you can upload a CSV file of promotion codes with one code on each row. <br>Note that max file size is 100MB and the total number of codes allowed in one list is 10MM codes. 
-If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
+Braze does not manage code creation or redemption, so as a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. Make sure that  there is only one code on each row. 
+
+Note that the max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
 ![Promo Codes 6][6]
 
@@ -70,13 +66,12 @@ From there, this code can be pasted into a message within the Dashboard.
 
 ![Promo Codes 10][10]{:height="200px"}
 
-Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code.
+Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used a multi-channel campaign or Canvas step, the same unique code will be sent to each user across the channels.
 
 {% alert important %}
 
 __Please note that promotion codes cannot be sent in In-App Messages.__
 <br><br>
-__Additionally, if the code snippet is used across messages in a multichannel campaign, different codes will be sent in each channel's message.__
 
 {% endalert %}
 

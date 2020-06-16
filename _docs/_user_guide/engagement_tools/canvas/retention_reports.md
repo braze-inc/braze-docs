@@ -25,7 +25,7 @@ Braze allows you to measure user retention right on the __Canvas Analytics__ pag
 
 ![Report Date][7]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Get started by visiting any Canvas in your Braze Dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. This report will includes all users who initially entered the canvas __during this window__, and of those users, the data of those that __performed their retention event during the date range__ will appear in the report. To select a date range, you must navigate to the upper right-hand corner of the Canvas Analytics page, here, you may select various ranges or set a custom range for your report.
+Get started by visiting any Canvas in your Braze Dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. This report will include all users who initially entered the Canvas __during this window__, and of those users, the data of those that __performed their retention event during the date range__ will appear in the report. To select a date range, you must navigate to the upper right-hand corner of the Canvas Analytics page, here, you may select various ranges or set a custom range for your report.
 
 Next, select the Analyze Variants button at the bottom of the page. From here, you can analyze your variants, check out your funnel report, and view your retention report. Canvas Retention shows you the rate at which any user who has received this specific Canvas has performed a Retention Event (specified by you on the Retention Report) over the 30 days from the time they received the Canvas.
 
@@ -45,26 +45,48 @@ The report will only show days down the left column on which the Canvas was send
 
 ## Report Explanation
 
-Our Retention Report uses the Rolling Retention formula, which measures how many users come back and do the retention event __on or after__ any of the days listed across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the Canvas was sent on the date in the left column will be counted under the "30 days" column in that row.
+Our Retention Report offers both a Rolling Retention and Range Retention formula. To view your Canvas report with one of these retention types, select the __Rolling Retention__ or __Range Retention__ radio dial listed under the Type of Retention.
+
+### Rolling Retention
+Rolling retention measures how many users come back and do the retention event __on or after any of the days listed__ across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the Canvas was sent on the date in the left column will be counted under the "30 days" column in that row.
+
+### Range Retention
+Range retention measures how many users come back __in the range of days listed__ across the top of the report. So, if a user started a session between days 3 and 7 and then again on day 13, they would be counted as retained under both "Day 3-7" and "Day 7-14" ranges.
 
 __Braze Retention Reports Components:__
 - __Users Column__: The value shown is the number of unique users that performed the start action within the selected time frame; the count of users for the present day will be excluded since it is being calculated. 
 - __Cohort Z Rows__: Shows the days in which the Canvas was sending messages.
 - __Day X Columns__: Days spanning between 0 and 30 days at various increments.
-- __All Users Row__: Also known as the Report Summary Row, summarizes the retention data for the entire time period. Note that if a user has entered the canvas in multiple cohorts, their results will be counted twice here. 
+- __All Users Row__: Also known as the Report Summary Row, summarizes the retention data for the entire time period. Note that if a user has entered the Canvas in multiple cohorts, their results will be counted twice here. 
 - __Percentages/Numbers__: Shows the percentage/number of users who performed the event X or more days after receiving the Canvas on Z day. These percentages are the weighted average percentages. Incomplete values will be denoted by an asterisk.
-- __Date Range__: Set on the Canvas Details page, the date range includes all users who received the campaign during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report.
+- __Date Range__: Set on the Canvas Details page, the date range includes all users who received the Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report.
 - __Units__: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a Canvas.
 - __Color Mapping__: In your retention report, higher percentages/number of users are assigned darker shades of blue. Lower percentage/number of users, lighter shades of blue. This is done to help users visualize this data.
 - __Retention Report Graph__: This graph summarizes the results for all cohorts for the selected date range.<br><br>
 
-The way to read the retention report chart for the day 3 column would be Y% or Y number of users (based on units chosen) performed the event 3 or more days after receiving the Canvas on day Z. 
+{% tabs %}
+{% tab Range Report %}
+__How to Read a Range Retention Report__
 
-![Full Report][3]{: style="border:0"}
+Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the image shown below, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range. 
 
-As another example, referring to the table above, on March 25th, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after receiving the Canvas. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after receiving the Canvas.
+![Retention Report]({% image_buster /assets/img/range_retention.png %})
+
+{% endtab %}
+
+{% tab Rolling Retention %}
+__How to Read a Rolling Retention Report__
+
+The way to read the retention report chart for a day 3 column would be Y% or Y number of users (based on units chosen) performed the event 3 or more days after receiving the Canvas on day Z. 
+
+![Rolling Report]({% image_buster /assets/img/campaign_retention2.png %})
+
+As another example, referring to the table above, on March 25th, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after entering the Canvas. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after entering the Canvas.
 
 This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage/number value in the day 30 column tells you the percentage of users who returned on day 30 or after. 
+
+{% endtab %}
+{% endtabs %}
 
 ### Things to Look For in your Retention Reports
 
