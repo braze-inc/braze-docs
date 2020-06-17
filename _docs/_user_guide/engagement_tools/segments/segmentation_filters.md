@@ -403,6 +403,10 @@ glossaries:
   - name: Install Attribution Ad
     description: Segments your users by the ad that their install was attributed to.
     tags:
+      - User Attributes
+  - name: Hard Bounce
+    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    tags:
       - Install Attribution
   - name: Install Attribution Adgroup
     description: Segments your users by the adgroup that their install was attributed to.
