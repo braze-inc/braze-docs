@@ -22,8 +22,6 @@ User attributes will be assigned to the currently active user. The following def
 - `PhoneNumber`
 - `AvatarImageUrl`
 
->  It's still valuable to set `email` addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
-
 **Example Implementation**
 
 ```
