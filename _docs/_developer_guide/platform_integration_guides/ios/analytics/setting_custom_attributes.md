@@ -48,7 +48,6 @@ The following attributes should be set on the `ABKUser` object:
 - `twitterAccountIdentifier`
 - `gender`
 
-__We strongly recommend collecting email addresses__ even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
 ## Assigning Custom User Attributes
 
