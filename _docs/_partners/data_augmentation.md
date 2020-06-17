@@ -24,6 +24,8 @@ valid_partner_list:
     url: /docs/partners/data_augmentation/contextual_location/neura_actions/
   - name: Radar
     url: /docs/partners/data_augmentation/contextual_location/radar/
+  - name: Bluedot
+    url: /docs/partners/data_augmentation/contextual_location/bluedot/
   - name: Certona
     url: /docs/partners/data_augmentation/recommendation/certona/
   - name: Liftigniter
