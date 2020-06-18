@@ -18,7 +18,7 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 
 To measure the impact of an individual Content Card, a [Control Group][2] can be added to an A/B Test.
 
-The top level campaign details will not include metrics from the Control Group variant.
+The Campaign Details Analytics Block (located above the Performance table) will not include metrics from the Control Group variant.
 
 {% alert warning %}
 If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
