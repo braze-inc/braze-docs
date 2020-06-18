@@ -23,7 +23,7 @@ This feature allows you to:
 
 ### BCC Addresses
 
-The BCC Address settings will allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to a email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. 
+The BCC Address settings will allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to a email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. Please contact your Customer Success Manager to enable this feature. 
 
 ![BCC Address][11]
 
