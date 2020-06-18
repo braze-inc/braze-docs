@@ -76,7 +76,7 @@ You may not advertise apps which are the property of companies other than your o
 
 Time to compose your News Feed card! Create a title and summary for your card and upload an image to go alongside it. You can also set link behavior on this page. This link can be a standard link or a ["Deep Link"][7] to in-app content.
 
-## Step 3: Select A Schedule
+## Step 3: Select A Schedule 
 
 ![News Feed Schedule][8]
 
