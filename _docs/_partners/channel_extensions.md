@@ -16,6 +16,8 @@ valid_partner_list:
   - name: Branch
     title: Deeplinking
     url: /docs/partners/channel_extensions/deep_linking/branch_for_deeplinking/
+  - name: Vizbee
+    url: /docs/partners/channel_extensions/tv_deep_linking/vizbee_for_tv_deep_linking/
   - name: Stensul
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stensul/
   - name: Stripo
