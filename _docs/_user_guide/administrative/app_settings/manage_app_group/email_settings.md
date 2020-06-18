@@ -1,4 +1,4 @@
-  ---
+---
 nav_title: Email Settings
 page_type: reference
 page_order: 3
