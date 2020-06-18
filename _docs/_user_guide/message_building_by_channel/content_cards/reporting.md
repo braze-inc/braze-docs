@@ -20,8 +20,8 @@ To measure the impact of an individual Content Card, a [Control Group][2] can be
 
 The top level campaign details will not include metrics from the Control Group variant.
 
-{% alert info %}
-If you have a customized feed, be to log impressions for control cards like you would variant cards to inform Braze Analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
+{% alert warning %}
+If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
 {% endalert %}
 
 ## Reporting in Campaigns
