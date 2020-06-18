@@ -9,10 +9,6 @@ page_type: reference
 description: "This reference goes over how to measure user retention for users who performed a selected retention event in a specific canvas."
 ---
 
-{% alert important %}
-This report is not yet available to our clients deployed in our EU region, or on our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
-{% endalert %}
-
 # Retention Report
 
 > This reference article goes over how to measure user retention for users who have performed a selected retention event in a specific Canvas. By knowing how your users are being retained after sending a message, you can measure the effectiveness of your Canvases.
