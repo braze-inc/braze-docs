@@ -3,7 +3,7 @@ page_order: 1
 nav_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by <a href="/docs/user_guide/engagement_tools/segments/filter_categories/">Filter Category.</a>
+glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: segments
@@ -402,6 +402,10 @@ glossaries:
       - User Attributes
   - name: Install Attribution Ad
     description: Segments your users by the ad that their install was attributed to.
+    tags:
+      - User Attributes
+  - name: Hard Bounce
+    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup
