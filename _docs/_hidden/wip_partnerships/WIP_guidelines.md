@@ -102,7 +102,7 @@ This is where you break down the integration into steps. Do not just write endle
 {% tab References %}
 This last section is located at the very end of your document. Here you will list out all references you need to links and images that you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
 ```
-[1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints)
+[1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints
 ```
 {% endtab %}
 {% endtabs %}
@@ -185,11 +185,12 @@ Once you have made the adequate changes to your partnership doc, save your docum
 
 Within the Braze docs GitHub repository, you will be able to find your branch. If your document is completed and ready to review, navigate to your forked repo in Github and select `New Pull Request`. Next, select how you would like your forked Branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
 
-1. Set up your branch to be merged in a similar fashion as shown below.<br>![Merge Branches][2]
-2. Name your Pull Request as your Partnership Name
-3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.
-4. Tag @KellieHawks, @Timothy-Kim, and the @Growth team, and our team will take a look.
-5. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.
+1. Set up your branch to be merged in a similar fashion as shown below.<br>![Merge Branches][2]<br><br>
+2. Name your Pull Request as your Partnership Name<br><br>
+3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.<br><br>
+4. Tag @KellieHawks, @Timothy-Kim, and the @Growth team, and our team will take a look.<br><br>
+5. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.<br><br>
+6. Lastly, in your submitted pull request, __make sure to check the "Allow edits from maintainers" box__ that can be found on the right hand side of the Github PR page. This allows the Braze documentation team to freely edit your pull request before we merge it into the braze-docs repo. ![Maintainers][3]
 
 ## Review Process {#review}
 
@@ -201,3 +202,4 @@ And you are done! Thanks for contributing to Braze Docs!
 
 [1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
 [2]: {% image_buster /assets/img/partner_template/partner_merge.png %}
+[3]: {% image_buster /assets/img/partner_template/maintainers.png %}
