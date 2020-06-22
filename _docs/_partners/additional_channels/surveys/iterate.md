@@ -24,7 +24,7 @@ To connect Braze with Iterate you'll need the following three items:
 
 ## Integration Details
 
-Fill in gaps and enrich your customer data by sending out a link to your Iterate survey via any channel in Braze: email, push, or in-app message. The link will include the user's braze id, which will be used to identify that user. When they fill out the survey the responses to each question will be set as a custom user attribute.
+Fill in gaps and enrich your customer data by sending out a link to your Iterate survey via any channel in Braze: email, push, or in-app message. The link will include the user's braze id, which will be used to identify that user. When they fill out the survey the responses to each question will be set as a custom user attribute. 
 
 ### Step 1: Connect Braze with Iterate
 
