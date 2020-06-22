@@ -16,7 +16,7 @@ Partnership Documentation Overview
 - [Image, Link and Code Snippet Formatting](#image_links)
 - [Reviewing and Testing](#testing)
 - [Commiting to Github](#committing)
-- [Review Process](#review)
+- [Review Process](#review) 
 
 {% alert important %}
 Note that this partnership guide is for NEW Braze partners that do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update your pages as you normally would. 
