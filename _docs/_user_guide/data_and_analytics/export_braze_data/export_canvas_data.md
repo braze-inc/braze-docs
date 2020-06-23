@@ -1,6 +1,8 @@
 ---
 nav_title: Export Canvas Data
 page_order: 1
+description: "This reference article covers how to export canvas analytics."
+
 ---
 
 # Canvas Results Data

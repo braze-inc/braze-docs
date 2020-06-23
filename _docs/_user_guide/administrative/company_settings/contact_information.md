@@ -1,6 +1,7 @@
 ---
 nav_title: Contact Information
 page_order: 0
+description: "If you're an admin, this is where you can manage your company's Contact Information and Timezone."
 ---
 
 # Company Contact Information

@@ -3,6 +3,7 @@ nav_title: Connected Content Retries
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 3
+description: "Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff."
 ---
 
 # Connected Content Retries

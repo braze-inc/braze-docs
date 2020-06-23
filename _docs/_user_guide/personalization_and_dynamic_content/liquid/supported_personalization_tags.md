@@ -1,6 +1,7 @@
 ---
 nav_title: Supported Personalization Tags
 page_order: 1
+description: "A complete list of supported Liquid personalization tags."
 ---
 
 # Supported Personalization Tags

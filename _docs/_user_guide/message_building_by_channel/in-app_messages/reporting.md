@@ -1,6 +1,7 @@
 ---
 nav_title: Reporting & Analytics
 page_order: 4
+description: "This reference article covers in-app message reporting and analytics."
 ---
 
 # Reporting & Analytics {#IAM-Reporting}

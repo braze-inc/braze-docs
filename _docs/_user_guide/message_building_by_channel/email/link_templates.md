@@ -3,6 +3,7 @@ nav_title: Link Templates
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 4
+description: "Link Templates allow users to append parameters or pre-append URLs to all links in an Email message."
 ---
 # Link Templates
 

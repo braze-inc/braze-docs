@@ -11,6 +11,8 @@ guide_top_text: "The ubiquity and flexibility of mobile technology allows market
 - <strong>Geofences</strong> are defined virtual geographic areas. If a user has enabled background location tracking, you can use geofences to trigger campaigns in real-time when a user is in a geofence. Geofences are only available in select Braze packages. For access, please reach out to your Braze representative."
 
 
+description: "Using the Braze platform, you can create and enhance relationships with your users based upon their location in the real world, unlocking a powerful set of deeply connected interactions."
+
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Location Tracking

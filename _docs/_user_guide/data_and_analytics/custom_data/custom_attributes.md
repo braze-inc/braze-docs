@@ -1,6 +1,7 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
+description: "Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application."
 ---
 
 # Custom Attributes
@@ -12,12 +13,12 @@ We get that Custom Attributes can be confusing, so read closely and check out ou
 
 All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
 
-# Custom Attribute Data Types
+## Custom Attribute Data Types
 Custom Attributes are extraordinarily flexible tools that allow for great targeting.
 
 The following data types may be stored as custom attributes:
 
-## Strings (Alpha-Numeric Characters)
+### Strings (Alpha-Numeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -42,7 +43,7 @@ More resources on RegEx:
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
-## Arrays
+### Arrays
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -63,7 +64,7 @@ More resources on RegEx:
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
-## Dates
+### Dates
 Date attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
 {% alert warning %}
@@ -108,7 +109,7 @@ As of March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Day
 
 {% endalert %}
 
-## Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
+### Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
 
 {% alert tip %}
@@ -125,7 +126,7 @@ Money spent in-app should not be recorded by this method. Rather it should be re
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Booleans (True/False)
+### Booleans (True/False)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -135,7 +136,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 | Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Purchases / Revenue Tracking
+### Purchases / Revenue Tracking
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 

@@ -4,6 +4,7 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
 hidden: true
+desciption: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
 # In-App Messages HTML Preview Beta

@@ -1,6 +1,8 @@
 ---
 nav_title: Export Custom Event Data
 page_order: 6
+description: "This reference article covers how to export custom event data and gives an explanation on custom event storage."
+
 ---
 
 # Custom Event Data

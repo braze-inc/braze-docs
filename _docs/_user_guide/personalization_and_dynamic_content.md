@@ -4,6 +4,8 @@ page_order: 6
 layout: featured
 guide_top_header: "Personalized Messaging"
 guide_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
+description: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
+
 
 guide_featured_title: "Topics"
 guide_featured_list:
