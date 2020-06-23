@@ -1,6 +1,7 @@
 ---
 nav_title: Testing
 page_order: 3
+description: "This reference article covers how to test content cards, as well as best practices."
 ---
 
 # Testing

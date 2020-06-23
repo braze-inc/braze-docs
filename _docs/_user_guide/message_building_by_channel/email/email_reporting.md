@@ -1,6 +1,7 @@
 ---
 nav_title: Reporting
 page_order: 20
+description: "Braze provides you with a detailed report of each of your email campaigns."
 ---
 
 # Email Reporting

@@ -2,7 +2,7 @@
 nav_title: "Notification IDs"
 page_order: 3
 page_type: reference
-description: "This reference article breifly discusses Notification IDs."
+description: "This reference article briefly discusses Notification IDs."
 
 platform: Android
 channel:

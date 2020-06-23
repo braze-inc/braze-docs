@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS Subscription Groups"
 page_order: 2
-description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
+description: "SMS Subscription Groups are the foundation for sending SMS through Braze. A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose."
 page_type: reference
 tool:
   - Dashboard

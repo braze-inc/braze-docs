@@ -4,6 +4,7 @@ page_order: 3.5
 layout: featured
 guide_top_header: "User Data Collection"
 guide_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there."
+description: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

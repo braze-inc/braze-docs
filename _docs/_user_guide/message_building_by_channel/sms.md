@@ -5,6 +5,7 @@ layout: featured
 
 guide_top_header: "SMS/MMS"
 guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the topics below to get started with Braze SMS or MMS!"
+description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

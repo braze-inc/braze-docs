@@ -1,7 +1,7 @@
 ---
 nav_title: High Volume Sending
 page_order: 4
-description: "This reference article covers how Braze processes certain keywords for SMS, as well as best practices."
+description: "This reference article covers high volume sending best practices."
 page_type: reference
 tool:
   - Dashboard

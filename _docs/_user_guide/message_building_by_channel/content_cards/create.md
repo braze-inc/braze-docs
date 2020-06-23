@@ -3,6 +3,7 @@ nav_title: Create a Content Card
 platform: Message_Building_and_Personalization
 subplatform: Content Cards
 page_order: 0
+description: "This reference article covers how to create a content card using campaigns."
 ---
 
 # Creating a Content Card

@@ -1,6 +1,7 @@
 ---
 nav_title: News Feed Categories
 page_order: 9
+description: "News Feed Categories make it possible to integrate multiple instances of the news feed into your application."
 ---
 # News Feed Categories
 

@@ -3,6 +3,7 @@ nav_title: Creating an Email Campaign
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 1
+description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, build, and test your campaign within the Braze Dashboard."
 ---
 # Creating an Email Campaign
 

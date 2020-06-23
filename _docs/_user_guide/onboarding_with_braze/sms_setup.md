@@ -4,6 +4,7 @@ layout: featured
 page_order: 4
 guide_top_header: "SMS Set Up"
 guide_top_text: "Braze has just launched SMS! You can use it in our Campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
+description: "Braze has just launched SMS! You can use it in our Campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

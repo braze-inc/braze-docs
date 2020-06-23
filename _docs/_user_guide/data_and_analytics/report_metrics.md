@@ -4,6 +4,7 @@ nav_title: Report Metrics Glossary
 layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
+description: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select Channels below to narrow the glossary:"
