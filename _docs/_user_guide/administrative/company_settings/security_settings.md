@@ -26,12 +26,11 @@ Use this field to set when you want your Braze account users to reset their pass
 Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 1440 (equal to 24 hours).
 
 ### Restrict SSO
-You can restrict your users from logging in using a password or Okta.
+You can restrict your users from logging in using a password or SSO.
 
-For those clients that use [Okta SSO Login][1], there is a form on this page that allows them to configure that login service by providing their Okta URL and certificate.
+For [SAML SSO][1], customers will need to setup their SAML settings prior to enforcing. If customers are using Google SSO, they will simply have to enforce on the security settings page with no additional lift.
 
 ## Dashboard IP Whitelisting
-
 Use the field shown to whitelist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma separated list. If not specified, users will be able to log in from any IP address.
 
 ## Two-Factor Authentication
@@ -41,6 +40,13 @@ When two-factor authentication is enabled, in addition to entering a password, u
 
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account.
 
+### __Remember Me Feature__
+![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
+Braze offers a __Remember Me__ checkbox displayed upon logging in with two-factor authentication. This feature stores the 'remember me' cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
+
+- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the 'remember me' cookie being tied to a device. If users use the same device to log in to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
+
+
 {% alert tip %}
 Any Braze account user can set up two-factor authentication (under Account Settings in the drop-down) on their own, even if not required by the administrator.
 {% endalert %}
@@ -48,5 +54,5 @@ Any Braze account user can set up two-factor authentication (under Account Setti
 
 Be sure to save your changes before leaving the page!
 
-
-[1]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/single_sign_on/okta_single_sign_on/
+[0]: {% image_buster /assets/img/remember_me.png %}
+[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/

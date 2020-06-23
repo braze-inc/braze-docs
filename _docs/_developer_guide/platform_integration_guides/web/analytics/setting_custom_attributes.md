@@ -25,8 +25,6 @@ Braze provides predefined methods for setting the following user attributes with
 - Home City
 - Phone Number
 
-__We strongly recommend collecting email addresses__ even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
-
 ### Implementation Examples
 
 #### Setting a first name

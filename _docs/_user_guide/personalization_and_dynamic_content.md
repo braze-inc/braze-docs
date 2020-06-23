@@ -27,6 +27,9 @@ guide_featured_list:
 - name: Content Blocks
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
   fa_icon: fas fa-columns
+- name: Promotion Codes
+  link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
+  fa_icon: fas fa-server
 ---
 
 <br>

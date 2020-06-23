@@ -161,7 +161,6 @@ With a `POST` you don't need to cache bust, as Braze never caches the results fr
 [23]: http://www.enclout.com/api/v1/yahoo_finance
 [24]: http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
 [25]: http://www.semantics3.com/products/pull
-[26]: http://factual.com/products/cpg
 [27]: http://blog.clearbit.com/logo
 [28]: http://api.tfl.gov.uk/#Line
 [29]: http://datamine.mta.info/

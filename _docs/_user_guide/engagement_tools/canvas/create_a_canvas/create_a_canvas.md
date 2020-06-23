@@ -148,7 +148,7 @@ Then, specify Quiet Hours (the time during which your messages will not send) fo
 ### Add a Variant
 ![Canvas Add Variant][11]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Click the "Add Variant" button and select the option to add a new variant to your Canvas. variants represent a journey that your users will take:
+Click the "Add Variant" button and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take.
 
 You can add additional variants by pressing the + button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies:
 
@@ -190,7 +190,7 @@ __Canvas Entry Properties can be referenced in the first step of a Canvas - but 
 For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endraw %}
 {% endtab %}
-{% tab Custom Entry Properties %}
+{% tab Custom Event Properties %}
 Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
 
 __Custom Event Properties can be referenced in the first step of a canvas - but only the first step__! 

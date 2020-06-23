@@ -53,6 +53,7 @@ window.addEventListener("ab.BridgeReady", function(){
   // event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
     // track Button 1 clicks for analytics
+    // Note: this requires Android SDK v8.0.0, Web SDK v2.5.0, and iOS SDK v3.23.0
     appboyBridge.logClick("0");
     // set the user's custom attribute
     appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");

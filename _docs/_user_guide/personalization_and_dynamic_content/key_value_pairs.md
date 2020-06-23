@@ -92,17 +92,7 @@ If you are using the HTTP/2 provider API, any individual payload you send to APN
 
 ### Android
 
-Firebase Cloud Messaging (FCM) allows you to send send additional data payloads in push notifications using key-value pairs. FCM specifies two types of payloads: notification and data. The notification payload has a 2KB limit and predetermined set of keys that govern message content. The data payload enables developers to send as much as 4KB of custom key-value pairs.
-
-##### Notification Payload Key-Values
-
-| Key   | Value Type | Value Description                             |
-|-------|------------|-----------------------------------------------|
-| body  | string     | The content of the push notification          |
-| title | string     | The title of the push notification            |
-| icon  | string     | The file name of the desired image to display |
-
-Braze's message composer automatically handles the creation of the notifcation payload.
+Braze allows you to send send additional data payloads in push notifications using key-value pairs.
 
 ##### Data Payload
 
@@ -115,28 +105,6 @@ Use-cases for custom key-value pairs include but are not limited to internal met
 {% alert important %}
 Note that your app's backend must be able to process custom key-value pairs for the data payload to function properly.
 {% endalert %}
-
-For more information on accessing key-value pairs sent with Android push notifications, refer to the [Braze Documention][6].
-
-Braze automatically formats both payloads as a JSON before sending them to FCM.
-
-**Notification and Data Payloads**
-
-{% raw %}
-
-```
-{
-    "notification" : {
-        "body" : "Message received from Spencer",
-        "title" : "Hi Will!",
-        "icon" : "Smiley"
-    },
-    "data" : {
-        "volume" : "6.7",
-        "contents" : "https://blog.braze.com/"
-    }
-}
-```
 
 ##### FCM Messaging Options
 
@@ -171,8 +139,6 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 ## Emails
 
 For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
-
-{% endraw %}
 
 {% alert note %}
 Note that bounced emails will not deliver key-value pairs to SendGrid.

@@ -86,7 +86,7 @@ The first method, `contentCardsUpdatedNotificationReceived:`, handles updates fr
 {% tab SWIFT %}
 
 ```swift
-@objc private func contentCardsUpdatedNotifcationReceived(notification: NSNotification) {
+@objc private func contentCardsUpdatedNotificationReceived(notification: NSNotification) {
     guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
     if updateSuccessful {
         // Get an array containing only cards that have the "Transactional" feed type set in their extras.

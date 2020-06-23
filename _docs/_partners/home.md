@@ -32,8 +32,6 @@ valid_partner_list:
   url: /docs/partners/advertising_technologies/attribution/tune/
 - name: Foursquare
   url: /docs/partners/data_augmentation/contextual_location/foursquare/
-- name: Factual
-  url: /docs/partners/data_augmentation/contextual_location/factual/
 - name: Kochava
   url: /docs/partners/advertising_technologies/attribution/kochava/
 - name: Appsflyer
@@ -115,8 +113,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/calendar/rokt_calendar/
 - name: Passkit
   url: /docs/partners/additional_channels/mobile_wallet/passkit/
-- name: Amazon Moments
-  url: /docs/partners/channel_extensions/loyalty/amazon_moments/
 - name: Voucherify
   url: /docs/partners/channel_extensions/loyalty/voucherify/
 - name: Movable Ink

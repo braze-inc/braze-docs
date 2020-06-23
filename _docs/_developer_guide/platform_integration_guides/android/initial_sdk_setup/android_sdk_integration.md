@@ -39,7 +39,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Add Braze Dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
+Add the non-AndroidX `android-sdk-ui` dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
@@ -50,6 +50,16 @@ dependencies {
 The below example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example below uses an old version. Please visit [Braze Android SDK Releases][60] for the most up to date version of the Braze Android SDK.
 
 ![MavenScreen2][32]
+
+##### Using AndroidX Dependencies (Optional)
+
+If using [AndroidX][70] in your project, use the jetified dependency instead of the above. All published artifacts of the Braze SDK ship with this fully jetified option.
+
+```gradle
+dependencies {
+  implementation "com.appboy:android-sdk-ui-jetified:+"
+}
+```
 
 ##### Perform Gradle Sync
 
@@ -95,13 +105,9 @@ See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementa
 
 ### Step 4: Tracking User Sessions in Android
 
-#### Activity Lifecycle Callback Integration (API 14+)
+#### Activity Lifecycle Callback Integration
 
-{% alert warning %}
-Our minimum supported version is `API 16`.
-{% endalert %}
-
-Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically. See the [HelloBraze sample application][62] for a full example.
+Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically.
 
 ##### Instructions
 Add the following code to the `onCreate()` method of your Application class:
@@ -207,7 +213,6 @@ Our Unity SDK integration for Android requires [the same support library version
 [59]: https://github.com/Appboy/appboy-android-sdk
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
 [61]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
-[62]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/src/main/java/com/appboy/helloworld/HelloAppboyApplication.java
 [63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [65]: https://developer.android.com/topic/libraries/support-library/setup.html#add-library
@@ -215,3 +220,4 @@ Our Unity SDK integration for Android requires [the same support library version
 [67]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{site.baseurl}}/support_contact/
 [69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
+[70]: https://developer.android.com/jetpack/androidx

@@ -56,7 +56,7 @@ There are two steps required to migrate to the new HTML Beta
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features are currently supported on *Web only* and require upgrading to the following Braze SDK version:
+These Beta features require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
@@ -64,6 +64,8 @@ These Beta features are currently supported on *Web only* and require upgrading 
 
 {% alert warning %}
 Because this new message type has SDK version depdendencies, be sure to use the new option when enough of your user base has upgraded. Users on older SDK versions will not be served the message.
+
+Did you know you can create segments to target greater-than or less-than certain app versions? [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
 ### New Message Type

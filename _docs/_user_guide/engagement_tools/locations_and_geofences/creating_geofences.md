@@ -1,7 +1,8 @@
 ---
 nav_title: Creating Geofences
-page_order: 0
+page_order: 1
 description: "This reference article covers how to create and configure GeoFences."
+
 ---
 # Geofences
 

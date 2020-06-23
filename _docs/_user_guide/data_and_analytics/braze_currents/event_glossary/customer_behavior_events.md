@@ -52,9 +52,18 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
-  "properties": (string) JSON encoded string of the custom properties for this event
+  "properties": (string) JSON encoded string of the custom properties for this event,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
 
 {% endapi %}
 {% api %}
@@ -86,9 +95,19 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "device_id": (string) id of the device on which the event occurred,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
+
 {% endapi %}
 
 
@@ -214,9 +233,18 @@ This event is triggered when a user visits a specified location. Use this to tra
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "device_id": (string) id of the device on which the event occurred,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
+
 {% endapi %}
 
 {% api %}
