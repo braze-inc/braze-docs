@@ -60,6 +60,10 @@ An example of overriding the default trigger interval can be found in our sample
 
 When a user is eligible to receive an in-app message, the `ABKInAppMessageController` will be offered the latest in-app message off the in-app message stack. The stack only persists stored in-app messages in memory and is cleared up between app launches from suspended mode.
 
+{% alert important %}
+Do not display in-app messages when the soft keyboard is displayed on screen, as rendering is undefined in this circumstance.
+{% endalert %}
+
 #### Adding In-App Messages to the Stack
 
 Users are eligible to receive an in-app message in the following situations:
