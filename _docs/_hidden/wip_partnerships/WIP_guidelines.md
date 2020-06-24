@@ -26,7 +26,10 @@ Note that this partnership guide is for NEW Braze partners that do not have exis
 
 To contribute to Braze docs, you must have a Github account with which you can commit changes and edits. 
 
-Follow our instructions here on how to set up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
+We recommend first __[forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository__, and then creating a __local clone of your fork__:
+1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click __Fork__ in the upper right corner of the page. <br><br>
+2. Next, within this newly forked repo, click the green __Clone or download__ button. Within the dialogue that appears, click __Use SSH__ and __save the repository link provided__ for step 3. <br><br>
+3. Lastly, follow our Github Wiki Guide on how to set up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) __ommitting step 3 of the guide__, and instead, __using the repository link saved,__ to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
 
@@ -40,7 +43,7 @@ Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_part
 
 Useful links to reference as you write:
 - [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices): A quick skim of our writing style and best practices helps align your documentation with our voice.<br>
-- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add chart, tabs, downloadable files, and more? Check out our Styling test page and Special Formatting pages to get started.
+- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add charts, tabs, downloadable files, and more? Check out our Styling test page and Special Formatting pages to get started.
 
 ### Template Components
 
@@ -99,7 +102,7 @@ This is where you break down the integration into steps. Do not just write endle
 {% tab References %}
 This last section is located at the very end of your document. Here you will list out all references you need to links and images that you want to include in your document. Please see the next step on best practices for adding images and links to your doc.
 ```
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints)
 ```
 {% endtab %}
 {% endtabs %}
@@ -180,12 +183,13 @@ Once you are done reviewing your edits, press Ctrl-C in the terminal, ending the
 
 Once you have made the adequate changes to your partnership doc, save your document, and commit your changes. 
 
-Within the Braze docs GitHub repository, you will be able to find your branch. If your document is completed and ready to review, Select `New Pull Request`, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
+Within the Braze docs GitHub repository, you will be able to find your branch. If your document is completed and ready to review, navigate to your forked repo in Github and select `New Pull Request`. Next, select how you would like your forked Branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
 
-1. Name your Pull Request as your Partnership Name
-2. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.
-3. Tag @KellieHawks and the @Growth team, and our team will take a look.
-4. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.
+1. Set up your branch to be merged in a similar fashion as shown below.<br>![Merge Branches][2]
+2. Name your Pull Request as your Partnership Name
+3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.
+4. Tag @KellieHawks, @Timothy-Kim, and the @Growth team, and our team will take a look.
+5. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.
 
 ## Review Process {#review}
 
@@ -196,3 +200,4 @@ Once the Pull Request has been approved by our writers, we will move it out of `
 And you are done! Thanks for contributing to Braze Docs! 
 
 [1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
+[2]: {% image_buster /assets/img/partner_template/partner_merge.png %}

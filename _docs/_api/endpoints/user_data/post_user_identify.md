@@ -85,8 +85,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
   [
     {
       "external_id": "user_id",
-      "user_alias" : "user_alias123",
-      "alias_label" : "label"
+      "user_alias" : {
+          "alias_name" : "user_alias123",
+          "alias_label" : "label"
+      }
     }
   ]
 }'
