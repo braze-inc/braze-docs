@@ -39,11 +39,15 @@ IDFA Collection is optional within the Braze SDK and disabled by default. IDFA C
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 
-- You are using advertising elsewhere in the app or through our in-app News Feed
+- You are using advertising elsewhere in the app
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-IDFA collection is enabled by implementing the [ABKIDFADelegate][29] protocol. Please check [IDFADelegate][30] for a full sample code.
+## Implementing IDFA Collection
+
+Follow these steps to implement IDFA Collection:
+
+1. Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -86,6 +90,8 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 ```
 {% endtab %}
 {% endtabs %}
+
+2. Set the delegate during Braze initialization. In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
 ### Approximate iOS SDK Size {#ios-sdk-size}
 
