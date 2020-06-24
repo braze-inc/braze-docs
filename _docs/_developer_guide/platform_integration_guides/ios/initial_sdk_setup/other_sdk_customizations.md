@@ -121,5 +121,5 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk
 [29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/IDFADelegate.m
+[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html
