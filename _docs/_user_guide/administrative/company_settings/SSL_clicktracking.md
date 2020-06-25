@@ -3,30 +3,22 @@ nav_title: SSL Click-Tracking
 page_order: 0
 description: ""
 ---
-SSL CLick-Tracking Setup Procedure
 
-1. Generate DNS records for customers like usual and have them uodate
+# SSL Click Tracking Setup Process
 
-2. Using Braze's internal tool, validate the customers DNS records
+Wait for customer to confirm they've updated their CDN to host the SSL certificate for the link domain, and pointed the DNS records away from Sendgrid.net and to their CDN:
 
-3. Share this email tempalte with the customer, explaining what is required to make this work with their links
 
-4. Wait for the customer to confirm they've updated their CDN to hot tht SSL certificate for the link domain, and pointed the DNS records away from sendgrid.new and to their CDN
+Cloudflare - Full DNS Setup
 
-5. Do not reevaluate internal tool
 
-6. Check your DNS records no longer point to senggrid.net. 
 
-7. Do not reevlaute in internal tool
 
-8. checkk that the set up is correct by taking a tracked like from a test email and manually put an S after HTTP.
+DNS record updates and 
 
-9. Open a support tocket with sendgrid and ask them to turn on SSL click tracking for this sub user
 
-10. Once complete, semdgrid will notify you and you can perform a final test with SSL clicke tracking on if you did 8e with no issues, there should be no additional issues at this step.
 
-http://ablinks.mkt.example.com/
-
+known-working CDN configurations
 
 
 Origin Domain Name: `sendgrid.net`
