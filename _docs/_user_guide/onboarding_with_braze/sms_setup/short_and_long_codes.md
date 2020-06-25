@@ -1,7 +1,7 @@
 ---
 nav_title: "Sending Phone Numbers"
 page_order: 4
-description: "description"
+description: "This article will walk you through important concepts involved in sending phone numbers with Braze. Included are considerations to keep in mind when using short codes and long codes, an explanation of the application process for a short code, and other topics like handling unknown numbers and high volume and multi-country sending."
 page_type: reference
 tool:
   - Dashboard

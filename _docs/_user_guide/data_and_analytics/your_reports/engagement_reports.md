@@ -3,7 +3,7 @@ nav_title: Engagement Reports
 page_order: 22
 local_redirect:
   report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
-
+description: "Engagement Reports are Braze's custom reporting tool, where you can pull engagement statistics for specified messages from Campaigns and Canvases."
 ---
 # Engagement Reports
 

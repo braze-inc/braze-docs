@@ -4,6 +4,7 @@ page_order: 0
 layout: dev_guide
 guide_top_header: "Access Braze"
 guide_top_text: "Do you need to log into your account? Double-check your endpoint? Reset a password? Set up single sign-on? Don't worry - we have docs for that."
+description: "Do you need to log into your account? Double-check your endpoint? Reset a password? Set up single sign-on? Don't worry - we have docs for that."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

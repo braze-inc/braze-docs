@@ -1,6 +1,7 @@
 ---
 nav_title: Custom Events
 page_order: 1
+description: "Custom Events are actions taken by your users; they're best suited for tracking high-value user interactions with your application."
 ---
 
 # Custom Events

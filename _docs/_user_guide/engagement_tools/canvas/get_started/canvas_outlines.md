@@ -1,6 +1,7 @@
 ---
 nav_title: Canvas Outlines
 page_order: 3
+description: "This reference article covers four helpful Canvas use cases."
 ---
 
 # Four Canvas Outlines

@@ -43,7 +43,7 @@ A Facebook dialog window will appear to authorize Braze to create Custom Audienc
 
 ![Facebook Dialog][7]
 
-Once you have successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names and their associated ad account IDs listed.
+Make sure that you've accepted [Facebook's Custom Audience Terms][3] for your Facebook ad account before proceeding. Once you've successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names and their associated ad account IDs listed. 
 
 ![Facebook Connected][8]
 

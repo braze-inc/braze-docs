@@ -1,6 +1,7 @@
 ---
 nav_title: Media Library
 page_order: 0
+description: "The Media Library allows you to manage your assets in a single, centralized location."
 ---
 # Media Library
 

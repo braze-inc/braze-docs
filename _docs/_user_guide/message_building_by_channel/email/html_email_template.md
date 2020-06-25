@@ -3,6 +3,7 @@ nav_title: Upload an HTML Email Template
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 2.1
+description: "Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns."
 ---
 # How to Upload an HTML Email Template
 

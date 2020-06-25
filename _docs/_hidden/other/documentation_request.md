@@ -315,9 +315,45 @@ hide_toc: true
               </label>
               </div>
               </div>
+              <div class="form-group" id="doc_release_div">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release" name="Request_Release_Note">
+                <label class="form-check-label" for="doc_release">
+                Does this require Release Notes?
+              </label>
+              </div>
+              </div>
               <div class="form-group" id="doc_request_div">
                 <label for="doc_request" id="doc_request_label">    * What is your request about?</label>
                 <input type="text" name="Request_Subject" id="doc_request" maxlength="80" required="required" value="" placeholder="Enter your request" class="form-control" />
+              </div>
+              <div class="form-group" id="doc_priority_div">
+              	<label for="doc_priority" id="doc_priority_label">    * How would you prioritize you request?</label>
+
+              	<div class="form-check">
+              		<input class="form-check-input" type="radio" value="P0" id="doc_priority_p0" name="Priority">
+              		<label class="form-check-label" for="doc_priority_p0">
+              		<b>Urgent</b>: Tasks that need to be completed as soon as possible
+              	</label>
+              	</div>
+              	<div class="form-check">
+              		<input class="form-check-input" type="radio" value="P1" id="doc_priority_p1" name="Priority">
+              		<label class="form-check-label" for="doc_priority_p1">
+              		<b>High Priority</b>: (Urgent + Important) Tasks with deadlines less than 2 weeks out, incorrect information in the docs (broken links, typo fixes)
+              	</label>
+              	</div>
+              	<div class="form-check">
+              		<input class="form-check-input" type="radio" value="P2" id="doc_priority_p2" name="Priority">
+              		<label class="form-check-label" for="doc_priority_p2">
+              		<b>Medium Priority</b>: (Not Urgent + Important) Tasks with deadlines over 2 weeks out/no definite deadline, correcting misleading documentation
+              	</label>
+              	</div>
+              	<div class="form-check">
+              		<input class="form-check-input" type="radio" value="P3" id="doc_priority_p3" name="Priority">
+              		<label class="form-check-label" for="doc_priority_p3">
+              		<b>Low Priority</b>: (Not Important) "Nice-to-Haves", tasks to be completed when the docs team has the time.
+              	</label>
+              	</div>
               </div>
               <div class="form-group" id="doc_category_div">
                 <label for="doc_category" id="doc_category_label">    * How would you categorize your request?</label>

@@ -1,6 +1,8 @@
 ---
 nav_title: Export Revenue & Total Revenue Data
 page_order: 4
+description: "This reference article covers revenue data and statistics."
+
 ---
 
 # Revenue Data

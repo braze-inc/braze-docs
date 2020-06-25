@@ -4,6 +4,7 @@ page_order: 5
 layout: dev_guide
 guide_top_header: "Tracking"
 guide_top_text: "You can track many action on your apps; we recommend following the two articles below to implement that tracking you want."
+description: "You can track many action on your apps; we recommend following the two articles below to implement that tracking you want."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

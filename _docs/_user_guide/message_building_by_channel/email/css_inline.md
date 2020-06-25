@@ -3,6 +3,7 @@ nav_title: CSS Inlining
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 3
+description: "This reference article covers CSS inling, how to use it, and best practices."
 ---
 # CSS Inlining
 

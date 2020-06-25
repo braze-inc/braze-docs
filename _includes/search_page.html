@@ -94,6 +94,18 @@
       return str;
     }
 
+    String.prototype.upCaseWord = function() {
+      return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+    };
+    String.prototype.replaceUnder = function() {
+      return this.toString().replace('%20', ' ').replace('_', ' ').upCaseWord();
+    };
+    Array.prototype.replaceUnder = function() {
+      return this.map(function(itm){ return itm.toString().replace('%20', ' ').replace('_', ' ')});
+    };
+    Array.prototype.upCaseWord = function() {
+      return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
+    };
 
     function hitTemplate(hit) {
       var content = '';
@@ -103,29 +115,29 @@
       var platform = '';
       var subname = '';
       var heading = '';
-      // console.log(hit)
+
       if ('nav_title' in hit) {
-        title = hit.nav_title.replace(/\%20/g, ' ').replace(/_/g, ' ') ;
+        title = hit.nav_title.replaceUnder() ;
       } else {
-        title = hit.title.replace(/\%20/g, ' ').replace(/_/g, ' ') ;
+        title = hit.title.replaceUnder() ;
       }
       if ('type' in hit) {
-        type = hit.type.replace(/\%20/g, ' ').replace(/_/g, ' ').upCaseWord() ;
+        type = hit.type.replaceUnder().upCaseWord() ;
       }
       if ('category' in hit) {
         if (Array.isArray(hit.category)) {
-          category = hit.category.map(x => x.replace(/\%20/g, ' ').replace(/_/g, ' ') ).join(',');
+          category = hit.category.map(x => x.replaceUnder() ).join(',');
         }
         else {
-          category = hit.category.replace(/\%20/g, ' ').replace(/_/g, ' ') ;
+          category = hit.category.replaceUnder() ;
         }
       }
       if ('platform' in hit) {
         if (Array.isArray(hit.platform)) {
-          platform = hit.platform.map(x => x.replace(/\%20/g, ' ').replace(/_/g, ' ') ).join(',');
+          platform = hit.platform.map(x => x.replaceUnder() ).join(',');
         }
         else {
-          platform = hit.platform.replace(/\%20/g, ' ').replace(/_/g, ' ') ;
+          platform = hit.platform.replaceUnder() ;
         }
       }
       if (platform || category) {
@@ -266,7 +278,7 @@
       })
     );
     function adjustlabel(data) {
-      data.highlighted = data.label.replace(/\_/g,' ').replace(/\%20/g, ' ').replace(/_/g, ' ').upCaseWord().mapReplace(wordmap);
+      data.highlighted = data.label.replace(/\_/g,' ').replaceUnder().upCaseWord().mapReplace(wordmap);
       return data;
     }
 

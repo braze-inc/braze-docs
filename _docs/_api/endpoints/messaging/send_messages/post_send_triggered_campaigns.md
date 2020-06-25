@@ -157,9 +157,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ## Response Details
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-## Attributes Object in Campaigns
+## Create Send Endpoint 
+
+__Using the Attributes Object in Campaigns__
 
 Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attribute and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by race conditions.
+
 {% details Click to read about the Benefits of using the Attributes Object with this Endpoint %}
 
 When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds for the user to be created in Braze's system or for the data to propagate to the user's profile.
@@ -181,6 +184,10 @@ This attribute object will __not__ create anonymous users by user alias.
 
 Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign.
 {% enddetails %}
+<br>
+{% alert important %}
+Looking for Create Send Endpoint for Canvases? Check out the documentation [here]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
+{% endalert %}
 
 {% endapi %}
 

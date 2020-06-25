@@ -1,6 +1,7 @@
 ---
 nav_title: Understanding Your App Usage Data
 page_order: 3
+description: "The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase."
 ---
 # Understanding Your App Usage Data
 

@@ -1,6 +1,7 @@
 ---
 nav_title: Consent & Address Collection
 page_order: 2
+description: "Before sending out your initial emails, it's important to get permission from your customers first. It's a common courtesy and does wonders for your open rates!"
 ---
 
 # Consent

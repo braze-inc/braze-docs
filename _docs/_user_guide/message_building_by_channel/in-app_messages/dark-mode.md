@@ -1,6 +1,7 @@
 ---
 nav_title: Dark Mode Themes
 page_order: 5.20
+description: "Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design."
 ---
 
 # Dark Mode for In App Messages
