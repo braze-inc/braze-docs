@@ -62,7 +62,7 @@ We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logC
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
 
-## Step-by-Step {#instructions}
+## Campaign Setup {#instructions}
 
 There are two steps required to migrate to the new HTML Beta
 
