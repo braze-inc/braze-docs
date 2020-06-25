@@ -117,6 +117,7 @@ Retention Reports are easy to generate, yet challenging to interpret and act on.
 
 [1]: {% image_buster /assets/img/retention_1.png %}
 [2]: {% image_buster /assets/img/retention_2.png %}
+[3]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence
 [6]: {% image_buster /assets/img/campaign_retention3.png %})
 [7]: {% image_buster /assets/img/date_select_retention.png %}
 [8]: {% image_buster /assets/img/variant_view.png %}
