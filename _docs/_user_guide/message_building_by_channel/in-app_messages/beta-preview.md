@@ -38,13 +38,15 @@ This new HTML message type now lets you create one message that can be sent to b
 
 ### Asset Management
 
-Upload campaign assets to the Media Library directly from your campaign using a simple drag-and-drop interface.
+Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
 
-This new workflow makes it easy to upload a file, copy its URL, and paste directly into your HTML.
+This new workflow makes it easy to upload a file and copy/paste its URL directly into your HTML.
 
-We've also added support for additional file types, including Fonts (.ttf, .woff, .otf, .woff2), SVG images (.svg), Javascript (.js), and CSS (.css) files.
+We've also added support for additional file types, including Fonts (`.ttf`, `.woff`, `.otf`, `.woff2`), SVG images (`.svg`), Javascript (`.js`), and CSS (`.css`) files.
 
-Uploading files to campaigns will ensure they are cached on mobile devices in case your message is shown while a user has a poor internet connection.
+{% alert tip %}
+Adding files to a campaign's asset list will ensure they are available on mobile devices even if a user has a poor internet connection.
+{% endalert %}
 
 ### Syntax Highlighting
 
@@ -60,7 +62,7 @@ We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logC
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
 
-## Migration Guide
+## Step-by-Step {#instructions}
 
 There are two steps required to migrate to the new HTML Beta
 
@@ -82,7 +84,7 @@ Did you know you can create segments to target greater-than or less-than certain
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
+![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions in order to receive this message. 
 
@@ -90,19 +92,22 @@ We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engag
 
 ### Uploading Asset Files {#upload-assets}
 
-Uploading assets to a custom HTML message is optional, although it's recommended if there's a chance your user is offline or has a poor connection when displaying the message.
+Use Braze's Media Library to upload and host assets for your custom HTML messages.
 
-There are three ways you can upload assets to a campaign:
+We recommend uploading assets to Braze's Media Library for two reasons:
 
-1. Drag-and-drop one or more assets into the Campaign Assets section, or
-2. Click the upload area to choose files from your computer, or
-3. Use the Media Library button to choose assets you've already uploaded to our Media Library
+1. Assets added to a campaign via Media Library will allow your messages to be displayed even while the user is offline
+2. Assets uploaded to Braze can be more easily re-used across campaigns.
 
-Once your assets are added to a campaign, you can use the Copy Link button to get the asset's location on Braze's CDN.
+To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a file _and_ add associate the file with this campaign.
 
-Then, paste the copied asset URL into your HTML as you normally would.
+You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library.
 
-![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.png %})
+Once your assets are added to a campaign, you can use the _Copy Link_ button to store file's URL to your clipboard.
+
+Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+
+![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
 
 ## Providing Feedback
 
