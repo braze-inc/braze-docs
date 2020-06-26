@@ -21,13 +21,13 @@ Name your promotion code list and add an optional description.
 
 Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. __Make sure that it is a code snippet that is not already being used in another list.__<br><br> Snippets are __case sensitive__, so for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets. <br>Note that you __will not__ be able to change the code snippet after saving.
 
-![Promo Codes 3][3]{:height="200px"}
+![Promo Codes 3][3]{: style="max-width:90%"}
 
 ### Step 3: Promotion Code Options
 
 Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list’s code snippet will not be sent.
 
-![Promo Codes 4][4]{:height="200px"}
+![Promo Codes 4][4]{: style="max-width:90%"}
 
 You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. This check is performed once a day.
 
@@ -60,11 +60,11 @@ All codes in the list will have the same expiration, regardless of the date of i
 
 To send promotion codes in messages, copy the code snippet you set when creating your promotion code list by clicking the Copy Snippet button.
 
-![Promo Codes 9][9]{:height="200px"}
+![Promo Codes 9][9]{: style="max-width:70%"}
 
 From there, this code can be pasted into a message within the Dashboard.
 
-![Promo Codes 10][10]{:height="200px"}
+![Promo Codes 10][10]{: style="max-width:70%"}
 
 Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file, into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used a multi-channel campaign or Canvas step, the same unique code will be sent to each user across the channels.
 
@@ -79,11 +79,11 @@ __Please note that promotion codes cannot be sent in In-App Messages.__
 
 Remaining code count can be found in the "Remaining" column of the promotion code list located on the promotion code page.
 
-![Promo Codes 12][12]{:height="110px"}
+![Promo Codes 12][12]{: style="max-width:90%"}
 
 This code count can also be found when revisited a pre-existing promotion code list page. 
 
-![Promo Codes 13][13]{:height="200px"}
+![Promo Codes 13][13]{: style="max-width:30%"}
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
