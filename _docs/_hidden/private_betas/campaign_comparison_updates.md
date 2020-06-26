@@ -1,7 +1,7 @@
 ---
 nav_title: Campaign Comparison Updates
 permalink: /campaign_comparison_updates/
-description: "This reference article notes updates to the existing Campaign Comparison feature within the Dashbaord."
+description: "This reference article notes updates to the existing Campaign Comparison feature within the Dashboard."
 hidden: true
 ---
 
