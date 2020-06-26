@@ -15,7 +15,7 @@ github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the latest version of the Braze iOS SDK in "x.y.z" format. Release versions are available [here](https://github.com/Appboy/appboy-ios-sdk/releases).
 
 {% alert note %}
-Note that there is a known issue for this integration method on SDK version `3.24.1`. Please use `3.24.0`, which is functionally identical, instead.
+Note that there is a known issue for this integration method on SDK version `3.24.0` and `3.24.1`. For these versions, please use the dependency-free integration instead.
 {% endalert %}
 
 For further instructions using Carthage, please refer to their [user guide][9] on Github.
