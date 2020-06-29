@@ -108,6 +108,8 @@ To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a 
 
 You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library.
 
+![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
+
 Once your assets are added to a campaign, you can use the _Copy Link_ button to store file's URL to your clipboard.
 
 Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
@@ -117,8 +119,6 @@ For example, if your HTML references a local asset like `<img src="/cat.png">` (
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
-
-![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
 
 ## Providing Feedback
 
