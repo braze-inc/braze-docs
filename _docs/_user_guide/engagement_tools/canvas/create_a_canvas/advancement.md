@@ -3,6 +3,7 @@ nav_title: Advancement Behaviors
 platform: Canvas
 page_order: 2
 description: "Braze’s Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. This reference article covers various use cases and scenarios that may come up as you advance through a Canvas."
+alias: /auto_advance/
 ---
 
 # Advancing Your Users through Canvas Steps
