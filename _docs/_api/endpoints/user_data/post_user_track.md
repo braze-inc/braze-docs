@@ -148,7 +148,7 @@ Successful messages will be met with the following response:
 
 #### Successful Message with Non-Fatal Errors
 
-If your message is successful but has non-fatal errors such as one invalid Event Object out of a longer list of events you will receive the following response:
+If your message is successful but has non-fatal errors such as one invalid Event Object out of a long list of events you will receive the following response:
 
 ```json
 {
@@ -178,7 +178,7 @@ In the case of a success, any data that was not affected by an error in the _err
 
 #### Queued Responses
 
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
+During times of maintenance, Braze might pause the real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
 
 ```json
 {
@@ -204,7 +204,7 @@ The following status codes and associated error messages will be returned if you
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API whom have not yet engaged with the app you should add the filter -- `Session Count > 0`.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
 
 {% endapi %}
 
