@@ -33,13 +33,17 @@ All of __the above consequences are entirely avoidable__ if you follow the follo
       - Abrupt, high volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. Please see the schedule below for details.
 2. __Ensure that your first content is highly engaging, and maximizes the likelihood that users, click, open and engage with your email.__
       - Always prefer well targeted emails to indiscriminate blasts when warming IPs.
-3. __When IP warming is complete, continue sending on as consistent a cadence as possible.__ IPs can cool down if volume stops or significantly decreases for more than a few days.
-4. __Use features like Braze's Local Time Zone delivery or (Intelligent Timing)[https://www.braze.com/docs/user_guide/intelligence/intelligent_timing/] to automatically spread email sends across a day__ rather than sending them as a mass blast at a single specific time.
-5. __Ensure that your email list is clean, and doesn't have old or un-verified emails.__ Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
-6. __Carefully monitor your Sender Reputation while you conduct the IP warming process.__ The following metrics are important:
-      - Bounce Rates - If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our ["Keep It Clean: The Importance of Email List Hygiene" article][43]. Additionally you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
-      - Spam Reports - If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, and ensure that it is targeted to an interested audience, and is appropriately worded to pique their interest.
-      - Sender Reputation Scores - The following services are useful for checking how your reputation is progressing: [ReturnPath's SenderScore][44] & Cisco's IronPort [SenderBase][45]
+3. __When IP warming is complete, continue sending on as consistent a cadence as possible.__ 
+      - IPs can cool down if volume stops or significantly decreases for more than a few days.
+4. __Spread your email sends across a day or several days.__
+      - Features like Braze's Local Time Zone delivery and (Intelligent Timing)[https://www.braze.com/docs/user_guide/intelligence/intelligent_timing/] can help automatically spread your send across a longer timeframe, rather than sending a mass blast at a single specific time.
+5. __Ensure that your email list is clean, and doesn't have old or un-verified emails.__ 
+      - Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
+6. __Carefully monitor your Sender Reputation while you conduct the IP warming process.__ 
+  - The following metrics are important to watch during warming:
+      - Bounce Rates: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our ["Keep It Clean: The Importance of Email List Hygiene" article][43]. Additionally you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
+      - Spam Reports: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, and ensure that it is targeted to an interested audience, and is appropriately worded to pique their interest.
+      - Sender Reputation Scores: The following services are useful for checking how your reputation is progressing: [ReturnPath's SenderScore][44] & Cisco's IronPort [SenderBase][45]
 
 ## IP Warming Schedules
 
