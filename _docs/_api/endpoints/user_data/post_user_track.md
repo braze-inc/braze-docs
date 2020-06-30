@@ -22,6 +22,8 @@ Use this endpoint to record Custom Events, Purchases, and update user profile at
 
 User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain data for up to 75 users, including up to 75 events, 75 attribute updates, and 75 purchases per user. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
 
+Please note that Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, check out our data point [documentation]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
+
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/User%20Data/User%20track%20%E2%80%93%20attributes%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
@@ -146,7 +148,7 @@ Successful messages will be met with the following response:
 
 #### Successful Message with Non-Fatal Errors
 
-If your message is successful but has non-fatal errors such as one invalid Event Object out of a longer list of events you will receive the following response:
+If your message is successful but has non-fatal errors such as one invalid Event Object out of a long list of events you will receive the following response:
 
 ```json
 {
@@ -176,7 +178,7 @@ In the case of a success, any data that was not affected by an error in the _err
 
 #### Queued Responses
 
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
+During times of maintenance, Braze might pause the real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
 
 ```json
 {
@@ -202,7 +204,7 @@ The following status codes and associated error messages will be returned if you
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API whom have not yet engaged with the app you should add the filter -- `Session Count > 0`.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
 
 {% endapi %}
 

@@ -1,6 +1,7 @@
 ---
 nav_title: Sending Emails to Apple Private Relay
-permalink: /email_relay/
+alias: /email_relay/
+page_order: 8
 ---
 
 # Sending Emails to Apple Private Relay
@@ -40,6 +41,7 @@ This might not be the case for your address. Please check your DNS records in Se
 |---|---|
 | UID | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> <br> _You can also ask your Braze representative to provide your UID, if you do not have access to your DNS records._ |
 | Whitelabeled Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the HOST value in your DNS Records in Sendgrid. <br> <br> ![HOST Value DNS Records]({% image_buster /assets/img/email-relay-dns-records.png %}) |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## What is the Apple Private Relay System?
@@ -48,6 +50,6 @@ With the recent iOS 13 release, Apple has introduced new functionality for Apple
 
 ### Disable forwarding
 
-Users can manage the apps using Sign In With Apple from from their Apple ID settings page (see [Apple's Documentation](https://support.apple.com/en-us/HT210426)).
+Users can manage the apps using Sign In With Apple from their Apple ID settings page (see [Apple's Documentation](https://support.apple.com/en-us/HT210426)).
 
 Should a user choose to disable the email forwarding to _your_ app's relay email, Braze will receive email bounce information as usual.

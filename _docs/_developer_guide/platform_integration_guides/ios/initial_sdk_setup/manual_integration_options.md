@@ -59,7 +59,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 
 1. Inside of your project folder, clone SDWebImage repository recursively:
 ```
-git clone --recursive https://github.com/rs/SDWebImage.git
+git clone --recursive https://github.com/SDWebImage/SDWebImage.git
 ```
 2. Drag-n-drop `SDWebImage/SDWebImage.xcodeproj` into your application Xcode project.
 3. In your project application’s target settings, open the "General" tab, click the "+" button under the "Link Frameworks and Libraries" block and add `ImageIO.framework`.

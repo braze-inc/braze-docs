@@ -12,7 +12,7 @@
 
 > To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS In-App Message Documentation][unity-4].
 
-[unity-1]: https://github.com/rs/SDWebImage
+[unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
 [unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/

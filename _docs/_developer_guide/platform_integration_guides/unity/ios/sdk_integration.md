@@ -319,7 +319,7 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [14]: {% image_buster /assets/img_archive/unity_add_other_linker_flag.png %}
 [15]: {% image_buster /assets/img_archive/unity_add_framework_search_paths.png %}
 [16]: https://github.com/Appboy/appboy-unity-sdk/releases
-[17]: https://github.com/rs/SDWebImage
+[17]: https://github.com/SDWebImage/SDWebImage
 [18]: {% image_buster /assets/img_archive/unity-ios-appboyconfig.png %}
 [19]: https://dashboard-01.braze.com/app_settings/app_settings
 [20]: #replace-xcode-project
