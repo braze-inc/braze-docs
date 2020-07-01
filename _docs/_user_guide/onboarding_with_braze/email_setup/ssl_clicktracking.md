@@ -80,7 +80,7 @@ Once the distribution is verified, change the DNS entry for the link white label
 
 Now that you have configured CloudFront, reach out to your COM or CSM and let them know you want SSL click-tracking turned on. They will also help test that your configuration is set up correctly.
 
-## Cloudflare - Sendgrid and Cloudflare {#cloudflare}
+## Cloudflare - Sendgrid and Sparkpost {#cloudflare}
 
 {% tabs %}
 {% tab Sendgrid %}
