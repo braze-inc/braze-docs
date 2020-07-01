@@ -77,7 +77,6 @@ If you want to use the Core SDK without any UI components, you can install the c
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_core.json"
-
 ```
 
 ## Specifying Your Custom Endpoint or Data Cluster
