@@ -64,7 +64,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Required|String|See Campaign Identifier|
 |`send_id`| Optional | String | See Send Identifier |
-|`trgger_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
+|`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
 |`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
 |`audience`|Optional|Connected Audience Object|See Connected Audience|
 |`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Campaign|
