@@ -13,7 +13,7 @@ Content Delivery Networks are a great mechanism that you can use to serve up con
 __Content Delivery Networks - Partners__<br>
 &#45; [AWS CloudFront](#cloudfront): Sparkpost<br>
 &#45; [Cloudflare](#cloudflare): Sendgrid and Sparkpost<br>
-&#45; [Fastly](#fastly-sparkpost): Sendgrid and Sparkpost<br>
+&#45; [Fastly](#fastly): Sendgrid and Sparkpost<br>
 &#45; [KeyCDN](#keycdn): Sendgrid<br>
 
 {% alert note %}
