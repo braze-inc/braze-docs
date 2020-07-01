@@ -126,7 +126,7 @@ Now that you have configured Cloudflare, reach out to your COM or CSM to get the
 {% tab Sparkpost %}
 #### Step 1: Navigate to DNS Tab
 
-From your Cloudflare account, navigate to the __DNS Tab__ in the Cloudflare Dashboard. Checkout the Sparkpost [documentation](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare) on how to use the command line to confirm your NS records have been updated. 
+From your Cloudflare account, navigate to the __DNS Tab__ in the Cloudflare Dashboard.
 
 #### Step 2: Add your Domain 
 
@@ -135,7 +135,7 @@ Add a domain and then add the following Cloudflare NS records:
 NS    aron.ns.cloudflare.com
 NS    peyton.ns.cloudflare.com
 ```
-These values can be found under the __DNS Tab__ in the Cloudflare Dashboard.
+These values can be found under the __DNS Tab__ in the Cloudflare Dashboard. Checkout the Sparkpost [documentation](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare) on how to use the command line to confirm your NS records have been updated. 
 
 #### Step 3: Set up Page Rules
 
@@ -171,7 +171,7 @@ Note: If you would like this tracking domain to be the default, please add "defa
 
 #### Step 7: Run Test Verification
 
-Navigate to the Tracking Domains section in the UI and click the orange "test" verification link. At this point, the process is complete. For detailed instructions, check out Sparkposts CDN Documentation [here](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare). 
+Navigate to the Tracking Domains section in the UI and click the orange "test" verification link. At this point, the process is complete. For detailed instructions and additional resources, check out Sparkpost's CDN documentation [here](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare). 
 
 {% endtab %}
 {% endtabs %}
