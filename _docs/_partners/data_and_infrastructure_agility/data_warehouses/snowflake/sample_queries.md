@@ -142,6 +142,54 @@ FROM email_messaging_cadence GROUP BY 1
 ORDER BY 1
 LIMIT 500;
 ```
-
-{% endtab %}
+  {% endtab %}
+  {% tab Unique Email Clicks %}
+  
+The algorithm to calculate the unique email clicks in a given time window is as follows.
+  1. Partition the events by the key(app_group_id, message_variation_id, dispatch_id, email_address).
+  2. In each partition, order the events by time and the first event is always a unique event.
+  3. For every subsequent event, if it occured more than 7 days after its predecessor, is considered a unique event.
+  
+We can use Snowflake's windowing functions to help us achieve this. The query below gives us all email clicks in last 365 days and indicates which events are unique in the `is_unique` column.
+  
+```sql
+select id, app_group_id, message_variation_api_id, dispatch_id, email_address, time
+  ,row_number()       over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number
+  ,lag(time, 1, time) over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time
+  ,time - previous_time as diff
+  ,iff(row_number = 1, true, iff(diff >= 7*24*3600, true, false)) as is_unique
+from "BRAZE_AT_BRAZE_SHARE"."DATALAKE_SHARING"."USERS_MESSAGES_EMAIL_CLICK_SHARED"
+where
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) and time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600; 
+```
+If you just want to see the unique events, use the `qualify` clause.
+```sql
+  
+select id, app_group_id, message_variation_api_id, dispatch_id, email_address, time
+  ,row_number()       over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number
+  ,lag(time, 1, time) over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time
+  ,time - previous_time as diff
+  ,iff(row_number = 1, true, iff(diff >= 7*24*3600, true, false)) as is_unique
+from "BRAZE_AT_BRAZE_SHARE"."DATALAKE_SHARING"."USERS_MESSAGES_EMAIL_CLICK_SHARED"
+where
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) and time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
+qualify is_unique = true;
+```
+To further see unique event counts grouped by email address
+```sql
+with unique_events as(
+  select id, app_group_id, message_variation_api_id, dispatch_id, email_address, time
+  ,row_number()       over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number
+  ,lag(time, 1, time) over (partition by app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time
+  ,time - previous_time as diff
+  ,iff(row_number = 1, true, iff(diff >= 7*24*3600, true, false)) as is_unique
+from "BRAZE_AT_BRAZE_SHARE"."DATALAKE_SHARING"."USERS_MESSAGES_EMAIL_CLICK_SHARED"
+where
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) and time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
+qualify is_unique = true) 
+select email_address, count(*) as count
+from unique_events
+group by email_address;
+```
+  {% endtab %}
 {% endtabs %}
