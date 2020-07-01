@@ -62,9 +62,15 @@ When choosing `product_id`, Braze suggests using simplistic names such as the pr
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
 
 ### Purchase Properties
-Purchase properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, but __does not__ allow you to segment based on these properties. However, Braze does allow you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
+Purchase properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
-While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes. }
+While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
+
+### Purchase Property Naming Conventions
+
+It is important to note that this feature is enabled __per product__, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
+
+In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123", "transaction 046", etc. Or for example, with the purchase event 'food', properties would be best set as "cake" and "sandwich".
 
 ### Example Purchase Object
 ```html

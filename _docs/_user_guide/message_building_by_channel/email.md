@@ -41,5 +41,8 @@ guide_menu_list:
 - name: Email Analytics Glossary
   link: /docs/user_guide/message_building_by_channel/email/analytics_glossary/
   fa_icon: fas fa-chart-pie
+- name: Apple Private Relay SSO
+  link: /docs/user_guide/message_building_by_channel/email/email_relay_apple_sso/
+  fa_icon: fab fa-apple
 
 ---
