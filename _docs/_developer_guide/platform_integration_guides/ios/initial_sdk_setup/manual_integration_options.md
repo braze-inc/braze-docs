@@ -13,9 +13,9 @@ We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapo
 
 ## Step 1: Cloning the Braze SDK
 
-1. Download the Braze iOS SDK from the [release page](https://github.com/appboy/appboy-ios-sdk/releases) under `Appboy_iOS_SDK.zip`.
+1. Download the relevant files from the [release page](https://github.com/appboy/appboy-ios-sdk/releases) under `Appboy_iOS_SDK.zip`.
 
-For SDK versions before 3.24.0, clone the Braze iOS SDK Github project:
+If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
 
 ```bash
 # This command will clone both versions of the Braze SDK
