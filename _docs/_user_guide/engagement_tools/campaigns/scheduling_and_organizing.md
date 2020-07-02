@@ -38,4 +38,7 @@ guide_menu_list:
   - name: Campaign Connector
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/
     fa_icon: fas fa-arrows-alt-h
+  - name: Change Your Campaign After Launch 
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/change_your_campaign_after_launch/
+    fa_icon: fas fa-undo
 ---
