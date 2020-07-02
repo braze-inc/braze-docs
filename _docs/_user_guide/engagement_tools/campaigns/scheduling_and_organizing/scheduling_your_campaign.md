@@ -227,23 +227,6 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 - If the variant percentages change, users may be redistributed to other variants.
 - Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
-## Editing Campaigns After Launch
-
-After launching your campaign, it's important to note what you can and cannot change and when the changes will come into effect.
-
-### Content
-
-Any content that is edited after your campaign is launched will be sent to your users correctly.
-
-### Scheduling and Recipients
-
-If you edit when your campaign is scheduled to send, or which users your campaign should be sent to, those changes won't be reflected in the actual campaign until after the current 24 hour period you are in ends.
-
-### Send Rate
-
-Changing the rate at which your messages will send will go into effect at the beginning of the next time zone that is set to be delivered to.
-
-
 [1]: #scheduled-delivery
 [2]: #immediately
 [3]: {% image_buster /assets/img_archive/time_based.png %}
