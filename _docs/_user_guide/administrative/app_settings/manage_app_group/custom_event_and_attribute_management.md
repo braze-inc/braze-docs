@@ -42,6 +42,8 @@ Please note that you should still remove the event/attribute from your app code 
 ## Forcing Data Type Comparisons
 Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Click on the drop-down in the Data Type column to choose.
 
+*Note*: Forcing data types does not apply to event properties, or purchase properties.
+
 ![customeventsviewdatatypedropdown1.png][75]
 
 {% alert warning %}
