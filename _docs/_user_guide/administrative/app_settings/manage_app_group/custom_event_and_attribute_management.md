@@ -44,7 +44,20 @@ Braze automatically recognizes data types for attribute data that is sent to us.
 
 ![customeventsviewdatatypedropdown1.png][75]
 
+{% alert warning %}
 If you elect to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
+{% endalert %}
+
+### Data Type Coercion
+
+| Forced Data Type | Description |
+|------------------|-------------|
+| Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
+| Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
+| Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
+| Array | Comma separated list of values, with or without square brackets (i.e.`[first, second, third]`, or `first,second,third`) will be stored as an Array |
+
+
 
 For more information on specific filter options exposed by different data type comparisons please see ["Configuring Reporting - Braze Academy"][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
 
