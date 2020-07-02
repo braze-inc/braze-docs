@@ -163,7 +163,7 @@ WHERE
   time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) 
   AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600; 
 ```
-If you just want to see the unique events, use the `qualify` clause.
+If you just want to see the unique events, use the `QUALIFY` clause.
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
   ROW_NUMBER()       OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number,
