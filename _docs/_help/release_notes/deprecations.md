@@ -60,7 +60,7 @@ _Support to be completely withdrawn July 1, 2019._
 
 The Braze SDK provided a feedback widget that could be added to your app to allow users to leave feedback using the submitFeedback method and pass it into either Desk.com or Zendesk and was managed on the dashboard.
 
-## Firebase Cloud Messaging (GCM)
+## Google Cloud Messaging (GCM)
 
 _Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration)_
 
