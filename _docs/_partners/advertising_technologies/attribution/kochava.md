@@ -35,11 +35,13 @@ Once Braze receives attribution data from Kochava, the status connection indicat
 
 Note for Android and Windows Support: If you are planning to leverage the server side integration between Braze and Kochava, you'll need to ensure that you utilize the 'Identity Link' method of the Kochava SDK to capture the 'Braze ID' for [Android][29] and [Windows][30]. The 'Braze ID' can be retrieved using the following method:
 
-{% tabs}{% tab JAVA %}
+{% tabs %}
+{% tab JAVA %}
 ```java
 Apppboy.getInstance(context).getDeviceId();
 ```
-{% endtab %}{% endtabs %}
+{% endtab %}
+{% endtabs %}
 
 Please ensure that you instrument this method to capture/pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server side integration.
 
