@@ -112,7 +112,7 @@ This key will only be automatically added to the Connected Content object if the
 ### Configurable Caching
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below.
+If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below. The maximum cache time is 4 hours.
 
 #### Cache for Specified Seconds
 
