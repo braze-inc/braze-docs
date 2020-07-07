@@ -1,32 +1,36 @@
 ---
-nav_title: SSL Click-Tracking
+nav_title: SSL Click Tracking
 page_order: 9
 description: "A fundamental part of SSL click-tracking for users who have HSTS, is getting a CDN configured to send the necessary security certificates required."
 ---
 
 # SSL Click Tracking - CDN Configuration
 
-> A fundamental part of getting SSL click-tracking up and working for clients with an HTTP Strict Transport Security (HSTS) policy enabled, is getting a CDN setup to deal with the necessary security certificates required to ensure links and images work as they should. CDC configuration commonly follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+> At Braze, email delivery is handled by our delivery partners that support open and click reporting within the Braze dashboard. To perform this tracking over SSL, the delivery partner is required to present a valid trusted certificate to your email recipient's browser. Braze is unable to request or manage such certificates, so this must be set up on your end through a CDN. <br><br>CDN configuration commonly follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
 
 Content Delivery Networks are a great mechanism that you can use to serve up content very quickly and easily across multiple mediums as well as handle security certificates for you. Below we have outlined and linked out to relevant CDN partner configurations and resources to help make this process easy. 
 
 __Content Delivery Networks - Partners__<br>
-&#45; [AWS CloudFront](#cloudfront): Sparkpost<br>
+&#45; [AWS CloudFront](#cloudfront): Sendgrid<br>
 &#45; [Cloudflare](#cloudflare): Sendgrid and Sparkpost<br>
-&#45; [Fastly](#fastly-sparkpost): Sendgrid and Sparkpost<br>
+&#45; [Fastly](#fastly): Sendgrid and Sparkpost<br>
 &#45; [KeyCDN](#keycdn): Sendgrid<br>
 
 {% alert note %}
 If you are unable or do not wish to use the Content Delivery Network Partners listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) documentation on this topic.
 {% endalert %}
 
-## AWS CloudFront - Sparkpost {#cloudfront}
+## AWS CloudFront - Sendgrid {#cloudfront}
 
-#### Step 1: Create a Distribution
+#### Step 1: Set Up your Server Certificate
+
+Either upload an existing certificate using the [AWS command-line tool](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html#UploadSignedCert) or approve a new certificate through your [Certificate Manager service](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) that is valid for your link whitelabel(s). e.g. __ablink.subdomain.customer.com__ and another certificate for __ablink.info.customer.com__. 
+
+#### Step 2: Create a Distribution
 
 Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels.
 
-#### Step 2: Configure your Distribution
+#### Step 3: Configure your Distribution
 
 __Set Origin Settings__
 - Origin Domain Name: `sendgrid.net`
@@ -68,19 +72,19 @@ __Distribution Settings__
 - Default Root Object: *leave blank*
 - Log Bucket: *leave blank*
 
-#### Step 3: Test your Distribution
+#### Step 4: Test your Distribution
 
 Once the Distribution is deployed, ensure that it can handle links correctly over HTTP and HTTPS using an existing link.
 
-#### Step 4: Update your DNS
+#### Step 5: Update your DNS
 
 Once the distribution is verified, change the DNS entry for the link white labels(s) (e.g. __ablink.subdomain.customer.com__ and __ablink.info.customer.com__) to CNAME to the domain name of the Distribution.
 
-#### Step 5: Next Steps
+#### Step 6: Next Steps
 
 Now that you have configured CloudFront, reach out to your COM or CSM and let them know you want SSL click-tracking turned on. They will also help test that your configuration is set up correctly.
 
-## Cloudflare - Sendgrid and Cloudflare {#cloudflare}
+## Cloudflare - Sendgrid and Sparkpost {#cloudflare}
 
 {% tabs %}
 {% tab Sendgrid %}
@@ -124,7 +128,7 @@ Now that you have configured Cloudflare, reach out to your COM or CSM to get the
 
 {% endtab %}
 {% tab Sparkpost %}
-#### Step 1: Navigate to DNS Tab
+#### Step 1: Navigate to the DNS Tab
 
 From your Cloudflare account, navigate to the __DNS Tab__ in the Cloudflare Dashboard. Checkout the Sparkpost [documentation](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare) on how to use the command line to confirm your NS records have been updated. 
 
@@ -156,18 +160,9 @@ More information on SSL options for Cloudflare can be found [here](https://suppo
 
 The value in the record doesn’t matter; the record simply needs to exist. For example, if your tracking domain is `track.example.com`, a CNAME value of `example.com` is sufficient. Without a record to reference, the page rule never gets triggered, and the proper redirect will not occur. Please note the typical time it takes to propagate new CNAME records is often around five to ten minutes but can be longer depending on your DNS provider.
 
-#### Step 6: Run the Update Tracking Domain API
+#### Step 6: Reach out to Braze to Update Tracking Domain API
 
-Using the following Post Data, run the Sparkpost [Update Tracking Domain API](https://developers.sparkpost.com/api/tracking-domains/#header-port-secure-attributes).
-
-```
-{
-    "port"    : 443,
-    "secure"  : true
-}
-```
-
-Note: If you would like this tracking domain to be the default, please add "default": true to the JSON object above, before updating the domain.
+Please reach out to a COM or CSM to complete this step for you. 
 
 #### Step 7: Run Test Verification
 
