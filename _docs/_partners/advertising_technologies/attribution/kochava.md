@@ -44,9 +44,7 @@ Apppboy.getInstance(context).getDeviceId();
 {% endtab %}
 {% endtabs %}
 
-Please ensure that you instrument this method to pass the 'Braze ID' (GUID, see explainer below) on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
-- __IdentityLink and Braze ID Explainer__<br>
-__[Android][29]__: The Android SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. <br>__iOS__: The SDK sends the IDFV back to Braze which is used to create an anonymous profile and the Braze backend generates a Braze ID. The IDFV passed gets associated with that Braze ID and is used to represent the anonymous profile prior to an External ID being specified.
+The [Android][29] SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. Please ensure that you instrument this method to pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
 
 ## Facebook and Twitter Attribution Data
 
