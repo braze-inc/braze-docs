@@ -74,7 +74,7 @@ Our measure of Production Quality is [Lift Quality]((https://dl.acm.org/doi/10.1
 {% alert note %}
 Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.
 
-If the model, on the other hand, allowed you to select 20% of the users as churned and in doing so capture all the “true” churners, the lift would be 100% / 20% = 5. In reality, models are usually somewhere in between. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here]((https://dl.acm.org/doi/10.1145/380995.381018).
+If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
 {% endalert %}
 
 The Prediction will be trained again every two weeks to keep it updated on the most recent user behavior patterns. This is also when the Prediction Quality metric will be updated. The last time this occurred for a Prediction will be displayed on the Predictions list page as well as on an individual Prediction's analytics page.
@@ -97,7 +97,7 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 ### Target Users
 
 
-
+### Filters
 
 Once you've decided what threshold to use for your Churn Score, you can use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
