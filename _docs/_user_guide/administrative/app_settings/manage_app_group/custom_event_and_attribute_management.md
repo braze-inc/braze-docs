@@ -23,17 +23,17 @@ To make these added custom attributes, events, products, or event properties tra
 All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager. 
 {% endalert %}
 
-## Blacklisting Custom Attributes, Custom Events, and Products
-If you want to stop tracking a specific custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
+## Blocklisting Custom Attributes, Custom Events, and Products
+If you want to stop tracking a specific custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blocklist.
 
 ![customeventsviewblacklist1.png][74]
 
-Once a custom event or attribute is blacklisted,
+Once a custom event or attribute is blocklisted,
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,
-- Blacklisted events/attributes will not show up in filters or graphs.
+- Blocklisted events/attributes will not show up in filters or graphs.
 
-Changes to the blacklist may take a few minutes to propagate. You may re-enable any blacklisted event or attribute at anytime.
+Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklisted event or attribute at anytime.
 
 {% alert note %}
 Please note that you should still remove the event/attribute from your app code during your next release.
