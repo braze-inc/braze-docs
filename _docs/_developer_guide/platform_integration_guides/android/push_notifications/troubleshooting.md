@@ -115,8 +115,8 @@ There are a few reasons why this could be happening:
 
 Users have uninstalled the application. This will invalidate their FCM push token.
 
-#### 2. Invalid Cloud Messaging API Key
-The Cloud Messaging API key provided in the Braze dashboard is invalid. You will need to verify:
+#### 2. Invalid Firebase Cloud Messaging Server Key
+The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. You will need to verify:
 
 - The API key is for server applications. It should look like this in your Google Developers Console:
 ![Server apps key][9]

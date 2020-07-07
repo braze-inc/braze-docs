@@ -8,6 +8,13 @@ alias: "/promotion_codes/"
 
 > Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
+{% alert important %}
+
+__Please note that promotion codes cannot be sent in In-App Messages.__
+<br><br>
+
+{% endalert %}
+
 ## Creating a Promotion Code List
 
 ![Promo Codes 1][1]{: style="float:right;max-width:30%;margin-left:15px;"}

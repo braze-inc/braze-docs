@@ -11,9 +11,11 @@ page_order: 2
 We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions below.
 {% endalert %}
 
-## Step 1: Cloning the Braze SDK
+## Step 1: Downloading the Braze SDK
 
-1. Clone the Braze iOS SDK Github project:
+1. Download the relevant files from the [release page](https://github.com/appboy/appboy-ios-sdk/releases) under `Appboy_iOS_SDK.zip`.
+
+If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
 
 ```bash
 # This command will clone both versions of the Braze SDK
@@ -52,7 +54,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 	- `Accounts.framework`
 	- `AdSupport.framework`
 	- `StoreKit.framework`
-7. While still under the target for your project, select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
+7. Select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
 8. The SDWebImage framework is required for the Braze News Feed, Content Cards and In-App Messaging to function properly. SDWebImage is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards or In-App Messages, please follow the steps below.
 
 ### SDWebImage Integration
@@ -62,10 +64,9 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 git clone --recursive https://github.com/SDWebImage/SDWebImage.git
 ```
 2. Drag-n-drop `SDWebImage/SDWebImage.xcodeproj` into your application Xcode project.
-3. In your project application’s target settings, open the "General" tab, click the "+" button under the "Link Frameworks and Libraries" block and add `ImageIO.framework`.
-4. In your project application’s target settings, open the "General" tab, click the "+" button under the "Embedded Binaries" block and add `SDWebImage.framework`.
-5. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
-6. In your project application's target settings, open the "Build Settings" tab. In the "Search Paths" section, locate "Header Search Paths" and add `$(SRCROOT)/SDWebImage` with "recursive" turned on.
+3. In your project application’s target settings, open the "General" tab, click the "+" button under the "Frameworks, Libraries, and Embedded Content" block and add `ImageIO.framework`. In the same place, also add `SDWebImage.framework`.
+4. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
+5. In your project application's target settings, open the "Build Settings" tab. In the "Search Paths" section, locate "Header Search Paths" and add `$(SRCROOT)/SDWebImage` with "recursive" turned on.
 
 ### Optional Location Tracking
 

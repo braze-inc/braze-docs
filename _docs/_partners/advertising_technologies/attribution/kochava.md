@@ -31,13 +31,24 @@ Follow [these instructions][18] to add a postback in Kochava's dashboard. You wi
 
 __Step 4: Confirming the Integration__
 
-Once Braze receives attribution data from Kochava, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from Kochava, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
 
-Note for Android and Windows Support: If you are planning to leverage the server side integration between Braze and Kochava, you'll need to ensure that you utilize the 'Identity Link' method of the Kochava SDK to capture the 'Braze ID' for [Android][29] and [Windows][30]. Please ensure that you instrument this method to capture/pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server side integration.
+__Note for [Android][29] and [Windows][30] Support__:<br>
+If you are planning to leverage the server-side integration between Braze and Kochava, you will need to ensure that you utilize the `IdentityLink` method of the Kochava SDK to capture the Braze ID. The 'Braze ID' can be retrieved using the following method:
+
+{% tabs %}
+{% tab JAVA %}
+```java
+Apppboy.getInstance(context).getDeviceId();
+```
+{% endtab %}
+{% endtabs %}
+
+The [Android][29] SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. Braze also has the option to match on __device_id__ and __IDFA__ (if enabled). Please ensure that you instrument this method to pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
 
 ## Facebook and Twitter Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
 
 [5]: #api-restrictions
