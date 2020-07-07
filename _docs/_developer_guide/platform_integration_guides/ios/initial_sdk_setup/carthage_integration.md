@@ -12,7 +12,6 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 ```
 
 You can integrate later versions of the SDK by including the following in your `Cartfile`:
-
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
