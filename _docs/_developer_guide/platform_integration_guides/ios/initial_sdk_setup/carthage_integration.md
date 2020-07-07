@@ -11,7 +11,7 @@ Starting from version 3.24.0 of the SDK, you can integrate the Braze SDK using C
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
 ```
 
-You can integrate later versions of the SDK by including the following in your `Cartfile`:
+You can integrate earlier versions of the SDK by including the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
