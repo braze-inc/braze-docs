@@ -46,6 +46,7 @@ Connected Content does not consume data points - using Connected Content is a gr
 |Profile Data | First Name | Yes |
 |Profile Data | Last Name | Yes |
 |Profile Data | User ID | Yes |
+|Profile Data | User Alias | No |
 |Profile Data | Email Address | Yes |
 |Profile Data | Gender | Yes |
 |Profile Data | Age Group | Yes |

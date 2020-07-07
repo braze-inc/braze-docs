@@ -51,6 +51,19 @@ You must first define one of the custom attributes as a variable and then perfor
 {{custom_attribute.${giftcard_balance} | plus: balance}}
 ```
 
+Use the abs filter to get the absolute value of a field:
+
+Input:
+```liquid
+The abs of -2 is {{ -2 | abs }}
+```
+
+Output:
+```liquid
+The abs of -2 is 2
+```
+
+
 - [Full Math Filter Documentation from Shopify][19]
 
 ## E-Commerce
