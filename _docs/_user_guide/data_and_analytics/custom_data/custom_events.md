@@ -15,8 +15,8 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __NUMBER__ |
 | Check if the custom event last occurred __after X date__ | __AFTER__ | __TIME__ |
 | Check if the custom event last occurred __before X date__ | __BEFORE__ | __TIME__ |
-| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
-| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
+| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive Number) |
+| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive Number) |
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
