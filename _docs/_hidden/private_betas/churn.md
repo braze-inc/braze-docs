@@ -102,11 +102,11 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 
 ### Filters
 
+Once you've decided what threshold to use for your Churn Score, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected in the interface.
+
 ![Churn Filters][5]
 
-Once you've decided what threshold to use for your Churn Score, you can use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
-
-As a shortcut, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with a Churn Risk Score above the value currently displayed in the sentence.
+You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
 ## Archived Predictions
 
