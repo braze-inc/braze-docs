@@ -10,13 +10,13 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the custom event has occurred __more than X number of times__ | __MORE THAN__ | __INTEGER__ |
-| Check if the custom event has occurred __less than X number of times__ | __LESS THAN__ | __INTEGER__ |
-| Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __INTEGER__ |
-| Check if the custom event last occurred __after X date__ | __AFTER__ | __DATE__ |
-| Check if the custom event last occurred __before X date__ | __BEFORE__ | __DATE__ |
-| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive) Integer) |
-| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive) Integer) |
+| Check if the custom event has occurred __more than X number of times__ | __MORE THAN__ | __NUMBER__ |
+| Check if the custom event has occurred __less than X number of times__ | __LESS THAN__ | __NUMBER__ |
+| Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __NUMBER__ |
+| Check if the custom event last occurred __after X date__ | __AFTER__ | __TIME__ |
+| Check if the custom event last occurred __before X date__ | __BEFORE__ | __TIME__ |
+| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive Number) |
+| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive Number) |
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
@@ -36,7 +36,7 @@ All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored a
 
 # Custom Event Properties
 
-With Custom Event Properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, numeric, boolean, or Date objects. However, property values cannot be array objects.
+With Custom Event Properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, numeric, boolean, or time objects. However, property values cannot be array objects.
 
 For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
 
