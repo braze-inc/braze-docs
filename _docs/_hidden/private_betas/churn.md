@@ -65,7 +65,7 @@ The Prediction will be rebuilt ("retrained") again every two weeks automatically
 
 # Performance & Targeting
 
-![Churn Filters][4]
+![Churn Targeting][4]
 
 
 ## Prediction Quality
@@ -83,14 +83,10 @@ Here’s what we recommend for various different ranges of Prediction Quality:
 | 0 - 20 | Poor. We recommend you change your audience definitions and try again. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Prediction Quality (Advanced) 
-
-Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.
-
-If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
-	
 The Prediction will be trained again every two weeks to keep it updated on the most recent user behavior patterns. This is also when the Prediction Quality metric will be updated. The last time this occurred for a Prediction will be displayed on the Predictions list page as well as on an individual Prediction's analytics page.
 
+
+>Prediction Quality (Advanced) <br> Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.<br> If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). <br>Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
 
 ## Churn Score and Category
 
@@ -98,15 +94,39 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 
 ## Targeting Users
 
+The Prediction analytics page lets you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters](#filters) in Segments or Campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+
+The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view by by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
+
+As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
+
 ### Estimated Results
 
-### Filters
+In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users, these progress bars estimate for a future potential message:
 
-Once you've decided what threshold to use for your Churn Score, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected in the interface.
+1. An estimate of how many actual churners will be correctly targeted
+
+Of course, we don't know the future perfectly, so we don't know precisely which users from the Prediction Audience will churn. But the Prediction gives us a good inference. Based on past performance, this progress bar indicates how many of the "actual" or "true" churners in the Prediction Audience will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging.
+
+2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted
+
+All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you take no action. They will be targeted anyway, so this is an error or "false positive."
+
+Using this information, we encourage you to decide how many of the churners you want to capture, and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
+
+### Filters {#filters}
+
+Once you've decided what range of Churn Risk Score or Category you want to target, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
 
 ![Churn Filters][5]
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+
+## Churn Correlation Table
+
+This analysis displays any user attributes or behaviors that are correlated with user churn in the historical Prediction Audience. The tables are split into left and right for more and less likely to churn, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to churn is displayed in the right column. This number is the ratio of churn likelihood of users with this behavior or attribute divided by the likelihood to churn of the entire Prediction Audience.
+
+This table is updated only when the Prediction retrains and not when user Churn Risk Scores are updated.
 
 ## Archived Predictions
 
