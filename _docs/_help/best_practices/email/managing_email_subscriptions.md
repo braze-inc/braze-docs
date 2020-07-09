@@ -15,7 +15,7 @@ If a user unsubscribes and later changes their email, their new email will also 
 
 ## Bounces & Invalid Emails
 
-If an email address hard bounces (due to the fact that the email is invalid or doesn't exist) or is blocked (for instance, if your IP is being blacklisted by a particular ISP), then we will mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we will resume sending emails to their, as their new email may be valid. Soft Bounces (inbox full, etc) are automatically retried for 72 hours.
+If an email address hard bounces (due to the fact that the email is invalid or doesn't exist) or is blocked (for instance, if your IP is being blacklisted by a particular ISP), then we will mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we will resume sending emails to them, as their new email may be valid. Soft Bounces (inbox full, etc) are automatically retried for 72 hours.
 
 ## Duplicate Emails
 
