@@ -71,7 +71,7 @@ The Prediction will be rebuilt ("retrained") again every two weeks automatically
 ## Prediction Quality
 In order to measure the accuracy of your model, the Prediction Quality metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). 
 
-Our measure of Production Quality is [Lift Quality]((https://dl.acm.org/doi/10.1145/380995.381018). You are probably familiar with "lift", which often measures the increase, as a ratio or percentage, of some successful outcome like a conversion. In this case, the successful outcome is correctly identifying a user who would have churned. Lift Quality is the average lift the Prediction provides across all possible audience sizes for messaging the test set. This approach measures how much better than random guessing the model is. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of who will churn.
+Our measure of Production Quality is [Lift Quality](https://dl.acm.org/doi/10.1145/380995.381018). You are probably familiar with "lift", which often measures the increase, as a ratio or percentage, of some successful outcome like a conversion. In this case, the successful outcome is correctly identifying a user who would have churned. Lift Quality is the average lift the Prediction provides across all possible audience sizes for messaging the test set. This approach measures how much better than random guessing the model is. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of who will churn.
 
 Here’s what we recommend for various different ranges of Prediction Quality:
 
@@ -86,7 +86,7 @@ Here’s what we recommend for various different ranges of Prediction Quality:
 The Prediction will be trained again every two weeks to keep it updated on the most recent user behavior patterns. This is also when the Prediction Quality metric will be updated. The last time this occurred for a Prediction will be displayed on the Predictions list page as well as on an individual Prediction's analytics page.
 
 
->Prediction Quality (Advanced) <br> Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.<br> If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). <br>Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
+>Prediction Quality Details <br><br> Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.<br> If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). <br><br>Another way to think of Lift Quality (and also Prediciton Quality) is how far along the the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
 
 ## Churn Score and Category
 
@@ -102,15 +102,17 @@ As you move the slider, the bar in the left half of the lower panel will inform 
 
 ### Estimated Results
 
-In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users, these progress bars estimate for a future potential message:
+![Estimated Results][6]
+
+In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users on that past data, these progress bars estimate for a future potential message using the audience highlited with the slider:
 
 1. An estimate of how many actual churners will be correctly targeted
 
-Of course, we don't know the future perfectly, so we don't know precisely which users from the Prediction Audience will churn. But the Prediction gives us a good inference. Based on past performance, this progress bar indicates how many of the "actual" or "true" churners in the Prediction Audience will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging.
+Of course, we don't know the future perfectly, so we don't know precisely which users from the Prediction Audience will churn in the future. But the Prediction is a reliable inference. Based on past performance, this progress bar indicates how many of the total "actual" or "true" churners expected in the Prediction Audience (based on prior churn rates) will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging. 
 
 2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted
 
-All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you take no action. They will be targeted anyway, so this is an error or "false positive."
+All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you take no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the red portion is those who will be incorrectly targeted using the current slider position.
 
 Using this information, we encourage you to decide how many of the churners you want to capture, and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
 
@@ -159,4 +161,5 @@ For the Churn definitions we outlined above, there might be some corresponding P
 [3]: {% image_buster /assets/img/churn/churn_overview.png %}
 [4]: {% image_buster /assets/img/churn/churnTargeting.gif %}
 [5]: {% image_buster /assets/img/churn/churnFilters.png %}
+[6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %}
 
