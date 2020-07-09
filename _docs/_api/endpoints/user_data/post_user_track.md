@@ -60,6 +60,7 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
+Note that for each of the request components listed below, one of `external_id`, `user_alias`, or `braze_id` is __required__.
 - [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 - [Events Object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchases Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
@@ -93,14 +94,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "attributes": [ 
-  {
-    "external_id":"user_id",
+    {
+      "external_id": "user_id",
       "string_attribute": "sherman",
       "boolean_attribute_1": true,
       "integer_attribute": 25,
       "array_attribute": ["banana", "apple"]
     }
-    ],
+  ],
   "events": [
     {
       "external_id": "user_id",
@@ -108,9 +109,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
       "name": "watched_trailer",
       "time": "2013-07-16T19:20:30+1:00"
     }  
-    ],
+  ],
   "purchases": [
-     {
+    {
       "external_id": "user_id",
       "app_id": "app_identifier",
       "product_id": "product_name",
