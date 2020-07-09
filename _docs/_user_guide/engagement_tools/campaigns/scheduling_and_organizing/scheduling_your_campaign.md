@@ -132,7 +132,7 @@ __Step 4: Assign the campaign's duration by specifying a start time and optional
 
 ![triggered 4][21]
 
-__Step 5: Select whether the user will receive the campaign during a specific portion of the day.__ If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes her to miss the time frame, then by default the user will not receive your message.
+__Step 5: Select whether the user will receive the campaign during a specific portion of the day.__ If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default the user will not receive your message.
 
 ![triggered 5][27]
 
@@ -153,7 +153,7 @@ __Step 6: Determine whether users can become [re-eligible][24] for the campaign.
 
 Triggered campaigns are very effective for transactional or achievement-based messages.
 
-Transactional campaigns include messages sent after the user completes a purchase or adds an item to her cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in her cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
+Transactional campaigns include messages sent after the user completes a purchase or adds an item to their cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in their cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
 
 In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough [onboarding process][30].
 
