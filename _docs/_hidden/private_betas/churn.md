@@ -52,7 +52,7 @@ For a sample list of Prediction Audience definitions, check out the [bottom of t
 
 ## Step 4: Choose the Update Frequency for Churn Predictions
 
-Next, the machine learning model will be created when you complete this page, it will be used on a regular schedule to generate fresh predictions of users’ probability to churn according to the schedule you choose here. Please select the maximum frequency of updates that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to Weekly on the day and time of your choosing.
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the maximum frequency of updates that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to Weekly on the day and time of your choosing.
 
 ![Churn 2][2]
 
@@ -71,7 +71,7 @@ The Prediction will be rebuilt ("retrained") again every two weeks automatically
 ## Prediction Quality
 In order to measure the accuracy of your model, the Prediction Quality metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). 
 
-Our measure of Production Quality is [Lift Quality](https://dl.acm.org/doi/10.1145/380995.381018). You are probably familiar with "lift", which often measures the increase, as a ratio or percentage, of some successful outcome like a conversion. In this case, the successful outcome is correctly identifying a user who would have churned. Lift Quality is the average lift the Prediction provides across all possible audience sizes for messaging the test set. This approach measures how much better than random guessing the model is. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of who will churn.
+Our measure of Prediction Quality is [Lift Quality](https://dl.acm.org/doi/10.1145/380995.381018). You are probably familiar with "lift", which often measures the increase, as a ratio or percentage, of some successful outcome like a conversion. In this case, the successful outcome is correctly identifying a user who would have churned. Lift Quality is the average lift the Prediction provides across all possible audience sizes for messaging the test set. This approach measures how much better than random guessing the model is. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of who will churn.
 
 Here’s what we recommend for various different ranges of Prediction Quality:
 
