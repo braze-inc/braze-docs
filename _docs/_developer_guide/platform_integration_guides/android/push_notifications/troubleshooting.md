@@ -90,7 +90,8 @@ If you force-quit your application through your system settings, your push notif
 The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
 ```
-<service android:name="com.appboy.AppboyFirebaseMessagingService">
+<service android:name="com.appboy.AppboyFirebaseMessagingService"
+  android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
   </intent-filter>
