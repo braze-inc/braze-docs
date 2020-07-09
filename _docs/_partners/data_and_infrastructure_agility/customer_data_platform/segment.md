@@ -141,7 +141,7 @@ Currently, Braze's server-to-server integration with Segment __does not__ suppor
 
 ## Step 2B: Map Methods {#methods}
 
-Braze supports the [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/), and [Page](https://segment.com/docs/spec/page/) (for mobile) / [Screen](https://segment.com/docs/spec/screen/) (web) Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
+Braze supports the [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/), and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page) (web) Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
 
 ### Identify
 
@@ -192,14 +192,14 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 
 When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
 
-### Page / Screen {#page-screen}
+### Page {#page}
 
-The [page](https://segment.com/docs/spec/page/) or [screen](https://segment.com/docs/spec/screen/) call lets you record whenever a user sees a page of your website or mobile app, along with any optional properties about the page.
+The [page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
 
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
-| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) without name    | Logged as a [Custom Event][13] |    `analytics.page();` >     `appboy.logCustomEvent("Loaded a Page");` |
-| [Page](https://segment.com/docs/spec/page/)/[Screen](https://segment.com/docs/spec/screen/) with name |    Logged as a [Custom Event][13]    | `analytics.page("Home");`    > `appboy.logCustomEvent("Viewed Home Page");` |
+| [Page](https://segment.com/docs/spec/page/) __without name__    | Logged as a [Custom Event][13] |    `analytics.page();` >     `appboy.logCustomEvent("Loaded a Page");` |
+| [Page](https://segment.com/docs/spec/page/) __with name__ |    Logged as a [Custom Event][13]    | `analytics.page("Home");`    > `appboy.logCustomEvent("Viewed Home Page");` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Test Your Integration
