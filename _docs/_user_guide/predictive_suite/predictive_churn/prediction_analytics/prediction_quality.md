@@ -2,7 +2,7 @@
 nav_title: Prediction Quality
 title: Prediction Quality
 description: "This reference article takes an in-depth look at the prediction quality metric located on the Prediction Analytics Page."
-page_order: 3
+page_order: 1
 ---
 
 # Prediction Quality

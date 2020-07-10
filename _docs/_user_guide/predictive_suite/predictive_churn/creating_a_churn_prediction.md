@@ -27,7 +27,7 @@ To implement this example, enter 7 days in the time window at the top of the pan
 
 Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select "do not" and "start a session". You can combine other filters with "and" and "or" as you see fit to create the definition you need. Uninstalling, making or not making purchases, or performing or not performing particular custom events are other filters that can be included.
 
-Interested in some potential churn definitions to consider? You’ll find some inspiration [here](({{site.baseurl}}/docs/user_guide/predictive_suite/predictive_churn/messaging_users/#filters)).
+Interested in some potential churn definitions to consider? You’ll find some inspiration [here](#sample-definitions).
 
 ### Step 3: Filter Your Prediction Audience
 
