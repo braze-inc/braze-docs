@@ -147,7 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
     },
     "external_user_id": "",
     "trigger_properties": {},
-    "canvas_entry_properties": {},
     "send_to_existing_only": true,
     "attributes": {}
   }]
