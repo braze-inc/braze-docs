@@ -1,15 +1,23 @@
 ---
-nav_title: Next Steps
-title: Next Steps
-description: "This reference article covers potential next steps after you have created and analyzed your trained churn prediction."
-page_order: 4
+nav_title: Messaging Users
+title: Messaging Users
+description: "This reference article covers potential next steps after you have created a Churn Prediction."
+page_order: 3
 ---
 
-# Next Steps {#what-do-next}
+# Messaging Users {#what-do-next}
 
-Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Below we have outlined some strategic considerations as well as guidence on how to implement filters to create segments and canvases driven by churn insights. 
+## Implementing Filters {#filters}
+
+Once you've decided what range of Churn Risk Score or Category you want to target, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+
+![Churn Filters][5]
+
+You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
 ## Strategic Considerations
+
+Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Below we have outlined some strategic considerations as well as guidence on how to implement filters to create segments and canvases driven by churn insights. 
 
 __Here are a few ideas to consider:__
 
@@ -19,12 +27,6 @@ __Here are a few ideas to consider:__
 
 Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments, to further qualify who gets what offers, messages, etc.
 
-## Implementing Filters {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
-
-![Churn Filters][5]
-
-You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
 [5]: {% image_buster /assets/img/churn/churnFilters.png %}
