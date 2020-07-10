@@ -68,16 +68,16 @@ The Prediction will be rebuilt ("retrained") again every __two weeks automatical
 
 ## Sample Churn and Prediction Audience Definitions {#sample-definitions}
 
-__Example Churn Definitions__<br>
-&#45; “Within 7 days, did custom event ‘Subscription Cancellation’”<br>
-&#45; “Within 14 days, did custom event ‘Trial Expired’”<br>
-&#45; “Within 1 day did uninstall.” <br>
-&#45; “Within 14 days did not Make a Purchase.” <br>
+__Sample Churn Definitions__<br>
+- “Within 7 days, did custom event ‘Subscription Cancellation’”<br>
+- “Within 14 days, did custom event ‘Trial Expired’”<br>
+- “Within 1 day did uninstall.” <br>
+- “Within 14 days did not Make a Purchase.” <br>
 
-For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br><br>
-__Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago__<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br><br>
-__Uninstallers__<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br><br>
-__Those at Risk of Not Purchasing as a Definition of Churn__<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
+For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br>
+- __Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago__<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
+- __Uninstallers__<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
+- __Those at Risk of Not Purchasing as a Definition of Churn__<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
 
 ## Archived Predictions
 
