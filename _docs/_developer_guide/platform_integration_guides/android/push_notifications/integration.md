@@ -193,7 +193,8 @@ After completing this section, you should be able to receive and display push no
 Braze includes a service to handle push receipt and open intents. Our `AppboyFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
-<service android:name="com.appboy.AppboyFirebaseMessagingService">
+<service android:name="com.appboy.AppboyFirebaseMessagingService"
+  android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
   </intent-filter>
