@@ -2,7 +2,6 @@
 nav_title: Predictive Churn
 title: Predictive Churn
 description: "This tutorial page covers the benefits of Predictive Churn, why you should be using it, and how to get it set up."
-permalink: "/predictive_churn/"
 hidden: true
 ---
 
