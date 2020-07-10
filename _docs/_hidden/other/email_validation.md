@@ -19,7 +19,7 @@ This validation is used for dashboard email addresses, end-user email addresses 
 
 This new email validation process is an enhancement to Braze's existing email validation process. Email validation is done when a user’s email address has been updated and when an email is sent to a user's email address. Braze validates email addresses using [this Ruby gem][1]—the gem is set to relaxed mode and configured to accept UTF-8 character.
 
-If a user tries to sign up for an account using an invalid email, you would see in the Braze dashboard that the user profile will be created but the email address field will be left blank. For accounts with existing email addresses, any invalid accounts will be marked as such. 
+If a user tries to sign up for an account using an invalid email, you would see in the Braze dashboard that the user profile will be created but the email address field will be left blank. For accounts with existing email addresses, any invalid accounts will be [marked as such][3]. 
 
 Email Validation looks at both the Local part and Host part of an email address—the local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed. 
 
@@ -84,3 +84,4 @@ Unicode is not accepted for the domain part, but it may be punycode-encoded.
 
 [1]: https://github.com/afair/email_address
 [2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
