@@ -55,8 +55,8 @@ PARAMS = {
     'sandbox': {
 
         #Braze
-        'braze_url': 'https://rest.iad-03.braze.com',
-        'braze_api_key': 'f06bac79-acbf-4aa1-baf2-0b7b510563a9',
+        'braze_url': '{ BRAZE ENDPOINT URL }',
+        'braze_api_key': '{ BRAZE API KEY }',
         'braze_user_track': 'users/track'
 
     },
