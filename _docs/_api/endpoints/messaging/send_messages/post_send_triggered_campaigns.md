@@ -91,7 +91,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 --data-raw '{
   "campaign_id": "",
   "send_id": "",
-  "trigger_properties": "",
+  "trigger_properties": {},
   "broadcast": false,
   "audience": {
     "AND": [
@@ -140,16 +140,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       }
     ]
   },
-  "recipients": {
+  "recipients": [{
     "user_alias": {
       "alias_name" : "",
       "alias_label" : ""
     },
-  "external_user_id": "",
-  "trigger_properties": "",
-  "send_to_existing_only": true,
-  "attributes": ""
-    }
+    "external_user_id": "",
+    "trigger_properties": {},
+    "send_to_existing_only": true,
+    "attributes": {}
+  }]
 }
 '
 ```
@@ -157,7 +157,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ## Response Details
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-## Create Send Endpoint 
+## Create Send Endpoint
 
 __Using the Attributes Object in Campaigns__
 
