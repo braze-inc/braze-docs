@@ -17,7 +17,7 @@ You can also use filters in campaigns or segments to target the users according 
 
 ## Strategic Considerations
 
-Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? Below we have outlined some strategic considerations as well as guidence on how to implement filters to create segments and canvases driven by churn insights. 
+Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
 
 __Here are a few ideas to consider:__
 
