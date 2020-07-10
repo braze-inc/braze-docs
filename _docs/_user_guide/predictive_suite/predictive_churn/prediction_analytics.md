@@ -31,7 +31,7 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 
 ### Prediction Quality {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/docs/user_guide/predictive_suite/predictive_churn/prediction_quality/).
+To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
 Here’s what we recommend for various ranges of Prediction Quality:
 

@@ -16,7 +16,7 @@ guide_featured_list:
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/
   fa_icon: fas fa-chart-bar
 - name: Prediction Quality
-  link: /docs/user_guide/predictive_suite/predictive_churn/prediction_quality/
+  link: /docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/
   fa_icon: fas fa-balance-scale
 - name: What Next?
   link: /docs/user_guide/predictive_suite/predictive_churn/next_steps/
