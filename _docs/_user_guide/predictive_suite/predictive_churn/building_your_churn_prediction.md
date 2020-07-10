@@ -1,23 +1,11 @@
 ---
-nav_title: Building your Churn Prediction
-title: Building your Churn Prediction
+nav_title: Creating A Churn Prediction
+title: Creating A Churn Prediction
 description: ""
 page_order: 1
 ---
 
-# Predictive Churn
-
-> Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn.
-
-![Churn Overview][3]
-
-With Predictive Churn, you can define what churn means for your business ([Churn Definition](#step-2-define-churn)) as well as the users you'd like to prevent from churning ([Prediction Audience](#step-3-filter-your-prediction-audience)). When you build the Prediction, Braze will train a machine learning model to predict churn by comparing the churn behaviors of users in the historical Prediction Audience to your churn definition. 
-
-Once the Prediction model is built and done training, users that currently fit the definition of the Prediction Audience will be assigned a __[Churn Risk Score]({{site.baseurl}}\/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score)__ between 0 and 100 denoting how likely they are to Churn according to your definition. The higher the score, the more likely a user is to churn. 
-
-Updating the risk scores of the Prediction Audience can be done with a [frequency you choose](#step-4-choose-the-update-frequency-for-churn-predictions). This way, you can reach out to users who are at risk of Churning before they actually do and prevent it from happening in the first place.
-
-## Building Your Prediction
+# Creating A Churn Prediction
 
 ### Step 1: Create a New Prediction
 On the left navigation bar of the Braze dashboard, choose the __Predictions__ page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
@@ -39,7 +27,7 @@ To implement this example, enter 7 days in the time window at the top of the pan
 
 Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select "do not" and "start a session". You can combine other filters with "and" and "or" as you see fit to create the definition you need. Uninstalling, making or not making purchases, or performing or not performing particular custom events are other filters that can be included.
 
-Interested in some potential churn definitions to consider? You’ll find some inspiration at the [bottom of this page](#sample-definitions).
+Interested in some potential churn definitions to consider? You’ll find some inspiration [here](({{site.baseurl}}/docs/user_guide/predictive_suite/predictive_churn/messaging_users/#filters)).
 
 ### Step 3: Filter Your Prediction Audience
 
@@ -85,5 +73,4 @@ Archived Predictions will cease updating user scores. Any archived Prediction th
 
 [1]: {% image_buster /assets/img/churn/churn1.png %}
 [2]: {% image_buster /assets/img/churn/churn2.png %}
-[3]: {% image_buster /assets/img/churn/churn_overview.png %}
 
