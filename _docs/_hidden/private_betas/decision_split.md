@@ -29,6 +29,8 @@ Let’s say that you’re creating an onboarding flow. You might start off with 
 
 ![Use Split in Onboarding][3]{: height="50%" width="50%"}
 
+If there is no step following one of the paths, users who go down that path will exit the Canvas. 
+
 {% alert important %}
 A decision split cannot have full step sibling steps. In other words, you cannot create a full step that branches into a filter step and a full step. This restriction exists because if there was a branch with a filter step and a full step, it wouldn’t be clear which branch users would go down.
 <br>
