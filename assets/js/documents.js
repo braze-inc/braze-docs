@@ -237,10 +237,10 @@ $(document).ready(function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
   };
   String.prototype.replaceUnder = function() {
-    return this.toString().replace('%20', ' ').replace('_', ' ').upCaseWord();
+    return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
   };
   Array.prototype.replaceUnder = function() {
-    return this.map(function(itm){ return itm.toString().replace('%20', ' ').replace('_', ' ')});
+    return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
   };
   Array.prototype.upCaseWord = function() {
     return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
@@ -257,7 +257,7 @@ $(document).ready(function() {
           var platform = '';
           var subname = '';
           var heading = '';
-          console.log(suggestion)
+
           if ('nav_title' in suggestion) {
             title = suggestion.nav_title.replaceUnder();
           }
@@ -286,12 +286,12 @@ $(document).ready(function() {
             }
             subname += category.upCaseWord() + ')';
           }
-
           if ('content' in suggestion._highlightResult){
             if ('value' in suggestion._highlightResult.content){
               content = suggestion._highlightResult.content.value.replaceUnder().replace(/<(.|\n)*?>/g, '');
             }
           }
+
           if (content.length > 400) {
             content = content.substring(0,400);
             content += '...';
