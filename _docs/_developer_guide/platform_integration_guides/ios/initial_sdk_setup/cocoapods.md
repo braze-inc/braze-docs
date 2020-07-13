@@ -74,7 +74,7 @@ Add the following line of code to your `AppDelegate.m` file:
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
          inApplication:application
      withLaunchOptions:launchOptions];
 ```
@@ -93,7 +93,7 @@ For more information about using Objective-C code in Swift projects, please see 
 In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
+Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
 __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
@@ -102,7 +102,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}
@@ -158,7 +158,7 @@ If you wish to customize Braze on startup, you can instead use the Braze initial
 In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions` method, add the following Braze method:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];
@@ -170,7 +170,7 @@ In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOpt
 In `AppDelegate.swift`, within your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, add the following Braze method:
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
+Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,
                  withAppboyOptions:appboyOptions)
@@ -185,7 +185,7 @@ __Note__: This method would replace the `startWithApiKey:inApplication:withLaunc
 
 This method is called with the following parameters:
 
-- `YOUR-API-KEY` – Your application's API Key from the Braze Dashboard
+- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze

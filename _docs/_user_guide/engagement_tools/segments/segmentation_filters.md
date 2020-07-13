@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Date attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
+    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
     tags:
       - Custom Data
   - name: First Did Custom Event

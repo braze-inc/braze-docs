@@ -75,7 +75,7 @@ Anything entered outside of the template block will behave like normal content a
 ![Type Variations][6]
 
 ## Step 6: Preview Message
-Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on his or her language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
+Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on their language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
 
 ![Preview Message][7]
 

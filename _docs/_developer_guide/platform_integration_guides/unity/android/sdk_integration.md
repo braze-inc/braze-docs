@@ -62,7 +62,8 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
     </activity>
 
     <!-- A Braze specific FirebaseMessagingService used to handle push notifications. -->
-    <service android:name="com.appboy.AppboyFirebaseMessagingService">
+    <service android:name="com.appboy.AppboyFirebaseMessagingService"
+      android:exported="false">
       <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
