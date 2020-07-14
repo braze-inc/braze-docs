@@ -36,13 +36,13 @@ This new HTML message type now lets you create one message that can be sent to b
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
-### Asset Management
+### New Asset Uploader
 
 Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
 
-This new workflow makes it easy to upload a file and copy/paste its URL directly into your HTML.
+This new workflow makes it easy to upload files, and copy/paste their URLs directly into your HTML.
 
-We've also added the ability to upload additional file types, including:
+We've also added the ability to upload newly supported file types, including:
 
 | File Type | File Extension|
 | :-------- | :------------ |
@@ -52,7 +52,7 @@ We've also added the ability to upload additional file types, including:
 | CSS Files| `.css`|
 
 {% alert tip %}
-Adding files to a campaign's asset list will ensure they are available on mobile devices even if a user has a poor internet connection.
+Using Braze's Media Library CDN to host assets will ensure your messages are displayed on mobile devices even if a user has a poor internet connection or offline.
 {% endalert %}
 
 ### Syntax Highlighting
@@ -69,7 +69,7 @@ We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logC
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
 
-## Campaign Setup {#instructions}
+## Creating a New Campaign {#instructions}
 
 ### SDK Requirements {#supported-sdk-versions}
 
@@ -82,7 +82,8 @@ These Beta features require upgrading to the following Braze SDK version:
 {% alert warning %}
 Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
 
-Consider adopting this new message type once a significant portion of your user base is reachable, or create a new campaign that only targets supported SDK versions using our new greater-than or less-than app version targeting filter. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
+
+Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
 ### New Message Type {#new-message-type}
@@ -114,11 +115,35 @@ Once your assets are added to a campaign, you can use the _Copy Link_ button to 
 
 Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
-For example, if your HTML references a local asset like `<img src="/cat.png">` (which was common when uploading a zip file), you would change to the newly uploaded asset URL `<img src="https://cdn.braze.com/appboy/communication/assets/image_assets/images/55ef23b46461733bd00d0000/original.?1441735604">`. 
+For example, if your HTML references a local asset like `<img src="/cat.png">` (which was common when uploading a zip file), you would change to the newly uploaded asset URL `<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png">`. 
 
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
+
+### Migrating old "zip file" campaigns {#migration-guide}
+
+Older campaigns which used zip-files are not supported in this new In-App Message composer.
+
+If you want to migrate those older zip-file campaigns, follow these instructions:
+
+1. Download the .zip asset file to your computer, and unzip the files
+2. Highlight and drag all asset files into your new campaign
+3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+
+For example, replace this:
+
+```html
+&lt;img src="/cat.png" /&gt;
+```
+
+With this:
+
+```html
+&lt;img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" &gt;
+```
+
+For example, if your HTML references a local asset like <img src="/cat.png"> (which was common when uploading a zip file), you would change to the newly uploaded asset URL <img src="https://cdn.braze.com/appboy/communication/assets/image_assets/images/55ef23b46461733bd00d0000/original.?1441735604">.
 
 ## Providing Feedback
 
