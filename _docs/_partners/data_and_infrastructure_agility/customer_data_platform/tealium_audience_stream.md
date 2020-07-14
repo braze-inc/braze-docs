@@ -77,12 +77,12 @@ Now, all customers will have a Lifetime Order Value attribute tied to them.
 {% endtab %}
 {% tab Badge %}
 
-Next you may create badges that help you classify and target your users by certain attributes they share. For the example below, we will be creating a VIP Badge for users who have a lifetime value of over $500.
+Next, you may create badges that help you classify and target your users by certain attributes they share. For the example below, we will be creating a VIP Badge for users who have a lifetime value of over $500.
 
 1. Navigate to __AudienceStream -> Visitor/Visit Attributes__ and click __Add Attribute__.
 2. Select the scope as __Visitor__ and click __Continue__.
 3. Select the data type __Badge__ and click __Continue__.
-4. Enter the name of the bagde, "VIP".
+4. Enter the name of the badge, "VIP".
 5. Click __Add Enrichment__ and select __Assign Badge__.
 6. Create a rule for badge assignment by selecting __Create Rule__.
 7. Assign a title to this rule, and using the previous attribute created, set the rule to "...has attribute __Lifetime Order Value greater than 500__"
@@ -102,7 +102,7 @@ First, name your audience and then take some time to think about what kind of at
 
 ## Step 3: Create an Audience Connector
 
-From the main page, select __Audience Connector__ under __AudienceStream__. Here you can create and configure your connector. From the Audience Connector page select __+ Add Connector__, look up __Braze__ and select __Braze (formerly Appboy)__ as the connector type. 
+From the main page, select __Audience Connector__ under __AudienceStream__. Here you can create and configure your connector. From the Audience Connector page, select __+ Add Connector__, look up __Braze__, and select __Braze (formerly Appboy)__ as the connector type. 
 
 ### Select Source
 
@@ -242,9 +242,3 @@ For more detailed instructions on how to implement Tealium's Trace tool, check o
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}
 [13]: {% image_buster /assets/img/tealium/summary_list.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
-
-
-
-
-
-
