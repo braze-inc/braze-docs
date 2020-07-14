@@ -121,7 +121,7 @@ For example, if your HTML references a local asset like `<img src="/cat.png">` (
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
 
-### Migrating old "zip file" campaigns {#migration-guide}
+### Migrating Old "Zip File" Campaigns {#migration-guide}
 
 Older campaigns which used zip-files are not supported in this new In-App Message composer.
 
