@@ -104,6 +104,8 @@ The ablink subdomain record will be added as custom hostnames.
 
 ![Link Branding]({% image_buster /assets/img/SSL/crypto_settings.png %}){: style="max-width:80%"}
 
+Make sure the HTTP proxy is enabled, i.e. the cloud icon is orange. 
+
 #### Step 3: Set Up Page Rules
 
 Confirm that __SSL is set to Full__ and Page Rules are turned __ON__ for each URL.
@@ -112,11 +114,7 @@ Confirm that __SSL is set to Full__ and Page Rules are turned __ON__ for each UR
 
 #### Step 4: Update DNS Settings
 
-Lastly, you must reach out to your COM or CSM to have them generate Email Link Whitelabels. They will then provide you with information similar to the chart found below for each of your subdomains and corresponding CNAMES. These CNAMES will be used to configure your DNS in Cloudflare.
-
-![DNS Settings]({% image_buster /assets/img/SSL/DNS_settings.png %}){: style="max-width:70%"}
-
-Next, point all link branding records for each subdomain to sendgrid.net (there should be 2 CNAME records per each subdomain). Make sure the HTTP proxy is enabled, i.e. the cloud icon is orange. 
+Make sure to point all link branding records for each subdomain to sendgrid.net (there should be 2 CNAME records per each subdomain).
 
 In the "Name" field, ensure you are only posting the portion of the CNAME before your domain. For example, if your CNAME is `ablink.x.example.com`, you would only post `ablink.x`.
 
