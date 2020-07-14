@@ -17,9 +17,9 @@ This validation is used for dashboard email addresses, end-user email addresses 
 {% endalert %}
 
 
-This new email validation process is an enhancement to Braze's existing email validation process. Email validation is done when a user’s email address has been updated and when an email is sent to a user's email address. Braze validates email addresses using [this Ruby gem][1]—the gem is set to relaxed mode and configured to accept UTF-8 character.
+This new email validation process is an enhancement to Braze's existing email validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload or modified in the dashboard. Braze validates email addresses using [this Ruby gem][1]—the gem is set to relaxed mode and configured to accept UTF-8 character.  This validation is not to be confused with a validation service like Briteverify.  This is a check to verify that the syntax of an email address complies with RFC standards.
 
-If a user tries to sign up for an account using an invalid email, you would see in the Braze dashboard that the user profile will be created but the email address field will be left blank. For accounts with existing email addresses, any invalid accounts will be [marked as such][3]. 
+If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API.  In this scenario, the user would not be created.
 
 Email Validation looks at both the Local part and Host part of an email address—the local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed. 
 

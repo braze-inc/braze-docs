@@ -7,7 +7,9 @@ page_order: 0
 
 _This is the URL Braze Users need to log into Braze, access the API, and integrate your SDK_
 
-Braze manages a number of different instances for our dashboard, SDK, and REST Endpoints. When your account is provisioned, you will log into the corresponding URL below. You should bookmark your URL to make sure you are always logging into the right one.
+Braze manages a number of different instances for our dashboard, SDK, and REST Endpoints, which we call "clusters." Your Braze onboarding manager will let you know which cluster you're on. 
+
+Logging in at [dashboard.braze.com](https://dashboard.braze.com) will automatically send you to the right cluster address.
 
 |Instance|URL|REST Endpoint|SDK Endpoint|
 |---|---|---|
@@ -20,7 +22,5 @@ Braze manages a number of different instances for our dashboard, SDK, and REST E
 |EU-01| https://dashboard-01.braze.eu | https://rest.fra-01.braze.eu | https://sdk.fra-01.braze.eu |
 
 {% alert important %}
-When integrating your SDK, use the "SDK Endpoint", not the "REST Endpoint".
-
-When using endpoints for API calls, use the "REST Endpoint".
+When integrating your SDK, use the "SDK Endpoint". When making calls to our REST API, use the "REST Endpoint".
 {% endalert %}
