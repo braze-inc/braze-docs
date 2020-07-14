@@ -134,16 +134,14 @@ If you want to migrate those older zip-file campaigns, follow these instructions
 For example, replace this:
 
 ```html
-&lt;img src="/cat.png" /&gt;
+<img src="/cat.png" />
 ```
 
 With this:
 
 ```html
-&lt;img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" &gt;
+<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
 ```
-
-For example, if your HTML references a local asset like <img src="/cat.png"> (which was common when uploading a zip file), you would change to the newly uploaded asset URL <img src="https://cdn.braze.com/appboy/communication/assets/image_assets/images/55ef23b46461733bd00d0000/original.?1441735604">.
 
 ## Providing Feedback
 
