@@ -6,7 +6,7 @@ hidden: true
 
 # View PII
 
-This will cover a new permission that is only accessible for a few select customers.  You can read about the existing team permission capabilities [here](https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+This will cover a new permission that is only accessible for a few select customers.  You can read about the existing team permission capabilities [here]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ## How it works
 

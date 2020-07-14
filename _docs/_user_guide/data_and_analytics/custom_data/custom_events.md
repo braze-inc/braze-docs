@@ -6,7 +6,7 @@ description: "Custom Events are actions taken by your users; they're best suited
 
 # Custom Events
 
-Custom Events are actions taken by your users; they're best suited for tracking high-value user interactions with your application. Logging a custom event can trigger any number of follow-up campaigns with configurable delays, and enables the following segmentation filters around the recency and frequency of that event:
+Custom Events are actions taken by your users; they're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number/type of follow-up campaigns, and enables the following segmentation filters on the recency and frequency of that event:
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

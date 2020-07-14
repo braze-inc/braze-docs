@@ -36,14 +36,14 @@ USA | `415 123 1234` | `+14151231234`
 UK | `020 1234 1234` | `+442012341234`
 Lithuania | `8 601 12345` | `+37060112345`
 
-As you can see, the country codes for each listing are:
+The country codes for each listing are:
 - USA: `+1`
-- UK: `+4`
-- Lithuania: `+3`
+- UK: `+44`
+- Lithuania: `+370`
 
 ### Adding Users to SMS Subscription Groups
 
-For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
+For a customer to receive an SMS message, they must have a __valid phone number__ and be __opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running; ([make sure you follow all applicable laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1].
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [picture]: {% image_buster /assets/img/sms/e164.jpg %}
