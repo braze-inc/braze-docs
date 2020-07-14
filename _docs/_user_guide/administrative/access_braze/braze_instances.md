@@ -9,7 +9,7 @@ _This is the URL Braze Users need to log into Braze, access the API, and integra
 
 Braze manages a number of different instances for our dashboard, SDK, and REST Endpoints, which we call "clusters." Your Braze onboarding manager will let you know which cluster you're on. 
 
-Logging in at (dashboard.braze.com)[https://dashboard.braze.com] will automatically send you to the right cluster address.
+Logging in at [dashboard.braze.com](https://dashboard.braze.com) will automatically send you to the right cluster address.
 
 |Instance|URL|REST Endpoint|SDK Endpoint|
 |---|---|---|

@@ -43,7 +43,7 @@ Before you start sending emails, there are some things you need. Refer to the ch
 IP Warming is the __most important step__ in the email setup process. Though it is not your first step (it's actually the last!), we're calling it out here to let you know that you must absolutely warm up your IP address or any emails you send will be sent to spam or be subject to other send barriers.
 {% endalert %}
 
-[IP Warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the follwing batches until you reach your typical daily volume. This is done at the very end of your email set up process.
+[IP Warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
 
 By starting with smaller volumes of email, you are establishing a level of trust with your mailbox provider, showing you are only sending emails to relevant users.
 
