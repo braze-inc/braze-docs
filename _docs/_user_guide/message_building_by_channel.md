@@ -23,7 +23,7 @@ guide_featured_list:
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/push_icon.png
-- name: SMS
+- name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   image: /assets/img/sms_icon.png
 - name: Webhooks
