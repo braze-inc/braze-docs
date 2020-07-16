@@ -30,8 +30,7 @@ It is also important to note that the attribute ID you have set in Jebbit is how
 ### Step 1: Provide API Credentials
 
 Please provide your API credentials as required from the above table. 
-For security reasons, we ask that you transfer the information from a .txt file via a Dropbox File request. Please submit your file using the following [Dropbox URL](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx
-).
+For security reasons, we ask that you transfer the information from a .txt file via a Dropbox File request. Please submit your file using the following [Dropbox URL](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx).
 
 ### Step 2: Confirm Test Submission
 

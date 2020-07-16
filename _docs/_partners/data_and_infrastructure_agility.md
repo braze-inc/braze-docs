@@ -44,6 +44,7 @@ valid_partner_list:
     url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/
   - name: Xamarin
     url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
-
+  - name: Jebbit
+    url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
 
 ---
