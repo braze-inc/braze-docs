@@ -19,7 +19,7 @@ This validation is used for dashboard email addresses, end-user email addresses 
 
 This new email validation process is an enhancement to Braze's existing email validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload or modified in the dashboard. Braze validates email addresses using [this Ruby gem][1]—the gem is set to relaxed mode and configured to accept UTF-8 character.  This validation is not to be confused with a validation service like Briteverify.  This is a check to verify that the syntax of an email address complies with RFC standards.
 
-If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API.  In this scenario, the user would not be created.
+If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API.  When uploading via CSV, the user would be created, but the email address will not be added.
 
 Email Validation looks at both the Local part and Host part of an email address—the local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed. 
 
@@ -36,8 +36,9 @@ The regex must follow these parameters:
 - Must start with a character (a-z)
 - Can contain any alphanumeric character (a-z or 0-9) or an underscore (**_**)
 - Can  contain the following characters (**.**) or (**-**)
-- Can not start or end with a period (**.**) or dash (**-**)
+- Can not start or end with a period (**.**) or hyphen (**-**)
 - Cannot contain two or more consecutive periods (**.**)
+- Can end with a hyphen (**-**)
 
 
 ## All Other Domains
@@ -71,6 +72,7 @@ The regex must also follow these parameters:
 - Must end with an alphanumeric character (a-z or 0-9)
 - Intermediate characters may include a dash (**-**)
 - Contains from 1 to 63 characters
+- Can end with a hyphen (**-**)
 
 **Additional validation required** 
 - The final part must be a valid top level domain (TLD) which is determined by anything after the final ‘.’ and must contain at least one alphabetic character.
