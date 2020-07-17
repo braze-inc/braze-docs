@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS Campaign Analytics"
 page_order: 7
-description: "This is the Google Search description. Characters past 160 get truncated, keep it brief."
+description: "This reference article covers SMS metrics used at Braze, as well as how to view themin your campaign."
 page_type: reference
 tool:
   - Dashboard

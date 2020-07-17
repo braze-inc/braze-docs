@@ -1,6 +1,8 @@
 ---
 nav_title: Export APIs
 page_order: 8
+description: "Braze's export APIs allow you to programmatically export a JSON file of Dashboard data."
+
 ---
 
 # Export APIs

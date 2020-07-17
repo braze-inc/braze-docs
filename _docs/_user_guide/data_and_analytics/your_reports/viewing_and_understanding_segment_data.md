@@ -1,6 +1,7 @@
 ---
 nav_title: Viewing and Understanding Segment Data
 page_order: 4
+description: "The Segments section of your Braze Dashboard contains a summary of all of your segments and allows you to examine detailed data for each one."
 ---
 # Viewing and Understanding Segment Data
 

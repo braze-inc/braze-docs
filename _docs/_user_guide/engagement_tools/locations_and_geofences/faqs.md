@@ -1,6 +1,8 @@
 ---
 nav_title: FAQs
-page_order: 3
+page_order: 4
+description: "This reference article covers some frequently asked questions surrounding the use of GeoFences."
+
 ---
 
 # Frequently Asked Questions

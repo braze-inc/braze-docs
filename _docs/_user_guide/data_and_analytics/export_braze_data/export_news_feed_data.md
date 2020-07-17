@@ -1,6 +1,8 @@
 ---
 nav_title: Export News Feed Data
 page_order: 5
+description: "This reference article covers how to export News Feed data."
+
 ---
 
 # News Feed Data

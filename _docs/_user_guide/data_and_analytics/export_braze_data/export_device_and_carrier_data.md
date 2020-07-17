@@ -1,6 +1,8 @@
 ---
 nav_title: Export Device & Carrier Data
 page_order: 7
+description: "This reference article covers how to export device and carrier data."
+
 ---
 
 # Device and Carrier Data

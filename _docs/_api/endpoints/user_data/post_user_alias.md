@@ -20,7 +20,7 @@ description: "This article outlines details about the create new User Aliases Br
 
 Use this endpoint to add new user aliases for existing identified users, or to create new unidentified users.
 
-Adding a user alias for an existing user requires a valid `external_id` to be included in the new user alias object. If the `external_id` is present in the object but it is not a valid ID, the process will fail.
+Adding a user alias for an existing user requires an `external_id` to be included in the new user alias object. If the `external_id` is present in the object but there is no user with that `external_id`, the alias will not be added to any users.
 
 Creating a new alias-only user requires the `external_id` to be omitted from the new user alias object. Once the user is created, use the `/users/track` endpoint to associate the alias-only user with attributes, events and purchases, and the `/users/identify` endpoint to identify the user with an `external_id`.
 

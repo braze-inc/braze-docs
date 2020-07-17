@@ -51,7 +51,7 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 ##### Option 1: Automatic Registration
 
-To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
+To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
 
 In your `appboy.xml`:
 
@@ -156,8 +156,8 @@ If migrating from using GCM to using Firebase with Braze, visit the [GCM Migrati
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
 * On the app settings page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the field labeled "Cloud Messaging API Key" under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the field labeled "Cloud Messaging Sender ID" under the Push Notification Settings section.
+* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
 
 ![fcmimg][16]
 
@@ -193,7 +193,8 @@ After completing this section, you should be able to receive and display push no
 Braze includes a service to handle push receipt and open intents. Our `AppboyFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
-<service android:name="com.appboy.AppboyFirebaseMessagingService">
+<service android:name="com.appboy.AppboyFirebaseMessagingService"
+  android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
   </intent-filter>
@@ -618,7 +619,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
 [14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "Custom Broadcast Sample Project"
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [23]: #step-4-registering-opens-and-receipts
 [26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"

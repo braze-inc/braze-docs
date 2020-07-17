@@ -46,7 +46,7 @@ presentViewController(ABKModalFeedbackViewController.init(), animated:true, comp
 
 ### Navigation Feedback View Controller
 
-`ABKNavigationFeedbackViewController` can be used in a navigation stack as a child of a `UINavigationController`. his Feedback view controller includes a "Send" button.
+`ABKNavigationFeedbackViewController` can be used in a navigation stack as a child of a `UINavigationController`. This Feedback view controller includes a "Send" button.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

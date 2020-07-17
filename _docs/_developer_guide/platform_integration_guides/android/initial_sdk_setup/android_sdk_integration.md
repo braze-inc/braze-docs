@@ -39,7 +39,7 @@ Alternatively, you may install the `android-sdk-ui` as an AAR file to your local
 
 ##### Add Braze Dependency
 
-Add the `android-sdk-ui` dependency to your app's `build.gradle`. For example:
+Add the non-AndroidX `android-sdk-ui` dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
@@ -50,6 +50,16 @@ dependencies {
 The below example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example below uses an old version. Please visit [Braze Android SDK Releases][60] for the most up to date version of the Braze Android SDK.
 
 ![MavenScreen2][32]
+
+##### Using AndroidX Dependencies (Optional)
+
+If using [AndroidX][70] in your project, use the jetified dependency instead of the above. All published artifacts of the Braze SDK ship with this fully jetified option.
+
+```gradle
+dependencies {
+  implementation "com.appboy:android-sdk-ui-jetified:+"
+}
+```
 
 ##### Perform Gradle Sync
 
@@ -65,12 +75,12 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute the API key found within the App Settings page of the Braze dashboard for `REPLACE_WITH_YOUR_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
+>  Be sure to substitute your [App Identifier API Key](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) found within the App Settings page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_appboy_api_key">REPLACE_WITH_YOUR_API_KEY</string>
+<string name="com_appboy_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
@@ -210,3 +220,4 @@ Our Unity SDK integration for Android requires [the same support library version
 [67]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{site.baseurl}}/support_contact/
 [69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
+[70]: https://developer.android.com/jetpack/androidx

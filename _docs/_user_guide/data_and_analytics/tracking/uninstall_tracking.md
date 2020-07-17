@@ -1,6 +1,7 @@
 ---
 nav_title: Uninstall Tracking
 page_order: 6
+description: "This reference article covers how to implement uninstall tracking"
 ---
 # Uninstall Tracking
 

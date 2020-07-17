@@ -63,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`campaign_id`|Required|String| See Campaign Identifier|
 |`send_id` | Optional | String | See Send Identifier |
 |`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
-|`audience` | Optional | Connected Audience Object | See Connected Audience | 
+|`audience` | Optional | Connected Audience Object | See Connected Audience |
 |`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
 | `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see Trigger Properties |
 | `schedule` | Required | Schedule Object | See Schedule Object |
@@ -85,12 +85,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 --data-raw '{
   "campaign_id": "",
   "send_id": "",
-  "recipients": {
+  "recipients": [{
     "user_alias": "",
     "external_user_id": "",
-    "trigger_properties": "",
-    "canvas_entry_properties": ""
-  },
+    "trigger_properties": {},
+    "canvas_entry_properties": {}
+  }],
   "audience": {
     "AND": [
       {
@@ -139,7 +139,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
     ]
   },
   "broadcast": false,
-  "trigger_properties": "",
+  "trigger_properties": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

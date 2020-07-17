@@ -29,7 +29,7 @@ Next, you need to name your campaign and select the messaging types and notifica
 
 ![Push2][2]
 
-Time to write your push message! Type it into the message box and watch a preview appear on in the preview box to the left. Don't forget to make use of our wonderful liquid logic tools when writing your messages. These tools allow you to make personalized, targeted push messages a snap!
+Time to write your push message! Type it into the message box and watch a preview appear on in the preview box to the left. Don't forget to make use of Liquid tools when writing your push messages to make them personalized and targeted.
 
 ### Additional Push Customization Steps
 

@@ -4,6 +4,7 @@ page_order: 4
 layout: dev_guide
 guide_top_header: "News Feed"
 guide_top_text: "Push Messages, Emails, and In-App messages are wonderful but ephemeral content. Once swiped away, you lose your opportunity to engage. If you catch a user at the wrong time, that message is lost to them forever. Multi-Channel messaging helps to ameliorate this problem, but the News Feed really puts it to rest once and for all."
+description: "Push Messages, Emails, and In-App messages are wonderful but ephemeral content. Once swiped away, you lose your opportunity to engage. If you catch a user at the wrong time, that message is lost to them forever. Multi-Channel messaging helps to ameliorate this problem, but the News Feed really puts it to rest once and for all."
 
 guide_featured_title: "Popular Articles"
 

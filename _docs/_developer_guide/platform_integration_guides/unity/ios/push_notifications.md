@@ -53,7 +53,7 @@ In the Unity Editor, open the Braze Configuration Settings by navigating to Braz
 
 Check "Integrate Push With Braze" to automatically register users for push notifications, pass push tokens to Braze, track analytics for push opens, and take advantage of Braze's default push notification handling.
 
-![Integrate Push With Braze][20]
+![Integrate Push With Braze][27]
 
 Users who have not yet opted-in to push notifications will be prompted to opt-in upon opening your application. To disable the automatic opt-in prompt and manually register users for push, see [Disabling Automatic Push Registration][6] below.
 
@@ -63,7 +63,7 @@ Users who have not yet opted-in to push notifications will be prompted to opt-in
 
 Check "Disable Automatic Push Registration" if you would like to manually register users with APNs (Apple Push Notification Service). Unity provides [NotificationServices.RegisterForNotifications][5] to do this from Unity.
 
-![Disable Automatic Push Registration][21]
+![Disable Automatic Push Registration][28]
 
 >  If you check this option, make sure that you are registering users for push notifications EVERY time the application runs after users have granted push permissions to your app. Apps need to re-register with APNs as [device tokens can change arbitrarily][4].
 
@@ -71,7 +71,7 @@ Check "Disable Automatic Push Registration" if you would like to manually regist
 
 Check "Enable Background Push" if you would like to enable [background mode][4] for push notifications. This allows the system to wake your application from the [Suspended][3] state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
 
-![Enabling Background Push][22]
+![Enabling Background Push][29]
 
 >  If you build your Xcode project with "Enable Background Push" checked and then later uncheck this option, you will need to either manually disable background push or choose "Replace" when rebuilding your iOS project. You can manually disable background push by removing `remote-notifications` from the `UIBackgroundModes` array in your Info.plist.
 
@@ -83,17 +83,45 @@ If you would like to pass push notification payloads to Unity or take additional
 
 The Push Received listener is fired when a user receives a push notification while they are actively using the application (i.e., the app is foregrounded). To send the push payload to Unity, set the name of your Game Object and Push Received listener callback method under the "Set Push Received Listener" foldout, like so:
 
-![Push Received Listener][23]
-
-For a sample implementation, take a look at the [`PushNotificationReceivedCallbackForiOS`][25] in `AppboyBindingTester.cs`.
+![Push Received Listener][30]
 
 #### Push Opened Listener
 
 The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener" foldout, like so:
 
-![Push Opened Listener][24]
+![Push Opened Listener][31]
 
-For a sample implementation, take a look at the [`PushNotificationOpenedCallbackForiOS`][25] in `AppboyBindingTester.cs`.
+#### Push Listener Implementation Example
+
+The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback` respectively. These methods are implemented in a file called `MainMenu.cs` and is a script linked to that game object. Every script attached to the game object that has an `PushNotificationReceivedCallback` or `PushNotificationOpenedCallback` function will be called.
+
+![Game Object Linking][32]
+
+```csharp
+public class MainMenu : MonoBehaviour {
+  void PushNotificationReceivedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationReceivedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification received: " + pushNotification);   
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push received Notification event: " + pushNotification);   
+#endif  
+  }
+
+  void PushNotificationOpenedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationOpenedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification opened: " + pushNotification);  
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push opened Notification event: " + pushNotification);   
+#endif  
+  }
+}
+```
 
 ## Manual Push Integration
 
@@ -212,10 +240,11 @@ See our documentation on [Deep Linking in iOS][18].
 [17]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html#//apple_ref/doc/uid/TP40008194-CH4-SW10
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [19]: {% image_buster /assets/img_archive/ios_push_sample.png %}
-[20]: {% image_buster /assets/img_archive/unity-ios-integrate-push.png %}
-[21]: {% image_buster /assets/img_archive/unity-ios-disable-registration.png %}
-[22]: {% image_buster /assets/img_archive/unity-ios-background-push.png %}
-[23]: {% image_buster /assets/img_archive/unity-ios-push-received.png %}
-[24]: {% image_buster /assets/img_archive/unity-ios-push-opened.png %}
 [25]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L44
 [26]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L50
+[27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
+[28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}
+[29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %}
+[30]: {% image_buster /assets/img/unity/ios/unity_ios_push_received.png %}
+[31]: {% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %}
+[32]: {% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %}

@@ -1,6 +1,7 @@
 ---
 nav_title: Security Settings
 page_order: 2
+description: "This reference article can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication."
 ---
 
 # Security Settings
@@ -37,19 +38,13 @@ Two-factor authentication adds a second level of identity verification to an acc
 
 When two-factor authentication is enabled, in addition to entering a password, users will be required to enter a verification code sent to their mobile device when logging in to their Braze account.
 
-Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account.
+Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also have the option to set up two-factor authentication on their own, even if not required by the administrator.
 
-### __Remember Me Feature__
+### __Remember Me__
 ![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
-Braze offers a __Remember Me__ checkbox displayed upon logging in with two-factor authentication. This feature stores the 'remember me' cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
+Upon toggling on two-factor authentication for your company, the __Remember Me__ checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
 
-- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the 'remember me' cookie being tied to a device. If users use the same device to log in to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
-
-
-{% alert tip %}
-Any Braze account user can set up two-factor authentication (under Account Settings in the drop-down) on their own, even if not required by the administrator.
-{% endalert %}
-
+- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the cookie being tied to a device. If users use the same device to log in to multiple accounts, the cookie will replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account; not one device for multiple accounts. 
 
 Be sure to save your changes before leaving the page!
 
