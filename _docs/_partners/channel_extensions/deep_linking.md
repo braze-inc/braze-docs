@@ -14,5 +14,6 @@ partner_top_header: "Deep-Linking"
 valid_partner_list:
 - name: Branch
   url: /docs/partners/channel_extensions/deep_linking/branch_for_deeplinking/
-
+- name: Vizbee
+  url: /docs/partners/channel_extenstions/deepl_linking/vizbee_for_tv_deeplinking/
 ---

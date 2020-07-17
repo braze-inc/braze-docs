@@ -3,7 +3,8 @@ nav_title: Administrative
 page_order: 2
 layout: featured
 guide_top_header: "Administrative"
-guide_top_text: "This series of topics and articles will guide you through the process of managing Braze Accounts, whether that be for your own account, your company or team accounts, those of other users, or general app settings. <br> <br> Select any of the topics below to find the articles you need."
+guide_top_text: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
+description: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
 
 guide_featured_title: "Popular Topics"
 guide_featured_list:

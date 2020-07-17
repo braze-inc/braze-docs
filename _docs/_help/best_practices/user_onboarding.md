@@ -80,7 +80,7 @@ Hailo does a great job at onboarding new users. When users open the app for the 
 
 The [News Feed][17] is an extremely powerful tool in the user onboarding process. It hosts rich content within your app, so users seeking more guidance or more advanced tips can easily access them. While your introduction should be simple and brief so users can dive into your app, the News Feed is there for when users have finished their initial exploration and are ready to discover advanced features and become a more involved member of your app's community.
 
-Welcome new users to your app with a branded News Feed card. Keep the News Feed updated with relevant information, hints and deals targeted towards users who are at different steps of the onboarding process. For instance, a user who is in his second week would see hints about advanced features, while a user who is in his third or fourth week may be targeted with conversion campaigns.
+Welcome new users to your app with a branded News Feed card. Keep the News Feed updated with relevant information, hints and deals targeted towards users who are at different steps of the onboarding process. For instance, a user who is in their second week would see hints about advanced features, while a user who is in their third or fourth week may be targeted with conversion campaigns.
 
 ### Requesting User Data
 
@@ -101,7 +101,7 @@ Use multi-channel messaging to create an engaging onboarding campaign. Combine i
 
 #### Push Notifications {#user-onboarding-push-notifications}
 
-- If a new user has push enabled and has only used your app once, you can send him a notification a couple days after his first session to remind him to come back into your app.
+- If a new user has push enabled and has only used your app once, you can send them a notification a couple days after their first session to remind them to come back into your app.
 - New users are still in the process of developing trust in your app's communications. Don't send too many push notifications, or users may perceive your app as spammy.
 - Like in-app messages, push notifications can [deep link] to specific pages within your app, making them a good tool for encouraging users to re-open your app.
 - Our [Push Best Practices][28] page has more information on creating custom opt-in prompts.

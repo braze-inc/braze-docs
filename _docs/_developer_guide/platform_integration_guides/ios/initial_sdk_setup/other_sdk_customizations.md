@@ -39,11 +39,15 @@ IDFA Collection is optional within the Braze SDK and disabled by default. IDFA C
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 
-- You are using advertising elsewhere in the app or through our in-app News Feed
+- You are using advertising elsewhere in the app
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-IDFA collection is enabled by implementing the [ABKIDFADelegate][29] protocol. Please check [IDFADelegate][30] for a full sample code.
+## Implementing IDFA Collection
+
+Follow these steps to implement IDFA Collection:
+
+1. Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -87,6 +91,8 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 {% endtab %}
 {% endtabs %}
 
+2. Set the delegate during Braze initialization. In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
+
 ### Approximate iOS SDK Size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
@@ -115,5 +121,5 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 [27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
 [28]: #apple-watch-sdk
 [29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/IDFADelegate.m
+[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

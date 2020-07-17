@@ -1,6 +1,7 @@
 ---
 nav_title: Reporting & Analytics
 page_order: 4
+description: "This reference article covers Content Card reporting and analytics."
 ---
 
 # Reporting & Analytics

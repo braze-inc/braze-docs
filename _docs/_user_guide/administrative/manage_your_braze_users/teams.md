@@ -1,6 +1,7 @@
 ---
 nav_title: Teams
 page_order: 4
+description: "Braze Admins can divide subsets of their Dashboard users into Teams with varying user roles and permissions. With Teams, Braze Admins will be able to restrict a Braze User’s access and permit or deny them the ability to perform different actions depending on their Team membership."
 ---
 
 # Teams

@@ -119,4 +119,9 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
 - name: Jebbit
   url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
+- name: Amazon Personalize
+  url: /docs/partners/data_augmentation/recommendation/amazon_personalize/
+- name: Vizbee
+  url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
+
 ---

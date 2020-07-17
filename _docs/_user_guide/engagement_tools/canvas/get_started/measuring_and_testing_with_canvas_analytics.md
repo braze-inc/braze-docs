@@ -1,6 +1,7 @@
 ---
 nav_title: Measuring and Testing with Canvas Analytics
 page_order: 2
+description: "Canvas makes it easy to understand how the experiences you’re building are impacting your goals. Once you build your Canvas and set it live, you can review performance on the Canvas Details page."
 ---
 
 # Moving the Needle: Measuring and Testing with Canvas Analytics

@@ -1,7 +1,7 @@
 ---
 nav_title: Custom Keyword Handling
 page_order: 2
-description: "This reference article covers how Braze processes certain keywords for SMS, as well as best practices."
+description: "This reference article covers how Braze processes custom keywords."
 page_type: reference
 tool:
   - Dashboard

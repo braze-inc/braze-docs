@@ -13,20 +13,20 @@ This best practice guide will help you to understand exactly what Braze consider
 The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
 
 #### Usage Information
-- First Used App (Date)
-- Last Used App (Date)
-- Total Session Count (Integer)
-- Number of Feedback Items (Integer)
-- Number of Sessions in the Last Y Days (Integer and Date)
+- First Used App (Time)
+- Last Used App (Time)
+- Total Session Count (Number)
+- Number of Feedback Items (Number)
+- Number of Sessions in the Last Y Days (Number and Time)
 - Email Available (Boolean)
-- News Feed View Count (Integer)
+- News Feed View Count (Number)
 
 #### Campaign Retargeting
-- Last Received Any Campaign (Date)
-- Last Received Email Campaign (Date)
-- Last Received Push Campaign (Date)
-- Last Viewed News Feed (Date)
-- Clicked Card (Integer)
+- Last Received Any Campaign (Time)
+- Last Received Email Campaign (Time)
+- Last Received Push Campaign (Time)
+- Last Viewed News Feed (Time)
+- Clicked Card (Number)
 - Received Message from Campaign
   - This filter allows you to target users based on their having (not) received a previous campaign.
 - Received Message from Campaign with Tag
@@ -48,7 +48,7 @@ The following events and attributes are captured and updated automatically by th
 - Device Wireless Carrier
 - Device Time Zone
 - Device Identifier
-- Uninstalled (Date and Boolean)
+- Uninstalled (Time and Boolean)
 
 ## Custom Events
 
@@ -56,13 +56,13 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the custom event has occurred __more than X number of times__ | __MORE THAN__ | __INTEGER__ |
-| Check if the custom event has occurred __less than X number of times__ | __LESS THAN__ | __INTEGER__ |
-| Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __INTEGER__ |
-| Check if the custom event last occurred __after X date__ | __AFTER__ | __DATE__ |
-| Check if the custom event last occurred __before X date__ | __BEFORE__ | __DATE__ |
-| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive) Integer) |
-| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive) Integer) |
+| Check if the custom event has occurred __more than X number of times__ | __MORE THAN__ | __NUMBER__ |
+| Check if the custom event has occurred __less than X number of times__ | __LESS THAN__ | __NUMBER__ |
+| Check if the custom event has occurred __exactly X number of times__ | __EXACTLY__ | __NUMBER__ |
+| Check if the custom event last occurred __after X date__ | __AFTER__ | __TIME__ |
+| Check if the custom event last occurred __before X date__ | __BEFORE__ | __TIME__ |
+| Check if the custom event last occurred __more than X days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
+| Check if the custom event last occurred __less than X days ago__ | __LESS THAN__ | __NUMBER OF DAYS AGO__ (Positive) Number) |
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
@@ -79,7 +79,7 @@ All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored a
 
 ### Custom Event Properties
 
-With Custom Event Properties, Braze allows you to set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, numeric, boolean, or Date objects. However, property values cannot be array objects.
+With Custom Event Properties, Braze allows you to set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, number, boolean, or time objects. However, property values cannot be array objects.
 
 For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
 
@@ -156,33 +156,33 @@ The maximum number of elements in Custom Attribute Arrays defaults to 25. The ma
 >  We use [Perl compatible regular expressions (PCRE)][11].
 
 #### Dates
-Date attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
+Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
->  The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom date attribute.
+>  The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
 
 Date filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24 hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the date attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
-| Check if the date attribute __is after__ a __selected date__| __AFTER__ | __CALENDAR DATE SELECTOR__ |
-| Check if the date attribute is __more than X number__ of __days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the date attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
-| Check if the date attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
-| Check if the date attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
-| Check if the date attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
-| Check if the date attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the time attribute __is before__ a __selected date__| __BEFORE__ | __CALENDAR DATE SELECTOR__ |
+| Check if the time attribute __is after__ a __selected date__| __AFTER__ | __CALENDAR DATE SELECTOR__ |
+| Check if the time attribute is __more than X number__ of __days ago__ | __MORE THAN__ | __NUMBER OF DAYS AGO__ |
+| Check if the time attribute is __less than X number__ of __days ago__| __LESS THAN__ | __NUMBER OF DAYS AGO__ |
+| Check if the time attribute is __in more than X number__ of __days in the future__ | __IN MORE THAN__ | __NUMBER OF DAYS IN FUTURE__ |
+| Check if the time attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
+| Check if the time attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
+| Check if the time attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
-#### Integers (Standard and Incrementing) and Decimals (Floats/Doubles) {#integers}
-Numeric attributes have a wide variety of use-cases. Incrementing integer custom attributes are useful for storing the number of times a given action or event has occurred. Standard integers and decimals have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).
+#### Numbers {#integers}
+Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numvers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).
 >  Money spent in app should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the numeric attribute __is more than__ an __integer or decimal value__| __MORE THAN__ | __INTEGER__ or __DECIMAL__ |
-| Check if the numeric attribute __is less than__ an __integer or decimal value__| __LESS THAN__ | __INTEGER__ or __DECIMAL__ |
-| Check if the numeric attribute __is exactly__ an __integer or decimal value__| __EXACTLY__ | __INTEGER__ or __DECIMAL__ |
-| Check if the numeric attribute __does not equal__ an __integer or decimal value__| __DOES NOT EQUAL__ | __INTEGER__ or __DECIMAL__ |
+| Check if the numeric attribute __is more than__ a __numver__| __MORE THAN__ | __NUMVER__ |
+| Check if the numeric attribute __is less than__ a __number__| __LESS THAN__ | __NUMBER__ |
+| Check if the numeric attribute __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
+| Check if the numeric attribute __does not equal__ a __numver__| __DOES NOT EQUAL__ | __NUMBER__ |
 | Check if the numeric attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 
@@ -201,13 +201,13 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the total number of dollars spent __is greater than__ an __integer or decimal value__| __GREATER THAN__ | __INTEGER__ or __DECIMAL__ |
-| Check if the total number of dollars spent __is less than__ an __integer or decimal value__| __LESS THAN__ | __INTEGER__ or __DECIMAL__ |
-| Check if total number of dollars spent __is exactly__ an __integer or decimal value__| __EXACTLY__ | __INTEGER__ or __DECIMAL__ |
-| Check if the purchase last occurred __after X date__ | __AFTER__ | __DATE__ |
-| Check if the purchase last occurred __before X date__ | __BEFORE__ | __DATE__ |
-| Check if the purchase last occurred __more than X days ago__ | __MORE THAN__ | __DATE__ |
-| Check if the purchase last occurred __less than X days ago__ | __LESS THAN__ | __DATE__ |
+| Check if the total number of dollars spent __is greater than__ a __number__| __GREATER THAN__ | __NUMBER__ |
+| Check if the total number of dollars spent __is less than__ a __number__| __LESS THAN__ | __NUMBERL__ |
+| Check if total number of dollars spent __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
+| Check if the purchase last occurred __after X date__ | __AFTER__ | __TIME__ |
+| Check if the purchase last occurred __before X date__ | __BEFORE__ | __TIME__ |
+| Check if the purchase last occurred __more than X days ago__ | __MORE THAN__ | __TIME__ |
+| Check if the purchase last occurred __less than X days ago__ | __LESS THAN__ | __TIME__ |
 | Check if the purchase occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the purchase occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
@@ -252,7 +252,7 @@ __Case Question #3: What other information might we want to know about our users
 The above characteristics could then be tagged as the following Custom Attributes:
 
 - Promotional Credit Balance (Decimal Type)
-- Average Driver Rating (Integer Type)
+- Average Driver Rating (Number Type)
 - Unique Promo Code (String Type)
 
 Adding these attributes would afford you the ability to send campaigns to users like:

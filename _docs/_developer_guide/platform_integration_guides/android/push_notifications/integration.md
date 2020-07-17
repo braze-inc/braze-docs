@@ -51,7 +51,7 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 ##### Option 1: Automatic Registration
 
-To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging sender ID.
+To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
 
 In your `appboy.xml`:
 
@@ -156,8 +156,8 @@ If migrating from using GCM to using Firebase with Braze, visit the [GCM Migrati
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
 * On the app settings page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the field labeled "Cloud Messaging API Key" under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the field labeled "Cloud Messaging Sender ID" under the Push Notification Settings section.
+* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
 
 ![fcmimg][16]
 
@@ -193,7 +193,8 @@ After completing this section, you should be able to receive and display push no
 Braze includes a service to handle push receipt and open intents. Our `AppboyFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
-<service android:name="com.appboy.AppboyFirebaseMessagingService">
+<service android:name="com.appboy.AppboyFirebaseMessagingService"
+  android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
   </intent-filter>
