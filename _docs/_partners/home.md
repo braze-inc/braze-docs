@@ -117,5 +117,7 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/loyalty/voucherify/
 - name: Movable Ink
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
+- name: Vizbee
+  url: /docs/partners/channel_extenstions/deepl_linking/vizbee_for_tv_deeplinking/
 
 ---
