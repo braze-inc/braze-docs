@@ -13,6 +13,7 @@ description: ""
 
 {% alert important %}
 
+**Please note that this is a beta feature.**
 This validation is used for dashboard email addresses, end-user email addresses (your customers), from and reply-to addresses done of an email message .
 {% endalert %}
 
