@@ -77,7 +77,7 @@ You can integrate Segment's Web source (Analytics.js) and native client-side lib
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-Side / Device-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration. |
+| [Side-by-Side / Device-mode](#side-by-side-sdk-integration) | Maps Segment's SDK to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration. |
 | [Server-to-Server / Cloud-mode](#server-to-server-integration) | Forwards data from Segment to Braze's [user/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -87,7 +87,7 @@ You can learn more about Segment's integration options (Connection Modes), inclu
 
 ### Side-by-Side SDK Integration
 
-Also called "Device-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and a more comprehensive usage of Braze than the server-to-server integration.
+Also called "Device-mode", this integration maps Segment's SDK and [methods](#methods) to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.
 
 {% tabs %}
 {% tab Android %}

@@ -10,7 +10,7 @@ page_type: partner
 
 > [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) is one of the world’s most popular instant messaging platforms, used by nearly one billion monthly active users. Through this platform, brands can create engaging Chatbots to interact intelligently and automatically with their customers.
 
-Use our Webhook and advanced segmentation, personalization, and triggering features to message your users in Facebook Messenger through the Messenger Platform API. We've included Facebook Messenger Webhook template in the Braze platform under __Templates & Media__.
+Use our Webhook and advanced segmentation, personalization, and triggering features to message your users in Facebook Messenger through the Messenger Platform API. We've included the Facebook Messenger Webhook template in the Braze platform under __Templates & Media__.
 
 The Facebook Messenger platform is intended for “non-promotional messages that facilitate a pre-existing transaction, provide other customer support actions, or deliver content requested by a person.” To read more, see [Facebook’s Platform Guidelines](https://developers.facebook.com/docs/messenger-platform/guidelines) and [Examples of Acceptable Use Cases](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable).
 
@@ -23,7 +23,7 @@ Please note that Facebook does not allow usage of the Messenger Platform to send
 | Facebook Messenger Page| Facebook| https://www.facebook.com/pages/create | A Facebook Page will be used as the identity of your bot. When people chat with your app, they will see the Page name and the Page profile picture.|
 | Facebook Messenger App| Facebook| https://developers.facebook.com/apps | The Facebook App contains the settings for your Messenger bot, including access tokens.
 | App Bot Review and Approval | Facebook | https://developers.facebook.com/docs/messenger-platform/app-review | When you are ready to release your bot to the public, you must submit it to Facebook for review and approval. This review process allows us to ensure your Messenger bot abides by our policies and functions as expected before it is made available to everyone on Messenger. |
-| Page-Scope IDs (PSIDs) | Facebook | https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages | You need to have users PSIDs in order to send messages on Facebook Messenger. Once a user interacts with  your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
+| Page-Scope IDs (PSIDs) | Facebook | https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages | You need to have users PSIDs in order to send messages on Facebook Messenger. Once a user interacts with your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
 | Page Access Token | Facebook | https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token | These access tokens are similar to user access tokens, except that they provide permission to APIs that read, write or modify the data belonging to a Facebook Page. To obtain a page access token you need to start by obtaining a user access token and asking for the `manage_pagespermission`. Once you have the user access token you then get the page access token via the Graph API.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -87,7 +87,7 @@ Before you send your message, test your webhook. Make sure your Messenger ID is 
 
 ![Sending a message to yourself][60]
 
-If you receive the message successfully, you can continue on to configure its delivery settings.
+If you receive the message successfully, you can start to configure its delivery settings.
 
 #### Targeting Facebook Messenger Users
 

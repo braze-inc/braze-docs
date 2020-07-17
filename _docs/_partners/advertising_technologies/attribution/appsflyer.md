@@ -99,7 +99,7 @@ For more information, please see AppsFlyer's [documentation][31].
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid  email system in order to seamlessly deep link from emails. <br>To get started, check out AppsFlyer's [documentation][3].
+There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. <br>To get started, check out AppsFlyer's [documentation][3].
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}

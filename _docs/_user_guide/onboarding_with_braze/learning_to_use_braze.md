@@ -78,7 +78,7 @@ _These reading paths assume that you've already completed your integration and s
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
 | 1 | [Configuring Reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
-| 2 | [User Data Collection Overview]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/) | How braze collects and categorizes user data. |
+| 2 | [User Data Collection Overview]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/) | How Braze collects and categorizes user data. |
 | 3 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
 | 4 | [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Import users into your Braze account. |
 | 5 | [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | Import users into your Braze account. |

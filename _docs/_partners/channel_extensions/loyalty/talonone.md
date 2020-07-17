@@ -222,4 +222,4 @@ You can also access the entire response from Talon.One by accessing `{% raw %} {
 
 Ensure your Connected Content syntax is correct (as in, using the right liquid tags for either a Canvas or Campaign, as well as referencing the right value in the `json` response).
 
-Be aware of the 500 messages/minute rate limit that you would want to implement in to the Braze Campaign/Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.
+Be aware of the 500 messages/minute rate limit that you would want to implement into the Braze Campaign/Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.
