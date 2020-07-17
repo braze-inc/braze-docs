@@ -39,7 +39,7 @@ No, the same level of insight will be provided when sending an MMS message.
 {% enddetails %}
 
 {% details Why can't I find MMS on my dashboard even though the feature is enabled? %}
-MMS is only displayed on the braze dashboard when a subscription group is considered "MMS enabled". This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message. 
+MMS is only displayed on the Braze dashboard when a subscription group is considered "MMS enabled". This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message. 
 {% enddetails %}
 
 {% details When receiving an MMS message, the image and message body order are inconsistent, sometimes showing the image second. Can I control the prioritization? %}

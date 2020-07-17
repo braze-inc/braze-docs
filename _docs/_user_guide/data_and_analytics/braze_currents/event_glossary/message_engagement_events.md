@@ -42,7 +42,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -85,7 +85,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 // Push Notification Open: users.messages.pushnotification.Open
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -130,7 +130,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -172,7 +172,7 @@ This event occurs when an error is received from either Apple Push Notification 
 // Push Notification Bounce: users.messages.pushnotification.Bounce
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -209,7 +209,7 @@ This event occurs when an email send request was successfully communicated betwe
 {
   // User Specific Properties
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -251,7 +251,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 // Email Delivery: users.messages.email.Delivery
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -292,7 +292,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
 // Email Open: users.messages.email.Open
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -334,7 +334,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 // Email Click: users.messages.email.Click
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -376,7 +376,7 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
 // Email Soft Bounce: users.messages.email.SoftBounce
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -416,7 +416,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
 // Email Mark As Spam: users.messages.email.MarkAsSpam
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -461,7 +461,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
 // Email Unsubscribe: users.messages.email.Unsubscribe
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -504,7 +504,7 @@ Subscription groups are only available for email and SMS channels at this time.
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "channel": (string) either 'sms' or 'email',
   "time": (int) time of the event in seconds since the epoch,
@@ -540,7 +540,7 @@ This event occurs when a user views an in-app message.
 // In-App Message Impression: users.messages.inappmessage.Impression
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -587,7 +587,7 @@ This event occurs when a user clicks on an in-app message.
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -635,7 +635,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 // Webhook Send: users.messages.webhook.Send
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -664,7 +664,7 @@ This event occurs when a content card gets sent to a user.
 // Content Card Send: users.messages.contentcard.Send
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -696,7 +696,7 @@ This event occurs when a user views a content card.
 // Content Card Impression: users.messages.contentcard.Impression
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -741,7 +741,7 @@ This event occurs when a user clicks a content card.
 // Content Card Click: users.messages.contentcard.Click
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -787,7 +787,7 @@ This event occurs when a user dismisses a content card.
 // Content Card Dismiss: users.messages.contentcard.Dismiss
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -837,7 +837,7 @@ This event occurs when a user views the News Feed.
 // News Feed Card Impression: users.messages.newsfeedcard.Impression
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -870,7 +870,7 @@ This event occurs when a user clicks the News Feed.
 // News Feed Card Click: users.messages.newsfeedcard.Click
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -898,7 +898,7 @@ This event occurs when a user sends an SMS.
 // SMS Send: users.messages.sms.Send
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
@@ -931,7 +931,7 @@ This event occurs when an SMS is sent to the carrier.
 // SMS Delivery: users.messages.sms.SendToCarrier
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
@@ -964,7 +964,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
 // SMS Delivery: users.messages.sms.Delivery
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
@@ -997,7 +997,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 // SMS Rejection: users.messages.sms.Rejection
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
@@ -1033,7 +1033,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 // SMS Delivery Failure: users.messages.sms.DeliveryFailure
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
@@ -1073,7 +1073,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 // Campaign Conversion Event: users.campaigns.Conversion
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -1107,7 +1107,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 // Canvas Conversion Event: users.canvas.Conversion
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -1137,7 +1137,7 @@ This event occurs when a user enters into the canvas. This event tells you which
 // Canvas Entry Event: users.canvas.Entry
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -1164,7 +1164,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 // Campaign Control Group Enrollment: users.campaigns.EnrollInControl
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,

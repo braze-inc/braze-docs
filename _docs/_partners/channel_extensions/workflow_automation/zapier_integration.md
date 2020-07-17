@@ -6,7 +6,7 @@ alias: /partners/zapier/
 
 [Zapier] [1] is an automation tool that links software services together, similar to [IFTTT] [2] (if this then that) for enterprise software. Utilizing [Webhooks] [3] and [API Triggered Campaigns] [4], Braze can integrate with Zapier
 
-### Step 1: Add Wordpress as a Trigger and select New Post after you connect your account:
+### Step 1: Add WordPress as a Trigger and select New Post after you connect your account:
 
 ![zapier1] [5]
 
@@ -34,7 +34,7 @@ Data : `trigger_properties__name`, `api_key`, `campaign_id`
 
 >  The above is an example for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
 
-## Step 6: Create Braze Campaign:
+## Step 6: Create a Braze Campaign:
 
 ![zapier6] [12]
 

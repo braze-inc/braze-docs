@@ -11,7 +11,7 @@ page_type: partner
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with braze to support your attribution needs.
+> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with Braze to support your attribution needs.
 
 Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
 
@@ -34,7 +34,7 @@ Branch.initSession(...);
 
 ### Step 2: Getting the Attribution ID
 
-In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the Branch section. The API key and the REST Endpoint are used in the next step when setting up a webhook in Branch's dashboard.
+In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Branch section. The API key and the REST Endpoint are used in the next step when setting up a webhook in Branch's dashboard.
 
 ### Step 3: Setting Up A Webhook from Branch
 
@@ -42,11 +42,11 @@ Follow [these instructions][22] to add a webhook in Branch's dashboard. You will
 
 ### Step 4: Confirming the Integration
 
-Once Braze receives attribution data from Branch, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from Branch, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
 
 ## Facebook and Twitter Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
 [5]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-limits
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"

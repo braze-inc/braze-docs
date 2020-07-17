@@ -109,17 +109,17 @@ Now, click the **Review Policy** button to make any final changes before setup.
 
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_review.png %})
 
-Here, give policy a unique name (something like: "Fivetran-S3-Access") and an optional description before clicking the **Create Policy** button.
+Here, give the policy a unique name (something like "Fivetran-S3-Access") and an optional description before clicking the **Create Policy** button.
 
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 #### Create an IAM role
 
-Navigate to **Roles**, then selet **Create New Role**.
+Navigate to **Roles**, then select **Create New Role**.
 
 ![Amazon S3 IAM New Role]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
-Select **Another AWS Account**, then click the check box for **Require external ID**.
+Select **Another AWS Account**, then click the checkbox for **Require external ID**.
 
 ![Amazon S3 Require External ID]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
@@ -189,7 +189,7 @@ After clicking **Edit bucket permissions**, grant ``Storage Object Viewer`` acce
 
 ![Google Storage Bucket Add Member]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 
-Lastly, navivate to your [Google Cloud Storage Consle](https://console.cloud.google.com/storage?pli=1) and take note of the bucket name as it will be needed in during the final setup steps.
+Lastly, navigate to your [Google Cloud Storage Consle](https://console.cloud.google.com/storage?pli=1) and take note of the bucket name as it will be needed in during the final setup steps.
 
 ![Google Storage Buckets]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 {% endtab %} {% endtabs %}

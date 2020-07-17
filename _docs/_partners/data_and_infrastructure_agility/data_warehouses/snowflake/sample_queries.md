@@ -148,9 +148,9 @@ LIMIT 500;
 The algorithm to calculate the unique email clicks in a given time window is as follows.
   1. Partition the events by the key (app_group_id, message_variation_id, dispatch_id, email_address).
   2. In each partition, order the events by time and the first event is always a unique event.
-  3. For every subsequent event, if it occured more than 7 days after its predecessor, is considered a unique event.
+  3. For every subsequent event, if it occurred more than 7 days after its predecessor, is considered a unique event.
   
-We can use Snowflake's windowing functions to help us achieve this. The query below gives us all email clicks in last 365 days and indicates which events are unique in the `is_unique` column.
+We can use Snowflake's windowing functions to help us achieve this. The query below gives us all email clicks in the last 365 days and indicates which events are unique in the `is_unique` column.
   
 ```sql
 SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
