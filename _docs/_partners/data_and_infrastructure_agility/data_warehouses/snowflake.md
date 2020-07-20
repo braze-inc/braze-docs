@@ -45,9 +45,9 @@ Read more about how Snowflake's Data Sharing works here: [Introduction to Secure
 In order to use the Braze Data Sharing feature, you must also be a Snowflake customer. This is because the data is shared within the Snowflake platform.
 {% endalert %}
 
-With Data Sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake’s unique services layer and metadata store. This is an important concept because it means that shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer’s monthly data storage charges. The **only** charges to consumers are for the compute resources (i.e. virtual warehouses) used to query the shared data.
+With Data Sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake’s unique services layer and metadata store. This is an important concept because it means that shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer’s monthly data storage charges. The **only** charges to consumers are for the computing resources (i.e. virtual warehouses) used to query the shared data.
 
-Additionally, using Snowflake's built in roles and permissions capabilities, access to data that is shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same exact way as your own data.
+Additionally, using Snowflake's built-in roles and permissions capabilities, access to data that is shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same exact way as your own data.
 
 When a Data Share is requested by a client, Braze will provision the share from the App Group(s) for which the share was purchased. Once the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an Incoming Data Share. 
 
@@ -59,7 +59,7 @@ In the context of Data Sharing, Braze is a [Data Provider](https://docs.snowflak
 
 ## Usage & Visualization
 
-Once the data share is provisioned, you'll need to create a database from the Incoming Data Share, which will then make the all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. Keep in mind, however, that the shared data is ready only, and can only be queried, but not modified or deleted in any way.
+Once the data share is provisioned, you'll need to create a database from the Incoming Data Share, which will then make all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. Keep in mind, however, that the shared data is ready only, and can only be queried, but not modified or deleted in any way.
 
 Similar to Currents, you can use your Secure Snowflake Data Sharing to...
 
@@ -83,15 +83,15 @@ Speed, performance, and cost of any query run on top of the data is entirely det
 
 ## Braze Benchmarks
 
-Braze Benchmarks will allow Braze prospects and  customers alike to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
+Braze Benchmarks will allow Braze prospects and customers alike to see how they compare to top players in their industry by comparing their metrics against Braze's industry benchmarks.
 
 We created a [Data Tool for Braze Benchmarks](https://www.braze.com/perspectives/benchmarks) so you can view a selection of the data, outside the Snowflake interface.
 
-The initial industries are: Delivery Services, Ecommerce, Education, Entertainment, Finance, Gaming, Health, Lifestyle, Restaurants, Retail, Technology, Transportation, and Travel.
+The initial industries are Delivery Services, Ecommerce, Education, Entertainment, Finance, Gaming, Health, Lifestyle, Restaurants, Retail, Technology, Transportation, and Travel.
 
 Our benchmarking data will also be available directly in the Snowflake Data Exchange.
 
-> For a set of example queries to reference when setting up snowflake, check out our [Sample Queries][SQ] and [ETL Event Pipleine Setup][ETL] examples.
+> For a set of example queries to reference when setting up snowflake, check out our [Sample Queries][SQ] and [ETL Event Pipeline Setup][ETL] examples.
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/

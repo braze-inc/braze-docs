@@ -54,7 +54,7 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 
 | Registration steps | Messaging steps |
 | ------------------ | --------------- |
-| 1. Customer (device) registers to push provider<br>2. Provider generates and delivers push token<br>3. Flush tokens in Braze |1. Braze sends push payload to provider<br>2. Provider delivers the push payload to the device<br>3. SDK passes messaging stats to braze |
+| 1. Customer (device) registers to push provider<br>2. Provider generates and delivers push token<br>3. Flush tokens in Braze |1. Braze sends push payload to provider<br>2. Provider delivers the push payload to the device<br>3. SDK passes messaging stats to Braze |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#before-android-sdk

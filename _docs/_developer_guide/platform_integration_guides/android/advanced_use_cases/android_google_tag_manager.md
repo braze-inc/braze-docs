@@ -33,7 +33,7 @@ In our example tag's custom parameters (key-value pairs), we've set `eventName` 
 {% alert important %}
 When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 
 
-The custom tag provider in our exmaple will use these key to determine what action to take, and what event name to send to braze when it receives data from Google Tag Manager.
+The custom tag provider in our exmaple will use these key to determine what action to take, and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
 
 ![Function Call Tag][4]

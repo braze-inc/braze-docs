@@ -10,7 +10,7 @@ page_type: partner
 
 > Rokt Calendar is a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications, in the form of calendar events and notifications, across a proprietary network of subscriber calendars.
 
-The Rokt Calendar and Braze integration allows for Rokt Calendar calendar subscribers and associated subscription data to be pushed into Braze.
+The Rokt Calendar and Braze integration allow for Rokt Calendar calendar subscribers and associated subscription data to be pushed into Braze.
 
 Customers can use the Braze Canvas to define journey targeting, a segment of your audience, while using the calendar event as a communication method, much in the same way that SMS, email, and push notifications are used. Audience segmentation can be done on any of the standard Braze user attributes as well as the custom attributes generated through the calendar subscription.
 

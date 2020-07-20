@@ -46,7 +46,7 @@ An example response with a blank context field is pictured below:
 
 ## Transifex Integration Code Example
 
-Here is example code which utilizes the Transifex Strings API and the user's "language" attribute.
+Here is example code that utilizes the Transifex Strings API and the user's "language" attribute.
 
 {% raw %}
 ```

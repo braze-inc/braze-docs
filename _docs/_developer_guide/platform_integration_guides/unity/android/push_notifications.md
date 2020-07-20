@@ -16,7 +16,7 @@ Check out [our troubleshooting section][8] for additional best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][9].
 
-In order to integrate braze push notifications into your app, you need to:
+In order to integrate Braze push notifications into your app, you need to:
 
 1. Enable Firebase
 2. Configure your Android Manifest

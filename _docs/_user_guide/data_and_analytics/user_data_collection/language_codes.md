@@ -2,7 +2,7 @@
 nav_title: User Language Codes
 page_type: reference
 glossary_top_header: "Braze User Language Codes"
-glossary_top_text: "Use these braze language codes to define your API requests. Though the parameters you need are listed under endpoints, this should give you more insight into their nuance and other specifications."
+glossary_top_text: "Use these Braze language codes to define your API requests. Though the parameters you need are listed under endpoints, this should give you more insight into their nuance and other specifications."
 description: "This glossary covers the current language codes Braze supports." 
 ---
 # User Language Codes

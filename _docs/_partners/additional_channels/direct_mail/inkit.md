@@ -20,7 +20,7 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 | ---| ---| ---|
 | Inkit API Key | Inkit | [Inkit Dashboard](https://app.inkit.io/#/account/integrations) | This key will enable you to connect your Braze and Inkit accounts.|
 | Inkit Template ID | Inkit | Found within the URL for each template. | This key will enable you to send your template to Braze. <br> Within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
-| HTTP Header | Inkit | Inkit Account | You will combine this with your Inkit API Key to authorize the connection as a key value pair within your Braze template. |
+| HTTP Header | Inkit | Inkit Account | You will combine this with your Inkit API Key to authorize the connection as a key-value pair within your Braze template. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -79,7 +79,7 @@ Inkit also requires a `HTTP Header` for authorization that includes your Inkit A
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag. You must have `street`, `unit`, `state`, and `zip` set up as [custom attributes][3] to send this Webhook.
 
-You should be able to preview your request in the left-hand panel, or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
+You should be able to preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
 Remember to save your template before leaving the page!

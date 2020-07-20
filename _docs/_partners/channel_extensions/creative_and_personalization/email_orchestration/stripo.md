@@ -7,7 +7,7 @@ alias: /partners/stripo
 
 [Stripo](https://stripo.email/) is a Drag-n-Drop email template builder that helps create sophisticated emails in no time due to workflow automation. Design responsive emails, setting which elements to display/hide on various devices, add interactive elements to emails right in the Stripo editor. The HTML code editor allows working with pure code to design unique emails.
 
-Create emails with Stripo faster with its comprehensive Drag-n-Drop editor and set of basic blocks. Embed custom HTML code with interactive elements. Then export those emails to Braze in 2 clicks, where you finalize them — personalize, add contact information prior to running email campaigns and track conversions after. Combine the tools for easy, productive communication with clients.
+Create emails with Stripo faster with its comprehensive Drag-n-Drop editor and set of basic blocks. Embed custom HTML code with interactive elements. Then export those emails to Braze in 2 clicks, where you finalize them — personalize, add contact information prior to running email campaigns, and track conversions after. Combine the tools for easy, productive communication with clients.
 
 # Requirements
 
@@ -27,7 +27,7 @@ Once you have finished editing your email, click **export** located at the top n
 Select **Braze** as your method of export.
 
 ## Step 3
-Enter your `account name` (i.e `Appgroup name`), `API key` and your `cluster instance`.
+Enter your `account name` (i.e `Appgroup name`), `API key`, and your `cluster instance`.
 ![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
 
 {% alert important %}

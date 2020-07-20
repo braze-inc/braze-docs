@@ -10,7 +10,7 @@ page_type: partner
 
 # About Tealium
 
-> Tealium is a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources.
+> Tealium is a universal data hub that enables you to connect mobile, web and alternative data to other third-party sources.
 
 Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 

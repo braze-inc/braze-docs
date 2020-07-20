@@ -42,7 +42,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
 // Custom Event: users.behaviors.CustomEvent
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -84,7 +84,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
 // Purchase Event: users.behaviors.Purchase
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "product_id": (string) id of the product purchased,
@@ -129,7 +129,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.FirstSession
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -161,7 +161,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.SessionStart
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
@@ -193,7 +193,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session End: users.behaviors.app.SessionEnd
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
@@ -221,7 +221,7 @@ This event is triggered when a user visits a specified location. Use this to tra
 // Location Event: users.behaviors.Location
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "longitude": (float) longitude of recorded location,
@@ -265,7 +265,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 // News Feed Impression: users.behaviors.app.NewsFeedImpression
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred,
@@ -294,7 +294,7 @@ Please note that this is not fired when the user actually uninstalls the app - t
 // Uninstall Event: users.behaviors.Uninstall
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred
@@ -317,7 +317,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 // Install Attribution Event: users.behaviors.InstallAttribution
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "source": (string) the source of the attribution
