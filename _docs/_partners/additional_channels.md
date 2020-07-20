@@ -28,5 +28,7 @@ valid_partner_list:
     url: /docs/partners/additional_channels/sms/twilio/
   - name: Wavecell
     url: /docs/partners/additional_channels/sms/wavecell/
+  - name: Iterate
+    url: /docs/partners/additional_channels/surveys/iterate/
 
 ---
