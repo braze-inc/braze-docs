@@ -19,7 +19,7 @@ This integration supports iOS and Android apps.
 | Requirement | Description |
 |---|---|
 | Braze SDK | Be sure to enable the proper SDK for your needs - either [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).|
-| Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll find the Install API Key and the REST Endpoint. The Install API Key and REST Endpoint will used to set up a postback in Adjust’s dashboard. |
+| Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll find the Install API Key and the REST Endpoint. The Install API Key and REST Endpoint will be used to set up a postback in Adjust’s dashboard. |
 | Adjust SDK | Please see the [Adjust docs](https://docs.adjust.com/en/getting-started/#integrate-the-adjust-sdk) for more information on this requirement. |
 | Enable IDFA Collection in Braze SDK | [IDFA Collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) is optional within the Braze SDK and disabled by default. This is required to be enabled for all of our Attribution partner integrations. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -31,7 +31,7 @@ Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getAppli
 ```
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you will need to ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).
+If you are planning to send post-install events from Adjust into Braze, you will need to ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).
 {% endalert %}
 
 ## Integration
@@ -41,7 +41,7 @@ To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
 2. Select __Braze (formerly Appboy)__.
 3. Copy the Braze API Key into the `Install API Key` field.
-- This Braze API Key is available in the Braze Dashboard. This can be found by naviagting to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Install Attribution__ section.
+- This Braze API Key is available in the Braze Dashboard. This can be found by navigating to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Install Attribution__ section.
 4. Copy the Braze REST Endpoint into the `REST_endpoint` field.
 5. Click __Save & Close__.
 
@@ -65,4 +65,4 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 
 ## Facebook and Twitter Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.

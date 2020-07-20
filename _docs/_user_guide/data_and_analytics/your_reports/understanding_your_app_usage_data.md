@@ -27,6 +27,8 @@ This is the total count of sessions that Braze has recorded since integration. S
 
 Monthly Active Users (or MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. The percentage next to the MAU count will give you a comparison of today's MAU count to the MAU count recorded 31 days ago. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
 
+Note that anonymous users will count towards your MAU as well. For mobile devices, anonymous users are device dependent. For web users, anonymous users are browser cache dependent. 
+
 ## Daily Active Users
 
 Daily Active Users (or DAU) displays the number of unique users who record at least one session in your app on a given day. DAU can be a useful statistic for examining the day-to-day variability of usage of your app and tailoring your messaging campaigns to be as effective as possible. For example, your app's usage may see an appreciable spike on weekends - this would inform you that you could reach more users with in-app messages on these days as opposed to weekdays.

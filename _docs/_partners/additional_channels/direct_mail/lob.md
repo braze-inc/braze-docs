@@ -17,13 +17,13 @@ You can access Lob's services through Braze's webhook feature and send mail to y
 
 ## HTTP URL
 
-The HTTP URL to request in the webhook is different for each action you can make to Lob. In this example we will be sending a postcard so the url is https://api.lob.com/v1/postcards, however the list of all the HTTP URL endpoints can be found in the [Lob documentation][39].
+The HTTP URL to request in the webhook is different for each action you can make to Lob. In this example we will be sending a postcard so the URL is https://api.lob.com/v1/postcards, however, the list of all the HTTP URL endpoints can be found in the [Lob documentation][39].
 
 ![Lob Endpoints][37]
 
 ## Request Body
 
-To specify an address in the webhook body requires nested objects, and as such it must be entered as "Raw Text" in JSON format.  If you are unfamiliar with the JSON format, an easy way to generate a sample request body is to copy the example CURL requests given on the Lob.com documentation and run it in your terminal (replacing their test API key with yours).  Once you run the code in terminal, go to the Lob.com dashboard and check the "Logs" tab found under the "Requests" title.  If the API request worked, you will be able to click on the request and copy the request body into the dashboard.  You can then replace the data in the file to fit your desires.
+To specify an address in the webhook body requires nested objects, and as such it must be entered as "Raw Text" in JSON format.  If you are unfamiliar with the JSON format, an easy way to generate a sample request body is to copy the example CURL requests given on the Lob.com documentation and run it in your terminal (replacing their test API key with yours).  Once you run the code in the terminal, go to the Lob.com dashboard and check the "Logs" tab found under the "Requests" title.  If the API request worked, you will be able to click on the request and copy the request body into the dashboard.  You can then replace the data in the file to fit your desires.
 
 ![Lob Success Response][34]
 
@@ -35,7 +35,7 @@ Lob's documentation states that you must include your API key in the header to a
 
 ## Preview Your Request
 
-At this point your campaign should be ready to send. If you run into errors, check the Lob dashboard and the developer console error message logs found in the Braze dashboard.  Using these two resources you should be able to troubleshoot and debug your request. For example, the error below is caused by an incorrectly formatted authentication header.
+At this point, your campaign should be ready to send. If you run into errors, check the Lob dashboard and the developer console error message logs found in the Braze dashboard.  Using these two resources you should be able to troubleshoot and debug your request. For example, the error below is caused by an incorrectly formatted authentication header.
 
 ![Error Log Message][36]
 

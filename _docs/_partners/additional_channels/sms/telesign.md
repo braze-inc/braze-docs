@@ -9,7 +9,7 @@ page_type: partner
 
 # TeleSign
 
-> [TeleSign][1] is a cloud communications platform helping the world’s leading websites and mobile applications across SMS messaging, voice messaging, mobile app verification and phone intelligence.
+> [TeleSign][1] is a cloud communications platform helping the world’s leading websites and mobile applications across SMS messaging, voice messaging, mobile app verification, and phone intelligence.
 
 ## Using TeleSign Example and Walkthrough
 
@@ -35,13 +35,13 @@ The image below depicts an example of what your request might look like if you a
 
 ### Step 2: Compose Request Headers and HTTP Method
 
-TeleSign requires two request headers, the request Content-Type and an HTTP Basic Authentication header.
+TeleSign requires two request headers, the request Content-Type, and an HTTP Basic Authentication header.
 
 ![headerchart.png][6]
 
 Add these to your webhook by clicking the gear icon on the right side of the Webhook composer, then clicking _Add New Pair_ twice.
 
-When you add them to your webhook, be sure to replace `TELESIGN_CUSTOMER_ID` and `TELESIGN_API_KEY` in the Header Values with values from your TeleSign dashboard. Lastly, TeleSign’s API endpoint expects an HTTP POST request, so choose that option in the dropdown for HTTP Method.
+When you add them to your webhook, be sure to replace `TELESIGN_CUSTOMER_ID` and `TELESIGN_API_KEY` in the Header Values with values from your TeleSign dashboard. Lastly, TeleSign’s API endpoint expects an HTTP POST request, so choose that option in the dropdown for the HTTP Method.
 
 ![telesign_step2.png][4]
 

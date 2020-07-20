@@ -39,7 +39,7 @@ In the Braze dashboard, go to Technology Partners and select Facebook. In the Fa
 
 ![Activate Facebook][6]
 
-A Facebook dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts and retrieve your associated Facebook app IDs if you plan to use the Facebook user ID when exporting your audiences (this is optional).
+A Facebook dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts and retrieve your associated Facebook app IDs.
 
 ![Facebook Dialog][7]
 
@@ -55,14 +55,11 @@ Braze's Facebook Audience Export is accessible through the Segments page. Simply
 
 If you haven't already activated Facebook within Braze, it will prompt you to go to the Facebook Technology Partners page of the dashboard. If you have already activated Facebook through Technology Partners > Facebook, you will be able to select the user field to export and a dropdown to select your Facebook ad account.
 
-There are 4 possible user fields you can export:  
+There are 3 possible user fields you can export:  
 
 - Email
 - Device IDFA
 - Phone number
-- Facebook user ID (UID)
-  - If you would like to export the Facebook UID you will need to enable Facebook social data tracking natively through the  Braze's [iOS][10] and [Android][11] SDKs.
-  - A [Facebook Application ID][12] is required if you are looking to export Facebook UIDs. After you are successfully collecting your users' Facebook UIDs through the Braze's SDKs, you will be able to select <b> Facebook UID </b> as an export field and select which Facebook Application IDs to include within the export modal.
 
 {% alert note %}
 You can only select one user field within a single export. If you choose more than 1 data type, Braze will create a separate custom audience for each.

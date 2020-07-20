@@ -28,7 +28,7 @@ Before you can access and use Segment Personas, you must have already [set up Br
 
 ## Sync Time
 
-Though the default setting for the Braze to Segment Personas connection is `Realtime`, there are some filters which will disqualify the persona from syncing in real time, including some time-based filters which restrict your audience's size at the time of message send.
+Though the default setting for the Braze to Segment Personas connection is `Realtime`, there are some filters that will disqualify the persona from syncing in real-time, including some time-based filters which restrict your audience's size at the time of message send.
 
 ## Segment Debugger Testing
 
