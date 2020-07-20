@@ -1,6 +1,7 @@
 ---
 nav_title: Adding Braze Account Users
 page_order: 0
+description: "This reference article covers how to add users to your company account."
 ---
 
 # Adding Users

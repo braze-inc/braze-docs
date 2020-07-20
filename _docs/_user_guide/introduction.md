@@ -6,6 +6,10 @@ user_top_header: "Braze User Guide"
 user_top_text: "Meet us at the intersection of art and science. Find us in the moment,
 or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
 we aim to create strong bonds between you and your customers or users."
+description: "Meet us at the intersection of art and science. Find us in the moment,
+or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
+we aim to create strong bonds between you and your customers or users."
+
 user_menu_list:
   - name: Manage Your Braze Account
     image: /assets/img/dashboard.png

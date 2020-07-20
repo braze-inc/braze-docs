@@ -1,6 +1,7 @@
 ---
 nav_title: Conditional Messaging Logic
 page_order: 6
+description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
 ---
 
 # Conditional Messaging Logic (Tags)

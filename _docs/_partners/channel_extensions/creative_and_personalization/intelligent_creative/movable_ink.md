@@ -16,7 +16,7 @@ Expand Braze's creative capabilities by leveraging Intelligent Creative features
 
 - An active Movable Ink account.
 - Data Source connected to Movable Ink.
-    - Either CSV, Website Import or API.
+    - Either CSV, Website Import, or API.
     - Note: Ensure that you are passing data with a unifying identifier between Movable Ink and Braze (e.g external_id)
 
 Intelligent Creative has many offerings that Braze users can take advantage of. Below is a list of what is supported. 
@@ -78,7 +78,7 @@ Customers will need to create a data source that can either be a CSV, Website Im
 1. ![create_campaign]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 From the Movable Ink home screen, you can choose to create a campaign. You can select from either Email from HTML, Email from Image, or a Block that can be used in any channel including Push, In-App Message, and Content Cards (suggested).
 We also suggest taking a look at the various content options available through creating a campaign using blocks.<br><br>
-2. Movable Ink has an easy editor for customers to drag and drop elements like text, image, etc. <br><br>Given that the customer has populated their data source, they can also dynamically generate an image using the data properties. In addition, they can also create fall backs within this flow for users in the event that the campaign is sent and a user doesn't fit within the personalization criteria.<br>![create_campaign2]({% image_buster /assets/img/movable_ink/create_campaign2.png %})Customers can also preview the dynamic images and test out the query parameters to see what the images will look upon view. <br><br>For more information on how to use the Movable Ink Platform, check out [Movable Ink Support Center][support]
+2. Movable Ink has an easy editor for customers to drag and drop elements like text, image, etc. <br><br>Given that the customer has populated their data source, they can also dynamically generate an image using the data properties. In addition, they can also create fallbacks within this flow for users in the event that the campaign is sent and a user doesn't fit within the personalization criteria.<br>![create_campaign2]({% image_buster /assets/img/movable_ink/create_campaign2.png %})Customers can also preview the dynamic images and test out the query parameters to see what the images will look upon view. <br><br>For more information on how to use the Movable Ink Platform, check out [Movable Ink Support Center][support]
 
 Once complete, you should be able to generate a dynamic URL that you can then insert into Braze!
 

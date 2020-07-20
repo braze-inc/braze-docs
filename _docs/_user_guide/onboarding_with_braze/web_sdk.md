@@ -1,6 +1,7 @@
 ---
 nav_title: Web SDK
 page_order: 3
+description: "With Braze’s Web SDK, you can collect session data, identify users (with the same set of attributes that we support across our other platforms), and record purchases and custom events via a web/mobile browser. Implementing Braze's Web SDK enables you to create a more complete view of your users across web and mobile channels."
 ---
 # Web SDK
 

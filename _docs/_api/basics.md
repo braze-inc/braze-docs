@@ -66,7 +66,7 @@ The `api_key` included in each request acts as an authentication key that allows
 
 API Keys are used to authenticate an API call. When you create a new REST API Key, you need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
-A good security practice is to assign a user only as much access as is necessary to complete his or her job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account.
+A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account.
 
 ![REST API Key Permissions][25]
 

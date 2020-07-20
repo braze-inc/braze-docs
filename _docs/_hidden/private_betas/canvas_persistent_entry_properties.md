@@ -28,7 +28,7 @@ Braze will begin saving the values associated with those properties once a Liqui
 
 ## Updated Entry Property Behavior
 
-If an active Canvas is edited to include a new entry property, the Canvas corresponding to that property will not be available for users who entered the Canvas before the entry property key was added to the Canvas. The values will only be saved for users that enter the Canvas __after__ the change is made. 
+If an active Canvas is edited to include a new entry property, the value corresponding to that property will not be available for users who entered the Canvas before the entry property key was added to the Canvas. The values will only be saved for users that enter the Canvas __after__ the change is made. 
 
 For example: If you initially launched a Canvas on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward. 
 

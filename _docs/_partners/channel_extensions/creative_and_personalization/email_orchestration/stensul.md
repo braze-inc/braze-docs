@@ -19,7 +19,7 @@ Braze API Key | [Braze Platform](https://dashboard.braze.com/sign_in) | The API 
 
 The export functionality from Stensul to Braze will allow users to send your HTML-formatted email as a new template within the Braze platform.
 
-Braze is integrated directly into the Stensul platform. Thus, after providing your Stensul Customer Success team with your Braze API key and cluster instance, the integration will be set up for you, allowing to you to push your completed email from Stensul to Braze as outlined below.
+Braze is integrated directly into the Stensul platform. Thus, after providing your Stensul Customer Success team with your Braze API key and cluster instance, the integration will be set up for you, allowing you to push your completed email from Stensul to Braze as outlined below.
 
 ## Step 1
 Once the email is created in Stensul, click “Complete”.

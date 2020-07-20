@@ -79,7 +79,7 @@ For more information, check out [Push Token Migration][3].
 The following data types can be stored as a custom attribute:
 
 - Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format)
-  - Date attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
+  - Time attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
   - Events and Attributes with timestamps in the future will default to the current time
 - Strings
 - Floats

@@ -4,6 +4,7 @@ page_order: 1
 layout: dev_guide
 guide_top_header: "Email"
 guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
+description: "With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -40,5 +41,8 @@ guide_menu_list:
 - name: Email Analytics Glossary
   link: /docs/user_guide/message_building_by_channel/email/analytics_glossary/
   fa_icon: fas fa-chart-pie
+- name: Apple Private Relay SSO
+  link: /docs/user_guide/message_building_by_channel/email/email_relay_apple_sso/
+  fa_icon: fab fa-apple
 
 ---

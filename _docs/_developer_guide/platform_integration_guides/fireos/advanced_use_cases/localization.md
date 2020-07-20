@@ -16,7 +16,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Burmese
 - Catalan
 - Chinese
-- Czech (coming soon)
+- Czech
 - Danish
 - Dutch
 - English
@@ -46,7 +46,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Spanish
 - Swedish
 - Thai
-- Ukrainian (coming soon)
+- Ukrainian
 - Vietnamese
 
 For more information see the [Android Localization Developer Docs][3].

@@ -9,9 +9,9 @@ description: "This article describes the partnership between Braze and Branch an
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with braze to support your deep linking needs.
+> [Branch][1], a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints. This article will walk you through how to use Branch with Braze to support your deep linking needs.
 
-Branch, with Braze, allows you to provide better experiences to your customers through allowing you to properly attribute the beginning of their user journey & connect them through deeplinks to the their intended location.
+Branch, with Braze, allows you to provide better experiences to your customers by allowing you to properly attribute the beginning of their user journey & connect them through deep links to their intended location.
 
 Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust [attribution]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) and deep linking.
 
@@ -35,7 +35,7 @@ To support sending iOS Universal Links as deep links from within Braze:
 
 To set up deep linking from emails sent through Braze, see [Branch's documentation](https://docs.branch.io/pages/integrations/braze/).
 
-Depending on your ESP, additional customization is required in order to support click-tracked Universal Links:
+Depending on your ESP, additional customization is required to support click-tracked Universal Links:
 
 - [SendGrid][5]
 - [Mailjet][6]

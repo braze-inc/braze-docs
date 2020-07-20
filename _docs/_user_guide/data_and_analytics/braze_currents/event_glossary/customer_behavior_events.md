@@ -42,7 +42,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
 // Custom Event: users.behaviors.CustomEvent
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -52,9 +52,18 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
-  "properties": (string) JSON encoded string of the custom properties for this event
+  "properties": (string) JSON encoded string of the custom properties for this event,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
 
 {% endapi %}
 {% api %}
@@ -75,7 +84,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
 // Purchase Event: users.behaviors.Purchase
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "product_id": (string) id of the product purchased,
@@ -86,9 +95,19 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "device_id": (string) id of the device on which the event occurred,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
+
 {% endapi %}
 
 
@@ -110,7 +129,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.FirstSession
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
@@ -142,7 +161,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.SessionStart
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
@@ -174,7 +193,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session End: users.behaviors.app.SessionEnd
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
@@ -202,7 +221,7 @@ This event is triggered when a user visits a specified location. Use this to tra
 // Location Event: users.behaviors.Location
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "longitude": (float) longitude of recorded location,
@@ -214,9 +233,18 @@ This event is triggered when a user visits a specified location. Use this to tra
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "device_id": (string) id of the device on which the event occurred,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+{% alert update %}
+For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+
+_Update noted in June 2020._
+{% endalert %}
+
 {% endapi %}
 
 {% api %}
@@ -237,7 +265,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 // News Feed Impression: users.behaviors.app.NewsFeedImpression
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred,
@@ -266,7 +294,7 @@ Please note that this is not fired when the user actually uninstalls the app - t
 // Uninstall Event: users.behaviors.Uninstall
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred
@@ -289,7 +317,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 // Install Attribution Event: users.behaviors.InstallAttribution
 {
   "id": (string) unique id of this event,
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in seconds since the epoch,
   "source": (string) the source of the attribution

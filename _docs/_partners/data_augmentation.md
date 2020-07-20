@@ -30,5 +30,7 @@ valid_partner_list:
     url: /docs/partners/data_augmentation/recommendation/certona/
   - name: Liftigniter
     url: /docs/partners/data_augmentation/recommendation/liftigniter/
+  - name: Amazon Personalize
+    url: /docs/partners/data_augmentation/recommendation/amazon_personalize/
 
 ---

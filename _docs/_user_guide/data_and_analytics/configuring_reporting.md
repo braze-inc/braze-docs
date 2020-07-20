@@ -1,6 +1,7 @@
 ---
 nav_title: Configuring Reporting
 page_order: 1.1
+description: "Braze automatically generates a weekly email report to help you understand the performance of your apps and messaging campaigns."
 ---
 # Configuring Reporting
 

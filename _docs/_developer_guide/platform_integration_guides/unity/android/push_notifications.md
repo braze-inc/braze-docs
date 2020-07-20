@@ -16,7 +16,7 @@ Check out [our troubleshooting section][8] for additional best practices.
 
 Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][9].
 
-In order to integrate braze push notifications into your app, you need to:
+In order to integrate Braze push notifications into your app, you need to:
 
 1. Enable Firebase
 2. Configure your Android Manifest
@@ -87,8 +87,8 @@ REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
 * On the app settings page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the field labeled "Cloud Messaging API Key" under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the field labeled "Cloud Messaging Sender ID" under the Push Notification Settings section.
+* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
 
 ![FCMKey][15]
 

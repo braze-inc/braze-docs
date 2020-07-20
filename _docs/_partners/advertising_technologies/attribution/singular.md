@@ -20,7 +20,7 @@ Singular allows you to import paid install attribution data to segment more inte
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Singular's SDK installed.
 * If you have an iOS app, you will need to [enable IDFA collection][13] in Braze's SDK.
-* If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method  or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
+* If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
 
 ```java
 @Override
@@ -37,11 +37,11 @@ protected void onCreate(Bundle savedInstanceState)
 
 ### Step 2: Getting the Braze API Key
 
-In your Braze account, navigate to "Technology Partners" , then "Attribution" and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
+In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
 
 ### Step 3: Confirming the Integration
 
-Once Braze receives attribution data from Singular, the status connection indicator on "Technology Partners" , then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from Singular, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ## Facebook and Twitter Attribution Data
 

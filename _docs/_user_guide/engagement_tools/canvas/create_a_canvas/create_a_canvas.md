@@ -3,6 +3,7 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
+description: "This reference article covers the neccesary steps involved in creating, maintaining, and testing a Canvas."
 ---
 
 # Creating a Canvas
@@ -147,7 +148,7 @@ Then, specify Quiet Hours (the time during which your messages will not send) fo
 ### Add a Variant
 ![Canvas Add Variant][11]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Click the "Add Variant" button and select the option to add a new variant to your Canvas. variants represent a journey that your users will take:
+Click the "Add Variant" button and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take.
 
 You can add additional variants by pressing the + button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies:
 

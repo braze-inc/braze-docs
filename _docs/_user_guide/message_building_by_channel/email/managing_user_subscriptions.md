@@ -1,6 +1,7 @@
 ---
 nav_title: Managing User Subscriptions
 page_order: 6
+description: "This reference article covers how to manage users email subscription states."
 ---
 # Managing User Subscriptions
 

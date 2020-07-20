@@ -4,6 +4,7 @@ page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always [test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) before launching. Check out the individual message type's Creative Specs or the global Creative Details below."
+description: "This in-app messaging landing page is a hub for all things creative."
 
 guide_featured_title: "Specifications for Each Message Type"
 
@@ -35,6 +36,8 @@ Our guidelines for images are more structured than those for text, as we want to
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
 - For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+
+{% alert tip %}Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 {% tabs %}
   {% tab Full-Screen %}

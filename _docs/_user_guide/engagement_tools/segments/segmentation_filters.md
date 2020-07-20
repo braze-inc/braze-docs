@@ -3,7 +3,7 @@ page_order: 1
 nav_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by <a href="/docs/user_guide/engagement_tools/segments/filter_categories/">Filter Category.</a>
+glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: segments
@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Date attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
+    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
     tags:
       - Custom Data
   - name: First Did Custom Event
@@ -402,6 +402,10 @@ glossaries:
       - User Attributes
   - name: Install Attribution Ad
     description: Segments your users by the ad that their install was attributed to.
+    tags:
+      - User Attributes
+  - name: Hard Bounce
+    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup

@@ -1,6 +1,7 @@
 ---
 nav_title: The Basics
 page_order: 1
+description: "This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas."
 ---
 {% comment %}
 Separate "The Basics" section into "Find Your Strategy" and "Building Your Customer Journey" and "Anatomy of a Canvas" - move Anatomy of a Canvas to Create a Canvas and put it 1st.

@@ -142,6 +142,7 @@ validurls['/docs/templates_and_media/'] = '/docs/user_guide/engagement_tools/tem
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
 validurls['/docs/user_targeting/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/';
 validurls['/docs/webinars/'] = '/docs/help/webinars/overview';
+validurls['/docs/create_send/'] = '/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#create-send-endpoint';
 
 validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports/'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/getting_your_account/';
@@ -230,7 +231,6 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
-validurls['/docs/hidden/private_betas/create_send/'] = '/docs/create_send/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
 validurls['/docs/hidden/private_betas/delay_step/'] = '/docs/delay_step/';
 validurls['/docs/hidden/private_betas/promotion_codes/'] = '/docs/promotion_codes/';
@@ -247,3 +247,4 @@ validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration
 
 validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
 
+validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant'
