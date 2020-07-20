@@ -8,6 +8,10 @@ page_order: 0
 
 Integrating the Braze SDK will provide you with basic analytics functionality as well as in-app messages with which you can engage your users. Note that the web SDK file size is 32.3 KB.
 
+{% alert note %}
+Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to delay your initial SDK setup if you want to exclude these users from your MAU count.
+{% endalert %}
+
 ## Integrate the Braze Library
 
 To integrate the Braze Web SDK, follow the instructions in the "Getting Started" section of the [Braze Web SDK Github Repository][2].
@@ -89,3 +93,4 @@ These files must be updated in coordination with each other to ensure proper fun
 [12]: {% image_buster /assets/img_archive/gtm_example.png %}
 [13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
 [14]: {% image_buster /assets/img/api_key_location.png %}
+[15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
