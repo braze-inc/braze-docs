@@ -20,7 +20,7 @@ description: "This article outlines details about the Identify Users Braze endpo
 
 Use this endpoint to identify an unidentified (alias-only) user.
 
-Identifying a user requires an `external_id` to be included in the aliases to identify the object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliases user's record, and the user will be considered identified.
+Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified.
 
 Subsequently, you can associate multiple additional user aliases with a single `external_id`. When these subsequent associations are made, only the push tokens and message history associated with the user alias are retained; any attributes, events or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
 
