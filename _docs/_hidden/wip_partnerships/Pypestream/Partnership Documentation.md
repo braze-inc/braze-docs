@@ -32,7 +32,7 @@ The requirements listed below are typical requirements you might need from Braze
 
 Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with various services and/or systems to support the data requirements of the conversational flow that is being built. These integrations, which are referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. The steps below highlight how to utilize an action node to integrate a Pypestream conversational flow into the Braze REST APIs. 
 
-*Note: For an overview and configuration steps for Pypestream action nodes, refer to the [Pypestream documentation](support.pypestream.com)*
+*Note: For an overview and configuration steps for Pypestream action nodes, refer to the [Pypestream documentation](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070). In order to access the documentation, you must be a Pypestream customer*
 
 ### Step 1: Set Endpoint Configurations
 
@@ -99,6 +99,7 @@ POST Request to the User Track Braze Endpoint (users/track)
   "req_endpoint_path": "users/track",
   "req_method": "POST",
   "req_headers": {
+    "Authorization": "{YOUR_REST_API_KEY}"
     "Content-Type": "application/json"
   },
   "req_body": {
@@ -129,7 +130,6 @@ class BrazeExample:
             # initialize payload variables
             app_params = app.PARAMS[context['env']]
             req_params = {
-                "api_key": app_params['braze_api_key'],
                 "attributes": [{
                     "external_id": "{ USER_ID }",
                     # include add'tl user details in this section
@@ -142,6 +142,7 @@ class BrazeExample:
                 app_params['braze_user_track']
             )
             req_headers = {
+                "Authorization": app_params['braze_api_key']
                 "Content-Type": "application/json"
             }
 
@@ -168,7 +169,7 @@ class BrazeExample:
 
 The final step of integrating with the Braze REST API Endpoints involves configuring the flows within Pypestream’s [Design Studio](https://platform.pypestream.com/design-studio/) to leverage the action node that was developed in Step 2. 
 
-For additional information on how to configure action nodes within Design Studio, please refer to the [Pypestream documentation](support.pypestream.com).
+For additional information on how to configure action nodes within Design Studio, please refer to the [Pypestream documentation](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070). Note: In order to access the documentation, you must be a Pypestream customer*
 
 ## Customization
 
@@ -251,7 +252,6 @@ class BrazeExample:
             # initialize payload variables
             app_params = app.PARAMS[context['env']]
             req_params = {
-                "api_key": app_params['braze_api_key'],
                 "attributes": [{
                     "external_id": "{ USER_ID }",
                     "first_name": "{ FIRST_NAME }",
@@ -274,6 +274,7 @@ class BrazeExample:
                 app_params['braze_user_track']
             )
             req_headers = {
+                "Authorization": app_params['braze_api_key']
                 "Content-Type": "application/json"
             }
 
