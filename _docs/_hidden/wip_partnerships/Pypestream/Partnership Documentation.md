@@ -17,7 +17,7 @@ With the Braze-Pypestream partnership, brands are able to seamlessly orchestrate
 
 ## Requirements or Pre-Requisites
 
-In order to integrate Pypestream with Braze, you'll first need a subscription to the Pypestream platform. If you are not already already a Pypestream customer, please contact the team directly via https://www.pypestream.com/contact-us/ and mention your desire to leverage the Braze integration in order to take advantage of the partnership in place between both companies. Once you have subscribed to Pypestream, the team will help to set you up with your own dedicated enviroment to being building your Pypestream conversational AI solution to integrate with Braze.
+In order to integrate Pypestream with Braze, you'll first need a subscription to the Pypestream platform. If you are not already already a Pypestream customer, please contact the team directly via https://www.pypestream.com/contact-us/ and mention your desire to leverage the Braze integration in order to take advantage of the partnership in place between both companies. Once you have subscribed to Pypestream, the team will help to set you up with your own dedicated environment to begin building your Pypestream conversational AI solution to integrate with Braze.
 
 Included below are the additional details specific to both Braze and Pypestream that will be needed to integrate both platforms.
 
