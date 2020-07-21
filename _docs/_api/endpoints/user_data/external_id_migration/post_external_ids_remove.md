@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 
-description: "This article outlines details about the External IDs Remove endpoint."
+description: "This article outlines details about the external IDs Remove endpoint."
 ---
 {% api %}
 # External ID Remove
@@ -21,7 +21,7 @@ For security purposes, this feature is disabled by default. To enable this featu
 
 Use this endpoint to remove your users' old deprecated `external id`s. This endpoint completely removes the deprecated ID and cannot be undone.
 
-You can send up to 50 external_ids per request.
+You can send up to 50 external IDss per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
@@ -38,11 +38,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (required, array of External IDs to remove)
-  {
-    "[external_id_string]" : (required, string) existing deprecated External ID for the user
+  "external_ids" : (required, array of external IDs to remove)
+  [
+    "external_id_string" (required, string) existing deprecated external ID for the user
     ...
-  }
+  ]
 }
 ```
 
@@ -53,14 +53,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "external_ids" : 
-    {
+    [
       "your_existing_deprecated_external_id_string",
       ...
-    }
+    ]
 }'
 ```
 {% alert important %}
-Only deprecated IDs can be removed; attempting to remove a primary External ID will result in an error.
+Only deprecated IDs can be removed; attempting to remove a primary external ID will result in an error.
 {% endalert %}
 
 ## Response Body
@@ -69,19 +69,17 @@ The response will confirm all successful removals, as well as unsuccessful remov
 ```
 {
 
-  "message" : (required, string) status message,
-  "removed_ids" : (required, array of successful Remove Operations),
-  "removal_errors": (required, array of any <minor error message>)
+  "message" : (string) status message,
+  "removed_ids" : (array of successful Remove Operations),
+  "removal_errors": (array of any <minor error message>)
 
 }
 ```
 
-The `message` field will return `success` for any valid request. More specific errors are captured in the `rename_errors` array. The `message` field returns an error in the case of:
+The `message` field will return `success` for any valid request. More specific errors are captured in the `removal_errors` array. The `message` field returns an error in the case of:
 - Invalid API key
-- Empty “external_ids” array
-- “external_ids” array with more than 50 objects
+- Empty `external_ids` array
+- `external_ids` array with more than 50 items
 - Rate limit hit (>20,000 requests/day)
 
 {% endapi %}
-
-[1]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
