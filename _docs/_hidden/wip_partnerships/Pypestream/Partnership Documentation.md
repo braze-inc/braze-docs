@@ -135,7 +135,8 @@ class BrazeExample:
                     # include add'tl user details in this section
                     # refer to the Braze API Documentation for User Track REST API Endpoint for more details
                 }],
-                "events": []
+                "events": [],
+                "partner" : 'pypestream'
             }
             req_url = '{}/{}'.format(
                 app_params['braze_url'],
@@ -232,7 +233,8 @@ POST Request to the User Track Braze Endpoint (users/track)
         }],
         "events": [
             ...
-        ]
+        ],
+        "partner" : 'pypestream'
 }
 
 
@@ -267,7 +269,8 @@ class BrazeExample:
                     "external_id": "{ USER_ID }",
                     "name": "{ NAME_OF_EVENT }",
                     "time": "{ EVENT_TIME }"
-                }]
+                }],
+                "partner" : 'pypestream'
             }
             req_url = '{}/{}'.format(
                 app_params['braze_url'],
