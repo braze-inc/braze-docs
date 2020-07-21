@@ -34,12 +34,12 @@ If the host domain has "msn, hotmail, outlook, or live", then the following rege
 
 The regex must follow these parameters:
 
-- Must start with a character (a-z)
-- Can contain any alphanumeric character (a-z or 0-9) or an underscore (**_**)
-- Can  contain the following characters (**.**) or (**-**)
-- Can not start or end with a period (**.**) or hyphen (**-**)
-- Cannot contain two or more consecutive periods (**.**)
-- Can end with a hyphen (**-**)
+- Can start with a character (a-z), an underscore (*_*) or a number (0-9).  If starting with a number, the local-part must contain atleast one other character
+- Can contain any alphanumeric character (a-z or 0-9) or an underscore (*_*)
+- Can  contain the following characters (*.*) or (*-*)
+- Can not start or end with a period (*.*) or hyphen (*-*)
+- Cannot contain two or more consecutive periods (*.*)
+- Can end with a hyphen (*-*)
 
 
 ## All Other Domains
@@ -50,7 +50,7 @@ For all other domains, Braze allows the following regex for the local part:
 
 The regex must follow these parameters:
 - Can contain any letter, number or underscore, including Unicode letters and numbers
-- Can contain but may not start or end with the following characters: (**.**) (**-**) (**+**) or (**'**)
+- Can contain but may not start or end with the following characters: (*.*) (*-*) (*+*) or (*'*)
 
 {% alert important %}
 If the domain part is a Gmail address, the local part needs to be at least 5 characters long. This is in addition to the regex validation specified above under "All other domains".
@@ -67,13 +67,13 @@ The following regex is allowed for the host part:
 The regex must also follow these parameters:
 
 - Consists of two or more period-separated parts. 
-- Must contain at least one period (**.**)
+- Must contain at least one period (*.*)
 - Cannot contain two or more consecutive periods
 - Must start with an alphanumeric character (a-z or 0-9)
 - Must end with an alphanumeric character (a-z or 0-9)
-- Intermediate characters may include a dash (**-**)
+- Intermediate characters may include a dash (*-*)
 - Contains from 1 to 63 characters
-- Can end with a hyphen (**-**)
+- Can end with a hyphen (*-*)
 
 **Additional validation required** 
 - The final part must be a valid top level domain (TLD) which is determined by anything after the final ‘.’ and must contain at least one alphabetic character.
