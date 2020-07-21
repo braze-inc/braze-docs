@@ -17,11 +17,9 @@ With the Braze-Pypestream partnership, brands are able to seamlessly orchestrate
 
 ## Requirements or Pre-Requisites
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
+In order to integrate Pypestream with Braze, you'll first need a subscription to the Pypestream platform. If you are not already already a Pypestream customer, please contact the team directly via https://www.pypestream.com/contact-us/ and mention your desire to leverage the Braze integration in order to take advantage of the partnership in place between both companies. Once you have subscribed to Pypestream, the team will help to set you up with your own dedicated enviroment to being building your Pypestream conversational AI solution to integrate with Braze.
 
-{% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
-{% endalert %}
+Included below are the additional details specific to both Braze and Pypestream that will be needed to integrate both platforms.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
@@ -308,7 +306,9 @@ In each solution’s design, the solution designer has the ability to route user
 
 When it comes to the Braze-Pypestream partnership, the possibilities are nearly endless! That said, we’ve highlighted a few common applications below to summarize the most common ways that brands have leveraged the combined capabilities:
 * **Intelligent Retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
-* **Dynamic Targeting**: *TBD*
+* **Dynamic Targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments (as defined with Braze), serving them with tailored conversational experiences via Pypestream.
+* **Contextual Customer Insights**: Once an end-user (existing or prospective customer) is engaging on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
+
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
