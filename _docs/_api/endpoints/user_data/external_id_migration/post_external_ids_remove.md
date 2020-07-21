@@ -16,7 +16,7 @@ description: "This article outlines details about the External IDs Remove endpoi
 {% endapimethod %}
 
 {% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, please reach our to your Success Manager.
+For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
 {% endalert %}
 
 Use this endpoint to remove your users' old deprecated `external id`s. This endpoint completely removes the deprecated ID and cannot be undone.

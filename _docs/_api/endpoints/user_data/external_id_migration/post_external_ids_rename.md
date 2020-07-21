@@ -16,7 +16,7 @@ description: "This article outlines details about the External IDs Rename endpoi
 {% endapimethod %}
 
 {% alert note %}
-For security purposes, this feature is disabled by default. To enable this feature, please reach our to your Success Manager.
+For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
 {% endalert %}
 
 Use this endpoint to "rename" your users' `external id`s. This endpoint creates a new primary `external_id` for the user and marks the existing `external_id` as deprecated. This means that the user can be identified by either `external_id` until the deprecatd one is removed. The deprecated ID can be removed at any time using the [remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint. We've architected this solution to allow multiple External IDs in order to support a migration period whereby older versions of your apps still in the wild that use the previous External ID naming schema don’t break. We highly recommend removing deprecated External IDs once your old naming schema is no longer in use.
