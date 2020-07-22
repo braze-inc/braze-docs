@@ -29,7 +29,7 @@ Failure to upgrade to [Braze Android SDK v8.1.0][1] for apps targeting **Android
  
 ### Deep Links
 
-Links to external URLs from a Braze message (In-App Message or Content Cards) will no longer work on **Android 11** Targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
+Deeplinks to external URLs from a Braze message (In-App Message or Content Cards) will no longer work on **Android 11** targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
 
 Links from push notifications will continue to work.
 
