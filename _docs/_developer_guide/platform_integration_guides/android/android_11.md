@@ -53,7 +53,7 @@ Users can now grant permissions, such as Location Collection, on a temporary, on
 Android 11 will require apps to first request the foreground location permission, and then after the app is backgrounded it may prompt the user again for Background Location permission. 
 Customers using Geofences should ensure their app follows Android’s recommendations on collecting Background Location permission. For more information, see the [Android Docs](https://developer.android.com/preview/privacy/location#background-location).
 
-![Android Background Location Permission][2]
+![Android Background Location Permission][2]{: height="230px" }
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810
 [2]: {% image_buster /assets/img/android/android-11-background-location-permission.svg %}
