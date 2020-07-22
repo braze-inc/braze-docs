@@ -21,7 +21,7 @@ For security purposes, this feature is disabled by default. To enable this featu
 
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
 
-You can send up to 50 external IDss per request.
+You can send up to 50 external IDs per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
