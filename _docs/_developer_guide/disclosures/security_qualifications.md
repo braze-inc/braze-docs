@@ -36,6 +36,6 @@ Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) clus
 [3]: https://www.iso.org/isoiec-27001-information-security.html
 [4]: https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html
 [5]: https://www.schellman.com/certificate-directory
-[6]: https://cert.schellmanco.com/?certhash=8XMm2WAG7p9V
+[6]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-3
 [7]: {{site_url}}/docs/assets/pdf/Braze_ISO_Cert.pdf
 [8]: https://www.schellman.com/
