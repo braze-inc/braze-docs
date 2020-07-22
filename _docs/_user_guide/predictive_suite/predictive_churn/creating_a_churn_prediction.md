@@ -13,7 +13,7 @@ On the left navigation bar of the Braze dashboard, choose the __Predictions__ pa
 To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
 
 {% alert note %}
-There is a limit of 3 concurrently active Churn Predictions.
+There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is 1 active Churn Prediction, and this Prediction will not regularly update scores or allow you to target users based on their Churn Risk.
 {% endalert %}
 
 On the Edit page, give your new Prediction a unique name.
