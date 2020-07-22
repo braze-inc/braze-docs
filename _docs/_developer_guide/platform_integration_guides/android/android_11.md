@@ -1,6 +1,6 @@
 ---
 nav_title: Android 11 Upgrade Guide
-page_order: 0
+page_order: 10
 platform: Android
 hidden: true
 ---
