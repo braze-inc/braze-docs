@@ -18,7 +18,7 @@ If your Android app does not yet target the new **Android 11** (API Version 30),
 When your Android app targets the new **Android 11** (API Version 30), please upgrade to the [Braze Android SDK v8.1.0][1].
 
 {% alert warning %}
-Apps targeting **Android 11** that do not upgrade to [Braze Android SDK v8.1.0][1] will experience issues with deep linking from Braze UI components, and will fail to render HTML In-App Messages.
+Apps targeting **Android 11** that do not upgrade to Braze Android SDK v8.1.0 will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages.
 {% endalert %}
 
 ## Braze Android 11 Support
