@@ -13,31 +13,31 @@ For a full migration guide to Android 11 features, see the [Android Developer Do
 
 # Upgrade Requirements
 
-If your Android app does not yet target the new *Android 11* (API Version 30), then no upgrade steps are required yet.
+If your Android app does not yet target the new _Android 11_ (API Version 30), then no upgrade steps are required yet.
 
-When your Android app targets the new *Android 11* (API Version 30), please upgrade to the [Braze Android SDK v8.1.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810).
+When your Android app targets the new _Android 11_ (API Version 30), please upgrade to the [Braze Android SDK v8.1.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810).
 
 {% alert warning %}
-Apps targeting Android 11 that do not upgrade to Braze SDK v8.1.0 will experience issues with deep linking from Braze UI components, and will fail to render HTML In-App Messages.
+Apps targeting _Android 11_ that do not upgrade to Braze SDK v8.1.0 will experience issues with deep linking from Braze UI components, and will fail to render HTML In-App Messages.
 {% endalert %}
 
 ## Braze Android 11 Support
 
-Apps targeting Android 11 (API 30) must upgrade to Braze Android SDK v8.1.0.
+Apps targeting _Android 11_ (API 30) must upgrade to Braze Android SDK v8.1.0.
 
-Failure to upgrade to Braze Android SDK v8.1.0 for apps targeting Android 11 will cause the following Braze features to no longer function as expected:
+Failure to upgrade to Braze Android SDK v8.1.0 for apps targeting _Android 11_ will cause the following Braze features to no longer function as expected:
  
 ### Deep Links
 
-Links to external URLs from a Braze message (In-App Message or Content Cards) will no longer work on Android 11 Targeted apps until upgrading to Braze Android SDK v8.1.0. 
+Links to external URLs from a Braze message (In-App Message or Content Cards) will no longer work on _Android 11_ Targeted apps until upgrading to Braze Android SDK v8.1.0. 
 
 Links from push notifications will continue to work.
 
 ### HTML In-App Messages
 
-Due to a change in Android 11's WebView settings, HTML In-App Messages will not be displayed on Android 11 Targeted apps until upgrading to Braze Android SDK v8.1.0. 
+Due to a change in _Android 11_'s WebView settings, HTML In-App Messages will not be displayed on _Android 11_ Targeted apps until upgrading to Braze Android SDK v8.1.0. 
  
-For more information on other Android 11 behavior changes unrelated to your Braze integration please review the official [Android 11 Behavior Changes](https://developer.android.com/preview/behavior-changes-11)
+For more information on other _Android 11_ behavior changes unrelated to your Braze integration please review the official [Android 11 Behavior Changes](https://developer.android.com/preview/behavior-changes-11)
 
 # Android 11 Features
 ## Privacy Updates
