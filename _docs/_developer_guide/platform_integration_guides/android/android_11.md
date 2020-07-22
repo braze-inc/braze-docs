@@ -46,7 +46,7 @@ Android 11 introduced [several changes](https://developer.android.com/preview/pr
 ### Allow Once Permissions
 Users can now grant permissions, such as Location Collection, on a temporary, one-time basis (see the [Android Docs](https://developer.android.com/preview/privacy/location#one-time-access) for more information). Once an app is closed, or in the background for long enough, that permission will be revoked automatically. The app would need to re-request this permission when needed in the future. Apps that already follow recommended patterns of asking for location likely already support one-time permissions.
 
-![Android Allow Once Permission][3]
+![Android Allow Once Permission][3]{: height="230px" }
 
  
 ### Background Location 
@@ -58,4 +58,3 @@ Customers using Geofences should ensure their app follows Android’s recommenda
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810
 [2]: {% image_buster /assets/img/android/android-11-background-location-permission.svg %}
 [3]: {% image_buster /assets/img/android/android-11-one-time-permission.svg %}
-
