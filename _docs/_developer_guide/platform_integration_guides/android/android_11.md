@@ -39,7 +39,7 @@ Due to a change in **Android 11**'s WebView settings, HTML In-App Messages will 
  
 For more information on other **Android 11** behavior changes unrelated to your Braze integration please review the official [Android 11 Behavior Changes](https://developer.android.com/preview/behavior-changes-11)
 
-## Android 11 Features
+## Braze-related Android 11 Features
 
 Android 11 introduced [several changes](https://developer.android.com/preview/privacy/location#change-details) to how location permissions are granted.
  
