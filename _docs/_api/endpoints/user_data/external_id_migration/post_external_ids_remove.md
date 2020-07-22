@@ -19,7 +19,7 @@ description: "This article outlines details about the external IDs Remove endpoi
 For security purposes, this feature is disabled by default. To enable this feature, please reach out to your Success Manager.
 {% endalert %}
 
-Use this endpoint to remove your users' old deprecated `external id`s. This endpoint completely removes the deprecated ID and cannot be undone.
+Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
 
 You can send up to 50 external IDss per request.
 
@@ -39,10 +39,6 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```json
 {
   "external_ids" : (required, array of external IDs to remove)
-  [
-    "external_id_string" (required, string) existing deprecated external ID for the user
-    ...
-  ]
 }
 ```
 

@@ -67,7 +67,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 {% alert important %}
 - The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
 - The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
-- The `current_external_id` and new_external_id cannot be the same
+- The `current_external_id` and `new_external_id` cannot be the same
 {% endalert %}
 
 ## Response Body
@@ -104,6 +104,6 @@ __Does this consume data points?__
 - This feature does not cost data points.
 
 __What is the recommended deprecation period?__
-- We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated id.
+- We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
 
 {% endapi %}
