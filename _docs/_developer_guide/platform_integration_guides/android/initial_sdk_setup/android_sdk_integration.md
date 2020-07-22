@@ -8,6 +8,10 @@ platform: Android
 
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
+{% alert info %}
+For apps targeting Android 11 (API 30) be sure to view our [Android 11 Support](/docs/developer_guide/platform_integration_guides/android/android_11/) article
+{% endalert %}
+
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
