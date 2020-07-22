@@ -2,6 +2,7 @@
 nav_title: Android 11 Upgrade Guide
 page_order: 0
 platform: Android
+hidden: true
 ---
 
 # Android 11 SDK Upgrade Guide
@@ -48,3 +49,5 @@ Users can now grant permissions, such as Location Collection, on a temporary, on
 ### Background Location 
 Android 11 will require apps to first request the foreground location permission, and then after the app is backgrounded it may prompt the user again for Background Location permission. 
 Customers using Geofences should ensure their app follows Android’s recommendations on collecting Background Location permission. For more information, see the [Android Docs](https://developer.android.com/preview/privacy/location#background-location).
+
+<img src=">
