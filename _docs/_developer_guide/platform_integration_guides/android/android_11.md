@@ -13,7 +13,7 @@ For a full migration guide to Android 11 features, see the [Android Developer Do
 
 ## Upgrade Requirements
 
-If your Android app does not yet target the new **Android 11** (API Version 30), then no upgrade steps are required yet.
+If your Android app does not yet target **Android 11** (API Version 30), then no Braze Android SDK upgrade steps are required.
 
 When your Android app targets **Android 11** (API Version 30), please upgrade to [Braze Android SDK v8.1.0][1].
 
