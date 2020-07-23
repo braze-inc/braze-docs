@@ -15,12 +15,8 @@ For a full migration guide of Android 11, see the [Android Developer Documentati
 Support for apps targeting Android 11 or above (API Version 30+) is available with [Braze Android SDK v8.1.0][1].
 
 {% alert warning %}
-Apps targeting **Android 11** that _do not_ upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages, as described below.
+Apps targeting Android 11 that _do not_ upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages, as described below.
 {% endalert %}
-
-### Location Permissions
-
-Apps using location permissions should follow Android's [Best Practices](https://developer.android.com/preview/privacy/location#change-details) when requesting location access. No changes to your Braze integration are necessary for these location updates.
  
 ### Deep Links
 
@@ -28,7 +24,11 @@ Apps targeting Android 11 or above (API Version 30+) must upgrade to [Braze Andr
 
 ### HTML In-App Messages
 
-Apps targeting Android 11 or above (API Version 30+) must upgrade to Braze Android SDK v8.1.0 to continue using custom HTML In-App Messages. Due to a change in Android 11 WebView settings, HTML In-App Messages will not properly display on **Android 11** targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
+Apps targeting Android 11 or above (API Version 30+) must upgrade to Braze Android SDK v8.1.0 to continue using custom HTML In-App Messages. Due to a change in Android 11 WebView settings, HTML In-App Messages will not properly display on Android 11 targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
+
+### Location Permissions
+
+Apps using location permissions should follow Android's [Best Practices](https://developer.android.com/preview/privacy/location#change-details) when requesting location access. No changes to your Braze integration are necessary for these location updates.
 
 ## Android 11 Behavior Changes
 
