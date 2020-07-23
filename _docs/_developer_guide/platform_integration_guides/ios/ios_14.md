@@ -18,7 +18,24 @@ If you experience any issues or questions related to our iOS 14 compatibility or
 
 ## iOS 14 Behavior Changes
 
-## iOS 14 Features
+### Approximate Location Permission
+
+### IDFA and App Tracking Transparency
+
+### Safari Intelligent Tracking Prevention (ITP)
+
+### Push Authorization
+
+### User Privacy and Data Use
+
+## iOS 14 New Features
+
+### App Clips
+
+### Widgets
+
+
+
 
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
