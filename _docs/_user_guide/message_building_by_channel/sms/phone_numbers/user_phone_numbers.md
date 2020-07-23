@@ -22,7 +22,7 @@ As a best practice, the best way to import a phone number is in [`E.164`](https:
 
 All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be inputted without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
 
-All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+4402012341234`)
+All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 
 ![e164][picture]{: style="max-width:50%;border: 0;"}
 
@@ -30,23 +30,18 @@ However, to ensure accuracy in the event that you are sending to multiple region
 
 You can see the differences between local number formatting as well as universal, `E.164` formatting in the table below:
 
-Country | Local |  `E.164`
----|---|---
-USA | `415 123 1234` | `+14151231234`
-UK | `020 1234 1234` | `+442012341234`
-Lithuania | `8 601 12345` | `+37060112345`
-
-As you can see, the country codes for each listing are:
-- USA: `+1`
-- UK: `+4`
-- Lithuania: `+3`
+| Country | Local | Country Code | `E.164` |
+|---|---|---|---|
+| USA | `4155552671` | 1 | `+14155552671` |
+| UK | `2071838750` | 44 | `+442071838750` |
+| Brazil | `1155256325` | 55 | `+551155256325` |
 
 ### Adding Users to SMS Subscription Groups
 
 For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
-[picture]: {% image_buster /assets/img/sms/e164.jpg %}
+[picture]: {% image_buster /assets/img/sms/e164.png %}
 
 
 

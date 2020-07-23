@@ -84,6 +84,9 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
 
+### Web Push Tokens
+Web push tokens contain extra fields that other platforms do not. As a result, we recommend that you integrate push and allow your token-base to repopulate naturally.
+
 ## Sending Push before Braze SDK Integration (Android Only)
 
 {% alert warning %}

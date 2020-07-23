@@ -111,8 +111,8 @@ Give your Current a name. Then, in the **Credentials** section, make sure the "A
 
 You can also add the following customizations, based on your needs:
 
--   Folder Path (defaults to `currents`)
--   AES-256 Encryption (defaults to OFF)
+-   Folder Path (defaults to `currents`) 
+-   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
 Click "Launch Current" to continue.
 
@@ -142,7 +142,7 @@ This authentication method generates a Role ARN (Amazon Resource Name) that enab
 
 ### Step 1 - Create Policy {#role-arn-1}
 
-To get started, navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar, and click "Create Policy".
+To get started, sign in to the AWS Management Console as an administrator of the account. Navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar, and click "Create Policy".
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
@@ -162,7 +162,7 @@ Open the "JSON" tab and input the code below into the “Policy Document” sect
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:PutObject"],
+            "Action": ["s3:PutObject", "s3:GetObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
@@ -264,7 +264,7 @@ Give your Current a name. Then, in the Credentials section, make sure the "AWS R
 You can also add the following customizations, based on your needs:
 
 -   Folder Path (defaults to `currents`)
--   AES-256 Encryption (defaults to OFF)
+-   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
 Click "Launch Current" to continue.
 
