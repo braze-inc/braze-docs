@@ -65,9 +65,22 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
+We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
+
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`). You should use `appboyBridge.logClick()` to log a Body Click, and `appboyBridge.logClick("0")` or `appboyBridge.logClick("1")` to log Button 1 and Button 2, respectively.
 
 Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
+
+
+## Backward Incompatible Changes {#backward-incompatible-changes}
+
+1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
+
+
+2. Zip files are no longer used to manage a message's assets. Instead you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+
+
+3. Automatic click tracking (`?abButtonId`) has been removed. Please use `appboyBridge.logClick("0")` and `appboyBridge.logClick("1")` to track Button 1 and Button 2 clicks, respectively.
 
 ## Creating a New Campaign {#instructions}
 

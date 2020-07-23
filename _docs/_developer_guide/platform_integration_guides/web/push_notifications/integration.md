@@ -127,6 +127,6 @@ appboy.logCustomEvent("prime-for-push");
 
 [1]: http://www.w3.org/TR/push-api/
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
-[4]: http://abbeybond.com/modal-test.html
+[4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
