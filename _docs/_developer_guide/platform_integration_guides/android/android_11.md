@@ -12,12 +12,10 @@ For a full migration guide of Android 11, see the [Android Developer Documentati
 
 ## Braze SDK Compatibility
 
-Support for apps targeting Android 11 or above (API Version 30+) is available with [Braze Android SDK v8.1.0][1].
+All apps targeting Android 11 (API 30) must upgrade to [Braze Android SDK v8.1.0+][1] in order to continue using Braze messaging features.
 
-{% alert note %}
-Apps targeting Android 11 that _do not_ upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages, as described below.
-{% endalert %}
- 
+Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to [Braze Android SDK v8.1.0+][1] will experience issues with deeplinking from Braze UI components, and will not properly display custom HTML In-App Messages.
+
 ### Deep Links
 
 Apps targeting Android 11 or above (API Version 30+) must upgrade to [Braze Android SDK v8.1.0][1] to continue using deeplinks within Braze messages. Due to a change in Android 11 APIs, apps that do not upgrade to at least Android SDK v8.1.0 will experience issues with deeplinks within Braze messages (In-App Messages or Content Cards).
