@@ -6,48 +6,40 @@ platform: Android
 
 # Android 11 SDK Upgrade Guide
 
-This guide describes relevant changes introduced in Android 11 (API version 30) and necessary upgrade steps required for the Braze Android SDK integration.
+This guide describes relevant changes introduced in Android 11 (API version 30) and the required upgrade steps for your Braze Android SDK integration.
 
-For a full migration guide to Android 11 features, see the [Android Developer Documentation](https://developer.android.com/preview/migration).
+For a full migration guide of Android 11, see the [Android Developer Documentation](https://developer.android.com/preview/migration).
 
-## Upgrade Requirements
+## Braze SDK Compatibility
 
-If your Android app does not yet target **Android 11** (API Version 30), then no Braze Android SDK upgrade steps are required.
-
-When your Android app targets **Android 11** (API Version 30), please upgrade to [Braze Android SDK v8.1.0][1].
+Support for apps targeting Android 11 or above (API Version 30+) is available with [Braze Android SDK v8.1.0][1].
 
 {% alert warning %}
-Apps targeting **Android 11** that do not upgrade to Braze Android SDK v8.1.0 will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages.
+Apps targeting **Android 11** that _do not_ upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages, as described below.
 {% endalert %}
 
-## Braze Android 11 Support
+### Location Permissions
 
-Apps targeting **Android 11** (API 30) must upgrade to [Braze Android SDK v8.1.0][1].
-
-Failure to upgrade to [Braze Android SDK v8.1.0][1] for apps targeting **Android 11** will cause the following Braze features to no longer function as expected:
+Apps using location permissions should follow Android's [Best Practices](https://developer.android.com/preview/privacy/location#change-details) when requesting location access. No changes to your Braze integration are necessary for these location updates.
  
 ### Deep Links
 
-Deeplinks to external URLs from a Braze message (In-App Message or Content Cards) will no longer work on **Android 11** targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
-
-Deeplinks from push notifications will continue to work.
+Apps targeting Android 11 or above (API Version 30+) must upgrade to [Braze Android SDK v8.1.0][1] to continue using deeplinks within Braze messages. Due to a change in Android 11 APIs, apps that do not upgrade to at least Android SDK v8.1.0 will experience issues with deeplinks within Braze messages (In-App Messages or Content Cards).
 
 ### HTML In-App Messages
 
-Due to a change in **Android 11**'s WebView settings, HTML In-App Messages will not properly display on **Android 11** targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
- 
-For more information on all **Android 11** behavior changes, please review the official [Android 11 Behavior Changes](https://developer.android.com/preview/behavior-changes-11).
+Apps targeting Android 11 or above (API Version 30+) must upgrade to Braze Android SDK v8.1.0 to continue using custom HTML In-App Messages. Due to a change in Android 11 WebView settings, HTML In-App Messages will not properly display on **Android 11** targeted apps until upgrading to [Braze Android SDK v8.1.0][1]. 
 
-## Braze-related Android 11 Features
+## Android 11 Behavior Changes
 
-Android 11 introduced [several changes](https://developer.android.com/preview/privacy/location#change-details) to how location permissions are granted.
- 
 ### Allow Once Permissions
+
 Users can now grant permissions, such as Location Collection, on a one-time basis (see the [Android Docs](https://developer.android.com/preview/privacy/location#one-time-access) for more information). Once an app is closed, or in the background for long enough, that permission will be revoked automatically. The app would need to re-request this permission when needed in the future. Apps that already follow the recommended flow for requesting permissions for location will already support one-time permissions.
 
 ![Android Allow Once Permission][3]{: height="230px" }
 
-### Background Location 
+### Background Location Permission
+
 Android 11 will require apps to first request the foreground location permission, and then after the app is backgrounded it may prompt the user again for Background Location permission. 
 Customers using Geofences should ensure their app follows Android’s recommendations on collecting Background Location permission. For more information, see the [Android Docs](https://developer.android.com/preview/privacy/location#background-location).
 
