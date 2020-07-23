@@ -71,6 +71,12 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 
 ## Creating a New Campaign {#instructions}
 
+### Backward Incompatible Changes
+
+1. Zip files are no longer used to manage a message's assets. Instead you should use our new (Asset Uploader)[#upload-assets] and paste absolute asset URLs directly into your HTML. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+
+2. Automatic click tracking has been removed. Please use `appboyBridge.logClick("0")` and `appboyBridge.logClick("1")` to track Button 1 and Button 2 clicks, respectively
+
 ### SDK Requirements {#supported-sdk-versions}
 
 These Beta features require upgrading to the following Braze SDK version:
