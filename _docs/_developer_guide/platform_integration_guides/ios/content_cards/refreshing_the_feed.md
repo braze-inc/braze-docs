@@ -1,7 +1,7 @@
 ---
 nav_title: Refreshing the Feed
 platform: iOS
-page_order: 3
+page_order: 4
 
 ---
 
