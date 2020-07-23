@@ -1,7 +1,7 @@
 ---
 nav_title: Customization
 platform: iOS
-page_order: 1
+page_order: 2
 
 ---
 
