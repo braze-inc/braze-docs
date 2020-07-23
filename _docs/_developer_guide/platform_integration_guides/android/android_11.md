@@ -14,7 +14,7 @@ For a full migration guide of Android 11, see the [Android Developer Documentati
 
 Support for apps targeting Android 11 or above (API Version 30+) is available with [Braze Android SDK v8.1.0][1].
 
-{% alert warning %}
+{% alert info %}
 Apps targeting Android 11 that _do not_ upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components and will fail to render HTML In-App Messages, as described below.
 {% endalert %}
  
