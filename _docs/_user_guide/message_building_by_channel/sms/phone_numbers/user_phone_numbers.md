@@ -41,7 +41,7 @@ You can see the differences between local number formatting as well as universal
 For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1]. 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
-[picture]: {% image_buster /assets/img/sms/e164.jpg %}
+[picture]: {% image_buster /assets/img/sms/e164.png %}
 
 
 
