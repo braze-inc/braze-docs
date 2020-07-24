@@ -75,10 +75,10 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 ## Backward Incompatible Changes {#backward-incompatible-changes}
 
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
+<br>
 
-
-2. Zip files are no longer used to manage a message's assets. Instead you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
-
+2. Zip files are no longer used to manage a message's assets. Instead you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+<br>
 
 3. Automatic click tracking (`?abButtonId`) has been removed. Please use `appboyBridge.logClick("0")` and `appboyBridge.logClick("1")` to track Button 1 and Button 2 clicks, respectively.
 
