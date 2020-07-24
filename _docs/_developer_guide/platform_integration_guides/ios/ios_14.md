@@ -52,7 +52,7 @@ IDFA (Identity for Advertisers) is an identifier provided by Apple used by adver
 
 Beginning in iOS 14, a new permission prompt, known as the AppTrackingTransparency framework, will require explicit user consent to access the IDFA. This permission to “track you across apps and websites owned by other companies” will be requested similarly to how you’d prompt users to request their location.
 
-If a user does not accept the prompt then a blank IDFA value ("00000000-0000-0000-0000-000000000000") will be returned.
+If a user does not accept the prompt then a blank IDFA value ("00000000-0000-0000-0000-000000000000") will be returned, and your app will not be allowed to prompt the user again.
 
 #### Changes to Braze IDFA collection
 
