@@ -37,7 +37,7 @@ glossaries:
     tags:
       - All
   - name: Total Impressions
-    description: The number of times the in-app message or card has been viewed (if a user receives a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+    description: The number of times the in-app message or card has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
     calculation: Count
     tags:
       - In-App Message
