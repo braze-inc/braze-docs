@@ -20,9 +20,9 @@ If you experience any issues or questions related to our iOS 14 compatibility or
 
 For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to Braze iOS SDK vX.X.X.
 
-[ ] Geofences are not supported for users who choose the new  _approximate location_ permission
-[ ] Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
-[ ] Expect a sudden decrease in IDFA availability which now requires a permission prompt
+- [ ] Geofences are not supported for users who choose the new  _approximate location_ permission
+- [ ] Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
+- [ ] Expect a sudden decrease in IDFA availability which now requires a permission prompt
 
 ## iOS 14 Behavior Changes
 
@@ -62,10 +62,11 @@ If a user does not accept the prompt then a blank IDFA value ("00000000-0000-000
 
 3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new External ID Migration API Endpoint.
 
-
 To learn more, check out about Apple's [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
 ### Safari Intelligent Tracking Prevention (ITP)
+
+
 
 ### Push Authorization
 

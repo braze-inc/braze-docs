@@ -43,7 +43,3 @@ guide_menu_list:
 
 
 ---
-
-{% alert note %}
-Upgrading your app to support iOS 14? Check out our  [iOS 14 Upgrade Guide](/docs/developer_guide/platform_integration_guides/ios/ios_14/).
-{% endalert %}
