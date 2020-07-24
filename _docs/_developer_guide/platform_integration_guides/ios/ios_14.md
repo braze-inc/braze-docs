@@ -33,6 +33,8 @@ For apps targeting iOS 14, the following features have a change in behavior, or 
 
 ### Approximate Location Permission
 
+![Precise Location]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
 #### Overview
 
 When an app requests location permission, users will now have a choice to provide their _precise location_ (previous behavior), or the new _approximate location_ which returns a larger radius in which the user is located.
@@ -61,6 +63,8 @@ If a user does not accept the prompt then a blank IDFA value ("00000000-0000-000
 
 #### Changes to Braze IDFA collection
 
+![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
 1. Braze will continue to allow apps to provide a user's IDFA value
 
 2. SDK macros which previously instructed the Braze SDK to retrieve the IDFA have been removed
@@ -86,7 +90,7 @@ Braze will continue to monitor this new feature announcement to help make sure t
 
 #### Overview
 
-![App Clip]({% image_buster /assets/img/ios/app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![App Clip]({% image_buster /assets/img/ios/ios14-app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
 
@@ -109,22 +113,15 @@ We will be releasing support and documentation in the near future.
 
 ### Safari Intelligent Tracking Prevention (ITP)
 
-![Safari ITP Privacy Report]({% image_buster /assets/img/ios/safari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Safari ITP Privacy Report]({% image_buster /assets/img/ios/ios14-safari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
-Apple introduced _Intelligent Tracking Prevention_ (ITP) in 2017 as a set of new privacy improvements for Safari. 
+This year, Apple announced a new Safari feature called the _Privacy Report_, which will show users which trackers or 3rd party domains have been blocked to prevent cross-site tracking or identification.
 
-This year, Apple announced a new Safari feature,  “Privacy Report”, which will show users which trackers or 3rd party domains have been blocked to prevent cross-site tracking or identification.
+#### Braze Web SDK
 
+The Braze Web SDK does not do cross-site tracking, does not set any 3rd party cookies, and does not use any fingerprinting technologies. Based on our current testing, Braze does not appear in Safari's _Privacy Report_.
 
-How customers are affected
-Braze does not do any cross-site tracking, does not set any 3rd party cookies, and does not use any fingerprinting technologies. Based on our current testing, Braze does not appear in Safari’s Privacy Report list displayed to end users.
-
-Braze has already updated the Web SDK (v2.5.2+) to address the shorter browser-storage duration from ITP 2.1, to account for Safari’s updated storage expiration restrictions.
-Action items for customers
-Customers should update their Braze Web SDK to version 2.5.2+ 
-
-
-
+Version 2.5.2 of the Braze Web SDK addresses the shorter browser-storage duration based on previous changes to Intelligent Tracking Prevention (ITP 2.1) which accounts for Safari’s updated storage expiration restrictions.
 
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
