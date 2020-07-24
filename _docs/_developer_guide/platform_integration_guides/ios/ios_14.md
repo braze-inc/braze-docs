@@ -12,17 +12,22 @@ For a complete list of the new features and changes announced this year at WWDC,
 
 ## Braze SDK Compatibility
 
-To test and build an app targeting iOS 14, we recommend integrating our Braze iOS Beta Release, which can be found [here][1] TODO!. This beta release for iOS 14 will be regularly updated based on changes to Apple's iOS 14 beta releases.
+An SDK upgrade will be required for apps targeting iOS 14 in order to continue using Braze messaging features. 
+
+We have released a beta version of our iOS 14 compatible SDK [available on our Github](**LINK**), and will continue to release updates and fixes to this beta version as Apple continues to release newer versions of iOS 14 beta.
+
+We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "golden master").
 
 If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
 
 ### Upgrade Summary
 
-For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to Braze iOS SDK vX.X.X.
+For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to the latest Braze iOS SDK.
 
 - [ ] Geofences are not supported for users who choose the new  _approximate location_ permission
 - [ ] Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
 - [ ] Expect a sudden decrease in IDFA availability which now requires a permission prompt
+- [ ] Upgrade to the Web SDK v2.5.2+ to account for Safari’s updated storage expiration restrictions
 
 ## iOS 14 Behavior Changes
 
@@ -79,10 +84,32 @@ Braze will continue to monitor this new feature announcement to help make sure t
 
 ### App Clips
 
+#### Overview
+
+![App Clip]({% image_buster /assets/img/ios/app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
+
+This feature give users quicker access to sample your app, with an opportunity to either upgrade to the full app experience, or auto-delete after a period of inactivity.
+
+#### Braze Support
+
+For customers interested in using Braze within App Clips, please contact your Braze Success Team or Support Team.
+
+We will be releasing support and documentation in the near future.
+
 ### Widgets
+
+#### Overview
+
+For customers interested in using Braze within Widgets, please contact your Braze Success Team or Support Team.
+
+We will be releasing support and documentation in the near future.
 
 
 ### Safari Intelligent Tracking Prevention (ITP)
+
+![Safari ITP Privacy Report]({% image_bustersafari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 Apple introduced _Intelligent Tracking Prevention_ (ITP) in 2017 as a set of new privacy improvements for Safari. 
 
