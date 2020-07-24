@@ -109,7 +109,7 @@ We will be releasing support and documentation in the near future.
 
 ### Safari Intelligent Tracking Prevention (ITP)
 
-![Safari ITP Privacy Report]({% image_bustersafari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Safari ITP Privacy Report]({% image_buster safari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 Apple introduced _Intelligent Tracking Prevention_ (ITP) in 2017 as a set of new privacy improvements for Safari. 
 
