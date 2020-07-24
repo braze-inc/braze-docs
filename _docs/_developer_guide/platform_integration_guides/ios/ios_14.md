@@ -16,7 +16,7 @@ An SDK upgrade will be required for apps targeting iOS 14 in order to continue u
 
 We have released a beta version of our iOS 14 compatible SDK [available on our Github](**LINK**), and will continue to release updates and fixes to this beta version as Apple continues to release newer versions of iOS 14 beta.
 
-We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "golden master").
+We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "Golden Master").
 
 If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
 
@@ -37,7 +37,7 @@ For apps targeting iOS 14, the following features have a change in behavior, or 
 
 #### Overview
 
-When an app requests location permission, users will now have a choice to provide their _precise location_ (previous behavior), or the new _approximate location_ which returns a larger radius in which the user is located.
+When requesting location permission, users will now have a choice to provide their _precise location_ (previous behavior), or the new _approximate location_. Approximate location will return a larger radius in which the user is located, instead of their exact coordinates.
 
 #### Geofences
 
@@ -55,9 +55,9 @@ For more information on Approximate Location, see Apple's [What's New In Locatio
 
 #### Overview
 
-IDFA (Identity for Advertisers) is an identifier provided by Apple used by advertising and attribution partners for cross-device tracking, tied to an individual's Apple ID.
+IDFA (Identity for Advertisers) is an identifier provided by Apple used by advertising and attribution partners for cross-device tracking and is tied to an individual's Apple ID.
 
-Beginning in iOS 14, a new permission prompt, known as the AppTrackingTransparency framework, will require explicit user consent to access the IDFA. This permission to “track you across apps and websites owned by other companies” will be requested similarly to how you’d prompt users to request their location.
+Beginning in iOS 14, a new permission prompt (launched by the new `AppTrackingTransparency` framework) will require explicit user consent to access the IDFA. This permission to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
 
 If a user does not accept the prompt then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
@@ -65,11 +65,11 @@ If a user does not accept the prompt then a blank IDFA value (`00000000-0000-000
 
 ![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
-1. Braze will continue to allow apps to provide a user's IDFA value
+1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK
 
-2. SDK macros which previously instructed the Braze SDK to retrieve the IDFA have been removed
+2. All code in Braze SDK which was used to retrieve the IDFA have been removed
 
-3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new External ID Migration API Endpoint.
+3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/).
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
