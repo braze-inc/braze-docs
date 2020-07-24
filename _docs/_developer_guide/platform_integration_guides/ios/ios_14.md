@@ -64,19 +64,37 @@ If a user does not accept the prompt then a blank IDFA value ("00000000-0000-000
 
 To learn more, check out about Apple's [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
-### Safari Intelligent Tracking Prevention (ITP)
-
-
-
 ### Push Authorization
 
-### User Privacy and Data Use
+iOS 14 has removed Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps will be authorized to receive push notifications _quietly_, within the user's notification tray.
+
 
 ## iOS 14 New Features
+
+### App Privacy and Data Collection Overview
+
+The App Store's new App Privacy feature will disclose to users what personal information an app collects and how it may track users across other apps and websites. Apple has [stated](https://www.apple.com/ios/ios-14-preview/), "Privacy information on the App Store will be coming in an iOS 14 update later this year".
+
+Braze will continue to monitor this new feature announcement to help make sure that your use of Braze is appropriately disclosed in the App Privacy summary.
 
 ### App Clips
 
 ### Widgets
+
+
+### Safari Intelligent Tracking Prevention (ITP)
+
+Apple introduced _Intelligent Tracking Prevention_ (ITP) in 2017 as a set of new privacy improvements for Safari. 
+
+This year, Apple announced a new Safari feature,  “Privacy Report”, which will show users which trackers or 3rd party domains have been blocked to prevent cross-site tracking or identification.
+
+
+How customers are affected
+Braze does not do any cross-site tracking, does not set any 3rd party cookies, and does not use any fingerprinting technologies. Based on our current testing, Braze does not appear in Safari’s Privacy Report list displayed to end users.
+
+Braze has already updated the Web SDK (v2.5.2+) to address the shorter browser-storage duration from ITP 2.1, to account for Safari’s updated storage expiration restrictions.
+Action items for customers
+Customers should update their Braze Web SDK to version 2.5.2+ 
 
 
 
