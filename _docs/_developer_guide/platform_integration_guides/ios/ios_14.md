@@ -24,10 +24,10 @@ If you experience any issues or questions related to our iOS 14 compatibility or
 
 For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to the latest Braze iOS SDK.
 
-- [ ] Geofences are not supported for users who choose the new  _approximate location_ permission
-- [ ] Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
-- [ ] Expect a sudden decrease in IDFA availability which now requires a permission prompt
-- [ ] Upgrade to the Web SDK v2.5.2+ to account for Safari’s updated storage expiration restrictions
+- Geofences are not supported for users who choose the new  _approximate location_ permission
+- Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
+- Expect a sudden decrease in IDFA availability which now requires a permission prompt
+- Upgrade to the Web SDK v2.5.2+ to account for Safari’s updated storage expiration restrictions
 
 ## iOS 14 Behavior Changes
 
@@ -59,7 +59,7 @@ IDFA (Identity for Advertisers) is an identifier provided by Apple used by adver
 
 Beginning in iOS 14, a new permission prompt, known as the AppTrackingTransparency framework, will require explicit user consent to access the IDFA. This permission to “track you across apps and websites owned by other companies” will be requested similarly to how you’d prompt users to request their location.
 
-If a user does not accept the prompt then a blank IDFA value ("00000000-0000-0000-0000-000000000000") will be returned, and your app will not be allowed to prompt the user again.
+If a user does not accept the prompt then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 #### Changes to Braze IDFA collection
 
@@ -71,7 +71,7 @@ If a user does not accept the prompt then a blank IDFA value ("00000000-0000-000
 
 3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new External ID Migration API Endpoint.
 
-To learn more, check out about Apple's [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
+Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
 ### Push Authorization
 
@@ -86,6 +86,8 @@ The App Store's new App Privacy feature will disclose to users what personal inf
 
 Braze will continue to monitor this new feature announcement to help make sure that your use of Braze is appropriately disclosed in the App Privacy summary.
 
+To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
+
 ### App Clips
 
 #### Overview
@@ -95,6 +97,8 @@ Braze will continue to monitor this new feature announcement to help make sure t
 An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
 
 This feature give users quicker access to sample your app, with an opportunity to either upgrade to the full app experience, or auto-delete after a period of inactivity.
+
+To learn more about App Clips, see [Apple's App Clip Documentation](https://developer.apple.com/app-clips/)
 
 #### Braze Support
 
