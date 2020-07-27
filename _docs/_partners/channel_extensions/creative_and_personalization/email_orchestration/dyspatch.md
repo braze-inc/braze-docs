@@ -5,7 +5,7 @@ alias: /partners/dyspatch
 
 # Dyspatch
 
-Use [Dyspatch](1) and Braze together simplify your email creation lifecycle and deliver engaging email experiences at scale. 
+Use [Dyspatch][1] and Braze together simplify your email creation lifecycle and deliver engaging email experiences at scale. 
 
 In Dyspatch, use the drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to approve emails and then upload them to Braze with only a couple of quick steps.
 
@@ -13,8 +13,8 @@ In Dyspatch, use the drag and drop email builder to create beautiful, responsive
 
 Requirement   |Origin| Notes
 --------------|------|-------------
-Braze Account    | [Braze](2) | To upload the email into Braze the account will need to have the permission to [Manage Media Library](3). |
-Dyspatch Account | [Dyspatch](4)| To export the email from Dyspatch the account will need to have the [role of owner or admin](5). |
+Braze Account    | [Braze][2] | To upload the email into Braze the account will need to have the permission to [Manage Media Library][3]. |
+Dyspatch Account | [Dyspatch][4]| To export the email from Dyspatch the account will need to have the [role of owner or admin][5]. |
 
 ## Integration
 Dyspatch supports exporting to Braze using the Liquid download option.
