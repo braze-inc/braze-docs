@@ -50,6 +50,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `users.identify` | Query for user profile information by user ID.  |
 | `users.export.ids` | The language the browser is set to use.  |
 | `users.export.segment` | Query for user profile information by Segment. |
+| `users.external_ids.rename` | Rename a user's existing external ID. |
+| `users.external_ids.remove` | Remove a user's deprecated external ID. |
 {: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
