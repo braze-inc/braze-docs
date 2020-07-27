@@ -28,7 +28,9 @@ Either upload an existing certificate using the [AWS command-line tool](https://
 
 #### Step 2: Create a Distribution
 
-Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains
+Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution (see photos below) for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains.
+![Single Distribution 1]({% image_buster /assets/img/SSL/single_distribution1.png %}){: style="max-width:40%"}
+![Single Distribution 2]({% image_buster /assets/img/SSL/single_distribution2.png %}){: style="margin-left:15px;max-width:25%"}
 
 #### Step 3: Configure your Distribution
 
