@@ -10,7 +10,7 @@ Braze has released two new External ID Migration endpoints. These endpoints allo
 
 ## Predictive Churn
 
-Use Braze’s long-awaited [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/) feature (the first to be released as part of the Braze Predictive Suite) to define what churn means for your business, as well as the users you’d like to prevent from churning. With Predictive Churn, Braze trains a machine learning model to identify users at risk of churning by learning from activity patterns of past users churn behavior. Currently available for select clients, please reach out to your COM or CSM to see if you are eligible. 
+Braze's Predictive Suite puts machine learning directly in your hands. Starting with [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/), it’s easier than ever to effectively leverage and act on data seamlessly within the Braze platform. With it, you can create a tailored machine learning model to predict the risk of churn for a specific customer base, and then message the users that machine learning determines are at-risk before it’s too late. Previews of this feature will appear in eligible Braze customers' dashboards in early August. Contact your Account Manager for access to the full feature.
 
 ## Updates to Currents Tracking Properties
 
