@@ -93,14 +93,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 ![Open News Feed][10]
 
-### Deep Links and Cold Starts
-
-For deep links to work on iOS from a cold start, you will need to add the following to your App delegate file's `didFinishLaunchingWithOptions` method:
-
-```
-[[AppboyReactUtils sharedInstance] populateInitialUrlFromLaunchOptions:launchOptions];
-```
-
 # Universal Links
 
 In order to use Universal Links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your AppDelegate. For example:
