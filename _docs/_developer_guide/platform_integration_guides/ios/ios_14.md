@@ -2,6 +2,7 @@
 nav_title: iOS 14 Upgrade Guide
 page_order: 10
 platform: iOS
+hidden: true
 ---
 
 # iOS 14 SDK Upgrade Guide
