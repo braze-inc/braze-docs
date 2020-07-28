@@ -15,7 +15,7 @@ For a complete list of the new features and changes announced this year at WWDC,
 
 An SDK upgrade will be required for apps targeting iOS 14 in order to continue using Braze messaging features. 
 
-We have released a beta version of our iOS 14 compatible SDK [available on our Github](**LINK**), and will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta.
+We have released a beta version of our iOS 14 compatible SDK [available on our Github][1], and will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta.
 
 We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "Golden Master").
 
@@ -131,5 +131,5 @@ The Braze Web SDK does not do cross-site tracking, does not set any 3rd party co
 Version 2.5.2 of the Braze Web SDK addresses the shorter browser-storage duration based on previous changes to Intelligent Tracking Prevention (ITP 2.1) which accounts for Safari’s updated storage expiration restrictions.
 
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
+[1]: https://github.com/Appboy/appboy-ios-sdk/blob/ios14-beta/CHANGELOG.md
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
