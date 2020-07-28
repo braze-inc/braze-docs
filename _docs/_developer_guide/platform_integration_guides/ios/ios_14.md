@@ -14,7 +14,7 @@ For a complete list of the new features and changes announced this year at WWDC,
 
 An SDK upgrade will be required for apps targeting iOS 14 in order to continue using Braze messaging features. 
 
-We have released a beta version of our iOS 14 compatible SDK [available on our Github](**LINK**), and will continue to release updates and fixes to this beta version as Apple continues to release newer versions of iOS 14 beta.
+We have released a beta version of our iOS 14 compatible SDK [available on our Github](**LINK**), and will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta.
 
 We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "Golden Master").
 
@@ -24,10 +24,10 @@ If you experience any issues or questions related to our iOS 14 compatibility or
 
 For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to the latest Braze iOS SDK.
 
-- Geofences are not supported for users who choose the new  _approximate location_ permission
+- Geofences are not supported for users who choose the new  _approximate location_ permission.
 - Updating a user's Last Known Location using the new _approximate location_ permission requires upgrading your Braze SDK.
-- Expect a sudden decrease in IDFA availability which now requires a permission prompt
-- Upgrade to the Web SDK v2.5.2+ to account for Safari’s updated storage expiration restrictions
+- Expect a sudden decrease in IDFA availability which now requires a permission prompt.
+- iOS 14 has removed provisional push authorization in favor of opting users into an initial "quiet" push setting.
 
 ## iOS 14 Behavior Changes
 
@@ -45,7 +45,9 @@ Geofences, which previously relied on precise location permission, are no longer
 
 #### Location Targeting
 
-To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to the latest Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles).
+To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to the latest Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). 
+
+Apps which target iOS 14 that do not upgrade to the latest Braze SDK will no longer be able to use location tracking when _approximate location_ is granted.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
@@ -67,7 +69,7 @@ If a user does not accept the prompt then a blank IDFA value (`00000000-0000-000
 
 1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK
 
-2. All code in Braze SDK which was used to retrieve the IDFA have been removed
+2. The `ABK_ENABLE_IDFA_COLLECTION` macro, which would conditionally compile in optional automatic IDFA collection, will be removed in our iOS 14 release.
 
 3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/).
 
@@ -84,7 +86,7 @@ iOS 14 has removed Provisional Push Authorization introduced in 2018 (iOS 12). A
 
 The App Store's new App Privacy feature will disclose to users what personal information an app collects and how it may track users across other apps and websites. Apple has [stated](https://www.apple.com/ios/ios-14-preview/), "Privacy information on the App Store will be coming in an iOS 14 update later this year".
 
-Braze will continue to monitor this new feature announcement to help make sure that your use of Braze is appropriately disclosed in the App Privacy summary.
+Braze will continue to monitor this new feature announcement to help you understand how your usage of Braze may be disclosed in the App Privacy summary.
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
