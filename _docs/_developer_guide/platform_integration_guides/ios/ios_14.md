@@ -27,7 +27,6 @@ For apps targeting iOS 14, the following features have a change in behavior, or 
 - Geofences are not supported for users who choose the new  _approximate location_ permission.
 - Using the "Last Known Location" targeting functionality will require upgrading your Braze SDK to work with the new _approximate location_ permission.
 - Expect a sudden decrease in IDFA availability which now requires a permission prompt.
-- iOS 14 has removed provisional push authorization in favor of opting users into an initial "quiet" push setting.
 
 ## iOS 14 Behavior Changes
 
