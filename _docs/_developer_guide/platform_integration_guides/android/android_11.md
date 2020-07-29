@@ -16,7 +16,7 @@ All apps that _target_ Android 11 (API 30) must upgrade to [Braze Android SDK v8
 
 Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to [Braze Android SDK v8.1.0+][1] will experience issues with deep linking from Braze UI components, and will not properly display custom HTML In-App Messages.
 
-For our supported wrapper SDKs, please follow their respective Github pages for updates on their Android 11 Support releases:
+For Android 11 support on our wrapper SDKs, please follow their respective repositories for updates:
 
 - [Xamarin](https://github.com/Appboy/appboy-xamarin-bindings)
 - [Cordova](https://github.com/Appboy/appboy-cordova-sdk)
