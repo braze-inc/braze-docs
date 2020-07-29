@@ -28,7 +28,6 @@ Integrating RudderStack with Braze is very quick and easy. All you need to do is
 | RudderStack account | RudderStack | [https://app.rudderstack.com/][2] | A RudderStack account is required to set up the RudderStack-Braze integration. |
 | Configured source | RudderStack | [https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack][3] | A source is essentially the origin of any data sent to RudderStack, such as websites, mobile apps, or backend servers. You are required to configure the source before setting up Braze as a destination in RudderStack. |
 | Braze SDK Integration with your device | Braze | To know more about using the Braze SDKs, refer to our documentation on the [web][4], [iOS][5], and [Android][6] platforms. | Braze must be set up on your website or app for the integration to be successful. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Step 2.1. Choose the Type of Integration
 
@@ -38,7 +37,6 @@ You can choose to integrate RudderStack's web and native client-side libraries w
 |---|---|
 | Side-by-Side / Device Mode | In this mode, RudderStack will send the event data to Braze directly from your client (browser or mobile application). |
 | Server-to-Server / Cloud Mode | In this mode, the Braze SDK sends the event data directly to RudderStack, which is then transformed and routed to Braze. |
-{: .reset-td-br-1 .reset-td-br-2}
 
 {{site.data.alerts.note}} Learn more about RudderStack's connection modes and the benefits of each [here][7]. {{site.data.alerts.end}}
 
@@ -83,7 +81,6 @@ Once you've decided on the integration mode and successfully set up the source a
 | REST API Key | This needs to be created in the Braze dashboard under <b>App Settings</b> - [Developer Console][13] - <b>API Settings</b>. You can find the detailed instructions [here][14]. |
 | Data Center | You will need to enter the Data Center details as provided by Braze. It is of the format `INSTANCE`, as explained in the [Braze Instances guide][15]. |
 | Native SDK | You can enable or disable this option to use the Braze native SDK to send the events (use the Device Mode). |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 3. Using the Integration - Set Up the Mappings
 
@@ -103,7 +100,6 @@ The field mapping is done as per the table below:
 | `address.city` | `home_city` |
 | `address.country` | `country` |
 | `gender` | `gender` |
-{: .reset-td-br-1 .reset-td-br-2}
 
 {{site.data.alerts.note}} All other traits will be recorded as [custom attributes][17]. {{site.data.alerts.end}}
 
@@ -148,4 +144,3 @@ You can read more about RudderStack's `page` method in their [documentation][22]
 [20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
 [21]: https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://docs.rudderstack.com/destinations/braze#page
-
