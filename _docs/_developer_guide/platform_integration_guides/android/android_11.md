@@ -18,11 +18,11 @@ Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upg
 
 For Android 11 support on our wrapper SDKs, please follow their respective repositories for updates:
 
-- [Xamarin](https://github.com/Appboy/appboy-xamarin-bindings)
-- [Cordova](https://github.com/Appboy/appboy-cordova-sdk)
-- [React Native](https://github.com/Appboy/appboy-react-sdk)
-- [Flutter](https://pub.dev/packages/braze_plugin)
-- [Unity](https://github.com/Appboy/appboy-unity-sdk)
+- Xamarin - [Supported in v1.3.0+](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1130)
+- Cordova - Coming Soon
+- React Native - Coming Soon
+- Flutter - Coming Soon
+- Unity - Coming Soon
 
 
 ### Deep Links
