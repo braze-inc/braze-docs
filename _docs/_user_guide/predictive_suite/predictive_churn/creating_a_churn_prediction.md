@@ -13,7 +13,7 @@ On the left navigation bar of the Braze dashboard, choose the __Predictions__ pa
 To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
 
 {% alert note %}
-There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is 1 active Churn Prediction, and this Prediction will not regularly update scores or allow you to target users based on their Churn Risk.
+There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is 1 active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
 {% endalert %}
 
 On the Edit page, give your new Prediction a unique name.
@@ -43,9 +43,13 @@ For a sample list of Prediction Audience definitions, check out our sample defin
 
 ### Step 4: Choose the Update Frequency for Churn Predictions
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing.
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
 ![Churn 2][2]
+
+{% alert note %}
+Preview and Demo Predictions will never update users' risk of churn. To purchase this functionality, contact your Account Manager.
+{% endalert %}
 
 ### Step 5: Build Prediction
 Verify that the details you’ve provided are correct, and choose “Build Prediction.” You can also save your changes in draft form by selecting “Save As Draft” to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
