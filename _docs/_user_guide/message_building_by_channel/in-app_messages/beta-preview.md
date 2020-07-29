@@ -164,6 +164,6 @@ With this:
 
 ## Providing Feedback
 
-Feedback is encouraged and welcome! Email any questions or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com).
+Feedback is encouraged and welcome! Email any questions or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com?subject=Feedback+for+Custom+HTML+In-App+Message+with+Preview).
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
