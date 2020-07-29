@@ -69,6 +69,12 @@ We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logC
 
 This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`). You should use `appboyBridge.logClick()` to log a Body Click, and `appboyBridge.logClick("0")` or `appboyBridge.logClick("1")` to log Button 1 and Button 2, respectively.
 
+For example, to close a message and log Button 2 click, you can use:
+
+```
+<a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
+```
+
 Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
 
 
@@ -158,8 +164,6 @@ With this:
 
 ## Providing Feedback
 
-Feedback is encouraged and welcome! 
-
-Please send any feedback or suggestions through to your Braze Customer Success Team.
+Feedback is encouraged and welcome! Email feedback, questions, or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com).
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
