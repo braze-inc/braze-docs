@@ -12,7 +12,7 @@ For a complete list of the new features and changes announced this year at WWDC,
 
 ## Braze SDK Compatibility
 
-An SDK upgrade will be required for apps targeting iOS 14 in order to continue using Braze messaging features. 
+Apps that are targeting iOS 14 are required to upgrade Braze's iOS SDK to continue using messaging features. 
 
 We have released a beta version of our iOS 14 compatible SDK [available on our Github][1], and will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta.
 
