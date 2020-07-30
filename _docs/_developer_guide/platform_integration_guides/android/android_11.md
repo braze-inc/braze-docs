@@ -6,15 +6,24 @@ platform: Android
 
 # Android 11 SDK Upgrade Guide
 
-This guide describes relevant changes introduced in Android 11 (API version 30) and the required upgrade steps for your Braze Android SDK integration.
+This guide describes relevant changes introduced in Android 11, and the required upgrade steps for your Braze Android SDK integration.
 
 For a full migration guide of Android 11, see the [Android Developer Documentation](https://developer.android.com/preview/migration).
 
 ## Braze SDK Compatibility
 
-All apps targeting Android 11 (API 30) must upgrade to [Braze Android SDK v8.1.0+][1] in order to continue using Braze messaging features.
+All apps that _target_ Android 11 (API 30) must upgrade to [Braze Android SDK v8.1.0+][1] in order to continue using Braze messaging features.
 
 Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to [Braze Android SDK v8.1.0+][1] will experience issues with deep linking from Braze UI components, and will not properly display custom HTML In-App Messages.
+
+For Android 11 support on our wrapper SDKs, please follow their respective repositories for updates:
+
+- Xamarin - [Supported in v1.3.0+](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1130)
+- Cordova - Coming Soon
+- React Native - Coming Soon
+- Flutter - Coming Soon
+- Unity - Coming Soon
+
 
 ### Deep Links
 
