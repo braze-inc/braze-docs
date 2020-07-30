@@ -14,7 +14,7 @@ description: ""
 {% alert important %}
 
 **Please note that this is a beta feature.**
-This validation is used for dashboard email addresses, end-user email addresses (your customers), from and reply-to addresses done of an email message.
+This validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
 
@@ -24,12 +24,12 @@ Email Syntax Validation looks at both the Local and Host part of an email addres
 
 __Note: If the domain part contains any non-ASCII characters, it will need to be punycode-encoded before being supplied to Braze__
 
-If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, the user would be created, but the email address will not be added.
+If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
 
 
 # Local Part Validation Rules
 ## Microsoft Domains
-If the host domain has "msn, hotmail, outlook, or live" part, then the following regex will be used to validate the local part:
+If the host domain includes "msn, hotmail, outlook, or live", then the following regex will be used to validate the local part:
 
 
 `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
@@ -63,7 +63,7 @@ If the domain part is a Gmail address, the local part needs to be at least 5 cha
 # Host Part Validation Rules
 IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
 
-The following regex is used to validat the domain:
+The following regex is used to validate the domain:
 
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
@@ -75,7 +75,7 @@ The domain must follow these parameters:
 - Each period-separated part must:
 	- Start with an alphanumeric character (a-z or 0-9)
 	- End with an alphanumeric character (a-z or 0-9)
-	- Only contain alphanumeric character (a-z or 0-9) and the dosh (*-*)
+	- Only contain alphanumeric character (a-z or 0-9) and the hyphen (-)
 	- Contain from 1 to 63 characters
 
 **Additional validation required** 
