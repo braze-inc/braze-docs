@@ -76,7 +76,7 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization
 
-We have observed an undocumented change in iOS 14 which indicate the removal of Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps will be authorized to receive push notifications _quietly_, within the user's notification tray.
+We have observed an undocumented change in iOS 14 which may indicate the removal of Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications _quietly_, within the user's notification tray. We'll continue to monitor and update this guide as future iOS 14 beta versions are released.
 
 
 ## iOS 14 New Features
