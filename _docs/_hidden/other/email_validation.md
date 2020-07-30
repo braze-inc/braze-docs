@@ -22,7 +22,7 @@ This new email syntax validation process is an enhancement to Braze's existing e
 
 Email Syntax Validation looks at both the Local and Host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed.
 
-__Note: If the domain part that contains any non-ASCII characters, it will need to be punycode-encoded before being supplied to Braze__
+__Note: If the domain part contains any non-ASCII characters, it will need to be punycode-encoded before being supplied to Braze__
 
 If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, the user would be created, but the email address will not be added.
 
