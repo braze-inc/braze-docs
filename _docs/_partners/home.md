@@ -125,5 +125,7 @@ valid_partner_list:
   url: /docs/partners/data_augmentation/recommendation/amazon_personalize/
 - name: Vizbee
   url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
+- name: RudderStack
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 
 ---
