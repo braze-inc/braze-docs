@@ -41,7 +41,7 @@ You also can Add Languages through the __Add Languages__ button. Braze offers th
 
 Braze allows you to specify what happens when a user clicks the body of a push notification. Whether you want to do something as simple as open the application, or redirect to a specified URL, we have many different ways to customize our push notifications, and therefore user experience. Here, you can also find the option to set up button prompts within your push notification, for example: yes/no prompt, confirm/cancel, more button, etc. 
 
-For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+For more information on platform specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 
 ### Step 2b: Preview and Test Your Message
 

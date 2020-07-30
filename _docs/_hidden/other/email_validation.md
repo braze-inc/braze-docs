@@ -13,42 +13,47 @@ description: ""
 
 {% alert important %}
 
-This validation is used for dashboard email addresses, end-user email addresses (your customers), from and reply-to addresses done of an email message .
+**Please note that this is a beta feature.**
+This validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
 
-This new email validation process is an enhancement to Braze's existing email validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload or modified in the dashboard. Braze validates email addresses using [this Ruby gem][1]—the gem is set to relaxed mode and configured to accept UTF-8 character.  This validation is not to be confused with a validation service like Briteverify.  This is a check to verify that the syntax of an email address complies with RFC standards.
+This new email syntax validation process is an enhancement to Braze's existing email syntax validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct (for example: has an @ symbol). One of the main drivers to use this new validation process is to provide support for international characters (i.e. UTF-8) in the local part of the email address.
 
-If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API.  In this scenario, the user would not be created.
+Email Syntax Validation looks at both the Local and Host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed.
 
-Email Validation looks at both the Local part and Host part of an email address—the local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed. 
+__Note: If the domain part contains any non-ASCII characters, it will need to be punycode-encoded before being supplied to Braze__
+
+If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
 
 
 # Local Part Validation Rules
 ## Microsoft Domains
-If the host domain has "msn, hotmail, outlook, or live", then the following regex is allowed for the local part:
+If the host domain includes "msn, hotmail, outlook, or live", then the following regex will be used to validate the local part:
 
 
-`/\A[a-z][\-\w]*(?:\.[\-\w]+)*\z/`
+`/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
-The regex must follow these parameters:
+The microsoft address local part must follow these parameters:
 
-- Must start with a character (a-z)
-- Can contain any alphanumeric character (a-z or 0-9) or an underscore (**_**)
-- Can  contain the following characters (**.**) or (**-**)
-- Can not start or end with a period (**.**) or dash (**-**)
-- Cannot contain two or more consecutive periods (**.**)
+- Can start with a character (a-z), an underscore (_), or a number (0-9).  
+- Can contain any alphanumeric character (a-z or 0-9) or an underscore (_)
+- Can contain the following characters (.) or (-)
+- Can not start with a period (.) or hyphen (-)
+- Can not contain two or more consecutive periods (.)
+- Can not end with a period (.)
 
 
 ## All Other Domains
-For all other domains, Braze allows the following regex for the local part:
+For all other domains, Braze allows email addresses matching the following regex for the local part:
 
 
-`/\A[\p\{L}\p\{N}_]+(?:[\.\-\+\']+[\p\{L}\p\{N}_]+)*\z/`
+`/\A[\p{L}\p{N}_](?:[\.\+\'\p{L}\p{N}_\-]*[\p{L}\p{N}_\-])?\z/`
 
-The regex must follow these parameters:
+The local part must follow these parameters:
 - Can contain any letter, number or underscore, including Unicode letters and numbers
-- Can contain but may not start or end with the following characters: (**.**) (**-**) (**+**) or (**'**)
+- Can contain but may not start or end with the following characters: (.) (+) or (`'`)
+- Can contain and end with, but may not start with the following character: (-)
 
 {% alert important %}
 If the domain part is a Gmail address, the local part needs to be at least 5 characters long. This is in addition to the regex validation specified above under "All other domains".
@@ -56,29 +61,29 @@ If the domain part is a Gmail address, the local part needs to be at least 5 cha
 
 
 # Host Part Validation Rules
-IPv4 or IPv6 addresses are now allowed in the host part of an email address. Also, the top level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
+IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
 
-The following regex is allowed for the host part: 
+The following regex is used to validate the domain:
 
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
-The regex must also follow these parameters:
+The domain must follow these parameters:
 
 - Consists of two or more period-separated parts. 
-- Must contain at least one period (**.**)
+- Must contain at least one period (.)
 - Cannot contain two or more consecutive periods
-- Must start with an alphanumeric character (a-z or 0-9)
-- Must end with an alphanumeric character (a-z or 0-9)
-- Intermediate characters may include a dash (**-**)
-- Contains from 1 to 63 characters
+- Each period-separated part must:
+	- Start with an alphanumeric character (a-z or 0-9)
+	- End with an alphanumeric character (a-z or 0-9)
+	- Only contain alphanumeric character (a-z or 0-9) and the hyphen (-)
+	- Contain from 1 to 63 characters
 
 **Additional validation required** 
-- The final part must be a valid top level domain (TLD) which is determined by anything after the final ‘.’ and must contain at least one alphabetic character.
+- The final part of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.)
 - The TLD should be in [ICANN’s TLD list][2].
 
-
 {% alert important %}
-Unicode is accepted for only for the local part of the email address.
+Unicode is accepted only for the local part of the email address.
 Unicode is not accepted for the domain part, but it may be punycode-encoded. 
 {% endalert %}
 
