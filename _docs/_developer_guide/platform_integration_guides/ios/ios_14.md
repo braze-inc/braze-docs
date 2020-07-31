@@ -73,6 +73,10 @@ Beginning in iOS 14, a new permission prompt (launched by the new `AppTrackingTr
 
 If a user does not accept the prompt then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
+{% alert important %}
+These IDFA updates take effect once end users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` even if you do not explicitly target iOS 14 support.
+{% endalert %}
+
 #### Changes to Braze IDFA collection
 
 ![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
@@ -87,7 +91,7 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization
 
-We have observed an undocumented change in iOS 14 which may indicate the removal of Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications _quietly_, within the user's notification tray. We'll continue to monitor and update this guide as future iOS 14 beta versions are released.
+Based on our testing of iOS 14 Beta 2, Apple has removed Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications _quietly_, within the user's notification tray. We'll continue to monitor and update this guide as future iOS 14 beta versions are released.
 
 
 ## iOS 14 New Features
