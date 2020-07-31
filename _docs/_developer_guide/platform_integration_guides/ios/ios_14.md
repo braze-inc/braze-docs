@@ -6,27 +6,34 @@ platform: iOS
 
 # iOS 14 SDK Upgrade Guide
 
-This guide describes relevant changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration.
+This guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration.
 
-For a complete list of the new features and changes announced this year at WWDC, see Apple's [iOS 14 Preview](https://www.apple.com/ios/ios-14-preview/).
+For a complete list of new iOS 14 updates announced this year at WWDC, see Apple's [iOS 14 Preview](https://www.apple.com/ios/ios-14-preview/).
 
-## Braze SDK Compatibility
+#### Summary of iOS 14 breaking changes
 
-Apps that are targeting iOS 14 are required to upgrade Braze's iOS SDK to continue using messaging features. 
-
-We have released a beta version of our iOS 14 compatible SDK [available on our Github][1], and will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta.
-
-We expect to release our official support for iOS 14 soon after Apple releases their final version of iOS 14 (known as the "Golden Master").
-
-If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
+- Geofences are no longer supported by iOS for users who choose the new  _approximate location_ permission.
+- Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 in order to accept the new _approximate location_ permission.
+- IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value, as if a user declined to provide this permission.
+- Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 
 ### Upgrade Summary
 
-For apps targeting iOS 14, the following features have a change in behavior, or will require upgrading to the latest Braze iOS SDK.
+There are two necessary upgrades that are required to continue using Braze messaging features on iOS.
 
-- Geofences are not supported for users who choose the new  _approximate location_ permission.
-- Using the "Last Known Location" targeting functionality will require upgrading your Braze SDK to work with the new _approximate location_ permission.
-- Expect a sudden decrease in IDFA availability which now requires a permission prompt.
+#### Location Targeting
+
+Customers who are using the _Most Recent Location_ targeting features must upgrade to iOS SDK v3.26.1 which contains updates related to the new _Approximate Location_ feature in iOS 14. Even though your app might not target iOS 14, your end users may upgrade their devices which enable this new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to collect location attributes when the _Approximate Location_ is selected by users on iOS 14 devices.
+
+#### iOS 14 + Xcode 12
+
+We have released [Beta versions][1] of our upcoming iOS 14 / Xcode 12 compatible SDK. Customers who relase Beta versions of their iOS apps with iOS 14 support are encouraged to use Braze's iOS 14 Beta SDK version which includes Xcode 12 compatibility and support for new iOS 14 APIs. We will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
+
+Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta release, known as the "Golden Master" release.
+
+#### IDFA permissions
+
+Once users upgrade to iOS 14, apps that collect the IDFA advertising ID must use the new iOS 14 APIs to prompt users for IDFA permission. Failure to update your code will result in a blank IDFA value (`00000000-0000-0000-0000-000000000000`), similar to when a user declines this new prompt.
 
 ## iOS 14 Behavior Changes
 
@@ -44,9 +51,9 @@ Geofences, which previously relied on precise location permission, are no longer
 
 #### Location Targeting
 
-To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to the latest Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
+To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
-Apps which target iOS 14 that do not upgrade to the latest Braze SDK will no longer be able to use location tracking when _approximate location_ is granted.
+Apps that do not ugprade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
