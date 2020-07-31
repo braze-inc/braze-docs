@@ -11,7 +11,7 @@ platform:
   - API
 ---
 
-# API Key Overview
+# REST API Key Overview
 
 >  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group API Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are, how they are used at Braze, their permissions and how to keep them secure. 
 
@@ -35,7 +35,7 @@ Prior to April 2020, API keys would be included as a part of the API request bod
 
 While the old way of passing API keys continues to work, after a period of time this will be permenatly removed so we urge users to update API calls accordingly. 
 
-### API Key Permissions
+### REST API Key Permissions
 
 API key permissions are permissions you can assign a user or group to limit their access to certain API calls.
 
@@ -245,7 +245,7 @@ For each relevant build variant, create a new `appboy.xml` for it in `src/<build
 ```
 When the build variant is compiled, it will use the new API key.
 
-## API Key Security
+## REST API Key Security
 
 Security is of the utmost importance at Braze. Given that REST API Keys allow access to potentially sensitive REST API endpoints, please secure these keys and only share them with trusted partners. They should never be publicly exposed. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
