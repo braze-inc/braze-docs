@@ -86,7 +86,15 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
 <br>
 
-3. Automatic click tracking (`?abButtonId`) has been removed. Please use `appboyBridge.logClick("0")` and `appboyBridge.logClick("1")` to track Button 1 and Button 2 clicks, respectively.
+3. Automatic click tracking, which used `?abButtonId` for button IDs, and "body clicks" on close buttons have been removed. The code examples below show how use our new Click Tracking javascript methods:
+
+|:before|:after|
+|------|------|
+|`<a href="appboy://close">Close Button</a>`|`<a href="#" onclick="appboyBridge.logClick();appboyBridge.closeMessage()">Close Button</a>`|
+|`<a href="app://deeplink?abButtonId=0">Track button 1</a>`|`<a href="app://deeplink" onclick="appboyBridge.logClick('0')">Track button 1</a>`|
+|`<script> location.href = "appboy://close?abButtonId=1" </script>`|```<script> window.addEventListener("ab.BridgeReady", function(){appboyBridge.logClick("1");appboyBridge.closeMessage();}); </script>```|
+
+
 
 ## Creating a New Campaign {#instructions}
 
