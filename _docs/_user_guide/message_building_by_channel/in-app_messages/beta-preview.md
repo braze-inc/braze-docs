@@ -140,8 +140,6 @@ Once your assets are added to a campaign, you can use the _Copy Link_ button to 
 
 Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
 
-For example, if your HTML references a local asset like `<img src="/cat.png">` (which was common when uploading a zip file), you would change to the newly uploaded asset URL `<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png">`. 
-
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
