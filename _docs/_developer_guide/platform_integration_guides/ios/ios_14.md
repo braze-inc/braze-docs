@@ -14,28 +14,28 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 
 - Geofences are no longer supported by iOS for users who choose the new  _approximate location_ permission.
 - Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
-- IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value, as if a user declined to provide this permission.
+- IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value as if a user declined to provide this permission.
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 
-### Upgrade Summary
+## Upgrade Summary
 
-There are two necessary upgrades that are required to continue using Braze messaging features on iOS.
+There are three necessary upgrades that are required to continue using Braze messaging features on iOS.
 
-#### Location Targeting
+### Location Targeting
 
 Customers who are using the _Most Recent Location_ targeting features must upgrade to at least iOS SDK v3.26.1 which contains updates related to the new _Approximate Location_ feature in iOS 14. 
 
 Even though your app might not target iOS 14, your end users may upgrade their devices which adds this new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.
 
-#### iOS 14 + Xcode 12
+### iOS 14 + Xcode 12
 
-We have released [Beta versions][1] of our upcoming iOS 14 / Xcode 12 compatible SDK. Customers who relase Beta versions of their iOS apps with iOS 14 support are encouraged to use Braze's iOS 14 Beta SDK version which includes Xcode 12 compatibility and support for new iOS 14 APIs. 
+We have released [Beta versions][1] of our upcoming iOS 14 / Xcode 12 compatible SDK. Customers who release Beta versions of their iOS apps with iOS 14 support are encouraged to use Braze's iOS 14 Beta SDK version which includes Xcode 12 compatibility and support for new iOS 14 APIs. 
 
 We will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
 
 Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.
 
-#### IDFA permissions
+### IDFA permissions
 
 Once users upgrade to iOS 14, apps that collect the IDFA advertising ID must use the new iOS 14 APIs to prompt users for IDFA permission. Failure to update your code will result in a blank IDFA value (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
 
@@ -51,13 +51,13 @@ When requesting location permission, users will now have a choice to provide the
 
 #### Geofences
 
-Geofences, which previously relied on precise location permission, are no longer recorded by apps that have obtained the new _approximate location_ permission. While no updates are required to your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
+Geofences, which previously relied on precise location permission, are no longer recorded by apps that have obtained the new _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
 
 #### Location Targeting
 
 To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
-Apps that do not ugprade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
+Apps that do not upgrade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
@@ -74,7 +74,7 @@ Beginning in iOS 14, a new permission prompt (launched by the new `AppTrackingTr
 If a user does not accept the prompt then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates take effect once end users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` even if you do not explicitly target iOS 14 support.
+These IDFA updates take effect once end-users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` even if you do not explicitly target iOS 14 support.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
@@ -92,7 +92,6 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 ### Push Authorization
 
 Based on our testing of iOS 14 Beta 2, Apple has removed Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications _quietly_, within the user's notification tray. We'll continue to monitor and update this guide as future iOS 14 beta versions are released.
-
 
 ## iOS 14 New Features
 
@@ -112,7 +111,7 @@ To learn more about this feature, see [Apple's Privacy and Data Use](https://dev
 
 An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
 
-This feature give users quicker access to sample your app, with an opportunity to either upgrade to the full app experience, or auto-delete after a period of inactivity.
+This feature gives users quicker access to sample your app, with an opportunity to either upgrade to the full app experience or auto-delete after a period of inactivity.
 
 To learn more about App Clips, see [Apple's App Clip Documentation](https://developer.apple.com/app-clips/)
 
