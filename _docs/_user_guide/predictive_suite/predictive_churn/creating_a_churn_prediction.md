@@ -48,7 +48,7 @@ The machine learning model created when you complete this page will be used on a
 ![Churn 2][2]
 
 {% alert note %}
-Preview and Demo Predictions will never update users' risk of churn. To purchase this functionality, contact your Account Manager.
+Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for   Predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager. 
 {% endalert %}
 
 ### Step 5: Build Prediction
