@@ -63,7 +63,7 @@ Custom Event Properties are designed to help you personalize your messaging or b
 
 If you need to segment on the values of Event Properties, you have options:
 1. **Within 30 days:** Braze support personnel can enable segmentation on the frequency and recency of specific event property values over the past thirty (30) days. If you’d like to leverage Event Properties for Segmentation, please contact your Braze account executive or Customer Success Manager.
-2. **Beyond 30 days:** Since all other data types on the profile are stored indefinitely, you can store event property values long-term by copying them into Custom Attributes, such as arrays or uniquely-named attribute values. This process can take place entirely within Braze in many scenarios.
+2. **Beyond 30 days:** Since all other data types on the profile are stored indefinitely, you can segment on event property values long-term by copying them into Custom Attributes. For example, in a streaming video scenario, you might copy the title of each show into an array of "shows watched" for long-term segmentation. The copying process can take place entirely within Braze in many scenarios.
 
 Braze's Success and Support teams can help recommend the best approach depending on your specific needs. Please note these approaches may have additional data usage impact.
 
