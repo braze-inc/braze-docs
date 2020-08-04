@@ -91,7 +91,7 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization
 
-Based on our current testing of iOS 14 Beta 3, Apple has removed the Provisional Push Authorization state introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications quietly, within the user's notification tray. 
+Based on our current testing of iOS 14 Beta 3, Apple has removed the Provisional Push Authorization state introduced in 2018 (iOS 12). Apple no longer separately reports to the app that a user is provisionally authorized, and instead marks any provisionally authorized users as authorized. As in iOS 13, newly installed apps may be authorized to receive push notifications quietly, within the user's notification tray. 
 
 If this change is confirmed by Apple’s official iOS 14 release, we will recommend updating any message targeting options which our use [Provisionally Authorized on iOS][3] filter. We'll continue to monitor and update this guide accordingly.
 
