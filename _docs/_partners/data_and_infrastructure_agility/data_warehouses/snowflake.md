@@ -73,12 +73,17 @@ And so much more!
 [Download the raw table schemas here.][schemas]
 
 ## Important Information and Limitations
-Data Sharing is currently only supported between accounts in the same region. Since Braze currently hosts all our data in Snowflake's US East and EU Frankfurt region, only clients with an account in these regions will be able to have a share provisioned. We are working closely with Snowflake on a product solution to overcome this limitation, so stay tuned for more.
 
+### Snowflake Regions
+Braze currently hosts all our data in Snowflake's US East and EU Frankfurt regions. We can share data within the same regions using Same-Region Data Sharing, and into other regions using Cross-Region Data Sharing. Because the latter involves an additional step to replicate the data across regions, the latency will be sightly higher.
+
+### Historical Data
 Braze's historical event data in Snowflake only goes back to April of 2019. In the first few months of us storing data there, we made some product changes that may result in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start.) It's best to assume that any results that include data prior to August 2019 may look slightly different from expectations.
 
+### PII and GDPR Compliance
 Nearly every event record we store includes a few fields that represent users' PII (Personally Identifiable Information). Some events may include data such as email address, phone number, device ID, language, gender, and location information. In the event of a user's request to be forgotten being submitted to Braze, we will null out those PII fields for any event belonging to those users. This way we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
 
+### Speed, Performance, Cost of Queries
 Speed, performance, and cost of any query run on top of the data is entirely determined by the size of the warehouse you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be performant or even to finish before timing out. Snowflake has excellent resources available about how to best determine which size to use: [Overview of Warehouses — Snowflake Documentation](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse Considerations — Snowflake Documentation](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
 ## Braze Benchmarks
