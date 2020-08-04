@@ -99,7 +99,7 @@ You must first purchase an SSL certificate that matches the exact link branding 
 
 #### Step 2: Purchase SSL Certificates
 
-Clients can purchase the "Dedicated SSL with Custom Hostnames" option.
+Clients can purchase the "Dedicated SSL with Custom Hostnames" option. Ensure that the Certificate purchased is an "Edge Certificate". For more information on Cloudflare's different certificates [please see here](https://support.cloudflare.com/hc/en-us/articles/228009108-Managing-Dedicated-SSL-Certificates).
 
 ![SSL Certificates]({% image_buster /assets/img/SSL/custom_hostname.png %}){: style="max-width:70%"}
 
