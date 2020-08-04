@@ -8,6 +8,8 @@ page_order: 6
 
 By default, Braze disables location tracking. We enable location tracking after the host application has opted in to location tracking and gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
 
+__Note:__ In order for location tracking to work in iOS 14 for users who give Approximate Location permission, you must update your SDK version to `3.26.1`.
+
 ## Enabling Automatic Location Tracking
 Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`.
 
