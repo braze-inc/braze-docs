@@ -48,7 +48,7 @@ You can check out how to set up custom events for a specific platform by reading
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
 
 ### Event Property Persistence
-Event Properties are designed Liquid personalization in messages triggered by their parent Events, so by default they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.
+Event Properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent Events. By default, they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.
 
 #### Event Example Request
 
