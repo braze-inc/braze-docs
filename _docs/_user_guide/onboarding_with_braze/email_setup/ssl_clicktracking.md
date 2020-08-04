@@ -29,6 +29,7 @@ Either upload an existing certificate using the [AWS command-line tool](https://
 #### Step 2: Create a Distribution
 
 Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution (see photos below) for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains.
+
 ![Single Distribution 1]({% image_buster /assets/img/SSL/single_distribution1.png %}){: style="max-width:40%"}
 ![Single Distribution 2]({% image_buster /assets/img/SSL/single_distribution2.png %}){: style="margin-left:15px;max-width:25%"}
 
@@ -98,7 +99,7 @@ You must first purchase an SSL certificate that matches the exact link branding 
 
 #### Step 2: Purchase SSL Certificates
 
-Clients can purchase the "Dedicated SSL with Custom Hostnames" option.
+Clients can purchase the "Dedicated SSL with Custom Hostnames" option. Ensure that the Certificate purchased is an "Edge Certificate". For more information on Cloudflare's different certificates [please see here](https://support.cloudflare.com/hc/en-us/articles/228009108-Managing-Dedicated-SSL-Certificates).
 
 ![SSL Certificates]({% image_buster /assets/img/SSL/custom_hostname.png %}){: style="max-width:70%"}
 
