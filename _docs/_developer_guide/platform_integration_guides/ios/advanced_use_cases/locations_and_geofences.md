@@ -14,6 +14,8 @@ To support geofences for iOS:
 
 2. Braze Geofences [must be enabled][1] through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
 
+__Note:__ Geofences will not work for users who give Approximate Location permission.
+
 ### Step 1: Enable Background Push
 
 To fully utilize our geofence syncing strategy you must have [Background Push][6] enabled in addition to completing the standard push integration.
