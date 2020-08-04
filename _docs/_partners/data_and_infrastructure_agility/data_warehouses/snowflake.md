@@ -75,7 +75,7 @@ And so much more!
 ## Important Information and Limitations
 
 ### Snowflake Regions
-Braze currently hosts all our data in Snowflake's US East and EU Frankfurt regions. We can share data within the same regions using Same-Region Data Sharing, and into other regions using Cross-Region Data Sharing. Because the latter involves an additional step to replicate the data across regions, the latency will be sightly higher.
+Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. However, we are able to provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS or Azure region.
 
 ### Historical Data
 Braze's historical event data in Snowflake only goes back to April of 2019. In the first few months of us storing data there, we made some product changes that may result in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start.) It's best to assume that any results that include data prior to August 2019 may look slightly different from expectations.
