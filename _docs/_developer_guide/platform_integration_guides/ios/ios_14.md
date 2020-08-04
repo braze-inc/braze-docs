@@ -91,7 +91,9 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization
 
-Based on our testing of iOS 14 Beta 2, Apple has removed Provisional Push Authorization introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications _quietly_, within the user's notification tray. We'll continue to monitor and update this guide as future iOS 14 beta versions are released.
+Based on our current testing of iOS 14 Beta 3, Apple has removed the Provisional Push Authorization state introduced in 2018 (iOS 12). As a result, newly installed apps may be authorized to receive push notifications quietly, within the user's notification tray. 
+
+If this change is confirmed by Apple’s official iOS 14 release, we will recommend updating any message targeting options which our use [Provisionally Authorized on iOS][3] filter. We'll continue to monitor and update this guide accordingly.
 
 ## iOS 14 New Features
 
@@ -130,18 +132,6 @@ For customers interested in using Braze within Widgets, please contact your Braz
 We will be releasing support and documentation in the near future.
 
 
-### Safari Intelligent Tracking Prevention (ITP)
-
-![Safari ITP Privacy Report]({% image_buster /assets/img/ios/ios14-safari-itp-privacy-report.jpg %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
-This year, Apple announced a new Safari feature called the _Privacy Report_, which will show users which trackers or 3rd party domains have been blocked to prevent cross-site tracking or identification.
-
-#### Braze Web SDK
-
-The Braze Web SDK does not do cross-site tracking, does not set any 3rd party cookies, and does not use any fingerprinting technologies. Based on our current testing, Braze does not appear in Safari's _Privacy Report_.
-
-Version 2.5.2 of the Braze Web SDK addresses the shorter browser-storage duration based on previous changes to Intelligent Tracking Prevention (ITP 2.1) which accounts for Safari’s updated storage expiration restrictions.
-
-
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/ios14-beta/CHANGELOG.md
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
+[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#provisionally-authorized-on-ios
