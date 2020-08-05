@@ -8,15 +8,11 @@ page_order: 3
 
 # Other SDK Customizations
 
-### Optional Property List Customizations
-
-To enable further compile-time customization, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` dictionary, the following can be added:
-
 ## Braze Log Level
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-To enable verbose logging for debugging, inside the `Appboy` dictionary add the `LogLevel` string subentry and set the value to `0`.
+To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` string subentry and set the value to `0`.
 
 LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
 
@@ -30,7 +26,6 @@ Example `Info.plist` contents:
 </dict>
 ```
 
-
 ### Description of Log Levels
 
 | LogLevel | Description |
@@ -42,7 +37,7 @@ Example `Info.plist` contents:
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
 
-To enable outside tap dismissals, inside the `Appboy` dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
+To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
 
 Example `Info.plist` contents:
 
@@ -59,7 +54,7 @@ Example `Info.plist` contents:
 | DismissModalOnOutsideTap | Description |
 |----------|-------------|
 | YES       | Modal in-app messages will be dismissed on outside tap     |
-| NO        | Default, Modal in-app messages will not be dismissed on outside tap |
+| NO        | Default, modal in-app messages will not be dismissed on outside tap |
 
 
 ### Optional IDFA Collection
