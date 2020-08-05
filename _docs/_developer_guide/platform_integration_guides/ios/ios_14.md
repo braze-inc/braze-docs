@@ -19,7 +19,7 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 
 ## Upgrade Summary
 
-There are three necessary upgrades that are required to continue using Braze messaging features on iOS.
+There are three necessary upgrades that may be required to continue using Braze features on iOS.
 
 #### Location Targeting
 
