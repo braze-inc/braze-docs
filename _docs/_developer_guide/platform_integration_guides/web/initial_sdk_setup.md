@@ -16,7 +16,7 @@ There are three easy ways to integrate the Web SDK, to include analytics and mes
 
 ### Option 1: NPM or Yarn {#install-npm}
 
-If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency:
+If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency. Typescript definitions are officially included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
 
 ```bash
 npm install --save @braze/web-sdk
@@ -88,13 +88,13 @@ To use Web Push Notifications, additional setup is required. Please see our [Pus
 
 To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` in your production environment.
 
-```
+```javascript
 appboy.initialize("YOUR-API-KEY-HERE", {
     baseUrl: "",
     enableLogging: true
 });
 
-or
+// or
 
 appboy.toggleAppboyLogging()
 ```
@@ -140,3 +140,4 @@ Braze may also be compatible with other tag management solutions. Please reach o
 [14]: {% image_buster /assets/img/api_key_location.png %}
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
+[17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
