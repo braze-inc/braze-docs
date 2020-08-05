@@ -38,32 +38,6 @@ Example `Info.plist` contents:
 | 0        | All log information will be logged to the iOS console  |
 | 8        | Default, minimal logging.                              |
 
-
-## Braze Session Timeout
-
-The default session timeout is the default [session lifecyle](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/).
-
-Starting with Braze iOS SDK v3.14.1, you can set the session timeout using the `Info.plist` file. Inside the `Appboy` dictionary, add the `SessionTimeout` number subentry and set the value to your custom session timeout.
-
-Example `Info.plist` contents:
-
-```
-<key>Appboy</key>
-<dict>
-	<key>SessionTimeout</key>
-	<number>YOUR-TIMEOUT-DURATION</number>
-</dict>
-```
-
-
-### Description of Session Timeout
-
-| SessionTimeout | Description |
-|----------|-------------|
-| YOUR-TIMEOUT-DURATION        | The duration of your session (in seconds).  |
-
-__Note__: The minimum value for `SessionTimeout` is `1`.
-
 ## Braze Dismiss Modal on Outside Tap
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
