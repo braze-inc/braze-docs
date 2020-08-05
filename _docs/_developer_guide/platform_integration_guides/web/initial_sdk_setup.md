@@ -6,10 +6,10 @@ page_order: 0
 ---
 # Initial SDK Setup
 
-Integrating the Braze SDK will provide you with basic analytics functionality as well as in-app messages with which you can engage your users. Note that the web SDK file size is 32.3 KB.
+Integrate the Braze Web SDK to collect analytics and display In-App Messages, Push, and Content Cards for your web users.
 
 {% alert note %}
-Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to delay your initial SDK setup if you want to exclude these users from your MAU count.
+Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
 ## Integrate the Braze Library
