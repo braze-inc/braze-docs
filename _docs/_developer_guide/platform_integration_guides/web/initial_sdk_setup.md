@@ -22,7 +22,7 @@ Be sure to view our [Push Setup] LINK NEEDED guide if you plan to use Web Push f
 
 ### NPM or Yarn {#install-npm}
 
-If your site uses NPM or Yarn package managers, you can add the Braze Web SDK as a dependency:
+If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency:
 
 ```bash
 npm install --save @braze/web-sdk
