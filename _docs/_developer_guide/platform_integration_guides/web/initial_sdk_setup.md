@@ -24,23 +24,18 @@ Be sure to view our [Push Setup] LINK NEEDED guide if you plan to use Web Push f
 
 If your site uses NPM or Yarn package managers, you can add the Braze Web SDK as a dependency:
 
-```javascript
+```bash
 npm install --save @braze/web-sdk
-```
-or
-```javascript
-yarn add @braze/web-sdk
+# or, using yarn:
+# yarn add @braze/web-sdk
 ```
 
 Once installed, you can `import` or `require` the library in the typical fashion:
 
-```
-const appboy = require("@braze/web-sdk);
-
-or
-
+```javascript
 import appboy from "@braze/web-sdk";
-
+// or, using `require`
+const appboy = require("@braze/web-sdk");
 ```
 
 
