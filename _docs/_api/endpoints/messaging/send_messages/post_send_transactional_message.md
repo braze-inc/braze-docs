@@ -41,7 +41,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "recipient": (required, object)
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
-      "user_alias": (optional, User Alias Object) User Alias of user to receive message,
+      "user_alias": (optional, User Alias Object) User Alias of the user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
       "send_to_existing_only": (optional, boolean) defaults to false,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
@@ -96,26 +96,25 @@ The Transactional Message sending endpoint response will include the message's `
 
 
 ## Transactional Currents
-All Transactional Messages are complimented with event statuss postbacks sent as an HTTP request to your specified URL. To specify your target URL to receive these postback, you can create a new Transactional Currents connection by navagting to Currents -> New Connection -> HTTP Postback Export.  
+All Transactional Messages are complimented with event status postbacks sent as an HTTP request to your specified URL. To specify your target URL to receive these postback, you can create a new Transactional Currents connection by navigating to Currents -> New Connection -> HTTP Postback Export.  
 
 ### Example Postback
 
 ```json
 {
   "send_id": Unique GUID that was returned upon making the request,
-  "status" : Current status of message from fields below,
+  "status": Current status of message from fields below,
   "external_send_id": If provided at time of request, Braze will pass your identifier for this instance of a send for all postbacks
 }
 ```
+
 | Event Status | Description |
-| --- | ---- |
-|`Sent`|Indicates Braze has successfully dispatched the message|
-|`Aborted`|Indicates Braze was unable to successfully dispatch the message due to the user not having a valid email or liquid abort logic|
-|`Email Delivered`|Indicates the user's email inbox provider has accepted the email|
-|`Email Bounced`|Indicates the user's email inbox provider has rejected the email|
-
-
-
+| ------------ | ----------- |
+| `Sent` | Indicated Braze has successfullt dispatched the message |
+| `Aborted` | Indicated Braze was unable to successfully dispatch the message due to the user not having a valid email or Liquid abort logic |
+|`Email Delivered`| Indicates the user's email inbox provider has accepted the email |
+|`Email Bounced`| Indicates the user's email inbox provider has rejected the email |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
 
