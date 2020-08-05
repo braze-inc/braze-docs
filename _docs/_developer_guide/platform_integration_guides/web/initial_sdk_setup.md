@@ -8,55 +8,90 @@ page_order: 0
 
 Integrate the Braze Web SDK to collect analytics and display In-App Messages, Push, and Content Cards for your web users.
 
+For a complete technical reference, please see our [Javascript Documentation][9].
+
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-## Integrate the Braze Library
+## Install the Braze Library
 
-To integrate the Braze Web SDK, follow the instructions in the "Getting Started" section of the [Braze Web SDK Github Repository][2].
+There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site.
 
-Substitute the API key found within the "App Settings" page (labeled "API Key" in the "Settings for ..." block) of your Braze account for `YOUR-API-KEY-HERE`. For more detailed technical documentation, refer to [the complete JSDocs][9].
+Be sure to view our [Push Setup] LINK NEEDED guide if you plan to use Web Push features.
+
+### NPM or Yarn {#install-npm}
+
+If your site uses NPM or Yarn package managers, you can add the Braze Web SDK as a dependency:
+
+```
+npm install --save @braze/web-sdk
+
+or
+
+yarn add @braze/web-sdk
+```
+
+Once installed, you can `import` or `require` the library in the typical fashion:
+
+```
+const appboy = require("@braze/web-sdk);
+
+or
+
+import appboy from "@braze/web-sdk";
+
+```
+
+
+### Google Tag Manager {#install-gtm}
+
+The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
+
+1. Initialization Tag - loads the Web SDK onto your website, and optionally sets the External User ID
+
+2. Actions Tag - used to trigger Custom Events, Purchases, Change User ID, or stop/resume SDK tracking
+
+For more information, please see the [Google Tag Manager Integration Guide] LINK NEEDED
+
+### Content Delivery Network (CDN) {#install-cdn}
+
+Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script.
+
+<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal"></script>
+
+## Initialize Braze
+
+Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
 
 ![API Key Location][14]
 
-Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Reference the endpoint within your initialization snippet, for example:
 
-*For US-03* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.iad-03.braze.com/api/v3’})`
-*For EU-01* : `appboy.initialize(‘YOUR-API-KEY-HERE’,{baseUrl:’https://sdk.fra-01.braze.eu/api/v3’})`
+```
+// initialize the SDK
+appboy.initialize('YOUR-API-KEY-HERE', {
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+});
+
+// optionally show all In-App Messages without custom handling
+appboy.display.automaticallyShowNewInAppMessages();
+
+// optionally set the current user's External ID
+appboy.changeUser(userIdentifier);
+
+// start (or continue) a session
+appboy.openSession();
+
+```
+
+For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
 
 
 ## Enable Error Logging {#error-logging}
 
 To enable logging, you can pass the option `enableLogging: true` to your initialize function (or call `appboy.toggleAppboyLogging()` after initialization), which will cause Braze to log to the JavaScript console. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` before you release your page to production.
 
-## Initialize Tag Managers
-
-### Google Tag Manager
-
-#### Initializing the SDK
-
-Braze's SDK can be initialized and controlled within tags configured from Google Tag Manager.
-
-To initialize Braze’s SDK create a ‘Custom HTML’ tag within your Google Tag Manager workspace.  Place Braze’s [Web SDK/JavaScript code from the Google Tag Manager integration instructions][13] within the tag.
-
-> This is instead of directly placing the snippet directly within the <head> section of your website.
-
-Subsequent tags which fire after page load can then reference this. For example `<script type="text/javascript">window.appboy.logCustomEvent("test event")</script>`.
-
-Please also ensure to replace the API key and custom SDK endpoint (if assigned one) in the code with your API key.
-
-Braze suggests the tag has the trigger configuration of **Page View > DOM Ready**. Other Page View triggers can fire the tag, provided that no other Braze related tags are fired to prior to this.
-
-![GTM_trigger_example][11]
-
-#### Logging Events and using Braze's Messaging Channels
-
-For Push, In-App Message, News Feed integration instructions please follow the standard integration instructions.
-
-For Analytics integration, reference `<script type="text/javascript">window.appboy.logCustomEvent("test event")</script>` instead of re-using Braze's [Web SDK/javascript code][6].
-
-![GTM_tag_configuration][12]
+# Alternative Integration Methods
 
 #### AMD Module Loader
 If you are using Google Tag Manager alongside an AMD module loader such as RequireJS to load Braze's SDK you will need to use the RequireJS-compatible integration snippet in your <head> tag.
