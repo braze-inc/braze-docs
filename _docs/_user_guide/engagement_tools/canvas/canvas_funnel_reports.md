@@ -1,15 +1,10 @@
 ---
 nav_title: Funnel Report
-title: Funnel Report
 description: ""
-permalink: "/funnel_report/"
-hidden: true
+page_order: 4
 ---
-{% alert note %}
-This Funnel Report feature is currently in Beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
 
-# Funnel Report
+# Canvas Funnel Report
 
 > Customer Retention is an important metric to understand because, with the proper tools, you can use customer data to optimize your marketing strategies and increase customer's lifetime value. The best part is that Braze already has tools to handle this. With campaigns, your company can run multiple variants, gaining data on what is most effective for your customers. And now, with Braze's new feature, Funnel Reporting, we can offer a visual reporting metric alongside those multivariant campaigns, making data-driven solutions easier to understand and implement. 
 
