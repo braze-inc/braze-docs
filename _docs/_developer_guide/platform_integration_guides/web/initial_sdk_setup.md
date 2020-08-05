@@ -24,11 +24,11 @@ Be sure to view our [Push Setup] LINK NEEDED guide if you plan to use Web Push f
 
 If your site uses NPM or Yarn package managers, you can add the Braze Web SDK as a dependency:
 
-```
+```javascript
 npm install --save @braze/web-sdk
-
+```
 or
-
+```javascript
 yarn add @braze/web-sdk
 ```
 
@@ -65,7 +65,6 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
 
 ![API Key Location][14]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 
 ```
 // initialize the SDK
