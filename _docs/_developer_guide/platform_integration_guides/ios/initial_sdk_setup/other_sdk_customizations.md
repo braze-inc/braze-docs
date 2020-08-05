@@ -80,7 +80,6 @@ Follow these steps to implement IDFA Collection:
   return [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
 }
 
-
 @end
 ```
 
@@ -93,7 +92,6 @@ import AdSupport
 import AppTrackingTransparency
 
 class IDFADelegate: NSObject, ABKIDFADelegate {
-
    func advertisingIdentifierString() -> String {
     return ASIdentifierManager.shared().advertisingIdentifier.uuidString
   }
@@ -104,9 +102,7 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
     }
     return ASIdentifierManager.shared().isAdvertisingTrackingEnabled
   }
-
 }
-
 ```
 {% endtab %}
 {% endtabs %}
