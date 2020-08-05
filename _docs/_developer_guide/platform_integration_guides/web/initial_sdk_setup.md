@@ -10,17 +10,11 @@ Integrate the Braze Web SDK to collect analytics and display In-App Messages, Pu
 
 For a complete technical reference, please see our [Javascript Documentation][9].
 
-{% alert note %}
-Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
-{% endalert %}
+## Step 1:  Install the Braze Library
 
-## Install the Braze Library
+There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features.
 
-There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site.
-
-Be sure to view our [Push Setup] LINK NEEDED guide if you plan to use Web Push features.
-
-### NPM or Yarn {#install-npm}
+### Option 1: NPM or Yarn {#install-npm}
 
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency:
 
@@ -39,7 +33,7 @@ const appboy = require("@braze/web-sdk");
 ```
 
 
-### Google Tag Manager {#install-gtm}
+### Option 2: Google Tag Manager {#install-gtm}
 
 The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
 
@@ -49,13 +43,13 @@ The Braze Web SDK can be quickly installed from the Google Tag Manager Template 
 
 For more information, please see the [Google Tag Manager Integration Guide] LINK NEEDED
 
-### Content Delivery Network (CDN) {#install-cdn}
+### Option 3: Braze CDN {#install-cdn}
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script.
 
-<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal&slice=8:12"></script>
+<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal&slice=7:13"></script>
 
-## Initialize Braze
+## Step 2: Initialize Braze
 
 Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
 
@@ -79,8 +73,16 @@ appboy.openSession();
 
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
 
+{% alert note %}
+Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+{% endalert %}
+
 ![API Key Location][14]{: style="max-width:45%;margin-left:15px;"}
 
+
+## Step 3: (optional) Web Push
+
+To use Web Push Notifications, additional setup is required. Please see our [Push Notifications][16] section for instructions.
 
 ## Troubleshooting {#error-logging}
 
@@ -137,3 +139,4 @@ Braze may also be compatible with other tag management solutions. Please reach o
 [13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
 [14]: {% image_buster /assets/img/api_key_location.png %}
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
