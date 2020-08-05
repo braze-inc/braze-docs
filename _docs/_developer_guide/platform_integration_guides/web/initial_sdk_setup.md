@@ -64,7 +64,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
 
-![API Key Location][14]
+![API Key Location][14]{: style="float:right;max-width:45%;margin-left:15px;"}
 
 
 ```
@@ -86,15 +86,36 @@ appboy.openSession();
 
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
 
+## Troubleshooting {#error-logging}
 
-## Enable Error Logging {#error-logging}
+To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` in your production environment.
 
-To enable logging, you can pass the option `enableLogging: true` to your initialize function (or call `appboy.toggleAppboyLogging()` after initialization), which will cause Braze to log to the JavaScript console. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `appboy.setLogger()` before you release your page to production.
+```
+appboy.initialize("YOUR-API-KEY-HERE", {
+    baseUrl: "",
+    enableLogging: true
+});
 
-# Alternative Integration Methods
+or
 
-#### AMD Module Loader
-If you are using Google Tag Manager alongside an AMD module loader such as RequireJS to load Braze's SDK you will need to use the RequireJS-compatible integration snippet in your <head> tag.
+appboy.toggleAppboyLogging()
+```
+
+## Upgrading the SDK
+
+When you reference the Braze Web SDK from our content delivery network, for example, https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
+
+You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
+
+* Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/appboy.min.js`, or in your package manager's dependencies.
+* If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at the root of your site, but the location may be customized in some integrations.
+
+These two files must be updated in coordination with each other to ensure proper functionality.
+
+## Alternative Integration Methods
+
+### AMD Module Loader
+If you are using Google Tag Manager alongside an AMD module loader such as RequireJS to load Braze's SDK you will need to use the RequireJS-compatible integration snippet in your `<head>` tag.
 
 For further instruction on this please see the appropriate section of our [Braze Web SDK Github Repository][2].
 
@@ -108,16 +129,7 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 Braze may also be compatible with other tag management solutions. Please reach out to a Braze representative if you need help evaluating these solutions.
 
-## Upgrading the SDK
 
-When you reference the Braze Web SDK from our content delivery network, for example, https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
-
-You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
-
-* Update the Braze JavaScript file - in the default integration, this means changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/appboy.min.js` in the `<head>` of your site to `https://js.appboycdn.com/web-sdk/[NEW VERSION NUMBER]/appboy.min.js`
-* If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at the root of your site, but the location may be customized in some integrations.
-
-These files must be updated in coordination with each other to ensure proper functionality.
 
 [1]: {{site.baseurl}}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
