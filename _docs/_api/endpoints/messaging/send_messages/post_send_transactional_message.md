@@ -113,7 +113,9 @@ All Transactional Messages are complimented with event statuss postbacks sent as
 |`Aborted`|Indicates Braze was unable to successfully dispatch the message due to the user not having a valid email or liquid abort logic|
 |`Email Delivered`|Indicates the user's email inbox provider has accepted the email|
 |`Email Bounced`|Indicates the user's email inbox provider has rejected the email|
-{: .reset-td-br-1 .reset-td-br-2 }
+
+
+
 
 {% endapi %}
 
