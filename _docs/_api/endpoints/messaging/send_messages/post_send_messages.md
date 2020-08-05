@@ -47,7 +47,7 @@ Authorization: Bearer YOUR_REST_API_KEY
    "user_aliases": (optional, array of User Alias Object) see User Alias,
    "segment_id": (optional, string) see Segment Identifier,
    "audience": (optional, Connected Audience Object) see Connected Audience,
-   "campaign_id": (optional, string) see Campaign Identifier,
+   "campaign_id": (required, string) see Campaign Identifier,
    "send_id": (optional, string) see Send Identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
