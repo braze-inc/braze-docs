@@ -58,15 +58,14 @@ For more information, please see the [Google Tag Manager Integration Guide] LINK
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script.
 
-<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal"></script>
+<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal&slice=8:12"></script>
 
 ## Initialize Braze
 
 Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
 
-![API Key Location][14]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-```
+```javascript
 // initialize the SDK
 appboy.initialize('YOUR-API-KEY-HERE', {
     baseUrl: "YOUR-SDK-ENDPOINT-HERE"
@@ -84,6 +83,9 @@ appboy.openSession();
 ```
 
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
+
+![API Key Location][14]{: style="max-width:45%;margin-left:15px;"}
+
 
 ## Troubleshooting {#error-logging}
 
