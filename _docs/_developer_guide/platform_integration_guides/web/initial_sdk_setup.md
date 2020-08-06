@@ -72,7 +72,6 @@ appboy.changeUser(userIdentifier);
 
 // start (or continue) a session
 appboy.openSession();
-
 ```
 
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
