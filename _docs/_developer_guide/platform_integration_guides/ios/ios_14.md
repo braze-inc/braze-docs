@@ -95,7 +95,7 @@ Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes
 
 After your app requests provisional push authorization, you are able to send push notifications to users which will appear quietly in their notfication center. 
 
-In iOS 13, this push notification would included two options: to "Keep" receiving push, prominently or quietly, or to "Turn Off" push for the app. After the user makes this decision, the authorization status would be either "authorized" or "unauthorized".
+In iOS 13, this push notification would included two options: to "Keep" receiving push, prominently or quietly, or to "Turn Off" push for the app. After the user makes this decision, the authorization status would be either "[authorized](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusauthorized?language=objc)" or "[denied](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusdenied?language=objc)".
 
 In iOS 14, users will now skip the "provisional" status and be granted a state of "authorized" after your app requests provisional push. You will still be able to send push notifications quietly to the notification center. However, this push will no longer include the two options to "Keep" or "Turn Off". So, in order to obtain the fully "authorized" status, your app will need to request authorization using the native push prompt dialog, or direct users to your app's settings page where a user would manually allow push.
 
