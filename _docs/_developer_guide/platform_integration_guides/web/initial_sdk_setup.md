@@ -12,7 +12,7 @@ For a complete technical reference, please see our [Javascript Documentation][9]
 
 ## Step 1:  Install the Braze Library
 
-There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features.
+There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
 
 ### Option 1: NPM or Yarn {#install-npm}
 
