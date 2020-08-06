@@ -93,13 +93,13 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes to the Provisional Push authorization flow which was introduced in 2018 (iOS 12).
 
-After your app requests provisional push authorization, you are able to send push notifications to users which will appear quietly in their notfication center. 
+After your app requests provisional push authorization, you are able to send push notifications to users which will appear quietly in their notification center. 
 
 In iOS 13, this push notification would included two options: to "Keep" receiving push, prominently or quietly, or to "Turn Off" push for the app. After the user makes this decision, the authorization status would be either "[authorized](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusauthorized?language=objc)" or "[denied](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusdenied?language=objc)".
 
-In iOS 14, users will now skip the "provisional" status and be granted a state of "authorized" after your app requests provisional push. You will still be able to send push notifications quietly to the notification center. However, this push will no longer include the two options to "Keep" or "Turn Off". So, in order to obtain the fully "authorized" status, your app will need to request authorization using the native push prompt dialog, or direct users to your app's settings page where a user would manually allow push.
+In iOS 14, users are directly granted a state of "authorized" after your app requests provisional push authorization. You will still be able to send push notifications quietly to the notification center. However, this push will no longer include the two options to "Keep" or "Turn Off". For users to elect to receive prominent notifications, your app will need to request authorization using the native push prompt dialog or direct users to your app's settings page where a user would manually allow push.
 
-Once this change is finalized and documented by Apple, we recommend updating your message targeting options which our use [Provisionally Authorized on iOS][3] filter as users will no longer be reported as "provisionally" authorized in iOS 14. We'll continue to monitor and update this guide accordingly.
+Once this change is finalized and documented by Apple, we recommend updating your message targeting options which our use [Provisionally Authorized on iOS][3] filter as users will no longer be reported as "provisionally" authorized in iOS 14. As users upgrade to iOS 14, the filter will lose effect over time. We'll continue to monitor and update this guide accordingly.
 
 ## iOS 14 New Features
 
