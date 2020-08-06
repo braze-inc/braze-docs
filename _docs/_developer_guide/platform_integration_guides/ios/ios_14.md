@@ -83,7 +83,7 @@ If a user does not accept the prompt then a blank IDFA value (`00000000-0000-000
 These IDFA updates take effect once end-users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` even if you do not explicitly target iOS 14 support.
 {% endalert %}
 
-#### Changes to Braze IDFA collection 
+#### Changes to Braze IDFA collection
 
 ![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
