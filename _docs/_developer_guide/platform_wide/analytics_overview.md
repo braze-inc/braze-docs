@@ -202,7 +202,7 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
 | Check if the total number of dollars spent __is greater than__ a __number__| __GREATER THAN__ | __NUMBER__ |
-| Check if the total number of dollars spent __is less than__ a __number__| __LESS THAN__ | __NUMBERL__ |
+| Check if the total number of dollars spent __is less than__ a __number__| __LESS THAN__ | __NUMBER__ |
 | Check if total number of dollars spent __is exactly__ a __number__| __EXACTLY__ | __NUMBER__ |
 | Check if the purchase last occurred __after X date__ | __AFTER__ | __TIME__ |
 | Check if the purchase last occurred __before X date__ | __BEFORE__ | __TIME__ |
