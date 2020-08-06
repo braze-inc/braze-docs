@@ -15,7 +15,7 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 - Geofences are no longer supported by iOS for users who choose the new  _approximate location_ permission.
 - Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
 - IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value as if a user declined to provide this permission.
-- Based on our testing, Apple may no longer display the provisional authorization dialog and instead set users as "authorized". [Learn More](#push-authorization)
+- Based on our testing, Apple may no longer display the provisional authorization dialog and instead set users as "authorized". [Learn More](#push-provisional-auth)
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 
 ## Upgrade Summary
@@ -38,7 +38,7 @@ Our official iOS 14 compatible SDK will be released shortly after Apple's final 
 
 #### Push Authorization
 
-Based on our testing (as of iOS 14 Beta 4), Apple no longer displays the provisional authorization dialog which lets users choose to "keep" or "turn off" push notifications sent when provisionally authorized. [Learn More](#push-authorization).
+Based on our testing (as of iOS 14 Beta 4), Apple no longer displays the provisional authorization dialog which lets users choose to "keep" or "turn off" push notifications sent when provisionally authorized. [Learn More](#push-provisional-auth).
 
 
 #### IDFA permissions
@@ -95,7 +95,7 @@ These IDFA updates take effect once end-users upgrade their device to iOS 14. Pl
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
-### Push Authorization {#push-authorization}
+### Push Authorization {#push-provisional-auth}
 
 Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes to the Provisional Push authorization flow which was introduced in 2018 (iOS 12).
 
