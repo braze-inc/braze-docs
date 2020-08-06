@@ -18,5 +18,5 @@ This guide references our Beta HTML Preview feature for In-App Messages. If this
 
 |Quickstart Template|Download Link|Screenshot|
 |--------|----------|---------|
-|Multi-page Carousel Modal| [View Code](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/index.html)|![Screenshot](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/screenshot.gif){: style="max-width:200px"}
+|Multi-page Carousel Modal| [View Code](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/index.html){:target="_blank"}|![Screenshot](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/screenshot.gif){: style="max-width:200px"}
 |
