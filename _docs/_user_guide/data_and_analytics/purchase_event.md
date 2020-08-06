@@ -10,7 +10,7 @@ description: "This article covers purchase events, how they should be structured
 
 ## Purchase Event Segmentation
 
-Logging purchase event can trigger any number/type of follow up campaigns, and enable the following segmentation filters on the recency and frequency of that event. This data is viewable within our revenue page in time-series.
+Logging purchase event can trigger any number/type of follow up campaigns, and enable the following segmentation filters on the recency and frequency of that event when targeting users. This data is viewable within our revenue page in time-series.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -26,7 +26,7 @@ Logging purchase event can trigger any number/type of follow up campaigns, and e
 | Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-![Purchase 1][1]
+![Purchase 1][1]{: style="max-width:80%;margin-left:15px;"}
 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute](https://www.braze.com/docs/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 
@@ -38,7 +38,7 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 __Example of Triggering based on Purchase Event Properties__
 
-![Purchase 2][2]
+![Purchase 2][2]{: style="max-width:80%;margin-left:15px;"}
 
 ### Purchase Event Storage
 All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you’d like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
