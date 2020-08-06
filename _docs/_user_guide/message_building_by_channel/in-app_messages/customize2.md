@@ -10,9 +10,18 @@ description: "In addition to the out-of-the-box In-App Message templates, Braze 
 
 Craft and customize the perfect In-App or In-Browser Message using your own HTML, CSS, and Javascript!
 
+### SDK Requirements {#supported-sdk-versions}
+
 {% alert important %}
-This guide references our Beta HTML Preview feature for In-App Messages. If this option is not enabled for your account, please contact Braze Support, or use our standard HTML Upload documentation.
+This guide references newer features which have Braze SDK requirements. For our deprecated zip-upload messages, please [click here][1].
 {% endalert %}
+
+__SDK Requirements__
+* Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
+* iOS SDK v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
+* Android SDK v8.0.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#800)
+
+Because users on older SDK versions will not receive the message, consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More][2]
 
 {% alert note %}
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
@@ -22,7 +31,6 @@ To enable HTML in-app messages in the Web SDK, your SDK integration must supply 
 
 Get a head start using our pre-built HTML templates. Just click "View Code", copy the HTML, and paste it into your In-App message campaign. Swap out images, text, and launch!
 
-
 |Quickstart Template|Download Link|Screenshot|
 |--------|----------|---------|
 |Multiple Page Carousel| [View Code](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/index.html){:target="_blank"}|![Screenshot](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/1-braze-dashboard-carousel-modal/screenshot.gif){: style="max-width:200px;width:100%"}|
@@ -31,6 +39,8 @@ Get a head start using our pre-built HTML templates. Just click "View Code", cop
 |Multiple Page Carousel| [View Code](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/5-fullscreen-pagination/index.html){:target="_blank"}|![Screenshot](https://raw.githubusercontent.com/braze-inc/in-app-message-templates/master/braze-templates/5-fullscreen-pagination/screenshot.gif){: style="max-width:200px;width:100%"}|
 
 ## Customizing your HTML
+
+In addition to using custom CSS, Javascript, and HTML, you can also leverage your Braze SDK to log custom events, set custom user attributes, and more using the injected [`appboyBridge`][3] javascript SDK.
 
 ### Close Button
 
@@ -148,3 +158,5 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 {% include archive/appboyBridge.md %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
+[2]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions
+[3]: #javascript-bridge
