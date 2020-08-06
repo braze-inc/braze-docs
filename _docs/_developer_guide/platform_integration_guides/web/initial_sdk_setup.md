@@ -53,7 +53,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in your Braze App Settings Dashboard.
+Once the Braze Web SDK is installed on your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in `Manage App Group > App Settings` within your Braze Dashboard.
 
 For a complete list of options for `appboy.initialize()` please see our [Javascript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).
 
@@ -80,8 +80,6 @@ For all other Javascript methods, please see our complete [Javascript Reference 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
-
-![API Key Location][14]{: style="max-width:45%;margin-left:15px;"}
 
 
 ## Step 3: (optional) Web Push
