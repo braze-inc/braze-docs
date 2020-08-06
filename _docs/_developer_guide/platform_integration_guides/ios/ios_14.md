@@ -91,7 +91,7 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization
 
-Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes to the Provisional Push authorization flow whicih was introduced in 2018 (iOS 12).
+Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes to the Provisional Push authorization flow which was introduced in 2018 (iOS 12).
 
 After your app requests provisional push authorization, you are able to send push notifications to users which will appear quietly in their notfication center. 
 
