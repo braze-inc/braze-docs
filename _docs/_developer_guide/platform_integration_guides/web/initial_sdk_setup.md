@@ -16,7 +16,9 @@ There are three easy ways to integrate the Web SDK, to include analytics and mes
 
 ### Option 1: NPM or Yarn {#install-npm}
 
-If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency. Typescript definitions are officially included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
+If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency. 
+
+Typescript definitions are officially included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
 
 ```bash
 npm install --save @braze/web-sdk
