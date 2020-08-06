@@ -16,7 +16,7 @@ There are three easy ways to integrate the Web SDK, to include analytics and mes
 
 ### Option 1: NPM or Yarn {#install-npm}
 
-If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency. 
+If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
 
 Typescript definitions are officially included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
 
@@ -47,7 +47,7 @@ For more information, please see the [Google Tag Manager Integration Guide] LINK
 
 ### Option 3: Braze CDN {#install-cdn}
 
-Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script.
+Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal&slice=7:14"></script>
 
@@ -78,7 +78,7 @@ appboy.openSession();
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
 
 {% alert note %}
-Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+Anonymous users on mobile or web devices may be counted towards your [MAU][15]. As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
 
@@ -129,17 +129,10 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 Braze may also be compatible with other tag management solutions. Please reach out to a Braze representative if you need help evaluating these solutions.
 
-
-
-[1]: {{site.baseurl}}/user_guide/introduction/
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
-[3]: https://www.google.com/analytics/tag-manager/ "Google Tag Manager"
-[6]: https://github.com/Appboy/appboy-web-sdk#getting-started "Web SDK Documentation"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
-[11]: {% image_buster /assets/img_archive/gtm_trigger.png %}
-[12]: {% image_buster /assets/img_archive/gtm_example.png %}
-[13]: https://github.com/appboy/appboy-web-sdk#alternative-google-tag-manager-installation
-[14]: {% image_buster /assets/img/api_key_location.png %}
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
+
+<!-- wesley wanted an empty line at the end -->
