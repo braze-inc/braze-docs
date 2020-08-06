@@ -15,7 +15,7 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 - Geofences are no longer supported by iOS for users who choose the new  _approximate location_ permission.
 - Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
 - IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value as if a user declined to provide this permission.
-- Based on our testing, Apple no longer displays the provisional authorization dialog and instead sets users as "authorized". [Learn More](#push-authorization)
+- Based on our testing, Apple may no longer display the provisional authorization dialog and instead sets users as "authorized". [Learn More](#push-authorization)
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 
 ## Upgrade Summary
