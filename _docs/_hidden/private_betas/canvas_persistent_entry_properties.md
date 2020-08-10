@@ -16,7 +16,6 @@ This feature is currently in Beta. Please reach out to your Braze account manage
 
 When a Canvas is triggered by a custom event or an API call, customers will now be able to use metadata from the API call or custom event for personalization in each step of the Canvas. __Prior to this change, the entry properties could only be used in the first step of Canvas.__ Being able to retain entry properties for the duration of a Canvas will allow customers to send more curated messages to their users, thereby resulting in a highly refined end-user experience.
 
-Currently, persistent entry properties are only available on API-Triggered Canvases. All channels are supported __except__ in-app messages. Support for in-app messages and Action-based campaigns will be included in future releases.
 
 ## Setting Entry Properties
 
@@ -28,9 +27,9 @@ Braze will begin saving the values associated with those properties once a Liqui
 
 ## Updated Entry Property Behavior
 
-If an active Canvas is edited to include a new entry property, the value corresponding to that property will not be available for users who entered the Canvas before the entry property key was added to the Canvas. The values will only be saved for users that enter the Canvas __after__ the change is made. 
+If an active Canvas that previously did not include any entry properties is edited to include a new entry property, the value corresponding to that property will not be available for users who entered the Canvas before the entry property key was added to the Canvas. The values will only be saved for users that enter the Canvas __after__ the change is made. 
 
-For example: If you initially launched a Canvas on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward. 
+For example: If you initially launched a Canvas that did not use any entry properties on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward. 
 
 In the case that a Canvas entry property is null or blank, you can abort messages using conditionals. The following code snippet is an example of how you may use Liquid to abort a message.
 

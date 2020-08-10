@@ -45,7 +45,7 @@ This new workflow makes it easy to upload files and copy/paste their URLs direct
 We've also added the ability to upload newly supported file types, including:
 
 | File Type | File Extension|
-| :-------- | :------------ |
+|:-------- |:------------|
 | Font Files| `.ttf`, `.woff`, `.otf`, `.woff2`|
 | SVG Images| `.svg`|
 | Javascript Files| `.js`|
@@ -86,7 +86,13 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
 <br>
 
-3. Automatic click tracking (`?abButtonId`) has been removed. Please use `appboyBridge.logClick("0")` and `appboyBridge.logClick("1")` to track Button 1 and Button 2 clicks, respectively.
+3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
+
+| Before | After |
+|:-------- |:------------|
+|<code>&lt;a href="appboy://close"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="appboyBridge.logClick();appboyBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+|<code>&lt;a href="app://deeplink?abButtonId=0">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="app://deeplink" onclick="appboyBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+|<code>&lt;script&gt;<br>location.href = "appboy://close?abButtonId=1"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;appboyBridge.logClick("1");<br>&nbsp;&nbsp;appboyBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
 ## Creating a New Campaign {#instructions}
 
@@ -133,8 +139,6 @@ You can also add _existing_ assets to your campaign that you've already uploaded
 Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
 
 Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
-
-For example, if your HTML references a local asset like `<img src="/cat.png">` (which was common when uploading a zip file), you would change to the newly uploaded asset URL `<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png">`. 
 
 {% alert tip %}
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!

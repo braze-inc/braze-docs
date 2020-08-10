@@ -37,6 +37,10 @@ __Summary Arguments__
 
 In addition to grouping notifications by Thread IDs, Apple allows you to edit the summaries that appear when notifications are grouped. Braze Users can specify the summary category, summary count, and summary argument when composing a push campaign using our tool.
 
+{% alert tip %}
+Note that the way notifications with the same Thread ID are grouped in the notification tray is under the control of the OS. iOS may choose to display notifications with the same Thread ID separately or in groups depending on what it deems optimal.
+{% endalert %}
+
 Check the __Alert Options__ box in the __Push Composer__.
 
 Then, select `summary-arg` and `summary-arg-count` as keys and input those values in the corresponding column. If you do not set a value for `summary-arg`, it will default to 1.
