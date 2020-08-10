@@ -24,7 +24,7 @@ guide_featured_list:
 
 ![Churn Overview][1]
 
-With Predictive Churn, you can define what churn means for your business (__[Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)__) as well as the users you'd like to prevent from churning (__[Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)__). When you create a Prediction, Braze trains a machine learning model to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition. 
+With Predictive Churn, you can define what churn means for your business (__[Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)__) as well as the users you'd like to prevent from churning (__[Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)__). When you create a Prediction, Braze trains a machine learning model using (__[gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting)__) to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
 
 Once the Prediction model is built, users in the Prediction Audience will be assigned a __[Churn Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score)__ between 0 and 100 denoting how likely they are to Churn according to your definition. The higher the score, the more likely a user is to churn. 
 
