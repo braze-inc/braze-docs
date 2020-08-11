@@ -11,7 +11,7 @@ page_type: partner
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 
-> [Segment][5] is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
+> [Segment][5]{:target="_blank"} is a data analytics hub that allows you to track your users and route that data to a wide variety of user analytics providers, such as Braze.
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
@@ -30,14 +30,14 @@ To get going with your Segment/Braze integration,
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Segment Account & Account Information | Segment | [https://app.segment.com/login](https://app.segment.com/login) | You must have an active Segment Account to utilize their services with Braze. |
-| Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/) | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
+| Segment Account & Account Information | Segment | [https://app.segment.com/login](https://app.segment.com/login){:target="_blank"} | You must have an active Segment Account to utilize their services with Braze. |
+| Installed Source and Segment Source Libraries | Segment | [https://segment.com/docs/sources/](https://segment.com/docs/sources/){:target="_blank"} | The origin of any data sent into Segment, such as mobile apps, websites, or backend servers. <br> <br> You must install the libraries into your app, site, or server before being able to set up a successful `Source -> Destination` flow.
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][34], [Android][35] and [Web][38] documentation. | Braze must be successfully installed onto your app or site. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Step 1: Configure Braze Settings in Segment {#connection-settings}
 
-![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: style="float:right;height:50%;width:50%;margin-left:15px;"} After successfully setting up your Braze and Segment integrations individually, you'll need to configure [Braze as a destination from Segment](https://segment.com/docs/destinations/). You'll have many options to customize the flow of data between Braze and Segment using the connection settings described in the chart below.
+![Destination Connection Settings]({% image_buster /assets/img/segment_destination_braze.png %}){: style="float:right;height:50%;width:50%;margin-left:15px;"} After successfully setting up your Braze and Segment integrations individually, you'll need to configure [Braze as a destination from Segment](https://segment.com/docs/destinations/){:target="_blank"}. You'll have many options to customize the flow of data between Braze and Segment using the connection settings described in the chart below.
 
 | Name| Description |
 |---|---|
@@ -63,8 +63,8 @@ To get going with your Segment/Braze integration,
 |Open In-App Messages in New Tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab as specified in the Braze platform. |
 |Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from news feed cards or content cards load in the current tab or a new tab as specified in the Braze platform. |
 |Session Timeout In Seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
-|Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/) to Braze as Page Events.|
-|Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/) to Braze
+|Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze as Page Events.|
+|Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze
 |Update Existing Users Only| On/Off (True/False) | This only applies to Server Side integrations. This determines whether or not all users vs. existing users will be updated. This defaults to `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% enddetails %}
@@ -82,7 +82,7 @@ You can integrate Segment's Web source (Analytics.js) and native client-side lib
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-You can learn more about Segment's integration options (Connection Modes), including the benefits of each, [here](https://segment.com/docs/destinations/#connection-modes).
+You can learn more about Segment's integration options (Connection Modes), including the benefits of each, [here](https://segment.com/docs/destinations/#connection-modes){:target="_blank"}.
 {% endalert %}
 
 ### Side-by-Side SDK Integration
@@ -94,21 +94,21 @@ Also called "Device-mode", this integration maps Segment's SDK and [methods](#me
 
 See and set up [mappings](#methods) to Segment's SDK for [Android](https://github.com/appboy/appboy-segment-android) on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android).
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [Android](https://segment.com/docs/connections/destinations/catalog/braze/#android){:target="_blank"}.
 
 {% endtab %}
 {% tab iOS %}
 
-See and set up [mappings](#methods) to Segment's SDK for [iOS](https://github.com/appboy/appboy-segment-ios) on Braze's Github.
+See and set up [mappings](#methods) to Segment's SDK for [iOS](https://github.com/appboy/appboy-segment-ios){:target="_blank"} on Braze's Github.
 
-To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios).
+To complete the side-by-side integration, please refer to Segment's detailed instructions for [iOS](https://segment.com/docs/connections/destinations/catalog/braze/#ios){:target="_blank"}.
 
 {% endtab %}
 {% tab Web or Javascript %}
 
 See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web) documentation.
+For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web){:target="_blank"} documentation.
 
 {% endtab %}
 {% endtabs %}
@@ -141,11 +141,11 @@ Currently, Braze's server-to-server integration with Segment __does not__ suppor
 
 ## Step 2B: Map Methods {#methods}
 
-Braze supports the [Identify](https://segment.com/docs/spec/identify/), [Track](https://segment.com/docs/spec/track/), and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page) (web) Segment methods; however, our REST APIs require you to include a [user ID][41] when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/) method.
+Braze supports the [Identify](https://segment.com/docs/spec/identify/){:target="_blank"}, [Track](https://segment.com/docs/spec/track/){:target="_blank"}, and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page){:target="_blank"} (web) Segment methods; however, our REST APIs require you to include a [user ID][41]{:target="_blank"} when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/){:target="_blank"} method.
 
 ### Identify
 
-When you [identify](https://segment.com/docs/connections/destinations/catalog/braze/#identify) a user, we will record information for that user with `userId` as the External User ID.
+When you [identify](https://segment.com/docs/connections/destinations/catalog/braze/#identify){:target="_blank"} a user, we will record information for that user with `userId` as the External User ID.
 
 | Segment Field | Braze Field |
 | ------------- | ----------- |
@@ -183,23 +183,23 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
-| [Track](https://segment.com/docs/spec/track/) | Logged as a [Custom Event][13]. | `analytics.track("played_game");` > `appboy.logCustomEvent("played_game");`|
-| [Track with Properties](https://segment.com/docs/spec/track/) | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` > `appboy.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
-| [Track with Product](https://segment.com/docs/spec/track/) | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
+| [Track](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as a [Custom Event][13]. | `analytics.track("played_game");` > `appboy.logCustomEvent("played_game");`|
+| [Track with Properties](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as [Event Property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties). | `analytics.track("played_game", {name: "BotW", weapon: "boomerang"});` > `appboy.logCustomEvent("played_game", { "name": "BotW", "weapon": "boomerang"});` |
+| [Track with Product](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Order Completed
 
-When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4], we will record the products you've listed as [purchases][28].
+When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4]{:target="_blank"}, we will record the products you've listed as [purchases][28].
 
 ### Page {#page}
 
-The [page](https://segment.com/docs/spec/page/) call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
+The [page](https://segment.com/docs/spec/page/){:target="_blank"} call lets you record whenever a user sees a page of your website, along with any optional properties about the page.
 
 | Segment Method | Braze Method | Example <br> `segment` > `braze`|
 |---|---|---|
-| [Page](https://segment.com/docs/spec/page/) __without name__    | Logged as a [Custom Event][13] |    `analytics.page();` >     `appboy.logCustomEvent("Loaded a Page");` |
-| [Page](https://segment.com/docs/spec/page/) __with name__ |    Logged as a [Custom Event][13]    | `analytics.page("Home");`    > `appboy.logCustomEvent("Viewed Home Page");` |
+| [Page](https://segment.com/docs/spec/page/){:target="_blank"} __without name__    | Logged as a [Custom Event][13] |    `analytics.page();` >     `appboy.logCustomEvent("Loaded a Page");` |
+| [Page](https://segment.com/docs/spec/page/){:target="_blank"} __with name__ |    Logged as a [Custom Event][13]    | `analytics.page("Home");`    > `appboy.logCustomEvent("Viewed Home Page");` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Test Your Integration
@@ -218,7 +218,7 @@ If you use a server-to-server integration, filters related to automatically coll
 
 ## User Deletion & Suppression 
 
-If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) __is__ mapped to our [Users/Delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment's User Delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to){:target="_blank"} __is__ mapped to our [Users/Delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Please note that verification of these deletions could take up to 30 days.
 
 You must ensure that that you select a common user identifier between Braze and Segment ( as in the user ID or external ID). Once you've initiated a deletion request with Segment, you will then be able to see the status and how it impacts each of your Destinations.
 
