@@ -7,7 +7,6 @@ platform: API
 tool:
   - Campaigns
 hidden: true
-alias: "/api/api_campaigns/transactional_campaigns"
 description: "This article outlines details about the Send Transactional Message via API Triggered Delivery Braze endpoint."
 ---
 {% api %}
@@ -20,7 +19,7 @@ API Triggered Delivery allows you to house message content inside of the Braze d
 
 The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Unlike the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) which accepts an audience or segment to send a message too, a transactional send must specify a single user either by External User ID or by User Alias.
 
-Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional).
+Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
 
 The Transactional campaign type is only available for certain customers. Please contact your customer success manager for more information. 
 
@@ -95,7 +94,6 @@ The Transactional Message sending endpoint response will include the message's `
 }
 ```
 
-
 ## Transactional Currents
 All Transactional Messages are complimented with event status postbacks sent as an HTTP request to your specified URL. To specify your target URL to receive these postback, you can create a new Transactional Currents connection by navigating to Currents -> New Connection -> HTTP Postback Export.  
 
@@ -105,13 +103,13 @@ All Transactional Messages are complimented with event status postbacks sent as 
 {
   "send_id": Unique GUID that was returned upon making the request,
   "status": Current status of message from fields below,
-  "external_send_id": If provided at time of request, Braze will pass your identifier for this instance of a send for all postbacks
+  "external_send_id": If provided at the time of the request, Braze will pass your identifier for this instance of a send for all postbacks
 }
 ```
 
 | Event Status | Description |
 | ------------ | ----------- |
-| `Sent` | Indicated Braze has successfullt dispatched the message |
+| `Sent` | Indicated Braze has successfully dispatched the message |
 | `Aborted` | Indicated Braze was unable to successfully dispatch the message due to the user not having a valid email or Liquid abort logic |
 |`Email Delivered`| Indicates the user's email inbox provider has accepted the email |
 |`Email Bounced`| Indicates the user's email inbox provider has rejected the email |
