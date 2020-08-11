@@ -18,7 +18,7 @@ guide_featured_list:
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
   fa_icon: far fa-user-circle
 - name: Logging In
-  link: /docs/user_guide/administrative/access_braze/logging_in/
+  link: /docs/user_guide/administrative/access_braze/getting_your_account/
   fa_icon: fas fa-user-circle
 - name: Resetting Your Password
   link: /docs/user_guide/administrative/access_braze/resetting_your_password/
