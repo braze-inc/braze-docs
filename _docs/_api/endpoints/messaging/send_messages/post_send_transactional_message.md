@@ -7,6 +7,7 @@ platform: API
 tool:
   - Campaigns
 hidden: true
+alias: "/api/api_campaigns/transactional_campaigns"
 description: "This article outlines details about the Send Transactional Message via API Triggered Delivery Braze endpoint."
 ---
 {% api %}
