@@ -1,5 +1,5 @@
 ---
-nav_title: Customer Behavior Events
+nav_title: Customer Behavior and User Events
 layout: customer_behavior_events_glossary
 
 page_order: 4
@@ -7,20 +7,20 @@ page_order: 4
 excerpt_separator: ""
 page_type: glossary
 
-description: "This glossary lists the various Customer Behavior Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
 
 tool: currents
 ---
 
 Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explanation of Customer Behavior Event Structure %}
+{% details Explanation of Customer Behavior and User Event Structure %}
 <br>
-This Customer Behavior Events breakdown shows what type of information is generally included in a customer behavior event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
 
 ![image]({% image_buster /assets/img/customer_engagement_event.png %})
 
-Customer Behavior Events events are comprised of __user specific__ properties, __behavior specific__ properties and __device specific__ properties. 
+Customer Behavior and User Events events are comprised of __user specific__ properties, __behavior specific__ properties, and __device specific__ properties. 
 
 {% enddetails %}
 
@@ -136,7 +136,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
+  "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
 }
@@ -167,7 +167,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
+  "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
 }
@@ -200,7 +200,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "duration": (float) seconds session lasted,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
+  "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
 }
@@ -270,7 +270,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
   "time": (int) time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
+  "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred
 }
@@ -323,6 +323,37 @@ This event occurs when an app installation is attributed to a source. Use this t
   "source": (string) the source of the attribution
 }
 ```
+
+{% endapi %}
+
+{% api %}
+
+## Random Bucket Number Event
+
+{% apitags %}
+Random Bucket Number
+{% endapitags %}
+
+This user event occurs every time a new user is created within their app group. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. 
+
+```json
+// Random Bucket Number Event: users.RandomBucketNumberUpdate
+{
+  "id": (string) unique id of this event,
+  "app_group_id": (string) AppGroup API id
+  "user_id": (string) braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) time of the event in milliseconds since the epoch,
+  "random_bucket_number": (int) new random bucket number
+  "prev_random_bucket_number":  (int) old random bucket number, optional
+}
+```
+
+{% alert important %}
+Note that this Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (i.e Amazon S3, Microsoft Azure, Google Cloud Storage).
+<br><br>To get this event enabled and to schedule the backfill for existing users' random bucket numbers in your app group, contact your Customer Success Manager.
+{% endalert %}
+
 {% endapi %}
 
 [support]: {{site.baseurl}}/support_contact/
