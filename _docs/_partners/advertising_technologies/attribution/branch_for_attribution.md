@@ -11,7 +11,7 @@ page_type: partner
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touch points. This article will walk you through how to use Branch with Braze to support your attribution needs.
+> [Branch](https://docs.branch.io/pages/integrations/braze/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints. This article will walk you through how to use Branch with Braze to support your attribution needs.
 
 Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust attribution and [deep linking]({{site.baseurl}}/partners/channel_extensions/deep_linking/branch_for_deeplinking/).
 
@@ -21,7 +21,9 @@ Branch and Braze help you understand exactly when and where users were acquired 
 
 * This integration supports iOS and Android.
 * Your app will need Braze's SDK and Branch's SDK installed.
-* You will need to [enable IDFA collection][13] in Braze's SDK.
+
+{% tabs %}
+{% tab Android %}
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Branch. You must set the correct key before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
 
 ```java
@@ -31,6 +33,20 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Appboy.getInstance(
 
 Branch.initSession(...);
 ```
+{% endtab %}
+{% tab iOS %}
+If you have an iOS app, you will need to include the code snippet below, which passes the customer's IDFV to Branch. This ID will then be mapped to a unique device ID in Braze.
+
+```
+Code Snippet TBA
+```
+
+{% alert important %}
+As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Getting the Attribution ID
 

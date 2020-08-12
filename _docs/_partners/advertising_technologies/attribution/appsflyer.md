@@ -40,7 +40,15 @@ AppsFlyerLib.setAdditionalData(customData);
 {% endtab %}
 {% tab iOS %}
 
-If you have an iOS app, the Braze SDK requires that you have [IDFA collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) enabled. 
+If you have an iOS app, you will need to include the code snippet below, which passes the customer's IDFV to AppsFlyer. This ID will then be mapped to a unique device ID in Braze.
+
+```
+Code Snippet TBA
+```
+
+{% alert important %}
+As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
+{% endalert %}
 
 {% endtab %}
 {% tab Unity %}

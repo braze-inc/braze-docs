@@ -19,8 +19,10 @@ Singular allows you to import paid install attribution data to segment more inte
 
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Singular's SDK installed.
-* If you have an iOS app, you will need to [enable IDFA collection][13] in Braze's SDK.
-* If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
+
+{% tabs %}
+{% tab Android %}
+If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
 
 ```java
 @Override
@@ -34,6 +36,19 @@ protected void onCreate(Bundle savedInstanceState)
    Singular.event("App Open", "appboyUserID", appboyDeviceId);
 }
 ```
+{% endtab %}
+{% tab iOS %}
+If you have an iOS app, you will need to include the code snippet below, which passes the customer's IDFV to Singular. This ID will then be mapped to a unique device ID in Braze.
+
+```
+Code Snippet TBA
+```
+
+{% alert important %}
+As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
+{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Getting the Braze API Key
 
@@ -45,8 +60,7 @@ Once Braze receives attribution data from Singular, the status connection indica
 
 ## Facebook and Twitter Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
-
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
 [5]: #api-restrictions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection

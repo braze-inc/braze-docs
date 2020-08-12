@@ -15,36 +15,46 @@ Kochava and Braze power a more holistic understanding of campaigns. Kochava send
 
 ## Integration
 
-__Step 1: Integration Requirements__
+### Step 1: Integration Requirements
 
 * This integration supports iOS, Android, and Windows apps.
 * Your app will need Braze's SDK and Kochava's SDK installed.
-* You will need to [enable IDFA collection][13] in Braze's SDK.
 
-__Step 2: Getting the Attribution ID__
+### Step 2: Getting the Attribution ID
 
 Go to your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
 
-__Step 3: Setting Up A Postback from Kochava__
+### Step 3: Setting Up A Postback from Kochava
 
 Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's Dashboard in Step 2. Select the __"POST"__ request when creating the PostBack Call on Kochava's dashboard.
 
-__Step 4: Confirming the Integration__
+### Step 4: Confirming the Integration
 
 Once Braze receives attribution data from Kochava, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
-
+<br><br>
 __Note for [Android][29] and [Windows][30] Support__:<br>
 If you are planning to leverage the server-side integration between Braze and Kochava, you will need to ensure that you utilize the `IdentityLink` method of the Kochava SDK to capture the Braze ID. The 'Braze ID' can be retrieved using the following method:
 
 {% tabs %}
 {% tab JAVA %}
+The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. Please ensure that you instrument this method to pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
+
 ```java
 Apppboy.getInstance(context).getDeviceId();
 ```
 {% endtab %}
-{% endtabs %}
+{% tab iOS %}
+If you have an iOS app, you will need to include the code snippet below, which passes the customer's IDFV to Adjust. This ID will then be mapped to a unique device ID in Braze.
 
-The [Android][29] SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. Braze also has the option to match on __device_id__ and __IDFA__ (if enabled). Please ensure that you instrument this method to pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
+```
+Code Snippet TBA
+```
+
+{% alert important %}
+As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
+{% endalert%}
+{% endtab %}
+{% endtabs %}
 
 ## Facebook and Twitter Attribution Data
 
