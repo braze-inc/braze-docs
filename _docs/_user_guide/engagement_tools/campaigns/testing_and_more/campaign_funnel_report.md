@@ -3,6 +3,7 @@ nav_title: Funnel Report
 title: Funnel Report
 description: ""
 page_order: 4
+permalink: /funnel_reports/
 ---
 
 # Funnel Report 
