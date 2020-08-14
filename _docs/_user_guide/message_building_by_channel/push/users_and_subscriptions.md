@@ -71,7 +71,7 @@ For iOS, on the subsequent app open, the SDK will detect that push has been disa
 __Provisional Authorization and Quiet Push__<br>
 In iOS 12, Apple introduced Provisional Authorization, allowing brands the option to send quiet push notifications to their users' Notification Centers _before_ they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
-__Note:__ In iOS 14, Apple removed the provisional authorization state. For apps that request provisional authorization, the default is now that new users are authorized to receive push notifications quietly, within the user’s notification tray. As users upgrade to iOS 14, the "Provisionally Authorized on iOS" filter will start to lose effectiveness. 
+__Note:__ In iOS 14, the OS no longer separately reports the `provisional` push authorization status to apps. End users who are provisionally authorized are now reported as `authorized`, which previously would have only been the case after the user took action to opt-in. The "Provisionally Authorized on iOS" segmentation filter was based on the `provisional` push authorization status and will lose membership over time as end users upgrade to iOS 14.
 
 On devices running iOS 11 or below, your users _must explicitly opt-in to receive your push messages_. You must request whether the user would like to receive push from you.
 
