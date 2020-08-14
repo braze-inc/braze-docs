@@ -12,7 +12,7 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 
 #### Summary of iOS 14 breaking changes
 
-- Geofences are no longer supported by iOS for users who choose the new  _approximate location_ permission.
+- Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
 - Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
 - IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value as if a user declined to provide this permission.
 - Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)
@@ -57,7 +57,7 @@ When requesting location permission, users will now have a choice to provide the
 
 #### Geofences {#geofences}
 
-Geofences, which previously relied on precise location permission, are no longer recorded by apps that have obtained the new _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
+Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
 
 #### Location Targeting {#location-tracking}
 
@@ -147,3 +147,4 @@ We will be releasing support and documentation in the near future.
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/ios14-beta/CHANGELOG.md
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#provisionally-authorized-on-ios
+[4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
