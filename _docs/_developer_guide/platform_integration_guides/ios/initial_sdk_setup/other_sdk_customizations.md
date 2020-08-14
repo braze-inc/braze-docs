@@ -44,9 +44,9 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 - You are attributing an action within the application to a previously served advertisement
 
 ## iOS 14 AppTrackingTransparency
-Beginning with iOS 14 access to the advertising identifier is now on a per app basis. In addition to this delegate, your application will need to prompt for this authorization. For more information you can see this [Braze iOS 14 guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency).
+Beginning with iOS 14 access to the advertising identifier is now on a per app basis. In addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information you can see this [Braze iOS 14 guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). Implementing this will require Xcode 12, collecting IDFA wil Xcode 11 is not possible in iOS 14.
 
-The prompt for AppTrackingTransparency also requires an `Info.plist` entry to explain your usage of the identifier:
+The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
 
 ```
 <key>NSUserTrackingUsageDescription</key>
