@@ -43,7 +43,7 @@ Based on our testing (as of iOS 14 Beta 4), Apple no longer displays the provisi
 
 #### IDFA permissions
 
-Once users upgrade to iOS 14, apps that collect the IDFA advertising ID must use the new iOS 14 APIs to prompt users for IDFA permission. Failure to update your code will result in a blank IDFA value (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
+Once users upgrade to iOS 14, apps must use the new iOS 14 APIs from Xcode 12 to prompt users for IDFA permission. Failure to update upgrade to XCode 12 and the new `AppTrackingTransparency` framework will result in a blank IDFA value (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
 
 ## iOS 14 Behavior Changes
 
@@ -77,10 +77,10 @@ IDFA (Identity for Advertisers) is an identifier provided by Apple used by adver
 
 Beginning in iOS 14, a new permission prompt (launched by the new `AppTrackingTransparency` framework) will require explicit user consent to access the IDFA. This permission to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
 
-If a user does not accept the prompt then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
+If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates take effect once end-users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` even if you do not explicitly target iOS 14 support.
+These IDFA updates take effect once end-users upgrade their device to iOS 14. Please ensure your app is using the new `AppTransparencyFramework` and Xcode 12 even if you do not explicitly target iOS 14 support.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
