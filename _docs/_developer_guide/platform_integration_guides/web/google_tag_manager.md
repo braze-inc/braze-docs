@@ -82,7 +82,7 @@ The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.
 
 Use this tag to track purchase to Braze, optionally including Purchase Properties.
 
-The _Product ID_ and _Price__ fields are required.
+The _Product ID_ and _Price_ fields are required.
 
 Use the __Add Row__ button to Purchase Properties.
 
@@ -106,9 +106,20 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 
 ## Troubleshooting Steps
 
+### Enable Tag Debugging
+
+Each Braze Tag template has an optional "GTM Tag Debugging" checkbox which can be used to log debug messages to your webpage's Javascript console.
+
+![Tag Debugging Option][12]
+
 ### Enter Debug Mode
 
-### Enable Tag Debugging
+Another way to help debug your Google Tag Manager integration is using Google's [Preview Mode][14] feature.
+
+This will help identify what values are being sent from your webpage's datalayer to each triggered Braze tag, and will also explain which tags were or were not triggered.
+
+![Preview Mode][13]
+
 
 [1]: https://marketingplatform.google.com/about/tag-manager/
 [2]: https://support.google.com/tagmanager/answer/6103696
@@ -121,3 +132,6 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 [9]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
 [10]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
 [11]: {% image_buster /assets/img/web-gtm/gtm-disable-tracking.png %}
+[12]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
+[13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
+[14]: https://support.google.com/tagmanager/answer/6107056
