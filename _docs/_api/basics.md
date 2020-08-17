@@ -118,7 +118,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 ##  API Limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
 |Default API Rate Limit | Value|
 |---|---|
