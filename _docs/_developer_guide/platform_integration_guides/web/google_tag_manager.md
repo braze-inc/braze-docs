@@ -1,5 +1,5 @@
 ---
-nav_title: Initial SDK Setup
+nav_title: Google Tag Manager
 platform: Web
 page_order: 20
 description: Use Google Tag Manager to deploy Braze to your website
