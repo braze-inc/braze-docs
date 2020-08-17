@@ -43,7 +43,7 @@ The Braze Web SDK can be quickly installed from the Google Tag Manager Template 
 
 2. Actions Tag - used to trigger Custom Events, Purchases, Change User ID, or stop/resume SDK tracking
 
-For more information, please see the [Google Tag Manager Integration Guide] LINK NEEDED
+For more information, please see the [Google Tag Manager Integration Guide][18].
 
 ### Option 3: Braze CDN {#install-cdn}
 
@@ -137,5 +137,5 @@ Braze may also be compatible with other tag management solutions. Please reach o
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
-
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager
 <!-- wesley wanted an empty line at the end -->
