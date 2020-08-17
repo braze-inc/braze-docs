@@ -18,7 +18,7 @@ There are three easy ways to integrate the Web SDK, to include analytics and mes
 
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
 
-Typescript definitions are officially included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
+Typescript definitions are now included as of v3.0.0 🎉. For notes on upgrading from 2.x to 3.x, please see our [Changelog][17].
 
 ```bash
 npm install --save @braze/web-sdk
@@ -49,7 +49,7 @@ For more information, please see the [Google Tag Manager Integration Guide] LINK
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
 
-<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/index.html?footer=minimal&slice=7:28"></script>
+<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/snippets/loading-snippet.js?footer=minimal"></script>
 
 ## Step 2: Initialize Braze
 
@@ -68,7 +68,9 @@ appboy.initialize('YOUR-API-KEY-HERE', {
 appboy.display.automaticallyShowNewInAppMessages();
 
 // optionally set the current user's External ID
-appboy.changeUser(userIdentifier);
+if (isLoggedIn){
+    appboy.changeUser(userIdentifier);
+}
 
 // start (or continue) a session
 appboy.openSession();
@@ -83,7 +85,9 @@ Anonymous users on mobile or web devices may be counted towards your [MAU][15]. 
 
 ## Step 3: (optional) Web Push
 
-To use Web Push Notifications, additional setup is required. Please see our [Push Notifications][16] section for instructions.
+To use Web Push Notifications, additional setup is required. 
+
+Please see our [Push Notifications][16] section for instructions.
 
 ## Troubleshooting {#error-logging}
 
@@ -95,7 +99,7 @@ appboy.initialize("YOUR-API-KEY-HERE", {
     enableLogging: true
 });
 
-// or
+// or, after initialization:
 
 appboy.toggleAppboyLogging()
 ```
