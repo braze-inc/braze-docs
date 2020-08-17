@@ -56,7 +56,7 @@ The Braze Actions Tag template lets you trigger custom events, track purchases, 
 
 #### Changing User External ID
 
-The __Change User__ Tag Type calls the [changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
+The __Change User__ Tag Type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
 
 Use this tag whenever a user logs in, or is otherwise identified with their unique "external_id" identifier.
 
@@ -66,7 +66,7 @@ Be sure to enter the current user's unique ID in the "External User ID" field, t
 
 #### Log Custom Events
 
-The __Custom Event__ Tag Type calls the [logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
+The __Custom Event__ Tag Type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
 Use this tag to send Custom Events to Braze, optionally including Custom Event Properties
 
@@ -78,7 +78,7 @@ Use the __Add Row__ button to add event properties.
 
 #### Track Purchase
 
-The __Purchase__ Tag Type calls the [logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
+The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
 
 Use this tag to track purchase to Braze, optionally including Purchase Properties.
 
