@@ -16,7 +16,7 @@ To learn more about installing Google Tag Manager on your website, see [their do
 
 ## Braze Tag Templates
 
-There are two Google Tag Manager templates built by Braze: the [Initialization Tag][#initialization-tag] and Actions Tag[#actions-tag].
+There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and Actions Tag(#actions-tag).
 
 Both tags can be found in Google's Community Gallery when adding a new Tag, by searching "Braze" as shown below:
 
