@@ -61,8 +61,8 @@ glossaries:
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of messages successfully sent to and received by eligible users.
-    calculation: (Sends - Bounces) / (Sends)
+    description: The total number of message requests that is accepted by the receiving email server.
+    calculation: Count
     tags:
       - All Push
       - Email
