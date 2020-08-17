@@ -9,14 +9,11 @@ description: Use Google Tag Manager to deploy Braze to your website
 
 This article provides a step-by-step guide on how to add the Braze Web SDK to your website using Google Tag Manager.
 
-[Google Tag Manager][1] lets marketers remotely add, remove, and edit tags on their website, without requiring a production code release or engineering resources.
-
-To learn more about installing Google Tag Manager on your website, see [their documentation][2].
-
+[Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website, without requiring a production code release or engineering resources.
 
 ## Braze Tag Templates
 
-There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and Actions Tag(#actions-tag).
+There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and [Actions Tag](#actions-tag).
 
 Both tags can be found in Google's Community Gallery when adding a new Tag, by searching "Braze" as shown below:
 
