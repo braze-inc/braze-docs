@@ -81,7 +81,7 @@ Use this tag to track purchase to Braze, optionally including Purchase Propertie
 
 The _Product ID_ and _Price_ fields are required.
 
-Use the __Add Row__ button to Purchase Properties.
+Use the __Add Row__ button to add Purchase Properties.
 
 ![Purchase Tag][10]
 
