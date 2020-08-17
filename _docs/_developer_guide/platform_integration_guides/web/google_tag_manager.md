@@ -120,4 +120,4 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 [8]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
 [9]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
 [10]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
-[11]: {% image_buster /assets/img/web-gtm/gtm-stop-tracking.png %}
+[11]: {% image_buster /assets/img/web-gtm/gtm-disable-tracking.png %}
