@@ -94,7 +94,7 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
   {% tab Action-Based Delivery %}
     __Action-Based Delivery__<br>
-    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
+    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. Note that action-based delivery is unavailable for Canvas steps with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
