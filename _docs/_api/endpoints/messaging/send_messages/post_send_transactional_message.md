@@ -15,13 +15,11 @@ description: "This article outlines details about the Send Transactional Message
 /v2/transactional/campaigns/YOUR_CAMPAIGN_ID_HERE/send/
 {% endapimethod %}
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
-
-The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Unlike the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) which accepts an audience or segment to send a message too, a transactional send must specify a single user either by External User ID or by User Alias.
+The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose built for 1:1 messaging of alerts like order confirmations or password resets. 
 
 Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
 
-The Transactional campaign type is only available for certain customers. Please contact your customer success manager for more information. 
+Transactional Messaging is currently available for email as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 
 {% alert important %}
 __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.
@@ -43,7 +41,6 @@ Authorization: Bearer YOUR_REST_API_KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of the user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "send_to_existing_only": (optional, boolean) defaults to false,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }
 }
@@ -53,18 +50,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Optional | String | Your identifier for this particular send. Passing this ID will allow it to be used as a deduplication key. Passing the same ID in another request will not result in a new instance of a send by Braze  |
+|`external_send_id`| Optional | String | Your internal identifier for this particular send. Passing this ID will allow it to be used as a deduplication key, which Braze will store for 24 hours. Passing the same ID in another request will not result in a new instance of a send by Braze for 24 hours. This ID will also be passed downstream in events from the Transactional HTTP event postback to allow you to track events using your internal ID. |
 |`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
 |`recipient`|Required|Object|The user you are targeting this message to|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
+- [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 - [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
 <br><br>
-When `send_to_existing_only` is `true`, Braze will only send the message to existing users. When `send_to_existing_only` is `false` and a user with the given `external_user_id` does not exist, Braze will create a user with that id and attributes before sending the message. Note that Braze will not create a user given a user alias that does not exist.
 
 ### Example Request
 ```
@@ -84,35 +81,62 @@ curl -X POST \
 ```
 
 ## Response Details
-The Transactional Message sending endpoint response will include the message's `send_id` for reference back to the send of the message. This `send_id` represents the transactional message sent to this particular user at this particular time. This identifier can be used along with events from the [Transactional Currents feed]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/#transactional-currents) to trace the message as it makes its way to the user.
+The Send Transactional Message endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual message sent to a single user. 
 
 ### Example response
 ```json
 {
-    "send_id": Unique GUID of the instance of this send
+    "dispatch_id": Braze generated Unique ID of the instance of this send
     "status": Current status of the message
 }
 ```
 
-## Transactional Currents
-All Transactional Messages are complimented with event status postbacks sent as an HTTP request to your specified URL. To specify your target URL to receive these postback, you can create a new Transactional Currents connection by navigating to Currents -> New Connection -> HTTP Postback Export.  
+## Transactional HTTP Event Postback
+All Transactional Messages are complimented with event status postbacks sent as an HTTP request to your specified URL. This will allow you to evaluate the message status in real time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. Once you provide your Customer Success Mangaer with your target URL, Braze will begin to send status updates for your transactional to this URL.
 
-### Example Postback
+### Postback Body
 
 ```json
 {
-  "send_id": Unique GUID that was returned upon making the request,
-  "status": Current status of message from fields below,
-  "external_send_id": If provided at the time of the request, Braze will pass your identifier for this instance of a send for all postbacks
+  "dispatch_id": (string, Braze generated Unique ID of the instance of this send),
+  "status": (string, Current status of message from fields below)
+  "external_send_id": (string, If provided at the time of the request, Braze will pass your internal identifier for this instance of a send for all postbacks)
+  "metadata" : (object, timestamps relating to the execution of event. Sent events will have a timestamp releflecting when the message was sent, in addition to timestamps reflecting the received_at, enqueued_at, and executed_at to show the time it took Braze to process the send. All other events will have a single timestamp field showing the time the event was processed.
 }
 ```
 
-| Event Status | Description |
+### Example Postback
+```json
+// Sent Event
+{
+    "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
+    "status": "sent",
+    "metadata": {
+      "received_at": "2020-08-18T16:25:45.000+00:00",
+      "enqueued_at": "2020-08-18T16:25:45.000+00:00",
+      "executed_at": "2020-08-18T16:25:45.000+00:00",
+      "sent_at": "2020-08-18T16:25:45.000+00:00"
+    }
+  }
+
+
+// Delivered Event
+{
+    "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
+    "status": "delivered",
+    "metadata": {
+      "delivered_at": "2020-08-18T16:25:47.000+00:00"
+    }
+  }
+```
+
+|  Status | Description |
 | ------------ | ----------- |
-| `Sent` | Indicated Braze has successfully dispatched the message |
-| `Aborted` | Indicated Braze was unable to successfully dispatch the message due to the user not having a valid email or Liquid abort logic |
-|`Email Delivered`| Indicates the user's email inbox provider has accepted the email |
-|`Email Bounced`| Indicates the user's email inbox provider has rejected the email |
+| `Sent` | Message successfully dispatched to Braze's email sending partner  |
+| `Processed` | Email sending partner has successfully received and prepared the message for delivery  |
+| `Aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. Includes `reason` field indicating why message was aborted |
+|`Email Delivered`| Message was accepted by the user's email inbox provider |
+|`Email Bounced`| Message was rejected by the user's email inbox provider. Includes `reason` field reflecting the bounce error provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
