@@ -66,7 +66,7 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Here are the steps for setting up an event-based schedule:
 
 {% alert important %}
-  Action-based delivery is not available for [Canvas steps with in-app messages][51]. Canvas steps with in-app messages must be scheduled.
+  Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Canvas steps with in-app messages must be scheduled.
 {% endalert %}
 
 ### Setting Up a Triggered Campaign
