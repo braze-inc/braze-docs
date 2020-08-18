@@ -20,30 +20,25 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 
 ## Upgrade Summary
 
-There are three necessary upgrades that may be required to continue using Braze features on iOS.
+There are three features, which if you use, will require an upgrade to your Braze iOS SDK:
 
 #### Location Targeting
 
-Customers who are using the _Most Recent Location_ targeting features must upgrade to at least iOS SDK v3.26.1 which contains updates related to the new _Approximate Location_ feature in iOS 14. 
+Customers who are using the _Most Recent Location_ targeting features must upgrade to at least iOS SDK v3.26.1 which allows the new _Approximate Location_ feature to be collected on iOS 14 devices.
 
-Even though your app might not target iOS 14, your end users may upgrade their devices which adds this new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.
+Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.
+
+#### IDFA permissions
+
+Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs from Xcode 12 to prompt users for IDFA ad tracking permission. If your app does not upgrade to use XCode 12 and the new `AppTrackingTransparency` framework, all IDFA values will be blank (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
 
 #### iOS 14 + Xcode 12
 
 We have released [Beta versions][1] of our upcoming iOS 14 / Xcode 12 compatible SDK. Customers who release Beta versions of their iOS apps with iOS 14 support are encouraged to use Braze's iOS 14 Beta SDK version which includes Xcode 12 compatibility and support for new iOS 14 APIs. 
 
-We will continue to release updates and fixes to future beta releases as Apple continues to release newer versions of iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
+We will continue to release updates and fixes to this beta as Apple continues to release newer versions of their iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
 
 Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.
-
-#### Push Authorization
-
-Based on our testing (as of iOS 14 Beta 4), Apple no longer displays the provisional authorization dialog which lets users choose to "keep" or "turn off" push notifications sent when provisionally authorized. [Learn More](#push-provisional-auth).
-
-
-#### IDFA permissions
-
-Once users upgrade to iOS 14, apps must use the new iOS 14 APIs from Xcode 12 to prompt users for IDFA permission. Failure to update upgrade to XCode 12 and the new `AppTrackingTransparency` framework will result in a blank IDFA value (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
 
 ## iOS 14 Behavior Changes
 
@@ -132,14 +127,6 @@ To learn more about App Clips, see [Apple's App Clip Documentation](https://deve
 #### Braze Support
 
 For customers interested in using Braze within App Clips, please contact your Braze Success Team or Support Team.
-
-We will be releasing support and documentation in the near future.
-
-### Widgets
-
-#### Overview
-
-For customers interested in using Braze within Widgets, please contact your Braze Success Team or Support Team.
 
 We will be releasing support and documentation in the near future.
 
