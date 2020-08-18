@@ -84,7 +84,11 @@ From time to time, Braze may make changes to the Avro schema when fields are add
 
 #### Non-breaking Changes
 
-When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. **We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.**
+When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
+
+{% alert important %}
+We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.
+{% endalert %}
 
 While we will strive to give advance warning in the case of all changes, we may include non-breaking changes to the schema at any time.
 

@@ -1,10 +1,8 @@
 ---
 nav_title: Email Validation 
-title: Email Validation
-permalink: "/email_validation/"
-hide_toc: true
-hidden: true
-description: ""
+alias: "/email_validation/"
+page_order: 4.5
+description: "This article covers local and host part validation rules for email addresses"
 ---
 
 # Email Technical Guidelines & Notes
@@ -12,13 +10,10 @@ description: ""
 ## Email Validation
 
 {% alert important %}
-
-**Please note that this is a beta feature.**
 This validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
-
-This new email syntax validation process is an enhancement to Braze's existing email syntax validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct (for example: has an @ symbol). One of the main drivers to use this new validation process is to provide support for international characters (i.e. UTF-8) in the local part of the email address.
+> This new email syntax validation process is an enhancement to Braze's existing email syntax validation process. Email validation is done when a user’s email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct (for example: has an @ symbol). One of the main drivers to use this new validation process is to provide support for international characters (i.e. UTF-8) in the local part of the email address.
 
 Email Syntax Validation looks at both the Local and Host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address, and does not take into account whether the domain has a valid MX server or if the user exists on the domain listed.
 
