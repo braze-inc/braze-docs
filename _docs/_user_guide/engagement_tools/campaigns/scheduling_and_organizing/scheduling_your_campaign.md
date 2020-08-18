@@ -65,6 +65,10 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 
 Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Here are the steps for setting up an event-based schedule:
 
+{% alert important %}
+  Action-based delivery is not available for [Canvas steps with in-app messages][51]. Canvas steps with in-app messages must be scheduled.
+{% endalert %}
+
 ### Setting Up a Triggered Campaign
 
 __Step 1: Select a trigger event, which can be:__
@@ -274,3 +278,4 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
+[51]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas
