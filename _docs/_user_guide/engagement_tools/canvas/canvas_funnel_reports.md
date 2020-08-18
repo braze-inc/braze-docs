@@ -1,7 +1,7 @@
 ---
 nav_title: Funnel Report
 title: Funnel Report
-description: ""
+description: "This article covers the benefits or funnel reports, how to set them up, as well as how to interpret your report."
 page_order: 4
 ---
 
@@ -12,7 +12,7 @@ page_order: 4
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 
 ## Funnel Report Set Up
-![Funnel Report 5][5]{: style="float:right;max-width:30%;border:0;"}
+![Funnel Report 5][5]{: style="float:right;max-width:37%;border:0;margin-left:15px;"}
 
 The funnel reporting feature is available from either:
 - An individual campaigns analytics page in the Dashboard
@@ -24,13 +24,13 @@ Funnel Reports can be made for existing active campaigns and Canvases. These rep
 
 You can select a time frame for a campaign or Canvas receipt (which has a maximum window of 6 months) and duration for completing your funnel steps (which has a maximum window of 30 days). In the example below, your funnel would look for users who received this campaign in the last 7 days and completed the funnel within 14 days. 
 
-![Funnel Report 5][6]{: style="max-width:70%;"}
+![Funnel Report 5][6]{: style="max-width:80%;"}
 
 ### Step 2: Select Events for Funnel Steps
 
-![Funnel Report 3][3]{: style="float:right;max-width:50%;margin-top:15px;margin-left:15px;"}
-
 For every funnel report, the first event will be when the user receives your message. From there, the subsequent events you choose will funnel the number of users who performed those events, as well as the previous events. Please note that funnel report events for both campaign and Canvases funnels allow for start session, make a purchase, and custom events, while __only campaign funnels__ include message engagement events right now.
+
+![Funnel Report 3][3]{: style="max-width:80%;"}
 
 For example, if you select a 14-day report time window, followed by the events "added to cart" and "made a purchase", you will see __both__ the number of users who added to cart within 14 days of receiving the message, as well as the number of users who added to cart and then made a purchase within seven days of receiving the campaign. 
 
