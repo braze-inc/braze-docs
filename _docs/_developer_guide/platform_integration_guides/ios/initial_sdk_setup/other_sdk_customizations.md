@@ -12,7 +12,7 @@ page_order: 3
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` string subentry and set the value to `0`.
+To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` String subentry and set the value to `0`.
 
 LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
 
@@ -33,31 +33,7 @@ Example `Info.plist` contents:
 | 0        | All log information will be logged to the iOS console  |
 | 8        | Default, minimal logging.                              |
 
-## Braze Dismiss Modal on Outside Tap
-
-The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
-
-To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
-
-Example `Info.plist` contents:
-
-```
-<key>Appboy</key>
-<dict>
-	<key>DismissModalOnOutsideTap</key>
-	<boolean>YES</boolean>
-</dict>
-```
-
-### Description of Dismiss Modal on Outside Tap
-
-| DismissModalOnOutsideTap | Description |
-|----------|-------------|
-| YES       | Modal in-app messages will be dismissed on outside tap     |
-| NO        | Default, modal in-app messages will not be dismissed on outside tap |
-
-
-### Optional IDFA Collection
+## Optional IDFA Collection
 
 IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is required if you intend to utilize our [install attribution integrations][21]. However, we may develop additional features in the future which would benefit from the collection of your IDFA. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
