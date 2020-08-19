@@ -12,7 +12,7 @@ description: "This article outlines details about the Send Transactional Message
 {% api %}
 # Sending Transactional Messages via API Triggered Delivery
 {% apimethod post %}
-/v2/transactional/campaigns/YOUR_CAMPAIGN_ID_HERE/send/
+/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
 The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose built for 1:1 messaging of alerts like order confirmations or password resets. 
@@ -77,7 +77,7 @@ curl -X POST \
           "external_user_id": TARGETED_USER_ID_STRING
         }
       }' \
-  https://rest.iad-01.braze.com/v2/transactional/campaigns/YOUR_TRANSACTIONAL_CAMPAIGN_ID/send
+  https://rest.iad-01.braze.com/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 ```
 
 ## Response Details
