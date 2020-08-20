@@ -40,7 +40,9 @@ AppsFlyerLib.setAdditionalData(customData);
 {% endtab %}
 {% tab iOS %}
 
-If you have an iOS app, the Braze SDK requires that you have [IDFA collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) enabled. 
+If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Unity %}
@@ -99,7 +101,23 @@ For more information, please see AppsFlyer's [documentation][31].
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. <br>To get started, check out AppsFlyer's [documentation][3].
+There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. To get started, check out AppsFlyer's [documentation][3].
+
+If you are using an AppsFlyer click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. AppsFlyer already collects the IDFV through their native integration.
+You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags:
+
+{% raw %}
+`{{most_recently_used_device.${id}}}` 
+or 
+`{{targeted_device.${id}}}`
+{% endraw %}
+
+This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [AppsFlyer](https://support.appsflyer.com/hc/en-us/articles/360011420698-AppsFlyer-SKAdNetwork-Solution-iOS-14-attribution-without-IDFA) is still able to attribute these clicks through their probabilistic attribution [modeling](https://support.appsflyer.com/hc/en-us/articles/207447053-Attribution-model-explained#:~:text=The%20Attribution%20Model%20is%20a,to%20touchpoints%20in%20conversion%20paths.&text=Most%20important%20is%20to%20understand,and%20launches%20the%20mobile%20app.). 
+However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
+
+{% alert important %}
+Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
+{% endalert %}
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}

@@ -19,8 +19,10 @@ Singular allows you to import paid install attribution data to segment more inte
 
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Singular's SDK installed.
-* If you have an iOS app, you will need to [enable IDFA collection][13] in Braze's SDK.
-* If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
+
+{% tabs %}
+{% tab Android %}
+If you have an Android app, you will need to include the code snippet below, which passes a unique Braze user id to Singular. For most setups, 2 lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
 
 ```java
 @Override
@@ -34,6 +36,15 @@ protected void onCreate(Bundle savedInstanceState)
    Singular.event("App Open", "appboyUserID", appboyDeviceId);
 }
 ```
+{% endtab %}
+{% tab iOS %}
+
+If you have an iOS app, your IDFV will be collected by Singular and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Getting the Braze API Key
 
@@ -45,8 +56,25 @@ Once Braze receives attribution data from Singular, the status connection indica
 
 ## Facebook and Twitter Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third-parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
+## Email Deep-Linking and Click Tracking
+
+If you are using an attribution partner click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. Singular already collects the IDFV through their native integration.
+You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags:
+
+{% raw %}
+`{{most_recently_used_device.${id}}}` 
+or 
+`{{targeted_device.${id}}}`
+{% endraw %}
+
+This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [Singular](https://support.singular.net/hc/en-us/articles/360047706852--New-Preparing-for-iOS-14-FAQ-for-Partners) is still able to attribute these clicks through their probabilistic attribution modeling.
+However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
+
+{% alert important %}
+Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
+{% endalert %}
 
 [5]: #api-restrictions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
