@@ -38,15 +38,11 @@ protected void onCreate(Bundle savedInstanceState)
 ```
 {% endtab %}
 {% tab iOS %}
-If you have an iOS app, you will need to include the code snippet below, which passes the customer's IDFV to Singular. This ID will then be mapped to a unique device ID in Braze.
 
-```
-Code Snippet TBA
-```
+If you have an iOS app, your IDFV will be collected by Singular and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-{% alert important %}
-As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
-{% endalert %}
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
 {% endtab %}
 {% endtabs %}
 
@@ -61,6 +57,24 @@ Once Braze receives attribution data from Singular, the status connection indica
 ## Facebook and Twitter Attribution Data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+
+## Email Deep-Linking and Click Tracking
+
+If you are using an attribution partner click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. Singular already collects the IDFV through their native integration.
+You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags:
+
+{% raw %}
+`{{most_recently_used_device.${id}}}` 
+or 
+`{{targeted_device.${id}}}`
+{% endraw %}
+
+This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [Singular](https://support.singular.net/hc/en-us/articles/360047706852--New-Preparing-for-iOS-14-FAQ-for-Partners) is still able to attribute these clicks through their probabilistic attribution modeling.
+However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
+
+{% alert important %}
+Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
+{% endalert %}
 
 [5]: #api-restrictions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection

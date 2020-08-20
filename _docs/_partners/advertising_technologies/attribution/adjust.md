@@ -34,15 +34,10 @@ Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getAppli
 {% endtab %}
 {% tab iOS %}
 
-If you have and iOS app, you will need to include the code snippet below, which passes the customer's IDFV to Adjust. This ID will then be mapped to a unique device ID in Braze.
+If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-```
-Code snippet TBA
-```
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
-{% alert important %}
-As of MM/DD/YYYY, we're recommending that all customers use the Braze `device_id` instead of the IDFA. This is in response to Apple's changes to the [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa) as part of the iOS 14 update.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -80,3 +75,24 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 ## Facebook and Twitter Attribution Data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+
+## Email Deep-Linking and Click Tracking
+
+Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+
+If you are using Adjust click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. Adjust already collects the IDFV through their native integration.
+You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags: 
+
+{% raw %}
+`{{most_recently_used_device.${id}}}` 
+or 
+`{{targeted_device.${id}}}`
+{% endraw %}
+
+This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [Adjust](https://www.adjust.com/product-updates/adjusts-new-ios-sdk-for-ios-14/) is still able to attribute these clicks through their probabilistic attribution modeling. 
+
+However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
+
+{% alert important %}
+Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
+{% endalert %}
