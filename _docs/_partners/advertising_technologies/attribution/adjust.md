@@ -21,14 +21,25 @@ This integration supports iOS and Android apps.
 | Braze SDK | Be sure to enable the proper SDK for your needs - either [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).|
 | Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll find the Install API Key and the REST Endpoint. The Install API Key and REST Endpoint will be used to set up a postback in Adjust’s dashboard. |
 | Adjust SDK | Please see the [Adjust docs](https://docs.adjust.com/en/getting-started/#integrate-the-adjust-sdk) for more information on this requirement. |
-| Enable IDFA Collection in Braze SDK | [IDFA Collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) is optional within the Braze SDK and disabled by default. This is required to be enabled for all of our Attribution partner integrations. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% tabs %}
+{% tab Android %}
 
 If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device ID to Adjust. You should call the following before initializing the SDK on `Adjust.onCreate.`:
 
 ```
 Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getDeviceId()););
 ```
+{% endtab %}
+{% tab iOS %}
+
+If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 If you are planning to send post-install events from Adjust into Braze, you will need to ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).
@@ -41,11 +52,9 @@ To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
 2. Select __Braze (formerly Appboy)__.
 3. Copy the Braze API Key into the `Install API Key` field.
-- This Braze API Key is available in the Braze Dashboard. This can be found by navigating to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Install Attribution__ section.
+	* This Braze API Key is available in the Braze Dashboard. This can be found by navigating to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Install Attribution__ section.
 4. Copy the Braze REST Endpoint into the `REST_endpoint` field.
 5. Click __Save & Close__.
-
-
 
 ### Attribution Parameters
 
@@ -66,3 +75,24 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 ## Facebook and Twitter Attribution Data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+
+## Email Deep-Linking and Click Tracking
+
+Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+
+If you are using Adjust click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. Adjust already collects the IDFV through their native integration.
+You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags: 
+
+{% raw %}
+`{{most_recently_used_device.${id}}}` 
+or 
+`{{targeted_device.${id}}}`
+{% endraw %}
+
+This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [Adjust](https://www.adjust.com/product-updates/adjusts-new-ios-sdk-for-ios-14/) is still able to attribute these clicks through their probabilistic attribution modeling. 
+
+However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
+
+{% alert important %}
+Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
+{% endalert %}

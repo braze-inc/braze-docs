@@ -15,8 +15,8 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
 - Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
 - IDFA collection now requires a permission prompt. Failure to update your IDFA collection code will result in a blank value as if a user declined to provide this permission.
-- Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
+- ~~Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)~~ This unexpected behavior was reverted in iOS Beta 5 (August 18) and no longer impacts iOS 14.
 
 ## Upgrade Summary
 
@@ -79,8 +79,7 @@ These IDFA updates take effect once end-users upgrade their device to iOS 14. Pl
 {% endalert %}
 
 #### Changes to Braze IDFA collection
-
-![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK
 
@@ -92,15 +91,11 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization {#push-provisional-auth}
 
-Based on our current testing of iOS 14 Beta 4 (August 5), Apple has made changes to the Provisional Push authorization flow which was introduced in 2018 (iOS 12).
+{% alert important %}
+In the first 4 beta versions of iOS 14, the Provisional Push authorization status was removed.
 
-After your app requests provisional push authorization, you are able to send push notifications to users which will appear quietly in their notification center. 
-
-In iOS 13, this push notification would included two options: to "Keep" receiving push, prominently or quietly, or to "Turn Off" push for the app. After the user makes this decision, the authorization status would be either "[authorized](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusauthorized?language=objc)" or "[denied](https://developer.apple.com/documentation/usernotifications/unauthorizationstatus/unauthorizationstatusdenied?language=objc)".
-
-In iOS 14, users are directly granted a state of "authorized" after your app requests provisional push authorization. You will still be able to send push notifications quietly to the notification center. However, this push will no longer include the two options to "Keep" or "Turn Off". For users to elect to receive prominent notifications, your app will need to request authorization using the native push prompt dialog or direct users to your app's settings page where a user would manually allow push.
-
-Once this change is finalized and documented by Apple, we recommend updating your message targeting options which our use [Provisionally Authorized on iOS][3] filter as users will no longer be reported as "provisionally" authorized in iOS 14. As users upgrade to iOS 14, the filter will lose effect over time. We'll continue to monitor and update this guide accordingly.
+As of iOS Beta 5 (August 18) this behavior reverted back to its previous iOS 13 behavior, so no strategy or app changes will be necessary with regards to iOS push authorization.
+{% endalert %}
 
 ## iOS 14 New Features
 
@@ -116,7 +111,7 @@ To learn more about this feature, see [Apple's Privacy and Data Use](https://dev
 
 #### Overview
 
-![App Clip]({% image_buster /assets/img/ios/ios14-app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![App Clip]({% image_buster /assets/img/ios/ios14-app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0"}
 
 An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
 
