@@ -15,7 +15,7 @@ This article provides a step-by-step guide on how to add the Braze Web SDK to yo
 
 There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and [Actions Tag](#actions-tag).
 
-Both tags can be found in Google's Community Gallery when adding a new Tag, by searching "Braze" as shown below:
+Both tags can be added to your workspace from [Google's Community Gallery][15], or by searching for Braze when adding a new tag from the Community Templates.
 
 ![Community Gallery Search][3]
 
@@ -132,3 +132,4 @@ This will help identify what values are being sent from your webpage's datalayer
 [12]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
 [13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056
+[15]: https://tagmanager.google.com/gallery/#/?filter=braze
