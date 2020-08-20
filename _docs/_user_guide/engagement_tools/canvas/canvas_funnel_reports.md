@@ -1,7 +1,7 @@
 ---
 nav_title: Funnel Report
 title: Funnel Report
-description: "This article covers the benefits or funnel reports, how to set them up, as well as how to interpret your report."
+description: "This article covers the benefits of funnel reports, how to set them up, as well as how to interpret your report."
 page_order: 4
 ---
 
