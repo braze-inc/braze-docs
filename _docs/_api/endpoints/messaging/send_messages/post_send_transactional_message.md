@@ -34,7 +34,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_send_id": (optional, string) see External Send Identifier,
+  "external_send_id": (optional, string) see external_send_id below,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
   "recipient": (required, object)
     {
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Optional | String | Your internal identifier for this particular send. Passing this ID will allow it to be used as a deduplication key, which Braze will store for 24 hours. Passing the same ID in another request will not result in a new instance of a send by Braze for 24 hours. This ID will also be passed downstream in events from the Transactional HTTP event postback to allow you to track events using your internal ID. |
+|`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex `/^[a-zA-Z0-9-_+\/=]+$/`. This optional field allows you to pass an internal identifier for this particular send which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
 |`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
 |`recipient`|Required|Object|The user you are targeting this message to|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -69,6 +69,7 @@ curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer YOUR-REST-API-KEY' \
   -d '{
+        "external_send_id" : YOUR_BASE64_COMPATIBLE_ID
         "trigger_properties": {
           "example_string_property": YOUR_EXAMPLE_STRING,
           "example_integer_property": YOUR_EXAMPLE_INTEGER
@@ -92,7 +93,12 @@ The Send Transactional Message endpoint will respond with the message's `dispatc
 ```
 
 ## Transactional HTTP Event Postback
-All Transactional Messages are complimented with event status postbacks sent as an HTTP request to your specified URL. This will allow you to evaluate the message status in real time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. Once you provide your Customer Success Mangaer with your target URL, Braze will begin to send status updates for your transactional to this URL.
+All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. 
+
+In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email. 
+
+To get started using the Transactional HTTP Event Postback, please provide your desired URL where you would like to receive the postback events to your CSM.
+
 
 ### Postback Body
 
@@ -101,7 +107,7 @@ All Transactional Messages are complimented with event status postbacks sent as 
   "dispatch_id": (string, Braze generated Unique ID of the instance of this send),
   "status": (string, Current status of message from fields below)
   "external_send_id": (string, If provided at the time of the request, Braze will pass your internal identifier for this instance of a send for all postbacks)
-  "metadata" : (object, timestamps relating to the execution of event. Sent events will have a timestamp releflecting when the message was sent, in addition to timestamps reflecting the received_at, enqueued_at, and executed_at to show the time it took Braze to process the send. All other events will have a single timestamp field showing the time the event was processed.
+  "metadata" : (object, timestamps relating to the execution of an event. Sent events will have a timestamp reflecting when the message was sent, in addition to timestamps reflecting the received_at, enqueued_at, and executed_at to show the time it took Braze to process the send. All other events will have a single timestamp field showing the time the event was processed.
 }
 ```
 
@@ -110,6 +116,7 @@ All Transactional Messages are complimented with event status postbacks sent as 
 // Sent Event
 {
     "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
+    "external_send_id" : "11dbc68a-e2fc-11ea-87d0-0242ac130003", 
     "status": "sent",
     "metadata": {
       "received_at": "2020-08-18T16:25:45.000+00:00",
@@ -123,6 +130,7 @@ All Transactional Messages are complimented with event status postbacks sent as 
 // Delivered Event
 {
     "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
+    "external_send_id" : "11dbc68a-e2fc-11ea-87d0-0242ac130003",
     "status": "delivered",
     "metadata": {
       "delivered_at": "2020-08-18T16:25:47.000+00:00"
@@ -135,8 +143,8 @@ All Transactional Messages are complimented with event status postbacks sent as 
 | `Sent` | Message successfully dispatched to Braze's email sending partner  |
 | `Processed` | Email sending partner has successfully received and prepared the message for delivery  |
 | `Aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. Includes `reason` field indicating why message was aborted |
-|`Email Delivered`| Message was accepted by the user's email inbox provider |
-|`Email Bounced`| Message was rejected by the user's email inbox provider. Includes `reason` field reflecting the bounce error provided by the inbox provider |
+|`Delivered`| Message was accepted by the user's email inbox provider |
+|`Bounced`| Message was rejected by the user's email inbox provider. Includes `reason` field reflecting the bounce error provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
