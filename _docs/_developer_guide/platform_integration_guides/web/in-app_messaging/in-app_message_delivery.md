@@ -23,7 +23,7 @@ appboy.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSecond
 
 ### Manual In-App Message Display
 
-If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own subscriber:
+If you don't want your site to immediately display new in-app messages when they're triggered, you can disable automatic display and register your own display subscribers. First, find and remove the call to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet. Then, create your own logic to custom handle a triggered In-App Message, where you show or don't show the message:
 
 ```javascript
 appboy.subscribeToInAppMessage(function(inAppMessage) {
@@ -32,6 +32,10 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
   appboy.display.showInAppMessage(inAppMessage);
 });
 ```
+
+{% alert important %}
+If you don't remove `appboy.display.automaticallyShowNewInAppMessages()` from your website when also calling `appboy.display.showInAppMessage`, the message may be displayed twice.
+{% endalert %}
 
 The `inAppMessage` parameter will be an [`appboy.ab.InAppMessage`][2] subclass or an [`appboy.ab.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
 
@@ -50,7 +54,9 @@ In-app messages can also be created within your site and displayed locally in re
 
 ### Exit-Intent Messages
 
-Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users, while not interrupting their experience on your site. To be able to send these messages, first reference the [open-source library][50] with the code below, which will log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
+Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users, while not interrupting their experience on your site. 
+
+To be able to send these messages, first add an exit entent library, such as [this open-source library][50] to your website. Then, use the code below to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
 
 ```javascript
   var _ouibounce = ouibounce(false, {
