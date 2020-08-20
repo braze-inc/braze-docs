@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention Report
 platform: Canvas
 subplatform: Testing and More
 page_order: 3

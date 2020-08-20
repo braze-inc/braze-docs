@@ -32,6 +32,12 @@ guide_featured_list:
 - name: In-App Messages in Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
   fa_icon: fas fa-mobile
+- name: Retention Reports
+  link: /docs/user_guide/engagement_tools/canvas/retention_reports/
+  fa_icon: fas fa-chart-area
+- name: Funnel Reports
+  link: /docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/
+  fa_icon: fas fa-filter
 
 ---
 <br>
