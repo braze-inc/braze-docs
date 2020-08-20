@@ -29,7 +29,12 @@ If you don't want your site to immediately display new in-app messages when they
 appboy.subscribeToInAppMessage(function(inAppMessage) {
   // Display the in-app message. You could defer display here by pushing this message to code within your own application.
   // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
-  appboy.display.showInAppMessage(inAppMessage);
+  
+  if ( should_show_the_message_according_to_your_custom_logic ) {
+      appboy.display.showInAppMessage(inAppMessage);
+  } else {
+      // do nothing
+  }
 });
 ```
 
