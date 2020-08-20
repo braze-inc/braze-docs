@@ -5,7 +5,7 @@ description: "When you turn analytics tracking on for a segment, Braze will let 
 ---
 
 # Segment Analytics Tracking
-
+<br>
 ![Analytics tracking][16]
 
 On the Revenue page of the Dashboard, you'll be able to view data on [revenue and purchases over time for this segment][14]. By adding or removing segments from the graph, you can visually compare segment data for any custom time range.
