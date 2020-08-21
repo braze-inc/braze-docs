@@ -58,24 +58,6 @@ Once Braze receives attribution data from Singular, the status connection indica
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
-## Email Deep-Linking and Click Tracking
-
-If you are using an attribution partner click tracking URL in your campaigns, Braze recommends that you include `device_id` as a parameter in the tracking link. The value for this parameter should be the IDFV. Singular already collects the IDFV through their native integration.
-You can add the IDFV to your click tracking URL by utilizing one of the following Liquid tags:
-
-{% raw %}
-`{{most_recently_used_device.${id}}}` 
-or 
-`{{targeted_device.${id}}}`
-{% endraw %}
-
-This recommendation is purely optional. If you currently do not use any device identifiers or do not plan to in the future, including IDFV, in your attribution click tracking URLs, [Singular](https://support.singular.net/hc/en-us/articles/360047706852--New-Preparing-for-iOS-14-FAQ-for-Partners) is still able to attribute these clicks through their probabilistic attribution modeling.
-However, by adding the IDFV to your tracking links, you will be able to track attributions deterministically and with greater accuracy. 
-
-{% alert important %}
-Note: Adding the `device_id` parameter to your click tracking links is optional. Your campaigns will continue to be tracked even if you choose not to update your links to include it.
-{% endalert %}
-
 [5]: #api-restrictions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
 [15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
