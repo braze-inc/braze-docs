@@ -1101,6 +1101,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 }
 ```
 {% endapi %}
+{% api %}
 
 ## SMS Inbound Received Events
 
