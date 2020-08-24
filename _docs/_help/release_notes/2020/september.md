@@ -16,3 +16,6 @@ In iOS14, users must decide if they want to opt-in to ad tracking and let apps a
 
 ## Email Validation
 This new email syntax validation process is an upgrade to Braze’s existing one. This is a check to verify that emails updated or imported into braze are correct. For more information, take a look at [these guidelines and notes](https://www.braze.com/docs/user_guide/onboarding_with_braze/email_setup/email_validation).
+
+## Canvas Decision Split and Delay Step
+Decision splits can be used to create Canvas branches depending on whether a user matches a defined query. Delay steps allow you to add a stand-alone delay to your Canvas without the need of a corresponding message. 
