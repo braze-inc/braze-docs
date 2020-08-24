@@ -15,7 +15,7 @@ description: "This article outlines details about the Send Transactional Message
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose built for 1:1 messaging of alerts like order confirmations or password resets. 
+The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets. 
 
 Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
 
@@ -93,7 +93,7 @@ The Send Transactional Message endpoint will respond with the message's `dispatc
 ```
 
 ## Transactional HTTP Event Postback
-All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. 
+All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. 
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email. 
 
@@ -142,7 +142,7 @@ To get started using the Transactional HTTP Event Postback, please provide your 
 | ------------ | ----------- |
 | `Sent` | Message successfully dispatched to Braze's email sending partner  |
 | `Processed` | Email sending partner has successfully received and prepared the message for delivery  |
-| `Aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. Includes `reason` field indicating why message was aborted |
+| `Aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. Includes `reason` field indicating why the message was aborted |
 |`Delivered`| Message was accepted by the user's email inbox provider |
 |`Bounced`| Message was rejected by the user's email inbox provider. Includes `reason` field reflecting the bounce error provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
