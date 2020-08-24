@@ -1,14 +1,15 @@
 ---
-nav_title: Canvas Delay Step
-permalink: "/delay_step/"
-hidden: true
+nav_title: Delay Step
+alias: "/delay_step/"
+description: "This reference article covers how to add stand-alone delay to your Canvas."
+page_order: 1
 ---
 
-# Canvas Delay Step
-
-{% alert update %}
-The Canvas Delay Step is currently in Beta. Please reach out to a Braze representative for more information.
+{% alert important %}
+Canvas Delay Step feature coming soon!
 {% endalert %}
+
+# Delay Step for Canvas
 
 Delay Steps in Canvas allow you to add a stand-alone delay to a Canvas. In other words, you can add a delay to your Canvas without needing to add an associated message.
 
@@ -23,7 +24,6 @@ To create a Delay Step, add a step to your Canvas. Then, use the drop-down at th
 ![Canvas Delay Step][1]
 
 - A delay step __cannot have full step sibling steps__. In other words, you cannot create a full step that branches into a delay step and a full step. This restriction exists because if there was a branch with a delay step and a full step, it wouldn’t be clear which branch users would go down.
-
 - A delay step can __only__ connect to one next step.
 
 ### Time Delay Options

@@ -2,7 +2,7 @@
 nav_title: Facebook&#58; App Review
 title: Facebook&#58; App Review
 description: ""
-permalink: "/fb_app_review/"
+alias: "/fb_app_review/"
 hidden: true
 ---
 
