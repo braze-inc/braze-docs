@@ -10,8 +10,7 @@ Custom Attributes are best for storing attributes about your users, or informati
 We get that Custom Attributes can be confusing, so read closely and check out our [LAB course on Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
 ## Custom Attribute Storage
-
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
+All data stored on the User Profile, including Custom Attribute data, is retained indefinitely as long as each profile is active.
 
 ## Custom Attribute Data Types
 Custom Attributes are extraordinarily flexible tools that allow for great targeting.

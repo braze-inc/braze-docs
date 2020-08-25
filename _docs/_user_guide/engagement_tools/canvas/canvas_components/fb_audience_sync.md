@@ -2,11 +2,12 @@
 nav_title: Audience Sync to Facebook
 title: Audience Sync to Facebook
 description: ""
-permalink: "/audience_sync_facebook/"
-hidden: true
+page_order: 4
+alias: "/audience_sync_facebook/"
 ---
-{% alert note %}
-This Audience Sync to Facebook feature is currently in Beta. Please reach out to your Braze account manager for more information.
+
+{% alert important %}
+Audience Sync to Facebook feature coming soon!
 {% endalert %}
 
 # Audience Sync to Facebook
