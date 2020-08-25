@@ -3,7 +3,7 @@ nav_title: Canvas Components
 page_order: 2
 layout: dev_guide
 guide_top_header: "Canvas Components"
-guide_top_text: "The following Canvas component articles will help you create more advanced Canvases."
+guide_top_text: "The following Canvas component will help you improve your process, unlock new journeys, and increase effectiveness. Check out our [Canvas LAB Playbook](https://labplaybooks.braze.com/canvas-playbooks#subpage/qpbtt) for a list of example use cases."
 description: "The following Canvas component articles will help you create more advanced Canvases."
 
 guide_featured_title: "Section Articles"
@@ -17,7 +17,7 @@ guide_featured_list:
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
     fa_icon: fas fa-comment-alt
-  - name: Facebook Audience Sync
+  - name: Audience Sync to Facebook
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/fb_audience_sync/
     fa_icon: fab fa-facebook
 ---
