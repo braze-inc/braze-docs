@@ -75,3 +75,37 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 ## Facebook and Twitter Attribution Data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+
+## Adjust Click Tracking URLs in Braze (Optional)
+
+Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+
+To get started with Adjust click tracking links, visit their [documentation](https://help.adjust.com/tracking/attribution/tracker-urls). You can insert the Adjust click tracking links into your Braze campaigns directly. Adjust will then use their [probabilistic attribution methodologies](https://www.adjust.com/blog/attribution-compatible-with-ios14/) to attribute the user that has clicked on the link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your Adjust tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
+
+{% tabs %}
+{% tab Android %}
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the Liquid logic below:
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'android' %}
+gps_adid={{most_recently_used_device.${google_ad_id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab iOS %}
+For iOS, both Braze and Adjust automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Adjust click tracking links by utilizing the Liquid logic below:
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'ios' %}
+idfv={{most_recently_used_device.${id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+__This recommendation is purely optional__<br>
+If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
+
