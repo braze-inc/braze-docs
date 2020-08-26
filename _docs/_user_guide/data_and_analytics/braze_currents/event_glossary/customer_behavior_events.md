@@ -341,7 +341,7 @@ This user event occurs every time a new user is created within their app group. 
 {
   "id": (string) unique id of this event,
   "app_group_id": (string) AppGroup API id
-  "user_id": (string) braze user id of the user,
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) time of the event in milliseconds since the epoch,
   "random_bucket_number": (int) new random bucket number

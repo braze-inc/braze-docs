@@ -178,7 +178,7 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
     }
 
     if (!map.containsKey(ACTION_TYPE_KEY)) {
-      AppboyLogger.w(TAG, "Map does not contain the braze action type key: " + ACTION_TYPE_KEY);
+      AppboyLogger.w(TAG, "Map does not contain the Braze action type key: " + ACTION_TYPE_KEY);
       return;
     }
     String actionType = String.valueOf(map.remove(ACTION_TYPE_KEY));
@@ -280,7 +280,7 @@ class BrazeGtmTagProvider : CustomTagProvider {
     }
 
     if (!map.containsKey(ACTION_TYPE_KEY)) {
-      AppboyLogger.w(TAG, "Map does not contain the braze action type key: $ACTION_TYPE_KEY")
+      AppboyLogger.w(TAG, "Map does not contain the Braze action type key: $ACTION_TYPE_KEY")
       return
     }
     val actionType = map.remove(ACTION_TYPE_KEY).toString()
