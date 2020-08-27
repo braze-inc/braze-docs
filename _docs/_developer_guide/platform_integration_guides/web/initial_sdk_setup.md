@@ -51,7 +51,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 <style>
 .gist-it-gist {
-    max-width:780px;
+    max-width:700px;
 }
 </style>
 
