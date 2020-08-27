@@ -21,11 +21,17 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 
 ## Upgrade Summary
 
+<style>
+table th:first-child,
+table td:first-child {
+    min-width:200px;
+}  
+</style>
 
 |Feature|Recommended Action|Description|
 |------|--------|---|
-|Most Recent Location| **Upgrade to at least v3.26.1** If you use this targeting feature, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.|Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
-|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and v3.27** If you collect IDFA, your app must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+.|Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs (Xcode 12) to prompt users for IDFA ad tracking permission. If your app does not upgrade to use XCode 12, or if a user declines the permission prompt, their IDFA value will be blank (`00000000-0000-0000-0000-000000000000`).|
+|Most Recent Location| **Upgrade to at least v3.26.1**|If you use the Most Recent Location targeting feature, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
+|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and v3.27**|If you collect IDFA, your app must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+.<br><br>Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs (Xcode 12) to prompt users for IDFA ad tracking permission. If your app does not upgrade to use XCode 12, or if a user declines the permission prompt, their IDFA value will be blank (`00000000-0000-0000-0000-000000000000`).|
 |Xcode 12|**Upgrade to iOS SDK v3.27**|Customers testing Xcode 12 or releasing Beta app vesrions must use our [iOS 14 Beta SDK versions][1] for compatibility. Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.<br><br>We will continue to release updates and fixes to this beta as Apple continues to release newer versions of their iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].|
 
 
