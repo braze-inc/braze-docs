@@ -87,7 +87,7 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_id_renames` array
 - `external_id_renames` array with more than 50 objects
-- Rate limit hit (>20,000 requests/day)
+- Rate limit hit (>1,000 requests/minute)
 
 ## Frequently Asked Questions
 
