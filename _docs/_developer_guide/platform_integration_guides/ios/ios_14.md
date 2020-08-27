@@ -27,7 +27,10 @@ table th:nth-child(2),
 table td:nth-child(1),
 table td:nth-child(2) {
     min-width:230px;
-}  
+}
+table td {
+    word-break: break-word;
+}
 </style>
 
 |If Your App Uses:|Upgrade Recommendation|Description|
