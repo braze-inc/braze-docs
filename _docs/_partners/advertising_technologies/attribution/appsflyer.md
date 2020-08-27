@@ -107,7 +107,7 @@ There are, however, ESPs like Sendgrid that support both universal linking and c
 
 You can use AppsFlyer's [OneLink attribution links](https://support.appsflyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to be able to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you will be able to holistically see the impact of your paid and owned channels in a single platform.
 
-You can simply create your OneLink tracking URL in AppsFlyer and insert it into your Braze campaigns directly. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.appsflyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link or deep link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your Branch tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
+You can simply create your OneLink tracking URL in AppsFlyer and insert it into your Braze campaigns directly. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.appsflyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link or deep link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your AppsFlyer tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
 
 {% tabs %}
 {% tab Android %}
