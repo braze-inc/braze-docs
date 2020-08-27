@@ -18,7 +18,6 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 - ~~Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)~~ This unexpected behavior was reverted in iOS Beta 5 (August 18) and no longer impacts iOS 14.
 
-#### Recommended Actions
 
 ## Upgrade Summary
 
