@@ -22,8 +22,10 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 ## Upgrade Summary
 
 <style>
-table th:first-child,
-table td:first-child {
+table th:nth-child(1),
+table th:nth-child(2),
+table td:nth-child(1),
+table td:nth-child(2) {
     min-width:200px;
 }  
 </style>
