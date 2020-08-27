@@ -49,6 +49,12 @@ For more information, please see the [Google Tag Manager Integration Guide][18].
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
 
+<style>
+.gist-it-gist {
+    max-width:700px;
+}
+</style>
+
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/snippets/loading-snippet.js?footer=minimal"></script>
 
 ## Step 2: Initialize Braze
