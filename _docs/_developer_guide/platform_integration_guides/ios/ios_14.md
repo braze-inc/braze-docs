@@ -30,7 +30,7 @@ table td:nth-child(2) {
 }  
 </style>
 
-|Features You Use|Recommended Action|Description|
+|If Your App Uses:|Upgrade Recommendation|Description|
 |------|--------|---|
 |Most Recent Location| **Upgrade to iOS SDK v3.26.1 as soon as possible**|If you use the Most Recent Location targeting feature, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
 |IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27**|If you collect IDFA, your app must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+.<br><br>Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs (Xcode 12) to prompt users for IDFA ad tracking permission. If your app does not upgrade to Xcode 12, or if a user declines the permission prompt, their IDFA value will be blank (`00000000-0000-0000-0000-000000000000`).|
