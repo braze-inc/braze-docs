@@ -18,27 +18,17 @@ For a complete list of new iOS 14 updates announced this year at WWDC, see Apple
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 - ~~Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)~~ This unexpected behavior was reverted in iOS Beta 5 (August 18) and no longer impacts iOS 14.
 
+#### Recommended Actions
+
 ## Upgrade Summary
 
-There are three features, which if you use, will require an upgrade to your Braze iOS SDK:
 
-#### Location Targeting
+|Feature|Recommended Action|Description|
+|------|--------|---|
+|Most Recent Location| **Upgrade to at least v3.26.1** If you use this targeting feature, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.|Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
+|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and v3.27** If you collect IDFA, your app must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+.|Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs (Xcode 12) to prompt users for IDFA ad tracking permission. If your app does not upgrade to use XCode 12, or if a user declines the permission prompt, their IDFA value will be blank (`00000000-0000-0000-0000-000000000000`).|
+|Xcode 12|**Upgrade to iOS SDK v3.27**|Customers testing Xcode 12 or releasing Beta app vesrions must use our [iOS 14 Beta SDK versions][1] for compatibility. Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.<br><br>We will continue to release updates and fixes to this beta as Apple continues to release newer versions of their iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].|
 
-Customers who are using the _Most Recent Location_ targeting features must upgrade to at least iOS SDK v3.26.1 which allows the new _Approximate Location_ feature to be collected on iOS 14 devices.
-
-Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.
-
-#### IDFA permissions
-
-Once users upgrade to iOS 14, all apps must use the new iOS 14 APIs from Xcode 12 to prompt users for IDFA ad tracking permission. If your app does not upgrade to use XCode 12 and the new `AppTrackingTransparency` framework, all IDFA values will be blank (`00000000-0000-0000-0000-000000000000`), similar to a user declining this new prompt.
-
-#### iOS 14 + Xcode 12
-
-We have released [Beta versions][1] of our upcoming iOS 14 / Xcode 12 compatible SDK. Customers who release Beta versions of their iOS apps with iOS 14 support are encouraged to use Braze's iOS 14 Beta SDK version which includes Xcode 12 compatibility and support for new iOS 14 APIs. 
-
-We will continue to release updates and fixes to this beta as Apple continues to release newer versions of their iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].
-
-Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.
 
 ## iOS 14 Behavior Changes
 
