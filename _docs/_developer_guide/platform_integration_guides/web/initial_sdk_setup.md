@@ -50,10 +50,8 @@ For more information, please see the [Google Tag Manager Integration Guide][18].
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
 
 <style>
-@media (min-width: 1200px) {
-    .gist-it-gist {
-        max-width:780px;
-    }
+.gist-it-gist {
+    max-width:780px;
 }
 </style>
 
