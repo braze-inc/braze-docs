@@ -51,7 +51,7 @@ All of our tests are run through actual email clients. We work hard to ensure th
 {% enddetails %}
 
 {% details Why is my email is not rendering? %}
-In general, if your email content relies on templating info such as user profile information, it will not work with Inbox Vision. This is because Braze templates in an empty user when we send emails for Inbox Vision.  
+In general, if your email content relies on templating info such as user profile information, it will not work with Inbox Vision. This is because Braze templates in an empty user when we send emails using this feature.
 {% enddetails %}
 
 
