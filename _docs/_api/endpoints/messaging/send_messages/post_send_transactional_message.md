@@ -15,7 +15,7 @@ description: "This article outlines details about the Send Transactional Message
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets. 
+The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
 Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
 
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex `/^[a-zA-Z0-9-_+\/=]+$/`. This optional field allows you to pass an internal identifier for this particular send which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
 |`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
-|`recipient`|Required|Object|The user you are targeting this message to|
+|`recipient`|Required|Object|The user you are targeting this message to. Please note that given a external user ID that does not already exists in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send to the newly created user.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -89,6 +89,7 @@ The Send Transactional Message endpoint will respond with the message's `dispatc
 {
     "dispatch_id": Braze generated Unique ID of the instance of this send
     "status": Current status of the message
+    "metadata" : Object containing additional information about the send instance
 }
 ```
 
@@ -97,7 +98,7 @@ All Transactional Messages are complimented with event status postbacks sent as 
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email. 
 
-To get started using the Transactional HTTP Event Postback, please provide your desired URL where you would like to receive the postback events to your CSM.
+To get started using the Transactional HTTP Event Postback, please provide your desired postback URL to your Customer Success Manager.
 
 
 ### Postback Body
@@ -106,46 +107,98 @@ To get started using the Transactional HTTP Event Postback, please provide your 
 {
   "dispatch_id": (string, Braze generated Unique ID of the instance of this send),
   "status": (string, Current status of message from fields below)
-  "external_send_id": (string, If provided at the time of the request, Braze will pass your internal identifier for this instance of a send for all postbacks)
-  "metadata" : (object, timestamps relating to the execution of an event. Sent events will have a timestamp reflecting when the message was sent, in addition to timestamps reflecting the received_at, enqueued_at, and executed_at to show the time it took Braze to process the send. All other events will have a single timestamp field showing the time the event was processed.
+  "metadata" : (object, additional information relating to the execution of an event)
+   { 
+     "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
+     "campaign_api_id" : (string, API identifier of this transactional campaign),
+     "received_at": (ISO 8601 DateTime string, Timestamp of when the request was received by Braze, only included for events with "sent" status),
+     "enqueued_at": (ISO 8601 DateTime string, Timestamp of when the request was enqueued by Braze, only included for events with "sent" status),
+     "executed_at": (ISO 8601 DateTime string, Timestamp of when the request was processed by Braze, only included for events with "sent" status),
+     "sent_at": (ISO 8601 DateTime string, Timestamp of when the request was sent to the ESP by Braze, only included for events with "sent" status),
+     "processed_at" : (ISO 8601 DateTime string, Timestamp the event was processed by the ESP, only included for events with "processed" status),
+     "delivered_at" : (ISO 8601 DateTime string, Timestamp the event was delivered to the user's inbox provider, only included for events with "processed" status),
+     "bounced_at" : (ISO 8601 DateTime string, Timestamp the event was bounced by the user's inbox provider, only included for events with "bounced" status),
+     "aborted_at" : (ISO 8601 DateTime string, Timestamp the event was Aborted by Braze, only included for events with "aborted" status),
+     "reason" : (string, The reason Braze or the Inbox provider was unable to process this message to the user, only included for events with "aborted" or "bounced" status), 
+   }
 }
 ```
 
-### Example Postback
-```json
-// Sent Event
-{
-    "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
-    "external_send_id" : "11dbc68a-e2fc-11ea-87d0-0242ac130003", 
-    "status": "sent",
-    "metadata": {
-      "received_at": "2020-08-18T16:25:45.000+00:00",
-      "enqueued_at": "2020-08-18T16:25:45.000+00:00",
-      "executed_at": "2020-08-18T16:25:45.000+00:00",
-      "sent_at": "2020-08-18T16:25:45.000+00:00"
-    }
-  }
-
-
-// Delivered Event
-{
-    "dispatch_id": "497a72794391cca2ea7a8bcfa6113b30",
-    "external_send_id" : "11dbc68a-e2fc-11ea-87d0-0242ac130003",
-    "status": "delivered",
-    "metadata": {
-      "delivered_at": "2020-08-18T16:25:47.000+00:00"
-    }
-  }
-```
 
 |  Status | Description |
 | ------------ | ----------- |
-| `Sent` | Message successfully dispatched to Braze's email sending partner  |
-| `Processed` | Email sending partner has successfully received and prepared the message for delivery  |
-| `Aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. Includes `reason` field indicating why the message was aborted |
-|`Delivered`| Message was accepted by the user's email inbox provider |
-|`Bounced`| Message was rejected by the user's email inbox provider. Includes `reason` field reflecting the bounce error provided by the inbox provider |
+| `sent` | Message successfully dispatched to Braze's email sending partner  |
+| `processed` | Email sending partner has successfully received and prepared the message for sending to the user's inbox provider |
+| `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
+|`delivered`| Message was accepted by the user's email inbox provider |
+|`bounced`| Message was rejected by the user's email inbox provider. All bounced events include a `reason` field within the metadata object reflecting the bounce error code provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
+
+### Example Postback
+```json
+
+// Sent Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "sent",
+    "metadata": {
+      "received_at": "2020-08-31T18:58:41.000+00:00",
+      "enqueued_at": "2020-08-31T18:58:41.000+00:00",
+      "executed_at": "2020-08-31T18:58:41.000+00:00",
+      "sent_at": "2020-08-31T18:58:42.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
+
+// Processed Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "processed",
+    "metadata": {
+      "processed_at": "2020-08-31T18:58:42.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
+
+// Aborted
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "aborted",
+    "metadata": {
+      "reason": "User not emailable",
+      "aborted_at": "2020-08-31T19:04:51.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
+
+// Delivered Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "delivered",
+    "metadata": {
+      "delivered_at": "2020-08-31T18:27:32.000+00:00",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
+
+// Bounced Event
+{
+    "dispatch_id": "acf471119f7449d579e8089032003ded",
+    "status": "bounced",
+    "metadata": {
+      "bounced_at": "2020-08-31T18:58:43.000+00:00",
+      "reason": "550 5.1.1 The email account that you tried to reach does not exist",
+      "campaign_api_id": "417220e4-5a2a-b634-7f7d-9ec891532368",
+      "external_send_id" : "34a2ceb3cf6184132f3d816e9984269a"
+    }
+}
+
+```
+
 
 {% endapi %}
 
