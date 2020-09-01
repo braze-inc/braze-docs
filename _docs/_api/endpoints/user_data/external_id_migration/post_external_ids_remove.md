@@ -76,6 +76,6 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_ids` array
 - `external_ids` array with more than 50 items
-- Rate limit hit (>20,000 requests/day)
+- Rate limit hit (>1,000 requests/minute)
 
 {% endapi %}

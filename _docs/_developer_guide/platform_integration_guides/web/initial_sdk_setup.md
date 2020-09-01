@@ -49,6 +49,12 @@ For more information, please see the [Google Tag Manager Integration Guide][18].
 
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
 
+<style>
+.gist-it-gist {
+    max-width:700px;
+}
+</style>
+
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/snippets/loading-snippet.js?footer=minimal"></script>
 
 ## Step 2: Initialize Braze
@@ -79,7 +85,7 @@ appboy.openSession();
 For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
 
 {% alert note %}
-Anonymous users on mobile or web devices may be counted towards your [MAU][15]. As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
 
@@ -106,7 +112,9 @@ appboy.toggleAppboyLogging()
 
 ## Upgrading the SDK
 
-When you reference the Braze Web SDK from our content delivery network, for example, https://js.appboycdn.com/web-sdk/a.a/appboy.min.js (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions a.a.a through a.a.z in the above examples) automatically when they refresh your site. When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and rehost it yourself (which is also a valid integration path), you won't receive any version updates automatically and should upgrade manually from time-to-time to receive the latest features and bug fixes.
+When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/appboy.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site. 
+
+When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
 You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
