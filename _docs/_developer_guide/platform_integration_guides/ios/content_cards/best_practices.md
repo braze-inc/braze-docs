@@ -13,7 +13,8 @@ description: "This developer article covers Content Card best practices, three c
 ## Best Practices
 
 ### Design Considerations
-<br>
+
+
 When adding Content Cards to your codebase, create code that is decoupled. For example, try to minimize your SDK imports down to a single "import Appboy-iOS-SDK" statement. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
 - __Decoupled__ - The "content" of the customer's data should be source-independent. Decoupled code allows you to easily track where your Content Card data is coming from and going to.
 - __Flexibility__ - Offers type-agnostic extended functionality. You can extend your custom production code to handle Content Card data.
@@ -239,7 +240,8 @@ Though we encourage minimal use of the ABKObjects, implementing Content Cards wh
 #### __Implementation Components__
 
 
-__Update Content Card Dictionary__<br>
+__Update Content Card Dictionary__
+
 Mapped via Content Card's idString
 ```swift
 private var contentCardsDictionary: [String: ABKContentCard] = [:]
@@ -249,7 +251,8 @@ for card in cards {
 ```
 
 
-__Encapsulated ABK Methods__<br>
+__Encapsulated ABK Methods__
+
 Only exposing the idString as a parameter
 ```swift
 switch rows[indexPath.row] {
@@ -259,7 +262,8 @@ switch rows[indexPath.row] {
 ```
 
 
-__Get Content Card from IDString__<br>
+__Get Content Card from IDString__
+
 Via Content Card Disctionary
 ```swift
 protocol ContentCardable {
@@ -270,7 +274,8 @@ protocol ContentCardable {
 ```
 
 
-__Call ABKCONTENTCARD Functions__<br>
+__Call ABKCONTENTCARD Functions__
+
 100% handled via AppboyManager.Swift
 ```swift
 func logContentCardClicked(idString: String?) {
@@ -281,4 +286,3 @@ func logContentCardClicked(idString: String?) {
 ```
 {% endtab %}
 {% endtabs %}
-
