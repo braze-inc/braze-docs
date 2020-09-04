@@ -2,27 +2,26 @@
 nav_title: Best Practices and Use Cases
 platform: iOS
 page_order: 7
+description: "This developer article covers Content Card best practices, three custom use case demo apps built out by our team, accompanying code snippets, as well as an implementation walkthrough."
 ---
 
 # Best Practices and Use Cases
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 
-> This developer article covers some Content Card best practices, three custom use case demo apps built out by our team, accompanying code snippets and reasonings, as well as an implementation walkthrough.
+> This developer article covers Content Card best practices, three custom use case demo apps built out by our team, accompanying code snippets, as well as an implementation walkthrough. Included to the right is our full video walkthrough, with sections included and referenced throughout the rest of the article.
 
 ## Best Practices
 
 ### Design Considerations
 <br>
-__Decoupling Customer Code - Only 1 "import Appboy-iOS-SDK"__<br>
-When adding Content Cards to your codebase, a best practice is to create code that is decoupled. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
-
-- __Decoupled__ - The "content" of the customer's data should be source-independent. You should be able to easily track where your Content Card data is coming from and going to.
-- __Flexibility__ - Offers type-agnostic extended functionality. You can extend your own custom production code to handle Content Card data
+When adding Content Cards to your codebase, create code that is decoupled. For example, try to minimize your SDK imports down to a single "import Appboy-iOS-SDK" statement. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
+- __Decoupled__ - The "content" of the customer's data should be source-independent. Decoupled code allows you to easily track where your Content Card data is coming from and going to.
+- __Flexibility__ - Offers type-agnostic extended functionality. You can extend your custom production code to handle Content Card data.
 - __Easy to Debug__ - Errors can be traced to one place. Because of the minimization of SDK imports, your code now has a single source of data to check and debug along. 
 
 ## Demo Use Case Applications
 
-Provided below through instructional video, we have provided code snippets for each demo application, as well as accompanying code snippets and dashboard implementation examples.
+Provided below are three instructional customer use case videos. We have provided code snippets for each demo application, as well as dashboard implementation examples.
 
 ### Supplemental Content
 
@@ -157,7 +156,7 @@ init(rawType: String?) {
 {% endtabs %}
 
 ### Message Center
-Content Cards can be used in a message center format, where each message is its own Content Card. Each Content Card contains additional key-value pairs to power on-click UI/UX.
+Content Cards can be used in a message center format where each message is its own Content Card. Each Content Card contains additional key-value pairs that power on-click UI/UX.
 {% tabs %}
 {% tab Video %}
 
@@ -183,7 +182,7 @@ func addContentCardToView(with message: Message) {
 {% endtabs %}
 
 ### Interact-able View
-Content Cards can be leverage to create a truly interactive experience for your users. In the Demo provided below, we have a Content Card pop-up at check out providing a last-minute coupon code or promotion, but there is an endless number of ways this feature can be utilized to improve your user experience.
+Content Cards can be leveraged to create interactive experiences for your users. In the demo provided below, we have a Content Card pop-up appear at checkout providing users last-minute promotion opportunities. Well placed Cards like this are a great way to give users a "nudge" toward specific user actions. 
 
 {% tabs %}
 {% tab Video %}
@@ -228,7 +227,7 @@ func configureView(_ imageUrl: String?, _ origin: CGPoint, _ animatePoint: CGFlo
 
 ## Implementation Walkthrough
 
-Because we encourage minimal use of the ABKObjects, implementing Content Cards so you can still decoupling impressions, along with logging clicks, and dismissals may seem difficult. Below we have outlined a possible way to go about your implementation.
+Though we encourage minimal use of the ABKObjects, implementing Content Cards while still decoupling impressions, logging clicks and dismissals is a must. Below we have outlined a possible way to go about your implementation.
 
 {% tabs %}
 {% tab Video %}
@@ -238,6 +237,7 @@ Because we encourage minimal use of the ABKObjects, implementing Content Cards s
 {% endtab %}
 {% tab Swift - Demo Code Snippets %}
 #### __Implementation Components__
+
 
 __Update Content Card Dictionary__<br>
 Mapped via Content Card's idString
