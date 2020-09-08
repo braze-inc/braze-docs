@@ -141,7 +141,7 @@ Check out:
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
-[21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
+[21]: {% image_buster /assets/img/webhook_JSON1.jpg %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}

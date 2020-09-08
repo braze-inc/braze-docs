@@ -8,10 +8,10 @@ description: "Duplicating a template can save a lot of time. You can duplicate a
 > Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
 
 ## Duplicate an Individual Template
+![template_duplicate_cog][8]{: style="float:right;max-width:15%;margin-left:15px;"}
+
 Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and selecting `duplicate` from the drop-down.
-
-![template_duplicate_cog][8]
-
+<br><br>
 {% alert note %}
 For [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) templates, a 'draft' copy is created. For all other templates a new duplicate copy is automatically created.
 {% endalert %}
