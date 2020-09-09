@@ -74,7 +74,7 @@ For more information on Approximate Location, see Apple's [What's New In Locatio
 
 IDFA (Identity for Advertisers) is an identifier provided by Apple used by advertising and attribution partners for cross-device tracking and is tied to an individual's Apple ID.
 
-Later in 2021, iOS 14 will introduce a new permission prompt (launched by the new `AppTrackingTransparency` framework) which will require explicit user consent to access the IDFA. This permission to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
+Later in 2021, iOS 14 will require a new permission prompt (launched by the new `AppTrackingTransparency` framework) which will require explicit user consent to access the IDFA. This permission to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
 
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
