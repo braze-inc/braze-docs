@@ -11,7 +11,7 @@ This guide describes Braze-related changes introduced in iOS 14 and the required
 For a complete list of new iOS 14 updates announced this year at WWDC, see Apple's [iOS 14 Preview](https://www.apple.com/ios/ios-14-preview/).
 
 {% alert tip %}
-Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a delay to the upcoming iOS 14 IDFA changes. While we still recommend upgrading to the latest version of the Braze iOS SDK (v3.27), your app will be able to continue collecting the IDFA identifier without changes to your app.
+Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a delay to the upcoming iOS 14 IDFA changes. Until Apple begins to enforce this - sometime in 2021 - your app can continue to collect the IDFA identifier without changes to your app.
 {% endalert %}
 
 #### Summary of iOS 14 breaking changes
