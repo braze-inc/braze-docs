@@ -38,8 +38,8 @@ Below is a list of features and messaging channels supported today.
             <th>Device Type</th>
             <th>Data and Analytics</th>
             <th>In App Messages</th>
-            <th>Push Notifications</th>
             <th>Content Cards</th>
+            <th>Push Notifications</th>
             <th>Canvas</th>
         </tr>
     </thead>
@@ -48,56 +48,56 @@ Below is a list of features and messaging channels supported today.
             <td>Amazon Fire TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Kindle Fire</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>LG TV (webOS)</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Samsung Tizen TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Roku</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-times text-warning"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="canvas">--</td>
         </tr>
         <tr>
             <td>Apple TV OS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-times text-warning"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>  
             <td for="canvas">--</td>
         </tr>
     </tbody>
