@@ -160,7 +160,7 @@ Please note that the code sample above includes integration for Provisional Push
 {% endalert %}
 
 {% alert warning %}
-You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. For more information, visit Apple's [`UNUserNotificationCenterDelegate` documentation][39].
+You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. For more information, visit Apple's [`UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).
 {% endalert %}
 
 ### Without UserNotifications Framework
