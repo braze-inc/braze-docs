@@ -154,8 +154,8 @@ Use Braze's Web SDK to integrate with LG webOS TVs.
 Features include:
 
 - Data and Analytics collection for cross-channel engagement
-- Content Cards
-- In-App Messages
+- Content Cards (via Custom UI)
+- In-App Messages (via Custom UI)
 
 For more information, visit the [Web Smart TV Integration Guide][8].
 
@@ -166,8 +166,8 @@ Use Braze's Web SDK to integrate with the Samsung Tizen TVs.
 Features include:
 
 - Data and Analytics collection for cross-channel engagement
-- Content Cards
-- In-App Messages
+- Content Cards (via Custom UI)
+- In-App Messages (via Custom UI)
 
 For more information, visit the [Web Smart TV Integration Guide][8].
 
