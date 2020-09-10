@@ -1,7 +1,7 @@
 ---
 nav_title: Exception Events 
 description: "This article covers how to add exception events to your Canvas steps."
-page_order: 5
+page_order: 2.1
 ---
 
 # Canvas Exception Events

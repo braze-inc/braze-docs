@@ -264,4 +264,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
-[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/exception_events/
+[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/

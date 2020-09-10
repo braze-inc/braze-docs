@@ -28,7 +28,7 @@ When __Immediately Advance Audience__ is selected, customers will be advanced to
 - A message is not sent because it is aborted
 
 {% alert important %}
-  Users must meet the step's criteria in order to be advanced through the step. For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/exception_events/), users who perform the exception event will not be advanced through the step.
+  Users must meet the step's criteria in order to be advanced through the step. For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
 {% endalert %}
 
 For action-based steps, users must perform the trigger action and meet the audience options in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.

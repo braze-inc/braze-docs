@@ -143,4 +143,4 @@ Selecting at least one conversion event will give you the ability to understand 
     - __Look to others:__ Imitation is the highest form of flattery. Don’t reinvent in the wheel. Don’t worry, we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
 
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/exception_events/
+[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
