@@ -72,7 +72,7 @@ Below is a list of features and messaging channels supported today.
             <td>LG webOS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-danger"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
@@ -80,24 +80,24 @@ Below is a list of features and messaging channels supported today.
             <td>Samsung Tizen</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-danger"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Roku</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-times text-danger"></i></td>
-            <td for="push"><i class="fas fa-times text-danger"></i></td>
-            <td for="content-cards"><i class="fas fa-times text-danger"></i></td>
+            <td for="iam"><i class="fas fa-times text-warning"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
+            <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="canvas">--</td>
         </tr>
         <tr>
             <td>Apple TV OS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-times text-danger"></i></td>
-            <td for="push"><i class="fas fa-times text-danger"></i></td>
-            <td for="content-cards"><i class="fas fa-times text-danger"></i></td>
+            <td for="iam"><i class="fas fa-times text-warning"></i></td>
+            <td for="push"><i class="fas fa-times text-warning"></i></td>
+            <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="canvas">--</td>
         </tr>
     </tbody>
@@ -149,7 +149,7 @@ Push notifications are not supported natively on Android TV. For more informatio
 
 ### LG webOS
 
-Use Braze's Web SDK to integrate with LG webOS TVs.
+Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lge.com/discover/discover-webos-tv/).
 
 Features include:
 
@@ -161,7 +161,7 @@ For more information, visit the [Web Smart TV Integration Guide][8].
 
 ### Samsung Tizen
 
-Use Braze's Web SDK to integrate with the Samsung Tizen TVs.
+Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html).
 
 Features include:
 
