@@ -12,6 +12,8 @@ When scheduling a step for a [Canvas][2], you have the option to set up an excep
 
 Exception events will only trigger while a user is waiting to receive the canvas step it’s associated with. If a user performs the same action on a previous canvas step, the exception event will not trigger.
 
+Exception events for an action-based step will work during the step delay or window. Scheduled steps don't have a window, and as a result, the exception event will only work if it happens during the delay.
+
 For example, if you have an exception event for “Abandoned Cart” on the third step of your canvas, but a user abandons their cart while they are on the second step, the exception event will not trigger. In this example, the exception event will only trigger if the user abandons their cart while on the third step of your Canvas. 
 
 
