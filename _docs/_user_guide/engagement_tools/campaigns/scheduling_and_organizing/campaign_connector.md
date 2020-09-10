@@ -67,6 +67,9 @@ If you choose to set a schedule delay, you can add an exception to the trigger a
 
 ![Schedule Delay][6]
 
+Exception events will only trigger while a user is waiting to receive the message it’s associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
+
+
 ### Step 4: Proceed with Campaign Creation
 
 Continue creating your campaign just as you normally would. Note that if you want to ensure that you send a message to every user that is going to interact with a specific campaign, then it would be best to target a segment that contains all of the users of your app.
