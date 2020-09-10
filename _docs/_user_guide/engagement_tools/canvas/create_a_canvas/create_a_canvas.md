@@ -160,7 +160,7 @@ Click anywhere on a Step, and Braze will open the Step editing interface. Steps 
 
 ![Canvas One Day][13]
 
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and exception events:
+Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events][56]:
 
 ![Canvas Exception Events][14]
 
@@ -264,3 +264,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/exception_events/
