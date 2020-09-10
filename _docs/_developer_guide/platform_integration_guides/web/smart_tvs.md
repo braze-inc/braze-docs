@@ -15,9 +15,11 @@ For a complete technical reference, please see our [Javascript Documentation][3]
 
 To get started, please follow our [Initial SDK Setup][4] guide for the Web SDK.
 
-{% alert important %}
-When downloading or importing the Web SDK, be sure to use the "core" bundle which can be found here: [https://www.npmjs.com/package/@braze/web-sdk-core][6].
-{% endalert %}
+There are two changes required when integrating with Smart TVs:
+
+1. When downloading or importing the Web SDK, be sure to use the "core" bundle which can be found here: [https://www.npmjs.com/package/@braze/web-sdk-core][6].
+
+2. When initializing the Web SDK, you must set the `disablePushTokenManagement` initialization option to `true`.
 
 ## Analytics
 
