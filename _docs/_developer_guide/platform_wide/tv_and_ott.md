@@ -69,7 +69,7 @@ Below is a list of features and messaging channels supported today.
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
-            <td>LG webOS</td>
+            <td>LG TV (webOS)</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-times text-warning"></i></td>
@@ -77,7 +77,7 @@ Below is a list of features and messaging channels supported today.
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
-            <td>Samsung Tizen</td>
+            <td>Samsung Tizen TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-times text-warning"></i></td>
