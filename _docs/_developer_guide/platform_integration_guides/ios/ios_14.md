@@ -97,11 +97,9 @@ Read more from Apple about their [Privacy Updates](https://developer.apple.com/a
 
 ### Push Authorization {#push-provisional-auth}
 
-<br>
 {% alert important %}
 In the first 4 beta versions of iOS 14, the Provisional Push authorization status was removed.
-
-
+<br>
 As of iOS Beta 5 (August 18) this behavior reverted back to its previous iOS 13 behavior, so no strategy or app changes will be necessary with regards to iOS push authorization.
 {% endalert %}
 
