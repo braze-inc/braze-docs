@@ -2,11 +2,11 @@
 nav_title: Best Practices and Use Cases
 platform: iOS
 page_order: 7
-description: "This developer article covers Content Card best practices, three custom use case demo apps built out by our team, accompanying code snippets, as well as an implementation walkthrough."
+description: "This developer article covers Content Card best practices, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough."
 ---
 
 # Best Practices and Use Cases
-{% include video.html id="3h5Xbhl-TxE" align="right" %}
+{% include video.html id="e0G7IJfkMOI" align="right" %}
 
 > This developer article covers Content Card best practices, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough. Included to the right is our full video walkthrough, with sections included and referenced throughout the rest of the article.
 
@@ -22,9 +22,9 @@ When adding Content Cards to your codebase, it is a best practice to decouple yo
 ## Sample Use Cases
 
 There are three customer use cases provided. We have provided video, code snippets for each demo application, as well as dashboard implementation examples for each. The use cases are:
-- Content Cards As Supplemental Content
-- Content Cards in a Message Center
-- Interactive Content Cards
+- [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
+- [Content Cards in a Message Center](#content-cards-in-a-message-center)
+- [Interactive Content Cards](#interactive-content-cards)
 
 ### Content Cards as Supplemental Content
 
@@ -33,7 +33,7 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 {% tabs %}
 {% tab Video %}
 
-{% include video.html id="3h5Xbhl-TxE" align="center" %}
+{% include video.html id="wSo1I9nLqKU" align="center" %}
 
 {% endtab %}
 {% tab Swift - Demo Code Snippets %}
@@ -163,7 +163,7 @@ Content Cards can be used in a message center format where each message is its o
 {% tabs %}
 {% tab Video %}
 
-{% include video.html id="3h5Xbhl-TxE" align="center" %}
+{% include video.html id="ZpXvjca9KyY" align="center" %}
 
 {% endtab %}
 {% tab Swift - Demo Code Snippets %}
@@ -190,7 +190,7 @@ Content Cards can be leveraged to create interactive experiences for your users.
 {% tabs %}
 {% tab Video %}
 
-{% include video.html id="3h5Xbhl-TxE" align="center" %}
+{% include video.html id="INDgFPIZrNQ" align="center" %}
 
 {% endtab %}
 {% tab Swift - Demo Code Snippets %}
@@ -230,12 +230,12 @@ func configureView(_ imageUrl: String?, _ origin: CGPoint, _ animatePoint: CGFlo
 
 ## Implementation Walkthrough
 
-Though we encourage minimal use of the ABKObjects, implementing Content Cards while still decoupling impressions, logging clicks and dismissals is a must. here is one way to go about your implementation.
+How do we log impressions, clicks, and dismissals while staying true to the code considerations mentioned above? We recommend storing your content cards as `idString` in order to log and reference them through a helper file. 
 
 {% tabs %}
 {% tab Video %}
 
-{% include video.html id="3h5Xbhl-TxE" align="center" %}
+{% include video.html id="INDVFUtv6Fc" align="center" %}
 
 {% endtab %}
 {% tab Swift - Demo Code Snippets %}
