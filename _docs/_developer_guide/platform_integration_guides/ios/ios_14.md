@@ -17,11 +17,10 @@ Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5&1599152
 #### Summary of iOS 14 breaking changes
 
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
-- Customers using the "Last Known Location" targeting features are required to upgrade their Braze iOS SDK to at least v3.26.1 for compatibility with _approximate location_ permission.
-- IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a permission prompt. Once Apple begins to enforce this change, apps must update to use the new IDFA collection methods.
+- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1 for compatibility with _approximate location_ permission.
+- IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a permission prompt. Once Apple begins to enforce this change later in 2021, apps must update to use the new AppTrackingTransparency Framework.
+- If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework.
 - Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
-- ~~Based on our testing, Apple may no longer display the provisional authorization dialog, and will instead set users as "authorized" as soon as the app requests provisional authorization. [Learn More](#push-provisional-auth)~~ This unexpected behavior was reverted in iOS Beta 5 (August 18) and no longer impacts iOS 14.
-
 
 ## Upgrade Summary
 
@@ -74,29 +73,34 @@ For more information on Approximate Location, see Apple's [What's New In Locatio
 
 IDFA (Identity for Advertisers) is an identifier provided by Apple used by advertising and attribution partners for cross-device tracking and is tied to an individual's Apple ID.
 
-Later in 2021, iOS 14 will require a new permission prompt (launched by the new `AppTrackingTransparency` framework) which will require explicit user consent to access the IDFA. This permission to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
+Later in 2021, iOS 14 will require a new permission prompt (launched by the new `AppTrackingTransparency` framework) to get explicit user consent to access the IDFA. This permission prompt to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
 
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates will take effect once end-users upgrade their device to a future iOS 14 upgrade in 2021. Once Apple announces their plans to enforce this change, please ensure your app is using the new `AppTransparencyFramework` and Xcode 12 even if you do not explicitly target iOS 14 support.
+These IDFA updates will take effect once end-users upgrade their device to a future iOS 14 upgrade in 2021. Once Apple announces their plans to enforce this change, please ensure your app is using the new `AppTransparencyFramework` and Xcode 12.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
-![App Clip]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK
 
-2. The `ABK_ENABLE_IDFA_COLLECTION` macro, which would conditionally compile in optional automatic IDFA collection, will be removed in our iOS 14 release.
+2. The `ABK_ENABLE_IDFA_COLLECTION` compilation macro, which would conditionally compile in optional automatic IDFA collection, will no longer function in iOS 14 and will be removed in our iOS 14 release. 
 
-3. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/).
+3. If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
+
+4. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/).
+
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
 ### Push Authorization {#push-provisional-auth}
 
+<br>
 {% alert important %}
 In the first 4 beta versions of iOS 14, the Provisional Push authorization status was removed.
+
 
 As of iOS Beta 5 (August 18) this behavior reverted back to its previous iOS 13 behavior, so no strategy or app changes will be necessary with regards to iOS push authorization.
 {% endalert %}
