@@ -135,9 +135,12 @@ Selecting at least one conversion event will give you the ability to understand 
 
 1. __Setting up variants:__ A variant is the trail each customer follows on their journey. Canvas supports up to eight variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
 
-2. __Building steps:__ A step is a marketing decision point—what is the experience you’re creating? Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking exception events and add channels from email to push to webhooks.
+2. __Building steps:__ A step is a marketing decision point—what is the experience you’re creating? Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
 
 3. __Determining when and how to use steps & variants:__ Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right shape and structure of your Canvas. There are a couple approaches you can use:
     - __Work backward:__ Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
     - __Start with the status quo and add more:__ Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a followup message. Look at your performance and keep optimizing by making incremental changes.
     - __Look to others:__ Imitation is the highest form of flattery. Don’t reinvent in the wheel. Don’t worry, we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
+
+
+[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/

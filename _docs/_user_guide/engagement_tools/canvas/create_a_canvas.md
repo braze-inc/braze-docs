@@ -20,6 +20,9 @@ guide_featured_list:
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     fa_icon: fas fa-user
+  - name: Exception Events
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
+    fa_icon: fas fa-exchange-alt
   - name: Change Your Canvas After Launch
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/
     fa_icon: fas fa-undo
