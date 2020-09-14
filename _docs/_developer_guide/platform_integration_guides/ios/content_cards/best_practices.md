@@ -97,7 +97,7 @@ struct Course: ContentCardable, Purchasable, Codable, Hashable {
 ```
 
 #### ABKContentCard Dependencies
-The Only Dependencies on ABKContentCard are its Primitive Types
+The Only Dependencies on `ABKContentCard` are its Primitive Types
 ```swift
 protocol ContentCardable {
   var contentCardData: ContentCardData? { get }
