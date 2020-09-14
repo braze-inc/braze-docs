@@ -159,7 +159,7 @@ init(rawType: String?) {
 {% endtabs %}
 
 ### Content Cards in a Message Center
-Content Cards can be used in a message center format where each message is its own Content Card. Each Content Card contains additional key-value pairs that power on-click UI/UX.
+Content Cards can be used in a message center format where each message is its own card. Each one can contain additional key-value pairs that power on-click UI/UX.
 {% tabs %}
 {% tab Video %}
 
