@@ -77,7 +77,7 @@ func loadContentCards() {
 ```
 
 #### Extending Course Functionality
-Populating Course Object through Content Card Payload
+Populating Course Object with the `Content Card` Payload
 ```swift
 // MARK: - Course
 struct Course: ContentCardable, Purchasable, Codable, Hashable {
