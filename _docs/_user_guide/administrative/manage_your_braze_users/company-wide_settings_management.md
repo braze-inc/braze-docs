@@ -24,7 +24,7 @@ If you choose to switch your time zone, you may face a variety of consequences:
 
 ### Notification Preferences
 
-The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
+The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should recfeive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
 ![Notification_Preferences][61]
 
@@ -53,7 +53,7 @@ Slack has an [incoming webhook app][62] that allows messages to be posted from e
 
 - Select the Slack channel that you'd like the notifications to go to
 
-- Slack will generate a URL that you'll need to enter this URL into the settings for the notifications that you wish to receive
+- Slack will generate a URL that you'll need to enter into the settings for the notifications that you wish to receive
 
 ![copy_url][64]
 
