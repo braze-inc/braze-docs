@@ -21,7 +21,7 @@ When adding Content Cards to your codebase, it is a best practice to decouple yo
 
 ## Sample Use Cases
 
-There are three customer use cases provided. We have provided video, code snippets for each demo application, as well as dashboard implementation examples for each. The use cases are:
+There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets for each demo application, and dashboard implementation examples:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
