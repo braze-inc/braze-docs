@@ -17,7 +17,7 @@ description: "This developer article covers Content Card best practices, three u
 When adding Content Cards to your codebase, it is a best practice to decouple your code. By keeping your code separate from the SDK code, it makes it easier to troubleshoot. For example, try to minimize your SDK imports down to a single "import Appboy-iOS-SDK" statement. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
 - __Decoupled__ - Your data should be source-independent. Decoupled code allows you to easily track where your Content Card data is coming from and going to.
 - __Flexibility__ - Offers type-agnostic extended functionality. You can extend your custom production code to handle Content Card data.
-- __Easy to Debug__ - Errors can be traced to one place. Because of the minimization of SDK imports, your code now has a single source of data to check and debug along. 
+- __Easy to Debug__ - Errors can be traced to one place. Because of the minimization of SDK imports, your code now has a single source of data to check and follow along. 
 
 ## Sample Use Cases
 
