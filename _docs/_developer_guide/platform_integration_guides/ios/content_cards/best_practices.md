@@ -185,7 +185,7 @@ func addContentCardToView(with message: Message) {
 {% endtabs %}
 
 ### Interactive Content Cards
-Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well placed cards like this are a great way to give users a "nudge" toward specific user actions. 
+Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
 {% tabs %}
 {% tab Video %}
