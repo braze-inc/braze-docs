@@ -51,7 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above),
-      "send_to_existing_only": (optional, boolean) defaults to true,
+      "send_to_existing_only": (optional, boolean) defaults to true, if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     },
   ]
@@ -161,7 +161,7 @@ Message sending endpoint responses will include the message’s `dispatch_id` fo
 
 __Using the Attributes Object in Campaigns__
 
-Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attribute and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by race conditions.
+Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attribute and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by race conditions. 
 
 {% details Click to read about the Benefits of using the Attributes Object with this Endpoint %}
 
@@ -182,7 +182,7 @@ Use the Attributes Object in this endpoint to guarantee that:
 This attribute object will __not__ create anonymous users by user alias.
 {% endalert %}
 
-Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign.
+Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if you set `send_to_existing_only` to `false`, then the attributes object __must__ be included in order to create the user.
 {% enddetails %}
 <br>
 {% alert important %}
