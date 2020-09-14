@@ -58,7 +58,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 {% endtabs %}
 
 {% alert warning %}
-Be sure to call this method in your application's main thread. Calling the method asynchronously can lead to broken functionality.
+Be sure to call this method in your application's main thread. Calling the method asynchronously can lead to undefined behavior.
 {% endalert %}
 
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
