@@ -535,10 +535,14 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 
 See the [Javadoc][36] for more information.
 
+{% alert note %}
+Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+{% endalert %}
+
 ## GIFs {#gifs-news-content-cards}
 
 {% alert note %}
-Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+This section applies to integrations which use the Braze SDK's default Content Cards Fragment or Views to display Content Cards.
 {% endalert %}
 
 {% include archive/android/gifs.md channel="Content Cards" %}
