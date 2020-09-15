@@ -16,7 +16,7 @@ description: "This how-to article gives an overview of attribute triggers and ho
 > By using conversion events, you can make sure you are collecting relevant, useful information that you can later use to gain insight into your campaign. 
 
 In order to track engagement metrics and the necessary details regarding how messaging drives your KPIs, Braze allows you to set Conversion Events for each of your campaigns and Canvases.
-
+test
 A Conversion Event is a type of success metric that tracks whether a recipient of your messaging performs a high-value action within a set amount of time after receiving your engagement. With this, you can begin to attribute these valuable actions to the different points of engagement reaching the user. For example, if you're creating a personalized holiday campaign for active users, a Conversion Event of "Starts Session" within 2 or 3 days may be appropriate, as it will then allow you to gather a sense of the rate at which your engagement helped nudge users to come back upon receiving your message.
 
 For more on conversions, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
