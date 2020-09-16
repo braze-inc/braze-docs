@@ -8,19 +8,19 @@ platform: iOS
 
 This guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration.
 
-For a complete list of new iOS 14 updates announced this year at WWDC, see Apple's [iOS 14 Preview](https://www.apple.com/ios/ios-14-preview/).
+For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
 
 {% alert tip %}
-Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a delay to the upcoming iOS 14 IDFA changes. Until Apple begins to enforce this - sometime in 2021 - your app can continue to collect the IDFA identifier without prompting users for permission.
+Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5) a delay to the upcoming iOS 14 IDFA changes. Until Apple begins to enforce this - sometime in 2021 - your app can continue to collect the IDFA identifier without prompting users for permission.
 {% endalert %}
 
 #### Summary of iOS 14 breaking changes
 
+- Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release][1].
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
-- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1 for compatibility with _approximate location_ permission.
-- IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5&1599152522) a permission prompt. Once Apple begins to enforce this change later in 2021, apps must update to use the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework.
+- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1 for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
+- IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5) a permission prompt. Once Apple begins to enforce this change later in 2021, apps must update to use the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework.
 - If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status.
-- Apps targeting iOS 14 / Xcode 12 for beta releases can use our [iOS 14 Beta release][1], and our official iOS 14 release after Apple's "Golden Master" release.
 
 ## Upgrade Summary
 
@@ -38,9 +38,9 @@ table td {
 
 |If Your App Uses:|Upgrade Recommendation|Description|
 |------|--------|---|
-|Most Recent Location| **Upgrade to iOS SDK v3.26.1 as soon as possible**|If you use the Most Recent Location targeting feature, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
-|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) once Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, [read the details below](#idfa). |
-|Xcode 12|**Upgrade to iOS SDK v3.27**|Customers testing Xcode 12 or releasing Beta app versions must use our [iOS 14 Beta SDK versions][1] for compatibility. Our official iOS 14 compatible SDK will be released shortly after Apple's final iOS 14 beta is released, known as the "Golden Master" release.<br><br>We will continue to release updates and fixes to this beta as Apple continues to release newer versions of their iOS 14 beta. If you experience any issues or questions related to our iOS 14 compatibility or beta release, please open a new [Github Issue][2].|
+|Xcode 12|**Upgrade to iOS SDK v3.27 or above**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, please open a new [Github Issue][2].|
+|Most Recent Location| **Upgrade to iOS SDK v3.26.1 or above**|If you use the Most Recent Location targeting feature and are still using XCode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your end users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
+|IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) once Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, [read the details below](#idfa).|
 
 
 ## iOS 14 Behavior Changes
@@ -64,6 +64,8 @@ To continue to collect users' _last known location_ when _approximate location_ 
 Apps that do not upgrade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
+
+Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
 
 For more information on Approximate Location, see Apple's [What's New In Location](https://developer.apple.com/videos/play/wwdc2020/10660/) WWDC Video.
 
@@ -95,14 +97,6 @@ These IDFA updates will take effect once end-users upgrade their device to a fut
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
-### Push Authorization {#push-provisional-auth}
-
-{% alert important %}
-In the first 4 beta versions of iOS 14, the Provisional Push authorization status was removed.
-<br>
-As of iOS Beta 5 (August 18) this behavior reverted back to its previous iOS 13 behavior, so no strategy or app changes will be necessary with regards to iOS push authorization.
-{% endalert %}
-
 ## iOS 14 New Features
 
 ### App Privacy and Data Collection Overview {#app-privacy}
@@ -132,7 +126,7 @@ For customers interested in using Braze within App Clips, please contact your Br
 We will be releasing support and documentation in the near future.
 
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/ios14-beta/CHANGELOG.md
+[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#provisionally-authorized-on-ios
 [4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
