@@ -97,6 +97,13 @@ These IDFA updates will take effect once end-users upgrade their device to a fut
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
+### Push Authorization {#push-provisional-auth}
+
+{% alert important %}
+No changes to Provisional Push Authorization are included in iOS 14. In an earlier beta version of iOS 14, Apple introduced a change which has since been reverted back to prior behavior.
+{% endalert %}
+
+
 ## iOS 14 New Features
 
 ### App Privacy and Data Collection Overview {#app-privacy}
