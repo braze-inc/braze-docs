@@ -36,7 +36,7 @@ Before you begin composing SMS campaigns through Braze, you’ll need to update 
 
 __Here's a quick summary of the user data you'll need to update in Braze:__
 
-1. __Import users' phone numbers in the correct format__ ([E.164][0]) (this requires a '+' and a country code, e.g. +12408884782) For more information on users phone numbers, check out our [documentation][userphone].
+1. __Import users' phone numbers in the recommended format__ ([E.164][0]) (this involves including a '+' and a country code, e.g. +12408884782) For more information on users phone numbers, check out our [documentation][userphone].
   - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
 
 2. __Add a user alias__ to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'
