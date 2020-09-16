@@ -18,7 +18,7 @@ Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5) a dela
 
 - Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release][1].
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
-- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1 for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
+- Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
 - IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5) a permission prompt. Once Apple begins to enforce this change later in 2021, apps must update to use the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework.
 - If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status.
 
