@@ -57,7 +57,9 @@ The prompt for App Tracking Transparency authorization also requires an `Info.pl
 
 Follow these steps to implement IDFA Collection:
 
-1. Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
+##### Step 1: Implement ABKIDFADelegate
+
+Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -107,7 +109,9 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 {% endtab %}
 {% endtabs %}
 
-2. Set the delegate during Braze initialization. In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
+##### Step 2: Set the delegate during Braze initialization
+
+In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
 ### Approximate iOS SDK Size {#ios-sdk-size}
 
