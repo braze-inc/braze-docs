@@ -168,7 +168,6 @@ __Potential causes of errors__:<br>
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.png %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
-[19]: {% image_buster /assets/img/fb_audience_sync/FB5.png %}
 [20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
 [21]: {% image_buster /assets/img/fb_audience_sync/FB7.png %}
 [22]: {% image_buster /assets/img/fb_audience_sync/FB8.png %}
@@ -180,7 +179,6 @@ __Potential causes of errors__:<br>
 [28]: https://developers.facebook.com/docs/marketing-api/access#standard
 [29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
 [30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
-[31]: {% image_buster /assets/img/fb_audience_sync/sync_setup.png %}
 [32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
 [33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
 [34]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-pages_read_engagement
