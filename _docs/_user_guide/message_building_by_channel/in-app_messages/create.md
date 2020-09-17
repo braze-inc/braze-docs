@@ -291,7 +291,6 @@ The average Braze customer has a total of 26 campaigns active at once - so it is
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/

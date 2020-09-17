@@ -165,7 +165,6 @@ If you find you need to make changes to launched Content Cards, you must stop yo
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
