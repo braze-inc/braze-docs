@@ -132,7 +132,6 @@ For push notifications, you'll be able to view statistics for the number of mess
 [3]: {% image_buster /assets/img_archive/schedule.png %}
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
 [9]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
 [10]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
