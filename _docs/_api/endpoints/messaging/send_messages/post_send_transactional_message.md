@@ -82,7 +82,7 @@ curl -X POST \
 ```
 
 ## Response Details
-The Send Transactional Message endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual message sent to a single user. 
+The Send Transactional Message endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual message sent to a single user.
 
 ### Example response
 ```json
@@ -94,11 +94,13 @@ The Send Transactional Message endpoint will respond with the message's `dispatc
 ```
 
 ## Transactional HTTP Event Postback
-All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency. 
+All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
-In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email. 
+In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
 
-To get started using the Transactional HTTP Event Postback, please provide your desired postback URL to your Customer Success Manager.
+To get started using the Transactional HTTP Event Postback, navigate to Manage App Group > Email Settings > Transactional WebPush URL in your Braze dashboard and input your desired URL to receive postbacks.
+
+![Transactional Webhook URL Update][1]
 
 
 ### Postback Body
@@ -108,7 +110,7 @@ To get started using the Transactional HTTP Event Postback, please provide your 
   "dispatch_id": (string, Braze generated Unique ID of the instance of this send),
   "status": (string, Current status of message from fields below)
   "metadata" : (object, additional information relating to the execution of an event)
-   { 
+   {
      "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
      "campaign_api_id" : (string, API identifier of this transactional campaign),
      "received_at": (ISO 8601 DateTime string, Timestamp of when the request was received by Braze, only included for events with "sent" status),
@@ -119,7 +121,7 @@ To get started using the Transactional HTTP Event Postback, please provide your 
      "delivered_at" : (ISO 8601 DateTime string, Timestamp the event was delivered to the user's inbox provider, only included for events with "processed" status),
      "bounced_at" : (ISO 8601 DateTime string, Timestamp the event was bounced by the user's inbox provider, only included for events with "bounced" status),
      "aborted_at" : (ISO 8601 DateTime string, Timestamp the event was Aborted by Braze, only included for events with "aborted" status),
-     "reason" : (string, The reason Braze or the Inbox provider was unable to process this message to the user, only included for events with "aborted" or "bounced" status), 
+     "reason" : (string, The reason Braze or the Inbox provider was unable to process this message to the user, only included for events with "aborted" or "bounced" status),
    }
 }
 ```
@@ -204,3 +206,4 @@ To get started using the Transactional HTTP Event Postback, please provide your 
 
 [41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
 [42]: {{site.baseurl}}/api/parameters/#broadcast
+[1]: {% image_buster /assets/transactional_webhook_url.png %}
