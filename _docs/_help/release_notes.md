@@ -43,22 +43,24 @@ guide_featured_list:
 ## October
 
 ### Report Builder
-The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Check out our [docs](https://www.braze.com/docs/report_builder) for more info!
+![Campaign Comparison Example][5]{: style="max-width:80%;"}
+
+The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more [here]({{site.baseurl}}/report_builder)!
 
 ### iOS 14 Upgrade Guide
-The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support and necessary Xcode upgrades. Check out our [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/ios_14/) to read more. 
+The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/) to read more. 
 
 ### Android 11 Upgrade Guide
-The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes to not relate to deep links, HTML In-App Messages, and location permissions. Check out our [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_11/) to read more.
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes to not relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
 
 ### Attribution Partners - Click Tracking Guide
-While optional attribution click tracking documentation has now been added to each attribution partner page, that includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your attribution partner page to read more. 
+Optional attribution partner click tracking documentation has now been added to each attribution partner page, this includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your [attribution partner]({{site.baseurl}}/partners/advertising_technologies/attribution/) page to read more. 
 
 ### New Description Field
 Users can now add descriptions to campaigns and Canvases! This new field can be found right under the campaign or Canvas name field when creating or editing an existing campaign or Canvas. 
 
 ### Canvas Exception Events
-New documention added describing the expected behavior of exception events in Canvases. Visit our [documentation](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more.
+New documention has beed added describing the expected behavior of exception events in Canvases. Visit our [documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more!
 
 ## September
 
@@ -252,4 +254,5 @@ When creating an email message within Braze, you can now personalize the From Ad
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
 [3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 
 
