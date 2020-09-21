@@ -165,7 +165,7 @@ __Potential causes of errors__:<br>
 [12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
 [13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
 [15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
-[16]: {% image_buster /assets/img/fb_audience_sync/FB2.png %}
+[16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
 [20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
