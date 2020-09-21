@@ -1,6 +1,6 @@
 ---
 nav_title: Report Builder
-alias: /campaign_comparison_updates/
+alias: /report_builder/
 description: "This reference article notes updates to the Report Builder feature within the Dashboard."
 ---
 
