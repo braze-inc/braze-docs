@@ -124,6 +124,12 @@ __Entered__: Number of users who entered this step to be synced to Facebook
 
 __Proceeded to Next Step__: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
 
+__Users Synced__: Number of users who have successfully been synced to Facebook
+
+
+__Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step.
+
+
 __User Not Synced__: Number of users who were not synced to Facebook due to an error, after ~13 hours of retries. When there is an error, Canvas will retry the sync for up to ~13 hours. If the sync is still not possible at that point, the User Not Synced will be populated.<br>
 __Potential causes of errors__:<br>
     - System user token is invalid<br>
