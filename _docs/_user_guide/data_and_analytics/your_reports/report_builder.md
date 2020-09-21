@@ -1,14 +1,14 @@
 ---
-nav_title: Campaign Comparison Report
+nav_title: Report Builder
 alias: /campaign_comparison_updates/
-description: "This reference article notes updates to the existing Campaign Comparison feature within the Dashboard."
+description: "This reference article notes updates to the Report Builder feature within the Dashboard."
 ---
 
-# Campaign Comparison Report
+# Report Builder
 <br>
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
-The Campaign Comparison Report allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
+The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 
 Use this report to answer key engagement questions, for example:
 - Which were the best performing campaigns for a specific tag or channel?
@@ -20,7 +20,7 @@ Use this report to answer key engagement questions, for example:
 
 ## Run a Report
 
-__1.__ Within the Dashboard, navigate to the Campaign Comparisons page in the lefthand navigation.<br><br>
+__1.__ Within the Dashboard, navigate to the Report Builder page in the lefthand navigation.<br><br>
 __2.__ Create a new report by selecting one of two options: __Manual__ or __Automated__. <br><br>![Campaign Dashboard][6]{: style="max-width:80%;"}<br><br> Below are the differences between these two options. Note that for both options, the current limit on the maximum number of campaigns in a report is 50.
 
 | __Action__ | __Manual__ | __Automated__ |
@@ -53,7 +53,7 @@ Name your report before saving it. If a report is saved without being named, Bra
 
 ## Saving and Accessing Reports
 
-You can save your report and name it by using the __Save__ button. Saved reports can be viewed at a later point on the Campaign Comparison page.
+You can save your report and name it by using the __Save__ button. Saved reports can be viewed at a later point on the Report Builder page.
 
 When you access a saved __manual report__, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
 
