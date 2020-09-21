@@ -6,10 +6,6 @@ page_order: 4
 alias: "/audience_sync_facebook/"
 ---
 
-{% alert important %}
-Audience Sync to Facebook feature coming soon!
-{% endalert %}
-
 # Audience Sync to Facebook
 
 Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (Push, Email, SMS, Webhook, etc) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
@@ -123,6 +119,10 @@ The __History__ tab of the custom audience in the Facebook Audience Manager will
 __Entered__: Number of users who entered this step to be synced to Facebook
 
 __Proceeded to Next Step__: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
+
+__Users Synced__: Number of users successfully synced into Facebook
+
+__Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step.
 
 __User Not Synced__: Number of users who were not synced to Facebook due to an error, after ~13 hours of retries. When there is an error, Canvas will retry the sync for up to ~13 hours. If the sync is still not possible at that point, the User Not Synced will be populated.<br>
 __Potential causes of errors__:<br>
