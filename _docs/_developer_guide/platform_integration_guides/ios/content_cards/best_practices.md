@@ -17,11 +17,11 @@ description: "This developer article covers Content Card best practices, three u
 When adding Content Cards to your codebase, it is a best practice to decouple your code. By keeping your code separate from the SDK code, it makes it easier to troubleshoot. For example, try to minimize your SDK imports down to a single "import Appboy-iOS-SDK" statement. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
 - __Decoupled__ - Your data should be source-independent. Decoupled code allows you to easily track where your Content Card data is coming from and going to.
 - __Flexibility__ - Offers type-agnostic extended functionality. You can extend your custom production code to handle Content Card data.
-- __Easy to Debug__ - Errors can be traced to one place. Because of the minimization of SDK imports, your code now has a single source of data to check and debug along. 
+- __Easy to Debug__ - Errors can be traced to one place. Because of the minimization of SDK imports, your code now has a single source of data to check and follow along. 
 
 ## Sample Use Cases
 
-There are three customer use cases provided. We have provided video, code snippets for each demo application, as well as dashboard implementation examples for each. The use cases are:
+There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets for each demo application, and dashboard implementation examples:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -77,7 +77,7 @@ func loadContentCards() {
 ```
 
 #### Extending Course Functionality
-Populating Course Object through Content Card Payload
+Populating Course Object with the `Content Card` Payload
 ```swift
 // MARK: - Course
 struct Course: ContentCardable, Purchasable, Codable, Hashable {
@@ -97,7 +97,7 @@ struct Course: ContentCardable, Purchasable, Codable, Hashable {
 ```
 
 #### ABKContentCard Dependencies
-The Only Dependencies on ABKContentCard are its Primitive Types
+The Only Dependencies on `ABKContentCard` are its Primitive Types
 ```swift
 protocol ContentCardable {
   var contentCardData: ContentCardData? { get }
@@ -159,7 +159,7 @@ init(rawType: String?) {
 {% endtabs %}
 
 ### Content Cards in a Message Center
-Content Cards can be used in a message center format where each message is its own Content Card. Each Content Card contains additional key-value pairs that power on-click UI/UX.
+Content Cards can be used in a message center format where each message is its own card. Each one can contain additional key-value pairs that power on-click UI/UX.
 {% tabs %}
 {% tab Video %}
 
@@ -185,7 +185,7 @@ func addContentCardToView(with message: Message) {
 {% endtabs %}
 
 ### Interactive Content Cards
-Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well placed cards like this are a great way to give users a "nudge" toward specific user actions. 
+Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
 {% tabs %}
 {% tab Video %}
