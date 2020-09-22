@@ -44,7 +44,9 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 - You are attributing an action within the application to a previously served advertisement
 
 ## iOS 14 AppTrackingTransparency
-Beginning with iOS 14, access to the advertising identifier is now on a per-app basis. In addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). With iOS 14 collecting IDFA will require building with Xcode 12, collecting IDFA will Xcode 11 is not possible in iOS 14.
+Apple has temporarily reverted the proposed per-app IDFA access change in iOS 14 until 2021. For now, prompting for permission with `AppTrackingTransparency` is not required, but you should be prepared for a future release from Apple which will require it to be implemented. 
+
+When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12, collecting IDFA will Xcode 11 is not possible in iOS 14.
 
 The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
 
@@ -57,7 +59,9 @@ The prompt for App Tracking Transparency authorization also requires an `Info.pl
 
 Follow these steps to implement IDFA Collection:
 
-1. Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
+##### Step 1: Implement ABKIDFADelegate
+
+Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -107,7 +111,9 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 {% endtab %}
 {% endtabs %}
 
-2. Set the delegate during Braze initialization. In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
+##### Step 2: Set the delegate during Braze initialization
+
+In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
 ### Approximate iOS SDK Size {#ios-sdk-size}
 

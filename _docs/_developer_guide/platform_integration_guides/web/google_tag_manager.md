@@ -128,7 +128,6 @@ This will help identify what values are being sent from your webpage's datalayer
 [8]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
 [9]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
 [10]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
-[11]: {% image_buster /assets/img/web-gtm/gtm-disable-tracking.png %}
 [12]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
 [13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056

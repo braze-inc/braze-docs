@@ -96,7 +96,6 @@ Braze suggests default settings for conversions, but you may want to set up conv
 
 [deeplink]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/
-[push_primer1]: {% image_buster /assets/img/push_primer/push_primer_1.jpg %}
 [push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.jpg %}
 [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %}
 [push_primer4]: {% image_buster /assets/img/push_primer/push_primer_4.png %}

@@ -124,6 +124,12 @@ __Entered__: Number of users who entered this step to be synced to Facebook
 
 __Proceeded to Next Step__: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
 
+__Users Synced__: Number of users who have successfully been synced to Facebook
+
+
+__Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step.
+
+
 __User Not Synced__: Number of users who were not synced to Facebook due to an error, after ~13 hours of retries. When there is an error, Canvas will retry the sync for up to ~13 hours. If the sync is still not possible at that point, the User Not Synced will be populated.<br>
 __Potential causes of errors__:<br>
     - System user token is invalid<br>
@@ -165,10 +171,9 @@ __Potential causes of errors__:<br>
 [12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
 [13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
 [15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
-[16]: {% image_buster /assets/img/fb_audience_sync/FB2.png %}
+[16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
-[19]: {% image_buster /assets/img/fb_audience_sync/FB5.png %}
 [20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
 [21]: {% image_buster /assets/img/fb_audience_sync/FB7.png %}
 [22]: {% image_buster /assets/img/fb_audience_sync/FB8.png %}
@@ -180,7 +185,6 @@ __Potential causes of errors__:<br>
 [28]: https://developers.facebook.com/docs/marketing-api/access#standard
 [29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
 [30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
-[31]: {% image_buster /assets/img/fb_audience_sync/sync_setup.png %}
 [32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
 [33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
 [34]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-pages_read_engagement

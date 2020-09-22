@@ -202,9 +202,6 @@ Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can
 
 {% include archive/android/gifs.md channel="in-app messages" %}
 
-
-
-
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
