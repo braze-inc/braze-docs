@@ -46,7 +46,7 @@ To get going with your Segment/Braze integration,
 | API Endpoint| Find and enter your [Braze SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
 | Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
 | Log Purchase when Revenue is present | Choose when to log purchases. |
-| Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. Format without the `https` as `rest.iad-01.braze.com`. |
+| Braze REST API Endpoint| Find and enter your [Braze REST Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. Make sure to include the `https` so it looks like `https://rest.iad-01.braze.com`. |
 |Safari Website Push ID| Safari requires a Website Push ID to send push. [More on this here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-5-configure-safari-push). |
 |Braze Web SDK Version| Which version of the Braze Web SDK you have integrated. You should have found this out during your initial integration process, but if you're unsure, reach out to your account manager or Braze support. |
 {: .reset-td-br-1 .reset-td-br-2}

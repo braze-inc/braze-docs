@@ -196,4 +196,3 @@ Please follow [Sparkpost's Fastly CDN Documentation](https://www.sparkpost.com/d
 [2]: {% image_buster /assets/img/SSL/custom_hostname.png %}
 [3]: {% image_buster /assets/img/SSL/crypto_settings.png %}
 [4]: {% image_buster /assets/img/SSL/page_rules.png %}
-[5]: {% image_buster /assets/img/SSL/DNS_settings.png %}

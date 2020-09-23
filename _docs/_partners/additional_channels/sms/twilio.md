@@ -62,7 +62,6 @@ Use the webhook composer to preview the request for a random user, or for a user
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
-[21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}

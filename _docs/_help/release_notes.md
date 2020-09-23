@@ -40,6 +40,53 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## October
+
+### Report Builder
+![Campaign Comparison Example][5]{: style="max-width:80%;"}
+
+The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more [here]({{site.baseurl}}/report_builder)!
+
+### iOS 14 Upgrade Guide
+The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/) to read more. 
+
+### Android 11 Upgrade Guide
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes to not relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+
+### Attribution Partners - Click Tracking Guide
+Optional attribution partner click tracking documentation has now been added to each attribution partner page, this includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your [attribution partner]({{site.baseurl}}/partners/advertising_technologies/attribution/) page to read more. 
+
+### New Description Field
+Users can now add descriptions to campaigns and Canvases! This new field can be found right under the campaign or Canvas name field when creating or editing an existing campaign or Canvas. 
+
+### Canvas Exception Events
+New documention has beed added describing the expected behavior of exception events in Canvases. Visit our [documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more!
+
+## September
+
+### Funnel Reporting
+Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports).
+
+### iOS 14 Upgrade Guide 
+In accordance with the changes announced in Apple’s new iOS 14, there are some Braze-related changes and action items required for Braze iOS SDK integrations. For more information, take a look at [this upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/).
+
+### Changes to IDFA and IDFV for iOS 14
+In iOS 14, users must decide if they want to opt-in to ad tracking and let apps and ad networks read their IDFA when visiting an app. As a result, Braze’s strategy is to instead use the “identifier for vendors” (i.e. IDFA) so you can continue to track users across different devices. For more information, take a look at [this section in the iOS 14 upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa).
+
+### Email Validation
+This new email syntax validation process is an upgrade to Braze’s existing one. This is a check to verify that emails updated or imported into Braze are correct. For more information, take a look at [these guidelines and notes]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation).
+
+### Random Bucket User Event in Currents
+The random bucket number (i.e. RBN) occurs every time a new user is created within their app group. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly distributed segments of random users. Use this to group a range of random bucket number values and compare performance across your campaigns and campaign variants. To see if this event is available to you, take a look at the [customer behavior events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/).
+
+### Canvas Components - Coming Soon!
+Braze has added four new Canvas components to help make increase the flexibility and functionality of your Canvases. These new components include: [Decision Split Step]({{site.baseurl}}/decision_split/), [Delay Step]({{site.baseurl}}/delay_step/), [Messaging Steps]({{site.baseurl}}/message_step/), and [Audience Sync to Facebook]({{site.baseurl}}/audience_sync_facebook/).
+- __Canvas Decision Split, Delay, and Messaging Steps__<br>Decision splits can be used to create Canvas branches depending on whether a user matches a defined query. Delay steps allow you to add a stand-alone delay to your Canvas without the need for a corresponding message. Messaging steps allow you to add a standalone message where you want in your Canvas flow.
+- __Audience Sync to Facebook__<br>Using the Braze Audience Sync to Facebook, brands can elect to add their own users’ data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation, and more. Any criteria you’d normally use to trigger a message (Push, Email, SMS, Webhook, etc) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
+
+### SMS Inbound Received Events
+A new messaging engagement event has been added to Currents. This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. For more information, check out our [messaging and engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
+
 ## August
 
 ### External ID Migration Endpoints
@@ -202,52 +249,10 @@ When creating an email message within Braze, you can now personalize the From Ad
 
 ![Personalized From Address][0]{: style="max-width:80%"}
 
-## March 2020
-
-### Custom Attribute Filter Behavior
-
-The Dashboard has improved filters to include more intuitive behaviors.
-There have been two significant changes to how certain custom attributes filters work. 
-The custom attribute filter changes are reflected in the filters: 
-- Less than __X__ Days Ago
-- Less than __X__ Days in the Future
-- Day of Recurring Event<br>
-
-__If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__ 
-
-Check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
-
-## February 2020
-
-### Retention Reports
-
-Braze is proud to now offer Retention Reports for Campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the Campaign Analytics page within the Dashboard. 
-
-Information on this new feature can be found in our [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
-
-![Full Report][4]
-
-{% alert important %}
-As of February 13th, 2020 this feature is not yet available to our client deployed in our EU region or our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
-{% endalert %}
-
-### New Email Content Block API Endpoint
-
-You can now [update]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_email_content_block/) your Email Content Blocks via API!
-
-## January 2020
-
-### Added SMS Capability
-
-Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages as well as implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
-
-In the SMS channel, the New User settings and behavior have been outlined and can be checked out [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
-
-
 [support]: {{site.baseurl}}/support_contact/
-[4]: {% image_buster /assets/img/retention_report_full_report.png %}
 [0]: {% image_buster /assets/img/personalized-from-name.png %}
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
 [3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 
 

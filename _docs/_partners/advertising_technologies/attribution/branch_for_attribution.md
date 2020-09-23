@@ -59,6 +59,40 @@ Once Braze receives attribution data from Branch, the status connection indicato
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
+## Branch Click Tracking URLs in Braze (Optional)
+
+Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+
+To get started with Branch click tracking links, visit their [documentation](https://help.branch.io/using-branch/docs/ad-links). You can insert the Branch click tracking links into your Braze campaigns directly. Branch will then use their [probabilistic attribution methodologies](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings) to attribute the user that has clicked on the link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your Branch tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
+
+{% tabs %}
+{% tab Android %}
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Adjust SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the Liquid logic below:
+
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'android' %}
+user_data_aaid={{most_recently_used_device.${google_ad_id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab iOS %}
+For iOS, both Braze and Branch automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your Branch click tracking links by utilizing the Liquid logic below:
+
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'ios' %}
+user_data_idfv={{most_recently_used_device.${id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+__This recommendation is purely optional__<br>
+If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
 
 [5]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-limits
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"
