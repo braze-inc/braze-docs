@@ -17,13 +17,13 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-{% include video.html id="wSo1I9nLqKU" align="center" %}
+{% include video.html id="wSo1I9nLqKU" align="right" %}
 
-This section covers how to represent your custom objects as Content Cards in a way that does not depend on the Braze SDK. This is done by implementing the ContentCardable protocol and initializer described below, and through the use of the Contentcardable struct, allows you to access the ABKContentCardData. 
+This section covers how custom objects can be extended to function as content cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the Contentcardable struct, allows you to access the ABKContentCardData. 
 
 Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` object and value that pulls and displays the appropriate content card.
 
-This can be accomplished by converting Cards to custom objects through passing the ABKcontentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
+This can be accomplished by converting Cards to custom objects by passing the ABKcontentCard variables into a dictionary of content card payload data (optional) to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
 
 {% tabs %}
 {% tab Swift %}
@@ -306,7 +306,7 @@ dispatch_semaphore_signal(semaphore);
 
 ### Content Cards in a Message Center
 Content Cards can be used in a message center format where each message is its own card. Each one can contain additional key-value pairs that power on-click UI/UX.
-{% include video.html id="ZpXvjca9KyY" align="center" %}
+{% include video.html id="ZpXvjca9KyY" align="right" %}
 
 {% tabs %}
 {% tab Swift %}
@@ -348,7 +348,7 @@ How to Filter and Identify Various Class Types
 ### Interactive Content Cards
 Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-{% include video.html id="INDgFPIZrNQ" align="center" %}
+{% include video.html id="INDgFPIZrNQ" align="right" %}
 
 {% tabs %}
 {% tab Swift %}
@@ -392,9 +392,9 @@ Getting Type-Specific Content Cards
 
 ## Logging Impressions, Clicks, and Dismissals
 
-How do we log impressions, clicks, and dismissals while staying true to the code considerations mentioned above? We recommend storing your content cards as `idString` in order to log and reference them through a helper file. 
+How do we log impressions, clicks, and dismissals while staying true to the code considerations mentioned above? This can be done through the use of the ContentCardable protocol. This protocol has a method that calls into the helper file, only exposing an idString parameter. After this parameter gets passed to the helper file, the Braze SDK can query the Content Card from the identifier. Once the Content Card has been received, we are able to log impressions, click, and dismissals.
 
-{% include video.html id="INDVFUtv6Fc" align="center" %}
+{% include video.html id="INDVFUtv6Fc" align="right" %}
 
 {% tabs %}
 {% tab Swift %}
@@ -408,6 +408,11 @@ private var contentCardsDictionary: [String: ABKContentCard] = [:]
 for card in cards {
       contentCardsDictionary[card.idString] = card
 ```
+
+{% alert note %}
+Note that the use of a ContentCardsDictionary is not required, but may be used here as a faster way to access the Content Card than querying the ContentCards array provided by the Braze SDK.
+{% endalert %}
+
 
 __Encapsulated ABK Methods__<br>
 Only exposing the idString as a parameter
