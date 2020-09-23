@@ -206,6 +206,8 @@ There are 3 sample customer use cases provided. Each sample has video walkthroug
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
+{% include video.html id="wSo1I9nLqKU" align="center" %}
+
 {% tabs %}
 {% tab Swift %}
 #### __Load Content Cards Alongside Existing Content__
