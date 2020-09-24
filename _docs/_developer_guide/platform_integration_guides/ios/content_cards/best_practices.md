@@ -1,15 +1,15 @@
 ---
-nav_title: Best Practices and Use Cases
+nav_title: Implementation Guide
 platform: iOS
 page_order: 7
-description: "This developer walkthrough covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough."
+description: "This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough."
 ---
 
-# Code Considerations and Use Cases
+# Content Card Implementation Guide
 
-> This developer walkthrough covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough. Visit our Content Card Repository [here]()! Please note that the use case videos provided are centered around a Swift implementation, Objective-C code snippets have been included here for the sake of parity. 
+> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough. Visit our Content Card Repository [here]()! Please note that the use case videos provided are centered around a Swift implementation, Objective-C code snippets have been included here for the sake of parity. 
 
-## Code Considerations
+## Code Considerations and Use Cases
 
 ### Import Statements and Helper Files
 
@@ -17,36 +17,29 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-{% include video.html id="wSo1I9nLqKU" align="center" %}
-
 This section covers how custom objects can be extended to function as content cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the Contentcardable struct, allows you to access the ABKContentCardData. 
 
 Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` object and value that pulls and displays the appropriate content card.
 
-This can be accomplished by converting Cards to custom objects by passing the ABKcontentCard variables into a dictionary of content card payload data (optional) to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
+This can be accomplished by converting Cards to custom objects by passing the ABKcontentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
 
-{% tabs %}
+{% include video.html id="wSo1I9nLqKU" align="center" %}
+
+{% tabs local %}
 {% tab Swift %}
 __Extending Functionality__<br>
-Populating Course Object with the `Content Card` Payload
+Populating Tile Object with the `Content Card` Payload
 
 ```swift
-// MARK: - Course
-struct Course: ContentCardable, Purchasable, Codable, Hashable {
+struct Tile: ContentCardable, Purchasable, Codable, Hashable {
   private(set) var contentCardData: ContentCardData?
-  let id: Int
-  let title: String
-  let price: Decimal
-  let imageUrl: String
-    
-  private enum CodingKeys: String, CodingKey {
-    case id
-    case title
-    case price
-    case imageUrl = "image"
-  }
+
 }
 ```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
 __ABKContentCard Dependencies__<br>
 The Only Dependencies on `ABKContentCard` are its Primitive Types
 
@@ -61,50 +54,12 @@ extension ContentCardable {
     return contentCardData != nil
   }
 
-// MARK: - ContentCardData
 struct ContentCardData: Hashable {
   let contentCardId: String
   let contentCardClassType: ContentCardClassType
   let createdAt: Double
   let isDismissable: Bool
 }
-```
-__Key-Value Pairs__
-
-```swift
-// MARK: - Content Card Initalizer
-extension Course {
-  init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType) {
-    guard let idString = metaData[.idString] as? String,
-      let createdAt = metaData[.created] as? Double,
-      let isDismissable = metaData[.dismissable] as? Bool,
-      let extras = metaData[.extras] as? [AnyHashable: Any],
-      let title  = extras["course_title"] as? String,
-      let detail = extras["course_detail"] as? String,
-      let priceString = extras["course_price"] as? String,
-      let price = Decimal(string: priceString),
-      let imageUrl = extras["course_image"] as? String
-      else { return nil }
-```
-__Identifying Types__
-
-```swift
-init(rawType: String?) {
-    switch rawType?.lowercased() {
-    case "ad":
-      self = .ad
-    case "coupon_code":
-      self = .coupon
-    case "course_recommendation":
-      self = .item(.course)
-    case "message_classic":
-      self = .message(.fullPage)
-    case "message_webview":
-      self = .message(.webView)
-    default:
-      self = .none
-    }
-  }
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -133,12 +88,34 @@ The Only Dependencies on `ABKContentCard` are its Primitive Types
 - (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData classType:(enum ContentCardClassType)classType;
 
 - (BOOL)isContentCard;
-- (void)logContentCardImpression:(NSString * __nullable)idString;
-- (void)logContentCardClick:(NSString * __nullable)idString;
-- (void)logContentCardDismissal:(NSString * __nullable)idString;
+- (void)logContentCardImpression:()idString;
+- (void)logContentCardClick:()idString;
+- (void)logContentCardDismissal:()idString;
 
 @end
 ```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
+__Key-Value Pairs__
+
+```swift
+extension Tile {
+  init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType) {
+    guard let idString = metaData[.idString] as? String,
+      let createdAt = metaData[.created] as? Double,
+      let isDismissable = metaData[.dismissable] as? Bool,
+      let extras = metaData[.extras] as? [AnyHashable: Any],
+      let title  = extras["tile_title"] as? String,
+      let detail = extras["tile_detail"] as? String,
+      let priceString = extras["tile_price"] as? String,
+      let price = Decimal(string: priceString),
+      let imageUrl = extras["tile_image"] as? String
+      else { return nil }
+```
+{% endtab %}
+{% tab Objective-C %}
 __Key-Value Pairs__
 
 ```objc
@@ -169,6 +146,32 @@ __Key-Value Pairs__
       }
     }
 ```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
+__Identifying Types__
+
+```swift
+init(rawType: String?) {
+    switch rawType?.lowercased() {
+    case "ad":
+      self = .ad
+    case "coupon_code":
+      self = .coupon
+    case "home_tile":
+      self = .item(.tile)
+    case "message_classic":
+      self = .message(.fullPage)
+    case "message_webview":
+      self = .message(.webView)
+    default:
+      self = .none
+    }
+  }
+```
+{% endtab %}
+{% tab Objective-C %}
 __Identifying Types__
 
 ```objc
@@ -207,16 +210,15 @@ There are 3 sample customer use cases provided. Each sample has video walkthroug
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
 {% include video.html id="wSo1I9nLqKU" align="center" %}
+#### __Load Content Cards Alongside Existing Content__<br><br>
 
-{% tabs %}
+{% tabs local %}
 {% tab Swift %}
-#### __Load Content Cards Alongside Existing Content__
-
 Get the data simultaneously through Operation Queues
 ```swift
 addOperation { [weak self] in
       guard let self = self else { return }
-      self.loadCourses(self.courseCompletionHandler)
+      self.loadTiles(self.tileCompletionHandler)
     }
     
 addOperation { [weak self] in
@@ -225,34 +227,8 @@ addOperation { [weak self] in
       self.semaphore.wait()
     }
 ```
-Course Operation
-```swift
-func loadCourses(_ completion: @escaping ([Course]) -> ()) {
-      switch result {
-      case .success(let metaData):
-        completion(metaData.courses)
-      case .failure:
-        cancelAllOperations()
-    }
-  }
-```
-Content Card Operation
-```swift
-func loadContentCards() {
-    AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
-    AppboyManager.shared.requestContentCardsRefresh()
-  }
-
-@objc private func contentCardsUpdated(_ notification: Notification) {
-    let contentCards = AppboyManager.shared.handleContentCardsUpdated(notification, for: [.item(.course), .ad])
-    contentCardCompletionHandler(contentCards)
-    semaphore.signal()
-  }
-```
 {% endtab %}
 {% tab Objective-C %}
-#### __Load Content Cards Alongside Existing Content__
-
 Get the data simultaneously through Operation Queues
 ```objc
 HomeListOperationQueue * __weak weakSelf = self;
@@ -266,28 +242,64 @@ HomeListOperationQueue * __weak weakSelf = self;
     
   [self addOperationWithBlock:^{
     if (weakSelf) {
-      [weakSelf loadLocalCoursesWithCompletion:^(NSMutableArray * localCourses, NSError*) {
-        [courses addObjectsFromArray:localCourses];
+      [weakSelf loadLocalTilesWithCompletion:^(NSMutableArray * localTiles, NSError*) {
+        [tiles addObjectsFromArray:localTiles];
       }];
     }
   }];
     
     [self addBarrierBlock:^{
-      completion(courses, ads);
+      completion(tiles, ads);
     }];
 ```
-Course Operation
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
+Local Data Operation
+```swift
+func loadTiles(_ completion: @escaping ([Tiles]) -> ()) {
+      switch result {
+      case .success(let metaData):
+        completion(metaData.tiles)
+      case .failure:
+        cancelAllOperations()
+    }
+  }
+```
+{% endtab %}
+{% tab Objective-C %}
+Local Data Operation
 ```objc
-- (void)loadCoursesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
-  [localDataCoordinator loadCoursesFromLocalDataWithCompletion:^(NSMutableArray *courses, NSError *error) {
+- (void)loadTilesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
+  [localDataCoordinator loadTilesFromLocalDataWithCompletion:^(NSMutableArray *tiles, NSError *error) {
     if (error == nil) {
-      completion(courses, error);
+      completion(tiles, error);
     } else {
       // handle error
     }
   }];
 }
 ```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
+Content Card Operation
+```swift
+func loadContentCards() {
+    AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
+    AppboyManager.shared.requestContentCardsRefresh()
+  }
+
+@objc private func contentCardsUpdated(_ notification: Notification) {
+    let contentCards = AppboyManager.shared.handleContentCardsUpdated(notification, for: [.item(.tile), .ad])
+    contentCardCompletionHandler(contentCards)
+    semaphore.signal()
+  }
+```
+{% endtab %}
+{% tab Objective-C %}
 Content Card Operation
 ```objc
 - (void)loadContentCards {
@@ -351,11 +363,10 @@ How to Filter and Identify Various Class Types
 Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
 {% include video.html id="INDgFPIZrNQ" align="center" %}
+#### Interactable View<br><br>
 
 {% tabs %}
 {% tab Swift %}
-#### __Interactable View__
-
 Requesting Content Cards
 ```swift
 func loadContentCards() {
@@ -363,7 +374,19 @@ func loadContentCards() {
     AppboyManager.shared.requestContentCardsRefresh()
   }
 ```
-
+{% endtab %}
+{% tab Objective-C %}
+Requesting Content Cards
+```objc
+- (void)loadContentCards {
+  [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
+  [[AppboyManager shared] requestContentCardsRefresh];
+}
+```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
 Getting Type-Specific Content Cards
 ```swift
   @objc func contentCardsUpdated(_ notification: Notification) {
@@ -372,16 +395,6 @@ Getting Type-Specific Content Cards
 ```
 {% endtab %}
 {% tab Objective-C %}
-#### __Interactable View__
-
-Requesting Content Cards
-```objc
-- (void)loadContentCards {
-  [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
-  [[AppboyManager shared] requestContentCardsRefresh];
-}
-```
-
 Getting Type-Specific Content Cards
 ```objc
 - (void)contentCardsUpdated:(NSNotification *)notification {
@@ -397,34 +410,29 @@ Getting Type-Specific Content Cards
 How do we log impressions, clicks, and dismissals while staying true to the code considerations mentioned above? This can be done through the use of the ContentCardable protocol. This protocol has a method that calls into the helper file, only exposing an idString parameter. After this parameter gets passed to the helper file, the Braze SDK can query the Content Card from the identifier. Once the Content Card has been received, we are able to log impressions, click, and dismissals.
 
 {% include video.html id="INDVFUtv6Fc" align="center" %}
+#### __Implementation Components__<br><br>
 
 {% tabs %}
 {% tab Swift %}
-#### __Implementation Components__
-
-__Update Content Card Dictionary__<br>
-Mapped through the Content Card idString
-```swift
-private var contentCardsDictionary: [String: ABKContentCard] = [:]
-
-for card in cards {
-      contentCardsDictionary[card.idString] = card
-```
-
-{% alert note %}
-Note that the use of a ContentCardsDictionary is not required, but may be used here as a faster way to access the Content Card than querying the ContentCards array provided by the Braze SDK.
-{% endalert %}
-
-
 __Encapsulated ABK Methods__<br>
 Only exposing the idString as a parameter
 ```swift
 switch rows[indexPath.row] {
-    case .item(let course):
-      guard course.isContentCard else { break }
-      course.logContentCardImpression()
+    case .item(let tile):
+      guard tile.isContentCard else { break }
+      tile.logContentCardImpression()
 ```
-
+{% endtab %}
+{% tab Objective-C %}
+__Encapsulated ABK Methods__<br>
+Only exposing the idString as a parameter
+```objc
+[message logContentCardImpression];
+```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
 __Get Content Card from IDString__<br>
 Via Content Card Dictionary
 ```swift
@@ -434,7 +442,19 @@ protocol ContentCardable {
   }
 }
 ```
-
+{% endtab %}
+{% tab Objective-C %}
+__Get Content Card from IDString__<br>
+Via Content Card Dictionary
+```objc
+- (void)logContentCardImpression {
+  [[AppboyManager shared] logContentCardImpression:self.contentCardData.contentCardId];
+}
+```
+{% endtab %}
+{% endtabs %}
+{% tabs local %}
+{% tab Swift %}
 __Call ABKCONTENTCARD Functions__<br>
 100% handled through AppboyManager.Swift
 ```swift
@@ -446,23 +466,6 @@ func logContentCardClicked(idString: String?) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-#### __Implementation Components__
-
-
-__Encapsulated ABK Methods__<br>
-Only exposing the idString as a parameter
-```objc
-[message logContentCardImpression];
-```
-
-__Get Content Card from IDString__<br>
-Via Content Card Dictionary
-```objc
-- (void)logContentCardImpression {
-  [[AppboyManager shared] logContentCardImpression:self.contentCardData.contentCardId];
-}
-```
-
 __Call ABKCONTENTCARD Functions__<br>
 100% handled through AppboyManager.Swift
 ```objc
