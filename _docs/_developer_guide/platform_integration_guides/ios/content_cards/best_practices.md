@@ -17,11 +17,11 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-This section covers how custom objects can be extended to function as content cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the Contentcardable struct, allows you to access the ABKContentCardData. 
+This section covers how custom objects can be extended to function as content cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the ContentCardable struct, allows you to access the ABKContentCardData. 
 
 Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` object and value that pulls and displays the appropriate content card.
 
-This can be accomplished by converting Cards to custom objects by passing the ABKcontentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
+This can be accomplished by converting Cards to custom objects by passing the ABKContentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
 
 {% include video.html id="wSo1I9nLqKU" align="center" %}
 
@@ -263,7 +263,7 @@ func loadTiles(_ completion: @escaping ([Tiles]) -> ()) {
       case .success(let metaData):
         completion(metaData.tiles)
       case .failure:
-        cancelAllOperations()
+        // handle error
     }
   }
 ```
