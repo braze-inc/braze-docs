@@ -52,7 +52,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex `/^[a-zA-Z0-9-_+\/=]+$/`. This optional field allows you to pass an internal identifier for this particular send which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
 |`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
-|`recipient`|Required|Object|The user you are targeting this message to. Please note that given a external user ID that does not already exists in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send to the newly created user.|
+|`recipient`|Required|Object|The user you are targeting this message to. Please note that given a external user ID that does not already exists in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send to the newly created user. Please note, if you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that standard attributes will be updated synchronously and templated into your message. Custom attributes do not have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
