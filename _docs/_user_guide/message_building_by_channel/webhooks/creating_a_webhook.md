@@ -120,7 +120,7 @@ Braze will send Webhooks from the IP ranges below.
 | `35.158.29.228`
 
 {% alert important %}
-  If you’re making a Braze-to-Braze webhook and using whitelisting, you only need to whitelist `127.0.0.1`.
+  If you’re making Braze-to-Braze webhooks and using the IP whitelisting feature in the Braze dashboard, you only need to whitelist `127.0.0.1`.
 {% endalert %}
 
 # Utilizing Webhooks
