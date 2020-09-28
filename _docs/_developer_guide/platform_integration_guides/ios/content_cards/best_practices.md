@@ -2,26 +2,26 @@
 nav_title: Implementation Guide
 platform: iOS
 page_order: 7
-description: "This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough."
+description: "This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
 ---
 
 # Content Card Implementation Guide
 
-> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, as well as an implementation walkthrough. Visit our Content Card Repository [here]()! Please note that the use case videos provided are centered around a Swift implementation, Objective-C code snippets have been included here for the sake of parity. 
+> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Content Card Repository [here]()! Please note that the use case videos provided are centered around a Swift implementation, Objective-C code snippets have been included here for the sake of parity. 
 
 ## Code Considerations and Use Cases
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should integrate them using a single "import Appboy-iOS-SDK" statement. At the same time, you should also represent your Content Cards as custom objects in addition to handling all of the necessary Braze dependencies in a helper file. This limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here]().
+When building out Content Cards, you should integrate them using a single "import Appboy-iOS-SDK" statement. At the same time, you should also represent your Content Cards as custom objects in addition to handling all of the necessary Braze dependencies in a helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here]().
 
 ### Content Cards as Custom Objects
 
-This section covers how custom objects can be extended to function as content cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the ContentCardable struct, allows you to access the ABKContentCardData. 
+Much like a rocket adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by implementing the ContentCardable protocol and initializer described below, and through the use of the ContentCardable struct, allows you to access the ABKContentCardData. 
 
 Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` object and value that pulls and displays the appropriate content card.
 
-This can be accomplished by converting Cards to custom objects by passing the ABKContentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
+This can be accomplished by converting cards to custom objects by passing the ABKContentCard variables into a dictionary of content card payload data to be passed in with the initializer. This initializer then parses and converts these cards to work with your custom code. 
 
 {% include video.html id="wSo1I9nLqKU" align="center" %}
 
@@ -200,7 +200,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 
 ## Sample Use Cases
 
-There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets for each demo application, and a look into how content card variables may look and be used in the Braze dashboard:
+There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how content card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -319,7 +319,7 @@ dispatch_semaphore_signal(semaphore);
 {% endtabs %}
 
 ### Content Cards in a Message Center
-Content Cards can be used in a message center format where each message is its own card. Each one can contain additional key-value pairs that power on-click UI/UX.
+Content Cards can be used in a message center format where each message is its own card. Each card contains additional key-value pairs that power on-click UI/UX.
 {% include video.html id="ZpXvjca9KyY" align="center" %}
 
 {% tabs %}
@@ -407,7 +407,7 @@ Getting Type-Specific Content Cards
 
 ## Logging Impressions, Clicks, and Dismissals
 
-How do we log impressions, clicks, and dismissals while staying true to the code considerations mentioned above? This can be done through the use of the ContentCardable protocol. This protocol has a method that calls into the helper file, only exposing an idString parameter. After this parameter gets passed to the helper file, the Braze SDK can query the Content Card from the identifier. Once the Content Card has been received, we are able to log impressions, click, and dismissals.
+After extending your own custom objects to function as Content Cards, you should also set up your code to capture valuable analytics such as impressions, clicks, and dismissals. One way a you might approach this is through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
 {% include video.html id="INDVFUtv6Fc" align="center" %}
 #### __Implementation Components__<br><br>
@@ -433,7 +433,7 @@ Only exposing the idString as a parameter
 {% endtabs %}
 {% tabs local %}
 {% tab Swift %}
-__Get Content Card from IDString__<br>
+__Get Content Card from idString__<br>
 Via Content Card Dictionary
 ```swift
 protocol ContentCardable {
@@ -444,7 +444,7 @@ protocol ContentCardable {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Get Content Card from IDString__<br>
+__Get Content Card from contentCardID__<br>
 Via Content Card Dictionary
 ```objc
 - (void)logContentCardImpression {
@@ -455,7 +455,7 @@ Via Content Card Dictionary
 {% endtabs %}
 {% tabs local %}
 {% tab Swift %}
-__Call ABKCONTENTCARD Functions__<br>
+__Call ABKContentCard Functions__<br>
 100% handled through AppboyManager.Swift
 ```swift
 func logContentCardClicked(idString: String?) {
@@ -466,7 +466,7 @@ func logContentCardClicked(idString: String?) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Call ABKCONTENTCARD Functions__<br>
+__Call ABKContentCard Functions__<br>
 100% handled through AppboyManager.Swift
 ```objc
 - (void)logContentCardImpression:(NSString * __nullable)idString {
