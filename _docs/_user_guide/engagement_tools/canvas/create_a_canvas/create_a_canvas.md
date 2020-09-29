@@ -156,7 +156,7 @@ You can add additional variants by pressing the + button. When you add new varia
 
 ### Editing a Step
 
-Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
+Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
 
 ![Canvas One Day][13]
 
