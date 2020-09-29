@@ -14,7 +14,7 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement)!
 
-### What is Snowflake?
+## What is Snowflake?
 
 [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is an analytic data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings.
 
@@ -22,7 +22,7 @@ Snowflake’s cloud data platform shatters the barriers that prevent organizatio
 
 > Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-### What is Data Sharing?
+## What is Data Sharing?
 
 Snowflake's [Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
@@ -76,16 +76,17 @@ And so much more!
 
 ### Breaking vs Non-Breaking Changes
 #### Non-Breaking Changes
-Non-breaking changes can happen at any time, and generally provide additional functionality.
-{% alert important %}
-Note that because new columns are considered non-breaking, Braze strongly recommends not using 'SELECT *' queries, but rather explicitly listing the columns of interest in each query. Alternately, customers might want to create views that explicitly name columns, and then query those views instead of the tables directly.
-{% endalert %}
+Non-breaking changes can happen at any time and generally provide additional functionality.<br>
 Examples of non-breaking changes:
 - Adding a new table or view
 - Adding a column to an existing table or view
 
+{% alert important %}
+Note that because new columns are considered non-breaking, Braze strongly recommends not using `SELECT *` queries, but rather explicitly listing the columns of interest in each query. Alternately, customers might want to create views that explicitly name columns, and then query those views instead of the tables directly.
+{% endalert %}
+
 #### Breaking Changes
-Breaking changes will be preceeded by an announcement and a migration period when possible. Examples of breaking changes include:
+Breaking changes will be preceded by an announcement and a migration period when possible. Examples of breaking changes include:
 - Removing a table or view
 - Removing a column from an existing table or view
 - Changing the type or nullability of an existing column
