@@ -11,6 +11,10 @@ page_order: 14
 
 > Inline Image push notifications are custom push notifications by Braze that show images inline without the need to manually expand like standard push notifications.
 
+{% alert important %}
+This feature is in Early Access. Please ask your account manager if you'd like to preview this new Push message type.
+{% endalert %}
+
 # Usage Overview
 
 No extra integration is required for Android Inline Image Push after upgrading to Braze Android SDK 10.0.0. Inline Image push notifications require Android M+ devices. Devices lower than Android M will see standard big image push notifications instead of inline images. Additionally, push action buttons are not supported when using this notification type.
