@@ -7,6 +7,10 @@ page_order: 14
 
 # Android Inline Image Push
 
+{% alert important %}
+This feature is in Early Access. Please ask your account manager if you'd like to preview this new Push message type.
+{% endalert %}
+
 <style>
 #main_content #article-main img {
   border:none !important;
@@ -16,9 +20,7 @@ page_order: 14
 
 > Inline Image push notifications are custom push notifications by Braze that show images inline without the need to manually expand like standard push notifications.
 
-{% alert important %}
-This feature is in Early Access. Please ask your account manager if you'd like to preview this new Push message type.
-{% endalert %}
+
 
 # Usage Overview
 
