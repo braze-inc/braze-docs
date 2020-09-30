@@ -233,9 +233,17 @@ $(document).ready(function() {
   $('.ab-tab-content .ab-tab-pane:first-child').addClass('active')
 
 
-
   String.prototype.upCaseWord = function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+  };
+  String.prototype.replaceUnder = function() {
+    return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
+  };
+  Array.prototype.replaceUnder = function() {
+    return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
+  };
+  Array.prototype.upCaseWord = function() {
+    return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
   };
   $('#search-form input').autocomplete({ hint: false ,debug: algolia_debug}, [{
       source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
@@ -249,23 +257,22 @@ $(document).ready(function() {
           var platform = '';
           var subname = '';
           var heading = '';
-          //console.log(hit)
+
           if ('nav_title' in suggestion) {
-            title = suggestion.nav_title.replace('%20', ' ').replace('_', ' ');
+            title = suggestion.nav_title.replaceUnder();
           }
           else {
-            title = suggestion.title.replace('%20', ' ').replace('_', ' ');
+            title = suggestion.title.replaceUnder();
           }
           if ('type' in suggestion) {
-            type = suggestion.type.replace('%20', ' ').replace('_', ' ').upCaseWord();
+            type = suggestion.type.replaceUnder().upCaseWord();
           }
           if ('category' in suggestion) {
-            category =  suggestion.category.replace('%20', ' ').replace('_', ' ');
+            category =  suggestion.category.replaceUnder();
           }
 
-
           if ('platform' in suggestion) {
-            platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
+            platform = suggestion.platform.replaceUnder();
           }
           if ('headings' in suggestion) {
             if (suggestion['headings']) {
@@ -279,13 +286,12 @@ $(document).ready(function() {
             }
             subname += category.upCaseWord() + ')';
           }
-
-
           if ('content' in suggestion._highlightResult){
             if ('value' in suggestion._highlightResult.content){
-              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ').replace(/<(.|\n)*?>/g, '');
+              content = suggestion._highlightResult.content.value.replaceUnder().replace(/<(.|\n)*?>/g, '');
             }
           }
+
           if (content.length > 400) {
             content = content.substring(0,400);
             content += '...';

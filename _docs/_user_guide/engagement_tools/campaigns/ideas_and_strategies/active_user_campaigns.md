@@ -44,4 +44,4 @@ Unexpected rewards can be more effective at encouraging continued user actions t
 Keep track of opens to ensure that you are targeting the proper collection of users with the optimal message type. Additionally, keep track of any push opt-outs and be wary of losing these crucial users.
 
 [1]: {% image_buster /assets/img_archive/define_top_users.png %} "Define your top users"
-[2]: {% image_buster /assets/img_archive/congratulations_push.png %}
+[2]: {% image_buster /assets/img/congratulations_push.jpg %}

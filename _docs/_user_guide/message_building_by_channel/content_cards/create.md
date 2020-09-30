@@ -3,20 +3,24 @@ nav_title: Create a Content Card
 platform: Message_Building_and_Personalization
 subplatform: Content Cards
 page_order: 0
+description: "This reference article covers how to create a content card using campaigns."
 ---
 
 # Creating a Content Card
 
-You can create a Content Card using the Braze platform using Campaigns.
+You can create a Content Card using the Braze platform using Campaigns and Canvases.
 
-## Build Your Message
+## Content Card Creation in Campaigns and Canvases
+{% tabs %}
+{% tab Campaign %}
+__Build Your Message__
 
-Click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
+Navigate to the Campaign section of the Dashboard and click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
 
 ![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %})
 
-1. Name your Campaign something clear and meaningful.
-2. Add __Teams__ and __Tags__, as necessary.
+1. Name your Campaign something clear and meaningful.<br><br>
+2. Add __Teams__ and __Tags__, as necessary.<br><br>
 3. Add and name as many Variants as you need for this campaign.
   - You can choose different platforms, message types, and layouts for each of your added Variants.
 
@@ -24,9 +28,26 @@ Click __Create Campaign__ to open a new messaging wizard for your Content Card. 
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional Variants - you will be able to choose **Copy from Variant** from the **Add Variant** dropdown.
 {% endalert %}
 
-## Step 1: Specify Your Message Types
+{% endtab %}
+{% tab Canvas %}
+__Setup Your Canvas__
 
-Choose a __Platform__, __Message Type__, __Layout__, and __Enforced Device Orientation__ as necessary.
+Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the canvas wizard to quickly create and launch your Content Card.
+
+1. __Name your Canvas__ something clear and meaningful.<br><br>
+2. __Add Teams and Tags__, as necessary.<br><br>
+3. __Define your conversion events__ - Canvas supports up to 4 conversion events. These events must be assigned during Canvas creation, and cannot be changed once a Canvas has launched.<br><br>
+4. __Set up your Entry Schedule__ - Canvas offers Scheduled, Action-Based and API-Triggered entry. <br><br>
+5. __Select your Entry Audience__ - Here you can determine who will enter this Canvas, and target users by segments and filters, these conditions will not be re-evaluated at each step. Within this dialogue, you also have the option to select Entry Controls such as allowing users to re-enter this Canvas and set an entry limit. You'll also automatically be given a snapshot of what that approximate target population looks like right now.<br><br>
+6. __Set your Send Settings__ - Here you can set messages sending options for all steps within Canvas. Some of these options include setting subscription settings, adjusting the rate limit, toggle frequency capping, and more.<br><br>
+7. __Add a Step in the Canvas Builder__ - Within this step, click Messages and then select the Content Card Messaging Channel. Here you will create and configure your Content Card.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
+
+For more in-depth details on setting up and configuring your Canvas, check out our [Canvas documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/). 
+
+{% endtab %}
+{% endtabs %}
+
+## Step 1: Specify Your Message Types
 
 ### Message Types
 
@@ -43,11 +64,11 @@ These Content Card types are accepted by both mobile apps and web applications.
 
 ## Step 2: Compose a Content Card
 
-The Compose tab allows you to edit all aspects of your message’s content and behavior.
+The Compose tab in the Campaign Wizard (located in the step wizard in Canvas) allows you to edit all aspects of your message’s content and behavior.
 
 ![Compose Content Card][24]
 
-The content of the Compose tab vary based on your chosen Message Options in the last step, but may include any of the options below:
+The content of here varies based on the Message Type chosen in the last step, but may include any of the options below:
 
 | Content | Options| Description |
 |---|---|---|
@@ -75,45 +96,52 @@ Add [key-value pairs][19] to your message, if needed.
 
 You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
-## Step 4: Build the Remainder of Your Campaign or Canvas
+## Step 4: Build the Remainder of Your Campaign or Canvas.
 
-Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages.
+{% tabs %}
+{% tab Campaign %}
 
-{% details Choose Delivery Schedule or Trigger %}
+Build the remainder of your campaign, see the sections below for further details on how to best utilize our tools to build Content Cards.
 
-Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
+#### Choose Delivery Schedule or Trigger
+- Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
+- You can also set the campaign's duration and Quiet Hours in this step.
+- __Frequency Capping does not apply to Content Cards.__
 
-You can also set the campaign's duration and Quiet Hours in this step.
+#### Choose Target Segment
+- Next, you need to choose the target segment from the dropdown menu.
+- You'll automatically be given a snapshot of what that approximate segment population looks like right now.
+- Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-__Frequency Capping does not apply to Content Cards.__
-
-{% enddetails %}
-
-{% details Choose Target Segment %}
-
-Next, you need to choose the target segment from the dropdown menu.
-
-You'll automatically be given a snapshot of what that approximate segment population looks like right now.
-
-Keep in mind that exact segment membership is always calculated just before the message is sent.
-
-{% enddetails %}
-
-{% details Choose Conversion Events %}
-
-Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign.
-
-You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
-
-{% enddetails %}
-
-<br>
+#### Choose Conversion Events
+- Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign.
+- You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 After you've finished building the last of your campaign, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
 
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
+{% endtab %}
+
+{% tab Canvas %}
+
+Complete the remaining sections of your Canvas step, see the sections below for further details on how to best utilize our tools to build Content Cards. After you have created and configured your step, check out our [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) for further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent selection, and more.
+
+#### Choose Step Schedule
+- Content Cards can be delivered based on a scheduled time or Action in Canvas
+
+#### Choose Audience
+- Next, you need to adjust Audience Options for this step. Here, you can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+
+#### Choose Advancement Behavior
+- Lastly, select your Advancement behavior for this step. Here you can choose to either "Advance when Message Sent" that advances your users to the next steps when the Content Card is sent, or "Immediately Advance Audience" that advances users when either the Content Card is sent or the Content Card was not sent because it got aborted. 
+- To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
+
+After you've finished building out your Canvas Step, review its details and [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
+
+{% endtab %}
+{% endtabs %}
 
 ## Things to Know
 
@@ -127,17 +155,16 @@ The following capabilities are not yet supported for Content Cards:
 
 ### Sending Behavior
 
-Once content cards have been sent, similiar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
+Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
 
-If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to  your content card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove content cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
+If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to your Content Card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove Content Cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
 
 ![Content Card][25]
 
-If you find you need to make changes to launched content cards, you must stop your campaign, remove active content cards from users' feeds, make your edits to the cards, and then restart your campaign.
+If you find you need to make changes to launched Content Cards, you must stop your campaign, remove active Content Cards from users' feeds, make your edits to the cards, and then restart your campaign.
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported

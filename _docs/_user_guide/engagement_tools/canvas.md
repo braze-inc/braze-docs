@@ -4,6 +4,7 @@ layout: dev_guide
 page_order: 3
 guide_top_header: "Canvas"
 guide_top_text: "Marketing is a science — one that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer. <br> <br> Canvas is a single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey and then compare and optimize those experiences using comprehensive analytics for the full user experience. <br> <br> The articles below will walk you through setting up a Canvas and up-level your strategies as you build customer experiences. You can also check out our <a href='http://lab.braze.com/canvas-course'>LAB course on Canvas</a>!"
+description: "Marketing is a science — one that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -31,6 +32,27 @@ guide_featured_list:
 - name: In-App Messages in Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
   fa_icon: fas fa-mobile
+- name: Retention Reports
+  link: /docs/user_guide/engagement_tools/canvas/retention_reports/
+  fa_icon: fas fa-chart-area
+- name: Funnel Reports
+  link: /docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/
+  fa_icon: fas fa-filter
+
+guide_menu_title: "Canvas Components"
+guide_menu_list:
+  - name: Decision Split Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    fa_icon: fas fa-random
+  - name: Delay Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    fa_icon: fas fa-stopwatch
+  - name: Message Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    fa_icon: fas fa-comment-alt
+  - name: Facebook Audience Sync
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/fb_audience_sync/
+    fa_icon: fab fa-facebook
 
 ---
 <br>

@@ -103,7 +103,7 @@ Be sure to call all push integration code in your application's main thread.
 
 ### Using UserNotification Framework (iOS 10+)
 
-If you are using the UserNotifications framework (recommended) that was introduced in iOS 10, use the following code:
+If you are using the `UserNotifications` framework (recommended) that was introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -159,9 +159,13 @@ if #available(iOS 10, *) {
 Please note that the code sample above includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/).
 {% endalert %}
 
+{% alert warning %}
+You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. For more information, visit Apple's [`UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).
+{% endalert %}
+
 ### Without UserNotifications Framework
 
-When not using the `UserNotifications` framework, use the following:
+If you are not using the `UserNotifications` framework, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -356,7 +360,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 [4]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
 [5]: https://dashboard-01.braze.com/app_settings/app_settings
 [6]: {% image_buster /assets/img_archive/push_cert_upload.png %} "push upload example image"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L34-62 "sample AppController.mm"
+[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m "sample AppController.mm"
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [11]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3 "iOS Lifecycle Methods"
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
@@ -377,3 +381,4 @@ Deep linking from a push into the app is automatically handled via our standard 
 [36]: #step-4-register-for-push-notifications
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
+[39]: https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate

@@ -57,6 +57,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "archived": (boolean) whether this Campaign is archived,
     "draft": (boolean) whether this Campaign is a draft,
     "name" : (string) campaign name,
+    "description" : (string) campaign description,
     "schedule_type" : (string) type of scheduling action,
     "channels" : (array) list of channels to send via,
     "first_sent" : (string) date and hour of first sent as ISO 8601 date,

@@ -3,6 +3,7 @@ nav_title: Inbox Vision
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 5
+description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
 ---
 
 # Inbox Vision
@@ -47,6 +48,10 @@ Taking a screenshot takes longer than code analysis since we wait till the email
 
 {% details Can I trust the accuracy of your email test results? %}
 All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please [open a support ticket]({{site.baseurl}}/support_contact/).
+{% enddetails %}
+
+{% details Why is my email is not rendering? %}
+In general, if your email content relies on templating info such as user profile information, it will not work with Inbox Vision. This is because Braze templates in an empty user when we send emails using this feature.
 {% enddetails %}
 
 

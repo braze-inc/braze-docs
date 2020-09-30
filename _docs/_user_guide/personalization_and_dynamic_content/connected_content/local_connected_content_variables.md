@@ -3,11 +3,12 @@ nav_title: Local Connected Content Variables
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 1
+description: "This reference article covers how to use and store local connected content variables."
 ---
 
 # Local Connected Content Variables
 
-Braze makes a standard GET request to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it is automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
+Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it is automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
 >  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of connected content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
@@ -111,14 +112,14 @@ This key will only be automatically added to the Connected Content object if the
 ### Configurable Caching
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below.
+If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_age`, as shown below. The maximum cache time is 4 hours.
 
 #### Cache for Specified Seconds
 
 This example will cache for 900 seconds (or 15 minutes).
 {% raw %}
 ```
-{% connected_content https://example.com/webservice.json :cache_max_value 900 %}
+{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
 

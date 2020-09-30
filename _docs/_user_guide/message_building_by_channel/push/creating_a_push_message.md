@@ -29,7 +29,7 @@ Next, you need to name your campaign and select the messaging types and notifica
 
 ![Push2][2]
 
-Time to write your push message! Type it into the message box and watch a preview appear on in the preview box to the left. Don't forget to make use of our wonderful liquid logic tools when writing your messages. These tools allow you to make personalized, targeted push messages a snap!
+Time to write your push message! Type it into the message box and watch a preview appear on in the preview box to the left. Don't forget to make use of Liquid tools when writing your push messages to make them personalized and targeted.
 
 ### Additional Push Customization Steps
 
@@ -41,7 +41,7 @@ You also can Add Languages through the __Add Languages__ button. Braze offers th
 
 Braze allows you to specify what happens when a user clicks the body of a push notification. Whether you want to do something as simple as open the application, or redirect to a specified URL, we have many different ways to customize our push notifications, and therefore user experience. Here, you can also find the option to set up button prompts within your push notification, for example: yes/no prompt, confirm/cancel, more button, etc. 
 
-For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+For more information on platform specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 
 ### Step 2b: Preview and Test Your Message
 
@@ -132,7 +132,6 @@ For push notifications, you'll be able to view statistics for the number of mess
 [3]: {% image_buster /assets/img_archive/schedule.png %}
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
 [9]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
 [10]: https://developer.apple.com/app-store/review/guidelines/#unacceptable

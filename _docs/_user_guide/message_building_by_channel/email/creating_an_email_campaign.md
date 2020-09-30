@@ -3,6 +3,7 @@ nav_title: Creating an Email Campaign
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 1
+description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, build, and test your campaign within the Braze Dashboard."
 ---
 # Creating an Email Campaign
 
@@ -132,7 +133,7 @@ Braze will de-duplicate sends by email address. However, opens are not de-duplic
 [9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
-[14]: {% image_buster /assets/img_archive/Email2Overview.png %}
+[14]: {% image_buster /assets/img/email.jpg %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}

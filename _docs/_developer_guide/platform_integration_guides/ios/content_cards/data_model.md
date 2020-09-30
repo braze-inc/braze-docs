@@ -1,7 +1,7 @@
 ---
 nav_title: Data Model
 platform: iOS
-page_order: 6
+page_order: 1
 
 ---
 

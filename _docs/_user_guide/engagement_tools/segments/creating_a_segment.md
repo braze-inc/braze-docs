@@ -3,17 +3,17 @@ nav_title: Creating a Segment
 page_order: 1
 
 page_type: tutorial
-channel: 
+channel:
 
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
 ---
 # Creating a Segment
 
-> This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival. 
+> This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
 Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow the guide below or check out [our LAB Segmentation course](https://lab.braze.com/segmentation-course)!
 
-Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly and easily move your users from install to your KPIs.
+Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly and easily move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 In order to build a house, you have to lay the first brick. Let's create your first segment.
 
@@ -26,6 +26,8 @@ On the left-hand side under Engagement click on Segments.
 ## Step 2: Name Your Segment
 
 Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can easily and accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
+
+Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to. 
 
 ![Segment2][2]
 

@@ -45,6 +45,12 @@ You can export the following data from Braze to Segment:
 | Email Soft Bounced             | Braze attempted to send an email, but the User’s receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) |
 | Email Marked As Spam           | User marked an email as spam. |
 | Email Unsubscribed             | User clicked the unsubscribe link in an email. |
+| SMS Sent                       | An SMS was sent. |
+| SMS Sent to Carrier            | An SMS was sent to the Carrier for delivery. |
+| SMS Delivered                  | An SMS was delivered successfully. |
+| SMS Delivery Failed            | An SMS was unable to be delivered successfully. |
+| SMS Rejected                   | An SMS was rejected. |
+| SMS Inbound Received           | An inbound SMS was received. |
 | Subscription Group State Changed | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'. |
 | In-App Message Viewed          | User viewed an In-App Message. |
 | In-App Message Clicked         | User tapped or clicked a button in an In-App Message. |
@@ -87,7 +93,7 @@ The following properties will be included with all Braze events sent to Segment:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}

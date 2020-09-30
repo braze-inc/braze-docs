@@ -5,9 +5,9 @@ alias: /partners/taxi_for_email
 
 # Taxi for Email
 
-[Taxi For Email](http://taxiforemail.com/) is an online email marketing tool that encourages teams to easily collaborate on email campaigns. It allows teams to produce accurate and on brand emails at a large scale in less time.
+[Taxi For Email](http://taxiforemail.com/) is an online email marketing tool that encourages teams to easily collaborate on email campaigns. It allows teams to produce accurate and on-brand emails at a large scale in less time.
 
-Taxi For Email can help Braze customers create intelligent email templates using our simple yet powerful syntax. With our easy-to-use drag and drop visual editor, copywriters and editors can  build emails without needing to know HTML code. Using Taxi can help empower teams to do their best work by assigning access and setting permissions for team members. Once emails are ready to go Braze customers can export send-ready code from Taxi and upload into Braze.
+Taxi For Email can help Braze customers create intelligent email templates using our simple yet powerful syntax. With our easy-to-use drag and drop visual editor, copywriters and editors can build emails without needing to know HTML code. Using Taxi can help empower teams to do their best work by assigning access and setting permissions for team members. Once emails are ready to go Braze customers can export send-ready code from Taxi and upload it into Braze.
 
 
 # Requirements

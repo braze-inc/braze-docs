@@ -3,6 +3,7 @@ nav_title: In-App Messages In Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 4
+description: "In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages."
 ---
 
 # In-App Messages In Canvas
@@ -105,6 +106,12 @@ Steps with an in-app message and another channel have the following advancement 
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
+## Custom Event Properties in a Canvas
+Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in a Canvas, we recommend using [templated content within an API triggered campaign][4] instead of an action-based delivery. 
+
+
+
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
 [2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
 [3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
+[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#setting-up-an-api-triggered-campaign

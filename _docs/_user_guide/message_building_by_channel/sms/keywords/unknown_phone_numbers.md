@@ -1,7 +1,7 @@
 ---
 nav_title: Handling Unknown Phone Numbers
 page_order: 1
-description: "This reference article covers how Braze processes certain keywords for SMS, as well as best practices."
+description: "This reference article covers how Braze processes unknown phone numbers from new users."
 page_type: reference
 tool:
   - Dashboard

@@ -3,7 +3,7 @@ page_order: 1
 nav_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by <a href="/docs/user_guide/engagement_tools/segments/filter_categories/">Filter Category.</a>
+glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
 tool: segments
@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Date attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
+    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
     tags:
       - Custom Data
   - name: First Did Custom Event
@@ -50,10 +50,10 @@ glossaries:
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
   - name: First Made Purchase
@@ -141,23 +141,23 @@ glossaries:
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Product Purchased in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last 1, 3, 7, 14, 21, and 30 calendar days (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last specified number of calendar days between 1 and 30 (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchase Property in Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Sessions in Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: Clicked Card
@@ -402,6 +402,10 @@ glossaries:
       - User Attributes
   - name: Install Attribution Ad
     description: Segments your users by the ad that their install was attributed to.
+    tags:
+      - User Attributes
+  - name: Hard Bounce
+    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
     tags:
       - Install Attribution
   - name: Install Attribution Adgroup

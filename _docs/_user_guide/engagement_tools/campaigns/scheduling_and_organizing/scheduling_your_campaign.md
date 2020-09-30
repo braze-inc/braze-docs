@@ -65,6 +65,10 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 
 Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Here are the steps for setting up an event-based schedule:
 
+{% alert important %}
+  Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Canvas steps with in-app messages must be scheduled.
+{% endalert %}
+
 ### Setting Up a Triggered Campaign
 
 __Step 1: Select a trigger event, which can be:__
@@ -132,7 +136,7 @@ __Step 4: Assign the campaign's duration by specifying a start time and optional
 
 ![triggered 4][21]
 
-__Step 5: Select whether the user will receive the campaign during a specific portion of the day.__ If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes her to miss the time frame, then by default the user will not receive your message.
+__Step 5: Select whether the user will receive the campaign during a specific portion of the day.__ If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default the user will not receive your message.
 
 ![triggered 5][27]
 
@@ -153,7 +157,7 @@ __Step 6: Determine whether users can become [re-eligible][24] for the campaign.
 
 Triggered campaigns are very effective for transactional or achievement-based messages.
 
-Transactional campaigns include messages sent after the user completes a purchase or adds an item to her cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in her cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
+Transactional campaigns include messages sent after the user completes a purchase or adds an item to their cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in their cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
 
 In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough [onboarding process][30].
 
@@ -227,23 +231,6 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 - If the variant percentages change, users may be redistributed to other variants.
 - Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
-## Editing Campaigns After Launch
-
-After launching your campaign, it's important to note what you can and cannot change and when the changes will come into effect.
-
-### Content
-
-Any content that is edited after your campaign is launched will be sent to your users correctly.
-
-### Scheduling and Recipients
-
-If you edit when your campaign is scheduled to send, or which users your campaign should be sent to, those changes won't be reflected in the actual campaign until after the current 24 hour period you are in ends.
-
-### Send Rate
-
-Changing the rate at which your messages will send will go into effect at the beginning of the next time zone that is set to be delivered to.
-
-
 [1]: #scheduled-delivery
 [2]: #immediately
 [3]: {% image_buster /assets/img_archive/time_based.png %}
@@ -291,3 +278,4 @@ Changing the rate at which your messages will send will go into effect at the be
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
+[51]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas

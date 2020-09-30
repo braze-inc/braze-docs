@@ -1,13 +1,15 @@
 ---
 nav_title: Archive Templates
 page_order: 4
+description: "Archiving templates can help better organize and manage your templates. This article covers how to archive templates in the templates and media section of the Braze Dashboard."
 ---
 # How to Archive Templates in Templates & Media
 
 > Archiving templates can help better organize and manage your templates.
 
 ### Archive an individual Template
-Archiving an individual template can be achieved by clicking the cog located on the template grid screen and selecting `Archive`. ![template_archive_cog][10]
+![template_archive_cog][10]{: style="float:right;max-width:20%;margin-left:15px;"}
+Archiving an individual template can be achieved by clicking the cog located on the template grid screen and selecting `Archive`.
 
 
 ### Archive multiple Templates

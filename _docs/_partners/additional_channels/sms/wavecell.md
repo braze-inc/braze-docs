@@ -26,7 +26,7 @@ Assuming you have successfully logged into Wavecell's [Consumer Portal](https://
 ![Wavecell Customer API View]({% image_buster /assets/img_archive/wavecell_customer_apiview.png %}){: height="80%" width="80%"}
 
 An API key named *apiKey 1* where the actual key is under *Key* is generated on signup and can be copied by clicking the blue double document icon.
-The Sub-Account ID(s) is also visible inside the API Keys page, and can be copied as well by clicking on the desired ID when needed.
+The Sub-Account ID(s) is also visible inside the API Keys page and can be copied as well by clicking on the desired ID when needed.
 After retrieving the Sub-Account ID and API key from Wavecell, navigate to your Braze account, and under **Engagement** click **Templates & Media** and select the **Webhook Templates** tab to create a new webhook template.
 
 ![Braze Template View]({% image_buster /assets/img_archive/braze_template_view.png %})
@@ -38,8 +38,8 @@ From there, select **Blank Template** to set up a new webhook.
 Add ``https://api.wavecell.com/sms/v1/{subAccountId}/single`` under​ **WEBHOOK URL**​,​ where
 ``subAccountID`` is the Sub-Account ID from your API Keys page under Wavecell's Customer Portal.
 ``REQUEST BODY``​ should be the default option which is  ``JSON Key/Value Pairs​``.
-Now add three new pairs in any order named **source**, **destination** and **text**. Source should be the sender ID which is the name or number you will see when you receive an SMS, destination is the mobile number in international format where you are sending the SMS and text is the body message of your SMS.
-After it's successfully setup, it should look similar to the image below:
+Now add three new pairs in any order named **source**, **destination** and **text**. The source should be the sender ID which is the name or number you will see when you receive an SMS, the destination is the mobile number in international format where you are sending the SMS and text is the body message of your SMS.
+After it's successfully set up, it should look similar to the image below:
 
 ![Braze Webhook Configuration]({% image_buster /assets/img_archive/braze_webhook_config.png %}){: height="60%" width="60%"}
 
@@ -47,7 +47,7 @@ Now, from the​ **Settings**​ tab, add two new request headers named **Author
 
 ![Braze Webhook Headers]({% image_buster /assets/img_archive/braze_webhook_headers.png %}){: height="80%" width="80%"}
 
-Finally, to perform a test on the webhook, navigate to the ​**Test​** tab and click on the **Send Test** button. If everything is setup properly, a successful webhook response (200) message should appear as shown below.
+Finally, to perform a test on the webhook, navigate to the ​**Test​** tab and click on the **Send Test** button. If everything is set up properly, a successful webhook response (200) message should appear as shown below.
 
 ![Braze Webhook Test]({% image_buster /assets/img_archive/braze_webhook_test.png %}){: height="75%" width="75%"}
 
@@ -57,8 +57,7 @@ After a successful test, click the **Save Template** button and your webhook wil
 
 From your Braze account, go to **App Settings** and select **Manage App Group**.
 
-Once inside, create an app by providing a name under **App Name** and clicking the **Add App** button. For
-this example we will use WEB as the app type.
+Once inside, create an app by providing a name under **App Name** and clicking the **Add App** button. For this example, we will use WEB as the app type.
 
 ![Braze Create App]({% image_buster /assets/img_archive/braze_create_app.png %})
 
@@ -120,12 +119,12 @@ Enter a **Campaign Name** and then select the **webhook template** you created a
 Now under **Delivery**, select **Action-Based Delivery** then select the **Perform Custom Event** trigger action and click **Add Trigger**.
 
 {% alert important %}
-The Forward link is located on the bottom-right of the application just beside “Save as Draft” button.
+The Forward link is located on the bottom-right of the application just beside the “Save as Draft” button.
 {% endalert %}
 
 ![Braze Campaign Trigger]({% image_buster /assets/img_archive/braze_campaign_trigger.png %}){: height="80%" width="80%"}
 
-Next, select the custom event you created previously. In this case it's ```test event```.
+Next, select the custom event you created previously. In this case, it's ```test event```.
 
 ![Braze Campaign Select Trigger Event]({% image_buster /assets/img_archive/braze_campaign_trigger_selected.png %}){: height="80%" width="80%"}
 
@@ -141,5 +140,5 @@ Under **Choose Conversion Event Type**, select **Performs Custom Event**, then s
 
 ![Braze Campaign Conversion Type]({% image_buster /assets/img_archive/braze_campaign_conversion_type.png %}){: height="80%" width="80%"}
 
-Once completed, click **Forward** once more. If everything has been setup and looks proper, click **Launch Campaign**.
+Once completed, click **Forward** once more. If everything has been set up and looks proper, click **Launch Campaign**.
 Now, you can open the previously created HTML file in a web browser. After clicking on the **Click me** button, you should receive an SMS with the message “hello world” (or any text specified).

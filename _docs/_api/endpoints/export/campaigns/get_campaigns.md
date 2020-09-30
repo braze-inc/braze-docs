@@ -31,6 +31,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 | `page` | No | Integer   | The page of campaigns to return, defaults to 0 (returns the first set of up to 100) |
 | `include_archived` | No | Boolean | Whether or not to include archived campaigns, defaults to false |
 | `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
+| `last_edit.time[gt]` | No | Time | Filters the results and only returns campaigns that were edited greater than the time provided till NOW. Format is yyyy-MM-DDTHH:mm:ss |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example URL
@@ -52,6 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "campaigns" : [
         {
             "id" : (string) Campaign API Identifier,
+            "last_edited": (ISO 8601 string) the last edited time for the message 
             "name" : (string) campaign name,
             "is_api_campaign" : (boolean) whether the campaign is an API Campaign,
             "tags" : (array) tag names associated with the campaign

@@ -1,6 +1,7 @@
 ---
 nav_title: Understanding Your App Usage Data
 page_order: 3
+description: "The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase."
 ---
 # Understanding Your App Usage Data
 
@@ -25,6 +26,8 @@ This is the total count of sessions that Braze has recorded since integration. S
 ## Monthly Active Users
 
 Monthly Active Users (or MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. The percentage next to the MAU count will give you a comparison of today's MAU count to the MAU count recorded 31 days ago. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
+
+Note that anonymous users will count towards your MAU as well. For mobile devices, anonymous users are device dependent. For web users, anonymous users are browser cache dependent. 
 
 ## Daily Active Users
 

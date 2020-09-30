@@ -1,5 +1,5 @@
 ---
-nav_title: Preview
+nav_title: Flutter SDK
 platform: Flutter
 page_order: 0
 ---

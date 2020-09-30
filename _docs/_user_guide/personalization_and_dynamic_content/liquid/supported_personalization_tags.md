@@ -1,6 +1,7 @@
 ---
 nav_title: Supported Personalization Tags
 page_order: 1
+description: "A complete list of supported Liquid personalization tags."
 ---
 
 # Supported Personalization Tags
@@ -60,7 +61,7 @@ Because there are such a wide range of device carriers, model names, and operati
 
 ## Targeted Device Information
 
-For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read.
+For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards. 
 
 |Tag | Description |
 |------------------|---|
@@ -72,7 +73,7 @@ For push notification and in-app message channels, you can template in the follo
 | `{{targeted_device.${windows_ad_id}}}` | For Windows devices, this value will be the Windows Advertising Identifier that is collected when your application is configured with Braze. For non-Windows devices, this value will be null. |
 | `{{targeted_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
 | `{{targeted_device.${os}}}` | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows". |
-| `{{targeted_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. |
+| `{{targeted_device.${platform}}}` | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. You can also use the `most_recently_used_device` personalization tag. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

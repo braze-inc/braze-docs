@@ -1,6 +1,7 @@
 ---
 nav_title: Filters
 page_order: 3
+description: "Filters can be used to reformat static or dynamic content. This reference article covers the filters supported by Liquid."
 ---
 
 # Filters
@@ -50,11 +51,24 @@ You must first define one of the custom attributes as a variable and then perfor
 {{custom_attribute.${giftcard_balance} | plus: balance}}
 ```
 
+Use the abs filter to get the absolute value of a field:
+
+Input:
+```liquid
+The abs of -2 is {{ -2 | abs }}
+```
+
+Output:
+```liquid
+The abs of -2 is 2
+```
+
+
 - [Full Math Filter Documentation from Shopify][19]
 
 ## E-Commerce
 
-If you're updating a user on their purchase, an account balance, or anything regarding money, you can use [money filters][11] to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
+If you're updating a user on their purchase, an account balance, or anything regarding money, you can use money filters to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
 ```liquid
 ${{custom_attribute.${account_balance} | money}}
@@ -65,6 +79,8 @@ In the event you are importing a custom attribute (like `account_balance`), you 
 | With the Money Filter | Without the Money Filter |
 |---|---|
 |![With Filter][1] <br> <br> Where `account_balance` is input as `17.8`. | ![Without Filter][2] <br> <br> Where `account_balance` is input as `17.8`.|
+
+Documentation on money filters can be found [here][11]. Please note that the behavior of the [Shopify money filter][11] slightly differs from how it is used within the Braze Dashboard. Please reference the behavior detailed above for an accurate representation of the expected behavior of this filter.
 
 ## String Filters
 

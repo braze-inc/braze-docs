@@ -3,6 +3,7 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
+description: "This reference article covers the neccesary steps involved in creating, maintaining, and testing a Canvas."
 ---
 
 # Creating a Canvas
@@ -93,7 +94,7 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
   {% tab Action-Based Delivery %}
     __Action-Based Delivery__<br>
-    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
+    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. Note that action-based delivery is unavailable for Canvas steps with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
@@ -147,7 +148,7 @@ Then, specify Quiet Hours (the time during which your messages will not send) fo
 ### Add a Variant
 ![Canvas Add Variant][11]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Click the "Add Variant" button and select the option to add a new variant to your Canvas. variants represent a journey that your users will take:
+Click the "Add Variant" button and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take.
 
 You can add additional variants by pressing the + button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies:
 
@@ -155,11 +156,11 @@ You can add additional variants by pressing the + button. When you add new varia
 
 ### Editing a Step
 
-Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
+Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
 
 ![Canvas One Day][13]
 
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and exception events:
+Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events][56]:
 
 ![Canvas Exception Events][14]
 
@@ -263,3 +264,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/

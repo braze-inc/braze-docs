@@ -207,10 +207,6 @@ The best way to go about this if you want to separate the old vs. new app would 
 Braze only collects location when the application is in the foreground. As a result, our last known location filters target users based upon where they last opened the application.
 {% enddetails %}
 
-{% details Why doesn’t Braze collect the ADID? %}
-Google’s terms for ADID state that the advertising identifier cannot be associated with any personally-identifiable information without the user’s explicit consent. As a result, we do not automatically collect this information. You may wish to collect this yourself as a custom attribute.
-{% enddetails %}
-
 {% details Does Braze allow me to add UTM parameters to deep links for Google Analytics tracking? %}
 Yes, this is possible as long as your client code is programmed to parse the UTM parameters that are sent with the deep link and send them to Google Analytics. You should ensure that you have the appropriate Google Analytics method integrated to do this.
 {% enddetails %}

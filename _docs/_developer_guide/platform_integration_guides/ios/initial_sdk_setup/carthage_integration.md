@@ -71,7 +71,7 @@ If you want to use SDWebImage in your project along with the Braze SDK, you can 
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk.json"
-github "rs/SDWebImage"
+github "SDWebImage/SDWebImage"
 ```
 
 ## Core Only Integration

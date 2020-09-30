@@ -4,6 +4,7 @@ nav_title: Report Metrics Glossary
 layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
+description: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select Channels below to narrow the glossary:"
@@ -36,7 +37,7 @@ glossaries:
     tags:
       - All
   - name: Total Impressions
-    description: The number of users whose devices reported that the in-app message has been delivered, or card has been viewed (if a user receives a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+    description: The number of times the in-app message or card has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
     calculation: Count
     tags:
       - In-App Message
@@ -60,8 +61,8 @@ glossaries:
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of messages successfully sent to and received by eligible users.
-    calculation: (Sends - Bounces) / (Sends)
+    description: The total number of message requests that is accepted by the receiving email server.
+    calculation: Count
     tags:
       - All Push
       - Email

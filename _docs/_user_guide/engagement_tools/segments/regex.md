@@ -157,7 +157,7 @@ If you're trying to target users who live in cities that start with "San", your 
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
 {% enddetails %}
-{% details How to filter for certain pone numbers with RegEx %}
+{% details How to filter for certain phone numbers with RegEx %}
 
 Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
 

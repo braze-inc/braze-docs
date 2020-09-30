@@ -1,6 +1,7 @@
 ---
 nav_title: API Settings
 page_order: 0
+description: "The API Settings page displays API identifications for your app group."
 ---
 
 # API Settings Tab

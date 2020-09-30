@@ -2,7 +2,7 @@
 nav_title: Sending Test Messages
 platform: Campaigns
 subplatform: Testing and More
-page_order: 4
+page_order: 3
 
 tools: campaigns
 page_type: reference
@@ -10,7 +10,7 @@ description: "This reference article covers how to send test messages across the
 ---
 # Sending Test Messages
 
-> This reference article goes over how to send test messages across the difference Braze channels, as well as how to incorporate custom event properties and user attributes. 
+> This reference article goes over how to send test messages across the different Braze channels, as well as how to incorporate custom event properties and user attributes. 
 > <br>
 > <br>
 > By testing out your campaigns you can make sure everything about it is just right!

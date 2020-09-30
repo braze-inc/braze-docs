@@ -4,6 +4,7 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
 hidden: true
+description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
 # In-App Messages HTML Preview Beta
@@ -20,7 +21,7 @@ This feature is in *Beta*. Ask your Braze team for more information on how to ge
 
 The message preview screen now shows a more realistic preview that renders the JavaScript included in your message.
 
-This means you can now preview _and interact_ with your custom messages (i.e. click through pagination, submit forms or surveys, watch JavaScript animations, etc.)
+This means you can now preview _and interact_ with your custom messages (i.e. click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
 ![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
@@ -35,6 +36,25 @@ This new HTML message type now lets you create one message that can be sent to b
 
 ![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
+### New Asset Uploader
+
+Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
+
+This new workflow makes it easy to upload files and copy/paste their URLs directly into your HTML.
+
+We've also added the ability to upload newly supported file types, including:
+
+| File Type | File Extension|
+|:-------- |:------------|
+| Font Files| `.ttf`, `.woff`, `.otf`, `.woff2`|
+| SVG Images| `.svg`|
+| Javascript Files| `.js`|
+| CSS Files| `.css`|
+
+{% alert tip %}
+Using Braze's Media Library CDN to host assets will ensure your messages are displayed on mobile devices even if a user has a poor internet connection or offline.
+{% endalert %}
+
 ### Syntax Highlighting
 
 The code editor now includes Syntax Highlighting with a number of different color themes to choose from.
@@ -45,13 +65,36 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks, for scenarios where users are not clicking links, or for tracking buttons after making some API request within a campaign. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
+We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
 
-Additionally, HTML In-App Messages are no longer limited to recording one button click even per impression.
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`). You should use `appboyBridge.logClick()` to log a Body Click, and `appboyBridge.logClick("0")` or `appboyBridge.logClick("1")` to log Button 1 and Button 2, respectively.
 
-## Migration Guide
+For example, to close a message and log Button 2 click, you can use:
 
-There are two steps required to migrate to the new HTML Beta
+```
+<a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
+```
+
+Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
+
+
+## Backward Incompatible Changes {#backward-incompatible-changes}
+
+1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
+<br>
+
+2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+<br>
+
+3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
+
+| Before | After |
+|:-------- |:------------|
+|<code>&lt;a href="appboy://close"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="appboyBridge.logClick();appboyBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+|<code>&lt;a href="app://deeplink?abButtonId=0">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="app://deeplink" onclick="appboyBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+|<code>&lt;script&gt;<br>location.href = "appboy://close?abButtonId=1"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;appboyBridge.logClick("1");<br>&nbsp;&nbsp;appboyBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+
+## Creating a New Campaign {#instructions}
 
 ### SDK Requirements {#supported-sdk-versions}
 
@@ -62,37 +105,69 @@ These Beta features require upgrading to the following Braze SDK version:
 * Android SDK - v8.0.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#800)
 
 {% alert warning %}
-Because this new message type has SDK version depdendencies, be sure to use the new option when enough of your user base has upgraded. Users on older SDK versions will not be served the message.
+Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
 
-Did you know you can create segments to target greater-than or less-than certain app versions? [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
+
+Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
-### New Message Type
+### New Message Type {#new-message-type}
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.png %})
+![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
-Keep in mind that your mobile app users need to upgrade to the supported SDK versions in order to receive this message. 
+Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. 
 
 We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
 
-## Upcoming Features
+### Uploading Asset Files {#upload-assets}
 
-The following features are planned and coming soon!
+Use Braze's Media Library to upload and host assets for your custom HTML messages.
 
-### Asset Management
+We recommend uploading assets to Braze's Media Library for two reasons:
 
-* Upload assets directly to the Media Library from within a campaign via simple drag-and-drop interface
+1. Assets added to a campaign via Media Library will allow your messages to be displayed even while the user is offline
+2. Assets uploaded to Braze can be more easily reused across campaigns.
 
-* List assets associated with this campaign, and quickly copy their URLs to use within your HTML
+To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a file _and_ add associate the file with this campaign.
 
-* Support for uploading additional file types (Fonts, SVG Images, JavaScript, CSS)
+You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library.
+
+![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
+
+Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
+
+Then, paste the copied asset URL into your HTML as you normally would when referencing a remote asset.
+
+{% alert tip %}
+You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
+{% endalert %}
+
+### Migrating Old "Zip File" Campaigns {#migration-guide}
+
+Older campaigns that used zip-files are not supported in this new In-App Message composer.
+
+If you want to migrate those older zip-file campaigns, follow these instructions:
+
+1. Download the .zip asset file to your computer, and unzip the files
+2. Highlight and drag all asset files into your new campaign
+3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+
+For example, replace this:
+
+```html
+<img src="/cat.png" />
+```
+
+With this:
+
+```html
+<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
+```
 
 ## Providing Feedback
 
-Feedback is encouraged and welcome! 
-
-Please send any feedback or suggestions through to your Braze Customer Success Team.
+Feedback is encouraged and welcome! Email any questions or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com?subject=Feedback%20for%20Custom%20HTML%20In-App%20Message%20with%20Preview&body=Company%20Name:%20%0D%0ACampaign%20Link:%20%0D%0AFeedback:).
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge

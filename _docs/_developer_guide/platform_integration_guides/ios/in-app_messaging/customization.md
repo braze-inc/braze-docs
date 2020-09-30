@@ -10,7 +10,7 @@ page_order: 1
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
 {% alert important %}
-By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support.
 <br><br>
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
@@ -179,7 +179,7 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```swift    
   // Set inAppMessage orientation to portrait
   inAppMessage.orientation = ABKInAppMessageOrientation.portrait
-    
+
   // Set inAppMessage orientation to landscape
   inAppMessage.orientation = ABKInAppMessageOrientation.landscape
 ```
@@ -249,9 +249,12 @@ For an implementation example, see our [In-App Message Sample Application][36].
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
+If the IAM campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `beforeInAppMessageDisplayed:` delegate method. This allows the IAM campaign to display from the top of the screen even if the keyboard is being displayed.
+
 ### Hiding the Status Bar During Display
 
 For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+
 
 ### Logging Impressions and Clicks
 
@@ -417,6 +420,30 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtabs %}
 
 >  When an in-app message has buttons, the only click actions that will be executed are the ones on the ABKInAppMessageButton model. The in-app message body will not be clickable even though the ABKInAppMessage model will have the default click action ("News Feed") assigned.
+
+## Dismiss Modal on Outside Tap
+
+The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
+
+To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
+
+Example `Info.plist` contents:
+
+```
+<key>Appboy</key>
+<dict>
+	<key>DismissModalOnOutsideTap</key>
+	<boolean>YES</boolean>
+</dict>
+```
+
+### Description of Dismiss Modal on Outside Tap
+
+| DismissModalOnOutsideTap | Description |
+|----------|-------------|
+| YES       | Modal in-app messages will be dismissed on outside tap     |
+| NO        | Default, modal in-app messages will not be dismissed on outside tap |
+
 
 ## Display In-App Messages In a Custom View Controller
 

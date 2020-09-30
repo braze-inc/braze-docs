@@ -2,6 +2,8 @@
 nav_title: Advancement Behaviors
 platform: Canvas
 page_order: 2
+description: "Braze’s Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. This reference article covers various use cases and scenarios that may come up as you advance through a Canvas."
+alias: /auto_advance/
 ---
 
 # Advancing Your Users through Canvas Steps
@@ -26,7 +28,7 @@ When __Immediately Advance Audience__ is selected, customers will be advanced to
 - A message is not sent because it is aborted
 
 {% alert important %}
-  Users must meet the step's criteria in order to be advanced through the step. For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.
+  Users must meet the step's criteria in order to be advanced through the step. For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
 {% endalert %}
 
 For action-based steps, users must perform the trigger action and meet the audience options in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.

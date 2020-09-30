@@ -17,7 +17,7 @@ Develop robust, cross-channel lifecycle marketing campaigns with the powers of B
 
 To use Remerge, configure the Braze webhook channel to connect Braze with retargeting actions. It is important to have an automatic way of enabling Braze and the retargeting system (i.e. Remerge) to have visibility of what the other system does and adapt from the other’s message. Ad retargeting is helpful if you have users who have push notifications disabled or users who haven’t opened your app recently.
 
-For example: An unregistered user could receive a push campaign saying “Thanks for installing our app, sign up today!” Once the user has signed up after receiving the push campaign they would receive an adapted follow-up message in a retargeted ad such as “Thanks for signing up! Here is 10% off your first order.”
+For example, An unregistered user could receive a push campaign saying “Thanks for installing our app, sign up today!” Once the user has signed up after receiving the push campaign they would receive an adapted follow-up message in a retargeted ad such as “Thanks for signing up! Here is 10% off your first order.”
 
 One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Remerge. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Remerge, which could then be used to define retargeting campaign definitions in remerge.io.
 
@@ -27,7 +27,7 @@ For this webhook, all data is passed on alongside the HTTP URL as query string p
 
 - You'll need to set the event name. This is to define the name of the event that will appear in your [remerge.io][65] dashboard
 - Remerge requires you to pass along your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678")
-- Finally you need to define a key. This will be provided by Remerge
+- Finally, you need to define a key. This will be provided by Remerge
 
 >  Braze does not automatically collect the device IDFA/AAID so you must store these values yourself. Please be aware that you may require user consent to collect this data.
 
@@ -78,7 +78,6 @@ To ensure the request is rendering properly for different users, use the Message
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
-[21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
