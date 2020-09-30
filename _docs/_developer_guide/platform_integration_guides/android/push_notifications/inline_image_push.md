@@ -8,7 +8,7 @@ page_order: 14
 # Android Inline Image Push
 
 {% alert important %}
-This feature is in Early Access. Please ask your account manager if you'd like to preview this new Push message type.
+This feature is in Early Access. Please ask your account manager if you'd like to preview this new push message type.
 {% endalert %}
 
 ![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
