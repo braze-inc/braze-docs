@@ -446,9 +446,7 @@ The class_type is passed in as a filter to only return Content Cards that have a
 
 ## Logging Impressions, Clicks, and Dismissals
 
-After extending your own custom objects to function as Content Cards, set up your code to capture valuable analytics such as impressions, clicks, and dismissals. One way you might approach this is through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
-
-Since your objects conform to the contrentcardable protocol, loggin impressions, clicks and dismissals is as simple as.... one line...?
+After extending your own custom objects to function as Content Cards, logging valuale metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
 {% include video.html id="INDVFUtv6Fc" align="center" %}
 #### __Implementation Components__<br><br>
