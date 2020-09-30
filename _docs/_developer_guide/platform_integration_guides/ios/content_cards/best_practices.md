@@ -7,13 +7,13 @@ description: "This implementation guide covers Content Card code considerations,
 
 # Content Card Implementation Guide
 
-> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here]()! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Code Considerations
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should integrate them using a single "import Appboy-iOS-SDK" statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here]().
+When building out Content Cards, you should integrate them using a single "import Appboy-iOS-SDK" statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift).
 
 ### Content Cards as Custom Objects
 
