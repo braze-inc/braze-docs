@@ -12,7 +12,7 @@ page_type: partner
 
 > Tealium is a universal data hub and customer data platform composed of EventStream and AudienceStream that enables you to connect mobile, web, and alternative data to other third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
-Braze offers [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
+Braze offers [both](#choose-your-integration-type) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
 ## Tealium EventStream
 
@@ -55,18 +55,31 @@ To get going with your Tealium/Braze integration,
 
 ### Remote Commands
 
-Remote Commands is a feature of the Tealium iOS and Android libraries that allows native code to be triggered with the Tealium iQ Tag Management.
+Remote commands allow customers to trigger code in their apps by using a tag in Tealium iQ Tag Management - which collects, controls, and delivers event data from mobile applications. Customers can conveniently use Tag Management to configure a native Braze implementation without having to add Braze-specific code to their apps. Instead, the Braze remote command module will automatically install and build the required Braze libraries. In order to use Braze Mobile Remote Command, the client will need to have Tealium libraries installed in their apps.
 
-The Braze integration uses the native Braze SDK, a remote command module that wraps the Braze methods, and the Braze Remote Command tag that translates event tracking into native Braze calls. This solution leverages the convenience of Tag Management to configure a native Braze implementation without having to add vendor-specific code to your app.
+Using remote commands, the Braze and Tealium SDKs work in tandem allowing clients to make calls from the Tealium SDK - through the Braze servers - to Braze. Here, the tealium tags travel back to be mapped by Braze. __The Braze SDK will continue to handle message displays, message renders, and message analytics.__
+
+Braze Mobile Remote Command maps standard user attributes and custom attributes, and can track purchases and custom events. It also allows clients to track location, and social data on Twitter and Facebook - like the number of followers or number of friends a user has.
+
+You can find more details on how to set up the Braze Mobile Remote Command Tag, as well as an overview of supported methods in the [Tealium Developer Docs](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828).
+
+{% alert important %}
+Braze Mobile Remote Commands do not support all Braze methods (eg. Content Cards). In order to use a Braze method that isn't mapped through a corresponding remote command, users will have to invoke the method by adding native Braze code to their codebase.
+{% endalert%}
 
 ### Tealium's Side-by Side Integrations with Braze
-- [iOS](https://docs.tealium.com/platforms/remote-commands/integrations/braze/) 
-- [Android](https://docs.tealium.com/platforms/remote-commands/integrations/braze/)
-- [Web](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106)
+- iOS Remote Command Resources
+	- [Tealium Documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/)
+	- [Tealium Github Repository](https://github.com/Tealium/tealium-ios-braze-remote-command)<br><br>
+- Android Remote Command Resources
+	- [Tealium Documentation](https://docs.tealium.com/platforms/remote-commands/integrations/braze/)
+	- [Tealium Github Repository](https://github.com/Tealium/tealium-android-braze-remote-command)<br><br>
+- Web SDK Tag Resources
+	- [Tealium Documentation](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106)
 {% details Web App Tag Manager Explainer %}
 
 #### Data In Integration
-Integrate Braze into your web app using the Tealium Tag Manager. In order to set up this integration correctly, there are a number of steps you need to take in order to configure the core integration. It’s then important to be able to understand how you start sending data to Braze by setting up custom events/custom attributes.
+Integrate Braze into your web app using the Tealium Tag Manager. In order to set up this integration correctly, there are a number of steps you need to take in order to configure the core integration. It’s then important to be able to understand how you start sending data to Braze by setting up custom events/custom attributes.<br>
 
 1. Set up Braze as a “Tag” in your Tealium dashboard.
 2. From the Tag Configuration dialogue box, enter your API Key and your appropriate Endpoint.
