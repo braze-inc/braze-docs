@@ -17,7 +17,7 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardData struct, allows you to access the ABKContentCard data. 
+Your custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardData struct, allows you to access the ABKContentCard data. 
 
 The initializer also includes a ContentCardClassType enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit class_type key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
@@ -228,7 +228,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 
 ## Sample Use Cases
 
-There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
+There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
