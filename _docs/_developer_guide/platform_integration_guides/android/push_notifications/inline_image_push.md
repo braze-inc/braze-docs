@@ -17,7 +17,7 @@ This feature is in Early Access. Please ask your account manager if you'd like t
 
 # Usage Requirements
 
-This new notification type requires the Braze Android SDK v10.0.0 or greater, and Android M+ devices or newer.
+This new notification type requires the Braze Android SDK v10.0.0+, and Android M+ devices.
 
 Devices or SDKs which don't support this feature will fallback to see the standard big image push notifications instead of the new inline image design. Additionally, push action buttons are not supported when using this notification type.
 
