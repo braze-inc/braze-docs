@@ -7,14 +7,25 @@ page_order: 14
 
 # Android Inline Image Push
 
-![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+{% alert important %}
+This feature is in Early Access. Please ask your account manager if you'd like to preview this new push message type.
+{% endalert %}
 
-> Inline Image push notifications are custom push notifications by Braze that show images inline without the need to manually expand like standard push notifications.
+![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-# Usage Overview
+> Showcase a larger image within your Android push notification using Inline Image push. With this design, users won't have to manually expand the push to enlarge the image.
 
-No extra integration is required for Android Inline Image Push after upgrading to Braze Android SDK 10.0.0. Inline Image push notifications require Android M+ devices. Devices lower than Android M will see standard big image push notifications instead of inline images. Additionally, push action buttons are not supported when using this notification type.
+# Usage Requirements
 
-# Inline Image Aspect Ratio
+{% alert tip %}
+No additional integration or SDK changes are required to use this feature. Devices or SDKs which don't meet the minimum version requirements will instead show a standard big image push notification.
+{% endalert %}
 
-Unlike regular Android push notifications, Inline Image push images are in a 3:2 aspect ratio.
+- This notification type requires the Braze Android SDK v10.0.0+ and Android M+ devices. 
+- Unsupported devices or SDKs will fallback to the standard big image push notification.
+- Unlike regular Android push notifications, Inline Image push images are in a 3:2 aspect ratio.
+
+
+This feature is available in the **Notification Type** menu when creating an Android Push message.
+
+![Android Inline Image Push example]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
