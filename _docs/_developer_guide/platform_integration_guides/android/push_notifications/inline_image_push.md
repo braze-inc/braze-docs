@@ -13,7 +13,7 @@ This feature is in Early Access. Please ask your account manager if you'd like t
 
 ![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-> Use the Inline Image push type to showcase your push notification images so users won't have to manually expand the message as required with a standard push type.
+> Showcase your push notification's image using an Inline Image push so users won't have to manually expand a standard push to enlarge its image.
 
 # Usage Requirements
 
