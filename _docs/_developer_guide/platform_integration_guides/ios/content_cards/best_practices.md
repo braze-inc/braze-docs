@@ -17,11 +17,13 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initalizer (as seen below) and through the use of the ContentCardable data struct, allows you to access the ABKContentCard data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardable data struct, allows you to access the ABKContentCard data. 
 
-Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` object and value that pulls and displays the appropriate content card.
+Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` key that pulls and displays the appropriate content card. 
 
-{% include video.html id="wSo1I9nLqKU" align="center" %}
+Once you have a solid understanding of the code considerations, check out the [three use cases]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/ios/content_cards/best_practices/#sample-use-cases) below to get started implementing your custom objects.
+
+{% include video.html id="55KTZqYAl7Y" align="center" %}
 
 {% tabs local %}
 {% tab Swift %}
@@ -242,7 +244,7 @@ There are 3 sample customer use cases provided. Each sample has video walkthroug
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-{% include video.html id="wSo1I9nLqKU" align="center" %}
+{% include video.html id="9nmwlQKnnfE" align="center" %}
 #### __Load Content Cards Alongside Existing Content__<br><br>
 
 {% tabs local %}
@@ -357,7 +359,7 @@ dispatch_semaphore_signal(semaphore);
 
 ### Content Cards in a Message Center
 Content Cards can be used in a message center format where each message is its own card. Each card contains additional key-value pairs that power on-click UI/UX.
-{% include video.html id="ZpXvjca9KyY" align="center" %}
+{% include video.html id="dmaT61p8kW8" align="center" %}
 
 {% tabs %}
 {% tab Swift %}
@@ -399,7 +401,7 @@ When a message is clicked, the ContentCardClassType handles how the next screen 
 ### Interactive Content Cards
 Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-{% include video.html id="INDgFPIZrNQ" align="center" %}
+{% include video.html id="76ivkU6Zmdg" align="center" %}
 #### Interactable View<br><br>
 
 {% tabs %}
@@ -446,9 +448,9 @@ The class_type is passed in as a filter to only return Content Cards that have a
 
 ## Logging Impressions, Clicks, and Dismissals
 
-After extending your own custom objects to function as Content Cards, logging valuale metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
+After extending your own custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
-{% include video.html id="INDVFUtv6Fc" align="center" %}
+{% include video.html id="N05Ojf-BKs0" align="center" %}
 #### __Implementation Components__<br><br>
 
 {% tabs %}
