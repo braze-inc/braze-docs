@@ -17,9 +17,9 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardable data struct, allows you to access the ABKContentCard data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardData struct, allows you to access the ABKContentCard data. 
 
-Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` key that pulls and displays the appropriate content card. Once you have a solid understanding of these code considerations, check out our [use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/best_practices/#sample-use-cases) below to get started implementing your own custom objects.
+Included in this initializer is a ContentCardClassType enum parameter, this enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you are then able to pass Braze a `class_type` key that pulls and displays the appropriate Content Card. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
 {% include video.html id="55KTZqYAl7Y" align="center" %}
 
@@ -85,16 +85,15 @@ ContentCardData represents the parsed out values of an ABKContentCard.
 
 @end
 
-
 @protocol ContentCardable <NSObject>
 
 @property (nonatomic, strong) ContentCardData *contentCardData;
 - (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData classType:(enum ContentCardClassType)classType;
 
 - (BOOL)isContentCard;
-- (void)logContentCardImpression:()idString;
-- (void)logContentCardClick:()idString;
-- (void)logContentCardDismissal:()idString;
+- (void)logContentCardImpression;
+- (void)logContentCardClick;
+- (void)logContentCardDismissal;
 
 @end
 ```
@@ -135,30 +134,26 @@ MetaData from an ABKContentCard is used to populate your object's variables. The
 ```objc
 - (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {
   self = [super init];
-  
   if (self) {
     if (metaData[@"idString"] != nil && metaData[@"created"] != nil && metaData[@"dismissable"] != nil && metaData[@"extras"] != nil) {
-    
       NSDictionary  *extras = metaData[@"extras"];
       NSString *idString = metaData[@"idString"];
       double createdAt = [metaData[@"createdAt"] doubleValue];
       BOOL isDismissable = metaData[@"isDimissable"];
-      
-      if (extras[@"tile_title"] != nil && extras[@"tile_price"] != nil && extras[@"tile_image"] !=  nil) {
+      if (extras[@"tile_id"] != nil && extras[@"tile_title"] != nil && extras[@"tile_price"] != nil && extras[@"tile_image"] !=  nil) {
         NSString *tagsString = extras[@"tile_tags"];
-
-        _idString = idString;
+        _idString = [extras[@"tile_id"] integerValue];
         _title = extras[@"tile_title"];
-        _tags = [tagsString separatedByCommaSpaceValue];
+        _tags = [tagsString componentsSeparatedByString:@", "];
         _imageUrl = extras[@"tile_image"];
-        
         self.price = [NSDecimalNumber decimalNumberWithString:extras[@"tile_price"]];
-        
         self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt: createdAt isDismissable:isDismissable];
-        
         return self;
       }
     }
+  }
+  return nil;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -233,7 +228,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 
 ## Sample Use Cases
 
-There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how content card variables may look and be used in the Braze dashboard:
+There are 3 sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -271,23 +266,23 @@ __Load the data simultaneously with OperationQueues__
 HomeListOperationQueue * __weak weakSelf = self;
 
 [self addOperationWithBlock:^{
-      if (weakSelf) {
-        [weakSelf loadContentCards];
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-      }
-    }];
+  if (weakSelf) {
+    [weakSelf loadContentCards];
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+  }
+}];
     
-  [self addOperationWithBlock:^{
-    if (weakSelf) {
-      [weakSelf loadLocalTilesWithCompletion:^(NSMutableArray * localTiles, NSError*) {
-        [tiles addObjectsFromArray:localTiles];
-      }];
-    }
-  }];
-    
-    [self addBarrierBlock:^{
-      completion(tiles, ads);
+[self addOperationWithBlock:^{
+  if (weakSelf) {
+    [weakSelf loadLocalTilesWithCompletion:^(NSMutableArray * localTiles, NSError*) {
+      [tiles addObjectsFromArray:localTiles];
     }];
+  }
+}];
+    
+[self addBarrierBlock:^{
+  completion(tiles, ads);
+}];
 ```
 {% endtab %}
 {% endtabs %}
@@ -348,8 +343,8 @@ __Content Card Operation__
 - (void)contentCardsUpdated:(NSNotification *)notification {
   NSArray *classTypes = @[@(ContentCardClassTypeHomeTile),@(ContentCardClassTypeAdBanner)];
   NSArray *contentCards = [[AppboyManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
-contentCardCompletionHandler(contentCards);
-dispatch_semaphore_signal(semaphore);
+  contentCardCompletionHandler(contentCards);
+  dispatch_semaphore_signal(semaphore);
 }
 ```
 {% endtab %}
@@ -457,23 +452,26 @@ __Custom Objects Call the Logging Methods__<br>
 From the ContentCardable protocol
 ```swift
 func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    let message = messages[indexPath.row]
-    message.logContentCardImpression()
-  }
+  let message = messages[indexPath.row]
+  message.logContentCardImpression()
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
 __Custom Objects Call the Logging Methods__<br>
 From the ContentCardable protocol
 ```objc
-[message logContentCardImpression];
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+  Message *message = self.messages[indexPath.row];
+  [message logContentCardImpression];
+}
 ```
 {% endtab %}
 {% endtabs %}
 {% tabs local %}
 {% tab Swift %}
 __Retrieve the Content Card from the ContentCardId__<br>
-From the  `Appboy.sharedInstance()?.contentCardsController.contentCards` array
+AppboyManager.Swift file handles the ABK dependencies
 ```swift
 protocol ContentCardable {
   func logContentCardImpression() {
@@ -484,7 +482,7 @@ protocol ContentCardable {
 {% endtab %}
 {% tab Objective-C %}
 __Retrieve the Content Card from the ContentCardId__<br>
-From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
+AppboyManager.Swift file handles the ABK dependencies
 ```objc
 - (void)logContentCardImpression {
   [[AppboyManager shared] logContentCardImpression:self.contentCardData.contentCardId];
@@ -495,12 +493,12 @@ From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
 {% tabs local %}
 {% tab Swift %}
 __Call ABKContentCard Functions__<br>
-AppboyManager.Swift file handles the ABK dependencies
+From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
 ```swift
 func logContentCardImpression(idString: String?) {
-    guard let contentCard = getContentCard(forString: idString) else { return }
+  guard let contentCard = getContentCard(forString: idString) else { return }
 
-    contentCard.logContentCardImpression()
+  contentCard.logContentCardImpression()
   }
   
   private func getContentCard(forString idString: String?) -> ABKContentCard? {
@@ -510,7 +508,7 @@ func logContentCardImpression(idString: String?) {
 {% endtab %}
 {% tab Objective-C %}
 __Call ABKContentCard Functions__<br>
-AppboyManager.Swift file handles the ABK dependencies
+From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
 ```objc
 - (void)logContentCardImpression:(NSString * __nullable)idString {
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
