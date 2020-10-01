@@ -21,7 +21,7 @@ This feature is in Early Access. Please ask your account manager if you'd like t
 No additional integration or SDK changes are required to use this feature!. Devices or SDKs which don't meet the minimum version requirements will instead show a standard big image push notification.
 {% endalert %}
 
-- This notification type requires the Braze Android SDK v10.0.0+, and Android M+ devices. Unsupported devices or SDKs will fallback to the standard big image push notifications
+- This notification type requires the Braze Android SDK v10.0.0+ and Android M+ devices. Unsupported devices or SDKs will fallback to the standard big image push notification.
 
 - Unlike regular Android push notifications, Inline Image push images are in a 3:2 aspect ratio.
 
