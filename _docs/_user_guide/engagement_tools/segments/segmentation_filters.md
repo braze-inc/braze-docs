@@ -189,7 +189,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received a designated campaign or canvas step.
+    description: Segments your users by whether or not they have received any campaign or canvas step.
     tags:
       - Retargeting
   - name: In Campaign Control Group
