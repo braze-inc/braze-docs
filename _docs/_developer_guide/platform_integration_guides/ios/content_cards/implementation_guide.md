@@ -242,7 +242,8 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 
 {% tabs %}
 {% tab Swift %}
-__Load the data simultaneously with OperationQueues__
+__Load the data simultaneously with OperationQueues__<br>
+A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
 ```swift
 addOperation { [weak self] in
       guard let self = self else { return }
@@ -261,7 +262,9 @@ addOperation { [weak self] in
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Load the data simultaneously with OperationQueues__
+__Load the data simultaneously with OperationQueues__<br>
+A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
+
 ```objc
 HomeListOperationQueue * __weak weakSelf = self;
 
@@ -288,7 +291,9 @@ HomeListOperationQueue * __weak weakSelf = self;
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__Load Local Data Operation__
+__Load Local Data Operation__<br>
+The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards.
+
 ```swift
 func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
       switch result {
@@ -301,7 +306,9 @@ func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Load Local Data Operation__
+__Load Local Data Operation__<br>
+The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards.
+
 ```objc
 - (void)loadTilesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
   [localDataCoordinator loadTilesFromLocalDataWithCompletion:^(NSMutableArray *tiles, NSError *error) {
@@ -317,7 +324,9 @@ __Load Local Data Operation__
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__ Load Content Card Operation__
+__Load Content Card Operation__<br>
+Using a semaphore to signal when the task is executed due to the notification callback from the Braze SDK. 
+
 ```swift
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
@@ -332,7 +341,9 @@ func loadContentCards() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Load Content Card Operation__
+__Load Content Card Operation__<br>
+Using a semaphore to signal when the task is executed due to the notification callback from the Braze SDK. 
+
 ```objc
 - (void)loadContentCards {
   [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
@@ -399,7 +410,9 @@ Content Cards can be leveraged to create interactive experiences for your users.
 
 {% tabs %}
 {% tab Swift %}
-__Requesting Content Cards__
+__Requesting Content Cards__<br>
+As long as the observer is still retained in memory, a notification callback from the Braze SDK can be expected. 
+
 ```swift
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
@@ -408,7 +421,9 @@ func loadContentCards() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Requesting Content Cards__
+__Requesting Content Cards__<br>
+As long as the observer is still retained in memory, a notification callback from the Braze SDK can be expected. 
+
 ```objc
 - (void)loadContentCards {
   [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
