@@ -288,7 +288,7 @@ HomeListOperationQueue * __weak weakSelf = self;
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__Local Data Load Operation__
+__Load Local Data Operation__
 ```swift
 func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
       switch result {
@@ -301,7 +301,7 @@ func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Local Data Load Operation__
+__Load Local Data Operation__
 ```objc
 - (void)loadTilesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
   [localDataCoordinator loadTilesFromLocalDataWithCompletion:^(NSMutableArray *tiles, NSError *error) {
@@ -317,7 +317,7 @@ __Local Data Load Operation__
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__Content Card Load Operation__
+__ Load Content Card Operation__
 ```swift
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
@@ -332,7 +332,7 @@ func loadContentCards() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Content Card Load Operation__
+__Load Content Card Operation__
 ```objc
 - (void)loadContentCards {
   [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
