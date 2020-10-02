@@ -12,6 +12,8 @@ page_type: partner
 
 > Tealium is a universal data hub and customer data platform composed of EventStream and AudienceStream that enables you to connect mobile, web, and alternative data to other third-party sources. Tealium’s connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
+![Tealium Overview][22]{: style="max-width:90%; border:0;"}
+
 Braze offers [both](#choose-your-integration-type) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
 ## Tealium EventStream
@@ -24,6 +26,7 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 - Event Connectors (API Hub Actions)
 
 ## Tealium AudienceStream
+
 Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. To read more about how to set up Tealium AudienceStream, check out our [documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/).
 
 ## Set Up Overview
@@ -76,10 +79,13 @@ Braze Mobile Remote Commands do not support all Braze methods (eg. Content Cards
 	- [Tealium Github Repository](https://github.com/Tealium/tealium-android-braze-remote-command)<br><br>
 - Web SDK Tag Resources
 	- [Tealium Documentation](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Web-SDK-Tag-Setup-Guide/ta-p/20106)
-{% details Web App Tag Manager Explainer %}
+{% details Braze Web SDK Tag Explainer %}
+
+#### Braze Web SDK Tag
+The Braze Web SDK Tag is used by customers to deploy Braze's Web SDK to their websites. [Tealium iQ Tag Management](https://community.tealiumiq.com/t5/iQ-Tag-Management/Introduction-to-iQ-Tag-Management/ta-p/15883) allows customers to add Braze as a Tag within the Tealium dashboard. A tag is a code snippet that is placed on a website to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization. By using the Braze Web SDK Tag, clients can get a lot of insight into how customers are interacting with their websites.
 
 #### Data In Integration
-Integrate Braze into your web app using the Tealium Tag Manager. In order to set up this integration correctly, there are a number of steps you need to take in order to configure the core integration. It’s then important to be able to understand how you start sending data to Braze by setting up custom events/custom attributes.<br>
+Integrate Braze into your web app using the Tag Manager. In order to set up this integration correctly, there are a number of steps you need to take in order to configure the core integration. It’s then important to be able to understand how you start sending data to Braze by setting up custom events/custom attributes.<br>
 
 1. Set up Braze as a “Tag” in your Tealium dashboard.
 2. From the Tag Configuration dialogue box, enter your API Key and your appropriate Endpoint.
@@ -323,3 +329,4 @@ For more detailed instructions on how to implement Tealium's Trace tool, check o
 [19]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329#toc-hId--2078027338
 [20]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
 [21]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Trace/ta-p/12058
+[22]: {% image_buster /assets/img/tealium/tealium_overview.png %}
