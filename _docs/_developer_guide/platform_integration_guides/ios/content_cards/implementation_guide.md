@@ -17,16 +17,16 @@ When building out Content Cards, you should integrate them using a single "impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the ContentCardable protocol and implementing the initializer (as seen below) and through the use of the ContentCardData struct, allows you to access the ABKContentCard data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the ABKContentCard data. 
 
-The initializer also includes a ContentCardClassType enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit class_type key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit class_type key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
 {% include video.html id="55KTZqYAl7Y" align="center" %}
 
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __No ABKContentCard Dependencies__<br>
-ContentCardData represents the parsed out values of an ABKContentCard.
+`ContentCardData` represents the parsed out values of an ABKContentCard.
 
 ```swift
 protocol ContentCardable {
@@ -69,7 +69,7 @@ extension ContentCardData: Equatable {
 {% tab Objective-C %}
 
 __No ABKContentCard Dependencies__<br>
-ContentCardData represents the parsed out values of an ABKContentCard.
+`ContentCardData` represents the parsed out values of an ABKContentCard.
 
 ```objc
 @interface ContentCardData : NSObject
@@ -99,7 +99,7 @@ ContentCardData represents the parsed out values of an ABKContentCard.
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Custom Object Initializer__<br>
 MetaData from an ABKContentCard is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
@@ -157,10 +157,10 @@ MetaData from an ABKContentCard is used to populate your object's variables. The
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Identifying Types__<br>
-The ContentCardClassType enum represents the class_type value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the class_type value in the Braze Dashboard.
 
 ```swift
 enum ContentCardClassType: Hashable {
@@ -200,7 +200,7 @@ enum ContentCardClassType: Hashable {
 {% endtab %}
 {% tab Objective-C %}
 __Identifying Types__<br>
-The ContentCardClassType enum represents the class_type value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the class_type value in the Braze Dashboard.
 
 ```objc
 typedef NS_ENUM(NSInteger, ContentCardClassType) {
@@ -240,7 +240,7 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 {% include video.html id="9nmwlQKnnfE" align="center" %}
 #### __Load Content Cards Alongside Existing Content__<br><br>
 
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Load the data simultaneously with OperationQueues__
 ```swift
@@ -286,9 +286,9 @@ HomeListOperationQueue * __weak weakSelf = self;
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
-__Local Data Operation__
+__Local Data Load Operation__
 ```swift
 func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
       switch result {
@@ -301,7 +301,7 @@ func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Local Data Operation__
+__Local Data Load Operation__
 ```objc
 - (void)loadTilesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
   [localDataCoordinator loadTilesFromLocalDataWithCompletion:^(NSMutableArray *tiles, NSError *error) {
@@ -315,9 +315,9 @@ __Local Data Operation__
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
-__Content Card Operation__
+__Content Card Load Operation__
 ```swift
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
@@ -332,7 +332,7 @@ func loadContentCards() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Content Card Operation__
+__Content Card Load Operation__
 ```objc
 - (void)loadContentCards {
   [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
@@ -357,7 +357,7 @@ Content Cards can be used in a message center format where each message is its o
 {% tabs %}
 {% tab Swift %}
 __Using 'class_type' for On Click Behavior__<br>
-When a message is clicked, the ContentCardClassType handles how the next screen should be populated.
+When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```swift
 func addContentCardToView(with message: Message) {
     switch message.contentCardData?.contentCardClassType {
@@ -373,7 +373,7 @@ func addContentCardToView(with message: Message) {
 {% endtab %}
 {% tab Objective-C %}
 __Using 'class_type' for On Click Behavior__<br>
-When a message is clicked, the ContentCardClassType handles how the next screen should be populated.
+When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```objc
 - (void)addContentCardToView:(Message *)message {
   switch (message.contentCardData.classType) {
@@ -417,7 +417,7 @@ __Requesting Content Cards__
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Getting Type-Specific Content Cards__<br>
 The class_type is passed in as a filter to only return Content Cards that have a matching class_type.
@@ -441,7 +441,7 @@ The class_type is passed in as a filter to only return Content Cards that have a
 
 ## Logging Impressions, Clicks, and Dismissals
 
-After extending your own custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a ContentCardable protocol that references and provides data to a helper file to be logged by the Braze SDK.
+After extending your own custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
 {% include video.html id="N05Ojf-BKs0" align="center" %}
 #### __Implementation Components__<br><br>
@@ -449,7 +449,7 @@ After extending your own custom objects to function as Content Cards, logging va
 {% tabs %}
 {% tab Swift %}
 __Custom Objects Call the Logging Methods__<br>
-From the ContentCardable protocol
+From the `ContentCardable` protocol
 ```swift
 func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
   let message = messages[indexPath.row]
@@ -459,7 +459,7 @@ func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forR
 {% endtab %}
 {% tab Objective-C %}
 __Custom Objects Call the Logging Methods__<br>
-From the ContentCardable protocol
+From the `ContentCardable` protocol
 ```objc
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
   Message *message = self.messages[indexPath.row];
@@ -468,7 +468,7 @@ From the ContentCardable protocol
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Retrieve the Content Card from the ContentCardId__<br>
 AppboyManager.Swift file handles the ABK dependencies
@@ -490,7 +490,7 @@ AppboyManager.Swift file handles the ABK dependencies
 ```
 {% endtab %}
 {% endtabs %}
-{% tabs local %}
+{% tabs %}
 {% tab Swift %}
 __Call ABKContentCard Functions__<br>
 From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
