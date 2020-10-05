@@ -103,6 +103,19 @@ You can use key-value pairs to create categories for your Cards, create multiple
 
 Build the remainder of your campaign, see the sections below for further details on how to best utilize our tools to build Content Cards.
 
+### Card Removal Events
+
+Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+
+Within a Campaign or Canvas Message you can add a **Removal Event** to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
+
+{% alert tip %}
+You can specify multiple custom events and purchase that should remove a card from a user's feed. Once _any_ of those actions are performed by the user, any existing cards sent by campaign/canvas's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+{% endalert %}
+
+![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+
+
 #### Choose Delivery Schedule or Trigger
 - Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
 - You can also set the campaign's duration and Quiet Hours in this step.
