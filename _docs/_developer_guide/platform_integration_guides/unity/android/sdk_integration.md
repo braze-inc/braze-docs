@@ -6,7 +6,7 @@ page_order: 0
 ---
 # SDK Integration
 
-Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages. Unity requires [the same support library version as the base Android SDK][24].
+Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages.
 
 ## Step 1: Choosing A Braze Unity Package
 
