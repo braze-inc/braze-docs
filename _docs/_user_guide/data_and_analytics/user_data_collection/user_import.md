@@ -132,7 +132,7 @@ The filter used to create the segment selects users who were created or updated 
 As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Previous to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
 {% endalert %}
 
-You can also choose to import the users in the CSV and make it possible to retarget these users as a group—doing so allows you to create a segment using the CSV import filter. You can also choose to have a create a segment with these users allows you to use the "segment membership" filter.
+You can also choose to import the users in the CSV and make it possible to retarget these users as a group—doing so allows you to create a segment using the CSV import filter. Additionally, you can automatically create a segment with these users. 
 
 ## Troubleshooting
 
