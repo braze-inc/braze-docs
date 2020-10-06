@@ -56,6 +56,10 @@ glossaries:
     description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
+  - name: Day of Recurring Event
+    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Timezone&#58;<br>This filter adjusts for whatever timezones the user is in.
+    tags:
+      - Custom Data
   - name: First Made Purchase
     description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Timezone:<br>UTC
     tags:
