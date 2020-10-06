@@ -122,7 +122,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 
 |Default API Rate Limit | Value|
 |---|---|
-|Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. These limits are subject to change and can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
+|Requests to the `/users/track` endpoint| For customers who onboarded prior to June 2, 2020: Unlimited. <br><br> For customers who onboarded after June 2, 2020: 50,000 requests per minute (see batching below). This limit can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
