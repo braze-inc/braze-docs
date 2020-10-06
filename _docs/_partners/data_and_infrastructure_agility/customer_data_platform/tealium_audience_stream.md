@@ -132,75 +132,22 @@ __Note that not all fields offered are required__. <br>If you wish to skip over 
 {% endalert %}
 
 {% tabs local %}
-{% tab Track User - User %}
-
-__Action: Track User - Users__
-
-This action allows you to track and map user attributes like those in the Braze User Attributes Object. To read more about the User Attributes Object, check out [our documentation](https://www.braze.com/docs/api/objects_filters/user_attributes_object/).
-
-| Parameters | Description |
-| ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
-| User Attribute | Use Braze's existing User Profile Attribute names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles. |
-| Modify User Attributes | Integer attributes may be incremented by positive or negative integers.<br>Array attributes may be modified by adding or removing values from existing arrays. |
-| User Attributes Update Strategy | Choose a strategy for updating or creating User Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![Track User]({% image_buster /assets/img/tealium/audience_stream/track_user_user.png %}){: style="max-width:70%"}
-
-{% endtab %}
-{% tab Track User - Event %}
-
-__Action: Track User - Event__
-
-This action allows you to track and map event attributes like those in the Braze Event Object. To read more about the Braze Event Object, check out [our documentation](https://www.braze.com/docs/api/objects_filters/event_object/).
-
-| Parameters | Description |
-| ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
-| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value.<br><br>If sending an Event Object, __Name (tealium_event)__, and __Time (Last event timestamp)__ are both required. | 
-| Event Attributes Strategy | Choose a strategy for updating or creating Event Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting`Create or Update` will create or update a user profile as needed. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![Track Event]({% image_buster /assets/img/tealium/audience_stream/track_user_event.png %}){: style="max-width:70%"}
-
-{% endtab %}
-{% tab Track User - Purchase %}
-
-__Action: Track User - Purchase__
-
-This action allows you to track and map user purchase attributes like those in the Braze Purchase Object. To read more about the Braze Purchase Object, check out our [Documentation](https://www.braze.com/docs/api/objects_filters/purchase_object/).
-
-| Parameters | Description |
-| ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
-| Purchase Attributes | A Purchase represents a single purchase by a particular user at a particular time.<br><br> If sending a purchase, the __Product ID (braze_product_id), Currency (currency), Price (product_list_price)__, and __Time (Last event timestamp)__ attributes are required. |
-| Purchase Attributes Update Strategy | Choose a strategy for updating or creating Purchase Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![Track Purchases]({% image_buster /assets/img/tealium/audience_stream/track_user_purchase.png %}){: style="max-width:70%"}
-
-{% endtab %}
-{% tab Track User (Advanced) %}
-
-__Action: Track User (Advanced)__
+{% tab Track User %}
 
 This action allows you to track user, event, and purchase attributes all in one action.
 
 | Parameters | Description |
 | ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
-| User Attributes | Use Braze's existing User Profile Attribute names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles. |
-| Modify User Attributes | Integer attributes may be incremented by positive or negative integers.<br>Array attributes may be modified by adding or removing values from existing arrays. |
-| User Attributes Update Strategy | Choose a strategy for updating or creating User Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
-| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value.<br><br>If sending an Event Object, __Name (tealium_event)__, and __Time (Last event timestamp)__ are both required. |
-| Event Attributes Update Strategy | Choose a strategy for updating or creating Event Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
-| Purchase Attributes | A Purchase represents a single purchase by a particular user at a particular time.<br><br> If sending a purchase, the __Product ID (braze_product_id), Currency (currency), Price (product_list_price)__, and __Time (Last event timestamp)__ attributes are required. |
-| Purchase Attributes Update Strategy | Choose a strategy for updating or creating Purchase Attributes. <br><br>- Selecting `Update Only` will only update existing user profiles. <br>- Selecting `Create or Update` will create or update a user profile as needed. |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. <br><br>For more information, check out the Braze [/users/track endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/). |
+| User Attributes | Use Braze's existing User Profile field names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles.<br><br>- By default new users will be created if one does not exist.<br>- By setting `Update Existing Only` to `true` only existing users will be updated and no new user will be created.<br><br>To read more about the User Attributes Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/user_attributes_object/) |
+| Modify User Attributes | Use this field to increment or decrement certain user attributes<br><br>- Integer attributes may be incremented by positive or negative integers.<br>- Array attributes may be modified by adding or removing values from existing arrays. |
+| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value. Use this field to track and map event attributes like those in the Braze Event Object. <br><br>- Event Attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events will be created if one does not exist. By setting `Update Existing Only` to `true` only existing events will be updated and no new event will be created.<br>-  Map Array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each event.<br><br>To read more about the Braze Event Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/event_object/). |
+| Purchase Attributes | Use this field to track and map user purchase attributes like those in the Braze Purchase Object.<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true` only existing purchases will be updated and no new purchase will be created.<br>- Map Array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.<br><br>To read more about the Braze Purchase Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/purchase_object/)|
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% endtab %}
+![Track User Example]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:70%"}
 
+{% endtab %}
 {% tab Delete User %}
 
 __Action: Delete Users__
@@ -209,10 +156,10 @@ This action allows you to delete users from the Braze Dashboard. To read more ab
 
 | Parameters | Description |
 | ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- If specifying a user alias, Alias Name and Alias Label should both be set. |
+| User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name & Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Track Purchases]({% image_buster /assets/img/tealium/audience_stream/track_user_delete.png %}){: style="max-width:70%"}
+![Delete Users]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -233,6 +180,22 @@ After your connector is up and running, you should test it to make sure it's wor
 4. Look for the action you want to validate and view the log status. 
 
 For more detailed instructions on how to implement Tealium's Trace tool, check out their [Trace documentation][21]. 
+
+## Potential Data Point Overages
+
+There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium. 
+
+#### __Insufficient Data Logging__
+Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
+__Solution__: You can check their own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ OR If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream (__similar to Segment personas__) to track user attribute changes.
+
+#### __Sending Irrelevant Data__
+If you have multiple EventStream connectors that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
+__Solution__: Set up a separate event specification or feed to track each action. OR Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
+
+#### __Initalizing Braze too Early__
+Users integrating with Tealium using the Braze Web SDK Tag may see a dramatic increase in their MAU. __If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.__ Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video" in order to lower their MAU count. <br><br>
+__Solution__: Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
 
 [1]: https://community.tealiumiq.com/t5/Getting-Started-with/Attributes/ta-p/25785
