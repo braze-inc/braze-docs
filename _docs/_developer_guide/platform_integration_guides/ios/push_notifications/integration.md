@@ -141,7 +141,6 @@ if #available(iOS 10, *) {
   }
   center.requestAuthorization(options: options) { (granted, error) in
     Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-    print("Permission granted.")
   }
   UIApplication.shared.registerForRemoteNotifications()
 } else {
