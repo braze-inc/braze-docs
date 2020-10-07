@@ -61,6 +61,7 @@ validurls['/docs/partner_integrations/#kochava'] = '/docs/partners/kochava/';
 validurls['/docs/partner_integrations/#singular'] = '/docs/partners/singular/';
 validurls['/docs/partner_integrations/#tune-mobileapptracking'] = '/docs/partners/tune/';
 validurls['/docs/partner_integrations/'] = '/docs/partners/';
+validurls['/docs/partners/technology_partners/channel_extensions/workflow_automation/zapier_integration/'] = '/docs/partners/channel_extensions/workflow_automation/zapier_integration/';
 validurls['/docs/platform_wide/#app-group-configuration'] = '/docs/developer_guide/platform_wide/app_group_configuration/#app-group-configuration';
 validurls['/docs/rest_api/#email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
