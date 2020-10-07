@@ -41,16 +41,16 @@ Tealium AudienceStream is an Omnichannel customer segmentation and real-time act
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 | Tealium Account & Account Information | Tealium | [https://my.tealiumiq.com/](https://my.tealiumiq.com/) | You must have an active Tealium Account with both Server and Client-Side Access to utilize their services with Braze. |
-| Install Source and Tealium Source Libraries | Tealium | [Tealium Source Libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector |
-| Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2] documentation | Braze must successfully be installed onto your app or site |
+| Install Source and Tealium Source Libraries | Tealium | [Tealium Source Libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector. |
+| Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2], and [Web][10] documentation | Braze must successfully be installed onto your app or site. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Choose your Integration Type
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-Side](#side-by-side-sdk-integration) | Maps Tealiums's SDK to Braze's, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration. |
-| [Server-to-Server](#server-to-server-integration) | Forwards data from Tealium to Braze's [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint). |
+| [Side-by-Side](#side-by-side-sdk-integration) | Maps Tealiums's SDK to Braze's SDK, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze Remote Commands, note that they do not support all Braze methods (eg. Content Cards). In order to use a Braze method that isn’t mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to their codebase. |
+| [Server-to-Server](#server-to-server-integration) | Forwards data from Tealium to Braze's [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data?redirected=true#user-track-endpoint).<br><br>Does __not__ support Braze UI features such as In-App Messaging, News Feed, or Push notifications. There also exists automatically captured data (Sessions, First Used App, and Last Used App) that is not available through this method. Consider a side-by-side integration if you wish to use these features. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Side-by-Side SDK Integration
@@ -62,7 +62,7 @@ Remote commands allow customers to trigger code in their apps by using a tag in 
 
 Using remote commands, the Braze and Tealium SDKs work in tandem allowing customers to make calls from the Tealium SDK - through the Braze servers - to Braze. Here, the Tealium tags travel back to be mapped by Braze. __The Braze SDK will continue to handle message displays, message renders, and message analytics.__
 
-Braze Mobile Remote Command maps standard user attributes and custom attributes and can track purchases and custom events. It also allows you to track location, and social data on Twitter and Facebook - like the number of followers or number of friends a user has. Check out the Remote Command chart to see the corresponding Braze method.
+Braze Mobile Remote Command maps standard user attributes and custom attributes and can track purchases and custom events. It also allows you to track location, and social data on Twitter and Facebook - like the number of followers or number of friends a user has. Check out the Remote Command chart to see the corresponding Braze methods.
 
 You can find more details on how to set up the Braze Mobile Remote Command Tag, as well as an overview of supported methods in the [Tealium Developer Docs](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828).
 
@@ -130,7 +130,7 @@ A connector is an integration between Tealium and another vendor that is used to
 For visitor data connectors, go to __AudienceStream__ -> __Audience Connectors__
 2. Select the blue `+ Add Connector` button to look through the Connector Marketplace.
 2. In the new dialogue box that appears, use the spotlight search to find the Braze Connector.
-3. To add this connector, click the Braze Connector Tile. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__ to begin configuring.
+3. To add this connector, click the __Braze Connector Tile__. <br>Once clicked, you can view the connection summary, here Tealium provides a list of the required information, supported actions, and configuration instructions. <br><br> Click __Continue__ to begin configuring.
 
 ### Step 2: Configure your Connector Settings
 
@@ -201,11 +201,11 @@ This action allows you to track user, event, and purchase attributes all in one 
 
 | Parameters | Description |
 | ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. <br><br>For more information, check out the Braze [/users/track endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/). |
-| User Attributes | Use Braze's existing User Profile field names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles.<br><br>- By default new users will be created if one does not exist.<br>- By setting `Update Existing Only` to `true` only existing users will be updated and no new user will be created.<br><br>To read more about the User Attributes Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/user_attributes_object/) |
+| User ID | Use this field to map the Tealium User ID field to its Braze Equivalent. <br><br>- If importing Push Tokens, External ID and Braze ID should not be specified.<br>- If specifying a user alias, Alias Name and Alias Label should both be set. <br><br>For more information, check out the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). |
+| User Attributes | Use Braze's existing User Profile field names to update user profile values in the Braze Dashboard or add your own custom attribute data to the user profiles.<br><br>- By default new users will be created if one does not exist.<br>- By setting `Update Existing Only` to `true` only existing users will be updated and no new user will be created.<br><br>To read more about the User Attributes Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | Modify User Attributes | Use this field to increment or decrement certain user attributes<br><br>- Integer attributes may be incremented by positive or negative integers.<br>- Array attributes may be modified by adding or removing values from existing arrays. |
-| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value. Use this field to track and map event attributes like those in the Braze Event Object. <br><br>- Event Attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events will be created if one does not exist. By setting `Update Existing Only` to `true` only existing events will be updated and no new event will be created.<br>-  Map Array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each event.<br><br>To read more about the Braze Event Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/event_object/). |
-| Purchase Attributes | Use this field to track and map user purchase attributes like those in the Braze Purchase Object.<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true` only existing purchases will be updated and no new purchase will be created.<br>- Map Array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.<br><br>To read more about the Braze Purchase Object, check out our [documentation](https://www.braze.com/docs/api/objects_filters/purchase_object/)|
+| Event Attributes | An Event represents a single occurrence of a Custom Event by a particular user at the designated time value. Use this field to track and map event attributes like those in the Braze Event Object. <br><br>- Event Attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events will be created if one does not exist. By setting `Update Existing Only` to `true` only existing events will be updated and no new event will be created.<br>-  Map Array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each event.<br><br>To read more about the Braze Event Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/event_object/). |
+| Purchase Attributes | Use this field to track and map user purchase attributes like those in the Braze Purchase Object.<br><br>- Purchase attributes `Product ID`, `Currency` and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true` only existing purchases will be updated and no new purchase will be created.<br>- Map Array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.<br><br>To read more about the Braze Purchase Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/purchase_object/)|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Track User Example]({% image_buster /assets/img/tealium/track_user_example.jpg %}){: style="max-width:80%"}
@@ -213,13 +213,11 @@ This action allows you to track user, event, and purchase attributes all in one 
 {% endtab %}
 {% tab Delete User %}
 
-__Action: Delete Users__
-
-This action allows you to delete users from the Braze Dashboard. To read more about the Braze /users/delete endpoint this action maps to, check out [our documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/).
+This action allows you to delete users from the Braze Dashboard.
 
 | Parameters | Description |
 | ---------- | ----------- |
-| User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name & Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/). |
+| User ID | Use this field to map the Tealium User ID field to it's Braze Equivalent. <br><br>- Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name & Alias Label.<br>- When specifying a user alias, Alias Name and Alias Label should both be set.<br><br>For more information, see the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Delete Users]({% image_buster /assets/img/tealium/track_user_delete.png %}){: style="max-width:70%"}
@@ -260,15 +258,15 @@ There are three primary ways that you might accidentally hit data overages when 
 
 #### __Insufficient Data Logging__
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
-__Solution__: You can check their own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ OR If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream (__similar to Segment personas__) to track user attribute changes.
+__Solution__: <br>You can check your own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ <br>__OR__<br> If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream to track user attribute changes.
 
 #### __Sending Irrelevant Data__
-If you have multiple EventStream connectors that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
-__Solution__: Set up a separate event specification or feed to track each action. OR Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
+If you have multiple EventStream that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
+__Solution__: <br>Set up a separate event specification or feed to track each action. <br>__OR__<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
 #### __Initalizing Braze too Early__
 Users integrating with Tealium using the Braze Web SDK Tag may see a dramatic increase in their MAU. __If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.__ Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video" in order to lower their MAU count. <br><br>
-__Solution__: Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
+__Solution__: <br>Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
@@ -279,6 +277,7 @@ __Solution__: Set up Load Rules to determine exactly when and where a Tag loads 
 [7]: {% image_buster /assets/img/tealium/event_specs.png %}
 [8]: {% image_buster /assets/img/tealium/get_code.png %}
 [9]: {% image_buster /assets/img/tealium/summary.png %}
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [13]: {% image_buster /assets/img/tealium/summary_list.png %}
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
 [16]: {% image_buster /assets/img/tealium/connector_summary.png %}

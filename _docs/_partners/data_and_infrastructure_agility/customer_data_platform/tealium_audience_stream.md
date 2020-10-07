@@ -102,7 +102,7 @@ First, name your audience and then take some time to think about what kind of at
 
 ## Step 3: Create an Audience Connector
 
-From the main page, select __Audience Connector__ under __AudienceStream__. Here you can create and configure your connector. From the Audience Connector page, select __+ Add Connector__, look up __Braze__, and select __Braze (formerly Appboy)__ as the connector type. 
+From the main page, select __Audience Connector__ under __AudienceStream__. Here you can create and configure your connector. From the Audience Connector page, select __+ Add Connector__, look up __Braze__, and select __Braze__ as the connector type. 
 
 ### Select Source
 
@@ -150,9 +150,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 {% endtab %}
 {% tab Delete User %}
 
-__Action: Delete Users__
-
-This action allows you to delete users from the Braze Dashboard. To read more about the Braze /users/delete endpoint this action maps to, check out [our documentation](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/).
+This action allows you to delete users from the Braze Dashboard.
 
 | Parameters | Description |
 | ---------- | ----------- |
@@ -187,15 +185,15 @@ There are three primary ways that you might accidentally hit data overages when 
 
 #### __Insufficient Data Logging__
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
-__Solution__: You can check their own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ OR If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream (__similar to Segment personas__) to track user attribute changes.
+__Solution__: <br>You can check your own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ <br>__OR__<br> If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream to track user attribute changes.
 
 #### __Sending Irrelevant Data__
-If you have multiple EventStream connectors that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
-__Solution__: Set up a separate event specification or feed to track each action. OR Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
+If you have multiple EventStream that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
+__Solution__: <br>Set up a separate event specification or feed to track each action. <br>__OR__<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
 #### __Initalizing Braze too Early__
 Users integrating with Tealium using the Braze Web SDK Tag may see a dramatic increase in their MAU. __If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.__ Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video" in order to lower their MAU count. <br><br>
-__Solution__: Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
+__Solution__: <br>Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
 
 [1]: https://community.tealiumiq.com/t5/Getting-Started-with/Attributes/ta-p/25785
