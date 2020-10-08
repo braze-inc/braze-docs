@@ -95,7 +95,7 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 appboy.subscribeToInAppMessage(function(inAppMessage) {
   var shouldDisplay = true;
 
-  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+  if (inAppMessage instanceof appboy.InAppMessage) {
     // Read the key-value pair for msg-id
     var msgId = inAppMessage.extras["msg-id"];
 

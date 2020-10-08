@@ -1103,16 +1103,16 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 {% endapi %}
 {% api %}
 
-## SMS Inbound Receive Events
+## SMS Inbound Received Events
 
 {% apitags %}
-SMS, InboundReceive
+SMS, InboundReceived
 {% endapitags %}
 
 This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups. Note when Braze receives an Inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.
 
 ```json
-// SMS Inbound Received: users.messages.sms.InboundReceive
+// SMS Inbound Received: users.messages.sms.InboundReceived
 {
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
