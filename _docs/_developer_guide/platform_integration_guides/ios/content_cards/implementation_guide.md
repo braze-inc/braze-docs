@@ -219,16 +219,14 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 + (NSArray *)contentCardClassTypeArray {
   return @[ @"", @"ad_banner", @"coupon_code", @"home_tile", @"message_full_page", @"message_webview" ];
 }
-
 + (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue {
-  NSArray *contentCardClassTypeArray = [[NSArray alloc] initWithObjects:kContentCardClassTypeArray];
-  if ([contentCardClassTypeArray indexOfObject:rawValue] == NSNotFound) {
+  if ([[self contentCardClassTypeArray] indexOfObject:rawValue] == NSNotFound) {
     return ContentCardClassTypeNone;
   } else {
-    NSInteger value = [contentCardClassTypeArray indexOfObject:rawValue];
+    NSInteger value = [[self contentCardClassTypeArray] indexOfObject:rawValue];
     return (ContentCardClassType) value;
   }
-}
+} 
 ```
 {% endtab %}
 {% endtabs %}
