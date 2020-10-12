@@ -72,6 +72,7 @@ __No `ABKContentCard` Dependencies__<br>
 `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
 ```objc
+// Header File
 @interface ContentCardData : NSObject
 
 + (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
@@ -214,7 +215,10 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
   ContentCardClassTypeMessageFullPage,
   ContentCardClassTypeMessageWebview,
 };
-#define kContentCardClassTypeArray @"", @"ad_banner", @"coupon_code", @"home_tile", @"message_full_page", @"message_webview", nil
+
++ (NSArray *)contentCardClassTypeArray {
+  return @[ @"", @"ad_banner", @"coupon_code", @"home_tile", @"message_full_page", @"message_webview" ];
+}
 
 + (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue {
   NSArray *contentCardClassTypeArray = [[NSArray alloc] initWithObjects:kContentCardClassTypeArray];
@@ -374,12 +378,12 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 ```swift
 func addContentCardToView(with message: Message) {
     switch message.contentCardData?.contentCardClassType {
-    case .message(.fullPage):
-      loadContentCardFullPageView(with: message as! FullPageMessage)
-    case .message(.webView):
-      loadContentCardWebView(with: message as! WebViewMessage)
-    default:
-      break
+      case .message(.fullPage):
+        loadContentCardFullPageView(with: message as! FullPageMessage)
+      case .message(.webView):
+        loadContentCardWebView(with: message as! WebViewMessage)
+      default:
+        break
     }
   }
 ```
