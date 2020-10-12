@@ -17,7 +17,7 @@ When building out Content Cards, you should integrate them using a single `impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. 
 
 The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
@@ -533,3 +533,7 @@ The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/
 ```
 {% endtab %}
 {% endtabs %}
+
+{% alert important %}
+For a control variant Content Card, a custom object should still be instantiated and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
+{% endalert %}
