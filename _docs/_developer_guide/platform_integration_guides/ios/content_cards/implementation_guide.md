@@ -90,7 +90,8 @@ __No `ABKContentCard` Dependencies__<br>
 @protocol ContentCardable <NSObject>
 
 @property (nonatomic, strong) ContentCardData *contentCardData;
-- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData classType:(enum ContentCardClassType)classType;
+- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData 
+                                  classType:(enum ContentCardClassType)classType;
 
 - (BOOL)isContentCard;
 - (void)logContentCardImpression;
