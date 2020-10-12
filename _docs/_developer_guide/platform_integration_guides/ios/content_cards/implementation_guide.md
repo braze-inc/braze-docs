@@ -350,7 +350,6 @@ A semaphore is used to signal when the task is executed due to the notification 
   [[AppboyManager shared] requestContentCardsRefresh];
 }
 
-
 - (void)contentCardsUpdated:(NSNotification *)notification {
   NSArray *classTypes = @[@(ContentCardClassTypeHomeTile),@(ContentCardClassTypeAdBanner)];
   NSArray *contentCards = [[AppboyManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
