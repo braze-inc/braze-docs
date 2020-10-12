@@ -74,7 +74,7 @@ __No `ABKContentCard` Dependencies__<br>
 ```objc
 @interface ContentCardData : NSObject
 
-+ (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue;
++ (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
 
 - (instancetype)initWithIdString:(NSString *)idString classType:(ContentCardClassType)classType createdAt:(double)createdAt isDismissable:(BOOL)isDismissable;
 
@@ -245,7 +245,7 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 __Load the data simultaneously with OperationQueues__<br>
 A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
 ```swift
-addOperation { [weak self] in
+    addOperation { [weak self] in
       guard let self = self else { return }
       self.loadTiles(self.tile)
     }
@@ -349,7 +349,6 @@ A semaphore is used to signal when the task is executed due to the notification 
   [[AppboyManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
   [[AppboyManager shared] requestContentCardsRefresh];
 }
-
 
 - (void)contentCardsUpdated:(NSNotification *)notification {
   NSArray *classTypes = @[@(ContentCardClassTypeHomeTile),@(ContentCardClassTypeAdBanner)];
