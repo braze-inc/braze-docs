@@ -151,7 +151,7 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
         _tags = [tagsString componentsSeparatedByString:@", "];
         _imageUrl = extras[@"tile_image"];
         self.price = [NSDecimalNumber decimalNumberWithString:extras[@"tile_price"]];
-        self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt: createdAt isDismissable:isDismissable];
+        self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt:createdAt isDismissable:isDismissable];
         return self;
       }
     }
