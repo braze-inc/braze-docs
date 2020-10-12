@@ -508,7 +508,7 @@ The `ContentCardable` protocol handles the heavy lifting of calling the helper f
 {% tabs %}
 {% tab Swift %}
 __Call `ABKContentCard` Functions__<br>
-Once we are in the helper file, we can reference ABK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift#L144) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
 func logContentCardImpression(idString: String?) {
   guard let contentCard = getContentCard(forString: idString) else { return }
@@ -523,7 +523,7 @@ func logContentCardImpression(idString: String?) {
 {% endtab %}
 {% tab Objective-C %}
 __Call `ABKContentCard` Functions__<br>
-Once we are in the helper file, we can reference ABK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift#L144) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
 - (void)logContentCardImpression:(NSString * __nullable)idString {
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
