@@ -245,7 +245,7 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 __Load the data simultaneously with OperationQueues__<br>
 A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
 ```swift
-addOperation { [weak self] in
+    addOperation { [weak self] in
       guard let self = self else { return }
       self.loadTiles(self.tile)
     }
