@@ -325,7 +325,7 @@ The corresponding `[Tile]` array will be seamlessly blended with an array of Con
 {% tabs %}
 {% tab Swift %}
 __Load Content Card Operation__<br>
-Using a semaphore to signal when the task is executed due to the notification callback from the Braze SDK. 
+A semaphore is used to signal when the task is executed due to the notification callback from the Braze SDK. 
 
 ```swift
 func loadContentCards() {
@@ -342,7 +342,7 @@ func loadContentCards() {
 {% endtab %}
 {% tab Objective-C %}
 __Load Content Card Operation__<br>
-Using a semaphore to signal when the task is executed due to the notification callback from the Braze SDK. 
+A semaphore is used to signal when the task is executed due to the notification callback from the Braze SDK. 
 
 ```objc
 - (void)loadContentCards {
