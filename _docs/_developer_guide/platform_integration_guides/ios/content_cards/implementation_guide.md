@@ -13,20 +13,20 @@ description: "This implementation guide covers Content Card code considerations,
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should integrate them using a single "import Appboy-iOS-SDK" statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift).
+When building out Content Cards, you should integrate them using a single `import Appboy-iOS-SDK` statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift).
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the ABKContentCard data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards in a way that does not depend on the Braze SDK. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. 
 
-The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit class_type key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
 {% include video.html id="55KTZqYAl7Y" align="center" %}
 
 {% tabs %}
 {% tab Swift %}
-__No ABKContentCard Dependencies__<br>
-`ContentCardData` represents the parsed out values of an ABKContentCard.
+__No `ABKContentCard` Dependencies__<br>
+`ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
 ```swift
 protocol ContentCardable {
@@ -68,8 +68,8 @@ extension ContentCardData: Equatable {
 {% endtab %}
 {% tab Objective-C %}
 
-__No ABKContentCard Dependencies__<br>
-`ContentCardData` represents the parsed out values of an ABKContentCard.
+__No `ABKContentCard` Dependencies__<br>
+`ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
 ```objc
 @interface ContentCardData : NSObject
@@ -102,7 +102,7 @@ __No ABKContentCard Dependencies__<br>
 {% tabs %}
 {% tab Swift %}
 __Custom Object Initializer__<br>
-MetaData from an ABKContentCard is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
 
 ```swift
 extension Tile: ContentCardable {
@@ -129,7 +129,7 @@ extension Tile: ContentCardable {
 {% endtab %}
 {% tab Objective-C %}
 __Custom Object Initializer__<br>
-MetaData from an ABKContentCard is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
 
 ```objc
 - (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {
@@ -160,7 +160,7 @@ MetaData from an ABKContentCard is used to populate your object's variables. The
 {% tabs %}
 {% tab Swift %}
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the class_type value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard.
 
 ```swift
 enum ContentCardClassType: Hashable {
@@ -200,7 +200,7 @@ enum ContentCardClassType: Hashable {
 {% endtab %}
 {% tab Objective-C %}
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the class_type value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard.
 
 ```objc
 typedef NS_ENUM(NSInteger, ContentCardClassType) {
@@ -367,7 +367,7 @@ Content Cards can be used in a message center format where each message is its o
 
 {% tabs %}
 {% tab Swift %}
-__Using 'class_type' for On Click Behavior__<br>
+__Using `class_type` for On Click Behavior__<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```swift
 func addContentCardToView(with message: Message) {
@@ -383,7 +383,7 @@ func addContentCardToView(with message: Message) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Using 'class_type' for On Click Behavior__<br>
+__Using `class_type` for On Click Behavior__<br>
 When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
 ```objc
 - (void)addContentCardToView:(Message *)message {
@@ -435,7 +435,7 @@ As long as the observer is still retained in memory, a notification callback fro
 {% tabs %}
 {% tab Swift %}
 __Getting Type-Specific Content Cards__<br>
-The class_type is passed in as a filter to only return Content Cards that have a matching class_type.
+The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 ```swift
 @objc func contentCardsUpdated(_ notification: Notification) {
     guard let contentCards = AppboyManager.shared.handleContentCardsUpdated(notification, for: [.coupon]) as? [Coupon], !contentCards.isEmpty else { return }
@@ -444,7 +444,7 @@ The class_type is passed in as a filter to only return Content Cards that have a
 {% endtab %}
 {% tab Objective-C %}
 __Getting Type-Specific Content Cards__<br>
-The class_type is passed in as a filter to only return Content Cards that have a matching class_type.
+The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 ```objc
 - (void)contentCardsUpdated:(NSNotification *)notification {
   NSArray *classTypes = @[@(ContentCardClassTypeCouponCode)];
@@ -464,7 +464,7 @@ After extending your own custom objects to function as Content Cards, logging va
 {% tabs %}
 {% tab Swift %}
 __Custom Objects Call the Logging Methods__<br>
-From the `ContentCardable` protocol
+For objects that conform to the `ContentCardable` protocol, the analytics methods can be called directly from the objects. As seen in the snippet below, the object is referenced to log the impression.
 ```swift
 func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
   let message = messages[indexPath.row]
@@ -474,7 +474,7 @@ func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forR
 {% endtab %}
 {% tab Objective-C %}
 __Custom Objects Call the Logging Methods__<br>
-From the `ContentCardable` protocol
+For objects that conform to the `ContentCardable` protocol, the analytics methods can be called directly from the objects. As seen in the snippet below, the object is referenced to log the impression.
 ```objc
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
   Message *message = self.messages[indexPath.row];
@@ -486,7 +486,7 @@ From the `ContentCardable` protocol
 {% tabs %}
 {% tab Swift %}
 __Retrieve the Content Card from the ContentCardId__<br>
-AppboyManager.Swift file handles the ABK dependencies
+The `ContentCardable` protocol handles the heavy lifting of calling the helper file and passing the unique identifier from the Content Card associated with the custom object.
 ```swift
 protocol ContentCardable {
   func logContentCardImpression() {
@@ -497,7 +497,7 @@ protocol ContentCardable {
 {% endtab %}
 {% tab Objective-C %}
 __Retrieve the Content Card from the ContentCardId__<br>
-AppboyManager.Swift file handles the ABK dependencies
+The `ContentCardable` protocol handles the heavy lifting of calling the helper file and passing the unique identifier from the Content Card associated with the custom object.
 ```objc
 - (void)logContentCardImpression {
   [[AppboyManager shared] logContentCardImpression:self.contentCardData.contentCardId];
@@ -507,8 +507,8 @@ AppboyManager.Swift file handles the ABK dependencies
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__Call ABKContentCard Functions__<br>
-From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
+__Call `ABKContentCard` Functions__<br>
+Once we are in the helper file, we can reference ABK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
 func logContentCardImpression(idString: String?) {
   guard let contentCard = getContentCard(forString: idString) else { return }
@@ -522,8 +522,8 @@ func logContentCardImpression(idString: String?) {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Call ABKContentCard Functions__<br>
-From the `Appboy.sharedInstance()?.contentCardsController.contentCards` array
+__Call `ABKContentCard` Functions__<br>
+Once we are in the helper file, we can reference ABK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
 - (void)logContentCardImpression:(NSString * __nullable)idString {
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
