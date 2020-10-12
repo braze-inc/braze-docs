@@ -74,7 +74,7 @@ __No `ABKContentCard` Dependencies__<br>
 ```objc
 @interface ContentCardData : NSObject
 
-+ (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue;
++ (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
 
 - (instancetype)initWithIdString:(NSString *)idString classType:(ContentCardClassType)classType createdAt:(double)createdAt isDismissable:(BOOL)isDismissable;
 
