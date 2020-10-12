@@ -76,7 +76,9 @@ __No `ABKContentCard` Dependencies__<br>
 
 + (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
 
-- (instancetype)initWithIdString:(NSString *)idString classType:(ContentCardClassType)classType createdAt:(double)createdAt isDismissable:(BOOL)isDismissable;
+- (instancetype)initWithIdString:(NSString *)idString 
+                       classType:(ContentCardClassType)classType
+                       createdAt:(double)createdAt isDismissable:(BOOL)isDismissable;
 
 @property (nonatomic, readonly) NSString *contentCardId;
 @property (nonatomic) ContentCardClassType classType;
