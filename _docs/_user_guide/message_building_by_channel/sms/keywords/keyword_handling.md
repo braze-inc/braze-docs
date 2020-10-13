@@ -20,10 +20,16 @@ hidden: true
 ---
 
 {% alert note %}
-This new SMS keyword handling process is currently in Beta. Please reach out to your Braze account manager for more information.
+This new SMS Keyword Handling process is currently in Beta. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
-# Default Opt-In/ Opt-Out Keywords
+# SMS Keyword Handling
+
+> Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords and groups that can be leveraged for more marketing options. Read more about our new SMS keyword handling process below. 
+
+![picture][2]
+
+## Default Opt-In/ Opt-Out Keywords
 
 Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
 
@@ -40,30 +46,22 @@ Only the __exact, single-word message__ will be processed (case _insensitive_). 
 
 If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. If you need to change this response, please reach out to your Braze representative.
 
-{% alert important %}
-Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
-{% endalert %}
-
 ## Editing Keywords
 
 If you would like to edit the default keywords set by Braze and add a new keyword to trigger an Opt-In, Opt-Out, or Help action, you can do this by navigating to your SMS subscription group and clicking into the group to edit your settings: 
 
 ![picture][1]
 
-Here, you will see the default keywords and responses and have the ability to modify those responses by clicking the "edit" icon to the right of the keyword category:
+Here, you will see the default keywords and responses and have the option to modify those responses by clicking the "Edit" icon to the right of each keyword category.
 
-![picture][2]
+This will bring up an edit modal to allow you to add keywords or modify responses. Note that Braze enforces global keywords (e.g START, YES, UNSTOP) to be set so these defaults cannot be changed. Please read the rules below that apply to keywords and keyword responses. 
 
-This will bring up an edit modal to allow you to add keywords or modify responses. Note that Braze enforces global keywords (e.g START, YES, UNSTOP) to be set so these defaults cannot be changed. The following rules apply to add keywords:
-- Valid UTF8 encoded characters
-- Maximum of 20 keywords per category total 
-- Maximum length of 34 characters
-- Minimum length of 1 character 
-- Cannot be blank keyword ("") or empty space (" ")
-- Keywords cannot contain spaces
-- Keywords are required to be case insensitive unique across the subscription group
+![picture][3]{: style="max-width:50%;"}
 
-![picture][3]{: style="max-width:80%;"}
+| Keywords | Keyword Responses |
+| -------- | ----------------- |
+| - Valid UTF8 encoded characters<br>- Maximum of 20 keywords per category total<br>- Maximum length of 34 characters<br>- Minimum length of 1 character <br>- Cannot contain spaces<br>- Required to be case insensitive and unique across the subscription group | - Cannot be blank<br>- Maximum length of 300 characters<br>- Valid UTF8 characters |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Multi-Language Support
 
@@ -72,15 +70,25 @@ When sending to certain countries, a sender may be required to support inbound k
 ![picture][4]{: style="float:right;max-width:40%;margin-left:10px;"}
 To get started, click "Add A Language" and select your target language or search for a language within the dropdown.
 
-Please note that other languages do NOT come with preset keywords/responses like English, so senders will need to work with their marketing and legal teams to add any required keywords to this set. Otherwise, Braze will not handle localized incoming messages for those languages. If you need to delete a language, click the "Delete Langauge" button at the bottom right:
+Please note that other languages do NOT come with preset keywords/responses like English, so senders will need to work with their marketing and legal teams to add any required keywords to this set. Otherwise, Braze will not handle localized incoming messages for those languages. If you need to delete a language, click the "Delete Language" button at the bottom right.
 
 ![picture][5]
 
 ## SMS Custom Keyword Categories
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), customers will be able to create their own keyword categories. This allows the customer to create arbitrary keywords and responses specific to their business. Keyword categories have a limit of 10 per customer to avoid abuse. As we have to store a field on a customer's user profile for __each__ category they respond to, having 100s of custom keywords makes it difficult for analytics and storage. 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), customers will be able to create their own keyword categories. This allows the customer to create arbitrary keywords and responses specific to their business. An example would be "PROMO" or "DISCOUNT" which can prompt a response about promos that are happening this month.
+
+![picture][11]
+
+Keyword categories have a limit of 10 per customer to avoid abuse. As we have to store a field on a customer's user profile for __each__ category they respond to, having 100s of custom keywords makes it difficult for analytics and storage. 
 
 Therefore, keyword categories should be set up for those business-specific keywords that you want to operate in an "always-on" capacity meaning anytime a user who is subscribed to your SMS program text one of them in, they are eligible to receive a message.
+
+If you have a one-off use case for an incoming message that you need to respond to, but don't need sent to every user and don't need app group/campaign level analytics, you can use the "OTHER" trigger on an SMS Inbound Received Campaign/Canvas trigger. 
+
+![picture][10]{: style="max-width:50%;"}
+
+To create a custom category, click, "Add custom keyword" to bring up the creation modal. Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
 
 ## Retargeting
 
@@ -103,7 +111,9 @@ __Trigger by Arbitrary Keywords__<br>
 ![picture][8]{: style="margin-top:10px;"}
 
 ## Currents Event
-Any inbound SMS event can be sent as a Currents event through the SMS InboundRecieved event. Reach out to your account manager to learn more. 
+Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
+
+![picture][9]{: style="max-width:80%;"}
 
 [1]: {% image_buster /assets/img/sms/sms_channel.png %}
 [2]: {% image_buster /assets/img/sms/sms_keywords.png %}
@@ -114,3 +124,6 @@ Any inbound SMS event can be sent as a Currents event through the SMS InboundRec
 [7]: {% image_buster /assets/img/sms/retargeting2.png %}
 [8]: {% image_buster /assets/img/sms/retargeting3.png %}
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
+[9]: {% image_buster /assets/img/sms/sms_currents.png %}
+[10]: {% image_buster /assets/img/sms/custom_category.png %}
+[11]: {% image_buster /assets/img/sms/keyword_list.png %}
