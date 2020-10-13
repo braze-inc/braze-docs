@@ -31,6 +31,10 @@ guide_featured_list:
 - name: Multiple Feeds
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/
   fa_icon: fas fa-th-list
+- name: Implementation Guide
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/
+  fa_icon: fas fa-user-check
+
 
 ---
 <br>

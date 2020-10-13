@@ -223,6 +223,7 @@ validurls['/docs/developer_guide/rest_api/tls_deprecation/'] = '/docs/help/relea
 validurls['/docs/developer_guide/rest_api/postman_collection/'] = '/docs/api/postman_collection/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/best_practices/'] = '/docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/';
 
 validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates';
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification/';
