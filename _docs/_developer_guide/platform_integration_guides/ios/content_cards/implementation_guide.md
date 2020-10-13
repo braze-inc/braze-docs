@@ -252,7 +252,7 @@ A `BarrierBlock` is used to synchronize the execution of the two tasks in the qu
 ```swift
     addOperation { [weak self] in
       guard let self = self else { return }
-      self.loadTiles(self.tile)
+      self.loadTiles(self.tileCompletionHandler)
     }
     
     addOperation { [weak self] in
@@ -529,11 +529,14 @@ func logContentCardImpression(idString: String?) {
 __Call `ABKContentCard` Functions__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift#L144) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
-- (void)logContentCardImpression:(NSString * __nullable)idString {
+- (void)logContentCardImpression:(NSString *)idString {
+  ABKContentCard *contentCard = [self getContentCard:idString];
+  [contentCard logContentCardImpression];
+}
+- (ABKContentCard *)getContentCard:(NSString *)idString {
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
   NSArray *filteredArray = [self.contentCards filteredArrayUsingPredicate:predicate];
-  ABKContentCard *contentCard = filteredArray.firstObject;
-  [contentCard logContentCardImpression];
+  return filteredArray.firstObject;
 }
 ```
 {% endtab %}
