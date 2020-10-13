@@ -1,7 +1,7 @@
 ---
 nav_title: Product Portal
 description: "This reference article covers how to access and use the Braze Product Portal from the dashboard."
-page_order: 0
+page_order: 6
 alias: /product_portal/
 ---
 
@@ -12,14 +12,14 @@ With the product portal, you can access the Braze product roadmap and submit ide
 ## What's in the Portal
 
 | __Recently Released__ | New features that we've released by quarter |
-| __Planned Features__ | Features that we've committed to building and will begin development within the quarter. There is no confirmed deadline as to when these features will be released. |
-| __Under Consideration__ | Features we're considering building that our product team would like your feedback on. These are ideas and no guarantee that we will build this feature. |
-| __Submit Ideas__ | There are 10 product categories in which you can vote for general improvements or comment with a specific feature request or idea. Our product team will receive and read your requests but an idea submission does not guarantee it will be built. |
+| __Planned Features__ | Features that we've committed to building and will begin development within the quarter. <br>There is no confirmed deadline as to when these features will be released. |
+| __Under Consideration__ | Features we're considering building that our product team would like your feedback on. <br>These are ideas and no guarantee that we will build this feature. |
+| __Submit Ideas__ | There are 10 product categories in which you can vote for general improvements or comment with a specific feature request or idea. <br>Our product team will receive and read your requests but an idea submission does not guarantee it will be built. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## How you can Join the Conversation
 
-| __Ranking a Features Importance__ | Rank a feature's importance by selecting "Nice to Have", "Important", or "Critical". |
+| __Rank a Features Importance__ | Rank a feature's importance by selecting "Nice to Have", "Important", or "Critical". |
 | __Comment on a Feature__ | Once you've ranked a feature, you can leave a comment with your feedback. |
 | __Answer a Product Manager's Question__ | Look for the "How Customers Can Help" on a feature's card to answer questions from our product team. |
 | __Submit an Idea__ | Go to the "Submit Ideas" page in the portal and select from one of ten cards to rank its importance and include your idea or request in the comments. <br><br>Once submitted, your idea will be reviewed by a member of our product team. We cannot provide updates on the status of a request. Occasionally check back to see if your idea has been added to the "Under Consideration" or "Planned Features" sections. |
@@ -38,7 +38,7 @@ The more information and context the better! Include links to campaigns, Canvase
 
 - What problem are you trying to solve?
 - What are some specific use cases?
-- Do you have any additional insight? (For example how this would benefit you and your teams)
+- Do you have any additional insight? (For example, how this would benefit you and your teams)
 - Are there any current workarounds? (This is not for our prioritization process, but may help with any solution discovery work) 
 
 For an example of a well-written product request, see [here]({{site.baseurl}}/product_request/). 
