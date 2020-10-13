@@ -17,7 +17,7 @@ When building out Content Cards, you should integrate them using a single `impor
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. 
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this, provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data.
 
 The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
@@ -250,20 +250,20 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 __Load the data simultaneously with OperationQueues__<br>
 A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
 ```swift
-    addOperation { [weak self] in
-      guard let self = self else { return }
-      self.loadTiles(self.tileCompletionHandler)
-    }
-    
-    addOperation { [weak self] in
-      guard let self = self else { return }
-      self.loadContentCards()
-      self.semaphore.wait()
-    }
-    
-    addBarrierBlock {
-      completion(tiles, ads)
-    }
+addOperation { [weak self] in
+  guard let self = self else { return }
+  self.loadTiles(self.tileCompletionHandler)
+}
+
+addOperation { [weak self] in
+  guard let self = self else { return }
+  self.loadContentCards()
+  self.semaphore.wait()
+}
+
+addBarrierBlock {
+  completion(tiles, ads)
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -275,16 +275,16 @@ HomeListOperationQueue * __weak weakSelf = self;
 
 [self addOperationWithBlock:^{
   if (weakSelf) {
-    [weakSelf loadContentCards];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-  }
-}];
-    
-[self addOperationWithBlock:^{
-  if (weakSelf) {
     [weakSelf loadLocalTilesWithCompletion:^(NSMutableArray * localTiles, NSError*) {
       [tiles addObjectsFromArray:localTiles];
     }];
+  }
+}];
+
+[self addOperationWithBlock:^{
+  if (weakSelf) {
+    [weakSelf loadContentCards];
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
   }
 }];
     
@@ -301,13 +301,13 @@ The corresponding `[Tile]` array will be seamlessly blended with an array of Con
 
 ```swift
 func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
-      switch result {
-      case .success(let metaData):
-        completion(metaData.tiles)
-      case .failure:
-        // handle error
-    }
+    switch result {
+    case .success(let metaData):
+      completion(metaData.tiles)
+    case .failure:
+      // handle error
   }
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -336,7 +336,7 @@ A semaphore is used to signal when the task is executed due to the notification 
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
     AppboyManager.shared.requestContentCardsRefresh()
-  }
+}
   
   @objc private func contentCardsUpdated(_ notification: Notification) {
     let contentCards = AppboyManager.shared.handleContentCardsUpdated(notification, for: [.item(.tile), .ad])
@@ -383,7 +383,7 @@ func addContentCardToView(with message: Message) {
       default:
         break
     }
-  }
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -421,7 +421,7 @@ As long as the observer is still retained in memory, a notification callback fro
 func loadContentCards() {
     AppboyManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
     AppboyManager.shared.requestContentCardsRefresh()
-  }
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -518,11 +518,11 @@ func logContentCardImpression(idString: String?) {
   guard let contentCard = getContentCard(forString: idString) else { return }
 
   contentCard.logContentCardImpression()
-  }
+}
   
-  private func getContentCard(forString idString: String?) -> ABKContentCard? {
-    return contentCards?.first(where: { $0.idString == idString })
-  }
+private func getContentCard(forString idString: String?) -> ABKContentCard? {
+  return contentCards?.first(where: { $0.idString == idString })
+}
 ```
 {% endtab %}
 {% tab Objective-C %}
