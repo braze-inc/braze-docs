@@ -19,15 +19,9 @@ alias: /keyword_handling/
 hidden: true
 ---
 
-{% alert note %}
-This new SMS Keyword Handling process is currently in Beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
-
 # SMS Keyword Handling
 
 > Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords and groups that can be leveraged for more marketing options. Read more about our new SMS keyword handling process below. 
-
-![picture][2]
 
 ## Default Opt-In/ Opt-Out Keywords
 
@@ -37,14 +31,12 @@ To support this, Braze has the following keyword categories, each with its own k
 
 | Type | Keyword | Change |
 |-|-------|---|
-|Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with any of these `START` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. <br><br>User will receive your defined Opt-In auto response.  |
-|Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with any of these `STOP` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer.<br><br>User will receive your defined Opt-Out auto response. |
-| Other | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
+|Opt-In| `START`<br> `YES`<br> `UNSTOP` | Any inbound request with one of these `Opt-In` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. <br><br>User will receive your defined Opt-In auto response.  |
+|Opt-Out| `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with one of these `Opt-In` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer.<br><br>User will receive your defined Opt-Out auto response. |
+| Help | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
-
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. If you need to change this response, please reach out to your Braze representative.
 
 ## Editing Keywords
 
@@ -53,6 +45,8 @@ If you would like to edit the default keywords set by Braze and add a new keywor
 ![picture][1]
 
 Here, you will see the default keywords and responses and have the option to modify those responses by clicking the "Edit" icon to the right of each keyword category.
+
+![picture][2]
 
 This will bring up an edit modal to allow you to add keywords or modify responses. Note that Braze enforces global keywords (e.g START, YES, UNSTOP) to be set so these defaults cannot be changed. Please read the rules below that apply to keywords and keyword responses. 
 
@@ -74,21 +68,6 @@ Please note that other languages do NOT come with preset keywords/responses like
 
 ![picture][5]
 
-## SMS Custom Keyword Categories
-
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), customers will be able to create their own keyword categories. This allows the customer to create arbitrary keywords and responses specific to their business. An example would be "PROMO" or "DISCOUNT" which can prompt a response about promos that are happening this month.
-
-![picture][11]
-
-Keyword categories have a limit of 10 per customer to avoid abuse. As we have to store a field on a customer's user profile for __each__ category they respond to, having 100s of custom keywords makes it difficult for analytics and storage. 
-
-Therefore, keyword categories should be set up for those business-specific keywords that you want to operate in an "always-on" capacity meaning anytime a user who is subscribed to your SMS program text one of them in, they are eligible to receive a message.
-
-If you have a one-off use case for an incoming message that you need to respond to, but don't need sent to every user and don't need app group/campaign level analytics, you can use the "OTHER" trigger on an SMS Inbound Received Campaign/Canvas trigger. 
-
-![picture][10]{: style="max-width:50%;"}
-
-To create a custom category, click, "Add custom keyword" to bring up the creation modal. Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
 
 ## Retargeting
 
@@ -102,16 +81,17 @@ Filter for the recency of a user responding to your SMS Program. This filter wil
 
 ### Trigger Messages by Keyword
 
-Messages can be triggered as users send messages inbound based on keyword categories or arbitrary keywords. These triggers are set in the Delivery step of the campaign builder.
+Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
 __Trigger by Inbound Keyword Category__<br>
 ![picture][7]{: style="margin-top:10px;"}
 
 __Trigger by Arbitrary Keywords__<br>
+Note triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![picture][8]{: style="margin-top:10px;"}
 
 ## Currents Event
-Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
+Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own Currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
 
 ![picture][9]{: style="max-width:80%;"}
 
