@@ -60,6 +60,10 @@ Yes, you can insert as many templates as you would like in your Email messages. 
 
 Once you have applied the Link Template, you can send yourself a test email to view all the links.  Additionally, you can open the links from the preview pane in a new tab to view the links.  Lastly, you can hover over the links in the Preview Pane and see them at the bottom of your browser.
 
+*Q: How does Link Templating work with Liquid?*
+
+Link Templates are expanded and added to the each URL prior to any liquid expansion happens.  As a best practice, if part of your URL is generated using a liquid snippet, it is recommended that the URL base and "?" is hardcoded for Link Templates to be expanded correctly.  Refrain from adding the "?" to your liquid as this will cause Link Templates to first add a "?" and then later the liquid expansion process will add a second "?" 
+
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
