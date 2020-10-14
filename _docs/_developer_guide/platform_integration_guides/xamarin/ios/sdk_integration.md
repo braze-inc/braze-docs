@@ -37,6 +37,31 @@ Within your `AppDelegate.cs` file, add the following snippet within your `Finish
 
 See the `AppDelegate.cs` file in the [TestApp.XamariniOS][10] sample app.
 
+## Step 3: Add your SDK endpoint to your Info.plist file
+
+Within your `Info.plist` file, add the following snippet:
+
+>  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [App Settings][5] page.
+
+```<key>Appboy</key>
+<dict>
+ <key>Endpoint</key>
+ <string>YOUR-SDK-ENDPOINT</string>
+</dict>
+```
+
+You can optionally include verbose logging by including the following snippet:
+
+
+```<key>Appboy</key>
+<dict>
+ <key>LogLevel</key>
+ <string>0</string>
+ <key>Endpoint</key>
+ <string>YOUR-SDK-ENDPOINT</string>
+</dict>
+```
+
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
