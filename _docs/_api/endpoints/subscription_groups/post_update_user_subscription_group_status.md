@@ -53,7 +53,8 @@ Authorization: Bearer YOUR_REST_API_KEY
    //one of external_id or email is required
    //can be passed as an array of string with a max of 50
    //endpoint only accepts email or phone value, not both
-   "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
+   "phone": (required*, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
+   //one of external_id or phone is required
  }
 ```
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
