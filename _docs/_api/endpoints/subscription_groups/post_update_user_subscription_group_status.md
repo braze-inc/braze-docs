@@ -68,7 +68,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | String | The external_id of the user |
 | `email` | Yes* | String | The email address of the user |
-| `phone` | Optional | String in E.164 format | Tags must already exist. |
+| `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Using Email
