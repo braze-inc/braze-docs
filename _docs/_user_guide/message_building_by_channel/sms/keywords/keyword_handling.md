@@ -81,13 +81,13 @@ Filter for the recency of a user responding to your SMS Program. This filter wil
 
 ### Trigger Messages by Keyword
 
-Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existings cateegories). These triggers are set in the Delivery step of the campaign builder.
+Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
 __Trigger by Inbound Keyword Category__<br>
 ![picture][7]{: style="margin-top:10px;"}
 
 __Trigger by Arbitrary Keywords__<br>
-Note triggeing a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
+Note triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![picture][8]{: style="margin-top:10px;"}
 
 ## Currents Event
