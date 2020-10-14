@@ -19,10 +19,6 @@ alias: /keyword_handling/
 hidden: true
 ---
 
-{% alert note %}
-This new SMS Keyword Handling process is currently in Beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
-
 # SMS Keyword Handling
 
 > Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords and groups that can be leveraged for more marketing options. Read more about our new SMS keyword handling process below. 
