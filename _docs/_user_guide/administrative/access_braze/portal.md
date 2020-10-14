@@ -19,7 +19,7 @@ With the product portal, you can access the Braze product roadmap and submit ide
 
 ## How you can Join the Conversation
 
-| __Rank a Features Importance__ | Rank a feature's importance by selecting "Nice to Have", "Important", or "Critical". |
+| __Rank a Feature's Importance__ | Rank a feature's importance by selecting "Nice to Have", "Important", or "Critical". |
 | __Comment on a Feature__ | Once you've ranked a feature, you can leave a comment with your feedback. |
 | __Answer a Product Manager's Question__ | Look for the "How Customers Can Help" on a feature's card to answer questions from our product team. |
 | __Submit an Idea__ | Go to the "Submit Ideas" page in the portal and select from one of ten cards to rank its importance and include your idea or request in the comments. <br><br>Once submitted, your idea will be reviewed by a member of our product team. We cannot provide updates on the status of a request. Occasionally check back to see if your idea has been added to the "Under Consideration" or "Planned Features" sections. |
