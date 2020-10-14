@@ -91,7 +91,7 @@ Note triggering a message on an "Other" keyword response, you will have the oppo
 ![picture][8]{: style="margin-top:10px;"}
 
 ## Currents Event
-Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
+Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own Currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
 
 ![picture][9]{: style="max-width:80%;"}
 
