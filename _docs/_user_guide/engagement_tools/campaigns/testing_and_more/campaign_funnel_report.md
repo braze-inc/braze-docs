@@ -24,7 +24,7 @@ Funnel Reports can be made for existing active campaigns and Canvases. These rep
 
 ### Step 1: Select Time Frame
 
-You can select a time frame for a campaign or Canvas receipt (which has a maximum window of 6 months) and duration for completing your funnel steps (which has a maximum window of 30 days). In the example below, your funnel would look for users who received this campaign in the last 7 days and completed the funnel within 14 days. 
+You can select a time frame for your report (within the past 6 months), and refine the data to see users who upon entering the Canvas, completed the funnel events within a set window (maximum of 30 days). In the example below, your funnel would look for users who received this campaign in the last 7 days and completed the funnel within 3 days. 
 
 ![Funnel Report 5][6]{: style="max-width:80%;"}
 
