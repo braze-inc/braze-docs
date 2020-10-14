@@ -15,9 +15,11 @@ For apps targeting Android 11 (API 30) be sure to view our [Android 11 Support](
 ## Android SDK Integration
 
 ### Step 1: Integrate the Braze Library
+
 The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and [fully customizable][1]. We strongly recommend integration of these features. Please refer to [Braze Docs][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
 #### Basic Integration
+
 In order to access Braze's messaging features, you must integrate the UI library. Please see the following directions to integrate the UI library depending on your IDE:
 
 #### Using Android Studio
@@ -37,13 +39,15 @@ allprojects {
 }
 ```
 
-Alternatively, you may install the `android-sdk-ui` as an AAR file to your local maven repository. See the [SDK Readme][37] for details.
+{% alert note %}
+The Braze Android SDK uses AndroidX Jetpack dependencies as of SDK version 10.0.0.
+{% endalert %}
 
-> See the [Android Support Library Setup instructions][65] for more information on the google maven repository.
+Alternatively, you can directly find the artifact AAR files on our [maven repository][71].
 
 ##### Add Braze Dependency
 
-Add the non-AndroidX `android-sdk-ui` dependency to your app's `build.gradle`:
+Add the `android-sdk-ui` dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
@@ -54,16 +58,6 @@ dependencies {
 The below example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example below uses an old version. Please visit [Braze Android SDK Releases][60] for the most up to date version of the Braze Android SDK.
 
 ![MavenScreen2][32]
-
-##### Using AndroidX Dependencies (Optional)
-
-If using [AndroidX][70] in your project, use the jetified dependency instead of the above. All published artifacts of the Braze SDK ship with this fully jetified option.
-
-```gradle
-dependencies {
-  implementation "com.appboy:android-sdk-ui-jetified:+"
-}
-```
 
 ##### Perform Gradle Sync
 
@@ -183,10 +177,6 @@ Braze will now be able to collect [specified data from your application]({{site.
 
 Please see the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/), the [news feed]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
-{% alert important %}
-Our Unity SDK integration for Android requires [the same support library version as the base Android SDK](https://github.com/Appboy/appboy-android-sdk#version-support).
-{% endalert %}
-
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/customization/#news-feed-customization
 [2]: {{site.baseurl}}/user_guide/introduction/
 [3]: https://developer.android.com/studio/build/build-variants.html
@@ -225,3 +215,4 @@ Our Unity SDK integration for Android requires [the same support library version
 [68]: {{site.baseurl}}/support_contact/
 [69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [70]: https://developer.android.com/jetpack/androidx
+[71]: https://appboy.github.io/appboy-android-sdk/sdk/com/appboy/android-sdk-ui/
