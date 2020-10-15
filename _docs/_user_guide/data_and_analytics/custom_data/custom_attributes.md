@@ -54,8 +54,8 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ * | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the string attribute __does not exist__ on a user's profile | __BLANK__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
