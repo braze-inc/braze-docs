@@ -6,8 +6,12 @@ page_order: 0
 ---
 
 # Carthage Integration
-You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
+Starting from version 3.24.0 of the SDK, you can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
+```
+binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
+```
 
+You can integrate earlier versions of the SDK by including the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
@@ -79,7 +83,6 @@ If you want to use the Core SDK without any UI components, you can install the c
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_core.json"
-
 ```
 
 ## Specifying Your Custom Endpoint or Data Cluster
