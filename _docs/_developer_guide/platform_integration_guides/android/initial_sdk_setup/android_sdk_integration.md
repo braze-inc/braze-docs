@@ -157,8 +157,6 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
-The SDK Endpoint configuration via `appboy.xml` is available starting with __Braze Android SDK v2.1.1__.
-
 ### Step 6: Enable Location Tracking
 
 If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
