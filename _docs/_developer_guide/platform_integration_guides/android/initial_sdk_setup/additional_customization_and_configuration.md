@@ -41,7 +41,7 @@ AppboyLogger.setLogLevel(Log.VERBOSE)
 {% endtabs %}
 
 {% alert important %}
-Verbose logs should be enabled as early as possible in your `Application.onCreate()` to ensure the SDK reports as much logging as possible.
+Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK, to guarantee as much logging as possible.
 {% endalert %}
 
 To know if your obtained logs are verbose, look for `V/Appboy` somewhere in your logs. For example:
