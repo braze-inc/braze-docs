@@ -123,7 +123,7 @@ After you've finished building the last of your campaign, review its details, [t
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
 
-#### Card Removal Events
+#### Card Removal Events {#action-based-card-removal}
 
 Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
