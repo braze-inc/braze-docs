@@ -5,9 +5,9 @@ page_order: 6
 alias: /product_portal/
 ---
 
-# Product Portal
+# Product Portal ![Portal][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
 
-With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request. The product portal can be found in the upper right section of the Braze Dashboard, under "Resources".
+With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request. The product portal can be found in the upper right section of the Braze Dashboard, listed under "Resources" as "What's New".
 
 ## What's in the Portal
 
@@ -42,3 +42,5 @@ The more information and context the better! Include links to campaigns, Canvase
 - Are there any current workarounds? (This is not for our prioritization process, but may help with any solution discovery work) 
 
 For an example of a well-written product request, see [here]({{site.baseurl}}/product_request/). 
+
+[1]: {% image_buster /assets/img/portal.png %}
