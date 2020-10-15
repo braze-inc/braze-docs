@@ -59,6 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
      "kindle_push": (optional, Kindle/FireOS Push Object),
      "web_push": (optional, Web Push Object),
      "email": (optional, Email Object),
+     "webhook": (optional, Webhook object),
      "content_card": (optional, Content Card Object),
      "sms": (optional, SMS Object)
    }
@@ -101,7 +102,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
 - [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
 ### Example Request
