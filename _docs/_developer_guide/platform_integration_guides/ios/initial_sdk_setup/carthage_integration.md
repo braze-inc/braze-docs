@@ -140,4 +140,4 @@ See the {% if include.platform == 'iOS' %}
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html
 
 [apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m
+[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
