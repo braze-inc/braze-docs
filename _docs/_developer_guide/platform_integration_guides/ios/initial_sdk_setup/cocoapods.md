@@ -202,7 +202,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
 [apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
+[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
 [apple_initial_setup_8]: #manual-sdk-integration
 [apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
 [apple_initial_setup_13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
@@ -214,7 +214,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
+[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m
 [apple_initial_setup_30]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#overview
 [apple_initial_setup_31]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [apple_initial_setup_32]: {{site.baseurl}}/support_contact/
