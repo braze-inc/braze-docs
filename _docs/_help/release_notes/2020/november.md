@@ -14,3 +14,5 @@ The [Braze Product Portal](https://www.braze.com/docs/user_guide/administrative/
 ## iOS Content Card Implementation Guide
 Embracing developer-centered technical strategy, Braze has released it's first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, [click here](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/). 
 
+## Swift Package Manager
+The Swift Package Manager is integrated with the Swift build system and automatically will download, compile, and link dependencies. Installing the iOS SDK via Swift Package Manager will automate the majority of the installation process for you. For more information, take a look at the [documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_SDK_setup/swift_package_manager).
