@@ -63,7 +63,6 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`preheader`|Optional|String|The email preheader used to generate previews in some clients|
 |`tags`|Optional|String|Tags must already exist|
 |`should_inline_css`|Optional|Boolean|Enables or disables the 'inline_css' feature per template.  If  not provided, Braze will use the default setting for the AppGroup.  One of 'true' or 'false' is expected|
-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
