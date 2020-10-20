@@ -37,7 +37,7 @@ Select the package that best fits your needs and click _Finish_:
 - `AppboyKit`
   - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
   
-> Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to some undesired warnings.
+> Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to undesired behavior.
 
 ![Swift Package Manager: Menu 4][apple_initial_setup_5]
 
@@ -132,8 +132,7 @@ To find out your specific cluster, please ask your Customer Success Manager or r
 
 ### Implementation Example
 
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_8] file{% endif %} in the Stopwatch sample app.
+See the [`AppDelegate.m`][apple_initial_setup_8] file in the Stopwatch sample app.
 
 [apple_initial_setup_1]: https://swift.org/package-manager/
 [apple_initial_setup_2]: {% image_buster /assets/img/ios/spm/image1.png %}
