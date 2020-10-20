@@ -11,7 +11,7 @@ description: "This tutorial covers how to install the SDK using Swift Package Ma
 
 Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
 
-> Note that tvOS and Push Stories support is not yet available via _Swift Package Manager_. 
+> Note that tvOS and Push Stories support is not yet available via _Swift Package Manager_.\
 > Push Stories are available through a side-by-side integration with Cocoapods.
 
 ## Step 1: Adding the dependency to your project
@@ -31,17 +31,17 @@ On the next screen, select the SDK version and click _Next_.
 ![Swift Package Manager: Menu 3][apple_initial_setup_4]
 
 Select the package that best fits your needs and click _Finish_:
-- `AppboyKit`
-  - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
 - `AppboyUI`
   - Best suited if you plan to use UI components provided by Braze.
   - Includes `AppboyKit` automatically.
+- `AppboyKit`
+  - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
   
 > Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to some undesired warnings.
 
 ![Swift Package Manager: Menu 4][apple_initial_setup_5]
 
-## Step 2: Additional setup
+## Step 2: Configuring your project
 
 Navigate to your project build settings and add the `-ObjC` flag to the _Other Linker Flags_ setting.
 
@@ -94,7 +94,7 @@ In `AppDelegate.swift`, add following snippet to your `application(application: 
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
+__Note__: Braze's `sharedInstance` singleton will be `nil` before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% endtab %}
 {% endtabs %}
