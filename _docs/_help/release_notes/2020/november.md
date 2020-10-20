@@ -1,0 +1,16 @@
+---
+nav_title: November
+page_order: 2
+---
+ 
+# November 2020
+
+## Tealium Partnership is live
+[Tealium](https://www.braze.com/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
+
+## Braze Product Portal
+The [Braze Product Portal](https://www.braze.com/docs/user_guide/administrative/access_braze/portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the upper-right section of the Braze dashboard, under “Resources”.
+
+## iOS Content Card Implementation Guide
+Embracing developer-centered technical strategy, Braze has released it's first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, [click here](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/). 
+
