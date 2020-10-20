@@ -296,6 +296,10 @@ glossaries:
     description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
     tags:
       - User Attributes
+  - name: Braze Segment Cohorts
+    description: After creating Segment Cohorts in the Braze Dashboard, you can choose to include/exclude those cohorts in your segment.
+    tags:
+      - User Attributes
   - name: City
     description: Segments your users by their last indicated city location.
     tags:
