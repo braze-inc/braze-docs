@@ -9,7 +9,7 @@ page_order: 3
 
 Predictive Churn, and any machine learning model, is only as good as the data available to the model. It also is highly dependent on having certain volumes of data to work with. This means that users may encounter some error messages, or low Prediction Quality, as they’re getting to know this new feature. 
 
-## Errors
+## Potential Errors
 
 ### Not Enough Data to Train
 
@@ -37,21 +37,21 @@ A Prediction Audience definition cannot exceed 40 million users. If you see a me
 
 ### Prediction has Poor Quality
 
-If your model has a prediction quality of 40% and above, you are in a great place! But if your prediction quality drops 39% and below, you may need to edit your Churn and Prediction Audience definitions to be more specific or have different time windows. 
+If your model has a prediction quality of 40% and above, you are in a great place! But if your prediction quality drops to 39% and below, you may need to edit your Churn and Prediction Audience definitions to be more specific or have different time windows. 
 
-If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a Prediction Quality of greater than 40%, it likely means that the data sent to Brzae is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than out current 30-day lookback window supports. 
+If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a Prediction Quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
 
 ## Timing Clarifications
 
-Customers can look back up to 14 days for their churn prediction. Their “churn” definition and time window for any Last Made Purchase / Last Used App / Last Did Custom Event filters in the Prediction Audience definition cannot add up to more than 30 days.
+You can look back up to 14 days for your churn prediction. Your “churn” definition and time window for any Last Made Purchase / Last Used App / Last Did Custom Event filters in the Prediction Audience definition cannot add up to more than 30 days.
 
-For example, if you define churn as not starting a session in the past 10 days then their Prediction Audience can be based on up to 20 days of data. 
+For example, if you define churn as not starting a session in the past 10 days then your Prediction Audience can be based on up to 20 days of data. 
 
 ## Data Considerations
 
 Listed below are some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
 
 - What high-value actions lead to retention and loyalty?
-- Have you set up custom events that map back to those specific actions? Predictive Churn works with custom events as opposed to custom attributes.
+- Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.
 - Are you thinking in "Short Windows" of time within which you'll denim churn. Predictive churn has a lookback window of 14 days. 
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
