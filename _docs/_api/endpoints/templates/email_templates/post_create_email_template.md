@@ -47,7 +47,8 @@ Authorization: Bearer YOUR_REST_API_KEY
    "body": (required, string) the email template body that may include HTML,
    "plaintext_body": (optional, string) a plaintext version of the email template body,
    "preheader": (optional, string) the email preheader used to generate previews in some clients,
-   "tags": (optional, Array of Strings) Tags must already exist.
+   "tags": (optional, Array of Strings) Tags must already exist,
+   "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
  }
 ```
 
@@ -55,12 +56,13 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|Optional|String|The name of your email template|
-|`subject`|Optional|String|The email template subject line|
-|`body`|Optional|String|The email template body that may include HTML|
+|`template_name`|Required|String|The name of your email template|
+|`subject`|Required|String|The email template subject line|
+|`body`|Required|String|The email template body that may include HTML|
 |`plaintext_body`|Optional|String|A plaintext version of the email template body|
 |`preheader`|Optional|String|The email preheader used to generate previews in some clients|
 |`tags`|Optional|String|Tags must already exist|
+|`should_inline_css`|Optional|Boolean|Enables or disables the 'inline_css' feature per template.  If  not provided, Braze will use the default setting for the AppGroup.  One of 'true' or 'false' is expected|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
@@ -74,7 +76,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
   "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
   "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
   "preheader": "My preheader is pretty cool.",
-  "tags": ["Tag1", "Tag2"]
+  "tags": ["Tag1", "Tag2"],
+  "should_inline_css": false
 }'
 ```
 
@@ -88,5 +91,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 - `Some Tags could not be found.` - A tag was specified which doesn't exist in this environment.
 
 - `Email must have valid content block names.` - The email contains Content Blocks which do not exist in this environment.
+
+- `"Invalid value for 'should_inline_css'.  One of 'true' or 'false' was expected"` - 'should_inline_css' accepts boolean characters only.  The error likely is being shown as the value is being sent as a 'string'.
 
 {% endapi %}

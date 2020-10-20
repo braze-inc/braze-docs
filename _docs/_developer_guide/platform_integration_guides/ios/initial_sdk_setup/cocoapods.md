@@ -202,7 +202,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
 [apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
+[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
 [apple_initial_setup_8]: #manual-sdk-integration
 [apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
 [apple_initial_setup_13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
