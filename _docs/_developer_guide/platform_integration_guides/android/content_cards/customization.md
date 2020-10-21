@@ -115,6 +115,19 @@ The following is the default `IContentCardsUpdateHandler` and can be used as a s
 
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
+
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
+    public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsUpdateHandler();
+    }
+
+    public DefaultContentCardsUpdateHandler[] newArray(int size) {
+      return new DefaultContentCardsUpdateHandler[size];
+    }
+  };
+
   @Override
   public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
     List<Card> sortedCards = event.getAllCards();
@@ -150,6 +163,18 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
     });
 
     return sortedCards;
+  }
+
+  // Parcelable interface method
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  // Parcelable interface method
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // No state is kept in this class so the parcel is left unmodified
   }
 }
 ```
@@ -232,6 +257,18 @@ Here's information on how to change how any card is rendered in the recyclerView
 
 ```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
+    public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsViewBindingHandler();
+    }
+
+    public DefaultContentCardsViewBindingHandler[] newArray(int size) {
+      return new DefaultContentCardsViewBindingHandler[size];
+    }
+  };
+
   /**
    * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
    */
@@ -286,6 +323,19 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
       mContentCardViewCache.put(cardType, contentCardView);
     }
     return mContentCardViewCache.get(cardType);
+  }
+
+  // Parcelable interface method
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  // Parcelable interface method
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
   }
 }
 ```
@@ -343,6 +393,8 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 
 {% endtab %}
 {% endtabs %}
+
+> This code can also be found here, [DefaultContentCardsViewBindingHandler][56].
 
 And here's how to use the above class:
 
@@ -582,7 +634,7 @@ This section applies to integrations which use the Braze SDK's default Content C
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
 [44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
 [45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
-[46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
+[46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
 [49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
@@ -592,3 +644,4 @@ This section applies to integrations which use the Braze SDK's default Content C
 [53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
 [54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/AppboyContentCardsFragment.java
 [55]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#isControl--
+[56]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java
