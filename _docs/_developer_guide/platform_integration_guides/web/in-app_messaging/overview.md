@@ -32,7 +32,7 @@ To see examples of in-app messages, check out our [Client Integration Gallery][5
 
 Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery. 
 
-All in-app messages inherit their prototype from [`appboy.ab.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.ab.SlideUpMessage][3], [appboy.ab.ModalMessage][6], [appboy.ab.FullScreenMessage][7], and [appboy.ab.HtmlMessage][12]. 
+All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.SlideUpMessage][3], [appboy.ModalMessage][6], [appboy.FullScreenMessage][7], and [appboy.HtmlMessage][12]. 
 
 ### Expected Behaviors by Message Types
 
