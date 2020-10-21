@@ -14,7 +14,7 @@ description: "This article outlines details about the delete User Information Br
 ---
 {% api %}
 # User Delete Endpoint
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
 /users/delete
 {% endapimethod %}
 <br>
