@@ -123,7 +123,7 @@ After you've finished building the last of your campaign, review its details, [t
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
 
-#### Card Removal Events {#action-based-card-removal}
+#### Card Removal Events (Optional) {#action-based-card-removal}
 
 Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
@@ -151,21 +151,9 @@ Complete the remaining sections of your Canvas step, see the sections below for 
 - Lastly, select your Advancement behavior for this step. Here you can choose to either "Advance when Message Sent" that advances your users to the next steps when the Content Card is sent, or "Immediately Advance Audience" that advances users when either the Content Card is sent or the Content Card was not sent because it got aborted. 
 - To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
-#### Card Removal Events {#action-based-card-removal}
-
-Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
-
-Within a Campaign or Canvas Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
-
-{% alert tip %}
-You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by campaign/Canvas's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
-{% endalert %}
-
-![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
-
 After you've finished building out your Canvas Step, review its details and [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
 
-#### Card Removal Events {#action-based-card-removal}
+#### Card Removal Events (Optional) {#action-based-card-removal}
 
 Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
