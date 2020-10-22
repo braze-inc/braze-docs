@@ -44,7 +44,7 @@ To allow for customers to refer to users by multiple other identifiers, rather t
 
 Each alias consists of two parts: a label, which defines the key of the alias, and a name, which defines the value. An alias name for any single label must be unique across the user base. If you attempt to update a second user profile with a pre-existing label and name combination the user profile will not be updated.
 
-Unlike for an external_id, once an alias is set for a user this can be updated with a new name for a given label. This is possible either via the [New User Alias endpoint][32] or if you pass a new name via the SDK. Upon setting a user alias these will be visible when exporting that user's data.
+Unlike an external_id, once an alias is set for a user this can be updated with a new name for a given label. This is possible either via the [New User Alias endpoint][32] or if you pass a new name via the SDK. Upon setting a user alias these will be visible when exporting that user's data.
 
 ![Alias_Label_Diagram][29]
 

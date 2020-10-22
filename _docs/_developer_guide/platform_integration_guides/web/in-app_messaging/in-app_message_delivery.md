@@ -42,7 +42,7 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 If you don't remove `appboy.display.automaticallyShowNewInAppMessages()` from your website when also calling `appboy.display.showInAppMessage`, the message may be displayed twice.
 {% endalert %}
 
-The `inAppMessage` parameter will be an [`appboy.ab.InAppMessage`][2] subclass or an [`appboy.ab.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
+The `inAppMessage` parameter will be an [`appboy.InAppMessage`][2] subclass or an [`appboy.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
 
 >  Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second Modal or Full message while one is already showing, `appboy.display.showInAppMessage` will return false, and the second message will not display.
 
@@ -52,8 +52,8 @@ In-app messages can also be created within your site and displayed locally in re
 
 ```javascript
   // Displays a slideup type in-app message.
-  var message = new appboy.ab.SlideUpMessage("Welcome to Braze! This is an in-app message.");
-  message.slideFrom = appboy.ab.InAppMessage.SlideFrom.TOP;
+  var message = new appboy.SlideUpMessage("Welcome to Braze! This is an in-app message.");
+  message.slideFrom = appboy.InAppMessage.SlideFrom.TOP;
   appboy.display.showInAppMessage(message);
 ```
 
