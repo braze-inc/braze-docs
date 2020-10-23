@@ -13,6 +13,8 @@ Native in-app messages display automatically on iOS when using React Native.
 ### Accessing In-App Message Data
 If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our public documentation [for iOS][1]. In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value (for more on these values, see our [iOS documentation][2]).
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
 ```objc
 // In-app messaging
 - (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
@@ -30,11 +32,35 @@ If you would like to access the in-app message data in the JavaScript layer, imp
   return ABKDisplayInAppMessageNow;
 }
 ```
+{% endtab %}
+{% tab swift %}
+```swift
+// In-app messaging
+func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMessageDisplayChoice {
+    let inAppMessageData = inAppMessage?.serializeToData()
+    var inAppMessageString: String? = nil
+    if let inAppMessageData = inAppMessageData {
+        inAppMessageString = String(data: inAppMessageData, encoding: .utf8)
+    }
+    let arguments = [
+        "inAppMessage": inAppMessageString ?? ""
+    ]
+    // Send to JavaScript
+    bridge.eventDispatcher.sendDeviceEvent(
+        withName: "inAppMessageReceived",
+        body: arguments)
+    // Note: return ABKDiscardInAppMessage if you would like
+    // to prevent the Braze SDK from displaying the message natively.
+    return ABKDisplayInAppMessageNow
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Receiving In-App Message in JavaScript
 
 On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
-```js
+```javascript
 this._listener = DeviceEventEmitter.addListener("inAppMessageReceived", function(event) {
     let inAppMessage = new ReactAppboy.BrazeInAppMessage(event.inAppMessage)
 })
