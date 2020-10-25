@@ -8,9 +8,9 @@ alias: /partners/edume/
 
 # EduMe
 
-EduMe is a mobile-based training tool that gives your workforce the knowledge they need to succeed. When they need it, wherever they are.
+[EduMe](https://edume.com) is a mobile-based training tool that gives your workforce the knowledge they need to succeed. When they need it, wherever they are.
 
-Use connected content in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using EduMe reporting functionality.
+Use [connected content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using EduMe reporting functionality.
 
 ## Pre-Requisites
 
