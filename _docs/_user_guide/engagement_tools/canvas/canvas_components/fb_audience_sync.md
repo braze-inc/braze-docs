@@ -6,10 +6,6 @@ page_order: 4
 alias: "/audience_sync_facebook/"
 ---
 
-{% alert important %}
-Audience Sync to Facebook feature coming soon!
-{% endalert %}
-
 # Audience Sync to Facebook
 
 Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (Push, Email, SMS, Webhook, etc) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
