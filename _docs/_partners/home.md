@@ -50,8 +50,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
 - name: Lob
   url: /docs/partners/additional_channels/direct_mail/lob/
-- name: Telesign
-  url: /docs/partners/additional_channels/sms/telesign/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: Looker
