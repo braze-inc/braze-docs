@@ -65,9 +65,17 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
+You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track legacy "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`). You should use `appboyBridge.logClick()` to log a Body Click, and `appboyBridge.logClick("0")` or `appboyBridge.logClick("1")` to log Button 1 and Button 2, respectively.
+You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
+
+#### Requirements
+
+* Up to 100 unique Button IDs are allowed per campaign
+* Each Button ID can not be longer than 255 characters
+* Only alphanumeric, space, dash, and underscore characters are allowed.
+
+**Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
 
 For example, to close a message and log Button 2 click, you can use:
 
