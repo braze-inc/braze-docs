@@ -65,26 +65,15 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track legacy "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
+You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
-
-#### Requirements
-
-* Up to 100 unique Button IDs are allowed per campaign
-* Each Button ID can not be longer than 255 characters
-* Only alphanumeric, space, dash, and underscore characters are allowed.
-
-**Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
 
 For example, to close a message and log Button 2 click, you can use:
 
 ```
 <a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
 ```
-
-Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
-
 
 ## Backward Incompatible Changes {#backward-incompatible-changes}
 
