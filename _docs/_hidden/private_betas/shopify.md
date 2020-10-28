@@ -15,15 +15,15 @@ Our Shopify integration allows brands to seamlessly connect their Shopify store 
 
 | Requirement | Origin | Access | Description |
 | ----------- | ------ | ------ | ----------- |
-| Shopify Store | Shopify | [https://www.shopify.com](https://www.shopify.com) | You will need to have an active Shopify store.<br><br>Please note that at this time, you will only be able to connect __one__ Shopify store per app group. |
-| Install Braze's Shopify App | Braze | Shopify integration page within Braze | You will need to begin setting up your integration with Shopify through Braze. We will walk you through a seamless onboarding process to install Braze's unlisted Shopify app.<br><br>For more details, check out our step-by-step guide below. |
+| Shopify Store | Shopify | [https://www.shopify.com](https://www.shopify.com) | You must have an active Shopify store.<br><br>Please note that at this time, you are only able to connect __one__ Shopify store per app group. |
+| Install Braze's Shopify App | Braze | Shopify integration page within Braze | You must set up your integration through our seamless onboarding process within Braze to install Braze's unlisted Shopify app.<br><br>For more details, check out our step-by-step guide below. |
 | Event Property Segmentation Enabled | Braze | Please reach out to your Customer Success Manager | To ensure you can segment your Shopify events properties, please work with your Customer Success Manager to confirm that you have event property segmentation enabled for your dashboard. |
 | Nested Event Property Support Enabled | Braze | Please reach out to your Customer Success Manager | To ensure that you have nested event property support for your nested Shopify events, please work with your Customer Success Manager to either enable or confirm that you have this enhancement enabled for your dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration Overview
 
-With Braze's turnkey Shopify integration, you will be able to:
+With Braze's turnkey Shopify integration, you are able to:
 - Seamlessly connect your Shopify store within Braze
 - Allow Braze to ingest and process the following Shopify webhook events:
 	- Order Create
@@ -36,7 +36,7 @@ From the Braze dashboard go to the Technology Partners section and then search _
 ![Shopify][2]{: style="max-width:70%;"}
 
 ### Step 2: Shopify Setup
-Next, you will be prompted by Braze's setup wizard. Within this flow, you will need to enter your __Shopify store name__, review the __Shopify webhook events__ (we will begin ingestion once the integration is connected), and take you to Shopify's marketplace to download Braze's unlisted Shopify app. Once you select __Install Unlisted App__, you will be redirected back to the Braze dashboard.
+Next, you are prompted by Braze's setup wizard. Within this flow, you must enter your __Shopify store name__, review the __Shopify webhook events__ (ingestion begins once the integration is connected), and visit the Shopify marketplace to download Braze's unlisted Shopify app. Once you select __Install Unlisted App__, you will be redirected back to the Braze dashboard.
 #### Shopify Setup within Braze
 ![Shopify][3]{: style="max-width:80%;"}
 
@@ -44,7 +44,7 @@ Next, you will be prompted by Braze's setup wizard. Within this flow, you will n
 ![Shopify][7]{: style="max-width:60%;"}
 
 ### Step 3: Verify Completion
-That's it! The status of your integration will appear in the Data Import section of the Shopify partner page. You will be notified via email once the Braze app has successfully installed and the webhook creation is complete. In addition, the __Connection Pending__ status will be updated to __Connected__ and will display the timestamp of when the connection was established.
+That's it! The status of your integration appears in the Data Import section of the Shopify partner page. You will be notified via email once the Braze app has successfully installed and the webhook creation is complete. In addition, the __Connection Pending__ status will be updated to __Connected__ and will display the timestamp of when the connection was established.
 
 ![Shopify][8]{: style="max-width:80%;"}
 ![Arrow][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
@@ -54,7 +54,7 @@ That's it! The status of your integration will appear in the Data Import section
 
 ## Shopify Event Processing
 
-Once the app installation is complete, Braze will automatically create your webhook integration with Shopify. See the table below for more details on how the supported Shopify webhook will map to Braze custom events and custom attributes.
+Once the app installation is complete, Braze automatically creates your webhook integration with Shopify. See the table below for more details on how the supported Shopify webhook events map to Braze custom events and custom attributes.
 
 #### Shopify Webhook Event - Checkout Update
 
@@ -69,32 +69,32 @@ Once the app installation is complete, Braze will automatically create your webh
 | `shopify_checkout_product_vendors` | Custom Atrribute Array | Array of product vendors from the most recent `shopify_abandoned_checkout` event |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-> __Checkout update events will Trigger after a user...__<br>- Adds/remove items from their cart<br>AND<br>- Proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to Shopify's checkout update webhooks and determine that a checkout is abandoned after __1 hour__ of checkout/cart inactivity. Nested event properties from the checkout update event will be logged as custom attributes for the Shopify beta to be used for segmentation.
+> __Checkout update events Trigger after a user...__<br>- Adds/remove items from their cart<br>AND<br>- Proceeds further into the checkout process including adding their personal information.<br><br>Braze listens to Shopify's checkout update webhooks and determines that a checkout is abandoned after __1 hour__ of checkout/cart inactivity. Nested event properties from the checkout update event are logged as custom attributes for the Shopify beta to be used for segmentation.
 
 #### Shopify Webhook Event - Order Create
 
 | Braze Event Mappings | Braze Event / Attribute Type | Event Properties / Array Items | Triggered when... |
 | ------- | ------- | ------- | ------ |
-| `shopify_order_created` | Custom Event | - `confirmed`<br>- `discount_codes`<br>- `line_items`<br>- `order_id`<br>- `order_number`<br>- `order_status_url`<br>- `total_discounts`<br>- `total_price` |Order create events will trigger: <br><br> Automatically after customer has completed a purchase from your Shopify store.<br><br>OR<br><br>Manually through the [Orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account. |
-| `purchase` | Purchase Event | - `product id`<br>- `quantity`<br>- `currency`<br>- `line price`<br>- `properties`<br>--- `title`<br>--- `variant title`<br>--- `vendor`<br> --- `name`<br>--- `SKUs` | Shopify's order create event will also immediately trigger a Braze purchase event. |
+| `shopify_order_created` | Custom Event | - `confirmed`<br>- `discount_codes`<br>- `line_items`<br>- `order_id`<br>- `order_number`<br>- `order_status_url`<br>- `total_discounts`<br>- `total_price` |Order create events trigger: <br><br> Automatically after customer has completed a purchase from your Shopify store.<br><br>OR<br><br>Manually through the [Orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account. |
+| `purchase` | Purchase Event | - `product id`<br>- `quantity`<br>- `currency`<br>- `line price`<br>- `properties`<br>--- `title`<br>--- `variant title`<br>--- `vendor`<br> --- `name`<br>--- `SKUs` | Shopify's order create event also immediately triggers a Braze purchase event. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Shopify User Syncing
 
-For the supported Shopify events, Braze will map the inbound events to Braze user profiles using the customer's email address. 
+For the supported Shopify events, Braze maps the inbound events to Braze user profiles using the customer's email address. 
 
 __Identified User Profiles__<br>
-- If the email address is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze will sync the Shopify data to that user
-- If the email address is associated with multiple identified user profiles, Braze will sync the Shopify data to the one with the most recent activity 
+- If the email address is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user
+- If the email address is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity 
 
 __Anonymous Users__<br>
-- If the email address is associated with an existing anonymous user profile or alias-only profile, we will sync the Shopify data to that user. 
+- If the email address is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
 	- Note: for existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
-- If the email address is __not__ associated with a user profile in Braze, Braze will generate an alias-only user with a Shopify alias object. 
-	- Note: If these alias-only users eventually become identified, Braze customers will need to assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
+- If the email address is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
+	- Note: If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 #### What Braze Syncs
-Braze will sync the following attributes on the user profile only if there was a change.
+Braze syncs the following attributes on the user profile only if there was a change.
 
 | Braze Standard Attributes | Braze Custom Attributes | Alias Object |
 | ------- | ------- | ------- |
@@ -104,15 +104,12 @@ Braze will sync the following attributes on the user profile only if there was a
 ## Using Shopify Data in Braze
 
 ### Segmentation
-If you are looking to segment by custom event properties, please ensure that you go to the __Manage App Group__ page and __Enable Filtering__ for all of the relevant event properties. Please note that for custom event property storage, you will only be able to segment on a custom event property for the past 30 days. For more details see [here]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage).
 
-![Shopify][11]{: style="max-width:60%;"}
-
-You should be able to filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
+You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
 
 ![Shopify][12]{: style="max-width:60%;"}
 
-In addition, you'll be able to use Braze's breadth of purchase filter to create segments of users based on:
+In addition, you can also use Braze's breadth of purchase filter to create segments of users based on:
 - First/last purchase
 - First/last purchase for a specific app
 - Products they have previously purchased within the last 30 days
@@ -122,7 +119,9 @@ In addition, you'll be able to use Braze's breadth of purchase filter to create 
 
 ![Shopify][14]{: style="max-width:80%;"}
 
-For the Shopify Abandoned Checkout event, you will also be able to segment and liquid template the items within your most recent abandoned cart for the following custom attributes: 
+_Note: If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager to enable filtering for all relevant event properties that you'd like to use within segmentation and liquid._ 
+
+For the Shopify Abandoned Checkout event, you are also able to segment and liquid template the items within your most recent abandoned cart for the following custom attributes: 
 - `product IDs`
 - `skus` 
 - `name`
@@ -132,13 +131,13 @@ For the Shopify Abandoned Checkout event, you will also be able to segment and l
 
 ### Campaign and Canvas Triggering 
 
-With Shopify custom events in Braze, you will be able to trigger Canvases or Campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Here is an example below of a Canvas that will trigger off of the Shopify Abandoned Checkout event within the Canvas entry criteria. 
+With Shopify custom events in Braze, you can trigger Canvases or Campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Here is an example below of a Canvas that triggers off of the Shopify Abandoned Checkout event within the Canvas entry criteria. 
 
 ![Shopify][5]
 
 ### Personalization using Liquid
 
-If you have the Nested Event Property support enabled by your Customer Success Manager, you will also be able to liquid template the event properties and nested event properties for the supported Shopify custom events. <br>Here is an example of liquid templating the __product title__ from the Shopify Abandoned Checkout event:
+If you have the Nested Event Property support enabled by your Customer Success Manager, you can liquid template the event properties and nested event properties for the supported Shopify custom events. <br>Here is an example of liquid templating the __product title__ from the Shopify Abandoned Checkout event:
 {% raw %}
 `{{event_properties.${line_items[0].title}}}`
 {% endraw %}
@@ -162,12 +161,12 @@ Create a private app in order to generate your Shopify access token.
 ![Shopify][18]{: style="max-width:70%;"}
 
 #### Step 4: Enter Credentials
-Once you have successfully created your private app, you will then be provided with your API credentials and keys. For your Connected Content calls, you will need to use the __Password__ value as the __X-Shopify-Access-Token__ in your requests 
+Once you have successfully created your private app, you are then provided with your API credentials and keys. For your Connected Content calls, you must use the __Password__ value as the __X-Shopify-Access-Token__ in your requests.
 ![Shopify][19]{: style="max-width:70%;"}
 
 #### Example Connected Content Request
 
-Once you have retrieved your Shopify access token, you will now be able to build out your Connected Content request within your campaign. Some use cases might include personalizing the product image, gather more meta-data around the specific product, and more. In the example below, we will be making a request to one of __Shopify's Products APIs__ to retrieve the product image used in the message for the specific product ID that the customer has added to their cart from the Shopify Created Order event.
+Once you have retrieved your Shopify access token, you can now build out your Connected Content request within your campaign. Some use cases might include personalizing the product image, gather more meta-data around the specific product, and more. In the example below, we make a request to one of __Shopify's Products APIs__ to retrieve the product image used in the message for the specific product ID that the customer has added to their cart from the Shopify Created Order event.
 
 {% raw %}
 ```
@@ -209,7 +208,7 @@ These HTML Elements can be included within a Liquid For Loop to dynamically gene
 :save product_info %}
  
 // generate your HTML content to display the results
-<<<< ALL HTML CONTENT HERE - THIS CONTENT WILL GENERATE FOR EACH ITERATION OF THE LOOP >>>>
+<<<< ALL HTML CONTENT HERE - THIS CONTENT GENERATES FOR EACH ITERATION OF THE LOOP >>>>
  
 // the below shows an example of templating in the product url into an img element
 <td class="img" style="font-size:0pt; line-height:0pt; text-align:left"><a href="#" target="_blank"><img src={{product_info.products[0].image.src}} border="0" width="80" height="80" alt="" /></a><div style="font-size:0pt; line-height:0pt;" class="mobile-br-15"></div>
@@ -235,7 +234,7 @@ These HTML Elements can be included within a Liquid For Loop to dynamically gene
 	- Braze failed to process the request 
 	- Your Shopify access token is invalid 
 	- The Braze Shopify app was deleted from your Shopify admin page
-- If this happens, you should be able to select __Retry Setup__ and start the installation process again.<br>
+- If this happens, you will be able to select __Retry Setup__ and start the installation process again.<br>
 ![Shopify][25]{: style="max-width:60%;"}
 
 #### How do I uninstall the Braze application from my Shopify store? 
@@ -244,7 +243,7 @@ These HTML Elements can be included within a Liquid For Loop to dynamically gene
 
 ## GDPR
 
-With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers, and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze will automatically receive [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers will ultimately be responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/gdpr_compliance/) policies.
+With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers, and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/gdpr_compliance/) policies.
 
 [1]: {% image_buster /assets/img/Shopify/shopify_integration1.png %} 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
