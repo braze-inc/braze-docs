@@ -11,7 +11,7 @@ description: "A fundamental part of SSL click-tracking for users who have HSTS, 
 Content Delivery Networks are a great mechanism that you can use to serve up content very quickly and easily across multiple mediums as well as handle security certificates for you. Below we have outlined and linked out to relevant CDN partner configurations and resources to help make this process easy. 
 
 __Content Delivery Networks - Partners__<br>
-&#45; [AWS CloudFront](#cloudfront): Sendgrid<br>
+&#45; [AWS CloudFront](#cloudfront): Sendgrid and Sparkpost<br>
 &#45; [Cloudflare](#cloudflare): Sendgrid and Sparkpost<br>
 &#45; [Fastly](#fastly): Sendgrid and Sparkpost<br>
 &#45; [KeyCDN](#keycdn): Sendgrid<br>
@@ -20,7 +20,10 @@ __Content Delivery Networks - Partners__<br>
 If you are unable or do not wish to use the Content Delivery Network Partners listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) documentation on this topic.
 {% endalert %}
 
-## AWS CloudFront - Sendgrid {#cloudfront}
+## AWS CloudFront - Sendgrid and Sparkpost {#cloudfront}
+
+{% tabs %}
+{% tab Sendgrid %}
 
 #### Step 1: Set Up your Server Certificate
 
@@ -87,6 +90,14 @@ Once the distribution is verified, change the DNS entry for the link white label
 
 Now that you have configured CloudFront, reach out to your COM or CSM and let them know you want SSL click-tracking turned on. They will also help test that your configuration is set up correctly.
 
+{% endtab %}
+{% tab Sparkpost %}
+
+Please follow [Sparkpost's CloudFront CDN Documentation](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/) for guidance on how to configure your CDN using CloudFront.
+
+{% endtab %}
+{% endtabs %}
+
 ## Cloudflare - Sendgrid and Sparkpost {#cloudflare}
 
 {% tabs %}
@@ -99,7 +110,7 @@ You must first purchase an SSL certificate that matches the exact link branding 
 
 #### Step 2: Purchase SSL Certificates
 
-Clients can purchase the "Dedicated SSL with Custom Hostnames" option.
+Clients can purchase the "Dedicated SSL with Custom Hostnames" option. Ensure that the Certificate purchased is an "Edge Certificate". For more information on Cloudflare's different certificates [please see here](https://support.cloudflare.com/hc/en-us/articles/228009108-Managing-Dedicated-SSL-Certificates).
 
 ![SSL Certificates]({% image_buster /assets/img/SSL/custom_hostname.png %}){: style="max-width:70%"}
 
@@ -196,4 +207,3 @@ Please follow [Sparkpost's Fastly CDN Documentation](https://www.sparkpost.com/d
 [2]: {% image_buster /assets/img/SSL/custom_hostname.png %}
 [3]: {% image_buster /assets/img/SSL/crypto_settings.png %}
 [4]: {% image_buster /assets/img/SSL/page_rules.png %}
-[5]: {% image_buster /assets/img/SSL/DNS_settings.png %}

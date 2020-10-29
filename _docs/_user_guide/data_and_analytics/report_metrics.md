@@ -61,8 +61,8 @@ glossaries:
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of messages successfully sent to and received by eligible users.
-    calculation: (Sends - Bounces) / (Sends)
+    description: The total number of message requests that is accepted by the receiving email server.
+    calculation: Count
     tags:
       - All Push
       - Email
@@ -128,7 +128,7 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Total Clicks
-    description: The total number (and percentage) of users who clicked within the delivered email or card.
+    description: The total number (and percentage) of users who clicked within the delivered email or card. Please note that clicks on an unsubscribe link will not be counted towards total clicks.
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
@@ -196,4 +196,8 @@ glossaries:
     calculation: (Unique Dismissals) / (Unique Impressions)
     tags:
       - Content Cards
+  - name: AMP Clicks
+    description: The total number of users who clicked into the AMP version of your AMP HTML Email.
+    tags:
+      - Email
 ---

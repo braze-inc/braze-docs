@@ -7,9 +7,13 @@ page_order: 3
 
 # Messaging Users {#what-do-next}
 
+{% alert note %}
+Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__ and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your Account Manager.
+{% endalert %}
+
 ## Implementing Filters {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the "Create Segment" or "Create Campaign" buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+Once you've decided what range of Churn Risk Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
 
 ![Churn Filters][5]
 

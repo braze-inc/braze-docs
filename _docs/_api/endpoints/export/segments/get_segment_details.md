@@ -56,6 +56,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "updated_at" : (string) date last updated as ISO 8601 date,
       "name" : (string) segment name,
       "description" : (string) human-readable description of filters,
+      "text_description" : (string) segment description, 
       "tags" : (array) tag names associated with the segment
 }
 ```

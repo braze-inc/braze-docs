@@ -53,7 +53,8 @@ Authorization: Bearer YOUR_REST_API_KEY
    //one of external_id or email is required
    //can be passed as an array of string with a max of 50
    //endpoint only accepts email or phone value, not both
-   "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
+   "phone": (required*, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
+   //one of external_id or phone is required
  }
 ```
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
@@ -67,7 +68,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | String | The external_id of the user |
 | `email` | Yes* | String | The email address of the user |
-| `phone` | Optional | String in E.164 format | Tags must already exist. |
+| `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Using Email
@@ -80,6 +81,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```
 
+This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
+
 #### Using Phone Number
 ```json
 {
@@ -89,6 +92,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 
 ```
+
+This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 ### Example Requests Email
 ```
@@ -135,3 +140,4 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 {% endapi %}
 
 [support]: {{site.baseurl}}/support_contact/
+[1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

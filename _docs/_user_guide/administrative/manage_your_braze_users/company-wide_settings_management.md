@@ -53,7 +53,7 @@ Slack has an [incoming webhook app][62] that allows messages to be posted from e
 
 - Select the Slack channel that you'd like the notifications to go to
 
-- Slack will generate a URL that you'll need to enter this URL into the settings for the notifications that you wish to receive
+- Slack will generate a URL that you'll need to enter into the settings for the notifications that you wish to receive
 
 ![copy_url][64]
 

@@ -88,10 +88,14 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 3. Replace the removed call with the following snippet:
 
 ```javascript
+
+// Be sure to remove calls to appboy.display.automaticallyShowNewInAppMessages() 
+// from your code as noted in the steps above
+
 appboy.subscribeToInAppMessage(function(inAppMessage) {
   var shouldDisplay = true;
 
-  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+  if (inAppMessage instanceof appboy.InAppMessage) {
     // Read the key-value pair for msg-id
     var msgId = inAppMessage.extras["msg-id"];
 

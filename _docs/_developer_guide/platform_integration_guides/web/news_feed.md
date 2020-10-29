@@ -57,13 +57,13 @@ Instances of the Braze News Feed can be configured to only receive cards from a 
 News Feed Categories can be defined by providing the third "allowedCategories" parameter to `toggleFeed`:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.ab.Card.Category.NEWS]);
+appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.NEWS]);
 ```
 
 You can also populate a feed with a combination of categories as in the following example:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.ab.Card.Category.ANNOUNCEMENTS, appboy.ab.Card.Category.NEWS]);
+appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
 ```
 
 ## Read/Unread Indicators

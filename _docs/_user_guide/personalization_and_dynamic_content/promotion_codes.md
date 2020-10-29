@@ -36,7 +36,7 @@ Each promotion code list has a corresponding expiration date and time that get s
 
 ![Promo Codes 4][4]{: style="max-width:90%"}
 
-You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. This check is performed once a day.
+You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
 
 ![Promo Codes 5][5]
 
@@ -90,7 +90,7 @@ Remaining code count can be found in the "Remaining" column of the promotion cod
 
 This code count can also be found when revisited a pre-existing promotion code list page. 
 
-![Promo Codes 13][13]{: style="max-width:30%"}
+![Promo Codes 13][13]{: style="max-width:50%"}
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
