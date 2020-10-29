@@ -117,12 +117,10 @@ There are a few reasons why this could be happening:
 Users have uninstalled the application. This will invalidate their FCM push token.
 
 #### 2. Invalid Firebase Cloud Messaging Server Key
-The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. You will need to verify:
 
-- The API key is for server applications. It should look like this in your Google Developers Console:
-![Server apps key][9]
+The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `appboy.xml` file. The Server key and Sender ID are found here in your Firebase Console:
 
-- The API key provided is for the same Sender Id that is referenced in your app's `appboy.xml` file.
+![FirebaseServerKey][20]
 
 ### Push Clicks Not Logged
 
@@ -156,3 +154,4 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [16]: #custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
 [18]: #custom-handling-push-receipts-and-opens
+[20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"

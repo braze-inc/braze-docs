@@ -38,4 +38,7 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
   - name: Dyspatch
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
+  - name: EduMe
+    url: /docs/partners/channel_extensions/learning/edume/
+
 ---

@@ -84,10 +84,10 @@ You may either simply not integrate certain parts of the SDK, or use [`stopWebTr
 
 ### Android SDK
 
-You can use [`setDeviceObjectWhitelist`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectWhitelist-java.util.EnumSet-) to configure to only send a subset of the device object keys or values according to a set whitelist.
+You can use [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-) to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-).
 
 {% alert important %}
-An empty whitelist will result in __no__ device data being sent to Braze.
+An empty allowlist will result in __no__ device data being sent to Braze.
 {% endalert %}
 
 ### iOS SDK

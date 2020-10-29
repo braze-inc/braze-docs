@@ -14,7 +14,7 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement)!
 
-### What is Snowflake?
+## What is Snowflake?
 
 [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is an analytic data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings.
 
@@ -22,7 +22,7 @@ Snowflake’s cloud data platform shatters the barriers that prevent organizatio
 
 > Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-### What is Data Sharing?
+## What is Data Sharing?
 
 Snowflake's [Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships.
 
@@ -73,12 +73,37 @@ And so much more!
 [Download the raw table schemas here.][schemas]
 
 ## Important Information and Limitations
-Data Sharing is currently only supported between accounts in the same region. Since Braze currently hosts all our data in Snowflake's US East and EU Frankfurt region, only clients with an account in these regions will be able to have a share provisioned. We are working closely with Snowflake on a product solution to overcome this limitation, so stay tuned for more.
 
+### Breaking vs Non-Breaking Changes
+#### Non-Breaking Changes
+Non-breaking changes can happen at any time and generally provide additional functionality.<br>
+Examples of non-breaking changes:
+- Adding a new table or view
+- Adding a column to an existing table or view
+
+{% alert important %}
+Note that because new columns are considered non-breaking, Braze strongly recommends not using `SELECT *` queries, but rather explicitly listing the columns of interest in each query. Alternately, customers might want to create views that explicitly name columns, and then query those views instead of the tables directly.
+{% endalert %}
+
+#### Breaking Changes
+Breaking changes will be preceded by an announcement and a migration period when possible. Examples of breaking changes include:
+- Removing a table or view
+- Removing a column from an existing table or view
+- Changing the type or nullability of an existing column
+
+### Snowflake Regions
+Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. However, we are able to provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS or Azure region.
+
+### Historical Data
 Braze's historical event data in Snowflake only goes back to April of 2019. In the first few months of us storing data there, we made some product changes that may result in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start.) It's best to assume that any results that include data prior to August 2019 may look slightly different from expectations.
 
+### PII and GDPR Compliance
 Nearly every event record we store includes a few fields that represent users' PII (Personally Identifiable Information). Some events may include data such as email address, phone number, device ID, language, gender, and location information. In the event of a user's request to be forgotten being submitted to Braze, we will null out those PII fields for any event belonging to those users. This way we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
 
+#### PII / NON_PII Tables - Deprecated
+In the past, Braze separated out columns that contained PII into separate tables that ended with _PII. Other columns were stored in tables that ended with _NON_PII. Those tables have since been deprecated, in favor of tables that contain all columns associated with an event. This change obviates the need to perform additional computation to get a complete view of an event. If you were using the old PII / NON_PII tables, please update your integration to use the new, unified tables.
+
+### Speed, Performance, Cost of Queries
 Speed, performance, and cost of any query run on top of the data is entirely determined by the size of the warehouse you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be performant or even to finish before timing out. Snowflake has excellent resources available about how to best determine which size to use: [Overview of Warehouses — Snowflake Documentation](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse Considerations — Snowflake Documentation](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
 ## Braze Benchmarks

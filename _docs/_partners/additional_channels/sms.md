@@ -12,8 +12,6 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "SMS"
 
 valid_partner_list:
-  - name: Telesign
-    url: /docs/partners/additional_channels/sms/telesign/
   - name: Twilio
     url: /docs/partners/additional_channels/sms/twilio/
   - name: Wavecell

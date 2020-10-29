@@ -6,8 +6,12 @@ page_order: 0
 ---
 
 # Carthage Integration
-You can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
+Starting from version 3.24.0 of the SDK, you can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
+```
+binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
+```
 
+You can integrate earlier versions of the SDK by including the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
@@ -79,7 +83,6 @@ If you want to use the Core SDK without any UI components, you can install the c
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_core.json"
-
 ```
 
 ## Specifying Your Custom Endpoint or Data Cluster
@@ -136,5 +139,5 @@ See the {% if include.platform == 'iOS' %}
 [30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html
 
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
+[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
 [apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m

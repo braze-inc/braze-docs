@@ -29,7 +29,9 @@ For example, a request with the following could add the word `"shoes"` to a mess
   }
 ```
 
-
+{% raw %}
+The "trigger_properties" object and `api_trigger_properties.${product_name}` syntax is only supported in Campaigns. To customize messages with keys and values from an API trigger request, use the [Canvas Entry Properties Object](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/).
+{% endraw %}
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -36,7 +36,7 @@ appboy.getUser().setFirstName("SomeFirstName");
 #### Setting a gender
 
 ```javascript
-appboy.getUser().setGender(appboy.ab.User.Genders.FEMALE);
+appboy.getUser().setGender(appboy.User.Genders.FEMALE);
 ```
 
 #### Setting a date of birth
@@ -136,7 +136,7 @@ Custom attribute keys and values have a maximum length of 255 characters. See th
 
 ### Setting Up User Subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type 'appboy.ab.User.NotificationSubscriptionTypes' as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type 'appboy.User.NotificationSubscriptionTypes' as arguments. This type has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
@@ -150,12 +150,12 @@ To set up a subscription for your users (either email or push), call the functio
 
 #### Unsubscribing a user from email:
 ```javascript
-appboy.getUser().setEmailNotificationSubscriptionType(appboy.ab.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
+appboy.getUser().setEmailNotificationSubscriptionType(appboy.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
 #### Unsubscribing a user from push:
 ```java
-appboy.getUser().setPushNotificationSubscriptionType(appboy.ab.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
+appboy.getUser().setPushNotificationSubscriptionType(appboy.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html "ab.User"

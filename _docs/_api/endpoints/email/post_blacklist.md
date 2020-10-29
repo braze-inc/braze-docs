@@ -6,6 +6,7 @@ layout: api_page
 
 page_type: reference
 channel: Email
+alias: /blacklist/
 
 description: "User email addresses can be blacklisted via Braze using a RESTful API."
 ---

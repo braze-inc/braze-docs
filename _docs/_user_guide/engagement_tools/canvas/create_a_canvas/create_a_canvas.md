@@ -94,7 +94,7 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
   {% tab Action-Based Delivery %}
     __Action-Based Delivery__<br>
-    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
+    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. Note that action-based delivery is unavailable for Canvas steps with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
@@ -156,11 +156,11 @@ You can add additional variants by pressing the + button. When you add new varia
 
 ### Editing a Step
 
-Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
+Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
 
 ![Canvas One Day][13]
 
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and exception events:
+Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events][56]:
 
 ![Canvas Exception Events][14]
 
@@ -177,6 +177,10 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
+Select desired advancement behavior. Learn more about options [here](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+
+![Canvas Advancement Behavior][20]
+
 Press the "Done" button once you've finished configuring your Step.
 
 {% tabs local %}
@@ -187,7 +191,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 
 __Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+For more information on the Canvas Entry Object and Properties, check out our [Documentation](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}
@@ -204,7 +208,7 @@ For more information on Custom Event Properties, check out our [Documentation]({
 
 Add more Steps by pressing the blue plus icon:
 
-![Canvas More Step][17]
+![Canvas More Step][17]{: style="max-width:75%;"}
 
 ## Step 4: Use Multivariate Testing Using Canvas
 
@@ -241,6 +245,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [18a]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
+[20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
 [link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
 [21]:{% image_buster /assets/img_archive/Journey_2.png %}
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
@@ -264,3 +269,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/

@@ -118,11 +118,11 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 ##  API Limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
 |Default API Rate Limit | Value|
 |---|---|
-|Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. These limits are subject to change and can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
+|Requests to the `/users/track` endpoint| For customers who onboarded prior to June 2, 2020: Unlimited. <br><br> For customers who onboarded after June 2, 2020: 50,000 requests per minute (see batching below). This limit can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |

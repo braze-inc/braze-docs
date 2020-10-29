@@ -64,7 +64,6 @@ The abs of -2 is 2
 ```
 
 
-- [Full Math Filter Documentation from Shopify][19]
 
 ## E-Commerce
 
@@ -148,7 +147,6 @@ Which will return something like:
 [2]: {% image_buster /assets/img/without_money_filter.png %}
 [11]: https://help.shopify.com/en/themes/liquid/filters/money-filters
 [12]: https://docs.shopify.com/themes/liquid-documentation/filters
-[19]: https://docs.shopify.com/themes/liquid/filters/math-filters
 [20]: https://docs.shopify.com/themes/liquid/filters/string-filters
 [21]: https://docs.shopify.com/themes/liquid/filters/string-filters#capitalize
 [22]: https://docs.shopify.com/themes/liquid/filters/array-filters

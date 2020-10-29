@@ -241,6 +241,68 @@ _Update noted in August 2019._
 {% endalert %}
 
 
+### SMS Events
+```json
+// SMS Send
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+}
+
+// SMS Send To Carrier
+// SMS Delivery
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
+}
+
+// SMS Rejection
+// SMS Delivery Failure
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
+  "error": (string) Error message for the rejection or delivery failure,
+  "provider_error_code": (string) Error code for the rejection or delivery failure,
+}
+```
+
+
+
 ### Subscription Events
 
 ```json
