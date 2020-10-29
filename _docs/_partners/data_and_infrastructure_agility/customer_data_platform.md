@@ -27,4 +27,6 @@ valid_partner_list:
         url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
   - name: Tealium
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
+  - name: Jebbit
+    url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
 ---
