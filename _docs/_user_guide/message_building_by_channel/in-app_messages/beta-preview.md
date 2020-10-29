@@ -12,7 +12,7 @@ description: "This reference article covers the new in-app messaging HTML Previe
 Learn about the new Beta Version of custom HTML In-App Messages.
 
 {% alert important %}
-This feature is in *Beta*. Ask your Braze team for more information on how to get access.
+This feature is in *Early Access*. Ask your Braze account team to get access!
 {% endalert %}
 
 ## New Features
