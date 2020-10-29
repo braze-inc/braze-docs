@@ -5,7 +5,7 @@ page_order: 1
 
 # Dispatch ID Behavior
 
-A `dispatch_id` is the ID of the message dispatch - a unique ID for each "transmission" sent from Braze. Users who are send a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
+A `dispatch_id` is the ID of the message dispatch - a unique ID for each "transmission" sent from Braze. Users who are sent a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
 
 These IDs are __per user, per Campaign for triggered (action-based or API-triggered) messages__. This can result in two different users having different `dispatch_ids` for a single Campaign if messages were sent at two different times. This is often because the API requests were made separately. If both users were in the same campaign audience in a single send, their Dispatch IDs would be the same.
 
