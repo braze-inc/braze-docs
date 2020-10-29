@@ -31,7 +31,7 @@ Here is an example of how to determine if a Content Card is a "Control" card:
 
 ```javascript
 function isControlCard(card) {
-    return card instanceof appboy.ab.ControlCard;
+    return card instanceof appboy.ControlCard;
 }
 ```
 

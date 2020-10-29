@@ -6,11 +6,9 @@ page_order: 0
 ---
 # Overview
 
+![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
-
-Sample push notification:
-
-![Sample Push][27]{: width="20%"}
 
 Check out [our help documentation][8] for push best practices.
 
@@ -385,34 +383,17 @@ See the equivalent configuration for your `appboy.xml`. Note that the class name
 <string name="com_appboy_push_deep_link_back_stack_activity_class_name">your.package.name.YourMainActivity</string>
 ```
 
-Back stack configuration is only available on SDK 2.1.4 and above.
-
 ### Step 5: Define Notification Channels
 
-Braze SDKs 2.1.0 and above support [Android O Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
+The Braze Android SDK supports [Android Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
 To set the user facing name of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelName()`][72].
 
 To set the user facing description of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelDescription()`][73].
 
-If you are an existing customer who is transitioning to Android O, you should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
+You should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
-
-#### Notification Channel Creation by SDK
-
-{% tabs %}
-{% tab 2.1.0 and Above %}
-
-The default notification channel creation will occur even if your app does not target Android O. If you would like to avoid default channel creation until your app targets Android O, **do not upgrade to this version**.
-
-{% endtab %}
-{% tab Lower than 2.1.0 %}
-
-For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, you do not need to define channels in your application.
-
-{% endtab %}
-{% endtabs %}
 
 ### Step 6: Test Notification Display and Analytics
 

@@ -88,10 +88,14 @@ It's often a good idea for sites to implement a "soft" push prompt where you "pr
 3. Replace the removed call with the following snippet:
 
 ```javascript
+
+// Be sure to remove calls to appboy.display.automaticallyShowNewInAppMessages() 
+// from your code as noted in the steps above
+
 appboy.subscribeToInAppMessage(function(inAppMessage) {
   var shouldDisplay = true;
 
-  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+  if (inAppMessage instanceof appboy.InAppMessage) {
     // Read the key-value pair for msg-id
     var msgId = inAppMessage.extras["msg-id"];
 
@@ -127,6 +131,6 @@ appboy.logCustomEvent("prime-for-push");
 
 [1]: http://www.w3.org/TR/push-api/
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
-[4]: http://abbeybond.com/modal-test.html
+[4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png

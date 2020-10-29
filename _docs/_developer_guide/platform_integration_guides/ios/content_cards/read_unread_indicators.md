@@ -1,7 +1,7 @@
 ---
 nav_title: Read & Unread Indicators
 platform: iOS
-page_order: 2
+page_order: 3
 
 ---
 

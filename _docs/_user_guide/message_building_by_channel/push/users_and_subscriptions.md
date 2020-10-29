@@ -32,6 +32,7 @@ Subscription states are helpful flags for brands to use when deciding which user
 Note that even though users __may not have a Push Token__ (e.g They turn off push tokens at the device level through settings, opting not to receive messages) they still may be subscribed. Being subscribed does not guarantee that a push will be delivered, users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
 ### Two ways to Check a Users Push Subscription State:
+![Push Exmaple][3]{: style="float:right;max-width:25%;margin-left:15px;"}
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device.
 
@@ -56,13 +57,22 @@ If a push token is moved a different user on the same device, that first user wi
   {% tab iOS %}
 __iOS Push__
 
-In iOS 12, Apple introduced Provisional Authorization, allowing brands the option to send quiet push notifications to their users' Notification Centers _before_ they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early.
+__iOS Push States__<br>
+Push Enabled - If Braze have a push token for the device<br>
+Push Opt-In State - If the user has expressed a preference to send them push notifications.
+
+For iOS, to receive a push token, you must request whether the user would like to receive push. Dependent on the user's response, Braze will adjust the user's opt-in state to opted in or out. Before this, the opt-in state will be `subscribed`. Upon receiving a response, Braze will attempt to register the user for push. Upon successfully receiving a token, we will update the user's push enabled state
+
+__Enabled State__<br>
+There exist two enabled states, Foreground push enabled (opted-in) and Background push enabled (opted-out). Regardless of the response to the opt-in prompt, the user will receive a __background__ push token (you must have "Remote Notifications" enabled in __Xcode__) allowing them to be sent silent push. If your app is provisionally authorized, or the user has opted into push, they will receive a __foreground__ push token as well, allowing them to be sent all types of push. Within Braze, we consider a user on iOS who is foreground push enabled to be 'push enabled', either explicitly (app-level) or provisionally (device-level).
+
+__Enabled State and Opt-In__<br>
+For iOS, on the subsequent app open, the SDK will detect that push has been disabled and will notify Braze. At this point, Braze will update the push enabled state to disabled. When you attempt to send a push to a user, Braze is already aware of whether we have a token so notifications only get sent to the people who explicitly state they want them. 
+
+__Provisional Authorization and Quiet Push__<br>
+In iOS 12, Apple introduced Provisional Authorization, allowing brands the option to send quiet push notifications to their users' Notification Centers _before_ they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. Check out our documentation to learn more about [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
 On devices running iOS 11 or below, your users _must explicitly opt-in to receive your push messages_. You must request whether the user would like to receive push from you.
-
-If your app is provisionally authorized or the user allows push, you will receive a token and be able to send remote notifications to that user that appears in the __foreground__. If your user does not allow push notifications, you will still receive a token, but this token will only be able to send silent push which permits the app to carry out actions in the __background__ (you must have "Remote Notifications" enabled in __Xcode__). These users with provisional authorization have push enabled at the device-level. 
-
-iOS users are considered "Push Enabled" only if they have allowed notifications in the __foreground__, either explicitly (app-level) or provisionally (device-level).
 
   {% endtab %}
   {% tab Android %}
@@ -92,3 +102,4 @@ Here are some details you should know if you aren't using our most up to date An
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}
+[3]: {% image_buster /assets/img/push_example.png %}

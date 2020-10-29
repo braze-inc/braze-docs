@@ -30,14 +30,13 @@ To do this, use the `users/track` endpoint and post the following information:
 ```json
 "app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
-    {
-      "push_token_import" : true,
-      "push_tokens": [
-          "app_id": ""
-          "token": ""
-          "device_id": ""
-      ]
-    }
+{
+"push_token_import" : true,
+"push_tokens": [
+{ "app_id": "", "token": "", "device_id": "" }
+
+]
+}
 ]
 ```
 
@@ -46,31 +45,30 @@ Example:
 ```json
 "app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
-    {
-      "push_token_import" : true,
-      "email": "braze.test1@testbraze.com",
-      "country": "US",
-      "language": "en",
-      "YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
-      "push_tokens": [
-          "app_id": "APP_ID_OF_OS"
-          "token": "PUSH_TOKEN_STRING"
-          "device_id": "DEVICE_ID"
-      ]
-    },
-    {
-      "push_token_import" : true,
-      "email": "braze.test2@testbraze.com",
-      "country": "US",
-      "language": "en",
-      "YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
-      "YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
-      "push_tokens": [
-          "app_id": "APP_ID_OF_OS"
-          "token": "PUSH_TOKEN_STRING"
-          "device_id": "DEVICE_ID"
-      ]
-    }
+{
+"push_token_import" : true,
+"email": "braze.test1@testbraze.com",
+"country": "US",
+"language": "en",
+"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+"push_tokens": [
+{"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
+      
+]
+},
+    
+{
+"push_token_import" : true,
+"email": "braze.test2@testbraze.com",
+"country": "US",
+"language": "en",
+"YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
+"YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
+"push_tokens": [
+{"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
+      
+]
+}
 ]
 ```
 
@@ -83,6 +81,9 @@ When specifying `push_token_import` as `true`:
 After import, as each user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
 
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
+
+### Web Push Tokens
+Web push tokens contain extra fields that other platforms do not. As a result, we recommend that you integrate push and allow your token-base to repopulate naturally.
 
 ## Sending Push before Braze SDK Integration (Android Only)
 

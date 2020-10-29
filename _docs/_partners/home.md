@@ -50,8 +50,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
 - name: Lob
   url: /docs/partners/additional_channels/direct_mail/lob/
-- name: Telesign
-  url: /docs/partners/additional_channels/sms/telesign/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: Looker
@@ -119,9 +117,15 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
 - name: Jebbit
   url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
+- name: Iterate
+  url: /docs/partners/additional_channels/surveys/iterate/
+- name: Bluedot
+  url: /docs/partners/data_augmentation/contextual_location/bluedot/
 - name: Amazon Personalize
   url: /docs/partners/data_augmentation/recommendation/amazon_personalize/
 - name: Vizbee
   url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
+- name: EduMe
+  url: /docs/partners/channel_extensions/learning/edume/
 
 ---

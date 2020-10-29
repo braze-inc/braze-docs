@@ -19,7 +19,7 @@ For this example, we'll configure the Braze webhook channel to send SMS and MMS 
 
 ## HTTP URL
 
-The Webhook URL is provided by Twilio in your dashboard. This URL is unique to your Twilio account, since it contains your Twilio account ID (`TWILIO_ACCOUNT_SID`).
+The Webhook URL is provided by Twilio in your dashboard. This URL is unique to your Twilio account since it contains your Twilio account ID (`TWILIO_ACCOUNT_SID`).
 
 In our Twilio example, the webhook URL is `https://api.twilio.com/2010-04-01/Accounts/TWILIO_ACCOUNT_SID/Messages.json`. You can find this URL in the *Getting Started* section of the Twilio console.
 
@@ -27,12 +27,12 @@ In our Twilio example, the webhook URL is `https://api.twilio.com/2010-04-01/Acc
 
 ## Request Body
 
-The Twilio API expects the request body to be URL-encoded, so we have to start by changing the request type in the Braze webhook composer to `Raw Text`. The required parameters for the body of the request are *To*, *From* and *Body*.
+The Twilio API expects the request body to be URL-encoded, so we have to start by changing the request type in the Braze webhook composer to `Raw Text`. The required parameters for the body of the request are *To*, *From*, and *Body*.
 
 The screenshot below is an example of what your request might look like if you are sending an SMS to each user’s phone number, with the body "Hello from Braze!".
 
 - You'll need to have valid phone numbers on each user profile in your target audience.
-- In order to meet Twilio's request format, use the `url_param_escape` Liquid filter on your message contents. This filter encodes a string so all the characters are allowed in an HTML request; for example, the plus character (`+`) in the phone number `+12125551212` is forbidden in URL-encoded data, and will be converted  to `%2B12125551212`.
+- To meet Twilio's request format, use the `url_param_escape` Liquid filter on your message contents. This filter encodes a string so all the characters are allowed in an HTML request; for example, the plus character (`+`) in the phone number `+12125551212` is forbidden in URL-encoded data and will be converted to `%2B12125551212`.
 
 ![Webhook Body][29]
 
@@ -62,7 +62,6 @@ Use the webhook composer to preview the request for a random user, or for a user
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
-[21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}

@@ -53,6 +53,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "campaigns" : [
         {
             "id" : (string) Campaign API Identifier,
+            "last_edited": (ISO 8601 string) the last edited time for the message 
             "name" : (string) campaign name,
             "is_api_campaign" : (boolean) whether the campaign is an API Campaign,
             "tags" : (array) tag names associated with the campaign

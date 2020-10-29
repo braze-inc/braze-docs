@@ -23,6 +23,15 @@ guide_featured_list:
 - name: Importing Your Email List into Braze
   link: /docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/
   fa_icon: fas fa-list
+- name: Email Validation
+  link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
+  fa_icon: fas fa-envelope-square
+- name: IP Warming
+  link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
+  fa_icon: fas fa-exclamation
+- name: SSL Click Tracking
+  link: /docs/user_guide/onboarding_with_braze/email_setup/ssl_clicktracking/
+  fa_icon: fas fa-mouse-pointer
 ---
 
 # Requirements
@@ -50,3 +59,8 @@ By starting with smaller volumes of email, you are establishing a level of trust
 Send your first batch of emails to your most engaged users. This will help you gain trust faster with your provider.
 
 After you're done with your IP Warmup, feel free to [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+
+
+### For more information on Email at Braze, check out our dedicated [Email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
+
+<br>

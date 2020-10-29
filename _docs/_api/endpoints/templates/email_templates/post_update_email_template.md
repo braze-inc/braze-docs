@@ -49,6 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "plaintext_body": (optional, string) a plaintext version of the email template body,
   "preheader": (optional, string) the email preheader used to generate previews in some clients,
   "tags": (optional, array of Strings) Tags must already exist
+  "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
 }
 ```
 
@@ -62,6 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Optional|String|The email template body that may include HTML|
 |`plaintext_body`|Optional|String|A plaintext version of the email template body|
 |`preheader`|Optional|String|The email preheader used to generate previews in some clients|
+|`should_inline_css`|Optional|Boolean|Enables or disables the 'inline_css' feature per template.  If  not provided, Braze will use the default setting for the AppGroup.  One of 'true' or 'false' is expected|
 |`tags`|Optional|String|Tags must already exist|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -80,7 +82,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
   "body": "Check out this week'\''s digital lookbook to inspire your outfits. Take a look at https://www.braze.com/",
   "plaintext_body": "This is the updated text within my email body and here is a link to https://www.braze.com/.",
   "preheader": "We want you to have the best looks this Summer",
-  "tags": ["Tag1", "Tag2"]
+  "tags": ["Tag1", "Tag2"],
+  "should_inline_css": false
 }'
 ```
 
@@ -92,5 +95,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 - `All Tags must be Strings.`
 
 - `Some Tags could not be found.`
+
+- `"Invalid value for 'should_inline_css'.  One of 'true' or 'false' was expected"` - 'should_inline_css' accepts boolean characters only.  The error likely is being shown as the value is being sent as a 'string'.
+
 
 {% endapi %}

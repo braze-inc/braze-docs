@@ -11,6 +11,9 @@ guide_featured_title: "Integrate & Customize"
 guide_featured_list:
 - name: Content Cards Feature Overview
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/overview/
+  fa_icon: fab fa-apple
+- name: Data Model
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
   fa_icon: fas fa-sticky-note
 - name: Customization
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/
@@ -24,12 +27,14 @@ guide_featured_list:
 - name: Badges
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/badges/
   fa_icon: fas fa-certificate
-- name: Data Model
-  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
   fa_icon: fas fa-server
 - name: Multiple Feeds
   link: /docs/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/
   fa_icon: fas fa-th-list
+- name: Implementation Guide
+  link: /docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/
+  fa_icon: fas fa-user-check
+
 
 ---
 <br>

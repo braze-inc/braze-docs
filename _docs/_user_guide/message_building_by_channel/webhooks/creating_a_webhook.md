@@ -100,10 +100,6 @@ With IP whitelisting, you can verify that Webhooks requests are actually coming 
 
 Braze will send Webhooks from the IP ranges below.
 
-{% alert important %}
-  If you’re making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
-{% endalert %}
-
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|
 | `127.0.0.1`
@@ -123,6 +119,10 @@ Braze will send Webhooks from the IP ranges below.
 | `52.29.193.121`
 | `35.158.29.228`
 
+{% alert important %}
+If you’re making Braze-to-Braze webhooks and using the IP whitelisting feature in the Braze dashboard, you only need to whitelist `127.0.0.1`.
+{% endalert %}
+
 # Utilizing Webhooks
 
 There are many ways to utilize webhooks, and with Braze's technology partners (Alloys) you can use webhooks to uplevel your communication directly with your customers and users.
@@ -141,7 +141,7 @@ Check out:
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
-[21]: {% image_buster /assets/img_archive/webhook_JSON1.png %}
+[21]: {% image_buster /assets/img/webhook_JSON1.jpg %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}

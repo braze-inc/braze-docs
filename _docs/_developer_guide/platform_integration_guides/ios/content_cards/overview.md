@@ -5,7 +5,7 @@ page_order: 0
 
 ---
 
-# Content Cards Overview 
+# Content Cards Overview
 
 ## When to Use Content Cards
 

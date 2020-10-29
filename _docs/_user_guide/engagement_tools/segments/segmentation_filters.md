@@ -50,10 +50,14 @@ glossaries:
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
-    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br> <a href="/docs/x-in-y-behavior/"> Learn more about X-in-Y behavior here.</a> <br><br>Example:<br>Abandoned Cart exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
       - Custom Data
   - name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last 1, 3, 7, 14, 21, and 30 calendar days. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    tags:
+      - Custom Data
+  - name: Day of Recurring Event
+    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Timezone&#58;<br>This filter adjusts for whatever timezones the user is in.
     tags:
       - Custom Data
   - name: First Made Purchase
@@ -141,23 +145,23 @@ glossaries:
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Product Purchased in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last 1, 3, 7, 14, 21, and 30 calendar days (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last specified number of calendar days between 1 and 30 (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchase Property in Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: X Sessions in Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last 1, 3, 7, 14, 21, and 30 calendar days. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - User Activity
   - name: Clicked Card
@@ -189,7 +193,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received a designated campaign or canvas step.
+    description: Segments your users by whether or not they have received any campaign or canvas step.
     tags:
       - Retargeting
   - name: In Campaign Control Group
@@ -290,6 +294,10 @@ glossaries:
       - User Attributes
   - name: Birthday
     description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
+    tags:
+      - User Attributes
+  - name: Braze Segment Cohorts
+    description: After creating Segment Cohorts in the Braze Dashboard, you can choose to include/exclude those cohorts in your segment.
     tags:
       - User Attributes
   - name: City

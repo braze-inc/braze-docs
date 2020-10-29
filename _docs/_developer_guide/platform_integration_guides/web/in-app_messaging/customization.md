@@ -15,7 +15,7 @@ In-app message objects may carry key-value pairs as their `extras` property. The
 
 ```javascript
 appboy.subscribeToInAppMessage(function(inAppMessage) {
-  if (inAppMessage instanceof appboy.ab.InAppMessage) {
+  if (inAppMessage instanceof appboy.InAppMessage) {
     var extras = inAppMessage.extras;
     for (var key in extras) {
       if (data.hasOwnProperty(key)) {

@@ -22,11 +22,11 @@ valid_partner_list:
     url: /docs/partners/additional_channels/instant_chat/messenger/
   - name: Passkit
     url: /docs/partners/additional_channels/mobile_wallet/passkit/
-  - name: Telesign
-    url: /docs/partners/additional_channels/sms/telesign/
   - name: Twilio
     url: /docs/partners/additional_channels/sms/twilio/
   - name: Wavecell
     url: /docs/partners/additional_channels/sms/wavecell/
+  - name: Iterate
+    url: /docs/partners/additional_channels/surveys/iterate/
 
 ---
