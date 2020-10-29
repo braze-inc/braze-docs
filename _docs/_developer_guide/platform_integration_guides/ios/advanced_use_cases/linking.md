@@ -93,14 +93,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 ![Open News Feed][10]
 
-### Deep Links and Cold Starts
-
-For deep links to work on iOS from a cold start, you will need to add the following to your App delegate file's `didFinishLaunchingWithOptions` method:
-
-```
-[[AppboyReactUtils sharedInstance] populateInitialUrlFromLaunchOptions:launchOptions];
-```
-
 # Universal Links
 
 In order to use Universal Links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your AppDelegate. For example:
@@ -226,7 +218,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 }
 ```
 
-For an implementation example, take a look at `application:openURL:options:` method in the [`AppDelegate.m`][9] file of our Stopwatch sample application.
+For an implementation example, take a look at `application:openURL:options:` method in the [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m) file of our Stopwatch sample application.
 
 {% endtab %}
 {% tab swift %}
@@ -339,7 +331,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m
 [6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKModalWebViewController.h
 [8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
-[9]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
+[9]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
 [10]: {% image_buster /assets/img_archive/Open_Deep_Link.png %}
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14

@@ -127,7 +127,6 @@
     margin-right: 15px;
     margin-bottom: 15px;
     padding: 10px 0 10px 0;
-    // border-top: 2px solid $grey-manatee;
 
     .api_tags {
       display: none;
@@ -135,7 +134,6 @@
     .api_type {
       background-color: #ebebeb;
       border-radius: 10px;
-      padding-right: 25px !important;
       margin-bottom: 15px;
       .method {
         font-family: $braze-black;
@@ -145,7 +143,7 @@
         padding: 6px 15px;
         display: inline-block;
         &.post {
-         background-color: #49cc90;
+          background-color: #49cc90;
         }
         &.get {
           background-color: #61affe;
@@ -157,6 +155,27 @@
           background-color: #f93e3e;
         }
         margin-right: 15px;
+      }
+      .coreclass {
+        font-family: $braze-black;
+        text-transform: uppercase;
+        color: #ffffff;
+        border-radius: 10px;
+        padding: 6px 15px;
+        display: inline-block;
+        float: right;
+        background-color: #f7918e;
+        a {
+          text-decoration: none;
+          border-bottom-width: 0;
+          color: #ffffff;
+          &:hover {
+            text-decoration: none;
+            background-color: transparent;
+            color: #000000;
+          }
+        }
+        margin-left: 15px;
       }
       p {
         display: inline-block;

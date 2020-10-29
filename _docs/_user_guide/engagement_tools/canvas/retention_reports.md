@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention Report
 platform: Canvas
 subplatform: Testing and More
 page_order: 3
@@ -97,7 +97,7 @@ Report by Variant Use Cases:
 __Braze Retention Reports By Variant Components:__
 - __Date Range__: Set on the Canvas Details page, the date range includes all users who received the campaign during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report. Each day the retention rate, percentage change from the control group, and confidence are measured.
 - __Retention Rate__: Shows the retention rate by variant. The retention rate is equivalent to the number of users that performed the retention event divided by the total users that have received the canvas.
-- __Recentage Change from Control__: Quantifies the percentage change per variant from the control group.
+- __Percentage Change from Control__: Quantifies the percentage change per variant from the control group.
 - __Confidence__: Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a Z Test to calculate a [confidence][9] percentage. This percentage signifies how confidently that variant is performing better than the control group.
 - __Units__: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a canvas.
 - __Variant Graph__: This graph summarizes the results by variant for the selected date range.

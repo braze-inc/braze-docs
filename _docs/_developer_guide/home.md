@@ -60,6 +60,9 @@ guide_menu_list:
   - name: Flutter Android and iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/preview/
     fa_icon: fas fa-mobile
+  - name: Smart TVs
+    link: /docs/developer_guide/platform_integration_guides/web/smart_tvs/
+    fa_icon: fas fa-tv
 
 guide_footer_header: " "
 guide_footer_text: " "

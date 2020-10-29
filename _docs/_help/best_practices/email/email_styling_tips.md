@@ -38,17 +38,30 @@ page_order: 4
 
 ## Preheader Character Limits
 
-  |      Email Client      |  Limit  |
+  |   Mobile Email Client  |  Limit  |
   |:----------------------:|:-------:|
-  | iPhone (5S)            | 64      |
-  | Gmail (Web Client)     | 100     |
-  | Gmail (iOS Client, 5S) | 34      |
-  | iPad 5, Mail App       | 64      |
-  | Android 4.4            | 97      |
-  | Apple Mail 8           | 50-100  |
-  | Outlook 2013           | 60-100  |
-  | Outlook.com            | 124-236 |
-  | Yahoo! Mail            | 135-202 |
+  | iOS Outlook            | 74      |
+  | Android Native         | 43      |
+  | Android Gmail          | 24      |
+  | iOS Native             | 82      |
+  | iOS Gmail              | 30      |
+
+  |  Desktop Email Client  |  Limit  |
+  |:----------------------:|:-------:|
+  | Apple Mail             | 33      |
+  | Outlook '13            | 38      |
+  | Ouotlook for Mac '15   | 53      |
+  | Outlook '16            | 50      |
+
+
+  |  Webmail Email Client  |  Limit  |
+  |:----------------------:|:-------:|
+  | AOL Mail               | 81      |
+  | Gmail                  | 119     |
+  | Outlook.com            | 49      |
+  | Office 365             | 40      |
+  | Mail.ru                | 64      |
+
 
   Source: [Email on Acid][62]
 
@@ -117,7 +130,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 [46]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
 [60]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
-[62]: https://www.emailonacid.com/blog/article/email-development/tips-for-coding-email-preheaders
+[62]: https://www.emailonacid.com/blog/article/email-marketing/preview-vs-preheader-text-how-long-should-preheader-text-be/
 [63]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
 [64]: {{site.baseurl}}/help/best_practices/email/#unsubscribed-email-addresses
 [65]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event

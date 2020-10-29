@@ -45,6 +45,12 @@ You can export the following data from Braze to Segment:
 | Email Soft Bounced             | Braze attempted to send an email, but the User’s receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) |
 | Email Marked As Spam           | User marked an email as spam. |
 | Email Unsubscribed             | User clicked the unsubscribe link in an email. |
+| SMS Sent                       | An SMS was sent. |
+| SMS Sent to Carrier            | An SMS was sent to the Carrier for delivery. |
+| SMS Delivered                  | An SMS was delivered successfully. |
+| SMS Delivery Failed            | An SMS was unable to be delivered successfully. |
+| SMS Rejected                   | An SMS was rejected. |
+| SMS Inbound Received           | An inbound SMS was received. |
 | Subscription Group State Changed | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'. |
 | In-App Message Viewed          | User viewed an In-App Message. |
 | In-App Message Clicked         | User tapped or clicked a button in an In-App Message. |

@@ -17,7 +17,7 @@ The GDPR defines three primary entities who are involved in the processing of pe
 
 In relation to the Braze Services:
 
-* The Data Subjects are the end users, customers or other individuals who provide their personal data to you.
+* The Data Subjects are the end users, customers, or other individuals who provide their personal data to you.
 * You are the Data Controller who decides how and why the personal data of the Data Subjects will be processed.
 * Braze is a Data Processor who processes personal data on your behalf and in accordance with the instructions that we receive from you.
 
@@ -25,7 +25,7 @@ This page outlines the ways that the Braze Services enable customers to fulfill 
 
 ## Legal Disclaimer
 
-As a Data Controller, you are required by the GDPR to enable end users from whom you have collected personal data to exercise numerous rights, each described in greater detail below. None of the following is intended to be, nor shall it be deemed to be, legal advice by Braze on how to comply with GDPR. You are advised to seek the advice of your own counsel with respect to our particular situation and how GDPR applies to you and your use of the Braze Services. You can find the [full GDPR text here](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG&toc=OJ:L:2016:119:TOC).
+As a Data Controller, you are required by the GDPR to enable end users from whom you have collected personal data to exercise numerous rights, each described in greater detail below. None of the following is intended to be, nor shall it be deemed to be, legal advice by Braze on how to comply with GDPR. You are advised to seek the advice of your own counsel with respect to your particular situation and how GDPR applies to you and your use of the Braze Services. You can find the [full GDPR text here](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG&toc=OJ:L:2016:119:TOC).
 
 ## The Right to Be Informed
 
@@ -71,23 +71,23 @@ Braze offers two solutions to stop additional processing of data by Braze:
 Once you have halted data collection, you can use Braze’s [User Deletion REST API endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint) to delete an end user, which will remove all records of such end user from the Braze’s Services:
 
 * For Users who have an `external_id` within the Services, you can use that ID to delete that end user’s data.
-* For anonymous end users who do not have an external_id within the Services, you  can retrieve that end user’s device identifier using the Braze SDK and can use the device identifier to find the end user profile associated with that device. You can then use the [User Deletion API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint) to delete the profile associated with that end user.
+* For anonymous end users who do not have an external_id within the Services, you can retrieve that end user’s device identifier using the Braze SDK and can use the device identifier to find the end user profile associated with that device. You can then use the [User Deletion API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint) to delete the profile associated with that end user.
 
 Under GDPR, You must make reasonable efforts to notify Data Subjects when you have complied with their request to erase their personal data.
 
-Braze will not be able to identify if a deleted (or 'forgotten') end user subsequently attempts to log into or re-register with your app or service.  To address this,  you may [disable login or] seek to  obtain positive confirmation that the end user consents to processing of their personal data. The Braze Services are not able to create blacklists of user identifiers or email addresses on behalf of customers.
+Braze will not be able to identify if a deleted (or 'forgotten') end user subsequently attempts to log into or re-register with your app or service.  To address this,  you may [disable login or] seek to obtain positive confirmation that the end user consents to processing of their personal data. The Braze Services are not able to create blacklists of user identifiers or email addresses on behalf of customers.
 
 Deleting an end user's data will erase person data from Braze. In order to maintain the integrity of campaign and application usage analytics, anonymous aggregated data will not be modified when an end user is deleted (for example, Braze will not decrement an app's total number of sessions when an end user is deleted.  The session(s) when such end user visited the app will still be included in the total number of visits to that app, but that data will not be connected in any way to the profile of the forgotten end user, ensuring that this anonymized and aggregated data cannot be tied back to an individual end user.
 
 ## Deletion Details
 
-Deleting an end user from the Braze Services will _permanently_ delete Braze's centralized User Profile for that end user. This includes all personal data, including structured profile information, that Braze collected automatically or that you configured the Braze Services to collect, such as device information, country, language and email address.
+Deleting an end user from the Braze Services will _permanently_ delete Braze's centralized User Profile for that end user. This includes all personal data, including structured profile information, that Braze collected automatically or that you configured the Braze Services to collect, such as device information, country, language, and email address.
 
 Analytics within the Braze Services are tied to the Braze end user Identifier. Once the end user’s profile has been deleted, the Braze User Identifier effectively becomes a completely anonymized identifier, as Braze is unable to tie it back to any individual end user.
 
 ## The Right to Restriction of Processing
 
-Data Subjects have the right to ‘block’ or suppress processing of certain subsets of their personal data in the event of inaccurate or improperly obtained data. When processing is restricted, you are permitted to store the personal data, but not further process it. You can retain just enough information about the individual to ensure that the restriction is respected in future.
+Data Subjects have the right to ‘block’ or suppress the processing of certain subsets of their personal data in the event of inaccurate or improperly obtained data. When processing is restricted, you are permitted to store the personal data, but not further process it. You can retain just enough information about the individual to ensure that the restriction is respected in the future.
 
 ### Braze Recommendation
 

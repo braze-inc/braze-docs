@@ -23,7 +23,7 @@ _These reading paths assume that you've already completed your integration and s
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
 | 1 | [Getting Your Account]({{site.baseurl}}/user_guide/administrative/logging_in_and_security/getting_your_account/) | How to get your Braze account set up. |
-| 2 | [Logging In]({{site.baseurl}}/user_guide/administrative/logging_in_and_security/logging_in/) | How to access the Braze platform. |
+| 2 | [Logging In]({{site.baseurl}}/user_guide/administrative/access_braze/getting_your_account/) | How to access the Braze platform. |
 | 3 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
 | 4 | [Creating a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) | Divide your user into specific audiences based on their attributes and actions within your site or app. |
 | 5 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |

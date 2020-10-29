@@ -27,8 +27,4 @@ guide_featured_list:
 
 <br>
 
-{% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/)!
-{% endalert %}
-
 By default, in-app messages are enabled after completing any standard Braze SDK integration, including GIF support. Note that if you did not integrate SDWebImage, in-app messages with images will not work.

@@ -122,6 +122,19 @@ After you've finished building the last of your campaign, review its details, [t
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
+
+#### Card Removal Events (Optional) {#action-based-card-removal}
+
+Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+
+Within a Campaign Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
+
+{% alert tip %}
+You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+{% endalert %}
+
+![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+
 {% endtab %}
 
 {% tab Canvas %}
@@ -139,6 +152,18 @@ Complete the remaining sections of your Canvas step, see the sections below for 
 - To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
 After you've finished building out your Canvas Step, review its details and [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
+
+#### Card Removal Events (Optional) {#action-based-card-removal}
+
+Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+
+Within a Canvas Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
+
+{% alert tip %}
+You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by Canvas's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+{% endalert %}
+
+![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -165,7 +190,6 @@ If you find you need to make changes to launched Content Cards, you must stop yo
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported

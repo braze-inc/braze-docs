@@ -19,18 +19,18 @@ guide_featured_list:
   - name: Multivariate & A/B Testing
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/
     fa_icon: fas fa-chart-line
-  - name: Comparing Campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/
-    fa_icon: fas fa-columns
   - name: Sending Test Messages
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
     fa_icon: fas fa-envelope
+  - name: Retention Reports
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+    fa_icon: fas fa-chart-area
+  - name: Funnel Reports
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/
+    fa_icon: fas fa-filter
   - name: Active In-App Message Campaign Limits
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/active_in_app_messaging_limit/
     fa_icon: fas fa-exclamation-triangle
-  - name: Retention Reports
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-    fa_icon: fas fa-chart-pie
   - name: Campaign Calendar
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_calendar/
     fa_icon: fas fa-calendar

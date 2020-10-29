@@ -49,6 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "created_at": (string) date created as ISO 8601 date,
   "updated_at": (string) date updated as ISO 8601 date,
   "name": (string) Canvas name,
+  "description": (string) Canvas description,
   "archived": (boolean) whether this Canvas is archived,
   "draft": (boolean) whether this Canvas is a draft,
   "schedule_type": (string) type of scheduling action,

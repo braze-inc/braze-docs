@@ -84,7 +84,7 @@ __Continue through the remaining steps of message creation.__ This includes fini
 
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/languages_1.png %}
+[1]: {% image_buster /assets/img_archive/languages_1.jpg %}
 [2]: {% image_buster /assets/img_archive/languages_2.png %}
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [4]: {% image_buster /assets/img_archive/languages_3.png %}

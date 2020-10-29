@@ -33,7 +33,7 @@ If all of the messages in your campaign are going to be similar or have the same
  After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
 
 1. Name your step something clear and meaningful.
-2. Add a Delay, as necessary.
+2. Add a Delay, as necessary. Note that steps containing in-app messages cannot be action based.
 3. Filter your Audience, as necessary.
 4. Choose your advancement options, as necessary.
 5. Choose all other messaging channels which you would like to pair with your message.
@@ -291,7 +291,6 @@ The average Braze customer has a total of 26 campaigns active at once - so it is
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[10]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
