@@ -196,4 +196,8 @@ glossaries:
     calculation: (Unique Dismissals) / (Unique Impressions)
     tags:
       - Content Cards
+  - name: AMP Clicks
+    description: The total number of users who clicked into the AMP version of your AMP HTML Email.
+    tags:
+      - Email
 ---
