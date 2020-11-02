@@ -1,5 +1,5 @@
 ---
-nav_title: Beta
+nav_title: HTML Preview
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
@@ -7,9 +7,9 @@ hidden: true
 description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
-# In-App Messages HTML Preview Beta
+# In-App Messages HTML Preview Early Access
 
-Learn about the new Beta Version of custom HTML In-App Messages.
+Learn about the new Early Access version of custom HTML In-App Messages.
 
 {% alert important %}
 This feature is in *Early Access*. Ask your Braze account team to get access!
@@ -98,7 +98,7 @@ For example, to close a message and log Button 2 click, you can use:
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features require upgrading to the following Braze SDK version:
+These new features require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
@@ -115,7 +115,7 @@ Consider adopting this new message type once a significant portion of your user 
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
+![New HTML In App Message Early Access Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. 
 
