@@ -113,9 +113,9 @@ To set up a subscription for your users (either email or push), you can set the 
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
 
 - `EmailNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
+  - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
 - `PushNotificationSubscriptionType`
-  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
+  - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
 
 >  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`
 

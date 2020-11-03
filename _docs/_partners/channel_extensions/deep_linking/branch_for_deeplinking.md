@@ -39,11 +39,13 @@ Depending on your ESP, additional customization is required to support click-tra
 
 - [SendGrid][5]
 - [Mailjet][6]
+- [Sparkpost][7]
 
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
-[5]: https://docs.branch.io/pages/emails/braze/
-[6]: https://docs.branch.io/pages/emails/braze-mailjet/
+[5]: https://help.branch.io/using-branch/page/braze-sendgrid
+[6]: https://help.branch.io/using-branch/page/braze-mailjet
+[7]: https://help.branch.io/using-branch/page/braze-sparkpost
