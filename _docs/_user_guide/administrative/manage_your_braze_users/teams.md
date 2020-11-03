@@ -12,7 +12,7 @@ Braze Admins can divide subsets of their Dashboard users into Teams with varying
 
 Go to the __Manage App Group Page__ and click __Manage Teams__. From there, you will see an option to __+Add Team__ that then populates a modal window. Here you will not only give the Team a name, but also have the option to use a Custom Attribute, Location, or Language to further define the access that will be granted. 
 
-This Team can later be used to filter end users for engagement objects like campaigns, Canvases, cards, segments, and more, granting members of this team access. This filter will also use the definition assigned to filter end-users within these objects. See [Tags and Filters](#tags-and-filters) below to learn more. 
+This Team can later be used to filter end-users for engagement objects like campaigns, Canvases, cards, segments, and more, granting members of this team access. See [Tags and Filters](#tags-and-filters) below to learn more. 
 
 ![adding_a_team][68]
 
