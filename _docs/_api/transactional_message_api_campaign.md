@@ -45,7 +45,11 @@ When launching a Transactional Campaign, Braze has simplified the campaign creat
 
 ### Disallowed Tags in Transactional Emails 
 
-Please note that the `Connected Content` liquid tag is currently not available within Transactional Message campaigns. Using the Connected Content tag requires Braze to make an outbound API request during our sending process which can slow down the message sending process if the external service we request is experiencing latency. As a result, we do not support including Connected Content tags within any field of your Transactional email campaign.
+Please note that the `Connected Content` and `Promotion Code` liquid tags are currently not available within Transactional Message campaigns. 
+
+Using the Connected Content tag requires Braze to make an outbound API request during our sending process which can slow down the message sending process if the external service we request is experiencing latency.  Similarly, the Promotion Code tag requires Braze to perform additional processing to evaluate the availability of a promotion before sending which can slow the sending process should one not be available.
+
+As a result, we do not support including Connected Content or Promotion Code tags within any field of your Transactional email campaign.
 
 
 [1]: {% image_buster /assets/img/transactional_email_campaign.png %} 
