@@ -186,7 +186,14 @@ If you need to remove old cards, you must stop the campaign to do so. This can b
 
 ![Content Card][25]
 
-If you find you need to make changes to launched Content Cards, you must stop your campaign, remove active Content Cards from users' feeds, make your edits to the cards, and then restart your campaign.
+### Updating Already Sent Cards
+
+If you find you need to make changes to cards which have already been sent:
+
+1. Stop your campaign
+2. Remove active Content Cards from users' feeds
+3. Edit your campaign as needed
+4. Restart your campaign
 
 [1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
