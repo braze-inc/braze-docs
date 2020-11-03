@@ -9,7 +9,7 @@ A push notification is an alert that appears on the user's screen when an import
 
 ![Sample Push][27]
 
-Check out [Braze Academy][7] for additional best practices.
+Visit our [documentation][7] for additional best practices.
 
 Web push notifications are implemented using the [W3C Push standard][1], which browsers are in the process of supporting. Currently, the browsers which support web push include most versions of Chrome, Firefox, and Opera. Web Push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple Push Notification Services; Braze supports these Safari notifications as well.
 
