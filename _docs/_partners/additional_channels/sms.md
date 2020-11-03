@@ -14,7 +14,5 @@ partner_top_header: "SMS"
 valid_partner_list:
   - name: Twilio
     url: /docs/partners/additional_channels/sms/twilio/
-  - name: Wavecell
-    url: /docs/partners/additional_channels/sms/wavecell/
 
 ---

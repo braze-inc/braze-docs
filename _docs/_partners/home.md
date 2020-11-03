@@ -105,8 +105,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/loyalty/talonone/
 - name: Fivetran
   url: /docs/partners/channel_extensions/workflow_automation/fivetran/
-- name: Wavecell
-  url: /docs/partners/additional_channels/sms/wavecell/
 - name: Rokt Calendar
   url: /docs/partners/channel_extensions/calendar/rokt_calendar/
 - name: Passkit
