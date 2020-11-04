@@ -17,7 +17,7 @@ Segment Cohorts expands our existing segmentation capabilities by opening up the
 
 ## Step 1: Navigating to the Segment Cohorts Section
 
-On the left-hand side under Engagement click on Segment Cohorts. From the Segment Cohorts table, click the "+ Create New Cohort" button at the top right of the table.
+On the left-hand side under Engagement, expand the Segments section and click on Segment Cohorts. From the Segment Cohorts table, click the "+ Create New Cohort" button at the top right of the table.
 
 ![Segment Cohorts Nav][1]
 
