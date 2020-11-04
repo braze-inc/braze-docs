@@ -325,7 +325,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Email Available
-    description: Segments your users by whether or not they have reported their respective email addresses, and if they are subscribed/opted-in to email.
+    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. If a user reports your emails as spam or if Braze receives a hard bounce response from this email address, the user will no longer appear in a segment that uses this filter with the value of "true".
     tags:
       - User Attributes
   - name: Email Opt-In Date
