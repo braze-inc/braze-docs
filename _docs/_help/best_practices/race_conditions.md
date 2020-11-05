@@ -9,7 +9,11 @@ A **race condition** is a concept where an outcome is dependent on the sequence 
 
 In the Braze platform, one of the most common race conditions occur with messages that target newly created users. Here, the expected order of events is: (1) a user gets created; (2) the same user is immediately targeted for a message. However, in some cases the second event will trigger first. This means that a message is attempting to be sent to a user that has not been created yet, and as a result, the user never receives it.
 
-If you're using API endpoints to create users and trigger canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occassionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. 
+If you're using seperate API endpoints to create users and trigger canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occassionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. 
+
+{% alert note %}
+If user attributes are sent via SDK, then Braze will automatically process those first before attempting to send any message.
+{% endalert %}
 
 One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your canvas or campaign. 
 
