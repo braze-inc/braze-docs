@@ -45,6 +45,9 @@ guide_menu_list:
   - name: Exporting to Facebook Audiences
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_to_facebook_audiences/
     fa_icon: fab fa-facebook-square
+  - name: Export Troubleshooting
+    link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
+    fa_icon: far fa-question-circle
 ---
 <br>
 
