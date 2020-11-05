@@ -163,8 +163,6 @@ __Using the Attributes Object in Campaigns__
 
 Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attribute and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by race conditions. 
 
-{% details Click to read about the Benefits of using the Attributes Object with this Endpoint %}
-
 When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds for the user to be created in Braze's system or for the data to propagate to the user's profile.
 
 When requests are made to the `users/track` and `messaging` endpoints at around the same time, Braze cannot guarantee that the request to the `users/track` endpoint will be processed before the request to the `messaging` endpoint. This can result in race conditions that can impact messaging: for example, a user may not yet have been created in Braze's system when a request to the `campaigns/trigger/send` endpoint is processed, resulting in the user not receiving an API-triggered push campaign.
@@ -183,7 +181,6 @@ This attribute object will __not__ create anonymous users by user alias.
 {% endalert %}
 
 Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to `false`, then the attributes object __must__ be included in order to create the user.
-{% enddetails %}
 <br>
 {% alert important %}
 Looking for Create Send Endpoint for Canvases? Check out the documentation [here]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
