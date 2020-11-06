@@ -17,7 +17,7 @@ Features include:
 * Update user profiles with standard and custom attributes
 * Send Push Notifications
 * Integrate your Unreal apps with larger Canvas journeys
-* Send cross-channel messaging, like email or SMS, based on in-game behaviors
+* Send cross-channel messaging, like email or SMS, based on in-app behavior
 
 To learn more about Braze's Unreal Engine plugin, see our [GitHub repository][1].
 
