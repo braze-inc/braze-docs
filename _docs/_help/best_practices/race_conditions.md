@@ -12,7 +12,7 @@ In the Braze platform, one of the most common race conditions occurs with messag
 If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. 
 
 {% alert note %}
-If user attributes are sent via SDK, then Braze will automatically process those first before attempting to send any message.
+If user attributes are sent via SDK or in the same user/track call as the event, then Braze will automatically process those first before attempting to send any message.
 {% endalert %}
 
 One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your canvas or campaign. 
