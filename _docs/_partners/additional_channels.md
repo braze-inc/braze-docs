@@ -16,7 +16,7 @@ valid_partner_list:
     url: /docs/partners/additional_channels/calendar/rokt_calendar/
   - name: Inkit
     url: /docs/partners/additional_channels/direct_mail/inkit/
-  - name: Lob.com
+  - name: Lob
     url: /docs/partners/additional_channels/direct_mail/lob/
   - name: Messenger
     url: /docs/partners/additional_channels/instant_chat/messenger/
