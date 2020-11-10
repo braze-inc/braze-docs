@@ -87,6 +87,10 @@ The exported file includes the same user data fields which are included when you
 - API ID of campaign variation received
 - Whether user is in control group
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 [6]: {% image_buster /assets/img/campaign_export_example.png %}
 [26]: {{site.baseurl}}//partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
 [40]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
