@@ -26,4 +26,8 @@ The following data can be accessed via the Detailed Statistics graph:
 
 You can also view revenue statistics on a case-by-case basis on the Analytics pages for your campaigns. The Total Revenue statistic is generated from campaign recipients who have made a purchase within the campaign's primary conversion period.
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 [9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}
