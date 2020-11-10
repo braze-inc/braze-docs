@@ -213,4 +213,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `apple_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push` above.
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
+
 {% endapi %}
