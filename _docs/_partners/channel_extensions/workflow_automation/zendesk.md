@@ -11,27 +11,24 @@ hidden: true
 
 # Zendesk
 
-> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+[Zendesk Support Suite](https://www.zendesk.com/support-suite/) offers businesses to have natural conversations with their customers through an omnichannel support, whether it’s email, chat, voice or social messaging apps. ZSS values customer support through tracking and prioritising interactions, allowing businesses to have a unified view of the customer through pulling in previous history too. Powerful tools such as a streamlined ticketing system allows businesses to reach out directly to customers with a personalised approach. 
 
-In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
-
-## Requirements or Pre-Requisites
+## Requirements
 
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
-{% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
-{% endalert %}
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
+| Zendesk Admin | Zendesk | You will need to create a Zendesk API token.| The Zendesk API token is necessary to be able to send requests from Braze to the Zendesk Ticket endpoint. |
 | Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## [Type of Integration] Integration
+## Braze → Zendesk Integration
+### Create tickets in Zendesk directly from Braze Campaign/Canvas
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of-the-Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
+Using this webhook template, customers can easily automate the creation of support tickets as a result of a user’s journey or message engagement within Braze. For example, you may want to automatically create a support ticket when a user receives a Braze in-app message that asks “Do you like our app?” and the user clicks “No”, so that your support team can reach out and offer help to satisfy the customer. 
+
 
 ### Step 1: This Is a Short Description of Step One
 
