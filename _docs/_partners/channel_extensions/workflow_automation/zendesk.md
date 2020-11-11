@@ -6,7 +6,7 @@ description: "Braze and Zendesk integration through webhooks. Send custom data f
 alias: /partners/zendesk/
 
 page_type: partner
-hidden: true
+hidden: false
 ---
 
 # Zendesk
