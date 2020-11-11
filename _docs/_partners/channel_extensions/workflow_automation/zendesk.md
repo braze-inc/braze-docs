@@ -30,7 +30,7 @@ This section is all about what you need to integrate with the partner and start 
 Using this webhook template, customers can easily automate the creation of support tickets as a result of a user’s journey or message engagement within Braze. For example, you may want to automatically create a support ticket when a user receives a Braze in-app message that asks “Do you like our app?” and the user clicks “No”, so that your support team can reach out and offer help to satisfy the customer. 
 
 
-### Step 1: This Is a Short Description of Step One
+### Step 1: Create a Webhook
 
 Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
 
