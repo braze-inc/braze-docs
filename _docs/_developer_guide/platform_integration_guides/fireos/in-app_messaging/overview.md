@@ -34,7 +34,7 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 
 ## In-App Message Types
 
-Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling and color schemes.  The currently available types are `Slideup`, `Modal`, `Full`, and `HTML Full`.  It is also possible to [define your own custom in-app message view][12].
+Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling and color schemes.  The currently available types are `Slideup`, `Modal`, `Full`, and `HTML Full`.  It is also possible to [define your own custom in-app message view]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/in-app_messaging/customization/#custom-view).
 
 All in-app messages implement the [`IInAppMessage`][3] interface, which defines basic behavior and traits for all in-app messages.  [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation.  All in-app message classes are subclasses of `InAppMessageBase`.
 
@@ -92,12 +92,6 @@ Please note that we currently do not support display of custom HTML in-app messa
 
 {% endtab %}
 {% endtabs %}
-
-#### In-Depth: Defining Custom In-App Message Types
-
-Braze's `slideup` in-app message object extends [`InAppMessageBase`][27].  Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28].  Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
-
-See [`CustomInAppMessage.java`][29] in the DroidBoy sample app for an example implementation.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
