@@ -1,21 +1,41 @@
 ---
-nav_title: Rip and Replace Airship Migration Guide
+nav_title: SDK Migration from Airship to Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
 ---
 
-# Migrating from Airship SDKs to Braze SDKs
+# Migrating SDKs from Airship to Braze (iOS)
 
-Moving from Airship to Braze takes time, but is an easy adoption! You cannot automatically migrate from Airship to Braze - you must reintegrate the Braze SDK from scratch. However, with all the benefits the Braze platform brings and the simplicity involved in migrating over, we don't think you'll mind. 
+> At Braze, we understand that moving to an entirely new platform and SDK can be daunting, but with the following migration guide, straightforward code-level examples, and impressive feature set the Braze platform brings to the table, we don't think you'll mind. Listed below, we have included the Braze equivalent to many key Airship features as well as "rip-and-replace" code snippets to make your migration quick, simple, and painless. 
 
-## Beyond the Code
+## Key Differences Beyond the Code
 ### Token Management
+Airship uses their own Airship tokens, while Braze uses Apple's device token for iOS.
 
+__Braze Perspective:__<br>
+We ensure customers can keep track of communication with their users such as push notifications when in the process of migrating from Airship to Braze (Hard cutover to 100% Braze, 50% Airship 50% Braze, etc.).
+
+To migrate tokens from Airship to Braze, we recommend [migrating tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
+
+1. Import the tokens via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Please reach out to your COM or SA for more details!
+2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
+3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed. 
+
+### Mobile Wallet
+Airship uses their own mobile wallet integration, while Braze uses a Passkit integration. <br>Visit this [implementation guide]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/) to learn how to integrate Passkit into Braze.
 
 ## Campaign Channel Configuration
-### Push Notifications
+At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning and rethinking to leverage these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
 
+### Segmentation
+Airship allows campaigns to target users, while Braze offers multiple segmentation filters to provide a rich user experience for your customers.
+
+### Push Notifications
+Airship uses only one push channel for iOS & Android, while Braze requires separate channels (one for iOS, one for Android).
+
+__Braze Perspective:__<br>
+We recognize the key differences between the two push platforms and leverage them in the Braze dashboard.
 
 ## Code Rip and Replace
 ### Installation
@@ -197,7 +217,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
   }
    
   func on(inAppMessageClicked inAppMessage: ABKInAppMessage) -> Bool {
-    // This delegate method is fired when the user clicks on a slideup in-app message, or a modal/full in-app message without button(s) on it.
+    // This delegate method is fired when the user clicks on a slide-up in-app message or a modal/full in-app message without button(s) on it.
     return true
   }
    
@@ -240,5 +260,3 @@ extension AppboyManager {
   }
 }
 ```
-
-
