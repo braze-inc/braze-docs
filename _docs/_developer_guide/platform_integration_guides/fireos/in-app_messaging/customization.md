@@ -2,7 +2,6 @@
 nav_title: Customization
 platform: FireOS
 page_order: 2
-
 ---
 
 # Customization {#in-app-message-customization}
