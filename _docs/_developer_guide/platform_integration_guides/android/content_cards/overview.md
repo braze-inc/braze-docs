@@ -29,9 +29,9 @@ Content Cards typically sit in a feed of sorts (but not necessarily) and help yo
 
 ## Content Cards & Feed
 
-This is what it looks like for your users to open a basic Content Card feed. As you can see, three basic types of cards can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
+This is what it looks like for your users to open a basic Content Card feed. As you can see, three basic types of cards can sit in the feed - __a Banner Card, a Captioned Content Card, and a Classic Content Card__. Note that the Classic Content Card includes two types of sub cards, a Text Announcement Card (a classic card without text) and a Short News Card (a classic card with text and an image). Visit our Content Card [data models article]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) to learn more.
 
-![Content Cards Feed]({% image_buster /assets/img/sample-torchy-feed-content-cards-braze.png %}){: height="50%" width="50%"}
+![Content Cards Feed]({% image_buster /assets/img/sample-torchy-feed-content-cards-braze.png %}){: style="max-width:40%;"}
 
 {% alert note %}
 Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
