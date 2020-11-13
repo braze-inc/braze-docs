@@ -80,7 +80,7 @@ These custom keywords operate in an "always-on" capacity, meaning that any user 
 ![picture][13]{: style="float:right;max-width:40%;margin-left:10px;"}
 To create a custom keyword category, edit the appropriate subscription group, and click "Add Custom Keyword Category". Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-Once created this keyword category will be available to [filter]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#filter-by-recency) and [trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword)  against in your campaigns and Canvases.
+Once created, this keyword category will be available to [filter]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#filter-by-recency) and [trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword)  against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
 
