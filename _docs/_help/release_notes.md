@@ -49,7 +49,7 @@ Within Currents email messaging engagement events (linked below), the tracking p
 A frequently asked questions article has been added to the existing Predictive Churn documentation. To read more about these potential errors, timing clarifications, and data considerations, check out our [Predictive Churn](https://www.braze.com/docs/user_guide/predictive_suite/predictive_churn/prediction_faq/) FAQ documentation.
 
 ### CSV and API Exports Troubleshooting Doc
-A troubleshooting doc detailing common CSV and API errors has been added to the Braze docs repo. To read more about these errors as well as some frequently asked questions, check out our CSV and API export [troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) documentation. 
+A troubleshooting doc detailing common CSV and API errors has been added to the Braze documentation. To read more about these errors as well as some frequently asked questions, check out our CSV and API export [troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) documentation. 
 
 ### EduMe Partnership
 EduMe is a mobile-based training tool that gives your workforce the knowledge they need to succeed. Use Connected Content in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality. For more information, check out our [EduMe](https://www.braze.com/docs/partners/channel_extensions/learning/edume/) documentation.
