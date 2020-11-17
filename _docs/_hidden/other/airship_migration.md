@@ -22,12 +22,6 @@ To migrate tokens from Airship to Braze, we recommend [migrating tokens via API]
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
 3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed. 
 
-### Mobile Wallet
-Airship uses their own mobile wallet integration, while Braze uses a Passkit integration. <br>Visit this [implementation guide]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/) to learn how to integrate Passkit into Braze.
-
-### Message Center
-While Braze does not offer an out of the box solution for a message center, through the use of [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/) your developers are able to build out a fully customizable message center. To read more about how to implement content cards, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center). 
-
 ## Campaign Channel Configuration
 At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning and rethinking to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
 
@@ -51,15 +45,30 @@ Please note that for CSV imports, an `External ID` is required for each imported
 Airship uses only one push channel for iOS & Android, while Braze requires separate channels (one for iOS, one for Android).
 
 __Braze Perspective:__<br>
-We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user-experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS.
+We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS.
 
-Push migration can happen in one of two ways. You can either choose to do the full push token migration, or set up and configure push as required when integrating the Braze SDK. The later option, once configured, will automatically collect push tokens as they flow in and users download the new version of the app and opt for push. This option of simply integrating Braze and skipping writing import code, may be enough for customers with low message volumes. Please reach out to your COM or SA to see if this is a viable option for you.
+Push migration can happen in one of two ways. You can either choose to do the full push token migration or set up and configure push as required when integrating the Braze SDK. The latter option, once configured, will automatically collect push tokens as they flow in as users download the new version of the app and opt for push. This option to simply integrating Braze and skip writing any import code may available for customers with low message volumes. Please reach out to your COM or SA to see if this is a viable option for you.
 
 It's also important to note that Braze is able to send push notifications to users who have not yet updated their application to the version with the Braze SDK installed. Given that Braze has a valid push token (through a push token import), Braze can send the notification without the Braze SDKs as APNS (Apple Push Notification Service) will handle the rest. It is crucial to note that __analytics will not be available for builds without the Braze SDK__.
 
-## Code Rip and Replace
-### Installation
-#### Airship
+For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users can be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
+
+### Message Center
+To replace Airship's message center campaign functionality, we recommend creating a multi-channel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center). 
+
+## SDK Code Snippets - Rip and Replace
+To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Please visit the following topic to get started:
+- [Installation](#installation)
+- [Getting and Setting User ID](#userid)
+- [Handling Push Notifications](#pushnotifications)
+- [Analytics](#analytics)
+- [Handling In-App Messages](#iammessages)
+- [Content Cards/ Message Center](#messagecenter)
+
+### Installation {#installation}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
      
@@ -79,7 +88,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     UAInAppAutomation.shared()?.inAppMessageManager.displayInterval = 30
 }
 ```
-#### Braze 
+__Braze__
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
          
@@ -99,9 +108,61 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
 }
 ```
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+  [UAirship takeOff:[UAConfig defaultConfig]];
+   
+  // Location
+  [[UALocation shared] setLocationUpdatesEnabled:YES];
+  [[UALocation shared] setBackgroundLocationUpdatesAllowed:YES];
+   
+  // Push Notifications
+  [UAirship push].notificationOptions = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+  [[UAirship push] setUserPushNotificationsEnabled:YES];
+  [[UAirship push] setPushNotificationDelegate:self];
+   
+  // In-App Messages
+  [UAInAppAutomation shared].inAppMessageManager.delegate = self;
+  [UAInAppAutomation shared].inAppMessageManager.displayInterval = 30;
+   
+  return YES;
+}
+```
+__Braze__
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+  [Appboy startWithApiKey:self.apiKey inApplication:application withLaunchOptions:launchOptions withAppboyOptions:self.appboyOptions];
+   
+  // Location
+  [self.locationManager requestAlwaysAuthorization]; // locationManager is a CLLocationManager property variable
+   
+  // Push Notifications
+  UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+  }];
+  [[UIApplication sharedApplication] registerForRemoteNotifications];
+ 
+  // In-App Messages
+  [[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
+   
+  return YES;
+}
+```
 
-### Getting and Setting User ID
-#### Airship
+{% endtab %}
+{% endtabs %}
+
+### Getting and Setting User ID {#userid}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 extension AirshipManager {
   var userId: String? {
@@ -113,7 +174,7 @@ extension AirshipManager {
   }
 }
 ```
-#### Braze
+__Braze__
 ```swift
 extension AppboyManager {
   var userId: String? {
@@ -125,8 +186,36 @@ extension AppboyManager {
   }
 }
 ```
-### Handling Push Notifications
-#### Airship
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+
+- (NSString *)userId {
+  return [UAirship namedUser].identifier
+}
+     
+- (void)setUser:(NSString *)userId {
+  return [[UAirship namedUser] setIdentifier:userId];
+}
+```
+__Braze__
+```objc
+- (NSString *)userId {
+  return [Appboy sharedInstance].user.userID;
+}
+ 
+- (void)changeUser:(NSString *)userId {
+  [[Appboy sharedInstance] changeUser: userId];
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Handling Push Notifications {#pushnotifications}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 extension AirshipManager: UAPushNotificationDelegate {
   func receivedBackgroundNotification(_ notificationContent: UANotificationContent, completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -145,7 +234,7 @@ extension AirshipManager: UAPushNotificationDelegate {
   }
 }
 ```
-#### Braze
+__Braze__
 ```swift
 extension AppboyManager {
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -161,8 +250,52 @@ extension AppboyManager {
   }
 }
 ```
-### Analytics
-#### Airship
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+- (void)receivedBackgroundNotification:(UANotificationContent *)notificationContent completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+  completionHandler(UIBackgroundFetchResultNoData);
+}
+ 
+- (void)receivedForegroundNotification:(UANotificationContent *)notificationContent completionHandler:(void (^)(void))completionHandler {
+  completionHandler();
+}
+ 
+- (void)receivedNotificationResponse:(UANotificationResponse *)notificationResponse completionHandler:(void (^)(void))completionHandler {
+  completionHandler();
+}
+```
+__Braze__
+```objc
+- (void)application:(UIApplication *)application didRegisterForRemoteNotifications
+  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
+  }
+   
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  [[Appboy sharedInstance] registerDeviceToken:deviceToken];
+}
+ 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+  [[Appboy sharedInstance] registerApplication:application
+                didReceiveRemoteNotification:userInfo
+                      fetchCompletionHandler:completionHandler];
+}
+   
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void (^)(void))completionHandler {
+  [[Appboy sharedInstance] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Analytics {#analytics}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 extension AirshipManager {
   func trackEvent(with name: String, value: NSDecimalNumber? = nil, eventProperties: [String: Any]? = nil) {
@@ -182,7 +315,7 @@ extension AirshipManager {
   }
 }
 ```
-#### Braze 
+__Braze__
 ```swift
 extension AppboyManager {
   func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable: Any]? = nil) {
@@ -198,8 +331,46 @@ extension AppboyManager {
   }
 }
 ```
-### Handling In-App Messages
-#### Airship
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+- (void)trackEventWith:(NSString *)name value:(NSDecimalNumber *)value eventProperties:(NSDictionary *)eventProperties {
+  UACustomEvent *event = [[UACustomEvent alloc] init];
+  event.eventName = name;
+  event.eventValue = value;
+  event.properties = eventProperties;
+   
+  [event track];
+}
+ 
+- (void)applyMutationWith:(NSString *)value forAttribute:(NSString *)attribute {
+  UAAttributeMutations* mutations = [[UAAttributeMutations alloc] init];
+  [mutations setString:value forAttribute:attribute];
+  [[UAirship namedUser] applyAttributeMutations:mutations];
+}
+```
+__Braze__
+```objc 
+- (void)logCustomEvent:(NSString *)eventName withProperties:(NSDictionary *)properties {
+  [[Appboy sharedInstance] logCustomEvent:eventName withProperties: properties];
+}
+ 
+- (void)setCustomAttributeWithKey:(NSString *)key andStringValue:(NSString *)value {
+  [[Appboy sharedInstance].user setCustomAttributeWithKey:key andStringValue:value];
+}
+  
+- (void)logPurchase:(NSString *)productIdentifier inCurrency:(NSString *)currency atPrice:(NSString *)price withQuantity:(NSInteger)quantity {
+  [[Appboy sharedInstance] logPurchase:productIdentifier inCurrency:currency atPrice:[[NSDecimalNumber alloc] initWithString:price] withQuantity:quantity];
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Handling In-App Messages {#iammessages}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 
 extension AirshipManager: UAInAppMessagingDelegate {
@@ -217,7 +388,7 @@ extension AirshipManager: UAInAppMessagingDelegate {
   }
 }
 ```
-#### Braze
+__Braze__
 ```swift
 extension AppboyManager: ABKInAppMessageControllerDelegate {
   func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
@@ -252,8 +423,60 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
   }
 }
 ```
-### Content Cards / Message Center
-#### Airship
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+- (UAInAppMessage *)extendMessage:(UAInAppMessage *)message {
+ 
+  return message;
+}
+ 
+- (void)messageWillBeDisplayed:(UAInAppMessage *)message scheduleID:(NSString *)scheduleID {
+   
+}
+ 
+- (void)messageFinishedDisplaying:(UAInAppMessage *)message scheduleID:(NSString *)scheduleID resolution:(UAInAppMessageResolution *)resolution {
+   
+}
+```
+__Braze__
+```objc
+- (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
+  return ABKDisplayInAppMessageNow;
+}
+ 
+- (ABKInAppMessageDisplayChoice) beforeControlMessageImpressionLogged:(ABKInAppMessage *)inAppMessage {
+  return ABKDisplayInAppMessageNow;
+}
+ 
+- (void)onInAppMessageDismissed:(ABKInAppMessage *)inAppMessage {
+  // Use this method to perform any custom logic that should execute after the in-app message has been dismissed
+}
+ 
+- (BOOL)onInAppMessageClicked: (ABKInAppMessage *)inAppMessage {
+  // This delegate method is fired when the user clicks on a slide-up in-app message or a modal/full in-app message without button(s) on it.
+  return YES;
+}
+ 
+- (BOOL)onInAppMessageButtonClicked:(ABKInAppMessageImmersive *)inAppMessage
+                             button:(ABKInAppMessageButton *)button {
+  return YES;
+}
+ 
+- (BOOL)onInAppMessageHTMLButtonClicked:(ABKInAppMessageHTML *)inAppMessage
+                             clickedURL:(nullable NSURL *)clickedURL
+                               buttonID:(NSString *)buttonID {
+  return YES;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Content Cards / Message Center {#messagecenter}
+{% tabs %}
+{% tab Swift %}
+__Airship__
 ```swift
 extension AirshipManager {
   func displayMessageCenter() {
@@ -269,7 +492,7 @@ extension AirshipManager {
   }
 }
 ```
-#### Braze 
+__Braze__
 ```swift
 extension AppboyManager {
   func displayContentCards(navigationController: UINavigationController?) {
@@ -280,8 +503,24 @@ extension AppboyManager {
   }
 }
 ```
-<<<<<<< HEAD
+{% endtab %}
+{% tab Objective-C %}
+__Airship__
+```objc
+- (void)displayMessageCenter {
+  [UAMessageCenter shared].defaultUI.title = @"My Message Center";
+  [[UAMessageCenter shared] display];
+}
+```
+__Braze__
+```objc
+- (void)displayContentCards:(UINavigationController *)navigationController {
+  ABKContentCardsTableViewController *contentCards = [ABKContentCardsTableViewController getNavigationFeedViewController];
+  contentCards.title = @"My Message Center";
+  [self.navigationController pushViewController:contentCards animated:YES];
+}
+```
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/csv_filter.png %} 
-=======
->>>>>>> 5760043011837edf636e05dc54efe3cd2115b182
