@@ -75,6 +75,16 @@ For example, to close a message and log Button 2 click, you can use:
 <a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
 ```
 
+You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
+
+#### Requirements
+
+* Up to 100 unique Button IDs are allowed per campaign
+* Each Button ID can not be longer than 255 characters
+* Only alphanumeric, space, dash, and underscore characters are allowed.
+
+**Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
+
 ## Backward Incompatible Changes {#backward-incompatible-changes}
 
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
@@ -151,16 +161,16 @@ Older campaigns that used zip-files are not supported in this new In-App Message
 If you want to migrate those older zip-file campaigns, follow these instructions:
 
 1. Download the .zip asset file to your computer, and unzip the files
-2. Highlight and drag all asset files into your new campaign
-3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
+3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 
-For example, replace this:
+For example, if your old HTML contains a reference that looks like this:
 
 ```html
 <img src="/cat.png" />
 ```
 
-With this:
+Replace it with its respective uploaded asset URL, like this:
 
 ```html
 <img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />

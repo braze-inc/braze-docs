@@ -37,6 +37,10 @@ guide_menu_list:
 - name: Web SDK
   link: /docs/help/best_practices/web_sdk/
   fa_icon: fas fa-globe
+- name: Race Conditions
+  link: /docs/help/best_practices/race_conditions/
+  fa_icon: fas fa-user-times
+
 
 
 

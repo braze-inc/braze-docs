@@ -215,6 +215,9 @@ The `conversion_behaviors` array will contain information about each conversion 
     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 
 {% endapi %}

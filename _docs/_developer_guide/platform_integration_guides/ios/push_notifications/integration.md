@@ -60,7 +60,7 @@ _Step 1: Generate Certificate Signing Request_
 4. If push notifications are not enabled, click Edit to update the app settings
   ![AppleProvisioningOptions]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Tick the Enable check box and click Create Certificate under the Production SSL Certificate
-  ![iOSPush3][4]
+  ![iOSPush32]({% image_buster /assets/img_archive/push_cert_gen.png %})
 6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
 
 >  You must update your provisioning profile for the app after you create your SSL certificates. A simple "Refresh" in the organizer will accomplish this.

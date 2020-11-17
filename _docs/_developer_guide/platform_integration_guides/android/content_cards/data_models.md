@@ -48,7 +48,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getDomain()` | Returns the link text for the property URL.
 
 ### Classic Card {#text-Announcement-card-for-android}
-[Text Announcement Cards][32] are clickable cards containing descriptive text. In addition to the base card properties:
+[Text Announcement Cards][32] are clickable cards containing descriptive text. [Short News Cards][41] are clickable cards that include text and images. In addition to the base card properties:
 
 |Property | Description |
 |---|---|
@@ -56,6 +56,11 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
+|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card.
+
+{% alert note %}
+Please note that a classic card without an image included will result in a Text Announcement Card. If an image is included, you will recieve a Short News Card.
+{% endalert %}
 
 ## Card Analytics Methods
 All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
@@ -95,3 +100,4 @@ All `Card` data model objects offer the following analytics methods for logging 
 [38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
 [39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[41]: https://github.com/Appboy/android-sdk/blob/9a091979b4cbaff7f935c2cae03043a944c3ab53/android-sdk-base/src/main/java/com/appboy/models/cards/ShortNewsCard.java

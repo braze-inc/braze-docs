@@ -14,7 +14,7 @@ partner_top_header: "Direct Mail"
 valid_partner_list:
   - name: Inkit
     url: /docs/partners/additional_channels/direct_mail/inkit/
-  - name: Lob.com
+  - name: Lob
     url: /docs/partners/additional_channels/direct_mail/lob/
 
 ---

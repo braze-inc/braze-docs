@@ -50,7 +50,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
-An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) file.
+An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m) file.
 
 ## Local In-App Message Delivery
 
