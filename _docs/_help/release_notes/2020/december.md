@@ -2,7 +2,7 @@
 nav_title: December
 page_order: 1
 ---
-# December 2019
+# December 2020
 
 ## Updates to Currents Messaging Event Properties
 Within Currents email messaging engagement events (linked below), the tracking property `ip_pool` has been added. The tracking properties `bounce_reason` and `bounce_code` have also been added to `users.messages.email.Bounce` and `users.messages.email.SoftBounce` events. <br>For the full list, check out the [Message Engagement Events Glossary](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
