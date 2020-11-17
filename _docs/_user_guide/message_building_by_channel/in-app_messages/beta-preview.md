@@ -161,16 +161,16 @@ Older campaigns that used zip-files are not supported in this new In-App Message
 If you want to migrate those older zip-file campaigns, follow these instructions:
 
 1. Download the .zip asset file to your computer, and unzip the files
-2. Highlight and drag all asset files into your new campaign
-3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+2. Upload all of your asset files into the new campaign. (tip: you can select all files and drag them in)
+3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 
-For example, replace this:
+For example, if your old HTML contains a reference that looks like this:
 
 ```html
 <img src="/cat.png" />
 ```
 
-With this:
+Replace it with its respective uploaded asset URL, like this:
 
 ```html
 <img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
