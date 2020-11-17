@@ -11,53 +11,53 @@ page_type: reference
 
 ## Beyond the Code
 ### Token Management
-Airship uses their own Airship tokens, while Braze uses Apple's device token for iOS.
+Braze uses Apple's device token for iOS.
 
-__Braze Perspective:__<br>
-We ensure customers can keep track of communication with their users such as push notifications when in the process of migrating from Airship to Braze (Hard cutover to 100% Braze, 50% Airship 50% Braze, etc.).
+| __Braze Perspective:__<br>We ensure customers can keep track of communication with their users such as push notifications when in the process of migrating from Airship to Braze (Hard cutover to 100% Braze, 50% Airship 50% Braze, etc.). |
+
+#### Push Token Migration
+
+Push token migration can happen in one of two ways. You may either choose to do the full push token migration via API (Recommended, steps listed below) or set up and configure push as required when integrating the Braze SDK. The latter option, once configured, will automatically collect push tokens as they flow in as users download the new version of the app and opt for push. This option to simply integrating Braze and skip writing any import code may available for customers with low message volumes. Please reach out to your COM or SA to see if this is a viable option for you.
 
 To migrate tokens from Airship to Braze, we recommend [migrating tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
 1. Import the tokens via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Please reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed. 
+3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed.
+
+#### Sharing Tokens
+
+For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 ## Campaign Channel Configuration
-At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning and rethinking to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
+At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
+
+### Push Channel
+Braze requires separate channels (one for iOS, one for Android).
+
+| __Braze Perspective:__<br>We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS. |
+
+Braze is able to send push notifications to users who do not update their application with the Braze SDK installed. Given that Braze has a valid push token, Braze can send the push notification without the Braze SDK as APNs will handle the rest. It is crucial to note that push message __analytics will not be available for builds without the Braze SDK__.
+
+For the case of lifecycle-specific campaigns that would need to persist through the migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 ### Segmentation
-Airship allows campaigns to target users, while Braze offers multiple segmentation filters to provide a rich user experience for your customers.
+Braze offers multiple segmentation filters to provide a rich user experience for your customers.
 
-__Braze Perspective__:<br>
-We stress that segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. 
+| __Braze Perspective__:<br> We stress that segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. |
 
 To directly recreate a static Airship segment in Braze, there exist two options:
 - __Import via API - Assign a Custom Attribute__ (Recommended)<br>
 We recommend importing users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint and while doing so, assigning a custom attribute to those imported users. For example, you might create a segment of users that each have a custom attribute `Segment_Group_1` that is set to `true`. To later segment these users, you would [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) of all users where `Segment_Group_1` is `true`.<br><br>
 - __Filter Based on CSV Import__<br>
-There is an option in Braze to filter specifically users who are included within a specific CSV import. This filtering option can be found during the target users step of our engagement tools under filter users by `Updated/Imported via CSV`. We recommend [importing users via REST API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api), but this option exists if needed. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+There is an option in Braze to filter specifically users who are included within a specific CSV import. This filtering option can be found during the target users step of our engagement tools under filter users by `Updated/Imported via CSV`. We recommend [importing users via REST API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api), but this option exists if needed. Please note that for CSV imports, an `External ID` is required for each imported user and __segments with anonymous or alias only users will not able to be imported__. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 ![CSV Import Filter][1]{: style="max-width:90%;border:0;"}
-{% alert note %}
-Please note that for CSV imports, an `External ID` is required for each imported user and segments with anonymous or alias only users will not able to be imported.
-{% endalert %}
-
-### Push Channel
-Airship uses only one push channel for iOS & Android, while Braze requires separate channels (one for iOS, one for Android).
-
-__Braze Perspective:__<br>
-We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS.
-
-Push migration can happen in one of two ways. You can either choose to do the full push token migration or set up and configure push as required when integrating the Braze SDK. The latter option, once configured, will automatically collect push tokens as they flow in as users download the new version of the app and opt for push. This option to simply integrating Braze and skip writing any import code may available for customers with low message volumes. Please reach out to your COM or SA to see if this is a viable option for you.
-
-It's also important to note that Braze is able to send push notifications to users who have not yet updated their application to the version with the Braze SDK installed. Given that Braze has a valid push token (through a push token import), Braze can send the notification without the Braze SDKs as APNS (Apple Push Notification Service) will handle the rest. It is crucial to note that __analytics will not be available for builds without the Braze SDK__.
-
-For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users can be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 ### Message Center
 To replace Airship's message center campaign functionality, we recommend creating a multi-channel campaign that consists of a push notification and a [Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/). To read more about how to use Content Cards in a message center format, check out our [iOS Content Card implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/#content-cards-in-a-message-center). 
 
 ## SDK Code Snippets - Rip and Replace
-To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Please visit the following topic to get started:
+To simplify migration, we have highlighted the following Airship SDK snippets that exist in your code and have provided the corresponding Braze SDK snippets necessary to replace them. Please visit the following topics to get started:
 - [Installation](#installation)
 - [Getting and Setting User ID](#userid)
 - [Handling Push Notifications](#pushnotifications)
