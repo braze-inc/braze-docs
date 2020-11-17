@@ -161,7 +161,7 @@ Older campaigns that used zip-files are not supported in this new In-App Message
 If you want to migrate those older zip-file campaigns, follow these instructions:
 
 1. Download the .zip asset file to your computer, and unzip the files
-2. Upload all of your asset files into the new campaign. (tip: you can select all files and drag them in)
+2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
 3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 
 For example, if your old HTML contains a reference that looks like this:
