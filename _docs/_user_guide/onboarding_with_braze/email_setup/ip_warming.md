@@ -46,8 +46,7 @@ All of __the above consequences are entirely avoidable__ if you follow the follo
 ## IP Warming Schedules
 
 We strongly recommend adhering to this IP warming schedule strictly in order to ensure deliverability. It's also important that you don't skip days as consistent scaling improves deliverability.
-{% tabs %}
-{% tab Sendgrid %}
+
 Day | # of Emails to be Sent
 ----|--------------------------|
 1 | 50
@@ -68,42 +67,6 @@ Day | # of Emails to be Sent
 16 | 2,000,000
 17 | 4,000,000
 18+ | Double Daily Until Desired Volume
-{% endtab %}
-{% tab Sparkpost %}
-Day | # of Emails to be Sent
-----|--------------------------|
-1 | 200
-2 | 500
-3 | 1000
-4 | 2,000
-5 | 5,000
-6 | 10,000
-7 | 20,000
-8 | 40,000
-9 | 50,000
-10 | 75,000
-11 | 100,000
-12 | 150,000
-13 | 200,000
-14 | 250,000
-15 | 325,000
-16 | 400,000
-17 | 500,000
-18 | 600,000
-19 | 750,000
-20 | 1,000,000
-21 | 1,250,000
-22 | 1,750,000
-23 | 2,000,000
-24 | 3,000,000
-25 | 4,250,000
-26 | 5,000,000
-27 | 6,000,000
-28 | 7,500,000
-29 | 10,000,000
-30 | Completed
-{% endtab %}
-{% endtabs %}
 
 Once warming is complete, and you've reached your desired daily volume you should aim to maintain that volume on a daily basis. Some fluctuation is alright, but reaching the desired volume, then only doing a mass blast once a week may have negative consequences for your deliverability and sender reputation. Lastly, most ISPs only store reputation data for 30 days. If go a month without sending, you will have to repeat the IP warming process.
 
