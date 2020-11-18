@@ -76,16 +76,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
      
     UAirship.takeOff(UAConfig.default())
      
-    // Location
     UALocation.shared()?.isLocationUpdatesEnabled = true
     UALocation.shared().isBackgroundLocationUpdatesAllowed = true
      
-    // Push Notifications
     UAirship.push()?.notificationOptions = [.alert, .badge, .sound]
     UAirship.push()?.userPushNotificationsEnabled = true
     UAirship.push()?.pushNotificationDelegate = self
      
-    // In-App Messages
     UAInAppAutomation.shared()?.inAppMessageManager.delegate = self
     UAInAppAutomation.shared()?.inAppMessageManager.displayInterval = 30
 }
@@ -96,8 +93,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
          
     Appboy.start(withApiKey: apiKey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
      
-    // Location - locationManager is a CLLocationManager property variable
-    locationManager.requestAlwaysAuthorization()
+    locationManager.requestAlwaysAuthorization() // locationManager is a CLLocationManager property variable
      
     // Push Notifications
     let options: UNAuthorizationOptions = [.alert, .sound, .badge]
@@ -118,16 +114,13 @@ __Airship__
    
   [UAirship takeOff:[UAConfig defaultConfig]];
    
-  // Location
   [[UALocation shared] setLocationUpdatesEnabled:YES];
   [[UALocation shared] setBackgroundLocationUpdatesAllowed:YES];
    
-  // Push Notifications
   [UAirship push].notificationOptions = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
   [[UAirship push] setUserPushNotificationsEnabled:YES];
   [[UAirship push] setPushNotificationDelegate:self];
    
-  // In-App Messages
   [UAInAppAutomation shared].inAppMessageManager.delegate = self;
   [UAInAppAutomation shared].inAppMessageManager.displayInterval = 30;
    
@@ -140,7 +133,6 @@ __Braze__
    
   [Appboy startWithApiKey:self.apiKey inApplication:application withLaunchOptions:launchOptions withAppboyOptions:self.appboyOptions];
    
-  // Location
   [self.locationManager requestAlwaysAuthorization]; // locationManager is a CLLocationManager property variable
    
   // Push Notifications
@@ -198,7 +190,7 @@ __Airship__
 }
      
 - (void)setUser:(NSString *)userId {
-  return [[UAirship namedUser] setIdentifier:userId];
+  [[UAirship namedUser] setIdentifier:userId];
 }
 ```
 __Braze__
@@ -221,17 +213,14 @@ __Airship__
 ```swift
 extension AirshipManager: UAPushNotificationDelegate {
   func receivedBackgroundNotification(_ notificationContent: UANotificationContent, completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    // Background content-available notification
     completionHandler(.noData)
   }
    
   func receivedForegroundNotification(_ notificationContent: UANotificationContent, completionHandler: @escaping () -> Void) {
-    // Foreground notification
     completionHandler()
   }
    
   func receivedNotificationResponse(_ notificationResponse: UANotificationResponse, completionHandler: @escaping () -> Void) {
-    // Notification response
     completionHandler()
   }
 }
@@ -377,16 +366,13 @@ __Airship__
 
 extension AirshipManager: UAInAppMessagingDelegate {
   func extend(_ message: UAInAppMessage) -> UAInAppMessage {
-      // Can be used to modify the message before it is displayed
       return message
   }
  
   func messageWillBeDisplayed(_ message: UAInAppMessage, scheduleID: String) {
-    // Message displayed
   }
  
   func messageFinishedDisplaying(_ message: UAInAppMessage, scheduleID: String, resolution: UAInAppMessageResolution) {
-      // Message finished
   }
 }
 ```
