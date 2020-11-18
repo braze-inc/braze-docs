@@ -13,7 +13,7 @@ page_type: reference
 ### Token Management
 Braze uses Apple's device token for iOS.
 
-| __Braze Perspective:__<br>We ensure customers can keep track of communication with their users such as push notifications when in the process of migrating from Airship to Braze (Hard cutover to 100% Braze, 50% Airship 50% Braze, etc.). |
+| __Braze Perspective:__<br>We ensure customers can keep track of communication with their users (such as push notifications) when in the process of migrating from Airship to Braze (Hard cutover to 100% Braze, 50% Airship 50% Braze, etc.). |
 
 #### Push Token Migration
 
@@ -23,11 +23,11 @@ To migrate tokens from Airship to Braze, we recommend [migrating tokens via API]
 
 1. Import the tokens via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Please reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed.
+3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed.
 
 #### Multiple Push Tokens
 
-With Braze, a user can have multiple push tokens and Braze will send a notification to all valid push tokens. It is possible to configure campaigns to only be sent the most recent device. 
+With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, can send notifications to multiple devices. It is also possible to configure campaigns to only send to the most recent device of a user.
 
 ## Campaign Channel Configuration
 At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
@@ -44,9 +44,9 @@ Braze is able to send push notifications to users who do not update their applic
 For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 ### Segmentation
-Braze offers multiple segmentation filters to provide a rich user experience for your customers.
+Braze offers multiple [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/) filters to provide a rich user experience for your customers.
 
-| __Braze Perspective__:<br> We stress that segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. |
+| __Braze Perspective__:<br> Segments in Braze are fully dynamic, so users will enter and exit the segment as the defined conditions change. |
 
 To directly recreate a static Airship segment in Braze, there exist two options:
 - __Import via API - Assign a Custom Attribute__ (Recommended)<br>
