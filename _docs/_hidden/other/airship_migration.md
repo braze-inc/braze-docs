@@ -25,9 +25,9 @@ To migrate tokens from Airship to Braze, we recommend [migrating tokens via API]
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
 3. QA the push integration. Ensure that the steps to [configure Push]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#step-1-configure-the-apple-developer-settings) have been completed.
 
-#### Sharing Tokens
+#### Multiple Push Tokens
 
-For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
+With Braze, a user can have multiple push tokens and Braze will send a notification to all valid push tokens. It is possible to configure campaigns to only be sent the most recent device. 
 
 ## Campaign Channel Configuration
 At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
@@ -39,7 +39,9 @@ Braze requires separate channels (one for iOS, one for Android).
 
 Braze is able to send push notifications to users who do not update their application with the Braze SDK installed. Given that Braze has a valid push token, Braze can send the push notification without the Braze SDK as APNs will handle the rest. It is crucial to note that push message __analytics will not be available for builds without the Braze SDK__.
 
-For the case of lifecycle-specific campaigns that would need to persist through the migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
+#### Sharing Tokens
+
+For the case of lifecycle-specific campaigns that would need to continue during your migration process to the Braze SDK, users may be eligible to receive notifications from both Braze and Airship, given that Braze has received a valid push token.
 
 ### Segmentation
 Braze offers multiple segmentation filters to provide a rich user experience for your customers.
