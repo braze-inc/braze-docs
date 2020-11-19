@@ -32,9 +32,9 @@ In sum, data points are accumulated when a user's profile data is updated or whe
 
 You can find a breakdown of how Braze accumulates data points below, but there are nuances beyond what you see here, which may affect the number of remaining points you expect to see. If you ever have any questions about your billing, reach out to your Braze account manager.
 
-{% alert tip %}
-Connected Content does not consume data points - using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points!
-{% endalert %}
+__Please note that:__<br>
+&#45; Connected Content does not consume data points - using Connected Content is a great way to reference data from other platforms without needing to bulk upload to Braze and use up your points!<br>
+&#45; CSV imports for __segmentation purposes__ (imports made with `external_id` as the only field) will not consume data points.
 
 {% tabs %}
 {% tab General %}
