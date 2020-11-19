@@ -16,7 +16,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 ---
 # Transactional Email Campaigns
 
-Braze's Transactional Email campaign type is purpose-built for email messages like order confirmations, password resets, billing alerts, or other notifications originating from your service for a single user where speed is of the utmost importance. Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details. 
+Transactional Emails are those that are sent to facilitate an agreed-upon transactional between a sender and the recipient.  Braze's Transactional Email campaign type is purpose-built for sending these automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business critical notifications originating from your service for a single user where speed is of the utmost importance.  Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details. 
 
 This reference article covers how to create a Transactional Campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
