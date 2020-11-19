@@ -9,15 +9,14 @@ tool:
 hidden: true
 description: "This article outlines details about the Send Transactional Email message via API Triggered Delivery Braze endpoint."
 ---
+
 {% api %}
 # Sending Transactional Email via API Triggered Delivery
 {% apimethod post %}
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send Triggered Campaign Endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API.  Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send a message to, a request to this Transactional Email Endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
-
-Please note that to send emails with this endpoint, you must have a Campaign ID, created when you build an [Transactional Email Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
+The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to designated users. This endpoint is used alongside the creation of a [Transactional Email Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and cooresponding Campaign ID. Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
 Transactional Email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 
@@ -61,7 +60,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 - [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
-<br><br>
+<br>
 
 ### Example Request
 ```

@@ -28,6 +28,8 @@ validurls['/docs/deep_dives/conversion_events'] = '/docs/user_guide/engagement_t
 validurls['/docs/deep_dives/creating_a_webhook'] = '/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/';
 validurls['/docs/deep_dives/multivariate_testing#intelligent-selection'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection';
 validurls['/docs/deep_dives/multivariate_testing'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/';
+validurls['/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'] = '/docs/api/endpoints/messaging/send_messages/post_send_transactional_email/';
+validurls['/docs/api/transactional_message_api_campaign/'] = '/docs/api/transactional_email_api_campaign/'
 
 validurls['/docs/message_building_and_personalization/personalization/#connected-content'] = '/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/';
 validurls['/docs/quick_wins/personalized_messaging#conditionals'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/';
