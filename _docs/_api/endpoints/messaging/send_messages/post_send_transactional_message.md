@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Transactional Messages via API Triggered Delivery"
+nav_title: "POST: Send Transactional Emails via API Triggered Delivery"
 page_order: 4
 layout: api_page
 page_type: reference
@@ -7,19 +7,19 @@ platform: API
 tool:
   - Campaigns
 hidden: true
-description: "This article outlines details about the Send Transactional Message via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Transactional Email message via API Triggered Delivery Braze endpoint."
 ---
 {% api %}
-# Sending Transactional Messages via API Triggered Delivery
+# Sending Transactional Email via API Triggered Delivery
 {% apimethod post %}
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The Send Transactional Message endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional message endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
+The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to designated users. Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) endpoint, this campaign type allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.  Unlike the Send triggered campaign endpoint which accepts an audience or segment to send a message too, a request to the send transactional email endpoint must specify a single user either by External User ID or by User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
-Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [Transactional Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
+Please note that to send emails with this endpoint, you must have a Campaign ID, created when you build an [Transactional Email Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns).
 
-Transactional Messaging is currently available for email as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
+Transactional Email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 
 {% alert important %}
 __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.
@@ -82,7 +82,7 @@ curl -X POST \
 ```
 
 ## Response Details
-The Send Transactional Message endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual message sent to a single user.
+The Send Transactional Email endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual email sent to a single user.
 
 ### Example response
 ```json
@@ -94,7 +94,7 @@ The Send Transactional Message endpoint will respond with the message's `dispatc
 ```
 
 ## Transactional HTTP Event Postback
-All Transactional Messages are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
+All Transactional Emails are complimented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
 
