@@ -18,7 +18,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 
 Transactional Emails are those that are sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional Email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications originating from your service for a single user where speed is of the utmost importance. Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details. 
 
-This reference article covers how to create a Transactional Campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_email).
+This reference article covers how to create a Transactional Campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 
 ## Create a New Campaign
@@ -40,7 +40,7 @@ When launching a Transactional Campaign, Braze has simplified the campaign creat
 
 1. Add a descriptive title so you can find the results on our campaigns page after you've sent your messages.
 2. Compose your email or select from a template. 
-3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email Endpoint Spec]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_email)
+3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email Endpoint Spec]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message)
 4. Click `Save Campaign` and you're set to begin your API campaign!
 
 ### Disallowed Tags in Transactional Emails 
