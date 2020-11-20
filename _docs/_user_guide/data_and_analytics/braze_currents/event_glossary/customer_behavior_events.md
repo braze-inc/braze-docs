@@ -65,6 +65,12 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+Currents will drop Cutsom Events with a total payload greater than 900kb.
+
+_Noted in November 2020._
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
