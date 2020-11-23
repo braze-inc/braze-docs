@@ -31,13 +31,15 @@ You can disable your global control group at any time, but keep in mind that doi
 2. __After Disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze will generate a new randomly selected group of users. <br><br>![Global Control Group][2]
 
 ## Viewing Reporting
-1. __Navigate to the reporting page__<br>To view a report for your global holdout groups, navigate to Control Group Report under Reports.<br><br>
-2. __Select your report parameters__<br>Select either sessions or a particular custom event, and click Run Report.
 
-This group allows you to compare your global control against a treatment sample. The treatment sample is comprised of approximately the same number of users as your control group and is randomly selected from the pool of non-control users.
+1. __Navigate to the reporting page.__ To view a report for your global holdout groups, navigate to Control Group Report under Reports.
+2. __Select your report parameters.__ Select either sessions or a particular custom event, and click Run Report.
 
 ### Understanding Your Report 
-Your global control group report takes the percentage of users in your control and treatment groups that have completed your selected event each day and averages this percentage out over the last 30 days. 
+
+The global control group allows you to compare it against a treatment sample of approximately the same number of users as your control group, and is randomly selected from the pool of non-control users.
+
+This report takes the percentage of users in your control and treatment groups that have completed your selected event each day and averages this percentage out over the last 30 days. 
 
 It calculates during this time period, on average, what percentage of control group and treatment group users would complete this event. This "Change from Control" indicates the percentage change between the two groups.<br><br>![Global Control Group][3]
 
