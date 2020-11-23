@@ -12,32 +12,34 @@ page_type: reference
 
 ## Create a Global Control Group
 
-1. __Navigate to the global control group tab__<br>From the dashboard, navigate to the "Global Control Group" tab located within "Global Message Settings" under "Engagement". <br><br>
-2. __Assign a percentage of all users to this control group__<br> See our [best practices section](#percentage-guidelines) for percentage guidelines. Once saved, Braze will generate a randomly selected group of users comprising that percentage of your total user base.<br><br>
-3. __Choose your exclusion settings__<br> You can either exclude your control group for only new campaigns/Canvases by default or exclude this group from both new campaigns/Canvases AND existing campaigns/Canvases. If you choose the latter option, upon saving your control group, all active campaigns will exclude the users in your control group in their sends. <br>Note that on an individual campaign or Canvas level, you will always have the option to override control group settings and still send that message to control group users (this may be helpful for transactional messages).<br><br>
-4. __Save your control group__<br><br>
-5. __View your groups__<br>Once saved, select the "Calculate Exact Group Size" button to calculate the exact sizes for your control, treatment, and treatment sample groups. <br><br>__Available Group Types:__<br>- Control: Number of users that will be in the control group.<br>- Treatment: The number of users that will not be in the global control group.<br>- Treatment Sample: The number of users in the treatment group used for comparison against the global control group. This sample will consist of the same percentage of all users as the global control group.<br><br>
-6. __Export a User CSV (Optional)__<br> From this same page, you can export a CSV of users in your global control group.
+1. __Navigate to the global control group tab__<br>From the dashboard, navigate to the Global Control Group tab located within Global Message Settings under Engagement.
+2. __Assign a percentage of all users to this control group__<br> See our [best practices section](#percentage-guidelines) for percentage guidelines. Once saved, Braze will generate a randomly selected group of users comprising that percentage of your total user base.
+3. __Save your control group__<br>Your saved control group will go into effect right away. As soon as you save your control group, all currently active as well as future campaigns/Canvases will no longer send to users in this group.
+4. __Export a CSV of users (Optional)__<br>From this page, you can export a CSV of users in your global control group. <br><br>![Global Control Group][1]
 
-## Sending Campaigns and Canvases using your Control Group
+## How to Global Control Group Works
 
-Once saved, your campaign and Canvas wizard will __now include a checkbox__ that, if unchecked (default), will __exclude__ sending to your control group. For campaigns, this can be found under Target Users. For Canvases, this can be found in the Target Users section of the Entry Step.<br><br>If you wish to override this and send a particular campaign/Canvas to your control group, uncheck this box.
+Your global control group will be applied to __all channels, campaigns as well as Canvases__, with the exception of News Feed Cards. Users in your control group will not be excluded from News Feed Cards. If you are using Content Cards, users in your control group will also be excluded from Content Cards.
 
-## Editing your Global Control Group
+__To assign users randomly to the global control group:__<br> Braze will randomly select multiple ranges of Random Bucket Numbers, and include users from those selected buckets. <br><br>
+__To track data for reporting:__<br>Braze will measure the behaviors of those in your control group and those in your treatment sample. Once a control group is saved, Braze generates a non-overlapping treatment sample of users using the same method.
 
-You can edit your global control group at any time, but keep in mind that doing so will randomly reshuffle membership and you will not be able to revert to prior membership. We recommend that you export your group before reshuffling so that you can maintain a record of who was in this group historically.
+## Disabling your Global Control Group
+You can disable your global control group at any time, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns/ Canvases.
 
-1. __Navigate to the Global Control Group page__ to edit your global control group. Here, you can view when your group was created and when it was last edited. Read our [best practices](#reshuffle) for guidelines on how frequently to reshuffle group membership.
-2. __Click "Edit" and then "Proceed"__ after reading the warning.
-3. __Enter a new percentage__, then click Save. If you enter the same percentage, Braze will randomly choose a new group of users comprising the same percentage.
+1. __Before Disabling your Control Group__, we recommend exporting a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there will be no way for Braze to restore that group or identify which users were in this group.
+2. __After Disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze will generate a new randomly selected group of users. <br><br>![Global Control Group][2]
 
 ## Viewing Reporting
+1. __Navigate to the reporting page__<br>To view a report for your global holdout groups, navigate to Control Group Report under Reports.<br><br>
+2. __Select your report parameters__<br>Select either sessions or a particular custom event, and click Run Report.
 
-The Global Control Group Report allows you to compare your global control against a treatment sample. The treatment sample is comprised of approximately the same number of users as your control group and is randomly selected from the pool of non-control users.
+This group allows you to compare your global control against a treatment sample. The treatment sample is comprised of approximately the same number of users as your control group and is randomly selected from the pool of non-control users.
 
-1. __Navigate to the reporting page__<br>To view a report for your global holdout groups, navigate to Control Group Report under Reports.
-2. __Select an event and time frame__<br>In the "Select an Event" box, select either sessions or a particular custom event you'd like to compare. Then, select a data time frame you'd like to view and run the report.
-3. __Report Metrics__<br>This report shows the percentage of control versus treatment group users that had a session or completed an event during the time frame you selected. The chart shows the percentage change between your control and treatment sample. Here you may export, share, or save this report. 
+### Understanding Your Report 
+Your global control group report takes the percentage of users in your control and treatment groups that have completed your selected event each day and averages this percentage out over the last 30 days. 
+
+It calculates during this time period, on average, what percentage of control group and treatment group users would complete this event. This "Change from Control" indicates the percentage change between the two groups.<br><br>![Global Control Group][3]
 
 ## Best Practices
 
@@ -63,3 +65,7 @@ If you have a total audience that’s smaller than 10,000, you should increase y
 #### Think About Valuable Metrics
 
 - Consider any baseline behaviors for the metrics you’re most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you’d like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. Once you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
+
+[1]: {% image_buster /assets/img/control_group/control_group1.png %}
+[2]: {% image_buster /assets/img/control_group/control_group2.png %}
+[3]: {% image_buster /assets/img/control_group/control_group3.png %}
