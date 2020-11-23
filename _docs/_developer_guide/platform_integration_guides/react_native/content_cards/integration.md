@@ -4,7 +4,7 @@ platform: React Native
 page_order: 1
 ---
 
-# Content Cards for React Natice Integration
+# Content Cards for React Native Integration
 
 To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `ReactAppboy.launchContentCards()` method.
 

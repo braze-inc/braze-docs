@@ -1,5 +1,5 @@
 ---
-nav_title: Intelligence
+nav_title: Intelligence Suite
 page_order: 6.5
 layout: featured
 
