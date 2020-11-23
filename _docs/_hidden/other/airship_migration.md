@@ -13,7 +13,7 @@ page_type: reference
 ### Token Management
 Braze uses Apple's device token for iOS.
 
-| __Braze Perspective:__<br>We ensure customers can continuously communicate with their users (such as push notifications) when in the process of migrating from Airship to Braze (Whether it be a hard cutover to 100% Braze, or a granular transition such as 50% Airship 50% Braze, etc.). |
+| __Braze Perspective:__<br>We ensure customers can continuously communicate with their users (such as push notifications) when in the process of migrating from Airship to Braze (Whether it be a hard cutover to 100% Braze or a granular transition such as 50% Airship 50% Braze, etc.). |
 {: .reset-td-br-1}
 
 #### Push Token Migration
