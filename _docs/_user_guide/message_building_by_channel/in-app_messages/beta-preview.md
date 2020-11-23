@@ -1,5 +1,5 @@
 ---
-nav_title: Beta
+nav_title: HTML Preview
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
@@ -7,12 +7,12 @@ hidden: true
 description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
-# In-App Messages HTML Preview Beta
+# In-App Messages HTML Preview Early Access
 
-Learn about the new Beta Version of custom HTML In-App Messages.
+Learn about the new Early Access version of custom HTML In-App Messages.
 
 {% alert important %}
-This feature is in *Beta*. Ask your Braze team for more information on how to get access.
+This feature is in *Early Access*. Ask your Braze account team to get access!
 {% endalert %}
 
 ## New Features
@@ -65,9 +65,9 @@ This helps to easily spot potential code errors directly in the message composer
 
 ### Button Tracking Improvements
 
-We've introduced a new [`appboyBridge`][1] JavaScript method (`appboyBridge.logClick(id_string)`) to programatically track button clicks. See our JavaScript [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) for more details.
+You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
-This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`). You should use `appboyBridge.logClick()` to log a Body Click, and `appboyBridge.logClick("0")` or `appboyBridge.logClick("1")` to log Button 1 and Button 2, respectively.
+This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed. Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
 
 For example, to close a message and log Button 2 click, you can use:
 
@@ -75,8 +75,19 @@ For example, to close a message and log Button 2 click, you can use:
 <a href="#" onclick="appboyBridge.logClick('1');appboyBridge.closeMessage()">✖</a>
 ```
 
-Additionally, HTML In-App Messages are no longer limited to recording one button click event per impression.
+You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
 
+{% alert important %}
+Note: Custom button IDs is not enabled by default and must be enabled for your account by Braze.
+{% endalert %}
+
+#### Requirements
+
+* Up to 100 unique Button IDs are allowed per campaign
+* Each Button ID can not be longer than 255 characters
+* Only alphanumeric, space, dash, and underscore characters are allowed.
+
+**Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
 
 ## Backward Incompatible Changes {#backward-incompatible-changes}
 
@@ -86,11 +97,14 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
 <br>
 
-3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
+3. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
+
+4. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
 
 | Before | After |
 |:-------- |:------------|
 |<code>&lt;a href="appboy://close"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="appboyBridge.logClick();appboyBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+|<code>&lt;a href="appboy://close?abButtonId=0"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="appboyBridge.logClick('0');appboyBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
 |<code>&lt;a href="app://deeplink?abButtonId=0">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="app://deeplink" onclick="appboyBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
 |<code>&lt;script&gt;<br>location.href = "appboy://close?abButtonId=1"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;appboyBridge.logClick("1");<br>&nbsp;&nbsp;appboyBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
@@ -98,7 +112,7 @@ Additionally, HTML In-App Messages are no longer limited to recording one button
 
 ### SDK Requirements {#supported-sdk-versions}
 
-These Beta features require upgrading to the following Braze SDK version:
+These new features require upgrading to the following Braze SDK version:
 
 * Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
 * iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
@@ -115,7 +129,7 @@ Consider adopting this new message type once a significant portion of your user 
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In App Message Beta Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
+![New HTML In App Message Early Access Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. 
 
@@ -151,16 +165,16 @@ Older campaigns that used zip-files are not supported in this new In-App Message
 If you want to migrate those older zip-file campaigns, follow these instructions:
 
 1. Download the .zip asset file to your computer, and unzip the files
-2. Highlight and drag all asset files into your new campaign
-3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
+3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 
-For example, replace this:
+For example, if your old HTML contains a reference that looks like this:
 
 ```html
 <img src="/cat.png" />
 ```
 
-With this:
+Replace it with its respective uploaded asset URL, like this:
 
 ```html
 <img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />

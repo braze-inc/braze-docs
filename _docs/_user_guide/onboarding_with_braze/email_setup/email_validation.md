@@ -62,19 +62,20 @@ The following regex is used to validate the domain:
 
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
-The domain must follow these parameters:
+The domain name must follow these parameters:
 
-- Consists of two or more period-separated parts. 
+- Consists of two or more period-separated labels.
+	- (Each part of a domain name is referred to as a "label". e.g. the domain name "example.com", consists of the "example" label and the "com" label.)
 - Must contain at least one period (.)
 - Cannot contain two or more consecutive periods
-- Each period-separated part must:
+- Each period-separated label must:
 	- Start with an alphanumeric character (a-z or 0-9)
 	- End with an alphanumeric character (a-z or 0-9)
 	- Only contain alphanumeric character (a-z or 0-9) and the hyphen (-)
 	- Contain from 1 to 63 characters
 
 **Additional validation required** 
-- The final part of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.)
+- The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.)
 - The TLD should be in [ICANN’s TLD list][2].
 
 {% alert important %}

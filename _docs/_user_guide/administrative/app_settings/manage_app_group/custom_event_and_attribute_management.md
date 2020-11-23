@@ -60,7 +60,7 @@ If you elect to force the data type for an attribute, any data that comes in tha
 | Array | Comma separated list of values, with or without square brackets (i.e.`[first, second, third]`, or `first,second,third`) will be stored as an Array |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on specific filter options exposed by different data type comparisons please see ["Configuring Reporting - Braze Academy"][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
+For more information on specific filter options exposed by different data type comparisons please see [Configuring Reporting article][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
 
 {% alert note %}
 Please note that data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed above to exercise control over what you're tracking in your dashboard.

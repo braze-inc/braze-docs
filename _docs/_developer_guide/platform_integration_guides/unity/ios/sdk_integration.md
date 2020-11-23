@@ -334,7 +334,7 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [31]: #in-app-message-integration
 [32]: #news-feed-integration
 [33]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#push-notifications
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/w_in-app_messaging/#in-app-messaging
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/#in-app-messaging
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [36]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package

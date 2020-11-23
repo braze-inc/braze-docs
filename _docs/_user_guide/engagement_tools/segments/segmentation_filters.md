@@ -325,7 +325,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Email Available
-    description: Segments your users by whether or not they have reported their respective email addresses, and if they are subscribed/opted-in to email.
+    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. If a user reports your emails as spam or if Braze receives a hard bounce response from this email address, the user will no longer appear in a segment that uses this filter with the value of "true".
     tags:
       - User Attributes
   - name: Email Opt-In Date
@@ -461,7 +461,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign.
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
     tags:
       - Other
   - name: Provisionally Authorized on iOS

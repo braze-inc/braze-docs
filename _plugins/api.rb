@@ -9,21 +9,31 @@ module Api
       site = context.registers[:site]
       converter = site.find_converter_instance(Jekyll::Converters::Markdown)
       content = converter.convert(super)
-      "<div id='#{@apiid}' class='api_div'>#{content}</div>"
+      return "<div id='#{@apiid}' class='api_div'>#{content}</div>"
     end
   end
 
   class ApiMethodBlock < Liquid::Block
-      def initialize(tag_name, methodtype, tokens)
+      def initialize(tag_name, params, tokens)
           super
-          @methodtype = methodtype.downcase.strip
+          @methodtype, @coreparam = params.split(' ').map(&:strip)
       end
 
       def render(context)
           site = context.registers[:site]
           converter = site.find_converter_instance(Jekyll::Converters::Markdown)
           content = converter.convert(super)
-          "<div class='api_type'><div class='method #{@methodtype} '>#{ @methodtype }</div>#{content}</div>"
+          apicontent = "<div class='api_type'><div class='method #{@methodtype.downcase} '>#{ @methodtype }</div>#{content}"
+          unless @coreparam.nil?
+            coretype, coreurl = @coreparam.split('|')
+            if coreurl.nil?
+              apicontent += "<div class='coreclass #{coretype.downcase} '>#{ coretype.gsub(/\_/,' ') }</div>"
+            else
+              apicontent += "<div class='coreclass #{coretype.downcase} '><a href=\"#{coreurl}\">#{ coretype.gsub(/\_/,' ') }</a></div>"
+            end
+          end
+          apicontent += "</div>"
+          return apicontent
       end
   end
   class ApiTagsBlock < Liquid::Block
@@ -33,7 +43,7 @@ module Api
 
       def render(context)
         content = super.strip
-        "<div class='api_tags' data-tags='#{content}' data-tags-lower='#{content.downcase}'></div>"
+        return "<div class='api_tags' data-tags='#{content}' data-tags-lower='#{content.downcase}'></div>"
       end
   end
   class ApiReferenceBlock < Liquid::Block
@@ -51,7 +61,7 @@ module Api
         when "postman"
           reftext = 'See me in Postman'
         end
-        "<div class='api_reference #{@reftype}'><a href='#{content}' class='seeme'>#{reftext}</a></div>"
+        return "<div class='api_reference #{@reftype}'><a href='#{content}' class='seeme'>#{reftext}</a></div>"
       end
   end
 end

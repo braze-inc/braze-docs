@@ -11,7 +11,7 @@ Sample push notification:
 
 ![Sample Push][10]
 
-Check out [Braze Academy][9] for additional best practices.
+Visit our [documentation][9] for additional best practices.
 
 ### Step 1: Configure Your Application For Push
 
