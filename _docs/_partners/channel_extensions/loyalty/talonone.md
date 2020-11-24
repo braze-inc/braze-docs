@@ -56,9 +56,9 @@ This endpoint contains the following built-in properties:
 ##### Example One: Only Required Properties
 
 ```bash
-curl https://demo.talon.one/v1/braze/createcoupon \
+curl https://demo.talon.one/v2/integration/braze/createcoupon \
  -X POST \
- -H 'Authorization: Bearer [sessionToken]' \
+ -H 'Authorization: ApiKey-v1 [YOUR_API_KEY]' \
  -d '{
         "applicationID": "1",
         "campaignID: "1",
@@ -70,9 +70,9 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 ##### Example Two: All Built-In Properties
 
 ```bash
-curl https://demo.talon.one/v1/braze/createcoupon \
+curl https://demo.talon.one/v2/integration/braze/createcoupon \
  -X POST \
- -H 'Authorization: Bearer [sessionToken]' \
+ -H 'Authorization: ApiKey-v1 [YOUR_API_KEY]' \
  -d '{
         "applicationID": "1",
         "campaignID": "1",
@@ -89,9 +89,9 @@ curl https://demo.talon.one/v1/braze/createcoupon \
 Custom attributes can also be passed directly as long as they are notated with a dot prefix and still wrapped in a string as shown below.
 
 ```bash
-curl https://demo.talon.one/v1/braze/createcoupon \
+curl https://demo.talon.one/v2/integration/braze/createcoupon \
  -X POST \
- -H 'Authorization: Bearer [sessionToken]' \
+ -H 'Authorization: ApiKey-v1 [YOUR_API_KEY]' \
  -d '{
         "applicationID": "1",
         "campaignID": "1",
@@ -130,7 +130,7 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon %}
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon %}
 
 ```
 {% endraw %}
@@ -139,10 +139,10 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
-  "authorization": "Bearer [sessionToken]"
+  "authorization": "ApiKey-v1 [YOUR_API_KEY]"
  } 
 :method post %}
 ```
@@ -156,10 +156,10 @@ Further details on how to generate a session token can be found [here](https://d
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
-  "authorization": "Bearer [sessionToken]"
+  "authorization": "ApiKey-v1 [YOUR_API_KEY]"
  } 
 :method post 
 :body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
@@ -178,10 +178,10 @@ Add the **save** parameter at the end to store the Talon.One response as a Braze
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
-  "authorization": "Bearer [sessionToken]"
+  "authorization": "ApiKey-v1 [YOUR_API_KEY]"
  } 
 :method post 
 :body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}
@@ -197,10 +197,10 @@ Use a [liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_conte
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
-  "authorization": "Bearer [sessionToken]"
+  "authorization": "ApiKey-v1 [YOUR_API_KEY]"
  } 
 :method post 
 :body applicationID=[YOUR_APPLICATION_ID]&campaignID=[YOUR_CAMPAIGN_ID]&identifier={{campaign.${message_api_id}}}&integrationID={{${user_id}}}

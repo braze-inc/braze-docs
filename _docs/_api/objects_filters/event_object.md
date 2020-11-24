@@ -94,5 +94,5 @@ Using the example provided above, we can see that someone watched a trailer rece
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/docs/user_guide/data_and_analytics/custom_data/custom_events/
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
