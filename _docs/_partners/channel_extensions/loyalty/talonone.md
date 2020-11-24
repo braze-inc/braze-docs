@@ -130,7 +130,7 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon %}
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon %}
 
 ```
 {% endraw %}
@@ -139,7 +139,7 @@ You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
   "authorization": "ApiKey-v1 [YOUR_API_KEY]"
@@ -156,7 +156,7 @@ Further details on how to generate a session token can be found [here](https://d
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
   "authorization": "ApiKey-v1 [YOUR_API_KEY]"
@@ -178,7 +178,7 @@ Add the **save** parameter at the end to store the Talon.One response as a Braze
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
   "authorization": "ApiKey-v1 [YOUR_API_KEY]"
