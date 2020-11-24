@@ -25,7 +25,7 @@ Click __Create Campaign__ in the top right corner of the __Campaigns__ page. <br
 
 ## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
+Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 

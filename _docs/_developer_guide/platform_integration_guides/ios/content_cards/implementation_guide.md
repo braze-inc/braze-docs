@@ -106,7 +106,7 @@ __No `ABKContentCard` Dependencies__<br>
 {% tabs %}
 {% tab Swift %}
 __Custom Object Initializer__<br>
-MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
 
 ```swift
 extension Tile: ContentCardable {
