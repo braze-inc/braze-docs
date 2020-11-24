@@ -197,7 +197,7 @@ Use a [liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_conte
 
 {% raw %}
 ```liquid
-{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v1/braze/createcoupon 
+{% connected_content https://[YOUR_SUBDOMAIN].talon.one/v2/integration/braze/createcoupon
 
 :headers {
   "authorization": "ApiKey-v1 [YOUR_API_KEY]"
