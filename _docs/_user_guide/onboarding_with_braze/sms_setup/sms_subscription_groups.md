@@ -42,11 +42,6 @@ To launch an SMS campaign through Braze, a Subscription Group must be selected i
 
 ![picture][6]
 
-### Multi-Country Sending
-Some brands may wish to send to a group of users that have phone numbers from various different countries. It's recommended and sometimes required to use a sending phone number that is from the same country as the target user's number. During the Subscription Group [setup process][5], sending phone numbers from different countries can be added to the group. Once completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one canvas step to target relevant users.
-
-![picture][1]
-
 ## Setup Process
 During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions on your Braze dashboard setup, please reach out to your Braze representative for support.  
 

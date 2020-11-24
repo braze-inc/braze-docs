@@ -74,4 +74,11 @@ The default concurrency rate and throughput enables &#126;360k/hour per short co
 Event properties have a character limit of 256, otherwise, there is no character limit. In order for a keyword to be recognized within a sentence, (e.g. "please stop texting me") you would have to utilize a Liquid statement in the message to recognize the specific word.
 {% enddetails %}
 
+{% details What are shared short codes? %}
+With a shared short code, all text messages, no matter what business or organization sends them, arrives on a consumer's mobile device from the same 5-6 digit phone number. While shared short codes are relatively low cost and immediately available, this means that your business __will not have a dedicated short code__. Some downsides to this approach include: <br>
+- If your customers opt-out of another business's messages that have a shared short code with you, they will have opted out of yours messages as well.<br>
+- If one business violates the rules, all businesses' messages are suspended.
+- Security Issues<br>
+{% enddetails %}
+
 
