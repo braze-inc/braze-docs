@@ -21,8 +21,7 @@ It is also important to note that the attribute ID you have set in Jebbit is how
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Developer Console > Rest API Keys | Please create an API Key with all permissions checked under “User Data”, and provide this key via Dropbox File Request here:
-https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx |
+|Braze App Group REST API Key | Braze platform | Developer Console > Rest API Keys | Please create an API Key with all permissions checked under “User Data”, and provide this key via a [Dropbox File Request](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx) |
 |Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | We currently support the [user data](https://www.braze.com/docs/api/endpoints/user_data/) endpoint specifically, but a request for a different endpoint can be supported. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
