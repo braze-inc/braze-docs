@@ -26,6 +26,6 @@ You can also leverage geofences with some of our partners, for example:
 - [Radar][2]
 - [Foursquare][3]
 
-[1]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/neura_actions/
-[2]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/radar/
-[3]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/foursquare/
+[1]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
+[2]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
+[3]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/

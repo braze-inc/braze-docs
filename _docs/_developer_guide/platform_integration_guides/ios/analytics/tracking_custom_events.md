@@ -57,11 +57,7 @@ See our [class documentation][4] for more information.
 The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
 
 - `time`
-- `product_id`
-- `quantity`
 - `event_name`
-- `price`
-- `currency`
 
 **Implementation Example**
 

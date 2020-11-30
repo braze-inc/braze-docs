@@ -63,11 +63,7 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
 
 - `time`
-- `product_id`
-- `quantity`
 - `event_name`
-- `price`
-- `currency`
 
 See the [Javadoc][6] for more information.
 
