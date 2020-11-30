@@ -1,5 +1,5 @@
 ---
-page_order: 0
+page_order: 2
 nav_title: Terms to Know
 layout: glossary_page
 glossary_top_header: "SMS Terms to Know"

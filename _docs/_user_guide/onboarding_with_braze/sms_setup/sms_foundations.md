@@ -1,6 +1,6 @@
 ---
 nav_title: "Foundations of SMS"
-page_order: 1
+page_order: 3
 description: "This article will walk you through the foundations of SMS at Braze during our onboarding process."
 page_type: reference
 tool:

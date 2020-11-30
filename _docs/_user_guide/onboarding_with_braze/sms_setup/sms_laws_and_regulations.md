@@ -21,7 +21,7 @@ channel:
 Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
 {% alert warning %}
-This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
+This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements. To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
 {% endalert %}
 
 ## The Six Rules to Get Compliance Right

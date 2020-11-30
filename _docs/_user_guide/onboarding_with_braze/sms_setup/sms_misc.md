@@ -1,6 +1,6 @@
 ---
-nav_title: "SMS Foundations 2"
-page_order: 2
+nav_title: "Foundations of SMS 2"
+page_order: 4
 description: "SMS Subscription Groups are the foundation for sending SMS through Braze. A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose."
 page_type: reference
 tool:
