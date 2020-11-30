@@ -1,5 +1,5 @@
 ---
-nav_title: "User Phone Numbers"
+nav_title: "Phone Number Handling"
 page_order: 6
 description: "This reference article covers phone number formatting, how to importing phone numbers, as well as how to add users to SMS subscription groups."
 page_type: reference
@@ -41,9 +41,20 @@ The country codes for each listing are:
 - UK: `+44`
 - Lithuania: `+370`
 
-### Adding Users to SMS Subscription Groups
+## Handling Unknown Phone Numbers
+You may find that once you get SMS up and running with Braze that you receive messages from unknown users. Noted below are the steps through which an unidentified user and number get processed.
 
-For a customer to receive an SMS message, they must have a __valid phone number__ and be __opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running; ([make sure you follow all applicable laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information on SMS Subscription Groups, check out [our documentation][1].
+Braze automatically addresses an unknown number in one of three ways:
+1. If an opt-in keyword is texted:
+  * Braze creates an anonymous profile
+  * Our system sets the phone attribute
+  * Subscribes the user to the corresponding subscription group based on what opt-in keyword was received by Braze.<br><br>
+2. If an opt-out keyword is texted:
+  * Braze creates an anonymous profile
+  * Our system sets the phone attribute
+  * Unsubscribes the user form the corresponding subscription group based on what opt-out keyword was received by Braze.<br><br>
+3. If any other custom keyword is texted:
+  * Braze ignores the text message and does nothing.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [picture]: {% image_buster /assets/img/sms/e164.jpg %}

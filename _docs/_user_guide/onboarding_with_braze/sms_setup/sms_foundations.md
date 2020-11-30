@@ -1,7 +1,7 @@
 ---
-nav_title: "Foundations of SMS"
+nav_title: "Short and Long Codes"
 page_order: 3
-description: "This article will walk you through the foundations of SMS at Braze during our onboarding process."
+description: "This article will walk you through the different types of short and long codes at Braze and how to begin applying for a short code.."
 page_type: reference
 tool:
   - Dashboard
@@ -17,11 +17,7 @@ channel:
 alias: /foundations/
 ---
 
-# Foundations of SMS
-
-The text message inbox is one of the least-saturated, most-effective marketing channels available. With open rates as high as 98%, more and more businesses are using SMS marketing to reach their customers. Texts can be sent through either a short code or a long code. 
-
-## Code Types
+# Short and Long Codes
 
 Short and long codes are the phone number from which you send your messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
 

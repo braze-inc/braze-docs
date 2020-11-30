@@ -34,13 +34,13 @@ glossaries:
   - name: Vanity Code
     description: A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember.
   - name: Shared Short Code
-    description: When using a shared short code, all text messages, no matter what business or organization sends them, arrives on a consumer's mobile device from the same 5-6 phone number. While shared short codes are relatively low cost and immediately available, this means that your business __will not have a dedicated short code__, and are subject to other businesses following the correct protocol with your shared short code. 
+    description: When using a shared short code, all text messages, no matter what business or organization sends them, arrives on a consumer's mobile device from the same 5-6 phone number. While shared short codes are relatively low cost and immediately available, this means that your business will not have a dedicated short code, and are subject to other businesses following the correct protocol with your shared short code. 
   - name: Alphanumeric Sender ID
     description: Alphanumeric Sender ID allows you to set your company name or brand as the Sender ID when sending one-way messages to supported countries
   - name: Toll-Free Number
     description: A toll-free telephone number or freephone number is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber.<br> Toll-free numbers are in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts. 
   - name: One-Way Messaging
-    description: One-way messaging is when you send an SMS message to a customer, but the customer cannot send a message back. One-way messaging is useful if you are implementing an alphanumeric sender ID in markets where mong codes of short codes are not available. 
+    description: One-way messaging is when you send an SMS message to a customer, but the customer cannot send a message back. One-way messaging is useful if you are implementing an alphanumeric sender ID in markets where long and short codes are not available. 
   - name: Two-Way Messaging
     description: Two-way messaging is when a business can send a message to their customers, and the customers can message back certain keywords to get responses.
 ---
