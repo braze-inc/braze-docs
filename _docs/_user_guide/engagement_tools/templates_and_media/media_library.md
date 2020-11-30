@@ -31,24 +31,29 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ## FAQ
 
-### How do I crop an existing image?
+{% details Are there storage limits for images within the Media Library? %}
+There are no storage limits for images within the Media Library.
+{% enddetails %}
+
+{% details How do I crop and existing image? %}
 You can crop an existing image by selecting the image from the Media Library and clicking the button for "Save & Crop Image".  You will be redirected to a cropping composer where you can select your ratio type and edit the name of the new image.  Once you hit save, your new image can be used.
 
 ![media_library_crop1][2]
 
-![media_library_crop2][3]
+![media_library_crop1][3]
+{% enddetails %}
 
-### Can I crop all images?
-
-{% alert note %}
+{% details Can I crop all images? %}
 The Media Library does not currently support cropping GIF images.
-{% endalert %}
+{% enddetails %}
 
-### Why can't I upload any image I want into the Push Composers?
+{% details Why can't I upload any image I want into the Push Composers? %}
 The reason for this is because most composers have restrictions on the image ratio size that is allowed.
+{% enddetails %}
 
-### My image keeps timing out when I try to upload it. What can I do about this? {#image-optimization}
+{% details My image keeps timing out when I try to upload it. What can I do about this?  %}
 This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]). Additionally, if your image was built in Photoshop (or similar software) and has many layers, merging and reducing the number of layers can also help.
+{% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
