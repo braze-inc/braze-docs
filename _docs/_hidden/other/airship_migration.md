@@ -22,11 +22,15 @@ It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_artic
 
 1. Import the tokens via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. For large batch imports, we have resources available to help expedite the process. Please reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
-3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed. Note that push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` once users start a session with the Braze SDK. 
+3. QA the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) have been completed. 
 
 If your user profiles and push tokens happen to be stored in separate locations, we recommend importing push tokens anonymously and then a subsequent migration of your existing user profiles. It is not necessary to map them together since the Braze iOS SDK will handle the token resolution upon successful integration. 
 
 - We recommend migrating users via API but if there is a need to import a static list of users, it can be done via CSV. Please note that __push tokens cannot be imported via CSV__ because the "push_token" object cannot be specified in the CSV. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
+
+{% alert note %}
+Push tokens may show up as `subscribed` in the Braze dashboard, but will change to `opted-in` once users start a session with the Braze SDK. 
+{% endalert %}
 
 #### Multiple Push Tokens
 
