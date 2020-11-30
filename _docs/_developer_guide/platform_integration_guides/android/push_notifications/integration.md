@@ -436,7 +436,7 @@ In some scenarios, you may wish to customize push notifications in ways that wou
 
 If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 
-Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification
+Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
 
 {% tabs %}
 {% tab JAVA %}
