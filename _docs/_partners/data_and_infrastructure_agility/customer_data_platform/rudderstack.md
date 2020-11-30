@@ -109,7 +109,7 @@ The field mapping is done as per the table below:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %} 
-All other traits will be recorded as [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/).
+All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/).
 {% endalert %}
 
 You can read more about RudderStack's identify method in their [documentation][18].
@@ -134,9 +134,9 @@ You can read more about RudderStack's `page` method in their [documentation][22]
 [1]: https://rudderstack.com/
 [2]: https://app.rudderstack.com/
 [3]: https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack
-[4]: https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[5]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[6]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [7]: https://docs.rudderstack.com/get-started/rudderstack-connection-modes
 [8]: https://github.com/rudderlabs/rudder-integration-braze-android
 [9]: https://github.com/rudderlabs/rudder-integration-braze-ios
@@ -144,13 +144,13 @@ You can read more about RudderStack's `page` method in their [documentation][22]
 [11]: https://docs.rudderstack.com/destinations/braze#adding-device-mode-integration
 [12]: https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-javascript-sdk
 [13]: https://dashboard.braze.com/app_settings/developer_console
-[14]: https://www.braze.com/docs/api/basics/?redirected=true#creating-and-managing-rest-api-keys
-[15]: https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances/
+[14]: {{site.baseurl}}/api/basics/?redirected=true#creating-and-managing-rest-api-keys
+[15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
 [16]: https://docs.rudderstack.com/rudderstack-api-spec
-[17]: https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+[17]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [18]: https://docs.rudderstack.com/destinations/braze#identify
 [19]: https://docs.rudderstack.com/destinations/braze#track
 [20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
-[21]: https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
+[21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://docs.rudderstack.com/destinations/braze#page
 

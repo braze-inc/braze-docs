@@ -177,7 +177,7 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
-Select desired advancement behavior. Learn more about options [here](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+Select desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 
 ![Canvas Advancement Behavior][20]
 
@@ -191,7 +191,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 
 __Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on the Canvas Entry Object and Properties, check out our [Documentation](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
+For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}

@@ -102,7 +102,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key).
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}
@@ -185,7 +185,7 @@ __Note__: This method would replace the `startWithApiKey:inApplication:withLaunc
 
 This method is called with the following parameters:
 
-- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
+- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
