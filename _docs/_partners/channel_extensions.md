@@ -40,5 +40,6 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: EduMe
     url: /docs/partners/channel_extensions/learning/edume/
-
+  - name: Playable
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/playable/
 ---
