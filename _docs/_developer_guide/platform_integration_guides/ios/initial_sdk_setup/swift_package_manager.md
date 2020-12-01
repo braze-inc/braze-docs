@@ -100,7 +100,7 @@ __Note__: Braze's `sharedInstance` singleton will be `nil` before `startWithApiK
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key).
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}

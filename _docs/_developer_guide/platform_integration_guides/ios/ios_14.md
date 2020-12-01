@@ -92,7 +92,7 @@ These IDFA updates will take effect once end-users upgrade their device to a fut
 
 3. If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
 
-4. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint](https://www.braze.com/docs/api/endpoints/user_data/external_id_migration/).
+4. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
