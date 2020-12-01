@@ -179,8 +179,4 @@ Replace it with its respective uploaded asset URL, like this:
 <img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
 ```
 
-## Providing Feedback
-
-Feedback is encouraged and welcome! Email any questions or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com?subject=Feedback%20for%20Custom%20HTML%20In-App%20Message%20with%20Preview&body=Company%20Name:%20%0D%0ACampaign%20Link:%20%0D%0AFeedback:).
-
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
