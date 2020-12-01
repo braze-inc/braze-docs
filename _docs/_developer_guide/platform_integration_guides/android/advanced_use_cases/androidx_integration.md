@@ -15,12 +15,12 @@ This module is used via:
 ```gradle
 dependencies {
   ...
-  implementation "com.appboy:android-sdk-ui-x:${LATEST_SDK_VERSION}"
+  implementation "com.appboy:android-sdk-ui-jetified:${LATEST_SDK_VERSION}"
 }
 ```
 
 {% alert important %}
-If including `android-sdk-ui-x` in your `build.gradle`, you can remove `android-sdk-ui` from your `build.gradle`.
+If including `android-sdk-ui-jetified` in your `build.gradle`, you can remove `android-sdk-ui` from your `build.gradle`.
 {% endalert %}
 
 ## Gradle Changes
