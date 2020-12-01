@@ -3,7 +3,6 @@ nav_title: HTML Preview
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
-hidden: true
 description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
