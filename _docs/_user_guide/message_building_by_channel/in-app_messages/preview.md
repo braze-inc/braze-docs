@@ -7,9 +7,9 @@ hidden: true
 description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
-# In-App Messages HTML Preview Early Access
+# In-App Messages HTML Preview
 
-Learn about the new Early Access version of custom HTML In-App Messages.
+Learn about the new Preview features for custom HTML In-App Messages.
 
 {% alert important %}
 This feature is in *Early Access*. Ask your Braze account team to get access!
