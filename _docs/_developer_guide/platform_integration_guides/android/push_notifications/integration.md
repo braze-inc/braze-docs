@@ -572,8 +572,6 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
     String action = intent.getAction();
     Log.d(TAG, String.format("Received intent with action %s", action));
 
-    logNotificationDuration(intent);
-
     if (pushReceivedAction.equals(action)) {
       Log.d(TAG, "Received push notification.");
     } else if (notificationOpenedAction.equals(action)) {
@@ -582,20 +580,6 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
       Log.d(TAG, "Received push notification deleted intent.");
     } else {
       Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action));
-    }
-  }
-
-  /**
-   * Logs the length of time elapsed since the notification's creation time.
-   */
-  private void logNotificationDuration(Intent intent) {
-    // Log the duration of the push notification
-    Bundle extras = intent.getExtras();
-    if (extras != null && extras.containsKey(Constants.APPBOY_PUSH_RECEIVED_TIMESTAMP_MILLIS)) {
-      long createdAt = extras.getLong(Constants.APPBOY_PUSH_RECEIVED_TIMESTAMP_MILLIS);
-      long durationMillis = System.currentTimeMillis() - createdAt;
-      long durationSeconds = TimeUnit.MILLISECONDS.toSeconds(durationMillis);
-      Log.i(TAG, "Notification active for " + durationSeconds + " seconds.");
     }
   }
 }
@@ -615,8 +599,6 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
     val action = intent.action
     Log.d(TAG, String.format("Received intent with action %s", action))
 
-    logNotificationDuration(intent)
-
     when (action) {
       pushReceivedAction -> {
         Log.d(TAG, "Received push notification.")
@@ -630,20 +612,6 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
       else -> {
         Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action))
       }
-    }
-  }
-
-  /**
-    * Logs the length of time elapsed since the notification's creation time.
-    */
-  private fun logNotificationDuration(intent: Intent) {
-    // Log the duration of the push notification
-    val extras = intent.extras
-    if (extras != null && extras.containsKey(Constants.APPBOY_PUSH_RECEIVED_TIMESTAMP_MILLIS)) {
-      val createdAt = extras.getLong(Constants.APPBOY_PUSH_RECEIVED_TIMESTAMP_MILLIS)
-      val durationMillis = System.currentTimeMillis() - createdAt
-      val durationSeconds = TimeUnit.MILLISECONDS.toSeconds(durationMillis)
-      Log.i(TAG, "Notification active for $durationSeconds seconds.")
     }
   }
 
