@@ -27,6 +27,9 @@ guide_featured_list:
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
   fa_icon: fas fa-mobile
+- name: HTML Preview
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/preview/
+  fa_icon: fas fa-file-code
 
 ---
 
