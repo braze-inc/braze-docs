@@ -23,7 +23,7 @@ guide_featured_list:
 - name: User Phone Numbers
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/
   fa_icon: fas fa-phone
-- name: Sending Phone Numbers
+- name: Short and Long Codes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card
 - name: User Data Migration

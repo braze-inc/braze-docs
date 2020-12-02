@@ -21,7 +21,7 @@ channel:
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
-This article discusses some common use cases to draw from and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.
+This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.
 
 ## Potential Use Cases
 
@@ -40,7 +40,7 @@ Before you start sending SMS, there are some things you need. Refer to the basic
 |---|---|---|
 | A Dedicated Phone Number (either a Short Code or Long Code) | A dedicated phone number provided exclusively to a single brand or host. | Braze handles acquiring these numbers for you. You can [read more about short and long codes here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).|
 | List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as a 10-digit number, as well as a country area code. [Learn more here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms/importing_numbers/). |
-| [Keywords and Responses to Them]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
+| [Keywords and Responses to Them]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | All base keywords must have responses attributed to it before you can begin messaging | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Terms to Know
@@ -57,4 +57,4 @@ For a full list of terms, visit our SMS [Terms to Know documentation]({{site.bas
 
 [picture]: {% image_buster /assets/img/sms/sms_about.jpg %}
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/create/#message-copy-limits
+[2]: {{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_sending/

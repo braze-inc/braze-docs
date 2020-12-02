@@ -60,7 +60,7 @@ You cannot have multiple in-app message variants in a single step.
 
 ## Step 2: Compose Your SMS
 
-Composing an SMS is easy! Just write your message, using languages and personalization as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
+Composing an SMS is easy! Just write your message, using languages, personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
 
 ![Compose SMS]({% image_buster /assets/img/sms_campaign_compose.gif %})
 

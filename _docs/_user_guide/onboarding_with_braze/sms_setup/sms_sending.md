@@ -18,12 +18,16 @@ channel:
 
 # SMS Message Sending
 
-### Message Segment & Character Limits
-A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
+## SMS Sending Basics
 
-### Targeting Users in a Campaign
+1. Select Your Subscription Group 
+SMS messages must be sent from a subscription group. A subscription group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging. Once configured, you will then be able to build an SMS campaign and target your subscription group. To read more about how SMS subscription groups work, view our documentation [here]({{Site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). 
 
-SMS messages must be sent from a subscription group. A subscription group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging. Once configured, you will then be able to build an SMS campaign and target your subscription group. To read more about how SMS subscription groups work, view our documentation [here]({{Site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). 
+2. Input Message Body
+Input up to 1600 characters, including Emojis, Liquid and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard. 
+
+3. Understand Message Segments & Character Limits.
+SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
 
 {% alert tip %}
 For a step-by-step guide on how to create an SMS campaign in the Braze dashboard, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).

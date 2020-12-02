@@ -21,7 +21,7 @@ To see the meanings of all SMS metrics, check the [Metrics Glossary][1].
 
 ## SMS Metrics
 - **Sent**: A campaign or canvas step has been launched or triggered and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
-- **Sent to Carrier**: Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+- **Sent to Carrier**: Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
 - **Delivery Failures**: The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
 - **Confirmed Delivery**: The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
 - **Rejections**: The SMS has been rejected by the carrier. This can happen for several reasons including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
@@ -82,6 +82,17 @@ This block will show you the performance of your conversion events for the SMS m
 {% endtab %}
 
 {% endtabs %}
+
+
+## SMS Curent Events
+Just like email, Braze receives user level events related to an SMS message as it makes its journey to a user. A customer has the option to capture these events for their own reporting or action through one of their Currents feeds.
+
+- SMS Send Events
+- SMS Sends to Carrier Events
+- SMS Delivery Events
+- SMS Rejection Events
+- SMS Delivery Failure Events
+- SMS Inbound Recieve Events
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants

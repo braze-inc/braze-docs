@@ -20,6 +20,18 @@ channel:
 
 > SMS Subscription Groups are the foundation for sending SMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
+## SMS Subscription Group Basics
+
+1. Subscription Groups
+- Available for each of your Braze app groups you send SMS with.
+- Your team must update the Subscription Group status for users who unsubscribe outside of SMS messages.
+- Remember a subscription group holds all of your SMS phone numbers. 
+
+2. Managing User Updates
+- You must add users to a subscription group via REST API.
+- Subscription Group reporting and segmentation filters are available.
+- Subscribe & unsubscribes states available.
+
 ## SMS Subscription States
 There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional Subscription Group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
 
