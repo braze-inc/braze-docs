@@ -233,8 +233,9 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   // Event Specific Properties
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
-  "email_address": (string) email address for this event
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "email_address": (string) email address for this event,
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -278,6 +279,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -320,7 +322,8 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -365,7 +368,8 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -409,6 +413,9 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "bounce_reason": (string) reason for bounce provided by server,
+  "bounce_code": (string) code for bounce provided by server
 }
 ```
 
@@ -450,7 +457,8 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -497,6 +505,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 

@@ -52,13 +52,9 @@ After completing those steps, you will need to create a custom [Huawei Message S
 ```java
 public class CustomPushService extends HmsMessageService {
   @Override
-  public void onNewToken(String s) {
-    super.onNewToken(s);
-    String appId = AGConnectServicesConfig.fromContext(this.getApplicationContext()).getString("client/app_id");
-    try {
-      String pushToken = HmsInstanceId.getInstance(this.getApplicationContext()).getToken(appId, "HCM");
-      Appboy.getInstance(this.getApplicationContext()).registerAppboyPushMessages(pushToken);
-    } catch (ApiException e) {}
+  public void onNewToken(String token) {
+    super.onNewToken(token);
+    Appboy.getInstance(this.getApplicationContext()).registerAppboyPushMessages(token);
   }
 
   @Override
@@ -78,8 +74,6 @@ public class CustomPushService extends HmsMessageService {
 class CustomPushService: HmsMessageService() {
   override fun onNewToken(token: String?) {
     super.onNewToken(token)
-    val appId = AGConnectServicesConfig.fromContext(applicationContext).getString("client/app_id")
-    val pushToken = HmsInstanceId.getInstance(applicationContext).getToken(appId, "HCM")
     Appboy.getInstance(applicationContext).registerAppboyPushMessages(token!!)
   }
 

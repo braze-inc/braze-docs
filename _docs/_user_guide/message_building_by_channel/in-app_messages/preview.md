@@ -3,13 +3,12 @@ nav_title: HTML Preview
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
-hidden: true
 description: "This reference article covers the new in-app messaging HTML Preview feature."
 ---
 
-# In-App Messages HTML Preview Early Access
+# In-App Messages HTML Preview
 
-Learn about the new Early Access version of custom HTML In-App Messages.
+Learn about the new Preview features for custom HTML In-App Messages.
 
 {% alert important %}
 This feature is in *Early Access*. Ask your Braze account team to get access!
@@ -76,6 +75,10 @@ For example, to close a message and log Button 2 click, you can use:
 ```
 
 You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
+
+{% alert important %}
+Note: Custom button IDs is not enabled by default and must be enabled for your account by Braze.
+{% endalert %}
 
 #### Requirements
 
@@ -161,23 +164,19 @@ Older campaigns that used zip-files are not supported in this new In-App Message
 If you want to migrate those older zip-file campaigns, follow these instructions:
 
 1. Download the .zip asset file to your computer, and unzip the files
-2. Highlight and drag all asset files into your new campaign
-3. Copy the newly uploaded asset URLs and replace them in your HTML's older local asset references
+2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
+3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 
-For example, replace this:
+For example, if your old HTML contains a reference that looks like this:
 
 ```html
 <img src="/cat.png" />
 ```
 
-With this:
+Replace it with its respective uploaded asset URL, like this:
 
 ```html
 <img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
 ```
-
-## Providing Feedback
-
-Feedback is encouraged and welcome! Email any questions or suggestions to our team at [in-app-message-preview-beta@braze.com](mailto:in-app-message-preview-beta@braze.com?subject=Feedback%20for%20Custom%20HTML%20In-App%20Message%20with%20Preview&body=Company%20Name:%20%0D%0ACampaign%20Link:%20%0D%0AFeedback:).
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
