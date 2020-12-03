@@ -13,8 +13,8 @@ page_type: reference
 ## Create a Global Control Group
 
 1. __Navigate to the Global Control Group settings__<br>From the dashboard, navigate to the Global Control Group tab located within __Global Message Settings__ under __Engagement__. <br><br>
-2. __Assign a percentage of all users to this control group__<br> Input a percentage for your Control Group and __Save__. Once entered, Braze will show you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. Visit our [best practices section](#percentage-guidelines) for percentage guidelines.<br>![Global Control Group][4] <br><br>
-3. __Assign Exclusion Settings__<br>Add exclusion settings to your Global Control Group by using tags. Any campaigns that use the tags included here in the exclusion settings will __not use__ your Global Control Group. These campaigns will continue to send to every user in the target audience (including those in your Global Control Group). You may want to add exclusion settings if you have transactional messages that should send to every user.<br>![Global Control Group][5] <br><br>
+2. __Assign a percentage of all users to this control group__<br> Input a percentage for your Control Group and __Save__. Once entered, Braze will show you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. Visit our [best practices section](#percentage-guidelines) for percentage guidelines.<br><br>![Global Control Group][4] <br><br>
+3. __Assign Exclusion Settings__<br>Add exclusion settings to your Global Control Group by using tags. Any campaigns that use the tags included here in the exclusion settings will __not use__ your Global Control Group. These campaigns will continue to send to every user in the target audience (including those in your Global Control Group). You may want to add exclusion settings if you have transactional messages that should send to every user.<br><br>![Global Control Group][5] <br><br>
 4. __Save your Control Group__<br>At this point, Braze will generate a randomly selected group of users comprising the selected percentage of your total user base. Once saved, all currently active as well as future campaigns/Canvases __will no longer send to users in this group__, with the exception being campaigns/Canvases that contain any of the tags in your exclusion settings. <br><br>
 5. __Export a CSV of users (Optional)__<br>If you’d like to save who is in your group, make sure to export a CSV of Control Group users before disabling the group, as you will no longer be able to export this information once your group is disabled.
 
@@ -22,7 +22,7 @@ page_type: reference
 
 Your Global Control Group will be applied to __all channels, campaigns as well as Canvases__, with the exception of News Feed Cards. Users in your Control Group _will not_ be excluded from News Feed Cards. If you are using Content Cards, users in your Control Group _will_ also be excluded from Content Cards.
 
-__Assigning users randomly to the Global Control Group:__<br> Braze will randomly select multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute), and include users from those selected buckets. <br><br>
+__Assigning users randomly to the Global Control Group:__<br> Braze will randomly select multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute), and include users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, please read the “[things to watch out for](#things-to-watch-for)” section of this article. <br><br>
 __Data tracking for reporting:__<br>Braze will measure the behaviors of those in your Control Group and those in your treatment sample. Your treatment sample is a random selection of users not in your Control Group, generated using the same Random Bucket Number method mentioned above.
 
 ## Disabling your Global Control Group
@@ -35,18 +35,18 @@ You can disable your Global Control Group at any time, but keep in mind that doi
 
 ## Viewing Reporting
 
-![Global Control Group][6]
-1. __Navigate to the reporting page__ -  To view a report for your Global Control, from the dashboard, navigate to __Global Control Group__ under __Data__.
-2. __Select your report parameters__ - Select either sessions or a particular custom event and click __Run Report__.
+To view a reporting for your Global Control Group, from the dashboard, navigate to __Global Control Group__ under __Data__. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click __Run Report__.
 
-#### Understanding Your Report 
+![Global Control Group][6]
+
+### Understanding Your Report 
 
 The Global Control Group Report allows you to compare your group against a treatment sample.
 Your treatment sample is a random selection of con-control users, approximately the same number of users as your Control, generated using the Random Bucket Number method.
 
 This report takes the percentage of users in your control and treatment groups that have completed your selected event each day and averages this percentage out over the last 30 days. This calculates during this time period, on average, what percentage of Global Control and treatment group users would complete this event. The __Change from Control__ field indicates the percentage change between the two groups.
 
-## Potential Errors
+## Potential Errors / Things to Watch For
 As you set up your Global Control Groups and view reporting, here are errors you may run into:
 
 ##### Unable to save the percentage entered when designating a Global Control Group
@@ -57,6 +57,10 @@ This usually indicates that some component of this page has changed, likely due 
 
 ##### Global Control Group report does not have any data
 If you access the Global Control report without having saved a Global Control Group, you will not see any data in the report. Create and save a Global Control Group and retry.
+
+#### Things to Watch Out For {#things-to-watch-for}
+- Your Global Control Group is formed using Random Bucket Numbers, and thus if you are running any other tests using Random Bucket Numbers segment filters, keep in mind that there could be an overlap between those segments you create, and your Global Control Group users.
+- If two users who have different external user IDs have the same email address, and one of these users is in the Control Group and the other is not, then an email will still be sent to that email address whenever the non-Control Group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
 
 ## Best Practices
 
