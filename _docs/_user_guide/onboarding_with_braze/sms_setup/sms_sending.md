@@ -20,14 +20,17 @@ channel:
 
 ## SMS Sending Basics
 
-1. Select Your Subscription Group 
-SMS messages must be sent from a subscription group. A subscription group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging. Once configured, you will then be able to build an SMS campaign and target your subscription group. To read more about how SMS subscription groups work, view our documentation [here]({{Site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). 
+1. __Select Your Subscription Group__<br>
+SMS messages must be sent from a [subscription group](({{Site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/)). A subscription group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
-2. Input Message Body
-Input up to 1600 characters, including Emojis, Liquid and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard. 
+2. __Input Message Body__<br>
+An SMS message body accepts up to 1600 characters, including Emojis, Liquid and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard.<br><br> 
 
-3. Understand Message Segments & Character Limits.
-SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
+3. __Understand Message Segments & Character Limits__<br>
+SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.<br><br>
+
+4. __Keyword Customization (Optional)__<br>
+Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responsese that get sent to users, and define keyword sets for different languages. Read more about keyword customization [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 
 {% alert tip %}
 For a step-by-step guide on how to create an SMS campaign in the Braze dashboard, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).

@@ -436,9 +436,18 @@ You can also set custom conversion events based on your specific use case. Get c
 
 ![SMS Conversion Events]({% image_buster /assets/img/sms_campaign_conversion.gif %})
 
-
 ## Step 7: Confirm Details and Launch!
 
 If you're using Campaigns, you'll have the opportunity to confirm it's details. If you're using Canvas, be sure to confirm the details of each of the pieces.
 
 ![SMS Confirm]({% image_buster /assets/img/sms_campaign_confirm.gif %})
+
+### Retargeting
+
+In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.
+
+### Filter for users who have recently recieved any SMS
+
+### Filter for users who have recieved a specific SMS campaign
+
+### Trigger messages as users recieve as SMS from a specific campaign

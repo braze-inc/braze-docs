@@ -16,7 +16,7 @@ channel:
   - SMS
 ---
 
-# Default Opt-In/ Opt-Out Keywords
+# Opt-In/ Opt-Out Keywords
 
 Regulations require that there are responses to all opt-in, opt-out and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
 
@@ -31,10 +31,19 @@ Braze will process the following keywords automatically and update the Subscript
 
 Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
 
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. If you need to change this response, please reach out to your Braze representative.
+If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the inital onboarding period.
 
 {% alert important %}
 Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
 {% endalert %}
+
+# Managing Keywords and Auto Responses
+
+- __Add your own Keywords__<br>During the onboarding process, Braze now allows customers to define their own keywords to trigger Opt-In, Opt-Out, and Help responses.  
+
+- __Manage Responses__<br>Users are able to manage their own responses that get sent to users after they text in a keyword.
+
+- __Define Keyword Sets__<br>Users may also choose to add keyword sets for different languages so the keywords received for different languages can be appropriately replied to. 
+
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

@@ -29,6 +29,9 @@ guide_featured_list:
 - name: User Data Migration
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
   fa_icon: fas fa-user
+- name: Next Steps..
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
+  fa_icon: fas fa-forward
   
 ---
 

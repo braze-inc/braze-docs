@@ -21,16 +21,18 @@ channel:
 > SMS Subscription Groups are the foundation for sending SMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS Subscription Group Basics
+Subscription Groups are necessary for any SMS message sent through Braze. A subscription group is a pool of numbers for a given messaging use case (for example, marketing or transactional messages). Users in this subscription group can be subscribed or unsubscribed to the group independently and if subscribed, will recieve messages send to that group.
 
-1. Subscription Groups
-- Available for each of your Braze app groups you send SMS with.
+1. __Subscription Groups__
+- A subscription groups is required for each of your Braze app groups you plan to send SMS with. 
+- Users may unsubscribe to messaging within an SMS message or through the use of other types of unsubscribe prompts (for example, account page or in-app web flow). Your team must update the subscription status of any user who unsubscribes outside of SMS messaging.
 - Your team must update the Subscription Group status for users who unsubscribe outside of SMS messages.
-- Remember a subscription group holds all of your SMS phone numbers. 
+- Remember a subscription group holds all of your SMS phone numbers.<br><br>
 
-2. Managing User Updates
+2. __Managing User Updates__
 - You must add users to a subscription group via REST API.
-- Subscription Group reporting and segmentation filters are available.
-- Subscribe & unsubscribes states available.
+- Subscription Group reporting and segmentation filters are available for creating and targeting campaigns and Canvases.
+- Subscribe and Unsubscribe states available.
 
 ## SMS Subscription States
 There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional Subscription Group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
