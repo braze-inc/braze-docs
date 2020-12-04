@@ -34,7 +34,7 @@ This is a security requirement in the open standards specification that Braze We
 
 #### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Braze has prepared an [example of this approach][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28].
 
 ### Step 1: Configure your Site's Service Worker
 
@@ -134,3 +134,4 @@ appboy.logCustomEvent("prime-for-push");
 [4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain.md
