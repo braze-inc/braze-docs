@@ -131,5 +131,7 @@ valid_partner_list:
   url: /docs/partners/advertising_technologies/attribution/pypestream/
 - name: EduMe
   url: /docs/partners/channel_extensions/learning/edume/
+- name: Zendesk
+  url: /docs/partners/channel_extensions/workflow_automation/zendesk/
 
 ---
