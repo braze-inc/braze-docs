@@ -82,24 +82,25 @@ Keeping Request Body as Raw Text, you can start filling in your payload. We have
 ```
 {% endraw %}
 
-## Customization
+Please note the above fields of the payload are extensible and can be customised based on the [Zendesk Ticket API] [6]. 
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+### Step 4: Test
 
-## Using This Integration
+In the Test section you can ‘Send Test’ to preview if the ticket has been created on the Zendesk side.
 
-This should describe how to use the integration - let your reader know if they need to push a few buttons or if they don't need to do anything at all after the integration.
+![zendesk_test] [7]
 
-### Step 1: This Is a Short Description of Step One
+## User ID
 
-Just your typical step by step how to.
+In this case, as we know that our unique identifier matches between Braze and Zendesk, we have set the ‘requester_id’ field to be the Braze external_id {% raw %} `({{${user_id}}}` {% endraw %} field). Other standard attributes can be used, such as {% raw %} `{{${email_address}}}`  {% endraw %} or {% raw %} `{{${phone}}}`  {% endraw %} .
 
-## Use Cases
+We realise that user_id, email or phone numbers may not be the optimal solution for all customers to have a common identifier between Braze and Zendesk. An alternative method could utilise a custom attribute in the Braze profile to hold the unique_id of the Zendesk user, with that value called as the requester_id each time.
 
-This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
 
 [1]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [2]: https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\
 [3]: {% image_buster /assets/img_archive/zendesk_step1.gif %}
 [4]: https://developer.zendesk.com/rest_api/docs/support/introduction
 [5]: {% image_buster /assets/img_archive/zendesk_step2.png %}
+[6]: https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket
+[7]: {% image_buster /assets/img_archive/zendesk_test.gif %}
