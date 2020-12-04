@@ -11,36 +11,76 @@ hidden: false
 
 # Zendesk
 
-[Zendesk Support Suite](https://www.zendesk.com/support-suite/) offers businesses to have natural conversations with their customers through an omnichannel support, whether it’s email, chat, voice or social messaging apps. ZSS values customer support through tracking and prioritising interactions, allowing businesses to have a unified view of the customer through pulling in previous history too. Powerful tools such as a streamlined ticketing system allows businesses to reach out directly to customers with a personalised approach. 
+[Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses to have natural conversations with their customers through an omnichannel support, whether it’s email, chat, voice or social messaging apps. ZSS values customer support through tracking and prioritising interactions, allowing businesses to have a unified view of the customer through pulling in previous history too. Powerful tools such as a streamlined ticketing system allows businesses to reach out directly to customers with a personalised approach. 
+
+Braze offers capacity for a bi-directional server-to-server integration, utilising webhooks to sync support ticket data between Braze and Zendesk.
 
 ## Requirements
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
-
-
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-| Zendesk Admin | Zendesk | You will need to create a Zendesk API token.| The Zendesk API token is necessary to be able to send requests from Braze to the Zendesk Ticket endpoint. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| Zendesk Account & Account Information | Zendesk | https://`<your-zendesk-instance>`.zendesk.com/agent/admin | An active Zendesk Account (with administrator privileges) is required to utilise the Braze integration. The Zendesk API token is necessary to be able to send requests from Braze to the Zendesk Ticket endpoint. |
+| Common Identifier between Braze and Zendesk | Braze | For more information, see our [User Profile Lifecycle] [1] docs | A matching identifier is required. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Braze → Zendesk Integration
 ### Create tickets in Zendesk directly from Braze Campaign/Canvas
 
+This process will allow you to automate the creation of support tickets in Zendesk as a result of message engagement of user journeys within Braze. For example, creating a support ticket from a user answering negatively to an in-app message with the question “Enjoying our app?”, allowing your support team to reach out and offer assistance to the customer.
+
+Here, we utilise the Braze webhook channel to send data to Zendesk.
+
 Using this webhook template, customers can easily automate the creation of support tickets as a result of a user’s journey or message engagement within Braze. For example, you may want to automatically create a support ticket when a user receives a Braze in-app message that asks “Do you like our app?” and the user clicks “No”, so that your support team can reach out and offer help to satisfy the customer. 
 
+### Step 1: Webhook Channel Settings
+#### 1a
 
-### Step 1: This Is a Short Description of Step One
+Create a key/value pair. Setting “Content-Type” as the key and its value to “application/json”.
 
-Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
+####  1b
 
-### Step 2: This Step Will Describe Images
+Set Authorization as another key and its value as 
+{% raw %} `Basic {{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}, where email address is your Zendesk Admin email and api_token is the API generated following [these instructions] [2]. Please note that we are using Liquid syntax, therefore the email address and API token should be in curly brackets as shown below. 
 
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+![zendesk_step1] [3]
 
-### Step 3: How Many Steps
 
-Outline thorough usage of the integration - especially if it means inserting liquid into our message composer.
+### Step 2: Webhook URL
+
+For this use case of creating a ticket, the Webhook URL would be:
+
+`<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`. 
+
+Further use cases can be handled through [Zendesk Support APIs] [4], which would change the /api/v2/ endpoint accordingly at the end of the Webhook URL.
+
+![zendesk_step2] [5]
+
+### Step 3: Webhook Payload
+
+Keeping Request Body as Raw Text, you can start filling in your payload. We have already set up a Webhook Template called Zendesk: Create Ticket with some predefined fields:
+
+{% raw %}
+```
+{% assign ticket_type = 'question/incident/task/problem' %} << Choose one >>
+{% assign ticket_subject = '' %}
+{% capture ticket_body %}
+<< Your message here >>
+{% endcapture %}
+{% assign ticket_subject_tag = '' %}
+{% assign ticket_status = 'New' %}
+
+{
+"ticket": {
+"requester_id": "{{${user_id}}}",
+"type": "{{ ticket_type }}",
+"subject":  "{{ticket_subject}}",
+"comment":  { "body": "{{ticket_body}}" },
+"priority": "low/normal/high/urgent",
+"status": "{{ ticket_status }}"
+  }
+}
+```
+{% endraw %}
 
 ## Customization
 
@@ -58,4 +98,8 @@ Just your typical step by step how to.
 
 This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[1]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+[2]: https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\
+[3]: {% image_buster /assets/img_archive/zendesk_step1.gif %}
+[4]: https://developer.zendesk.com/rest_api/docs/support/introduction
+[5]: {% image_buster /assets/img_archive/zendesk_step2.png %}
