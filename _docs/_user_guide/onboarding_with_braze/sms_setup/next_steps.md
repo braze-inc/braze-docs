@@ -18,6 +18,9 @@ guide_featured_list:
 - name: Retargeting
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
   fa_icon: fas fa-dot-circle
+- name: User Phone Numbers
+  link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
+  fa_icon: fas fa-phone
 - name: Custom Keyword Handling
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: far fa-handshake

@@ -9,23 +9,23 @@ description: "Ready to get started with SMS? You can use it in our Campaigns or 
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: About SMS
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/about/
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/about_sms/
   fa_icon: fas fa-comment-dots
-- name: Terms to Know
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
-  fa_icon: fas fa-bookmark
 - name: SMS Laws & Regulations
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
   fa_icon: fas fa-gavel
-- name: SMS Subscription Groups
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
-  fa_icon: fas fa-users
-- name: User Phone Numbers
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/
-  fa_icon: fas fa-phone
+- name: Terms to Know
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
+  fa_icon: fas fa-bookmark
 - name: Short and Long Codes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card
+- name: SMS Message Sending
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
+  fa_icon: fas fa-comment-alt
+- name: SMS Subscription Groups
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
+  fa_icon: fas fa-users
 - name: User Data Migration
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
   fa_icon: fas fa-user
@@ -34,6 +34,6 @@ guide_featured_list:
   fa_icon: fas fa-forward
   
 ---
-
+<br>
 
 
