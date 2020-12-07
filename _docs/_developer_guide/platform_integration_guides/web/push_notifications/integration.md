@@ -34,7 +34,7 @@ This is a security requirement in the open standards specification that Braze We
 
 #### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
 
 ### Step 1: Configure your Site's Service Worker
 
