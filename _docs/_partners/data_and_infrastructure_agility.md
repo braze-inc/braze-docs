@@ -47,6 +47,6 @@ valid_partner_list:
   - name: RudderStack
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
   - name: Jebbit
-    url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
+    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/
 
 ---
