@@ -114,7 +114,7 @@ valid_partner_list:
 - name: Movable Ink
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
 - name: Jebbit
-  url: /docs/partners/data_and_infrastructure_agility/cutomer_data_platform/jebbit/
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/
 - name: Iterate
   url: /docs/partners/additional_channels/surveys/iterate/
 - name: Bluedot
