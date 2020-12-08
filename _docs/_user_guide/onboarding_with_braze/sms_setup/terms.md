@@ -10,9 +10,9 @@ glossaries:
   - name: SMS (Short Message Service)
     description: A messaging channel created in 1980 and one of the oldest texting technologies. It also happens to be one of the most wide-spread and more frequently used, of all texting channels. This channel is a more direct way to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. As such, SMS has more rules and regulations around it than other messaging channels.
   - name: Short Code
-    description: Either a short or a long code is required. <br> <br> This is a short, memorable 5-6 digit sequence that allows senders to send more messages at more consistent rates than long numbers (1 message per second).
+    description: This is a short, memorable 5-6 digit sequence that allows senders to send more messages at more consistent rates than long numbers (1 message per second).<br><br>Either a short or a long code is required.
   - name: Long Code
-    description: Either a short or a long code is required. <br> <br> This is the standard, 10-digit phone number (in most countries) that allows senders to send more messages at the rate of 1 message per second.
+    description: This is the standard, 10-digit phone number (in most countries) that allows senders to send more messages at the rate of 1 message per second.<br><br>Either a short or a long code is required.
   - name: Encoding
     description: The conversion of anything into a coded form. SMS content can be encoded in either GSM-7 or UCS-2.
   - name: GSM-7 Encoding (Global System for Mobile Communications)
@@ -28,7 +28,7 @@ glossaries:
   - name: Keyword
     description: "A short word that is sent to a short or long code to interact with a pre-defined SMS program or to request to OPT-OUT of a specific program or all programs on a code. For example, `STOP`. Keywords should <br> - be alphanumeric <br> - have no spaces <br> - be less than 10 (ten) characters. <br> <br> A specific keyword and short code combination may only be used on one active program at a time. If a keyword is entered that is already in use by another program, a validation error will appear. <br> <br> There are two mandatory keyword categories that all SMS content providers must comply with: `STOP` and `HELP`."
   - name: Mandatory Keyword HELP
-    description: For each program that is created in the SMS Campaign Manager platform, content for this keyword must be provided and has to meet the best practices and carrier compliance per country or region in which the SMS traffic is being sent and received. In most cases, this content should have a brief explanation of the SMS program, and how to OPTED-OUT.
+    description: For each program that is created in the SMS Campaign Manager platform, content for this keyword must be provided and has to meet the best practices and carrier compliance per country or region in which the SMS traffic is being sent and received. In most cases, this content should have a brief explanation of the SMS program, and how to OPT-OUT.
   - name: Global STOP Keywords
     description: Variations include `STOP`, `END`, `QUIT`, `UNSUBSCRIBE`, `CANCEL`, `STOPALL`. These are referred to as `Global-Stop-Keywords`. If any of these keywords are texted in to a short or long code, it results in the mobile number (the originating mobile phone number) being opted-out of every active SMS program on that code it is associated with.
   - name: Vanity Code
@@ -38,7 +38,7 @@ glossaries:
   - name: Alphanumeric Sender ID
     description: Alphanumeric Sender ID allows you to set your company name or brand as the Sender ID using alphanumeric characters when sending one-way messages to supported countries.
   - name: Toll-Free Number
-    description: An toll-free telephone number or is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.<br><br>Toll-Free messaging works best when your use case is person-to-person, such as customer support or sales, with both the sender and the recipient having a conversation via text.
+    description: An toll-free telephone number or freephone number is a telephone number that is billed for all arriving calls instead of incurring charges to the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.<br><br>Toll-Free messaging works best when your use case is person-to-person, such as customer support or sales, with both the sender and the recipient having a conversation via text.
   - name: One-Way Messaging
     description: One-way messaging allows you to communicate with your customers by sending text messages. One-way messaging is useful if you are implementing an alphanumeric sender ID in markets where long and short codes are not available. 
   - name: Two-Way Messaging

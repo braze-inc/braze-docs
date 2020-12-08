@@ -21,6 +21,9 @@ guide_featured_list:
 - name: User Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
   fa_icon: fas fa-phone
+- name: Keyword Management
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/#managing-keywords-and-auto-responses
+  fa_icon: far fa-handshake
 - name: Custom Keyword Handling
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
   fa_icon: far fa-handshake
@@ -39,7 +42,7 @@ guide_menu_list:
 - name: "MMS Short and Long Codes"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
   fa_icon: fas fa-phone-square
-- name: "Creating a MMS Campaign"
+- name: "Creating an MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   fa_icon: fas fa-table
 - name: "MMS FAQs"

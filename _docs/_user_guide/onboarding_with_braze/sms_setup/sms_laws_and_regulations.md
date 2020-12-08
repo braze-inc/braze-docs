@@ -31,10 +31,10 @@ In general, we encourage using your best judgment when approaching SMS sending. 
 __There are the six rules you should follow:__
 
 1. __Obtain explicit consent from users before sending them SMS.__ Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
-    - __The time and date the user gave consent.__
-    - __The type of SMS messaging they consented to. (e.g. marketing or transactional messaging)__
-    - __The users' phone number__
-    - __The language in which they opted-in.__<br><br>
+- __The time and date the user gave consent__
+- __The type of SMS messaging they consented to__
+- __The users' phone number__
+- __The language in which they opted-in__<br><br>
 
 2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
 
@@ -51,8 +51,8 @@ __There are the six rules you should follow:__
 Here are some links you might need to consult as you build up your SMS campaign:
 
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
-- Twilio's [Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
-- IBM's [Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
+- [Twilio's Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
+- [IBM's Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
 
 ## Considerations for Compliance
 

@@ -16,9 +16,9 @@ channel:
   - SMS
 ---
 
-# Creating an SMS Campaign
+# Create an SMS Campaigns
 
-> SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
+> SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
 ## Step 1: Choose Where to Build Your Message
 
@@ -442,12 +442,34 @@ If you're using Campaigns, you'll have the opportunity to confirm it's details. 
 
 ![SMS Confirm]({% image_buster /assets/img/sms_campaign_confirm.gif %})
 
-### Retargeting
+## Retargeting
 
 In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.
 
-### Filter for users who have recently recieved any SMS
+### Filter Users who have Recently Recieved Any SMS
 
-### Filter for users who have recieved a specific SMS campaign
+1. To filter for users who have recently received any SMS, create or edit an SMS campaign. 
+2. Navigate to the __Target Users__ step.
+3. Under Additional Filters, select the __Last Received SMS__ filter. Next, select the time frame for your SMS filter.
 
-### Trigger messages as users recieve as SMS from a specific campaign
+![Filter 1][1]
+
+### Filter Users who have Recieved a Specific SMS Campaign
+
+1. To filter for users who have received a specific SMS campaign, create or edit an SMS campaign. 
+2. Navigate to the __Target Users__ step. 
+3. Under additional filters, select the __Received Messages from Campaign__ filter and choose the campaign your would like to use. 
+
+![Filter 2][2]
+
+### Trigger Messages as Users Recieve an SMS from a Specific Campaign
+
+1. To trigger messages as users recieve an SMS from a specific campaign, create or edit an SMS campaign. 
+2. Navigate to the __Delivery__ step. 
+3. Slect __Interact with Campaign__ as the new trigger action. Next, select __Receive SMS__ as the action and then select the SMS campaign you would like to use. 
+
+![Trigger][3]
+
+[1]: {% image_buster /assets/img/sms/filter1.png %}
+[2]: {% image_buster /assets/img/sms/filter2.png %}
+[3]: {% image_buster /assets/img/sms/trigger.png %} 

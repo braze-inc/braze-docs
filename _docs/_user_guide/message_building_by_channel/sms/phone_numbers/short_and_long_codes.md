@@ -1,7 +1,7 @@
 ---
 nav_title: "Short and Long Codes"
-page_order: 3
-description: "This article will walk you through the different types of short and long codes at Braze and how to begin applying for a short code."
+page_order: 1
+description: "This article will walk you through important concepts involved in sending phone numbers with Braze. Included are considerations to keep in mind when using short codes and long codes, an explanation of the application process for a short code, and other topics like handling unknown numbers and high volume and multi-country sending."
 page_type: reference
 tool:
   - Dashboard
@@ -14,12 +14,12 @@ platform:
 
 channel:
   - SMS
-
 ---
+
 
 # Short and Long Codes
 
-Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code and what type of short code you might want in addition to the long code you will already be assigned.
+Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
 
 ## Types of Sending Numbers
 
@@ -138,7 +138,6 @@ You also must inform us, regardless of which number you use, of how many message
 {% alert important %}
 If you have your own short code, reach out to your Customer Success Manager  __during the onboarding process__ to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
-
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [3]: {% image_buster /assets/img/sms/sms_graph.png %}

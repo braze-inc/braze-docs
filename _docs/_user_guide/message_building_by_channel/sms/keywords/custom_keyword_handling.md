@@ -54,7 +54,38 @@ Note: This feature relies on user aliases in order to properly assign custom eve
 1. alias_label: `phone` and alias_name: `users_phone_number`
 2. Phone numbers must be in the E.164 format (e.g +19173337578). 
 
-If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol. 
+If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.
+
+## Managing Keywords and Auto Responses
+
+SMS with Braze gives you the option to create keyword triggers, custom responses, and define keyword sets for multiple languages. 
+
+### Add Keyword Triggers
+In addition to the default opt-in and opt-out keywords listed above, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
+
+![Home][1]{: style="float:right;max-width:40%;margin-left:10px;""}
+1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups. 
+2. Under SMS Global Keywords, select a keyword category to add a keyword to by selecting the pencil icon. 
+3. In the dialogue box that pops up, add a keyword you would like to trigger this keyword category. Note that keywords are case sensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed.
+
+### Manage Responses
+You are able to manage your own responses that get sent to users after they text in a keyword to a specific keyword category.
+1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. 
+2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon. 
+3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six Rules to get Compliance Right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response.<br><br>
+![Responses][2]
+
+### Define Keyword Sets
+You can create keyword sets for different languages so the keywords received for different languages can be appropriately replied to.
+![Language][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:15px;"}
+
+1. To define a keyword set, navigate to the SMS section of the dashboard located under Subscription Groups. 
+2. Under SMS Global Keywords, select __Add a Language__, and choose the appropriate language for your keyword set. Once clicked, a new global keyword list will be added to fill out with the necessary keywords and responses in the language you chose.<br>
+
+[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
+[1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
+[2]: {% image_buster /assets/img/sms/keyword_home.png %}
+[3]: {% image_buster /assets/img/sms/keyword_language.png %} 
 
 [unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
 [endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/

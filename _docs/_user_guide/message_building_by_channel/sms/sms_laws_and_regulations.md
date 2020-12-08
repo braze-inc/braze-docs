@@ -21,7 +21,7 @@ channel:
 Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
 {% alert warning %}
-This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements.  To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
+This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements. To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
 {% endalert %}
 
 ## The Six Rules to Get Compliance Right
@@ -31,10 +31,10 @@ In general, we encourage using your best judgment when approaching SMS sending. 
 __There are the six rules you should follow:__
 
 1. __Obtain explicit consent from users before sending them SMS.__ Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
-    - __The time and date the user gave consent.__
-    - __The type of SMS messaging they consented to. (e.g. marketing or transactional messaging)__
-    - __The users' phone number__
-    - __The language in which they opted-in.__<br><br>
+- __The time and date the user gave consent__
+- __The type of SMS messaging they consented to__
+- __The users' phone number__
+- __The language in which they opted-in__<br><br>
 
 2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
 
@@ -51,8 +51,8 @@ __There are the six rules you should follow:__
 Here are some links you might need to consult as you build up your SMS campaign:
 
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
-- Twilio's [Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
-- IBM's [Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
+- [Twilio's Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
+- [IBM's Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
 
 ## Considerations for Compliance
 
@@ -78,7 +78,7 @@ Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by
 
 Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act to ensure compliance (in the U.S.)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
 
-Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider the compliance laws when planning your campaigns.
+Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider compliance laws when planning your campaigns.
 
 ### Content
 
