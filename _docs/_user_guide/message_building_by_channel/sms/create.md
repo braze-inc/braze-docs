@@ -16,7 +16,7 @@ channel:
   - SMS
 ---
 
-# Create an SMS Campaigns
+# Create an SMS Campaign
 
 > SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
@@ -86,7 +86,7 @@ Character limits for messages are:
 - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit per message segment.
 - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) has a 67 character limit per message segment.
 
-Languages such as Chinese, Korean or Japanese must be transferred using the 16-bit UCS-2 character encoding.
+Languages such as Chinese, Korean, or Japanese must be transferred using the 16-bit UCS-2 character encoding.
 
   {% endtab %}
 
@@ -296,7 +296,7 @@ if(number.length == 1) { number = "0" + number; }
 return "0x" + number;
 },
 /**
-take a string and return a list of the unicode characters
+take a string and return a list of the Unicode characters
 */
 unicodeCharacters: function (string) {
 var chars = smsutil.map(string, smsutil.id);
@@ -311,7 +311,7 @@ while (chars.length > 0) {
 return result;
 },
 /**
-take a string and return a list of the unicode codepoints
+take a string and return a list of the Unicode codepoints
 */
 unicodeCodePoints: function (string) {
 var charCodes = smsutil.map(string, function (x) { return x.charCodeAt(0); });
@@ -328,8 +328,8 @@ while (charCodes.length > 0) {
 return result;
 },
 /**
-Encode a single (unicode) character into UTF16 "bytes"
-A single unicode character may be 2 javascript characters
+Encode a single (Unicode) character into UTF16 "bytes"
+A single Unicode character may be 2 javascript characters
 */
 encodeCharUtf16: function (char) {
 return smsutil.concatMap(char, function (c) {
@@ -438,36 +438,26 @@ You can also set custom conversion events based on your specific use case. Get c
 
 ## Step 7: Confirm Details and Launch!
 
-If you're using Campaigns, you'll have the opportunity to confirm it's details. If you're using Canvas, be sure to confirm the details of each of the pieces.
+If you're using Campaigns, you'll have the opportunity to confirm its details. If you're using Canvas, be sure to confirm the details of each of the pieces.
 
 ![SMS Confirm]({% image_buster /assets/img/sms_campaign_confirm.gif %})
 
 ## Retargeting
 
-In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.
+In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. 
 
-### Filter Users who have Recently Recieved Any SMS
+### Filter Users by SMS
+Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder. 
 
-1. To filter for users who have recently received any SMS, create or edit an SMS campaign. 
-2. Navigate to the __Target Users__ step.
-3. Under Additional Filters, select the __Last Received SMS__ filter. Next, select the time frame for your SMS filter.
+__Filter by Last Received SMS__<br>
+![Filter 1][2]
 
-![Filter 1][1]
+__Filter by Received Messages from SMS Campaign__<br>
+Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
+![Filter 2][1]
 
-### Filter Users who have Recieved a Specific SMS Campaign
-
-1. To filter for users who have received a specific SMS campaign, create or edit an SMS campaign. 
-2. Navigate to the __Target Users__ step. 
-3. Under additional filters, select the __Received Messages from Campaign__ filter and choose the campaign your would like to use. 
-
-![Filter 2][2]
-
-### Trigger Messages as Users Recieve an SMS from a Specific Campaign
-
-1. To trigger messages as users recieve an SMS from a specific campaign, create or edit an SMS campaign. 
-2. Navigate to the __Delivery__ step. 
-3. Slect __Interact with Campaign__ as the new trigger action. Next, select __Receive SMS__ as the action and then select the SMS campaign you would like to use. 
-
+### Trigger Messages as Users Receive SMS
+To trigger messages as users receive SMS messages from a specific campaign, select __Interact with Campaign__ as the trigger action. Next, select __Receive SMS__ and the SMS campaign you would like to use. <br><br>
 ![Trigger][3]
 
 [1]: {% image_buster /assets/img/sms/filter1.png %}
