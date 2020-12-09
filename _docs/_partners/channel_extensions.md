@@ -40,5 +40,8 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: EduMe
     url: /docs/partners/channel_extensions/learning/edume/
+  - name: Zendesk
+    url: /docs/partners/channel_extensions/support/zendesk/
+    
 
 ---
