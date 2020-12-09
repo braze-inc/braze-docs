@@ -1,6 +1,6 @@
 ---
 nav_title: Zendesk
-page_order: 1
+page_order: 9
 
 description: "Braze and Zendesk integration through webhooks. Send custom data from Braze to create a ticket in Zendesk Support Suite"
 alias: /partners/zendesk/
