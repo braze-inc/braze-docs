@@ -18,7 +18,6 @@ channel:
 
 # SMS Message Sending
 
-
 ## SMS Sending Basics
 
 Messaging can be complicated, but it doesn't have to be. Listed below are the fundamentals of SMS message sending at Braze including the importance of subscription groups, the requirements for SMS segments and message bodies, as well as advanced customization options available.
@@ -44,7 +43,8 @@ Want to learn how to create an SMS campaign? Visit our SMS onboarding [Next Step
 ### Multi-Country SMS Sending
 Some brands may wish to send to a group of users that have phone numbers from different countries. In order to send an SMS message to a phone number in a particular country, it is best practice to use a long code or short code that is from the same country. In fact, __short codes can only send SMS to phone numbers from the same country the short code was created in__. 
 
-To overcome this limitation, during the Subscription Groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. Once completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one Canvas step to target relevant users.
+To overcome this limitation, during the Subscription Groups [setup process][5], groups can be set up to hold long and short codes from multiple different countries. Once completed, sending phone numbers with the same country code as the target user's phone number will automatically be used when launching a campaign. You will not have to create separate campaigns for users with phone numbers with different country codes, allowing you to launch one campaign or use one canvas step to target relevant users.
+
 
 ![picture][2]
 
@@ -60,7 +60,7 @@ To overcome this limitation, during the Subscription Groups [setup process][5], 
 
 Plan on doing some high volume sending? We have some best practices for you to ensure it runs smoothly.
 
-- Adjust the delivery speed rate-limiting for your campaign/Canvases as needed, based on target audience size. This will ensure that (1) you reach the send volume that you need and (2) Braze sends the messages at the rate that Twilio is expecting and can handle.
+- Adjust the delivery speed rate-limiting for your campaign/canvases as needed, based on target audience size. This will ensure that (1) you reach the send volume that you need and (2) Braze sends the messages at the rate that Twilio is expecting and can handle.
 - Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
