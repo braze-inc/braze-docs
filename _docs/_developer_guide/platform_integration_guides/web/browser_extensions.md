@@ -108,7 +108,7 @@ appboy.initialize("YOUR-API-KEY-HERE", {
 
 ## Push
 
-Extension Popup dialogs don't allow for push prompts (they don't have the URL bar in the navigation). So, in order to register and request Push Permission within an extension's Popup dialog, you'll have to make use of alternate domain workaround, as described in our [Alternate Push Domain][12] guide.
+Extension Popup dialogs don't allow for push prompts (they don't have the URL bar in the navigation). So, in order to register and request Push Permission within an extension's Popup dialog, you'll have to make use of alternate domain workaround, as described in our [Alternate Push Domain][11] guide.
 
 [1]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 [2]: https://developer.chrome.com/extensions/background_pages
@@ -120,5 +120,4 @@ Extension Popup dialogs don't allow for push prompts (they don't have the URL ba
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/
 [9]: https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze
 [10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initialize
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/cross_domain_push.md
-[12]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain.md
+[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
