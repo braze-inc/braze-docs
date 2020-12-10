@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 platform: iOS
-page_order: 4
+page_order: 5
 
 ---
 
