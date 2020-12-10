@@ -13,7 +13,7 @@ hidden: false
 
 [Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support, using email, web chat, voice or social messaging apps. ZSS values customer support through tracking and prioritising interactions, allowing businesses to have a unified historical view of the customer. Powerful tools such as a streamlined ticketing system allow businesses to reach out directly to customers with a personalised approach. 
 
-Braze offers capacity for a bi-directional server-to-server integration, utilising webhooks to sync support ticket data between Braze and Zendesk.
+Braze offers capacity for a server-to-server integration, utilising webhooks to sync support ticket data between Braze and Zendesk.
 
 
 
@@ -22,7 +22,7 @@ Braze offers capacity for a bi-directional server-to-server integration, utilisi
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
 | Zendesk Account & Account Information | Zendesk | https://`<your-zendesk-instance>`.zendesk.com/agent/admin | An active Zendesk Account (with administrator privileges) is required to utilise the Braze integration. The Zendesk API token is necessary to be able to send requests from Braze to the Zendesk Ticket endpoint. |
-| Common Identifier between Braze and Zendesk | Braze | For more information, see our [User Profile Lifecycle] [1] docs | A matching identifier is required. |
+| Common Identifier between Braze and Zendesk | Braze | For more information, see our [User Profile Lifecycle] [1] docs | A [common identifier](##common-identifier) between Braze and Zendesk is recommended. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Braze → Zendesk Integration
@@ -60,10 +60,7 @@ Further use cases can be handled through [Zendesk Support APIs] [4], which would
 ![zendesk_step2] [5]
 
 ### Step 4: Webhook Payload
-Now define the details about the ticket created in Zendesk, such as ticket type, subject and status. To do this, keep the request body as ‘Raw Text’, then you start filling your payload. Please see below for an example: 
-
-Keeping Request Body as Raw Text, you can start filling in your payload. We have already set up a Webhook Template called Zendesk: Create Ticket with some predefined fields:
-
+Now define the details about the ticket created in Zendesk, such as ticket type, subject and status. To do this, keep the request body as ‘Raw Text’, then you start filling your payload. Please see below for an example:
 {% raw %}
 ```
 {% assign ticket_type = 'question/incident/task/problem' %} << Choose one >>
@@ -85,7 +82,6 @@ Keeping Request Body as Raw Text, you can start filling in your payload. We have
 "status": "{{ ticket_status }}"
   }
 }
-
 ```
 {% endraw %}
 
