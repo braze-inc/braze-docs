@@ -134,4 +134,4 @@ appboy.logCustomEvent("prime-for-push");
 [4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain.md
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
