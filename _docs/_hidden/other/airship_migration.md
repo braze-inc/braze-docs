@@ -45,7 +45,7 @@ Braze requires separate channels for push (one for iOS, one for Android).
 
 | __Braze Perspective:__<br>We enable our customers to get the best of both worlds instead of having to make concessions. Being able to leverage the individual channel to its full capacity offers more flexibility for the marketer and an improved user experience. This allows us to adopt the latest features of each OS; for example, Android supported rich notifications before iOS. |
 {: .reset-td-br-1}
-
+ 
 Braze is able to send push notifications to users who do not update their application with the Braze SDK installed. Given that Braze has a valid push token, Braze can send the push notification without the Braze SDK as APNs will handle the rest. It is crucial to note that push message __analytics will not be available for builds without the Braze SDK__.
 
 ##### Sharing Tokens
