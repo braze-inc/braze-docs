@@ -13,7 +13,7 @@ description: "This article outlines details about the Update Scheduled API Trigg
 ---
 {% api %}
 # Update Scheduled API Triggered Canvases
-{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/update
 {% endapimethod %}
 
