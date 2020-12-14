@@ -7,7 +7,7 @@ page_order: 2
 
 # Defining a News Feed Category
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain "category". This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature see [Braze Academy][40].
+Instances of the Braze News Feed can be configured to only receive cards from a certain "category". This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature visit our [News Feed Best Practices][40] doc.
 
 News Feed Categories can be defined by calling the following methods as you load the News Feed:
 

@@ -16,13 +16,16 @@ guide_featured_list:
   fa_icon: fas fa-server
 - name: Aborting Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-  fa_icon: fas fa-undo
+  fa_icon: fas fa-eject
 - name: Connected Content Retries
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  fa_icon: fas fa-reply
+  fa_icon: fas fa-undo
 - name: Public APIs
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
   fa_icon: far fa-dot-circle
+- name: Pulling User Profile Data
+  link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
+  fa_icon: fas fa-users
 ---
 
 <br>

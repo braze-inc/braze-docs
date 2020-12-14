@@ -52,7 +52,9 @@ If you require a faster sending speeds for unknown phone numbers, reach out to y
 
 Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
 1. alias_label: `phone` and alias_name: `users_phone_number`
-2. Phone numbers must be in the E.164 format (e.g +19173337578)
+2. Phone numbers must be in the E.164 format (e.g +19173337578). 
+
+If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol. 
 
 [unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
 [endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/

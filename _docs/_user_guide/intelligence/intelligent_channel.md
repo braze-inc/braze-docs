@@ -19,7 +19,7 @@ So, if a user only has data for one (1) channel, or less than three (3) messages
 For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Intelligent Channel" filter as "Mobile" and use __OR__ to add a second "Intelligent Channel" filter set to "Not Enough Data". This way users who prefer push will receive one as well as users for whom there isn't enough data to know. A separate campaign with the Most Engaged filter set to "Email" could address users who prefer email.
 
 {% alert note %}
-Campaigns and Canvas Steps that ignore [Frequency Capping](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
+Campaigns and Canvas Steps that ignore [Frequency Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
 {% endalert %}
 
 ## The "Mobile Push" Option

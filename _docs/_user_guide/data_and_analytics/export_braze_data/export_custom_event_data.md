@@ -19,4 +19,8 @@ You can export the following CSVs:
     - (Optional) Custom Events for Different Segments
 - Custom Events per MAU
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 [14]: {% image_buster /assets/img_archive/Export_events.png %}

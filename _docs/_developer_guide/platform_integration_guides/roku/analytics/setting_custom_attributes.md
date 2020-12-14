@@ -107,7 +107,7 @@ You can set the following email subscription statuses for your users programmati
 
 >  These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
 
-The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See Braze Academy for details][10].
+The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
 
 Example usage:
 ```

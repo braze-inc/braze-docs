@@ -2,12 +2,12 @@
 nav_title: Customization
 platform: FireOS
 page_order: 2
-
 ---
-## Customization {#in-app-message-customization}
+
+# Customization {#in-app-message-customization}
 All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
-### Key-Value Pair Extras
+## Key-Value Pair Extras
 
 In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
 
@@ -19,7 +19,7 @@ Map<String, String> getExtras()
 
 See the [Javadoc][44] for more information.
 
-### Custom Styling
+## Custom Styling
 
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the Braze SDK's [`styles.xml`][6] file.
 
@@ -45,7 +45,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all attributes to be correctly set. Please note that these custom styles are for changes to individual UI elements, not wholesale changes to layouts. Layout-level changes need to be handled with custom views.
 
-#### Using Custom Styling to Set a Custom Font
+### Using Custom Styling to Set a Custom Font
 
 Braze allows for setting a custom font using the [font family guide][79]. To use it, override the style for message text, headers, and/or button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -67,7 +67,7 @@ Aside from the `Appboy.InAppMessage.Button` style for button text, the style for
 
 >  As with other custom styles, the entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
 
-### Setting Custom Listeners
+## Setting Custom Listeners
 
 Before customizing in-app messages with custom listeners, it's important to understand the [`AppboyInAppMessageManager`][34], which handles the majority of in-app message handling. As described in [Step 1][5], it must be registered for in-app messages to function appropriately.
 
@@ -77,11 +77,11 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IInAppMessageViewFactory`][42] - Implement to [build custom in-app message views][12].
 - [`IInAppMessageAnimationFactory`][20] - Implement to [define custom in-app message animations][22].
 
-#### Setting a Custom Manager Listener
+### Setting a Custom Manager Listener
 
 The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
 
-##### Step 1: Implement an In-App Message Manager Listener
+#### Step 1: Implement an In-App Message Manager Listener
 
 Create a class that implements [`IInAppMessageManagerListener`][21]
 
@@ -93,7 +93,7 @@ For example, if you set a custom manager listener, when an in-app message is rec
 
 - See [`CustomInAppMessageManagerListener.java`][36] in our Droidboy sample app for an implementation example.
 
-##### Step 2: Instruct Braze to use your In-App Message Manager Listener
+#### Step 2: Instruct Braze to use your In-App Message Manager Listener
 
 Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
@@ -102,7 +102,7 @@ to use your custom `IInAppMessageManagerListener` instead of the default listene
 
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
-##### In-Depth: Altering In-App Messages Before Display
+#### In-Depth: Altering In-App Messages Before Display
 
 When a new in-app message is received, and there is already an in-app message being displayed, the new message will be put onto the top of the stack and can be displayed at a later time.
 
@@ -132,17 +132,17 @@ On Android, this is done by calling `logClick` and `logImpression` on in-app mes
 
 >  Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`][67]. Calling this method requests Braze to display the next available in-app message from the stack.
 
-#### Setting a Custom View Factory
+### Setting a Custom View Factory {#custom-view}
 
 Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases.  However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible via setting a custom view factory.
 
-##### Step 1: Implement an In-App Message View Factory
+#### Step 1: Implement an In-App Message View Factory
 
 Create a class that implements [`IInAppMessageViewFactory`][42]
 
 - See [`CustomInAppMessageViewFactory.java`][43] in our Droidboy sample app for an implementation example.
 
-##### Step 2: Instruct Braze to use your In-App Message View Factory
+#### Step 2: Instruct Braze to use your In-App Message View Factory
 
 Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
@@ -151,7 +151,7 @@ to use your custom `IInAppMessageViewFactory` instead of the default view factor
 
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
-##### In-Depth: Implementing a Braze View Interface
+#### In-Depth: Implementing a Braze View Interface
 
 Braze's `slideup` in-app message view implements [`IInAppMessageView`][25].  Braze's `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24].  Implementing one of these classes will allow Braze to add click listeners to your custom view where appropriate.  All Braze view classes extend Android's [View][18] class.
 
@@ -159,17 +159,17 @@ Implementing `IInAppMessageView` allows you to define a certain portion of your 
 
 - See [`CustomInAppMessageView.java`][26] in our Droidboy sample app for an implementation example.
 
-#### Setting a Custom Animation Factory
+### Setting a Custom Animation Factory
 
 In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible via setting a custom animation factory.
 
-##### Step 1: Implement an In-App Message Animation Factory
+#### Step 1: Implement an In-App Message Animation Factory
 
 Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
 - See [`CustomInAppMessageAnimationFactory.java`][9] in our Droidboy sample app for an implementation example.
 
-##### Step 2: Instruct Braze to use your In-App Message View Factory
+#### Step 2: Instruct Braze to use your In-App Message View Factory
 
 Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
@@ -178,7 +178,7 @@ to use your custom `IInAppMessageAnimationFactory` instead of the default animat
 
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
-### Setting Fixed Orientation
+## Setting Fixed Orientation
 
 To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener][19]. Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method.
 
@@ -190,17 +190,22 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 }
 ```
 
-## Button Text Capitalization
-
-Android Material Design specifies that Button text should be upper case by default. Braze's in-app message buttons follow this convention as well.
-
-## Youtube in HTML in-app messages
-
-Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also, that hardware acceleration is only available on API versions 11 and above.
-
 ## GIFs {#gifs-IAMs}
 
 {% include archive/android/gifs.md channel="in-app messages" %}
+
+## Advanced Notes
+### Android Dialogs
+
+Braze doesn't support displaying in-app messages in [Android Dialogs][39] at this time.
+
+### Button Text Capitalization
+
+Android Material Design specifies that Button text should be upper case by default. Braze's in-app message buttons follow this convention as well.
+
+### Youtube in HTML in-app messages
+
+Starting in Braze Android SDK version 2.0.1, Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][71] for more details. Also, that hardware acceleration is only available on API versions 11 and above.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java

@@ -25,3 +25,7 @@ For information on your users' phone operating systems, screen resolutions, wire
 {{site.data.alerts.note}}
 Carrier and Device data is sampled and aggregated for the corresponding reports.
 {{site.data.alerts.end}}
+
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}

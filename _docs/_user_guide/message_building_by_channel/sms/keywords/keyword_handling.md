@@ -68,6 +68,33 @@ Please note that other languages do NOT come with preset keywords/responses like
 
 ![picture][5]
 
+## Custom Keyword Categories
+
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories. This allows you to identify arbitrary keywords and set up responses specific to your business. An example category might be "PROMO" or "DISCOUNT" which might prompt a response about promos that are happening this month. 
+
+These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle. 
+
+![picture][12]
+
+### Create a Custom Category
+![picture][13]{: style="float:right;max-width:40%;margin-left:10px;"}
+To create a custom keyword category, edit the appropriate subscription group, and click "Add Custom Keyword Category". Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
+
+Once created, this keyword category will be available to [filter]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#filter-by-recency) and [trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword)  against in your campaigns and Canvases.
+
+Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
+
+### Lifecycle Specific Keywords
+
+If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g during their first initial onboarding) to receive a response, you can use the trigger "Send inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. 
+
+#### Canvas
+
+![picture][14]{: style="max-width:80%;"}
+
+#### Campaign
+
+![picture][15]{: style="max-width:80%;"}
 
 ## Retargeting
 
@@ -107,3 +134,7 @@ Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_gu
 [9]: {% image_buster /assets/img/sms/sms_currents.png %}
 [10]: {% image_buster /assets/img/sms/custom_category.png %}
 [11]: {% image_buster /assets/img/sms/keyword_list.png %}
+[12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}
+[13]: {% image_buster /assets/img/sms/sms_custom_step.png %}
+[14]: {% image_buster /assets/img/sms/canvas_trigger.png %}
+[15]: {% image_buster /assets/img/sms/campaign_trigger.png %}

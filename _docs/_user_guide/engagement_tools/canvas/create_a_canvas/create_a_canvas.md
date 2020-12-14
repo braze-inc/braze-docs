@@ -177,6 +177,10 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
+Select desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+
+![Canvas Advancement Behavior][20]
+
 Press the "Done" button once you've finished configuring your Step.
 
 {% tabs local %}
@@ -187,7 +191,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 
 __Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on the Canvas Entry Object and Properties, check out our [Documentation](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
+For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}
@@ -204,7 +208,7 @@ For more information on Custom Event Properties, check out our [Documentation]({
 
 Add more Steps by pressing the blue plus icon:
 
-![Canvas More Step][17]
+![Canvas More Step][17]{: style="max-width:75%;"}
 
 ## Step 4: Use Multivariate Testing Using Canvas
 
@@ -241,6 +245,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [18a]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
+[20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
 [link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
 [21]:{% image_buster /assets/img_archive/Journey_2.png %}
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}

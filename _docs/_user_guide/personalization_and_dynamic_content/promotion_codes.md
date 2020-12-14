@@ -90,7 +90,7 @@ Remaining code count can be found in the "Remaining" column of the promotion cod
 
 This code count can also be found when revisited a pre-existing promotion code list page. 
 
-![Promo Codes 13][13]{: style="max-width:30%"}
+![Promo Codes 13][13]{: style="max-width:50%"}
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}

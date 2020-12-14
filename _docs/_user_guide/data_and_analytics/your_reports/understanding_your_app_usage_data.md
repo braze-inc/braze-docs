@@ -21,7 +21,8 @@ This is simply the total number of users that we have recorded using your app at
 
 ## Lifetime Sessions
 
-This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, please see [this page][4].
+This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, please visit the cooresponding 
+[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/) session tracking developer articles.
 
 ## Monthly Active Users
 
@@ -58,4 +59,3 @@ Daily Sessions per MAU is the ratio of Daily Sessions to MAU on a given day. Wha
 [1]: {% image_buster /assets/img_archive/Usage_Page.png %}
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {{site.baseurl}}/help/faqs/

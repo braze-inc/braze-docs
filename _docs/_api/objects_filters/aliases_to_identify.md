@@ -20,18 +20,19 @@ An API request with any fields in the Attributes Object will create or update an
 ##  Object Body
 
 ```json
-
 {
-   "aliases_to_identify" : (required, array of Aliases to Identify Object)
-   {
-     "external_id" : (required, string) see External User ID below,
-     // external_ids for users that do not exist will return a non-fatal error.
-     // See Server Responses for details.
-     "user_alias" : {
-       "alias_name" : (required, string),
-       "alias_label" : (required, string)
-     }
-   }
+  "aliases_to_identify" : (required, array of Aliases to Identify Object)
+  [
+    {
+      "external_id" : (required, string) see External User ID below,
+      // external_ids for users that do not exist will return a non-fatal error.
+      // See Server Responses for details.
+      "user_alias" : {
+        "alias_name" : (required, string),
+        "alias_label" : (required, string)
+      }
+    }
+  ]
 }
 ```
 

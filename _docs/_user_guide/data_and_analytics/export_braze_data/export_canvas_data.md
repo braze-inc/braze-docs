@@ -11,4 +11,8 @@ All of the analytics from your Braze Canvases can be exported to a CSV. From the
 
 ![canvasexport][1]
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 [1]: {% image_buster /assets/img/canvas_csv_export.png %}

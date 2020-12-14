@@ -50,8 +50,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
 - name: Lob
   url: /docs/partners/additional_channels/direct_mail/lob/
-- name: Telesign
-  url: /docs/partners/additional_channels/sms/telesign/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: Looker
@@ -107,8 +105,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/loyalty/talonone/
 - name: Fivetran
   url: /docs/partners/channel_extensions/workflow_automation/fivetran/
-- name: Wavecell
-  url: /docs/partners/additional_channels/sms/wavecell/
 - name: Rokt Calendar
   url: /docs/partners/channel_extensions/calendar/rokt_calendar/
 - name: Passkit
@@ -117,6 +113,8 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/loyalty/voucherify/
 - name: Movable Ink
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
+- name: Jebbit
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/
 - name: Iterate
   url: /docs/partners/additional_channels/surveys/iterate/
 - name: Bluedot
@@ -125,5 +123,13 @@ valid_partner_list:
   url: /docs/partners/data_augmentation/recommendation/amazon_personalize/
 - name: Vizbee
   url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
+- name: RudderStack
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
+- name: Dyspatch
+  url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
+- name: Pypestream
+  url: /docs/partners/advertising_technologies/attribution/pypestream/
+- name: EduMe
+  url: /docs/partners/channel_extensions/learning/edume/
 
 ---

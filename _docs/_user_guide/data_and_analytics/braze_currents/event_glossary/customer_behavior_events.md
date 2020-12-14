@@ -25,9 +25,9 @@ Customer Behavior and User Events events are comprised of __user specific__ prop
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
-{% endalert %}
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
 
+{% endalert %}
 {% api %}
 
 ## Custom Events
@@ -44,7 +44,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "name": (string) name of the custom event,
   "app_id": (string) id for the app on which the user action occurred,
@@ -86,7 +86,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "product_id": (string) id of the product purchased,
   "price": (float) price of the purchase,
   "currency": (string) three letter alpha ISO 4217 currency code,
@@ -131,7 +131,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
@@ -163,7 +163,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -195,7 +195,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
   "duration": (float) seconds session lasted,
   "app_id": (string) id for the app on which the user action occurred,
@@ -223,7 +223,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "longitude": (float) longitude of recorded location,
   "latitude": (float) latitude of recorded location,
   "altitude": (float) altitude of recorded location,
@@ -267,7 +267,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of the device used for the action,
@@ -296,7 +296,7 @@ Please note that this is not fired when the user actually uninstalls the app - t
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred
 }
 ```
@@ -319,7 +319,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "source": (string) the source of the attribution
 }
 ```
@@ -343,7 +343,7 @@ This user event occurs every time a new user is created within their app group. 
   "app_group_id": (string) AppGroup API id
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in milliseconds since the epoch,
+  "time": (int) UTC time of the event in milliseconds since the epoch,
   "random_bucket_number": (int) new random bucket number
   "prev_random_bucket_number":  (int) old random bucket number, optional
 }
