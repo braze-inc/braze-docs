@@ -1,7 +1,7 @@
 ---
 nav_title: Adobe
 alias: /partners/adobe/
-description: ""
+description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users."
 page_type: partner
 ---
 
@@ -62,10 +62,10 @@ Activate the data you have in the Adobe Real-Time CDP by mapping segments to the
 
 Listed below are the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit their [Segment Documentation](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
 
-1. Select and activate the Braze destination, this will open the Segment Wizard.
+1. Select and activate the Braze destination.
 2. Select applicable segments.
 4. Configure scheduling and file names for each segment you export.
-5. Select Attributes to send to Braze.
+5. Select attributes to send to Braze.
 6. Review and verify activation.
 
 ### Step 6: Field Mapping
