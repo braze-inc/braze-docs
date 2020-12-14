@@ -32,6 +32,7 @@ module Jekyll
 
           if @results.code != '200'
             puts 'Error returning results: ' + url
+            context['site']['data'][url] = '{}'
             return '{}'
           else
             if @results.body
@@ -49,7 +50,12 @@ module Jekyll
     end
 
     def fetchContent(url)
-      Net::HTTP.get_response(URI.parse(URI.encode(url.strip)))
+      link = URI.parse(URI.encode(url.strip))
+      http = Net::HTTP.new(link.host, link.port)
+      http.open_timeout = 60
+      http.read_timeout = 120
+      res = Net::HTTP.get_response(link)
+      return res
     end
   end
 end
