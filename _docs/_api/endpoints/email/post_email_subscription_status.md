@@ -15,7 +15,7 @@ description: "This article outlines the usage of and parameters for changing a U
 ---
 {% api %}
 # Change User's Email Subscription Status
-{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/status
 {% endapimethod %}
 

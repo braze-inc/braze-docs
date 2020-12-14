@@ -14,7 +14,7 @@ description: "This article outlines details about the Delete Scheduled API Trigg
 ---
 {% api %}
 # Delete Scheduled API Triggered Campaigns
-{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 

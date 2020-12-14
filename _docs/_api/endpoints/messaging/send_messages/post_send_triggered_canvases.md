@@ -13,7 +13,7 @@ description: "This article outlines details about the Send Canvas Messages via A
 ---
 {% api %}
 # Sending Canvas Messages via API Triggered Delivery
-{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/send
 {% endapimethod %}
 

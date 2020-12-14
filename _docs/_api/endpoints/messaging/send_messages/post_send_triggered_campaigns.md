@@ -13,7 +13,7 @@ description: "This article outlines details about the Send Campaign Messages via
 ---
 {% api %}
 # Sending Campaign Messages via API Triggered Delivery
-{% apimethod post core_endpoint|https://www.braze.com/docs/sla %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
 
