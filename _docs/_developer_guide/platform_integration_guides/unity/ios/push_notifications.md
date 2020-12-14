@@ -13,7 +13,7 @@ Sample push notification:
 
 ![Sample Push][19]
 
-Check out [Braze Academy]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
+Check out [push troubleshooting documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
 
 ## Step 1: Configure the Apple Developer Settings
 

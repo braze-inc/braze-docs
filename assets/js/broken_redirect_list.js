@@ -224,7 +224,6 @@ validurls['/docs/developer_guide/rest_api/postman_collection/'] = '/docs/api/pos
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/best_practices/'] = '/docs/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/';
-
 validurls['/docs/day-of-recurring-event-behavior/'] = '/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#dates';
 validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attributes-object-specification/';
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
@@ -251,3 +250,5 @@ validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration
 validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant'
+
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';

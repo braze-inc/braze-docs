@@ -37,8 +37,6 @@ Segment Insights have also been built right into the segment details view. When 
 
 ![Segment Insights Details][3]
 
-As we continue to build out our Intelligent Suite, we’ll update Braze Academy and [Relate][4], our blog, with more information.
-
 ## Sample Use Cases {#insights-use-cases}
 
 ### Comparing demographic usage and purchasing patterns
@@ -69,7 +67,6 @@ We can see that relatively few users are currently signed up for the newsletter,
 [1]: {% image_buster /assets/img_archive/Segment_Insights.png %}
 [2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}
 [3]: {% image_buster /assets/img_archive/Segment_Segment_Insights.png %}
-[4]: https://braze.com/blog/
 [5]: {% image_buster /assets/img_archive/Segment_Language_Insights.png %}
 [7]: {% image_buster /assets/img_archive/Segment_Insights_Events1.png %}
 [8]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding

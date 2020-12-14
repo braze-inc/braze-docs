@@ -25,7 +25,7 @@ Message engagement events are comprised of __user specific__ properties, __campa
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
 {% endalert %}
 
 {% api %}
@@ -44,7 +44,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -89,7 +89,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -136,7 +136,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -180,7 +180,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the bounce occurred,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -219,7 +219,7 @@ This event occurs when an email send request was successfully communicated betwe
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   // Campaign/Canvas Tracking Properties
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -233,8 +233,9 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   // Event Specific Properties
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
-  "email_address": (string) email address for this event
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "email_address": (string) email address for this event,
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -263,7 +264,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -278,6 +279,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -306,7 +308,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -320,7 +322,8 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -350,7 +353,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -365,7 +368,8 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -394,7 +398,7 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -409,6 +413,9 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "bounce_reason": (string) reason for bounce provided by server,
+  "bounce_code": (string) code for bounce provided by server
 }
 ```
 
@@ -436,7 +443,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -450,7 +457,8 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only)
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -483,7 +491,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -497,6 +505,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
+  "ip_pool": (string) IP pool used for message sending
 }
 ```
 
@@ -529,7 +538,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "channel": (string) either 'sms' or 'email',
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -566,7 +575,7 @@ This event occurs when a user views an in-app message.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -615,7 +624,7 @@ This event occurs when a user clicks on an in-app message.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "button_id": (string) index of the button clicked, if it was a button that was clicked,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -665,7 +674,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -696,7 +705,7 @@ This event occurs when a content card gets sent to a user.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "content_card_id": (string) id of the content card that was sent,
   "campaign_id": (string) id of the campaign if from a campaign,
@@ -730,7 +739,7 @@ This event occurs when a user views a content card.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
@@ -777,7 +786,7 @@ This event occurs when a user clicks a content card.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
@@ -825,7 +834,7 @@ This event occurs when a user dismisses a content card.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "content_card_id": (string) id of the content card that was viewed/clicked/dismissed,
@@ -877,7 +886,7 @@ This event occurs when a user views the News Feed.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "card_id": (string) id of the card that was viewed,
   "app_id": (string) id for the app on which the user action occurred,
@@ -910,7 +919,7 @@ This event occurs when a user clicks the News Feed.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "card_id": (string) id of the card that was clicked,
   "app_id": (string) id for the app on which the user action occurred,
@@ -938,7 +947,7 @@ This event occurs when a user sends an SMS.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -973,7 +982,7 @@ This event occurs when an SMS is sent to the carrier.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1008,7 +1017,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1043,7 +1052,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1081,7 +1090,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1117,7 +1126,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
   "inbound_phone_number": (string) the phone number the message was sent to,
@@ -1148,7 +1157,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "campaign_id": (string) id of the campaign,
@@ -1182,7 +1191,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "app_id": (string) id for the app on which the user action occurred,
   "canvas_id": (string) id of the canvas,
@@ -1214,7 +1223,7 @@ This event occurs when a user enters into the canvas. This event tells you which
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "canvas_id": (string) id of the Canvas,
   "canvas_name": (string) name of the Canvas,
@@ -1243,7 +1252,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "time": (int) time of the event in seconds since the epoch,
+  "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
   "campaign_id": (string) id of the campaign,
   "campaign_name": (string) name of the campaign,

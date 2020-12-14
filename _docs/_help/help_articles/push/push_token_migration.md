@@ -19,9 +19,28 @@ These campaigns will have to be configured with proper key-value pairs to ensure
 
 Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
+#### Migration if External ID is Present
+```json
+"app_group_id" : "YOUR_APP_GROUP_ID",
+"attributes" : [
+  {
+	"push_token_import" : false,
+	"external_id": "external_id1",
+	"country": "US",
+	"language": "en",
+	"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+	"push_tokens": [
+	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING"}
+	]
+  }
+]
+```
+
 {% alert note %}
 When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
 {% endalert %}
+
+#### Migration if External ID is not Present
 
 These tokens can be migrated by [importing them with our API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import).
 
@@ -30,13 +49,12 @@ To do this, use the `users/track` endpoint and post the following information:
 ```json
 "app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
-{
-"push_token_import" : true,
-"push_tokens": [
-{ "app_id": "", "token": "", "device_id": "" }
-
-]
-}
+  {
+	"push_token_import" : true,
+	"push_tokens": [
+	  { "app_id": "", "token": "", "device_id": "" }
+	]
+  }
 ]
 ```
 
@@ -44,31 +62,29 @@ Example:
 
 ```json
 "app_group_id" : "YOUR_APP_GROUP_ID",
-"attributes" : [
-{
-"push_token_import" : true,
-"email": "braze.test1@testbraze.com",
-"country": "US",
-"language": "en",
-"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
-"push_tokens": [
-{"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
-      
-]
-},
+"attributes": [ 
+  {
+    "push_token_import" : true,
+	"email": "braze.test1@testbraze.com",
+	"country": "US",
+	"language": "en",
+	"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+	"push_tokens": [
+	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
+	]
+  },
     
-{
-"push_token_import" : true,
-"email": "braze.test2@testbraze.com",
-"country": "US",
-"language": "en",
-"YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
-"YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
-"push_tokens": [
-{"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
-      
-]
-}
+  {
+	"push_token_import" : true,
+	"email": "braze.test2@testbraze.com",
+	"country": "US",
+	"language": "en",
+	"YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
+	"YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
+	"push_tokens": [
+	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}  
+	]
+  }
 ]
 ```
 

@@ -4,17 +4,27 @@ alias: /partners/zapier/
 ---
 # Zapier Integration
 
-[Zapier] [1] is an automation tool that links software services together, similar to [IFTTT] [2] (if this then that) for enterprise software. Utilizing [Webhooks] [3] and [API Triggered Campaigns] [4], Braze can integrate with Zapier
+[Zapier][1] is an automation web tool that allows you to share data between web apps, and then use that information to automate actions. You can use the Braze platform's API endpoints and [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, etc—and automate a variety of actions.
+
+
+In the Zapier example below, we'll be sending information from Wordpress to Braze using a POST webhook. We'll then use that information to create a Braze campaign. 
+
 
 ### Step 1: Add WordPress as a Trigger and select New Post after you connect your account:
 
-![zapier1] [5]
+Using Zapier's terminology, a "zap"  is an automated workflow that connects your apps and services together. The first part of any zap is to designate a trigger. Once your zap is enabled, whenever your trigger is detected, Zapier will automatically perform its respective actions.
 
-### Step 2: When Post Status is Published:
+Using our Wordpress example, we'll set up our trigger as a published Wordpress post.
+
+![zapier1] [5]
 
 ![zapier2] [6]
 
 ### Step 3: Add an Action “Webhook”:
+
+The second part of any zap is the action. When your zap is enabled and your trigger is detected, the action will automatically occur. 
+
+Using the same example, our action will send a POST request as a JSON to a Braze endpoint. 
 
 ![zapier3] [7]
 
@@ -29,6 +39,7 @@ URL : `https://rest.iad-01.braze.com/campaigns/trigger/send`
 Payload Type : JSON
 
 Data : `trigger_properties__name`, `api_key`, `campaign_id`
+These data fields are key-value pairs that will for the data portion of the request.
 
 ![zapier5] [10]
 
@@ -38,7 +49,7 @@ Data : `trigger_properties__name`, `api_key`, `campaign_id`
 
 ![zapier6] [12]
 
-You can also use trigger_properties with Liquid to filter what or if the message is sent.
+Once you've successfully set up your zap, you can now use that information you're being sent to customize your campaign and send off any messages. You can also use trigger_properties with Liquid to filter what or if the message is sent.
 
 [1]: https://zapier.com/
 [2]: https://ifttt.com/

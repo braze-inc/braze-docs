@@ -46,13 +46,15 @@ You can also leverage location tracking with some of our partners, for example:
 - [Neura][5]
 - [Radar][6]
 - [Foursquare][7]
+- [Gimbal][10]
 
-[1]: https://www.braze.com/docs/user_guide/engagement_tools/segments/location_targeting/
-[2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
-[3]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/location_tracking/
+[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.trackLocation
-[5]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/neura_actions/
-[6]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/radar/
-[7]: https://www.braze.com/docs/partners/data_augmentation/contextual_location/foursquare/
-[8]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/
-[9]: https://www.braze.com/docs/api/objects_filters/user_attributes_object/
+[5]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
+[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
+[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
+[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
+[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/

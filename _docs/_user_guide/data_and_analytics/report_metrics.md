@@ -44,7 +44,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Unique Impressions
-    description: Also known as Unique Daily Impression, is the total number of people who actually received and viewed the in-app message or card in a day. This number is received from Braze.
+    description: The total number of users who received and viewed a given in-app message or card. The count should not increment the second time a user views a in-app message or card. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
@@ -196,4 +196,8 @@ glossaries:
     calculation: (Unique Dismissals) / (Unique Impressions)
     tags:
       - Content Cards
+  - name: AMP Clicks
+    description: The total number of users who clicked into the AMP version of your AMP HTML Email.
+    tags:
+      - Email
 ---

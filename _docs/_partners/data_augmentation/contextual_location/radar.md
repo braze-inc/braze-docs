@@ -13,7 +13,7 @@ page_type: partner
 
 You can use Radar to add location context and tracking to your iOS and Android apps in less than 10 lines of code, allowing you to easily retarget to your customers and augment your marketing with rich location data.
 
-The Radar platform has three products: [Geofences](https://www.onradar.com/documentation/geofences), [Insights](https://www.onradar.com/documentation/insights), and [Places](https://www.onradar.com/documentation/places).
+The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
 
 Whenever Radar events are generated, Radar will send __custom events__ and __user attributes__ to Braze. You can use events and user attributes to build location-based segments or trigger location-based campaigns.
 

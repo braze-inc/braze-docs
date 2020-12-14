@@ -152,7 +152,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 {% apimethod post %}campaigns/trigger/send{% endapimethod %}
 {% apitags %}Post, Campaigns, Trigger,Send{% endapitags %}
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard, while dictating when a message is sent, and to whom via your API. Please see this section of [Braze Academy for further details][39].
+API Triggered Delivery allows you to house message content inside of the Braze dashboard, while dictating when a message is sent, and to whom via your API. 
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/ {% endapiref %}
 {% apiref postman %}https://www.getpostman.com/ {% endapiref %}

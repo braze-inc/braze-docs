@@ -5,10 +5,6 @@ description: "This reference article covers how to create and implement decision
 page_order: 0
 ---
 
-{% alert important %}
-Canvas Decision Step feature coming soon!
-{% endalert %}
-
 # Decision Split Step for Canvas
 
 Decision Split Steps in Canvas allow you to deliver personalized, real-time experiences for your users. Decision split steps can be used to create Canvas branches based on whether a user matches a query.

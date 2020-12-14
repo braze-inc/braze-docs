@@ -29,17 +29,17 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
 
 To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `appboy.xml`. An example can be found in our sample application's [`appboy.xml`][87].
 
-# Server-side Event Triggering
+## Server-side Event Triggering
 
 By default in-app messages are triggered by custom events logged by the SDK. If you would like to trigger in-app messages by server sent events you are also able to achieve this.
 
 To enable this feature, a silent push is sent to the device which allows a custom push receiver to log an SDK based event. This SDK event will subsequently trigger the user-facing in-app message.
 
-## Step 1: Register a Custom Broadcast Receiver to Log Custom Event
+### Step 1: Register a Custom Broadcast Receiver to Log Custom Event
 
 Register your custom `BroadcastReceiver` to listen for a specific silent push within your AndroidManifest.xml. For more information on how to register a custom `BroadcastReceiver` please review [Braze's push documentation][78].
 
-## Step 2: Create your BroadcastReceiver
+### Step 2: Create your BroadcastReceiver
 
 Your receiver will handle the intent broadcast by the silent push and log an SDK event. Starting in SDK 2.0.0, events can be logged in the background without issue. All clients implementing this solution must be on SDK v2.0.0+.
 
@@ -49,7 +49,7 @@ It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed 
 
 For further details on custom handling push receipts, opens, and key-value pairs please visit this section of our [Documentation][78].
 
-## Step 3: Create a Push Campaign
+### Step 3: Create a Push Campaign
 
 Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign please review this section of our [Docs][73].
 
@@ -63,7 +63,7 @@ The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs th
 
 Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
-##  Step 4: Create an In-App Message Campaign
+###  Step 4: Create an In-App Message Campaign
 
 Create your user visible in-app message campaign from within Braze’s dashboard. This campaign should have an Action Based delivery, and be triggered from the custom event logged from within the custom [EventBroadcastReceiver.java][72].
 
@@ -92,8 +92,13 @@ The following method will manually display your in-app message.
 ```java
   AppboyInAppMessageManager.getInstance().addInAppMessage(inAppMessage);
 ```
-
 See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for example usage.
+
+### In-Depth: Defining Custom In-App Message Types
+
+Braze's `slideup` in-app message object extends [`InAppMessageBase`][27].  Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28].  Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
+
+See [`CustomInAppMessage.java`][29] in the DroidBoy sample app for an example implementation.
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java

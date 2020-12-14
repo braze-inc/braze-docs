@@ -41,4 +41,8 @@ You can export CSVs with the following data:
 - Session Count per MAU by Date
 - Stickiness by Date
 
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 [27]: {% image_buster /assets/img_archive/app_usage.png %}

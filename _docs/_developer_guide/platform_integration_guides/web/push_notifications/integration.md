@@ -9,7 +9,7 @@ A push notification is an alert that appears on the user's screen when an import
 
 ![Sample Push][27]
 
-Check out [Braze Academy][7] for additional best practices.
+Visit our [documentation][7] for additional best practices.
 
 Web push notifications are implemented using the [W3C Push standard][1], which browsers are in the process of supporting. Currently, the browsers which support web push include most versions of Chrome, Firefox, and Opera. Web Push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple Push Notification Services; Braze supports these Safari notifications as well.
 
@@ -34,7 +34,7 @@ This is a security requirement in the open standards specification that Braze We
 
 #### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Braze has prepared an [example of this approach][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
 
 ### Step 1: Configure your Site's Service Worker
 
@@ -134,3 +134,4 @@ appboy.logCustomEvent("prime-for-push");
 [4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain

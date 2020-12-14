@@ -25,7 +25,7 @@ There are two changes required when integrating with Smart TVs:
 
 All of the same Web SDK methods for analytics can be used on Smart TVs.
 
-For a complete guide to tracking custom events, custom attributes, and more, please read our [Analytics Documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
+For a complete guide to tracking custom events, custom attributes, and more, please read our [Analytics Documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
 
 ## In-App Messages and Content Cards
 

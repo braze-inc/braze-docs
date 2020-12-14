@@ -95,6 +95,7 @@ __One-time scheduled campaigns__ - can be edited up until the scheduled send tim
 __Recurring scheduled campaigns__ - can be edited up until the scheduled send time.<br>
 __Local Send Time campaigns__ - can be edited up to 24 hours prior to the scheduled send time.<br>
 __Optimal Send Time campaigns__ - can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
+
 What if I make an edit within the “safe zone?”
 
 Changing the send time on campaigns within this time can lead to undesired behavior, for example:<br>- Braze will not send messages to any users that have missed the send time by more than 1 hour.<br>- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
