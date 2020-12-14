@@ -6,7 +6,7 @@ layout: partner_page
 page_type: landing
 description: "This page lists partners (Alloys) who allow you to expand your analytics and communications using channels other than the ones Braze provides."
 
-partner_api: "https://www.braze.com/api/v1/partners.json"
+partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Additional Channels"
 partner_top_text: "These partners allow you to expand your analytics and communications using channels other than the ones Braze provides."
