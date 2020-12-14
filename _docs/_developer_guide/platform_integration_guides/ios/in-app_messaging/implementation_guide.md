@@ -8,7 +8,7 @@ description: "This implementation guide covers in-app message code consideration
 # In-App Messaging Implementation Guide
 
 > This implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Visit out Braze Demo Repository [here]()! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
-
+ 
 ## Code Considerations
 
 ### Understanding Subclassing
