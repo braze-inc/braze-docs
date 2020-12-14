@@ -34,7 +34,7 @@ Push tokens may show up as `subscribed` in the Braze dashboard, but will change 
 
 #### Multiple Push Tokens
 
-With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, you can send notifications to multiple user devices. It is also possible to configure campaigns to only send to the most recent device of a user.
+With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, you can send notifications to multiple user devices. It is also possible to configure campaigns to only send to the most recent device of a user. 
 
 ## Campaign Configuration
 At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools - and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
