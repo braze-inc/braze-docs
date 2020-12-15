@@ -33,8 +33,7 @@ Either upload an existing certificate using the [AWS command-line tool](https://
 
 Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution (see photos below) for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains.
 
-![Single Distribution 1]({% image_buster /assets/img/SSL/single_distribution1.png %}){: style="max-width:40%"}
-![Single Distribution 2]({% image_buster /assets/img/SSL/single_distribution2.png %}){: style="margin-left:15px;max-width:25%"}
+![Single Distribution]({% image_buster /assets/img/SSL/single_distribution.png %})
 
 #### Step 3: Configure your Distribution
 
@@ -54,6 +53,7 @@ __Set Default Cache Behavior__
 - Viewer Protocol Policy: __HTTP and HTTPS__ *(default)*
 - Allowed HTTP Methods: `GET`, `HEAD`, `OPTIONS`, `PUT`, `PATCH` `DELETE`
 - Cached HTTP Methods: `GET`, `HEAD`, check __OPTIONS__
+- Cache and Origin Request Settings: __Use legacy cache settings__
 - Cache Based on Selected Request Headers: __All__
 - Minimum TTL: `0` *(default)*
 - Maximum TTL: `31536000` *(default)*
