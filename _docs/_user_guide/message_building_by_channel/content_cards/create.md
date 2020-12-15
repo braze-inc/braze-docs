@@ -180,7 +180,7 @@ The following capabilities are not yet supported for Content Cards:
 
 ### Sending Behavior
 
-Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
+Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during it's life-span. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes, this data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
 
 If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to your Content Card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove Content Cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
 

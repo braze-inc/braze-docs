@@ -14,7 +14,7 @@ description: "This article outlines details about the User Track Braze endpoint.
 ---
 {% api %}
 # User Track
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/track
 {% endapimethod %}
 
