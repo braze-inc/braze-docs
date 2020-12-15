@@ -27,7 +27,7 @@ If you are unable or do not wish to use the Content Delivery Network Partners li
 
 #### Step 1: Set Up your Server Certificate
 
-Either upload an existing certificate using the [AWS command-line tool](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html#UploadSignedCert) or approve a new certificate through your [Certificate Manager service](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) that is valid for your link whitelabel(s). e.g. __ablink.subdomain.customer.com__ and another certificate for __ablink.info.customer.com__. 
+Either upload an existing certificate using the [AWS command-line tool](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html#UploadSignedCert) or approve a new certificate through your [Certificate Manager service](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) that is valid for your link whitelabel(s). e.g. __ablink.subdomain.customer.com/link.subdomain.customer.com__ and another certificate for __ablink.info.customer.com/link.subdomain.customer.com__. 
 
 #### Step 2: Create a Distribution
 
@@ -69,7 +69,7 @@ __Distribution Settings__
 - Price Class: __Use All Edge Locations__
 - AWS WAF Web ACL: *leave blank*
 - State: __Enabled__
-- Alternate Domain Names (CNAMEs): `ablink.subdomain.customer.com`
+- Alternate Domain Names (CNAMEs): `ablink.subdomain.customer.com` or `link.subdomain.customer.com`
 - SSL Certificate: __Custom SSL Certificate__
 - Custom SSL Client Support: __Client that Support Server Name Indication (SNI)__
 - Security Policy: __TLSv1.2__
@@ -84,7 +84,7 @@ Once the Distribution is deployed, ensure that it can handle links correctly ove
 
 #### Step 5: Update your DNS
 
-Once the distribution is verified, change the DNS entry for the link white labels(s) (e.g. __ablink.subdomain.customer.com__ and __ablink.info.customer.com__) to CNAME to the domain name of the Distribution.
+Once the distribution is verified, change the DNS entry for the link white labels(s) (e.g. __ablink.subdomain.customer.com/link.subdomain.customer.com__ and __ablink.info.customer.com/link.subdomain.customer.com__) to CNAME to the domain name of the Distribution.
 
 #### Step 6: Next Steps
 
