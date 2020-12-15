@@ -35,7 +35,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 {% endtab %}
 {% endtabs %}
 
-- Supported currency symbols include: USD, CAD, EUR, GBP, JPY, AUD, CHF, NOK, MXN, NZD, CNY, RUB, TRY, INR, IDR, ILS, SAR, ZAR, AED, SEK, HKD, SPD, DKK, and TWD.
+- Supported currency symbols include: USD, CAD, EUR, GBP, JPY, AUD, CHF, NOK, MXN, NZD, CNY, RUB, TRY, INR, IDR, ILS, SAR, ZAR, AED, SEK, HKD, SPD, DKK, and more. Visit our Github repo for the full list of [supported currency codes](https://github.com/Appboy/appboy-ios-sdk/blob/6fb2a43e888241293615373a10c477a9e290763e/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L426).
   - Any other provided currency symbol will result in a logged warning and no other action taken by the SDK.
 - The product ID can have a maximum of 255 characters
 - Please note that if the product identifier is empty, the purchase will not be logged to Braze.

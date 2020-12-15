@@ -16,14 +16,14 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 - __Competitive Analysis:__ Set up triggers around competitive locations to understand consumer trends and patterns.
 - __Audience Insights:__ Understand your users' visitation behaviors and further segment based on those learnings.
 
-# Pre-Requisites
+## Pre-Requisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
 |Gimbal SDK | Gimbal | https://docs.gimbal.com/index.html | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-# SDK Integration
+## SDK Integration
 
 You must have the Location SDK implemented & geofences (or beacons) set up, as well as a Gimbal Manager account to proceed with the integration.
 1.	Create a [Gimbal Manager][1] account.

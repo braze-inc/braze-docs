@@ -18,6 +18,9 @@ guide_featured_list:
 - name: Messaging Users
   link: /docs/user_guide/predictive_suite/predictive_churn/messaging_users/
   fa_icon: fas fa-arrow-right
+- name: Frequently Asked Questions
+  link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
+  fa_icon: fas fa-question
 ---
 
 ## Overview

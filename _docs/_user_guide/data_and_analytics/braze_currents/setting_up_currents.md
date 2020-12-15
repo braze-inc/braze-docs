@@ -59,3 +59,7 @@ If needed, you can learn more about our events in our [Event Delivery Semantics]
 ## Step 5: Test Your Integration
 
 You may test your integration or take a look at the sample Currents data in [our Currents Examples Github repo](https://github.com/Appboy/currents-examples).
+
+{% alert important %}
+Please note that Currents will drop events with excessively large payloads of greater than 900KB. 
+{% endalert %}

@@ -18,12 +18,12 @@ With the Braze-Pypestream partnership, brands can seamlessly orchestrate the end
 |---|---|---|---|
 | Pypestream Subscription | Pypestream | If not already a Pypestream customer, please reach out via Pypestream's [Contact Page](https://www.pypestream.com/contact-us/) | Once subscribed, the Pypestream team will help you set up your dedicated environment to begin building your conversational AI solution to integrate with Braze. |
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | The Braze API Key will be used in the API calls to the Braze REST Endpoint URLs to authenticate the service. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List](https://www.braze.com/docs/api/basics/?redirected=true) | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST Endpoint | Braze | [Braze REST Endpoint List]({{site.baseurl}}/api/basics/?redirected=true) | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Overview
 
-There are multiple ways to leverage the [Braze API Endpoints](https://www.braze.com/docs/api/basics/?redirected=true) when designing a conversational solution using Pypestream. The document outlines what is required to set up the initial integration into the Braze Endpoint using Pypestream’s action node structure. The benefit of action nodes is the flexibility it provides when integrating into a service. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API Endpoint and allows the results to be evaluated in a multitude of ways. 
+There are multiple ways to leverage the [Braze API Endpoints]({{site.baseurl}}/api/basics/?redirected=true) when designing a conversational solution using Pypestream. The document outlines what is required to set up the initial integration into the Braze Endpoint using Pypestream’s action node structure. The benefit of action nodes is the flexibility it provides when integrating into a service. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API Endpoint and allows the results to be evaluated in a multitude of ways. 
 
 ## Action Node Integration
 
@@ -155,11 +155,11 @@ The final step of integrating with the Braze REST API involves configuring the f
 
 ## Example Integration - Track Users for Targeting (User/Track) 
 
-Once the prerequisites are met and an action node structure has been created, the developer has a blank canvas to work from when interacting with the Braze API Endpoints. Listed below are the steps required to integrate an action node into the Braze [User Track Endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow:
+Once the prerequisites are met and an action node structure has been created, the developer has a blank canvas to work from when interacting with the Braze API Endpoints. Listed below are the steps required to integrate an action node into the Braze [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow:
 
 ### Step 1: Collect Data from User in Conversation
 
-When a user enters into a Pypestream session, the specifics of the data collected are entirely dependent on the use case at hand. To be able to create a user profile within Braze, the conversation must collect data to send to Braze via the [User Track Endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/). 
+When a user enters into a Pypestream session, the specifics of the data collected are entirely dependent on the use case at hand. To be able to create a user profile within Braze, the conversation must collect data to send to Braze via the [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). 
 
 For example, if the solution collected the following information from the user during the conversation: 
 
@@ -174,7 +174,7 @@ This data can now be sent to the Braze platform to track this user’s engagemen
 
 ### Step 2: Populate Data in Action Node Structure
 
-Leveraging the same structure for developing action nodes as outlined above, the data collected from the user can be populated in the action node to be sent to Braze via the [User Track Endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/):
+Leveraging the same structure for developing action nodes as outlined above, the data collected from the user can be populated in the action node to be sent to Braze via the [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/):
 
 ```
 # -*- coding: utf-8 -*-

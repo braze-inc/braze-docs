@@ -8,7 +8,7 @@ description: "This article covers how to pull user profiles into your Connected 
 
 # Pulling User Profile Data
 
-If a Content Card response contains user profile fields (within a Liquid personalization tag), these values __must be defined earlier in the message via Liquid, before the Content Card call__ in order to render the Liquid passback properly. Similarly, the `:rerender` flag must be included in the request. Note that this flag is only one level "deep" meaning that it will not apply to any nested Connected Content tags.
+If a Connected Content response contains user profile fields (within a Liquid personalization tag), these values __must be defined earlier in the message via Liquid, before the Connected Content call__ in order to render the Liquid passback properly. Similarly, the `:rerender` flag must be included in the request. Note that this flag is only one level "deep" meaning that it will not apply to any nested Connected Content tags.
 
 For personalization, the pulling of user profile fields happens before Braze passes that field to Liquid - so if the response from Connected Content has user profile fields, it must be defined beforehand. For example, if this were the Connected Content call:
 {% raw %}

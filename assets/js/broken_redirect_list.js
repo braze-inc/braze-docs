@@ -250,3 +250,5 @@ validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration
 validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant'
+
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';

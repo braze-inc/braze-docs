@@ -436,14 +436,20 @@ In some scenarios, you may wish to customize push notifications in ways that wou
 
 If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 
+Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
+
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-// factory method implemented in your custom IAppboyNotificationFactory
-Notification createNotification(AppboyConfigurationProvider appConfigurationProvider, Context context, Bundle notificationExtras, Bundle appboyExtras) {
-  // example of getting notification title
-  String title = notificationExtras.getString(Constants.APPBOY_PUSH_TITLE_KEY);
+// Factory method implemented in your custom IAppboyNotificationFactory
+@Override
+public Notification createNotification(BrazeNotificationPayload brazeNotificationPayload) {
+  // Example of getting notification title
+  String title = brazeNotificationPayload.getTitleText();
+
+  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  String customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key");
 }
 ```
 
@@ -451,10 +457,13 @@ Notification createNotification(AppboyConfigurationProvider appConfigurationProv
 {% tab KOTLIN %}
 
 ```kotlin
-// factory method implemented in your custom IAppboyNotificationFactory
-fun createNotification(appConfigurationProvider: AppboyConfigurationProvider, context: Context, notificationExtras: Bundle, appboyExtras: Bundle): Notification {
-  // example of getting notification title
-  val title = notificationExtras.getString(Constants.APPBOY_PUSH_TITLE_KEY)
+// Factory method implemented in your custom IAppboyNotificationFactory
+override fun createNotification(brazeNotificationPayload: BrazeNotificationPayload): Notification {
+  // Example of getting notification title
+  val title = brazeNotificationPayload.getTitleText()
+
+  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  val customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key")
 }
 ```
 
@@ -544,7 +553,76 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `APPBOY_PUSH_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `appboy.xml`.
 
-For a detailed custom receiver example, please see [`AppboyBroadcastReceiver.java`][14] in our Custom Broadcast sample app. Visit this page for a basic tutorial on creating broadcast receivers: [Android Receiver Help][26]
+For a detailed custom receiver example, please see the below:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomBroadcastReceiver extends BroadcastReceiver {
+  private static final String TAG = CustomBroadcastReceiver.class.getName();
+
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    String packageName = context.getPackageName();
+    String pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX;
+    String notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX;
+    String notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX;
+
+    String action = intent.getAction();
+    Log.d(TAG, String.format("Received intent with action %s", action));
+
+    if (pushReceivedAction.equals(action)) {
+      Log.d(TAG, "Received push notification.");
+    } else if (notificationOpenedAction.equals(action)) {
+      AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent);
+    } else if (notificationDeletedAction.equals(action)) {
+      Log.d(TAG, "Received push notification deleted intent.");
+    } else {
+      Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action));
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomBroadcastReceiver : BroadcastReceiver() {
+  override fun onReceive(context: Context, intent: Intent) {
+    val packageName = context.packageName
+    val pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX
+    val notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX
+    val notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX
+
+    val action = intent.action
+    Log.d(TAG, String.format("Received intent with action %s", action))
+
+    when (action) {
+      pushReceivedAction -> {
+        Log.d(TAG, "Received push notification.")
+      }
+      notificationOpenedAction -> {
+        AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent)
+      }
+      notificationDeletedAction -> {
+        Log.d(TAG, "Received push notification deleted intent.")
+      }
+      else -> {
+        Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action))
+      }
+    }
+  }
+
+  companion object {
+    private val TAG = CustomBroadcastReceiver::class.java.name
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
@@ -598,7 +676,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [11]: https://support.google.com/cloud/answer/6158840?hl=en
 [12]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
 [13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "Custom Broadcast Sample Project"
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
@@ -645,3 +722,4 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
+[77]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/push/BrazeNotificationPayload.html

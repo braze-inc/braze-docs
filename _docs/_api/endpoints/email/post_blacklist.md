@@ -12,7 +12,7 @@ description: "User email addresses can be blacklisted via Braze using a RESTful 
 ---
 {% api %}
 # Blacklist Emails
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/blacklist
 {% endapimethod %}
 
