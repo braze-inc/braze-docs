@@ -13,7 +13,7 @@ description: "This implementation guide covers in-app message code consideration
 
 ### ABKInAppMessage Subclasses
 
-The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to get started implementing In-App Messaging subclasses.
+The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to get started implementing in-app messaging subclasses.
 
 {% tabs %}
 {% tab Swift %}
@@ -65,7 +65,7 @@ __ABKInAppMessage Subclasses__<br>
 
 ## Sample Use Cases
 
-There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how In-App Messaging variables may look and be used in the Braze dashboard:
+There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how in-app messaging variables may look and be used in the Braze dashboard:
 - [In-App Message Slideup Customization](#in-app-messaging-slideup-customization)
 - [Custom Modal In-App Message](#custom-modal-in-app-message)
 - [Custom Full In-App Message](#custom-full-in-app-message)
@@ -163,7 +163,8 @@ An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPicke
 {% tabs %}
 {% tab Swift %}
 __Parsing "view_type"__<br>
-An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view.
+An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view. It's important to note that not all in-app messages have to be custom.
+If the `view_type` key is not provided or does not match the intended value, it defaults to the `ModalViewController`. 
 ```swift
 func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalViewController {
   switch inAppMessage.extras?[InAppMessageKey.viewType.rawValue] as? String {
@@ -173,12 +174,12 @@ func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalV
     return ABKInAppMessageModalViewController(inAppMessage: inAppMessage)
   }
 }
-
 ```
 {% endtab %}
 {% tab Objective-C %}
 __Parsing "view_type"__<br>
-An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view.
+An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view. It's important to note that not all in-app messages have to be custom.
+If the `view_type` key is not provided or does not match the intended value, it defaults to the `ModalViewController`. 
 ```objc
 - (ABKInAppMessageModalViewController *)modalViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
   InAppMessageData *inAppMessageData = [[InAppMessageData alloc] init];
@@ -223,8 +224,8 @@ Override `loadView()` and set your own custom view to suit your needs.
 
 {% tabs %}
 {% tab Swift %}
-__Format Variables for PickerView__<br>
-The `pickerView` requires that you format the in-app message message string response to an array of individual strings, seperated by a comma and a space. 
+__Format Variables for a Dynamic List__<br>
+Before being sent to the `pickerView`, the `inAppMessage` message is output as a long _String_ of variables. This message must be formatted as an array of items to be displayed correctly. This can be done manually or through the use of a built-in function.
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
@@ -236,7 +237,7 @@ override func viewDidLoad() {
 {% endtab %}
 {% tab Objective-C %}
 __Format Variables for PickerView__<br>
-The `pickerView` requires that you format the in-app message message string response to an array of individual strings, seperated by a comma and a space. 
+Before being sent to the `pickerView`, the `inAppMessage` message is output as a long _String_ of variables. This message must be formatted as an array of items to be displayed correctly. This can be done manually or through the use of a built-in function like [`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc).
 ```objc
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -284,6 +285,6 @@ Use custom full in-app messages to create interactive, user-friendly prompts to 
 
 #### Intercepting In-App Message Touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
-Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not the desired behavior so you can add a `UISwitch` or list of switches to the table view to work with the existing button behavior. Through the use of multiple UIswitches, the touches now get handled by our custom view. As of iOS 6, buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
+Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not always the desired behavior, so you have the option to add a `UISwitch` or list of switches to the table view to work with the existing button behavior. Through the use of multiple switches, the touches now get handled by our custom view. As of iOS 6, buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}
