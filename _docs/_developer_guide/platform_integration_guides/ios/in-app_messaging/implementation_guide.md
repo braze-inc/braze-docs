@@ -11,18 +11,9 @@ description: "This implementation guide covers in-app message code consideration
  
 ## Code Considerations
 
-### Understanding Subclassing
-
-A subclass inherits its properties from its superclass and can be used to override them to refine or modify their behavior. In the example below, you can see that the superclass Mammal has a subclass of Cat and Dog, and Dog has a subclass of GermanShephard and Poodle. Because Poodle is a subclass of Dog that is a subclass of Mammal, Poodle has access to Mammal properties and methods like `getEyeColor()`. This same type of subclassing behavior can be used to our advantage when building out in-app messages. 
-
-__In-App Messages can be Subclasses to Power Custom Views__<br>
-Like riding a rollercoaster, pushing the limits to get the most out of in-app messages can be intimidating, but by leveraging subclasses you can have a safe, engaging, and enjoyable implementation experience.
-
 ### ABKInAppMessage Subclasses
 
-The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. Within this method are five subclasses. We will be covering a basic implementation and show how the full, slide up and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to get started implementing In-App Messaging subclasses.
-
-{% include video.html id="" align="center" %}
+The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to get started implementing In-App Messaging subclasses.
 
 {% tabs %}
 {% tab Swift %}
@@ -141,7 +132,7 @@ Adjust the constraint in the `viewWillTransition` so the in-app message position
 {% tabs %}
 {% tab Swift %}
 __Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here you must update the `slideConstraint` variable so it gets updated in the view controller superclass. 
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass. 
 
 ```swift
 func setSlideConstraint() {
@@ -153,7 +144,7 @@ func setSlideConstraint() {
 {% endtab %}
 {% tab Objective-C %}
 __Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here you must update the `slideConstraint` variable so it gets updated in the view controller superclass.  
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass.  
 
 ```objc
 - (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
@@ -165,7 +156,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 
 ### Custom Modal In-App Message
 
-The Custom Modal subclass can be used to create a `pickerView` that offers engaging ways to collect valuable user data. The example below shows how you can use Connected Content and the `pickerView` to capture custom attributes like Favorite Team from a dynamic list of items. 
+An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user data. The example below shows how you can use Connected Content and the `pickerView` to capture custom attributes from a dynamic list of items. 
 
 {% include video.html id="dmaT61p8kW8" align="center" %}
 
@@ -207,7 +198,7 @@ An in-app message has an `extras` dictionary that comes with the `ABKInAppMessag
 {% tabs %}
 {% tab Swift %}
 __Override and Provide Custom View__<br>
-Override `loadview()` and set your own custom view to suit your needs.
+Override `loadView()` and set your own custom view to suit your needs.
 ```swift
 override var nibname: String{
   return "ModalPickerViewController"
@@ -220,7 +211,7 @@ override func loadView() {
 {% endtab %}
 {% tab Objective-C %}
 __Override and Provide Custom View__<br>
-Override `loadview()` and set your own custom view to suit your needs.
+Override `loadView()` and set your own custom view to suit your needs.
 ```objc
 - (void)loadView {
   NSString *nibName = @"ModalPickerViewController";
@@ -292,5 +283,7 @@ Use custom full in-app messages to create interactive, user-friendly prompts to 
 {% include video.html id="" align="center" %}
 
 #### Intercepting In-App Message Touches
+![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not the desired behavior so you must add a `UISwitch` or list of switches to the table view to work with the existing button behavior. Through the use of multiple UIswitches, the touches now get handled by our custom view. As of iOS 6, buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
-Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not the desired behavior so you must add a `UISwitch` or list of switches to the table view to deal with the conflicting button behavior. Through the use of multiple UIswitches, the touches now get handled by our custom view. Thanks to Apple, we are able to give buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
+[1]: {% image_buster /assets/img/iam_implementation_guide.png %}
