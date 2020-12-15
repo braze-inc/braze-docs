@@ -24,11 +24,11 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
   func inAppMessageViewControllerWith(_ inAppMessage: ABKInAppMessage) -> ABKInAppMessageViewController {
     switch inAppMessage {
     case is ABKInAppMessageSlideup:
-      return slideupViewController(inAppMessage: inAppMessage)
-    case is ABKInAppMessageModal:
-      return modalViewController(inAppMessage: inAppMessage)
+      return slideupViewController(inAppMessage: inAppMessage) //Custom Method
+    case is ABKInAppMessageModal: 
+      return modalViewController(inAppMessage: inAppMessage) //Custom Method
     case is ABKInAppMessageFull:
-      return fullViewController(inAppMessage: inAppMessage)
+      return fullViewController(inAppMessage: inAppMessage) //Custom Method
     case is ABKInAppMessageHTML:
       return ABKInAppMessageHTMLViewController(inAppMessage: inAppMessage)
     case is ABKInAppMessageImmersive:
@@ -46,11 +46,11 @@ __ABKInAppMessage Subclasses__<br>
 ```objc
 - (ABKInAppMessageViewController *)inAppMessageViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
   if ([inAppMessage isKindOfClass:[ABKInAppMessageSlideup class]]) {
-    return [self slideupViewControllerWithInAppMessage:inAppMessage];
+    return [self slideupViewControllerWithInAppMessage:inAppMessage]; //Custom Method
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageModal class]]) {
-    return [self modalViewControllerWithInAppMessage:inAppMessage];
+    return [self modalViewControllerWithInAppMessage:inAppMessage]; //Custom Method
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageFull class]]) {
-    return [self fullViewControllerWithInAppMessage:inAppMessage];
+    return [self fullViewControllerWithInAppMessage:inAppMessage]; //Custom Method
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageHTML class]]) {
     return [[ABKInAppMessageHTMLViewController alloc] initWithInAppMessage:inAppMessage];
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
@@ -103,6 +103,31 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 
 {% tabs %}
 {% tab Swift %}
+__Update `slideConstraint` Variable__<br>
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass. 
+
+```swift
+func setSlideConstraint() {
+  guard let superview = view.superview else { return }
+   
+  slideConstraint?.constant = superview.safeAreaInsets.bottom + tabBarHeight
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+__Update `slideConstraint` Variable__<br>
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass.  
+
+```objc
+- (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
+  slideConstraint.constant = self.view.superview.safeAreaInsets.bottom + self.tabBarHeight;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab Swift %}
 __Adjust Constraint for Device Orientation__<br>
 Adjust the constraint in `viewWillTransition()` so the in-app message positioning stays synced and displays correctly when changing device orientation. 
 
@@ -129,34 +154,9 @@ Adjust the constraint in the `viewWillTransition` so the in-app message position
 {% endtab %}
 {% endtabs %}
 
-{% tabs %}
-{% tab Swift %}
-__Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass. 
-
-```swift
-func setSlideConstraint() {
-  guard let superview = view.superview else { return }
-   
-  slideConstraint?.constant = superview.safeAreaInsets.bottom + tabBarHeight
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass.  
-
-```objc
-- (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
-  slideConstraint.constant = self.view.superview.safeAreaInsets.bottom + self.tabBarHeight;
-}
-```
-{% endtab %}
-{% endtabs %}
-
 ### Custom Modal In-App Message
 
-An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user data. The example below shows how you can use Connected Content and the `pickerView` to capture custom attributes from a dynamic list of items. 
+An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user data. The example below shows how you can use Connected Content and a `pickerView` to capture custom attributes from a dynamic list of items. 
 
 {% include video.html id="dmaT61p8kW8" align="center" %}
 
@@ -284,6 +284,6 @@ Use custom full in-app messages to create interactive, user-friendly prompts to 
 
 #### Intercepting In-App Message Touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
-Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not the desired behavior so you must add a `UISwitch` or list of switches to the table view to work with the existing button behavior. Through the use of multiple UIswitches, the touches now get handled by our custom view. As of iOS 6, buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
+Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. While useful, this is not the desired behavior so you can add a `UISwitch` or list of switches to the table view to work with the existing button behavior. Through the use of multiple UIswitches, the touches now get handled by our custom view. As of iOS 6, buttons and other controls precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}
