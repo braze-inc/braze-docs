@@ -10,10 +10,6 @@ Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Servic
 
 This guide will show you how to set up your Huawei Android integration in order to send push through Braze, and take advantage of all existing Braze features, including segmentation, analytics, canvas, and more!
 
-{% alert important %}
-This feature is in *Beta*. Ask your Braze team for more information on how to get access.
-{% endalert %}
-
 ## 1. Register for a Huawei Developer Account
 
 Before getting started, you'll need to register and set up a [Huawei Developer account][2].

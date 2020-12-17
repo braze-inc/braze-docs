@@ -27,14 +27,13 @@ If you are unable or do not wish to use the Content Delivery Network Partners li
 
 #### Step 1: Set Up your Server Certificate
 
-Either upload an existing certificate using the [AWS command-line tool](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html#UploadSignedCert) or approve a new certificate through your [Certificate Manager service](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) that is valid for your link whitelabel(s). e.g. __ablink.subdomain.customer.com__ and another certificate for __ablink.info.customer.com__. 
+Either upload an existing certificate using the [AWS command-line tool](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html#UploadSignedCert) or approve a new certificate through your [Certificate Manager service](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) that is valid for your link whitelabel(s). e.g. __ablink.subdomain.customer.com/link.subdomain.customer.com__ and another certificate for __ablink.info.customer.com/link.subdomain.customer.com__. 
 
 #### Step 2: Create a Distribution
 
 Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution (see photos below) for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains.
 
-![Single Distribution 1]({% image_buster /assets/img/SSL/single_distribution1.png %}){: style="max-width:40%"}
-![Single Distribution 2]({% image_buster /assets/img/SSL/single_distribution2.png %}){: style="margin-left:15px;max-width:25%"}
+![Single Distribution]({% image_buster /assets/img/SSL/single_distribution.png %})
 
 #### Step 3: Configure your Distribution
 
@@ -54,6 +53,7 @@ __Set Default Cache Behavior__
 - Viewer Protocol Policy: __HTTP and HTTPS__ *(default)*
 - Allowed HTTP Methods: `GET`, `HEAD`, `OPTIONS`, `PUT`, `PATCH` `DELETE`
 - Cached HTTP Methods: `GET`, `HEAD`, check __OPTIONS__
+- Cache and Origin Request Settings: __Use legacy cache settings__
 - Cache Based on Selected Request Headers: __All__
 - Minimum TTL: `0` *(default)*
 - Maximum TTL: `31536000` *(default)*
@@ -69,7 +69,7 @@ __Distribution Settings__
 - Price Class: __Use All Edge Locations__
 - AWS WAF Web ACL: *leave blank*
 - State: __Enabled__
-- Alternate Domain Names (CNAMEs): `ablink.subdomain.customer.com`
+- Alternate Domain Names (CNAMEs): `ablink.subdomain.customer.com` or `link.subdomain.customer.com`
 - SSL Certificate: __Custom SSL Certificate__
 - Custom SSL Client Support: __Client that Support Server Name Indication (SNI)__
 - Security Policy: __TLSv1.2__
@@ -84,7 +84,7 @@ Once the Distribution is deployed, ensure that it can handle links correctly ove
 
 #### Step 5: Update your DNS
 
-Once the distribution is verified, change the DNS entry for the link white labels(s) (e.g. __ablink.subdomain.customer.com__ and __ablink.info.customer.com__) to CNAME to the domain name of the Distribution.
+Once the distribution is verified, change the DNS entry for the link white labels(s) (e.g. __ablink.subdomain.customer.com/link.subdomain.customer.com__ and __ablink.info.customer.com/link.subdomain.customer.com__) to CNAME to the domain name of the Distribution.
 
 #### Step 6: Next Steps
 
