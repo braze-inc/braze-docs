@@ -137,6 +137,13 @@ For more information on CIDR notation see [RFC 4632][84].
 
 Two-factor authentication adds an extra layer of identity verification upon login. By enabling two-factor authentication, Braze will require two methods of verification to log in to your Braze account: your password and your mobile phone.  Braze uses [Authy][56], a two-factor authentication service, to help secure your account.
 
+#### Two-Factory Authentication Authy Set Up Overview
+1. Download the Authy App.
+2. Navigate to Two-Factor Authentication under Account Settings and enter your phone number.
+3. There will be a notification sent to the device instructing to open Authy to obtain the code for Braze.
+4. Open the Authy App on the device linked to obtain the code. 
+5. Navigate to Two-Factor Authentication settings and enter the code. 
+
 If you would like to enforce two-factor authentication for the whole company, turn on two-factor authentication under the Security Settings tab and press Save Changes at the bottom of the page.
 
 ![Two-Factor Authentication - Company Settings][53]
