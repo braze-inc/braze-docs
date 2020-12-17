@@ -65,8 +65,10 @@ validurls['/docs/partners/technology_partners/channel_extensions/workflow_automa
 validurls['/docs/platform_wide/#app-group-configuration'] = '/docs/developer_guide/platform_wide/app_group_configuration/#app-group-configuration';
 validurls['/docs/rest_api/#email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
-validurls['/docs/rest_apis/email_sync'] = '/docs/developer_guide/rest_api/email_sync/';
+validurls['/docs/rest_apis/email_sync'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
 validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports';
+validurls['/docs/api/endpoints/email_sync/#querying-unsubscribed-emails'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'
+validurls['']
 
 validurls['/docs/rest_api/#export'] = '/docs/developer_guide/rest_api/export/#export';
 validurls['/docs/rest_apis/export'] = '/docs/developer_guide/rest_api/export/#export';
