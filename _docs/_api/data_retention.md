@@ -3,6 +3,7 @@ nav_title: Data Retention
 alias: /data_retention/
 description: "This reference article covers general Braze data retention information."
 page_type: reference
+page_order: 2.5
 ---
 
 # Braze Data Retention Information
