@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Core Endpoints
+nav_title: Core Endpoints
 permalink: "/core_endpoints/"
 hidden: true
 ---
