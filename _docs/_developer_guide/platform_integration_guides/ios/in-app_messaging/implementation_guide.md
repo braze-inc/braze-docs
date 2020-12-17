@@ -129,7 +129,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 {% tabs %}
 {% tab Swift %}
 __Adjust Constraint for Device Orientation__<br>
-Adjust the constraint in `viewWillTransition()` so the in-app message positioning stays synced and displays correctly when changing device orientation. 
+Adjust the constraint in `viewWillTransition()` because the subclass assumes responsibility of keeping the constraint synced during layout changes.
 
 ```swift
 override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -142,7 +142,7 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
 {% endtab %}
 {% tab Objective-C %}
 __Adjust Constraint for Device Orientation__<br> 
-Adjust the constraint in the `viewWillTransition` so the in-app message positioning stays synced and displays correctly when changing device orientation. 
+Adjust the constraint in `viewWillTransition()` because the subclass assumes responsibility of keeping the constraint synced during layout changes.
 ```objc
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
   [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
