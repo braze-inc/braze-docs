@@ -47,7 +47,7 @@ While industry best practice is to make your whole site secure, customers who ca
 
 #### What if I can't register a Service Worker in the root directory?
 
-A Service Worker can typically only be used in the same directory it is registered in. For example, if your Service Worker file exists in `/assets/service-worker.js`, then it would only be possible to register it within `example.com/assets/*` and not on your homepage (`example.com/`). For this reason, it is recommended you host and register the Service Worker in the root directory (i.e. `https://example.com/service-worker.js`).
+By default, a Service Worker can only be used within the same directory it is registered in. For example, if your Service Worker file exists in `/assets/service-worker.js`, then it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the Service Worker in the root directory (i.e. `https://example.com/service-worker.js`).
 
 If you are unable to register a Service Worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP Header when serving your Service Worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the Service Worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory, like the home page.
 
