@@ -66,6 +66,7 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the custom events analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
@@ -112,6 +113,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
 | Check if the string attribute __exists__ on a user's profile | __IS BLANK__ | __N/A__ |
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
 &#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
@@ -152,6 +154,7 @@ The maximum number of elements in Custom Attribute Arrays defaults to 25. The ma
 | Check if the array attribute __contains a value which partially matches__ an inputted value __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the array attribute __has any value__ | __HAS A VALUE__ | __N/A__ |
 | Check if the array attribute __is empty__ | __IS EMPTY__ | __N/A__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 >  We use [Perl compatible regular expressions (PCRE)][11].
 
@@ -172,6 +175,7 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 | Check if the time attribute is __less than X number__ of __days in the future__ | __IN LESS THAN__ | __NUMBER OF DAYS IN FUTURE__  |
 | Check if the time attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
 | Check if the time attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numvers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).
@@ -185,6 +189,7 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 | Check if the numeric attribute __does not equal__ a __numver__| __DOES NOT EQUAL__ | __NUMBER__ |
 | Check if the numeric attribute __exists__ on a user's profile | __EXISTS__ | __N/A__ |
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booleans (True/False)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
@@ -194,6 +199,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 | Check if the boolean value __is__ | __IS__  | __TRUE__, __FALSE__, __TRUE OR NOT SET__, or __FALSE OR NOT SET__ |
 | Check if the boolean value __exists__ on a user's profile | __EXISTS__  | __N/A__ |
 | Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Purchase Events / Revenue Tracking
 
@@ -211,6 +217,7 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 | Check if the purchase occurred __more than X (Max = 50) number of times__ | __MORE THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the purchase occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the purchase occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
