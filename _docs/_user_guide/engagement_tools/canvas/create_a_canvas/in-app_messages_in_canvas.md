@@ -73,6 +73,10 @@ Action-based delivery is __not available for Canvas steps with in-app messages__
 
 Note that if you have multiple in-app messages within one canvas, a user must start multiple sessions to receive each of those individual messages.
 
+{% alert important %}
+Please note that in-app messages __cannot__ be triggered by events in Canvas.
+{% endalert %}
+
 ### Steps with In-App Messages Only
 
 Steps with in-app messages have specific advancement options that allow you to specify the exact situation when your message would be sent.
