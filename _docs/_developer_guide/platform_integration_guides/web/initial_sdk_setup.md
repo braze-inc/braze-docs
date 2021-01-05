@@ -41,7 +41,7 @@ The Braze Web SDK can be quickly installed from the Google Tag Manager Template 
 
 1. Initialization Tag - loads the Web SDK onto your website, and optionally sets the External User ID
 
-2. Actions Tag - used to trigger Custom Events, Purchases, Change User ID, or stop/resume SDK tracking
+2. Actions Tag - used to trigger Custom events, purchases, change user IDs, or stop/resume SDK tracking
 
 For more information, please see the [Google Tag Manager Integration Guide][18].
 

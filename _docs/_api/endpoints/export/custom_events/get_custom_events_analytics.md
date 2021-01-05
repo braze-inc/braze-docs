@@ -6,7 +6,7 @@ layout: api_page
 
 page_type: reference
 platform: API
-description: "This article outlines details about the Custom Events List Endpoint."
+description: "This article outlines details about the Custom events List Endpoint."
 ---
 {% api %}
 # Custom Events Analytics

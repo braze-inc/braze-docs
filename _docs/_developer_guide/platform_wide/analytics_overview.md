@@ -6,11 +6,11 @@ page_order: 2
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
-This best practice guide will help you to understand exactly what Braze considers to be a "Custom Event" vs. a "Custom Attribute".
+This best practice guide will help you to understand exactly what Braze considers to be a "Custom event" vs. a "Custom attribute".
 
 ## Automatically Collected Data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom events or Custom attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
 
 #### Usage Information
 - First Used App (Time)
@@ -52,7 +52,7 @@ The following events and attributes are captured and updated automatically by th
 
 ## Custom Events
 
-Custom Events are actions taken by your users; they're best suited for tracking high-value user interactions with your application. Logging a custom event can trigger any number of follow-up campaigns with configurable delays, and enables the following segmentation filters around the recency and frequency of that event:
+Custom events are actions taken by your users; they're best suited for tracking high-value user interactions with your application. Logging a custom event can trigger any number of follow-up campaigns with configurable delays, and enables the following segmentation filters around the recency and frequency of that event:
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -67,39 +67,39 @@ Custom Events are actions taken by your users; they're best suited for tracking 
 | Check if the custom event occurred __less than X (Max = 50) number of times__ | __LESS THAN__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the custom events analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the Custom events analytics page you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
 ![custom_event_analytics_example.png][8]
 
->  [Incrementing Custom Attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+>  [Incrementing Custom attributes][10] can be used to keep a counter on a user action similar to a Custom event. However, you will not be able to view Custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 
 ### Custom Event Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
+All User Profile data (Custom events, Custom attribute, Custom Data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Event Properties
 
-With Custom Event Properties, Braze allows you to set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, number, boolean, or time objects. However, property values cannot be array objects.
+With Custom event properties, Braze allows you to set properties on Custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, number, boolean, or time objects. However, property values cannot be array objects.
 
-For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
+For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom event property of the 'cart value' of users' carts.
 
 ![customEventProperties.png][18]
 
-Custom Event Properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The Custom Event Property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The Custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 ![custom_event_properties_gaming.png][19]
 
-Custom Event Properties are designed to help you personalize your messaging or build granular Action-Based Delivery Campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
+Custom event properties are designed to help you personalize your messaging or build granular Action-Based Delivery Campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 
 ## Custom Attributes
-Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom Attributes, so you're not going to get any graphs based upon them like the above example for Custom Events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom attributes, so you're not going to get any graphs based upon them like the above example for Custom events.
 
 ### Custom Attribute Storage
 
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
+All User Profile data (Custom events, Custom attribute, Custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager.
 
 ### Custom Attribute Data Types
-Custom Attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
+Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
 #### Strings (Alpha-Numeric Characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
@@ -114,7 +114,7 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
 
 {% alert important %}
-&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a Custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a Custom attribute is blank in order to ensure users are being targetted properly.
 {% endalert %}
 
 {% alert tip %}
@@ -143,7 +143,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 ```
 
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in Custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -228,7 +228,7 @@ __Case Question #2: What are the intermediate steps on the way to that goal from
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following Custom Events:
+The above actions could then be tagged as the following Custom events:
 
 - Began Registration
 - Completed Registration
@@ -249,7 +249,7 @@ __Case Question #3: What other information might we want to know about our users
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following Custom Attributes:
+The above characteristics could then be tagged as the following Custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Number Type)
@@ -331,7 +331,7 @@ The following content will be trimmed programmatically from your attributes and 
   -  "My \x80 Field" would be condensed to "My Field"
 
 #### Reserved Keys
-Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are __RESERVED__ and __CANNOT__ be used as Custom Attributes:
+Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are __RESERVED__ and __CANNOT__ be used as Custom attributes:
 
 - `email`
 - `facebook`
@@ -348,7 +348,7 @@ Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are
 - `email_subscribe`
 - `push_subscribe`
 
-Additionally, the following keys are reserved and cannot be used as Custom Event Properties:
+Additionally, the following keys are reserved and cannot be used as Custom event properties:
 
 - `time`
 - `product_id`

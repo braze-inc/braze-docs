@@ -15,13 +15,13 @@ description: "This how-to article gives an overview of attribute triggers and ho
 > <br>
 > By using conversion events, you can make sure you are collecting relevant, useful information that you can later use to gain insight into your campaign. 
 
-In order to track engagement metrics and the necessary details regarding how messaging drives your KPIs, Braze allows you to set Conversion Events for each of your campaigns and Canvases.
+In order to track engagement metrics and the necessary details regarding how messaging drives your KPIs, Braze allows you to set conversion events for each of your campaigns and Canvases.
 
 A Conversion Event is a type of success metric that tracks whether a recipient of your messaging performs a high-value action within a set amount of time after receiving your engagement. With this, you can begin to attribute these valuable actions to the different points of engagement reaching the user. For example, if you're creating a personalized holiday campaign for active users, a Conversion Event of "Starts Session" within 2 or 3 days may be appropriate, as it will then allow you to gather a sense of the rate at which your engagement helped nudge users to come back upon receiving your message.
 
 For more on conversions, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-Along with "Make a Purchase,” events like "Start a Session,” "Upgrade App," or any of your Custom Events can be selected as Conversion Events. Below are further details on the feature, as well as the steps needed to implement them.
+Along with "Make a Purchase,” events like "Start a Session,” "Upgrade App," or any of your Custom events can be selected as conversion events. Below are further details on the feature, as well as the steps needed to implement them.
 
 ## Primary Conversion Event
 The Primary Conversion Event is the first event added during the campaign or Canvas creation, and it is the one that has the most bearing on your engagement and reporting. It is used to:
@@ -33,7 +33,7 @@ The Primary Conversion Event is the first event added during the campaign or Can
 ## Step 1: Create a Campaign with Conversion Tracking
 Navigate to the [Braze Campaigns page][1] in your company dashboard and click "Create Campaign," then select the type of campaign you'd like to create.
 
-After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion Events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value Custom Event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
+After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value Custom Event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
 
 ## Step 2: Add Conversion Events
 
@@ -54,7 +54,7 @@ Once you've selected your conversion events, continue the campaign creation proc
 
 ## Step 3: View Results
 
-Navigate to the "Details" page to view details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign — as well as specific variants — during the window of the Primary Conversion Event.
+Navigate to the "Details" page to view details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign — as well as specific variants — during the window of the primary conversion event.
 
 {% alert note %}
 If no conversion events were selected during campaign creation, the time period defaults to 3 days. 
@@ -66,7 +66,7 @@ Additionally, for multivariate messages, you can see the number of conversions a
 
 ## Conversion Tracking Rules
 
-Conversion Events allow you to attribute user action back to a point of engagement. That said, there are a few things to note regarding how Braze handles conversions when there are multiple in play. Please find these scenarios outlined below.
+Conversion events allow you to attribute user action back to a point of engagement. That said, there are a few things to note regarding how Braze handles conversions when there are multiple in play. Please find these scenarios outlined below.
 
 - A user can only convert once on each conversion event for a campaign or Canvas. For instance, assume a campaign has only one conversion event which is "makes any purchase." If a user who receives this campaign makes 2 separate purchases within the conversion deadline, only one conversion will be counted.
 - If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, the conversion will register on both.

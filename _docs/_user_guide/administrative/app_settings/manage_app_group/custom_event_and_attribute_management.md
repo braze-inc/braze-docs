@@ -7,7 +7,7 @@ page_order: 1
 
 ## Adding Custom Attributes, Custom Events, Products, and Event Properties
 
-To add a custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage App Groups” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
+To add a Custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage App Groups” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
 
 ![customattributessearch1.png][71]
 
@@ -17,18 +17,18 @@ You can also add event properties for custom events or products by clicking on t
 ![customeventsview1.png][72]
 ![manageproperties1.png][73]
 
-To make these added custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you may use Braze's APIs to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users!
+To make these added Custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you may use Braze's APIs to import data on that attribute. After that, the Custom attribute, event, or other will be actionable and apply to your users!
 
 {% alert note %}
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager. 
+All User Profile data (Custom events, Custom attribute, Custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager. 
 {% endalert %}
 
 ## Blacklisting Custom Attributes, Custom Events, and Products
-If you want to stop tracking a specific custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
+If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
 
 ![customeventsviewblacklist1.png][74]
 
-Once a custom event or attribute is blacklisted,
+Once a Custom event or attribute is blacklisted,
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,
 - Blacklisted events/attributes will not show up in filters or graphs.
