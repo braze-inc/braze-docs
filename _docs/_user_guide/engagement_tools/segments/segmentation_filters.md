@@ -81,7 +81,7 @@ glossaries:
     tags:
       - User Activity
   - name: Last Made Purchase
-    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Purchase for App
