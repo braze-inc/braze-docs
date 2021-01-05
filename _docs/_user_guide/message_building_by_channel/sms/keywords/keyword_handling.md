@@ -117,6 +117,11 @@ __Trigger by Arbitrary Keywords__<br>
 Note triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![picture][8]{: style="margin-top:10px;"}
 
+__Template Keywords__<br>
+When triggering a Campaign or Canvas Step on an inbound SMS, you can optionally template the text that your user sent into the body of your Campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+
+
+
 ## Currents Event
 Any inbound SMS event can be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. To get this feature flipped on so you can enable it within your own Currents integration, reach out to your account manager. Please note that inbound messages are truncated past 1600 characters. 
 
