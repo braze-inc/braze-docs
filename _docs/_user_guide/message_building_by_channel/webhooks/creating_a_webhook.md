@@ -31,9 +31,9 @@ Enter the HTTP URL. This HTTP URL specifies your endpoint. The endpoint is the p
 
 Create the body of your webhook request. This is the information that will be sent to the URL that you specified. There are two ways to create the body of your web hook request:
 
-### JSON Key-Value Pairs
+### JSON Key Value Pairs
 
-JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is “message_body,” the corresponding value might be “Your order just arrived.” Once you’ve entered your key-value pair, the composer will configure your request in JSON syntax and a preview of your JSON request will automatically populate.
+JSON key value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is “message_body,” the corresponding value might be “Your order just arrived.” Once you’ve entered your key-value pair, the composer will configure your request in JSON syntax and a preview of your JSON request will automatically populate.
 
 ![Webhook_JSON][21]
 
@@ -45,7 +45,7 @@ The raw text option gives you the flexibility to write a request for an endpoint
 
 ### Personalization
 
-[Personalization][15] is supported in both the JSON key-value pairs option and the raw text option. You can include any user attribute, [custom attribute][17] or [event property][18] in your request. For example, you can include a customer’s first name and email in your request. Don’t forget to include a [default value][19] for each attribute.
+[Personalization][15] is supported in both the JSON key value pairs option and the raw text option. You can include any user attribute, [custom attribute][17] or [event property][18] in your request. For example, you can include a customer’s first name and email in your request. Don’t forget to include a [default value][19] for each attribute.
 
 ### Internationalization
 

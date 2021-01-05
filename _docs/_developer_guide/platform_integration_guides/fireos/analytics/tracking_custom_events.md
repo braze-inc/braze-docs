@@ -22,7 +22,7 @@ See the [Javadoc][2] for more information.
 
 You can add metadata about custom events by passing a [Braze Properties][4] object with your custom event.
 
-Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
+Properties are defined as key value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
 
 ```java
 AppboyProperties eventProperties = new AppboyProperties();

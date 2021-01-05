@@ -92,9 +92,9 @@ Each user is eligible to receive up to 100 non-expired Content Cards. As a user 
 
 ## Step 3: Configure Additional Settings
 
-Add [key-value pairs][19] to your message, if needed.
+Add [key value pairs][19] to your message, if needed.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use key value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas.
 

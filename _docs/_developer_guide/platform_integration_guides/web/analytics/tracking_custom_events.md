@@ -20,7 +20,7 @@ See the [logCustomEvent documentation][1] for more information.
 
 You can optionally add metadata about custom events by passing a properties object with your custom event.
 
-Properties are defined as key-value pairs.  Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`][2] objects.
+Properties are defined as key value pairs.  Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`][2] objects.
 
 ```javascript
 appboy.logCustomEvent(YOUR_EVENT_NAME, {key: 'value'});

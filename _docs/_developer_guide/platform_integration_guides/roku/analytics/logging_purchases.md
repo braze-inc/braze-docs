@@ -21,7 +21,7 @@ m.Braze.logPurchase("PURCHASE_NAME", "CURRENCY_CODE", Double price, Integer quan
 
 You can add metadata about purchases by passing a properties dictionary with your purchase information.
 
-Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String` or `Integer`.
+Properties are defined as key value pairs.  Keys are `String` objects and values can be `String` or `Integer`.
 
 ```
 m.Braze.logPurchase("PURCHASE_NAME", "CURRENCY_CODE", Double price, Integer quantity, {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})

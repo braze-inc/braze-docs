@@ -165,7 +165,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "trigger_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, Connected Audience Object) see Connected Audience,
   // Including 'audience' will only send to users in the audience
@@ -174,7 +174,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above)
+      "trigger_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with trigger_properties above)
     },
     ...
   ]
@@ -189,7 +189,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
   "canvas_id": (required, string) see Canvas Identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, Connected Audience Object) see Connected Audience,
   // Including 'audience' will only send to users in the audience
@@ -198,7 +198,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with canvas_entry_properties above)
+      "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with canvas_entry_properties above)
     },
     ...
   ]

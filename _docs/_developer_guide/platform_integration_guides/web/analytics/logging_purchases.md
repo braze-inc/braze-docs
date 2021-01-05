@@ -22,7 +22,7 @@ See the [JSdocs][8] for more information. Quantity must be less than or equal to
 
 ### Adding Properties
 
-You can add metadata about purchases by passing an object of key-value pairs with your purchase information. Keys are `string` objects and values can be `string`, `numeric`, `boolean`, or `Date` objects.
+You can add metadata about purchases by passing an object of key value pairs with your purchase information. Keys are `string` objects and values can be `string`, `numeric`, `boolean`, or `Date` objects.
 
 ```javascript
 appboy.logPurchase(productId, price, "USD", quantity, {key: "value"});
