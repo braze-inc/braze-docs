@@ -24,5 +24,5 @@ Braze will not refresh Content Cards on new page loads (and so this function wil
 
 {% endcomment %}
 
-## Key-Value Pairs
-`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.
+## Key Value Pairs
+`ab.Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.

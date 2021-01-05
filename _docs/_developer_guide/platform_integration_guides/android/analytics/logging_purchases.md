@@ -10,7 +10,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][3].
+Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Analytics Overview][3].
 
 ### Tracking Purchases & Revenue
 
@@ -53,7 +53,7 @@ __If the product Identifier is empty, the purchase will not be logged to Braze._
 
 You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
 
-Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
+Properties are defined as key value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
 
 {% tabs %}
 {% tab JAVA %}

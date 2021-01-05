@@ -158,9 +158,9 @@ Appboy.sharedInstance()?.logFeedbackDisplayed()
 {% endtab %}
 {% endtabs %}
 
-## Third Party Provider Integrations
+## Third-Party Provider Integrations
 
-Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
+Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third-party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
 
 To take advantage of these integrations, please visit the ["feedback" section within the "app settings" page][15].
 

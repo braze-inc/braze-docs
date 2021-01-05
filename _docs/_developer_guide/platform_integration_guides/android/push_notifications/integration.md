@@ -434,7 +434,7 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
-If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
+If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key value pairs sent either via the dashboard or the messaging APIs:
 
 Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
 
@@ -524,9 +524,9 @@ setCustomAppboyNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
+### Custom Handling For Push Receipts, Opens, Dismissals, and Key Value Pairs
 
-Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
+Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
 
 #### Step 1: Register your BroadcastReceiver
 
@@ -628,9 +628,9 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-#### Step 3: Access Custom Key-Value Pairs
+#### Step 3: Access Custom Key Value Pairs
 
-Custom key-value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
+Custom key value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
 
 {% tabs %}
 {% tab JAVA %}
@@ -639,7 +639,7 @@ Custom key-value pairs sent either via the dashboard or the messaging APIs will 
 // intent is the Braze push intent received by your custom broadcast receiver.
 String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
 
-// The extras bundle extracted from the intent contains all custom key-value pairs.
+// The extras bundle extracted from the intent contains all custom key value pairs.
 Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
@@ -653,7 +653,7 @@ String myExtra = extras.getString("my_key");
 // intent is the Braze push intent received by your custom broadcast receiver.
 val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
 
-// The extras bundle extracted from the intent contains all custom key-value pairs.
+// The extras bundle extracted from the intent contains all custom key value pairs.
 val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.

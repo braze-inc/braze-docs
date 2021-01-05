@@ -8,7 +8,7 @@ page_order: 3
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][7].
+Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][7].
 
 To assign attributes to your users, call the `appboy.getUser()` method to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
@@ -47,7 +47,7 @@ appboy.getUser().setDateOfBirth(2000, 12, 25);
 
 ## Assigning Custom User Attributes
 
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom Attributes can be set with the following data types:
+In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom attributes can be set with the following data types:
 
 - Strings
 - Arrays
@@ -106,7 +106,7 @@ appboy.getUser().setCustomUserAttribute(
 >  Dates passed to Braze with this method must be JavaScript Date objects.
 
 #### Setting a Custom Attribute with an Array Value
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+The maximum number of elements in Custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom attribute arrays and their behavior, see our [Documentation on Arrays][6].
 
 ```javascript
 appboy.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
@@ -120,7 +120,7 @@ appboy.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "
 
 ### Unsetting a Custom Attribute
 
-Custom Attributes can be unset by setting their value to null.
+Custom attributes can be unset by setting their value to null.
 
 ```javascript
 appboy.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
