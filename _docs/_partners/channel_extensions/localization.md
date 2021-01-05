@@ -14,5 +14,6 @@ partner_top_header: "Localization"
 valid_partner_list:
   - name: Transifex
     url: /docs/partners/channel_extensions/localization/transifex/
-
+  - name: Crowdin
+    url: /docs/partners/channel_extensions/localization/crodwin/
 ---
