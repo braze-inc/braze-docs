@@ -61,7 +61,7 @@ When editing a `POST` request, you'll need to open the request and navigate to t
 
 ### Edit a GET Request
 
-When editing a `GET` request, you will need to edit the parameters passed in the request URL. To edit these easily, select the `Params` button next to the URL bar and edit the key-value pairs in the fields that will appear below the URL bar.
+When editing a `GET` request, you will need to edit the parameters passed in the request URL. To edit these easily, select the `Params` button next to the URL bar and edit the key value pairs in the fields that will appear below the URL bar.
 
 ![Editing a GET request][5]
 

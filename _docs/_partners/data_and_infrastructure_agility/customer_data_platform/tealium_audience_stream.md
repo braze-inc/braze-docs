@@ -120,7 +120,7 @@ After you have selected a connector to link this audience to click done and cont
 
 ### Action
 
-Next, you must select a connector action. A connector action sends data according to the mapping that you configure. The Braze connector allows you to map Braze attributes to Tealium attribute names. 
+Next, you must select a connector action. A connector action sends data according to the mapping that you configure. The Braze connector allows you to map Braze Attributes to Tealium attribute names. 
 
 1. From the __Action__ dialogue, select one of the actions to set up.
 2. Depending on which action you chose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.

@@ -25,7 +25,7 @@ __Customizable Features__
 - A large image
 - Up to two call to action buttons with separate on click behavior and deep links
 - Different colors for the header and body text, buttons and background
-- Key-value pairs
+- Key value pairs
 
 {% enddetails %}
 {% details  Modal %}
@@ -39,7 +39,7 @@ __Customizable Features__
 - An image or customizable badge icon
 - Up to two call to action buttons with separate on click behavior and deep links
 - Different colors for the header and body text, buttons and background
-- Key-value pairs
+- Key value pairs
 
 {% enddetails %}
 
@@ -55,7 +55,7 @@ __Customizable Features__
 - Different colors for slideup background, text and icon
 - Message close behavior
 - Slideup position (top or bottom of the app screen)
-- Key-value pairs
+- Key value pairs
 
 {% enddetails %}
 
@@ -78,7 +78,7 @@ __Customizable Features__
 - An optional image
 - An optional "Terms of Service" link
 - Different colors for the header and body text, buttons and background
-- Key-value pairs
+- Key value pairs
 
 {% enddetails %}
 

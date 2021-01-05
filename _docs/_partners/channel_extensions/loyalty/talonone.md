@@ -123,7 +123,7 @@ You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app
 {% endraw %}
 
 {% alert tip %}
-You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
+You can access Braze Attributes by using liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
 {% endalert %}
 
 #### Step Two: Add the URL to the createCoupon Endpoint of Your Talon.One Deployment

@@ -16,7 +16,7 @@ Similarly, data on [sessions over time for this particular segment][13] can be f
 
 ![Session data by segment][18]
 
-Braze also provides the ability to view data on [Custom Events over time for segments][20], via the Custom Events page.
+Braze also provides the ability to view data on [Custom events over time for segments][20], via the Custom Events page.
 
 If you don't turn analytics tracking on for a segment, you will still be able to access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
 

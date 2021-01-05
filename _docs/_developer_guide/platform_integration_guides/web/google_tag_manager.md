@@ -65,7 +65,7 @@ Be sure to enter the current user's unique ID in the "External User ID" field, t
 
 The __Custom Event__ Tag Type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
-Use this tag to send Custom Events to Braze, optionally including Custom Event Properties
+Use this tag to send Custom events to Braze, optionally including Custom event properties
 
 Enter the __Event Name__, either using a variable or by typing in an event name.
 
@@ -77,11 +77,11 @@ Use the __Add Row__ button to add event properties.
 
 The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
 
-Use this tag to track purchase to Braze, optionally including Purchase Properties.
+Use this tag to track purchase to Braze, optionally including Purchase properties.
 
 The _Product ID_ and _Price_ fields are required.
 
-Use the __Add Row__ button to add Purchase Properties.
+Use the __Add Row__ button to add Purchase properties.
 
 ![Purchase Tag][10]
 

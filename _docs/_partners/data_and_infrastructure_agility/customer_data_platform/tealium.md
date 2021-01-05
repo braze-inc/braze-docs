@@ -181,7 +181,7 @@ If you have created a connector before, you may optionally use an existing one f
 
 #### Step 2d: Action
 
-Next, you must select a connector action. A connector action sends data according to the mapping that gets configured. The Braze connector allows you to map Braze attributes to Tealium attribute names. 
+Next, you must select a connector action. A connector action sends data according to the mapping that gets configured. The Braze connector allows you to map Braze Attributes to Tealium attribute names. 
 
 It's also important to note that user aliases can be leveraged to track and target anonymous users. For example, once obtained, these users can be sent personalized messages that could convert prospective users into active ones.
 

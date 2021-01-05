@@ -7,7 +7,7 @@ page_order: 4
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. User Attributes vs Purchase Events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. User attributes vs Purchase events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 User attributes will be assigned to the currently active user. The following default fields may be set:
 
@@ -30,7 +30,7 @@ m.Braze.setFirstName("User's First Name")
 
 ### Assigning Custom User Attributes
 
-Beyond the default attributes above, Braze also allows you to define Custom Attributes using several different data types.
+Beyond the default attributes above, Braze also allows you to define Custom attributes using several different data types.
 For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
 #### Custom Attribute with a Boolean Value
@@ -81,7 +81,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 #### Unsetting a Custom Attribute
 
-Custom Attributes can also be unset using the following method:
+Custom atributes can also be unset using the following method:
 
 ```
 m.Braze.unsetCustomAttribute("attributeName")

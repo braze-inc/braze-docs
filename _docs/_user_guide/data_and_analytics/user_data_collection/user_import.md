@@ -136,10 +136,6 @@ You can also choose to import the users in the CSV and make it possible to retar
 
 ## Troubleshooting
 
-### No External ID
-
-To connect data from User Import to user profiles, Braze requires an `external_id` in each row. Rows without a value in the `external_id` column will be excluded from the import. User profiles that lack an `external_id` cannot be created or updated via the User Import.
-
 ### Malformed Row
 
 There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length that have more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.

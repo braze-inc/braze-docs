@@ -32,7 +32,7 @@ glossaries:
   - name: Custom Attributes
     description: Braze provides methods within the dashboard for assigning custom attributes to users. You’ll be able to filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> Campaigns.
   - name: Custom Events
-    description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">Custom Events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.
+    description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">Custom events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.
   - name: Data Point
     description: A data point is counted when a custom attribute is set or updated (even if you’re updating it with the same value), a custom event or purchase event is logged, any standard data (e.g. email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
   - name: Dormant Users

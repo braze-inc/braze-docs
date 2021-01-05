@@ -272,8 +272,8 @@ Appboy.requestFeedRefresh()
 
 See the [Javadoc][16] for more information.
 
-## Key-Value Pairs
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+## Key Value Pairs
+`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 Call the following on a `Card` object to retrieve its extras:
 

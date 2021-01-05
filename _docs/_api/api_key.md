@@ -135,7 +135,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `events.list` | Query for a list of Custom Events. |
+| `events.list` | Query for a list of Custom events. |
 | `events.data_series` | Query occurrences of a Custom Event over a time range. |
 {: .reset-td-br-1 .reset-td-br-2}
 

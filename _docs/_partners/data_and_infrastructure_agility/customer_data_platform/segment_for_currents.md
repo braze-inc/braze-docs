@@ -69,7 +69,7 @@ You can export the following data from Braze to Segment:
 | Application Uninstalled        | User uninstalled the App. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The following properties will be included with all Braze events sent to Segment:
+The following properties will be included with all Braze Events sent to Segment:
 
 | Property Name          | Type     | Description |
 | ---------------------- | -------- | ----        |
