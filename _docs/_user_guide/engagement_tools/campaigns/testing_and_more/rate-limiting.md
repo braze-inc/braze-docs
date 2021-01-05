@@ -1,6 +1,6 @@
 ---
 nav_title: Rate-Limiting and Frequency Capping
-platform: 
+platform:
   - iOS
   - Android
   - Web
@@ -33,7 +33,7 @@ As you create more segments, there are going to be cases where the membership of
 Braze provides the following filters in order to help you limit the rate at which your users receive messages:
 
 - Last Engaged With Message
-- Last Received Any Campaign
+- Last Received Any Message
 - Last Received Push Campaign
 - Last Received Email Campaign
 - Last Received SMS
@@ -114,7 +114,7 @@ Each line of frequency caps will be connected using an "AND," and you're able to
 
 ### Delivery Rules
 
-There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.  
+There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
 
 If you want a particular campaign to override Frequency Capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling Frequency Capping to "Off". After this, you will be asked if you still want this Campaign to count towards your Frequency Cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
 

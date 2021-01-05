@@ -153,7 +153,7 @@ The production key should be used with production provisioning profiles and apps
 
 {% details How does rate-limiting work? %}
 Braze affords you control over marketing pressure by allowing you to limit the rate at which your users are messaged both globally and on a per-channel basis using the following filters.
-* Last Received Any Campaign
+* Last Received Any Message
 * Last Received Email Campaign
 * Last Received Push Campaign
 If your push campaign fails to reach the intended user we still mark that user has having received a push campaign on that day. We record the campaign receipt at the time of delivery because push token invalidation notifications from iOS and FCM are not synchronous.
