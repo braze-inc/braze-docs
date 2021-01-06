@@ -74,7 +74,7 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, customization like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding slide constraint settings to set your own custom constraint value.
 
-{% include video.html id="" align="center" %}
+{% include video.html id="xfTtkZGjpxQ" align="center" %}
 
 #### __Subclassing the ABKInAppMessageSlideupViewController__<br><br>
 
@@ -108,9 +108,13 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 
 ```swift
 func setSlideConstraint() {
-  guard let superview = view.superview else { return }
-   
-  slideConstraint?.constant = superview.safeAreaInsets.bottom + tabBarHeight
+    slideConstraint?.constant = bottomSpacing
+}
+```
+
+```swift
+private var bottomSpacing: CGFloat {
+    return AppboyManager.shared.activeApplicationViewController.topMostViewController().view.safeAreaInsets.bottom
 }
 ```
 {% endtab %}
@@ -133,7 +137,7 @@ Adjust the constraint in `viewWillTransition()` because the subclass assumes res
 
 An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user data. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. 
 
-{% include video.html id="dmaT61p8kW8" align="center" %}
+{% include video.html id="hOPUB5fn0F0" align="center" %}
 
 {% tabs %}
 {% tab Swift %}
@@ -256,7 +260,7 @@ Using the subclass, after a user presses submit, pass the item to Braze with the
 
 Use custom full in-app messages to create interactive, user-friendly prompts to collect valuable customer data. The example below shows an implementation of the custom full in-app message reimagined as an interactive push primer with notification preferences. 
 
-{% include video.html id="" align="center" %}
+{% include video.html id="X2HsHIeNo4I" align="center" %}
 
 #### Intercepting In-App Message Touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
