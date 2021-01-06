@@ -135,6 +135,7 @@ The Braze SDK caches data (sessions, custom events, etc) and uploads it periodic
 |Great    |10 Seconds|
 |Good    |30 Seconds|
 |Poor    |60 Seconds|
+{: .reset-td-br-1 .reset-td-br-2}
 
 If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
 No data is uploaded after a session is closed.

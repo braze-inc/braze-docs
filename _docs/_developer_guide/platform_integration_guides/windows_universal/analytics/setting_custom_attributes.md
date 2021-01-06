@@ -111,6 +111,7 @@ To set up a subscription for your users (either email or push), you can set the 
 | `OptedIn` | Subscribed, and explicitly opted in |
 | `Subscribed` | Subscribed, but not explicitly opted in |
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
+{: .reset-td-br-1 .reset-td-br-2}
 
 - `EmailNotificationSubscriptionType`
   - Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.

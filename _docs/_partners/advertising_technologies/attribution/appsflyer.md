@@ -78,6 +78,7 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 | `campaign` | Attributed Campaign |
 | `af_adset` | Attributed Adgroup |
 | `af_ad` | Attributed Ad |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 4: Confirming the Integration
 

@@ -16,6 +16,7 @@ On this page, you will be able to comprehensively view and analyze the success o
 | Bounces | The push notifications sent to these users were undeliverable. These users have been automatically unsubscribed from all future push notifications. See [Bounced Push Notifications][38]. |
 | Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
 | Opens | Instances including both Direct Opens (defined above) and Influenced Opens in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
 

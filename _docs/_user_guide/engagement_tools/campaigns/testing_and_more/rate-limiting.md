@@ -90,6 +90,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 |7|10K|10K|
 |8|5K|10K|
 |9|0K|6K|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Multi-Channel Campaigns
 Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).

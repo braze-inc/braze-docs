@@ -121,6 +121,7 @@ This filter allows you to segment based on a user's push subscription status.
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Email Subscription Filter
 
@@ -141,6 +142,7 @@ This filter allows you to segment based on a user's email subscription status.
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Last Used App Filter
 
@@ -160,3 +162,4 @@ This filter allows you to segment based on when was the last time the user used 
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `after`, `before` | DateTime (ISO 8601 string) |
+{: .reset-td-br-1 .reset-td-br-2}
