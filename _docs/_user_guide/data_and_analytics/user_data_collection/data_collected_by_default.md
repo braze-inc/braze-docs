@@ -6,7 +6,7 @@ description: "This reference article addresses the data that is collected by def
 
 # Data Collected by Default
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom Events or Custom Attributes.
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom events or Custom attributes.
 
 ## Usage Information
 - First Used App (Date)

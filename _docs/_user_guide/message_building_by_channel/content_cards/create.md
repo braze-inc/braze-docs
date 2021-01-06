@@ -92,9 +92,9 @@ Each user is eligible to receive up to 100 non-expired Content Cards. As a user 
 
 ## Step 3: Configure Additional Settings
 
-Add [key-value pairs][19] to your message, if needed.
+Add [key value pairs][19] to your message, if needed.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use key value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas.
 
@@ -114,7 +114,7 @@ Build the remainder of your campaign, see the sections below for further details
 - Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose Conversion Events
-- Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign.
+- Braze allows you to track how often users perform specific actions (i.e. conversion events) after receiving a campaign.
 - You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 After you've finished building the last of your campaign, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
@@ -127,7 +127,7 @@ Once a Content Card is launched, it cannot be edited. It can only be stopped fro
 
 Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
-Within a Campaign Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
+Within a Campaign Message you can add a __Removal Event__ to specify which Custom events or Purchases should cause previously sent cards to be removed from that user's feed.
 
 {% alert tip %}
 You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
@@ -157,7 +157,7 @@ After you've finished building out your Canvas Step, review its details and [tes
 
 Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
-Within a Canvas Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
+Within a Canvas Message you can add a __Removal Event__ to specify which Custom events or purchases should cause previously sent cards to be removed from that user's feed.
 
 {% alert tip %}
 You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by Canvas's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
@@ -180,7 +180,7 @@ The following capabilities are not yet supported for Content Cards:
 
 ### Sending Behavior
 
-Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once a card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
+Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during it's life-span. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes, this data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
 
 If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to your Content Card campaign, and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove Content Cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync. 
 

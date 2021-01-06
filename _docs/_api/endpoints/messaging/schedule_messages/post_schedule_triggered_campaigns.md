@@ -13,7 +13,7 @@ description: "This article outlines details about the Update Scheduled Campaigns
 ---
 {% api %}
 # Schedule API Triggered Campaigns
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the campaign
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see Trigger Properties,
+  "trigger_properties": (optional, object) personalization key value pairs for all users in this send; see Trigger Properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
 |`audience` | Optional | Connected Audience Object | See Connected Audience |
 |`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see Trigger Properties |
+| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see Trigger Properties |
 | `schedule` | Required | Schedule Object | See Schedule Object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

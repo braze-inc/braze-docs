@@ -24,7 +24,7 @@ You can search your user base using a user's e-mail or user ID. Most of the time
 
 ## Overview Tab
 
-In the Overview Tab you can see information about the user's Profile, App Usage, Custom Attributes, Custom Events, Purchases, and the Most Recent Device that the user logged in on. For more information on this data, see [User Data Collection][12].
+In the Overview Tab you can see information about the user's profile, app usage, Custom attributes, Custom events, purchases, and the most recent device that the user logged in on. For more information on this data, see [User Data Collection][12].
 
 ![User_Search_Overview][8]
 

@@ -47,7 +47,7 @@ It will subclass `BroadcastReceiver` and override `onReceive()`. For a detailed 
 
 >  Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom `BroadcastReceiver`. To ensure the same event is not duplicated, the event logged from within your `BroadcastReceiver` should be given a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done segmentation and user data may be affected by duplicate events being logged for a single user action.
 
-For further details on custom handling push receipts, opens, and key-value pairs please visit this section of our [Documentation][78].
+For further details on custom handling push receipts, opens, and key value pairs please visit this section of our [Documentation][78].
 
 ### Step 3: Create a Push Campaign
 
@@ -59,9 +59,9 @@ The push campaign must include key-value pair extras which indicate that this pu
 
 ![kvpConfiguration][76]
 
-The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
+The [EventBroadcastReceiver.java][72] recognizes the key value pairs and logs the appropriate SDK custom event.
 
-Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key-value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
+Should you want to include any event properties to attach to your 'In-App Message Trigger' event, you can achieve this by passing these in the key value pairs of the push payload. In the example above the campaign name of the subsequent in-app message has been included. Your custom `BroadcastReceiver` can then pass the value as the parameter of the event property when logging the custom event.
 
 ###  Step 4: Create an In-App Message Campaign
 

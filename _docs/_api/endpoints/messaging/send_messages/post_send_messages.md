@@ -14,7 +14,7 @@ description: "This article outlines details about the Send Messages Immediately 
 ---
 {% api %}
 # Sending Messages Immediately via API Only
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}
 

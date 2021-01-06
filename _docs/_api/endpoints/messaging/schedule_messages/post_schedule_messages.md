@@ -14,7 +14,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 ---
 {% api %}
 # Create Scheduled Messages
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
 

@@ -42,7 +42,7 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion Code Upload
 
-Braze does not manage code creation or redemption, so as a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. Make sure that  there is only one code on each row. 
+Braze does not manage code creation or redemption, so as a result, you’ll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify](https://www.braze.com/docs/partners/channel_extensions/loyalty/voucherify/) or [Talon.One](https://www.braze.com/docs/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
 
 Note that the max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
