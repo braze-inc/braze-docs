@@ -244,7 +244,7 @@ Using the subclass, after a user presses submit, pass the item to Braze with the
   InAppMessageData *inAppMessageData = [[InAppMessageData alloc] init];
   NSString *key = [inAppMessageData rawValueForInAppMessageKey:InAppMessageKeyAttributeKey];
    
-  if (self.selectedItem.length > 0 && [self.inAppMessage.extras objectForKey: key]) {
+  if (self.selectedItem.length > 0 && [self.inAppMessage.extras objectForKey:key]) {
     [[AppboyManager shared] setCustomAttributeWithKey:self.inAppMessage.extras[key] andStringValue:self.selectedItem];
   }
 }
