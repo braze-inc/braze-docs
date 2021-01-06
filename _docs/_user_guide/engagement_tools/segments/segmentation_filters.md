@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up. 
+    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up.
     tags:
       - Custom Data
   - name: First Did Custom Event
@@ -101,7 +101,7 @@ glossaries:
     tags:
       - User Activity
   - name: Median Session Duration
-    description: Segments your users by the median length of their sessions in your app. 
+    description: Segments your users by the median length of their sessions in your app.
     tags:
       - User Activity
   - name: Money Spent In-App
@@ -254,10 +254,6 @@ glossaries:
       - Marketing Activity
   - name: Last Received Any Message
     description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Timezone:<br>Company's Time Zone
-    tags:
-      - Marketing Activity
-  - name: Last Received Any Campaign
-    description: Segments your users by the last time that they have received a campaign on any messaging channel. (24-hour period)<br><br>Timezone:<br>UTC
     tags:
       - Marketing Activity
   - name: Last Received Email
@@ -453,7 +449,7 @@ glossaries:
     tags:
       - Testing
   - name: Email Address
-    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter. 
+    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter.
     tags:
       - Testing
   - name: External User ID
@@ -461,7 +457,7 @@ glossaries:
     tags:
       - Testing
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
+    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
     tags:
       - Other
   - name: Provisionally Authorized on iOS
@@ -473,7 +469,7 @@ glossaries:
     tags:
       - User Activity
   - name: Ad Tracking Enabled
-    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads. 
+    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
     tags:
       - Testing
 ---
