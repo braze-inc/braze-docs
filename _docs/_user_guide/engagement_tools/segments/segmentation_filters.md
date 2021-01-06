@@ -26,7 +26,7 @@ glossary_tags:
 
 glossaries:
   - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Timezone:<br> Company's Time Zone
+    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Timezone:<br>Company's Time Zone
     tags:
       - Custom Data
   - name: Custom Event
@@ -46,7 +46,7 @@ glossaries:
     tags:
       - Custom Data
   - name: Last Received SMS
-    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: X Custom Event in Y Days
@@ -65,19 +65,19 @@ glossaries:
     tags:
       - User Activity
   - name: First Purchase for App
-    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Purchased Product
-    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Used App
-    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Made Purchase
@@ -85,19 +85,19 @@ glossaries:
     tags:
       - User Activity
   - name: Last Purchase for App
-    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Purchased Product
-    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Used App
-    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Last Used Specific App
-    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - User Activity
   - name: Median Session Duration
@@ -241,15 +241,15 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last In-App Message Impression
-    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Any Message
@@ -257,15 +257,15 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Received Email
-    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Push
-    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Received Webhook
-    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Timezone:<br>UTC
+    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Timezone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Viewed News Feed
