@@ -59,6 +59,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{site
 | `<zone>` | For internal use by Braze. Single letter. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
@@ -73,6 +74,7 @@ Data files will be written to your storage bucket once you hit _any of the set t
 | Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. |
 | Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. |
 | Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 Currents will never write empty files.

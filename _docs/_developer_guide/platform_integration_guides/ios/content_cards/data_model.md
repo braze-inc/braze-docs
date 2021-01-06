@@ -75,6 +75,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `url` | The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL.|
 | `openURLInWebView` | This property determines whether the URL will be opened within the app or in an external web browser.|
 | `extras`| An optional NSDictionary of NSString values.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner Content Card Properties - ABKBannerContentCard
 
@@ -82,6 +83,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 |---|---|
 | `image` | This property is the URL of the card's image.|
 | `imageAspectRatio` | This property is the aspect ratio of the card's image.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned Image Content Card Properties - ABKCaptionedImageCard
 
@@ -92,6 +94,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `title` | The title text for the card.|
 | `cardDescription` | The body text for the card.|
 | `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Classic Content Card Properties - ABKClassicContentCard
 
@@ -101,6 +104,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `title` | The title text for the card. |
 | `cardDescription` | The body text for the card. |
 | `domain` | The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Card Methods
 
@@ -110,6 +114,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `logContentCardClicked` | Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. |
 | `logContentCardDismissed` | Manually log a dismissal to Braze for a particular card.|
 | `isControlCard` | Determine if a card is the Control card for an A/B test. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 For more details, view the full [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
 

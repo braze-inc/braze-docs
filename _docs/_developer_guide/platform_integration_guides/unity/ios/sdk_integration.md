@@ -180,6 +180,7 @@ git clone git@github.com:Appboy/appboy-unity-sdk.git
 | __NO__ | the `Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
 | __YES__ | `Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
 | __YES__ | `Plugins/iOS` | `/<your-project>/Assets/Plugins/iOS` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Step 3: Generating Xcode project & Adding Required Classes
 

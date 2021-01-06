@@ -26,6 +26,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getExpiredAt()` | Gets the expiration date of the card.|
 |`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Banner Image Card {#banner-image-card-for-android}
 [Banner Image Cards][30] are clickable full-sized images. In addition to the base card properties:
@@ -35,6 +36,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getImageUrl()` | Returns the URL of the card’s image.|
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.|
 |`getDomain()` | Returns link text for the property URL.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Captioned Image Card {#captioned-image-card-for-android}
 [Captioned Image Cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
@@ -45,7 +47,8 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getTitle()` | Returns the title text for the card.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
-|`getDomain()` | Returns the link text for the property URL.
+|`getDomain()` | Returns the link text for the property URL. 
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Classic Card {#text-Announcement-card-for-android}
 [Text Announcement Cards][32] are clickable cards containing descriptive text. [Short News Cards][41] are clickable cards that include text and images. In addition to the base card properties:
@@ -56,7 +59,9 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
-|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card.
+|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short 
+News Card.
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 Please note that a classic card without an image included will result in a Text Announcement Card. If an image is included, you will recieve a Short News Card.
@@ -70,6 +75,7 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`logImpression()` | Manually log an impression to Braze for a particular card.
 |`logClick()` | Manually log a click to Braze for a particular card. 
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again.
+{: .reset-td-br-1 .reset-td-br-2}
 
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"

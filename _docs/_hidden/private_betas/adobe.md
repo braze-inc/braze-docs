@@ -88,6 +88,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 | --- | ------------------ | -------------- |
 | Attributes | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
 | Identities | - `Email`<br>- `Google Ad ID (GAID)`<br>- `Apple ID For Advertisers (IDFA)` | - `external_id` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The correct mapping would look like this:
 

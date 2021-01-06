@@ -49,6 +49,7 @@ We've also added the ability to upload newly supported file types, including:
 | SVG Images| `.svg`|
 | Javascript Files| `.js`|
 | CSS Files| `.css`|
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 Using Braze's Media Library CDN to host assets will ensure your messages are displayed on mobile devices even if a user has a poor internet connection or offline.

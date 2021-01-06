@@ -15,6 +15,7 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 | Android | 800 KB |
 | iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
 | Web | 35 KB |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Dashboard/UI
 

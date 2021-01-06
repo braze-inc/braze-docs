@@ -66,6 +66,7 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 | {campaign_name} | Attributed Campaign |
 | {adgroup_name} | Attributed Adgroup |
 | {creative_name} | Attributed Ad |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 {% alert important %}

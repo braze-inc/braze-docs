@@ -78,6 +78,7 @@ In the event you are importing a custom attribute (like `account_balance`), you 
 | With the Money Filter | Without the Money Filter |
 |---|---|
 |![With Filter][1] <br> <br> Where `account_balance` is input as `17.8`. | ![Without Filter][2] <br> <br> Where `account_balance` is input as `17.8`.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 Documentation on money filters can be found [here][11]. Please note that the behavior of the [Shopify money filter][11] slightly differs from how it is used within the Braze Dashboard. Please reference the behavior detailed above for an accurate representation of the expected behavior of this filter.
 

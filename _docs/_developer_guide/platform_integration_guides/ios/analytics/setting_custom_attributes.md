@@ -251,6 +251,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `ABKOptedin` | Subscribed, and explicitly opted in |
 | `ABKSubscribed` | Subscribed, but not explicitly opted in |
 | `ABKUnsubscribed` | Unsubscribed and/or explicitly opted out |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Users who grant permission for an app to send them push notifications default to the status of `ABKOptedin` as iOS requires an explicit opt-in.
 
