@@ -45,6 +45,7 @@ page_order: 4
   | Android Gmail          | 24      |
   | iOS Native             | 82      |
   | iOS Gmail              | 30      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
   |  Desktop Email Client  |  Limit  |
   |:----------------------:|:-------:|
@@ -52,6 +53,7 @@ page_order: 4
   | Outlook '13            | 38      |
   | Ouotlook for Mac '15   | 53      |
   | Outlook '16            | 50      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
 
   |  Webmail Email Client  |  Limit  |
@@ -61,6 +63,7 @@ page_order: 4
   | Outlook.com            | 49      |
   | Office 365             | 40      |
   | Mail.ru                | 64      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
 
   Source: [Email on Acid][62]
@@ -86,6 +89,7 @@ page_order: 4
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
 | 25KB maximum |   60KB maximum   | 600 pixels maximum |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Make sure to limit your **Body Size**: Large E-Mail bodies (larger than 102kb) are not only extremely taxing on Braze and SendGrid's servers, but are also clipped by Gmail and other E-Mail clients. We recommend keeping the size of your email under 25kb for just text, or 60kb with images.
 
@@ -96,6 +100,7 @@ If you are receiving this error in the editor, you likely have base64 encoded im
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |
 |:-----------:|:------------------:|:------------------:|:-------------:|
 | 5MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPG, GIF |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
 

@@ -56,6 +56,7 @@ Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can
 | Mobile Apps | iOS & Android SDKs|
 | Web Browsers | Web SDK|
 | Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Step 2: Specify Your Message Types

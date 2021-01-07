@@ -443,7 +443,7 @@ Example `Info.plist` contents:
 |----------|-------------|
 | YES       | Modal in-app messages will be dismissed on outside tap     |
 | NO        | Default, modal in-app messages will not be dismissed on outside tap |
-
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Display In-App Messages In a Custom View Controller
 

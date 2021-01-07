@@ -23,6 +23,7 @@ Learn more about the new sections of our Docs site below.
 | [Developer Guide][8]	| Meant for developers and engineers, this is a series of easy-to-use guides for implementing the Braze product and using the Braze REST API. |
 | [Technology Partners][9]	| This section supplements the Partnership Hub that elaborates on the implementation of available partners (we call them Alloys!) with Braze.	|
 | [Help][10] | This provides additional content not typically found in the guides that will up level and improve your experience and is for anyone and everyone! |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Find What You Need
 

@@ -65,6 +65,7 @@ The following status codes and associated error messages will be returned if you
 | 401 Unauthorized | Unknown or missing REST API Key                                  |
 | 429 Rate Limited | Over rate limit                                                  |
 | 5XX              | Internal server error, you should retry with exponential backoff |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

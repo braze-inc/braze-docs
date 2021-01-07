@@ -172,6 +172,7 @@ The `InAppMessageOperation()` return value can be used to control when the messa
 | `DISPLAY_LATER` | The message will be returned to the stack and displayed at the next available opportunity |
 | `DISCARD` | The message will be discarded |
 | `null` | The message will be ignored. This method should __NOT__ return `null` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 See [`InAppMessageOperation.java`][45] for more details.
 

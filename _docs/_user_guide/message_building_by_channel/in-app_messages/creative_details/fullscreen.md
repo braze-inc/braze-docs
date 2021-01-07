@@ -31,6 +31,7 @@ Full-screen in-app messages will fill the entire height of a device and crop hor
 |--- | --- | --- |
 | Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
 | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Landscape
 

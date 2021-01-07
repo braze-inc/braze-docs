@@ -26,6 +26,7 @@ page_order: 5
 |    Aspect Ratio   | Recommended Image Size | Maximum Image Size |   File Types  |
 |:-----------------:|:----------------------:|:------------------:|:-------------:|
 | 2:1 (recommended) |          500KB         |         5MB        | PNG, JPG, GIF |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### iOS Example
 
@@ -52,6 +53,7 @@ page_order: 5
 |:---------------------------:|:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
 |          Push Icon          | 1:1 (400x400 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 | Expanded Notification Image | 2:1 (600x300 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
 

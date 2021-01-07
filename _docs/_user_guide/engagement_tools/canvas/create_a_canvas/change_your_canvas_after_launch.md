@@ -22,6 +22,7 @@ tool:
 | Target Audience                  |                   |
 | Stop / Resume Initial Condition |                   |
 | Workflow Name                    |                   |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Canvas Graph
 
@@ -32,6 +33,7 @@ tool:
 | Add New Connections                            | Deleting Connections |
 | Add New Variants                               |                      |
 | Variant Distribution                           |                      |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Individual Step
 
@@ -44,6 +46,7 @@ tool:
 | Audience                            |                                              |
 | Exception Events                    |                                              |
 | Delays / Windows                    |                                              |
+{: .reset-td-br-1 .reset-td-br-2}
 
 There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
 

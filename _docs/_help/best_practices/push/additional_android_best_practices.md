@@ -36,6 +36,7 @@ Android push notifications provide the option to specify if your notification fa
 | Status         | Ongoing information about device or contextual status                       |
 | System         | System or device status update. Reserved for system use.                    |
 | Transport      | Media transport control for playback                                        |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 [See Android Documentation for more info][51]

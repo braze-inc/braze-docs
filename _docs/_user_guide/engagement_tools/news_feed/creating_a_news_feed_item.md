@@ -65,6 +65,7 @@ You may not advertise apps which are the property of companies other than your o
 |          Classic         | 1:1 (110 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
 |          Captioned image         | 4:3 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
 |          Banner         | 6:1 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - PNG files are recommended.
 - A custom image loading library is required to display Gifs on Android. We recommend Glide.

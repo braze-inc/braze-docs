@@ -135,6 +135,7 @@ The Braze SDK caches data (sessions, custom events, etc) and uploads it periodic
 |Great    |10 Seconds|
 |Good    |30 Seconds|
 |Poor    |60 Seconds|
+{: .reset-td-br-1 .reset-td-br-2}
 
 If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
 No data is uploaded after a session is closed.
@@ -153,7 +154,7 @@ The production key should be used with production provisioning profiles and apps
 
 {% details How does rate-limiting work? %}
 Braze affords you control over marketing pressure by allowing you to limit the rate at which your users are messaged both globally and on a per-channel basis using the following filters.
-* Last Received Any Campaign
+* Last Received Any Message
 * Last Received Email Campaign
 * Last Received Push Campaign
 If your push campaign fails to reach the intended user we still mark that user has having received a push campaign on that day. We record the campaign receipt at the time of delivery because push token invalidation notifications from iOS and FCM are not synchronous.

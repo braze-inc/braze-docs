@@ -104,6 +104,7 @@ You can set the following email subscription statuses for your users programmati
 | `OptedIn` | Subscribed, and explicitly opted in |
 | `Subscribed` | Subscribed, but not explicitly opted in |
 | `UnSubscribed` | Unsubscribed and/or explicitly opted out |
+{: .reset-td-br-1 .reset-td-br-2}
 
 >  These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
 

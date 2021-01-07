@@ -40,6 +40,7 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser
 |`facebookUserProfile`| The dictionary returned from the endpoint "/me".|
 | `numberOfFriends`| The length of the friends array returned from the endpoint "/me/friends".|
 | `likes` | The array of user's Facebook likes from the endpoint "/me/likes". |
+{: .reset-td-br-1 .reset-td-br-2}
 
 >  For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
 
