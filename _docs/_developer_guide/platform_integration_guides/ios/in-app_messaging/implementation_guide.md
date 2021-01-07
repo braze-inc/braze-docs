@@ -124,7 +124,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 
 ```objc
 - (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
-  slideConstraint.constant = self.view.superview.safeAreaInsets.bottom + self.tabBarHeight;
+  slideConstraint.constant = bottomSpacing;
 }
 ```
 {% endtab %}
