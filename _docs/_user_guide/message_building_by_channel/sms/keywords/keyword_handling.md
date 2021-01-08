@@ -1,7 +1,7 @@
 ---
 nav_title: Keyword Handling
 page_order: 0
-description: "This reference article covers the new beta process of handling custom keyword."
+description: "This reference article covers handing inbound SMS keywords sent from your users."
 page_type: reference
 tool:
   - Dashboard
