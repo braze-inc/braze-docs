@@ -18,11 +18,11 @@ channel:
 
 ## Two-Way Messaging (Custom Keyword Responses)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receieve an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way. 
+Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way. 
 
 ### Two Way Messaging Speeds
 
-Two-way messaging leverges custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
+Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
 
 | Type | Speed | Notes | 
 | ----- | ----- | ---- | 
@@ -30,7 +30,7 @@ Two-way messaging leverges custom events to make this seemingly smooth customer 
 | Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-If you require a faster sending speeds for unknown phone numbers, reach out to your customer sucess manager to discuss your options.
+If you require a faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
 
 ### Custom Keyword Messaging Handling
 
@@ -41,7 +41,7 @@ If you require a faster sending speeds for unknown phone numbers, reach out to y
 
 | Included Event Properties |
 | ------- | ------ |
-| - `message_body`: users SMS response<br>- `to_number`: usually shortcode the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_messsage_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
+| - `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
 {: .reset-td-br-1 .reset-td-br-2}
 
 - Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
