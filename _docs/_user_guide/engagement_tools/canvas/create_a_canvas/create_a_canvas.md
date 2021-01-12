@@ -3,7 +3,7 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
-description: "This reference article covers the neccesary steps involved in creating, maintaining, and testing a Canvas."
+description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
 ---
 
 # Creating a Canvas
