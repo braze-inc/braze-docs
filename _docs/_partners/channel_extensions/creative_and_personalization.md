@@ -23,5 +23,5 @@ valid_partner_list:
   - name: Dyspatch
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: Playable
-    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/playable/
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
 ---
