@@ -17,7 +17,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 | Email List Attributes <br> (Learn more [here][43]) | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | SMS Attributes <br> (Learn more [here][48]) | `{{sms.${inbound_message_body}}}` |
 | Campaign Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` |
-| Canvas Attributes | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
+| Canvas Attributes | `{{canvas.${name}}}` <br> `{{campaign.${name}}}`*<br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your app group.)| `{{event_properties.${your_custom_event_property}}}` |
@@ -31,9 +31,15 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 {% endalert %}
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-_Update noted in August 2019._
+Please note that the behavior for the following tags differs between Canvas and Campaigns:<br><br>
+
+`dispatch_id`  - Behavior differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
+{% raw %}
+`{{campaign.${name}}}` - When using this tag with Canvas, it will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
+{% endraw %}<br><br>
+
+_Updates noted in August 2019._
 {% endalert %}
 
 
