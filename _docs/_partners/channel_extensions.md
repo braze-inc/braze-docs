@@ -41,5 +41,5 @@ valid_partner_list:
   - name: EduMe
     url: /docs/partners/channel_extensions/learning/edume/
   - name: Crowdin
-    url: /docs/partners/channel_extensions/localization/crodwin/
+    url: /docs/partners/channel_extensions/localization/crowdin/
 ---
