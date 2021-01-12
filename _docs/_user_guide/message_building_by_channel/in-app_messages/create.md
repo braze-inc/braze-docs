@@ -56,6 +56,7 @@ Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can
 | Mobile Apps | iOS & Android SDKs|
 | Web Browsers | Web SDK|
 | Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Step 2: Specify Your Message Types
@@ -176,9 +177,9 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ## Step 5: Configure Additional Settings
 
-### Key-Value Pairs
+### Key Value Pairs
 
-Add [key-value pairs][19] to send extra custom fields to user devices. 
+Add [key value pairs][19] to send extra custom fields to user devices. 
 
 ### Re-evaluate Campaign Eligibility and Liquid
 

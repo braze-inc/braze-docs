@@ -15,9 +15,9 @@ By default, in-app messages are enabled after completing the standard SDK integr
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
-## Key-Value Pair Extras
+## Key Value Pair Extras
 
-`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.
+`ABKInAppMessage` objects may carry key value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.
 
 ## Setting Delegates
 
@@ -443,7 +443,7 @@ Example `Info.plist` contents:
 |----------|-------------|
 | YES       | Modal in-app messages will be dismissed on outside tap     |
 | NO        | Default, modal in-app messages will not be dismissed on outside tap |
-
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Display In-App Messages In a Custom View Controller
 
@@ -544,8 +544,6 @@ For additional information see the following header files:
 - [`ABKInAppMessage.h`][14]
 - [`ABKInAppMessageController.h`][15]
 - [`ABKInAppMessageControllerDelegate.h`][16]
-- [`ABKInAppMessageView.h`][17]
-- [`ABKInAppMessageViewController.h`][18]
 
 ## Implementation Samples
 
@@ -567,8 +565,6 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
-[17]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageView.h
-[18]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageViewController.h
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
 [21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates

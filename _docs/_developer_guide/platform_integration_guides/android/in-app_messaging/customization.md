@@ -9,9 +9,9 @@ platform: Android
 
 All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
-## Key-Value Pair Extras
+## Key Value Pair Extras
 
-In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
+In-app message objects may carry key value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
 
 Call the following when you get an in-app message object to retrieve its extras:
 
@@ -172,6 +172,7 @@ The `InAppMessageOperation()` return value can be used to control when the messa
 | `DISPLAY_LATER` | The message will be returned to the stack and displayed at the next available opportunity |
 | `DISCARD` | The message will be discarded |
 | `null` | The message will be ignored. This method should __NOT__ return `null` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 See [`InAppMessageOperation.java`][45] for more details.
 

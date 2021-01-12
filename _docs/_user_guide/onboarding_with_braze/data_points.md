@@ -8,7 +8,7 @@ description: "This page outlines what Data Points are at Braze and how you can b
 # Data Points
 
 At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger & cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
-
+ 
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
 {% alert important %}
@@ -71,6 +71,7 @@ __Please note that:__<br>
 |Purchases | All Purchases | Yes |
 |Amplitude Cohort Assignment | All Assignments | Yes |
 |Mixpanel Cohort Assignment | All Assignments | Yes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
   {% endtab %}
 {% tab Location %}
@@ -80,6 +81,7 @@ __Please note that:__<br>
 |Data Type | Data Point | Does it count towards consumption? |
 |---|---|---|
 |Most Recent Location | All Most Recent Locations | Yes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
   {% endtab %}
 {% tab Engagement %}
@@ -106,6 +108,7 @@ __Please note that:__<br>
 |Install Attribution | Ad | No |
 |Miscellaneous | Random Bucket Number | No |
 |Canvas Messages Received | Canvas Messages Received | No |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
  {% endtab %}
 {% tab Social %}
@@ -119,6 +122,7 @@ __Please note that:__<br>
 |Twitter | Following | No |
 |Twitter | Number of Tweets | No |
 |Facebook | Likes | No |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
  {% endtab %}
 {% endtabs %}

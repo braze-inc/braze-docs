@@ -14,7 +14,7 @@ description: "This article outlines details about the Update Scheduled Messages 
 ---
 {% api %}
 # Update Scheduled Messages
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/update
 {% endapimethod %}
 

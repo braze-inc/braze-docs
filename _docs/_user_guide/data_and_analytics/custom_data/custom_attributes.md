@@ -1,13 +1,13 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
-description: "Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application."
+description: "Custom attributes are best for storing attributes about your users, or information about low-value actions within your application."
 ---
 
 # Custom Attributes
-Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom Attributes, so you won't be able to get any graphs based upon them like you can for Custom Events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom attributes, so you won't be able to get any graphs based upon them like you can for Custom events.
 
-We get that Custom Attributes can be confusing, so read closely and check out our [LAB course on Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes)!
+We get that Custom attributes can be confusing, so read closely and check out our [LAB course on Custom events and attributes](http://lab.braze.com/custom-events-and-attributes)!
 
 ## Custom Attribute Storage
 All data stored on the User Profile, including Custom Attribute data, is retained indefinitely as long as each profile is active.

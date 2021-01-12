@@ -34,7 +34,7 @@ This is a security requirement in the open standards specification that Braze We
 
 #### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Braze has prepared an [example of this approach][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
 
 ### Step 1: Configure your Site's Service Worker
 
@@ -44,6 +44,12 @@ While industry best practice is to make your whole site secure, customers who ca
 
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
+
+#### What if I can't register a Service Worker in the root directory?
+
+By default, a Service Worker can only be used within the same directory it is registered in. For example, if your Service Worker file exists in `/assets/service-worker.js`, then it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the Service Worker in the root directory (i.e. `https://example.com/service-worker.js`).
+
+If you are unable to register a Service Worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP Header when serving your Service Worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the Service Worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory, like the homepage-even when the file exists in a deeper directory.
 
 
 ### Step 2: Browser Registration
@@ -134,3 +140,4 @@ appboy.logCustomEvent("prime-for-push");
 [4]: http://appboyj.com/modal-test.html
 [7]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
+[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain

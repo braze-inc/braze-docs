@@ -25,7 +25,7 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 ![e164][picture]{: style="max-width:50%;border: 0;"}
 
 ### Adding Aliases to the User Profiles
-Aliases are neccessary in order to be able to capture any Custom Events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number. 
+Aliases are necessary in order to be able to capture any Custom events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number. 
 
 ### Update Historical Information on Users Subscription States
 If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 

@@ -161,7 +161,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 
 ## Step 5: Registering Push Opens
 
-- Baidu supports sending extra key-value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key-value pairs:
+- Baidu supports sending extra key value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key value pairs:
 
   ```json
   {
@@ -194,7 +194,7 @@ AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
 
 ## Step 6: Extras
 
-- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
+- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key value pairs.  To extract your key value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
 
 {% tabs %}
 {% tab JAVA %}

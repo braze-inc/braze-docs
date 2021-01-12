@@ -65,8 +65,10 @@ validurls['/docs/partners/technology_partners/channel_extensions/workflow_automa
 validurls['/docs/platform_wide/#app-group-configuration'] = '/docs/developer_guide/platform_wide/app_group_configuration/#app-group-configuration';
 validurls['/docs/rest_api/#email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
-validurls['/docs/rest_apis/email_sync'] = '/docs/developer_guide/rest_api/email_sync/';
+validurls['/docs/rest_apis/email_sync'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
 validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports';
+validurls['/docs/api/endpoints/email_sync/#querying-unsubscribed-emails'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'
+validurls['']
 
 validurls['/docs/rest_api/#export'] = '/docs/developer_guide/rest_api/export/#export';
 validurls['/docs/rest_apis/export'] = '/docs/developer_guide/rest_api/export/#export';
@@ -203,6 +205,7 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/dat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/data_augmentation/contextual_location/gimbal/';
 
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';
@@ -251,4 +254,4 @@ validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/d
 
 validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant'
 
-validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/ '] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';

@@ -20,6 +20,7 @@ Logging in at [dashboard.braze.com](https://dashboard.braze.com) will automatica
 |US-06| https://dashboard-06.braze.com | https://rest.iad-06.braze.com | https://sdk.iad-06.braze.com |
 |US-08| https://dashboard-08.braze.com | https://rest.iad-08.braze.com | https://sdk.iad-08.braze.com |
 |EU-01| https://dashboard-01.braze.eu | https://rest.fra-01.braze.eu | https://sdk.fra-01.braze.eu |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
 When integrating your SDK, use the "SDK Endpoint". When making calls to our REST API, use the "REST Endpoint".

@@ -28,6 +28,7 @@ You will see the following segment statistics, which update in real-time as you 
 | **LTV (Paying Users)** | The lifetime value per user (LTV) in this segment and the lifetime value per paying user in this segment. The LTV is calculated by dividing your lifetime revenue by lifetime users. |
 | **Emailable (Opted In)** | Emailable refers to all users who can be reached via email. These users have provided an email address and have not opted out. Opted In refers to users who have explicitly opted in to email. Due to [spam regulations][6], it's often a good idea to ask your users to explicitly opt in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt in, you can target a message at [those who have neither opted in nor out][5]. |
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (e.g. if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. On iOS and Windows, users must always explicitly opt in for you to send them pushes. Because of how permissions are granted on Android, users don't always need to explicitly opt in to receive pushes. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Messaging Use and Historical Membership
 

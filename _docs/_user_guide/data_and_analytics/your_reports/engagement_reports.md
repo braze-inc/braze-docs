@@ -65,6 +65,7 @@ The Stats tab will automatically show you stats for the types of Campaigns or Ca
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 

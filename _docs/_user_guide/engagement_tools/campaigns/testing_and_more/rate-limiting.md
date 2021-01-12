@@ -1,6 +1,6 @@
 ---
 nav_title: Rate-Limiting and Frequency Capping
-platform: 
+platform:
   - iOS
   - Android
   - Web
@@ -33,7 +33,7 @@ As you create more segments, there are going to be cases where the membership of
 Braze provides the following filters in order to help you limit the rate at which your users receive messages:
 
 - Last Engaged With Message
-- Last Received Any Campaign
+- Last Received Any Message
 - Last Received Push Campaign
 - Last Received Email Campaign
 - Last Received SMS
@@ -90,6 +90,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 |7|10K|10K|
 |8|5K|10K|
 |9|0K|6K|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Multi-Channel Campaigns
 Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
@@ -114,7 +115,7 @@ Each line of frequency caps will be connected using an "AND," and you're able to
 
 ### Delivery Rules
 
-There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.  
+There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
 
 If you want a particular campaign to override Frequency Capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling Frequency Capping to "Off". After this, you will be asked if you still want this Campaign to count towards your Frequency Cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
 
@@ -126,9 +127,9 @@ Please note that this behavior changes the default behavior when you turn off Fr
 
 ![Frequency Capping Update][18]
 
-- Different channels within a multi-channel campaign will individually count towards the frequency cap. For instance, if you create a multi-channel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multi-channel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
+Different channels within a multi-channel campaign will individually count towards the frequency cap. For instance, if you create a multi-channel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multi-channel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
 
-- In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
+In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
 {% alert update %}
 Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.

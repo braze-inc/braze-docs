@@ -76,6 +76,7 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Additional Notes and Best Practices
 Please note the following:
