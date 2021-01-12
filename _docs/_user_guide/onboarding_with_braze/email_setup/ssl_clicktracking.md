@@ -185,7 +185,7 @@ Navigate to the Tracking Domains section in the UI and click the orange "test" v
 
 ## KeyCDN - Sendgrid {#keycdn}
 
-Please follow [Sendgrid's KeyCDN CDN Documentation](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly) for guidance on how to configure your CDN using KeyCDN.
+Please follow [Sendgrid's KeyCDN CDN Documentation](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) for guidance on how to configure your CDN using KeyCDN.
 
 ## Fastly - Sendgrid and Sparkpost {#fastly} 
 

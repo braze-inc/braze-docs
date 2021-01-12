@@ -12,7 +12,7 @@ tool:
   - Campaigns
 ---
 {% alert important %}
-Push Primer campaigns require backend set up from your developers. <br>Check out the neccesary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
+Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
 
 
