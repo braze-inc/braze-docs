@@ -204,6 +204,11 @@ For more information on Custom Event Properties, check out our [Documentation]({
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
+Did you know you can include Canvas step names in your messages and link templates?<br>
+Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
+{% endalert %}
+
 ### Add More Steps
 
 Add more Steps by pressing the blue plus icon:
