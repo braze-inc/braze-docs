@@ -247,6 +247,7 @@ Segment __does not__ have a limit on the number of data elements clients send to
 | ----------------- | ------------------ |
 | Braze SDK Endpoint | Custom API Endpoint |
 | Braze REST Endpoint | Custom REST API Endpoint |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API Endpoint (for example, `https://rest.iad-03.braze.com`)
 {% enddetails %}
@@ -257,6 +258,7 @@ Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK
 | ----------------- | ------------------ |
 | Braze SDK Endpoint | Custom API Endpoint |
 | Braze REST Endpoint | Custom REST API Endpoint |
+{: .reset-td-br-1 .reset-td-br-2}
 
 To ensure that you input your Braze SDK Endpoint correctly, the proper format must be followed. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with invalid endpoint `https://https://sdk.iad-03.braze.com`.
 

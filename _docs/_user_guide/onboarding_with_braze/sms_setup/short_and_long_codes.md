@@ -139,6 +139,5 @@ You also must inform us, regardless of which number you use, of how many message
 If you have your own short code, reach out to your Customer Success Manager  __during the onboarding process__ to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
 
-
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [3]: {% image_buster /assets/img/sms/sms_graph.png %}

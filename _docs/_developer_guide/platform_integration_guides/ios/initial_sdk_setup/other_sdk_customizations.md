@@ -31,7 +31,8 @@ Example `Info.plist` contents:
 | LogLevel | Description |
 |----------|-------------|
 | 0        | All log information will be logged to the iOS console  |
-| 8        | Default, minimal logging.                              |
+| 8        | Default, minimal logging. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Optional IDFA Collection
 

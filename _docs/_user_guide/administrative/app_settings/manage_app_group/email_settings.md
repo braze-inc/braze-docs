@@ -65,7 +65,7 @@ Learn more about best practices for email list management [here][7].
 
 Within the email settings, Braze lets you set a Custom Opt-In Page. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
 
-![Cutom Opt-In][4]
+![Custom Opt-In][4]
 
 Requirements:
 - Must provide your own HTML for this feature.

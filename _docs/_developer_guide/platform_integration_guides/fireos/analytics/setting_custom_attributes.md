@@ -146,6 +146,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `OPTED_IN` | Subscribed, and explicitly opted in |
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 {% alert important %}

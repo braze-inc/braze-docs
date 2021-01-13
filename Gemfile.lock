@@ -1,21 +1,23 @@
 GIT
   remote: https://github.com/zzhaobraze/html-extractor
-  revision: ccc2b0a0c6f58d73955e2d7c2d4dd9476266346d
+  revision: 7a53d233228302fd0b1ac4e0bd66a774f4eb8fe5
+  branch: master
   specs:
-    algolia_html_extractor (2.6.1)
+    algolia_html_extractor (2.6.1a)
       json (~> 2.0)
-      nokogiri (~> 1.10.8)
+      nokogiri (~> 1.11.1)
 
 GIT
   remote: https://github.com/zzhaobraze/jekyll-algolia
-  revision: 1ca19a49913d4e76019d19bb91a943ffb9e6c8b2
+  revision: ae825fcb66a2a9fec605e6d3c1dff7c9aee742d5
+  branch: master
   specs:
     jekyll-algolia (1.6.0)
       algoliasearch (= 1.26.1)
       filesize (~> 0.1)
       jekyll (>= 3.6, < 5.0)
       json (~> 2.0)
-      nokogiri (~> 1.10.8)
+      nokogiri (~> 1.11.1)
       progressbar (~> 1.9)
       verbal_expressions (~> 0.1.5)
 
@@ -64,7 +66,7 @@ GEM
     jekyll_asset_pipeline (0.6.2)
       jekyll (>= 3.5, < 5.0)
       liquid (~> 4.0)
-    json (2.3.1)
+    json (2.5.1)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -74,7 +76,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.5.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -82,14 +84,16 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.2)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.1)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    progressbar (1.10.1)
+    progressbar (1.11.0)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-jekyll (0.3.5)
       jekyll
@@ -150,4 +154,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

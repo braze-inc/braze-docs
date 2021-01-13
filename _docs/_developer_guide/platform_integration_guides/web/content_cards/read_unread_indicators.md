@@ -14,6 +14,7 @@ Braze provides indicators on Content Cards as pictured below:
 |---|---|
 |Read | ![ReadContentCard][2] |
 | Unread | ![UnreadContentCard][3] |
+{: .reset-td-br-1 .reset-td-br-2}
 
 # Changing colors
 

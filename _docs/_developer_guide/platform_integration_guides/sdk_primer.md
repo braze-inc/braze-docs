@@ -31,6 +31,7 @@ These properties are collected by the Web SDK upon proper integration.
 | LANGUAGE | The language the browser is set to use.  |
 | TIME_ZONE | The time zone of the device.  |
 | USER_AGENT | The user agent string of the browser. <br> See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) for more information. |
+{: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
  {% tab Android SDK %}
@@ -65,7 +66,8 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `ABKDeviceOptionTimezone`| The reported timezone of the device.
 | Device Push Authorization Status <br> `ABKDeviceOptionPushAuthStatus`| Whether this app has push authorization for the device.
-| Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled.
+| Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}

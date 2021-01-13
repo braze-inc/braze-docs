@@ -20,7 +20,7 @@ Apple Push Notifications service (APNs) supports setting alert preferences and s
 | alert             | string or dictionary object | For string inputs, displays an alert with the string as the message with Close and View buttons; for non-string inputs, displays an alert or banner depending on the input's child properties |
 | badge             | number                      | Governs the number that is displayed as the badge on the app icon                                                                                                                              |
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
-| content-available | number                      | Input values of 1 signal to the app the availabilty of new information upon launch or session resumption |
+| content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 

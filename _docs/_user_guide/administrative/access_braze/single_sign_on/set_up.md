@@ -45,6 +45,7 @@ On this page, you, input:
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like “Okta.” |
 | `Target URL` | This is provided after setting up Braze within your IdP. Some IdPs reference this as the SSO URL or SAML 2.0 Endpoint. |
 | `Certificate` | The `x.509` certificate is provided by your IdP. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 

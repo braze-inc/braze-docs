@@ -12,7 +12,7 @@ tool: currents
 
 > This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners.
 
-Currents for Data Storage is a continuous streama of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Currents for Data Storage is a continuous streams of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
@@ -59,6 +59,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{site
 | `<zone>` | For internal use by Braze. Single letter. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
@@ -73,6 +74,7 @@ Data files will be written to your storage bucket once you hit _any of the set t
 | Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. |
 | Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. |
 | Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 Currents will never write empty files.
