@@ -72,7 +72,7 @@ Scroll down to the `Email Message Performance` section and click the arrow under
 
 The Email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-To place a link to the Preference Center in your emails, use the Preference Center liquid tag and place it in the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
+To place a link to the Preference Center in your emails, use the Preference Center Liquid tag and place it in the desired place in your email, similar to the way you insert [unsubscribe urls](#custom-footer).
 
 {% raw %}
 ```

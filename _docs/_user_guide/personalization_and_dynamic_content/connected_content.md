@@ -3,7 +3,7 @@ nav_title: Connected Content
 page_order: 1
 layout: featured
 guide_top_header: "Connected Content"
-guide_top_text: "Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs. <br> <br> You can also use our connected content capabilities with our Technology Partners - like <a href='/docs/partners/data_augmentation/contextual_location/accuweather/'>AccuWeather</a> and <a href='/docs/partners/channel_extensions/localization/transifex/'>Transifex</a>!"
+guide_top_text: "Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs. <br> <br> You can also use our Connected Content capabilities with our Technology Partners - like <a href='/docs/partners/data_augmentation/contextual_location/accuweather/'>AccuWeather</a> and <a href='/docs/partners/channel_extensions/localization/transifex/'>Transifex</a>!"
 description: "Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users."
 
 guide_featured_title: "Section Articles"
