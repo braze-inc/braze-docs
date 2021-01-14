@@ -62,60 +62,17 @@ You cannot have multiple in-app message variants in a single step.
 
 Composing an SMS is easy! Just write your message, using languages, personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
 
+{% alert important %}
+Before proceeding, read our [SMS Message Copy Limits and Message Segment documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
+{% endalert %}
+
 ![Compose SMS]({% image_buster /assets/img/sms_campaign_compose.gif %})
 
 {% alert tip %}
 {% raw %}
 If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
 {% endraw %}
-
 {% endalert %}
-
-### Message Copy Limits
-
-{% tabs local %}
-  {% tab Encoding Types %}
-
-Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character is used, the message body will automatically format for that encoding standard. This will limit your characters per message segment to 67, as opposed to 160 with GSM-7.
-
-  {% endtab %}
-
-  {% tab Character Limits %}
-
-Character limits for messages are:
-- [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit per message segment.
-- [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) has a 67 character limit per message segment.
-
-Languages such as Chinese, Korean, or Japanese must be transferred using the 16-bit UCS-2 character encoding.
-
-  {% endtab %}
-
-  {% tab Message Limits %}
-
-Messages are limited by characters and message segments.
-- No more than 10 segments of messages ay be sent in a single Braze SMS message.
-- Those 10 segments will be limited to 1600 characters (GSM-7 encoding) or 670 characters (UCS-2 encoding).
-<br><br>
-{% alert warning %}
-Going over message or copy limits may result in additional charges.
-{% endalert %}
-
-  {% endtab %}
-
-  {% tab Validation Rules %}
-
-Braze will alert you if...
-
-- Your message body exceeds 1600 characters,
-- UCS-2 characters are used, increasing the potential for overflow into another message segment as your message will then be limited to 67 characters per message segment,
-- Your message uses liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your liquid could bring to the message.
-<br><br>
-{% alert warning %}
-Going over message or copy limits may result in additional charges.
-{% endalert %}
-
-  {% endtab %}
-{% endtabs %}
 
 ## Step 3: Preview and Test Your Message
 
@@ -124,7 +81,7 @@ Braze always recommends previewing and testing your message before sending.
 ![Test SMS]({% image_buster /assets/img/sms_campaign_test.gif %})
 
 {% alert tip %}
-If you'd like to test how many segments yout SMS may be split into, test your copy length [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/).
+If you'd like to test how many segments yout SMS may be split into, test your copy length [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#sms-segment-calculator).
 {% endalert %}
 
 ## Step 4: Configure Message Delivery
@@ -138,6 +95,10 @@ Decide how, when, and why your message will be delivered. You can either schedul
 In this step, you'll choose which users receive your message. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your Segments, and narrow that segment further with our Filters, if you choose.
 
 ![SMS Targeting]({% image_buster /assets/img/sms_campaign_targeting.gif %})
+
+{% alert tip %}
+Interesting in SMS retargeting? Visit our SMS [retargeting doc]({{siet.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more. 
+{% endalert %}
 
 ## Step 6: Choose Conversion Events
 
