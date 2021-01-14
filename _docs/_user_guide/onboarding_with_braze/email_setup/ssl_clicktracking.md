@@ -80,7 +80,7 @@ __Distribution Settings__
 
 #### Step 4: Test your Distribution
 
-Once the Distribution is deployed, ensure that it can handle links correctly over HTTP and HTTPS using an existing link.
+Once the Distribution is deployed, ensure that it can handle links correctly over HTTP and HTTPS. This can be done by adding an "s" to an existing HTTP link and verifying it resolves to the original URL.
 
 #### Step 5: Update your DNS
 
