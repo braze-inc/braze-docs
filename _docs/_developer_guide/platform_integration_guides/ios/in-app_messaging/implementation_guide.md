@@ -30,10 +30,6 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
       return modalViewController(inAppMessage: inAppMessage) //Custom Method
     case is ABKInAppMessageFull:
       return fullViewController(inAppMessage: inAppMessage) //Custom Method
-    case is ABKInAppMessageHTML:
-      return ABKInAppMessageHTMLViewController(inAppMessage: inAppMessage)
-    case is ABKInAppMessageImmersive:
-      return ABKInAppMessageImmersiveViewController(inAppMessage: inAppMessage)
     default:
       return ABKInAppMessageViewController(inAppMessage: inAppMessage)
     }
@@ -52,10 +48,6 @@ __ABKInAppMessage Subclasses__<br>
     return [self modalViewControllerWithInAppMessage:inAppMessage]; //Custom Method
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageFull class]]) {
     return [self fullViewControllerWithInAppMessage:inAppMessage]; //Custom Method
-  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageHTML class]]) {
-    return [[ABKInAppMessageHTMLViewController alloc] initWithInAppMessage:inAppMessage];
-  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
-    return [[ABKInAppMessageImmersiveViewController alloc] initWithInAppMessage:inAppMessage];
   } else {
     return [[ABKInAppMessageViewController alloc] initWithInAppMessage:inAppMessage];
   }
