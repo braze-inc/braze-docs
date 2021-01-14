@@ -119,9 +119,9 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 
 ![Shopify][14]{: style="max-width:80%;"}
 
-_Note: If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager to enable filtering for all relevant event properties that you'd like to use within segmentation and liquid._ 
+_Note: If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid._ 
 
-For the Shopify Abandoned Checkout event, you are also able to segment and liquid template the items within your most recent abandoned cart for the following custom attributes: 
+For the Shopify Abandoned Checkout event, you are also able to segment and Liquid template the items within your most recent abandoned cart for the following custom attributes: 
 - `product IDs`
 - `skus` 
 - `name`
@@ -137,7 +137,7 @@ With Shopify custom events in Braze, you can trigger Canvases or Campaigns like 
 
 ### Personalization using Liquid
 
-If you have the Nested Event Property support enabled by your Customer Success Manager, you can liquid template the event properties and nested event properties for the supported Shopify custom events. <br>Here is an example of liquid templating the __product title__ from the Shopify Abandoned Checkout event:
+If you have the Nested Event Property support enabled by your Customer Success Manager, you can Liquid template the event properties and nested event properties for the supported Shopify custom events. <br>Here is an example of Liquid templating the __product title__ from the Shopify Abandoned Checkout event:
 {% raw %}
 `{{event_properties.${line_items[0].title}}}`
 {% endraw %}
@@ -184,7 +184,7 @@ Once you have retrieved your Shopify access token, you can now build out your Co
 
 ### Dynamically Generating HTML Content via Liquid and Connected Content (Advanced)
 
-For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
+For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with Liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
 ![Shopify][22]{: style="float:right;max-width:30%;margin-left:15px;margin-top:15px;"}
 
 In this example, we'll be using [Braze's standard email HTML template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) for Order Confirmation and a [Liquid For Loop](https://shopify.github.io/liquid/tags/iteration/). In the standard Braze HTML Order Confirmation Template, there are pre-constructed HTML elements that are used to represent the products purchased:<br>

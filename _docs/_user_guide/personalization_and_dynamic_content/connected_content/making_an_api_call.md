@@ -3,7 +3,7 @@ nav_title: Making an API Call
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 0
-description: "This reference article covers how to make an connected content API call, as well as helpful examples and advanced connected content use cases."
+description: "This reference article covers how to make an Connected Content API call, as well as helpful examples and advanced Connected Content use cases."
 ---
 
 # Making an API Call

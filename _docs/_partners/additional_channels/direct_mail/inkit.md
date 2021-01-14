@@ -42,7 +42,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 
 ### Step 2: Fill Out Your Template
 
-Please ensure that your liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
+Please ensure that your Liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
 
 ```json
 {% raw %}
