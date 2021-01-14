@@ -14,13 +14,15 @@ alias: /funnel_reports/
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 
 ## Funnel Report Set Up
-![Funnel Report 5][5]{: style="float:right;max-width:37%;border:0;margin-left:15px;"}
+![Funnel Report 5][5]{: style="float:right;max-width:39%;border:0;margin-left:15px;"}
 
 The funnel reporting feature is available from either:
 - An individual campaigns analytics page in the Dashboard
 - An individual Canvas details page, via the Analyze Variants button 
 
 Funnel Reports can be made for existing active campaigns and Canvases. These reports show a series of events that a campaign recipient progresses through over a period of one (1) to thirty (30) days from the date they received the message. A user is considered converted through a step in the funnel if they perform the event in the specified order.
+
+Please note that Funnel Reports are not currently available for SMS or API campaigns.
 
 ### Step 1: Select Time Frame
 
