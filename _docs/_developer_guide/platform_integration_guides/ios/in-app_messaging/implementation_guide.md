@@ -63,9 +63,9 @@ There are three sample customer use cases provided. Each sample has video walkth
 - [Custom Modal In-App Message](#custom-modal-in-app-message)
 - [Custom Full In-App Message](#custom-full-in-app-message)
 
-### In-App Message Slideup Modification
+### Custom Slideup In-App Message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, customization like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding slide constraint settings to set your own custom constraint value.
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding slide constraint settings to set your own custom constraint value.
 
 {% include video.html id="xfTtkZGjpxQ" align="center" %}
 
