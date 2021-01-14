@@ -7,7 +7,7 @@ description: "This implementation guide covers in-app message code consideration
 
 # In-App Messaging Implementation Guide
 
-> This implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Please reference our Braze [Demo repository](
+> This implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Please reference our [Braze Demo repository](
 https://github.com/braze-inc/braze-growth-shares-ios-demo-app) and [HTML Template repository](https://github.com/braze-inc/in-app-message-templates) as needed. Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
  
 ## Code Considerations
@@ -77,7 +77,7 @@ While building out your slide-up in-app message, you may notice you aren't able 
 
 {% include video.html id="xfTtkZGjpxQ" align="center" %}
 
-#### __Subclassing the ABKInAppMessageSlideupViewController__<br><br>
+#### __Adding Additional Behavior to our Default UI__<br><br>
 
 {% tabs %}
 {% tab Swift %}
