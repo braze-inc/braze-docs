@@ -64,7 +64,7 @@ You can template in the following attributes for the user's most recent device a
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
+Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
 ## Targeted Device Information
 
@@ -115,7 +115,7 @@ Hello {{${first_name} | default: 'there'}}, thanks for downloading!
 Thanks for downloading!
 {% endif %}
 ```
-In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see liquid in the event of a mistake.
+In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see Liquid in the event of a mistake.
 
 {% endraw %}
 
@@ -134,7 +134,7 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 {% abort_message('not enough points') %}
 {% endif %}
 ```
-This tag comes in handy when you want to reformat content that is returned from our [connected content][4] feature. You can read more about variable tags [here][31].
+This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more about variable tags [here][31].
 
 ## Iteration Tags
 

@@ -517,7 +517,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 ## Usage
 {%raw %}
 Enclose __tabs__ in a `{% tabs %}` and `{% endtabs %}`
-Enclose individual __tab__ with the liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
+Enclose individual __tab__ with the Liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
 {% endraw %}
 
 {% alert important %}

@@ -16,10 +16,10 @@ A tag must be wrapped in `{% %}`.
 Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% alert tip %}
-To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your liquid syntax.
+To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your Liquid syntax.
 
 
-If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other liquid elements.
+If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
 
 
 For example, add the following into the message field first:  
@@ -30,7 +30,7 @@ For example, add the following into the message field first:
 {% endif %}
 ```
 
-Be sure it highlights in green, then replace the `X` with your chosen liquid or connected content using the blue `+` in the message field corner, and the `0` with your desired value.
+Be sure it highlights in green, then replace the `X` with your chosen Liquid or Connected Content using the blue `+` in the message field corner, and the `0` with your desired value.
 
 
 Then, add your message variations as you need them between the `else` conditionals:
