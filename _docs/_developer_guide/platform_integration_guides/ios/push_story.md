@@ -69,7 +69,7 @@ end
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`
 
-### Manually
+### Manual Integration
 
 Download the latest `AppboyPushStory.zip` from the [Github release page][8], unzip it and add the following files to your project's Notification Content Extension:
 - `Resources/ABKPageView.nib`
