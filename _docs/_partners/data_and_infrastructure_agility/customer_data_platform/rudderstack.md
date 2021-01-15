@@ -130,7 +130,7 @@ RudderStack's `page` method allows you to record your website's page views. It a
 You can read more about RudderStack's `page` method in their [documentation][22].
 
 
-[0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
+[0]: {% image_buster /assets/img/rudderstack/braze_settings.png %}
 [1]: https://rudderstack.com/
 [2]: https://app.rudderstack.com/
 [3]: https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack

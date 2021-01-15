@@ -33,7 +33,7 @@ Either upload an existing certificate using the [AWS command-line tool](https://
 
 Go to [Cloudfront](https://console.aws.amazon.com/cloudfront/) and click __Create Distribution__. Select __Web__ as your delivery method. *Please note* you will also have to do this set up for each of the link white labels. However, it is possible to use a single distribution (see photos below) for all link white labels, as long as the SSL certificate attached to this distribution covers all subdomains.
 
-![Single Distribution]({% image_buster /assets/img/SSL/single_distribution.png %})
+![Single Distribution]({% image_buster /assets/img/ssl/single_distribution.png %})
 
 #### Step 3: Configure your Distribution
 
@@ -106,17 +106,17 @@ Please follow [Sparkpost's CloudFront CDN Documentation](https://www.sparkpost.c
 
 You must first purchase an SSL certificate that matches the exact link branding record for each subdomain, for example, __ablink.m.example.com__, __ablink.x.example.com__. A wildcard certificate that only covers one level of a subdomain  (&#42;__.level-ex.com__) will cause links to break. 
 
-![Crytpo Settings]({% image_buster /assets/img/SSL/SSL_certificate.png %}){: style="max-width:70%"}
+![Crytpo Settings]({% image_buster /assets/img/ssl/SSL_certificate.png %}){: style="max-width:70%"}
 
 #### Step 2: Purchase SSL Certificates
 
 Clients can purchase the "Dedicated SSL with Custom Hostnames" option. Ensure that the Certificate purchased is an "Edge Certificate". For more information on Cloudflare's different certificates [please see here](https://support.cloudflare.com/hc/en-us/articles/228009108-Managing-Dedicated-SSL-Certificates).
 
-![SSL Certificates]({% image_buster /assets/img/SSL/custom_hostname.png %}){: style="max-width:70%"}
+![SSL Certificates]({% image_buster /assets/img/ssl/custom_hostname.png %}){: style="max-width:70%"}
 
 The ablink subdomain record will be added as custom hostnames.
 
-![Link Branding]({% image_buster /assets/img/SSL/crypto_settings.png %}){: style="max-width:80%"}
+![Link Branding]({% image_buster /assets/img/ssl/crypto_settings.png %}){: style="max-width:80%"}
 
 Make sure the HTTP proxy is enabled, i.e. the cloud icon is orange. 
 
@@ -124,7 +124,7 @@ Make sure the HTTP proxy is enabled, i.e. the cloud icon is orange.
 
 Confirm that __SSL is set to Full__ and Page Rules are turned __ON__ for each URL.
 
-![Page Rules]({% image_buster /assets/img/SSL/page_rules.png %}){: style="max-width:70%"}
+![Page Rules]({% image_buster /assets/img/ssl/page_rules.png %}){: style="max-width:70%"}
 
 #### Step 4: Update DNS Settings
 
@@ -132,7 +132,7 @@ Make sure to point all link branding records for each subdomain to sendgrid.net 
 
 In the "Name" field, ensure you are only posting the portion of the CNAME before your domain. For example, if your CNAME is `ablink.x.example.com`, you would only post `ablink.x`.
 
-![DNS]({% image_buster /assets/img/SSL/crypto_settings.png %}){: style="max-width:90%"}
+![DNS]({% image_buster /assets/img/ssl/crypto_settings.png %}){: style="max-width:90%"}
 
 #### Next steps 
 
@@ -203,7 +203,7 @@ Please follow [Sparkpost's Fastly CDN Documentation](https://www.sparkpost.com/d
 {% endtabs %}
 
 
-[1]: {% image_buster /assets/img/SSL/SSL_certificate.png %}
-[2]: {% image_buster /assets/img/SSL/custom_hostname.png %}
-[3]: {% image_buster /assets/img/SSL/crypto_settings.png %}
-[4]: {% image_buster /assets/img/SSL/page_rules.png %}
+[1]: {% image_buster /assets/img/ssl/SSL_certificate.png %}
+[2]: {% image_buster /assets/img/ssl/custom_hostname.png %}
+[3]: {% image_buster /assets/img/ssl/crypto_settings.png %}
+[4]: {% image_buster /assets/img/ssl/page_rules.png %}

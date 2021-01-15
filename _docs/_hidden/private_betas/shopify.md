@@ -245,30 +245,30 @@ These HTML Elements can be included within a Liquid For Loop to dynamically gene
 
 With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers, and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/gdpr_compliance/) policies.
 
-[1]: {% image_buster /assets/img/Shopify/shopify_integration1.png %} 
-[2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
-[3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.png %}
-[4]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %} 
-[6]: {% image_buster /assets/img/Shopify/shopify_integration12.png %} 
-[7]: {% image_buster /assets/img/Shopify/shopify_integration7.png %} 
-[8]: {% image_buster /assets/img/Shopify/shopify_integration8.png %} 
-[9]: {% image_buster /assets/img/Shopify/shopify_integration9.png %} 
-[10]: {% image_buster /assets/img/Shopify/shopify_integration10.png %} 
-[11]: {% image_buster /assets/img/Shopify/shopify_segmentation1.png %} 
-[12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %} 
-[13]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %} 
-[14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %} 
-[15]: {% image_buster /assets/img/Shopify/shopify_connected_content1.png %} 
-[16]: {% image_buster /assets/img/Shopify/shopify_connected_content2.png %} 
-[17]: {% image_buster /assets/img/Shopify/shopify_connected_content3.png %} 
-[18]: {% image_buster /assets/img/Shopify/shopify_connected_content4.png %} 
-[19]: {% image_buster /assets/img/Shopify/shopify_connected_content5.png %} 
-[20]: {% image_buster /assets/img/Shopify/shopify_troubleshooting1.png %} 
-[21]: {% image_buster /assets/img/Shopify/shopify_troubleshooting2.png %} 
-[22]: {% image_buster /assets/img/Shopify/shopify_integration13.png %} 
-[23]: {% image_buster /assets/img/Shopify/shopify_integration14.png %} 
-[24]: {% image_buster /assets/img/Shopify/shopify_integration15.png %} 
-[25]: {% image_buster /assets/img/Shopify/shopify_integration16.png %} 
+[1]: {% image_buster /assets/img/shopify/shopify_integration1.png %} 
+[2]: {% image_buster /assets/img/shopify/shopify_integration2.png %} 
+[3]: {% image_buster /assets/img/shopify/shopify_integration3-6.png %}
+[4]: {% image_buster /assets/img/shopify/arrow.jpeg %}
+[5]: {% image_buster /assets/img/shopify/shopify_integration11.png %} 
+[6]: {% image_buster /assets/img/shopify/shopify_integration12.png %} 
+[7]: {% image_buster /assets/img/shopify/shopify_integration7.png %} 
+[8]: {% image_buster /assets/img/shopify/shopify_integration8.png %} 
+[9]: {% image_buster /assets/img/shopify/shopify_integration9.png %} 
+[10]: {% image_buster /assets/img/shopify/shopify_integration10.png %} 
+[11]: {% image_buster /assets/img/shopify/shopify_segmentation1.png %} 
+[12]: {% image_buster /assets/img/shopify/shopify_segmentation2.png %} 
+[13]: {% image_buster /assets/img/shopify/shopify_segmentation3.png %} 
+[14]: {% image_buster /assets/img/shopify/shopify_segmentation4.png %} 
+[15]: {% image_buster /assets/img/shopify/shopify_connected_content1.png %} 
+[16]: {% image_buster /assets/img/shopify/shopify_connected_content2.png %} 
+[17]: {% image_buster /assets/img/shopify/shopify_connected_content3.png %} 
+[18]: {% image_buster /assets/img/shopify/shopify_connected_content4.png %} 
+[19]: {% image_buster /assets/img/shopify/shopify_connected_content5.png %} 
+[20]: {% image_buster /assets/img/shopify/shopify_troubleshooting1.png %} 
+[21]: {% image_buster /assets/img/shopify/shopify_troubleshooting2.png %} 
+[22]: {% image_buster /assets/img/shopify/shopify_integration13.png %} 
+[23]: {% image_buster /assets/img/shopify/shopify_integration14.png %} 
+[24]: {% image_buster /assets/img/shopify/shopify_integration15.png %} 
+[25]: {% image_buster /assets/img/shopify/shopify_integration16.png %} 
 
 
