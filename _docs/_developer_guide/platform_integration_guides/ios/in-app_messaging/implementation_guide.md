@@ -7,9 +7,8 @@ description: "This implementation guide covers in-app message code consideration
 
 # In-App Messaging Implementation Guide
 
-> This implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Please reference our [Braze Demo repository](
-https://github.com/braze-inc/braze-growth-shares-ios-demo-app) and [HTML Template repository](https://github.com/braze-inc/in-app-message-templates) as needed. Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
- 
+> This implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
+
 ## Code Considerations
 
 ### ABKInAppMessage Subclasses
@@ -30,6 +29,8 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
       return modalViewController(inAppMessage: inAppMessage) //Custom Method
     case is ABKInAppMessageFull:
       return fullViewController(inAppMessage: inAppMessage) //Custom Method
+    case is ABKInAppMessageHTML:
+      return ABKInAppMessageHTMLViewController(inAppMessage: inAppMessage)
     default:
       return ABKInAppMessageViewController(inAppMessage: inAppMessage)
     }
@@ -48,6 +49,8 @@ __ABKInAppMessage Subclasses__<br>
     return [self modalViewControllerWithInAppMessage:inAppMessage]; //Custom Method
   } else if ([inAppMessage isKindOfClass:[ABKInAppMessageFull class]]) {
     return [self fullViewControllerWithInAppMessage:inAppMessage]; //Custom Method
+  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageHTML class]]) {
+    return [[ABKInAppMessageHTMLViewController alloc] initWithInAppMessage:inAppMessage];
   } else {
     return [[ABKInAppMessageViewController alloc] initWithInAppMessage:inAppMessage];
   }
@@ -58,14 +61,14 @@ __ABKInAppMessage Subclasses__<br>
 
 ## Sample Use Cases
 
-There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how in-app messaging variables may look and be used in the Braze dashboard:
-- [In-App Message Slideup Modification](#in-app-messaging-slideup-customization)
+There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how in-app messages may look and be used in the Braze dashboard:
+- [Custom Slideup In-App Message](#custom-slideup-in-app-message)
 - [Custom Modal In-App Message](#custom-modal-in-app-message)
 - [Custom Full In-App Message](#custom-full-in-app-message)
 
 ### Custom Slideup In-App Message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding slide constraint settings to set your own custom constraint value.
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `slideConstraint` value with your own custom constraint value. 
 
 {% include video.html id="xfTtkZGjpxQ" align="center" %}
 
