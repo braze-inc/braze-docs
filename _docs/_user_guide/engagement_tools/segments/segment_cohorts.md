@@ -91,4 +91,4 @@ Now you can proceed as usual with [creating your segment][11].
 [13]: {% image_buster /assets/img/cohort/property2.png %}
 [14]: {% image_buster /assets/img/cohort/property3.png %}
 [15]: {% image_buster /assets/img/cohort/property4.png %}
-[16]: {% image_buster /assets/img/shopify/arrow.jpeg %}
+[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
