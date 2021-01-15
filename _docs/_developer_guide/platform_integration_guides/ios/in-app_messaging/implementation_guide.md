@@ -68,7 +68,7 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 ### Custom Slideup In-App Message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `slideConstraint` value with your own custom constraint value. 
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `slideConstraint` value with your own custom constraint value. Visit the [SlideFromBottomViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/ViewController/In%20App%20Messages/SlideFromBottomViewController.swift) to get started.
 
 {% include video.html id="xfTtkZGjpxQ" align="center" %}
 
@@ -137,7 +137,7 @@ Adjust the constraint in `viewWillTransition()` because the subclass assumes res
 
 ### Custom Modal In-App Message
 
-An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. 
+An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [ModalPickerViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/ViewController/In%20App%20Messages/ModalPickerViewController/ModalPickerViewController.swift) to get started.
 
 {% include video.html id="hOPUB5fn0F0" align="center" %}
 
@@ -260,7 +260,7 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 
 ### Custom Full In-App Message
 
-Use custom full in-app messages to create interactive, user-friendly prompts to collect valuable customer data. The example below shows an implementation of the custom full in-app message reimagined as an interactive push primer with notification preferences. 
+Use custom full in-app messages to create interactive, user-friendly prompts to collect valuable customer data. The example below shows an implementation of the custom full in-app message reimagined as an interactive push primer with notification preferences. Visit the [FullListViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/ViewController/In%20App%20Messages/FullListViewController/FullListViewController.swift) to get started.
 
 {% include video.html id="X2HsHIeNo4I" align="center" %}
 
