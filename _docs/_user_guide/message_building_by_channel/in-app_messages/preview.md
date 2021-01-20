@@ -77,10 +77,6 @@ For example, to close a message and log Button 2 click, you can use:
 
 You can also track new custom button names - up to 100 unique names per campaign, for example `appboyBridge.logClick("blue button")` or `appboyBridge.logClick("viewed carousel page 3")`.
 
-{% alert important %}
-Note: Custom button IDs is not enabled by default and must be enabled for your account by Braze.
-{% endalert %}
-
 #### Requirements
 
 * Up to 100 unique Button IDs are allowed per campaign
