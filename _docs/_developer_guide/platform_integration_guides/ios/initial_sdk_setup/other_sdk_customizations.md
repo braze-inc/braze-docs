@@ -36,18 +36,17 @@ Example `Info.plist` contents:
 
 ## Optional IDFA Collection
 
-IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is required if you intend to utilize our [install attribution integrations][21]. However, we may develop additional features in the future which would benefit from the collection of your IDFA. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
+IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to utilize our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 
-- You are using advertising elsewhere in the app
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-## iOS 14 AppTrackingTransparency
-Apple has temporarily reverted the proposed per-app IDFA access change in iOS 14 until 2021. For now, prompting for permission with `AppTrackingTransparency` is not required, but you should be prepared for a future release from Apple which will require it to be implemented. 
+### iOS 14 AppTrackingTransparency
+In the future, Apple will require a new permission prompt in order to collect IDFA. For now, prompting for IDFA permission with `AppTrackingTransparency` is not required, but you should be prepared for a future iOS release from Apple which will require user opt-in.
 
-When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12, collecting IDFA will Xcode 11 is not possible in iOS 14.
+When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12, and collecting IDFA will Xcode 11 is not possible in iOS 14.
 
 The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
 
@@ -56,7 +55,7 @@ The prompt for App Tracking Transparency authorization also requires an `Info.pl
 <string>To retarget ads and build a global profile to better serve you things you would like.</string>
 ```
 
-## Implementing IDFA Collection
+### Implementing IDFA Collection
 
 Follow these steps to implement IDFA Collection:
 
@@ -116,7 +115,7 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 
 In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
-### Approximate iOS SDK Size {#ios-sdk-size}
+## Approximate iOS SDK Size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
 
