@@ -216,7 +216,7 @@ User export object (we will include the least data possible - if a field is miss
             "name" : (string),
             "platform" : (string),
             "version" : (string),
-            "sessions" : (string),
+            "sessions" : (integer),
             "first_used" : (string) date,
             "last_used" : (string) date
         },
