@@ -100,7 +100,7 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 {% tabs %}
 {% tab Swift %}
 __Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass. 
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
 ```swift
 func setSlideConstraint() {
@@ -116,7 +116,7 @@ private var bottomSpacing: CGFloat {
 {% endtab %}
 {% tab Objective-C %}
 __Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. Here, you can update the `slideConstraint` so it gets updated in the view controller superclass.  
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
 ```objc
 - (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
@@ -266,6 +266,6 @@ Use custom full in-app messages to create interactive, user-friendly prompts to 
 
 #### Intercepting In-App Message Touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
-Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. Through the use of adding a UISwitch or button to the UITableViewCell’s view hierarchy, the touches now get handled by our custom view. As of iOS 6, buttons and other controls have precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
+Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. Through the use of adding a `UISwitch` or button to the `UITableViewCell` view hierarchy, the touches now get handled by our custom view. As of iOS 6, buttons and other controls have precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}
