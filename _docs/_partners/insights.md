@@ -26,6 +26,7 @@ valid_partner_list:
   - name: Neura
     title: Insights
     url: /docs/partners/insights/behavioral_analytics/neura_insights/
-
+  - name: Kubit
+    url: /docs/partners/insights/behavioral_analytics/kubit/
 
 ---
