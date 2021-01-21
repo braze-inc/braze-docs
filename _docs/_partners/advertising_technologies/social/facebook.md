@@ -43,7 +43,7 @@ A Facebook dialog window will appear to authorize Braze to create Custom Audienc
 
 ![Facebook Dialog][7]
 
-Make sure that you've accepted [Facebook's Custom Audience Terms][3] for your Facebook ad account before proceeding. Once you've successfully linked your Facebook account, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names and their associated ad account IDs listed. 
+Make sure that you've accepted [Facebook's Custom Audience Terms][3] for your personal user account __and__ Facebook ad account before proceeding. Once you've successfully linked your Facebook accounts, you should see a "Connected" status in the Facebook Audience Export module. You should also see the Facebook ad account names, your personal account, and the associated account IDs listed. 
 
 ![Facebook Connected][8]
 
@@ -94,7 +94,7 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [5]: https://developers.facebook.com/docs/marketing-apis
 [6]: {% image_buster /assets/img/fb_activate.png %}
 [7]: {% image_buster /assets/img/fb_dialog.png %}
-[8]: {% image_buster /assets/img/fb_connected.png %}
+[8]: {% image_buster /assets/img/fb_connected.jpg %}
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [12]: https://developers.facebook.com/docs/apps/#app-id
