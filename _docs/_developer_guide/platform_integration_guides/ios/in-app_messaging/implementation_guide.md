@@ -11,6 +11,8 @@ description: "This implementation guide covers in-app message code consideration
 
 ## Code Considerations
 
+The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view controllers will be included below with each use case, offering options to extend functionality and natively customize the look and feel of your in-app messages.
+
 ### ABKInAppMessage Subclasses
 
 The code snippet below is a UI delegate method from the Braze SDK that determines what subclass view you want to populate your in-app message with. We cover a basic implementation in this guide and show how the full, slide up and modal subclasses can be implemented in captivating ways. Please note that if you want to set up your custom view controller, you must set up all other in-app message subclasses. Once you have a solid understanding of the concepts behind subclassing, check out our [use cases](#sample-use-cases) below to get started implementing in-app messaging subclasses.
