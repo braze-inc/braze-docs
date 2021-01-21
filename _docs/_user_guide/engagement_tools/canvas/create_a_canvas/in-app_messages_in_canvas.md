@@ -111,8 +111,7 @@ Steps with an in-app message and another channel have the following advancement 
 {% endalert %}
 
 ## Custom Event Properties in a Canvas
-Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in a Canvas, we recommend using [templated content within an API triggered campaign][4] instead of an action-based delivery. 
-
+Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
