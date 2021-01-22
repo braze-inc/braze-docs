@@ -114,7 +114,9 @@ func setSlideConstraint() {
 private var bottomSpacing: CGFloat {
     return AppboyManager.shared.activeApplicationViewController.topMostViewController().view.safeAreaInsets.bottom
 }
-```
+``` 
+Visit the Braze Demo repository for the [`topMostViewController()`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/Utils/UIViewController_Util.swift#L17) function referenced above.
+
 {% endtab %}
 {% tab Objective-C %}
 __Update `slideConstraint` Variable__<br>
