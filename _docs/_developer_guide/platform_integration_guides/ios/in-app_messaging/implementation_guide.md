@@ -147,8 +147,8 @@ An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPicke
 
 {% tabs %}
 {% tab Swift %}
-__Parsing "view_type"__<br>
-An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
+__Using `view_type` for UI Display Behavior__<br>
+The `ABKInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ```swift
 func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalViewController {
@@ -162,8 +162,8 @@ func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalV
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Parsing "view_type"__<br>
-An in-app message has an `extras` dictionary that comes with the `ABKInAppMessage` modal. We are able to query that dictionary to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
+__Using `view_type` for UI Display Behavior__<br>
+The `ABKInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ```objc
 - (ABKInAppMessageModalViewController *)modalViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
