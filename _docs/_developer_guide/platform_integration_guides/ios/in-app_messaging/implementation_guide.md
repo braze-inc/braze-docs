@@ -11,7 +11,7 @@ description: "This implementation guide covers in-app message code consideration
 
 ## Code Considerations
 
-The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view controllers will be included below with each use case, offering options to extend functionality and natively customize the look and feel of your in-app messages.
+The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view controllers are included below with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages.
 
 ### ABKInAppMessage Subclasses
 
