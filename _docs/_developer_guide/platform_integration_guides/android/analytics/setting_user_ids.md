@@ -68,8 +68,6 @@ Refer to the [changeUser documentation][4] for more information.
 
 **Implementation Example**
 
-See the [`UserProfileDialog.java` file][3] in the Droidboy sample app.
-
 Full class information can be found in the [javadocs][4].
 
 #### Automatic Preservation of Anonymous User History
@@ -100,6 +98,5 @@ If you opt to use a hash of a unique identifier as your userID take care to ensu
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String- "Javadocs"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

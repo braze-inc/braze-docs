@@ -110,8 +110,6 @@ For example, if you set a custom manager listener when an in-app message is rece
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
-- See [`CustomInAppMessageManagerListener.java`][36] in our Droidboy sample app for an implementation example.
-
 ### Step 2: Hook into In-App Message View Lifecycle Methods (Optional)
 
 The [`IInAppMessageManagerListener`][21] interface has in-app message view methods that are called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
@@ -133,8 +131,6 @@ Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageMan
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
 
 We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
-
-See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
 ##### In-Depth: Altering In-App Messages Before Display
 
@@ -290,9 +286,7 @@ We recommend setting your `IInAppMessageViewFactory` in your `Application.onCrea
 
 Braze's `slideup` in-app message view implements [`IInAppMessageView`][25].  Braze's `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24].  Implementing one of these classes will allow Braze to add click listeners to your custom view where appropriate.  All Braze view classes extend Android's [View][18] class.
 
-Implementing `IInAppMessageView` allows you to define a certain portion of your custom view as clickable.  Implementing `IInAppMessageImmersiveView` allows you to define message button views and a close button view.
-
-- See [`CustomInAppMessageView.java`][26] in our Droidboy sample app for an implementation example.
+Implementing `IInAppMessageView` allows you to define a certain portion of your custom view as clickable. Implementing [`IInAppMessageImmersiveView`][24] allows you to define message button views and a close button view.
 
 ## Setting a Custom Animation Factory
 
@@ -302,7 +296,53 @@ In-app messages have preset animation behavior. `Slideup` type messages slide in
 
 Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
-- See [`CustomInAppMessageAnimationFactory.java`][9] in our Droidboy sample app for an implementation example.
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomInAppMessageAnimationFactory implements IInAppMessageAnimationFactory {
+
+  @Override
+  public Animation getOpeningAnimation(IInAppMessage inAppMessage) {
+    Animation animation = new AlphaAnimation(0, 1);
+    animation.setInterpolator(new AccelerateInterpolator());
+    animation.setDuration(2000L);
+    return animation;
+  }
+
+  @Override
+  public Animation getClosingAnimation(IInAppMessage inAppMessage) {
+    Animation animation = new AlphaAnimation(1, 0);
+    animation.setInterpolator(new DecelerateInterpolator());
+    animation.setDuration(2000L);
+    return animation;
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
+  override fun getOpeningAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(0, 1)
+    animation.interpolator = AccelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
+
+  override fun getClosingAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(1, 0)
+    animation.interpolator = DecelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Instruct Braze to use your In-App Message View Factory
 
@@ -310,8 +350,6 @@ Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageMa
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
 We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
-
-See [`InAppMessageTesterFragment.java`][2] in the DroidBoy sample app for an example implementation.
 
 ## Setting a Custom HTML In-App Message Action Listener
 
@@ -637,14 +675,11 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 ```
 
 [1]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
-[2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/InAppMessageTesterFragment.java
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
 [4]: {{site.baseurl}}//help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#step-1-braze-in-app-message-manager-registration
 [6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[7]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageImmersive.html
-[9]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageAnimationFactory.java
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-view-factory
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/key-value_pairs/
@@ -656,21 +691,17 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 [21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html
 [22]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#setting-a-custom-animation-factory
 [23]: http://developer.android.com/reference/android/R.integer.html#config_shortAnimTime
-[24]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageImmersiveView.java
+[24]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageImmersiveView.html
 [25]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageView.java
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageView.java
 [27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageBase.html
 [28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageImmersiveBase.html
-[29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessage.java
 [30]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [33]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [34]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/AppboyInAppMessageManager.java
-[36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageManagerListener.java
 [39]: https://developer.android.com/guide/topics/ui/dialogs.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#html-full-in-app-messages
 [41]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#full-in-app-messages
 [42]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
-[43]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomInAppMessageViewFactory.java
 [44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html#getExtras--
 [45]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/InAppMessageOperation.java
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/MessageButton.html
@@ -680,7 +711,6 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 [54]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#in-app-message-customization
 [55]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/#gifs-iams
 [59]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#activity-lifecycle-callback-integration-api-14
-[60]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values-xlarge/styles.xml
 [65]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
 [66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestInAppMessageRefresh--
 [67]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--

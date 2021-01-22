@@ -89,10 +89,6 @@ Now that you've added your API key, you need to add the following permissions to
 
 >  With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
 
-**Implementation Example**
-
-See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
-
 ### Step 4: Tracking User Sessions in Android
 
 #### Activity Lifecycle Callback Integration (API 14+)
@@ -231,7 +227,6 @@ When the build variant is compiled, it will use the new API key.
 [2]: {{site.baseurl}}/user_guide/introduction/
 [3]: https://developer.android.com/studio/build/build-variants.html
 [4]: https://raw.github.com/appboy/appboy-android-sdk/master/android-sdk-ui/libs/appboy.jar
-[6]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
 [7]: http://developer.android.com/reference/android/app/Activity.html
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [16]: {% image_buster /assets/img_archive/file_import.png %}
