@@ -18,7 +18,7 @@ channel:
 
 ## Two-Way Messaging (Custom Keyword Responses)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way.
+Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way. 
 
 ### Two Way Messaging Speeds
 
@@ -32,29 +32,29 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 
 If you require a faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
 
-### ~~Custom Keyword Messaging Handling~~
+### Custom Keyword Messaging Handling
 
 | Custom Event Fired |
 | ------- | ------ |
-| ~~`sms_response_subscriptionName_custom`~~ | ~~Response Examples => Status, Coupons, News~~ |
+| `sms_response_subscriptionName_custom` | Response Examples => Status, Coupons, News |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Included Event Properties |
 | ------- | ------ |
-| ~~- `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID~~ | ~~Message Body => <br>Users response returned as all lower case~~ |
+| - `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
 {: .reset-td-br-1 .reset-td-br-2}
 
-- ~~Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze.~~ 
-- ~~Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.~~
-- ~~The `message_body` custom keyword value must be __lowercase__.~~
+- Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 
+- Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.
+- The `message_body` custom keyword value must be __lowercase__.
 
 ![picture][IMAGE2]
 
-~~Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:~~
-1. ~~alias_label: `phone` and alias_name: `users_phone_number`~~
-2. ~~Phone numbers must be in the E.164 format (e.g +19173337578).~~ 
+Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
+1. alias_label: `phone` and alias_name: `users_phone_number`
+2. Phone numbers must be in the E.164 format (e.g +19173337578). 
 
-~~If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.~~
+If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.
 
 ## Managing Keywords and Auto Responses
 
