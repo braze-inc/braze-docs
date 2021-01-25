@@ -10,6 +10,11 @@ description: "Collect custom user attributes and power retargeting campaigns usi
 
 Collect custom user attributes and power retargeting campaigns using an In-App Message Survey Template.
 
+{% alert important %}
+This feature is in *Early Access*. Ask your Braze account team to request access!
+{% endalert %}
+
+
 <hr>
 
 <style>
@@ -42,14 +47,22 @@ Collect custom user attributes and power retargeting campaigns using an In-App M
     height: 32px;
 }
 </style>
+
+## SDK Requirements {#supported-sdk-versions}
+
+This template requires upgrading to the following Braze SDK versions:
+
 <div id="sdk-versions">
-    <div class="sdk-versions--chip">Android: 8.0.0+</div>
-    <div class="sdk-versions--chip">iOS: 3.23.0+</div>
-    <div class="sdk-versions--chip">Web: 2.5.0+</div>
+    <a href="/developer_guide/platform_integration_guides/web/changelog/#250" class="sdk-versions--chip" style="background:#50c5d4">Web: 2.5.0+</a>
+    <a href="/developer_guide/platform_integration_guides/ios/changelog/#3230" class="sdk-versions--chip" style="background:#ed9494">iOS: 3.23.0+</a>
+    <a href="/developer_guide/platform_integration_guides/android/changelog/#800" class="sdk-versions--chip" style="background:#ff9449">Android: 8.0.0+</a>
 </div>
 
-{% alert important %}
-This feature is in *Early Access*. Ask your Braze account team to request access!
+
+{% alert warning %}
+Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. <br><br>
+
+Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
 ## Examples {#examples}
@@ -65,19 +78,6 @@ This feature is in *Early Access*. Ask your Braze account team to request access
  {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Promote New Features and Trigger Promotions
 {% endgallery %}
 
-## SDK Requirements {#supported-sdk-versions}
-
-This template requires upgrading to the following Braze SDK versions:
-
-* Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
-* iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
-* Android SDK - v8.0.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#800)
-
-{% alert warning %}
-Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
-
-Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
-{% endalert %}
 
 ## Creating A New Survey Message {#create}
 
