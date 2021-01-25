@@ -30,3 +30,15 @@
     border: none !important;
     padding: 6px 17px !important;
 }
+
+#sdk-versions .sdk-versions--chip.web-sdk {
+    background: #50c5d4;
+}
+
+#sdk-versions .sdk-versions--chip.ios-sdk {
+    background: #ed9494;
+}
+
+#sdk-versions .sdk-versions--chip.android-sdk {
+    background: #ff9449;
+}
