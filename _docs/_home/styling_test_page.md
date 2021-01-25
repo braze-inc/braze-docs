@@ -488,4 +488,4 @@ For self contain tabs, ie tabs that only change the tab content for the specific
 
 ## Image Styling
 
-![Text]({% image_buster /assets/img/log-braze-fa.svg %}){: style="max-width:600px; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:600px; color: green" }
