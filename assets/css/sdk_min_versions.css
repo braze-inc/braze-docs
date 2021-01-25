@@ -33,7 +33,7 @@
     border-radius: 16px;
     font-size: 14px;
     height: 32px;
-    border: none !important;
+    border: 1px transparent !important;
     padding: 6px 17px !important;
 }
 
