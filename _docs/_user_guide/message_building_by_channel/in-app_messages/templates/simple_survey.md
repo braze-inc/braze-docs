@@ -16,10 +16,15 @@ This feature is in *Early Access*. Ask your Braze account team to request access
 
 ## Examples {#examples}
 
+<style>
+.swiper-container .swiper-description p {
+    font-size: 1.7rem;
+}
+</style>
 {% gallery %}
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Collect User Preferences as Custom Attributes {: style="max-width:700px"}
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Gather Customers Satisfaction and Feedback {: style="max-width:700px"}
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Promote New Features and Trigger Promotions {: style="max-width:700px"}
+ {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Collect User Preferences as Custom Attributes
+ {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Gather Customers Satisfaction and Feedback
+ {{site.baseurl}}/assets/img/iam/iam-survey.png <br><br> Promote New Features and Trigger Promotions
 {% endgallery %}
 
 ## SDK Requirements {#supported-sdk-versions}
