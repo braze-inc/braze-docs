@@ -12,7 +12,7 @@ As of version [3.32.0][1], the Braze SDK supports MacOS for apps using [Mac Cata
 To build your app with Mac Catalyst, please reference <a href="https://developer.apple.com/documentation/uikit/mac_catalyst">Apple's documentation here</a>.
 {% endalert %}
 
-To import the Braze SDK into your app, follow the instructions to use [Swift Package Manager][3]. Currently, the Braze SDK does not support Mac Catalyst when using Cocoapods or Carthage.
+Once your app supports Catalyst, follow [these instructions to use Swift Package Manager][3] to import the Braze SDK into your app. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
 
 ## Supported Features
 
