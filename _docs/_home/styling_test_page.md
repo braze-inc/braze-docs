@@ -10,110 +10,49 @@ hidden: true
 H1 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
+Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
+Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
 
 ## H2 Banner
 H2 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 ### H3 Banner
 H3 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 #### H4 Banner
 H4 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 ##### H5 Banner
 H5 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 ###### H6 Banner
 H6 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 # Font Test
 Normal
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 *Emphasize Text*
 
-**Bold**
+**Bold** 
 
 _**Bold Emphasize**_
 
@@ -126,17 +65,11 @@ _**Bold Emphasize**_
 # Inline quotes
 Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. ``Donec pellentesque facilisis odio``, sed ``imperdiet ante``. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 
 # Pre
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
-Sed bibendum condimentum lectus, quis venenatis neque volutpat eget.
-Sed sodales felis ut nisi ullamcorper pharetra. Sed ut justo mollis, aliquet ipsum ac, pharetra nunc.
-Etiam pretium mauris eu leo vestibulum, in laoreet urna rhoncus. Proin ut varius diam, et fringilla nibh.
 ```
 
 # Table
@@ -550,3 +483,9 @@ For self contain tabs, ie tabs that only change the tab content for the specific
 {% endtabs %}
 ```
 {% endraw %}
+
+# Images
+
+## Image Styling
+
+![Text]({% image_buster /assets/img/log-braze-fa.svg %}){: style="max-width:600px; color: green" }
