@@ -10,6 +10,44 @@ description: "Collect custom user attributes and power retargeting campaigns usi
 
 Collect custom user attributes and power retargeting campaigns using an In-App Message Survey Template.
 
+<hr>
+
+<style>
+#sdk-versions .sdk-versions--chip {
+    word-break: normal;
+    tab-size: 4;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    margin: 0;
+    align-items: center;
+    cursor: default;
+    display: inline-flex;
+    line-height: 20px;
+    max-width: 100%;
+    outline: none;
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: .28s;
+    transition-property: box-shadow,opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    vertical-align: middle;
+    white-space: nowrap;
+    border-color: #2196f3!important;
+    color: rgba(0,0,0,.87);
+    border-radius: 16px;
+    font-size: 14px;
+    height: 32px;
+}
+</style>
+<div id="sdk-versions">
+    <div class="sdk-versions--chip">Android: 8.0.0+</div>
+    <div class="sdk-versions--chip">iOS: 3.23.0+</div>
+    <div class="sdk-versions--chip">Web: 2.5.0+</div>
+</div>
+
 {% alert important %}
 This feature is in *Early Access*. Ask your Braze account team to request access!
 {% endalert %}
