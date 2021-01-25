@@ -4,7 +4,8 @@
 
 #sdk-versions .sdk-versions--chip:hover {
     background: white !important;
-    color: #3accdd !important;
+    color: #50c5d4 !important;
+    border: solid 1px #50c5d4;
 }
 
 #sdk-versions .sdk-versions--chip {
