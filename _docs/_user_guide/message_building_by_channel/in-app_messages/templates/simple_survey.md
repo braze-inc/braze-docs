@@ -58,9 +58,6 @@ This template requires upgrading to the following Braze SDK versions:
     <a href="/developer_guide/platform_integration_guides/android/changelog/#800" class="sdk-versions--chip" style="background:#ff9449">Android: 8.0.0+</a>
 </div>
 
-{% sdk_min_versions  %}
-
-
 {% alert warning %}
 Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. <br><br>
 
