@@ -98,6 +98,3 @@ else
     clean_single_file(INPUT_FILE)
   end
 end
-
-
-
