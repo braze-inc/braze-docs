@@ -37,7 +37,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Edit Segments| Allows users to create and edit segment. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments.|
 |View User Profile| Allows user to access User Search page.|
-|Manage Dashboard Users| Allows user to view the Manage Users tab.|
+|Manage Dashboard Users| Allows user to view, edit and manage the Manage Users tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
 |Manage Media Library| Allows user to upload images to library. You can still upload pictures/audio etc. directly to a campaign without this permission.|
 |View Usage Data| Allows user to view app usage.|
 |Import and Update User Data| Allows user to import CSV and update files of app users as well as view the User Import page.|
