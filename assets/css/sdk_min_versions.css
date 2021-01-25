@@ -1,0 +1,32 @@
+#sdk-versions {
+    margin-bottom: 30px;
+}
+
+#sdk-versions .sdk-versions--chip {
+    word-break: normal;
+    tab-size: 4;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    margin: 0;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    line-height: 20px;
+    max-width: 100%;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition-duration: .28s;
+    transition-property: box-shadow, opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    vertical-align: middle;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, .87);
+    border-radius: 16px;
+    font-size: 14px;
+    height: 32px;
+    border: none !important;
+    padding: 6px 17px !important;
+}
