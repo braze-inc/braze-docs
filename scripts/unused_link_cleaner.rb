@@ -7,19 +7,19 @@ unless !INPUT_FILE.nil? && File.exists?(INPUT_FILE)
   exit()
 end
 
-def get_file_contents(filePath)
-  return File.read(filePath)
+def get_file_contents(file_path)
+  return File.read(file_path)
 end
 
-def grep_with_index(stringLines, query)
-  return stringLines.each_with_index.select{|e,| e =~ query}
+def grep_with_index(string_lines, query)
+  return string_lines.each_with_index.select{|e,| e =~ query}
 end
 
 def get_shortlink_lines(fileLines)
   return grep_with_index(fileLines, /\[.*\]: .*/)
 end
 
-def remove_unused_shortlink_lines(originalFileLines, shortlink_lines)
+def remove_unused_shortlink_lines(original_file_lines, shortlink_lines)
   lines_to_remove = []
 
   ref_query = /\[(.*)\]: .*/
@@ -29,7 +29,7 @@ def remove_unused_shortlink_lines(originalFileLines, shortlink_lines)
     ref = current_line[0].match(ref_query)[1]
 
     # Search for that ref in the file
-    is_in_file = originalFileLines.grep(/\[#{ref}\]/)
+    is_in_file = original_file_lines.grep(/\[#{ref}\]/)
     if is_in_file.length < 2
       # This shortlink can be deleted
       lines_to_remove << current_line[1]
@@ -40,7 +40,7 @@ def remove_unused_shortlink_lines(originalFileLines, shortlink_lines)
   # we actually want to delete will be off by 1 per previous deletion
   lines_deleted = 0
   lines_to_remove.each do |line_to_remove|
-    originalFileLines.delete_at(line_to_remove - lines_deleted)
+    original_file_lines.delete_at(line_to_remove - lines_deleted)
     lines_deleted += 1
   end
   puts "deleted #{lines_deleted} lines"
@@ -84,9 +84,9 @@ if File.directory?(INPUT_FILE)
   # flush the STDOUT since gradle won't do that for us
   # Without flushing, the user won't be able to read the prompt
   STDOUT.flush
-  yesOrNoPromptResponse = STDIN.gets.chomp
+  prompt_response = STDIN.gets.chomp
 
-  if (!yesOrNoPromptResponse.eql? "y")
+  if (!prompt_response.eql? "y")
     puts "Not continuing!"
     exit(0)
   end
