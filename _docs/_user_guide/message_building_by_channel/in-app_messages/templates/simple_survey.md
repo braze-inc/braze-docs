@@ -17,9 +17,9 @@ This feature is in *Early Access*. Ask your Braze account team to request access
 ## Examples {#examples}
 
 {% gallery %}
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br> <h2>Collect User Preferences as Custom Attributes</h2>
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br> <h2>Gather Customers Satisfaction and Feedback</h2>
- {{site.baseurl}}/assets/img/iam/iam-survey.png <br> <h2>Promote New Features and Trigger Promotions</h2>
+ {{site.baseurl}}/assets/img/iam/iam-survey.png  ##Collect User Preferences as Custom Attributes
+ {{site.baseurl}}/assets/img/iam/iam-survey.png  ##Gather Customers Satisfaction and Feedback
+ {{site.baseurl}}/assets/img/iam/iam-survey.png  ##Promote New Features and Trigger Promotions
 {% endgallery %}
 
 ## SDK Requirements {#supported-sdk-versions}
