@@ -1,4 +1,7 @@
+# Usage: 
 # {% sdk_min_versions ios:3.2.3 android:8.0.0 web:1.2.3 %}
+# Description:
+# Renders a chip for each platform along with the changelog version as an href
 
 module Jekyll
   module SdkMinVersions
