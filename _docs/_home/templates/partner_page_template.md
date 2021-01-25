@@ -74,7 +74,7 @@ You have the option to put images in your documentation, so we recommend you do 
 
 ### Step 3: How Many Steps
 
-Outline through usage of the integration - especially if it means inserting liquid into our message composer.
+Outline through usage of the integration - especially if it means inserting Liquid into our message composer.
 
 ## Customization
 

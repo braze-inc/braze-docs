@@ -37,7 +37,7 @@ After setting up your local environment, make sure to sign our [CLA](https://www
 
 To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
 
-Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_partner_name/). Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
+Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_partner_name/). Next, create a partner folder, name it, copy this template into your folder, and get to work!
 
 ### Useful Resources
 
@@ -155,7 +155,7 @@ And at the end of your document, add your link.
 
 ### Liquid
 
-Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a liquid warning in markdown.
+Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including Liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a Liquid warning in markdown.
 {% raw %}
 
 {&#37; raw &#37;}<br>

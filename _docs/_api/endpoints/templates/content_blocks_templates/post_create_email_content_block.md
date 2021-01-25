@@ -91,7 +91,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 - `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.` - The liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Please try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 

@@ -29,7 +29,5 @@ valid_partner_list:
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
   - name: RudderStack
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-  - name: Jebbit
-    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/
 
 ---

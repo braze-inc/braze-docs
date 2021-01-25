@@ -3,14 +3,14 @@ nav_title: Local Connected Content Variables
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 1
-description: "This reference article covers how to use and store local connected content variables."
+description: "This reference article covers how to use and store local Connected Content variables."
 ---
 
 # Local Connected Content Variables
 
 Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it is automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
->  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of connected content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
+>  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
 You can also specify `:save your_variable_name` after the url in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 

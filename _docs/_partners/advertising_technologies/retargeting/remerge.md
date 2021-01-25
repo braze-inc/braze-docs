@@ -48,7 +48,7 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 {% endif %}
 ```
 {% endraw %}
-After defining the parameters above, insert this liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
+After defining the parameters above, insert this Liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
 
 ![Webhook Template Remerge][67]
 

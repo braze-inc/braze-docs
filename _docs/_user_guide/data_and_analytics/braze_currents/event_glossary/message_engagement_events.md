@@ -1229,6 +1229,7 @@ This event occurs when a user enters into the canvas. This event tells you which
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_name": (string) will always return 'null' for this engagement event, 
   "canvas_step_id": (string) id of the step the user entered into,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas

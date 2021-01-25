@@ -205,7 +205,7 @@ For more information about how to debug ATS failures, please refer to Tim Ekl's 
 
 As of Braze iOS SDK v2.21.0, the SDK percent-encodes links to create valid `NSURL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. For example:
+To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. Please note that you must also return `YES` in the `ABKURLDelegate` and that a call to action is required to trigger the handling of the URL by the App. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

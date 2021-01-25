@@ -29,8 +29,8 @@ The Classic card is great for standard messaging and notifications, or even visu
 
 | Card Capability | Details |
 | --- | ---|
-| Header Text | 18px; Bolded <br> One line of text is ideal. <br> You may use liquid here to personalize your message. |
-| Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use liquid here to personalize your message. |
+| Header Text | 18px; Bolded <br> One line of text is ideal. <br> You may use Liquid here to personalize your message. |
+| Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
 | Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within  your app. |
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60px by 60px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -44,9 +44,9 @@ The Captioned Image card is a great way to show off and attract attention to imp
 
 | Card Capability | Details |
 | --- | ---|
-| Header Text | 18px; Bolded <br> One line of text is ideal. <br> You may use liquid here to personalize your message. |
-| Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use liquid here to personalize your message. |
-| Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within  your app. |
+| Header Text | 18px; Bolded <br> One line of text is ideal. <br> You may use Liquid here to personalize your message. |
+| Message Text | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
+| Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within your app. |
 | Image | Suggested be 4:3 ratio. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF. |
 {: .reset-td-br-1 .reset-td-br-2}
 
