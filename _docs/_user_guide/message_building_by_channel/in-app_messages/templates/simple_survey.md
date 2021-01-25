@@ -32,7 +32,6 @@ This feature is in *Early Access*. Ask your Braze account team to request access
     max-width: 100%;
     outline: none;
     overflow: hidden;
-    padding: 0 12px;
     position: relative;
     text-decoration: none;
     transition-duration: .28s;
@@ -40,11 +39,12 @@ This feature is in *Early Access*. Ask your Braze account team to request access
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     vertical-align: middle;
     white-space: nowrap;
-    border-color: #2196f3!important;
     color: rgba(0,0,0,.87);
     border-radius: 16px;
     font-size: 14px;
     height: 32px;
+    border: none !important;
+    padding: 6px 17px !important;
 }
 </style>
 
@@ -52,11 +52,13 @@ This feature is in *Early Access*. Ask your Braze account team to request access
 
 This template requires upgrading to the following Braze SDK versions:
 
-<div id="sdk-versions">
+<div id="sdk-versions" style="margin-bottom:30px">
     <a href="/developer_guide/platform_integration_guides/web/changelog/#250" class="sdk-versions--chip" style="background:#50c5d4">Web: 2.5.0+</a>
     <a href="/developer_guide/platform_integration_guides/ios/changelog/#3230" class="sdk-versions--chip" style="background:#ed9494">iOS: 3.23.0+</a>
     <a href="/developer_guide/platform_integration_guides/android/changelog/#800" class="sdk-versions--chip" style="background:#ff9449">Android: 8.0.0+</a>
 </div>
+
+{% sdk_min_versions  %}
 
 
 {% alert warning %}
