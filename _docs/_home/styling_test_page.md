@@ -52,7 +52,7 @@ Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Donec pellentes
 
 *Emphasize Text*
 
-**Bold** 
+**Bold**
 
 _**Bold Emphasize**_
 
