@@ -1,5 +1,10 @@
 #sdk-versions {
-    margin-bottom: 30px;
+    margin: 15px 0 30px;
+}
+
+#sdk-versions .sdk-versions--chip:hover {
+    background: white !important;
+    color: #3accdd !important;
 }
 
 #sdk-versions .sdk-versions--chip {
