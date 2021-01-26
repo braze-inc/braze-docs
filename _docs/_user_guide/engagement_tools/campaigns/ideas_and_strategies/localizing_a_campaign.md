@@ -40,6 +40,5 @@ Braze automatically collects the most recent location of users' devices (if loca
 [3]: http://msdn.microsoft.com/en-us/library/windows/apps/dd373814.aspx
 [4]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd373814(v=vs.85).aspx
 [7]: {% image_buster /assets/img_archive/language-filter-select.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [12]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [13]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/#location-targeting

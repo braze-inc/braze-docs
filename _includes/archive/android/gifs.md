@@ -164,8 +164,6 @@ class GlideIntegrationApplication : Application() {
 {% endtabs %}
 
 [gifs-56]: http://developer.android.com/reference/android/app/Application.html
-[gifs-57]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
-[gifs-58]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [gifs-59]: https://github.com/Appboy/appboy-android-sdk#version-support
 [gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
 [gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy

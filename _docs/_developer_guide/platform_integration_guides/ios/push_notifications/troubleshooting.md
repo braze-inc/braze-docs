@@ -137,12 +137,10 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}
 [26]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [27]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[28]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html
 [14]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html
 [2]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities
 [30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[32]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [34]: #push-clicks-not-logged
 [35]: #received-unregistered-sending
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze

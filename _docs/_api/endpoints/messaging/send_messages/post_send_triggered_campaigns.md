@@ -169,6 +169,4 @@ Looking for Create Send Endpoint for Canvases? Check out the documentation [here
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[42]: {{site.baseurl}}/api/parameters/#broadcast
 

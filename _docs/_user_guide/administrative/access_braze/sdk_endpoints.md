@@ -38,4 +38,3 @@ To configure the Braze Web SDK to use the appropriate endpoint for your integrat
 {: .reset-td-br-1 .reset-td-br-2}
 
 [85]: https://lab.braze.com/braze-101
-[support]: {{site.baseurl}}/support_contact/
