@@ -139,7 +139,7 @@ See the {% if include.platform == 'iOS' %}
 
 ## SDK Integration Complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% else %}Please note that when compiling your iOS app and any other third-party libraries, Bitcode must be enabled.{% endif %}
+Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% endif %}
 
 ## Updating the Braze SDK via CocoaPods
 
