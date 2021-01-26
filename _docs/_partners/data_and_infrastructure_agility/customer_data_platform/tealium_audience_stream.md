@@ -200,6 +200,4 @@ __Solution__: <br>Set up Load Rules to determine exactly when and where a Tag lo
 [15]: {% image_buster /assets/img/tealium/create_configuration.png %}
 [6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
 [21]: https://community.tealiumiq.com/t5/Getting-Started-with/Trace/ta-p/25797
-[16]: {% image_buster /assets/img/tealium/connector_summary.png %}
-[13]: {% image_buster /assets/img/tealium/summary_list.png %}
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}

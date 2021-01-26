@@ -143,7 +143,6 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [9]: {% image_buster /assets/img_archive/testemail.png %}
 [10]: {% image_buster /assets/img_archive/testpush.png %}
 [11]: {% image_buster /assets/img_archive/testwebpush.png %}
-[12]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
 [14]: {% image_buster /assets/img_archive/test-in-app.png %}
 [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}

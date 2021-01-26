@@ -117,4 +117,3 @@ Due to action-based delivery being unavailable for Canvas steps with in-app mess
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
 [2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
 [3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#setting-up-an-api-triggered-campaign

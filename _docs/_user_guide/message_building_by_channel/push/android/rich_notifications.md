@@ -51,7 +51,6 @@ Add your image in the 'Expanded Notification Image' field in the composer of the
 ### Step 4: Continue Creating Your Campaign
 Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.
 
-[1]: https://developer.android.com/training/notify-user/expanded#image-style
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
 [7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %}

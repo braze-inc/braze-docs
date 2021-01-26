@@ -101,7 +101,6 @@ You can also use our REST API to record purchases. Refer to the [user API docume
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/ViewControllers/User/Events/EventsViewController.m
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a63d8c390bff05f87c7f8f86f2fc0deb6 "logpurchase:incurrency:atprice"
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties documentation"

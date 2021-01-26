@@ -102,4 +102,3 @@ If you opt to use a hash of a unique identifier as your userID take care to ensu
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

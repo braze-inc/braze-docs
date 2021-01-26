@@ -147,7 +147,6 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
-[9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [14]: http://tcpiputils.com/browse/as/15169
 [15]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml

@@ -287,7 +287,6 @@ See the [Javadoc][36] for more information.
 
 {% include archive/android/gifs.md channel="the News Feed" %}
 
-[1]: {% image_buster /assets/img_archive/UONewsFeed.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/

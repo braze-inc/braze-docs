@@ -91,8 +91,6 @@ Initially, users are randomly assigned a particular variant before receiving a c
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
 [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
-[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
-[10]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery
 [12]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
