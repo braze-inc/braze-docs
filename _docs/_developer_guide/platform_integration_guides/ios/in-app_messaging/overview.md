@@ -112,7 +112,6 @@ The following example shows a paginated HTML Full in-app message:
 [14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
 [15]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
 [23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [24]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events

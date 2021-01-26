@@ -56,10 +56,6 @@ Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long 
 
 To take advantage of these integrations, please visit the "Feedback" section within the "App Settings" page
 
-**Implementation Example**
-
-See the [`DroidBoyActivity.java` file][4] in the Droidboy sample app.
-
 ## Theming the Braze Feedback UI
 
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
@@ -114,7 +110,6 @@ If you would prefer, you can override these styles to create a look and feel tha
 [1]: {% image_buster /assets/img_archive/droidfeed.png %} "Android News Feed and Feedback Form"
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#submitFeedback-java.lang.String-java.lang.String-boolean- "Feedback documentation"
 [13]: http://www.desk.com
 [14]: http://www.zendesk.com
