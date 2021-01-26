@@ -20,7 +20,6 @@ module Jekyll
       end
 
       def render(context)
-        puts "doing render"
         site = context.registers[:site]
         converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
 
