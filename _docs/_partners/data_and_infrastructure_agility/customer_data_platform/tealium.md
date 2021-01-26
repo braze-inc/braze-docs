@@ -270,8 +270,6 @@ __Solution__: <br>Set up Load Rules to determine exactly when and where a Tag lo
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[4]: https://community.tealiumiq.com/t5/Customer-Data-Hub/About-Connectors/ta-p/17389
 [5]: {% image_buster /assets/img/tealium/braze_connector_marketplace.png %}
 [6]: {% image_buster /assets/img/tealium/data_source.png %}
 [7]: {% image_buster /assets/img/tealium/event_specs.png %}
@@ -284,7 +282,6 @@ __Solution__: <br>Set up Load Rules to determine exactly when and where a Tag lo
 [17]: {% image_buster /assets/img/tealium/save_publish.png %}
 [18]: {% image_buster /assets/img/tealium/braze_connection.png %}
 [19]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Event-Specifications/ta-p/19329#toc-hId--2078027338
-[20]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
 [21]: https://community.tealiumiq.com/t5/Customer-Data-Hub/Trace/ta-p/12058
 [22]: {% image_buster /assets/img/tealium/tealium_overview.png %}
 [23]: {% image_buster /assets/img/tealium/remote_mappings.png %}

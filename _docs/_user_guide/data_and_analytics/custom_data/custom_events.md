@@ -77,14 +77,6 @@ Braze's Success and Support teams can help recommend the best approach depending
 
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: http://www.regextester.com/pregsyntax.html
-[10]: #integers
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
-[12]: #automatic-data-collection
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging
-[14]: #taxiride-sharing-app-use-case
-[15]: #customeventproperties
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[17]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns

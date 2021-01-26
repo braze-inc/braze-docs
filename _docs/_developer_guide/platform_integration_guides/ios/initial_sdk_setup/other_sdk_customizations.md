@@ -124,24 +124,7 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 > If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
 
-[1]: http://cocoapods.org/
-[2]: https://www.ruby-lang.org/en/installation/
-[3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[4]: http://guides.cocoapods.org/syntax/podfile.html
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
-[12]: #appboy-podfiles-for-non-64-bit-apps
-[13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
-[15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
-[25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[28]: #apple-watch-sdk
 [29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
 [30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

@@ -73,7 +73,6 @@ If your report contains any multivariant campaigns, your export will include 2 C
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 
-[0]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/#comparing-campaigns
 [2]: {% image_buster /assets/img/campaign_comparison/compare_option.png %}
 [3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
 [4]: {% image_buster /assets/img/campaign_comparison/metric.png %}

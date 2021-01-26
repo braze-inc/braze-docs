@@ -118,7 +118,6 @@ This will help identify what values are being sent from your webpage's datalayer
 ![Preview Mode][13]
 
 
-[1]: https://marketingplatform.google.com/about/tag-manager/
 [2]: https://support.google.com/tagmanager/answer/6103696
 [3]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
 [4]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %}

@@ -139,5 +139,3 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 
 {% endapi %}
 
-[support]: {{site.baseurl}}/support_contact/
-[1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
