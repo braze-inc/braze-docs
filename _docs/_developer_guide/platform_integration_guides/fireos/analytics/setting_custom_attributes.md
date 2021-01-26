@@ -166,7 +166,6 @@ Appboy.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType
 ```
 
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
-[3]: http://en.wikipedia.org/wiki/ISO_8601
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

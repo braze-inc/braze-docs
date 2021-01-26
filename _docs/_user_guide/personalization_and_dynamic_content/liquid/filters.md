@@ -153,6 +153,4 @@ Which will return something like:
 [22]: https://docs.shopify.com/themes/liquid/filters/array-filters
 [23]: https://docs.shopify.com/themes/liquid/filters/array-filters#first
 [24]: https://docs.shopify.com/themes/liquid/filters/additional-filters#date
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[27]: #adding-personalizable-attributes-objects
 [30]: #variable-tags

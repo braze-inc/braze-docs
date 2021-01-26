@@ -166,7 +166,6 @@ To take advantage of these integrations, please visit the ["feedback" section wi
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample
 [4]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKFeedbackViewController/FeedbackViewController
-[5]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample/CustomAppboyFeedbackViewController.m
 [11]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKFeedbackViewController/FeedbackViewController/ABKFeedbackViewController.h
 [13]: http://www.desk.com
 [14]: http://www.zendesk.com

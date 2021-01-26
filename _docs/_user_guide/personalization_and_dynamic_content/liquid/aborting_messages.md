@@ -44,41 +44,9 @@ You can also have the abort_message log something to your Developer Console log 
 
 ![developer_console][26]
 
-[1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[6]: #conditional-messaging-logic-tags
-[7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[12]: https://docs.shopify.com/themes/liquid-documentation/filters
-[4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
-[9]: #connected-content
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[16]: #manipulating-message-content-filters
-[17]: #conditional-logic
-[18]: #aborting-messages
-[19]: https://docs.shopify.com/themes/liquid/filters/math-filters
-[20]: https://docs.shopify.com/themes/liquid/filters/string-filters
-[21]: https://docs.shopify.com/themes/liquid/filters/string-filters#capitalize
-[22]: https://docs.shopify.com/themes/liquid/filters/array-filters
-[23]: https://docs.shopify.com/themes/liquid/filters/array-filters#first
-[24]: https://docs.shopify.com/themes/liquid/filters/additional-filters#date
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
 [26]: {% image_buster /assets/img_archive/developer_console.png %}
-[27]: #adding-personalizable-attributes-objects
-[30]: #variable-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
 [37]:#accounting-for-null-attribute-values
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[39]: #most-recently-used-device-information
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
-[41]: https://dashboard-01.braze.com/app_settings/app_settings/custom_attributes
-[42]: https://dashboard-01.braze.com/app_settings/app_settings/custom_events
-[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.png %}
-[46]: #targeted-device-information

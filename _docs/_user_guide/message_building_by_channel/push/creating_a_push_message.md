@@ -133,13 +133,6 @@ For push notifications, you'll be able to view statistics for the number of mess
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
 [8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
-[9]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
-[10]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
-[11]: https://play.google.com/about/privacy-security-deception/deceptive-behavior/unauthorized-system-functionality/
 [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
 [25]: {% image_buster /assets/img_archive/target_segmenter.png %}
-[26]: {% image_buster /assets/img_archive/notgroupclickdropdown.gif %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img_archive/notchannclickdropdown.gif %}
-[29]: {% image_buster /assets/img_archive/notchannels.png %}

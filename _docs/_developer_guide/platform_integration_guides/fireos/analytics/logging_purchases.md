@@ -64,5 +64,4 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
 [5]: http://developer.android.com/reference/java/util/Date.html
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int,%20com.appboy.models.outgoing.AppboyProperties)
-[7]: https://github.com/Appboy/android-sdk/blob/develop/droidboy/src/main/java/com/appboy/sample/MainFragment.java
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int)

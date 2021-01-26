@@ -200,4 +200,3 @@ And you are done! Thanks for contributing to Braze Docs!
 
 [1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
 [2]: {% image_buster /assets/img/partner_template/partner_merge.png %}
-[3]: {% image_buster /assets/img/partner_template/maintainers.png %}

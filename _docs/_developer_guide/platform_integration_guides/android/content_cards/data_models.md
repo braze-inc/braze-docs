@@ -77,29 +77,8 @@ All `Card` data model objects offer the following analytics methods for logging 
 |`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again.
 {: .reset-td-br-1 .reset-td-br-2}
 
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
-[7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/news_feed/#card-types
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
-[18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
-[19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
-[20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
-[21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[23]: {% image_buster /assets/img_archive/android_news_feed.png %}
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
-[27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png
 [29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
 [30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
 [31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
 [32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
-[33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://github.com/Appboy/android-sdk/blob/9a091979b4cbaff7f935c2cae03043a944c3ab53/android-sdk-base/src/main/java/com/appboy/models/cards/ShortNewsCard.java
