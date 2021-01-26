@@ -137,17 +137,10 @@ You can read more about RudderStack's `page` method in their [documentation][22]
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[7]: https://docs.rudderstack.com/get-started/rudderstack-connection-modes
-[8]: https://github.com/rudderlabs/rudder-integration-braze-android
-[9]: https://github.com/rudderlabs/rudder-integration-braze-ios
-[10]: https://github.com/rudderlabs/rudder-sdk-js
-[11]: https://docs.rudderstack.com/destinations/braze#adding-device-mode-integration
-[12]: https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-javascript-sdk
 [13]: https://dashboard.braze.com/app_settings/developer_console
 [14]: {{site.baseurl}}/api/basics/?redirected=true#creating-and-managing-rest-api-keys
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
 [16]: https://docs.rudderstack.com/rudderstack-api-spec
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [18]: https://docs.rudderstack.com/destinations/braze#identify
 [19]: https://docs.rudderstack.com/destinations/braze#track
 [20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification

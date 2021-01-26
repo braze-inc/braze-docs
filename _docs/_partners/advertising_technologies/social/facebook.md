@@ -91,12 +91,7 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059
 [3]: https://www.facebook.com/ads/manage/customaudiences/tos.php
 [4]: https://www.facebook.com/business/help/164749007013531?id=401668390442328
-[5]: https://developers.facebook.com/docs/marketing-apis
 [6]: {% image_buster /assets/img/fb_activate.png %}
 [7]: {% image_buster /assets/img/fb_dialog.png %}
 [8]: {% image_buster /assets/img/fb_connected.jpg %}
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
-[12]: https://developers.facebook.com/docs/apps/#app-id
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
-[15]: https://developer.android.com/training/articles/user-data-ids.html

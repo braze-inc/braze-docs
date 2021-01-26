@@ -322,7 +322,6 @@ UNREDEEMED
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
 [10]: https://github.com/PassKit/smart-pass-link-from-csv-generator
-[11]: https://docs.passkit.io/protocols/coupon/#operation/createCoupon
 [12]: https://docs.passkit.io/protocols/member/
 [13]: https://docs.passkit.io/protocols/coupon/
 [14]: https://docs.passkit.io/protocols/boarding/

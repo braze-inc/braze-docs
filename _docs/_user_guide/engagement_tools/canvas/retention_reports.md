@@ -117,8 +117,6 @@ Retention Reports are easy to generate, yet challenging to interpret and act on.
 
 [1]: {% image_buster /assets/img/retention_1.png %}
 [2]: {% image_buster /assets/img/retention_2.png %}
-[3]: {% image_buster /assets/img/campaign_retention2.png %}
-[4]: {% image_buster /assets/img/retention_report_full_report.png %}
 [6]: {% image_buster /assets/img/canvas_retention_report.png %}
 [7]: {% image_buster /assets/img/date_select_retention.png %}
 [8]: {% image_buster /assets/img/variant_view_canvas.png %}

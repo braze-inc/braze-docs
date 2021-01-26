@@ -290,10 +290,7 @@ The 200 count includes active IAM campaigns that have not yet reached end time a
 
 The average Braze customer has a total of 26 campaigns active at once - so it is unlikely that this limitation will impact you. 
 
-[1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/

@@ -93,10 +93,4 @@ Appboy.sharedInstance()?.user.twitterUser = twitterUser
 {% endtabs %}
 
 [2]: https://developers.facebook.com/docs/ios "facebook ios sdk docs"
-[3]: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/ "create a facebook app"
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/manual_sdk_integration/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
 [10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"
-[11]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample/CustomAppboyFeedbackViewController.m
-[12]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKContentCardsViewController/ContentCardsViewController/ABKContentCardsViewController.m

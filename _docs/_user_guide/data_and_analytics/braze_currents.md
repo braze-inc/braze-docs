@@ -53,7 +53,6 @@ Currents allows you to…
 A Currents connector is already included in many of our pro- and enterprise-level packages. If you’re interested using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your Currents [set up and integration]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 <br>
 
-[support]: {{site.baseurl}}/support_contact/
 
 
 ## Change Log

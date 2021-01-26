@@ -26,6 +26,8 @@ All User Profile data (Custom events, Custom attribute, Custom data) is stored a
 ## Blacklisting Custom Attributes, Custom Events, and Products
 If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
 
+In order to prevent collection of certain device attributes, see our [SDK guide][88].
+
 ![customeventsviewblacklist1.png][74]
 
 Once a Custom event or attribute is blacklisted,
@@ -74,4 +76,4 @@ Please note that data sent to Braze is immutable and cannot be deleted or modifi
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
 [74]: {% image_buster /assets/img_archive/customeventsviewblacklist1.png %}
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
-
+[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

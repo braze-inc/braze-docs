@@ -198,4 +198,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/

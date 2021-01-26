@@ -88,7 +88,6 @@ __Continue through the remaining steps of message creation.__ This includes fini
 [2]: {% image_buster /assets/img_archive/languages_2.png %}
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [4]: {% image_buster /assets/img_archive/languages_3.png %}
-[5]: http://www.loc.gov/standards/iso639-2/php/code_list.php
 [6]: {% image_buster /assets/img_archive/languages_5.png %}
 [7]: {% image_buster /assets/img_archive/languages_6.png %}
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/
