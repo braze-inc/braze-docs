@@ -18,7 +18,7 @@ Once your app supports Catalyst, follow [these instructions to use Swift Package
 
 Braze supports push notifications and location features when running on Mac Catalyst. To integrate push in your Catalyst app, follow the [iOS SDK instructions here][4]. For enabling automatic location collection, follow the [setup instructions here][5].
 
-Please note that Push Stories and Geofences are not supported on MacOS.
+Please note that Push Stories, Rich Push, and Geofences are not supported on MacOS.
 
 [1]:https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.32.0
 [2]:https://developer.apple.com/mac-catalyst/
