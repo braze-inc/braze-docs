@@ -38,6 +38,7 @@ def remove_unused_shortlink_lines(original_file_lines, shortlink_lines)
 
   # Since we're deleting the original list, the line number 
   # we actually want to delete will be off by 1 per previous deletion
+  # Deletion always goes in order from smallest line to highest
   lines_deleted = 0
   lines_to_remove.each do |line_to_remove|
     original_file_lines.delete_at(line_to_remove - lines_deleted)
