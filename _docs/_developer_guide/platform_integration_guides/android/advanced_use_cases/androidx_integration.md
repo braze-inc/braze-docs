@@ -7,8 +7,6 @@ page_order: 3
 ## AndroidX
 [AndroidX][1] is the project that Android uses to release libraries within [Jetpack][2].
 
-{% sdk_min_versions ios:3.2.3 android:8.0.0 web:1.2.3 %}
-
 ## Braze AndroidX Module
 An AndroidX compatible module is published alongside the main Braze SDK, starting in version 3.0.0.
 
