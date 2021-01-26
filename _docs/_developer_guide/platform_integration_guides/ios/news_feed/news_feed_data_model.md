@@ -147,9 +147,22 @@ In addition to the base card properties:
 
 When displaying the News Feed in your own user interface, you can manually record News Feed impressions via `- (void)logFeedDisplayed;`. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance] logFeedDisplayed];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logFeedDisplayed()
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#setting-delegates
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click

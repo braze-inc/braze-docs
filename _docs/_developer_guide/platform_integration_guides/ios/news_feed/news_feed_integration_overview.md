@@ -18,10 +18,24 @@ The News Feed can be integrated with 2 view controller contexts, either in code 
 
 ## Navigation Context -- ABKFeedViewControllerNavigationContext
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
-ABKNewsFeedTableViewController *newsFeed = [ABKNewsFeedTableViewController getNavigationFeedViewController];
+ABKNewsFeedTableViewController *newsFeed = [[ABKNewsFeedTableViewController alloc] init];
 [self.navigationController pushViewController:newsFeed animated:YES];
 ```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+let newsFeed = ABKNewsFeedTableViewController()
+self.navigationController?.pushViewController(newsFeed, animated: true)
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 To customize the navigation bar's title, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
@@ -34,17 +48,30 @@ To customize the navigation bar's title, set the title property of the `ABKNewsF
 - If a delegate __is NOT set__ the Done button will dismiss the modal view
 - If a delegate __is set__ the Done button will call the delegate, and the delegate itself will be responsible for dismissing the view
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 ABKNewsFeedViewController *newsFeed = [[ABKNewsFeedViewController alloc] init];
-[self.navigationController presentViewController:newsFeed animated:YES completion:nil];
+[self presentViewController:newsFeed animated:YES completion:nil];
 ```
 
->  The [Stopwatch sample project][3] contains examples of the view controllers.
+{% endtab %}
+{% tab swift %}
 
+```swift
+let newsFeed = ABKNewsFeedViewController()
+self.present(newsFeed, animated: true, completion: nil)
+```
+
+{% endtab %}
+{% endtabs %}
+
+>  The [News Feed sample app][3] contains examples of the view controllers.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Example/Stopwatch
+[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
 [10]: {% image_buster /assets/img_archive/UONewsFeed.png %} "Urban Outfitters News Feed"
 [11]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample

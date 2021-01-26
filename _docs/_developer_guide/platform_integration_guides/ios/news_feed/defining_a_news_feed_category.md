@@ -11,6 +11,9 @@ Instances of the Braze News Feed can be configured to only receive cards from a 
 
 News Feed Categories can be defined by calling the following methods as you load the News Feed:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [newsFeed setCategories:ABKCardCategoryAll];
 [newsFeed setCategories:ABKCardCategoryAnnouncements];
@@ -20,12 +23,40 @@ News Feed Categories can be defined by calling the following methods as you load
 [newsFeed setCategories:ABKCardCategoryNoCategory];
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+newsFeed.categories = ABKCardCategory.all
+newsFeed.categories = ABKCardCategory.announcements
+newsFeed.categories = ABKCardCategory.advertising
+newsFeed.categories = ABKCardCategory.social
+newsFeed.categories = ABKCardCategory.news
+newsFeed.categories = ABKCardCategory.noCategory
+```
+
+{% endtab %}
+{% endtabs %}
+
+
 You can also populate a feed with a combination of categories as in the following example:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [newsFeed setCategories:ABKCardCategoryAnnouncements|ABKCardCategoryAdvertising];
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+newsFeed.categories = ABKCardCategory([.announcements, .advertising])
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#setting-delegates
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
