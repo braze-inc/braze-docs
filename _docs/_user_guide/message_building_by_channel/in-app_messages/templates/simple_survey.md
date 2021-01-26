@@ -19,6 +19,8 @@ This feature is in *Early Access*. Ask your Braze account team to request access
 
 ## SDK Requirements {#supported-sdk-versions}
 
+To use this feature, your apps will need to be on at least the following SDK versions:
+
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
 {% alert warning %}
