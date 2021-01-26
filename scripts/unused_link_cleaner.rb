@@ -21,7 +21,7 @@ def get_shortlink_lines(file_lines)
 end
 
 def remove_unused_shortlink_lines(original_file_lines)
-  shortlink_lines = get_shortlink_lines(lines)
+  shortlink_lines = get_shortlink_lines(original_file_lines)
   lines_to_remove = []
 
   ref_query = /\[(.*)\]: .*/
@@ -47,6 +47,7 @@ def remove_unused_shortlink_lines(original_file_lines)
     lines_deleted += 1
   end
   puts "deleted #{lines_deleted} lines"
+  return lines_deleted
 end
 
 def is_md_file(full_file_path)
@@ -57,12 +58,14 @@ def clean_single_file(full_file_path)
   contents = get_file_contents(full_file_path)
   lines = contents.lines
   # find the url shortlinks at the bottom of the file
-  remove_unused_shortlink_lines(lines)
+  num_lines_deleted = remove_unused_shortlink_lines(lines)
 
-  # writeback to the original file with our changes
-  File.open(full_file_path, 'w') do |out|
-    out << lines.join()
-  end  
+  if num_lines_deleted > 0
+    # writeback to the original file with our changes
+    File.open(full_file_path, 'w') do |out|
+      out << lines.join()
+    end  
+  end
 end
 
 def walk_directory(directory)
