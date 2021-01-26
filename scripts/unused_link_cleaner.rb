@@ -17,7 +17,7 @@ def grep_with_index(string_lines, query)
 end
 
 def get_shortlink_lines(file_lines)
-  return grep_with_index(file_lines, /\[.*\]: .*/)
+  return grep_with_index(file_lines, /\[.*\]: [{#\w].*/)
 end
 
 def remove_unused_shortlink_lines(original_file_lines)
@@ -25,16 +25,16 @@ def remove_unused_shortlink_lines(original_file_lines)
   lines_to_remove = []
 
   ref_query = /\[(.*)\]: .*/
-  shortlink_lines.each do |current_line|
+  shortlink_lines.each do |current_line, current_line_index|
     # Get the reference from the link itself to search for
     # "[1]: https://google.com" has a ref of "1"
-    ref = current_line[0].match(ref_query)[1]
+    ref = current_line.match(ref_query)[1]
 
     # Search for that ref in the file
     is_in_file = original_file_lines.grep(/\[#{ref}\]/)
     if is_in_file.length < 2
       # This shortlink can be deleted
-      lines_to_remove << current_line[1]
+      lines_to_remove << current_line_index
     end
   end
 
