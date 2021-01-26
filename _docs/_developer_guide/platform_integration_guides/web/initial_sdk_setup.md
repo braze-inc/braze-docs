@@ -142,7 +142,6 @@ Braze may also be compatible with other tag management solutions by following ou
 
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager

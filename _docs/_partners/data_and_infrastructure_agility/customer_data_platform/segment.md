@@ -296,11 +296,8 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 
 
-[2]: https://segment.com/docs/
-[3]: https://segment.com/docs/destinations/appboy/
 [4]: https://segment.com/docs/spec/ecommerce/v2/
 [5]: https://segment.com
-[11]: https://segment.com/docs/destinations/braze/
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
@@ -312,18 +309,10 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[29]: https://segment.com/docs/destinations/appboy/#android
-[30]: https://segment.com/docs/destinations/appboy/#ios
-[31]: https://github.com/appboy/appboy-segment-android
-[32]: https://github.com/appboy/appboy-segment-ios
-[33]: https://github.com/segment-integrations/analytics.js-integration-appboy
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
-[37]: https://segment.com/docs/destinations/appboy/#web
 [38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
 [40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
-[44]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[45]: https://dashboard.braze.com/app_settings/developer_console

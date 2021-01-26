@@ -49,6 +49,5 @@ Admins can unarchive a team by selecting the archived team and then clicking the
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}
-[4]: {% image_buster /assets/img/teams2.png %}
 [68]: {% image_buster /assets/img_archive/adding_a_team.png %}
 [86]: {% image_buster /assets/img_archive/archive_a_team.png %}

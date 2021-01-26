@@ -164,8 +164,6 @@ __Potential causes of errors__:<br>
 [10]: https://developers.facebook.com/docs/apps/review/#business-verification
 [11]: https://developers.facebook.com/docs/apps/review/#supplemental-terms
 [12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
-[13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
-[15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
@@ -179,7 +177,5 @@ __Potential causes of errors__:<br>
 [27]: {{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token
 [28]: https://developers.facebook.com/docs/marketing-api/access#standard
 [29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
-[30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
 [32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
 [33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
-[34]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-pages_read_engagement

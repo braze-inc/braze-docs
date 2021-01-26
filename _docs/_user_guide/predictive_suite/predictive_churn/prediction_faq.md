@@ -58,5 +58,4 @@ Listed below are some questions to ask yourself as you set up Predictive Churn. 
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}
-[2]: {% image_buster /assets/img/churn/churn4.png %}
 [3]: {% image_buster /assets/img/churn/churn5.png %}

@@ -45,6 +45,5 @@ AppboyBinding.LogPurchase("product ID", "USD", 12.5m);
 
 You can also use our REST API to record purchases. Refer to the [user API documentation][4] for details.
 
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a63d8c390bff05f87c7f8f86f2fc0deb6 "logpurchase:incurrency:atprice"
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

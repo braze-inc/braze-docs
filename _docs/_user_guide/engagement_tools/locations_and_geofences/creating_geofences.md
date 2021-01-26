@@ -77,5 +77,3 @@ To use geofence data to personalize a message, you may use the following Liquid 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
 [2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

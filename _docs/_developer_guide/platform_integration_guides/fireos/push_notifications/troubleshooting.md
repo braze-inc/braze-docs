@@ -30,9 +30,5 @@ There are a few scenarios why this could be occurring:
 
   - This typically occurs when users have uninstalled the application, causing their ADM Registration ID to become invalid.
 
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/
-[7]: https://console.developers.google.com/
-[9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[14]: http://tcpiputils.com/browse/as/15169
 [15]: {{ site.baseurl }}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#notification-priority

@@ -90,5 +90,4 @@ You can separate your Content Cards into multiple feeds based on categories. For
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
 [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/#IAM-Reporting
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
