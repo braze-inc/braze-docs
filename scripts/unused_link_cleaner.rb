@@ -1,4 +1,5 @@
 require 'fileutils'
+require "readline"
 
 INPUT_FILE = ARGV[0]
 
@@ -15,11 +16,12 @@ def grep_with_index(string_lines, query)
   return string_lines.each_with_index.select{|e,| e =~ query}
 end
 
-def get_shortlink_lines(fileLines)
-  return grep_with_index(fileLines, /\[.*\]: .*/)
+def get_shortlink_lines(file_lines)
+  return grep_with_index(file_lines, /\[.*\]: .*/)
 end
 
-def remove_unused_shortlink_lines(original_file_lines, shortlink_lines)
+def remove_unused_shortlink_lines(original_file_lines)
+  shortlink_lines = get_shortlink_lines(lines)
   lines_to_remove = []
 
   ref_query = /\[(.*)\]: .*/
@@ -55,8 +57,7 @@ def clean_single_file(full_file_path)
   contents = get_file_contents(full_file_path)
   lines = contents.lines
   # find the url shortlinks at the bottom of the file
-  shortlink_lines = get_shortlink_lines(lines)
-  remove_unused_shortlink_lines(lines, shortlink_lines)
+  remove_unused_shortlink_lines(lines)
 
   # writeback to the original file with our changes
   File.open(full_file_path, 'w') do |out|
@@ -81,13 +82,9 @@ end
 
 if File.directory?(INPUT_FILE)
   puts "Input directory #{INPUT_FILE}. Will recurse!"
-  puts "Continue? [y/n]"
-  # flush the STDOUT since gradle won't do that for us
-  # Without flushing, the user won't be able to read the prompt
-  STDOUT.flush
-  prompt_response = STDIN.gets.chomp
+  prompt_response = Readline.readline("Continue? [y/n] ") 
 
-  if (!prompt_response.eql? "y")
+  if (prompt_response != "y")
     puts "Not continuing!"
     exit(0)
   end
