@@ -68,7 +68,7 @@ Use a confirmation page to thank users or provide additional information, and se
 
 ### Styling Your Message
 
-Customize the accent color of the message using the color theme picker, located in the Style tab.
+Customize the font and accent color of the message using the Color Theme picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:700px"}
 
