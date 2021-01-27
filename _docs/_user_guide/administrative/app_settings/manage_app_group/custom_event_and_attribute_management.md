@@ -23,19 +23,17 @@ To make these added Custom attributes, events, products, or event properties tra
 All User Profile data (Custom events, Custom attribute, Custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager. 
 {% endalert %}
 
-## Blacklisting Custom Attributes, Custom Events, and Products
-If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
+## Blocklisting Custom Attributes, Custom Events, and Products
+If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blocklist.
 
 In order to prevent collection of certain device attributes, see our [SDK guide][88].
 
-![customeventsviewblacklist1.png][74]
-
-Once a Custom event or attribute is blacklisted,
+Once a Custom event or attribute is blocklisted,
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,
-- Blacklisted events/attributes will not show up in filters or graphs.
+- blocklisted events/attributes will not show up in filters or graphs.
 
-Changes to the blacklist may take a few minutes to propagate. You may re-enable any blacklisted event or attribute at anytime.
+Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
 
 {% alert note %}
 Please note that you should still remove the event/attribute from your app code during your next release.
@@ -74,6 +72,5 @@ Please note that data sent to Braze is immutable and cannot be deleted or modifi
 [71]: {% image_buster /assets/img_archive/customattributessearch1.png %}
 [72]: {% image_buster /assets/img_archive/customeventsview1.png %}
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[74]: {% image_buster /assets/img_archive/customeventsviewblacklist1.png %}
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
 [88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection
