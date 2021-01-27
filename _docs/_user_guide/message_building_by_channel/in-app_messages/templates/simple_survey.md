@@ -3,12 +3,12 @@ nav_title: Simple Survey
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 1.5
-description: "Send in-app surveys and collect custom attributes using the new In-App Message Survey Template - without any custom code!"
+description: "Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys."
 ---
 
 # Simple Survey In-App Message
 
-Send in-app surveys and collect custom attributes using the new In-App Message Survey Template - without any custom code!
+Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys.
 
 {% alert important %}
 This feature is in *Early Access*. Ask your Braze account team to request access!
