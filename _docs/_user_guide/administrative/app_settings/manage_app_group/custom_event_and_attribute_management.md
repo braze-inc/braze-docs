@@ -15,6 +15,7 @@ To add a Custom attribute, event, or product, go to the Custom Attributes, Custo
 You can also add event properties for custom events or products by clicking on the “Manage Properties” link in the “Event Properties” column:
 
 ![customeventsview1.png][72]
+
 ![manageproperties1.png][73]
 
 To make these added Custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you may use Braze's APIs to import data on that attribute. After that, the Custom attribute, event, or other will be actionable and apply to your users!
