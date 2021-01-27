@@ -2,8 +2,8 @@
 nav_title: Simple Survey
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
-page_order: 9
-description: "Collect custom user attributes and power retargeting campaigns using an In-App Message Survey Template."
+page_order: 1.5
+description: "Send in-app surveys and collect custom attributes using the new In-App Message Survey Template - without any custom code!"
 ---
 
 # Simple Survey In-App Message
