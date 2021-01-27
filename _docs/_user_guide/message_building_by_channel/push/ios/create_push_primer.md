@@ -12,7 +12,7 @@ tool:
   - Campaigns
 ---
 {% alert important %}
-Push Primer campaigns require backend set up from your developers. <br>Check out the neccesary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
+Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
 
 
@@ -94,7 +94,6 @@ If you are not sure the best way to segment, you may also select All Users. This
 ## Step 7: Conversions
 Braze suggests default settings for conversions, but you may want to set up conversion events surrounding push primers.
 
-[deeplink]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/
 [push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.jpg %}
 [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %}
@@ -102,5 +101,3 @@ Braze suggests default settings for conversions, but you may want to set up conv
 [push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %}
 [push_primer6]: {% image_buster /assets/img/push_primer/push_primer_6.jpg %}
 [push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.jpg %}
-[ioslink]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#requirements
-[androidlink]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/#requirements

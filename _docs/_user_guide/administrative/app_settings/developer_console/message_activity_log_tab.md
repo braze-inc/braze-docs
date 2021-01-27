@@ -20,18 +20,10 @@ However, there are some common message types you might see, and some might even 
 |---|---|---|
 |Block|The email account that you tried to reach is disabled. Learn more at _SAMPLE URL_.|Your message never reached this person's inbox - because there was no inbox to reach! If you want to dig further in, messages like this can sometimes have links in the __View Details__ column that will allow you to view the intended recipient's profile.|
 |Block|Spam message is rejected because of anti-spam policy. For more information, please visit _SAMPLE URL_.| Uh oh. Looks like your message got categorized as spam here. It might just might be for that intended recipient, but if you're seeing this message a lot, you might want to re-evaluate your send habits or the content of your message. Also, think back - did you do an [IP warm-up][8]? If not, reach out to Braze for advice on getting one going.|
-|Aborted Message Error| empty-cart_web| If you have an app with a cart or you create a send with an abort message in the liquid, you can customize what message is returned to you if the send is aborted. In this case, the message returned is empty-cart_web.|
+|Aborted Message Error| empty-cart_web| If you have an app with a cart or you create a send with an abort message in the Liquid, you can customize what message is returned to you if the send is aborted. In this case, the message returned is empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
 [2]: {% image_buster /assets/img_archive/msgactlog1.png %}
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/
-[4]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[5]: {{site.baseurl}}/developer_guide/rest_api/email_sync/
-[6]: {{site.baseurl}}/developer_guide/rest_api/export/
-[7]: {% image_buster /assets/img_archive/internal_group.png %}
 [8]: {% image_buster /assets/img_archive/UserLogs1.png %}
-[9]: {% image_buster /assets/img_archive/content_test_preview.png %}
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
-[11]: {% image_buster /assets/img_archive/seed_group_campaign.png %}

@@ -106,7 +106,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
 
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
 The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
 
@@ -631,9 +631,9 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
-## Key-Value Pairs
+## Key Value Pairs
 
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 
@@ -649,35 +649,10 @@ This section applies to integrations which use the Braze SDK's default Content C
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/news_feed/#card-types
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
-[18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
-[19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
-[20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
-[21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[23]: {% image_buster /assets/img_archive/android_news_feed.png %}
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
-[27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png
-[28]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
-[30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
-[31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
-[32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
-[33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
 [36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
-[38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
-[39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
@@ -689,7 +664,6 @@ This section applies to integrations which use the Braze SDK's default Content C
 [48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
 [49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyEmptyContentCardsAdapter.html
-[51]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/layout/com_appboy_content_cards_empty.xml
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml#L552-L560
 [53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
 [54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/AppboyContentCardsFragment.java

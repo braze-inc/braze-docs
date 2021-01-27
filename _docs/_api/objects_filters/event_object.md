@@ -22,9 +22,9 @@ description: "This reference article goes over the event object, what it is, and
 
 An Event Object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each Event Object in the events array represents a single occurrence of a Custom Event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the "Tracking Custom Events" page under the __analytics tab__ of the various platforms. We have linked several for you.
+You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the "Tracking Custom events" page under the __analytics tab__ of the various platforms. We have linked several for you.
 
-- Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
+- Tracking Custom events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
 
 ### Event Object
 

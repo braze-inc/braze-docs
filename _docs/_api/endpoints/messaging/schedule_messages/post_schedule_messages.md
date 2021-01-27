@@ -14,7 +14,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 ---
 {% api %}
 # Create Scheduled Messages
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
 
@@ -198,4 +198,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/

@@ -164,7 +164,6 @@ Under normal conditions, the time for our data eventual-consistency to occur is 
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[18]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [support]: {{site.baseurl}}/support_contact/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

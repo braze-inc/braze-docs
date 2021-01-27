@@ -45,6 +45,7 @@ page_order: 4
   | Android Gmail          | 24      |
   | iOS Native             | 82      |
   | iOS Gmail              | 30      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
   |  Desktop Email Client  |  Limit  |
   |:----------------------:|:-------:|
@@ -52,6 +53,7 @@ page_order: 4
   | Outlook '13            | 38      |
   | Ouotlook for Mac '15   | 53      |
   | Outlook '16            | 50      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
 
   |  Webmail Email Client  |  Limit  |
@@ -61,6 +63,7 @@ page_order: 4
   | Outlook.com            | 49      |
   | Office 365             | 40      |
   | Mail.ru                | 64      |
+  {: .reset-td-br-1 .reset-td-br-2}
 
 
   Source: [Email on Acid][62]
@@ -86,6 +89,7 @@ page_order: 4
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
 | 25KB maximum |   60KB maximum   | 600 pixels maximum |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Make sure to limit your **Body Size**: Large E-Mail bodies (larger than 102kb) are not only extremely taxing on Braze and SendGrid's servers, but are also clipped by Gmail and other E-Mail clients. We recommend keeping the size of your email under 25kb for just text, or 60kb with images.
 
@@ -96,6 +100,7 @@ If you are receiving this error in the editor, you likely have base64 encoded im
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |
 |:-----------:|:------------------:|:------------------:|:-------------:|
 | 5MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPG, GIF |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
 
@@ -104,33 +109,5 @@ If you are receiving this error in the editor, you likely have base64 encoded im
 
 A high percentage of emails are read on mobile devices. Utilizing deep linking is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. Email, on the other hand, gives no way of knowing whether recipients have the app installed. As such, providing a deep link to the app could link to an error message for these recipients who do not have the app.
 
-[18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
-[19]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[20]: {% image_buster /assets/img_archive/Email_Sunset_Policies_new.png %}
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns
-[22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[23]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[24]: http://tools.ietf.org/html/rfc2822
-[25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-[36]: #deep-linking
-[37]: http://googlewebmastercentral.blogspot.com/2015/05/app-deep-linking-with-googl.html
-[38]: {{site.baseurl}}/help/best_practices/email/#unsubscribed-email-addresses
-[39]: {{site.baseurl}}/help/best_practices/email/#bounces--invalid-emails
-[40]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[42]: https://returnpath.com/
-[43]: http://www.briteverify.com/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
-[60]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
 [62]: https://www.emailonacid.com/blog/article/email-marketing/preview-vs-preheader-text-how-long-should-preheader-text-be/
-[63]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
-[64]: {{site.baseurl}}/help/best_practices/email/#unsubscribed-email-addresses
-[65]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event

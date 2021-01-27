@@ -26,7 +26,7 @@ Once you make changes to a template, you will need to re-run the test to see the
 
 ## Code Analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML.  Code analysis shows the number of occurrences of each issue and provides insight into which HTML elements are not supported.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
 ![inboxvision2][2]
 ![inboxvision3][3]

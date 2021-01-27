@@ -161,7 +161,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 
 ## Step 5: Registering Push Opens
 
-- Baidu supports sending extra key-value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key-value pairs:
+- Baidu supports sending extra key value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key value pairs:
 
   ```json
   {
@@ -194,7 +194,7 @@ AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
 
 ## Step 6: Extras
 
-- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
+- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key value pairs.  To extract your key value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
 
 {% tabs %}
 {% tab JAVA %}
@@ -240,15 +240,10 @@ On the "App Settings Page" (where your API keys are located), select your Androi
 - [Baidu Integration Docs][43]
 
 [7]: https://www.baidu.com/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [10]: {% image_buster /assets/img_archive/baidu_project.png %}
 [11]: http://developer.baidu.com/console#app/project
-[12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
 [13]: {% image_buster /assets/img_archive/baidu_dev_reg.png %}
 [14]: {% image_buster /assets/img_archive/baidu_app_console.png %}
-[15]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/05-requesting-an-access-token"
-[16]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/06-sending-a-message
 [17]: {% image_buster /assets/img_archive/baidu_signup.png %}
 [19]: {% image_buster /assets/img_archive/baidu_api_key.png %} "APIKey"
 [26]: {% image_buster /assets/img_archive/baidu_app_name.png %}

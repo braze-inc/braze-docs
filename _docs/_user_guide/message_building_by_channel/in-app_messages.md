@@ -27,6 +27,9 @@ guide_featured_list:
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
   fa_icon: fas fa-mobile
+- name: HTML Preview
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/preview/
+  fa_icon: fas fa-file-code
 
 ---
 
@@ -88,6 +91,5 @@ Full-Screen messages are exactly what you'd expect - they take up the whole scre
 {% endtab %}
 {% endtabs %}
 
-[1]: http://yuml.me/e4562a3d.png
 [11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
 [21]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts

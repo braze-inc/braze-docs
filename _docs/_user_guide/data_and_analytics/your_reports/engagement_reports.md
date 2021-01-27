@@ -65,6 +65,7 @@ The Stats tab will automatically show you stats for the types of Campaigns or Ca
 | In-App Message | Impressions, Clicks, First Button Clicks, Second Button Clicks |
 | Webhook  |  Sends, Errors |
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 
@@ -104,8 +105,3 @@ The report, when opened, will contain all the statistics selected in the [Add St
 [3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
 [4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
 [5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}
-[6]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-export
-[7]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-details-endpoint
-[8]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-series-endpoint
-[9]: {{site.baseurl}}/developer_guide/rest_api/export/#canvas-data-summary-endpoint
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens

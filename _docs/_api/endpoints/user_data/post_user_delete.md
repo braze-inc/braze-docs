@@ -14,7 +14,7 @@ description: "This article outlines details about the delete User Information Br
 ---
 {% api %}
 # User Delete Endpoint
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/delete
 {% endapimethod %}
 <br>
@@ -81,14 +81,3 @@ Authorization: Bearer YOUR_REST_API_KEY
 {% endapi %}
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
-[16]: #not-used-app
-[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
-[21]: http://docs.python-requests.org/en/latest/ "Requests"
-[22]: https://rubygems.org/gems/multi_json "multiJSON"
-[23]: https://rubygems.org/gems/rest-client "Rest Client"
-[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
-[26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

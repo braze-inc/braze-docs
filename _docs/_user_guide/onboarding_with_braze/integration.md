@@ -46,6 +46,7 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
 | Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 3: They Set Up Your Data
 

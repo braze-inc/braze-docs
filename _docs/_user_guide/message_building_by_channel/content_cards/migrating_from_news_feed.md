@@ -1,7 +1,7 @@
 ---
 nav_title: Migrating from News Feed
 page_order: 10
-decription: "Moving from News Feed to Content Cards takes time, but it is an easy adoption! You cannot automatically migrate content from News Feed to Content Cards - you must integrate Content Cards from scratch."
+description: "Moving from News Feed to Content Cards takes time, but it is an easy adoption! You cannot automatically migrate content from News Feed to Content Cards - you must integrate Content Cards from scratch."
 ---
 
 # Migrating From News Feed to Content Cards

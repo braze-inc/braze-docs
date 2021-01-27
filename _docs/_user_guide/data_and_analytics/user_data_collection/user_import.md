@@ -35,7 +35,9 @@ Braze accepts user data in the standard CSV format from files __up to 100MB in s
 
 ### Data Point Considerations
 
-Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point. Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
+Each piece of customer data imported via CSV will overwrite the existing value on user profiles and will count as a data point&#42;. Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
+
+&#42; External IDs uploaded via CSV will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading __ONLY__ external IDs, this can be done without consuming data points. If you were to add additional data like user email or phone number in your import, that would overwrite existing user data, consuming your data points. 
 
 {% alert important %}
 Note that setting `language` and/or `country` on a user via CSV import or API will __prevent__ Braze from automatically capturing this information via the SDK.
@@ -51,7 +53,7 @@ Note that setting `language` and/or `country` on a user via CSV import or API wi
 | `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
 | `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g. `GB`). | No |
 | `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g. `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
-| `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say) or nil (unknown). | No |
+| `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (e.g. `London`). | No |
 | `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g. `en`). <br>[List of accepted Languages][1] | No |
 | `phone` | String | A telephone number as indicated by your users (e.g. `541 754 3010`). | No |
@@ -90,7 +92,7 @@ For uploading these kinds of values, please use Braze’s [User/Track REST API](
 
 ### Importing a CSV
 
-To import your CSV file, navigate to the User Import page under the Users section on the left-hand toolbar. In the lower text box, “Recent Imports”, there will be a table which lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+To import your CSV file, navigate to the User Import page under the Users section on the left-hand toolbar. In the lower text box, “Recent Imports”, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
 [Download a CSV Import Template here.][template]
 
@@ -116,7 +118,7 @@ When you are satisfied with the upload, start the import. The pop-up will close 
 
 Under `Lines Processed`, you will see the progress of the import; the status will change to Complete when finished. You can continue to navigate around other parts of Braze during the import, you will receive modal notifications when the import begins and ends.
 
-When the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can mouse over the icon to see details into why certain lines failed. Once the import is Complete, all data will have been added to existing profiles or all new profiles will have been created.
+When the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can mouse over the icon to see details into why certain lines failed. Once the import is complete, all data will have been added to existing profiles or all-new profiles will have been created.
 
 ## Segmenting
 
@@ -124,7 +126,7 @@ User Import creates and updates user profiles, and can also be used to create se
 
 ![CSV Import Segmenting Users][7]
 
-You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment once the import has completed.
+You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment once the import has been completed.
 
 The filter used to create the segment selects users who were created or updated in a selected import and is available with all other filters in the edit segment page.
 
@@ -136,13 +138,9 @@ You can also choose to import the users in the CSV and make it possible to retar
 
 ## Troubleshooting
 
-### No External ID
-
-To connect data from User Import to user profiles, Braze requires an `external_id` in each row. Rows without a value in the `external_id` column will be excluded from the import. User profiles that lack an `external_id` cannot be created or updated via the User Import.
-
 ### Malformed Row
 
-There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length that have more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
+There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length has more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 
 ### Multiple Data Types
 
@@ -164,15 +162,10 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[fields]: {{site.baseurl}}/developer_guide/rest_api/user_data/#custom-attribute-data-types
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-upsers.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
-[date]: https://en.wikipedia.org/wiki/ISO_8601
-[utf8]: https://en.wikipedia.org/wiki/UTF-8
-[CAO]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[filtering]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}

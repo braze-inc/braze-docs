@@ -56,6 +56,7 @@ The requirements listed below are typical requirements you might need from Braze
 |---|---|---|---|
 |Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
 |Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## [Type of Integration] Integration
 
@@ -73,7 +74,7 @@ You have the option to put images in your documentation, so we recommend you do 
 
 ### Step 3: How Many Steps
 
-Outline through usage of the integration - especially if it means inserting liquid into our message composer.
+Outline through usage of the integration - especially if it means inserting Liquid into our message composer.
 
 ## Customization
 

@@ -133,9 +133,4 @@ Braze should now be collecting data from your application and your basic integra
 
 [Full iOS class documentation][7] is available to provide additional guidance on any of the aforementioned methods.
 
-[1]: #clone-sdk
-[2]: #add-libs
-[3]: #configure
-[4]: #update-delegate
 [7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full ios class documentation"
-[10]: http://cocoapods.org/

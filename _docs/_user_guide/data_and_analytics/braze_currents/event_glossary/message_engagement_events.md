@@ -25,7 +25,7 @@ Message engagement events are comprised of __user specific__ properties, __campa
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
 {% endalert %}
 
 {% api %}
@@ -1229,6 +1229,7 @@ This event occurs when a user enters into the canvas. This event tells you which
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_name": (string) will always return 'null' for this engagement event, 
   "canvas_step_id": (string) id of the step the user entered into,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas

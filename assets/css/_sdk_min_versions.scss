@@ -1,0 +1,50 @@
+#sdk-versions {
+    margin: 15px 0 30px;
+
+    .sdk-versions--chip:hover {
+        background: white !important;
+        color: #0c525b !important;
+        border: solid 1px #0c525b !important;
+    }
+
+    .sdk-versions--chip {
+        word-break: normal;
+        tab-size: 4;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: inherit;
+        margin: 0 4px;
+        align-items: center;
+        cursor: pointer;
+        display: inline-flex;
+        line-height: 20px;
+        max-width: 100%;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        transition-duration: .28s;
+        transition-property: box-shadow, opacity;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        vertical-align: middle;
+        white-space: nowrap;
+        color: rgba(0, 0, 0, .87);
+        border-radius: 16px;
+        font-size: 14px;
+        height: 32px;
+        border: 1px solid transparent !important;
+        padding: 6px 17px !important;
+    }
+
+    .sdk-versions--chip.web-sdk {
+        background: #50c5d4;
+    }
+
+    .sdk-versions--chip.ios-sdk {
+        background: #ed9494;
+    }
+
+    .sdk-versions--chip.android-sdk {
+        background: #ff9449;
+    }
+}

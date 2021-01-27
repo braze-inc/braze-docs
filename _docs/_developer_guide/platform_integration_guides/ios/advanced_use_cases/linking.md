@@ -205,7 +205,7 @@ For more information about how to debug ATS failures, please refer to Tim Ekl's 
 
 As of Braze iOS SDK v2.21.0, the SDK percent-encodes links to create valid `NSURL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. For example:
+To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. Please note that you must also return `YES` in the `ABKURLDelegate` and that a call to action is required to trigger the handling of the URL by the App. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -326,7 +326,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtabs %}
 
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW10 "Apple's Documentation"
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m
 [6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKModalWebViewController.h
@@ -341,10 +340,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
 [17]: http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[20]: #customizing-link-handling
 [22]: #customizing-appboy-on-startup
 [23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKURLDelegate.h
-[24]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [25]: #deep-links
 [26]: #linking-customization
 [27]: #universal-links

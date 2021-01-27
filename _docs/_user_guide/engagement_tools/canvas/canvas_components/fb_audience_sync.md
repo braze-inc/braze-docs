@@ -39,7 +39,6 @@ You will need to ensure that you have the following items created and/or complet
 
 Customers looking to use the Audience Sync to Facebook step in Canvas will need to undergo [Facebook’s App Review][25] process for the following permissions. This ensures each customer is adhering to Facebook’s permission and authorization protocols when using the Facebook marketing API. 
 
-- [Pages Read Engagement][34]
 - [Ads Management][29]
 - [Ads Management Standard Access][28]
 
@@ -49,8 +48,8 @@ Granting these permissions enables Braze to sync data seamlessly into Facebook. 
 
 1. Ensure that your team has created a Facebook app through the [Facebook Developer Console][9].<br><br>
 2. Through the Facebook Developer Console, select the app you’d like to use, and then navigate to __Permissions and Features__ on the left-hand menu. Here you will see all of the available permissions.<br><br>As part of the app review process, Pages Read Engagement, Ads Management Standard Access, and Ads Management require additonal information that you must provide. Check out here for [Example Responses][24] to these prompts.<br>![audience sync][23]{:style="max-width:85%"}<br><br>
-	- __Pages Read Engagement Dependency__<br>To be approved for Ads Management, your submission must include [pages_read_engagement](https://developers.facebook.com/docs/permissions/reference/pages_read_engagement) or your app must have been approved for pages_read_engagement. In addition, you must ensure that you have either previously been approved for Ads Management or submit an app review with both Ads Management and pages_read_engagement in order to be approved for ads management standard access.
 	- __Ads Management Permissions__<br>Please ensure that you have completed [Business Verification][10] and sign the [supplemental terms][11]. To do this, you can go to your Business Settings within Facebook Business Manager. On the left-hand side, navigate to Business Info and then scroll down to the Business Contracts section.<br>![audience sync][22]{:style="max-width:85%"}<br><br>
+	- __Ads Management Standard Access Requiements__<br>Please make sure prior to submitting your Facebook App Review, to complete the neccesary requirements for Ads Management Standard Access listed [here](https://developers.facebook.com/docs/marketing-api/overview/authorization#layer-2--access-levels--permissions--and-features).<br><br>
 3. Once you have completed the additional requirements, you should be ready to submit your Facebook App Review. <br><br>
 4. When your Facebook App Review has been approved, you will need to switch your app to “Live Mode” within the Facebook Developer Dashboard. 
 
@@ -165,8 +164,6 @@ __Potential causes of errors__:<br>
 [10]: https://developers.facebook.com/docs/apps/review/#business-verification
 [11]: https://developers.facebook.com/docs/apps/review/#supplemental-terms
 [12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
-[13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
-[15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
@@ -180,7 +177,5 @@ __Potential causes of errors__:<br>
 [27]: {{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token
 [28]: https://developers.facebook.com/docs/marketing-api/access#standard
 [29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
-[30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
 [32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
 [33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
-[34]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-pages_read_engagement

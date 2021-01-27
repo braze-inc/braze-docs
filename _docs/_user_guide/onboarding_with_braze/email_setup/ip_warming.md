@@ -80,7 +80,7 @@ Braze's built-in user limiting feature serves as an useful tool to help you with
 
 Braze takes your deliverability very seriously. As such, we’ve built a number of warnings and notifications throughout the dashboard to limit any issues during the IP warming process.  Braze will work very closely with you to define your IP Warming time frame as well as understand how many emails should be sent daily.
 
-During your established IP warming period, there will be numerous reminders in the Dashboard that your app group is going through IP Warming. Additionally, Braze will provide warnings throughout the Campaign or Canvas creation process if you accidently go beyond your daily quota.
+During your established IP warming period, there will be numerous reminders in the Dashboard that your app group is going through IP Warming. Additionally, Braze will provide warnings throughout the Campaign or Canvas creation process if you accidentally go beyond your daily quota.
 
 As a last issue deterrent, Braze will automatically email a select number of individuals regarding any breach of your quota so that it can be addressed immediately.
 

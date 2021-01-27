@@ -31,6 +31,7 @@ Braze currently has two Blocks available: the Message Engagement Analytics and t
 |---|---|---|---|
 | __Message Engagement Analytics Block__ | This block includes data around push, email, in-app messages, webhook, newsfeed, conversion, Canvas entry, and campaign control group enrollment events. | [Learn more about this Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) from Looker. | See the code on [Github](https://github.com/llooker/braze_message_engagement_block). |
 | __User Behavior Analytics Block__ | This block includes data around custom events, purchases, sessions, location events, and uninstalls. | [Learn more about this Looker Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) from Looker. | See the code on [Github](https://github.com/llooker/braze_retention_block). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Implementing the Looker Blocks
 
@@ -157,7 +158,7 @@ _Sample of the Outgoing API which will be sent to the [/user/track/][10] endpoin
 [3]: https://github.com/llooker/braze_retention_block/blob/master/README.md
 [4]: {{site.baseurl}}//user_guide/onboarding_with_braze/integration/
 [5]: {{site.baseurl}}/partners/braze_currents/about/
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct
 [8]: https://dashboard.braze.com/app_settings/developer_console/
 [9]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

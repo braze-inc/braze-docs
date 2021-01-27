@@ -10,10 +10,6 @@ Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Servic
 
 This guide will show you how to set up your Huawei Android integration in order to send push through Braze, and take advantage of all existing Braze features, including segmentation, analytics, canvas, and more!
 
-{% alert important %}
-This feature is in *Beta*. Ask your Braze team for more information on how to get access.
-{% endalert %}
-
 ## 1. Register for a Huawei Developer Account
 
 Before getting started, you'll need to register and set up a [Huawei Developer account][2].
@@ -151,7 +147,6 @@ Once your campaign has been launched, you will see analytics for your campaign o
 [8]: {% image_buster /assets/img/huawei/huawei-segmentation.png %}
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#results-data-push
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
 [12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
 [13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html
 [14]: https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls
