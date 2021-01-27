@@ -104,6 +104,7 @@ On this page, you, input:
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "Azure AD.” |
 | `Target URL` | This is the Login URL provided by Azure AD.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your IdP. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 

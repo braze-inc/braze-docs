@@ -3,8 +3,8 @@ nav_title: Manage App Group
 page_order: 0
 layout: dev_guide
 guide_top_header: "Developer Console"
-guide_top_text: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom Events, Custom Attributes, and more."
-description: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom Events, Custom Attributes, and more."
+guide_top_text: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom events, Custom attributes, and more."
+description: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom events, Custom attributes, and more."
 
 guide_featured_title: "Section Articles"
 

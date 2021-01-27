@@ -34,7 +34,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```json
 {
   "external_send_id": (optional, string) see external_send_id below,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
+  "trigger_properties": (optional, object) personalization key value pairs that will apply to the user in this request,
   "recipient": (required, object)
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex `/^[a-zA-Z0-9-_+\/=]+$/`. This optional field allows you to pass an internal identifier for this particular send which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
-|`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
+|`trigger_properties`|Optional|Object|Personalization key value pairs that will apply to the user in this request|
 |`recipient`|Required|Object|The user you are targeting this message to. Please note that given an external user ID that does not already exist in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send it to the newly created user. Please note, if you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that `first_name`, `last_name`, and `email` attributes will be updated synchronously and templated into your message. Custom attributes do not have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -130,7 +130,7 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage A
 | ------------ | ----------- |
 | `sent` | Message successfully dispatched to Braze's email sending partner  |
 | `processed` | Email sending partner has successfully received and prepared the message for sending to the user's inbox provider |
-| `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
+| `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or Liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
 |`delivered`| Message was accepted by the user's email inbox provider |
 |`bounced`| Message was rejected by the user's email inbox provider. All bounced events include a `reason` field within the metadata object reflecting the bounce error code provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -203,5 +203,3 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage A
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[42]: {{site.baseurl}}/api/parameters/#broadcast

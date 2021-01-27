@@ -205,6 +205,9 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/dat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
+validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/data_augmentation/contextual_location/gimbal/';
+validurls['/docs/partners/advertising_technologies/attribution/pypestream/'] = '/docs/partners/additional_channels/support/pypestream/';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/'] = '/docs/partners/channel_extensions/loyalty/jebbit/';
 
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';

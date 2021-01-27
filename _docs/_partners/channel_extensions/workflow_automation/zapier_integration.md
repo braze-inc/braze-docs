@@ -39,7 +39,7 @@ URL : `https://rest.iad-01.braze.com/campaigns/trigger/send`
 Payload Type : JSON
 
 Data : `trigger_properties__name`, `api_key`, `campaign_id`
-These data fields are key-value pairs that will for the data portion of the request.
+These data fields are key value pairs that will for the data portion of the request.
 
 ![zapier5] [10]
 
@@ -52,14 +52,11 @@ These data fields are key-value pairs that will for the data portion of the requ
 Once you've successfully set up your zap, you can now use that information you're being sent to customize your campaign and send off any messages. You can also use trigger_properties with Liquid to filter what or if the message is sent.
 
 [1]: https://zapier.com/
-[2]: https://ifttt.com/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#setting-up-an-api-triggered-campaign
 [5]:{% image_buster /assets/img_archive/zapier1.png %}
 [6]:{% image_buster /assets/img_archive/zapier2.png %}
 [7]:{% image_buster /assets/img_archive/zapier3.png %}
 [8]:{% image_buster /assets/img_archive/zapier4.png %}
 [10]:{% image_buster /assets/img_archive/zapier5.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#api-triggered-campaigns-server-triggered-campaigns
 [12]:{% image_buster /assets/img_archive/zapier6.png %}
 [66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery

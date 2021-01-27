@@ -40,7 +40,7 @@ You can modify the form of generated codes for any campaign by navigating to the
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Because Braze's connected content only supports **string** data types, a custom endpoint must be used to convert everything to the correct data type.
+Because Braze's Connected Content only supports **string** data types, a custom endpoint must be used to convert everything to the correct data type.
 This endpoint contains the following built-in properties:
 
 - `applicationID` (required)
@@ -123,7 +123,7 @@ You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app
 {% endraw %}
 
 {% alert tip %}
-You can access Braze attributes by using liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
+You can access Braze Attributes by using Liquid tags (e.g. {% raw %} {{${user_id}} {% endraw %} to pass the user id).
 {% endalert %}
 
 #### Step Two: Add the URL to the createCoupon Endpoint of Your Talon.One Deployment
@@ -220,6 +220,6 @@ You can also access the entire response from Talon.One by accessing `{% raw %} {
 
 # Troubleshooting
 
-Ensure your Connected Content syntax is correct (as in, using the right liquid tags for either a Canvas or Campaign, as well as referencing the right value in the `json` response).
+Ensure your Connected Content syntax is correct (as in, using the right Liquid tags for either a Canvas or Campaign, as well as referencing the right value in the `json` response).
 
 Be aware of the 500 messages/minute rate limit that you would want to implement into the Braze Campaign/Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.

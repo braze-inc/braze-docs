@@ -77,8 +77,5 @@ Braze also allows sending deep links through the REST API. Windows Universal Pus
 [6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID Dashboard"
 [9]: {{site.baseurl}}/help/best_practices/push/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[11]: https://msdn.microsoft.com/en-us/library/windows/apps/hh465448.aspx#specify_app_launch_parameters "Windows App Launch Parameters Documentation"
-[12]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [13]: {{site.baseurl}}/developer_guide/rest_api/messaging/#windows-universal-push-object
-[14]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx "WINDOWS Toast Template Catalog"
 [15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"

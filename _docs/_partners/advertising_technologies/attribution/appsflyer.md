@@ -78,6 +78,7 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 | `campaign` | Attributed Campaign |
 | `af_adset` | Attributed Adgroup |
 | `af_ad` | Attributed Ad |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 4: Confirming the Integration
 
@@ -139,15 +140,5 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}
 [3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
-[5]: #api-restrictions
-[15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
-[17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[19]: http://support.mobileapptracking.com/entries/22560357-Setting-Up-Postback-URLs "Tune Postbacks"
-[20]: https://github.com/adjust/ios_sdk#9-implement-the-attribution-callback "Adjust SDK-to-SDK Integrations on iOS"
-[21]: https://github.com/adjust/android_sdk#16-set-listener-for-attribution-changes "Adjust SDK-to-SDK Integrations on Android"
-[22]: https://dev.branch.io/recipes/analytics_appboy/ "Branch Webhooks"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration

@@ -56,6 +56,7 @@ Web Email Capture and Web Modal with CSS are both unique to the Web SDK, and can
 | Mobile Apps | iOS & Android SDKs|
 | Web Browsers | Web SDK|
 | Both Mobile Apps & Web Browsers | iOS, Android & Web SDKs|
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 ## Step 2: Specify Your Message Types
@@ -113,12 +114,12 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 
 | Content | Options| Description |
 |---|---|---|
-|Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
+|Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. |
 |Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
 |Button Text & On Click Behavior| Add up to two buttons. | You can create and edit custom button text and color. You can also add  Terms of Service Link within Web Email Capture forms.  |
 |Device Options | Restrict send to only iOS devices. | Click __Change__ and check the box as desired. |
 |Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the screen. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
-|Header & Body Text | Completely custom copy (often with custom HTML capabilities) with the options to include liquid and other types of personalization. | Some message types do not need and therefore do not ask for headers. |
+|Header & Body Text | Completely custom copy (often with custom HTML capabilities) with the options to include Liquid and other types of personalization. | Some message types do not need and therefore do not ask for headers. |
 |Position | __From Bottom of App Screen__ or __From Top of App Screen__. | This only exists in the Universal Slideup message builder.|
 |HTML & Assets | Completely custom via upload, URL, or copy and paste. | Copy and paste HTML into the available space and upload your assets via ZIP. |
 |Email Capture Input Placeholder | Custom copy. | This is used solely in the Web Email Capture Form and will direct your users to input the desired content into the space. |
@@ -176,9 +177,9 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ## Step 5: Configure Additional Settings
 
-### Key-Value Pairs
+### Key Value Pairs
 
-Add [key-value pairs][19] to send extra custom fields to user devices. 
+Add [key value pairs][19] to send extra custom fields to user devices. 
 
 ### Re-evaluate Campaign Eligibility and Liquid
 
@@ -191,7 +192,7 @@ When you enable this "Re-evaluate Campaign Eligibility" option, an additional re
 {% alert note %}
 Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
 
-Do not use this option for messages that can be triggered while a user is offline, or when eligibility and liquid re-evaluation are not required.
+Do not use this option for messages that can be triggered while a user is offline, or when eligibility and Liquid re-evaluation are not required.
 {% endalert %}
 
 ## Step 6: Build the Remainder of Your Campaign or Canvas
@@ -289,10 +290,7 @@ The 200 count includes active IAM campaigns that have not yet reached end time a
 
 The average Braze customer has a total of 26 campaigns active at once - so it is unlikely that this limitation will impact you. 
 
-[1]: {% image_buster /assets/img_archive/newcampaign.png %}
 [2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/

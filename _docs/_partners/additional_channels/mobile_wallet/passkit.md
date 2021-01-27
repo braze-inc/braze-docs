@@ -37,7 +37,7 @@ Examples of data to share from PassKit includes:
 - __Pass Updates__: when a pass is updated.
 - __Pass Delete__: when a customer deletes the pass from their wallet app.
 
-Once the data is passed into Braze, you can build audiences, personalize content via liquid, and trigger campaigns or Cavanses once these actions have been performed.
+Once the data is passed into Braze, you can build audiences, personalize content via Liquid, and trigger campaigns or Cavanses once these actions have been performed.
 
 ### Connect PassKit to Braze
 
@@ -97,7 +97,7 @@ Example Payload
 
 First, create and name a new content block by navigating to `Templates & Media` within the Braze Dashboard. Here you can find the Content Block Library tab, select `Create Content Block` to get started.
 
-Next, you must define your __Content Block Liquid Tag__. After saving this content block, this liquid tag can now be referenced when composing messages. In this example, we have assigned the liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
+Next, you must define your __Content Block Liquid Tag__. After saving this content block, this Liquid tag can now be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
 Within this content block, we will not directly include the payload written above, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your content block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
@@ -206,7 +206,7 @@ Your Message Body should look something like this:
 The output URL for the sample above is:
 ![Output URL][2]{: style="max-width:70%"}
 
-That looks long doesn’t it? The reason for this is due to it containing all the pass data in addition to incorporating best in class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a connected content call to a bit.ly endpoint!
+That looks long doesn’t it? The reason for this is due to it containing all the pass data in addition to incorporating best in class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint!
 
 ## Update Pass Using the PassKit Webhook
 
@@ -273,7 +273,7 @@ Remember to save your template before leaving the page!
 
 ## Retrieve Pass Details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users’ pass metadata via Braze’s Connected Content in order to incorporate personalized pass details within your messaging campaigns. For more information on how to run connected content calls, check out our [documentation][15]. 
+In addition to creating and updating passes, you can also retrieve your users’ pass metadata via Braze’s Connected Content in order to incorporate personalized pass details within your messaging campaigns. For more information on how to run Connected Content calls, check out our [documentation][15]. 
 
 __PassKit Connected Content Call__
 
@@ -322,7 +322,6 @@ UNREDEEMED
 [8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
 [9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
 [10]: https://github.com/PassKit/smart-pass-link-from-csv-generator
-[11]: https://docs.passkit.io/protocols/coupon/#operation/createCoupon
 [12]: https://docs.passkit.io/protocols/member/
 [13]: https://docs.passkit.io/protocols/coupon/
 [14]: https://docs.passkit.io/protocols/boarding/

@@ -15,7 +15,7 @@ This can be ideally used for the following use cases:
 2. Pre-appending a URL to all links in a given Email message
 
 {% alert important %}
-Note that if an Email link contains liquid or personalization, Braze __cannot__ track clicks on those links in our dashboard. However, those clicks will still be tracked in [Currents]({{site.baseurl}}/partners/braze_currents/) as an event.
+Note that if an Email link contains Liquid or personalization, Braze __cannot__ track clicks on those links in our dashboard. However, those clicks will still be tracked in [Currents]({{site.baseurl}}/partners/braze_currents/) as an event.
 {% endalert %}
 
 ## Creating a Link Template
@@ -62,7 +62,7 @@ Once you have applied the Link Template, you can send yourself a test email to v
 
 *Q: How does Link Templating work with Liquid?*
 
-Link Templates are expanded and added to the each URL prior to any liquid expansion happens.  As a best practice, if part of your URL is generated using a liquid snippet, it is recommended that the URL base and "?" is hardcoded for Link Templates to be expanded correctly.  Refrain from adding the "?" to your liquid as this will cause Link Templates to first add a "?" and then later the liquid expansion process will add a second "?" 
+Link Templates are expanded and added to the each URL prior to any Liquid expansion happens.  As a best practice, if part of your URL is generated using a Liquid snippet, it is recommended that the URL base and "?" is hardcoded for Link Templates to be expanded correctly.  Refrain from adding the "?" to your Liquid as this will cause Link Templates to first add a "?" and then later the Liquid expansion process will add a second "?" 
 
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}

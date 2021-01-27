@@ -32,8 +32,6 @@ valid_partner_list:
     url: /docs/partners/advertising_technologies/retargeting/remerge/
   - name: Facebook
     url: /docs/partners/advertising_technologies/social/facebook/
-  - name: Pypestream
-    url: /docs/partners/advertising_technologies/attribution/pypestream/
 
 
 ---

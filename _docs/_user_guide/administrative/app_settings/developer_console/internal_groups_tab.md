@@ -59,9 +59,9 @@ Only Groups that are tagged as Content Test will be available on the â€˜previewâ
 
 ### Seed Groups
 
-Seed Groups are only meant for the Email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API Campaigns, though you can include Seed Groups via an API triggered entry in Campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical/archive purposes.
+Seed Groups are only meant for the Email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API Campaigns, though you can include Seed Groups via an API triggered entry in Campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical/archive purposes. 
 
-Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the "Target Users" section of the Campaign composer or on the Send Settings section in a Canvas.
+Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the "Target Users" section of the Campaign composer or on the Send Settings section in a Canvas. Seed emails will have an identifier `[SEED]`, appended to the start of the email subject line. Please note that Seed emails sent will not increment sends in dashboard analytics, and they will not update a user profile's "Campaign Received" list.
 
 _If your Seed Group members report not seeing the message in their inbox, ensure that they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders._
 
@@ -84,14 +84,7 @@ Seed groups in Canvas work in a similar fashion to that of any Triggered Campaig
 _If an Email step was updated after the Seed Group was mailed, the option to only send to updated steps/all steps/turn off seeds will be presented._
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/msgactlog1.png %}
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/
-[4]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[5]: {{site.baseurl}}/developer_guide/rest_api/email_sync/
-[6]: {{site.baseurl}}/developer_guide/rest_api/export/
 [7]: {% image_buster /assets/img_archive/internal_group.png %}
 [8]: {% image_buster /assets/img_archive/UserLogs1.png %}
 [9]: {% image_buster /assets/img_archive/content_test_preview.png %}
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
 [11]: {% image_buster /assets/img_archive/seed_group_campaign.png %}

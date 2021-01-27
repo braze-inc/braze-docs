@@ -37,6 +37,7 @@ Refer to the [changeUser documentation][4] for more information.
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Suggested User ID Naming Convention
 
@@ -53,6 +54,7 @@ Providing this information to others may allow people outside your organization 
 | 83nmas45-eks1-083m-mk36-426655440000 | Anna@email.com |
 | Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
 | k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Additional Notes and Best Practices
 Please note the following:

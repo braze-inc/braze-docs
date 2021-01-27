@@ -135,7 +135,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `events.list` | Query for a list of Custom Events. |
+| `events.list` | Query for a list of Custom events. |
 | `events.data_series` | Query occurrences of a Custom Event over a time range. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -255,7 +255,6 @@ With App identifiers, the `app_id` is assigned by Braze and permissions cannot b
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
-[4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: {{site.baseurl}}/api/basics/
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types

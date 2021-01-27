@@ -73,6 +73,10 @@ Action-based delivery is __not available for Canvas steps with in-app messages__
 
 Note that if you have multiple in-app messages within one canvas, a user must start multiple sessions to receive each of those individual messages.
 
+{% alert important %}
+Please note that in-app messages __cannot__ be triggered by events in Canvas.
+{% endalert %}
+
 ### Steps with In-App Messages Only
 
 Steps with in-app messages have specific advancement options that allow you to specify the exact situation when your message would be sent.
@@ -107,11 +111,9 @@ Steps with an in-app message and another channel have the following advancement 
 {% endalert %}
 
 ## Custom Event Properties in a Canvas
-Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in a Canvas, we recommend using [templated content within an API triggered campaign][4] instead of an action-based delivery. 
-
+Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
 [2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
 [3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#setting-up-an-api-triggered-campaign
