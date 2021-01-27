@@ -31,7 +31,7 @@ In order to prevent collection of certain device attributes, see our [SDK guide]
 Once a Custom event or attribute is blocklisted,
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,
-- blocklisted events/attributes will not show up in filters or graphs.
+- Blocklisted events/attributes will not show up in filters or graphs.
 
 Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
 
