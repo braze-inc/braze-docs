@@ -80,6 +80,3 @@ When Custom Attribute collection is enabled, the Multiple Choice option will set
 ![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:700px"}
 
 ## Retargeting Using Custom Attributes
-
-
-
