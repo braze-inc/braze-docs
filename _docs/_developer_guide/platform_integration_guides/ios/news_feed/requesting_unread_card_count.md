@@ -45,21 +45,65 @@ In addition to serving as push notification reminders for an app, badges can als
 
 Call this method which records the badge count once the app is closed and the user's session ends.
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 (void)applicationDidEnterBackground:(UIApplication *)application
 ```
 
+{% endtab %}
+{% tab swift %}
+
+```swift
+func applicationDidEnterBackground(_ application: UIApplication)
+```
+
+{% endtab %}
+{% endtabs %}
+
 Within the above method, implement the following code which actively updates the badge count while the user views cards during a given session.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [UIApplication sharedApplication].applicationIconBadgeNumber = [[Appboy sharedInstance].feedController unreadCardCountForCategories:ABKCardCategoryAll];
 ```
 
-For more information see the [`Appboy.h` header file][15]. The Stopwatch sample application also has a sample implementation of a badge in [FeedAndFeedbackUIViewController.m][4], as well as code clearing the badge count in [`AppDelegate.m`][28].
+{% endtab %}
+{% tab swift %}
+
+```swift
+UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedController.unreadCardCount(forCategories: ABKCardCategory.all) ?? 0
+```
+
+{% endtab %}
+{% endtabs %}
+
+At any point, for example in the `applicationDidBecomeActive` method, use the following code to clear the badge count.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+UIApplication.shared.applicationIconBadgeNumber = 0
+```
+
+{% endtab %}
+{% endtabs %}
+
+For more information see the [`Appboy.h` header file][15].
 
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h "Appboy.h Header File"
-[28]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
 [45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}
