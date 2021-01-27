@@ -28,7 +28,7 @@ Braze does not count subscription state changes against your data points, global
 
 ### Subscription Groups
 
-_Subscription Groups_ are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states) above. These Groups offer the ability to present more granular subscription options to end users.
+_Subscription Groups_ are segment filters that can further narrow your audience from the [Global Subscription States](#subscription-states) above. These Groups (maximum of 25 groups per app group) offer the ability to present more granular subscription options to end users.
 
 For example, if you send out multiple categories of email campaigns, you can offer your customers the option to subscribe or unsubscribe from those groups in bulk from a single page, using our [Email Preference Center](#email-preference-center).
 
