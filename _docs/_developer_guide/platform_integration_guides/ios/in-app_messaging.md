@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Templates
   link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_templates/
   fa_icon: fas fa-ruler-combined
+- name: Implementation Guide
+  link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/
+  fa_icon: fas fa-user-check
 - name: Troubleshooting
   link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/troubleshooting/
   fa_icon: fas fa-life-ring
