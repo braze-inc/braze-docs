@@ -205,12 +205,10 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/dat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/'] = '''/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/';
+
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/data_augmentation/contextual_location/gimbal/';
 validurls['/docs/partners/advertising_technologies/attribution/pypestream/'] = '/docs/partners/additional_channels/support/pypestream/';

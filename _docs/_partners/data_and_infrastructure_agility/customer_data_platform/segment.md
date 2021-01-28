@@ -16,5 +16,6 @@ guide_featured_list:
 - name: Segment for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
   fa_icon: fas fa-warehouse
----
 
+---
+<br>
