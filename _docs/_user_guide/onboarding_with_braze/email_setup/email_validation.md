@@ -83,6 +83,4 @@ Unicode is accepted only for the local part of the email address.
 Unicode is not accepted for the domain part, but it may be punycode-encoded. 
 {% endalert %}
 
-[1]: https://github.com/afair/email_address
 [2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

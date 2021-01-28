@@ -74,9 +74,9 @@ To correctly send your audience data from Adobe Experience Platform to Braze, yo
 
 1. In the Mapping Step, click __Add new mapping__.<br>![Mapping][5]{: style="max-width:50%;"}<br><br>
 2. In the Source Field Section, click the arrow button next to the empty field, this will open the Select source field window.<br>![Source][6]<br><br>
-3. From the Select source field window, you must select Adobe attributes to map to your Braze attributes. <br>![Field][7]{: style="max-width:70%;"}<br><br>Next, you must select the identity namespace. This option is used to map a Platform identity namespace to a Braze namespace.<br>![Identity][8]{: style="max-width:80%;"}<br> Choose your source fields, then click __Select__.<br><br>
+3. From the Select source field window, you must select Adobe attributes to map to your Braze Attributes. <br>![Field][7]{: style="max-width:70%;"}<br><br>Next, you must select the identity namespace. This option is used to map a Platform identity namespace to a Braze namespace.<br>![Identity][8]{: style="max-width:80%;"}<br> Choose your source fields, then click __Select__.<br><br>
 4. In the Target Field section, click the mapping icon to the right of the field.<br>![Tagret][9]{: style="max-width:90%;"} <br><br>
-5. In the Select target field window, you can choose between three categories of target fields:<br><br>• __Select attributes__: Use this option to map your Adobe XDM attributes to standard Braze attributes.<br>• __Select identity namespace__: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• __Select custom attributes__: Use this option to map Adobe XDM attributes to custom Braze attributes that you defined in your Braze account. <br><br>![Attributes][10]{: style="max-width:60%;"}<br><br>__You can also use this option to rename existing XDM attributes into Braze.__ For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, the click __Select__.<br><br>
+5. In the Select target field window, you can choose between three categories of target fields:<br><br>• __Select attributes__: Use this option to map your Adobe XDM attributes to standard Braze Attributes.<br>• __Select identity namespace__: Use this option to map Platform identity namespaces to Braze identity namespaces.<br>• __Select custom attributes__: Use this option to map Adobe XDM attributes to custom Braze Attributes that you defined in your Braze account. <br><br>![Attributes][10]{: style="max-width:60%;"}<br><br>__You can also use this option to rename existing XDM attributes into Braze.__ For example, mapping a `lastname` XDM attribute to a custom `Last_Name` attribute in Braze, will create the `Last_Name` attribute in Braze if it doesn't already exist, and map the `lastname` XDM attribute to it. <br><br> Choose your target fields, the click __Select__.<br><br>
 6. You should now see your field mapping in the list.<br>![List][11]<br><br>
 7. To add more mappings, repeat steps 1 through 6 as necessary. 
 
@@ -88,6 +88,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 | --- | ------------------ | -------------- |
 | Attributes | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
 | Identities | - `Email`<br>- `Google Ad ID (GAID)`<br>- `Apple ID For Advertisers (IDFA)` | - `external_id` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 The correct mapping would look like this:
 
@@ -100,7 +101,6 @@ To verify if data has been exported successfully to Braze, check your Braze acco
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how the Adobe Experience Platform enforces data governance, see Adobe's [Data Governance in Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en) documentation. 
 
 [1]: {% image_buster /assets/img/adobe/braze-destination-configure.png %} 
-[2]: {% image_buster /assets/img/adobe/braze-destination-activate.png %} 
 [3]: {% image_buster /assets/img/adobe/braze-destination-account.png %}
 [4]: {% image_buster /assets/img/adobe/braze-destination-authentication.png %}
 [5]: {% image_buster /assets/img/adobe/braze-destination-mapping.png %} 

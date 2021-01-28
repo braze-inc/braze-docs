@@ -16,4 +16,3 @@ Use the [Subscription Group REST APIs]({{site.baseurl}}/developer_guide/rest_api
 
 The [Email Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-[support]: {{site.baseurl}}/support_contact/

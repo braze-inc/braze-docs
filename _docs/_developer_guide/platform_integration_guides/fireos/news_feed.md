@@ -22,10 +22,6 @@ The `AppboyFeedFragment` class will automatically refresh and display the conten
 
 Linking to the News Feed from an in-app message must be enabled by registering the `AppboyFeedActivity` within your [AndroidManifest.xml][28] file.
 
-**Implementation Example**
-
-See [`DroidBoyActivity.java`][5] in the Droidboy sample app.
-
 ## News Feed Customization
 
 ### Default Styling
@@ -109,13 +105,9 @@ You can handle News Feed clicks manually by setting a custom News Feed click lis
 
 Create a class that implements [IFeedClickActionListener][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
 
-See [CustomFeedClickActionListener.java][38] in our Droidboy sample application for an example implementation.
-
 #### Step 2: Instruct Braze to Use Your News Feed Click Listener
 
 Once your `IFeedClickActionListener` is created, call `AppboyFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `AppboyFeedManager` to use your custom `IFeedClickActionListener`.
-
-See [PreferencesActivity.java][39] in our Droidboy sample application for an example implementation.
 
 ### Fully Custom Feed Display
 
@@ -272,8 +264,8 @@ Appboy.requestFeedRefresh()
 
 See the [Javadoc][16] for more information.
 
-## Key-Value Pairs
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+## Key Value Pairs
+`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 Call the following on a `Card` object to retrieve its extras:
 
@@ -287,11 +279,9 @@ See the [Javadoc][36] for more information.
 
 {% include archive/android/gifs.md channel="the News Feed" %}
 
-[1]: {% image_buster /assets/img_archive/UONewsFeed.png %}
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
@@ -307,7 +297,7 @@ See the [Javadoc][36] for more information.
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
 [27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png
-[28]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[28]: https://developer.android.com/guide/topics/manifest/manifest-intro "AndroidManifest.xml"
 [29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
 [30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
 [31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
@@ -315,6 +305,4 @@ See the [Javadoc][36] for more information.
 [33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
 [36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras()
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
-[38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
-[39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

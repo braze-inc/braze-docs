@@ -29,7 +29,7 @@ This integration supports iOS and Android apps.
 If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device ID to Adjust. You should call the following before initializing the SDK on `Adjust.onCreate.`:
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getInstallTrackingId()););
 ```
 {% endtab %}
 {% tab iOS %}
@@ -66,6 +66,7 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
 | {campaign_name} | Attributed Campaign |
 | {adgroup_name} | Attributed Adgroup |
 | {creative_name} | Attributed Ad |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 {% alert important %}

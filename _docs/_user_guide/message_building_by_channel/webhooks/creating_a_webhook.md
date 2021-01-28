@@ -31,9 +31,9 @@ Enter the HTTP URL. This HTTP URL specifies your endpoint. The endpoint is the p
 
 Create the body of your webhook request. This is the information that will be sent to the URL that you specified. There are two ways to create the body of your web hook request:
 
-### JSON Key-Value Pairs
+### JSON Key Value Pairs
 
-JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is “message_body,” the corresponding value might be “Your order just arrived.” Once you’ve entered your key-value pair, the composer will configure your request in JSON syntax and a preview of your JSON request will automatically populate.
+JSON key value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is “message_body,” the corresponding value might be “Your order just arrived.” Once you’ve entered your key-value pair, the composer will configure your request in JSON syntax and a preview of your JSON request will automatically populate.
 
 ![Webhook_JSON][21]
 
@@ -45,7 +45,7 @@ The raw text option gives you the flexibility to write a request for an endpoint
 
 ### Personalization
 
-[Personalization][15] is supported in both the JSON key-value pairs option and the raw text option. You can include any user attribute, [custom attribute][17] or [event property][18] in your request. For example, you can include a customer’s first name and email in your request. Don’t forget to include a [default value][19] for each attribute.
+[Personalization][15] is supported in both the JSON key value pairs option and the raw text option. You can include any user attribute, [custom attribute][17] or [event property][18] in your request. For example, you can include a customer’s first name and email in your request. Don’t forget to include a [default value][19] for each attribute.
 
 ### Internationalization
 
@@ -140,35 +140,9 @@ Check out:
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[20]: https://www.twilio.com/docs/api/rest/sending-messages
 [21]: {% image_buster /assets/img/webhook_JSON1.jpg %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
-[28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
-[29]: {% image_buster /assets/img_archive/Webhook_Body.png %}
-[30]: {% image_buster /assets/img_archive/Webhook_Method.png %}
-[31]: {% image_buster /assets/img_archive/Webhook_Preview.png %}
-[32]: https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side
-[41]: https://en.wikipedia.org/wiki/JSON#Example
 [42]: https://dashboard-01.braze.com/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[44]: {{site.baseurl}}/partners/additional_channels/instant_chat/messenger/
-[45]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup
-[46]: https://github.com/Appboy/appboy-fb-messenger-bot
-[47]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup#page_access_token
-[48]: https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable
-[49]: https://developers.facebook.com/docs/messenger-platform/guidelines
-[50]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes
-[51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[54]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/
-[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
-[60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}
 [64]: {% image_buster /assets/img_archive/webhook_test_send.png %}
-[65]: https://www.remerge.io/
-[66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API
-[67]: {% image_buster /assets/img_archive/webhook_remerge_preview.png %}
-[68]: {% image_buster /assets/img_archive/httpmethod_remerge.png %}

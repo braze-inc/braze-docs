@@ -84,7 +84,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": (string) description of the channel, such as "ios_push" or "android_push"
     "alert": (string) alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key value pairs provided
 }
 ```
 
@@ -98,7 +98,7 @@ The `messages` response will contain information about each message. Example mes
     "from": (string) from address and display name,
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key value pairs provided
 }
 ```
 
@@ -108,7 +108,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": "content_cards",
     "name": (string) name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "extras": (hash) any key value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 

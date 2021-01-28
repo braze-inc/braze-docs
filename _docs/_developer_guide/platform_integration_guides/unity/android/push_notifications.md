@@ -119,7 +119,5 @@ See Android's documentation on ["Deep Linking" to In-App Resources][26]
 [15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [23]: {% image_buster /assets/img_archive/Push_Android_2.png %}
 [26]: https://developer.android.com/training/app-links/deep-linking
-[27]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Android/AndroidManifest.xml
-[28]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/res/values/appboy.xml
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"

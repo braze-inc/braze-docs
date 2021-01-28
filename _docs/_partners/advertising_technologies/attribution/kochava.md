@@ -17,7 +17,7 @@ Kochava and Braze power a more holistic understanding of campaigns. Kochava send
 
 ### Step 1: Integration Requirements
 
-* This integration supports iOS, Android, and Windows apps.
+* This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Kochava's SDK installed.
 
 ### Step 2: Getting the Attribution ID
@@ -26,7 +26,7 @@ Go to your Braze account, navigate to "Technology Partners", then "Attribution" 
 
 ### Step 3: Setting Up A Postback from Kochava
 
-Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's Dashboard in Step 2. Select the __"POST"__ request when creating the PostBack Call on Kochava's dashboard.
+Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's Dashboard in Step 2. 
 
 ### Step 4: Confirming the Integration
 
@@ -52,9 +52,9 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-## Facebook and Twitter Attribution Data
+## Facebook, Twitter and Snapchat Attribution Data
 
-Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook, Twitter, and Snapchat campaigns are __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
 ## Kochava Click Tracking URLs in Braze (Optional)
 
@@ -90,15 +90,6 @@ idfv={{most_recently_used_device.${id}}}
 __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Kochava will still be able to attribute these clicks through their probabilistic modeling.
 
-[5]: #api-restrictions
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
-[15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
-[16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
-[17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"
 [18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[19]: http://support.mobileapptracking.com/entries/22560357-Setting-Up-Postback-URLs "Tune Postbacks"
-[20]: https://github.com/adjust/ios_sdk#9-implement-the-attribution-callback "Adjust SDK-to-SDK Integrations on iOS"
-[21]: https://github.com/adjust/android_sdk#16-set-listener-for-attribution-changes "Adjust SDK-to-SDK Integrations on Android"
-[22]: https://dev.branch.io/recipes/analytics_appboy/ "Branch Webhooks"
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8

@@ -65,5 +65,4 @@ You can unarchive the segment by navigating to it within Segments, then selectin
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/Segment4.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}

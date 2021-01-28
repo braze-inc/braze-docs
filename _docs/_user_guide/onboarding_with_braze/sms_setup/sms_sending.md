@@ -30,7 +30,7 @@ An SMS message body accepts up to 1600 characters, including Emojis, Liquid and 
 SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.<br><br>
 
 4. __Keyword Customization (Optional)__<br>
-Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responsese that get sent to users, and define keyword sets for different languages. Read more about keyword customization [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
+Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. Read more about keyword customization [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 
 {% alert tip %}
 For a step-by-step guide on how to create an SMS campaign in the Braze dashboard, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/create/).
@@ -62,6 +62,5 @@ Plan on doing some high volume sending? We have some best practices for you to e
 Please note: higher throughput pricing needs to go through a deal desk.
 - Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

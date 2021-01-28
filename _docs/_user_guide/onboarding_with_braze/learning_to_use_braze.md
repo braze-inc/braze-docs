@@ -57,7 +57,7 @@ _These reading paths assume that you've already completed your integration and s
 | 2 | [Creating an Email Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
 | 3 | [Email Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) | Create reusable email templates. |
 | 4 | [Managing User Subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | Learn about and utilize the subscription statuses of your users in email. |
-
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Personalization Prodigy
 
@@ -68,7 +68,7 @@ _These reading paths assume that you've already completed your integration and s
 | 3 | [Using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) | How to use Liquid to create personalization in your messages. |
 | 4 | [Supported Personalization Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | A summary of supported personalization tags. |
 | 5 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
-| 6 | [Key-Value Pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key-value pairs. |
+| 6 | [Key Value Pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key value pairs. |
 | 7 | [Deep-Linking to In-App Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) | How to launch a native app and provide additional information from a message. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -84,3 +84,4 @@ _These reading paths assume that you've already completed your integration and s
 | 5 | [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | Import users into your Braze account. |
 | 6 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/overview/) | The many ways to export data from the Braze platform. |
 | 7 | [Understanding Your App Usage Data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) | All about the App Usage page and the data within it. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

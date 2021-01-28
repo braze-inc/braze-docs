@@ -41,7 +41,7 @@ The Braze Web SDK can be quickly installed from the Google Tag Manager Template 
 
 1. Initialization Tag - loads the Web SDK onto your website, and optionally sets the External User ID
 
-2. Actions Tag - used to trigger Custom Events, Purchases, Change User ID, or stop/resume SDK tracking
+2. Actions Tag - used to trigger Custom events, purchases, change user IDs, or stop/resume SDK tracking
 
 For more information, please see the [Google Tag Manager Integration Guide][18].
 
@@ -89,7 +89,7 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 {% endalert %}
 
 
-## Step 3: (optional) Web Push
+## Step 3: (Optional) Web Push
 
 To use Web Push Notifications, additional setup is required. 
 
@@ -119,7 +119,7 @@ When we release major changes however, we require you to upgrade the Braze Web S
 You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
 * Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/appboy.min.js`, or in your package manager's dependencies.
-* If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at the root of your site, but the location may be customized in some integrations.
+* If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at the root directory of your site, but the location may be customized in some integrations. Please note that you must be able to access the root directory to host a service worker file. 
 
 These two files must be updated in coordination with each other to ensure proper functionality.
 
@@ -138,11 +138,10 @@ For more details, or in-depth Tealium configuration support, check out our [inte
 
 ### Other Tag Managers
 
-Braze may also be compatible with other tag management solutions. Please reach out to a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
 
 [2]: https://github.com/Appboy/appboy-web-sdk#getting-started "Braze Web SDK Github Repository"
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager

@@ -247,6 +247,7 @@ Segment __does not__ have a limit on the number of data elements clients send to
 | ----------------- | ------------------ |
 | Braze SDK Endpoint | Custom API Endpoint |
 | Braze REST Endpoint | Custom REST API Endpoint |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK endpoint that Braze sets up for your SDK (for example, `sdk.iad-03.braze.com`). Your Braze REST API Endpoint (called the "Custom REST API Endpoint" in Segment) is the REST API Endpoint (for example, `https://rest.iad-03.braze.com`)
 {% enddetails %}
@@ -257,6 +258,7 @@ Your Braze API Endpoint (called the "Custom API Endpoint" in Segment) is the SDK
 | ----------------- | ------------------ |
 | Braze SDK Endpoint | Custom API Endpoint |
 | Braze REST Endpoint | Custom REST API Endpoint |
+{: .reset-td-br-1 .reset-td-br-2}
 
 To ensure that you input your Braze SDK Endpoint correctly, the proper format must be followed. Your Braze SDK endpoint must not include `https://` (for example, `sdk.iad-03.braze.com`), or else the Braze integration will break. This is required because Segment automatically prepends your endpoint with `https://`, resulting in Braze initializing with invalid endpoint `https://https://sdk.iad-03.braze.com`.
 
@@ -294,11 +296,8 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 
 
-[2]: https://segment.com/docs/
-[3]: https://segment.com/docs/destinations/appboy/
 [4]: https://segment.com/docs/spec/ecommerce/v2/
 [5]: https://segment.com
-[11]: https://segment.com/docs/destinations/braze/
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
 [18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
@@ -310,18 +309,10 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[29]: https://segment.com/docs/destinations/appboy/#android
-[30]: https://segment.com/docs/destinations/appboy/#ios
-[31]: https://github.com/appboy/appboy-segment-android
-[32]: https://github.com/appboy/appboy-segment-ios
-[33]: https://github.com/segment-integrations/analytics.js-integration-appboy
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [36]: https://segment.com/docs/sources/#server
-[37]: https://segment.com/docs/destinations/appboy/#web
 [38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
 [40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [41]: https://segment.com/docs/spec/identify/#user-id
-[44]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[45]: https://dashboard.braze.com/app_settings/developer_console

@@ -40,5 +40,9 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: EduMe
     url: /docs/partners/channel_extensions/learning/edume/
+  - name: Crowdin
+    url: /docs/partners/channel_extensions/localization/crowdin/
+  - name: Jebbit
+    url: /docs/partners/channel_extensions/loyalty/jebbit/
 
 ---

@@ -72,7 +72,7 @@ The content of here varies based on the Message Type chosen in the last step, bu
 
 | Content | Options| Description |
 |---|---|---|
-|Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the liquid. |
+|Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. |
 |Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card message fields are limited to 2kb in total size as noted in the section below. |
 |Pinning | A pinned card will display at the top of a user’s feed and cannot be dismissed by the user. | If more than one card in a user’s feed is pinned, the pinned cards will display in chronological order. Once a card has been sent you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
 |Expiration | Set the specific expiration date or the days until a Card expires. | Currently, Braze supports a maximum expiration time of __30 days__. <br> <br> All variants have identical expiration dates. |
@@ -92,9 +92,9 @@ Each user is eligible to receive up to 100 non-expired Content Cards. As a user 
 
 ## Step 3: Configure Additional Settings
 
-Add [key-value pairs][19] to your message, if needed.
+Add [key value pairs][19] to your message, if needed.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use key value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas.
 
@@ -114,7 +114,7 @@ Build the remainder of your campaign, see the sections below for further details
 - Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose Conversion Events
-- Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign.
+- Braze allows you to track how often users perform specific actions (i.e. conversion events) after receiving a campaign.
 - You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 After you've finished building the last of your campaign, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
@@ -122,18 +122,6 @@ After you've finished building the last of your campaign, review its details, [t
 {% alert warning %}
 Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
 {% endalert %}
-
-#### Card Removal Events (Optional) {#action-based-card-removal}
-
-Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
-
-Within a Campaign Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
-
-{% alert tip %}
-You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
-{% endalert %}
-
-![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 {% endtab %}
 
@@ -152,18 +140,6 @@ Complete the remaining sections of your Canvas step, see the sections below for 
 - To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
 After you've finished building out your Canvas Step, review its details and [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
-
-#### Card Removal Events (Optional) {#action-based-card-removal}
-
-Some Content Cards are only relevant until a user takes its recommended action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
-
-Within a Canvas Message you can add a __Removal Event__ to specify which Custom Events or Purchases should cause previously sent cards to be removed from that user's feed.
-
-{% alert tip %}
-You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by Canvas's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
-{% endalert %}
-
-![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -186,6 +162,18 @@ If you need to remove old cards, you must stop the campaign to do so. This can b
 
 ![Content Card][25]
 
+### Card Removal Events {#action-based-card-removal}
+
+Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+
+Within a Campaign or Canvas Message you can optionally add a __Removal Event__ to specify which Custom events or Purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
+
+{% alert tip %}
+You can specify multiple custom events and purchase that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+{% endalert %}
+
+![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+
 ### Updating Already Sent Cards
 
 If you find you need to make changes to cards which have already been sent:
@@ -195,12 +183,7 @@ If you find you need to make changes to cards which have already been sent:
 3. Edit your campaign as needed
 4. Restart your campaign
 
-[1]: {% image_buster /assets/img_archive/newcampaign.png %}
-[2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/compose-cc.gif %}
 [25]: {% image_buster /assets/img/cc_remove.png %}

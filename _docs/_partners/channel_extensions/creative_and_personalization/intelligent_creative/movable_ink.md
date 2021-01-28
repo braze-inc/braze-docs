@@ -110,7 +110,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink Da
 ## Troubleshooting
 __Dynamic Images not showing correctly? What channel are you experiencing difficulties with?__<br>
 - __Push__: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- __In-App Messages and Content Cards__: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
+- __In-App Messages and Content Cards__: Make sure that the image URL will be unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [In-App and Content Card Messages Instructions][Instructions]. 
 - __Image Not Loading__: Be sure to replace any "merge tags" from with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 <br><br>
 

@@ -177,4 +177,3 @@ Let's say you wanted to filter users by phone number for a specific area code, 7
 [regex]: https://regex101.com/
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
-[phonenumbers]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/

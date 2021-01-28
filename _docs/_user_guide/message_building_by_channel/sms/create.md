@@ -108,7 +108,7 @@ Braze will alert you if...
 
 - Your message body exceeds 1600 characters,
 - UCS-2 characters are used, increasing the potential for overflow into another message segment as your message will then be limited to 67 characters per message segment,
-- Your message uses liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your liquid could bring to the message.
+- Your message uses Liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
 <br><br>
 {% alert warning %}
 Going over message or copy limits may result in additional charges.
@@ -131,7 +131,7 @@ __Test Your SMS Copy Length__
 
 <br>
 
-If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of liquid or connected content.
+If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of Liquid or Connected Content.
 
 <form id="sms_split">
 <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />

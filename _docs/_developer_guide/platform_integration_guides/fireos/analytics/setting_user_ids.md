@@ -50,9 +50,6 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 Refer to the [changeUser documentation][4] for more information.
 
-**Implementation Example**
-
-See the [`UserProfileDialog.java` file][3] in the Droidboy sample app.
 
 Full class information can be found in the [javadocs][4].
 
@@ -62,6 +59,7 @@ Full class information can be found in the [javadocs][4].
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Additional Notes and Best Practices
 Please note the following:
@@ -81,6 +79,5 @@ Please note the following:
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

@@ -52,6 +52,7 @@ On this page, you, input:
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your IdP name, like "OneLogin". |
 | `Target URL` | This is the `SAML 2.0 Endpoint (HTTP)` URL provided by OneLogin.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your OneLogin. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 

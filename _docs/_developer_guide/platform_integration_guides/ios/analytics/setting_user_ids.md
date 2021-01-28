@@ -4,7 +4,7 @@ platform: iOS
 page_order: 1
 
 ---
-## Setting User IDs
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -76,6 +76,7 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Additional Notes and Best Practices
 Please note the following:

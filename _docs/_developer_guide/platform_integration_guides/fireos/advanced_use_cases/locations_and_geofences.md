@@ -19,13 +19,11 @@ To support geofences for Android:
 
 Add the [Google Play Services Location package][3] to your app level `build.gradle` using the [Google Play Services setup guide][10]:
 
-```
+```groovy
 dependencies {
   compile "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
 }
 ```
-
-See our sample application's [`build.gradle`][2] for an example implementation.
 
 ### Step 2: Update the Manifest
 
@@ -108,11 +106,6 @@ Note that Braze syncs geofences to devices using background push. In most cases,
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
-[2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
-[5]: https://developer.android.com/training/location/geofencing.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [10]: https://developers.google.com/android/guides/setup
