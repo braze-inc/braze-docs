@@ -5,7 +5,7 @@ description: "Crowdin helps you automate the translation of your email templates
 alias: /partners/crowdin/
 ---
 
-# About Crowdin
+# Crowdin
 
 > Crowdin is a cloud-based software for localization management. Braze integration with Crowdin allows you to translate email templates and content blocks. You can synchronize content from your Braze account to your Crowdin project and add translations back to Braze.
 
