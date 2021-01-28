@@ -12,11 +12,11 @@ You have a great deal of flexibility in how you choose to display the view contr
 
 >  The News Feed that is called by the default behavior of an in-app message click will not respect any delegates that you set for the News Feed. If you want to respect that, you must [set the delegate on `ABKInAppMessageUIController`][1] and implement the `ABKInAppMessageUIDelegate` delegate method [`onInAppMessageClicked:`][2].
 
-# News Feed View Controller Integration Options
+## News Feed View Controller Integration Options
 
 The News Feed can be integrated with 2 view controller contexts, either in code or via a storyboard implementation.
 
-## Navigation Context -- ABKFeedViewControllerNavigationContext
+### Navigation Context -- ABKFeedViewControllerNavigationContext
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -41,7 +41,7 @@ self.navigationController?.pushViewController(newsFeed, animated: true)
 To customize the navigation bar's title, set the title property of the `ABKNewsFeedTableViewController` instance's `navigationItem`.
 {% endalert %}
 
-## Modal Context -- ABKFeedViewControllerModalContext
+### Modal Context -- ABKFeedViewControllerModalContext
 
 - Used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar
 - Set the modal's title via the embedded `ABKNewsFeedTableViewController` instance's `navigationItem`'s `title` property
