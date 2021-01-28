@@ -70,32 +70,10 @@ To be able to send these messages, first add an exit entent library, such as [th
 ```
 
 
-[1]: https://github.com/Appboy/appboy-web-sdk#getting-started
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html
-[4]: {{site.baseurl}}//help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-behavior
-[5]: #display-in-app
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ModalMessage.html
-[7]: https://js.appboycdn.com/web-sdk/latest/doc/ab.FullScreenMessage.html
 [8]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ControlMessage.html
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
-[11]: #inapp-customization
-[12]: https://js.appboycdn.com/web-sdk/latest/doc/ab.HtmlMessage.html
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
-[14]: #key-value
-[15]: http://fortawesome.github.io/Font-Awesome/
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[30]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[32]: #in-app-messages-triggered
-[33]: #original-in-app-messages-deprecated
-[35]: #styling
-[40]: #message-types
 [41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
-[46]: #inapp-control
-[47]: {% image_buster /assets/img_archive/In-App_Full.png %}
-[48]: {% image_buster /assets/img_archive/In-App_Modal.png %}
 [50]: https://github.com/carlsednaoui/ouibounce
-[51]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[52]: {{site.baseurl}}/help/best_practices/in-app_messages/web_browsers_only/#web-html-messages

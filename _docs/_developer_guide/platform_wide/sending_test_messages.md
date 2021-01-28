@@ -137,12 +137,8 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}
-[7]: #test-segment
-[8]: #email-test
 [9]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/#user-segmentation
-[10]: #push-inapp-test
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
-[12]: #curl
 [13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [14]: https://dashboard-01.braze.com/app_settings/api_settings/
 [15]: https://dashboard-01.braze.com/users/user_search/user-search/

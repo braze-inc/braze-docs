@@ -30,14 +30,4 @@ Click the “Raw Data” button to show the raw `JSON` data for that specific lo
 Event User Logs will remain in the dashboard for thirty (30) days after they are logged.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/msgactlog1.png %}
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/
-[4]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[5]: {{site.baseurl}}/developer_guide/rest_api/email_sync/
-[6]: {{site.baseurl}}/developer_guide/rest_api/export/
-[7]: {% image_buster /assets/img_archive/internal_group.png %}
-[8]: {% image_buster /assets/img_archive/UserLogs1.png %}
-[9]: {% image_buster /assets/img_archive/content_test_preview.png %}
 [10]: {% image_buster /assets/img_archive/rawlogs.png %}
-[11]: {% image_buster /assets/img_archive/seed_group_campaign.png %}

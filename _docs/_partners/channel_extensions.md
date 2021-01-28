@@ -42,6 +42,9 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/learning/edume/
   - name: Zendesk
     url: /docs/partners/channel_extensions/support/zendesk/
-    
+  - name: Crowdin
+    url: /docs/partners/channel_extensions/localization/crowdin/
+  - name: Jebbit
+    url: /docs/partners/channel_extensions/loyalty/jebbit/
 
 ---

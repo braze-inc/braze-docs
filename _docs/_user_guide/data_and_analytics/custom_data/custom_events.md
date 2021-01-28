@@ -6,7 +6,9 @@ description: "Custom events are actions taken by, or updates about, your users; 
 
 # Custom Events
 
-Custom events are actions taken by, or updates about, your users; they're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number/type of follow-up campaigns, and enables the following segmentation filters on the recency and frequency of that event:
+Custom events are actions taken by, or updates about, your users; they're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number/type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+
+## Custom Event Segmentation Filters
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -22,6 +24,8 @@ Custom events are actions taken by, or updates about, your users; they're best s
 | Check if the custom event occurred __exactly X (Max = 50) number of times__ | __EXACTLY__ | in the past __Y Days (Y = 1,3,7,14,21,30)__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Custom Event Analytics
+
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [custom events analytics page][7] you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
 ![custom_event_analytics_example.png][8]
@@ -29,6 +33,10 @@ Braze notes the number of times these events have occurred as well as the last t
 {% alert tip %}
 [Incrementing Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 {% endalert %}
+
+### Custom Events Analytics Not Showing?
+
+Please note that Segments created with custom event data cannot show previous historic data from before they were created.
 
 ## Custom Event Storage
 
@@ -69,14 +77,6 @@ Braze's Success and Support teams can help recommend the best approach depending
 
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: http://www.regextester.com/pregsyntax.html
-[10]: #integers
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
-[12]: #automatic-data-collection
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging
-[14]: #taxiride-sharing-app-use-case
-[15]: #customeventproperties
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[17]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns

@@ -33,7 +33,7 @@ Email headers contain information about the email being sent.  These key:value p
 
 ### Step 2b: Preview and Test Your Message
 
-After you finish composing your perfect email, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your connected content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your email displays properly on a variety of devices and email clients.
+After you finish composing your perfect email, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your Connected Content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your email displays properly on a variety of devices and email clients.
 
 ![newemailtest][15]
 

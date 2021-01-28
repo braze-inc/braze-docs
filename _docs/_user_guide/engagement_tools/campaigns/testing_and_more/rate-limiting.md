@@ -143,4 +143,3 @@ Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Step
 [16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
 [18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

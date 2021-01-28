@@ -23,4 +23,3 @@ Properties are defined as key value pairs.  Keys are `String` objects and values
 m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

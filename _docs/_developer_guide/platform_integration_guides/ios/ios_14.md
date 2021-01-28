@@ -135,5 +135,4 @@ We will be releasing support and documentation in the near future.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#provisionally-authorized-on-ios
 [4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization

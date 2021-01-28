@@ -52,7 +52,7 @@ For this webhook, all data is passed on alongside the HTTP URL as query string p
 
 - You’ll need to set the event name. This is to define the name of the event that will appear in your Jampp dashboard.
 - Jampp requires you to pass along your app’s unique application identifier for Android (i.e. “com.example”) and iOS (i.e. “012345678”).
-- You’ll also need to insert [liquid][1] for the appropriate custom attribute you’re tracking the Google Advertising ID.
+- You’ll also need to insert [Liquid][1] for the appropriate custom attribute you’re tracking the Google Advertising ID.
 
 Below is an example of what your Webhook URL might look like:
 
@@ -80,7 +80,7 @@ Elements (from sample above) to modify before sending the campaign:
 
 Please note that in this example the Google Advertising ID is listed as `aaid` but you will need to replace it with the custom attribute name your developers set.
 
-After defining the parameters above, insert this liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
+After defining the parameters above, insert this Liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
 
 ![Webhook Template Jampp][2]
 
