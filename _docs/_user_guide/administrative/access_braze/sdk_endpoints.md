@@ -34,7 +34,7 @@ To configure the Braze Web SDK to use the appropriate endpoint for your integrat
 |---|---|
 | Android | 800 KB |
 | iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 35kb (core), 50kb (core + UI) |
+| Web | 36kb (core), 50kb (core + UI) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [85]: https://lab.braze.com/braze-101
