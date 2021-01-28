@@ -64,12 +64,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/stensul/
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
-  alt:
-    - title: Currents
-      url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
-  alt:
-    - title: Personas
-      url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/
 - name: Branch
   title: Deeplinking
   url: /docs/partners/channel_extensions/deep_linking/branch_for_deeplinking/
@@ -82,9 +76,6 @@ valid_partner_list:
   url: /docs/partners/additional_channels/sms/twilio/
 - name: mParticle
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
-  alt:
-    - title: Currents
-      url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
 - name: Microsoft Azure
   title: Currents
   url: /docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
