@@ -103,7 +103,7 @@ valid_partner_list:
 - name: Voucherify
   url: /docs/partners/channel_extensions/loyalty/voucherify/
 - name: Movable Ink
-  url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
+  url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/
 - name: Jebbit
   url: /docs/partners/channel_extensions/loyalty/jebbit/
 - name: Iterate
@@ -122,6 +122,8 @@ valid_partner_list:
   url: /docs/partners/advertising_technologies/attribution/pypestream/
 - name: EduMe
   url: /docs/partners/channel_extensions/learning/edume/
+- name: Playable
+  url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
 - name: Zendesk
   url: /docs/partners/channel_extensions/support/zendesk/
 - name: Crowdin

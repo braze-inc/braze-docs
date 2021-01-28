@@ -33,13 +33,15 @@ valid_partner_list:
   - name: Zapier
     url: /docs/partners/channel_extensions/social/zapier_integration/
   - name: Movable Ink
-    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/
   - name: Vizbee
     url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
   - name: Dyspatch
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: EduMe
     url: /docs/partners/channel_extensions/learning/edume/
+  - name: Playable
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
   - name: Zendesk
     url: /docs/partners/channel_extensions/support/zendesk/
   - name: Crowdin
