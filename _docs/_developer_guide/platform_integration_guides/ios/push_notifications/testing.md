@@ -4,7 +4,7 @@ platform: iOS
 page_order: 2
 
 ---
-## Testing {#push-testing}
+# Testing {#push-testing}
 
 If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via CURL and the [Messaging API][29]. You will need to replace the following fields with the correct values for your test case:
 
