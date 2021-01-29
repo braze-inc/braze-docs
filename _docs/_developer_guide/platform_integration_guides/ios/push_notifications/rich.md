@@ -75,4 +75,3 @@ Also note the supported file types and sizes, listed [here][28].
 [26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
 [27]: https://developer.apple.com
 [28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-
