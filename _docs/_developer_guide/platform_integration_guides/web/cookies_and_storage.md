@@ -29,7 +29,7 @@ To stop tracking, or to clear all stored browser data, please see the [`stopWebT
 |`ab.storage.sessionId.[your-api-key]`|Randomly generated string used to determine whether the user is starting a new or existing session, in order to sync messages and calculate session analytics.|
 |`ab.storage.deviceId.[your-api-key]`|Randomly generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|
 |`ab.optOut`|Used to store a user's opt-out preference|
-|`ab._gd`|Temporarily used (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|
+|`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Disabling Cookies {#disable-cookies}
