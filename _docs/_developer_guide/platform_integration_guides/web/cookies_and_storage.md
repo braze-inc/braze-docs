@@ -59,7 +59,7 @@ By default, Braze will collect the following device-level properties to allow de
 * TIME_ZONE
 * USER_AGENT
 
-You can disable or specify the properties you wish to collect by setting the `devicePropertyAllowlist` initialization option to a list of [`DeviceProperties`][2].
+You can disable or specify the properties you wish to collect by setting the `devicePropertyAllowlist` initialization option to a list of [`DeviceProperties`][2]. Note that without some properties, not all features will function properly. For instance, without the time zone, local timezone delivery will not function.
 
 ```javascript
 import braze from "@braze/web-sdk";
