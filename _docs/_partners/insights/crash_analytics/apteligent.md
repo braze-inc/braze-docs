@@ -49,4 +49,3 @@ Upon receiving the notification, log a custom crash event and update user attrib
 That's it! Now you'll be able to harness the power of Braze's segmentation, analytics, and engagement using the crash information that Apteligent provides.
 
 [1]: https://www.apteligent.com/
-
