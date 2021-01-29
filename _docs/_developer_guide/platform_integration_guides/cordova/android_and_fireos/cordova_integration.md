@@ -10,4 +10,3 @@ page_order: 1
     config_platform = "android"
     endpoint_preference_key = "com.appboy.android_api_endpoint"
 %}
-
