@@ -34,9 +34,7 @@ Please note that setting the badge number to 0 will also clear up notifications 
 
 In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 
-For an example of setting up custom actions and categories, please see the `setupRemoteNotificationForiOS10` or `setupRemoteNotificationForiOS8And9` methods within the [AppDelegate.m][15] file of Stopwatch.
-
->  If you haven't migrated to iOS 10, please see this [alternative categories documentation][31].
+>  If are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
 
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
 
@@ -98,7 +96,7 @@ You should check your application for automatic actions in the following places 
 ### Using Braze's Internal Push Utility Methods
 
 You can use the utility methods in `ABKPushUtils` to check if your app has received or was launched by a Braze internal push. `isAppboyInternalRemoteNotification:` will return `YES` on all Braze internal push notifications, while `isUninstallTrackingRemoteNotification:` and `isGeofencesSyncRemoteNotification:` will return `YES` for uninstall tracking and geofences sync notifications, respectively.
-See [`ABKPushUtils.h`][1] for method declarations and our [Stopwatch sample application][15] for example implementations.
+See [`ABKPushUtils.h`][1] for method declarations.
 
 ### Implementation Example {#internal-push-implementation-example}
 
@@ -159,7 +157,6 @@ Braze allows you to send custom-defined string key value pairs, known as extras,
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
 [12]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [17]: {{site.baseurl}}/assets/img_archive/push_example_category.png
 [20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
 [21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1

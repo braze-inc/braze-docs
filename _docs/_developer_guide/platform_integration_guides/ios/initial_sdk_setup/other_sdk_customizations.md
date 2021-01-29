@@ -61,7 +61,7 @@ Follow these steps to implement IDFA Collection:
 
 ##### Step 1: Implement ABKIDFADelegate
 
-Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
+Create a class that conforms to the [`ABKIDFADelegate`][29] protocol.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -126,5 +126,4 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 
 [21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
 [29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

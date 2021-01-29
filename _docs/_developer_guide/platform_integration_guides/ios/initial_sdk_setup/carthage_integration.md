@@ -111,12 +111,4 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### Implementation Example
-
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_29] file{% endif %} in the Stopwatch sample app.
-
 [9]: https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos
-
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m

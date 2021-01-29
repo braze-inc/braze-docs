@@ -70,8 +70,6 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
       withAppboyOptions:@{ ABKMinimumTriggerTimeIntervalKey : @(5) }];
 ```
 
-An example of overriding the default trigger interval can be found in our sample application's [`AppDelegate.m`][in_app_message_16] file.
-
 {% elsif include.platform == "Android" %}
 To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `appboy.xml`.
 
@@ -96,7 +94,6 @@ To override this value, set `com_appboy_trigger_action_minimum_time_interval_sec
 [in_app_message_14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
 [in_app_message_15a]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle
 [in_app_message_15b]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle
-[in_app_message_16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
 [in_app_message_19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
 [in_app_message_23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
 [in_app_message_24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events

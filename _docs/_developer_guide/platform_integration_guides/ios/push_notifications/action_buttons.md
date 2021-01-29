@@ -53,8 +53,6 @@ Clicking on push action buttons with background activation mode will only dismis
 
 >  If you wish to create your own custom notification categories, see our [action button customization][37] documentation.
 
-See our sample code [here][33] for `UserNotification.framework` and [here][32] for `UIUserNotificationSettings`.
-
 ## Step 2: Enable Interactive Push Handling
 
 If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. 
@@ -115,8 +113,6 @@ We strongly recommend that people using `handleActionWithIdentifier` begin using
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
-[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L218-L223
-[33]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L245-L249
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
