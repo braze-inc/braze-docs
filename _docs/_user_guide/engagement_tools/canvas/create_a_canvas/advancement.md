@@ -18,12 +18,15 @@ When __Message Sent__ is selected, customers will only be advanced to subsequent
 - A push message is sent
 - A webhook is sent
 - An in-app message is viewed
+- A Content Card is sent
 
 When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
 - Any message is sent or the in-app message in the step becomes live
 - The webhook is not sent because the webhook causes an error or errors
 - A push or email is not sent because the user is not reachable by push or email
+- Content Card sending is attempted 
+- A Card is aborted and not sent
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
