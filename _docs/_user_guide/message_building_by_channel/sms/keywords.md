@@ -23,8 +23,6 @@ guide_featured_list:
 - name: High Volume Sending
   link: /docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/
   fa_icon: fas fa-paper-plane
-- name: Double Opt-In Process
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
-  fa_icon: fas fa-check-double
+
 ---
 <br><br>
