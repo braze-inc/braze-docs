@@ -34,7 +34,7 @@ Please note that setting the badge number to 0 will also clear up notifications 
 
 In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 
->  If are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
+>  If you are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
 
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
 
