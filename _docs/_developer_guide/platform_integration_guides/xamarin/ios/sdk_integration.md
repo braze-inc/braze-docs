@@ -70,9 +70,7 @@ Braze should now be collecting data from your application and your basic integra
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
 
 
-[2]: http://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
-[4]: #add-api-calls
 [5]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/src/ios-unified
 [9]: https://www.nuget.org/

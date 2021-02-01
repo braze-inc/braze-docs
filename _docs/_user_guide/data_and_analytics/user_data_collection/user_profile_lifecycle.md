@@ -16,7 +16,7 @@ Once a user profile is created, either following a user being recognized by the 
 
 ## Anonymous User Profiles
 
-Initially, when a user profile is recognized via the SDK an 'anonymous' user profile is created with an associated braze_id: a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API.
+Initially, when a user profile is recognized via the SDK an 'anonymous' user profile is created with an associated `braze_id`: a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API.
 
 The `braze_id` is automatically assigned by Braze, cannot be edited and will be device-specific.
 

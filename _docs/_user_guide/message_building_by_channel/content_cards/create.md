@@ -183,12 +183,7 @@ If you find you need to make changes to cards which have already been sent:
 3. Edit your campaign as needed
 4. Restart your campaign
 
-[1]: {% image_buster /assets/img_archive/newcampaign.png %}
-[2]: {% image_buster /assets/img/primary-secondary-buttons.png %}
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
-[15]: {% image_buster /assets/img_archive/in-app-choices.png %}
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[22]: {% image_buster /assets/img/iam-generations.gif %}
 [24]: {% image_buster /assets/img/compose-cc.gif %}
 [25]: {% image_buster /assets/img/cc_remove.png %}

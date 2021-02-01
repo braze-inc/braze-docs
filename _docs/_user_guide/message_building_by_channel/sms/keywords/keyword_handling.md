@@ -137,10 +137,7 @@ Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/u
 [6]: {% image_buster /assets/img/sms/retargeting1.png %}
 [7]: {% image_buster /assets/img/sms/retargeting2.png %}
 [8]: {% image_buster /assets/img/sms/retargeting3.png %}
-[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [9]: {% image_buster /assets/img/sms/sms_currents.png %}
-[10]: {% image_buster /assets/img/sms/custom_category.png %}
-[11]: {% image_buster /assets/img/sms/keyword_list.png %}
 [12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}
 [13]: {% image_buster /assets/img/sms/sms_custom_step.png %}
 [14]: {% image_buster /assets/img/sms/canvas_trigger.png %}

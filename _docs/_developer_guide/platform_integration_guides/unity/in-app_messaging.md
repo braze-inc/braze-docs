@@ -75,7 +75,6 @@ For sample implementation code, refer to the `InAppMessageReceivedCallback()` me
 [4]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageSlideup.cs
 [5]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/DismissType.cs
 [6]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageBase.cs
-[7]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/AppboyBinding.cs
 [8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageButton.cs
 [9]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/ClickAction.cs
 [11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageImmersiveBase.cs

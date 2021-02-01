@@ -20,5 +20,4 @@ We have added the option for any Canvas step to be sent __immediately__.
 
 ![Canvas Delay][canvas_delay]
 
-[support]: {{site.baseurl}}/support_contact/
 [canvas_delay]: {% image_buster /assets/img/canvas_delay_immediate.png %}

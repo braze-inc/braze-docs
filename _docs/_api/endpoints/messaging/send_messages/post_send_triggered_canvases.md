@@ -173,4 +173,3 @@ Looking for Create Send Endpoint for Campaigns? Check out the documentation [her
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
