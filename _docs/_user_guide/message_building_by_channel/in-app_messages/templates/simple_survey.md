@@ -28,10 +28,6 @@ Did you know you can segment app versions _above_ these SDK requirements? [Learn
 
 ![example]({% image_buster /assets/img/iam/iam-survey.png %})
 
-- Collect User Preferences as Custom Attributes
-- Gather Customers Satisfaction and Feedback
-- Promote New Features and Trigger Promotions
-
 ## Creating a new Survey {#create}
 
 Create a new Survey message by selecting the Simple Survey option in your message's Template Type option.
