@@ -11,7 +11,7 @@ description: "Collect user attributes, insights, and preferences to power your c
 Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys.
 
 {% alert important %}
-This feature is in *Early Access*. Ask your Braze account team to request access!
+This feature is in _Early Access_. Ask your Braze account team to request access!
 {% endalert %}
 
 ## SDK Requirements {#supported-sdk-versions}
@@ -28,9 +28,9 @@ Did you know you can segment app versions _above_ these SDK requirements? [Learn
 
 ![example]({% image_buster /assets/img/iam/iam-survey.png %})
 
-* Collect User Preferences as Custom Attributes
-* Gather Customers Satisfaction and Feedback
-* Promote New Features and Trigger Promotions
+- Collect User Preferences as Custom Attributes
+- Gather Customers Satisfaction and Feedback
+- Promote New Features and Trigger Promotions
 
 ## Creating a new Survey {#create}
 
@@ -79,5 +79,3 @@ Analyze results in real-time in your message's analytics report to see how many 
 ![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:700px"}
 
  <!-- Retargeting Using Custom Attributes -->
-
- 
