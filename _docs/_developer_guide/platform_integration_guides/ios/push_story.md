@@ -214,16 +214,18 @@ Open the Info.plist file of the Notification Content Extension and add/change fo
 
 ![Plist Settings][ios_pushstory_08]
 
-## Step 9: Updating the Braze Integration in Your Main App
+## Step 9: Configure Push Story App Group in Your Main App
 
-Add `ABKPushStoryAppGroupKey` in the `appboyOption` dictionary as following when you initialize Braze:
+##### Option 1: Runtime
+
+In the `appboyOptions` dictionary used to configure your Braze instance, add a `ABKPushStoryAppGroupKey` entry and set the value to your App Group identifier.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
-appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
+appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 [Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
@@ -235,13 +237,17 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
-  ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
+  ABKPushStoryAppGroupKey : "YOUR-APP-GROUP-IDENTIFIER"
 ]
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
 
 {% endtab %}
 {% endtabs %}
+
+##### Option 2: Info.plist
+
+Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}

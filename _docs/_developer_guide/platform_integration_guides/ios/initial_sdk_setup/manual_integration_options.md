@@ -101,8 +101,6 @@ Be sure to update `YOUR-API-KEY` with the correct value from your App Settings p
 Be sure to initialize Braze in your application's main thread.
 {% endalert %}
 
-See the [`AppDelegate.m` file](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) in the Stopwatch sample app.
-
 {% endtab %}
 {% tab swift %}
 
@@ -133,9 +131,4 @@ Braze should now be collecting data from your application and your basic integra
 
 [Full iOS class documentation][7] is available to provide additional guidance on any of the aforementioned methods.
 
-[1]: #clone-sdk
-[2]: #add-libs
-[3]: #configure
-[4]: #update-delegate
 [7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full ios class documentation"
-[10]: http://cocoapods.org/

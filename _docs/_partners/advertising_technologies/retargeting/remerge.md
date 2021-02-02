@@ -71,39 +71,6 @@ This webhook does not require any *Request Headers*, but be sure to choose GET i
 
 To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
 
-[14]: https://sendgrid.com/blog/whats-webhook
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#setting-default-values
-[20]: https://www.twilio.com/docs/api/rest/sending-messages
-[22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
-[26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
-[28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
-[29]: {% image_buster /assets/img_archive/Webhook_Body.png %}
-[30]: {% image_buster /assets/img_archive/Webhook_Method.png %}
-[31]: {% image_buster /assets/img_archive/Webhook_Preview.png %}
-[32]: https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side
-[41]: https://en.wikipedia.org/wiki/JSON#Example
-[42]: https://dashboard-01.braze.com/app_settings/developer_console/
-[43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[44]: {{site.baseurl}}/partners/messenger
-[45]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup
-[46]: https://github.com/Appboy/appboy-fb-messenger-bot
-[47]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup#page_access_token
-[48]: https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable
-[49]: https://developers.facebook.com/docs/messenger-platform/guidelines
-[50]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes
-[51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[54]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
-[60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}
-[64]: {% image_buster /assets/img_archive/webhook_test_send.png %}
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API
 [67]: {% image_buster /assets/img_archive/webhook_remerge_preview.png %}

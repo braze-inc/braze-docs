@@ -62,6 +62,5 @@ Plan on doing some high volume sending? We have some best practices for you to e
 Please note: higher throughput pricing needs to go through a deal desk.
 - Ensure you are sticking to the 160 character limit, and aware of special characters double-counting (i.e. \ ^ &#126;). 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

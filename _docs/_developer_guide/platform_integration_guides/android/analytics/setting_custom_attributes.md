@@ -51,8 +51,6 @@ Appboy.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-See [`UserProfileDialog.java`][1] in the Droidboy sample app.
-
 ### Assigning Custom User Attributes
 
 In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom Attributes can be set with the following data types:
@@ -334,7 +332,6 @@ Appboy.getInstance(context).currentUser?.setPushNotificationSubscriptionType(pus
 {% endtab %}
 {% endtabs %}
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays

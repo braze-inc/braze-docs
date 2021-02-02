@@ -15,6 +15,7 @@ To add a Custom attribute, event, or product, go to the Custom Attributes, Custo
 You can also add event properties for custom events or products by clicking on the “Manage Properties” link in the “Event Properties” column:
 
 ![customeventsview1.png][72]
+
 ![manageproperties1.png][73]
 
 To make these added Custom attributes, events, products, or event properties trackable, you must ask your developer to create it in the SDK using the exact name you used to add it earlier. Or, you may use Braze's APIs to import data on that attribute. After that, the Custom attribute, event, or other will be actionable and apply to your users!
@@ -23,17 +24,17 @@ To make these added Custom attributes, events, products, or event properties tra
 All User Profile data (Custom events, Custom attribute, Custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager. 
 {% endalert %}
 
-## Blacklisting Custom Attributes, Custom Events, and Products
-If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blacklist.
+## Blocklisting Custom Attributes, Custom Events, and Products
+If you want to stop tracking a specific Custom attribute/custom event/product (e.g., accidental creation during testing, no longer useful), search for it in the Custom Events tab, then click Blocklist.
 
-![customeventsviewblacklist1.png][74]
+In order to prevent collection of certain device attributes, see our [SDK guide][88].
 
-Once a Custom event or attribute is blacklisted,
+Once a Custom event or attribute is blocklisted,
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,
-- Blacklisted events/attributes will not show up in filters or graphs.
+- Blocklisted events/attributes will not show up in filters or graphs.
 
-Changes to the blacklist may take a few minutes to propagate. You may re-enable any blacklisted event or attribute at anytime.
+Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
 
 {% alert note %}
 Please note that you should still remove the event/attribute from your app code during your next release.
@@ -72,6 +73,5 @@ Please note that data sent to Braze is immutable and cannot be deleted or modifi
 [71]: {% image_buster /assets/img_archive/customattributessearch1.png %}
 [72]: {% image_buster /assets/img_archive/customeventsview1.png %}
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[74]: {% image_buster /assets/img_archive/customeventsviewblacklist1.png %}
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
-
+[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection
