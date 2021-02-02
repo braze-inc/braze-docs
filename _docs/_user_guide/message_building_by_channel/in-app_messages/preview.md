@@ -11,7 +11,7 @@ description: "This reference article covers the new in-app messaging HTML Previe
 Learn about the new Preview features for custom HTML In-App Messages.
 
 {% alert important %}
-This feature is in *Early Access*. Ask your Braze account team to get access!
+This is an opt-in feature. Ask your Braze account team to get access today!
 {% endalert %}
 
 ## New Features

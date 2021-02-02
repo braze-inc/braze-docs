@@ -48,9 +48,4 @@ Upon receiving the notification, log a custom crash event and update user attrib
 
 That's it! Now you'll be able to harness the power of Braze's segmentation, analytics, and engagement using the crash information that Apteligent provides.
 
-### Implementation Example
-
-See our sample implementation in the [`AppDelegate.m`][2] file of the Stopwatch sample application.
-
 [1]: https://www.apteligent.com/
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L55

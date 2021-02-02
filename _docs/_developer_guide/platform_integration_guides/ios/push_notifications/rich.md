@@ -17,7 +17,7 @@ To create a [Notification Service Extension][23], navigate to `File > New > Targ
 Ensure that `Embed In Application` is set to embed the extension in your application.
 
 ## Setting Up The Service Extension
-A `Notification Service Extension` is its own binary that is bundled with your app. As such, it must be set up in the [Apple Developer Portal][27] with its own App ID and Provisioning Profile. Typically extensions are named with a suffix on the main application's ID (e.g., `com.appboy.stopwatch.stopwatchnotificationservice`).
+A `Notification Service Extension` is its own binary that is bundled with your app. As such, it must be set up in the [Apple Developer Portal][27] with its own App ID and Provisioning Profile.
 
 ### Configuring The Service Extension To Work With Braze
 Braze sends down an attachment payload in the APNs payload under the `ab` key that we use to configure, download and display rich content:
@@ -64,8 +64,6 @@ We provide sample code that you can copy into your `Notification Service Extensi
 
 You can write the Service Extension in either Objective-C or Swift.
 
-For our sample code, see the [Stopwatch sample application][30]. For Swift sample code, see the [Hello Swift sample application][38].
-
 ## Creating A Rich Notification In Your Dashboard
 
 To create a rich notification in your Braze dashboard, simple create an iOS push and attach an image or gif, or provide a url that hosts an image, gif, or video.  Note that assets are downloaded on the receipt of push notifications, so that if you are hosting your own content you should plan for large, synchronous spikes in requests.
@@ -77,5 +75,3 @@ Also note the supported file types and sizes, listed [here][28].
 [26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
 [27]: https://developer.apple.com
 [28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
-[38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift

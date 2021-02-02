@@ -32,6 +32,9 @@ guide_featured_list:
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile
+  - name: Content Cards in Canvas
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
+    fa_icon: fas fa-columns
   - name: Persistent Entry Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram
