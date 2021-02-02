@@ -45,10 +45,6 @@ __Note__: We suggest you version Braze so pod updates automatically grab anythin
 | `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |
 {: .ws-td-nw-1}
 
-### Example Podfile
-
-If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.
-
 ## Step 3: Installing the Braze SDK
 
 To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
@@ -132,11 +128,6 @@ If given a pre-existing custom endpoint...
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### Implementation Example
-
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_29] file{% endif %} in the Stopwatch sample app.
-
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% endif %}
@@ -201,9 +192,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
-[apple_initial_setup_13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[apple_initial_setup_14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m

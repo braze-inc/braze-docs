@@ -130,10 +130,6 @@ If given a pre-existing custom endpoint...
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### Implementation Example
-
-See the [`AppDelegate.m`][apple_initial_setup_8] file in the Stopwatch sample app.
-
 [apple_initial_setup_1]: https://swift.org/package-manager/
 [apple_initial_setup_2]: {% image_buster /assets/img/ios/spm/image1.png %}
 [apple_initial_setup_3]: {% image_buster /assets/img/ios/spm/image2.png %}
@@ -141,4 +137,3 @@ See the [`AppDelegate.m`][apple_initial_setup_8] file in the Stopwatch sample ap
 [apple_initial_setup_5]: {% image_buster /assets/img/ios/spm/image4.png %}
 [apple_initial_setup_6]: {% image_buster /assets/img/ios/spm/image5.png %}
 [apple_initial_setup_7]: {% image_buster /assets/img/ios/spm/image6.png %}
-[apple_initial_setup_8]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m

@@ -343,17 +343,12 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-## Step 6: Verify Code Modifications
-
-Verify the code modifications you made against this [sample AppDelegate.m file][7]. We also strongly advise looking through the below section on customization to determine if any additional changes need to be implemented.
-
-## Step 7: Deep Linking
+## Step 6: Deep Linking
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [Advanced Use Cases section on Deep Linking for iOS][10].
 
 
 [0]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m "sample AppController.mm"
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [19]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
