@@ -62,9 +62,9 @@ Note: The metrics populating the row for your overall campaign will reflect the 
 
 Within a Canvas report, you can view your Canvases broken down by:
 
-- __Variants__ - this will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
-- __Steps__ - you’ll be able to view step-level metrics, with each row of the report containing the row of a step.
-- __Message__ - similar to a step-level breakdown, the message-level breakdown contains the name of steps in each row. However, within Edit Columns, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
+- __Variants__ - this will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.<br>![Variants][11]{: style="max-width:90%;"}<br><br>
+- __Steps__ - you’ll be able to view step-level metrics, with each row of the report containing the row of a step.<br>![Steps][10]{: style="max-width:90%;"}<br><br>
+- __Message__ - similar to a step-level breakdown, the message-level breakdown contains the name of steps in each row. However, within Edit Columns, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.<br>![Report][9]{: style="max-width:90%;"}
 
 Note that within the Braze dashboard, you can preview the first 50 rows of your Canvas report. You can access the full report when you export a CSV.
 
@@ -123,3 +123,6 @@ If you download a variant breakdown Canvas report, you’ll receive 2 CSV files 
 [6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
 [7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
 [8]: {% image_buster /assets/img/campaign_comparison/download.png %}
+[9]: {% image_buster /assets/img/campaign_comparison/message_report.png %}
+[10]: {% image_buster /assets/img/campaign_comparison/steps_report.png %}
+[11]: {% image_buster /assets/img/campaign_comparison/variants_report.png %}
