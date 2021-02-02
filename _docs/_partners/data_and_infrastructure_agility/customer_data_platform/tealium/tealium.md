@@ -254,7 +254,7 @@ For more detailed instructions on how to implement Tealium's Trace tool, check o
 
 ## Potential Data Point Overages
 
-There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium. 
+There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
 #### __Insufficient Data Logging__
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 

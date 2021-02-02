@@ -11,8 +11,8 @@ description: "This tutorial covers how to install the SDK using Swift Package Ma
 
 Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
 
-> Note that tvOS and Push Stories support is not yet available via _Swift Package Manager_.\
-> Push Stories are available through a side-by-side integration with Cocoapods.
+> Note that tvOS is not yet available via _Swift Package Manager_.\
+> As of version 3.31.0, Push stories is supported thru SPM.
 
 ## Step 1: Adding the dependency to your project
 
