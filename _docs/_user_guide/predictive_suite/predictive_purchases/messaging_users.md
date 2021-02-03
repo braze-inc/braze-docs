@@ -1,7 +1,7 @@
 ---
 nav_title: Messaging Users
 title: Messaging Users
-description: "This reference article covers potential next steps after you have created a Churn Prediction."
+description: "This reference article covers potential next steps after you have created a Purchase Prediction."
 page_order: 3
 ---
 
@@ -13,15 +13,15 @@ Preview and Demo Predictions will not allow users to be targeted for messaging, 
 
 ## Implementing Filters {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+Once you've decided what range of Purchase Likelihood Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign that filters for users with the Purchase Likelihood Score or Category selected with the slider.
 
 ![Churn Filters][5]
 
-You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Purchase Likelihood Score or Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
-## Strategic Considerations
+## Strategic Considerations (needs revision)
 
-Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
+Now that you’ve identified and selected the group of users who may or may not purchasethat you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
 
 __Here are a few ideas to consider:__
 
