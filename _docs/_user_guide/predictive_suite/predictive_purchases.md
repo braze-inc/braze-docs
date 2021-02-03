@@ -22,7 +22,7 @@ guide_featured_list:
 
 ## Overview NEEDS REVISION
 
-![purchase Overview][1]
+![Churn Overview][1]
 
 With Predictive purchase, you can define what purchase means for your business (__[purchase Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/creating_a_purchase_prediction/#step-2-define-purchase)__) as well as the users you'd like to prevent from purchaseing (__[Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/creating_a_purchase_prediction/#step-3-filter-your-prediction-audience)__). When you create a Prediction, Braze trains a machine learning model using __[gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting)__ to identify users at risk of purchase by learning from activity patterns of past users who did and did not purchase according to your definition.
 
@@ -38,4 +38,3 @@ With the Preview, you can also edit and rebuild this one Prediction or archive i
 
 <br><br>
 
-[1]: {% image_buster /assets/img/purchase/purchase_overview.png %}
