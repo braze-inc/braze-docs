@@ -80,7 +80,7 @@ Starting in iOS 14.5, a new permission prompt (launched by the new `AppTrackingT
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates will take effect once end-users upgrade their device to iOS 14.5. Please ensure your app is uses the new `AppTransparencyFramework` with Xcode 12 if you plan to collect IDFA.
+These IDFA updates will take effect once end-users upgrade their device to iOS 14.5. Please ensure your app uses the new `AppTransparencyFramework` with Xcode 12 if you plan to collect IDFA.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
