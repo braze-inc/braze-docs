@@ -34,8 +34,8 @@ For a sample list of Prediction Audience definitions, check out our sample defin
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to Purchase. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchaseing, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
-<!-- ![Purchase 2][2]
- -->
+![Purchase 2][2]
+
 {% alert note %}
 Preview and Demo Predictions will never update users' risk of Purchase. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Purchase. To purchase this functionality, contact your Account Manager. 
 {% endalert %}
@@ -51,6 +51,6 @@ The Prediction will be rebuilt ("retrained") again every __two weeks automatical
 
 Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
 
-<!-- [1]: {% image_buster /assets/img/Purchase/Purchase1.png %}
-[2]: {% image_buster /assets/img/Purchase/Purchase2.png %} -->
+[1]: {% image_buster /assets/img/Purchase/Purchase1.png %}
+[2]: {% image_buster /assets/img/Purchase/Purchase2.png %} 
 

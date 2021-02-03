@@ -67,5 +67,5 @@ This table is updated only when the Prediction retrains and not when user Purcha
 Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your Account Manager for more information.
 {% endalert %}
 
-<!-- [6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %}
-[4]: {% image_buster /assets/img/churn/churnTargeting.gif %} -->
+[6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %}
+[4]: {% image_buster /assets/img/churn/churnTargeting.gif %}
