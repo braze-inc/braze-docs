@@ -19,7 +19,7 @@ __Analytics Components__<br>
 
 The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category, or by score. Users in bins further to the right have higher scores and are more likely to purchase. Users in bins further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Purchase Likelihood Score or Category.
 
-<!-- ![Churn Targeting][4]{: style="max-width:90%"} -->
+![Churn Targeting][4]{: style="max-width:90%"} 
 
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
 
