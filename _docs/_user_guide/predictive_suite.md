@@ -11,10 +11,6 @@ guide_featured_list:
 - name: Predictive Churn
   link: /docs/user_guide/predictive_suite/predictive_churn/
   fa_icon: fas fa-cogs
-- name: Predictive Purchases
-  link: /docs/user_guide/predictive_suite/predictive_purchases/
-  fa_icon: fas fa-cogs
-
 ---
 
 <br><br>
