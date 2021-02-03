@@ -123,7 +123,7 @@ This feature gives users quicker access to sample your app, with an opportunity 
 
 To learn more about App Clips, see [Apple's App Clip Documentation](https://developer.apple.com/app-clips/)
 
-For customers interested in using Braze within App Clips, please submit feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
+If you're interested in using Braze within App Clips, please submit feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
