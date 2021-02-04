@@ -16,6 +16,10 @@ channel:
   - SMS
 ---
 
+{% alert improtant %}
+Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling doc.
+{% endalert %}
+
 ## Two-Way Messaging (Custom Keyword Responses)
 
 Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way.

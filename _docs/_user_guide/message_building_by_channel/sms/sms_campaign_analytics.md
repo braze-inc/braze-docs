@@ -80,9 +80,7 @@ This block will show you the performance of your conversion events for the SMS m
 ![CC_Conversion]({% image_buster /assets/img/cc-conversion.png %})
 
 {% endtab %}
-
 {% endtabs %}
-
 
 ## SMS Curent Events
 Just like email, Braze receives user level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundReceived event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. Please note that inbound messages are truncated past 1600 characters. 
@@ -93,3 +91,5 @@ Just like email, Braze receives user level events related to an SMS message as i
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
+[9]: {% image_buster /assets/img/sms/sms_currents.png %}
+

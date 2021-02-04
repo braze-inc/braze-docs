@@ -16,6 +16,9 @@ channel:
   - SMS
 ---
 
+{% alert important %}
+Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration doc.
+{% endalert %}
 
 # User Data Migration
 
