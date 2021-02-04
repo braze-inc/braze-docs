@@ -102,7 +102,6 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 
 For more information see the [`Appboy.h` header file][15].
 
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h "Appboy.h Header File"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
