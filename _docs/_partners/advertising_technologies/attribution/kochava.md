@@ -20,9 +20,9 @@ Kochava and Braze power a more holistic understanding of campaigns. Kochava send
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Kochava's SDK installed.
 
-### Step 2: Getting the Attribution ID
+### Step 2: Getting the Braze Data Import Key
 
-Go to your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Kochava section. The API key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.
+In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Kochava". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![Kochava Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Setting Up A Postback from Kochava
 
@@ -93,3 +93,4 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 [18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
 [29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
 [30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
+[4]: {% image_buster /assets/img/attribution/kochava.png %}
