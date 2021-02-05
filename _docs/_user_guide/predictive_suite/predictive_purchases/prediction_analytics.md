@@ -11,24 +11,23 @@ hidden: true
 Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or Campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 __Analytics Components__<br>
-&#45; [Purchase Likelihood Score and Category](#purchase_score)<br>
+&#45; [Targeting Users](#target_users)<br>
 &#45; [Prediction Quality](#prediction_quality)<br>
 &#45; [Estimated Results](#estimated_results)<br>
 &#45; [Purchase Correlation Table](#correlation_table)
 
 ## Overview
 
-The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category, or by score. Users in bins further to the right have higher scores and are more likely to purchase. Users in bins further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Purchase Likelihood Score or Category.
+Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets or in each of the Purchase Likelihood Categories is displayed in the chart at the top of the page.
+
+## Targeting Users {#target_users}
+
+The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category, or by score. Users in bins further to the right have higher scores and are more likely to purchase. Users in bins further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Purchase Likelihood Score or Category.
 
 ![Churn Targeting][4]{: style="max-width:90%"} 
 
-As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
+As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
 
-## Purchase Likelihood Score and Category {#purchase_score}
-
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the Purchase Likelihood looks like across the population according to this Prediction.
-
-## Targeting Users 
 
 ### Prediction Quality {#prediction_quality}
 
@@ -46,7 +45,7 @@ Here’s what we recommend for various ranges of Prediction Quality:
 
 The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page.
 
-## Estimated Results {#estimated_results}
+### Estimated Results {#estimated_results}
 
 ![Estimated Results][6]{: style="float:right;max-width:30%;margin-left:15px;"}
 
