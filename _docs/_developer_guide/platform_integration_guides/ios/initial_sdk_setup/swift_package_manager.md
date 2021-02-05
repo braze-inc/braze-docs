@@ -52,8 +52,10 @@ Edit the scheme of the target including the Appboy package (_Product > Scheme > 
 - In the dropdown next to _Provide build settings from_, select your app's target.
 - Copy this script into the open field:
 ```sh
-rm -rf "${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Frameworks/libAppboyKitLibrary.a"
-rm -rf "${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app/Plugins/libAppboyKitLibrary.a"
+# iOS
+bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Appboy.bundle/appboy-spm-cleanup.sh"
+# macOS (if applicable)
+bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/Appboy.bundle/appboy-spm-cleanup.sh"
 ```
 
 ![Swift Package Manager: Menu 7][apple_initial_setup_7]
