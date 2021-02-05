@@ -3,20 +3,20 @@ nav_title: Predictive Purchases
 page_order: 6.4
 layout: featured
 alias: /predictive_purchases/
-
+hidden: true
 guide_top_header: "Predictive Purchases"
 guide_top_text: "NEEDS REVISION Customer purchase, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address purchase is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially purchaseing users, Braze offers Predictive purchase, providing a proactive approach toward minimizing future purchase."
 
 guide_featured_title: "Topics"
 guide_featured_list:
 - name: Creating A Purchase Prediction
-  link: /docs/user_guide/predictive_suite/predictive_purchase/creating_a_purchase_prediction/
+  link: /docs/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/
   fa_icon: fas fa-cogs
 - name: Prediction Analytics
-  link: /docs/user_guide/predictive_suite/predictive_purchase/prediction_analytics/
+  link: /docs/user_guide/predictive_suite/predictive_purchases/prediction_analytics/
   fa_icon: fas fa-chart-bar
 - name: Messaging Users
-  link: /docs/user_guide/predictive_suite/predictive_purchase/messaging_users/
+  link: /docs/user_guide/predictive_suite/predictive_purchases/messaging_users/
   fa_icon: fas fa-arrow-right
 ---
 
@@ -37,4 +37,6 @@ The Predictions page is accessible from the left navigation bar on the Braze das
 With the Preview, you can also edit and rebuild this one Prediction or archive it and create others to test the expected [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/prediction_analytics/prediction_quality/) of different audiences ({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/#step-2-define-purchase).
 
 <br><br>
+
+[1]: {% image_buster /assets/img/churn/churn_overview.png %}
 

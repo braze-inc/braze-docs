@@ -3,6 +3,7 @@ nav_title: Messaging Users
 title: Messaging Users
 description: "This reference article covers potential next steps after you have created a Purchase Prediction."
 page_order: 3
+hidden: true
 ---
 
 # Messaging Users {#what-do-next}

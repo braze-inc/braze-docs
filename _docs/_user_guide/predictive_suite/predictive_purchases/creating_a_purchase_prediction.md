@@ -3,6 +3,7 @@ nav_title: Creating A Purchase Prediction
 title: Creating A Purchase Prediction
 description: ""
 page_order: 1
+hidden: true
 ---
 
 # Creating A Purchase Prediction
@@ -20,13 +21,13 @@ On the Edit page, give your new Prediction a unique name.
 
 ### Step 2: Filter Your Prediction Audience (optional)
 
-Your Prediction Audience is the group of users whose chances of making a purchase you want the Prediction assess. You can try to predict Purchases as defined above in your entire population of users, the model will likely perform better if you narrow down and filter the group of users you want to prevent from Purchaseing with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
+Your Prediction Audience is the group of users whose chances of making a purchase you want the Prediction assess. You can try to predict Purchases in your entire population of users. The model will likely perform better if you narrow down and filter the group of users you want to assess purchase likelihood for with some criteria. For example, you might want to focus on users who first used your app recently.
 
 {% alert note %}
-The Prediction Audience cannot exceed 40 million users.
+The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 30 days minus the number of days of the window specified__ in the Purchase Definition. For example, if your Purchase definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 16 days__ .
 
 For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
 

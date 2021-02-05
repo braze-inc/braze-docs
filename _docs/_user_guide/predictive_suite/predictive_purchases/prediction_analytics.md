@@ -1,8 +1,9 @@
 ---
 nav_title: Prediction Analytics
 title: Prediction Analytics
-description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful driven decisions."
+description: "This reference article covers the different components included in the Purchase Prediction Analytics Page and how they can be used to make insightful driven decisions."
 page_order: 2
+hidden: true
 ---
 
 # Prediction Analytics
@@ -25,9 +26,9 @@ As you move the slider, the bar in the left half of the lower panel will inform 
 
 ## Purchase Likelihood Score and Category {#purchase_score}
 
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the Purchase Likelihood looks like across the population according to this Prediction.
+Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the Purchase Likelihood looks like across the population according to this Prediction.
 
-## Targeting Users to Reduce Churn
+## Targeting Users 
 
 ### Prediction Quality {#prediction_quality}
 
@@ -55,7 +56,7 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 2. An estimate of how many users who wouldn't have actually purchased will be targeted in error<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the red portion is those who will be incorrectly targeted using the current slider position.
 
-Using this information, we encourage you to decide how many of the actual purchasers you want to capture, how many non-buyers you want to target, and what the cost of errors are for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
+Using this information, we encourage you to decide how many of the purchasers you want to capture, how many non-purchasers you want to target, and what the cost of errors are for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
 
 ## Purchase Correlation Table {#correlation_table}
 
