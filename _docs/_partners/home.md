@@ -116,7 +116,7 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
 - name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-- name: Dyspatch
+- name: Dyspatch.io
   url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
 - name: Pypestream
   url: /docs/partners/advertising_technologies/attribution/pypestream/
