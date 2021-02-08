@@ -61,7 +61,7 @@ Geofences are [no longer supported by iOS][4] for users who choose the new  _app
 
 To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
-Apps that do not upgrade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
+Apps that do not upgrade the Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
@@ -112,11 +112,10 @@ Starting on Dec 8, 2020, all submissions to the App Store require additional ste
 #### Apple Developer Portal Questionnaire
 
 On the _Apple Developer Portal_:
-* App owners will be asked to fill out a questionnaire to describe how their app or their third-party partners collect data.
-  * The questionnaire expected to always be up-to-date with their most recent release in the App Store.
+* You will be asked to fill out a questionnaire to describe how your app or third-party partners collect data.
+  * The questionnaire is expected to always be up-to-date with your most recent release in the App Store.
   * The questionnaire may be updated even without a new app submission.
-* App owners will be required to paste a link to their app's Privacy Policy URL.
-  * This can be hosted on their app's website or hosted elsewhere.
+* You will be required to paste a link to your app's Privacy Policy URL.
 
 As you fill out your questionnaire, consider how your usage of Braze for the following fields may affect your disclosure requirements.
 
