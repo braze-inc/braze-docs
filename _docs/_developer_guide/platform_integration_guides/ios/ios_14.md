@@ -120,22 +120,15 @@ On the _Apple Developer Portal_:
 As you fill out your questionnaire, please consult your legal team, and consider how your usage of Braze for the following fields may affect your disclosure requirements.
 
 #### Braze Default Data Collection
-
-**Identifiers**
-  * An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
-**Usage Data**
-  * This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
+**Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
+**Usage Data** - This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
 
 #### Optional Data Collection
-
 Data you may optionally be collecting through your usage of Braze:
 
-**Location**
-  * Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.
-**Contact Info**
-  * This can include events and attributes related to the user's identity.
-**Purchases**
-  * This can include events and purchases logged on behalf of the user.
+**Location** - Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.
+**Contact Info** - This can include events and attributes related to the user's identity.
+**Purchases** - This can include events and purchases logged on behalf of the user.
 
 {% alert important %}
 Note that this is not an exhaustive list. If you manually collect other information about your users in Braze that apply to other categories in the App Privacy Questionnaire, you will need to disclose those as well.
