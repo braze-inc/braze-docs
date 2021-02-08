@@ -107,9 +107,41 @@ No changes to Provisional Push Authorization are included in iOS 14. In an earli
 
 ### App Privacy and Data Collection Overview {#app-privacy}
 
-The App Store's new App Privacy feature will disclose to users what personal information an app collects and how it may track users across other apps and websites. Apple has [stated](https://www.apple.com/ios/ios-14-preview/), "Privacy information on the App Store will be coming in an iOS 14 update later this year".
+Starting on Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
 
-Braze will continue to monitor this new feature announcement to help you understand how your usage of Braze may be disclosed in the App Privacy summary.
+#### Apple Developer Portal Questionnaire
+
+On the _Apple Developer Portal_:
+* App owners will be asked to fill out a questionnaire to describe how their app or their third-party partners collect data.
+  * The questionnaire expected to always be up-to-date with their most recent release in the App Store.
+  * The questionnaire may be updated even without a new app submission.
+* App owners will be required to paste a link to their app's Privacy Policy URL.
+  * This can be hosted on their app's website or hosted elsewhere.
+
+As you fill out your questionnaire, consider how your usage of Braze for the following fields may affect your disclosure requirements.
+
+#### Braze Default Data Collection
+
+* Identifiers
+  * An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor) by default.
+  * In a future SDK release, we will change the device ID to be an internally generated identifier instead of IDFV. This will remove the need for integrators to flag the `Identifiers` field.
+* Usage Data
+  * This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
+
+#### Optional Data Collection
+
+Data you may optionally be collecting through your usage of Braze:
+
+* Location
+  * Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.
+* Contact Info
+  * This can include events and attributes related to the user's identity.
+* Purchases
+  * This can include events and purchases logged on behalf of the user.
+
+{% alert important %}
+Note that this is not an exhaustive list. If you manually collect other information about your users in Braze that apply to other categories in the App Privacy Questionnaire, you will need to disclose those as well.
+{% endalert %}
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
