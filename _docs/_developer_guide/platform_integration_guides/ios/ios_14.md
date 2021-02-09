@@ -107,7 +107,7 @@ No changes to Provisional Push Authorization are included in iOS 14. In an earli
 
 ### App Privacy and Data Collection Overview {#app-privacy}
 
-Starting on Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
+Since Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
 
 #### Apple Developer Portal Questionnaire
 
