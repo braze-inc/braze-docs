@@ -19,7 +19,7 @@ There is a limit of 3 concurrently active Purchase Predictions. Prior to purchas
 
 On the Edit page, give your new Prediction a unique name.
 
-### Step 2: Filter Your Prediction Audience (optional)
+### Step 2: Filter Your Prediction Audience (optional) {#audience}
 
 Your Prediction Audience is the group of users whose chances of making a purchase you want the Prediction assess. You can try to predict Purchases in your entire population of users. The model will likely perform better if you narrow down and filter the group of users you want to assess purchase likelihood for with some criteria. For example, you might want to focus on users who first used your app recently.
 

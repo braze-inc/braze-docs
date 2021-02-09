@@ -20,7 +20,7 @@ Once you've decided what range of Purchase Likelihood Score or Category you want
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Purchase Likelihood Score or Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
-## Strategic Considerations  {#strategy}
+## Strategic Considerations {#strategy}
 
 Now that you know who may or may not make a future purchase, start thinking about how you want to message customers and allocate your marketing resources. Here are a few ideas to jumpstart your Predictive Purchase strategy:
 

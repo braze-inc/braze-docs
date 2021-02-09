@@ -11,14 +11,15 @@ hidden: true
 Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or Campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 __Analytics Components__<br>
+&#45; [Purchase Likelihood Score](#purchase_score)<br>
 &#45; [Targeting Users](#target_users)<br>
 &#45; [Prediction Quality](#prediction_quality)<br>
 &#45; [Estimated Results](#estimated_results)<br>
 &#45; [Purchase Correlation Table](#correlation_table)
 
-## Overview
+## Purchase Likelihood Score {#purchase_score}
 
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets or in each of the Purchase Likelihood Categories is displayed in the chart at the top of the page.
+Users in the Prediction Audience will be assigned a Purchase Likelihood Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets or in each of the Purchase Likelihood Categories is displayed in the chart at the top of the page.
 
 ## Targeting Users {#target_users}
 
