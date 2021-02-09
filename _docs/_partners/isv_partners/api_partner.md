@@ -6,7 +6,7 @@ hidden: true
 
 # API Partner Integration
 
-Certified ISV partners are required to add their partner name to the partner field in their API implementation. Please see the following /users/track endpoint structure for an example request.
+Alloys ISV partners are required to add their partner name to the `partner` field in their API Requests, allowing Braze to track API partner usage such as incoming requests from partners. Please reference the following [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint structure when developing your implementation.
 
 ## Partner Request Body
 
@@ -20,6 +20,6 @@ Authorization: Bearer YOUR_REST_API_KEY
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
    "purchases" : (optional, array of Purchase Object),
-   "partner" : (optional, string)
+   "partner" : (required, string)
 }
 ```
