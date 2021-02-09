@@ -11,7 +11,7 @@ This guide describes Braze-related changes introduced in iOS 14 and the required
 For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
 
 {% alert tip %}
-As of iOS 14.5, **IDFA** collection and [certain data sharing][5] will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).
+As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).
 {% endalert %}
 
 #### Summary of iOS 14 breaking changes

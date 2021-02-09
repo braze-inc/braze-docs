@@ -37,4 +37,4 @@ In this case, these users cannot be messaged and are not engaging with your bran
 ## Spam Blocking
 Braze blocks individual users with over 5 million sessions, and no longer ingests their SDK events, because they are usually the result of an incorrect integration. If you find that this has happened for a legitimate user, please file a ticket with Braze Support.
 
-[1]: {{site.baseurl}}/help/gdpr_compliance/#braze-recommendation
+[1]: {{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure

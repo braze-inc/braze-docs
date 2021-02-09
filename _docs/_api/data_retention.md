@@ -22,11 +22,11 @@ Customers can:
 
 Behavioral events cannot be deleted from a User Profile (custom events, sessions, campaigns, purchases). In order to remove those events, the entire User Profile must be deleted.
 
-For privacy compliance, customers may need to delete all personal data pertaining to a User upon the User’s request. Customers can find instructions on our GDPR compliance page at:
-[https://www.braze.com/docs/help/gdpr_compliance/#the-right-to-erasure]({{site.baseurl}}/help/gdpr_compliance/#the-right-to-erasure) 
+For privacy compliance, customers may need to delete all personal data pertaining to a User upon the User’s request. Customers can find instructions on our data protection technical assistance page at:
+[https://www.braze.com/docs/help/dp-technical-assistance/#the-right-to-erasure]({{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure) 
 
 {% alert note %}
-A User may have multiple profiles, and you may need to delete multiple profiles to delete all data pertaining to a single User. Follow instructions on the GDPR compliance page on how to fully delete all data regarding a User.
+A User may have multiple profiles, and you may need to delete multiple profiles to delete all data pertaining to a single User. Follow instructions on the data protection technical assistance page on how to fully delete all data regarding a User.
 {% endalert %}
 
 ## 2. Data retention handled by Braze
