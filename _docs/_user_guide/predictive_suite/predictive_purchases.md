@@ -5,7 +5,7 @@ layout: featured
 alias: /predictive_purchases/
 hidden: true
 guide_top_header: "Predictive Purchases"
-guide_top_text: "NEEDS REVISION Customer purchase, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address purchase is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially purchaseing users, Braze offers Predictive purchase, providing a proactive approach toward minimizing future purchase."
+guide_top_text: "Knowing which of your users is likely to make a purchase is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Purchase, a machine learning model that makes it easy for marketing teams to understand future purchasing behavior and focus their resources on revenue-maximizing campaigns."
 
 guide_featured_title: "Topics"
 guide_featured_list:
@@ -20,15 +20,16 @@ guide_featured_list:
   fa_icon: fas fa-arrow-right
 ---
 
-## Overview NEEDS REVISION
+## Overview
 
 ![Churn Overview][1]
 
-With Predictive purchase, you can define what purchase means for your business (__[purchase Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/creating_a_purchase_prediction/#step-2-define-purchase)__) as well as the users you'd like to prevent from purchaseing (__[Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/creating_a_purchase_prediction/#step-3-filter-your-prediction-audience)__). When you create a Prediction, Braze trains a machine learning model using __[gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting)__ to identify users at risk of purchase by learning from activity patterns of past users who did and did not purchase according to your definition.
+Predictive Purchase gives marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using __[gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting)__ to learn from previous purchase activity and predict future purchase activity. 
 
-Once the Prediction model is built, users in the Prediction Audience will be assigned a __[Purchaser Likelihood Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score)__ between 0 and 100 denoting how likely they are to purchase according to your definition. The higher the score, the more likely a user is to purchase. 
+Once the Prediction is built, users are assigned a __[Purchase Likelihood Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score)__ between 0 and 100 denoting how likely they are to make a purchase. The higher the score, the more likely a user is to make a purchase. Users can also be sorted by Low, Medium, and High Purchase Likelihood Category. 
 
-Updating the risk scores of the Prediction Audience can be done with a __[frequency you choose]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/#step-3-choose-the-update-frequency-for-purchase-predictions)__. This way, you can reach out to users who are at risk of purchaseing before they actually do and prevent it from happening in the first place. Using up to three active Predictions, you can leverage Predictive purchase to tailor individual models to help prevent purchase within specific segments of your users that you deem to be the most valuable.
+The real value of Predictive Purchase lies in the next step: using Prediction results to create a Segment or Campaign. Marketers can build targeted Campaigns directly in the Prediction page for immediate revenue-boosting results, or save a Segment for a future Campaign or Canvas. Not sure who to target first? Read our (__[strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchase/messaging_users/#strategy)__)  for messaging users based on their Purchase Likelihood.
+
 
 ## Access Predictive purchase
 

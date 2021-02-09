@@ -20,18 +20,15 @@ Once you've decided what range of Purchase Likelihood Score or Category you want
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Purchase Likelihood Score or Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
-## Strategic Considerations (needs revision)
+## Strategic Considerations  {#strategy}
 
-Now that you’ve identified and selected the group of users who may or may not purchasethat you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
+Now that you know who may or may not make a future purchase, start thinking about how you want to message customers and allocate your marketing resources. Here are a few ideas to jumpstart your Predictive Purchase strategy:
 
-__Here are a few ideas to consider:__
+- Score a quick win by messaging users with the highest likelihood of purchasing. An email reminder about the items waiting in their carts, an in-app message prompt to “buy now!”, or a personalized push notification might just do the trick.
+- Save the promotions for mid-likelihood users who need an extra nudge. Offer a special discount, retarget with relevant content on Facebook and Google, or share exclusive early access to a new experience (product, feature, or level).
+- There are a couple paths you can test out for low-likelihood purchasers. Think you can convince them to make a purchase? Dish out higher discounts or do a concentrated cross-channel blast for three days. Offer personalized recommendations or hands-on support to make the purchasing process as simple and easy as possible.
+- Or, drop these users into a more passive Campaign or Canvas as a resource-light way to keep your brand top-of-my mind. This could be a persona-specific weekly newsletter, a series of relevant customer case studies, or a monthly round-up of new tips & tricks.
 
-- Target your predicted medium-to-high-risk users with a special discount, free merchandise (physical gift or digital credits), exclusive content, or early access to a new experience (product, app feature, level).<br><br>
-- Drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or send a message from a real person, asking for brand feedback or offering a pro tip.<br><br>
-- Maybe you just need a new, fun way to reiterate the value of your brand, and all the ways these customers have found value in yours before. This could look like a persona-specific weekly newsletter, a series of real stories from real users about your brand, or some other content marketing play.
-
-Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments, to further qualify who gets what offers, messages, etc.
-
-
+Messaging users based on their Purchase Likelihood Score or Category doesn’t just help you make money - it helps you save money, too! Offer promotions on a sliding scale: the more likely a user is to make a purchase, the fewer discounts they likely need. Finding this balance helps you give and get the right amount of value for each customer. Keep in mind that you can also layer other filters onto these segments to further qualify who gets which messages.
 
 [5]: {% image_buster /assets/img/churn/churnFilters.png %}
