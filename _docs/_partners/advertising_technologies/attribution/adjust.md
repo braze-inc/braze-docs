@@ -42,7 +42,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtabs %}
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you will need to ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).
+If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the __Generate API Key__ button found within the Adjust partner section of the Braze dashboard.<br><br>![Adjust Image]({% image_buster /assets/img/attribution/adjust2.png %}){: style="max-width:70%;"}
 {% endalert %}
 
 ## Integration
@@ -110,4 +110,5 @@ __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 
 [1]: {% image_buster /assets/img/attribution/adjust.png %}
+[2]: {% image_buster /assets/img/attribution/adjust2.png %}
 
