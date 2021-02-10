@@ -65,6 +65,10 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 
 Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Here are the steps for setting up an event-based schedule:
 
+{% alert important %}
+  Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Canvas steps with in-app messages must be scheduled.
+{% endalert %}
+
 ### Setting Up a Triggered Campaign
 
 __Step 1: Select a trigger event, which can be:__
@@ -227,29 +231,19 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 - If the variant percentages change, users may be redistributed to other variants.
 - Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
-[1]: #scheduled-delivery
-[2]: #immediately
 [3]: {% image_buster /assets/img_archive/time_based.png %}
-[4]: #designated
 [5]: #local-time-zone-campaigns
-[6]: #local-use
 [7]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [8]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[11]: #delivery-rules
-[12]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
-[13]: #intelligent-use
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[15]: #triggered
-[16]: #setup
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
 [20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
 [21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
 [22]: #use-cases-2
-[23]: #re-eligible
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
 [25]: {{site.baseurl}}/help/faqs/#how-does-local-time-zone-delivery-work
 [26]: #why-did-a-user-not-receive-my-triggered-campaign

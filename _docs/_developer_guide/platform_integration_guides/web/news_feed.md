@@ -52,18 +52,18 @@ body .ab-feed {
 
 ## Categories
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature see [Braze Academy][14]
+Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature visit our [documentation][14].
 
 News Feed Categories can be defined by providing the third "allowedCategories" parameter to `toggleFeed`:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.ab.Card.Category.NEWS]);
+appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.NEWS]);
 ```
 
 You can also populate a feed with a combination of categories as in the following example:
 
 ``` javascript
-appboy.display.toggleFeed(undefined, undefined, [appboy.ab.Card.Category.ANNOUNCEMENTS, appboy.ab.Card.Category.NEWS]);
+appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
 ```
 
 ## Read/Unread Indicators
@@ -94,8 +94,8 @@ appboy.getCachedFeed().getUnreadCardCount();
 
 This is often used to power badges signifying how many unread news-feed cards there are. See the [JSDocs][17] for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestFeedRefresh();`
 
-### Key-Value Pairs
-`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application.  Simply call `card.extras` to access these values.
+### Key Value Pairs
+`ab.Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a card for further handling by the application.  Simply call `card.extras` to access these values.
 
 See the JSDocs for [ab.ClassicCard][3], [ab.Banner][4], or [ab.CaptionedImage][5] for more information.
 

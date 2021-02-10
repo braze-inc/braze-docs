@@ -26,7 +26,7 @@ At Braze, we __strongly suggest__ naming User IDs also known as `external_user_i
 
 If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
 
-Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
+Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs, however a migration is possible using our [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
 | User ID Naming |
 | Good Example | Bad Example |
@@ -35,6 +35,7 @@ Providing this information to others may allow people outside your organization 
 | 83nmas45-eks1-083m-mk36-426655440000 | Anna@email.com |
 | Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
 | k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Assigning a User ID
 
@@ -67,8 +68,6 @@ Refer to the [changeUser documentation][4] for more information.
 
 **Implementation Example**
 
-See the [`UserProfileDialog.java` file][3] in the Droidboy sample app.
-
 Full class information can be found in the [javadocs][4].
 
 #### Automatic Preservation of Anonymous User History
@@ -77,6 +76,7 @@ Full class information can be found in the [javadocs][4].
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Additional Notes and Best Practices
 Please note the following:
@@ -98,6 +98,4 @@ If you opt to use a hash of a unique identifier as your userID take care to ensu
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String- "Javadocs"

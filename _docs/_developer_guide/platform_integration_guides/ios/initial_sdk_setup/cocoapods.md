@@ -1,5 +1,5 @@
 ---
-nav_title: CocoaPod
+nav_title: CocoaPods
 platform: iOS
 page_order: 1
 description: "This tutorial covers how to install and use CocoaPods"
@@ -44,10 +44,6 @@ __Note__: We suggest you version Braze so pod updates automatically grab anythin
 | `pod 'Appboy-iOS-SDK/NewsFeed'` | The `NewsFeed` subspec contains the Braze News Feed UI and the Core SDK. |
 | `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |
 {: .ws-td-nw-1}
-
-### Example Podfile
-
-If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.
 
 ## Step 3: Installing the Braze SDK
 
@@ -102,7 +98,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key).
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}
@@ -132,14 +128,9 @@ If given a pre-existing custom endpoint...
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### Implementation Example
-
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_29] file{% endif %} in the Stopwatch sample app.
-
 ## SDK Integration Complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% else %}Please note that when compiling your tvOS app and any other third-party libraries, Bitcode must be enabled.{% endif %}
+Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% endif %}
 
 ## Updating the Braze SDK via CocoaPods
 
@@ -185,7 +176,7 @@ __Note__: This method would replace the `startWithApiKey:inApplication:withLaunc
 
 This method is called with the following parameters:
 
-- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
+- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
@@ -200,42 +191,6 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_1]: http://cocoapods.org/
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
 [apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[apple_initial_setup_8]: #manual-sdk-integration
-[apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[apple_initial_setup_14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{site.baseurl}}/partner_integrations/#attribution-integration
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[apple_initial_setup_26]: #social-data-tracking
-[apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m
-[apple_initial_setup_30]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#overview
-[apple_initial_setup_31]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{site.baseurl}}/support_contact/
-[1]: http://cocoapods.org/
-[2]: https://www.ruby-lang.org/en/installation/
-[3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[4]: http://guides.cocoapods.org/syntax/podfile.html
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
-[12]: #appboy-podfiles-for-non-64-bit-apps
-[13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
-[15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[21]: {{site.baseurl}}/partners/
-[25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[28]: #apple-watch-sdk
-[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/IDFADelegate.m
-[31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

@@ -14,7 +14,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 ---
 {% api %}
 # Create Scheduled Messages
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
 
@@ -109,7 +109,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
 - [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
 ### Example Request
@@ -198,4 +198,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/

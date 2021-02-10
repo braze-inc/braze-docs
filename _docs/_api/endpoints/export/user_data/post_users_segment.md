@@ -106,6 +106,44 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 }'
 ```
 
+### Fields to Export
+
+The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
+
+* `apps`
+* `attributed_campaign`
+* `attributed_source`
+* `attributed_adgroup`
+* `attributed_ad`
+* `braze_id`
+* `campaigns_received`
+* `canvases_received`
+* `cards_clicked`
+* `country`
+* `created_at`
+* `custom_attributes`
+* `custom_events`
+* `devices`
+* `dob`
+* `email`
+* `email_subscribe`
+* `external_id`
+* `first_name`
+* `gender`
+* `home_city`
+* `language`
+* `last_coordinates`
+* `last_name`
+* `phone`
+* `purchases`
+* `push_subscribe`
+* `push_tokens`
+* `random_bucket`
+* `time_zone`
+* `total_revenue`
+* `uninstalled_at`
+* `user_aliases`
+
 ### Response
 
 ```json
@@ -152,7 +190,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_ad" : (string),
     "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "custom_attributes" : (object) custom attribute key-value pairs,
+    "custom_attributes" : (object) custom attribute key value pairs,
     "custom_events" : [
         {
             "name" : (string),
@@ -259,4 +297,9 @@ User export object (we will include the least data possible - if a field is miss
     ]
 }
 ```
+
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 {% endapi %}

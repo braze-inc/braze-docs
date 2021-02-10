@@ -15,25 +15,7 @@ After clicking on the name of a segment, you'll be able to view, at the top of t
 
 ![Segment data][2]
 
-## Turning Analytics Tracking On and Off
-
-When you turn analytics tracking on for a segment, Braze will let you view sessions, custom events, and revenue over time by this segment.
-
-![Analytics tracking][16]
-
-On the Revenue page of the Dashboard, you'll be able to view data on [revenue and purchases over time for this segment][14]. By adding or removing segments from the graph, you can visually compare segment data for any custom time range.
-
-![Revenue data by segment][17]
-
-Similarly, data on [sessions over time for this particular segment][13] can be found on the App Usage page.
-
-![Session data by segment][18]
-
-Braze also provides the ability to view data on [Custom Events over time for segments][20], via the Custom Events page.
-
-If you don't turn analytics tracking on for a segment, you will still be able to access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
-
-An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue, and purchases.
+When you turn [analytics tracking on for a segment][9], Braze will let you view sessions, custom events, and revenue over time by this segment.
 
 ## Segment Statistics
 
@@ -46,6 +28,7 @@ You will see the following segment statistics, which update in real-time as you 
 | **LTV (Paying Users)** | The lifetime value per user (LTV) in this segment and the lifetime value per paying user in this segment. The LTV is calculated by dividing your lifetime revenue by lifetime users. |
 | **Emailable (Opted In)** | Emailable refers to all users who can be reached via email. These users have provided an email address and have not opted out. Opted In refers to users who have explicitly opted in to email. Due to [spam regulations][6], it's often a good idea to ask your users to explicitly opt in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt in, you can target a message at [those who have neither opted in nor out][5]. |
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (e.g. if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. On iOS and Windows, users must always explicitly opt in for you to send them pushes. Because of how permissions are granted on Android, users don't always need to explicitly opt in to receive pushes. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Messaging Use and Historical Membership
 
@@ -71,10 +54,4 @@ On this page, you can view a number of user-specific attributes as shown below:
 [6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [7]: {% image_buster /assets/img_archive/Preview_Users.png %}
 [8]: {% image_buster /assets/img_archive/User_Preview.png %}
-[11]: #segment-statistics
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-[16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
-[17]: {% image_buster /assets/img_archive/Revenue.png %}
-[18]: {% image_buster /assets/img_archive/Events_Over_Time2.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
+[9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/

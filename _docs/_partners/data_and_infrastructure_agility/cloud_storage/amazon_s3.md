@@ -270,6 +270,10 @@ Click "Launch Current" to continue.
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
 
+{% alert important %}
+Error: If you receive a “S3 credentials are invalid” error, this may be due to integrating too quickly after creating a role in AWS. Please wait and try again. 
+{% endalert %}
+
 {% endtab %}
 {% tab Dashboard Data Export %}
 
@@ -288,15 +292,7 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% endtabs %}
 
-[3]: http://aws.amazon.com/
-[4]: http://aws.amazon.com/
 
-[5]: {% image_buster /assets/img/s3_tech_partners.png %} "AWS Creds"
-[6]: https://console.aws.amazon.com/s3/
-[8]: https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
-[10]: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
 [11]: {% image_buster /assets/img_archive/S3_Credentials.png %}
 [12]: {% image_buster /assets/img_archive/S3_CreatePolicy.png %}
 [13]: {% image_buster /assets/img_archive/S3_AttachPolicy.png %}
-[14]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
-[15]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#getting-started

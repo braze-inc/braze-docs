@@ -170,7 +170,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_ad" : (string),
     "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "custom_attributes" : (object) custom attribute key-value pairs,
+    "custom_attributes" : (object) custom attribute key value pairs,
     "custom_events" : [
         {
             "name" : (string),
@@ -216,7 +216,7 @@ User export object (we will include the least data possible - if a field is miss
             "name" : (string),
             "platform" : (string),
             "version" : (string),
-            "sessions" : (string),
+            "sessions" : (integer),
             "first_used" : (string) date,
             "last_used" : (string) date
         },
@@ -277,5 +277,8 @@ User export object (we will include the least data possible - if a field is miss
     ]
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 {% endapi %}

@@ -31,23 +31,37 @@ Example `Info.plist` contents:
 | LogLevel | Description |
 |----------|-------------|
 | 0        | All log information will be logged to the iOS console  |
-| 8        | Default, minimal logging.                              |
+| 8        | Default, minimal logging. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Optional IDFA Collection
 
-IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is required if you intend to utilize our [install attribution integrations][21]. However, we may develop additional features in the future which would benefit from the collection of your IDFA. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
+IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to utilize our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 
-- You are using advertising elsewhere in the app
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-## Implementing IDFA Collection
+### iOS 14 AppTrackingTransparency
+In the future, Apple will require a new permission prompt in order to collect IDFA. For now, prompting for IDFA permission with `AppTrackingTransparency` is not required, but you should be prepared for a future iOS release from Apple which will require user opt-in.
+
+When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12, and collecting IDFA will Xcode 11 is not possible in iOS 14.
+
+The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
+
+```
+<key>NSUserTrackingUsageDescription</key>
+<string>To retarget ads and build a global profile to better serve you things you would like.</string>
+```
+
+### Implementing IDFA Collection
 
 Follow these steps to implement IDFA Collection:
 
-1. Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
+##### Step 1: Implement ABKIDFADelegate
+
+Create a class that conforms to the [`ABKIDFADelegate`][29] protocol.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -55,6 +69,7 @@ Follow these steps to implement IDFA Collection:
 ```objc
 #import "IDFADelegate.h"
 #import <AdSupport/ASIdentifierManager.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @implementation IDFADelegate
 
@@ -62,7 +77,10 @@ Follow these steps to implement IDFA Collection:
   return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 }
 
-- (BOOL)isAdvertisingTrackingEnabled {
+- (BOOL)isAdvertisingTrackingEnabledOrATTAuthorized {
+  if (@available(iOS 14, *)) {
+    return [ATTrackingManager trackingAuthorizationStatus] == ATTrackingManagerAuthorizationStatusAuthorized;
+  }
   return [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
 }
 
@@ -75,25 +93,29 @@ Follow these steps to implement IDFA Collection:
 ```swift
 import Appboy_iOS_SDK
 import AdSupport
+import AppTrackingTransparency
 
 class IDFADelegate: NSObject, ABKIDFADelegate {
-
    func advertisingIdentifierString() -> String {
     return ASIdentifierManager.shared().advertisingIdentifier.uuidString
   }
 
-  func isAdvertisingTrackingEnabled() -> Bool {
+  func isAdvertisingTrackingEnabledOrATTAuthorized() -> Bool {
+    if #available(iOS 14, *) {
+      return ATTrackingManager.trackingAuthorizationStatus ==  ATTrackingManager.AuthorizationStatus.authorized
+    }
     return ASIdentifierManager.shared().isAdvertisingTrackingEnabled
   }
-
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-2. Set the delegate during Braze initialization. In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
+##### Step 2: Set the delegate during Braze initialization
 
-### Approximate iOS SDK Size {#ios-sdk-size}
+In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
+
+## Approximate iOS SDK Size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
 
@@ -102,24 +124,6 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 > If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
 
-[1]: http://cocoapods.org/
-[2]: https://www.ruby-lang.org/en/installation/
-[3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[4]: http://guides.cocoapods.org/syntax/podfile.html
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
-[12]: #appboy-podfiles-for-non-64-bit-apps
-[13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
-[15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
-[25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[28]: #apple-watch-sdk
 [29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

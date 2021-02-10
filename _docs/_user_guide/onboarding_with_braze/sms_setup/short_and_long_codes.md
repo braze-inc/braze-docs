@@ -87,7 +87,7 @@ Sender IDs are the short or long codes that appear at the top of an SMS message 
 Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There __may not__ be only numbers. 
 
 | Pros | Cons |
-|- No additional charge to implement<br>- Improves brand awareness<br>- Increases SMS open rates<br>- Matches sending speed of phone numbers inside the subscription group. |- [Two-way messaging][2] is not supported<br>- Not all coutries support this feature<br>- Some countries require an additional approval processes. This may take additional time. |
+|- No additional charge to implement<br>- Improves brand awareness<br>- Increases SMS open rates<br>- Matches sending speed of phone numbers inside the subscription group. |- [Two-way messaging][2] is not supported<br>- Not all countries support this feature<br>- Some countries require an additional approval processes. This may take additional time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more information on Alphanumeric Sender ID, please reach out to your Customer Success Manager. 

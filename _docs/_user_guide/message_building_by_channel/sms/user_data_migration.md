@@ -25,7 +25,7 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 ![e164][picture]{: style="max-width:50%;border: 0;"}
 
 ### Adding Aliases to the User Profiles
-Aliases are neccessary in order to be able to capture any Custom Events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number. 
+Aliases are necessary in order to be able to capture any Custom events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number. 
 
 ### Update Historical Information on Users Subscription States
 If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 
@@ -36,7 +36,7 @@ Before you begin composing SMS campaigns through Braze, you’ll need to update 
 
 __Here's a quick summary of the user data you'll need to update in Braze:__
 
-1. __Import users' phone numbers in the correct format__ ([E.164][0]) (this requires a '+' and a country code, e.g. +12408884782) For more information on users phone numbers, check out our [documentation][userphone].
+1. __Import users' phone numbers in the recommended format__ ([E.164][0]) (this involves including a '+' and a country code, e.g. +12408884782) For more information on users phone numbers, check out our [documentation][userphone].
   - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
 
 2. __Add a user alias__ to identified user profiles with a user's phone number. The required format for this is alias_label: 'phone' and alias_name: '+12408884782'

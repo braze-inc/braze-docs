@@ -11,23 +11,26 @@ guide_featured_list:
 - name: Terms to Know
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
   fa_icon: fas fa-bookmark
-- name: "Import Phone Numbers"
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/importing_numbers/
-  fa_icon: fas fa-user-circle
-- name: "Short & Long Codes"
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
-  fa_icon: far fa-address-card
-- name: Requirements
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/#requirements
-  fa_icon: far fa-check-square
-- name: Compliance
-  link: /docs/user_guide/message_building_by_channel/sms/compliance/
+- name: SMS Laws & Regulations
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
   fa_icon: fas fa-gavel
+- name: SMS Subscription Groups
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
+  fa_icon: fas fa-users
+- name: User Phone Numbers
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/
+  fa_icon: fas fa-phone
+- name: Sending Phone Numbers
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
+  fa_icon: fas fa-address-card
+- name: User Data Migration
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
+  fa_icon: fas fa-user
 ---
 
 ## Requirements
 
-Before you start sending sms, there are some things you need. Refer to the basic chart below to learn more.
+Before you start sending SMS, there are some things you need. Refer to the basic chart below to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|
@@ -36,5 +39,7 @@ Before you start sending sms, there are some things you need. Refer to the basic
 | [Keywords and Responses to Them]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+
+### For more information on SMS at Braze, check out our dedicated [SMS section]({{site.baseurl}}/user_guide/message_building_by_channel/sms/).
 
 <br>

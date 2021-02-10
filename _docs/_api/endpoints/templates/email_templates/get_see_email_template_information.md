@@ -57,16 +57,17 @@ GET https://YOUR_REST_API_URL/templates/email/info
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
-  “email_template_id”: (string) your email template's API Identifier,
-  “template_name”: (string) the name of your email template,
-  “subject”: (string) the email template subject line,
-  “preheader”: (optional, string) the email preheader used to generate previews in some clients),
-  “body”: (optional, string) the email template body that may include HTML,
-  “plaintext_body”: (optional, string) a plaintext version of the email template body,
-  “should_inline_css”: (optional, boolean) whether there is inline CSS in the body of the template - defaults to the css inlining value for the App Group,
-  “tags”: (string) tag names,
-  “created_at”: (string, in ISO 8601),
-  “updated_at”: (string, in ISO 8601)
+  "email_template_id": (string) your email template's API Identifier,
+  "template_name": (string) the name of your email template,
+  "description": (string) email template description,
+  "subject": (string) the email template subject line,
+  "preheader": (optional, string) the email preheader used to generate previews in some clients),
+  "body": (optional, string) the email template body that may include HTML,
+  "plaintext_body": (optional, string) a plaintext version of the email template body,
+  "should_inline_css": (optional, boolean) whether there is inline CSS in the body of the template - defaults to the css inlining value for the App Group,
+  "tags": (string) tag names,
+  "created_at": (string, in ISO 8601),
+  "updated_at": (string, in ISO 8601)
 }
 ```
 

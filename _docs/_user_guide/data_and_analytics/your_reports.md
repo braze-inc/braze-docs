@@ -17,4 +17,7 @@ guide_featured_list:
   - name: Engagement Reports
     link: /docs/user_guide/data_and_analytics/your_reports/engagement_reports/
     fa_icon: fas fa-chart-line
+  - name: Report Builder
+    link: /docs/user_guide/data_and_analytics/your_reports/report_builder/
+    fa_icon: fas fa-chart-bar
 ---

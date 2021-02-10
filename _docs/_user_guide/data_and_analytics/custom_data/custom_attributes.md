@@ -1,17 +1,16 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
-description: "Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application."
+description: "Custom attributes are best for storing attributes about your users, or information about low-value actions within your application."
 ---
 
 # Custom Attributes
-Custom Attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom Attributes, so you won't be able to get any graphs based upon them like you can for Custom Events.
+Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom attributes, so you won't be able to get any graphs based upon them like you can for Custom events.
 
-We get that Custom Attributes can be confusing, so read closely and check out our [LAB course on Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes)!
+We get that Custom attributes can be confusing, so read closely and check out our [LAB course on Custom events and attributes](http://lab.braze.com/custom-events-and-attributes)!
 
 ## Custom Attribute Storage
-
-All User Profile data (Custom Events, Custom Attribute, Custom Data) is stored as long as those profiles are active. Custom Event Properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage Event Properties for Segmentation, please contact your Braze account or customer success manager.
+All data stored on the User Profile, including Custom Attribute data, is retained indefinitely as long as each profile is active.
 
 ## Custom Attribute Data Types
 Custom Attributes are extraordinarily flexible tools that allow for great targeting.
@@ -55,8 +54,8 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __partially matches__ an inputted string __OR__ Regular Expression | __MATCHES REGEX__ | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not partially match__ an inputted string __OR__ Regular Expression | __DOES NOT MATCH REGEX__ * | __STRING__ __OR__ __REGULAR EXPRESSION__ |
 | Check if the string attribute __does not match__ an inputted string| __DOES NOT EQUAL__ | __STRING__ |
-| Check if the string attribute __exists__ on a user's profile | __BLANK__ | __N/A__ |
-| Check if the string attribute __does not exist__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the string attribute __exists__ on a user's profile | __IS NOT BLANK__ | __N/A__ |
+| Check if the string attribute __does not exist__ on a user's profile | __BLANK__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}

@@ -18,6 +18,10 @@ The Campaign Calendar can be found by navigating to the Braze Dashboard and sele
 
 ![Full Page][4]
 
+{% alert note %}
+Note that only Scheduled Campaigns are displayed in the Campaign Calendar. Canvas Steps, Triggered Campaigns, and API campaigns will not be displayed here.
+{% endalert %}
+
 ## Future Send Calendar
 
 __Red__: Single Channel Scheduled Campaigns<br>

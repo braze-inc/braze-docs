@@ -177,48 +177,8 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 
 {% endraw %}
 
-[1]: #aborting-connected-content
-[6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
-[7]: http://openweathermap.org/api
-[8]: http://developer.nytimes.com/docs/read/article_search_api_v2
-[9]: http://open-platform.theguardian.com/documentation/
-[10]: http://alchemyapi.readme.io/v1.0/docs/introduction
-[11]: http://platform.seatgeek.com/
-[12]: http://developer.tmsapi.com/docs/read/data_v1_1/movies/movie_showtimes
-[13]: http://www.bandsintown.com/api/overview
-[14]: http://www.last.fm/api
-[15]: http://developer.ebay.com/devzone/shopping/docs/concepts/shoppingapiguide.html
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
-[18]: http://numbersapi.com/
-[19]: https://developer.eventbrite.com/
-[20]: https://api.eventful.com/
-[21]: https://www.discogs.com/developers/
-[22]: https://www.songkick.com/developer
-[23]: https://www.enclout.com/api/v1/yahoo_finance
-[24]: https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
-[25]: https://www.semantics3.com/products/pull
-[27]: https://blog.clearbit.com/logo
-[28]: https://api.tfl.gov.uk/#Line
-[29]: https://datamine.mta.info/
-[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[31]: https://docs.transifex.com/api/translation-strings
-[32]: {% image_buster /assets/img_archive/TransifexUI.png %}
-[33]: {% image_buster /assets/img_archive/terminal.png %}
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
-[36]: https://www.barchartondemand.com/free
-[37]: https://www.coindesk.com/api/
-[38]: https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
-[39]: https://sunrise-sunset.org/api
-[40]: https://www.brewerydb.com/
-[41]: https://developers.zomato.com/api
-[42]: https://airvisual.com/api
-[43]: https://developer.nutritionix.com/
-[44]: https://open.fda.gov/api/
-[45]: https://ndb.nal.usda.gov/ndb/doc/index
-[46]: https://www.json.org
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
 [48]: https://apidev.accuweather.com/developers/locationsAPIguide
 [49]: https://apidev.accuweather.com/developers/forecastsAPIguide
 [50]: https://apidev.accuweather.com/developers/currentConditionsAPIGuide

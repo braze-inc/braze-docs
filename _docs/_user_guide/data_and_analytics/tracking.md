@@ -14,4 +14,7 @@ guide_featured_list:
   - name: Influenced Opens
     link: /docs/user_guide/data_and_analytics/tracking/influenced_opens/
     fa_icon: far fa-dot-circle
+  - name: Segment Analytics Tracking
+    link: /docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
+    fa_icon: fas fa-chart-bar
 ---

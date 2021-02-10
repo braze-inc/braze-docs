@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention Report
 platform: Canvas
 subplatform: Testing and More
 page_order: 3
@@ -13,9 +13,11 @@ description: "This reference goes over how to measure user retention for users w
 
 > This reference article goes over how to measure user retention for users who have performed a selected retention event in a specific Canvas. By knowing how your users are being retained after sending a message, you can measure the effectiveness of your Canvases.
 
-User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy.
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze allows you to measure user retention right on the __Canvas Analytics__ page. 
 
-Braze allows you to measure user retention right on the __Canvas Analytics__ page.
+{% alert important %}
+Please note that Retention Reports are available for both Canvases and campaigns, currently excluding SMS and API-triggered campaigns.
+{% endalert %}
 
 ## Run a Retention Report
 
@@ -97,7 +99,7 @@ Report by Variant Use Cases:
 __Braze Retention Reports By Variant Components:__
 - __Date Range__: Set on the Canvas Details page, the date range includes all users who received the campaign during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report. Each day the retention rate, percentage change from the control group, and confidence are measured.
 - __Retention Rate__: Shows the retention rate by variant. The retention rate is equivalent to the number of users that performed the retention event divided by the total users that have received the canvas.
-- __Recentage Change from Control__: Quantifies the percentage change per variant from the control group.
+- __Percentage Change from Control__: Quantifies the percentage change per variant from the control group.
 - __Confidence__: Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a Z Test to calculate a [confidence][9] percentage. This percentage signifies how confidently that variant is performing better than the control group.
 - __Units__: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a canvas.
 - __Variant Graph__: This graph summarizes the results by variant for the selected date range.
@@ -115,8 +117,6 @@ Retention Reports are easy to generate, yet challenging to interpret and act on.
 
 [1]: {% image_buster /assets/img/retention_1.png %}
 [2]: {% image_buster /assets/img/retention_2.png %}
-[3]: {% image_buster /assets/img/campaign_retention2.png %}
-[4]: {% image_buster /assets/img/retention_report_full_report.png %}
 [6]: {% image_buster /assets/img/canvas_retention_report.png %}
 [7]: {% image_buster /assets/img/date_select_retention.png %}
 [8]: {% image_buster /assets/img/variant_view_canvas.png %}

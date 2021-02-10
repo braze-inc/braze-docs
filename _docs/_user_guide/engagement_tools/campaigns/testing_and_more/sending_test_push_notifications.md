@@ -2,7 +2,7 @@
 nav_title: Sending Test Messages
 platform: Campaigns
 subplatform: Testing and More
-page_order: 4
+page_order: 3
 
 tools: campaigns
 page_type: reference
@@ -10,7 +10,7 @@ description: "This reference article covers how to send test messages across the
 ---
 # Sending Test Messages
 
-> This reference article goes over how to send test messages across the difference Braze channels, as well as how to incorporate custom event properties and user attributes. 
+> This reference article goes over how to send test messages across the different Braze channels, as well as how to incorporate custom event properties and user attributes. 
 > <br>
 > <br>
 > By testing out your campaigns you can make sure everything about it is just right!
@@ -143,7 +143,6 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [9]: {% image_buster /assets/img_archive/testemail.png %}
 [10]: {% image_buster /assets/img_archive/testpush.png %}
 [11]: {% image_buster /assets/img_archive/testwebpush.png %}
-[12]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
 [14]: {% image_buster /assets/img_archive/test-in-app.png %}
 [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}

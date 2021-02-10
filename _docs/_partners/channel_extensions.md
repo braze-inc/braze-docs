@@ -6,7 +6,7 @@ page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to expand your messaging strategy and connect or target across custom channels."
 
 layout: partner_page
-partner_api: "https://www.braze.com/api/v1/partners.json"
+partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Channel Extensions"
@@ -33,9 +33,20 @@ valid_partner_list:
   - name: Zapier
     url: /docs/partners/channel_extensions/social/zapier_integration/
   - name: Movable Ink
-    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/
   - name: Vizbee
     url: /docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/
-  - name: Dyspatch
+  - name: Dyspatch.io
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
+  - name: EduMe
+    url: /docs/partners/channel_extensions/learning/edume/
+  - name: Playable
+    url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
+  - name: Zendesk
+    url: /docs/partners/channel_extensions/support/zendesk/
+  - name: Crowdin
+    url: /docs/partners/channel_extensions/localization/crowdin/
+  - name: Jebbit
+    url: /docs/partners/channel_extensions/loyalty/jebbit/
+
 ---

@@ -60,6 +60,12 @@ guide_menu_list:
   - name: Flutter Android and iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/preview/
     fa_icon: fas fa-mobile
+  - name: Smart TVs
+    link: /docs/developer_guide/platform_integration_guides/web/smart_tvs/
+    fa_icon: fas fa-tv
+  - name: Unreal Engine
+    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    fa_icon: fas fa-gamepad
 
 guide_footer_header: " "
 guide_footer_text: " "

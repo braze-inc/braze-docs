@@ -89,7 +89,7 @@ If you force-quit your application through your system settings, your push notif
 
 The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
-```
+```xml
 <service android:name="com.appboy.AppboyFirebaseMessagingService"
   android:exported="false">
   <intent-filter>
@@ -97,8 +97,6 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
   </intent-filter>
 </service>
 ```
-
-For an implementation example, please check out our sample application's [AndroidManifest.xml][15]
 
 #### 3. Firewall is Blocking Push
 
@@ -117,12 +115,10 @@ There are a few reasons why this could be happening:
 Users have uninstalled the application. This will invalidate their FCM push token.
 
 #### 2. Invalid Firebase Cloud Messaging Server Key
-The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. You will need to verify:
 
-- The API key is for server applications. It should look like this in your Google Developers Console:
-![Server apps key][9]
+The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `appboy.xml` file. The Server key and Sender ID are found here in your Firebase Console:
 
-- The API key provided is for the same Sender Id that is referenced in your app's `appboy.xml` file.
+![FirebaseServerKey][20]
 
 ### Push Clicks Not Logged
 
@@ -149,10 +145,9 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
-[9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [14]: http://tcpiputils.com/browse/as/15169
-[15]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [16]: #custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
 [18]: #custom-handling-push-receipts-and-opens
+[20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"

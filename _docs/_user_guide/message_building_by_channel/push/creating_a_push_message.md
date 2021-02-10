@@ -25,7 +25,7 @@ Click __Create Campaign__ in the top right corner of the __Campaigns__ page. <br
 
 ## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
 
-Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
+Next, you need to name your campaign and select the messaging types and notification style (rich ([iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) and [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)) or standard) that will be included in the campaign. You select the platform(s) you're sending a push message to by clicking on the toggle buttons on the right-hand side.
 
 ![Push2][2]
 
@@ -41,7 +41,7 @@ You also can Add Languages through the __Add Languages__ button. Braze offers th
 
 Braze allows you to specify what happens when a user clicks the body of a push notification. Whether you want to do something as simple as open the application, or redirect to a specified URL, we have many different ways to customize our push notifications, and therefore user experience. Here, you can also find the option to set up button prompts within your push notification, for example: yes/no prompt, confirm/cancel, more button, etc. 
 
-For more information on platofrm specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+For more information on platform specific Notification Options, please see our [iOS Notification and Provisional Push documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 
 ### Step 2b: Preview and Test Your Message
 
@@ -132,15 +132,7 @@ For push notifications, you'll be able to view statistics for the number of mess
 [3]: {% image_buster /assets/img_archive/schedule.png %}
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/intelligent_delivery.png %}
 [8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
-[9]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
-[10]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
-[11]: https://play.google.com/about/privacy-security-deception/deceptive-behavior/unauthorized-system-functionality/
 [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
 [25]: {% image_buster /assets/img_archive/target_segmenter.png %}
-[26]: {% image_buster /assets/img_archive/notgroupclickdropdown.gif %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img_archive/notchannclickdropdown.gif %}
-[29]: {% image_buster /assets/img_archive/notchannels.png %}

@@ -67,6 +67,9 @@ If you choose to set a schedule delay, you can add an exception to the trigger a
 
 ![Schedule Delay][6]
 
+Exception events will only trigger while a user is waiting to receive the message it’s associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
+
+
 ### Step 4: Proceed with Campaign Creation
 
 Continue creating your campaign just as you normally would. Note that if you want to ensure that you send a message to every user that is going to interact with a specific campaign, then it would be best to target a segment that contains all of the users of your app.
@@ -81,11 +84,7 @@ Or, you might follow up with users who clicked a deep link in an onboarding in-a
 
 You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
 
-[1]: #overview
-[2]: #how-to
-[3]: #use-cases
 [4]: {% image_buster /assets/img_archive/Campaign_Connector1.png %}
 [5]: {% image_buster /assets/img_archive/Campaign_Connector2.png %}
 [6]: {% image_buster /assets/img_archive/Campaign_Connector3.png %}
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
-[8]: #delivery-rules

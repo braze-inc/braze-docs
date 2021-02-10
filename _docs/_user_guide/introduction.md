@@ -19,7 +19,7 @@ user_menu_list:
   - name: Logging Into Braze
     image: /assets/img/sign-in.png
     bg_color: '#ff9349'
-    link: /docs/user_guide/administrative/logging_in_and_security/logging_in/
+    link: /docs/user_guide/administrative/access_braze/getting_your_account/
     description: Log into our platform!
   - name: Create a Canvas
     bg_color: '#f7918e'
@@ -37,7 +37,7 @@ popular_topic_list:
   - name: Personalized Messaging & Liquid
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
   - name: Log Into Braze
-    link: /docs/user_guide/administrative/logging_in_and_security/logging_in/
+    link: /docs/user_guide/administrative/access_braze/getting_your_account/
   - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
   - name: News Feeds

@@ -53,8 +53,6 @@ Clicking on push action buttons with background activation mode will only dismis
 
 >  If you wish to create your own custom notification categories, see our [action button customization][37] documentation.
 
-See our sample code [here][33] for `UserNotification.framework` and [here][32] for `UIUserNotificationSettings`.
-
 ## Step 2: Enable Interactive Push Handling
 
 If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. 
@@ -113,33 +111,8 @@ We strongly recommend that people using `handleActionWithIdentifier` begin using
 
 
 
-[0]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
-[1]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
-[2]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
-[3]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
-[4]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
-[5]: https://dashboard-01.braze.com/app_settings/app_settings
-[6]: {% image_buster /assets/img_archive/push_cert_upload.png %} "push upload example image"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L34-62 "sample AppController.mm"
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
-[11]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3 "iOS Lifecycle Methods"
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
-[17]: {{site.baseurl}}/assets/img_archive/push_example_category.png
-[18]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:
-[19]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
-[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L218-L223
-[33]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L245-L249
-[34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: #push-action-buttons-integration
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
-[38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[40]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623068-application?language=objc

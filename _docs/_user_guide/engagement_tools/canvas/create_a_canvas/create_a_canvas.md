@@ -3,7 +3,7 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
-description: "This reference article covers the neccesary steps involved in creating, maintaining, and testing a Canvas."
+description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
 ---
 
 # Creating a Canvas
@@ -94,7 +94,7 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
   {% tab Action-Based Delivery %}
     __Action-Based Delivery__<br>
-    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event.
+    Additionally, you can choose to enter users into a Canvas when they perform certain triggers using Action-Based Delivery. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. Note that action-based delivery is unavailable for Canvas steps with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
@@ -156,11 +156,11 @@ You can add additional variants by pressing the + button. When you add new varia
 
 ### Editing a Step
 
-Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
+Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding Campaign with time delays between messages:
 
 ![Canvas One Day][13]
 
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and exception events:
+Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events][56]:
 
 ![Canvas Exception Events][14]
 
@@ -177,6 +177,10 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
+Select desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+
+![Canvas Advancement Behavior][20]
+
 Press the "Done" button once you've finished configuring your Step.
 
 {% tabs local %}
@@ -187,7 +191,7 @@ Canvas Entry Properties are the properties mapped by you when triggering or sche
 
 __Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+For more information on the Canvas Entry Object and Properties, check out our [Documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/#canvas-entry-properties-object).
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}
@@ -200,11 +204,16 @@ For more information on Custom Event Properties, check out our [Documentation]({
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
+Did you know you can include Canvas step names in your messages and link templates?<br>
+Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
+{% endalert %}
+
 ### Add More Steps
 
 Add more Steps by pressing the blue plus icon:
 
-![Canvas More Step][17]
+![Canvas More Step][17]{: style="max-width:75%;"}
 
 ## Step 4: Use Multivariate Testing Using Canvas
 
@@ -241,7 +250,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [18a]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
-[link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
+[20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
 [21]:{% image_buster /assets/img_archive/Journey_2.png %}
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
@@ -252,15 +261,10 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [33]:{% image_buster /assets/img_archive/Canvas_Branch_3.png %}
 [34]:{% image_buster /assets/img_archive/Canvas_Branch_4.png %}
 [35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
-[36]: https://www.braze.com/contact/
-[37]: {{site.baseurl}}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
-[41]: {% image_buster /assets/img_archive/Journey_8-audience_options.png %}
-[42]: {% image_buster /assets/img_archive/Journey_11-audience_options.png %}
-[45]: {% image_buster /assets/img_archive/step_priority.png %}
-[46]: {% image_buster /assets/img_archive/canvas_priority.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
 [51]: {% image_buster /assets/img/Basics1.gif %}
 [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %}
 [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %}
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+[56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/

@@ -18,13 +18,13 @@ description: "This reference article goes over the event object, what it is, and
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 
-## What is an Event Object?
+## What is the Event Object?
 
 An Event Object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each Event Object in the events array represents a single occurrence of a Custom Event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the "Tracking Custom Events" page under the __analytics tab__ of the various platforms. We have linked several for you.
+You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the "Tracking Custom events" page under the __analytics tab__ of the various platforms. We have linked several for you.
 
-- Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
+- Tracking Custom events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
 
 ### Event Object
 
@@ -47,10 +47,8 @@ You can check out how to set up custom events for a specific platform by reading
 ## Event Properties Object
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
 
-### Event Properties
-Event properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, but __does not__ allow you to segment based on these properties. However, Braze does allow you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
-
-While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
+### Event Property Persistence
+Event Properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent Events. By default, they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.
 
 #### Event Example Request
 
@@ -72,8 +70,8 @@ Authorization: Bearer YOUR_REST_API_KEY
       "name" : "rented_movie",
       "time" : "2013-07-16T19:20:45+01:00",
       "properties": {
-      "movie": "The Sad Egg",
-      "director": "Dan Alexander"
+        "movie": "The Sad Egg",
+        "director": "Dan Alexander"
       }
     },
     {
@@ -96,4 +94,5 @@ Using the example provided above, we can see that someone watched a trailer rece
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"

@@ -13,7 +13,7 @@ description: "This article outlines details about the Send Campaign Messages via
 ---
 {% api %}
 # Sending Campaign Messages via API Triggered Delivery
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
 
@@ -41,7 +41,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "trigger_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, Connected Audience Object) see Connected Audience,
   // Including 'audience' will only send to users in the audience
@@ -50,8 +50,8 @@ Authorization: Bearer YOUR_REST_API_KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User Alias Object) User Alias of user to receive message,
       "external_user_id": (optional, string) External Id of user to receive message,
-      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above),
-      "send_to_existing_only": (optional, boolean) defaults to true,
+      "trigger_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with trigger_properties above),
+      "send_to_existing_only": (optional, boolean) defaults to true, if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     },
   ]
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Required|String|See Campaign Identifier|
 |`send_id`| Optional | String | See Send Identifier |
-|`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
+|`trigger_properties`|Optional|Object|Personalization key value pairs that will apply to all users in this request|
 |`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
 |`audience`|Optional|Connected Audience Object|See Connected Audience|
 |`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Campaign|
@@ -161,35 +161,12 @@ Message sending endpoint responses will include the message’s `dispatch_id` fo
 
 __Using the Attributes Object in Campaigns__
 
-Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attribute and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by race conditions.
+Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
-{% details Click to read about the Benefits of using the Attributes Object with this Endpoint %}
-
-When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds for the user to be created in Braze's system or for the data to propagate to the user's profile.
-
-When requests are made to the `users/track` and `messaging` endpoints at around the same time, Braze cannot guarantee that the request to the `users/track` endpoint will be processed before the request to the `messaging` endpoint. This can result in race conditions that can impact messaging: for example, a user may not yet have been created in Braze's system when a request to the `campaigns/trigger/send` endpoint is processed, resulting in the user not receiving an API-triggered push campaign.
-
-This is especially useful when you want to guarantee that a user has been created or that new data has populated to a user's profile before a message is sent to a user.
-- _For example, you might want to send an order confirmation to a customer that just registered. Because the user's email information is not yet in Braze, you'll want to make sure that Braze processes the user's email address before the order confirmation campaign is sent to them._
-- _Another example is ensuring that user attributes needed for campaign segmentation are processed before the campaign is sent. You might have a segment on your API triggered campaign that references an attribute value like gender, which is provided by the user during the registration process. If the attribute isn't updated on the user's profile before the campaign segmentation is evaluated, the user will not get the campaign._
-
-Use the Attributes Object in this endpoint to guarantee that:
-
-- Users are created before a request to the `campaign/trigger/send` endpoint is processed.
-- User attributes are updated before a request to the `campaign/trigger/send` endpoint is processed.
-
-{% alert important %}
-This attribute object will __not__ create anonymous users by user alias.
-{% endalert %}
-
-Attributes that are included in this object will be processed __before__ Braze begins to send the campaign. If the ```send_to_existing_only``` flag is set to false, and an `external_user_id` does not exist in Braze's database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign.
-{% enddetails %}
-<br>
 {% alert important %}
 Looking for Create Send Endpoint for Canvases? Check out the documentation [here]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
 {% endalert %}
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[42]: {{site.baseurl}}/api/parameters/#broadcast
+

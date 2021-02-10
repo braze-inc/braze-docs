@@ -17,3 +17,7 @@ When analyzing the performance of a specific News Feed card, you can export the 
     - Clickthrough Rate
     - Clicks
     - Unique Clicks
+
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}

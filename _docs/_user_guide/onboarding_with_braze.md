@@ -1,5 +1,5 @@
 ---
-page_order: 0
+page_order: 0.1
 nav_title: Onboarding with Braze
 layout: featured
 guide_top_header: "Welcome to Braze!"

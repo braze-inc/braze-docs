@@ -37,6 +37,32 @@ Within your `AppDelegate.cs` file, add the following snippet within your `Finish
 
 See the `AppDelegate.cs` file in the [TestApp.XamariniOS][10] sample app.
 
+## Step 3: Add your SDK endpoint to your Info.plist file
+
+Within your `Info.plist` file, add the following snippet:
+
+>  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [App Settings][5] page.
+
+```
+<key>Appboy</key>
+<dict>
+ <key>Endpoint</key>
+ <string>YOUR-SDK-ENDPOINT</string>
+</dict>
+```
+
+You can optionally include verbose logging by including the following snippet:
+
+```
+<key>Appboy</key>
+<dict>
+ <key>LogLevel</key>
+ <string>0</string>
+ <key>Endpoint</key>
+ <string>YOUR-SDK-ENDPOINT</string>
+</dict>
+```
+
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
@@ -44,9 +70,7 @@ Braze should now be collecting data from your application and your basic integra
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
 
 
-[2]: http://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
-[4]: #add-api-calls
 [5]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [7]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/src/ios-unified
 [9]: https://www.nuget.org/

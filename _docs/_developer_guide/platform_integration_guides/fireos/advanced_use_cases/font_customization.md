@@ -7,7 +7,7 @@ page_order: 7
 
 ## Font Customization
 
-Fonts in the Braze SDK can be set via XML using the Support Library version 26.0.0 or above using the [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
+Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
 
 ### Create A Font Family
 
@@ -18,7 +18,7 @@ The following is an example custom font family definition using the [font family
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <!--Note: As of Android Support Library 26.0.0, you must declare both sets of attributes
+  <!--Note: You must declare both sets of attributes
       to ensure your fonts load on devices running Android 8.0 (API level 26) or lower.
       See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
 
@@ -52,7 +52,9 @@ For example, the following styles override would use the `bungee` font family fr
 </style>
 ```
 
->  Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
+{% alert warning %}
+  Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
+{% endalert %}
 
 [1]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html
 [2]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family

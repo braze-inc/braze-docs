@@ -6,11 +6,9 @@ page_order: 0
 ---
 # Overview
 
+![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
-
-Sample push notification:
-
-![Sample Push][27]{: width="20%"}
 
 Check out [our help documentation][8] for push best practices.
 
@@ -281,7 +279,7 @@ The icons pictured below are examples of properly designed icons:
 
 ##### Specifying Icons in appboy.xml
 
-- Braze allows you to configure your notification icons by specifying drawable resources in your [`appboy.xml`][12]:
+- Braze allows you to configure your notification icons by specifying drawable resources in your `appboy.xml`:
 
 ```xml
 <drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
@@ -294,7 +292,7 @@ Setting a large notification icon is optional but recommended.
 
 ##### Specifying Icon Background Color
 
-- The notification icon background color can be overriden in your [appboy.xml][12]. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
+- The notification icon background color can be overriden in your `appboy.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
 
 ```xml
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
@@ -385,34 +383,17 @@ See the equivalent configuration for your `appboy.xml`. Note that the class name
 <string name="com_appboy_push_deep_link_back_stack_activity_class_name">your.package.name.YourMainActivity</string>
 ```
 
-Back stack configuration is only available on SDK 2.1.4 and above.
-
 ### Step 5: Define Notification Channels
 
-Braze SDKs 2.1.0 and above support [Android O Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
+The Braze Android SDK supports [Android Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
 To set the user facing name of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelName()`][72].
 
 To set the user facing description of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelDescription()`][73].
 
-If you are an existing customer who is transitioning to Android O, you should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
+You should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
-
-#### Notification Channel Creation by SDK
-
-{% tabs %}
-{% tab 2.1.0 and Above %}
-
-The default notification channel creation will occur even if your app does not target Android O. If you would like to avoid default channel creation until your app targets Android O, **do not upgrade to this version**.
-
-{% endtab %}
-{% tab Lower than 2.1.0 %}
-
-For SDK versions lower than `2.1.0`, and if your app targets `API 25` or lower, you do not need to define channels in your application.
-
-{% endtab %}
-{% endtabs %}
 
 ### Step 6: Test Notification Display and Analytics
 
@@ -453,16 +434,22 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
-If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
+If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key value pairs sent either via the dashboard or the messaging APIs:
+
+Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-// factory method implemented in your custom IAppboyNotificationFactory
-Notification createNotification(AppboyConfigurationProvider appConfigurationProvider, Context context, Bundle notificationExtras, Bundle appboyExtras) {
-  // example of getting notification title
-  String title = notificationExtras.getString(Constants.APPBOY_PUSH_TITLE_KEY);
+// Factory method implemented in your custom IAppboyNotificationFactory
+@Override
+public Notification createNotification(BrazeNotificationPayload brazeNotificationPayload) {
+  // Example of getting notification title
+  String title = brazeNotificationPayload.getTitleText();
+
+  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  String customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key");
 }
 ```
 
@@ -470,10 +457,13 @@ Notification createNotification(AppboyConfigurationProvider appConfigurationProv
 {% tab KOTLIN %}
 
 ```kotlin
-// factory method implemented in your custom IAppboyNotificationFactory
-fun createNotification(appConfigurationProvider: AppboyConfigurationProvider, context: Context, notificationExtras: Bundle, appboyExtras: Bundle): Notification {
-  // example of getting notification title
-  val title = notificationExtras.getString(Constants.APPBOY_PUSH_TITLE_KEY)
+// Factory method implemented in your custom IAppboyNotificationFactory
+override fun createNotification(brazeNotificationPayload: BrazeNotificationPayload): Notification {
+  // Example of getting notification title
+  val title = brazeNotificationPayload.getTitleText()
+
+  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  val customKvp = brazeNotificationPayload.getAppboyExtras().getString("my_key")
 }
 ```
 
@@ -508,7 +498,7 @@ setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificatio
 {% endtab %}
 {% endtabs %}
 
-The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.  See [`DroidboyApplication.java`][36] for an example.
+The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
 Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
@@ -534,9 +524,9 @@ setCustomAppboyNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
+### Custom Handling For Push Receipts, Opens, Dismissals, and Key Value Pairs
 
-Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
+Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
 
 #### Step 1: Register your BroadcastReceiver
 
@@ -563,15 +553,84 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `APPBOY_PUSH_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `appboy.xml`.
 
-For a detailed custom receiver example, please see [`AppboyBroadcastReceiver.java`][14] in our Custom Broadcast sample app. Visit this page for a basic tutorial on creating broadcast receivers: [Android Receiver Help][26]
+For a detailed custom receiver example, please see the below:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class CustomBroadcastReceiver extends BroadcastReceiver {
+  private static final String TAG = CustomBroadcastReceiver.class.getName();
+
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    String packageName = context.getPackageName();
+    String pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX;
+    String notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX;
+    String notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX;
+
+    String action = intent.getAction();
+    Log.d(TAG, String.format("Received intent with action %s", action));
+
+    if (pushReceivedAction.equals(action)) {
+      Log.d(TAG, "Received push notification.");
+    } else if (notificationOpenedAction.equals(action)) {
+      AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent);
+    } else if (notificationDeletedAction.equals(action)) {
+      Log.d(TAG, "Received push notification deleted intent.");
+    } else {
+      Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action));
+    }
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class CustomBroadcastReceiver : BroadcastReceiver() {
+  override fun onReceive(context: Context, intent: Intent) {
+    val packageName = context.packageName
+    val pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX
+    val notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX
+    val notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX
+
+    val action = intent.action
+    Log.d(TAG, String.format("Received intent with action %s", action))
+
+    when (action) {
+      pushReceivedAction -> {
+        Log.d(TAG, "Received push notification.")
+      }
+      notificationOpenedAction -> {
+        AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent)
+      }
+      notificationDeletedAction -> {
+        Log.d(TAG, "Received push notification deleted intent.")
+      }
+      else -> {
+        Log.d(TAG, String.format("Ignoring intent with unsupported action %s", action))
+      }
+    }
+  }
+
+  companion object {
+    private val TAG = CustomBroadcastReceiver::class.java.name
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-#### Step 3: Access Custom Key-Value Pairs
+#### Step 3: Access Custom Key Value Pairs
 
-Custom key-value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
+Custom key value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
 
 {% tabs %}
 {% tab JAVA %}
@@ -580,7 +639,7 @@ Custom key-value pairs sent either via the dashboard or the messaging APIs will 
 // intent is the Braze push intent received by your custom broadcast receiver.
 String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
 
-// The extras bundle extracted from the intent contains all custom key-value pairs.
+// The extras bundle extracted from the intent contains all custom key value pairs.
 Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
@@ -594,7 +653,7 @@ String myExtra = extras.getString("my_key");
 // intent is the Braze push intent received by your custom broadcast receiver.
 val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
 
-// The extras bundle extracted from the intent contains all custom key-value pairs.
+// The extras bundle extracted from the intent contains all custom key value pairs.
 val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.
@@ -608,35 +667,19 @@ val myExtra = extras.getString("my_key")
 Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
 {% endalert %}
 
-[4]: #displaying-push
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomAppboyNotificationFactory-com.appboy.IAppboyNotificationFactory-
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNotificationFactory.html
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [8]: {{site.baseurl}}/help/best_practices/push/overview/
-[10]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[11]: https://support.google.com/cloud/answer/6158840?hl=en
-[12]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
-[13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "Custom Broadcast Sample Project"
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[23]: #step-4-registering-opens-and-receipts
-[26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
-[27]: {% image_buster /assets/img_archive/Push_Android_2.png %}
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
-[29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
-[30]: #step-3-enable-automatic-registration
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
-[36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
 [37]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [38]: {% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon"
 [40]: http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation"
 [41]: {% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action"
 [42]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[43]: https://developer.android.com/training/permissions/index.html
 [45]: https://firebase.google.com/docs/cloud-messaging/
-[46]: https://firebase.google.com/docs/cloud-messaging/android/client
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
 [50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
@@ -647,7 +690,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[60]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push
 [61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
 [62]: https://developer.android.com/preview/features/notification-channels.html
 [63]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
@@ -656,7 +698,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
@@ -664,3 +705,4 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
+[77]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/push/BrazeNotificationPayload.html

@@ -44,7 +44,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Unique Impressions
-    description: Also known as Unique Daily Impression, is the total number of people who actually received and viewed the in-app message or card in a day. This number is received from Braze.
+    description: The total number of users who received and viewed a given in-app message or card. The count should not increment the second time a user views an in-app message or card. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
@@ -56,13 +56,13 @@ glossaries:
     tags:
       - All
   - name: Sends to Carrier
-    description: This stat is the sum of Confirmed Deliveries, Rejections and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+    description: This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
     calculation: Count
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of messages successfully sent to and received by eligible users.
-    calculation: (Sends - Bounces) / (Sends)
+    description: The total number of message requests that are accepted by the receiving email server.
+    calculation: Count
     tags:
       - All Push
       - Email
@@ -128,7 +128,7 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Total Clicks
-    description: The total number (and percentage) of users who clicked within the delivered email or card.
+    description: The total number (and percentage) of users who clicked within the delivered email or card. Please note that clicks on an unsubscribe link will not be counted towards total clicks.
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
@@ -142,7 +142,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Body Clicks
-    description: Occurs when someone clicks on a slideup, modal, or full-screen in-app message that has no buttons.
+    description: Occurs when someone clicks on a slide-up, modal, or full-screen in-app message that has no buttons.
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message
@@ -196,4 +196,19 @@ glossaries:
     calculation: (Unique Dismissals) / (Unique Impressions)
     tags:
       - Content Cards
+  - name: AMP Clicks
+    description: The total number of users who clicked into the AMP version of your AMP HTML Email.
+    tags:
+      - Email
+  - name: Received
+    description: Content Cards - Received when users view the card in the app.<br>Push - Received when messages are sent from the Braze server to the push provider.<br>Email - Received when messages are sent from the Braze server to the email service provider.<br>SMS/MMS - "Delivered" once the SMS provider receives confirmation from the upstream carrier and destination device.<br>In-App Message - Received at the time of display based on the trigger action defined. 
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - SMS
+
 ---

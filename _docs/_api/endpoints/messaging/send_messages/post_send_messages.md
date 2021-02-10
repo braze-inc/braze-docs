@@ -14,7 +14,7 @@ description: "This article outlines details about the Send Messages Immediately 
 ---
 {% api %}
 # Sending Messages Immediately via API Only
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR_REST_API_KEY
    "user_aliases": (optional, array of User Alias Object) see User Alias,
    "segment_id": (optional, string) see Segment Identifier,
    "audience": (optional, Connected Audience Object) see Connected Audience,
-   "campaign_id": (optional, string) see Campaign Identifier,
+   "campaign_id": (optional*, string) *Required if you wish to track campaign states. see Campaign Identifier,
    "send_id": (optional, string) see Send Identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
@@ -59,6 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
      "kindle_push": (optional, Kindle/FireOS Push Object),
      "web_push": (optional, Web Push Object),
      "email": (optional, Email Object),
+     "webhook": (optional, Webhook object),
      "content_card": (optional, Content Card Object),
      "sms": (optional, SMS Object)
    }
@@ -74,7 +75,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`user_aliases`|Optional|Array of User Alias Objects|See User Alias Object|
 |`segment_id `| Optional | String | See Segment Identifier |
 |`audience`|Optional|Connected Audience Object|See Connected Audience|
-|`campaign_id`|Required|String|See Campaign Identifier|
+|`campaign_id`|Optional*|String| *Required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc) on the Braze dashboard. <br>See Campaign Identifier for more information|
 |`send_id`| Optional | String | See Send Identifier |
 |`override_frequency_capping`|Optional|Boolean|Ignore frequency_capping for campaigns, defaults to false |
 |`recipient_subscription_state`|Optional|String|Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed'|
@@ -101,7 +102,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
 - [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
 ### Example Request

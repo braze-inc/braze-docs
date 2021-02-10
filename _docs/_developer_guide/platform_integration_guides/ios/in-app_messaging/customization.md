@@ -10,14 +10,14 @@ page_order: 1
 All of Braze's in-app message types are highly customizable across messages, images, [Font Awesome][26] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard][13]. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
 {% alert important %}
-By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+By default, in-app messages are enabled after completing the standard SDK integration, including GIF support.
 <br><br>
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
-## Key-Value Pair Extras
+## Key Value Pair Extras
 
-`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.
+`ABKInAppMessage` objects may carry key value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.
 
 ## Setting Delegates
 
@@ -179,7 +179,7 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```swift    
   // Set inAppMessage orientation to portrait
   inAppMessage.orientation = ABKInAppMessageOrientation.portrait
-    
+
   // Set inAppMessage orientation to landscape
   inAppMessage.orientation = ABKInAppMessageOrientation.landscape
 ```
@@ -254,6 +254,7 @@ If the IAM campaign is not displaying when the session has been started, make su
 ### Hiding the Status Bar During Display
 
 For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+
 
 ### Logging Impressions and Clicks
 
@@ -420,6 +421,30 @@ if inAppMessage is ABKInAppMessageImmersive {
 
 >  When an in-app message has buttons, the only click actions that will be executed are the ones on the ABKInAppMessageButton model. The in-app message body will not be clickable even though the ABKInAppMessage model will have the default click action ("News Feed") assigned.
 
+## Dismiss Modal on Outside Tap
+
+The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
+
+To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
+
+Example `Info.plist` contents:
+
+```
+<key>Appboy</key>
+<dict>
+	<key>DismissModalOnOutsideTap</key>
+	<boolean>YES</boolean>
+</dict>
+```
+
+### Description of Dismiss Modal on Outside Tap
+
+| DismissModalOnOutsideTap | Description |
+|----------|-------------|
+| YES       | Modal in-app messages will be dismissed on outside tap     |
+| NO        | Default, modal in-app messages will not be dismissed on outside tap |
+{: .reset-td-br-1 .reset-td-br-2}
+
 ## Display In-App Messages In a Custom View Controller
 
 In-app messages can also be displayed within a custom view controller which you pass to Braze. Braze will animate the customized in-app message in and out, as well as handle analytics of the in-app message. The view controller must meet the following requirements:
@@ -519,38 +544,18 @@ For additional information see the following header files:
 - [`ABKInAppMessage.h`][14]
 - [`ABKInAppMessageController.h`][15]
 - [`ABKInAppMessageControllerDelegate.h`][16]
-- [`ABKInAppMessageView.h`][17]
-- [`ABKInAppMessageViewController.h`][18]
 
 ## Implementation Samples
 
 See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageViewController.m`][19] in the in-app message sample app.
 
-[1]: #customize-inAppMessage-dashboard
-[2]: #customize-inAppMessage-code
-[3]: #set-delegate
-[4]: #customize-inAppMessage-display
-[5]: #before-display
-[6]: #manual-cue
-[7]: #situational-display
-[8]: #inAppMessage-click
-[9]: #custom-view
-[10]: #custom-inAppMessage
-[11]: #custom-complete
-[12]: #method-declarations
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
-[17]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageView.h
-[18]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageViewController.h
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
-[21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates
 [26]: http://fortawesome.github.io/Font-Awesome/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
-[29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
 [32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
@@ -558,7 +563,6 @@ See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageView
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
 [37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
-[38]: #in-app-mssage-ui-delegate
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}

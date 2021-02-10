@@ -3,7 +3,7 @@ nav_title: Campaigns
 page_order: 2
 layout: dev_guide
 guide_top_header: "Campaigns"
-guide_top_text: "If you want to engage with your users on a case by case basis, you can send them a campaign using any of our <a href='/docs/user_guide/message_building_by_channel/'>Messaging Channels</a>. <br> <br> Select any of the following topics to see articles you may be interested in."
+guide_top_text: "If you want to engage with your users with a single message step, you can send them a Campaign using any supported <a href='/docs/user_guide/message_building_by_channel/'>Messaging Channels</a>. Most multi-step user journeys are better created as <a href='/docs/user_guide/engagement_tools/canvas/'>Canvases</a>.<br> <br> Select any of the following topics to see articles you may be interested in."
 
 tools: campaigns
 page_type: landing

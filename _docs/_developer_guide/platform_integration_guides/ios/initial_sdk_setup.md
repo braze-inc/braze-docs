@@ -13,6 +13,9 @@ guide_featured_list:
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/
   image: /assets/img/cocoapods.png
+- name: Swift Package Manager (SPM)
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/
+  image: /assets/img/swift.png
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/
   image: /assets/img/carthage.jpeg

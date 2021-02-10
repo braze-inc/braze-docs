@@ -6,7 +6,7 @@ page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to send, store, and otherwise coordinate your data across different tools and providers."
 
 layout: partner_page
-partner_api: "https://www.braze.com/api/v1/partners.json"
+partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Data & Infrastructure Agility"
@@ -15,17 +15,8 @@ partner_top_text: "These partners allow you to send, store, and otherwise coordi
 valid_partner_list:
   - name: Segment
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
-    alt:
-      - title: Currents
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
-    alt:
-      - title: Personas
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/
   - name: mParticle
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
-    alt:
-      - title: Currents
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
   - name: Tealium
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
   - name: Amazon S3
@@ -44,6 +35,7 @@ valid_partner_list:
     url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/
   - name: Xamarin
     url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
-
+  - name: RudderStack
+    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 
 ---

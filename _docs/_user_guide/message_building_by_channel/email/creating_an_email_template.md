@@ -13,8 +13,6 @@ description: "Email messages are great for delivering content to the user on the
 
 Click on the __Templates & Media__ tab under __Engagement__ in the navigation bar. This will open to the __Email Template Gallery__.
 
-![Email Templates][1]
-
 ## Step 2: Create or Choose a Template
 
 Now, you can create a new template, or edit an existing template (plain or [mobile responsive][8]). If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
@@ -30,7 +28,9 @@ Braze will add a footer with an unsubscribe link at the bottom of your email by 
 If you want to see how your email looks before sending it out to your users, you can send a test email to an address of your choosing through the Settings tab in the top right corner.
 
 ![Enter Email Template Editing][3]
-![E-Mail Template Editor Guide][6]
+<br>
+<br>
+![E-Mail Template Editor Guide][4]
 
 Our editor supports **HTML Autocomplete** triggered by the 'Tab' key.  It should be used on naked HTML tags. For example, use of tab on `head` will result in:
 {% raw %}
@@ -60,20 +60,17 @@ Be sure to save your template by clicking the "Save Template" button in the bott
 ## Using Your Templates in API Campaigns {#api_for_email_templates}
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any Email Template created in Braze.
 
-![Save Template][4]
+![Save Template][6]
 
 ## Managing Email Templates
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 
-[1]: {% image_buster /assets/img_archive/email_templates1_new.png %}
-[2]: {% image_buster /assets/img_archive/email_templates2_new.png %}
-[3]: {% image_buster /assets/img_archive/email_templates3a_new.png %}
-[4]: {% image_buster /assets/img_archive/email_templates4-new.png %}
+[2]: {% image_buster /assets/img/email_templates/template2.jpg %}
+[3]: {% image_buster /assets/img/email_templates/template3.jpg %}
+[4]: {% image_buster /assets/img/email_templates/template4.jpg %}
 [cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
-[5]: {{site.baseurl}}/assets/img_archive/email_temlplates5.png
-[6]: {% image_buster /assets/img_archive/email_templates3b_new.png %}
+[6]: {% image_buster /assets/img/email_templates/template5.jpg %}
 [7]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
 [8]: {{site.baseurl}}/help/release_notes/2017/august/#mobile-responsive-email-templates
-[9]: {% image_buster /assets/img_archive/step1and2htmluploader.gif %}

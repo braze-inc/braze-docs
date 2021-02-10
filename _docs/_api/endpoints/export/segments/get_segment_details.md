@@ -56,7 +56,12 @@ Authorization: Bearer YOUR_REST_API_KEY
       "updated_at" : (string) date last updated as ISO 8601 date,
       "name" : (string) segment name,
       "description" : (string) human-readable description of filters,
+      "text_description" : (string) segment description, 
       "tags" : (array) tag names associated with the segment
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
+
 {% endapi %}

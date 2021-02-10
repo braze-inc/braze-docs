@@ -19,7 +19,7 @@ Partnership Documentation Overview
 - [Review Process](#review)
 
 {% alert important %}
-Note that this partnership guide is for NEW Braze partners that do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update your pages as you normally would. 
+Note that this partnership guide is for NEW Braze partners that __do not have existing documentation__ already hosted on our site. If you are an existing partner updating your documentation, navigate to your partner page located in: `braze-docs` -> `_docs` -> `_partners` and update your pages as you normally would. 
 {% endalert %}
 
 ## Step 1: Set up Your Local Environment {#setup_env}
@@ -37,7 +37,7 @@ After setting up your local environment, make sure to sign our [CLA](https://www
 
 To create your partner page, open the braze-docs repository and navigate to the `wip_partnerships` folder within the repo. <br>This folder can be found by following the file path: `braze-docs` -> `_docs` -> `_hidden` -> `wip_partnerships`.
 
-Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_partner_name/). Navigate to the `partnerships_files` folder, create a partner folder, name it, and copy this template into your folder and get to work!
+Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_partner_name/). Next, create a partner folder, name it, copy this template into your folder, and get to work!
 
 ### Useful Resources
 
@@ -155,7 +155,7 @@ And at the end of your document, add your link.
 
 ### Liquid
 
-Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a liquid warning in markdown.
+Partner integrations often leverage our Liquid capabilities within the dashboard. If you plan on including Liquid code snippets, they must be wrapped between {&#37; raw &#37;} and {&#37; endraw &#37;} or you'll get a Liquid warning in markdown.
 {% raw %}
 
 {&#37; raw &#37;}<br>
@@ -186,11 +186,9 @@ Once you have made the adequate changes to your partnership doc, save your docum
 Within the Braze docs GitHub repository, you will be able to find your branch. If your document is completed and ready to review, navigate to your forked repo in Github and select `New Pull Request`. Next, select how you would like your forked Branch to be merged, name your request your partnership name and provide any relevant information that we can use to reference when reviewing your content. 
 
 1. Set up your branch to be merged in a similar fashion as shown below.<br>![Merge Branches][2]<br><br>
-2. Name your Pull Request as your Partnership Name<br><br>
+2. Name your Pull Request as "Partnership Name - Partner Docs"<br><br>
 3. Provide any relevant information that can help the Braze documentation team confirm your changes, as well as your __Braze Product Manager__ so we can reach out to them to get in contact with you about your changes if needed.<br><br>
-4. Tag @KellieHawks, @Timothy-Kim, and the @Growth team, and our team will take a look.<br><br>
-5. Add a `Done` and `Braze Partnerships` label so that we can go ahead and evaluate your addition to the docs website.<br><br>
-6. Lastly, in your submitted pull request, __make sure to check the "Allow edits from maintainers" box__ that can be found on the right hand side of the Github PR page. This allows the Braze documentation team to freely edit your pull request before we merge it into the braze-docs repo. ![Maintainers][3]
+4. After you are done making changes, tag @KellieHawks and @Timothy-Kim in a comment within the PR, and our team will take a look.<br><br>
 
 ## Review Process {#review}
 
@@ -202,4 +200,3 @@ And you are done! Thanks for contributing to Braze Docs!
 
 [1]: {% image_buster /assets/img/partner_template/partner_folder.png %}
 [2]: {% image_buster /assets/img/partner_template/partner_merge.png %}
-[3]: {% image_buster /assets/img/partner_template/maintainers.png %}

@@ -22,6 +22,7 @@ tool:
 | Target Audience                  |                   |
 | Stop / Resume Initial Condition |                   |
 | Workflow Name                    |                   |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Canvas Graph
 
@@ -32,6 +33,7 @@ tool:
 | Add New Connections                            | Deleting Connections |
 | Add New Variants                               |                      |
 | Variant Distribution                           |                      |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Individual Step
 
@@ -44,6 +46,7 @@ tool:
 | Audience                            |                                              |
 | Exception Events                    |                                              |
 | Delays / Windows                    |                                              |
+{: .reset-td-br-1 .reset-td-br-2}
 
 There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
 
@@ -58,3 +61,7 @@ There are a number of things to know if you plan to edit or add more steps to an
 In Canvas, if a variant percentage is modified, you will find that the users may be redistributed to other variants.
 
 Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a canvas variant) - __they will receive the same variant unless the variant percentages are modified__. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
+
+## Local Send Time
+
+Local send time Canvases can be edited up to 24 hours prior to the schedules send time. This window is called is "safe zone". Please note that if you intend to make changes to your Canvas that require you to make a new Canvas entirely, please remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for timezone sending. 

@@ -307,6 +307,10 @@ hide_toc: true
                   </div>
                   <input type="email" class="form-control" id="doc_email" maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
               </div>
+              <div class="form-group" id="doc_request_div">
+                <label for="doc_request" id="doc_request_label">    * What needs to be changed?</label>
+                <input type="text" name="Request_Subject" id="doc_request" maxlength="180" required="required" value="" placeholder="Enter your request" class="form-control" />
+              </div>
               <div class="form-group" id="doc_pm_div">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
@@ -315,102 +319,24 @@ hide_toc: true
               </label>
               </div>
               </div>
-              <div class="form-group" id="doc_release_div">
+
+              <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_release" name="Request_Release_Note">
-                <label class="form-check-label" for="doc_release">
-                Does this require Release Notes?
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_urgent" name="Request_Urgent">
+                <label class="form-check-label" for="doc_urgent">
+                Is this request Urgent?
               </label>
               </div>
               </div>
-              <div class="form-group" id="doc_request_div">
-                <label for="doc_request" id="doc_request_label">    * What is your request about?</label>
-                <input type="text" name="Request_Subject" id="doc_request" maxlength="80" required="required" value="" placeholder="Enter your request" class="form-control" />
-              </div>
-              <div class="form-group" id="doc_priority_div">
-              	<label for="doc_priority" id="doc_priority_label">    * How would you prioritize you request?</label>
 
-              	<div class="form-check">
-              		<input class="form-check-input" type="radio" value="P0" id="doc_priority_p0" name="Priority">
-              		<label class="form-check-label" for="doc_priority_p0">
-              		<b>Urgent</b>: Tasks that need to be completed as soon as possible
-              	</label>
-              	</div>
-              	<div class="form-check">
-              		<input class="form-check-input" type="radio" value="P1" id="doc_priority_p1" name="Priority">
-              		<label class="form-check-label" for="doc_priority_p1">
-              		<b>High Priority</b>: (Urgent + Important) Tasks with deadlines less than 2 weeks out, incorrect information in the docs (broken links, typo fixes)
-              	</label>
-              	</div>
-              	<div class="form-check">
-              		<input class="form-check-input" type="radio" value="P2" id="doc_priority_p2" name="Priority">
-              		<label class="form-check-label" for="doc_priority_p2">
-              		<b>Medium Priority</b>: (Not Urgent + Important) Tasks with deadlines over 2 weeks out/no definite deadline, correcting misleading documentation
-              	</label>
-              	</div>
-              	<div class="form-check">
-              		<input class="form-check-input" type="radio" value="P3" id="doc_priority_p3" name="Priority">
-              		<label class="form-check-label" for="doc_priority_p3">
-              		<b>Low Priority</b>: (Not Important) "Nice-to-Haves", tasks to be completed when the docs team has the time.
-              	</label>
-              	</div>
-              </div>
-              <div class="form-group" id="doc_category_div">
-                <label for="doc_category" id="doc_category_label">    * How would you categorize your request?</label>
 
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="Y" id="doc_category_newarticle" name="Request_Article">
-                  <label class="form-check-label" for="doc_category_newarticle">
-                  Creation of a new article or topic
-                </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="Y" id="doc_category_feature" name="Request_Feature">
-                  <label class="form-check-label" for="doc_category_feature">
-                  Documentation to be released alongside feature
-                </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="Y" id="doc_category_typo" name="Request_Typo">
-                  <label class="form-check-label" for="doc_category_typo">
-                  Typo/Edit/Link Fix
-                </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="Y" id="doc_category_misleading" name="Request_Misleading">
-                  <label class="form-check-label" for="doc_category_misleading">
-                  Certain existing documentation is misleading or incorrect
-                </label>
-                </div>
-                <div class="form-inline">
-                  <input class="form-check-input" type="checkbox" value="Y" id="doc_category_other" name="Request_Other">
-                  <label class="form-check-label" for="doc_category_other">
-                  Other                <input type="text" class="form-control" aria-label="Small" id="doc_category_other_text" name="Request_Other_Text" value="" placeholder="" aria-describedby="inputGroup-sizing-sm">
-
-                </label>
-
-                </div>
-
-              </div>
 
               <div class="form-group">
 
                 <label for="doc_description" id="doc_description_label">   * Please describe your request. </label>
 
-                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="What needs to be done for you to consider this request complete? Be as descriptive as possible." placeholder="What needs to be done for you to consider this request complete? Be as descriptive as possible."
+                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation." placeholder="What needs to be done for you to consider this request complete? Be as descriptive as possible.&#10;&#10;Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation."
                   rows="7"></textarea>
-              </div>
-
-              <!-- div class="form-group" id="doc_completion_date_div">
-                <label for="doc_completion_date" id="doc_completion_date_label">    * When should this be done by.</label>
-                <input type="date" name="Completion_Date" id="doc_completion_date" required="required" value="" placeholder="There is no guarantee that your request will be done by this date." class="form-control" />
-              </div -->
-              <div class="form-group">
-
-                <label for="doc_resources" id="doc_resources_label">   * Please link to relevant sites or other resources. </label>
-
-                <textarea name="Resources" class="form-control" id="doc_resources" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation."
-                  placeholder="Link to as many resources as necessary, including drive folders full of images. Include links to existing documentation that needs to be repaired as well as links that might need to be included in the documentation." rows="7"></textarea>
               </div>
 
               <div class="form-group">

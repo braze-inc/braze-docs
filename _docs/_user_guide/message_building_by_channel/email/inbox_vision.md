@@ -26,7 +26,7 @@ Once you make changes to a template, you will need to re-run the test to see the
 
 ## Code Analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML.  Code analysis shows the number of occurrences of each issue and provides insight into which HTML elements are not supported.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
 ![inboxvision2][2]
 ![inboxvision3][3]
@@ -48,6 +48,10 @@ Taking a screenshot takes longer than code analysis since we wait till the email
 
 {% details Can I trust the accuracy of your email test results? %}
 All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please [open a support ticket]({{site.baseurl}}/support_contact/).
+{% enddetails %}
+
+{% details Why is my email is not rendering? %}
+In general, if your email content relies on templating info such as user profile information, it will not work with Inbox Vision. This is because Braze templates in an empty user when we send emails using this feature.
 {% enddetails %}
 
 

@@ -26,8 +26,6 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-  See [appboy.xml][17] within the Droidboy Sample app for an example implementation.
-
 ### Step 2: Update AndroidManifest.xml
 
 - In your app's AndroidManifest.xml, add Amazon's namespace to the `<tt>manifest</tt>` tag.
@@ -83,10 +81,6 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   </receiver>
   ```
 
-  #### Implementation Example
-
-  See the [`AndroidManifest.xml`][13] in the Droidboy sample app.
-
 ### Step 3: Store Your ADM API Key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's `assets` folder.
@@ -130,7 +124,7 @@ If you need to handle ADM registration yourself, you should do the following:
 
 ### ADM Extras
 
-Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
+Users may send custom key value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key value pairs.
 
 Reserved Keys Include:
 
@@ -148,17 +142,10 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 
 [2]: #step-1-enable-adm
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
 [10]: https://developer.amazon.com/public
 [11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
 [12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
-[13]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [14]: https://developer.amazon.com/public/apis/engage/device-messaging
-[15]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/05-requesting-an-access-token"
-[16]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/06-sending-a-message
-[17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
-[20]: {{site.baseurl}}/download/amazon-device-messaging-1.0.1.jar
-[26]: http://www.compiletimeerror.com/2013/03/android-broadcast-receiver-in-detail.html#.U5nCZxYmbww "Android Receiver Tutorial"
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}

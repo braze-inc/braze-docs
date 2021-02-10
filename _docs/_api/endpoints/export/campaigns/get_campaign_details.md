@@ -57,6 +57,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "archived": (boolean) whether this Campaign is archived,
     "draft": (boolean) whether this Campaign is a draft,
     "name" : (string) campaign name,
+    "description" : (string) campaign description,
     "schedule_type" : (string) type of scheduling action,
     "channels" : (array) list of channels to send via,
     "first_sent" : (string) date and hour of first sent as ISO 8601 date,
@@ -83,7 +84,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": (string) description of the channel, such as "ios_push" or "android_push"
     "alert": (string) alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key value pairs provided
 }
 ```
 
@@ -97,7 +98,7 @@ The `messages` response will contain information about each message. Example mes
     "from": (string) from address and display name,
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key value pairs provided
 }
 ```
 
@@ -107,7 +108,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": "content_cards",
     "name": (string) name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "extras": (hash) any key value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
@@ -214,6 +215,9 @@ The `conversion_behaviors` array will contain information about each conversion 
     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 
 {% endapi %}

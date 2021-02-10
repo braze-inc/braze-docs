@@ -13,15 +13,12 @@ description: "This how-to article will walk you through how to set up and create
 
 Your developers have integrated the SDK, and the data from your users have begun pouring in. Now what? It's time to start segmenting your users. Follow the guide below or check out [our LAB Segmentation course](https://lab.braze.com/segmentation-course)!
 
-Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly and easily move your users from install to your KPIs.
-
-In order to build a house, you have to lay the first brick. Let's create your first segment.
+Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly and easily move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 ## Step 1: Navigating to the Segments Section
+![Segment1][1]{: style="float:right;max-width:20%;"}
 
-On the left-hand side under Engagement click on Segments.
-
-![Segment1][1]
+From the left-hand side of the Dashboard under Engagement, click on Segments.
 
 ## Step 2: Name Your Segment
 
@@ -29,7 +26,7 @@ Name your segment by describing the type of user you intend to filter for. This 
 
 Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to. 
 
-![Segment2][2]
+![Segment2][2]{: style="max-width:70%;"}
 
 ## Step 3: Choose Your App or Platform
 
@@ -47,9 +44,11 @@ Choosing "OR" for your filters means that your segment will contain users satisf
 
 Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
 
-## Step 5: Save Your Segment
+{% alert important %}
+Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
+{% endalert %}
 
-![Segment4][4]
+## Step 5: Save Your Segment
 
 Once you've clicked "Save" you're ready to start sending messages to your users!
 
@@ -66,5 +65,4 @@ You can unarchive the segment by navigating to it within Segments, then selectin
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/Segment4.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}

@@ -6,12 +6,13 @@ layout: api_page
 
 page_type: reference
 channel: Email
+alias: /blacklist/
 
 description: "User email addresses can be blacklisted via Braze using a RESTful API."
 ---
 {% api %}
 # Blacklist Emails
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/blacklist
 {% endapimethod %}
 

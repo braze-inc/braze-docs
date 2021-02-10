@@ -14,13 +14,13 @@ description: "This article outlines details about the User Track Braze endpoint.
 ---
 {% api %}
 # User Track
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/track
 {% endapimethod %}
 
-Use this endpoint to record Custom Events, Purchases, and update user profile attributes.
+Use this endpoint to record Custom events, Purchases, and update user profile attributes.
 
-User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain data for up to 75 users, including up to 75 events, 75 attribute updates, and 75 purchases per user. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
+User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain up to 75 events, 75 attribute updates, and 75 purchases. These can belong to different users, that is, each of the 75 events in a request can belong to 75 different users. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
 
 Please note that Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, check out our data point [documentation]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
 
@@ -141,7 +141,7 @@ Successful messages will be met with the following response:
 ```json
 {
   "message" : "success",
-  "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of attributes that were queued to be processed,
+  "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
   "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,,
   "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,,
 }
@@ -209,14 +209,3 @@ The segmentation tool will include these users regardless of whether they have e
 
 {% endapi %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[15]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/#user-data-collection
-[16]: #not-used-app
-[17]: http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"
-[21]: http://docs.python-requests.org/en/latest/ "Requests"
-[22]: https://rubygems.org/gems/multi_json "multiJSON"
-[23]: https://rubygems.org/gems/rest-client "Rest Client"
-[24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
-[26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields

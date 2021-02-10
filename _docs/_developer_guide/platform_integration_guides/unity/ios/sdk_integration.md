@@ -180,6 +180,7 @@ git clone git@github.com:Appboy/appboy-unity-sdk.git
 | __NO__ | the `Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
 | __YES__ | `Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
 | __YES__ | `Plugins/iOS` | `/<your-project>/Assets/Plugins/iOS` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Step 3: Generating Xcode project & Adding Required Classes
 
@@ -305,8 +306,6 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [2]: {% image_buster /assets/img_archive/unity-bundle-ios.png %} "Link iOS Binary and Library"
-[3]: #manual-initial-sdk-setup
-[4]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/IPhoneOSClientImp.html#//apple_ref/doc/uid/TP40008194-CH103-SW2
 [5]: #transitioning-from-manual-to-automated-integration
 [6]: http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html
 [7]: #step-1-importing-the-braze-unity-package
@@ -318,13 +317,10 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [13]: {% image_buster /assets/img_archive/unity_adding_iOS_SDK.png %}
 [14]: {% image_buster /assets/img_archive/unity_add_other_linker_flag.png %}
 [15]: {% image_buster /assets/img_archive/unity_add_framework_search_paths.png %}
-[16]: https://github.com/Appboy/appboy-unity-sdk/releases
-[17]: https://github.com/SDWebImage/SDWebImage
 [18]: {% image_buster /assets/img_archive/unity-ios-appboyconfig.png %}
 [19]: https://dashboard-01.braze.com/app_settings/app_settings
 [20]: #replace-xcode-project
 [21]: #append-to-xcode-project
-[22]: #importing-the-provided-unity-package
 [25]: {% image_buster /assets/img_archive/unity-ios-iam-listener.png %}
 [26]: #manual-iam-integration
 [27]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L14
@@ -334,7 +330,7 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [31]: #in-app-message-integration
 [32]: #news-feed-integration
 [33]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#push-notifications
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/w_in-app_messaging/#in-app-messaging
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/#in-app-messaging
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [36]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/z_advanced_use_cases/customizing_the_unity_package/#customizing-the-unity-package

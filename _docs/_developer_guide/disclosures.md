@@ -19,8 +19,8 @@ guide_featured_list:
   - name: Security Qualifications
     link: /docs/developer_guide/disclosures/security_qualifications/
     fa_icon: fas fa-user-shield
-  - name: GDPR
-    link: /docs/help/gdpr_compliance/
+  - name: Data Protection Technical Assistance
+    link: /docs/help/dp-technical-assistance/
     fa_icon: fas fa-globe-europe
 
 ---

@@ -3,7 +3,7 @@ nav_title: Message Building by Channel
 page_order: 5
 layout: dev_guide
 guide_top_header: "Message Building by Channel"
-guide_top_text: "Messaging channels are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the sections listed below. Or, check out <a href='http://lab.braze.com/channels-course' target='_blank'>our LAB course on Messaging Channels</a>!"
+guide_top_text: "Messaging channels are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the sections listed below. Or, check out <a href='https://lab.braze.com/series/messaging-channels' target='_blank'>our LAB courses on Messaging Channels</a>!"
 description: "Messaging channels are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more!"
 
 guide_featured_title: "Available Channels"

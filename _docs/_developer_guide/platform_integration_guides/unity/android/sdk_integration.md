@@ -6,7 +6,7 @@ page_order: 0
 ---
 # SDK Integration
 
-Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages. Unity requires [the same support library version as the base Android SDK][24].
+Installing the Braze SDK will provide you with the ability to collect analytics and engage users with push messages and native in-app messages.
 
 ## Step 1: Choosing A Braze Unity Package
 
@@ -307,32 +307,15 @@ Braze should now be collecting data from your application and your basic integra
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [2]: {% image_buster /assets/img_archive/UnityPackageName.png %}
-[3]: https://dashboard-01.braze.com/app_settings/app_settings/settings
-[4]: {{site.baseurl}}/app_group_configuration "dashboard setup api keys"
-[5]: #clone-unity
-[6]: #copy-plugins
-[7]: #add-bundle-id
 [8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
-[13]: #android-advanced
 [14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [15]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Android
 [16]: https://github.com/Appboy/appboy-unity-sdk/releases
-[17]: #prime-31
-[18]: #adm-push
-[19]: #game-objects
-[20]: #inapp-disabling-native
-[21]: https://github.com/Appboy/appboy-android-sdk/tree/master/android-sdk-ui/assets
 [22]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/customizing_the_unity_package/
 [23]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/ContentCard.cs
-[24]: https://github.com/Appboy/appboy-android-sdk#version-information
-[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
 [26]: https://docs.unity3d.com/Manual/AssetPackages.html
-[27]: https://developer.android.com/jetpack/androidx
-[28]: https://firebase.google.com/docs/unity/setup
 [29]: https://docs.unity3d.com/Manual/android-manifest.html
 [30]: {{site.baseurl}}/support_contact/
 [31]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push

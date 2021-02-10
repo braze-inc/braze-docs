@@ -33,7 +33,7 @@ Email headers contain information about the email being sent.  These key:value p
 
 ### Step 2b: Preview and Test Your Message
 
-After you finish composing your perfect email, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your connected content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your email displays properly on a variety of devices and email clients.
+After you finish composing your perfect email, you need to test it before sending it out! Navigate to the test page by clicking the "Preview and Test" button at the bottom of the overview screen. Use **Preview as User** to make sure that your Connected Content and personalization calls are working as they should and to get a sense of how your message may view on desktop vs. mobile. Use **Test Sends** to ensure that your email displays properly on a variety of devices and email clients.
 
 ![newemailtest][15]
 
@@ -133,7 +133,7 @@ Braze will de-duplicate sends by email address. However, opens are not de-duplic
 [9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
-[14]: {% image_buster /assets/img_archive/Email2Overview.png %}
+[14]: {% image_buster /assets/img/email.jpg %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}

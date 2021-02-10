@@ -95,6 +95,7 @@ __One-time scheduled campaigns__ - can be edited up until the scheduled send tim
 __Recurring scheduled campaigns__ - can be edited up until the scheduled send time.<br>
 __Local Send Time campaigns__ - can be edited up to 24 hours prior to the scheduled send time.<br>
 __Optimal Send Time campaigns__ - can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
+
 What if I make an edit within the “safe zone?”
 
 Changing the send time on campaigns within this time can lead to undesired behavior, for example:<br>- Braze will not send messages to any users that have missed the send time by more than 1 hour.<br>- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
@@ -134,6 +135,7 @@ The Braze SDK caches data (sessions, custom events, etc) and uploads it periodic
 |Great    |10 Seconds|
 |Good    |30 Seconds|
 |Poor    |60 Seconds|
+{: .reset-td-br-1 .reset-td-br-2}
 
 If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
 No data is uploaded after a session is closed.
@@ -152,7 +154,7 @@ The production key should be used with production provisioning profiles and apps
 
 {% details How does rate-limiting work? %}
 Braze affords you control over marketing pressure by allowing you to limit the rate at which your users are messaged both globally and on a per-channel basis using the following filters.
-* Last Received Any Campaign
+* Last Received Any Message
 * Last Received Email Campaign
 * Last Received Push Campaign
 If your push campaign fails to reach the intended user we still mark that user has having received a push campaign on that day. We record the campaign receipt at the time of delivery because push token invalidation notifications from iOS and FCM are not synchronous.

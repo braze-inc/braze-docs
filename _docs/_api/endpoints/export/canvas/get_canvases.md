@@ -51,6 +51,7 @@ Authorization: Bearer YOUR_REST_API_KEY
   "canvases" : [
   	{
   		"id" : (string) Canvas API Identifier,
+  		"last_edited": (ISO 8601 string) the last edited time for the message,
   		"name" : (string) Canvas name,
   		"tags" : (array) tag names associated with the Canvas,
   	},
@@ -59,5 +60,8 @@ Authorization: Bearer YOUR_REST_API_KEY
   "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 {% endapi %}

@@ -26,7 +26,7 @@ Add this information to the Mixpanel Currents integration page on the dashboard,
 
 A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-You can export two types of events events to Mixpanel: "Message Engagement Events" consisting of the Braze events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom Events, and Purchases tracked through the platform. All Custom Events are prefixed with `[Braze Custom Event]`. Custom Event properties and Purchase Event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All Custom events are prefixed with `[Braze Custom Event]`. Custom event properties and Purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
@@ -222,6 +222,75 @@ Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze tr
 _Update noted in August 2019._
 {% endalert %}
 
+
+### SMS Events
+
+```json
+// SMS Send
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+}
+
+// SMS Send To Carrier
+// SMS Delivery
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
+}
+
+// SMS Rejection
+// SMS Delivery Failure
+{
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "to_phone_number": (string) the number the message was sent to,
+  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+  "error": (string) Error message for the rejection or delivery failure,
+  "provider_error_code": (string) Error code for the rejection or delivery failure,
+}
+
+// SMS Inbound Receipt
+{
+  "inbound_phone_number": (string) phone number on which the message was received,
+  "subscription_group_id": (string) api id of the subscription group from which this SMS message was received,
+  "user_phone_number": (string) the number from which message was sent,
+  "action": (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),  
+  "message_body": (string) the text of the message,
+}
+```
 
 ### Subscription Events
 

@@ -31,6 +31,7 @@ These properties are collected by the Web SDK upon proper integration.
 | LANGUAGE | The language the browser is set to use.  |
 | TIME_ZONE | The time zone of the device.  |
 | USER_AGENT | The user agent string of the browser. <br> See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) for more information. |
+{: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
  {% tab Android SDK %}
@@ -65,7 +66,8 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `ABKDeviceOptionTimezone`| The reported timezone of the device.
 | Device Push Authorization Status <br> `ABKDeviceOptionPushAuthStatus`| Whether this app has push authorization for the device.
-| Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled.
+| Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
@@ -84,10 +86,10 @@ You may either simply not integrate certain parts of the SDK, or use [`stopWebTr
 
 ### Android SDK
 
-You can use [`setDeviceObjectWhitelist`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectWhitelist-java.util.EnumSet-) to configure to only send a subset of the device object keys or values according to a set whitelist.
+You can use [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-) to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-).
 
 {% alert important %}
-An empty whitelist will result in __no__ device data being sent to Braze.
+An empty allowlist will result in __no__ device data being sent to Braze.
 {% endalert %}
 
 ### iOS SDK

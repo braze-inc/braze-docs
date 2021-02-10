@@ -13,7 +13,7 @@ Sample push notification:
 
 ![Sample Push][19]
 
-Check out [Braze Academy]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
+Check out [push troubleshooting documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
 
 ## Step 1: Configure the Apple Developer Settings
 
@@ -240,8 +240,6 @@ See our documentation on [Deep Linking in iOS][18].
 [17]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html#//apple_ref/doc/uid/TP40008194-CH4-SW10
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [19]: {% image_buster /assets/img_archive/ios_push_sample.png %}
-[25]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L44
-[26]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L50
 [27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
 [28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}
 [29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %}

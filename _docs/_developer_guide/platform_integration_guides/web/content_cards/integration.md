@@ -18,6 +18,7 @@ This method will toggle the visibility of the Content Cards. By default, if no a
 |---|---|
 |`parentNode` | The HTML node to render the content cards into. If the parent node already has a Braze content cards view as a direct descendant, the existing content cards will be replaced. |
 |`filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
@@ -31,7 +32,7 @@ Here is an example of how to determine if a Content Card is a "Control" card:
 
 ```javascript
 function isControlCard(card) {
-    return card instanceof appboy.ab.ControlCard;
+    return card instanceof appboy.ControlCard;
 }
 ```
 
@@ -44,3 +45,4 @@ function isControlCard(card) {
 |`toggleContentCards()`| Toggle the visibility of the Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
 |`getCachedContentCards()`|Get all currently available cards from the last content cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
 |`subscribeToContentCardsUpdates(subscriber)`| Subscribe to content cards updates. <br> The subscriber callback will be called whenever content cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

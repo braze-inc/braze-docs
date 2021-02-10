@@ -5,7 +5,7 @@ page_order: 5
 
 # Are My Custom Event Properties Being Logged?
 
-There are three important checks to carry out to ensure your Custom Events are being logged as you expect:
+There are three important checks to carry out to ensure your Custom events are being logged as you expect:
 
 * [Establish which events are logged](#which-events)
 * [Verify log](#verify-log)
@@ -19,7 +19,7 @@ There are three important checks to carry out to ensure your Custom Events are b
 
 ### Which Events?
 
-Check with your developers which Event Properties are being tracked. Keep in mind that all event properties are case sensitive.
+Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive.
 
 For further information see:
 
@@ -34,7 +34,7 @@ To confirm that the event properties are successfully tracked, you can view all 
 
 ### Verify Values
 
-To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the Custom Event within the App, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
+To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the Custom event within the App, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 

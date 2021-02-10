@@ -1,5 +1,5 @@
 ---
-nav_title: Lob.com
+nav_title: Lob
 alias: /partners/lob/
 
 description: "This article outlines the partnership between Braze and Lob.com, which allows you to send direct mail like letters, postcards, and checks through the mail."

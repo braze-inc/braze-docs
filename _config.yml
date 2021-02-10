@@ -98,7 +98,7 @@ collections:
     title: Braze
     output: true
     hidden: true
-  site_pages: # Site specific pages. ie main redirects and search
+  docs_pages: # Site specific pages. ie main redirects and search
     title: Braze
     output: true
     hidden: true
@@ -162,7 +162,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "site_pages"
+      type: "docs_pages"
     values:
       layout: "bare"
       hide_nav: true
@@ -176,7 +176,14 @@ permalink: ./:collection/:path/
 permalink_custom_vars: ['nav_title']
 
 # Don't serve non-jekyll files
-exclude: ['app','bin','db','lib','log','test','tmp','vendor','config.ru', 'Gemfile', 'Gemfile.lock', 'Readme.md', 'Procfile', 'Rakefile', 'vendor', 'config','404.html','public', 'proxy.rb','*.log','MigrationTool','Archive','documentation','academy']
+exclude: [
+  'app','bin','db','lib','log','test','tmp','vendor',
+  'config.ru', 'Gemfile', 'Gemfile.lock', 'readme.md', 'Procfile',
+  'Rakefile', 'vendor', 'config','404.html','public', 'proxy.rb',
+  '*.log','MigrationTool','Archive','documentation','academy',
+  '.sass-cache', '.git', '.vscode', 'system.properties',
+  'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site'
+]
 
 # Setting for image buster
 image_buster:
@@ -208,14 +215,18 @@ algolia:
       - searchable(nav_title)
       - searchable(channel)
     searchableAttributes:
-      - search_rank
-      - platform
-      - headings
-      - unordered(content)
-      - url
-      - collection,tags
       - nav_title
+      - Path_01
+      - headings
+      - content
+      - url
+      - search_rank
+      - collection, tags
+      - platform
       - channel
+    customRanking:
+      - desc(custom_ranking)
+      - desc(search_rank)
   extensions_to_index:
     - html
     - md
@@ -224,7 +235,7 @@ algolia:
     - _docs/_hidden/*
     - _docs/_hidden/*/* #exclude hidden subdirectories from indexing
     - _docs/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
-    - _docs/_site_pages/*
-    - _docs/_site_pages/*/* #exclude hidden subdirectories from indexing
-    - _docs/_site_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _docs/_docs_pages/*
+    - _docs/_docs_pages/*/* #exclude hidden subdirectories from indexing
+    - _docs/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
     - _docs/_home/Styling_Test_Page.md

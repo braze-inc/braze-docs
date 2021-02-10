@@ -8,7 +8,8 @@ description: "Archiving templates can help better organize and manage your templ
 > Archiving templates can help better organize and manage your templates.
 
 ### Archive an individual Template
-Archiving an individual template can be achieved by clicking the cog located on the template grid screen and selecting `Archive`. ![template_archive_cog][10]
+![template_archive_cog][10]{: style="float:right;max-width:20%;margin-left:15px;"}
+Archiving an individual template can be achieved by clicking the cog located on the template grid screen and selecting `Archive`.
 
 
 ### Archive multiple Templates

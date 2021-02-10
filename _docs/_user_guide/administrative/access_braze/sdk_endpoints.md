@@ -19,6 +19,7 @@ A Software Development Kit (SDK) is a set of tools that can be used to develop s
 |US-04 | sdk.iad-04.braze.com |
 |US-06 | sdk.iad-06.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
+{: .reset-td-br-1 .reset-td-br-2}
 
 When using endpoints for SDK integration, use the __SDK Endpoint__ listed on this page, __not__ the [Rest Endpoint]({{site.baseurl}}/api/basics/#endpoints) used for API calls.
 
@@ -33,7 +34,7 @@ To configure the Braze Web SDK to use the appropriate endpoint for your integrat
 |---|---|
 | Android | 800 KB |
 | iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 35 KB |
+| Web | 36KB (core), 50KB (core + UI) |
+{: .reset-td-br-1 .reset-td-br-2}
 
 [85]: https://lab.braze.com/braze-101
-[support]: {{site.baseurl}}/support_contact/

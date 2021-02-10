@@ -20,15 +20,14 @@ guide_featured_list:
 - name: Templates
   link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/in-app_message_templates/
   fa_icon: fas fa-ruler-combined
+- name: Implementation Guide
+  link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/
+  fa_icon: fas fa-user-check
 - name: Troubleshooting
   link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/troubleshooting/
   fa_icon: fas fa-life-ring
 ---
 
 <br>
-
-{% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades to in-app messages, check out our [Generation Comparison documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/)!
-{% endalert %}
 
 By default, in-app messages are enabled after completing any standard Braze SDK integration, including GIF support. Note that if you did not integrate SDWebImage, in-app messages with images will not work.

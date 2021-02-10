@@ -8,7 +8,7 @@ page_order: 2
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Best Practices section][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Adding A Custom Event
 
@@ -54,23 +54,16 @@ See our [class documentation][4] for more information.
 
 ### Reserved Keys {#event-reserved-keys}
 
-The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
+The following keys are __RESERVED__ and __CANNOT__ be used as Custom event properties:
 
 - `time`
-- `product_id`
-- `quantity`
 - `event_name`
-- `price`
-- `currency`
 
-**Implementation Example**
+**Additional Information**
 
-`logCustomEvent` is utilized within [`EventsViewController.m` file][1] in the Stopwatch sample application.
-
-- Also, see the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logCustomEvent Documentation][3] for more information.
+- See the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logCustomEvent Documentation][3] for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/EventsViewController.m
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
 [3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent documentation"
 [4]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties documentation"

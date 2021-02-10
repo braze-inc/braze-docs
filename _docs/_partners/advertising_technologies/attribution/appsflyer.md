@@ -40,7 +40,9 @@ AppsFlyerLib.setAdditionalData(customData);
 {% endtab %}
 {% tab iOS %}
 
-If you have an iOS app, the Braze SDK requires that you have [IDFA collection]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection) enabled. 
+If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Unity %}
@@ -76,6 +78,7 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 | `campaign` | Attributed Campaign |
 | `af_adset` | Attributed Adgroup |
 | `af_ad` | Attributed Ad |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 4: Confirming the Integration
 
@@ -99,20 +102,43 @@ For more information, please see AppsFlyer's [documentation][31].
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. <br>To get started, check out AppsFlyer's [documentation][3].
+There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. To get started, check out AppsFlyer's [documentation][3].
+
+### Click Tracking URLs in Braze (Optional)
+
+You can use AppsFlyer's [OneLink attribution links](https://support.appsflyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to be able to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you will be able to holistically see the impact of your paid and owned channels in a single platform.
+
+You can simply create your OneLink tracking URL in AppsFlyer and insert it into your Braze campaigns directly. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.appsflyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link or deep link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your AppsFlyer tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
+
+{% tabs %}
+{% tab Android %}
+For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'android' %}
+advertising_id={{most_recently_used_device.${google_ad_id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab iOS %}
+For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the Liquid logic below:
+{% raw %}
+```
+{% if most_recently_used_device.${platform} == 'ios' %}
+device_id={{most_recently_used_device.${id}}}
+{% endif %}
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+__This recommendation is purely optional__<br>
+If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, AppsFlyer will still be able to attribute these clicks through their probabilistic modeling.
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}
 [3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
-[5]: #api-restrictions
-[15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
-[17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[19]: http://support.mobileapptracking.com/entries/22560357-Setting-Up-Postback-URLs "Tune Postbacks"
-[20]: https://github.com/adjust/ios_sdk#9-implement-the-attribution-callback "Adjust SDK-to-SDK Integrations on iOS"
-[21]: https://github.com/adjust/android_sdk#16-set-listener-for-attribution-changes "Adjust SDK-to-SDK Integrations on Android"
-[22]: https://dev.branch.io/recipes/analytics_appboy/ "Branch Webhooks"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
 [31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration

@@ -62,13 +62,5 @@ You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 
 
 
-[1]: {% image_buster /assets/img_archive/email_templates1_new.png %}
-[2]: {% image_buster /assets/img_archive/email_templates2_new.png %}
-[3]: {% image_buster /assets/img_archive/email_templates3a_new.png %}
 [4]: {% image_buster /assets/img_archive/email_templates4-new.png %}
-[cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
-[5]: {{site.baseurl}}/assets/img_archive/email_temlplates5.png
-[6]: {% image_buster /assets/img_archive/email_templates3b_new.png %}
-[7]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
-[8]: {{site.baseurl}}/help/release_notes/2017/august/#mobile-responsive-email-templates
 [9]: {% image_buster /assets/img_archive/step1and2htmluploader.gif %}

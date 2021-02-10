@@ -156,7 +156,7 @@ If you choose to apply your own template, click __Apply Template__ and choose fr
 ## Web Email Capture Form {#email-capture-form}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
-To navigate to this option, you must create an in-app messaging campaign. From there, this message type can be found by selecting "Web Broswers" under "Send To" and "Web Email Capture Form" under "Message Type".
+To navigate to this option, you must create an in-app messaging campaign. From there, this message type can be found by selecting "Web Browsers" under "Send To" and "Web Email Capture Form" under "Message Type".
 
 ![emailimage]({% image_buster /assets/img/email_capture.png %})
 
@@ -169,7 +169,7 @@ To enable Email Capture in-app messages, your SDK integration must supply the `e
 - An optional image
 - An optional "Terms of Service" link
 - Different colors for the header and body text, buttons and background
-- Key-value pairs
+- Key value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
 ## Reusable Message Templates {#reusable-color-profiles}

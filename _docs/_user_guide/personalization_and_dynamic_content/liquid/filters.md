@@ -64,7 +64,6 @@ The abs of -2 is 2
 ```
 
 
-- [Full Math Filter Documentation from Shopify][19]
 
 ## E-Commerce
 
@@ -79,6 +78,7 @@ In the event you are importing a custom attribute (like `account_balance`), you 
 | With the Money Filter | Without the Money Filter |
 |---|---|
 |![With Filter][1] <br> <br> Where `account_balance` is input as `17.8`. | ![Without Filter][2] <br> <br> Where `account_balance` is input as `17.8`.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 Documentation on money filters can be found [here][11]. Please note that the behavior of the [Shopify money filter][11] slightly differs from how it is used within the Braze Dashboard. Please reference the behavior detailed above for an accurate representation of the expected behavior of this filter.
 
@@ -148,12 +148,9 @@ Which will return something like:
 [2]: {% image_buster /assets/img/without_money_filter.png %}
 [11]: https://help.shopify.com/en/themes/liquid/filters/money-filters
 [12]: https://docs.shopify.com/themes/liquid-documentation/filters
-[19]: https://docs.shopify.com/themes/liquid/filters/math-filters
 [20]: https://docs.shopify.com/themes/liquid/filters/string-filters
 [21]: https://docs.shopify.com/themes/liquid/filters/string-filters#capitalize
 [22]: https://docs.shopify.com/themes/liquid/filters/array-filters
 [23]: https://docs.shopify.com/themes/liquid/filters/array-filters#first
 [24]: https://docs.shopify.com/themes/liquid/filters/additional-filters#date
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[27]: #adding-personalizable-attributes-objects
 [30]: #variable-tags

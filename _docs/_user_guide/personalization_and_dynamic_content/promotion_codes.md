@@ -36,13 +36,13 @@ Each promotion code list has a corresponding expiration date and time that get s
 
 ![Promo Codes 4][4]{: style="max-width:90%"}
 
-You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. This check is performed once a day.
+You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
 
 ![Promo Codes 5][5]
 
 ### Step 4: Promotion Code Upload
 
-Braze does not manage code creation or redemption, so as a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. Make sure that  there is only one code on each row. 
+Braze does not manage code creation or redemption, so as a result, you’ll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify](https://www.braze.com/docs/partners/channel_extensions/loyalty/voucherify/) or [Talon.One](https://www.braze.com/docs/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
 
 Note that the max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
 
@@ -90,7 +90,7 @@ Remaining code count can be found in the "Remaining" column of the promotion cod
 
 This code count can also be found when revisited a pre-existing promotion code list page. 
 
-![Promo Codes 13][13]{: style="max-width:30%"}
+![Promo Codes 13][13]{: style="max-width:50%"}
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
