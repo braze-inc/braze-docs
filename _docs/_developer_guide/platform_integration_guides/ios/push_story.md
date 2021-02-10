@@ -247,7 +247,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 ##### Option 2: Info.plist
 
-Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier.
+Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}

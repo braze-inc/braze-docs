@@ -44,7 +44,7 @@ Within your `Info.plist` file, add the following snippet:
 >  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [App Settings][5] page.
 
 ```
-<key>Appboy</key>
+<key>Braze</key>
 <dict>
  <key>Endpoint</key>
  <string>YOUR-SDK-ENDPOINT</string>
@@ -54,7 +54,7 @@ Within your `Info.plist` file, add the following snippet:
 You can optionally include verbose logging by including the following snippet:
 
 ```
-<key>Appboy</key>
+<key>Braze</key>
 <dict>
  <key>LogLevel</key>
  <string>0</string>
