@@ -1,7 +1,7 @@
 ---
 nav_title: Subscription and Billing
-hidden: true
 alias: /subscription_and_billing/
+page_order: 4.1
 ---
 
 # Subscription and Billing

@@ -1,7 +1,7 @@
 ---
 nav_title: Email Set Up
 layout: featured
-page_order: 4
+page_order: 5
 guide_top_header: "Email Set Up"
 guide_top_text: "So you want to start sending email campaigns? Braze Onboarding can help you with that! Either follow our guide below or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>LAB course on deliverability</a>."
 description: "So you want to send email campaigns, huh? Braze Onboarding can help you with that! Either follow our guide below or check out our LAB course on deliverability"
