@@ -124,7 +124,7 @@ class MyApplication: Application() {
     super.onCreate()
     FirebaseMessaging.getInstance().token.addOnCompleteListener { task: Task<String?> ->
       if (!task.isSuccessful) {
-        Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+        Log.w(TAG, "Exception while registering FCM token with Braze.", task.exception)
         return@addOnCompleteListener
       }
       val token = task.result
