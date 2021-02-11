@@ -100,6 +100,7 @@ To obtain the source URL, you must have set up the content in the Movable Ink Da
 1. In the Braze Platform:
 	- __Android Push__: Paste the URL in the __Push Icon Image__ and __Expanded Notification Image__ fields.
 	- __iOS Push__: Paste URL in __Rich Notification Media__ link field, and directly below, denote the file format you are using.
+	- __Web Push__: Paste the URL in the __Push Icon Image__ and __Large Notification Image__ fields.
 2. In order to make sure images are not cached, prepend the URL in the message with empty Liquid tags: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 #### In-App Messages and Content Cards
