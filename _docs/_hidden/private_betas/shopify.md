@@ -144,46 +144,6 @@ If you have the Nested Event Property support enabled by your Customer Success M
 `{{event_properties.${line_items[0].title}}}`
 {% endraw %}
 
-### Personalization using Connected Content
-
-You may have some use cases for personalization to template in additional information including product images. You can deepen the level of personalization with Shopify by using Braze's [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) feature. 
-
-#### Step 1: Navigate to Apps
-Go to your Shopify's admin page listed under __Apps__.
-![Shopify][15]
-
-#### Step 2: Enable Private App Development
-If you haven't already, please ensure that you have enabled private app development for your store.<br>
-![Shopify][16]{: style="max-width:60%;"}
-
-![Shopify][17]{: style="max-width:60%;"}
-
-#### Step 3: Create a Private App
-Create a private app in order to generate your Shopify access token.
-![Shopify][18]{: style="max-width:70%;"}
-
-#### Step 4: Enter Credentials
-Once you have successfully created your private app, you are then provided with your API credentials and keys. For your Connected Content calls, you must use the __Password__ value as the __X-Shopify-Access-Token__ in your requests.
-![Shopify][19]{: style="max-width:70%;"}
-
-#### Example Connected Content Request
-
-Once you have retrieved your Shopify access token, you can now build out your Connected Content request within your campaign. Some use cases might include personalizing the product image, gather more meta-data around the specific product, and more. In the example below, we make a request to one of __Shopify's Products APIs__ to retrieve the product image used in the message for the specific product ID that the customer has added to their cart from the Shopify Created Order event.
-
-{% raw %}
-```
-{% assign items = {{event_properties.${line_items}}} %}
- 
-{% connected_content https://SHOPIFY_STORE_NAME.myshopify.com/admin/api/2020-10/products.json?ids={{item.product_id}}
-   :headers {
-        "X-Shopify-Access-Token": "SHOPIFY_ACCESS_TOKEN" }
-   :content_type application/json
-    :save product_info %}
- 
-{{product_info.products[0].image.src}}
-```
-{% endraw %}
-
 ### Dynamically Generating HTML Content via Liquid and Connected Content (Advanced)
 
 For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with Liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
