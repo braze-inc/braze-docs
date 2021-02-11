@@ -101,20 +101,16 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-
-    // FCM Registration tokens cannot be obtained on the main thread.
     final Context applicationContext = this;
-    new Thread(new Runnable() {
-      @Override
-      public void run() {
-        try {
-          String token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM");
-          Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
-        } catch (Exception e) {
-          Log.e(TAG, "Exception while registering FCM token with Braze.", e);
-        }
+    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+      if (!task.isSuccessful()) {
+        Log.w(TAG, "Exception while registering FCM token with Braze.", task.getException());
+        return;
       }
-    }).start();
+
+      final String token = task.getResult();
+      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
+    });
   }
 }
 ```
@@ -126,16 +122,14 @@ public class MyApplication extends Application {
 class MyApplication: Application() {
   override fun onCreate() {
     super.onCreate()
-
-    // FCM Registration tokens cannot be obtained on the main thread.
-    Thread(Runnable {
-      try {
-        val token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM")
-        Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
-      } catch (e: Exception) {
-        Log.e(TAG, "Exception while registering FCM token with Braze.", e)
+    FirebaseMessaging.getInstance().token.addOnCompleteListener { task: Task<String?> ->
+      if (!task.isSuccessful) {
+        Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+        return@addOnCompleteListener
       }
-    }).start()
+      val token = task.result
+      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
+    }
   }
 }
 ```
