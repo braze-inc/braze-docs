@@ -20,7 +20,7 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/taxi_for_email/
   - name: Movable Ink
     url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/movable_ink/
-  - name: Dyspatch
+  - name: Dyspatch.io
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: Playable
     url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
