@@ -29,8 +29,6 @@ The Prediction Audience cannot exceed 100 million users.
 
 For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 16 days__.
 
-For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
-
 ### Step 3: Choose the Update Frequency for Purchase Predictions
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to Purchase. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchasing, set the update frequency to __Weekly__ on the day and time of your choosing. 
