@@ -21,19 +21,19 @@ On the Edit page, give your new Prediction a unique name.
 
 ### Step 2: Filter Your Prediction Audience (optional) {#audience}
 
-Your Prediction Audience is the group of users whose chances of making a purchase you want the Prediction assess. You can try to predict Purchases in your entire population of users. The model will likely perform better if you narrow down and filter the group of users you want to assess purchase likelihood for with some criteria. For example, you might want to focus on users who first used your app recently.
+Your Prediction Audience is the group of users whose Purchase likelihood you would like to assess. Purchase Prediction allows you to run a Prediction on your entire population of users, though the model will likely perform better if you filter the group of users you want to assess with some criteria. For example, you might want to focus on users who first used your app recently.
 
 {% alert note %}
 The Prediction Audience cannot exceed 100 million users.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 16 days__ .
+For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 16 days__.
 
 For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
 
 ### Step 3: Choose the Update Frequency for Purchase Predictions
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to Purchase. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchaseing, set the update frequency to __Weekly__ on the day and time of your choosing. 
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to Purchase. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchasing, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
 ![Purchase 2][2]
 
