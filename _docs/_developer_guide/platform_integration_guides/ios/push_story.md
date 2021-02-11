@@ -62,7 +62,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 ## Step 5: Link the Braze Push Story Framework
 
 {% alert important %}
-For those integrating with SPM, skip to step 6a for SPM specific instructions.
+For those integrating with SPM, skip to [step 6a](#step-6a-spm-integration-only) for SPM specific instructions.
 {% endalert %}
 
 Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
@@ -120,7 +120,7 @@ Go to the `General` tab of the Content Extension target and add `AppboyPushStory
 ## Step 6: Updating your Notification View Controller
 
 {% alert important %}
-For those integrating with SPM, skip to step 6a for SPM specific instructions.
+For those integrating with SPM, skip to [step 6a](#step-6a-spm-integration-only) for SPM specific instructions.
 {% endalert %}
 
 {% tabs %}
@@ -200,11 +200,11 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 {% endtab %}
 {% endtabs %}
 
-### Step 6a: SPM Integration Only
+## Step 6a: SPM Integration Only
 
 In the Content Extension Target, add the `AppboyPushStory` framework.
 
-![View Outlet][ios_pushstory_10]
+![View Outlet][ios_pushstory_10]{: style="max-width:80%;"}
 
 ## Step 7: Set the Notification Content Extension Storyboard
 
