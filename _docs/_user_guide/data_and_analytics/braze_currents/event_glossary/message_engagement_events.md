@@ -977,7 +977,7 @@ SMS, Delivery
 This event occurs when an SMS is sent to the carrier. 
 
 ```json
-// SMS Delivery: users.messages.sms.SendToCarrier
+// SMS Delivery: users.messages.sms.CarrierSend
 {
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
