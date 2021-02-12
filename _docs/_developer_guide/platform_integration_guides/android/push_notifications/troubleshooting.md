@@ -69,7 +69,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 `InvalidRegistration` can be caused by a malformed push token.
 
-1. Make sure to pass a valid push token to Braze from FCM by calling [`FirebaseInstanceId.getToken()`][4].
+1. Make sure to pass a valid push token to Braze from Firebase Cloud Messaging [according to their documentation][21].
 
 #### Error: NotRegistered
 
@@ -151,3 +151,4 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
 [18]: #custom-handling-push-receipts-and-opens
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
+[21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
