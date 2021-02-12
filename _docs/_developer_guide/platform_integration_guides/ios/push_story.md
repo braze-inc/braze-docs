@@ -49,6 +49,10 @@ You also need to add Capability `App Groups`. If you haven't had any app group i
 
 ## Step 4: Updating the Podfile
 
+{% alert important %}
+For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
+{% endalert %}
+
 Add the following line to your Podfile:
 
 ```ruby
@@ -62,7 +66,7 @@ After updating the Podfile, navigate to the directory of your Xcode app project 
 ## Step 5: Link the Braze Push Story Framework
 
 {% alert important %}
-For those integrating with SPM, skip to [step 6a](#step-6a-spm-integration-only) for SPM specific instructions.
+For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
 {% endalert %}
 
 Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
@@ -118,10 +122,6 @@ Go to the `General` tab of the Content Extension target and add `AppboyPushStory
 ![Linked Frameworks][ios_pushstory_04]
 
 ## Step 6: Updating your Notification View Controller
-
-{% alert important %}
-For those integrating with SPM, skip to [step 6a](#step-6a-spm-integration-only) for SPM specific instructions.
-{% endalert %}
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
