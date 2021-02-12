@@ -11,10 +11,6 @@ At Braze, data means action: each piece of data that arrives in Braze updates se
  
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
-{% alert important %}
-This pricing structure only applies to customers using in-app or in-browser messages, push, Content Cards, webhooks, and email services.
-{% endalert %}
-
 ## Management & Usage
 
 You can view your Data Points Usage on the __Subscriptions and Usage__ section in any of the tabs. Just go to your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__.
