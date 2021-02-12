@@ -1,30 +1,48 @@
 ---
-nav_title: Subscription and Billing
+nav_title: Subscriptions and Usage
 alias: /subscription_and_billing/
 page_order: 4.1
 ---
 
-# Subscription and Billing
-![Subscription and Billing][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+# Subscriptions and Usage
 
-Your Data Points Dashboard is located in the __Subscriptions and Usage__ section of the dashboard, which can be found by clicking on your account’s icon in the upper right corner. Then, navigate to the Data Points Dashboard tab.
+The Subscriptions and Usage page can be found by selecting your account icon in the upper right corner of the Dashboard, and then selecting __Subscriptions and Usage__ from the dropdown that shows. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
-You can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
+## Subscription and Usage
+
+### Usage Graphs
+
+Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics. 
+
+![Subscription and Billing][3]{: style="max-width:80%;"}
+
+Within these graphs, you will be able to find your yearly capacity for a specific type of usage, stats by month, stats by year, as well as a bar graph visualization of overall app group usage, color-coded by app group. These usage graphs also allow you to select and unselect app groups to isolate usage. Usage graphs like these are particularly helpful when trying to budget usage and get a deeper understanding of what app groups contribute to overall usage.
+
+### Contract Details
+
+Contract details list the start and end date of your current contract with Braze.
+
+## Most Used Data Points by App
+
+## Data Points Dashboard
+
+The Data Points Dashboard can be found under the __Looker Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
 
 ![Subscription and Billing][2]{: style="max-width:80%;"}
 
-## Contract Details 
+### Contract Details 
 
 Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
-## Current Billing Cycle - App Group Data Point Usage
+### Current Billing Cycle - App Group Data Point Usage
 
-Depending on whether you chose a time frame of weeks or months, your data here will be broken down by weeks or months. You’ll see how many data points were consumed for each time frame, and a color coded breakdown of which apps contributed to those data points. Using this graph, you can monitor your data point usage over different periods of time and check for trends as well as outliers, such as unexpected spikes during particular time frames.
+Depending on whether you chose a time frame of weeks or months, your data here will be broken down by weeks or months. You’ll see how many data points were consumed for each time frame, and a color-coded breakdown of which apps contributed to those data points. Using this graph, you can monitor your data point usage over different periods of time and check for trends as well as outliers, such as unexpected spikes during particular time frames.
 
-## Data Point Usage Over Time
+### Data Point Usage Over Time
 
 You can use this section to monitor how your data point usage is trending over time, and how close you are to hitting your contract’s allotment. One trend line shows your consumption, and the other shows your contract allotment.
 
 
 [1]: {% image_buster /assets/img/subscription_and_billing1.png %}
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
+[3]: {% image_buster /assets/img/subscription_and_billing3.png %}
