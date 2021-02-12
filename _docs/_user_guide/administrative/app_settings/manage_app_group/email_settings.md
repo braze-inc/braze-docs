@@ -75,7 +75,7 @@ Learn more about best practices for email list management [here][7].
 
 ## Email Open Tracking Pixel
 
-Currently a Beta feature, the email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
+The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
 
 For more information regarding the email open tracking pixel, check out our short [LAB course][6].
 
