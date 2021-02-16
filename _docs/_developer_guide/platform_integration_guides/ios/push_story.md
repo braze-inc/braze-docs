@@ -49,6 +49,10 @@ You also need to add Capability `App Groups`. If you haven't had any app group i
 
 ## Step 4: Updating the Podfile
 
+{% alert important %}
+For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
+{% endalert %}
+
 Add the following line to your Podfile:
 
 ```ruby
@@ -60,6 +64,10 @@ end
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`
 
 ## Step 5: Link the Braze Push Story Framework
+
+{% alert important %}
+For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
+{% endalert %}
 
 Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
 
@@ -192,6 +200,12 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 {% endtab %}
 {% endtabs %}
 
+## Step 6a: SPM Integration Only
+
+In the Content Extension Target, add the `AppboyPushStory` framework.
+
+![View Outlet][ios_pushstory_10]{: style="max-width:80%;"}
+
 ## Step 7: Set the Notification Content Extension Storyboard
 
 -		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the Notification View Controller's main view frame.
@@ -262,3 +276,4 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
+[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}
