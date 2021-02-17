@@ -6,7 +6,7 @@ page_order: 4
 ---
 ## Runtime Configuration
 
-Runtime configuration is an optional way to configure your app at runtime in place of an `appboy.xml`. The use of both runtime configuration and `appboy.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `appboy.xml`. If the Braze SDK can find all values in the runtime configuration, then the `appboy.xml` is no longer needed and can be removed. See the full documentation [here][1].
+Runtime configuration is an optional way to configure your app at runtime in place of an `braze.xml`. The use of both runtime configuration and `braze.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `braze.xml`. If the Braze SDK can find all values in the runtime configuration, then the `braze.xml` is no longer needed and can be removed. See the full documentation [here][1].
 
 ### Example Usage
 

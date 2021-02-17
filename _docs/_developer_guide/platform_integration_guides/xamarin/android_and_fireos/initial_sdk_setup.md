@@ -26,8 +26,8 @@ The second integration method is to include the binding source found [here][3]. 
 
 >  The Braze Nuget package depends on the [`Xamarin.Android.Support.v4`][12] Nuget package.
 
-### Step 2: Configure the Braze SDK in Appboy.xml
-Now that the libraries have been integrated, you have to create an `Appboy.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:
+### Step 2: Configure the Braze SDK in braze.xml
+Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:
 
 >  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located the [App Settings][4] page of the Braze dashboard.
 
@@ -48,7 +48,7 @@ Now that you've added your API key, you need to add the following permissions to
 ```
 
 **Implementation Example**
-See [`Appboy.xml`][11] in the Android sample app for an example implementation.
+See [`braze.xml`][11] in the Android sample app for an example implementation.
 
 ### Step 4: Tracking User Sessions and Registering for In-App Messages
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
@@ -68,6 +68,6 @@ You should now be able to launch your application and see sessions being logged 
 [4]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
-[11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/Appboy.xml
+[11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/braze.xml
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
 [13]: https://www.nuget.org/packages/AppboyPlatform.AndroidBinding/

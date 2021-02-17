@@ -77,9 +77,9 @@ AppboyLogger.setLogLevel(AppboyLogger.SUPPRESS)
 
 The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
-To easily switch between multiple API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
+To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 
-For each relevant build variant, create a new `appboy.xml` for it in `src/<build variant name>/res/values/`:
+For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

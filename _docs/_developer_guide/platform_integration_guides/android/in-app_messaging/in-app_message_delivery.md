@@ -27,7 +27,7 @@ For in-app messages that display immediately on delivery (*i.e.*, session start,
 
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience.
 
-To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `appboy.xml` via:
+To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `braze.xml` via:
 
 ```xml
   <integer name="com_appboy_trigger_action_minimum_time_interval_seconds">5</integer>

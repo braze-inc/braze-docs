@@ -20,7 +20,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 - Create an account with the [Amazon Apps & Games Developer Portal][10] if you have not already done so.
 - Obtain OAuth credentials (Client ID and Client Secret) and an ADM API key by following the instructions in [Obtaining Amazon Device Messaging Credentials][11].
-- Add the following line to your `res/values/appboy.xml` file to enable ADM:
+- Add the following line to your `res/values/braze.xml` file to enable ADM:
 
   ```xml
   <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
@@ -91,7 +91,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 ##### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `appboy.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml`:
 
 ```
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
@@ -108,7 +108,7 @@ Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2]
 ### Manual Push Registration
 If you need to handle ADM registration yourself, you should do the following:
 
-- Within [appboy.xml][12] add the following:
+- Within [braze.xml][12] add the following:
 
   ```xml
   <!-- This will disable automatic registration for ADM via the Braze SDK-->
