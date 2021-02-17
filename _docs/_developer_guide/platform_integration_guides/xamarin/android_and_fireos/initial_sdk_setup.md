@@ -47,9 +47,6 @@ Now that you've added your API key, you need to add the following permissions to
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-**Implementation Example**
-See [`braze.xml`][11] in the Android sample app for an example implementation.
-
 ### Step 4: Tracking User Sessions and Registering for In-App Messages
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
 
@@ -68,6 +65,5 @@ You should now be able to launch your application and see sessions being logged 
 [4]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
-[11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/braze.xml
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
 [13]: https://www.nuget.org/packages/AppboyPlatform.AndroidBinding/
