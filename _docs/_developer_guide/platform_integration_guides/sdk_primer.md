@@ -62,7 +62,7 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device Model <br> `ABKDeviceOptionModel`| The specific hardware of the device.
 | Device OS Version <br> `ABKDeviceOptionOSVersion` | The version of the iOS OS installed on the device. |
 | Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. |
-| Device IDFA <br> `ABKDeviceOptionIDFA`| Device identifier for advertisers. |
+| Device IDFA <br> `ABKDeviceOptionIDFA`| (if supplied) Device identifier for advertisers. |
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
 | Device Timezone <br> `ABKDeviceOptionTimezone`| The reported timezone of the device.
 | Device Push Authorization Status <br> `ABKDeviceOptionPushAuthStatus`| Whether this app has push authorization for the device.
