@@ -30,7 +30,7 @@ Create a new Survey message by selecting the Simple Survey option in your messag
 
 This Survey template is supported on mobile, web, or both mobile + web. Remember to be sure that your SDKs are on the [minimum versions](#supported-sdk-versions) required for this feature.
 
-### Options {#options}
+### Customization Options {#options}
 
 #### Single vs. Multiple Choice Survey {#single-multiple-choice}
 
@@ -48,9 +48,9 @@ Enable Custom Attribute collection to collect attributes based on the user's sub
 
 ### Showing A Confirmation Page
 
-Once a user submits their response, you can optionally show a confirmation page or close the message.
+Once a user submits their response, you can optionally show a confirmation page, or, simply close the message.
 
-Use a confirmation page to thank users or provide additional information, and set a click-through URL to other parts of your app or website.
+A confirmation page is a great place to thank users for their time, or provide additional information. You can customize the Call To Action on this page to guide users to another page of your app or website.
 
 ![Confirmation Option]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:700px"}
 
