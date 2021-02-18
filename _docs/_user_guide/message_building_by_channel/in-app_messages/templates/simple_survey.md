@@ -11,7 +11,7 @@ description: "Collect user attributes, insights, and preferences to power your c
 Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys.
 
 {% alert important %}
-This feature is in _Early Access_. Ask your Braze account team to request access!
+This feature is in a closed _Early Access_ period, and only available to a limited number of brands.
 {% endalert %}
 
 ## SDK Requirements {#supported-sdk-versions}
