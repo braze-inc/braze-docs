@@ -17,6 +17,6 @@ guide_top_text: "Use new In-App Message Templates to deliver rich in-app and in-
 guide_featured_title: "In-App Message Templates"
 guide_featured_list:
   - name: "Simple Survey"
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
     fa_icon: far fa-tasks
 ---

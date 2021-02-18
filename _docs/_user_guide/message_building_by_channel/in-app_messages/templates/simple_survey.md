@@ -16,15 +16,9 @@ This feature is in a closed _Early Access_ period, and only available to a limit
 
 ## SDK Requirements {#supported-sdk-versions}
 
-This feature requires the following minimum SDK versions:
+This In-App Message will only be delivered to devices that use at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
-
-{% alert warning %}
-Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. <br><br>
-
-Did you know you can segment app versions _above_ these SDK requirements? [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
-{% endalert %}
 
 ![example]({% image_buster /assets/img/iam/iam-survey.png %})
 
