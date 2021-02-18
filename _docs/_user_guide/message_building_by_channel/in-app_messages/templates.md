@@ -2,6 +2,7 @@
 nav_title: "Templates"
 page_order: 1.5
 layout: featured
+hidden: true
 
 page_type: landing
 channel: In-App Messages

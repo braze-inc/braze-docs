@@ -3,6 +3,7 @@ nav_title: Simple Survey
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 1.5
+hidden: true
 description: "Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys."
 ---
 
