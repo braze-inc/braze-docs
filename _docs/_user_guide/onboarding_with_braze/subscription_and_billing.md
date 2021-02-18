@@ -2,6 +2,7 @@
 nav_title: Subscriptions and Usage
 alias: /subscription_and_billing/
 page_order: 4.1
+hidden: true
 ---
 
 # Subscriptions and Usage
