@@ -5,7 +5,7 @@ layout: featured
 
 page_type: landing
 channel: In-App Messages
-platform: 
+platform:
   - android
   - iOS
   - web
@@ -16,8 +16,7 @@ guide_top_text: "Use new In-App Message Templates to deliver rich in-app and in-
 
 guide_featured_title: "In-App Message Templates"
 guide_featured_list:
-- name: "Simple Survey"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  fa_icon: far fa-tasks
-
+  - name: "Simple Survey"
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+    fa_icon: far fa-tasks
 ---
