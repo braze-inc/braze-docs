@@ -43,7 +43,6 @@ Authorization: Bearer YOUR_REST_API_KEY
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
    "purchases" : (optional, array of Purchase Object),
-   "partner" : (optional, string)
 }
 ```
 
