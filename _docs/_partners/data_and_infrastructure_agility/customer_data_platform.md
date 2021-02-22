@@ -15,7 +15,7 @@ valid_partner_list:
   - name: Segment
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
   - name: mParticle
-    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
+    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
   - name: Tealium
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
   - name: RudderStack
