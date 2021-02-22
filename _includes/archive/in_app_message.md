@@ -71,7 +71,7 @@ By default, we rate limit in-app messages to once every 30 seconds to ensure a q
 ```
 
 {% elsif include.platform == "Android" %}
-To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `appboy.xml`.
+To override this value, set `com_appboy_trigger_action_minimum_time_interval_seconds` in your `braze.xml`.
 
 ```xml
   <integer name="com_appboy_trigger_action_minimum_time_interval_seconds">5</integer>

@@ -65,13 +65,13 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 
 ![GradleSync][38]
 
-### Step 2: Configure the Braze SDK in appboy.xml
+### Step 2: Configure the Braze SDK in braze.xml
 
 {% alert note %}
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
 
 >  Be sure to substitute your [App Identifier API Key](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) found within the App Settings page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
@@ -143,7 +143,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-To update the default endpoint in your integration of the Braze SDKs please add the following code to your `appboy.xml`:
+To update the default endpoint in your integration of the Braze SDKs please add the following code to your `braze.xml`:
 
 ```xml
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
@@ -151,7 +151,7 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 
 ### Step 6: Enable Location Tracking
 
-If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you would like to enable Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>

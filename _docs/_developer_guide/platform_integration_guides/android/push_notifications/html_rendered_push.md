@@ -24,7 +24,7 @@ The above example is rendered with the following HTML:
 
 ## Implementation
 
-In your `appboy.xml`:
+In your `braze.xml`:
 
 ```xml
 <bool translatable="false" name="com_appboy_push_notification_html_rendering_enabled">true</bool>
