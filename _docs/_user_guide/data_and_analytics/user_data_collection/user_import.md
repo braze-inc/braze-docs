@@ -124,7 +124,7 @@ When the import process runs into an error, a yellow warning icon will be displa
 
 User Import creates and updates user profiles, and can also be used to create segments. To create a segment, check the ‘Create a segment from this CSV’ box.
 
-![CSV Import Segmenting Users][7]
+![CSV Import Segmenting Users][7]{: style="max-width:80%;"}
 
 You can set the name of the segment or accept the default, which is the name of your file. Files that were used to create a segment will have a link to view the segment once the import has been completed.
 
@@ -133,8 +133,6 @@ The filter used to create the segment selects users who were created or updated 
 {% alert update %}
 As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Previous to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
 {% endalert %}
-
-You can also choose to import the users in the CSV and make it possible to retarget these users as a group—doing so allows you to create a segment using the CSV import filter. Additionally, you can automatically create a segment with these users. 
 
 ## Troubleshooting
 
@@ -164,7 +162,7 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
-[7]: {% image_buster /assets/img/segment-imported-upsers.png %}
+[7]: {% image_buster /assets/img/segment-imported-users.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
