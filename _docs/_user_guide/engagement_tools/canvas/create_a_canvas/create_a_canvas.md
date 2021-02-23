@@ -135,7 +135,7 @@ Click "Send Settings" to select your Subscription Settings, turn on rate limitin
 By turning on rate-limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate-limiting and Frequency Capping click [here][6b].
 
 {% alert important %}
-Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.
+Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.<br><br>For more information on the nuances of frequency capping and rate limiting, visit [this article]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
 {% endalert %}
 
 Then, specify Quiet Hours (the time during which your messages will not send) for Canvas. Check "Enable Quiet Hours" in your __Send Settings__. Select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
