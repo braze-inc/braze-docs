@@ -52,6 +52,7 @@ Authorization: Bearer YOUR_REST_API_KEY
    "email": (required*, array of string) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
    // Endpoint only accepts email or phone value, not both
+   // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
    "phone": (required*, array of string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
    // SMS subscription group - one of external_id or phone is required
    // Endpoint only accepts email or phone value, not both
@@ -67,7 +68,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `subscription_group_id` | Yes | String | The id of your subscription group, |
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | String | The external_id of the user |
-| `email` | Yes* | String | Email addresses of the user |
+| `email` | Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
 | `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
