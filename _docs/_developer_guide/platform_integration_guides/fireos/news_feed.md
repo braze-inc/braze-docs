@@ -186,7 +186,7 @@ Braze allows you to optionally toggle on an Unread/Read indicator on News Feed c
 
 ### Enabling the Indicators
 
-In order to enable this functionality add the following line to your `appboy.xml` file:
+In order to enable this functionality add the following line to your `braze.xml` file:
 
 ```xml
 <bool name="com_appboy_newsfeed_unread_visual_indicator_on">true</bool>

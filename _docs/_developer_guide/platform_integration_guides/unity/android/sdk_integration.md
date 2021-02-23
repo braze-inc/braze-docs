@@ -105,7 +105,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 >  Your Braze API key can be found within the App Settings page of the Braze dashboard. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][30].
 
 {% alert note %}
-This automatic integration should not be used in conjunction with a manually created `appboy.xml` file since the configuration values may conflict during project building.
+This automatic integration should not be used in conjunction with a manually created `braze.xml` file since the configuration values may conflict during project building.
 {% endalert %}
 
 ## Advanced Android Integration Options
@@ -135,7 +135,7 @@ In order to use the Braze Unity plugin with Prime31 plugins, edit your project's
 
 ### Disabling Native In-App Message Display
 
-In-app messages from Braze's servers are automatically displayed natively. To disable this functionality, set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `appboy.xml`.
+In-app messages from Braze's servers are automatically displayed natively. To disable this functionality, set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
 ### Amazon ADM Push
 
@@ -143,9 +143,9 @@ Braze supports integrating [Amazon ADM push][10] into Unity apps. If you would l
 
 ### Receiving In-App Message Data in Unity
 
-Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming in-app messages.
+Unity Game Objects may be registered in your Unity project's `braze.xml` to be notified of incoming in-app messages.
 
-Sample `appboy.xml` Snippet:
+Sample `braze.xml` Snippet:
 
 ```xml
 <string name="com_appboy_inapp_listener_game_object_name"></string>
@@ -176,9 +176,9 @@ void InAppMessageReceivedCallback(string message) {
 
 ### Receiving Content Card Data in Unity
 
-Unity Game Objects may be registered in your Unity project's `appboy.xml` to be notified of incoming Content Cards.
+Unity Game Objects may be registered in your Unity project's `braze.xml` to be notified of incoming Content Cards.
 
-Sample `appboy.xml` Snippet:
+Sample `braze.xml` Snippet:
 
 ```xml
 <string name="com_appboy_content_cards_updated_listener_game_object_name"></string>
@@ -241,11 +241,11 @@ If you do not wish to import the Unity package, you may also manually copy the p
 
 ### Configure the SDK in XML {#unity-android-xml-configuration}
 
-A static configuration file called `appboy.xml` can be used to configure the Braze Android SDK. This file should exist under `Assets/Plugins/Android/res/values/appboy.xml`.
+A static configuration file called `braze.xml` can be used to configure the Braze Android SDK. This file should exist under `Assets/Plugins/Android/res/values/braze.xml`.
 
 #### Part 1: Adding The XML File
 
-If your app does not have an `appboy.xml`, you can use the following as a template. Otherwise, if you already have an `appboy.xml`, ensure that any missing sections below are added to your existing `appboy.xml`.
+If your app does not have an `braze.xml`, you can use the following as a template. Otherwise, if you already have an `braze.xml`, ensure that any missing sections below are added to your existing `braze.xml`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -285,16 +285,16 @@ If your app does not have an `appboy.xml`, you can use the following as a templa
 </resources>
 ```
 
-#### Part 2: Make Replacements in appboy.xml
+#### Part 2: Make Replacements in braze.xml
 
 * Replace `REPLACE_WITH_YOUR_BRAZE_API_KEY` with your Braze API Key.
 * Replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Messaging Sender ID. Please see [Registering for Push][31] for more information.
 
 >  Your Braze API key can be found within the App Settings page of the Braze dashboard. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][30].
 
-#### Part 3: Configure ADM in appboy.xml (optional)
+#### Part 3: Configure ADM in braze.xml (optional)
 
-If using ADM, please add the following to your `appboy.xml`:
+If using ADM, please add the following to your `braze.xml`:
 
 ```xml
 <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool> <!-- Whether or not Braze should handle registering the device to receive ADM push notifications. Default is false. -->

@@ -51,7 +51,7 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
 
-In your `appboy.xml`:
+In your `braze.xml`:
 
 ```xml
 <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
@@ -271,9 +271,9 @@ The icons pictured below are examples of properly designed icons:
 
 ### Step 3: Configure Notification Icons
 
-##### Specifying Icons in appboy.xml
+##### Specifying Icons in braze.xml
 
-- Braze allows you to configure your notification icons by specifying drawable resources in your `appboy.xml`:
+- Braze allows you to configure your notification icons by specifying drawable resources in your `braze.xml`:
 
 ```xml
 <drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
@@ -286,7 +286,7 @@ Setting a large notification icon is optional but recommended.
 
 ##### Specifying Icon Background Color
 
-- The notification icon background color can be overriden in your `appboy.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
+- The notification icon background color can be overriden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
 
 ```xml
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
@@ -296,7 +296,7 @@ Setting a large notification icon is optional but recommended.
 
 ##### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to it's default setting,`true`, in your `appboy.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to it's default setting,`true`, in your `braze.xml`:
 
 ```xml
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
@@ -370,7 +370,7 @@ Appboy.configure(this, appboyConfig)
 {% endtab %}
 {% endtabs %}
 
-See the equivalent configuration for your `appboy.xml`. Note that the class name must be the same as returned by `Class.forName()`:
+See the equivalent configuration for your `braze.xml`. Note that the class name must be the same as returned by `Class.forName()`:
 
 ```xml
 <bool name="com_appboy_push_deep_link_back_stack_activity_enabled">true</bool>
@@ -545,7 +545,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `APPBOY_PUSH_RECEIVED` intent will be received when a push notification arrives.
   - An `APPBOY_NOTIFICATION_OPENED` intent will be received when a push notification is clicked by the user.
   - An `APPBOY_PUSH_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
-- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `appboy.xml`.
+- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
 For a detailed custom receiver example, please see the below:
 

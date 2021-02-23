@@ -36,7 +36,7 @@ Ensure that your app is correctly configured to allow push notifications. Common
 
 #### 1. Incorrect Sender Id
 
-Ensure that the correct FCM Sender ID is included in the `appboy.xml` file. An incorrect Sender ID will lead to `MismatchSenderID` errors reported in the dashboard's Message Activity Log.
+Ensure that the correct FCM Sender ID is included in the `braze.xml` file. An incorrect Sender ID will lead to `MismatchSenderID` errors reported in the dashboard's Message Activity Log.
 
 #### 2. Braze Registration Not Occurring
 
@@ -116,7 +116,7 @@ Users have uninstalled the application. This will invalidate their FCM push toke
 
 #### 2. Invalid Firebase Cloud Messaging Server Key
 
-The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `appboy.xml` file. The Server key and Sender ID are found here in your Firebase Console:
+The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `braze.xml` file. The Server key and Sender ID are found here in your Firebase Console:
 
 ![FirebaseServerKey][20]
 

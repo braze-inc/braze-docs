@@ -77,7 +77,7 @@ public void onNewIntent(Intent intent) {
 
 ### Completing the integration
 
-1.  Follow the directions at [our public documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) to finish your integration. In particular, you will need to set your Braze API key in a new `appboy.xml` file and set up session handling by passing a `AppboyLifecycleCallbackListener` instance into `application.registerActivityLifecycleCallbacks`.
+1.  Follow the directions at [our public documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) to finish your integration. In particular, you will need to set your Braze API key in a new `braze.xml` file and set up session handling by passing a `AppboyLifecycleCallbackListener` instance into `application.registerActivityLifecycleCallbacks`.
 2.  When you need to make Braze calls from JavaScript, use the following declaration to import the JavaScript module:
 
 ```

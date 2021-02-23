@@ -20,7 +20,7 @@ In order to integrate Braze push notifications into your app, you need to:
 
 1. Enable Firebase
 2. Configure your Android Manifest
-3. Configure your appboy.xml
+3. Configure your braze.xml
 4. Set your API key on the Braze dashboard
 
 ## Step 1: Enable Firebase
@@ -42,32 +42,32 @@ Once you have setup your Firebase project, it is time to configure your Android 
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 ```
 
-## Step 3: Configure your appboy.xml
+## Step 3: Configure your braze.xml
 
 In order for a device to receive push notifications, it must register with the FCM server. The Braze SDK can handle the registration process for you.
 
-- To tell Braze to handle registration automatically, add the following configuration to your `appboy.xml` file:
+- To tell Braze to handle registration automatically, add the following configuration to your `braze.xml` file:
 
 ```xml
 <!-- Whether or not Braze should handle registering the device to receive push notifications. Default is false. -->
 <bool name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
 ```
 
-- Add the following configuration element to your `appboy.xml` file and replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Sender ID:
+- Add the following configuration element to your `braze.xml` file and replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Sender ID:
 
 ```xml
 <!-- Replace with your Firebase Sender ID -->
 <string name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
 ```
 
-- **Recommended** To instruct Braze to handle deep links from push automatically, add the following configuration to your `appboy.xml` file:
+- **Recommended** To instruct Braze to handle deep links from push automatically, add the following configuration to your `braze.xml` file:
 
 ```xml
 <!-- Whether to open push deep links from Braze automatically. -->
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
 ```
 
-- **Recommended**: Specify the drawable resource that should be displayed in the push notification in your appboy.xml file.
+- **Recommended**: Specify the drawable resource that should be displayed in the push notification in your braze.xml file.
 
 ```xml
 <!-- The drawable that should be displayed whenever a push notification is received. If no icon is given, the notification will use the application icon -->

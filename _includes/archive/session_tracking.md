@@ -52,7 +52,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 {% endif %}
 
-{% if include.platform == "Android" %}To customize the session timeout, add [`com_appboy_session_timeout`][session_tracking_4] to your [`appboy.xml`][session_tracking_3] file:
+{% if include.platform == "Android" %}To customize the session timeout, add [`com_appboy_session_timeout`][session_tracking_4] to your [`braze.xml`][session_tracking_3] file:
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open"
