@@ -29,9 +29,11 @@ guide_featured_list:
   fa_icon: fas fa-server
 ---
 
-<br>
 ## Example News Feed: Urban Outfitters
+
 ![iOS ActivityFeed+FeedBack][10]
 <br>
+
+{% alert note %} Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information. {% endalert %}<br>
 
 [10]: {% image_buster /assets/img_archive/UONewsFeed.png %} "Urban Outfitters News Feed"
