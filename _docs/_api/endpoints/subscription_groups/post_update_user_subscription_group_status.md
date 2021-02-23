@@ -49,11 +49,11 @@ Authorization: Bearer YOUR_REST_API_KEY
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
-   "email": (required*, string) the email address of the user (must include at least one email and at most 50 emails),
+   "email": (required*, array of string) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
    // Endpoint only accepts email or phone value, not both
    // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
-   "phone": (required*, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   "phone": (required*, array of string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
    // SMS subscription group - one of external_id or phone is required
    // Endpoint only accepts email or phone value, not both
  }
@@ -77,7 +77,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "email": "your.user@email.com"
+  "email": "your.user@email.com",
 }
 
 ```
@@ -89,7 +89,7 @@ This property should not be used for updating a user's profile information. Plea
 {
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "phone": "+12223334444"
+  "phone": "+12223334444",
 }
 
 ```
@@ -105,7 +105,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
   "external_id": "user123",
-  "email": "your.user@email.com"
+  "email": ["your.user@email.com", "your.user2@email.com"]
 }
 '
 ```
@@ -119,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
   "external_id": "user123",
-  "phone": "+12223334444"
+  "phone": ["+12223334444", "+13334445555"]
 }
 '
 ```
