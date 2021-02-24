@@ -35,7 +35,7 @@ This Survey template is supported on mobile, web, or both mobile + web. Remember
 
 #### Single vs. Multiple Choice Survey {#single-multiple-choice}
 
-Use the Single vs. Multiple Choice option to control whether a user can select only one choice, or multiple choices.
+Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices.
 
 When Custom Attribute collection is enabled, the Multiple Choice option will set each choice's designated custom attribute. So, be sure to use a unique Custom Attribute name for each choice to prevent choices from overwriting each other.
 
@@ -51,7 +51,7 @@ Enable Custom Attribute collection to collect attributes based on the user's sub
 
 Once a user submits their response, you can optionally show a confirmation page, or, simply close the message.
 
-A confirmation page is a great place to thank users for their time, or provide additional information. You can customize the Call To Action on this page to guide users to another page of your app or website.
+A confirmation page is a great place to thank users for their time or provide additional information. You can customize the Call To Action on this page to guide users to another page of your app or website.
 
 ![Confirmation Option]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:700px"}
 
