@@ -287,7 +287,7 @@ _Update noted in August 2019._
   "inbound_phone_number": (string) phone number on which the message was received,
   "subscription_group_id": (string) api id of the subscription group from which this SMS message was received,
   "user_phone_number": (string) the number from which message was sent,
-  "action": (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),  
+  "action": (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
   "message_body": (string) the text of the message,
 }
 ```
@@ -331,7 +331,7 @@ _Update noted in August 2019._
 }
 // In-App Message Click
 {
-  "button_id": (string) index of the button clicked, if it was a button that was clicked,
+  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
