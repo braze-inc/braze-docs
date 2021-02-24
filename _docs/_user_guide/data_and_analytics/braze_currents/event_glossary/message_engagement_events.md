@@ -414,8 +414,7 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
   "ip_pool": (string) IP pool used for message sending,
-  "bounce_reason": (string) reason for bounce provided by server,
-  "bounce_code": (string) code for bounce provided by server
+  "bounce_reason": (string) reason for bounce provided by server
 }
 ```
 
