@@ -83,6 +83,8 @@ _Note: Inbox Vision is currently unavailable in this editor view._
 ## Step 5: Check for Email Errors
 Email errors are presented on the ‘compose’ tab of the message workflow.  Errors prevent you from progressing forward, while “Warnings”, indicate reminders to help you follow best practices.  Depending on your business, you might choose to ignore them.
 
+![dnd_compose_error][3]
+
 
 ## Step 6: Save Your Template
 Be sure to save your template by clicking the “Save Template” button in the bottom right corner of the editor. You’re now ready to use this template in any campaign or canvas step you choose.
@@ -93,3 +95,5 @@ Note: Edits made to an existing template will not be reflected in campaigns that
 
 [1]: {% image_buster /assets/img/dnd_editor_workflow.png %}
 [2]: {% image_buster /assets/img/dnd_badge_icon.png %}
+[3]: {% image_buster /assets/img/dnd_compose_error.png %}
+
