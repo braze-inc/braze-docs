@@ -21,3 +21,4 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
     fa_icon: far fa-tasks
 ---
+<br><br>
