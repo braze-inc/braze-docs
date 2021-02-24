@@ -61,11 +61,11 @@ Users who have not yet opted-in to push notifications will be prompted to opt-in
 
 #### Disabling Automatic Push Registration
 
-Check "Disable Automatic Push Registration" if you would like to manually register users with APNs (Apple Push Notification Service). Unity provides [NotificationServices.RegisterForNotifications][5] to do this from Unity.
+Check "Disable Automatic Push Registration" if you would like to manually register users with APNs (Apple Push Notification Service).
 
 ![Disable Automatic Push Registration][28]
 
->  If you check this option, make sure that you are registering users for push notifications EVERY time the application runs after users have granted push permissions to your app. Apps need to re-register with APNs as [device tokens can change arbitrarily][4].
+>  If you check this option, ensure that you are registering users for push notifications every time the application runs after users have granted push permissions to your app. Apps need to re-register with APNs as [device tokens can change arbitrarily][4].
 
 #### Enabling Background Push
 
@@ -226,7 +226,6 @@ See our documentation on [Deep Linking in iOS][18].
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#transitioning-from-manual-to-automated-integration
 [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 [4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
-[5]: https://docs.unity3d.com/ScriptReference/iOS.NotificationServices.RegisterForNotifications.html
 [6]: #disabling-automatic-push-registration
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#step-2-setting-your-api-key
 [9]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
