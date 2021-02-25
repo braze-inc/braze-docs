@@ -41,7 +41,7 @@ Data breakdowns like these help customers understand what specific data points a
 
 ## Total Data Points Dashboard
 
-Your Total Data Points Dashboard can be found under the __Looker Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
+Your Total Data Points Dashboard can be found under the __Total Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
 
 ![Subscription and Usage][2]{: style="max-width:80%;"}
 
