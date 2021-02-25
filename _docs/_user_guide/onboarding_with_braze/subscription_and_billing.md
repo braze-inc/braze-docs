@@ -39,9 +39,9 @@ Please note that custom attributes, events, and in-app purchases are italicized.
 
 Data breakdowns like these help customers understand what specific data points are taking up the what percentage of your allotment. We recommend customers query this information from time to time to make sure they aren't accidentally spending data points in wasteful and unnecessary ways. 
 
-## Data Points Dashboard
+## Total Data Points Dashboard
 
-The Data Points Dashboard can be found under the __Looker Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
+Your Total Data Points Dashboard can be found under the __Looker Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
 
 ![Subscription and Billing][2]{: style="max-width:80%;"}
 
