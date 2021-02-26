@@ -9,10 +9,10 @@ description: "This tutorial covers how to install the SDK using Swift Package Ma
 
 ## Requirements
 
-Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
+Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] (SPM) automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
 
 > Note that tvOS is not yet available via _Swift Package Manager_.\
-> As of version 3.31.0, Push stories is supported thru SPM.
+> As of version 3.31.0, Push stories is supported through SPM.
 
 ## Step 1: Adding the dependency to your project
 
@@ -20,7 +20,9 @@ Open your project and navigate to your project's settings. Select the tab named 
 
 ![Swift Package Manager: Menu 1][apple_initial_setup_2]
 
-Enter the url of our iOS SDK repository (`https://github.com/Appboy/appboy-ios-sdk`) in the text field and click _Next_:
+When importing SDK version `3.33.1` and above, enter the url of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click _Next_:
+
+> For versions `3.32.0` and below, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
 
 ![Swift Package Manager: Menu 2][apple_initial_setup_3]
 
