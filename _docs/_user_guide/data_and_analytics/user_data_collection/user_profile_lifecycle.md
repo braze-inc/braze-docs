@@ -20,8 +20,6 @@ Initially, when a user profile is recognized via the SDK an 'anonymous' user pro
 
 The `braze_id` is automatically assigned by Braze, cannot be edited and will be device-specific.
 
-When a new anonymous user starts a single session (automatic collection only, location enabled), the following 8 data points are collected: User ID, Country, City, Language, Device Locale, Time Zone, Session Start, and Session End.
-
 ## Identified User Profiles
 
 Once a user is recognizable in your app (by providing a form of user ID or email address) we suggest [assigning an external_id][23] to that user's profile. The purpose of this is to recognize the same user across multiple devices to a single user profile.
