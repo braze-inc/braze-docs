@@ -11,8 +11,7 @@ description: "This tutorial covers how to install the SDK using Swift Package Ma
 
 Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] (SPM) automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
 
-> Note that tvOS is not yet available via _Swift Package Manager_.\
-> As of version 3.31.0, Push stories is supported through SPM.
+> Note that tvOS is not yet available via _Swift Package Manager_.
 
 ## Step 1: Adding the dependency to your project
 
@@ -39,7 +38,7 @@ Select the package that best fits your needs and click _Finish_:
 - `AppboyKit`
   - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
 - `AppboyPushStory`
-  - Include this package if you have integrated Push Stories in your app.
+  - Include this package if you have integrated Push Stories in your app. This is supported as of version 3.31.0.
   - In the dropdown under `Add to Target`, select your `ContentExtension` target instead of your main app's target. 
   
 > Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to undesired behavior.
