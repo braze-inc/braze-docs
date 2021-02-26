@@ -16,13 +16,13 @@ Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] (SPM) 
 
 ## Step 1: Adding the dependency to your project
 
-Open your project and navigate to your project's settings. Select the tab named _Swift Packages_ and click on the add button (_+_) at the bottom left.
+Open your project and navigate to your project's settings. Select the tab named _Swift Packages_ and click on the add button (+) at the bottom left.
 
 ![Swift Package Manager: Menu 1][apple_initial_setup_2]
 
 When importing SDK version `3.33.1` and above, enter the url of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click _Next_:
 
-> For versions `3.32.0` and below, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
+> For versions `3.29.0` through `3.32.0`, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
 
 ![Swift Package Manager: Menu 2][apple_initial_setup_3]
 
@@ -38,6 +38,9 @@ Select the package that best fits your needs and click _Finish_:
   - Includes `AppboyKit` automatically.
 - `AppboyKit`
   - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
+- `AppboyPushStory`
+  - Include this package if you have integrated Push Stories in your app.
+  - In the dropdown under `Add to Target`, select your `ContentExtension` target instead of your main app's target. 
   
 > Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to undesired behavior.
 
