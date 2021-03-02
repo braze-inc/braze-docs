@@ -210,7 +210,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/';
-
+validurls['/docs/partners/technology_partners/advertising_technologies/attribution/kochava/'] = '/docs/partners/advertising_technologies/attribution/kochava/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/data_augmentation/contextual_location/gimbal/';
 validurls['/docs/partners/advertising_technologies/attribution/pypestream/'] = '/docs/partners/additional_channels/support/pypestream/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/'] = '/docs/partners/channel_extensions/loyalty/jebbit/';
