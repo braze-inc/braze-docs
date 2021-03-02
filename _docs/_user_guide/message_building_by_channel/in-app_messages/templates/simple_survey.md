@@ -9,12 +9,14 @@ description: "Collect user attributes, insights, and preferences to power your c
 
 # Simple Survey In-App Message
 
-Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys.
+Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy.
 
-![example]({% image_buster /assets/img/iam/iam-survey.png %})
+For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
+
+![examples]({% image_buster /assets/img/iam/iam-survey.png %})
 
 {% alert important %}
-This feature is in a closed _Early Access_ period, and only available to a limited number of brands.
+This feature is in a closed _Early Access_ period. To request access, please submit your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 {% endalert %}
 
 ## SDK Requirements {#supported-sdk-versions}
@@ -25,7 +27,7 @@ This In-App Message will only be delivered to devices that use at least the [SDK
 
 ## Creating a new Survey {#create}
 
-Create a new Survey message by selecting the Simple Survey option in your message's Template Type option.
+When creating a new In-App message, choose the new "Simple Survey" option located in the Template Type menu.
 
 ![Simple Survey Message Type]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:700px"}
 

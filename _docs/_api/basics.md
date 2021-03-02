@@ -145,7 +145,7 @@ The response headers for any valid request include the current rate limit status
 
 Header Name             | Description
 ----------------------- | -----------------------
-`X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per hour.
+`X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per day/hour/minute/second.
 `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.
 `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
 {: .reset-td-br-1 .reset-td-br-2}
