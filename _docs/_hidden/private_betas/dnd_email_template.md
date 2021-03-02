@@ -16,8 +16,8 @@ Two editing options will now be shown.
 
 ![dnd_editor_workflow][1]{: style="max-width:80%;"}
 
-1. Selecting the HTML Code Editor will allow you to use the existing editors and see your existing email templates.
-2. Selecting the 'Drag-and-Drop' editor will allow you to select templates created using the drag-and-drop editor.
+1. Selecting the 'Drag-and-Drop' editor will allow you to select templates created using the drag-and-drop editor.
+2. Selecting the HTML Code Editor will allow you to use the existing editors and see your existing email templates.
 
 ## Step 3: Create or Choose a Template
 
@@ -40,7 +40,7 @@ The new editing experience is broken out into 3 sections: __Sending Settings__, 
 #### __Sending Settings__
 The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
-_Note: Advanced functionality will appear in the campaign or canvas step composer. In advanced functionality, you can modify your inline CSSsetting, set a BCC email address, and enter in a header or extra value pairs (if configured)._
+_Note: Advanced functionality will appear in the campaign or canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key value pairs (if configured)._
 
 {% endtab %}
 {% tab Content %}
@@ -67,7 +67,7 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 {% endtab %}
 {% endtabs %}
 
-_Note: Inbox Vision is currently unavailable in this editor view._
+_Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
 
 ## Step 5: Check for Email Errors
 Email errors are presented on the ‘compose’ tab of the message workflow. Errors prevent you from progressing forward, while “Warnings”, indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
