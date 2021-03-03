@@ -23,13 +23,11 @@ To use them, just drag one inside a column, it will auto-adjust to the column wi
 | `HTML` |  Insert raw HTML.  Great for advanced liquid such as connected content or conditional statements. | 
 | `Video` |  The video block will automatically create a preview image for youtube or vimeo urls. | 
 | `Menu` |  Create a flexible menu for the message you're designing. | 
-| `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets for easy insertion into your editor. | 
 
-### Block type properties
+### Block type properties (TBD)
 Details for each block type are provided below
 
 #### Title
-
 
 #### Text
 
@@ -46,3 +44,11 @@ Details for each block type are provided below
 #### Video
 
 #### Menu
+
+### Add Liquid Personalization
+| Name | Description |
+|---|---|
+| `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets for easy insertion into your editor. | 
+
+
+
