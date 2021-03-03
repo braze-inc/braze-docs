@@ -20,4 +20,7 @@ guide_featured_list:
   - name: Audience Sync to Facebook
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/fb_audience_sync/
     fa_icon: fab fa-facebook
+  - name: Audience Path Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_path/
+    fa_icon: fa fa-users
 ---
