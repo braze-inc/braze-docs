@@ -17,8 +17,8 @@ Example of pushing a `ABKContentCardsTableViewController` instance into a naviga
 {% tab OBJECTIVE-C %}
 
 ```objc
-ABKContentCardsTableViewController *contentCards = [ABKContentCardsTableViewController getNavigationFeedViewController];
-contentCards.title = "Content Cards Title";
+ABKContentCardsTableViewController *contentCards = [[ABKContentCardsTableViewController alloc] init];
+contentCards.title = @"Content Cards Title";
 contentCards.disableUnreadIndicator = YES;
 [self.navigationController pushViewController:contentCards animated:YES];
 ```
@@ -49,7 +49,7 @@ This modal is used to present the view controller in a modal view, with a naviga
 
 ```objc
 ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController alloc] init];
-contentCards.contentCardsViewController.title = "Content Cards Title";
+contentCards.contentCardsViewController.title = @"Content Cards Title";
 contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 [self.navigationController presentViewController:contentCards animated:YES completion:nil];
 ```
