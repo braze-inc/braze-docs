@@ -342,7 +342,7 @@ _Update noted in August 2019._
 }
 // In-App Message Click
 {
-  "button_id": (string) index of the button clicked, if it was a button that was clicked,
+  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,

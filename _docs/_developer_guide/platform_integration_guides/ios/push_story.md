@@ -145,7 +145,7 @@ In your `NotificationViewController.m`, remove the default implementation and ad
 - (void)didReceiveNotification:(UNNotification *)notification {
   self.dataSource = [[ABKStoriesViewDataSource alloc] initWithNotification:notification
                                                                storiesView:self.storiesView
-                                                                  appGroup:@"YOUR-APP-GROUP"];
+                                                                  appGroup:@"YOUR-APP-GROUP-IDENTIFIER"];
 }
 
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response
@@ -180,7 +180,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
   var dataSource: ABKStoriesViewDataSource?
     
   func didReceive(_ notification: UNNotification) {
-    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "group.Appboy.HelloSwift")
+    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "YOUR-APP-GROUP-IDENTIFIER")
   }
     
   func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
