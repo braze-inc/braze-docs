@@ -34,6 +34,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `content_block_id`  | Yes | String | The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.|
+| `include_inclusion_data`  | No | Boolean | When set to 'true', the API returns back the Message Variation API ID of Campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted Campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Example Request
@@ -61,11 +62,39 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
+### Example Request with including inclusion data
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id=12345678910&include_inclusion_data=true' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY'
+```
+
+### Successful Response Properties
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "content_block_id": "string",
+  "name": "string",
+  "content": "string",
+  "description": "string",
+  "content_type": "html or text",
+  "tags":  "array of strings",
+  "created_at": "time-in-iso",
+  "last_edited": "time-in-iso",
+  "inclusion_count" : integer,
+  "inclusion_data": "array"
+  "message": "success",
+}
+```
+
 ## Possible Errors
 - `Content Block ID cannot be blank.` - A Content Block has not been listed or is not encapsulated in quotes.
 
 - `Content Block ID is invalid for this App Group.` - This Content Block does not exist or is in a different company account or app group.
 
 - `Content Block has been deleted - content not available.` - This Content Block, though it may have existed earlier, has been deleted.
+
+- `Include Inclusion Data - error` - One of true or false is not provided
 
 {% endapi %}
