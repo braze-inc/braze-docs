@@ -9,13 +9,13 @@ Nested Object Support is currently in beta. Please contact your Braze account ma
 
 # Nested Object Support for Custom Event Properties
 
-Nested Object Support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in APi triggered messages using Liquid and dot notation to traverse the sata to a specific node and template in the desired value. 
+Nested Object Support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages using Liquid and dot notation to traverse the data to a specific node and template in the desired values. 
 
 ## Limitations
 - Nested data can only be sent with __custom events and purchase events__. This is not yet supported with user attributes. 
-- The array data cannot be used for segmentation, triggering or in any other way on the platform outside of Liquid templating.
+- The array data cannot be used for segmentation or in any other way on the platform outside of Liquid templating and triggering.
 - Available on events/purchases sent __via API only__, the Braze SDKs are not yet supported.
-- Partners for our HTTP Currents connector (Mixpanel, Amplitude, mParticle, and Segment) do NOT yet support nested arrays data in event properties. Until this is no longer the case, we recommend against using this feature with app groups that have HTTP Currents integrations enabled. 
+- Partners for our HTTP Currents connector (Mixpanel, Amplitude, mParticle, and Segment) do NOT yet support nested arrays data in event properties. Until this is supported, we recommend against using this feature with app groups that have HTTP Currents integrations enabled. 
 
 ## Usage Examples
 
@@ -24,7 +24,7 @@ Nested Object Support allows you to send arrays of data as properties of custom 
 {% tabs %}
 {% tab Music Example %}
 
-Shown below is a `/users/track` example with a "Played Song" custom event. Once a song has been played, to capture the properties of the song, we will send an API request that lists "songs" as a property, and the nested properties of that song.
+Shown below is a `/users/track` example with a "Played Song" custom event. Once a song has been played, to capture the properties of the song, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -45,7 +45,7 @@ properties: {
 {% endtab %}
 {% tab Restaurant Example%}
 
-Shown below is a `/users/track` example with a "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
+Shown below is a `/users/track` example with an "Ordered" custom event. Once an order has been completed, to capture properties of that order, we will send an API request that lists "r_details" as a property, and the nested properties of that order.
 
 ```
 ...
@@ -68,8 +68,9 @@ properties:{
 
 ### Liquid Templating
 
-The liquid templating examples below show how to reference the nested properties saved from the above API requests and use them in your API triggered Liquid messaging. Using Liquid and dot notation, traverse the nested data array to find the specific node you would like to include in your API triggered messages.
-{% tabs %}
+The Liquid templating example below shows how to reference the nested properties saved from the above API request and use them in your API-triggered Liquid messaging. Using Liquid and dot notation, traverse the nested data array to find the specific node you would like to include in your API-triggered messages.
+
+{% tabs local %}
 {% tab Music Example %}
 Templating in Liquid in a message triggered by the "Liked Song" event:
 
@@ -79,29 +80,27 @@ Templating in Liquid in a message triggered by the "Liked Song" event:
 {% endraw %}
 
 {% endtab %}
-{% tab Restaurant Example %}
-Templating in Liquid in a message triggered by the "Ordered" event:
-
-{% raw %}
-`{{event_properties.${r_details}[0].location[0].city}}` - "Montclair"<br>
-`{{event_properties.${r_details}[0].name}}` - "McDonalds"
-{% endraw %}
-
-{% endtab %}
 {% endtabs %}
 
 ### Campaign Triggering
 
-Campaign triggering is supported for object custom event properties only. __Array data types are not currently supported for triggering__. To use these properties to trigger a campaign, select your custom event, and add a Nested Object Property filter. 
+Campaign triggering is supported for object custom event properties only. To use these properties to trigger a campaign, select your custom event, and add a __Nested Object Property__ filter. 
 
 {% tabs %}
+{% tab Music Example %}
+
+Triggering a campaign with nested properties from the "Liked Song" event:
+
+![Triggering Campaign]({% image_buster /assets/img/nested_object2.png %})
+
+{% endtab %}
 {% tab Restaurant Example %}
 
 Triggering a campaign with nested properties from the "Ordered" event:
 
 ![Triggering Campaign]({% image_buster /assets/img/nested_object1.png %})
 
-`restaurant_details.name` - "Mcdonalds"<br>
+`r_details.name` - "Mcdonalds"<br>
 `r_details.location.city` - "Montclair"
 {% endtab %}
 {% endtabs %}
@@ -110,7 +109,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 {% details Does this consume additional data points? %}
 
-Array properties are treated the same as pther event type properties, so there is no change in how we charge data points as a result of adding the capability
+Array properties are treated the same as other event type properties, so there is no change in how we charge data points as a result of adding the capability
 
 {% enddetails %}
 
