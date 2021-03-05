@@ -31,7 +31,7 @@ In the default Audience Step, there will already be two audience groups, __Group
 
 ### Define Audience Groups
 
-Below, you are shown the layout of an Audience Step. Here you can define up to 8 audience groups (1 preset and 7 customizable). To define an audience group, select the group name from the Audience Path wizard. Here, you can rename your audience group, choose the filters and segments that apply to your group, and add or delete audience groups.
+Below, you are shown the layout of an Audience Step. Here you can define up to 8 audience groups (1 preset and 7 customizable). To define an audience group, select the group name from the Audience Path wizard. Here, you can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
 
 For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", "Loves European Cuisine", etc. 
 
@@ -46,9 +46,9 @@ Once the Audience Step has been completed, each audience group will have a separ
 The true power of audience paths lies in the ability to assign priority. While this feature does not need to be used strategically, some marketers may find themselves pushing certain products to users, for example, specials or limited-edition releases. By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria, all in a single Canvas step.
 
 ![Audience Paths][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
-For example, if you wanted to send a group of users ads for new products, you would rank filters that fall under those products high on the audience path. Let's say you were trying to send out a marketing campaign for the company "Big Brand" and a new brand of shoe was just released, you might select filters like "Likes Big Brand Shoes", "Likes Big Brand", etc. and send out different types of email messages based on what group they fall into. 
+For example, if you wanted to send a group of users ads for new products, you would rank filters that fall under those products high on the audience path. Let's say you were trying to send out a marketing campaign for the company "Big Brand" and a new brand of shoe was just released, you might select filters like "Likes Big Brand Shoes", "Likes Big Brand", etc. and send out different types of email messages based on what path they fall into. 
 
-When users enter this Audience Path step, they will first be evaluated if they fall under the highest rank criteria, criteria 1 "Likes Big Brand Shoes", if so, they will continue to the next step defined in your Canvas. If that user did not "Like Big Brand Shoes", they will then be evaluated for the next Audience Path criteria, criteria 2 "Likes Big Brand", and will commence to the next Canvas step if the criteria are met. Lastly, if there exist users that failed to fall into the previous paths, they would fall into the Everybody Else path and would continue onto the next Canvas step you define for that group. 
+When users enter this Audience Path step, they will first be evaluated if they fall under the highest rank criteria, criteria 1 "Likes Big Brand Shoes", if so, they will continue to the next step defined in your Canvas. If that user did not "Like Big Brand Shoes", they will then be evaluated for the next Audience Path criteria, criteria 2 "Likes Big Brand", and will commence to the next Canvas step if the criteria are met. Lastly, if there exist users that failed to fall into the previous paths, they would fall into the Everybody Else path and would continue onto the next Canvas step you define for that path. 
 
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
