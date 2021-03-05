@@ -33,4 +33,4 @@ Keep in mind that you can message different levels of at-risk users differently!
 
 
 
-[5]: {% image_buster /assets/img/churn/churnFilters.png %}
+[5]: {% image_buster /assets/img/purchasePrediction/purchaseFilters.png %}
