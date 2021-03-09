@@ -141,7 +141,7 @@ If you choose to only use one button, it will automatically adjust to take over 
 
 Braze has three Generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support, in the [Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) section which composing your in-app message.
 
-![In-App_Messages_Generations][22]{: height="50%" width="50%"}
+![In-App_Messages_Generations][22]{: style="max-width:50%"}
 
 Depending on what SDK Versions your users are on, you may or may not see this option. You are only asked to select a generation when you have users on more than one generation. A Generation is defined as a collection of SDK Versions that contain a large number of major upgrades. For example, Generation 3 is the latest one that encompasses the latest style updates. 
 
@@ -199,10 +199,16 @@ Do not use this option for messages that can be triggered while a user is offlin
 
 Build the remainder of your campaign or Canvas, see the sections below for further details on how to best utilize our tools to build in-app messages. For more information on Canvas specific in-app messaging options like expiry and steps, [check out our documentation][16]. 
 
-{% details Triggering %}
-![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: height="50%" width="50%"}
+{% tabs %}
+{% tab Triggering %}
 
 ### Triggering 
+
+{% alert important %}
+Please note that if you intend to trigger your in-app message based off a custom event, that custom event __must be sent via the SDK__.
+{% endalert %}
+
+![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: style="max-width:70%"}
 
 In-app message delivery is entirely based off of of the following action triggers:
 - Making a purchase
@@ -220,44 +226,43 @@ Please refer to our developer documentation for [server-side event triggering]({
 
 In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). When you stop a campaign, the trigger condition is set to null and updated on the user's next session. For a user's current session, they may still see the in-app messages until the triggers are updated on their next session. 
 
-{% enddetails %}
-
-{% details Prioritize %}
+{% endtab %}
+{% tab Prioritize %}
 
 ### Prioritize
 
 #### Campaigns
 Finally, once you've selected the action the in-app message will be triggered off of, you should also set a priority. If two messages are triggered off of the same action, high priority messages will be scheduled to appear on users' devices before messages with lower priorities.
 
-![Event Prioritization]({% image_buster /assets/img_archive/prioritization_options.png %}){: height="50%" width="50%"}
+![Event Prioritization]({% image_buster /assets/img_archive/prioritization_options.png %}){: style="max-width:80%"}
 
 The high, medium and low options for triggered message priorities are buckets, and as such multiple messages could have the same selected priority. To set priorities within these buckets, click __Set Exact Priority__ and you will be able to drag and drop campaigns to order them with the correct priority.
 
-![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: height="50%" width="50%"}
+![Bucket Prioritization]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Canvas
 A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
-![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: height="50%" width="50%"}
+![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:70%"}
 
 Navigate to the “send settings” of the canvas section to prioritize in-app messages from a canvas against in-app messages from other canvases and campaigns.
 
 By default, canvas step priority is set to medium with the most recently created steps having the highest relative priority. Canvas/campaign level priorities also default to medium with the highest relative priority defaulting to the most recently created items.
 
-![canvas_priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: height="50%" width="50%"}
+![canvas_priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
 
-{% enddetails %}
+{% endtab %}
+{% tab Target Segment %}
 
-{% details Choose Target Segment %}
 ### Target Segment
 
 Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-![Target Page]({% image_buster /assets/img_archive/target_page.png %}){: height="50%" width="50%"}
+![Target Page]({% image_buster /assets/img_archive/target_page.png %}){: style="max-width:50%"}
 
-{% enddetails %}
+{% endtab %}
+{% tab Conversion Events %}
 
-{% details Choose Conversion Events %}
 ### Conversion Events
 Braze allows you to track how often users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
 
@@ -268,11 +273,10 @@ Braze allows you to track how often users perform specific actions (Conversion E
 
 You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
-![Conversion Event]({% image_buster /assets/img_archive/conversion_event_selection.png %}){: height="50%" width="50%"}
+![Conversion Event]({% image_buster /assets/img_archive/conversion_event_selection.png %}){: style="max-width:50%"}
 
-{% enddetails %}
-
-<br>
+{% endtab %}
+{% endtabs %}
 
 After you've finished building the last of your campaign or Canvas, review its details, then send it!
 
