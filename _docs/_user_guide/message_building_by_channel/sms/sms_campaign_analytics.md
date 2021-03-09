@@ -25,8 +25,6 @@ To see the meanings of all SMS metrics, check the [Metrics Glossary][1].
 - **Delivery Failures**: The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
 - **Confirmed Delivery**: The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
 - **Rejections**: The SMS has been rejected by the carrier. This can happen for several reasons including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
-- **Opt-Out**: A user replied to your message with an [Opt-Out Keyword][3] and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. 
-- **Help**: A user replied to your message with a [HELP Keyword][3] and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. 
 
 
 ### Control Groups
@@ -73,16 +71,6 @@ This block allows you to see the message's performance over a set time period on
 
 {% endtab %}
 
-{% tab Keyword Responses %}
-
-**Keyword Responses**
-
-This block allows you to see the inbound keywords users replied with after receiving your message on a timeline 
-
-![sms_keyword_responses]({% image_buster /assets/img/sms/sms_keyword_responses.png %})
-
-{% endtab %}
-
 {% tab Conversion Event Details %}
 
 **Conversion Event Details**
@@ -97,4 +85,3 @@ This block will show you the performance of your conversion events for the SMS m
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords
