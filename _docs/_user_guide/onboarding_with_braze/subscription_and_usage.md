@@ -36,7 +36,7 @@ The Most Used Data Points by App tab is a further breakdown of the information p
 Please note that custom attributes, events, and in-app purchases are italicized.
 {% endalert%}
 
-Data breakdowns like these help customers understand what specific data points are taking up the what percentage of your allotment. We recommend customers query this information from time to time to make sure they aren't accidentally spending data points in wasteful and unnecessary ways. 
+Data breakdowns like these help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren't accidentally spending data points in accidental and unnecessary ways. 
 
 ## Total Data Points Dashboard
 
