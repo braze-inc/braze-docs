@@ -10,4 +10,4 @@ description: "This page lists updates to Braze's iOS SDK changelog."
 
 # iOS SDK Changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/mattlsteinberg/appboy-ios-changelog-test/main/CHANGELOG.md %}
