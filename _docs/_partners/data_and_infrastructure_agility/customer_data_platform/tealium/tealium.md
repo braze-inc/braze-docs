@@ -29,10 +29,6 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 
 Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. To read more about how to set up Tealium AudienceStream, check out our [documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/).
 
-{% alert important %}
-Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. 
-{% endalert %}
-
 ## Set Up Overview
 
 1. Adhere to the requirements and pre-requisites
@@ -120,7 +116,7 @@ Server-to-Server integration does __not__ support Braze UI features such as In-A
 
 | Name | Description |
 | ---- | ----------- |
-| REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__|
+| REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__ |
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 

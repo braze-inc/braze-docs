@@ -9,19 +9,18 @@ description: "This tutorial covers how to install the SDK using Swift Package Ma
 
 ## Requirements
 
-Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] (SPM) automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
+Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
 
-> Note that tvOS is not yet available via _Swift Package Manager_.
+> Note that tvOS is not yet available via _Swift Package Manager_.\
+> As of version 3.31.0, Push stories is supported thru SPM.
 
 ## Step 1: Adding the dependency to your project
 
-Open your project and navigate to your project's settings. Select the tab named _Swift Packages_ and click on the add button (+) at the bottom left.
+Open your project and navigate to your project's settings. Select the tab named _Swift Packages_ and click on the add button (_+_) at the bottom left.
 
 ![Swift Package Manager: Menu 1][apple_initial_setup_2]
 
-When importing SDK version `3.33.1` and above, enter the url of our iOS SDK repository (`https://github.com/braze-inc/braze-ios-sdk`) in the text field and click _Next_:
-
-> For versions `3.29.0` through `3.32.0`, use the URL `https://github.com/Appboy/Appboy-ios-sdk`.
+Enter the url of our iOS SDK repository (`https://github.com/Appboy/appboy-ios-sdk`) in the text field and click _Next_:
 
 ![Swift Package Manager: Menu 2][apple_initial_setup_3]
 
@@ -37,9 +36,6 @@ Select the package that best fits your needs and click _Finish_:
   - Includes `AppboyKit` automatically.
 - `AppboyKit`
   - Best suited if you don't need to use any of the UI components provided by Braze (e.g. Content Cards, In-App Messages, etc.).
-- `AppboyPushStory`
-  - Include this package if you have integrated Push Stories in your app. This is supported as of version 3.31.0.
-  - In the dropdown under `Add to Target`, select your `ContentExtension` target instead of your main app's target. 
   
 > Make sure you select **either** `AppboyKit` **or** `AppboyUI`. Including both packages can lead to undesired behavior.
 
