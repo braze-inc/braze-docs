@@ -63,6 +63,8 @@ You can optionally include verbose logging by including the following snippet:
 </dict>
 ```
 
+Note that prior to Braze iOS SDK INSERT_VERSION_HERE, the dictionary key `Appboy` must be used in place of `Braze`.
+
 ## SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
