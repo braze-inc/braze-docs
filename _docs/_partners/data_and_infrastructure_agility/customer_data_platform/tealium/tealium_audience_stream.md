@@ -23,6 +23,10 @@ Tealium AudienceStream visitor profiles are segmented by shared behaviors to cre
 | [Braze REST Endpoint][6] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert important %}
+Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. 
+{% endalert %}
+
 ## Step 1: Set up Attributes and Badges
 
 ### Understanding Attributes

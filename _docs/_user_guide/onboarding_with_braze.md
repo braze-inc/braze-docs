@@ -20,6 +20,12 @@ guide_featured_list:
   - name: Web SDK Overview for Marketers
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
     fa_icon: fas fa-globe
+  - name: Data Points
+    link: /docs/user_guide/onboarding_with_braze/data_points/
+    fa_icon: fa fa-asterisk
+  - name: Subscription and Usage
+    link: /docs/user_guide/onboarding_with_braze/subscription_and_usage/
+    fa_icon: fa fa-users
   - name: Email Set Up
     link: /docs/user_guide/onboarding_with_braze/email_setup/
     fa_icon: fas fa-envelope
