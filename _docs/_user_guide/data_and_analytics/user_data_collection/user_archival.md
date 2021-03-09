@@ -10,7 +10,7 @@ This process ensures that Braze provides accurate statistics regarding campaign 
 1. The storage limitation principle - personal data processed and stored should be kept for no longer than is necessary
 2. Having a legitimate business purpose to process personal data.
 
-That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes.
+That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes. Please note, archived users will also have their unsubscribe status deleted in compliance with GDPR.
 
 If you have a user profile in danger of being archived under these policies which needs to be retained, just register a single data point through our REST API for that user profile at least once every six months.
 
