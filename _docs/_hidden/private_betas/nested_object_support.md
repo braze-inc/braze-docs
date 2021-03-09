@@ -9,13 +9,13 @@ Nested Object Support is currently in beta. Please contact your Braze account ma
 
 # Nested Object Support for Custom Event Properties
 
-Nested Object Support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages using Liquid and dot notation to traverse the data to a specific node and template in the desired values. 
+Nested Object Support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
 
 ## Limitations
 - Nested data can only be sent with __custom events and purchase events__. This is not yet supported with user attributes. 
 - The array data cannot be used for segmentation or in any other way on the platform outside of Liquid templating and triggering.
 - Available on events/purchases sent __via API only__, the Braze SDKs are not yet supported.
-- Partners for our HTTP Currents connector (Mixpanel, Amplitude, mParticle, and Segment) do NOT yet support nested arrays data in event properties. Until this is supported, we recommend against using this feature with app groups that have HTTP Currents integrations enabled. 
+- Partners for our HTTP Currents connector (Mixpanel, Amplitude, mParticle, and Segment) do not yet support nested arrays data in event properties. Until this is supported, we recommend against using this feature with app groups that have HTTP Currents integrations enabled. 
 
 ## Usage Examples
 
