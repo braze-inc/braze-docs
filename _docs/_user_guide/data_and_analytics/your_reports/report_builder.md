@@ -6,13 +6,9 @@ description: "This reference article notes updates to the Report Builder feature
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
-
-{% alert note %}
-Canvases have recently been added to Report Builder. Canvas reports currently cannot be named, saved, or edited, but this functionality is coming soon. 
-{% endalert %}
 
 #### Use this report to answer key engagement questions, for example:<br><br>
 - Which were the best performing campaigns or Canvases for a specific tag or channel?
@@ -62,9 +58,9 @@ Note: The metrics populating the row for your overall campaign will reflect the 
 
 Within a Canvas report, you can view your Canvases broken down by:
 
-- __Variants__ - this will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.<br>![Variants][11]{: style="max-width:90%;"}<br><br>
-- __Steps__ - you’ll be able to view step-level metrics, with each row of the report containing the row of a step.<br>![Steps][10]{: style="max-width:90%;"}<br><br>
-- __Message__ - similar to a step-level breakdown, the message-level breakdown contains the name of steps in each row. However, within Edit Columns, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.<br>![Report][9]{: style="max-width:90%;"}
+- __Variants__ - this will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.<br>![Variants][12]{: style="max-width:90%;"}<br><br>
+- __Steps__ - you’ll be able to view step-level metrics, with each row of the report containing the row of a step.<br>![Steps][13]{: style="max-width:90%;"}<br><br>
+- __Message__ - similar to a step-level breakdown, the message-level breakdown contains the name of steps in each row. However, within Edit Columns, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.<br>![Report][14]{: style="max-width:90%;"}
 
 Note that within the Braze dashboard, you can preview the first 50 rows of your Canvas report. You can access the full report when you export a CSV.
 
@@ -74,21 +70,13 @@ Name your report before saving it. If a report is saved without being named, Bra
 
 ![Campaign Note][7]{: style="max-width:60%;"}
 
-{% alert note %}
-This functionality is not yet available for Canvas reports.
-{% endalert %}
-
 ## Saving and Accessing Reports
 
 You can save your report and name it by using the __Save__ button. Saved reports can be viewed at a later point on the Report Builder page.
 
 When you access a saved __manual report__, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
 
-When you access a saved __automatic report__, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report used the filters for “Last Sent” in the last 7 days for campaigns with the tag “Promotion,” then each time you view this report, you will be able to see all campaigns with the “Promotion” tag that last sent in the last 7 days, even if these campaigns were created after you made this report.
-
-{% alert note %}
-This functionality is not yet available for Canvas reports.
-{% endalert %}
+When you access a saved __automatic report__, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag “Promotion,” then each time you view this report, you will be able to see all campaigns with the “Promotion” tag, even if these campaigns were created after you made this report.
 
 ## Editing Reports
 
@@ -96,15 +84,9 @@ In a __manual report__, you can edit a report via the Edit button in the upper r
 
 In an __automatic report__, simply toggle your filters to narrow down the results in your report.
 
-{% alert note %}
-This functionality is not yet available for Canvas reports.
-{% endalert %}
-
 ## Exporting Reports
 
 You can also download your report to CSV using the __Export__ button. 
-
-### Campaign Comparison Reports
 
 If your report contains any multivariant campaigns, your export will include 2 CSV files - one file containing only the top-level metrics for each campaign, and another file that contains variant level metrics. The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you’ll receive a pop-up asking you to grant permission for downloading multiple files -  click __Allow__.
 
@@ -123,6 +105,6 @@ If you download a variant breakdown Canvas report, you’ll receive 2 CSV files 
 [6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
 [7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
 [8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[9]: {% image_buster /assets/img/campaign_comparison/message_report.png %}
-[10]: {% image_buster /assets/img/campaign_comparison/steps_report.png %}
-[11]: {% image_buster /assets/img/campaign_comparison/variants_report.png %}
+[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
+[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
+[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
