@@ -79,6 +79,8 @@ This block allows you to see the message's performance over a set time period on
 
 This block allows you to see the inbound keywords users replied with after receiving your message on a timeline 
 
+![keyword_responses]({% image_buster /assets/img/sms/keyword_responses.png %})
+
 {% endtab %}
 
 {% tab Conversion Event Details %}
