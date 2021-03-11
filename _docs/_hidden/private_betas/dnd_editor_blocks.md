@@ -24,6 +24,8 @@ To use them, just drag one inside a column, it will auto-adjust to the column wi
 | `Video` |  The video block will automatically create a preview image for youtube or vimeo urls. | 
 | `Menu` |  Create a flexible menu for the message you're designing. | 
 
+
+
 ### Block type properties
 Details for each block type are provided below
 
@@ -122,9 +124,10 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`All sides`| If 'item padding' is disabled, set a consistent padding number|
 
 ### Add Liquid Personalization
+
 | Name | Description |
 |---|---|
-| `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets for easy insertion into your editor. | 
+| `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks etc... | 
 
 
 
