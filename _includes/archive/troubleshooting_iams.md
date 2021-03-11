@@ -64,7 +64,7 @@ If your app is successfully requesting and receiving in-app messages but they ar
 [troubleshooting_iams_4]: #session-tracking
 [troubleshooting_iams_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
 [troubleshooting_iams_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[troubleshooting_iams_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#re-eligibility-with-campaigns-and-canvas
+[troubleshooting_iams_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/
 [troubleshooting_iams_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
 [troubleshooting_iams_9]: #minimum-time-interval-between-triggers
 [troubleshooting_iams_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}

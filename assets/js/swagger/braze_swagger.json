@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Braze API Endpoints",
-    "description": "The collection below list interactive documentation with prewritten examples for all of Braze's API endpoints. For more detailed explanations of our API, please read <a href=\"/docs/developer_guide/rest_api/basics\">our API overview</a>. You can also check out <a href=\"/docs/developer_guide/rest_api/postman_collection/#what-is-postman\">our Postman Collection</a>.",
+    "description": "The collection below list interactive documentation with prewritten examples for all of Braze's API endpoints. Please note that this documentation is currently out of date. For more detailed explanations of our API, please read <a href=\"/docs/developer_guide/rest_api/basics\">our API overview</a>. You can also check out <a href=\"/docs/developer_guide/rest_api/postman_collection/#what-is-postman\">our Postman Collection</a>.",
     "version": "1.0"
   },
   "components": {
