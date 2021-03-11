@@ -54,7 +54,7 @@ In order to send an MMS message, at least one number within your Subscription Gr
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/#sms-laws-regulations--abuse-prevention
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
 [4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [6]: {% image_buster /assets/img/sms/sms_subgroup_select.png %}

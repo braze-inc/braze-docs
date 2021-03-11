@@ -100,12 +100,8 @@ Just like email, Braze receives user level events related to an SMS message as i
 ![picture][9]{: style="max-width:80%;"}
 
 
-
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
-<<<<<<< HEAD
 [9]: {% image_buster /assets/img/sms/sms_currents.png %}
-
-=======
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords
->>>>>>> a536229ffbdc9a19e7ee8f3854cf6c1641799297
+
