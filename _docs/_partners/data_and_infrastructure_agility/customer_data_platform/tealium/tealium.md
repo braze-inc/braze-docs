@@ -29,6 +29,10 @@ Tealium EventStream is a data collection and API hub that sits at the center of 
 
 Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. To read more about how to set up Tealium AudienceStream, check out our [documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/).
 
+{% alert important %}
+Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. 
+{% endalert %}
+
 ## Set Up Overview
 
 1. Adhere to the requirements and pre-requisites
@@ -116,7 +120,7 @@ Server-to-Server integration does __not__ support Braze UI features such as In-A
 
 | Name | Description |
 | ---- | ----------- |
-| REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__ |
+| REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__|
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client Side Access to utilize their services with Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -258,7 +262,7 @@ There are three primary ways that you might accidentally hit data overages when 
 
 #### __Insufficient Data Logging__
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
-__Solution__: <br>You can check your own backend to assess whether an attribute has changed or not and if so, call Segment/mParticle’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ <br>__OR__<br> If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream to track user attribute changes.
+__Solution__: <br>You can check your own backend to assess whether an attribute has changed or not and if so, call Tealiums’s relevant methods to update the user profile. __This is what users who integrate Braze directly usually do.__ <br>__OR__<br> If you don't store your own version of a user profile in your backend, and can’t tell if attributes change or not, you can use AudienceStream to track user attribute changes.
 
 #### __Sending Irrelevant Data__
 If you have multiple EventStream that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>

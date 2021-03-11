@@ -15,8 +15,10 @@ Our Shopify integration allows brands to seamlessly connect their Shopify store 
 
 | Requirement | Origin | Access | Description |
 | ----------- | ------ | ------ | ----------- |
+| Braze's Supplemental Terms for Shopify | Braze | Braze | Braze requires all customers that are looking to use the Shopify integration to sign supplemental terms for this integration. You will receive the supplemental terms for the Shopify integration from Customer Success Manager. |
 | Shopify Store | Shopify | [https://www.shopify.com](https://www.shopify.com) | You must have an active Shopify store.<br><br>Please note that at this time, you are only able to connect __one__ Shopify store per app group. |
 | Install Braze's Shopify App | Braze | Shopify integration page within Braze | You must set up your integration through our seamless onboarding process within Braze to install Braze's unlisted Shopify app.<br><br>For more details, check out our step-by-step guide below. |
+| Segment Cohort Beta Enabled | Braze | Please reach out to your Customer Success Manager | To ensure that you have the ability to create segments for custom events and custom event properties for up to 365 days, please work with your Customer Success Manager to either enable or confirm that you have this beta enabled for your dashboard. |
 | Event Property Segmentation Enabled | Braze | Please reach out to your Customer Success Manager | To ensure you can segment your Shopify events properties, please work with your Customer Success Manager to confirm that you have event property segmentation enabled for your dashboard. |
 | Nested Event Property Support Enabled | Braze | Please reach out to your Customer Success Manager | To ensure that you have nested event property support for your nested Shopify events, please work with your Customer Success Manager to either enable or confirm that you have this enhancement enabled for your dashboard. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -142,46 +144,6 @@ If you have the Nested Event Property support enabled by your Customer Success M
 `{{event_properties.${line_items[0].title}}}`
 {% endraw %}
 
-### Personalization using Connected Content
-
-You may have some use cases for personalization to template in additional information including product images. You can deepen the level of personalization with Shopify by using Braze's [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) feature. 
-
-#### Step 1: Navigate to Apps
-Go to your Shopify's admin page listed under __Apps__.
-![Shopify][15]
-
-#### Step 2: Enable Private App Development
-If you haven't already, please ensure that you have enabled private app development for your store.<br>
-![Shopify][16]{: style="max-width:60%;"}
-
-![Shopify][17]{: style="max-width:60%;"}
-
-#### Step 3: Create a Private App
-Create a private app in order to generate your Shopify access token.
-![Shopify][18]{: style="max-width:70%;"}
-
-#### Step 4: Enter Credentials
-Once you have successfully created your private app, you are then provided with your API credentials and keys. For your Connected Content calls, you must use the __Password__ value as the __X-Shopify-Access-Token__ in your requests.
-![Shopify][19]{: style="max-width:70%;"}
-
-#### Example Connected Content Request
-
-Once you have retrieved your Shopify access token, you can now build out your Connected Content request within your campaign. Some use cases might include personalizing the product image, gather more meta-data around the specific product, and more. In the example below, we make a request to one of __Shopify's Products APIs__ to retrieve the product image used in the message for the specific product ID that the customer has added to their cart from the Shopify Created Order event.
-
-{% raw %}
-```
-{% assign items = {{event_properties.${line_items}}} %}
- 
-{% connected_content https://SHOPIFY_STORE_NAME.myshopify.com/admin/api/2020-10/products.json?ids={{item.product_id}}
-   :headers {
-        "X-Shopify-Access-Token": "SHOPIFY_ACCESS_TOKEN" }
-   :content_type application/json
-    :save product_info %}
- 
-{{product_info.products[0].image.src}}
-```
-{% endraw %}
-
 ### Dynamically Generating HTML Content via Liquid and Connected Content (Advanced)
 
 For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with Liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
@@ -243,7 +205,7 @@ These HTML Elements can be included within a Liquid For Loop to dynamically gene
 
 ## GDPR
 
-With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers, and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/gdpr_compliance/) policies.
+With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers, and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
 [3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.png %}

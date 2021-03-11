@@ -43,11 +43,11 @@ The microsoft address local part must follow these parameters:
 For all other domains, Braze allows email addresses matching the following regex for the local part:
 
 
-`/\A[\p{L}\p{N}_](?:[\.\+\'\p{L}\p{N}_\-]*[\p{L}\p{N}_\-])?\z/`
+`\A[\p{L}\p{N}_](?:[\.\+\'\p{L}\p{N}_&#\/\-]*[\p{L}\p{N}_\-])?\z`
 
 The local part must follow these parameters:
 - Can contain any letter, number or underscore, including Unicode letters and numbers
-- Can contain but may not start or end with the following characters: (.) (+) or (`'`)
+- Can contain but may not start or end with the following characters: (.) (+) (&) (#) (/) or (`'`)
 - Can contain and end with, but may not start with the following character: (-)
 
 {% alert important %}

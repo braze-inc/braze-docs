@@ -1,5 +1,5 @@
 ---
-nav_title: CocoaPod
+nav_title: CocoaPods
 platform: iOS
 page_order: 1
 description: "This tutorial covers how to install and use CocoaPods"

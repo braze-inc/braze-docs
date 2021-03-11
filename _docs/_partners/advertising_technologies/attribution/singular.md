@@ -46,9 +46,9 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Getting the Braze API Key
+### Step 2: Getting the Braze Data Import Key
 
-In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
+In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Singular". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. You will need to provide the Data Import Key and your REST Endpoint to your Singular Account Manager for the integration to be completed.<br><br>![Singular Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Confirming the Integration
 
@@ -91,4 +91,7 @@ idfv={{most_recently_used_device.${id}}}
 
 __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Singular will still be able to attribute these clicks through their probabilistic modeling.
+
+[4]: {% image_buster /assets/img/attribution/singular.png %}
+
 

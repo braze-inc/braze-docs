@@ -15,7 +15,7 @@ You can choose to disable the blue line at the bottom of the card which indicate
 
 ## Customizing the Unviewed Indicator
 
-The Unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you have a custom `ABKContentCardsTableViewController` subclass or are otherwise utilizing Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
+The Unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you are utilizing Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
 
 For example, to set the color of the unviewed indicator to red:
 

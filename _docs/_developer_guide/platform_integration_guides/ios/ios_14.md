@@ -11,7 +11,7 @@ This guide describes Braze-related changes introduced in iOS 14 and the required
 For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
 
 {% alert tip %}
-As of iOS 14.5, **IDFA** collection and [certain data sharing][5] will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).
+As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).
 {% endalert %}
 
 #### Summary of iOS 14 breaking changes
@@ -61,7 +61,7 @@ Geofences are [no longer supported by iOS][4] for users who choose the new  _app
 
 To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
-Apps that do not upgrade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
+Apps that do not upgrade the Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
@@ -107,9 +107,35 @@ No changes to Provisional Push Authorization are included in iOS 14. In an earli
 
 ### App Privacy and Data Collection Overview {#app-privacy}
 
-The App Store's new App Privacy feature will disclose to users what personal information an app collects and how it may track users across other apps and websites. Apple has [stated](https://www.apple.com/ios/ios-14-preview/), "Privacy information on the App Store will be coming in an iOS 14 update later this year".
+Since Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
 
-Braze will continue to monitor this new feature announcement to help you understand how your usage of Braze may be disclosed in the App Privacy summary.
+#### Apple Developer Portal Questionnaire
+
+On the _Apple Developer Portal_:
+* You will be asked to fill out a questionnaire to describe how your app or third-party partners collect data.
+  * The questionnaire is expected to always be up-to-date with your most recent release in the App Store.
+  * The questionnaire may be updated even without a new app submission.
+* You will be required to paste a link to your app's Privacy Policy URL.
+
+As you fill out your questionnaire, please consult your legal team, and consider how your usage of Braze for the following fields may affect your disclosure requirements.
+
+#### Braze Default Data Collection
+**Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
+
+**Usage Data** - This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
+
+#### Optional Data Collection
+Data you may optionally be collecting through your usage of Braze:
+
+**Location** - Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.
+
+**Contact Info** - This can include events and attributes related to the user's identity.
+
+**Purchases** - This can include events and purchases logged on behalf of the user.
+
+{% alert important %}
+Note that this is not an exhaustive list. If you manually collect other information about your users in Braze that apply to other categories in the App Privacy Questionnaire, you will need to disclose those as well.
+{% endalert %}
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 

@@ -262,7 +262,7 @@ One multivariate and A/B test can (and should!) inspire ideas for future tests, 
 [80]: #choosing-a-segment
 [160]: {% image_buster /assets/img/ab_create_1.png %}
 [170]: {% image_buster /assets/img/ab_create_2.gif %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign
+[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
 [180]: {% image_buster /assets/img/ab_create_4.png %}
 [210]: {% image_buster /assets/img/ab_create_8.png %}
 [225]: https://www.optimizely.com/resources/sample-size-calculator/

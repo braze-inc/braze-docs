@@ -1,7 +1,7 @@
 ---
 nav_title: SMS Set Up
 layout: featured
-page_order: 4
+page_order: 6
 guide_top_header: "SMS Set Up"
 guide_top_text: "Ready to get started with SMS? You can use it in our Campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
 description: "Ready to get started with SMS? You can use it in our Campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."

@@ -67,8 +67,7 @@ validurls['/docs/rest_api/#email-sync'] = '/docs/developer_guide/rest_api/email_
 validurls['/docs/rest_apis/email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email_sync'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
 validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports';
-validurls['/docs/api/endpoints/email_sync/#querying-unsubscribed-emails'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'
-validurls['']
+validurls['/docs/api/endpoints/email_sync/#querying-unsubscribed-emails'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
 
 validurls['/docs/rest_api/#export'] = '/docs/developer_guide/rest_api/export/#export';
 validurls['/docs/rest_apis/export'] = '/docs/developer_guide/rest_api/export/#export';
@@ -184,6 +183,7 @@ validurls['/docs/user_guide/data_and_analytics/braze_currents/message_engagement
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/importing_numbers/'] = '/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/'] = '/docs/report_builder/';
 validurls['/docs/user_guide/message_building_by_channel/sms/create/'] = '/docs/user_guide/message_building_by_channel/sms/campaign/create/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/';
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
@@ -212,7 +212,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium_audience_stream/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/';
-
+validurls['/docs/partners/technology_partners/advertising_technologies/attribution/kochava/'] = '/docs/partners/advertising_technologies/attribution/kochava/';
 validurls['/docs/partners/technology_partners/data_augmentation/contextual_location/gimbal/'] = '/docs/partners/data_augmentation/contextual_location/gimbal/';
 validurls['/docs/partners/advertising_technologies/attribution/pypestream/'] = '/docs/partners/additional_channels/support/pypestream/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/'] = '/docs/partners/channel_extensions/loyalty/jebbit/';
@@ -242,6 +242,7 @@ validurls['/docs/users_identify/'] = '/docs/api/endpoints/user_data/#user-attrib
 validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/';
+validurls['/docs/developer_guide/rest_api/email_sync/#changing-email-subscription-status'] = '/docs/api/endpoints/email/post_email_subscription_status/#change-users-email-subscription-status';
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
@@ -257,7 +258,7 @@ validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
 validurls['/docs/services_handbook/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook.pdf'
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
-
+validurls['/docs/help/gdpr_compliance/'] = '/docs/help/dp-technical-assistance/'
 validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs/#sdk-changelogs/';
 
 validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';

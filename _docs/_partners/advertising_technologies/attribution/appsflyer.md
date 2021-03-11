@@ -57,16 +57,16 @@ AppsFlyer.setAdditionalData(customData);
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Getting the Braze API Key
+### Step 2: Getting the Braze Data Import Key
 
-In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the AppsFlyer section. The API key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.
+In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Appsflyer". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![Appsflyer Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's Dashboard
 
 In AppsFlyer's dashboard, navigate to the "Integrated Partners" page on the left bar. From here, search for Braze and click on Braze's logo to open up a configuration window.
 ![AppsFlyer][1]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;margin-top:15px"}
 
-Within the Integration tab, switch on Activate Partner, copy the Braze API key into the "API_key" field, add the Braze REST Endpoint URL into the "REST Endpoint" field. Finally, save your configuration.
+Within the Integration tab, switch on Activate Partner, copy the Data Import Key into the `API_key` field, add your Braze REST Endpoint URL into the `REST Endpoint` field. Finally, save your configuration.
 
 Additional information on these instructions is available in [AppsFlyer's documentation][16].
 
@@ -142,3 +142,5 @@ If you currently do not use any device identifiers - such as the IDFV or GAID - 
 [3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
 [16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
 [31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration
+[4]: {% image_buster /assets/img/attribution/appsflyer.png %}
+

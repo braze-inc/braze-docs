@@ -43,7 +43,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `external_id`  | Yes | String | The external_id of the user (must include at least one and at most 50 `external_ids`). |
-| `email`  |  Yes* | String | The email address of the user (must include at least one address and at most 50 addresses). |
+| `email`  |  Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
 | `phone` | Yes* | String | The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format. |
 | `limit` | No | Integer | The limit on the maximum number of results returned. Default (and max) limit is 100. |
 | `offset`  |  No | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
