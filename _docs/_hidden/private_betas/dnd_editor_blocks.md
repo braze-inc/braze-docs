@@ -24,26 +24,102 @@ To use them, just drag one inside a column, it will auto-adjust to the column wi
 | `Video` |  The video block will automatically create a preview image for youtube or vimeo urls. | 
 | `Menu` |  Create a flexible menu for the message you're designing. | 
 
-### Block type properties (TBD)
+### Block type properties
 Details for each block type are provided below
 
 #### Title
 
+| Properties | Description |
+|---|---|
+| `Title`  | Select the heading style.  H1, H2, or H3 are available only. | 
+|`Font Family`| The style to be used for your title|
+|`Font Size`| The size of your text |
+|`Text Color`| Modifies the color of the title|
+|`Link Color`| Modifies the color of the link|
+|`Align`| Moves the title to be either left, center or right oriented|
+|`Line Height`| Modify the distance between lines of text|
+|`Line spacing`| Modify the distance in between each character|
+|`Text direction`| Default left to right, but can be edited to write right-to-left|
+
+
 #### Text
+
+| Properties | Description |
+|---|---|
+|`Text Color`| Modifies the color of the title|
+|`Link Color`| Modifies the color of the link|
+|`Line Height`| Modify the distance between lines of text|
+|`Line spacing`| Modify the distance in between each character|
 
 #### Image
 
+| Properties | Description |
+|---|---|
+|`Auto Width`| Modifies the px of the image|
+|`Align`| Moves the image to be either left, center or right oriented|
+|`URL`| The hosted address for your image|
+|`Alternate text`| The written copy that appears in place of an image, when the image fails to load|
+
+
+_Note about Auto Width_
+
+Automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
+- Large images, wider than the available space, will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
+- Small images, smaller than the available space, will use the image natural size to avoid distortion effects or blurry pics.
+
 #### Button
+
+| Properties | Description |
+|---|---|
+|`Link Type`| The desired action when clicking the button.  Sets the appropriate link protocal |
+|`URL`| Dynamic based on the Link Type chosen.|
+
 
 #### Divider
 
+| Properties | Description |
+|---|---|
+|`Transparent`| If enabled, 'line' and 'width' options are removed. |
+|`Line `| The different formats of a line, whether dotted, spotted, or solid.  In addition you can modify the thickness and color of the divider line|
+|`Width `| Adjusts the spread of the divider in increments of 5  |
+|`Align`| Moves the line to be either left, center or right oriented| |
+
 #### Social
+
+| Properties | Description |
+|---|---|
+|`Select Icon Collection `| Predefined list of social icons.  Default list includes Facebook, Twitter, Instagram and LinkedIn.  |
+|`Configure Icon Collection `| Configure the Title, URL, Alt Text  |
 
 #### HTML
 
+| Properties | Description |
+|---|---|
+|` html editor`| Enter the raw HTML |
+
+
 #### Video
 
+| Properties | Description |
+|---|---|
+|`Video URL `| Set the URL for your video.|
+
 #### Menu
+
+| Properties | Description |
+|---|---|
+|`Configure menu items`| Add a menu item  |
+|`Font Family`| The style to be used for your menu|
+|`Font Size`| The size of your menu |
+|`Text Color`| Modifies the color of the menu|
+|`Link Color`| Modifies the color of the menu text|
+|`Align`| Moves the menu to be either left, center or right oriented|
+|`Letter spacing`| Modify the distance in between each character |
+|`Layout`| Either horizontal or vertical|
+|`Separator`| Add character(s) in between the menu options |
+|`Mobile menu`| Options to modify the icon size, color, and icon type when shown on a mobile device|
+|`Item padding`| If enabled, you can modify the padding, by using either the + or - button or by inputting a specific number|
+|`All sides`| If 'item padding' is disabled, set a consistent padding number|
 
 ### Add Liquid Personalization
 | Name | Description |
