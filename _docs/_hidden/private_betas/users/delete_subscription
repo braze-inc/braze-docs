@@ -1,6 +1,6 @@
 ---
 nav_title: "GET: Subscription information based on email address or phone number"
-permalink: "/users/subscription"
+permalink: "/users/delete_subscription"
 hidden: true
 
 layout: api_page
