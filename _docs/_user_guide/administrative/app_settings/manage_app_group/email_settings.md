@@ -21,6 +21,8 @@ This feature allows you to:
 - Set Default Sending and Reply-To Address
 - Exclude Reply-To option and send replies to the "From" Address
 
+When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. marketing.yourdomain.com), failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+
 ### BCC Addresses
 
 The BCC Address settings will allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to a email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. 
