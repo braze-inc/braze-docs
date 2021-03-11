@@ -4,11 +4,7 @@ platform: Cordova
 subplatform: iOS
 page_order: 0
 ---
-# Initial SDK Setup
-
-Installing the Braze SDK will provide you with analytics functionality, as well as push and in-app messages.
-
-### Step 1: Get the SDK
+## Initial SDK Setup
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
@@ -22,11 +18,11 @@ Alternatively, if you are running Cordova 6 or later, you could install directly
 cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
 ```
 
-### Configure the plugin
+## Configure the plugin
 
 In your config.xml, add a `preference` element under the iOS `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
 
-```
+```xml
 <platform name="ios">
     <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
 </platform>
@@ -34,22 +30,22 @@ In your config.xml, add a `preference` element under the iOS `platform` element 
 
 Set up your applications to have the appropriate certificates for push, via the [iOS push documentation][2].
 
-#### Removing Automatic Push Setup
+### Removing Automatic Push Setup
 
 If you want to turn off iOS automatic push registration, set the following configuration preferences:
 
-```
+```xml
 <platform name="ios">
     <preference name="com.appboy.ios_disable_automatic_push_registration" value="YES" />
     ...
 </platform>
 ```
 
-#### Optional IDFA Collection
+### Optional IDFA Collection
 
 To enable the automatic collection of the iOS IDFA, set the following configuration preferences:
 
-```
+```xml
 <platform name="ios">
     <preference name="com.appboy.ios_enable_idfa_automatic_collection" value="YES" />
 </platform>
@@ -57,11 +53,11 @@ To enable the automatic collection of the iOS IDFA, set the following configurat
 
 > Please see the [iOS IDFA][3] documentation for more information.
 
-#### Location Collection and Geofences
+### Location Collection and Geofences
 
 To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
-```
+```xml
 <platform name="ios">
     <preference name="com.appboy.enable_location_collection" value="true" />
     <preference name="com.appboy.geofences_enabled" value="true" />
