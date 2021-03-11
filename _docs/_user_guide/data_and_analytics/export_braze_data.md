@@ -33,9 +33,6 @@ guide_menu_list:
   - name: Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     fa_icon: fas fa-cog
-  - name: Device and Carrier Data
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_device_and_carrier_data/
-    fa_icon: fas fa-mobile
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
     fa_icon: fas fa-server
