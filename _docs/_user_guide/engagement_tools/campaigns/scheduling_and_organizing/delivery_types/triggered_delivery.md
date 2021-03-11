@@ -30,7 +30,7 @@ Select a trigger event, which can be:
 - Performing the exception event for another campaign
 - Adding an email address to a user profile
 
-You can also further filter trigger events through Braze's [Custom Event Properties][32] which allows for customizable event properties for both custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. For example, in the following screenshot, an Abandoned Cart custom event is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts.
+You can also further filter trigger events through Braze's [Custom Event Properties][32] which allows for customizable event properties for both custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. For example, in the following screenshot, an Abandoned Cart custom event is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
 ![Custom Event Properties Pic][34]
 
