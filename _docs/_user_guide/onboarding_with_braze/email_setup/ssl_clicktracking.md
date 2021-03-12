@@ -8,13 +8,13 @@ description: "A fundamental part of SSL click-tracking for users who have HSTS, 
 
 ## What is SSL?
 
-A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP, ensuring your users that they will not be directed to malicious sites. These certificates, similiar to SPM and DKIM for email authentication, are insurances that the links in your emails are coming from the right location, company, or person. While not required, SSL certificated are quickly becoming the standard and are required if you would like to take advantage of valuable email analytics like open and click tracking.  
+A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. Customers at Braze can set up their links and domains to apply SSL certificates. These certificates, similiar to SPM and DKIM for email authentication, are insurances that the links in your emails are sending your users to reputable locations, and not malicious websites. While not required, SSL certificates are quickly becoming the standard and are not only recommended to ensure links and images display properly for all your customers, but they are also required if you would like to take advantage of valuable email analytics like user open and click tracking.
 
 ## Why We Recommend SSL
 
 While SSL is not required, the reasons we recommend SSL to our clients are two-fold:
-1. __Required by some browsers__<br>HTTPS links have a certified SSL link attached to it, compared to the less secure HTTP, making it more secure for your users. Authentications like this are quickly becoming the standard with big-name browsers like Google Chrome now requiring it. This means that newer versions of Chrome can no longer access HTTP links without the necessary SSL layer. <br><br>
-2. __Click and open tracking are only available through the use of SSL__<br> Not only does this allow you to see valuable email analytics in the braze dashboard, but it also ensures your links and images will appear as you intend them to. This is because without SSL, your email service provider (ESP) will transform your link to include click tracking, and then send it off to your user, but because this link has not been verified to be using SSL, your browser may cause your links (both image and web links) to break
+1. __Required by some browsers__<br>HTTPS links have a certified SSL link certificates attached to it, making it more secure for your users. Authentications like this are quickly becoming the standard with big-name browsers like Google Chrome now requiring it. This means that newer versions of Chrome can no longer access HTTP links without the necessary SSL layer. <br><br>
+2. __Click and open tracking are only available through the use of SSL__<br> Not only does this allow you to see valuable email analytics in the braze dashboard, but it also ensures your links and images will appear as you intend them to. This is because without SSL, your email service provider (ESP) will transform your link to include click tracking, and then send it off to your user, but because this link has not been verified to be using SSL, your browser may cause your links (both image and web links) to break.
 
 ## How do I get Started?
 1. Clients must first complete a full Braze email setup.
