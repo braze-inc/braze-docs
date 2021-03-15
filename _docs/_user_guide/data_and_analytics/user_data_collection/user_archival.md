@@ -19,6 +19,7 @@ If you have a user profile in danger of being archived under these policies whic
 "Inactive Users" are users that are unreachable and have likely churned. Inactive Users are those that meet all of these criteria:
 
 - Cannot be sent email. For example, they do not have an email address or they are unsubscribed from all email lists.
+- Cannot be sent SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Cannot be sent push. For example, they have uninstalled the app or disabled push permissions.
 - Have not used any mobile app or visited a website in an app group in more than six months.
 - Have not received any messages from an app group in more than six months.
