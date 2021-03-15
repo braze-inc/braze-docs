@@ -254,6 +254,8 @@ validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audienc
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
 validurls['/docs/services_handbook/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook.pdf'
+validurls['/docs/services_handbook21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook21.pdf'
+
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 validurls['/docs/help/gdpr_compliance/'] = '/docs/help/dp-technical-assistance/'
