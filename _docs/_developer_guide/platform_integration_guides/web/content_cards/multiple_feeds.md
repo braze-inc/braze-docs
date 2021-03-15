@@ -31,7 +31,7 @@ function showCardsByFeedType(feed_type) {
     return cards.filter(function(card) {
       return card.extras["feed_type"] === feed_type;
     });
-  }
+  })
 }
 ```
 
