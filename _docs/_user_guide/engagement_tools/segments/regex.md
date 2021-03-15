@@ -136,7 +136,7 @@ Use the email address filter, set it to "matches regex". Reference the regex for
 - <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
 
 __Example__<br>
-Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter [a-zA-Z0-9.-+_]+@braze\.com in the field.
+Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
 {% enddetails %}

@@ -110,7 +110,7 @@ Frequency Capping is applied at the Campaign/Canvas step send level nand can be 
 - How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
 - Users can choose how many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. 
 
-Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) reules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
+Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
 
 ![Frequency Capping][14]
 
@@ -132,8 +132,8 @@ Different channels within a multi-channel campaign will individually count towar
 
 In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
-{% alert update %}
-Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.
+{% alert important %}
+Please note that global frequency capping is based in the user's time zone, and are based on calendar days, not 24-hour periods. For example, if I set up a frequency capping rule of sending no more than 1 campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 {% endalert %}
 
 #### Examples
