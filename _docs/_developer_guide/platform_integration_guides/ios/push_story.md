@@ -59,10 +59,6 @@ After following the [Swift Package Manager integration guide][5], simply add `Ap
 
 ### Cocoapods
 
-{% alert important %}
-For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
-{% endalert %}
-
 Add the following line to your Podfile:
 
 ```ruby
