@@ -6,25 +6,23 @@ description: "A fundamental part of SSL click-tracking for users who have HSTS, 
 
 # SSL Click Tracking
 
-## What is SSL?
-
-A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. Customers at Braze can set up their links and domains to apply SSL certificates. These certificates, similiar to SPM and DKIM for email authentication, are insurances that the links in your emails are sending your users to reputable locations, and not malicious websites. While not required, SSL certificates are quickly becoming the standard and are not only recommended to ensure links and images display properly for all your customers, but they are also required if you would like to take advantage of valuable email analytics like user open and click tracking.
+A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. Customers at Braze can set up their links and domains to apply SSL certificates. These certificates, similar to SPM and DKIM for email authentication, are insurances that links in your emails are sending your users to reputable locations, and not malicious websites. While not required, SSL certificates are quickly becoming the standard and are not only recommended to ensure links and images display properly, but are also required if you would like to take advantage of valuable email analytics like user open and click tracking.
 
 ## Why We Recommend SSL
 
 While SSL is not required, the reasons we recommend SSL to our clients are two-fold:
-1. __Required by some browsers__<br>HTTPS links have a certified SSL link certificates attached to it, making it more secure for your users. Authentications like this are quickly becoming the standard with big-name browsers like Google Chrome now requiring it. This means that newer versions of Chrome can no longer access HTTP links without the necessary SSL layer. <br><br>
-2. __Click and open tracking are only available through the use of SSL__<br> Not only does this allow you to see valuable email analytics in the braze dashboard, but it also ensures your links and images will appear as you intend them to. This is because without SSL, your email service provider (ESP) will transform your link to include click tracking, and then send it off to your user, but because this link has not been verified to be using SSL, your browser may cause your links (both image and web links) to break.
+1. __Required by some browsers__<br>HTTPS links have a certified SSL link certificate attached to them, making it more secure for your users. Authentications like this are quickly becoming the standard with big-name browsers like Google Chrome now requiring it. This means that newer versions of Chrome can no longer access HTTP links or images without the necessary SSL layer. <br><br>
+2. __Click and open tracking are only available through the use of SSL__<br> Not only does this allow you to see valuable email analytics in the Braze dashboard, but it also ensures your links and images will appear as you intend them to. This is because without SSL, your email service provider (ESP) will transform your link to include click tracking, and then send it off to your user, but because this link has not been verified to be using SSL, your click tracking will be unsuccessful and your browser may cause your links (both image and web links) to break.
 
-## How do I get Started?
-1. Clients must first complete a full Braze email setup.
-2. Take the given DNS records from Braze and add them to your domain registry
-3. Braze verifies added to domain correctly.
-4. User selects CDN and obtains SSL certificates from a chosen third party (if needed)
-5. User Sets up CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
-6. Reach out to your COM or CSM to get SSL turned on.
+## How do I get started?
+1. You must reach out to a COM or CSM to initiate a full Braze email setup.
+2. Braze will provide DNS records to add to your domain registry.
+3. Braze will verify if records have been added to registry correctly.
+4. You will then select a CDN and obtain SSL certificates from a third-party provider. 
+5. You will set up your CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
+6. Lastly, reach out to your COM or CSM to get SSL turned on.
 
-## What is a CDN?
+## What is a CDN, and why do I need it?
 
 At Braze, email delivery is handled by our delivery partners that support open and click reporting within the Braze dashboard. To perform this tracking over SSL, the delivery partner is required to present a valid trusted certificate to your email recipient's browser. Braze is unable to request or manage such certificates, so this must be set up on your end through a CDN.
 
