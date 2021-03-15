@@ -26,5 +26,6 @@ valid_partner_list:
     url: /docs/partners/additional_channels/sms/twilio/
   - name: Iterate
     url: /docs/partners/additional_channels/surveys/iterate/
-
+  - name: Pypestream
+    url: /docs/partners/additional_channels/support/pypestream/
 ---

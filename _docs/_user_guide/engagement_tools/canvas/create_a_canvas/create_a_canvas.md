@@ -3,7 +3,7 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
-description: "This reference article covers the neccesary steps involved in creating, maintaining, and testing a Canvas."
+description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
 ---
 
 # Creating a Canvas
@@ -135,7 +135,7 @@ Click "Send Settings" to select your Subscription Settings, turn on rate limitin
 By turning on rate-limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate-limiting and Frequency Capping click [here][6b].
 
 {% alert important %}
-Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.
+Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.<br><br>For more information on the nuances of frequency capping and rate limiting, visit [this article]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
 {% endalert %}
 
 Then, specify Quiet Hours (the time during which your messages will not send) for Canvas. Check "Enable Quiet Hours" in your __Send Settings__. Select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
@@ -204,6 +204,11 @@ For more information on Custom Event Properties, check out our [Documentation]({
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
+Did you know you can include Canvas step names in your messages and link templates?<br>
+Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
+{% endalert %}
+
 ### Add More Steps
 
 Add more Steps by pressing the blue plus icon:
@@ -246,7 +251,6 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
-[link]: https://startupclass.co/courses/how-to-start-a-startup/lectures/64035
 [21]:{% image_buster /assets/img_archive/Journey_2.png %}
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
@@ -257,12 +261,6 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [33]:{% image_buster /assets/img_archive/Canvas_Branch_3.png %}
 [34]:{% image_buster /assets/img_archive/Canvas_Branch_4.png %}
 [35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
-[36]: https://www.braze.com/contact/
-[37]: {{site.baseurl}}/help/webinars/webinar_signup/#canvas-entry-steps-and-conditions
-[41]: {% image_buster /assets/img_archive/Journey_8-audience_options.png %}
-[42]: {% image_buster /assets/img_archive/Journey_11-audience_options.png %}
-[45]: {% image_buster /assets/img_archive/step_priority.png %}
-[46]: {% image_buster /assets/img_archive/canvas_priority.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
 [51]: {% image_buster /assets/img/Basics1.gif %}
 [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %}

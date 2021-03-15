@@ -89,19 +89,15 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 - `price`
 - `currency`
 
-**Implementation Example**
+**Additional Information
 
-`logPurchase` is utilized within the [`EventsViewController.m` file][1] in the Stopwatch sample application.
-
-- Also, see the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
+- See the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
 
 ### REST API
 
 You can also use our REST API to record purchases. Refer to the [user API documentation][4] for details.
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/ViewControllers/User/Events/EventsViewController.m
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a63d8c390bff05f87c7f8f86f2fc0deb6 "logpurchase:incurrency:atprice"
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties documentation"

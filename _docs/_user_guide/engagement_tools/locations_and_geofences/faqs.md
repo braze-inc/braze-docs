@@ -31,7 +31,5 @@ Braze geofences use a combination of all location providers available to a devic
 
 Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
-[1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
-[2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

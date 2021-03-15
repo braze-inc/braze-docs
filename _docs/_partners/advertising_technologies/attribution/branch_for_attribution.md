@@ -43,9 +43,9 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Getting the Attribution ID
+### Step 2: Getting the Braze Data Import Key
 
-In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Branch section. The API key and the REST Endpoint are used in the next step when setting up a webhook in Branch's dashboard.
+In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Branch". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![Branch Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Setting Up A Webhook from Branch
 
@@ -94,6 +94,6 @@ user_data_idfv={{most_recently_used_device.${id}}}
 __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
 
-[5]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-limits
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection "IDFA Collection"
 [22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"
+[4]: {% image_buster /assets/img/attribution/branch.png %}
+

@@ -5,44 +5,51 @@ alias: /partners/dyspatch
 
 # Dyspatch
 
+
 > Use [Dyspatch][1] and Braze together to simplify your email creation lifecycle and deliver engaging email experiences at scale. 
 
-With Dyspatch, use the intuitive drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of quick steps!
+With Dyspatch, use the intuitive drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a couple of quick steps! 
 
-## Pre-Requisites
+## Integration Requirements
 
-Requirement   |Origin| Notes
---------------|------|-------------
-Braze Account    | [Braze][2] | To upload your email into Braze, the account will need to have permissions allowing you to [Manage the Media Library][3]. |
-Dyspatch Account | [Dyspatch][4]| To export the email from Dyspatch the account will need to have a [owner or admin role][5] assigned. |
+Requirement   | Source | Description
+--------------|--------| -----
+Braze API Key | [Braze](https://dashboard.braze.com/sign_in) | The API key must have the *Template's* permission enabled before use.
+Dyspatch Account | [Dyspatch][3] | To export an email from Dyspatch the account will need to have an [owner or admin role][4] assigned.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
-Dyspatch supports exporting email templates to Braze using the Liquid download option.
+Export email templates from Dyspatch directly into your Braze media library with Dyspatch's Braze Integration. Dyspatch also supports [downloading your email template][5] to manually import it to Braze.
 
-### Step 1: Download Template from Dyspatch
-Once your team has approved an email in Dyspatch, click __Download Template__ and select __Liquid__ to download a zip file containing your email.
+### Step 1: Create a Braze Integration
+You will need to have a [Dyspatch admin role][4] assigned to create an integration and you'll also want to have your Braze API key with __Template's__ permission ready for this step.
 
-![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_downloading.png %})
+In Dyspatch's Administration portal, open your username drop-down menu, and select __Integrations__.
 
-### Step 2: Upload Template to Braze
-![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_upload.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
-Within Braze, select __Templates & Media__ from the sidebar and create a new email template using the __From File__ option. Select and upload the zip file downloaded from Dyspatch. 
+![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_admin_dropdown.png %}){: style="max-width:60%;"}
 
-### Step 3: Customize the Template
-- __Template Name__: We recommend using the same name used for the template in Dyspatch.<br>
-- __Sending Info__: Enter your subject line from Dyspatch, you can find it in the metadata text file included in the Dyspatch download.<br>
-- __Preheader__: If you have already added a preheader in Dyspatch, you can leave the "Preheader" field empty.<br>
+Create a new integration, select Braze and enter your Braze API key.
+
+![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
+
+You can choose how you would like to manage localizations when creating your Braze integration. This way you can use Dyspatch to [localize your email templates][6] and export them to Braze to easily send emails personalized by language or locale. Select either the Braze property __Language__ or __Most Recent Locale__ for your localized templates.
+
+### Step 2: Export an Email from Dyspatch into Braze
+After your team has approved an email, click __Download/Export__ when viewing the published email template and select __Export to Integration__ to send your Dyspatch email template to your Braze account.
+
+![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
 {% alert important %}
-Make sure __Inline CSS__ in the __Sending Info__ section is __not selected__. Dyspatch takes care of this by making sure your emails are robust and responsive, making it so CSS inlining with Dyspatch email templates is not needed.
+ __Inline CSS__ in the __Sending Info__ section for any Dyspatch email template in Braze should __not be selected__.  Dyspatch takes care of this by making sure your emails are robust, responsive, and ready to send.
+
 {% endalert %}
 
-## Usage
-Once you have finished building and previewing your email template, it can be found in the __Templates & Media__ > __Email Templates__ section of your Braze account. You can now use this email template to start sending engaging email messages to your customers!
+### Usage
+Your new email template can be found in the __Templates & Media > Email Templates__ section of your Braze account. You can now use this email template to start sending engaging email messages to your customers!
 
 [1]: https://www.dyspatch.io
 [2]: https://dashboard.braze.com/sign_in
-[3]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
-[4]: https://www.dyspatch.io/login/
-[5]: https://docs.dyspatch.io/administration/dyspatch_roles/
+[3]: https://www.dyspatch.io/login/
+[4]: https://docs.dyspatch.io/administration/dyspatch_roles/
+[5]: https://docs.dyspatch.io/exports/export_to_braze/#download-your-template
+[6]: https://docs.dyspatch.io/localization/localizing_a_template/

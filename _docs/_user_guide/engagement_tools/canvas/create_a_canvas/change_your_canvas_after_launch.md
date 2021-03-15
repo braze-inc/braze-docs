@@ -64,4 +64,4 @@ Initially, users are randomly assigned a particular variant before receiving a c
 
 ## Local Send Time
 
-Local send time Canvases can be edited up to 24 hours prior to the schedules send time. This window is called is "safe zone". Please note that if you intend to make changes to your Canvas that require you to make a new Canvas entirely, please remember to exclude users who recieved the first Canvas and re-adjust the Canvas schedule times to allow for timezone sending. 
+Local send time Canvases can be edited up to 24 hours prior to the schedules send time. This window is called is "safe zone". Please note that if you intend to make changes to your Canvas that require you to make a new Canvas entirely, please remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for timezone sending. 

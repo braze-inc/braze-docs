@@ -70,8 +70,8 @@ Authorization: Bearer YOUR_REST_API_KEY
       "name" : "rented_movie",
       "time" : "2013-07-16T19:20:45+01:00",
       "properties": {
-      "movie": "The Sad Egg",
-      "director": "Dan Alexander"
+        "movie": "The Sad Egg",
+        "director": "Dan Alexander"
       }
     },
     {

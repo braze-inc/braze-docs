@@ -15,17 +15,8 @@ partner_top_text: "These partners allow you to send, store, and otherwise coordi
 valid_partner_list:
   - name: Segment
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
-    alt:
-      - title: Currents
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
-    alt:
-      - title: Personas
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/
   - name: mParticle
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
-    alt:
-      - title: Currents
-        url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
   - name: Tealium
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
   - name: Amazon S3
@@ -46,7 +37,5 @@ valid_partner_list:
     url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
   - name: RudderStack
     url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
-  - name: Jebbit
-    url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/
 
 ---

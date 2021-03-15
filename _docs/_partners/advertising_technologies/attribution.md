@@ -22,7 +22,5 @@ valid_partner_list:
   url: /docs/partners/advertising_technologies/attribution/kochava/
 - name: Singular
   url: /docs/partners/advertising_technologies/attribution/singular/
-- name: Pypestream
-  url: /docs/partners/advertising_technologies/attribution/pypestream/
 
 ---

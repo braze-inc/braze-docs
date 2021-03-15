@@ -13,7 +13,7 @@ Braze's analytics views now allow you to combine several data points together to
 
 Formulas can be accessed in the "Detailed Statistics" panels on the [App Usage][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. Change the "View Statistics for" dropdown from the relevant analytics to "KPI Formulas."
 
-![select forumla][16]
+![select formula][16]
 
 ## How to Create a New Formula
 

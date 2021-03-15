@@ -108,7 +108,7 @@ Braze will alert you if...
 
 - Your message body exceeds 1600 characters,
 - UCS-2 characters are used, increasing the potential for overflow into another message segment as your message will then be limited to 67 characters per message segment,
-- Your message uses liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your liquid could bring to the message.
+- Your message uses Liquid, which may put your message at risk of going over the 1600 character limit. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
 <br><br>
 {% alert warning %}
 Going over message or copy limits may result in additional charges.
@@ -131,16 +131,48 @@ __Test Your SMS Copy Length__
 
 <br>
 
-If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of liquid or connected content.
-
+If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of Liquid or Connected Content.
+<style>
+  .segment_data_hide {
+    display: none;
+  }
+  .segment {
+    display: inline-flex;
+    padding: 2px;
+    font-size: 10px;
+    overflow-wrap: break-word;
+  }
+  .message_output_char {
+    display: inline-flex;
+  }
+  .hover_segment {
+    background-color: #27368F ! important;
+    color: #fff;
+  }
+  .segment_color_0 {
+    background-color: #3accdd59;
+  }
+  .segment_color_1 {
+    background-color: #ff934954;
+  }
+  .segment_color_2 {
+    background-color: #f7918e47;
+  }
+  .segment_color_3 {
+    background-color: #27368f30;
+  }
+</style>
 <form id="sms_split">
-<textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
-<input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Auto Detect</label><br />
-<input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7 Encoding</label><br />
-<input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">USC-2 Encoding</label><br />
-<br />
-Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
-SMS Segments: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
+  <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
+  <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Auto Detect</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
+  <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7 Encoding</label><br />
+  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">USC-2 Encoding</label><br />
+  <br />
+  Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
+  SMS Segments Count: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
+  Message Output: <span id="sms_output" style="padding-left: 5px;"></span><br />
+  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Display Segments: </label>
+  <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
 var unicodeToGsm = {
@@ -288,13 +320,14 @@ concatMap: function (sub, func) { return [].concat.apply([], smsutil.map(sub, fu
 id: function (x) { return x; },
 isHighSurrogate: function (c) {
 var codeUnit = (c.charCodeAt != undefined) ? c.charCodeAt(0) : c;
-return codeUnit >= 0xD800 && codeUnit <= 0xDBFF;
+  return codeUnit >= 0xD800 && codeUnit <= 0xDBFF;
 },
 numberToHexString: function(number) {
 var number = number.toString(16);
 if(number.length == 1) { number = "0" + number; }
-return "0x" + number;
+  return "0x" + number;
 },
+hexEncode: (codeUnit) => "0x"+codeUnit.toString(16).padStart(4, '0').toUpperCase(),
 /**
 take a string and return a list of the unicode characters
 */
@@ -332,9 +365,11 @@ Encode a single (unicode) character into UTF16 "bytes"
 A single unicode character may be 2 javascript characters
 */
 encodeCharUtf16: function (char) {
-return smsutil.concatMap(char, function (c) {
-    return [((0xff00 & c.charCodeAt(0)) >> 8), 0x00ff & c.charCodeAt(0)];
-});
+  if (char.length === 2) {
+    return [char.charCodeAt(0), char.charCodeAt(1)];
+  } else {
+    return [0x00, char.charCodeAt(0)];
+  }
 },
 /**
 Encode a single character into GSM0338 "bytes"
@@ -350,9 +385,11 @@ return function (s) {
 pickencoding: function (s) {
 // choose gsm if possible otherwise ucs2
 if(smsutil.unicodeCodePoints(s).every(function (x) {return x in unicodeToGsm})) {
-    return "gsm";
+  $('#auto_encoding').html("(GSM)");
+  return "gsm";
 } else {
-    return "ucs2";
+  $('#auto_encoding').html("(USC-2)");
+  return "ucs2";
 }
 },
 _segmentWith: function (maxSingleSegmentSize, maxConcatSegmentSize, doEncode) {
@@ -385,7 +422,7 @@ return function (listOfUnichrs) {
 }
 var encoder = {
 gsm: smsutil._encodeEachWith(smsutil.encodeCharGsm),
-ucs2: smsutil._encodeEachWith(smsutil.encodeCharUtf16),
+ucs2: smsutil.encodeCharUtf16,
 auto: function (s) { return encoder[smsutil.pickencoding(s)](s); },
 }
 var segmenter = {
@@ -401,11 +438,44 @@ function updateSMSSplit(){
     var smsSegments = segmenter[sms_type](unicodeinput);
     $('#sms_length').html(sms_text.length);
     $('#sms_segments').html(smsSegments.length);
+    const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
+    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
+    const messageOutput = smsSegments.map((segment,segment_index) =>  segment.text.map((ch, i) => `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""));
+    $('#sms_output').html(messageOutput);
+    $('#sms_segments_data').html(segmentsHtml);
+    $('#segment_section').click(function() {
+      if($(this).is(":checked")) {
+        $("#sms_segments_data").show();
+      }
+      else {
+        $("#sms_segments_data").hide();
+      }
+    })
 }
-$('#sms_message_split').keyup(function(e){
-    updateSMSSplit();
+const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
+  $(hover_id).mouseover(function(e){
+    var input_id = e.target.id;
+    var index = input_id.split(input_id_prefix)[1];
+    if(!index) {
+      return;
+    }
+    var output_id = `#${output_id_prefix}${index}`;
+    $(`${output_id}, #${input_id}`).addClass("hover_segment");
+    $(`#${input_id}`).mouseleave(function() {
+    $(`${output_id}, #${input_id}`).removeClass("hover_segment");
+  });
+});
+};
+//highlight segment to message output
+implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
+//highlight message output to segment
+implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
+$('#sms_message_split').on("input", function(e){
+  $('#auto_encoding').html("");
+  updateSMSSplit();
 });
 $('#sms_split input[name=sms_type]').change(function(e){
+    $('#auto_encoding').html("");
     updateSMSSplit();
 });
 </script>

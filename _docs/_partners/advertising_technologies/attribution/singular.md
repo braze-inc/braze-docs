@@ -46,9 +46,9 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Getting the Braze API Key
+### Step 2: Getting the Braze Data Import Key
 
-In your Braze account, navigate to "Technology Partners", then "Attribution" and find the API key and REST Endpoint in the Singular section. You will need to provide the API key and the REST Endpoint to your Singular Account Manager for the integration to be completed.
+In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Singular". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. You will need to provide the Data Import Key and your REST Endpoint to your Singular Account Manager for the integration to be completed.<br><br>![Singular Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Confirming the Integration
 
@@ -92,15 +92,6 @@ idfv={{most_recently_used_device.${id}}}
 __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Singular will still be able to attribute these clicks through their probabilistic modeling.
 
-[5]: #api-restrictions
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#optional-idfa-collection
-[15]: https://docs.adjust.com/en/callbacks/ "Adjust Callbacks"
-[16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
-[17]: http://support.apsalar.com/customer/portal/articles/1503188-creating-and-managing-postbacks "Singular Postbacks"
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[19]: http://support.mobileapptracking.com/entries/22560357-Setting-Up-Postback-URLs "Tune Postbacks"
-[20]: https://github.com/adjust/ios_sdk#9-implement-the-attribution-callback "Adjust SDK-to-SDK Integrations on iOS"
-[21]: https://github.com/adjust/android_sdk#16-set-listener-for-attribution-changes "Adjust SDK-to-SDK Integrations on Android"
-[22]: https://dev.branch.io/recipes/analytics_appboy/ "Branch Webhooks"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
+[4]: {% image_buster /assets/img/attribution/singular.png %}
+
+

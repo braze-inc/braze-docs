@@ -11,7 +11,7 @@ This guide describes Braze-related changes introduced in iOS 14 and the required
 For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
 
 {% alert tip %}
-Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5) a delay to the upcoming iOS 14 IDFA changes. Until Apple begins to enforce this - sometime in 2021 - your app can continue to collect the IDFA identifier without prompting users for permission.
+As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).
 {% endalert %}
 
 #### Summary of iOS 14 breaking changes
@@ -19,7 +19,7 @@ Apple [recently announced](https://developer.apple.com/news/?id=hx9s63c5) a dela
 - Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release][1].
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
 - Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
-- IDFA collection will [soon require](https://developer.apple.com/news/?id=hx9s63c5) a permission prompt. Once Apple begins to enforce this change later in 2021, apps must update to use the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework.
+- As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
 - If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status.
 
 ## Upgrade Summary
@@ -61,7 +61,7 @@ Geofences are [no longer supported by iOS][4] for users who choose the new  _app
 
 To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze Dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
-Apps that do not upgrade their Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
+Apps that do not upgrade the Braze iOS SDK to at least v3.26.1 will no longer be able to use location tracking when _approximate location_ is granted on iOS 14 devices.
 
 Users who have already granted location access will continue to provide _precise location_ after upgrading.
 
@@ -75,25 +75,24 @@ For more information on Approximate Location, see Apple's [What's New In Locatio
 
 IDFA (Identifier for Advertisers) is an identifier provided by Apple for use with advertising and attribution partners for cross-device tracking and is tied to an individual's Apple ID.
 
-Later in 2021, iOS 14 will require a new permission prompt (launched by the new `AppTrackingTransparency` framework) to get explicit user consent to access the IDFA. This permission prompt to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
+Starting in iOS 14.5, a new permission prompt (launched by the new `AppTrackingTransparency` framework) must be shown to collect explicit user consent for IDFA. This permission prompt to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
 
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
 {% alert important %}
-These IDFA updates will take effect once end-users upgrade their device to a future iOS 14 upgrade in 2021. Once Apple announces their plans to enforce this change, please ensure your app is using the new `AppTransparencyFramework` and Xcode 12 when that future release occurs.
+These IDFA updates will take effect once end-users upgrade their device to iOS 14.5. Please ensure your app uses the new `AppTransparencyFramework` with Xcode 12 if you plan to collect IDFA.
 {% endalert %}
 
 #### Changes to Braze IDFA collection
 ![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK
+1. Braze will continue to allow apps to provide a user's IDFA value _to_ the Braze SDK.
 
 2. The `ABK_ENABLE_IDFA_COLLECTION` compilation macro, which would conditionally compile in optional automatic IDFA collection, will no longer function in iOS 14 and has been removed in 3.27.0. 
 
 3. If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
 
 4. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
-
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
@@ -108,15 +107,39 @@ No changes to Provisional Push Authorization are included in iOS 14. In an earli
 
 ### App Privacy and Data Collection Overview {#app-privacy}
 
-The App Store's new App Privacy feature will disclose to users what personal information an app collects and how it may track users across other apps and websites. Apple has [stated](https://www.apple.com/ios/ios-14-preview/), "Privacy information on the App Store will be coming in an iOS 14 update later this year".
+Since Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
 
-Braze will continue to monitor this new feature announcement to help you understand how your usage of Braze may be disclosed in the App Privacy summary.
+#### Apple Developer Portal Questionnaire
+
+On the _Apple Developer Portal_:
+* You will be asked to fill out a questionnaire to describe how your app or third-party partners collect data.
+  * The questionnaire is expected to always be up-to-date with your most recent release in the App Store.
+  * The questionnaire may be updated even without a new app submission.
+* You will be required to paste a link to your app's Privacy Policy URL.
+
+As you fill out your questionnaire, please consult your legal team, and consider how your usage of Braze for the following fields may affect your disclosure requirements.
+
+#### Braze Default Data Collection
+**Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
+
+**Usage Data** - This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
+
+#### Optional Data Collection
+Data you may optionally be collecting through your usage of Braze:
+
+**Location** - Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.
+
+**Contact Info** - This can include events and attributes related to the user's identity.
+
+**Purchases** - This can include events and purchases logged on behalf of the user.
+
+{% alert important %}
+Note that this is not an exhaustive list. If you manually collect other information about your users in Braze that apply to other categories in the App Privacy Questionnaire, you will need to disclose those as well.
+{% endalert %}
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
 ### App Clips {#app-clips}
-
-#### Overview
 
 ![App Clip]({% image_buster /assets/img/ios/ios14-app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0"}
 
@@ -126,14 +149,9 @@ This feature gives users quicker access to sample your app, with an opportunity 
 
 To learn more about App Clips, see [Apple's App Clip Documentation](https://developer.apple.com/app-clips/)
 
-#### Braze Support
-
-For customers interested in using Braze within App Clips, please contact your Braze Success Team or Support Team.
-
-We will be releasing support and documentation in the near future.
-
+If you're interested in using Braze within App Clips, please submit feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#provisionally-authorized-on-ios
 [4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
+[5]: https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track

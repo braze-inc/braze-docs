@@ -130,7 +130,7 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage A
 | ------------ | ----------- |
 | `sent` | Message successfully dispatched to Braze's email sending partner  |
 | `processed` | Email sending partner has successfully received and prepared the message for sending to the user's inbox provider |
-| `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
+| `aborted` | Braze was unable to successfully dispatch the message due to the user not having an emailable address, or Liquid abort logic was called in the message body. All aborted events include a `reason` field within the metadata object indicating why the message was aborted |
 |`delivered`| Message was accepted by the user's email inbox provider |
 |`bounced`| Message was rejected by the user's email inbox provider. All bounced events include a `reason` field within the metadata object reflecting the bounce error code provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -203,5 +203,3 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage A
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[42]: {{site.baseurl}}/api/parameters/#broadcast

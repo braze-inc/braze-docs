@@ -36,7 +36,7 @@ Ensure that your app is correctly configured to allow push notifications. Common
 
 #### 1. Incorrect Sender Id
 
-Ensure that the correct FCM Sender ID is included in the `appboy.xml` file. An incorrect Sender ID will lead to `MismatchSenderID` errors reported in the dashboard's Message Activity Log.
+Ensure that the correct FCM Sender ID is included in the `braze.xml` file. An incorrect Sender ID will lead to `MismatchSenderID` errors reported in the dashboard's Message Activity Log.
 
 #### 2. Braze Registration Not Occurring
 
@@ -69,7 +69,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 `InvalidRegistration` can be caused by a malformed push token.
 
-1. Make sure to pass a valid push token to Braze from FCM by calling [`FirebaseInstanceId.getToken()`][4].
+1. Make sure to pass a valid push token to Braze from Firebase Cloud Messaging [according to their documentation][21].
 
 #### Error: NotRegistered
 
@@ -89,7 +89,7 @@ If you force-quit your application through your system settings, your push notif
 
 The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
-```
+```xml
 <service android:name="com.appboy.AppboyFirebaseMessagingService"
   android:exported="false">
   <intent-filter>
@@ -97,8 +97,6 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
   </intent-filter>
 </service>
 ```
-
-For an implementation example, please check out our sample application's [AndroidManifest.xml][15]
 
 #### 3. Firewall is Blocking Push
 
@@ -118,7 +116,7 @@ Users have uninstalled the application. This will invalidate their FCM push toke
 
 #### 2. Invalid Firebase Cloud Messaging Server Key
 
-The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `appboy.xml` file. The Server key and Sender ID are found here in your Firebase Console:
+The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `braze.xml` file. The Server key and Sender ID are found here in your Firebase Console:
 
 ![FirebaseServerKey][20]
 
@@ -147,11 +145,10 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
-[9]: {% image_buster /assets/img_archive/serverappskey.png %}
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [14]: http://tcpiputils.com/browse/as/15169
-[15]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
 [16]: #custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
 [18]: #custom-handling-push-receipts-and-opens
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
+[21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token

@@ -117,8 +117,15 @@ __Trigger by Arbitrary Keywords__<br>
 Note triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![picture][8]{: style="margin-top:10px;"}
 
+__Template Keywords__<br>
+When triggering a Campaign or Canvas Step on an inbound SMS, you can optionally template the text that your user sent into the body of your Campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+
+![picture][16]{: style="max-width:80%;"}
+<br><br>
+![picture][17]{: style="max-width:80%;"}
+
 ## Currents Event
-Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundRecieved event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. Please note that inbound messages are truncated past 1600 characters. 
+Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundReceived event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. Please note that inbound messages are truncated past 1600 characters. 
 
 ![picture][9]{: style="max-width:80%;"}
 
@@ -130,11 +137,10 @@ Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/u
 [6]: {% image_buster /assets/img/sms/retargeting1.png %}
 [7]: {% image_buster /assets/img/sms/retargeting2.png %}
 [8]: {% image_buster /assets/img/sms/retargeting3.png %}
-[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [9]: {% image_buster /assets/img/sms/sms_currents.png %}
-[10]: {% image_buster /assets/img/sms/custom_category.png %}
-[11]: {% image_buster /assets/img/sms/keyword_list.png %}
 [12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}
 [13]: {% image_buster /assets/img/sms/sms_custom_step.png %}
 [14]: {% image_buster /assets/img/sms/canvas_trigger.png %}
 [15]: {% image_buster /assets/img/sms/campaign_trigger.png %}
+[16]: {% image_buster /assets/img/keyword_example1.jpg %}
+[17]: {% image_buster /assets/img/keyword_example2.jpg %}

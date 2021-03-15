@@ -22,33 +22,6 @@ While Braze's platform automatically stops sending emails to users who have mark
 
 Sunset policies can be especially helpful in email campaigns that target lapsing users.  While these campaigns focus on segments that have not interacted with your app for a period of time, they can put the deliverability of your emails at risk if they repeatedly include unengaged recipients. Sunset policies allow you to target lapsing users without landing in the spam folder.
 
-[18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
 [19]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [20]: {% image_buster /assets/img_archive/Email_Sunset_Policies_new.png %}
 [21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns
-[22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[23]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[24]: http://tools.ietf.org/html/rfc2822
-[25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
-[36]: #deep-linking
-[37]: http://googlewebmastercentral.blogspot.com/2015/05/app-deep-linking-with-googl.html
-[38]: {{site.baseurl}}/help/best_practices/email/#unsubscribed-email-addresses
-[39]: {{site.baseurl}}/help/best_practices/email/#bounces--invalid-emails
-[40]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[42]: https://returnpath.com/
-[43]: http://www.briteverify.com/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
-[60]: {{site.baseurl}}/help/best_practices/email/#email-sunset-policies
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}
-[62]: https://www.emailonacid.com/blog/article/email-development/tips-for-coding-email-preheaders
-[63]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
-[64]: {{site.baseurl}}/help/best_practices/email/#unsubscribed-email-addresses
-[65]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event

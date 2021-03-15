@@ -136,7 +136,7 @@ Use the email address filter, set it to "matches regex". Reference the regex for
 - <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
 
 __Example__<br>
-Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter [a-zA-Z0-9.-+_]+@braze\.com in the field.
+Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
 {% enddetails %}
@@ -177,4 +177,3 @@ Let's say you wanted to filter users by phone number for a specific area code, 7
 [regex]: https://regex101.com/
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
-[phonenumbers]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/

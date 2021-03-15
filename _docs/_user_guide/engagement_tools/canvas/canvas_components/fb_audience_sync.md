@@ -29,7 +29,7 @@ You will need to ensure that you have the following items created and/or complet
 | ----------- | ------ | ----------- |
 | Facebook Business Manager | [Facebook][3] | A centralized tool to manage your brand’s Facebook assets (e.g. ad accounts, pages, apps). |
 | Facebook Ad Account | [Facebook][4] | An active Facebook ad account tied to your brand’s Business Manager.<br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
-| Facebook App | [Facebook][5] | Ensure that you have created a Facebook app through [developers.facebook.com][2] and added the app to your Facebook Business Manager. <br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook apps you plan to use with Braze. |
+| Facebook App | [Facebook][5] | Ensure that you have created a Facebook app through [developers.facebook.com][2] and added the app to your Facebook Business Manager. <br><br>Ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook apps you plan to use with Braze.<br><br>Note: When creating your app, under the Advanced Settings within the Facebook Developer App Dashboard, set the API version of __Upgrade All Calls__ and __Upgrade Calls for App Roles__ to v9 or lower.|
 | Facebook Custom Audiences Terms | [Facebook][6] | Accept Facebook’s Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 | Facebook System User Access Token | [Facebook][7] | System users represent servers or software that make API calls to assets owned or managed by a Business Manager. <br><br>You will need to follow the instructions [here][1] to generate a system user access token.<br>See [below][26] for more details. |
 | Facebook App Review | [Facebook][8] | See [below][27] for more details. |
@@ -164,8 +164,6 @@ __Potential causes of errors__:<br>
 [10]: https://developers.facebook.com/docs/apps/review/#business-verification
 [11]: https://developers.facebook.com/docs/apps/review/#supplemental-terms
 [12]: https://www.facebook.com/business/help/503306463479099?id=2190812977867143
-[13]: https://developers.facebook.com/docs/apps/review/common-rejection-reasons/
-[15]: {% image_buster /assets/img/fb_audience_sync/FB1.png %}
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [17]: {% image_buster /assets/img/fb_audience_sync/FB3.png %}
 [18]: {% image_buster /assets/img/fb_audience_sync/FB4.png %}
@@ -179,7 +177,5 @@ __Potential causes of errors__:<br>
 [27]: {{site.baseurl}}/audience_sync_facebook/#facebook-system-user-access-token
 [28]: https://developers.facebook.com/docs/marketing-api/access#standard
 [29]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management
-[30]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-business_management
 [32]: {% image_buster /assets/img/fb_audience_sync/sync_setup2.png %}
 [33]: {% image_buster /assets/img/fb_audience_sync/sync_setup3.png %}
-[34]: https://developers.facebook.com/docs/facebook-login/permissions/#reference-pages_read_engagement

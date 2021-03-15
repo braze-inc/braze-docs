@@ -12,7 +12,7 @@ guide_featured_title: "Popular Articles"
 
 guide_featured_list:
   - name: Scheduling Your Campaign
-    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
     fa_icon: fas fa-chart-line
   - name: Attribute Triggers
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/attribute_triggers/

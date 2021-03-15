@@ -214,4 +214,8 @@ If an email is bounced, Braze marks the email as invalid and the subscription st
 
 Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, ALT texts can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider.
 
+## Setting From and Reply-To Addresses
+
+When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. marketing.yourdomain.com), failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+
 [24]: http://tools.ietf.org/html/rfc2822

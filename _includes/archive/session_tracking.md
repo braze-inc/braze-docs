@@ -52,9 +52,9 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 {% endif %}
 
-{% if include.platform == "Android" %}To customize the session timeout, add [`com_appboy_session_timeout`][session_tracking_4] to your [`appboy.xml`][session_tracking_3] file:
+{% if include.platform == "Android" %}To customize the session timeout, add [`com_appboy_session_timeout`][session_tracking_4] to your [`braze.xml`][session_tracking_3] file:
 
-```java
+```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open"
 otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
 <integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
@@ -81,7 +81,6 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
 [session_tracking_2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L101
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session_tracking_4]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml#L20
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
 [session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}

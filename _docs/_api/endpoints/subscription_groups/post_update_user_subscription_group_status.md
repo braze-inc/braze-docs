@@ -49,12 +49,13 @@ Authorization: Bearer YOUR_REST_API_KEY
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
    "external_id": (required*, string) the external_id of the user,
-   "email": (required*, string) the email address of the user
-   //one of external_id or email is required
-   //can be passed as an array of string with a max of 50
-   //endpoint only accepts email or phone value, not both
-   "phone": (required*, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
-   //one of external_id or phone is required
+   "email": (required*, array of string) the email address of the user (must include at least one email and at most 50 emails),
+   // Email subscription group - one of external_id or email is required
+   // Endpoint only accepts email or phone value, not both
+   // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   "phone": (required*, array of string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   // SMS subscription group - one of external_id or phone is required
+   // Endpoint only accepts email or phone value, not both
  }
 ```
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
@@ -67,7 +68,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `subscription_group_id` | Yes | String | The id of your subscription group, |
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | String | The external_id of the user |
-| `email` | Yes* | String | The email address of the user |
+| `email` | Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
 | `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -76,7 +77,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "email": "your.user@email.com"
+  "email": "your.user@email.com",
 }
 
 ```
@@ -88,7 +89,7 @@ This property should not be used for updating a user's profile information. Plea
 {
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
-  "phone": "+12223334444"
+  "phone": "+12223334444",
 }
 
 ```
@@ -104,7 +105,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
   "external_id": "user123",
-  "email": "your.user@email.com"
+  "email": ["your.user@email.com", "your.user2@email.com"]
 }
 '
 ```
@@ -118,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
   "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
   "subscription_state": "unsubscribed",
   "external_id": "user123",
-  "phone": "+12223334444"
+  "phone": ["+12223334444", "+13334445555"]
 }
 '
 ```
@@ -139,5 +140,3 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 
 {% endapi %}
 
-[support]: {{site.baseurl}}/support_contact/
-[1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

@@ -24,8 +24,6 @@ dependencies {
 }
 ```
 
-See our sample application's [`build.gradle`][2] for an example implementation.
-
 ### Step 2: Update the Manifest
 
 Add boot, fine location, and background location permissions to your `AndroidManifest.xml`:
@@ -60,7 +58,7 @@ If you are using a version of the Android SDK less than `2.3.0`, the following m
 
 ### Step 3: Enable Braze Location Collection
 
-If you have not yet enabled Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
@@ -70,7 +68,7 @@ If you have not yet enabled Braze location collection, update your `appboy.xml` 
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
-Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `appboy.xml`, independently of the value of `com_appboy_enable_location_collection`. 
+Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_appboy_enable_location_collection`. 
 
 ```xml
 <bool name="com_appboy_geofences_enabled">true</bool>
@@ -244,7 +242,7 @@ By default, Braze automatically retrieves the device's location and requests geo
 
 #### Part 1: Disable Automatic Geofence Requests
 
-Automatic Braze Geofence requests can be disabled in your `appboy.xml` file by setting `com_appboy_automatic_geofence_requests_enabled` to `false`.
+Automatic Braze Geofence requests can be disabled in your `braze.xml` file by setting `com_appboy_automatic_geofence_requests_enabled` to `false`.
 
 ```xml
 <bool name="com_appboy_automatic_geofence_requests_enabled">false</bool>
@@ -312,12 +310,7 @@ Note that Braze syncs geofences to devices using background push. In most cases,
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom Application.onCreate() implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
-[2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
-[5]: https://developer.android.com/training/location/geofencing.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [10]: https://developers.google.com/android/guides/setup
 [11]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestGeofences-double-double-

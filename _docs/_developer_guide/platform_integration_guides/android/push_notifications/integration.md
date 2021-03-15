@@ -51,7 +51,7 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
 
-In your `appboy.xml`:
+In your `braze.xml`:
 
 ```xml
 <bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
@@ -101,20 +101,16 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-
-    // FCM Registration tokens cannot be obtained on the main thread.
     final Context applicationContext = this;
-    new Thread(new Runnable() {
-      @Override
-      public void run() {
-        try {
-          String token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM");
-          Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
-        } catch (Exception e) {
-          Log.e(TAG, "Exception while registering FCM token with Braze.", e);
-        }
+    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+      if (!task.isSuccessful()) {
+        Log.w(TAG, "Exception while registering FCM token with Braze.", task.getException());
+        return;
       }
-    }).start();
+
+      final String token = task.getResult();
+      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
+    });
   }
 }
 ```
@@ -126,16 +122,14 @@ public class MyApplication extends Application {
 class MyApplication: Application() {
   override fun onCreate() {
     super.onCreate()
-
-    // FCM Registration tokens cannot be obtained on the main thread.
-    Thread(Runnable {
-      try {
-        val token = FirebaseInstanceId.getInstance().getToken("<YOUR_SENDER_ID>", "FCM")
-        Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
-      } catch (e: Exception) {
-        Log.e(TAG, "Exception while registering FCM token with Braze.", e)
+    FirebaseMessaging.getInstance().token.addOnCompleteListener { task: Task<String?> ->
+      if (!task.isSuccessful) {
+        Log.w(TAG, "Exception while registering FCM token with Braze.", task.exception)
+        return@addOnCompleteListener
       }
-    }).start()
+      val token = task.result
+      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
+    }
   }
 }
 ```
@@ -277,9 +271,9 @@ The icons pictured below are examples of properly designed icons:
 
 ### Step 3: Configure Notification Icons
 
-##### Specifying Icons in appboy.xml
+##### Specifying Icons in braze.xml
 
-- Braze allows you to configure your notification icons by specifying drawable resources in your [`appboy.xml`][12]:
+- Braze allows you to configure your notification icons by specifying drawable resources in your `braze.xml`:
 
 ```xml
 <drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
@@ -292,7 +286,7 @@ Setting a large notification icon is optional but recommended.
 
 ##### Specifying Icon Background Color
 
-- The notification icon background color can be overriden in your [appboy.xml][12]. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
+- The notification icon background color can be overriden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
 
 ```xml
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
@@ -302,7 +296,7 @@ Setting a large notification icon is optional but recommended.
 
 ##### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to it's default setting,`true`, in your `appboy.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to its default setting,`true`, in your `braze.xml`:
 
 ```xml
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
@@ -376,7 +370,7 @@ Appboy.configure(this, appboyConfig)
 {% endtab %}
 {% endtabs %}
 
-See the equivalent configuration for your `appboy.xml`. Note that the class name must be the same as returned by `Class.forName()`:
+See the equivalent configuration for your `braze.xml`. Note that the class name must be the same as returned by `Class.forName()`:
 
 ```xml
 <bool name="com_appboy_push_deep_link_back_stack_activity_enabled">true</bool>
@@ -498,7 +492,7 @@ setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificatio
 {% endtab %}
 {% endtabs %}
 
-The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.  See [`DroidboyApplication.java`][36] for an example.
+The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
 Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
@@ -551,7 +545,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - An `APPBOY_PUSH_RECEIVED` intent will be received when a push notification arrives.
   - An `APPBOY_NOTIFICATION_OPENED` intent will be received when a push notification is clicked by the user.
   - An `APPBOY_PUSH_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
-- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `appboy.xml`.
+- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
 For a detailed custom receiver example, please see the below:
 
@@ -667,34 +661,19 @@ val myExtra = extras.getString("my_key")
 Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
 {% endalert %}
 
-[4]: #displaying-push
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomAppboyNotificationFactory-com.appboy.IAppboyNotificationFactory-
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNotificationFactory.html
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [8]: {{site.baseurl}}/help/best_practices/push/overview/
-[10]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[11]: https://support.google.com/cloud/answer/6158840?hl=en
-[12]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
-[13]: http://stackoverflow.com/questions/6273892/android-package-name-convention
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[23]: #step-4-registering-opens-and-receipts
-[26]: http://www.vogella.com/tutorials/AndroidBroadcastReceiver/article.html "Android Receiver Tutorial"
-[27]: {% image_buster /assets/img_archive/Push_Android_2.png %}
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
-[29]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java "DroidBoyActivity.java"
-[30]: #step-3-enable-automatic-registration
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
-[36]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidboyApplication.java
 [37]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [38]: {% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon"
 [40]: http://developer.android.com/training/app-indexing/deep-linking.html "Google Deep Linking Documentation"
 [41]: {% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action"
 [42]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[43]: https://developer.android.com/training/permissions/index.html
 [45]: https://firebase.google.com/docs/cloud-messaging/
-[46]: https://firebase.google.com/docs/cloud-messaging/android/client
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
 [50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
@@ -705,7 +684,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[60]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push
 [61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
 [62]: https://developer.android.com/preview/features/notification-channels.html
 [63]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
@@ -714,7 +692,6 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-

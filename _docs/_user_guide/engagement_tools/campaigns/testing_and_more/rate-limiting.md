@@ -64,7 +64,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Delivery Speed Rate-Limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute). Note that non rate-limited campaigns may exceed these delivery limits.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits.
 
 ![Per Minute Rate Limit Example][3]
 
@@ -93,7 +93,7 @@ Instead of attempting to make up for the delay and send the remaining 4K message
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Multi-Channel Campaigns
-Keep in mind that the per minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
+Keep in mind that the per-minute rate limit is adjusted on a per-campaign basis. If multiple channels are utilized within a campaign, the rate limit will apply to each of those channels. If your campaign utilizes email and in-app banners with a rate limit of 10K per minute, we will send 20K total messages each minute (10K email, 10K push).
 
 #### Multi-Platform Push Campaigns
 For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10K rate-limit per minute will equally distribute the 10K messages across the 3 platforms.
@@ -104,12 +104,13 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency Capping can be set up for each app group by selecting Global Campaign Settings found underneath the Engagement tab. From here, you can choose:
+Frequency Capping is applied at the Campaign/Canvas step send level nand can be set up for each app group by selecting __Global Campaign Settings__ found underneath the Engagement tab. From here, you can choose:
 
-- Which message channel you’d like to cap - push, email, sms, webhook or any of those four.
-- How many times each user should receive that channel within a certain time frame, which can be measured in minutes, days, weeks (7 days) and months.
+- Which messaging channel you would like to cap - push, email, SMS, webhook, or any of those four.
+- How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
+- Users can choose how many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. 
 
-Each line of frequency caps will be connected using an "AND," and you're able to add as many as you wish. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than 1 push per day and no more than 3 pushes per week.
+Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
 
 ![Frequency Capping][14]
 
@@ -131,10 +132,107 @@ Different channels within a multi-channel campaign will individually count towar
 
 In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
-{% alert update %}
-Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.
+{% alert important %}
+Please note that global frequency capping is based in the user's time zone, and are based on calendar days, not 24-hour periods. For example, if I set up a frequency capping rule of sending no more than 1 campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 {% endalert %}
 
+#### Examples
+{% tabs %}
+{% tab Example 1 %}
+
+Let's say that you set a Frequency Capping rule which asks that your user receive no more than three (3) push notification Campaigns/Canvas steps per week from __all__ Campaign/Canvas steps.
+
+If your user is slated to receive three (3) push notifications, two (2) in-app messages, and one (1) Content Card this week, they will receive all of those messages.
+
+{% endtab %}
+{% tab Example 2 %}
+
+Using the following frequency capping rules:
+
+![rule]({% image_buster /assets/img/standard_rules_fnfn.png %})
+
+**And the following scenario occurs:**
+
+- A user triggers the same Campaign, Campaign ABC three times over the course of a week.
+- This user triggers Campaign ABC once on Monday, once on Wednesday, and once on Thursday.
+
+__Then, the expected behavior is that:__
+
+- This user will receive the Campaign sends that triggered on Monday and Wednesday.
+- This user will not receive the third Campaign send on Thursday because the user has already received two push Campaign sends that week.
+
+{% endtab %}
+{% endtabs %}
+
+### Frequency Capping by Tag
+
+[Frequency Capping](#updated-frequency-capping-rules) rules can be applied to app groups using specific Tags you have applied to your Campaigns/Canvases, allowing you to, essentially, base your Frequency Capping on custom-named groups.
+
+You can combine regular Frequency Capping with Frequency Capping by Tags, as shown below.
+
+![rule][12]
+
+The rules above ask that users receive:
+1. No more than three (3) push notification Campaigns/Canvas steps per week from __all__ Campaign/Canvas steps, __AND__
+2. No more than two (2) push notification Campaign/Canvas steps per week with the tag `promotional`.
+
+As a result, your users will receive no more than three (3) Campaign sends per week over all Campaigns/Canvas steps and no more than two (2) push notification Campaigns/Canvas steps with the tag `promotional`.
+
+{% alert important %}
+Canvases are tagged at the Canvas level, as opposed to tagging by Step. So, each Canvas Step will inherit __all__ of the Canvas level tags.
+{% endalert %}
+
+#### Conflicting Rules
+
+When rules conflict, the most restrictive, applicable frequency capping rule will be applied to your users.
+
+![global][11]
+
+In this example, your user will not receive more than one (1) push notification Campaign/Canvas steps with the tag "promotional" in a given week, because you've specified that users should not receive more than one (1) push notification Campaign/Canvas step from all Campaign/Canvas steps. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
+
+#### Tag Count
+Frequency Capping by Tag rules compute at the time a message sends. This means that Frequency Capping by Tag only counts tags that are currently on the Campaigns/Canvases that a user received in the past. It does not count the tags that were on the Campaigns/Canvases during the time they were sent but have since been removed. It will count if a Tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
+
+##### Example
+
+Consider the following Campaigns and Frequency Capping by Tag rule:
+
+__Campaigns:__
+- __Campaign A__ is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Monday.
+- __Campaign B__ is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Wednesday.
+
+__Frequency Capping by Tag Rule:__
+- Your user should receive no more than one (1) push notification Campaign per week with the tag `promotional`.<br><br>
+
+| Action | Result |
+|---|---|
+| The `promotional` tag is removed from __Campaign A__ _after_ your user received the message, but _before_ __Campaign B has sent.__ | Your user will receive __Campaign B__.|
+| The `promotional` tag is mistakenly removed from __Campaign A__ after your user received the message. <br> The tag is added back to __Campaign A__ on Tuesday, before __Campaign B__ is sent. | Your user will not receive __Campaign B__. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Sending at Large Scales
+ 
+If you send __more than one hundred (100) messages per channel__ from Campaigns/Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly. 
+
+For example, if your frequency capping by tag rule is: 
+
+> No more than two (2) email Campaigns/Canvas Steps with the tag `Promotional` to a user every week.
+
+And you send the user more than one hundred (100) emails from Campaigns/Canvas Steps with frequency capping turned on over the course of a week, more than two emails may be sent to the user. 
+
+Because 100 messages per channel are more messages than most brands send to their users, it's unlikely that you will be impacted by this limitation. To avoid this limitation, you can simply set a cap for the maximum number of emails you'd like your users to receive over the course of a week. 
+
+For example, you might set up the following rule: 
+
+> No more than three (3) email Campaigns/Canvas steps per week from __all__ Campaign/Canvas Steps.
+
+This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive 3 emails per week from Campaigns/Canvas Steps with frequency capping turned on.
+
+
+
+[11]: {% image_buster /assets/img/global_rules.png %} "global rules"
+[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "rules"
+[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "rules standard"
 [1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
 [2]: {% image_buster /assets/img_archive/total_limit.png %}
 [3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
@@ -143,4 +241,3 @@ Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Step
 [16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
 [18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

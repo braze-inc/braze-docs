@@ -20,7 +20,7 @@ Apple Push Notifications service (APNs) supports setting alert preferences and s
 | alert             | string or dictionary object | For string inputs, displays an alert with the string as the message with Close and View buttons; for non-string inputs, displays an alert or banner depending on the input's child properties |
 | badge             | number                      | Governs the number that is displayed as the badge on the app icon                                                                                                                              |
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
-| content-available | number                      | Input values of 1 signal to the app the availabilty of new information upon launch or session resumption |
+| content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
@@ -155,10 +155,7 @@ Key value pairs can be added to a News Feed Card in the Braze message composer b
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/TheNotificationPayload.html
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[5]: https://developers.google.com/cloud-messaging/concept-options#common-message-options
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options

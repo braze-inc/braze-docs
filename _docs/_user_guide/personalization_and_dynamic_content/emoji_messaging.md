@@ -37,7 +37,7 @@ To insert emojis into your message channels, **highlight**, click and drag the _
 
 ## Troubleshooting
 
-Many of the available emojis are currently unviewable in the Chrome browser. This issue will not affect the sending of emojis across Braze messaging channels, and the emojis will still be successfully delivered to your users. Try using another browswer such as Safari or Firefox to accurately preview the emojis in your messages.
+Many of the available emojis are currently unviewable in the Chrome browser. This issue will not affect the sending of emojis across Braze messaging channels, and the emojis will still be successfully delivered to your users. Try using another browser such as Safari or Firefox to accurately preview the emojis in your messages.
 
 [1]: {% image_buster /assets/img_archive/accessing_emoji_1.png %}
 [2]: {% image_buster /assets/img_archive/accessing_emoji_2.png %}

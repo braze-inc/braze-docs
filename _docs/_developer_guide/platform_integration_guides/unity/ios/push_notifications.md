@@ -44,6 +44,7 @@ Braze provides a native Unity solution for automating the Unity iOS push notific
 
 - If you would prefer instead to complete the integration manually by modifying your built Xcode project, please follow the [Manual Push Integration instructions][1].
 - If you are transitioning from a manual integration to an automated one, please follow the instructions on [Transitioning from Manual to Automated Integration][2] before following the rest of these steps.
+- Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
 
 ### Step 1: Open Braze Configuration Settings
 
@@ -61,11 +62,11 @@ Users who have not yet opted-in to push notifications will be prompted to opt-in
 
 #### Disabling Automatic Push Registration
 
-Check "Disable Automatic Push Registration" if you would like to manually register users with APNs (Apple Push Notification Service). Unity provides [NotificationServices.RegisterForNotifications][5] to do this from Unity.
+Check "Disable Automatic Push Registration" if you would like to manually register users with APNs (Apple Push Notification Service).
 
 ![Disable Automatic Push Registration][28]
 
->  If you check this option, make sure that you are registering users for push notifications EVERY time the application runs after users have granted push permissions to your app. Apps need to re-register with APNs as [device tokens can change arbitrarily][4].
+>  If you check this option, ensure that you are registering users for push notifications every time the application runs after users have granted push permissions to your app. Apps need to re-register with APNs as [device tokens can change arbitrarily][4].
 
 #### Enabling Background Push
 
@@ -226,7 +227,6 @@ See our documentation on [Deep Linking in iOS][18].
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#transitioning-from-manual-to-automated-integration
 [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 [4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
-[5]: https://docs.unity3d.com/ScriptReference/iOS.NotificationServices.RegisterForNotifications.html
 [6]: #disabling-automatic-push-registration
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#step-2-setting-your-api-key
 [9]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
@@ -240,8 +240,6 @@ See our documentation on [Deep Linking in iOS][18].
 [17]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html#//apple_ref/doc/uid/TP40008194-CH4-SW10
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [19]: {% image_buster /assets/img_archive/ios_push_sample.png %}
-[25]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L44
-[26]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L50
 [27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
 [28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}
 [29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %}

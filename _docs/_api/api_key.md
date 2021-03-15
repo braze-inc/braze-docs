@@ -234,8 +234,8 @@ There are two ways to locate your `app_id`:
 ### Multiple App Identifier API keys
 
 During SDK set up, The most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
-To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `appboy.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
-For each relevant build variant, create a new `appboy.xml` for it in `src/<build variant name>/res/values/`:
+To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
+For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -255,7 +255,6 @@ With App identifiers, the `app_id` is assigned by Braze and permissions cannot b
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
-[4]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
 [5]: {{site.baseurl}}/api/basics/
 [6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types

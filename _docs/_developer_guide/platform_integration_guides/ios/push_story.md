@@ -59,6 +59,10 @@ After following the [Swift Package Manager integration guide][5], simply add `Ap
 
 ### Cocoapods
 
+{% alert important %}
+For those integrating with SPM, skip to [step 6](#step-6-updating-your-notification-view-controller).
+{% endalert %}
+
 Add the following line to your Podfile:
 
 ```ruby
@@ -105,7 +109,7 @@ In your `NotificationViewController.m`, remove the default implementation and ad
 - (void)didReceiveNotification:(UNNotification *)notification {
   self.dataSource = [[ABKStoriesViewDataSource alloc] initWithNotification:notification
                                                                storiesView:self.storiesView
-                                                                  appGroup:@"YOUR-APP-GROUP"];
+                                                                  appGroup:@"YOUR-APP-GROUP-IDENTIFIER"];
 }
 
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response
@@ -140,7 +144,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
   var dataSource: ABKStoriesViewDataSource?
     
   func didReceive(_ notification: UNNotification) {
-    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "group.Appboy.HelloSwift")
+    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "YOUR-APP-GROUP-IDENTIFIER")
   }
     
   func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
@@ -184,14 +188,16 @@ Open the Info.plist file of the Notification Content Extension and add/change fo
 
 ## Step 8: Updating the Braze Integration in Your Main App
 
-Add `ABKPushStoryAppGroupKey` in the `appboyOption` dictionary as following when you initialize Braze:
+##### Option 1: Runtime
+
+In the `appboyOptions` dictionary used to configure your Braze instance, add a `ABKPushStoryAppGroupKey` entry and set the value to your App Group identifier.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
-appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
+appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 [Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
@@ -203,13 +209,17 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
-  ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
+  ABKPushStoryAppGroupKey : "YOUR-APP-GROUP-IDENTIFIER"
 ]
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
 
 {% endtab %}
 {% endtabs %}
+
+##### Option 2: Info.plist
+
+Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}
@@ -224,3 +234,4 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
+[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}

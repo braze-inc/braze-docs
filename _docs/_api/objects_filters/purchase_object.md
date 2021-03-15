@@ -51,7 +51,7 @@ A Purchase Object is an object that gets passed through the API when a purchase 
 ## Purchase Product_ID
 
 Within the purchase object, The `product_id` is an identifier for the purchase, e.g Product Name or Product Category
-- Braze allows you to store more than 5000 `product_id`s in the dashboard.
+- Braze allows you to store a max of 5000 `product_id`s in the dashboard.
 - `product_id` max is 255 characters
 
 ### Product_ID Naming Conventions

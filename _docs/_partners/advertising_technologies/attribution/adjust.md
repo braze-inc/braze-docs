@@ -19,7 +19,7 @@ This integration supports iOS and Android apps.
 | Requirement | Description |
 |---|---|
 | Braze SDK | Be sure to enable the proper SDK for your needs - either [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/).|
-| Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll find the Install API Key and the REST Endpoint. The Install API Key and REST Endpoint will be used to set up a postback in Adjust’s dashboard. |
+| Braze API Key & REST Endpoint | In your Braze account, navigate to Technology Partners and search for Adjust. There, you'll be able to find your rest endpoint and generate a Data Import Key. The Data Import Key and REST Endpoint will be used to set up a postback in Adjust’s dashboard. |
 | Adjust SDK | Please see the [Adjust docs](https://docs.adjust.com/en/getting-started/#integrate-the-adjust-sdk) for more information on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -29,7 +29,7 @@ This integration supports iOS and Android apps.
 If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device ID to Adjust. You should call the following before initializing the SDK on `Adjust.onCreate.`:
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getInstallTrackingId()););
 ```
 {% endtab %}
 {% tab iOS %}
@@ -42,18 +42,17 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtabs %}
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you will need to ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).
+If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will need to set up `product_id` as a parameter for events. For more information on defining partner parameters for event forwarding see [Adjust’s documentation](https://github.com/adjust/sdks).<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the __Generate API Key__ button found within the Adjust partner section of the Braze dashboard.<br><br>![Adjust Image]({% image_buster /assets/img/attribution/adjust2.png %}){: style="max-width:70%;"}
 {% endalert %}
 
 ## Integration
 
 To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 
-1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.
-2. Select __Braze (formerly Appboy)__.
-3. Copy the Braze API Key into the `Install API Key` field.
-	* This Braze API Key is available in the Braze Dashboard. This can be found by navigating to __Technology Partners__ under __Integrations__ and selecting __Adjust__. From here, the API you need is housed under the __Data Import for Install Attribution__ section.
-4. Copy the Braze REST Endpoint into the `REST_endpoint` field.
+1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.<br><br>
+2. Select __Braze (formerly Appboy)__.<br><br>
+3. Copy the Braze Data Import Key into the `Install API Key` field.<br><br>This Data Import Key is available in the Braze Dashboard. This can be found by navigating to __Technology Partners__ under __Integrations__ and selecting __Adjust__. Here, you can generate a new key or invalidate an existing key. From here, the API you need is housed under the __Data Import for Install Attribution__ section.<br><br>![Adjust Image][1]{: style="max-width:70%;"}<br><br>
+4. Copy your specific Braze REST Endpoint into the `REST_endpoint` field.<br><br>
 5. Click __Save & Close__.
 
 ### Attribution Parameters
@@ -109,4 +108,7 @@ idfv={{most_recently_used_device.${id}}}
 
 __This recommendation is purely optional__<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
+
+[1]: {% image_buster /assets/img/attribution/adjust.png %}
+[2]: {% image_buster /assets/img/attribution/adjust2.png %}
 
