@@ -48,6 +48,9 @@ tool:
 | Delays / Windows                    |                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
+
+## Making Edits Post Launch
+
 There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
 
 - Users who have not yet entered the Canvas __will__ be eligible for newly created steps.
@@ -55,6 +58,10 @@ There are a number of things to know if you plan to edit or add more steps to an
 - Users who are currently in a Canvas, but have not reached the points where new steps are added __will__ be eligible to receive those new steps.
 - You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
 - Users already in the Canvas will fall out when a Canvas is stopped.
+
+{% alert important %}
+When users receive a step, __the current step will be received and the next step will be queued__, once a step has been queued, it cannot be changed. This means that users must keep in mind that they will be unable to make edits post launch to the current and next step for the user in their Canvas journey.
+{% endalert %}
 
 ## Canvas Variant Percentages
 
