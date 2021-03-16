@@ -26,7 +26,6 @@ The campaign shown below sends at 9:00PM on April 16th. It's audience's segmenta
 ![Campaign Schedule][1]
 
 9:00PM ET on April 16th is 1:00AM UTC on April 17th.
-9:00PM ET on April 16th is 1:00AM UTC on April 17th.
 
 April 17th would be day "0", April 16th would be day "1", April 15th would be day "2", and April 14th would be day "3".
 

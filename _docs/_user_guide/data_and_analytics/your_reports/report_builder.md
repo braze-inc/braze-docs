@@ -45,6 +45,8 @@ Your table will populate with the metrics you choose.
 
 You can also toggle calculations for the __average__ of any rate or numerical metric or __total__ for any numerical metric.
 
+__4.__ You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas step does not have any data for your selected time period, the results for that row will be blank. 
+
 ![Campaign numerical metric][4]{: style="max-width:60%;"}<br>
 
 ### Campaign Comparison Report with Multivariate Campaigns
@@ -95,6 +97,15 @@ If your report contains any multivariant campaigns, your export will include 2 C
 Your CSV export will reflect whichever breakdown view you were on when you clicked Export. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click __Export__ from there.
 
 If you download a variant breakdown Canvas report, you’ll receive 2 CSV files - one containing top-level metrics for each Canvas, and another containing variant level metrics. The first time you export a report like this, you’ll receive a pop-up asking you to grant permission for downloading multiple files - click __Allow__.
+
+## Report FAQs
+
+__If I delete a variant from a multivariant campaign, will the data from that variant be available in a future report?__<br>
+No; data from deleted variants within a multivariant campaign will not appear in Report Builder.
+
+__Which types of campaigns and Canvases can be included in a report?__<br>
+Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
+
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 

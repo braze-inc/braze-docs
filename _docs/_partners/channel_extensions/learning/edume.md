@@ -61,3 +61,13 @@ https://edume-braze-connect.herokuapp.com/getLessonLink?lessonId=25805&groupId=4
 ```
 {%endraw%}
 The differences are the API endpoint `getLessonLink`, and providing a lesson ID in the `lessonId` parameter instead of a module ID. Otherwise, everything works the same as for courses.
+
+### Access to an eNPS Survey
+
+As for lessons, a link to a particular eNPS survey can be created by using the following URL:
+{%raw%}
+```
+https://edume-braze-connect.herokuapp.com/getSurveyLink?surveyId=654&groupId=7961&externalUserId={{${driver_id}}}
+```
+{%endraw%}
+Again, the differences are the API endpoint `getSurveyLink`, and providing a surveyId in the `surveyId` parameter. Otherwise it is exactly the same process as for courses.
