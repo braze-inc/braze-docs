@@ -17,7 +17,7 @@ channel:
 ---
 
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding handling unknown phone numbers doc.
+Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentaion](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding handling unknown phone numbers article.
 {% endalert %}
 
 # Handling Unknown Phone Numbers - New Users

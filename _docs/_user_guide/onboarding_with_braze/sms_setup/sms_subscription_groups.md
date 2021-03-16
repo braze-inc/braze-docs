@@ -28,7 +28,7 @@ Subscription Groups are necessary for any SMS message sent through Braze. A subs
 - Users may unsubscribe to messaging within an SMS message or through the use of other types of unsubscribe prompts (for example, account page or in-app web flow). Your team must update the subscription status of any user who unsubscribes outside of SMS messaging.<br><br>
 2. __Managing User Updates__
 - You must add users to a subscription group via REST API.
-- Subscription Group [reporting and segmentation filters]() are available for creating and targeting campaigns and Canvases.
+- Subscription Group [reporting and segmentation filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) are available for creating and targeting campaigns and Canvases.
 - Two subscription states are available for SMS users: `subscribed` and `unsubscribed`
 
 ## SMS Subscription States
@@ -69,3 +69,5 @@ In order to send an MMS message, at least one number within your Subscription Gr
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/
 [8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
 [9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
+[10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
+

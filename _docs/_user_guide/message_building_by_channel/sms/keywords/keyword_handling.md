@@ -17,7 +17,7 @@ channel:
 ---
 
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling doc.
+Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
 {% endalert %}
 
 ## Two-Way Messaging (Custom Keyword Responses)
@@ -31,7 +31,7 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 | Type | Speed | Notes | 
 | ----- | ----- | ---- | 
 | Known Phone Numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
-| Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
+| Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 If you require faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
@@ -101,7 +101,7 @@ These custom keywords operate in an "always-on" capacity, meaning that any user 
 ![picture][13]{: style="float:right;max-width:40%;margin-left:10px;"}
 To create a custom keyword category, edit the appropriate subscription group, and click "Add Custom Keyword Category". Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
-Once created, this keyword category will be available to [filter]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#filter-by-recency) and [trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword)  against in your campaigns and Canvases.
+Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
 
 Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
 
@@ -125,7 +125,7 @@ Interested in seeing how these keywords and keyword categories can be used in yo
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
 [2]: {% image_buster /assets/img/sms/keyword_home.png %}
 [3]: {% image_buster /assets/img/sms/keyword_language.png %} 
-[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
+[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
 [endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
 [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
 [4]: {% image_buster /assets/img/sms/sms_channel.png %}

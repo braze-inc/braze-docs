@@ -17,7 +17,6 @@ channel:
 ---
 
 # Reporting & Analytics
-To see the meanings of all SMS metrics, check the [Metrics Glossary][1].
 
 ## SMS Metrics
 - **Sent**: A campaign or canvas step has been launched or triggered and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.

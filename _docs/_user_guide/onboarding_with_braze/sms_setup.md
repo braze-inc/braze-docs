@@ -20,15 +20,15 @@ guide_featured_list:
 - name: Short and Long Codes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card
+- name: User Data Migration
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
+  fa_icon: fas fa-user
 - name: SMS Message Sending
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
   fa_icon: fas fa-comment-alt
 - name: SMS Subscription Groups
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
   fa_icon: fas fa-users
-- name: User Data Migration
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
-  fa_icon: fas fa-user
 - name: Next Steps..
   link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
   fa_icon: fas fa-forward

@@ -1,5 +1,5 @@
 ---
-nav_title: Message Copy and SMS Segment Calculator
+nav_title: Message Copy and Segment Calculator
 page_order: 5
 description: "This reference article covers SMS message segments."
 page_type: reference
@@ -24,7 +24,7 @@ channel:
 
 SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
 
-As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but __is not indicative of how your message will be split into segments and ultimately how you be charged__. Understanding how many segments will be sent and being cognizant of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator) below.
+As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but __is not indicative of how your message will be split into segments and ultimately how you be charged__. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator) below.
 
 ![SMS Segment Picture]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 ### Segment Breakdown

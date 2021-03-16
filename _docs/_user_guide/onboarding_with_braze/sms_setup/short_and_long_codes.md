@@ -45,7 +45,7 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 {% endtab %}
 {% tab Long Codes %}
 #### Long Codes
-A long code number is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
+A long code is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
 
 | Pros |
 | ---- |

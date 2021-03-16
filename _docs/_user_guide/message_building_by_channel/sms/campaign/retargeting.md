@@ -1,5 +1,5 @@
 ---
-nav_title: SMS User Retargeting
+nav_title: User Retargeting
 page_order: 5
 description: "This reference article covers how users can retarget their messages by users SMS interactions."
 page_type: reference
@@ -18,7 +18,11 @@ channel:
 
 # SMS Retargeting
 
-In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign.  
+In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
+
+{% alert tip %}
+To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
+{% endalert %}  
 
 ## Retargeting Options
 
@@ -54,7 +58,7 @@ __Trigger by Inbound Keyword Category__<br>
 ![picture][7]{: style="margin-top:10px;"}
 
 __Trigger by Arbitrary Keywords__<br>
-Note triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
+Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. 
 ![picture][8]{: style="margin-top:10px;"}
 
 __Template Keywords__<br>

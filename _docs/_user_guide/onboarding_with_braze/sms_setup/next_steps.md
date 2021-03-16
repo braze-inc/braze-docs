@@ -25,11 +25,8 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/#managing-keywords-and-auto-responses
   fa_icon: far fa-handshake
 - name: Custom Keyword Handling
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
   fa_icon: far fa-handshake
-- name: Double Opt-In Process
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
-  fa_icon: fas fa-check-double
 - name: SMS FAQs
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment

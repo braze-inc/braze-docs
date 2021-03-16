@@ -60,7 +60,7 @@ You cannot have multiple in-app message variants in a single step.
 
 ## Step 2: Compose Your SMS
 
-Composing an SMS is easy! Just write your message, using languages, personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
+Composing an SMS is easy! Just write your message using languages and personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
 
 {% alert important %}
 Before proceeding, read our [SMS Message Copy Limits and Message Segment documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
@@ -97,7 +97,7 @@ In this step, you'll choose which users receive your message. You should have al
 ![SMS Targeting]({% image_buster /assets/img/sms_campaign_targeting.gif %})
 
 {% alert tip %}
-Interesting in SMS retargeting? Visit our SMS [retargeting doc]({{siet.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more. 
+Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more. 
 {% endalert %}
 
 ## Step 6: Choose Conversion Events
