@@ -143,7 +143,7 @@ Your Unity application is now set up to receive the News Feed data model from Br
 
 To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
-1. Remove all Braze-related code from your Xcode project's `UnityAppController.mm`.
+1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
 2. Remove Braze's iOS libraries from your Unity or Xcode project (i.e., `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package][7] into your Unity project.
 3. Follow the integration instructions on [setting your API key through Unity][8].
 
@@ -173,7 +173,7 @@ Now that you've copied over the requisite plugins, the following steps will help
 1. Generate your Xcode project in Unity by clicking on File > Build Settings...
 2. Select iOS as the platform and click "Build".
 3. Select `/your-project/your-iOS-project/` as the build location.
-4. Confirm that Unity has copied the files `AppboyBinding.m`, `AppboyUnityManager.h`, and `AppboyUnityManager.mm` to your generated project under the "Libraries" directory.
+4. Confirm that Unity has copied the source files from `Plugins/iOS` to your generated project under the "Libraries" directory.
 
 #### Step 4: Add the Braze iOS SDK framework and required system frameworks
 
@@ -230,7 +230,7 @@ Braze should now be collecting data from your application and your basic integra
 
 ### In-App Message Integration {#manual-iam-integration}
 
-You can set an in-app message listener by manually modifying your built Xcode project. In order to pass in-app messages from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
+You can set an in-app message listener by manually modifying your built Xcode project. In order to pass in-app messages from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController` subclass:
 
 ```objc
 [Appboy sharedInstance].inAppMessageController.delegate = [AppboyUnityManager sharedInstance];
@@ -246,7 +246,7 @@ You can set an in-app message listener by manually modifying your built Xcode pr
 
 ### News Feed Integration {#manual-feed-integration}
 
-You can set a feed listener by manually modifying your built Xcode project. In order to pass the News Feed from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
+You can set a feed listener by manually modifying your built Xcode project. In order to pass the News Feed from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController` subclass:
 
 ```objc
 [[AppboyUnityManager sharedInstance] addFeedListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Callback Method Name"];
