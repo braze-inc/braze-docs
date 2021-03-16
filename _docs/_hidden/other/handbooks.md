@@ -11,4 +11,4 @@ permalink: /handbooks/
 
 
 [1]: {{site.baseurl}}/services_handbook21/
-[2]: {{site.baseurl}}/services_handbook/
+[2]: {{site.baseurl}}/services_handbook2/
