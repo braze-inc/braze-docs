@@ -60,7 +60,7 @@ There are a number of things to know if you plan to edit or add more steps to an
 - Users already in the Canvas will fall out when a Canvas is stopped.
 
 {% alert important %}
-When users receive a step, __the current step will be received and the next step will be queued__, once a step has been queued, it cannot be changed. This means that users must keep in mind that they will be unable to make edits post launch to the current and next step for the user in their Canvas journey.
+When a user receives a step, the next step will be queued. Once a step has been queued, it cannot be changed. As a result, you cannot make edits post lauch to a user's current and next step in their Canvas journey.
 {% endalert %}
 
 ## Canvas Variant Percentages
