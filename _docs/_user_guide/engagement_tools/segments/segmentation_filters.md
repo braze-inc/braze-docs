@@ -137,7 +137,7 @@ glossaries:
     tags:
       - User Activity
   - name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app.
+    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
@@ -345,7 +345,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Has App
-    description: Segments by whether or not a user has your app.
+    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. 
     tags:
       - User Attributes
   - name: Language
