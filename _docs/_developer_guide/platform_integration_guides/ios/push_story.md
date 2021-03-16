@@ -81,6 +81,8 @@ Download the latest `AppboyPushStory.zip` from the [Github release page][8], unz
 Make sure that `Do Not Embed` is selected for `AppboyPushStory.xcframework` under the `Embed` column.
 {% endalert %}
 
+Add the `-ObjC` flag to your project's Notification Content Extension in _Build Settings->Other Linker Flags_.
+
 ## Step 5: Updating your Notification View Controller
 
 {% tabs %}
