@@ -100,10 +100,10 @@ If you download a variant breakdown Canvas report, you’ll receive 2 CSV files 
 
 ## Report FAQs
 
-__If I delete a variant from a multivariant campaign, will the data from that variant be available in a future report?__
+__If I delete a variant from a multivariant campaign, will the data from that variant be available in a future report?__<br>
 No; data from deleted variants within a multivariant campaign will not appear in Report Builder.
 
-__Which types of campaigns and Canvases can be included in a report?__
+__Which types of campaigns and Canvases can be included in a report?__<br>
 Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
 
 
