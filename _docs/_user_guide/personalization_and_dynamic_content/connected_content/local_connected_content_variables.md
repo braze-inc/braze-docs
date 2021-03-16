@@ -112,7 +112,7 @@ This key will only be automatically added to the Connected Content object if the
 ### Configurable Caching
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_age`, as shown below. The maximum cache time is 4 hours.
+If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_age`, as shown below. The maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
 
 #### Cache for Specified Seconds
 
