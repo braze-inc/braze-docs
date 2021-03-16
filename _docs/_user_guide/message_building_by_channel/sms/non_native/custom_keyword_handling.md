@@ -16,11 +16,11 @@ channel:
   - SMS
 ---
 
-## Two-Way Messaging (Custom Keyword Responses)
+# Two-Way Messaging (Custom Keyword Responses)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way. 
+Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way. 
 
-### Two Way Messaging Speeds
+## Two Way Messaging Speeds
 
 Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
 
@@ -30,9 +30,9 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 | Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-If you require a faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
+If you require faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
 
-### Custom Keyword Messaging Handling
+## Custom Keyword Messaging Handling
 
 | Custom Event Fired |
 | ------- | ------ |
@@ -56,7 +56,6 @@ Note: This feature relies on user aliases in order to properly assign custom eve
 
 If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.
 
-
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
 [2]: {% image_buster /assets/img/sms/keyword_home.png %}
@@ -65,5 +64,3 @@ If using the new user alias endpoint, to ensure E.164 compliance, please add a "
 [unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
 [endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
 [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
-
-

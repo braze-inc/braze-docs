@@ -29,7 +29,7 @@ As you create an SMS campaign or Canvas using Braze, the messages you build in t
 ![SMS Segment Picture]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 ### Segment Breakdown
 
-The character limit for __a stand-alone SMS segment__ is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). 
+The character limit for __a stand-alone SMS segment__ is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). 
 
 It's important to note that __as you pass the character limit of your first segment, additional characters will cause your entire message to be split and segmented based on new character limits__:
 - __GSM-7 Encoding__
@@ -293,7 +293,7 @@ if(number.length == 1) { number = "0" + number; }
 },
 hexEncode: (codeUnit) => "0x"+codeUnit.toString(16).padStart(4, '0').toUpperCase(),
 /**
-take a string and return a list of the unicode characters
+take a string and return a list of the Unicode characters
 */
 unicodeCharacters: function (string) {
 var chars = smsutil.map(string, smsutil.id);
@@ -308,7 +308,7 @@ while (chars.length > 0) {
 return result;
 },
 /**
-take a string and return a list of the unicode codepoints
+take a string and return a list of the Unicode codepoints
 */
 unicodeCodePoints: function (string) {
 var charCodes = smsutil.map(string, function (x) { return x.charCodeAt(0); });

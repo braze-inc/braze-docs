@@ -18,7 +18,7 @@ channel:
 
 # SMS Retargeting
 
-In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received an SMS messages from a specific SMS campaign, and trigger messages as users receive an SMS messages from a specific SMS campaign.  
+In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign.  
 
 ## Retargeting Options
 
@@ -38,7 +38,7 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 
 ## Keyword Category Specific Retargeting
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword catagories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
+In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
 ### Filter by Recency
 

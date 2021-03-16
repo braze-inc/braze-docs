@@ -32,7 +32,7 @@ Braze automatically addresses an unknown number in one of three ways:
 2. If an opt-out keyword is texted:
   * Braze creates an anonymous profile
   * Our system sets the phone attribute
-  * Unsubscribes the user form the corresponding subscription group based on what opt-out keyword was received by Braze.<br><br>
+  * Unsubscribes the user from the corresponding subscription group based on what opt-out keyword was received by Braze.<br><br>
 3. If any other custom keyword is texted:
   * Braze ignores the text message and does nothing.
 

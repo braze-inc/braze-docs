@@ -38,7 +38,7 @@ __There are the six rules you should follow:__
 
 2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
 
-3. __Keep essential information updated and visible__. Ensure that the most up to date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
+3. __Keep essential information updated and visible__. Ensure that the most up-to-date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
 
 4. __Only send SMS to legally obtained, opted-in phone numbers__. As part of technical migration planning, ensure that your team understands the mechanism for tying opt-in statuses to each and every user profile in your customer engagement platform.<br><br>
 

@@ -16,13 +16,13 @@ channel:
   - SMS
 ---
 
-{% alert improtant %}
+{% alert important %}
 Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling doc.
 {% endalert %}
 
 ## Two-Way Messaging (Custom Keyword Responses)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be an simple, immediate and dynamic solution to customer marketing, saving time and resources along the way.
+Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
 
 ### Two Way Messaging Speeds
 
@@ -34,7 +34,7 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 | Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-If you require a faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
+If you require faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
 
 ## Managing Keywords and Auto Responses
 
@@ -135,6 +135,3 @@ Interested in seeing how these keywords and keyword categories can be used in yo
 [14]: {% image_buster /assets/img/sms/canvas_trigger.png %}
 [15]: {% image_buster /assets/img/sms/campaign_trigger.png %}
 [16]: {% image_buster /assets/img/sms/multi-language.png %}
-
-
-
