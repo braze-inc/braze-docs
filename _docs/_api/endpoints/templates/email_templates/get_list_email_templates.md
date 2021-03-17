@@ -67,3 +67,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 {% endapi %}
+
+{% alert important %}
+Templates built using the Drag & drop editor are not provided in this response
+{% endalert %}
