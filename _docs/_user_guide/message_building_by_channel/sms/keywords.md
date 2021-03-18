@@ -9,7 +9,7 @@ description: "Keywords are a foundational aspect of automated SMS messaging. Wit
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Default Opt-In/Opt-Out
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
   fa_icon: fas fa-commenting
 - name: Handling Unknown Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
@@ -23,8 +23,6 @@ guide_featured_list:
 - name: High Volume Sending
   link: /docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/
   fa_icon: fas fa-paper-plane
-- name: Double Opt-In Process
-  link: /docs/user_guide/message_building_by_channel/sms/keywords/double_opt_in/
-  fa_icon: fas fa-check-double
+
 ---
 <br><br>

@@ -224,7 +224,11 @@ Please refer to our developer documentation for [server-side event triggering]({
 
 #### Online vs. Offline Triggering
 
-In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). When you stop a campaign, the trigger condition is set to null and updated on the user's next session. For a user's current session, they may still see the in-app messages until the triggers are updated on their next session. 
+In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). 
+
+{% alert important %}
+Please note that once an in-app message campaign has been stopped, due to the trigger condition being turned to `null` on the user's __next session__, there may exist some users that will still see the in-app message until they end their current session and start a new one.
+{% endalert %}
 
 {% endtab %}
 {% tab Prioritize %}

@@ -14,7 +14,7 @@ Before you can start using Braze in your Unity scripts, you'll need to import th
 
 Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
-## Step 1: Choosing A Braze Unity Package
+## Step 1: Choose your Braze Unity Package
 
 The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a Unity C# interface.
 
@@ -22,7 +22,7 @@ There are several Braze Unity packages available for download at [Braze Unity Re
  
 {% include archive/unity/unitypackage_descriptions.md%}
 
-## Step 2: Importing the Braze Unity Package
+## Step 2: Import the Package
 
 1. In the Unity Editor, import the package into your Unity project by navigating to `Assets > Import Package > Custom Package`.
 2. Click "Import".
@@ -35,7 +35,7 @@ Braze also provides the option of [customizing and exporting the Unity package][
 If you only wish to import the iOS plugin, deselect the `Plugins/Android` subdirectory when importing the Braze `.unitypackage`.
 {% endalert %}
 
-### Step 3: Setting Your API Key
+### Step 3: Set Your API Key
 
 Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`][6] and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 
@@ -45,11 +45,11 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 
 ![Braze Config Editor][18]
 
->  If your application is already using another UnityAppController subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
+>  If your application is already using another `UnityAppController` subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
 
 ### Step 4: SDK Integration Complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. Continue on to the following sections to integrate [in-app messages][31], [the News Feed][32], [push notifications][33] and the complete suite of Braze features.
+Braze should now be collecting data from your application and your basic integration should be complete. Continue on to the following sections to integrate the complete suite of Braze features.
 
 ## In-App Message Integration
 
@@ -143,21 +143,9 @@ Your Unity application is now set up to receive the News Feed data model from Br
 
 To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
-If the only modifications you have made to your app's built Xcode project have been for the Braze integration, you can follow the instructions on [replacing your Xcode project][20]. Otherwise, follow the instructions for [appending to your Xcode project][21].
-
-### Replace Xcode Project
-
-1. Follow the integration instructions on [importing the Braze Unity package][7] and [setting your API key through Unity][8].
-2. Based on the features of your previous Braze integration, continue on to the instructions for [integrating push notifications][9], [setting in-app message listeners][31], and [setting feed listeners][32].
-3. Export your project from Unity to the same destination and choose "Replace."
-
-### Append to Xcode Project
-
-1. Remove all Braze-related code from your Xcode project's `UnityAppController.mm`.
-2. Remove Braze's iOS libraries from your Unity or Xcode project (i.e., BrazeKit and SDWebImage) and [import the Braze Unity package][7] into your Unity project.
+1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
+2. Remove Braze's iOS libraries from your Unity or Xcode project (i.e., `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package][7] into your Unity project.
 3. Follow the integration instructions on [setting your API key through Unity][8].
-4. Based on the features of your previous Braze integration, continue on to the instructions for [integrating push notifications][9], [setting in-app message listeners][31], and [setting feed listeners][32].
-5. Export your project from Unity to the same destination and choose "Append."
 
 ## Manual SDK Integration
 
@@ -165,7 +153,7 @@ If the only modifications you have made to your app's built Xcode project have b
 
 Follow the instructions below to manually integrate Braze into your built Xcode project.
 
-#### Step 1: Cloning the Unity SDK
+#### Step 1: Clone the Unity SDK
 
 Clone the [Braze Unity SDK Github project][1]
 
@@ -173,36 +161,26 @@ Clone the [Braze Unity SDK Github project][1]
 git clone git@github.com:Appboy/appboy-unity-sdk.git
 ```
 
-#### Step 2: Copying Required Plugins
+#### Step 2: Copy Required Plugins
 
-| Are you using other plugins? | What to Copy | Where to Copy |
-| ---------------------------- | ------------ | ------------- |
-| __NO__ | the `Plugins` directory from the Unity SDK | the `Assets` folder of your Unity Project |
-| __YES__ | `Plugins/Appboy` | `/<your-project>/Assets/Plugins/Appboy` |
-| __YES__ | `Plugins/iOS` | `/<your-project>/Assets/Plugins/iOS` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+1. `Plugins/Appboy` -> `/<your-project>/Assets/Plugins/Appboy`
+2. `Plugins/iOS` -> `/<your-project>/Assets/Plugins/iOS`
 
-#### Step 3: Generating Xcode project & Adding Required Classes
+#### Step 3: Test Xcode Project Generatino
 
 Now that you've copied over the requisite plugins, the following steps will help you generate your Xcode project and add the required classes for the Braze SDK to function:
 
 1. Generate your Xcode project in Unity by clicking on File > Build Settings...
 2. Select iOS as the platform and click "Build".
 3. Select `/your-project/your-iOS-project/` as the build location.
-4. Confirm that Unity has copied the files `AppboyBinding.m`, `AppboyUnityManager.h`, and `AppboyUnityManager.mm` to your generated project under the "Libraries" directory.
-	- If these three files were not automatically integrated into your project or linked correctly by Unity, you will need to manually copy them into the "Classes" directory of your generated project (without checking "Copy items if needed" in the Options). Then, in the Compile Sources step of your target's Build Phases tab, make sure to delete any incorrect paths.
+4. Confirm that Unity has copied the source files from `Plugins/iOS` to your generated project under the "Libraries" directory.
 
-#### Step 4: Integrating the Braze iOS SDK
+#### Step 4: Add the Braze iOS SDK framework and required system frameworks
 
-You must now integrate the standard Braze iOS SDK into your project.
+You must now add the Braze iOS SDK framework into your project.
 
-1. Add the `AppboyKit` SDK and `SDWebImage.framework` to your project.
-	1. In Xcode, from the project navigator, select the destination project or group for Braze
-	2. Navigate to File > Add Files to “Project_Name”
-	3. Add the `AppboyKit` folder and `SDWebImage.framework` to your project as a group from the Unity SDK Libraries Folder.
-	  - If you are integrating for the first time, make sure to expand "Options" and check "Copy items if needed"
-		- Check "Create groups" option for the "Added folders"
-	  ![Add libraries][13]
+1. Add `Appboy_iOS_SDK.framework` and `SDWebImage.framework` to your project as embedded frameworks.
+  - Your "Build Phases" panel's "Embed Frameworks" step should contain `Appboy_iOS_SDK.framework` and `SDWebImage.framework`
 2. Add Required iOS Libraries
 	1. Click on the target for your project (using the left-side navigation), and select the “Build Phases” tab
 	2. Click the + button under “Link Binary With Libraries”
@@ -219,36 +197,26 @@ You must now integrate the standard Braze iOS SDK into your project.
 		- `CoreTelephony.framework`
 		- `ImageIO.framework`
 		- `Accounts.framework`
-		- `AdSupport.framework`
 		- `StoreKit.framework`
 		- `CoreLocation.framework`
-			- You must authorize location for your users using `CLLocationManager` in your app
-3. Configure the Braze Library and Framework
-	1. In the “Build Phases” panel, expand the “Link Binary With Libraries” section and the “Copy Bundle Resources” section
-	2. Your "Build Phases" panel should look like the following screenshot:
-		- Please ensure that `libAppboyKitLibrary.a` is within the "Link Binary With Libraries" section, and `Appboy.bundle` is within the "Copy Bundle Resources" section.
-		![Link iOS Binary and Library][2]
 
-#### Step 5: Updating the Project Build Settings
+#### Step 5: Update Project Build Settings
 
    1. Click on the target for your project (using the left-side navigation), and select the “Build Settings" tab
    2. Find "Other Linker Flags" and add `-ObjC` to the row
-      ![Adding `-ObjC` in "Other Linker Flags"][14]
-   3. Find "Framework Search Paths" and add the relative path of the SDWebImage.framework. In the sample here, the relative path is `./../../../Libraries`
-      ![Adding the Path to SDWebImage.framework to "Framework Search Paths"][15]
 
-#### Step 5: Modifying UnityAppController.mm
+#### Step 5: Initialize the SDK
 
-You now must make modifications to your generated `Classes/UnityAppController.mm`:
+You now must make modifications to your `UnityAppController` subclass. Typically, this is generated in `Classes/UnityAppController.mm`:
 
-1. At the top of `UnityAppController.mm` add the following import statements:
+1. At the top of your `UnityAppController` subclass, add the following import statements:
 
 ```objc
-	#import "AppboyKit.h"
+	#import <Appboy_iOS_SDK/AppboyKit.h>
 	#import "AppboyUnityManager.h"
 ```
 
-2. In the method `applicationDidFinishLaunchingWithOptions`, add the following code snippet above the return statement. Be sure to replace `"YOUR-API-KEY"` with the Braze API key from the [Braze dashboard][19].
+2. In the `UIApplicationDelegate` method `applicationDidFinishLaunchingWithOptions`, add the following code snippet above the return statement. Be sure to replace `"YOUR-API-KEY"` with the Braze API key from the [Braze dashboard][19].
 
 ```objc
 	[Appboy startWithApiKey:@"YOUR-API-KEY"
@@ -256,17 +224,13 @@ You now must make modifications to your generated `Classes/UnityAppController.mm
         	withLaunchOptions:launchOptions];
 ```
 
-#### Step 6: Updating Your App From Unity
+#### Step 6: SDK Integration Complete
 
-Finally, if you need to update your app from Unity, ensure that you choose the same location to generate the Xcode project each time and __choose "Append"__ the existing folder when prompted by Unity to ensure that you don't have to redo any of your Braze setup in the future. (Note that Unity may overwrite the Framework Search Paths even when appending to the Xcode project.)
-
-#### Step 7: SDK Integration Complete
-
-Braze should now be collecting data from your application and your basic integration should be complete. Continue on to the following sections to integrate [in-app messages][31], [the News Feed][32], [push notifications][33] and the complete suite of Braze features.
+Braze should now be collecting data from your application and your basic integration should be complete. Continue on to the following sections to integrate the complete suite of Braze features.
 
 ### In-App Message Integration {#manual-iam-integration}
 
-You can set an in-app message listener by manually modifying your built Xcode project. In order to pass in-app messages from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
+You can set an in-app message listener by manually modifying your built Xcode project. In order to pass in-app messages from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController` subclass:
 
 ```objc
 [Appboy sharedInstance].inAppMessageController.delegate = [AppboyUnityManager sharedInstance];
@@ -282,7 +246,7 @@ You can set an in-app message listener by manually modifying your built Xcode pr
 
 ### News Feed Integration {#manual-feed-integration}
 
-You can set a feed listener by manually modifying your built Xcode project. In order to pass the News Feed from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController.mm` file:
+You can set a feed listener by manually modifying your built Xcode project. In order to pass the News Feed from Braze to Unity, you must add the following code to your `applicationDidFinishLaunchingWithOptions` method within your `UnityAppController` subclass:
 
 ```objc
 [[AppboyUnityManager sharedInstance] addFeedListenerWithObjectName:@"Your Unity Game Object Name" callbackMethodName:@"Your Unity Callback Method Name"];
@@ -305,7 +269,6 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 - The callback method must be contained within the Unity object you passed in as the first parameter.
 
 [1]: https://github.com/appboy/appboy-unity-sdk
-[2]: {% image_buster /assets/img_archive/unity-bundle-ios.png %} "Link iOS Binary and Library"
 [5]: #transitioning-from-manual-to-automated-integration
 [6]: http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html
 [7]: #step-1-importing-the-braze-unity-package
@@ -314,9 +277,6 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [10]: {% image_buster /assets/img_archive/unity-ios-sysconfig.png %}
 [11]: {% image_buster /assets/img_archive/unity-ios-sysconfigreq.png %}
 [12]: {% image_buster /assets/img_archive/iosunitystep3part5.gif %}
-[13]: {% image_buster /assets/img_archive/unity_adding_iOS_SDK.png %}
-[14]: {% image_buster /assets/img_archive/unity_add_other_linker_flag.png %}
-[15]: {% image_buster /assets/img_archive/unity_add_framework_search_paths.png %}
 [18]: {% image_buster /assets/img_archive/unity-ios-appboyconfig.png %}
 [19]: https://dashboard-01.braze.com/app_settings/app_settings
 [20]: #replace-xcode-project
@@ -327,9 +287,6 @@ You can set a Content Card listener by manually modifying your built Xcode proje
 [28]: #manual-feed-integration
 [29]: #manual-content-cards-integration
 [30]: {% image_buster /assets/img_archive/unity-ios-feed-listener.png %}
-[31]: #in-app-message-integration
-[32]: #news-feed-integration
-[33]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/push_notifications/#push-notifications
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/#in-app-messaging
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/x_news_feed/#news-feed
 [36]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
