@@ -12,6 +12,10 @@ The Report Builder allows you to compare the results of multiple campaigns or Ca
 
 This detailed guide covers how to leverage subclassing to create custom slideup in-app messages, custom modal in-app messages, and custom full in-app messages to add to your Braze campaigns and Canvases. Included are the necessary code consideration, detailed use cases built by our team, and accompanying code snippets. Visit our documentation [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) to read more. 
 
+## SMS Custom Keyword Categories and Retargeting Options
+
+Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
+
 ## Playable Partnership is Live
 
 Expand Braze's email capabilities to deliver your best content (high-quality video) to your best audience (email) with Playable. Playable video emails allow you to increase your click-through and post-click metrics with exciting high-quality video content that plays automatically within the inbox. To read more about Playable, visit our documentation [here]({{site.baseurl}}/partners/playable/).
