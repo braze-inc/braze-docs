@@ -41,6 +41,8 @@ Use the Single vs. Multiple Choice option to control whether a user can select o
 
 When Custom Attribute collection is enabled, the Multiple Choice option will set each choice's designated custom attribute. So, be sure to use a unique Custom Attribute name for each choice to prevent choices from overwriting each other.
 
+**Note**: Up to 10 choices are allowed in the survey.
+
 ![Single Multiple Choice]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:700px"}
 
 ### Collect Custom Attributes
@@ -68,6 +70,8 @@ Customize the font and accent color of the message using the Color Theme picker.
 ## Analyzing Results
 
 Analyze results in real-time in your message's analytics report to see how many users selected each choice.
+
+**Note** When deleting a choice from the survey, its results will not be deleted from the analytics report.
 
 ![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:700px"}
 
