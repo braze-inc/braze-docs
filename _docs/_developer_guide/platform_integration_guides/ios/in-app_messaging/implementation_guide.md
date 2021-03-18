@@ -83,9 +83,19 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 
 ```swift
 override func beforeMoveInAppMessageViewOnScreen() {
+  super.beforeMoveInAppMessageViewOnScreen()
+  setOffset()
+}
+```
+
+{% details Version 3.34.0 or earlier %}
+```swift
+override func beforeMoveInAppMessageViewOnScreen() {
   setSlideConstraint()
 }
 ```
+{% enddetails %}
+
 {% endtab %}
 {% tab Objective-C %}
 __Override and Set Custom Constraint__<br> 
@@ -93,9 +103,18 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 
 ```objc
 - (void)beforeMoveInAppMessageViewOnScreen {
+  [super beforeMoveInAppMessageViewOnScreen];
+  [self setOffset];
+}
+```
+
+{% details Version 3.34.0 or earlier  %}
+```objc
+- (void)beforeMoveInAppMessageViewOnScreen {
   [self setSlideConstraint:self.slideConstraint];
 }
 ```
+{% enddetails %}
 {% endtab %}
 {% endtabs %}
 
@@ -104,6 +123,25 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 __Update `slideConstraint` Variable__<br>
 The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
+```swift
+func setSlideConstraint() {
+  offset = 0
+}
+```
+
+```swift
+override var offset: CGFloat {
+  get {
+    return super.offset
+  }
+  set {
+    super.offset = newValue + adjustedOffset
+  }
+}
+```
+
+{% details Version 3.34.0 or earlier  %}
+<br>
 ```swift
 func setSlideConstraint() {
     slideConstraint?.constant = bottomSpacing
@@ -116,12 +154,28 @@ private var bottomSpacing: CGFloat {
 }
 ``` 
 Visit the Braze Demo repository for the [`topMostViewController()`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/Utils/UIViewController_Util.swift#L17) function referenced above.
-
+{% enddetails %}
 {% endtab %}
 {% tab Objective-C %}
 __Update `slideConstraint` Variable__<br>
 The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
+```objc
+- (void)setOffset {
+  self.offset = 0;
+}
+```
+
+```objc
+- (CGFloat)offset {
+  return [super offset];
+}
+ 
+- (void)setOffset:(CGFloat)offset {
+  [super setOffset:offset + [self adjustedOffset]];
+}
+```
+{% details Version 3.34.0 or earlier  %}
 ```objc
 - (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
   slideConstraint.constant = bottomSpacing;
@@ -133,6 +187,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
   return [AppboyManager shared].activeApplicationViewController.topMostViewController.view.safeAreaInsets.bottom;
 }
 ```
+{% enddetails %}
 {% endtab %}
 {% endtabs %}
 
