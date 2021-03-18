@@ -177,7 +177,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 ```
 {% details Version 3.34.0 or earlier  %}
 ```objc
-- (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
+- (void)self.setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
   slideConstraint.constant = bottomSpacing;
 }
 ```

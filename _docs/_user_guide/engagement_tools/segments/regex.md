@@ -130,16 +130,21 @@ $( document ).ready(function() {
 
 {% details How do I filter for inbox specific email addresses when segmenting? %}
 
-Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.-+_]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
-- <font color="red">[a-zA-Z0-9.-+_]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
+Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
+- <font color="red">[a-zA-Z0-9.+_-]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
 - <font color="blue">[a-zA-Z0-9.-]+</font> is the first part of the domain. So the "example" in "name@example.com".
 - <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
 
-__Example__<br>
+{% enddetails %}
+
+{% details How do I filter for email addresses associated to a specific domain? %}
+
 Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
-{% enddetails %}
+
+{% enddetails%}
+
 {% details How can I use RegEx on number Strings to filter for values ≥ x or ≤ x? %}
 If you're searching for __values ≥ x__, the regex to use would be __^([x-y]|\d{z,})$__
 where x-y is the range of numbers (0-9) of the first digit, and z is the one more the number of digits of x.<br>__Example__<br>

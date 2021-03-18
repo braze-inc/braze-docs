@@ -13,7 +13,7 @@ Our Customer Success team can help recommend data best practices to fit your spe
 
 ## Management & Usage
 
-To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and billing [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_billing/). 
+To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/). 
 
 {% alert tip %}
 __Only update your deltas (changing data)!__

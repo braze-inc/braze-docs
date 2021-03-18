@@ -35,7 +35,7 @@ You can manage the Amplitude Data Import process from the Technology Partners pa
 
 ## Integration Details
 
-A list of the events that can be exported from Braze to Amplitude is below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude User ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
+A list of the events that can be exported from Braze to Amplitude is below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude User ID. Braze will only send event data for users who either have their `external_user_id` set, or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
 
 You can export two types of events to Amplitude: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all Custom events are prefixed with `[Appboy] [Custom Event]`. Custom Event properties and Purchase Event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
