@@ -227,7 +227,7 @@ Please refer to our developer documentation for [server-side event triggering]({
 In-app messages's work by sending the message and triggers to the user's device. Once the in-app messages are on a device it waits to display until the trigger condition is met. __If the in-app messages are already cached on the user's device, you can even trigger in-app messages offline with no connection to Braze__ (for example, in Airplane mode). 
 
 {% alert important %}
-Please note that once an in-app message campaign has been stopped, due to the trigger condition being turned to `null` on the user's __next session__, there may exist some users that will still see the in-app message until they end their current session and start a new one.
+Note that once an in-app message campaign has been stopped, there may be some users that already received the message but have not seen it because they haven’t opened your app. These users will still see your in-app message, and be counted as a unique impression—even after your campaign has been stopped.
 {% endalert %}
 
 {% endtab %}
