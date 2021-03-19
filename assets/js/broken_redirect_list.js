@@ -258,8 +258,8 @@ validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/frequenc
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
-validurls['/docs/services_handbook2/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook2.pdf'
-validurls['/docs/services_handbook21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook21.pdf'
+validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf'
+validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf'
 
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
