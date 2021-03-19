@@ -68,7 +68,7 @@ Please reach out to your CDN provider and review their documentation to help to 
 {% endtab %}
 {% tab HTTP Messages Persisting %}
 
-#### Check if SSL is Enabled by Braze
+### Check if SSL is Enabled by Braze
 
 If you have completed your SSL setup and are still seeing your links come up as HTTP and not HTTPS, reach out to your Braze COM or CSM and make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
 
