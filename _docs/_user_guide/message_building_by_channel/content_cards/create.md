@@ -86,7 +86,7 @@ Content Card message fields are limited to 2kb in total size, calculated by addi
 
 {% alert note %}
 
-Each user is eligible to receive up to 100 non-expired Content Cards. As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
+Each user is eligible to receive up to 100 non-expired and non-dismissed Content Cards. As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
 
 {% endalert %}
 
