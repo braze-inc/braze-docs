@@ -35,8 +35,4 @@ Only the __exact, single-word message__ will be processed (case _insensitive_). 
 
 If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
 
-{% alert important %}
-Our delivery vendor manages a blacklist. Occasionally, there is a delay in sync between our blacklist and theirs. For more information or if you suspect this is a current issue for you, reach out to support.
-{% endalert %}
-
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
