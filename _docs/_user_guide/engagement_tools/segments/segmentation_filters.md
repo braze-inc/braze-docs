@@ -276,8 +276,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Cohorts
-    description: Clients who use Amplitude to supplement their segments may import and choose from those cohorts.
+  - name: Amplitude Extension
+    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
     tags:
       - User Attributes
   - name: Background Push Enabled
@@ -288,8 +288,8 @@ glossaries:
     description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
     tags:
       - User Attributes
-  - name: Braze Segment Cohorts
-    description: After creating Segment Cohorts in the Braze Dashboard, you can choose to include/exclude those cohorts in your segment.
+  - name: Braze Segment Extension
+    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City

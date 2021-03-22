@@ -68,7 +68,7 @@ glossaries:
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple Campaigns.
   - name: Segmentation
-    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or cohorts of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
+    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
   - name: "Software Development Kit (SDK)"
     description: <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.
   - name: User Archival
