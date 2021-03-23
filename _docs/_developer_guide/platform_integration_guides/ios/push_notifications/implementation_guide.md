@@ -7,11 +7,11 @@ description: ""
 
 # Push Notification Implementation Guide
 
-> This implementation guide covers the background needed on fundamental Push concepts, three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Notification Content Extensions
 
-Push notifications while seemingly standard across different platforms offer the immense capacity for customization past what is normally implemented in the default UI. When a push notification (abbreviated banner view) is 3D pressed or viewed using the banner options, content notification extensions enable a custom view of the expanded push notification. The customization options this extended view offer are quite expansive, offering similar functionality to that you'd find in an in-app message. 
+Push notifications while seemingly standard across different platforms offer immense customization options past what is normally implemented in the default UI. When a push notification is 3D pressed, long pressed or, "viewed" through the banner options, content notification extensions enable a custom view of the expanded push notification. The customization options this extended view offer are quite expansive, offering similar functionality to that you'd find in an in-app message.
 
 While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
 
@@ -32,7 +32,6 @@ Push notifications can be opened in three different ways:
 - Swiping the banner to the right and selecting "View"
 
 3D presses can be disabled in a device's accessibility settings so it's important to note other ways users can access your push content.  
-
 #### Dashboard Configuration
 
 To set up a custom view in the dashboard you must notify Braze you would like to use a custom category, register the category, and then toggle notification buttons on. While notifications buttons aren't directly used, they are required to signal which view to be displayed in the content extension. The given pre-registered custom iOS category is then checked against the code. Lastly, since pushes with content extensions aren't always apparent, we recommend including a call to action to get your user to make the most of their push experience.
@@ -664,3 +663,5 @@ func logPendingUserAttributesIfNecessary() {
 2. Initialize an encoded UserAttribute object from attribute data
 3. Set specific user field based on the User Attribute type (email)
 4. Remove all pending user attributes from storage
+
+[1]: {% image_buster /assets/img/push_implementation_guide/push1.png %}
