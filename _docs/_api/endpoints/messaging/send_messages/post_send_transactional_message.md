@@ -86,7 +86,7 @@ The Send Transactional Email endpoint will respond with the message's `dispatch_
 ### Example response
 ```json
 {
-    "dispatch_id": Braze generated Unique ID of the instance of this send
+    "dispatch_id": Out-of-the-box generated Unique ID of the instance of this send
     "status": Current status of the message
     "metadata" : Object containing additional information about the send instance
 }
@@ -106,7 +106,7 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage A
 
 ```json
 {
-  "dispatch_id": (string, Braze generated Unique ID of the instance of this send),
+  "dispatch_id": (string, Out-of-the-box generated Unique ID of the instance of this send),
   "status": (string, Current status of message from fields below)
   "metadata" : (object, additional information relating to the execution of an event)
    {

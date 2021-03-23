@@ -24,18 +24,6 @@ Are you currently a non-native SMS client? If so, please visit the [non-native S
 
 Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
 
-### Two Way Messaging Speeds
-
-Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
-
-| Type | Speed | Notes | 
-| ----- | ----- | ---- | 
-| Known Phone Numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
-| Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how unknown phone numbers are dealt with, check out our [documentation][unknown].|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-If you require faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
-
 ## Managing Keywords and Auto Responses
 
 SMS with Braze gives you the option to create keyword triggers, custom responses, define keyword sets for multiple languages, and establish custom keyword categories. 
