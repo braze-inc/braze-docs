@@ -1,33 +1,33 @@
 ---
-nav_title: Drag and Drop editor Templates
+nav_title: Drag and Drop Editor Templates
 alias: "/dnd/email_template/"
 hidden: true
 ---
 
-# Create an Email Template using the Drag-and-Drop editor
+# Create an Email Template using the Drag & Drop Editor
 
 > Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. With the new email editing experience, you can quickly design and template beautiful emails with ease.
 
 ## Step 1: Navigate to the Email Templates
 Click on the __Templates & Media__ tab under __Engagement__ in the navigation bar. This will open to the __Email Template Gallery__.
 
-## Step 2: Choose the new editor
+## Step 2: Choose the Drag & drop editor
 Two editing options will now be shown. 
 
 ![dnd_editor_workflow][1]{: style="max-width:80%;"}
 
-1. Selecting the 'Drag-and-Drop' editor will allow you to select templates created using the drag-and-drop editor.
+1. Selecting the 'Drag & Drop Editor' will allow you to select templates created using the Drag & drop editor.
 2. Selecting the HTML Code Editor will allow you to use the existing editors and see your existing email templates.
 
 ## Step 3: Create or Choose a Template
 
-You can choose from the existing templates provided by Braze or any custom templates you have created using the drag and drop editor.
+You can choose from the existing templates provided by Braze or any custom templates you have created using the Drag & drop editor.
 
 _Note: Your existing custom templates will need to be re-created using the new editor._
 
 ## Step 4: Customize Your Template
 
-Once you have selected your template, you will be guided to the editor. A ‘drag and drop’ badge will appear, indicating that you are about to use the new editor for template creation (conversely, an HTML badge will appear if you are using the existing editor).
+Once you have selected your template, you will be guided to the editor. A ‘Drag & Drop Editor’ badge will appear, indicating that you are about to use the new editor for template creation (conversely, an HTML badge will appear if you are using the existing editor).
 
 ![dnd_badge_icon][2]{: style="max-width:80%;"}
 
@@ -49,7 +49,9 @@ _Note: Advanced functionality will appear in the campaign or canvas step compose
 The Content section contains the editor. There are 3 key components within this section.
 
 - __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside a column, it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see ['Editor Block Properties'](https://www.braze.com/docs/dnd/editor_blocks)
-- __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
+
+- __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.
+
 - __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
 
 This is very useful to build a coherent message very quickly.
@@ -61,8 +63,10 @@ This is very useful to build a coherent message very quickly.
 The Preview & Test section allows you to preview your email based on different users.
 
 - __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information.
-Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that users’ attributes and event information<br><br>
+Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
+
+- __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information
+
 - __Custom user__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 {% endtab %}
 {% endtabs %}
