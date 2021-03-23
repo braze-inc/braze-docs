@@ -1,5 +1,6 @@
 ---
 nav_title: Audience Sync to Google
+title: Audience Sync to Google
 alias: /google_audience_sync/
 description: ""
 hidden: true
