@@ -47,7 +47,7 @@ You must include an Apple Push Object in `messages` if you want users you have t
 
 ### Apple Push Alert Object
 
-In most cases, `alert` can just be specified in an `apple_push` object as a string. You should specify `alert` as an object only in cases where you need specific localization or Apple Watch customization.
+In most cases, `alert` can be specified in an `apple_push` object as a string.
 
 ```json
 {
