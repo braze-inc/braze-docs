@@ -123,7 +123,7 @@ __Update `slideConstraint` Variable__<br>
 The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
 
 ```objc
-- (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
+- (void)self.setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
   slideConstraint.constant = bottomSpacing;
 }
 ```

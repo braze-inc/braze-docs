@@ -22,7 +22,7 @@ channel:
 
 {% details How will I be billed for SMS? %}
 Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. 
-For overages, your account manager will reach out to let you know if you are close to reaching you maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
+For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
 {% enddetails %}
 
@@ -46,7 +46,7 @@ A client can include any link in any SMS campaign they would like. However, ther
 Yes, they do. Please keep this in mind when testing messages. 
 {% enddetails %}
 
-{% details How many characters does a emoji utilize? %}
+{% details How many characters does an emoji utilize? %}
 Emojis can be a bit trickier, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool](http://chadselph.github.io/smssplit/). 
 {% enddetails %}
 
@@ -58,7 +58,7 @@ What does that look like on the user profile? The subscription group will revert
 Aliases are not visible on the user profile, you would need to use an export API to confirm aliases being set.
 {% enddetails %}
 
-{% details How would a client create logic so that when a user opts in to SMS for VIP vs. Alerts, they are subscribed to the right subscription group?  %}
+{% details How would a client create logic so that when a user opts-in to SMS for VIP vs. Alerts, they are subscribed to the right subscription group?  %}
 Custom keywords would be written as custom events, so you would want to create segments based on the keywords customers can text in.
 {% enddetails %}
 
@@ -74,4 +74,9 @@ The default concurrency rate and throughput enables &#126;360k/hour per short co
 Event properties have a character limit of 256, otherwise, there is no character limit. In order for a keyword to be recognized within a sentence, (e.g. "please stop texting me") you would have to utilize a Liquid statement in the message to recognize the specific word.
 {% enddetails %}
 
-
+{% details What are shared short codes? %}
+With a shared short code, all text messages, no matter what business or organization sends them, arrives on a consumer's mobile device from the same 5-6 digit phone number. While shared short codes are relatively low cost and immediately available, this means that your business __will not have a dedicated short code__. Some downsides to this approach include: <br>
+- If your customers opt-out of another business's messages that have a shared short code with you, they will have opted out of yours messages as well.<br>
+- If one business violates the rules, all businesses' messages are suspended.
+- Security Issues<br>
+{% enddetails %}

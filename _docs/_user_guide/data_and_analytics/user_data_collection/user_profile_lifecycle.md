@@ -48,7 +48,7 @@ Unlike an external_id, once an alias is set for a user this can be updated with 
 
 ![Alias_Label_Diagram][29]
 
-User aliases also allow customers to tag anonymous users with an identifier. These users can then be exported using their aliases (e.g. for Currents) or referenced by the API.
+User aliases also allow customers to tag anonymous users with an identifier. These users can then be exported using their aliases or referenced by the API.
 
 If an anonymous user profile with an alias is later recognized with an external_id, they will be treated as a normal identified user profile but will retain and can be referenced by their existing alias.
 
