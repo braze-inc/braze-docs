@@ -6,7 +6,7 @@ hidden: true
 
 # Create an Email Template using the Drag & Drop Editor
 
-> Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. With the new email editing experience, you can quickly design and template beautiful emails with ease.
+> Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. With this email editing experience, you can quickly design and template beautiful emails with ease.
 
 ## Step 1: Navigate to the Email Templates
 Click on the __Templates & Media__ tab under __Engagement__ in the navigation bar. This will open to the __Email Template Gallery__.
@@ -23,17 +23,17 @@ Two editing options will now be shown.
 
 You can choose from the existing templates provided by Braze or any custom templates you have created using the Drag & drop editor.
 
-_Note: Your existing custom templates will need to be re-created using the new editor._
+_Note: Your existing custom templates will need to be re-created using the Drag & Drop Editor._
 
 ## Step 4: Customize Your Template
 
-Once you have selected your template, you will be guided to the editor. A ‘Drag & Drop Editor’ badge will appear, indicating that you are about to use the new editor for template creation (conversely, an HTML badge will appear if you are using the existing editor).
+Once you have selected your template, you will be guided to the editor. A ‘Drag & Drop Editor’ badge will appear, indicating that you are about to use this editing experience for template creation (conversely, an HTML badge will appear if you are using the existing HTML or WYSIWYG editors).
 
 ![dnd_badge_icon][2]{: style="max-width:80%;"}
 
-### New Editing Experience
+### Drag & Drop Editing Experience
 
-The new editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
+The Drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
 
 {% tabs %}
 {% tab Send Settings %}
