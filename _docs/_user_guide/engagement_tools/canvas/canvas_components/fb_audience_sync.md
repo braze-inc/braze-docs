@@ -73,13 +73,13 @@ Enter an authenticated Facebook System User Token in the Technology Partners pag
 
 ### Step 2: Add a Facebook Audience Step in Canvas
 
-Add a step in your Canvas, select the dropdown at the top of the step, and select “Facebook Audience Step”.
+Add a step in your Canvas, select the dropdown at the top of the step, and select __Facebook Audience__ Step.
 
 ![audience sync][20]{:style="max-width:70%"}
 
 ### Step 3: Sync Setup
 
-Click on the “Custom Audience” button to open the step editor.
+Click on the __Custom Audience__ button to open the step editor.
 
 Select the desired ad account. Then you will have to option to Sync with an Existing Audience or Create a New Audience.
 
@@ -100,7 +100,7 @@ Enter a name for the new custom audience.
 Next, select the first-party user field data to send to Facebook. Facebook uses this information to determine who the user is in their database.<br>
 
 ![audience sync][18]{: style="float:left;max-width:15%;margin-right:15px;"}
-Click the “Done” button to return back to your Canvas. <br>This is what your step should look like after completion of the sync step. 
+Click the __Done__ button to return back to your Canvas. <br>This is what your step should look like after completion of the sync step. 
 <br><br><br><br>
 
 
