@@ -13,9 +13,7 @@ guide_featured_list:
 - name: Creating an Email Template
   link: /dnd/email_template/
   fa_icon: fas fa-table
-- name: Creating an Email Campaign or Canvas Step
-  link: 
-  fa_icon: fas fa-envelope
+
 - name: Editor Blocks
   link: /dnd/editor_blocks/
   fa_icon: fas fa-align-left
