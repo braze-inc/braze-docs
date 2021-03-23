@@ -19,9 +19,7 @@ guide_featured_list:
 - name: Editor Blocks
   link: /dnd/editor_blocks/
   fa_icon: fas fa-align-left
-- name: FAQ
-  link: /dnd/faq/
-  fa_icon: fas fa-envelope
+
 
 
 ---
