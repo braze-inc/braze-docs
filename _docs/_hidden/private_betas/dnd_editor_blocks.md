@@ -1,5 +1,5 @@
 ---
-nav_title: Drag and Drop Editor Blocks
+nav_title: Drag-and-Drop Editor Blocks
 permalink: "/dnd/editor_blocks/"
 hidden: true
 ---
