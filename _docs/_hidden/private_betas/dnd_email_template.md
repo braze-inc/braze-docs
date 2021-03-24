@@ -1,6 +1,6 @@
 ---
 nav_title: Drag and Drop Editor Templates
-alias: "/dnd/email_template/"
+permalink: "/dnd/email_template/"
 hidden: true
 ---
 

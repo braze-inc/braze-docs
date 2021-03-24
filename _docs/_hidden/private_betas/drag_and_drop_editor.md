@@ -1,6 +1,6 @@
 ---
 nav_title: Drag and Drop Editor
-alias: /dnd/
+permalink: /dnd/
 description: "This article covers how to set up and properly use the Drag & Drop Editor provided by Braze."
 hidden: true
 layout: dev_guide

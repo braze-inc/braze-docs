@@ -1,6 +1,6 @@
 ---
 nav_title: Drag and Drop Editor Blocks
-alias: "/dnd/editor_blocks/"
+permalink: "/dnd/editor_blocks/"
 hidden: true
 ---
 
