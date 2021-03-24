@@ -25,13 +25,13 @@ Braze provides a native Unity solution for automating iOS push integrations.
 
 ## Step 2 (Optional): Implement Automatic Push Integration
 
-#### Step 1: Configure Push Notifications
+#### Configure Push Notifications
 
 1. Follow the instructions in our [iOS Push Notification Configuration documentation][8] to configure Braze using a `.p8` or `.p12` file.
 
-#### Step 2: Enable Automatic Push Integration
+#### Enable Automatic Push Integration
 
-In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
+In the Unity Editor, open the Braze Configuration Settings by navigating to "Braze" > "Braze Configuration".
 
 ![enable push notification][24]
 
@@ -39,23 +39,23 @@ Check "Integrate Push With Braze" to automatically register users for push notif
 
 ![Integrate Push With Braze][27]
 
-#### Step 3 (Optional): Enable Background Push
+#### (Optional): Enable Background Push
 
 Check "Enable Background Push" if you would like to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
 
 ![Enabling Background Push][29]
 
-#### Step 4 (Optional): Disable Automatic Registration
+#### (Optional): Disable Automatic Registration
 
 Users who have not yet opted-in to push notifications will automatically be provisionally authorized for push upon opening your application. To disable this feature and manually register users for push, check "Disable Automatic Push Registration".
 
 ![Disable Automatic Push Registration][28]
 
-#### Step 5: Enable Push Capabilities
+#### Enable Push Capabilities
 
 Braze's automatic integration option currently requires one manual step in the generated XCode project.
 
-In your Xcode project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3).
+In your Xcode project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://developer.apple.com/documentation/xcode/adding_capabilities_to_your_app).
 
 
 ## Step 3: Set Push Listeners
