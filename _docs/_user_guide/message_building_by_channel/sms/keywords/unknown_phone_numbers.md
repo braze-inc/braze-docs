@@ -38,10 +38,6 @@ Braze automatically addresses an unknown number in one of three ways:
 3. If any other custom keyword is texted:
   * Braze ignores the text message and does nothing.
 
-{% alert important %}
-If you would like to enable this functionality, please contact your Onboarding Manager or Customer Success Manager.
-{% endalert %}
-
 [ualink]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [telink]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [uaolink]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
