@@ -195,7 +195,7 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 {% endtabs %}
 
 __Adjust Constraint for Device Orientation__<br>
-Adjust the constraint in `viewWillTransition()` because the subclass assumes responsibility for keeping the constraint synced during layout changes.
+Adjust the respective value in `viewWillTransition()` because the subclass assumes responsibility for keeping the constraint synced during layout changes.
 
 ### Custom Modal In-App Message
 
