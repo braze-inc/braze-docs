@@ -120,9 +120,8 @@ Override `beforeMoveInAppMessageViewOnScreen()` and set your own custom constrai
 
 {% tabs %}
 {% tab Swift %}
-__Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
-
+__Update `offset` Variable__<br>
+Update the `offset` variable and set your own offset to suit your needs.
 ```swift
 func setSlideConstraint() {
   offset = 0
@@ -141,7 +140,9 @@ override var offset: CGFloat {
 ```
 
 {% details Version 3.34.0 or earlier  %}
-<br>
+__Update `slideConstraint` Variable__<br>
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
+
 ```swift
 func setSlideConstraint() {
     slideConstraint?.constant = bottomSpacing
@@ -157,9 +158,8 @@ Visit the Braze Demo repository for the [`topMostViewController()`](https://gith
 {% enddetails %}
 {% endtab %}
 {% tab Objective-C %}
-__Update `slideConstraint` Variable__<br>
-The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
-
+__Update `offset` Variable__<br>
+Update the `offset` variable and set your own offset to suit your needs.
 ```objc
 - (void)setOffset {
   self.offset = 0;
@@ -176,6 +176,9 @@ The `slideConstraint` public variable comes from the superclass `ABKInAppMessage
 }
 ```
 {% details Version 3.34.0 or earlier  %}
+__Update `slideConstraint` Variable__<br>
+The `slideConstraint` public variable comes from the superclass `ABKInAppMessageSlideupViewController`. 
+
 ```objc
 - (void)setSlideConstraint:(NSLayoutConstraint *)slideConstraint {
   slideConstraint.constant = bottomSpacing;
