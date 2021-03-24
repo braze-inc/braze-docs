@@ -1,5 +1,5 @@
 ---
-nav_title: Drag and Drop Editor Templates
+nav_title: Drag-and-Drop Editor Templates
 permalink: "/dnd/email_template/"
 hidden: true
 ---
