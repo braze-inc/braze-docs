@@ -27,7 +27,7 @@ Braze provides a native Unity solution for automating iOS push integrations.
 
 #### Configure Push Notifications
 
-1. Follow the instructions in our [iOS Push Notification Configuration documentation][8] to configure Braze using a `.p8` or `.p12` file.
+Follow the instructions in our [iOS Push Notification Configuration documentation][8] to configure Braze using a `.p8` or `.p12` file.
 
 #### Enable Automatic Push Integration
 
