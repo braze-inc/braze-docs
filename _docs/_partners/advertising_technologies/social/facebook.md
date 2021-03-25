@@ -3,6 +3,7 @@ nav_title: Facebook
 alias: /partners/facebook/
 description: "This article outlines the partnership between Braze and Facebook, a leading social platform for brands to reach and engage with their customers."
 page_type: partner
+page_order: 1
 ---
 
 # Facebook Audience Export
