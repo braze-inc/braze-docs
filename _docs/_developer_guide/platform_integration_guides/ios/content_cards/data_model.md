@@ -112,7 +112,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 |---|---|
 | `logContentCardImpression` | Manually log an impression to Braze for a particular card. |
 | `logContentCardClicked` | Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. |
-| `logContentCardDismissed` | Manually log a dismissal to Braze for a particular card.|
+| `logContentCardDismissed` | Manually log a dismissal to Braze for a particular card. The SDK will only log a card dismissal if the card's `dismissed` property is not already set to `true`. |
 | `isControlCard` | Determine if a card is the Control card for an A/B test. |
 {: .reset-td-br-1 .reset-td-br-2}
 
