@@ -113,6 +113,12 @@ Besides these differences, know that a brand will usually have one short code, b
 Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our SMS FAQ [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/). 
 {% endalert %}
 
+## A2P 10DLC
+
+A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, and once registered, improves overall message deliverability, allowing brands to send messages at scale including links and calls to action, and helps further protect consumers from unwanted messages. 
+
+All customers who currently have and/or use long codes are required to register them with the A2P 10DLC registration. Starting April 1st, registering and applying for 10DLC will be now part of the SMS onboarding process. Customers who onboarded SMS before this date must work with their COM or CSM to get their long codes registered. __If customers fail to register their long codes, starting June 1st, any A2P sender using long codes will experience heavy filtering of all messages if they are not registered for 10DLC.__ Customers may experience some additional carrier fees through adopting this service, please reach out to your COM or CSM to learn more. 
+
 ## How Do I Get a Short Code?
 
 Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
