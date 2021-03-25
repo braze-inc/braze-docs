@@ -86,7 +86,7 @@ In your project settings, ensure that under the `Capabilities` tab your `Push No
 
 ![enable push notification][24]
 
->  If you are using Xcode 8 and have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
+>  If you have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
 ![xcode 8 auto signing][34]
 
 ## Step 3: Register for Push Notifications

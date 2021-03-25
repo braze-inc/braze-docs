@@ -94,7 +94,7 @@ Learn more about best practices for e-mail list management [here][8].
 
 ### Include a List-Unsubscribe Header
 
-![list_unsub_1][00]{: style="float:right;max-width:90%;margin-left:15px;"}
+![list_unsub_1][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
 

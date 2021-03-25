@@ -7,6 +7,7 @@ hidden: true
 layout: doc_guide
 custom_collection: home
 nav_title: "Documentation"
+description: "This article goes over the type of documentation you'll find on this site that goes over how to use the Braze platform."
 
 doc_top_header: "Braze Documentation"
 doc_top_text: "Meet us at the intersection of art and science. Find us in the moment, or light years ahead.
