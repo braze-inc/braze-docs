@@ -15,34 +15,31 @@ tool: currents
 
 > [mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
-To get started, you must obtain the mParticle Server to Server Key and mParticle Server to Server Secret. These can obtained by navigating to your mParticle dashboard and creating the neccesary feeds that allow mParticle to receive Braze interaction data for iOS, Android, and Web platforms. Once obtained, the Key and Secret must be added to the Braze mParticle integration page. 
+To get started, you must obtain the __mParticle Server to Server Key__ and __mParticle Server to Server Secret__. These can be obtained by navigating to your mParticle dashboard and creating the necessary feeds that allow mParticle to receive Braze interaction data for iOS, Android, and Web platforms. Once obtained, the Key and Secret must be added to the Braze Currents mParticle integration page. 
 
-## Create Feeds
+## mParticle Currents Integration 
+### Create Feeds
 
-Within the mParticle dashboard, you must create one feed per platform (iOS, Android, Web), and one feed for all platforms. mParticle also offers an unbound feed for events such as emails, that are not connected to an app platform.  
+Within the mParticle dashboard, you must create one feed per platform (iOS, Android, Web), and one feed for all platforms.
 
-0. From your mParticle Admin account, navigate to __Inputs__ under __Setup__.
+0. From your mParticle Admin account, navigate to __Inputs__ under __Setup__.<br><br>
 1. Locate __Braze__ in the mParticle __Directory__ and add the Feed Integration.<br><br>
-2. The Braze Feed Integration supports four seperate feeds: iOS, Android, Web, and Unbound. You will need to create an input for each feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.<br><br>For each feed, select an "Act as Application" platform. For iOS, Android, and Web, select the appropriate option from the list. For your Unbound feed, leave this setting at "Select Application."<br><br>
-3. As you create each input, mParticle wull provide you with a Key and Secret. Copy these credientials, making sure to note which feed each pair of credentials is for. Provide the credentials to your Braze account manager and ask them to enable the mParticle feed. 
+2. The Braze Feed Integration supports four separate feeds: iOS, Android, Web, and Unbound. You will need to create an input for each feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.![mParticle Settings][1]<br><br>For each feed, under "Act as Platform" select the appropriate option from the list.<br>![mParticle Settings][2]{: style="max-width:30%;"}  ![mParticle Settings][3]{: style="max-width:28%;"}<br><br>
+3. As you create each input, mParticle will provide you with a Key and Secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
 
-## Events
-
-The Braze feed sends events for tracking campaign performance. Included as custom attributes for each event are Braze's IDs for the relevant campaign, News Feed card, button, Canvas, etc. You can find the ID's in the relevant sections of the Braze dashboard under __API Identifier__. 
-
-## Finish mParticle Integration
-To get started, find the following information from your mParticle dashboard:
+### Finish mParticle Integration
+To get started, navigate to the Braze dashboard, and select __Currents__ under Integrations. Next, create a new Current, and select __mParticle Data Export__. Here, you must select the apps you would like event tracking for, and provide the following information for each feed you created:
 
 -   mParticle Server to Server Key
 -   mParticle Server to Server Secret
 
-Add this information to the mParticle integration page on the dashboard, and press save.
+Add this information to the mParticle integration page on the dashboard, and press __Launch Current__.
 
 ![mParticle]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 All events sent to mParticle will include the user's `external_user_id` as the `customerid`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-## Integration Details
+### Integration Details
 
 You can export the following data from Braze to mParticle:
 
@@ -83,3 +80,7 @@ You can export the following data from Braze to mParticle:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 To read more about the mParticle integration, visit their documentation [here](http://docs.mparticle.com/integrations/braze/feed).
+
+[1]: {% image_buster /assets/img/braze-feed-inputs.png %}
+[2]: {% image_buster /assets/img/braze-feed-act1.png %}
+[3]: {% image_buster /assets/img/braze-feed-act2.png %}
