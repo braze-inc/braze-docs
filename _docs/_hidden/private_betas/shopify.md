@@ -83,16 +83,16 @@ Once the app installation is complete, Braze automatically creates your webhook 
 
 ## Shopify User Syncing
 
-For the supported Shopify events, Braze maps the inbound events to Braze user profiles using the customer's email address. 
+For the supported Shopify events, Braze maps the inbound events to Braze user profiles using the customer's email address or phone number. 
 
 __Identified User Profiles__<br>
-- If the email address is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user
-- If the email address is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity 
+- If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user
+- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity 
 
 __Anonymous Users__<br>
-- If the email address is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
+- If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
 	- Note: for existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
-- If the email address is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
+- If the email address or phone number is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
 	- Note: If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 #### What Braze Syncs
