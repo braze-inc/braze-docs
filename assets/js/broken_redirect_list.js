@@ -189,6 +189,7 @@ validurls['/docs/user_guide/message_building_by_channel/sms/keywords/double_opt_
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/user_phone_numbers/'] = '/docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/multi_country_sms_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/multi_country_sms_sending/';
 validurls['/docs/user_guide/message_building_by_channel/sms/keywords/high_volume_sending/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/high_volume_sending/';
+validurls['/docs/user_guide/engagement_tools/segments/segment_cohorts/'] = '/docs/user_guide/engagement_tools/segments/segment_extension/';
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';
@@ -270,7 +271,7 @@ validurls['/docs/SDK_Changelogs/'] = '/docs/developer_guide/platform_integration
 
 validurls['/docs/partners/data_augmentation/contextual_location/factual/'] = '/docs/partners/home/';
 
-validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant'
+validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/#performance-by-variant';
 
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';
 
