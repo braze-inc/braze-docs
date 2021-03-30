@@ -285,7 +285,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
+    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.
     tags:
       - User Attributes
   - name: Braze Segment Extension
