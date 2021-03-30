@@ -23,7 +23,7 @@ You can also specify `:save your_variable_name` after the url in order to save t
 
 Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing / learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
 
->  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache and will make a second request to the destination server.
+>  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the "cache_max_age" option below.
 
 ### JSON Parsing
 
@@ -110,9 +110,11 @@ This key will only be automatically added to the Connected Content object if the
 {% endalert %}
 
 ### Configurable Caching
-Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
+Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_age`, as shown below. The maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
+Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown below. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
+
+By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call. 
 
 #### Cache for Specified Seconds
 
