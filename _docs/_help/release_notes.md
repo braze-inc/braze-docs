@@ -178,7 +178,7 @@ Retention Reports now offer Range Retention - Range Retention measures how many 
 
 ### Users/Track API Updates
 
-The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2nd, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
+The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
 
 Braze is imposing this default on our most heavily used customer-facing endpoint as a step toward our stability and reliability goals for our API and infrastructure. The limit imposed is very liberal, and will affect very few dashboard companies and their regular operations. In the event that you need an increase to this limit, please reach out to your Customer Success Manager to request an increase.
 

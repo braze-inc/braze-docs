@@ -20,7 +20,7 @@ description: "This article outlines details about the User Track Braze endpoint.
 
 Use this endpoint to record Custom events, Purchases, and update user profile attributes.
 
-User Track has a base speed limit of 50,000 requests per minute for customers who start with Braze after June 2, 2020. Each request can contain up to 75 events, 75 attribute updates, and 75 purchases. These can belong to different users, that is, each of the 75 events in a request can belong to 75 different users. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased
+User Track has a base speed limit of 50,000 requests per minute for all customers. Each request can contain up to 75 events, 75 attribute updates, and 75 purchases each. These components can belong to up to 75 different users. For example, a request may include 75 events, 75 attribute updates, and 75 purchases for a single user, while another may include 75 different users who may each have an event, update or purchase recorded. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
 
 Please note that Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, check out our data point [documentation]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
 
@@ -55,7 +55,6 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 | `attributes` | Optional | Array of Attributes Object | See User Attributes Object |
 | `events` | Optional | Array of Event Object | See Events Objects |
 | `purchases` | Optional | Array of Purchase Object | See Purchase Object |
-| `partner` | Optional | String | For use by Braze Partners to aid in tracking inbound requests and API usage |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -83,8 +82,6 @@ Note that for each of the request components listed below, one of `external_id`,
   ]
 }
 ```
-
-You can see this example in action [in our Swagger documentation]({{site.baseurl}}/api/interactive/#/User%20Data/User%20track%20–%20events%20example).
 
 ### Example Request
 ```
@@ -125,7 +122,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
        } 
      }
   ],
-  "partner" : "partner1"
 }'
 ```
 

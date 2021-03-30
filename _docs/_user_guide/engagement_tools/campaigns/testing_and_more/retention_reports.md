@@ -81,7 +81,7 @@ The way to read the retention report chart for a day 3 column would be Y% or Y n
 
 ![Rolling Report]({% image_buster /assets/img/campaign_retention3.png %})
 
-As another example, referring to the table above, on March 25th, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after receiving the campaign. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after receiving the campaign.
+As another example, referring to the table above, on the 25th of March, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after receiving the campaign. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after receiving the campaign.
 
 This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage/number value in the day 30 column tells you the percentage of users who returned on day 30 or after. 
 
