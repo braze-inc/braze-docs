@@ -121,7 +121,7 @@ Marketers should test that silent push notifications trigger expected behavior b
 Upon campaign launch, you should check that you have not received any visible push notification on your test device. For instructions on how to check if your silent push notification has updated your app as intended, contact your dedicated success manager or [success@braze.com](mailto:success@braze.com).
 
 {% alert note %}
-The iOS operating system may [gate notifications][24] for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
+The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
 {% endalert %}
 
 ### Web
@@ -173,4 +173,3 @@ Key value pairs can be added to a News Feed Card in the Braze message composer b
 [21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
 [22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
 [23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations
