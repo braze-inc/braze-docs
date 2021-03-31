@@ -7,13 +7,18 @@ description: "This implementation guide covers how to leverage push notification
 
 # Push Notification Implementation Guide
 
-> This implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Notification Content Extensions
 
 ![Push Content Extension][1]{: style="max-width:60%;border:0;"}
 
-Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is 3D pressed, long pressed or, "viewed" through the banner options, content notification extensions enable a custom view of the expanded push notification. The customization options this extended view offers are quite expansive, offering similar functionality to that you'd find in an in-app message.
+Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is expanded, content notification extensions enable a custom view of the expanded push notification. 
+
+Push notifications can be expanded in three different ways: 
+- A long press on the push banner
+- Swiping down on the push banner
+- Swiping the banner to the right and selecting "View" 
 
 While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
 
@@ -29,13 +34,6 @@ There are three push notification content extension types provided. Each type ha
 ![Push Content Extension][12]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification and your service. This can be achieved by having your users expand the push notification they receive.
-
-Push notifications can be expanded in three different ways: 
-- A 3D press (hard press) on the push banner
-- A long press on the push banner
-- Swiping the banner to the right and selecting "View"
-
-3D presses can also be disabled in a device's accessibility settings so it's important to note other ways users can access your push content.  
 
 #### Dashboard Configuration
 
@@ -117,7 +115,7 @@ Push notifications can capture user information inside a content extension, allo
 
 ![Information Capture Push Dashboard Example][8]
 
-Note that the information requested here can be a wide range of things, it doesn't have to be email-specific.
+Note that the information requested here can be a wide range of things such as SMS number capture, it doesn't have to be email-specific.
 
 #### Dashboard Configuration
 
@@ -131,7 +129,7 @@ To set up an information capture capable push in the dashboard, you must registe
 
 #### Handling Button Actions
 
-Each action button is uniquely identified. The code checks if your response identifier is equal to the `registerIndentifier`, and if so, knows that the user clicked register. From here, on your backend, you should save this event and attribute, and lastly, dismiss the notification. 
+Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button. From here, on your backend, you should save this event and attribute, and lastly, dismiss the notification. 
 
 __Handling Push Notification Action Button Responses__<br>
 Push notification action buttons are uniquely identified to handle responses from button presses accordingly.
