@@ -125,5 +125,5 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 
 
 [21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
-[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
+[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKIDFADelegate.h
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html
