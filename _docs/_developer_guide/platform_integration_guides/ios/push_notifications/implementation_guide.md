@@ -15,10 +15,7 @@ description: "This implementation guide covers how to leverage push notification
 
 Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is expanded, content notification extensions enable a custom view of the expanded push notification. 
 
-Push notifications can be expanded in three different ways: 
-- A long press on the push banner
-- Swiping down on the push banner
-- Swiping the banner to the right and selecting "View" 
+Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the right and selecting "View" 
 
 While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
 
@@ -31,7 +28,7 @@ There are three push notification content extension types provided. Each type ha
 
 ### Interactive Push Notification
 
-![Push Content Extension][12]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Push Content Extension][12]{: style="float:right;max-width:24%;margin-left:15px;border:0"}
 
 Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification and your service. This can be achieved by having your users expand the push notification they receive.
 
@@ -43,23 +40,19 @@ To set up a custom view in the dashboard you must notify Braze you would like to
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
 {% endalert %}
 
-![Interactive Push Dashboard Example][2]
-
-![Interactive Push Dashboard Example][3]{: style="float:right;max-width:55%;margin-left:15px;"}
+![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;margin-left:15px;"}
 In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled. 
 
 Interested in using this logic to implement this in your push notifications? Take a look at the [logging and analytics section](#logging-vs-analytics) to get a better understanding of how the flow of data should look. 
 
 ### Personalized Push Notifications
-![Personalized Push Dashboard Example][6]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Personalized Push Dashboard Example][6]{: style="float:right;max-width:24%;margin-left:15px;border:0"}
 
 Push notifications can display user-specific information inside a content extension. The example to the right shows a notification of a Braze LAB user who has completed a Braze session and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken.
 
 #### Dashboard Configuration
 
 To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
-
-![Personalized Push Dashboard Example][4]{: style="max-width:60%;"}
 
 ![Personalized Push Dashboard Example][5]{: style="max-width:60%;"}
 
@@ -113,7 +106,7 @@ Push notifications can capture user information inside a content extension, allo
 3. Confirmation view is displayed.
 4. Push is dismissed. 
 
-![Information Capture Push Dashboard Example][8]
+![Information Capture Push Dashboard Example][8]{: style="border:0;"}
 
 Note that the information requested here can be a wide range of things such as SMS number capture, it doesn't have to be email-specific.
 
@@ -122,10 +115,6 @@ Note that the information requested here can be a wide range of things such as S
 To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must set the notification style to Rich Notification and include a rich push image as you normally would. 
 
 ![Information Capture Push Dashboard Example][9]
-
-![Information Capture Push Dashboard Example][11]{: style="max-width:60%;"}
-
-![Information Capture Push Dashboard Example][10]{: style="max-width:60%;"}
 
 #### Handling Button Actions
 
@@ -175,7 +164,7 @@ Requesting user input through push notifications is an exciting opportunity that
 
 ### Logging with the Braze API
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [user/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. If you would like to log analytics with the API, it requires the `userId` parameter, which cannot be queried from Braze SDK.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. If you would like to log analytics with the API, it requires the `userId` parameter, which cannot be queried from Braze SDK.
 
 ### Logging Manually 
 
