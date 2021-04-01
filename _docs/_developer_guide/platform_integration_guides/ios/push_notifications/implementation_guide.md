@@ -178,6 +178,9 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists an additional helper file `UserAttributes`that is used when sending and saving user attributes. Both helper files can be found [here](#helper-files). 
 
+{% tabs %}
+{% tab Custom Events %}
+
 #### Saving Custom Event
 
 To save custom events you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
@@ -187,8 +190,8 @@ To save custom events you must create the analytics from scratch. This is done b
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func saveCustomEvent(with properties: [String: Any]? = nil) {
   // 1
@@ -207,8 +210,8 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)saveCustomEvent:(NSDictionary<NSString *, id> *)properties {
   // 1 
@@ -228,8 +231,8 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Sending Custom Events to Braze
 
@@ -242,8 +245,8 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 5. Log individual custom event 
 6. Remove all pending events from storage
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func logPendingCustomEventsIfNecessary() {
   let remoteStorage = RemoteStorage(storageType: .suite)
@@ -278,8 +281,8 @@ func logPendingCustomEventsIfNecessary() {
   remoteStorage.removeObject(forKey: .pendingCustomEvents)
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)logPendingEventsIfNecessary {
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
@@ -314,8 +317,10 @@ func logPendingCustomEventsIfNecessary() {
   [remoteStorage removeObjectForKey:RemoteStorageKeyPendingCustomEvents];
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Custom Attributes %}
 
 #### Saving Custom Attributes
 
@@ -326,8 +331,8 @@ To save custom attributes you must create the analytics from scratch. This is do
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func saveCustomAttribute() {
   // 1 
@@ -346,8 +351,8 @@ func saveCustomAttribute() {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ``` objc
 - (void)saveCustomAttribute {
   // 1 
@@ -367,8 +372,8 @@ func saveCustomAttribute() {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Sending Custom Attributes to Braze
 
@@ -379,8 +384,8 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Log individual custom attribute with corresponding key and value
 4. Remove all pending attributes from storage
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func logPendingCustomAttributesIfNecessary() {
   let remoteStorage = RemoteStorage(storageType: .suite)
@@ -405,8 +410,8 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)logPendingCustomAttributesIfNecessary {
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
@@ -429,8 +434,10 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
   }
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab User Attributes %}
 
 #### Saving User Attributes
 
@@ -441,8 +448,8 @@ When saving custom attributes, you can't save a custom object as is, the object 
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func saveUserAttribute() {
   // 1 
@@ -461,8 +468,8 @@ func saveUserAttribute() {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)saveUserAttribute {
   // 1 
@@ -485,8 +492,8 @@ func saveUserAttribute() {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Sending User Attributes to Braze
 
@@ -497,8 +504,8 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Set specific user field based on the User Attribute type (email)
 4. Remove all pending user attributes from storage
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func logPendingUserAttributesIfNecessary() {
   let remoteStorage = RemoteStorage(storageType: .suite)
@@ -519,8 +526,8 @@ func logPendingUserAttributesIfNecessary() {
   remoteStorage.removeObject(forKey: .pendingUserAttributes)
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)logPendingUserAttributesIfNecessary {
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
@@ -545,14 +552,16 @@ func logPendingUserAttributesIfNecessary() {
   [remoteStorage removeObjectForKey:RemoteStorageKeyPendingUserAttributes];
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Helper Files %}
 
 ### Helper Files
 
 {% details RemoteStorage Helper File %}
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ```swift
 enum RemoteStorageKey: String, CaseIterable {
    
@@ -601,8 +610,8 @@ class RemoteStorage: NSObject {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 @interface RemoteStorage ()
  
@@ -665,13 +674,13 @@ class RemoteStorage: NSObject {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 {% enddetails %}
 
 {% details UserAttribute Helper File %}
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ```swift
 enum UserAttribute: Hashable {
   case email(String?)
@@ -700,8 +709,8 @@ extension UserAttribute: Codable {
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 @implementation UserAttribute
  
@@ -730,9 +739,11 @@ extension UserAttribute: Codable {
  
 @end
 ```
+{% endsubtab %}
+{% endsubtabs %}
+{% enddetails %}
 {% endtab %}
 {% endtabs %}
-{% enddetails %}
 
 [1]: {% image_buster /assets/img/push_implementation_guide/push1.png %}
 [2]: {% image_buster /assets/img/push_implementation_guide/push2.png %}
