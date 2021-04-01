@@ -11,13 +11,13 @@ description: "This implementation guide covers how to leverage push notification
 
 ## Notification Content Extensions
 
-![Push Content Extension][1]{: style="max-width:60%;border:0;"}
+![Push Content Extension][1]{: style="max-width:65%;border:0;margin-top:10px"}
 
 Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is expanded, content notification extensions enable a custom view of the expanded push notification. 
 
 Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the right and selecting "View" 
 
-While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
+These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
 
 ## Use Case and Implementation Walkthrough
 
