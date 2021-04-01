@@ -62,8 +62,8 @@ The method below, `didReceive` is called when the content extension has received
 
 __Parsing Key-Value Pairs from Push Notifications__<br>
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func didReceive(_ notification: UNNotification) {
   let userInfo = notification.request.content.userInfo
@@ -75,8 +75,8 @@ func didReceive(_ notification: UNNotification) {
   ...
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)didReceiveNotification:(nonnull UNNotification *)notification {
   NSDictionary *userInfo = notification.request.content.userInfo;
@@ -90,8 +90,8 @@ func didReceive(_ notification: UNNotification) {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Other Use Cases
 
@@ -123,8 +123,8 @@ Each action button is uniquely identified. The code checks if your response iden
 __Handling Push Notification Action Button Responses__<br>
 Push notification action buttons are uniquely identified to handle responses from button presses accordingly.
 
-{% tabs %}
-{% tab Swift %}
+{% subtabs %}
+{% subtab Swift %}
 ``` swift 
 func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
   if response.actionIdentifier == "YOUR-REGISTER-IDENTIFIER" {
@@ -134,8 +134,8 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
   }
 }
 ```
-{% endtab %}
-{% tab Objective-C %}
+{% endsubtab %}
+{% subtab Objective-C %}
 ```objc
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response completionHandler:(void (^)(UNNotificationContentExtensionResponseOption))completion {
   if ([response.actionIdentifier  isEqual: @"YOUR-REGISTER-IDENTIFIER"]) {
@@ -145,8 +145,8 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 ##### Dismissing Pushes
 
