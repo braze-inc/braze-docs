@@ -10,7 +10,7 @@ hidden: true
 H1 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
-Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 Donec pellentesque facilisis odio, sed imperdiet ante. Maecenas blandit justo sed turpis auctor varius. Morbi sollicitudin erat in ex egestas condimentum a et mi.
 
@@ -484,6 +484,52 @@ For self contain tabs, ie tabs that only change the tab content for the specific
 ```
 {% endraw %}
 
+## Sub Tabs
+For tabs within tabs, `subtabs` and `subtab` can be used. Default setting is `local`.
+For global `subtabs`, use the `global` option: {%raw %}`{% subtabs global %}`{% endraw %}
+
+{% tabs local %}
+{% tab Tab 1 %}
+tab content 1
+{% subtabs %}
+{% subtab Sub Tab 1a %}
+Sub Tab 1a Content
+{% endsubtab %}
+{% subtab Sub Tab 2a %}
+Sub Tab 2a Content
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Tab 2 %}
+tab content 2
+{% subtabs %}
+{% subtab Sub Tab 1b %}
+Sub Tab 1a Content
+{% endsubtab %}
+{% subtab Sub Tab 2b %}
+Sub Tab 2a Content
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+### Example
+{% raw %}
+```
+{% tabs %}
+{% tab Tab 1 %}
+{% subtabs %}
+{% subtab Sub Tab 1 %}
+Sub Tab 1 Content
+{% endsubtab %}
+{% subtab Sub Tab 2 %}
+Sub Tab 2 Content
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+```
+{% endraw %}
 # Images
 
 ## Image Styling

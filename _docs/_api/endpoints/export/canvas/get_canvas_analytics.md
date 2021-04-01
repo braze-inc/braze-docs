@@ -42,7 +42,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 
 ## Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&send_id=3456789&length=30&ending_at=2014-12-10T23:59:59-05:00' \
+curl --location --request GET 'https://rest.iad-01.braze.com/sends/data_series?canvas_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=30&ending_at=2014-12-10T23:59:59-05:00' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 

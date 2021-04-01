@@ -39,10 +39,6 @@ guide_featured_list:
 
 ![Sample Push iOS][17]
 
-{% alert tip %}
-We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/#manual-integration-options).
-{% endalert %}
-
 <br>
 
 [17]: {{site.baseurl}}/assets/img_archive/push_example_category.png

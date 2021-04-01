@@ -184,7 +184,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
+[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [apple_initial_setup_8]: #manual-sdk-integration
 [apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}

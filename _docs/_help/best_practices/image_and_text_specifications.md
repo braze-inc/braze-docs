@@ -137,6 +137,7 @@ Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
 ### MMS
 
 #### Images
+
 **Image Specifications** | **Recommended Properties**
 --- | ---
 Size | 5MB maximum
