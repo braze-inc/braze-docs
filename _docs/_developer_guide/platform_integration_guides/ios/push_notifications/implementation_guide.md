@@ -62,8 +62,8 @@ The method below, `didReceive` is called when the content extension has received
 
 __Parsing Key-Value Pairs from Push Notifications__<br>
 
-{% subtabs %}
-{% subtab Swift %}
+{% tabs %}
+{% tab Swift %}
 ``` swift 
 func didReceive(_ notification: UNNotification) {
   let userInfo = notification.request.content.userInfo
@@ -75,8 +75,8 @@ func didReceive(_ notification: UNNotification) {
   ...
 }
 ```
-{% endsubtab %}
-{% subtab Objective-C %}
+{% endtab %}
+{% tab Objective-C %}
 ```objc
 - (void)didReceiveNotification:(nonnull UNNotification *)notification {
   NSDictionary *userInfo = notification.request.content.userInfo;
@@ -90,8 +90,8 @@ func didReceive(_ notification: UNNotification) {
   }
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 #### Other Use Cases
 
@@ -123,8 +123,8 @@ Each action button is uniquely identified. The code checks if your response iden
 __Handling Push Notification Action Button Responses__<br>
 Push notification action buttons are uniquely identified to handle responses from button presses accordingly.
 
-{% subtabs %}
-{% subtab Swift %}
+{% tabs %}
+{% tab Swift %}
 ``` swift 
 func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
   if response.actionIdentifier == "YOUR-REGISTER-IDENTIFIER" {
@@ -134,8 +134,8 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
   }
 }
 ```
-{% endsubtab %}
-{% subtab Objective-C %}
+{% endtab %}
+{% tab Objective-C %}
 ```objc
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response completionHandler:(void (^)(UNNotificationContentExtensionResponseOption))completion {
   if ([response.actionIdentifier  isEqual: @"YOUR-REGISTER-IDENTIFIER"]) {
@@ -145,8 +145,8 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
   }
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 ##### Dismissing Pushes
 
@@ -176,9 +176,9 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 ### Code Snippets
 
-The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists an additional helper file `UserAttributes`that is used when sending and saving user attributes. Both helper files can be found [here](#helper-files). 
+The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists an additional helper file `UserAttributes`that is used when sending and saving user attributes. Both helper files can be found below.
 
-{% tabs %}
+{% tabs local %}
 {% tab Custom Events %}
 
 #### Saving Custom Event
@@ -190,7 +190,7 @@ To save custom events you must create the analytics from scratch. This is done b
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func saveCustomEvent(with properties: [String: Any]? = nil) {
@@ -245,7 +245,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 5. Log individual custom event 
 6. Remove all pending events from storage
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func logPendingCustomEventsIfNecessary() {
@@ -331,7 +331,7 @@ To save custom attributes you must create the analytics from scratch. This is do
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func saveCustomAttribute() {
@@ -384,7 +384,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Log individual custom attribute with corresponding key and value
 4. Remove all pending attributes from storage
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func logPendingCustomAttributesIfNecessary() {
@@ -448,7 +448,7 @@ When saving custom attributes, you can't save a custom object as is, the object 
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func saveUserAttribute() {
@@ -504,7 +504,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Set specific user field based on the User Attribute type (email)
 4. Remove all pending user attributes from storage
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ``` swift 
 func logPendingUserAttributesIfNecessary() {
@@ -560,7 +560,7 @@ func logPendingUserAttributesIfNecessary() {
 ### Helper Files
 
 {% details RemoteStorage Helper File %}
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ```swift
 enum RemoteStorageKey: String, CaseIterable {
@@ -679,7 +679,7 @@ class RemoteStorage: NSObject {
 {% enddetails %}
 
 {% details UserAttribute Helper File %}
-{% subtabs %}
+{% subtabs local %}
 {% subtab Swift %}
 ```swift
 enum UserAttribute: Hashable {
