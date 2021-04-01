@@ -80,4 +80,4 @@ Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitud
 For more information, see [`ABKUser.h`][5].
 
 [4]: #customizing-appboy-on-startup
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKUser.h
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h

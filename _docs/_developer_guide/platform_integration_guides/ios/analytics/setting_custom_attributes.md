@@ -297,7 +297,7 @@ For more information on implementing subscriptions, visit our page on [managing 
 [1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601
 [3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
 [8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

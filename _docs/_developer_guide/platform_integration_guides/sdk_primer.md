@@ -12,7 +12,7 @@ Before you begin to integrate the Braze SDKs, you may find yourself wondering wh
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
-All of our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as whitelist processes that do so](#blocking-data-collection).
+All of our features are configurable, but it would not be advantageous to avoid these in your integration. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. However, if necessary, it is possible to [block the default collection of certain data, as well as allowlist processes that do so](#blocking-data-collection).
 {% endalert %}
 
 ### Device Properties
@@ -94,7 +94,9 @@ An empty allowlist will result in __no__ device data being sent to Braze.
 
 ### iOS SDK
 
-You can use [`ABKDeviceWhitelistKey;`](https://github.com/Appboy/appboy-ios-sdk/blob/4e26a9a3ba7a86c9bc6bd8080deed1e97e7bf53a/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L108) to specify a whitelist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off all fields, set the value of this key to `ABKDeviceOptionNone`.
+You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`.
+
+To specify allowlisted device fields, assign the bitwise OR of desired fields to `ABKDeviceAllowlistKey` in the `appboyOptions` object passed to `startWithApiKey`.
 
 {% alert important %}
 By default, all fields are collected by the Braze iOS SDK.

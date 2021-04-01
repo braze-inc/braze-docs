@@ -294,5 +294,10 @@ glossaries:
     tags:
       - Retail & eCommerce
       - Financial Services & Insurance
-
+  - name: Drive User Action by Nudging Users to Leave Reviews in the App Store
+    image: /docs/assets/img_archive/HTML5-1.gif
+    description: "<a href='https://soundcloud.com/'>SoundCloud</a> <br> <br> With the power of deep links and Braze in-app messages, you can create messages that nudge users to provide feedback. This HTML in-app message prompts users to rate their experience, allowing the application to directly collect valuable user feedback, and through the use of deep links, link to the app store to rate the application."
+    tags:
+      - Media & Entertainment
+      - Miscellaneous & Other
 ---

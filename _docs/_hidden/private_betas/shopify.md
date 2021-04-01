@@ -83,16 +83,16 @@ Once the app installation is complete, Braze automatically creates your webhook 
 
 ## Shopify User Syncing
 
-For the supported Shopify events, Braze maps the inbound events to Braze user profiles using the customer's email address. 
+For the supported Shopify events, Braze maps the inbound events to Braze user profiles using the customer's email address or phone number. 
 
 __Identified User Profiles__<br>
-- If the email address is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user
-- If the email address is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity 
+- If the email address or phone number is associated with an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze syncs the Shopify data to that user
+- If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity 
 
 __Anonymous Users__<br>
-- If the email address is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
+- If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
 	- Note: for existing alias-only profiles, we'll add the Shopify alias object for that user (see below).
-- If the email address is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
+- If the email address or phone number is __not__ associated with a user profile in Braze, Braze generates an alias-only user with a Shopify alias object. 
 	- Note: If these alias-only users eventually become identified, Braze customers must assign an external ID to the alias-only profile by calling the [Users Identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 #### What Braze Syncs
@@ -142,43 +142,6 @@ With Shopify custom events in Braze, you can trigger Canvases or Campaigns like 
 If you have the Nested Event Property support enabled by your Customer Success Manager, you can Liquid template the event properties and nested event properties for the supported Shopify custom events. <br>Here is an example of Liquid templating the __product title__ from the Shopify Abandoned Checkout event:
 {% raw %}
 `{{event_properties.${line_items[0].title}}}`
-{% endraw %}
-
-### Dynamically Generating HTML Content via Liquid and Connected Content (Advanced)
-
-For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with Liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
-![Shopify][22]{: style="float:right;max-width:30%;margin-left:15px;margin-top:15px;"}
-
-In this example, we'll be using [Braze's standard email HTML template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) for Order Confirmation and a [Liquid For Loop](https://shopify.github.io/liquid/tags/iteration/). In the standard Braze HTML Order Confirmation Template, there are pre-constructed HTML elements that are used to represent the products purchased:<br>
-![Shopify][23]{: style="max-width:30%;margin-top:15px;"}
-
-These HTML Elements can be included within a Liquid For Loop to dynamically generate based on the number of items left in the cart.
-
-{% raw %}
-```
-// save the products included within the event property to local variable
-{% assign items = {{event_properties.${line_items}}} %}
- 
-// iterate through the items, up to a limit of 3
-{% for item in items limit:3 %}
- 
-// retrieve product information by templating in the current iteration of the product id (Optional - if product info is not included in Event Properties
-{% connected_content https://shopify_URL_EXAMPLE/products.json?ids={{item.product_id}}
-:headers {
-"X-Shopify-Access-Token": "SHOPIFY_ACCESS_TOKEN" }
-:content_type application/json
-:save product_info %}
- 
-// generate your HTML content to display the results
-<<<< ALL HTML CONTENT HERE - THIS CONTENT GENERATES FOR EACH ITERATION OF THE LOOP >>>>
- 
-// the below shows an example of templating in the product url into an img element
-<td class="img" style="font-size:0pt; line-height:0pt; text-align:left"><a href="#" target="_blank"><img src={{product_info.products[0].image.src}} border="0" width="80" height="80" alt="" /></a><div style="font-size:0pt; line-height:0pt;" class="mobile-br-15"></div>
-</td>
- 
-// end the for loop
-{% endfor %}
-```
 {% endraw %}
 
 ## Troubleshooting

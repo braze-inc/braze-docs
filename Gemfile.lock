@@ -67,7 +67,7 @@ GEM
       jekyll (>= 3.5, < 5.0)
       liquid (~> 4.0)
     json (2.5.1)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -136,7 +136,7 @@ DEPENDENCIES
   jekyll (~> 3.9.0)
   jekyll-algolia (~> 1.0)!
   jekyll_asset_pipeline
-  kramdown (>= 2.3.0)
+  kramdown (>= 2.3.1)
   kramdown-parser-gfm
   minima (~> 2.0)
   puma (= 4.3.5)
