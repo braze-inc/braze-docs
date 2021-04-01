@@ -43,12 +43,16 @@ Since pushes with content extensions aren't always apparent, it is recommended t
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;margin-left:15px;"}
 In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled. 
 
-Interested in using this logic to implement this in your push notifications? Take a look at the [logging and analytics section](#logging-vs-analytics) to get a better understanding of how the flow of data should look. 
+#### Other Use Cases
+Push content extensions are an exciting option for companies to introduce interactivity in their promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
+
+##### Ready to log analytics? 
+Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
 ### Personalized Push Notifications
 ![Personalized Push Dashboard Example][6]{: style="float:right;max-width:24%;margin-left:15px;border:0"}
 
-Push notifications can display user-specific information inside a content extension. The example to the right shows a notification of a Braze LAB user who has completed a Braze session and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken.
+Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken.
 
 #### Dashboard Configuration
 
@@ -95,7 +99,10 @@ func didReceive(_ notification: UNNotification) {
 
 #### Other Use Cases
 
-The ideas for progress-based and user-focused push content extensions are endless, some examples could be adding the option to share your progress across different platforms, expressing achievements unlocked, punch cards, or even onboarding checklists. 
+The ideas for progress-based and user-focused push content extensions are endless, some examples include adding the option to share your progress across different platforms, expressing achievements unlocked, punch cards, or even onboarding checklists. 
+
+##### Ready to log analytics?
+Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
 ### Information Capture Push Notification
 
@@ -160,6 +167,9 @@ Push notifications can be automatically dismissed from an action button press. T
 
 Requesting user input through push notifications is an exciting opportunity that many companies do not take advantage of. In these push messages, you can not only request basic information like name, email, or number, but you could also prompt users to complete a user profile if unfinished, or even to submit feedback. 
 
+##### Ready to log analytics?
+Visit the section below to get a better understanding of how the flow of data should look. 
+
 ## Logging Analytics
 
 ### Logging with the Braze API
@@ -174,14 +184,14 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 ![Push Logging][13]
 
-### Code Snippets
+#### Code Snippets
 
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists an additional helper file `UserAttributes`that is used when sending and saving user attributes. Both helper files can be found below.
 
 {% tabs local %}
 {% tab Custom Events %}
 
-#### Saving Custom Event
+##### Saving Custom Events
 
 To save custom events you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
@@ -234,7 +244,7 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Sending Custom Events to Braze
+##### Sending Custom Events to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -322,7 +332,7 @@ func logPendingCustomEventsIfNecessary() {
 {% endtab %}
 {% tab Custom Attributes %}
 
-#### Saving Custom Attributes
+##### Saving Custom Attributes
 
 To save custom attributes you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
@@ -375,7 +385,7 @@ func saveCustomAttribute() {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Sending Custom Attributes to Braze
+##### Sending Custom Attributes to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -439,7 +449,7 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 {% endtab %}
 {% tab User Attributes %}
 
-#### Saving User Attributes
+##### Saving User Attributes
 
 When saving custom attributes, you can't save a custom object as is, the object must be converted to a `UserAttribute` data object and then initialized with the correct type. Next, store the necessary user attributes. To minimize the amount of looping in this function, the code leverages enums to help identify where the data should be stored without looping through the data unnecessarily.
 
@@ -495,7 +505,7 @@ func saveUserAttribute() {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Sending User Attributes to Braze
+##### Sending User Attributes to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -557,7 +567,7 @@ func logPendingUserAttributesIfNecessary() {
 {% endtab %}
 {% tab Helper Files %}
 
-### Helper Files
+##### Helper Files
 
 {% details RemoteStorage Helper File %}
 {% subtabs local %}
@@ -742,6 +752,7 @@ extension UserAttribute: Codable {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
+<br>
 {% endtab %}
 {% endtabs %}
 
