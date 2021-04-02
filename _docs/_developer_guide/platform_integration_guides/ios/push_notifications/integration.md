@@ -251,15 +251,21 @@ Next, add the following code to your app's `(void)userNotificationCenter:didRece
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler`:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
-         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  if (@available(iOS 14.0, *)) {
+    completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
+  } else {
+    completionHandler(UNNotificationPresentationOptionAlert);
+  }
+}
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% tab swift %}
@@ -282,18 +288,21 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler` in the appropriate view controller class:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
-                willPresent notification: UNNotification,
-      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    completionHandler([.alert, .badge, .sound])
+                              willPresent notification: UNNotification,
+                              withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+  if #available(iOS 14, *) {
+    completionHandler([.list, .banner]);
+  } else {
+    completionHandler([.alert]);
+  }
 }
-
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% endtabs %}
