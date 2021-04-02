@@ -7,7 +7,7 @@ platform:
   - android
   - ios
 
-description: "This page lists updates to Braze's Unity SDK changelog for Android and iOS."
+description: "This page lists updates to Braze's Unity SDK changelog."
 ---
 
 # Unity SDK Changelog

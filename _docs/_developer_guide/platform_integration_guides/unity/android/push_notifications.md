@@ -6,15 +6,9 @@ page_order: 1
 ---
 # Push Notifications
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
 
-Sample push notification:
-
-![Sample Push][23]
-
-Check out [our troubleshooting section][8] for additional best practices.
-
-Braze sends push notifications to Android devices using [Firebase Cloud Messaging (FCM)][9].
+For ADM integration instructions, see our [advanced use cases][61] documentation.
 
 In order to integrate Braze push notifications into your app, you need to:
 
@@ -117,7 +111,7 @@ See Android's documentation on ["Deep Linking" to In-App Resources][26]
 [12]: https://firebase.google.com/docs/android/setup
 [13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples
 [15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[23]: {% image_buster /assets/img_archive/Push_Android_2.png %}
 [26]: https://developer.android.com/training/app-links/deep-linking
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
+[61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases
