@@ -40,8 +40,12 @@ To set up a custom view in the dashboard you must notify Braze you would like to
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
 {% endalert %}
 
-![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;margin-left:15px;"}
-In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled. 
+In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
+
+![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
+Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled. 
+
+![Interactive Push Dashboard Example][14]{: style="max-width:50%;"}
 
 #### Other Use Cases
 Push content extensions are an exciting option for companies to introduce interactivity in their promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
@@ -769,3 +773,4 @@ extension UserAttribute: Codable {
 [11]: {% image_buster /assets/img/push_implementation_guide/push11.png %}
 [12]: {% image_buster /assets/img/push_implementation_guide/push12.png %}
 [13]: {% image_buster /assets/img/push_implementation_guide/push13.png %}
+[14]: {% image_buster /assets/img/push_implementation_guide/push14.png %}
