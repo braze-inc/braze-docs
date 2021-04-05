@@ -28,9 +28,9 @@ There are three push notification content extension types provided. Each type ha
 
 ### Interactive Push Notification
 
-![Push Content Extension][12]{: style="float:right;max-width:24%;margin-left:15px;border:0"}
-
 Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification and your service. This can be achieved by having your users expand the push notification they receive.
+
+![Push Content Extension][12]{: style="border:0"}
 
 #### Dashboard Configuration
 
