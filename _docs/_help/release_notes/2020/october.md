@@ -14,7 +14,7 @@ The Report Builder allows you to compare the results of multiple campaigns in a 
 The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/) to read more. 
 
 ## Android 11 Upgrade Guide
-The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes to not relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
 
 ## Attribution Partners - Click Tracking Guide
 Optional attribution partner click tracking documentation has now been added to each attribution partner page, this includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your [attribution partner]({{site.baseurl}}/partners/advertising_technologies/attribution/) page to read more. 
