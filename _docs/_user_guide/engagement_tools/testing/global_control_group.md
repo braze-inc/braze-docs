@@ -16,7 +16,6 @@ page_order: 0
 2. __Assign a percentage of all users to this control group__<br> Input a percentage for your Control Group and __Save__. Once entered, Braze will show you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. Visit our [best practices section](#percentage-guidelines) for percentage guidelines.<br><br>![Global Control Group][4] <br><br>
 3. __Assign Exclusion Settings__<br>Add exclusion settings to your Global Control Group by using tags. Any campaigns that use the tags included here in the exclusion settings will __not use__ your Global Control Group. These campaigns will continue to send to every user in the target audience (including those in your Global Control Group). You may want to add exclusion settings if you have transactional messages that should send to every user.<br><br>![Global Control Group][5] <br><br>
 4. __Save your Control Group__<br>At this point, Braze will generate a randomly selected group of users comprising the selected percentage of your total user base. Once saved, all currently active as well as future campaigns/Canvases __will no longer send to users in this group__, with the exception being campaigns/Canvases that contain any of the tags in your exclusion settings. <br><br>
-5. __Export a CSV of users (Optional)__<br>If you’d like to save who is in your group, make sure to export a CSV of Control Group users before disabling the group, as you will no longer be able to export this information once your group is disabled.
 
 ## How the Global Control Group Works
 
@@ -32,6 +31,12 @@ You can disable your Global Control Group at any time, but keep in mind that doi
 1. __Before Disabling your Control Group__ we recommend exporting a CSV of users in that group in case you need to reference it at a later point. Once you disable a Control Group, there will be no way for Braze to restore the group or identify which users were in this group.<br><br>
 2. __After Disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze will generate a new randomly selected group of users. If you enter the same percentage as before, Braze will still generate a new group of users for your control and treatment groups.
  <br><br>![Global Control Group][2]
+ 
+ ## Exporting your Control Group members
+ 
+If you'd like to see which users are in yout Global Control Group, can export your Group's members via either CSV or API. To run a CSV export, navigate to the Global Control Group setup page (under Global Message Settings). To export via API, use the [Global Control Group endpoint]({{site.baseurl}}/docs/api/endpoints/export/user_data/post_users_global_control_group/).
+
+Historical Control Groups are not preserved, so you can only export the members of your current Group. Make sure to export any necessary information before disabling a Control Group.
 
 ## Viewing Reporting
 
@@ -60,9 +65,9 @@ If you access the Global Control report without having saved a Global Control Gr
 
 #### Things to Watch Out For {#things-to-watch-for}
 - Your Global Control Group is formed using Random Bucket Numbers, and thus if you are running any other tests using Random Bucket Numbers segment filters, keep in mind that there could be an overlap between those segments you create, and your Global Control Group users.
-- If two users who have different external user IDs have the same email address, and one of these users is in the Control Group and the other is not, then an email will still be sent to that email address whenever the non-Control Group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
+- __If two users who have different external user IDs have the same email address,__ and one of these users is in the Control Group and the other is not, then an email will still be sent to that email address whenever the non-Control Group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
 
-## Best Practices
+## Testing Best Practices
 
 ### Optimal Control Group Size {#percentage-guidelines}
 
