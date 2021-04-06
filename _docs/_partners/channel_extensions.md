@@ -48,5 +48,7 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/localization/crowdin/
   - name: Jebbit
     url: /docs/partners/channel_extensions/loyalty/jebbit/
+  - name: Phrasee
+    url: /docs/partners/channel_extensions/creative_and_personalization/language_optimization/phrasee/
 
 ---
