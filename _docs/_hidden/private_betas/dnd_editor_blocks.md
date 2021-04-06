@@ -19,9 +19,7 @@ To use them, just drag one inside a column, it will auto-adjust to the column wi
 | `Image` | Allows you to insert an image from the Media Library. | 
 | `Button` |  Add a standard button.  Properties for this block allow for editing and setting links easily.  | 
 | `Divider` |  Insert a solid, dotted, or dashed line to help with spacing.|
-<!--| `Social` |  Quickly insert standard social icons.  Facebook, Twitter, Instagram, and LinkedIn are provided by default. | -->
 | `HTML` |  Insert raw HTML.  Great for advanced liquid such as connected content or conditional statements. | 
-<!--| `Video` |  The video block will automatically create a preview image for youtube or Vimeo URLs. | -->
 | `Menu` |  Create a flexible menu for the message you're designing. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
