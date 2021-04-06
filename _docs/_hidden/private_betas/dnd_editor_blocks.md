@@ -86,13 +86,13 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`Align`| Moves the line to be either left, center, or right oriented |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Social
+<!-- ### Social -->
 
-| Properties | Description |
-|---|---|
-|`Select Icon Collection `| Predefined list of social icons.  The default list includes Facebook, Twitter, Instagram, and LinkedIn.  |
-|`Configure Icon Collection `| Configure the Title, URL, Alt Text  |
-{: .reset-td-br-1 .reset-td-br-2}
+<!-- | Properties | Description | -->
+<!--|---|---| -->
+<!--|`Select Icon Collection `| Predefined list of social icons.  The default list includes Facebook, Twitter, Instagram, and LinkedIn.  |-->
+<!--|`Configure Icon Collection `| Configure the Title, URL, Alt Text  |-->
+<!--{: .reset-td-br-1 .reset-td-br-2}-->
 
 ### HTML
 
@@ -101,12 +101,12 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`html editor`| Enter the raw HTML |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Video
+<!--### Video -->
 
-| Properties | Description |
-|---|---|
-|`Video URL `| Set the URL for your video.|
-{: .reset-td-br-1 .reset-td-br-2}
+<!--| Properties | Description | -->
+<!--|---|---| -->
+<!--|`Video URL `| Set the URL for your video.| -->
+<!--{: .reset-td-br-1 .reset-td-br-2} -->
 
 ### Menu
 
