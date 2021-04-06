@@ -2,8 +2,8 @@
 nav_title: Treasure Data
 page_order: 4
 
-description: "Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale.
-Watch our video to learn why we are the industry’s best at transforming customer experiences, one brand at a time."
+description: "Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale."
+
 alias: /partners/treasure_data/
 
 page_type: partner
@@ -12,7 +12,11 @@ hidden: false
 
 # Treasure Data
 
-> Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale.https://www.treasuredata.com/
+> Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale. Visit [Treasure Data Website][4] for the full product overview.   
+Watch our video to learn why we are the industry’s best at transforming customer experiences, one brand at a time."
+
+{% include video.html id="Zqdm33TWr0E" %}
+
 
 Treasure Data supports the Braze platform by allowing you to write job results from Treasure Data directly to Braze.  What can you do with this Integration?
 * Map external ids: For example, you can map ids from your CRM system to the Braze user account. 
@@ -33,6 +37,8 @@ An account and Basic Knowledge of Treasure Data.
 
 ## Export Integration
 
+For more detail, check out the document on [Treasure Data Product Documentation][5]
+
 ### Step 1: Obtain Rest API Key in Braze
 
 See the list of scopes in the Requirements section
@@ -44,8 +50,9 @@ n Treasure Data, you must create and configure the data connection before runnin
 1. Navigate to Integrations Hub > Catalog.
 1. Search for and select Braze.
 1. Type the credentials to authenticate.
-
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+![Treasure Data Authentication Dialog][2]
+1. Type a name for your connection.
+1. Select Done.
 
 ### Step 3: Define your Query
 1. Complete the instructions in Step 2
@@ -64,6 +71,7 @@ You have the option to put images in your documentation, so we recommend you do 
 ## Customization
 
 The export results parameters are described in the table following the image.
+![Export Configuration Dialog][3]
 
 | Parameter | Values | Description |
 |---|---|---|
@@ -77,4 +85,8 @@ The export results parameters are described in the table following the image.
 
 You can synchronize your consolidated customer profiles from Treasure Data into Braze to build the target segment. Treasure Data supports 1st party cookie data, Mobile IDs, third party system like your CRM, and many more.
 
-[1]: https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration
+[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[2]: {% image_buster /assets/img/treasure_data/braze_authentication.png %}
+[3]: {% image_buster /assets/img/treasure_data/braze_export_configuration.png %}
+[4]: https://www.treasuredata.com/
+[5]: https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration
