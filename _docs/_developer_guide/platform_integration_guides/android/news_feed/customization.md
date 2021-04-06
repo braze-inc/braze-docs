@@ -147,5 +147,5 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
+[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
