@@ -14,7 +14,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 {% endalert %}
 
 If given a pre-exisiting custom endpoint by Braze...
-- Starting with Braze iOS SDK v3.0.2, you can set a custom secure endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+- Starting with Braze iOS SDK v3.0.2, you can set a custom secure endpoint using the `Info.plist` file. Add the `Braze` dictionary to your Info.plist file. Inside the `Braze` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint url’s authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`). Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ## Runtime Endpoint Configuration
 
