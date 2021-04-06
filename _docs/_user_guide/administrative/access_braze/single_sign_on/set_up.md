@@ -58,7 +58,7 @@ Please make sure that your certificate follows this format when adding it to the
 
 When you save your Security Settings and log out, you should now be able to sign in with your IdP.
 
-![Login Page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%"}
+![Login Page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
 ## Create and Enable a Braze API Key for IdP Login (Optional)
 
