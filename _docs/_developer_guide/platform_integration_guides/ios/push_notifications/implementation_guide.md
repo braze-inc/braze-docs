@@ -178,7 +178,7 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 ### Logging with the Braze API
 
-Logging analytics with the Braze API can be done by sending down the `braze_id` value in the Key-Value Pairs field (as seen in the screenshot above) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot above) to identify which user profile to update.
 
 ### Logging Manually 
 
