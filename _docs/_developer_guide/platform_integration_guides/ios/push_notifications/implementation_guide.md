@@ -178,7 +178,7 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 ### Logging with the Braze API
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. If you would like to log analytics with the API, it requires the `userId` parameter, which cannot be queried from Braze SDK.
+Logging analytics with the Braze API can be done by sending down the `braze_id` value in the Key-Value Pairs field (as seen in the screenshot above) to identify which user profile to update.
 
 ### Logging Manually 
 
@@ -455,7 +455,7 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 
 ##### Saving User Attributes
 
-When saving custom attributes, you can't save a custom object as is, the object must be converted to a `UserAttribute` data object and then initialized with the correct type. Next, store the necessary user attributes. To minimize the amount of looping in this function, the code leverages enums to help identify where the data should be stored without looping through the data unnecessarily.
+When saving user attributes, it is recommended to create a custom object to decipher what type of attribute is being updated (email, first_name, phone_number, etc.). The object should be compatible with being stored/retrieved from UserDefaults. See the `UserAttribute` helper file for one example of how to accomplish this.
 
 1. Initialize an encoded UserAttribute object with the corresponding type
 2. Initialize userDefaults to retrieve and store the event data
