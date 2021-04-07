@@ -89,7 +89,7 @@ func didReceive(_ notification: UNNotification) {
 - (void)didReceiveNotification:(nonnull UNNotification *)notification {
   NSDictionary *userInfo = notification.request.content.userInfo;
    
-  if ([userInfo objectForKey:@"YOUR-KEY-VALUE-PAIR"] && [userInfo objectForKey:@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
+  if (userInfo[@"YOUR-KEY-VALUE-PAIR"] && userInfo[@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
  
   ...
  
