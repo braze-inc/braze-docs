@@ -88,7 +88,7 @@ This feature is available as of the following [SDK versions]({{ site.baseurl }}/
 When this feature is enabled, the Braze SDK will append the current user's last known JWT to network requests made to Braze Servers.
 
 {% alert note %}
-Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard).
+Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard) within the Braze Dashboard.
 {% endalert %}
 
 {% tabs %}
@@ -213,6 +213,7 @@ These callback methods are a great place to add your own monitoring or error-log
 {% tab Javascript %}
 ```javascript
 appboy.onSdkAuthenticationFailure(async (errorEvent) => {
+  // TODO: check if the errorEvent user matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(errorEvent);
   // TODO: optionally log to your error-reporting service
   appboy.setAuthenticationToken(updated_jwt);
@@ -222,6 +223,7 @@ appboy.onSdkAuthenticationFailure(async (errorEvent) => {
 {% tab Java %}
 ```java
 Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+    // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
     // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
@@ -233,9 +235,12 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 [[Appboy sharedInstance] setSdkAuthenticationDelegate:delegate];
 
 // Method to implement in delegate
-- (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)authError {
+- (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
+  // TODO: check if the errorEvent's user matches the currently logged-in user
   NSLog(@"Invalid SDK Authentication signature.");
-  [[Appboy sharedInstance] setSdkAuthenticationSignature:@"signature"];
+  // TODO: optionally log to your error-reporting service
+  NSString *newSignature = getNewSignatureSomehow(errorEvent);
+  [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
 }
 ```
 {% endtab %}
@@ -245,10 +250,12 @@ Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
 func handle(_ authError: ABKSdkAuthenticationError?) {
+        // TODO: check if the errorEvent's user matches the currently logged-in user
         print("Invalid SDK Authentication signature.")
-        Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
+        let newSignature = getNewSignatureSomehow(authError)
+        // TODO: optionally log to your error-reporting service
+        Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
     }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -287,14 +294,14 @@ Should anything go wrong with your integration (i.e. your app is incorrectly pas
 
 In the Dashboard `App Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
 
-![dashboard][8]
-
 | Setting| Description|
 | ------ | ---------- |
 | **Disabled** | Braze will not verify the JWT supplied for a user. (Default Setting)|
 | **Optional** | Braze will verify requests for logged-in users, but will not reject invalid requests. |
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
 {: .reset-td-br-1 .reset-td-br-2}
+
+![dashboard][8]
 
 The "**Optional**" setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
@@ -356,3 +363,4 @@ Instead, we use private Keys so that not even Braze Employees (let alone your Da
 [6]: #enforcement-options
 [7]: #sdk-callback
 [8]: {% image_buster /assets/img/sdk-auth-settings.png %}
+[9]: #error-codes
