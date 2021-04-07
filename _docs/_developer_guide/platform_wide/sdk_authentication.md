@@ -16,7 +16,7 @@ This feature is in _beta_ and only available for Android, Web, and iOS SDKs.
 
 # SDK Authentication
 
-SDK Authentication ensures that no one can impersonate or create Braze users using your SDK API Keys. Braze SDKs, like other client-side libraries, use a public API key to identify your app. To ensure that Braze only trusts requests from authenticated users, this feature allows _you_ to supply Braze with secure, cryptographic proof. After all, your server is the only one who would know whether a user is who they claim to be in your app (using cookies or other persistent session data).
+SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze Dashboard can be configured to reject requests with a missing or invalid JWT signature.
 
 When enabled, this feature will prevent unauthorized requests that use your app's SDK API Key for logged in users, including:
 - Sending custom events, attributes, purchases, and session data
