@@ -149,7 +149,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 {% tab Objective-C %}
 ```objc
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response completionHandler:(void (^)(UNNotificationContentExtensionResponseOption))completion {
-  if ([response.actionIdentifier  isEqual: @"YOUR-REGISTER-IDENTIFIER"]) {
+  if ([response.actionIdentifier isEqualToString:@"YOUR-REGISTER-IDENTIFIER"]) {
     completion(UNNotificationContentExtensionResponseOptionDismiss);
   } else {
     completion(UNNotificationContentExtensionResponseOptionDoNotDismiss);
