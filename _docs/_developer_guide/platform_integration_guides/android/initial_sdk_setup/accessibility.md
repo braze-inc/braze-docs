@@ -11,7 +11,7 @@ The Braze Android SDK follows the [Android Accessibility Guidelines][1].
 
 ## In-App Message Talkback
 
-In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following  SDK configuration:
+In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following SDK configuration:
 
 {% tabs %}
 {% tab braze.xml %}
