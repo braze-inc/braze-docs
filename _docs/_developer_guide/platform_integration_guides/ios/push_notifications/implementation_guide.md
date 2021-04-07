@@ -309,7 +309,7 @@ func logPendingCustomEventsIfNecessary() {
     
   // 2 
     for(NSString* key in event) {
-      if ([key isEqual: @"event_name"]) {
+      if ([key isEqualToString:@"event_name"]) {
   // 3       
         if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
           eventName = [event objectForKey:key];
