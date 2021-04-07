@@ -502,7 +502,7 @@ func saveUserAttribute() {
     [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
   } else {
   // 4 
-    [remoteStorage store:@[ data ] forKey:RemoteStorageKeyPendingUserAttributes];
+    [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
   }
 }
 ```
