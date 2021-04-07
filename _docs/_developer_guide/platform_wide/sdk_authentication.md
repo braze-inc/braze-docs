@@ -353,7 +353,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
 
-Instead, we use private Keys so that not even Braze Employees (let alone your Dashboard users) could discover your private Keys.
+Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to reveal your Private Keys.
 
 [1]: #server-side-integration
 [2]: #sdk-integration
