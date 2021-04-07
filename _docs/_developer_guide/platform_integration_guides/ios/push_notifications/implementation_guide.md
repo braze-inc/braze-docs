@@ -21,20 +21,20 @@ These custom views offer smart ways to engage customers allowing you to display 
 
 ## Use Case and Implementation Walkthrough
 
-There are three push notification content extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how Push notification variables may look and be used in the Braze dashboard:
+There are three push notification content extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
 - [Interactive Push Notification](#interactive-push-notification)
 - [Personalized Push Notifications](#personalized-push-notifications)
 - [Information Capture Push Notifications](#information-capture-push-notification)
 
 ### Interactive Push Notification
 
-Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification and your service. This can be achieved by having your users expand the push notification they receive.
+Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification. This can be achieved by having your users expand the push notification they receive.
 
 ![Push Content Extension][12]{: style="border:0"}
 
 #### Dashboard Configuration
 
-To set up a custom view in the dashboard you must notify Braze you would like to use a custom category, register the category, and then toggle notification buttons on. While notifications buttons aren't directly used, they are required to signal which view to display in the content extension. The pre-registered custom iOS category you provide is then checked against the code. 
+To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the code in the .plist of your Notification Content Extension Target.
 
 {% alert tip %}
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
@@ -43,7 +43,7 @@ Since pushes with content extensions aren't always apparent, it is recommended t
 In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
 
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
-Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled. 
+Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled in the .plist of your Notification Content Extension Target. 
 
 ![Interactive Push Dashboard Example][14]{: style="max-width:50%;"}
 
@@ -54,7 +54,7 @@ Push content extensions are an exciting option for companies to introduce intera
 Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
 ### Personalized Push Notifications
-![Personalized Push Dashboard Example][6]{: style="float:right;max-width:24%;margin-left:15px;border:0"}
+![Personalized Push Dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken.
 
@@ -66,7 +66,7 @@ To set up a personalized push in the dashboard, you must register the specific c
 
 #### Handling Key-Value Pairs
 
-The method below, `didReceive` is called when the content extension has received a notification. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary. This information is then parsed and sent to the push notification.
+The method below, `didReceive` is called when the content extension has received a notification. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
 
 __Parsing Key-Value Pairs from Push Notifications__<br>
 
@@ -176,7 +176,7 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 ## Logging Analytics
 
-### Logging with the Braze API
+### Logging with the Braze API - Recommended
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot above) to identify which user profile to update.
 
