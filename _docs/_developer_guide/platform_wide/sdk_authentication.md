@@ -107,6 +107,8 @@ When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `t
 AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
 Appboy.configure(this, appboyConfigBuilder.build());
+```
+{% endtab %}
 {% tab Objective-C %}
 ```objc
 [Appboy startWithApiKey:@"YOUR-API-KEY"
@@ -155,6 +157,14 @@ Supply the JWT Token when calling `appboy.changeUser`:
 
 ```java
 Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
+```
+
+Or, when you have refreshed the user's token mid-session:
+
+```java
+Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
+```
+{% endtab %}
 {% tab Objective-C %}
 
 Supply the JWT Token when calling `changeUser`:
