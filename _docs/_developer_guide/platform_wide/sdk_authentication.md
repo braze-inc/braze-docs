@@ -29,7 +29,7 @@ When enabled, this feature will prevent unauthorized requests that use your app'
 There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
-2. [SDK Integration][2] - Enable this feature in the Braze SDK and supply the JWT Token generated from your server.<br><br>
+2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
 3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage App Group" page.<br><br>
 4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze Dashboard on an app-by-app basis.
 
@@ -385,7 +385,7 @@ Once disabled, any pending failed SDK requests will eventually be retried by the
 
 When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
 
-Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to reveal your Private Keys.
+Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to your Private Keys.
 
 [1]: #server-side-integration
 [2]: #sdk-integration
