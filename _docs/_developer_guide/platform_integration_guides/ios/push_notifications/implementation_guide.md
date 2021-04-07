@@ -308,7 +308,7 @@ func logPendingCustomEventsIfNecessary() {
     NSMutableDictionary *properties = [NSMutableDictionary dictionary];
     
   // 2 
-    for(NSString* key in event) {
+    for (NSString* key in event) {
       if ([key isEqualToString:@"event_name"]) {
   // 3       
         if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
