@@ -30,7 +30,7 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 
 ### In-App Message Default z-index
 
-By default, In-App Messages are displayed using `z-index: 1050`. This is configurable using the `iamZIndex` [initialization option][41] in case your website uses higher values which cover the message.
+By default, In-App Messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
 
 **Note**: This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded in order to use this option.
 
@@ -38,7 +38,7 @@ By default, In-App Messages are displayed using `z-index: 1050`. This is configu
 import braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY", {
     baseUrl: "YOUR-API-ENDPOINT",
-    iamZIndex: 9001
+    inAppMessageZIndex: 9001
 });
 ```
 
