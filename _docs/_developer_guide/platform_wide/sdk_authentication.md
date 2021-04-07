@@ -109,6 +109,14 @@ AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
 Appboy.configure(this, appboyConfigBuilder.build());
 ```
 {% endtab %}
+{% tab KOTLIN %}
+When configuring the Appboy instance, call setIsSdkAuthenticationEnabled to true.
+```kotlin
+AppboyConfig.Builder appboyConfigBuilder = AppboyConfig.Builder()
+    .setIsSdkAuthenticationEnabled(true)
+Appboy.configure(this, appboyConfigBuilder.build())
+```
+{% endtab %}
 {% tab Objective-C %}
 ```objc
 [Appboy startWithApiKey:@"YOUR-API-KEY"
@@ -163,6 +171,20 @@ Or, when you have refreshed the user's token mid-session:
 
 ```java
 Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
+```
+{% endtab %}
+{% tab KOTLIN %}
+
+Supply the JWT Token when calling appboy.changeUser:
+
+```kotlin
+Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
+```
+
+Or, when you have refreshed the user's token mid-session:
+
+```kotlin
+Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -228,6 +250,16 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
     // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+    // TODO: check if the errorEvent user matches the currently logged-in user
+    val newToken: String = getNewTokenSomehow(errorEvent)
+    // TODO: optionally log to your error-reporting service
+    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
+})
 ```
 {% endtab %}
 {% tab Objective-C %}
