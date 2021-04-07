@@ -40,7 +40,7 @@ To set up a custom view in the dashboard you must toggle on notification buttons
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
 {% endalert %}
 
-In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
+In the content extension's _Info.plist_ file, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
 
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
 Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled in the .plist of your Notification Content Extension Target. 
