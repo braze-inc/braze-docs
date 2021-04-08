@@ -35,7 +35,7 @@ You can manage user permissions by group or on an individual basis using the Use
 |Send Campaigns, Canvases| Allows user to edit, archive, stop, duplicate campaigns and canvases, create campaigns, launch canvases.<br><br>__Note: Users must have "Access Campaigns, Canvases, Cards, Segments, Media Library" permissions checked to have this permission work as intended.__ |
 |Publish Cards| Allows user to create and edit news feed cards. (You can still view cards without this permission).|
 |Edit Segments| Allows users to create and edit segment. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
-|Export User Data| Allows user to export your user data from Segments.|
+|Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
 |View PII | Allows user to view personally identifiable information within the dashboard. Note that both email addresses and phone number will be visable. |
 |View User Profile| Allows user to access User Search page.|
 |Manage Dashboard Users| Allows user to view, edit and manage the Manage Users tab. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level.|
