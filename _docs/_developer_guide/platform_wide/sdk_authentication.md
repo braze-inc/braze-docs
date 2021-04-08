@@ -118,6 +118,8 @@ Appboy.configure(this, appboyConfigBuilder.build())
 ```
 {% endtab %}
 {% tab Objective-C %}
+Set the `ABKEnableSDKAuthenticationKey` option set to `@YES`. Alternatively, this can be added to your `plist` options using `EnableSDKAuthentication`.
+
 ```objc
 [Appboy startWithApiKey:@"YOUR-API-KEY"
             inApplication:application
@@ -126,6 +128,8 @@ Appboy.configure(this, appboyConfigBuilder.build())
 ```
 {% endtab %}
 {% tab Swift %}
+Set the `ABKEnableSDKAuthenticationKey` option set to `@YES`. Alternatively, this can be added to your `plist` options using `EnableSDKAuthentication`.
+
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
