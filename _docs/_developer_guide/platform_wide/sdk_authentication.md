@@ -118,7 +118,9 @@ Appboy.configure(this, appboyConfigBuilder.build())
 ```
 {% endtab %}
 {% tab Objective-C %}
-Set the `ABKEnableSDKAuthenticationKey` option set to `@YES`. Alternatively, this can be added to your `plist` options using `EnableSDKAuthentication`.
+To enable SDK Authentication, add the key `EnableSDKAuthentication` to the `Braze` dictionary in your `.plist` file and set it to true.
+
+Alternatively, you can enable SDK Authentication when initializing the SDK:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API-KEY"
