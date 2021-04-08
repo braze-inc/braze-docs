@@ -281,10 +281,10 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braz
 Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
-func handle(_ authError: ABKSdkAuthenticationError?) {
+func handle(_ errorEvent: ABKSdkAuthenticationError?) {
         // TODO: check if the errorEvent's user matches the currently logged-in user
         print("Invalid SDK Authentication signature.")
-        let newSignature = getNewSignatureSomehow(authError)
+        let newSignature = getNewSignatureSomehow(errorEvent)
         // TODO: optionally log to your error-reporting service
         Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
     }
