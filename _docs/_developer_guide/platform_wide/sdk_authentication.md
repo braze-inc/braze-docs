@@ -110,7 +110,7 @@ Appboy.configure(this, appboyConfigBuilder.build());
 ```
 {% endtab %}
 {% tab KOTLIN %}
-When configuring the Appboy instance, call setIsSdkAuthenticationEnabled to true.
+When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
 ```kotlin
 AppboyConfig.Builder appboyConfigBuilder = AppboyConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
@@ -183,7 +183,7 @@ Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVE
 {% endtab %}
 {% tab KOTLIN %}
 
-Supply the JWT Token when calling appboy.changeUser:
+Supply the JWT Token when calling `appboy.changeUser`:
 
 ```kotlin
 Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
