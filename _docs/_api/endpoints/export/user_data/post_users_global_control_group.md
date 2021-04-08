@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: User Profile Export by Segment"
-page_order: 4
+nav_title: "POST: User Profile Export by Global Control Group"
+page_order: 6
 
 layout: api_page
 
@@ -11,19 +11,15 @@ tool:
   - Campaigns
   - Segment
 
-description: "This article outlines details about the Users by Segment Braze endpoint."
+description: "This article outlines details about the Users in Gloabl Control Groups Braze endpoint."
 ---
 {% api %}
-# Users by Segment Endpoint
+# Users by Global Control Group
 {% apimethod post %}
-/users/export/segment
+/users/export/global_control_group
 {% endapimethod %}
 
-This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
-
-
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20segment%20id%20example {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
+This endpoint allows you to export all the users within the Global Control Group. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
 {% alert important %}
 __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
@@ -67,48 +63,40 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-    "segment_id" : (required, string) identifier for the segment to be exported,
     "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
-    "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases']. Defaults to all if not provided.
+    "fields_to_export" : (required, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases'],
     "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
-The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint]({{site.baseurl}}/api/endpoints/export/get_segment/).
-
 {% alert warning %}
-Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
+Individual custom attributes cannot be exported. However, all custom attributes can be exported by including custom_attributes in the fields_to_export array (e.g. [‘first_name’, ‘email’, ‘custom_attributes’]).
 {% endalert %}
 
 ## Request Parameters
 
 | Key | Requirement | Data Type | Details |
-|---|---|---|---|
-|`segment_id` | Required | String | Identifier for the segment to be exported |
-|`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
-|`fields_to_export` | Optional | Array of Strings  | Name of user data fields to export. You may export custom attributes. Defaults to all if not provided.|
-|`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
+| --- | ----------- | --------- | ------- |
+| `callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available. |
+| `fields_to_export` | Required | Array of Strings | Name of user data fields to export. You may export custom attributes. |
+| `output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as ‘zip’ or ‘gzip’. Defaults to zip file format.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ### Example Request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/export/global_control_group' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-    "segment_id" : "",
     "callback_endpoint" : "",
-    "fields_to_export" : ["field1", "field2", "field3"],
+    "fields_to_export" : ["email", "braze_id"],
     "output_format" : ""
 }'
 ```
 
 ### Fields to Export
 
-The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
+The following is a list of valid fields_to_export. Using fields_to_export to minimize the data returned can improve response time of this API endpoint:
 
 * `apps`
 * `attributed_campaign`
@@ -116,9 +104,6 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `attributed_adgroup`
 * `attributed_ad`
 * `braze_id`
-* `campaigns_received`
-* `canvases_received`
-* `cards_clicked`
 * `country`
 * `created_at`
 * `custom_attributes`
@@ -126,7 +111,6 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `devices`
 * `dob`
 * `email`
-* `email_subscribe`
 * `external_id`
 * `first_name`
 * `gender`
@@ -136,8 +120,6 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `last_name`
 * `phone`
 * `purchases`
-* `push_subscribe`
-* `push_tokens`
 * `random_bucket`
 * `time_zone`
 * `total_revenue`
@@ -188,8 +170,6 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : (string),
     "attributed_adgroup" : (string),
     "attributed_ad" : (string),
-    "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "custom_attributes" : (object) custom attribute key value pairs,
     "custom_events" : [
         {
@@ -223,14 +203,6 @@ User export object (we will include the least data possible - if a field is miss
         },
         ...
     ],
-    "push_tokens" : [
-        {
-            "app" : (string) app name,
-            "platform" : (string),
-            "token" : (string)
-        },
-        ...
-    ],
     "apps" : [
         {
             "name" : (string),
@@ -242,64 +214,7 @@ User export object (we will include the least data possible - if a field is miss
         },
         ...
     ],
-    "campaigns_received" : [
-        {
-            "name" : (string),
-            "last_received" : (string) date,
-            "engaged" : {
-                "opened_email" : (bool),
-                "opened_push" : (bool),
-                "clicked_email" : (bool),
-                "clicked_in_app_message" : (bool)
-            },
-            "converted" : (bool),
-            "api_campaign_id" : (string),
-            "variation_name" : (optional, string) exists only if it is a multivariate campaign,
-            "variation_api_id" : (optional, string) exists only if it is a multivariate campaign,
-            "in_control" : (optional, bool) exists only if it is a multivariate campaign
-        },
-        ...
-    ],
-    "canvases_received": [
-        {
-            "name": (string),
-            "api_canvas_id": (string),
-            "last_received_message": (string) date,
-            "last_entered": (string) date,
-            "variation_name": (string),
-            "in_control": (bool),
-            "last_exited": (string) date,
-            "steps_received": [
-                {
-                    "name": (string),
-                    "api_canvas_step_id": (string),
-                    "last_received": (string) date
-                },
-                {
-                    "name": (string),
-                    "api_canvas_step_id": (string),
-                    "last_received": (string) date
-                },
-                {
-                    "name": (string),
-                    "api_canvas_step_id": (string),
-                    "last_received": (string) date
-                }
-            ]
-        },
-        ...
-    ],
-    "cards_clicked" : [
-        {
-            "name" : (string)
-        },
-        ...
-    ]
 }
 ```
-
-{% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
-{% endalert %}
 
 {% endapi %}
