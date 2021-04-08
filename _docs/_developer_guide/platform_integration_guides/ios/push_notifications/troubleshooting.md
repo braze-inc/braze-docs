@@ -137,7 +137,7 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}
 [26]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [27]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
-[14]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html
+[14]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607
 [2]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-2-enable-push-capabilities
 [30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
