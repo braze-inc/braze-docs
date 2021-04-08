@@ -6,7 +6,7 @@ page_order: 1.5
 hidden: true
 description: "Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys."
 ---
-
+<br>
 {% alert important %}
 This feature is in a closed _Early Access_ period. To request access, please submit your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 {% endalert %}
@@ -65,6 +65,7 @@ Customize the font and accent color of the message using the Color Theme picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
+<!--
 ## Analyzing Results
 
 Analyze results in real-time in your message's analytics report to see how many users selected each choice.
@@ -73,4 +74,5 @@ Analyze results in real-time in your message's analytics report to see how many 
 
 ![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:90%"}
 
- <!-- Retargeting Using Custom Attributes -->
+
+-->
