@@ -21,7 +21,7 @@ channel:
 > On this page, we'll attempt to answer your most stringent questions about SMS!
 
 {% details How will I be billed for SMS? %}
-Besides the charges for Short and Long Codes, billing is done by the number of messages sent per country. 
+Besides the charges for Short and Long Codes, billing is done by the number of message segements sent per country. To read more about how message segmenets are calculated see our [Message Segements and Copy Limits](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
 For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
 {% enddetails %}
@@ -29,7 +29,7 @@ For overages, your account manager will reach out to let you know if you are clo
 {% details How can I avoid overages? %}
 While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
-- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages.
+- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown)
 - Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses UCS-2 encoding,  you can usually estimate that you can send a message with 67 characters per message segment.
 - Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
