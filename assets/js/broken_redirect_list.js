@@ -278,3 +278,5 @@ validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-pre
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
+
