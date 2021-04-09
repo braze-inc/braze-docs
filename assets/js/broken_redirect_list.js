@@ -251,6 +251,7 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] 
 validurls['/docs/developer_guide/rest_api/email_sync/#changing-email-subscription-status'] = '/docs/api/endpoints/email/post_email_subscription_status/#change-users-email-subscription-status';
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
+validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/engagement_tools/testing/global_control_group/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
@@ -276,4 +277,6 @@ validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campa
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
+
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
 
