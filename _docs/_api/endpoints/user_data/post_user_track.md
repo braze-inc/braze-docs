@@ -67,7 +67,7 @@ Note that for each of the request components listed below, one of `external_id`,
 {% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
 <br><br>
-- Updating the subscription status with this endpoint will not only update the user specified by their external_id (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
+- Updating the subscription status with this endpoint will not only update the user-specified by their external_id (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
 ### Example Request Body for Event Tracking
@@ -138,8 +138,8 @@ Successful messages will be met with the following response:
 {
   "message" : "success",
   "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,,
-  "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,,
+  "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
+  "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
 }
 ```
 
@@ -198,9 +198,8 @@ The following status codes and associated error messages will be returned if you
 
 ###  Importing Legacy User Data
 
-You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
 The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
 
 {% endapi %}
-

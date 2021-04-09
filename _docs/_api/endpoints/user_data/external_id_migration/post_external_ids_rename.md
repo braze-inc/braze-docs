@@ -45,7 +45,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Request Parameters
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_id_renames` | Required | Array of external ID rename objects | View request example and the following limitations for structure of external ID rename object |
+| `external_id_renames` | Required | Array of external ID rename objects | View request example and the following limitations for the structure of external ID rename object |
 
 - The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
 - The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
@@ -92,7 +92,7 @@ __Does this impact MAU?__
 - No, since the number of users will stay the same, they’ll just have a new `external_id`.
 
 __Does user behavior change historically?__
-- No, since the user is still the same user, and all their historical behavior is still connected to them.
+- No, since the user is still the same, and all their historical behavior is still connected to them.
 
 __Can it be run on dev/staging app groups?__
 - Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.

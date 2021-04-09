@@ -29,7 +29,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 
 ## Request Parameters
 
-You must provide an `end_date`, as well as either an `email` or a `start_date` .
+You must provide an `end_date`, as well as either an `email` or a `start_date`.
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
@@ -40,7 +40,7 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 | `email` | No * | String | If provided, we will return whether or not the user has hard bounced |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-If your date range has more than `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
+If your date range has more than the `limit` number of hard bounces, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
 ## Example Request
 ```
