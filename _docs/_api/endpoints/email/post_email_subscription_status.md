@@ -39,7 +39,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "email": "example@123.com",
+  "email": "example@braze.com",
   "subscription_state": "subscribed"
 }
 ```
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
+| `email` | Yes | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
 | `subscription_state` | Yes | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -56,9 +56,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/status' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "email": "example@123.com",
+  "email": "example@braze.com",
   "subscription_state": "subscribed"
 }'
 ```

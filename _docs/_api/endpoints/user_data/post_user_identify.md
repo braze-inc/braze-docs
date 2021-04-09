@@ -41,7 +41,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-   "aliases_to_identify" : (required, array of Aliases to Identify Object)
+   "aliases_to_identify" : (required, array of alias to identify objects)
 }
 ```
 
@@ -49,54 +49,33 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
-| `aliases_to_identify` | Yes | Array of Aliases to Identify Objects | See Alias to Identify Object |
+| `aliases_to_identify` | Yes | Array of aliases to identify object | See alias to identify object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
 
 ### Request Components
 - [Alias to Identify Object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
-###  Request Body with Aliases to Identify Object
-
-```json
-
-{
-   "aliases_to_identify" : (required, array of Aliases to Identify Object)
-   [
-     {
-       "external_id" : (required, string) see External User ID below,
-       // external_ids for users that do not exist will return a non-fatal error.
-       // See Server Responses for details.
-       "user_alias" : {
-         "alias_name" : (required, string),
-         "alias_label" : (required, string)
-       }
-     }
-   ]
-}
-```
-
 ### Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "aliases_to_identify" : 
   [
     {
       "external_id": "user_id",
       "user_alias" : {
-          "alias_name" : "user_alias123",
-          "alias_label" : "label"
+          "alias_name" : "example_alias",
+          "alias_label" : "example_label"
       }
     }
   ]
 }'
 ```
 
-For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). You can learn more about the [Alias to Identify Object here]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)
+For more information on `alias_name` and `alias_label`, check out our [user aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).
 
 {% endapi %}
 

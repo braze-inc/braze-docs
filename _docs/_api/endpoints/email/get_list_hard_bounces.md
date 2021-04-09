@@ -44,8 +44,8 @@ If your date range has more than `limit` number of hard bounces, you will need t
 
 ## Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ### Sample Response

@@ -38,16 +38,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_id_renames" : (required, array of external ID Renames Object)
-  [
-    {
-      "current_external_id" : (required, string) existing external ID for the user,
-      "new_external_id" : (required, string) new external ID for the user, must be unique
-    },
-    ...
-  ]
+  "external_id_renames" : (required, array of external ID rename objects)
 }
 ```
+
+### Request Parameters
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `external_id_renames` | Required | Array of external ID rename objects | View request example and the following limitations for structure of external ID rename object |
+
+- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
+- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
+- The `current_external_id` and `new_external_id` cannot be the same
 
 ### Request Example
 ```
@@ -58,17 +60,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
   "external_id_renames" : 
   [
     {
-      "current_external_id": "your_existing_external_id",
-      "new_external_id" : "your_new_external_id"
+      "current_external_id": "existing_external_id",
+      "new_external_id" : "new_external_id"
     }
   ]
 }'
 ```
-{% alert important %}
-- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
-- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
-- The `current_external_id` and `new_external_id` cannot be the same
-{% endalert %}
 
 ## Response Body
 The response will confirm all successful renames, as well as unsuccessful renames with any associated errors. Error messages in the `rename_errors` field will reference the index of the object in the array of the original request.

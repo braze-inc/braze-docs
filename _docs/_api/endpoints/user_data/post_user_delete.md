@@ -40,22 +40,22 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) external ids for the users to delete,
-  "user_aliases" : (optional, array of User Alias objects) User Aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze User Identifiers for the users to delete
+  "external_ids" : (optional, array of string) External ids for the users to delete,
+  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
+  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete
 }
 ```
 ### Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | Optional | Array of Strings | External ids for the users to delete |
-| `user_aliases` | Optional | Array of User Alias Objects | User Aliases for the users to delete |
-| `braze_ids` | Optional | Array of Strings | Braze User Identifiers for the users to delete |
+| `external_ids` | Optional | Array of strings | External identifiers for the users to delete |
+| `user_aliases` | Optional | Array of user alias object | User aliases for the users to delete |
+| `braze_ids` | Optional | Array of strings | Braze user identifiers for the users to delete |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
-- [User Alias Object here]({{site.baseurl}}/api/objects_filters/user_alias_object/)
+- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ### Example Request
 ```

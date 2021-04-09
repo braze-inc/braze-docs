@@ -18,7 +18,7 @@ description: "This article outlines details about the User Track Braze endpoint.
 /users/track
 {% endapimethod %}
 
-Use this endpoint to record Custom events, Purchases, and update user profile attributes.
+Use this endpoint to record custom events, purchases, and update user profile attributes.
 
 User Track has a base speed limit of 50,000 requests per minute for all customers. Each request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Please see our page on API limits for details, and reach out to your Customer Success Manager if you need your limit increased.
 
@@ -40,9 +40,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-   "attributes" : (optional, array of Attributes Object),
-   "events" : (optional, array of Event Object),
-   "purchases" : (optional, array of Purchase Object),
+   "attributes" : (optional, array of attributes object),
+   "events" : (optional, array of event object),
+   "purchases" : (optional, array of purchase object),
 }
 ```
 
@@ -52,9 +52,10 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Optional | Array of Attributes Object | See User Attributes Object |
-| `events` | Optional | Array of Event Object | See Events Objects |
-| `purchases` | Optional | Array of Purchase Object | See Purchase Object |
+| `attributes` | Optional | Array of attributes objects | See user attributes object |
+| `events` | Optional | Array of event objects | See events object |
+| `purchases` | Optional | Array of purchase objects | See purchase object |
+
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -66,7 +67,7 @@ Note that for each of the request components listed below, one of `external_id`,
 {% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
 <br><br>
-- Updating the subscription status with this endpoint will not only update the user specified by their external_id (e.g User 123), but it will also update the subscription status of any users with the same email as that user (User 123).
+- Updating the subscription status with this endpoint will not only update the user specified by their external_id (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
 ### Example Request Body for Event Tracking
@@ -87,28 +88,28 @@ Note that for each of the request components listed below, one of `external_id`,
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "attributes": [ 
-    {
-      "external_id": "user_id",
-      "string_attribute": "sherman",
+  {
+    "external_id":"user_identifier",
+      "string_attribute": "fruit",
       "boolean_attribute_1": true,
       "integer_attribute": 25,
       "array_attribute": ["banana", "apple"]
     }
-  ],
-  "events": [
+    ],
+    "events": [
     {
-      "external_id": "user_id",
+      "external_id": "user_identifier",
       "app_id" : "app_identifier",
       "name": "watched_trailer",
       "time": "2013-07-16T19:20:30+1:00"
     }  
-  ],
+   ],
   "purchases": [
-    {
-      "external_id": "user_id",
+     {
+      "external_id": "user_identifier",
       "app_id": "app_identifier",
       "product_id": "product_name",
       "currency": "USD",
@@ -121,7 +122,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
          "date_property": "2014-02-02T00:00:00Z"
        } 
      }
-  ],
+  ]
 }'
 ```
 
@@ -194,7 +195,6 @@ The following status codes and associated error messages will be returned if you
 | `429 Rate Limited` | Over rate limit. |
 | `5XX` | Internal server error, you should retry with exponential backoff. |
 {: .reset-td-br-1 .reset-td-br-2}
-
 
 ###  Importing Legacy User Data
 

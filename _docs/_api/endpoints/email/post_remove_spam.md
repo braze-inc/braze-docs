@@ -36,7 +36,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "email": "example@123.com"
+  "email": "example@braze.com"
 }
 ```
 
@@ -53,7 +53,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/spam/remove'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "email": "example@xyz.abc"
+  "email": "example@braze.com"
 }'
 ```
 {% endapi %}

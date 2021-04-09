@@ -34,7 +34,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "email": "email@address.com"
+  "email": "example@braze.com"
 }
 ```
 
@@ -49,9 +49,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "email": ["EMAIL_TO_BLACKLIST_1","EMAIL_TO_BLACKLIST_2"]
+  "email": ["blacklist_email1","blacklist_email2"]
 }'
 ```
 

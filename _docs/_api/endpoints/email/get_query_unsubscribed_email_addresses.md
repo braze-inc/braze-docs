@@ -19,7 +19,7 @@ description: "This article outlines the usage of and parameters for using the Ge
 /email/unsubscribes
 {% endapimethod %}
 
-Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
+Use the /email/unsubscribes endpoint to return emails that have unsubscribed during the time period from `start_date` to `end_date`. You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.
 
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/QueryingAllEmailUnsubscribesExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
@@ -46,8 +46,8 @@ If your date range has more than `limit` number of unsubscribes, you will need t
 
 ### Example Request 
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=0&offset=1&sort_direction=desc&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
 ### Sample Response

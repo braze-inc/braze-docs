@@ -42,6 +42,13 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `external_ids` | Required | Array of strings | External identifiers for the users to remove |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ### Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
@@ -50,7 +57,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 --data-raw '{
   "external_ids" : 
     [
-      "your_existing_deprecated_external_id_string",
+      "existing_deprecated_external_id_string",
       ...
     ]
 }'
