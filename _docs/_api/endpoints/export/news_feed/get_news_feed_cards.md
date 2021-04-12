@@ -20,10 +20,6 @@ This endpoint allows you to export a list of News Feed cards, each of which will
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
@@ -39,14 +35,14 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 ### Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/feed/list?page=1&include_archived=true&sort_direction=desc' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "cards" : [

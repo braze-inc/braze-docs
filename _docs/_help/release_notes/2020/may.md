@@ -23,12 +23,12 @@ This example uses the /email/hard_bounces endpoint.
 
 __Before: API Key in Request Body__
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR_REST_API_KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR-REST-API-KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 ```
 __Now: API Key in Header__
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endtab %}
 {% tab POST Request %}

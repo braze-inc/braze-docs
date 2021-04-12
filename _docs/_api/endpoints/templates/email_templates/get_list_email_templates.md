@@ -27,10 +27,6 @@ Use the Template REST APIs to programmatically manage the email templates that y
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/ListEmailTemplates {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
@@ -47,7 +43,7 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 ### Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=0' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Successful Response Properties
@@ -55,7 +51,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ```json
 GET https://YOUR_REST_API_URL/templates/email/list
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "count": number of templates returned
   "templates": [template with the following properties]:

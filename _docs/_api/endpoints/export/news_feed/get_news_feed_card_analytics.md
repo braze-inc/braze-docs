@@ -20,10 +20,6 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameters
 
 | Parameter   | Required | Data Type | Description |
@@ -46,14 +42,14 @@ The `card_id` for a given card can be found in the Developer Console page and on
 ### Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

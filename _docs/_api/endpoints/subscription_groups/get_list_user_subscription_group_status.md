@@ -33,10 +33,6 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/GetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
@@ -66,13 +62,13 @@ https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id=1f3-
 ### Example Request for SMS
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=12345&email=example.email@braze.com&phone=+11112223333' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ### Example Request for Email
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id=1f3-33203-3dd3-d323d3&external_id=1234&email=example.email@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
@@ -81,7 +77,7 @@ All successful responses will return `subscribed`, `unsubscribed`, or `unknown` 
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",

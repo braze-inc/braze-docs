@@ -21,14 +21,14 @@ The Send Transactional Email endpoint allows you to send immediate, ad-hoc messa
 Transactional Email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.
+__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR-REST-API-KEY` within the __Example Request__ below.
 {% endalert %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json

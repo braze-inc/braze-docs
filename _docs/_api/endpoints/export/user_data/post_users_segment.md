@@ -21,13 +21,8 @@ description: "This article outlines details about the Users by Segment Braze end
 
 This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
-
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20segment%20id%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Credentials-Based Response Details
 If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
@@ -62,7 +57,7 @@ Larger user bases will result in longer export times. For example, an app with 2
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -97,7 +92,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
     "segment_id" : "",
     "callback_endpoint" : "",
@@ -148,7 +143,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',

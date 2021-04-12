@@ -20,10 +20,6 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameter
 
 | Parameter     | Required | Data Type | Description             |
@@ -42,14 +38,14 @@ The `campaign_id` for API campaigns can be found on the Developer Console page a
 ### Example Request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 ```
 
 ### Campaign Details Endpoint API Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) date created as ISO 8601 date,
