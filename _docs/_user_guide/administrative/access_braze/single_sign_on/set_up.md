@@ -49,9 +49,9 @@ On this page, you, input:
 
 Please make sure that your certificate follows this format when adding it to the dashboard:
 ```
-----BEGIN CERTIFICATE----
+-----BEGIN CERTIFICATE-----
 <certificate>
-----END CERTIFICATE----
+-----END CERTIFICATE-----
 ```
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
