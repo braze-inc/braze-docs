@@ -21,12 +21,11 @@ description: "This article outlines details about the Users by Segment Braze end
 
 This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
-
 {% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20segment%20id%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+Beginning April 2021, the "fields_to_export" field in this API request will be __required for all new accounts__. The option to default to all field will be removed, and new customers will need to specify the specific fields they'd like to include in their export.
 {% endalert %}
 
 ## Credentials-Based Response Details
@@ -54,7 +53,7 @@ Example ZIP File:
 
 If you do not have S3 credentials provided, the response to the request provides the URL where a zip file containing all the user files can be downloaded. The URL will only become a valid location once the export is ready. Please be aware that if you do not have S3 credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you’re exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using ‘fields_to_export’ and specifying only the fields you need, in order to keep the size of the transfer lower. If you want to export all your users and are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (e.g. create a segment where random bucket number <1000, between 1000 and 2000, etc).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download url as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
@@ -69,8 +68,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
     "segment_id" : (required, string) identifier for the segment to be exported,
     "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
-    "fields_to_export" : (optional, array of string) name of user data fields to export, e.g. ['first_name', 'email', 'purchases']. Defaults to all if not provided.
-    "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
+    "fields_to_export" : (required*, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+    "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
@@ -86,7 +85,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 |---|---|---|---|
 |`segment_id` | Required | String | Identifier for the segment to be exported |
 |`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
-|`fields_to_export` | Optional | Array of Strings  | Name of user data fields to export. You may export custom attributes. Defaults to all if not provided.|
+|`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export. |
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -152,11 +151,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
-    "url" : (optional, string) the url where the segment export data can be downloaded if you do not have your own S3 credentials
+    "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-Once made available, the url will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
 ### Sample User Export File Output
 
