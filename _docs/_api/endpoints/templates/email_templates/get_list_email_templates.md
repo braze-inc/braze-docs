@@ -24,7 +24,6 @@ Use this endpoint to get a list of available templates in your Braze account.
 
 Use the Template REST APIs to programmatically manage the email templates that you have stored on the Braze dashboard, on the Templates & Media page. Braze provides two endpoints for creating and updating your email templates.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/ListEmailTemplates {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
 ## Request Parameters
@@ -37,19 +36,15 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example URL
-`https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=0`
-
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=0' \
+curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=1&offset=0' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Successful Response Properties
 
 ```json
-GET https://YOUR_REST_API_URL/templates/email/list
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {

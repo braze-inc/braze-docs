@@ -17,7 +17,6 @@ description: "This article outlines details about a specified campaign."
 
 This endpoint allows you to export a list of campaigns, each of which will include its name, Campaign API Identifier, whether it is an API Campaign, and Tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
 ## Request Parameters
@@ -27,15 +26,12 @@ This endpoint allows you to export a list of campaigns, each of which will inclu
 | `page` | No | Integer   | The page of campaigns to return, defaults to 0 (returns the first set of up to 100) |
 | `include_archived` | No | Boolean | Whether or not to include archived campaigns, defaults to false |
 | `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
-| `last_edit.time[gt]` | No | Time | Filters the results and only returns campaigns that were edited greater than the time provided till NOW. Format is yyyy-MM-DDTHH:mm:ss |
+| `last_edit.time[gt]` | No | Time | Filters the results and only returns campaigns that were edited greater than the time provided till now. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Example URL
-`https://{{instance_url}}/campaigns/list?page=0&include_archived=false&sort_direction=desc`
 
 ### Example Request 
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/list?page=0&include_archived=false&sort_direction=desc' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/list?page=0&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

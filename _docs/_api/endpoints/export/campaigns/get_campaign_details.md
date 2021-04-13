@@ -15,16 +15,15 @@ description: "This article outlines details about the Campaign Details endpoint.
 /campaigns/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`.
+This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. 
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
 ## Request Parameter
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Yes      | String    | Campaign API Identifier |
+| `campaign_id` | Yes      | String    | Campaign API identifier |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -32,13 +31,10 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 <br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
-### Example Request URL
-`https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
-
 ### Example Request 
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ### Campaign Details Endpoint API Response
@@ -214,6 +210,5 @@ The `conversion_behaviors` array will contain information about each conversion 
 {% alert tip %}
 For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
-
 
 {% endapi %}

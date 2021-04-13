@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
   "user_aliases" : 
   [
     {
-      "external_id": "user_identifier",
+      "external_id": "external_identifier",
       "alias_name" : "example_name",
       "alias_label" : "example_label"
     }

@@ -19,7 +19,6 @@ This endpoint allows you to export a list of Canvases, including the name, Canva
 
 Archived Canvases will not be included in the API response unless the `include_archived` field is specified. Canvases that are stopped but not archived, however, will be returned by default.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
 ## Request Parameters
@@ -34,7 +33,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 ## Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

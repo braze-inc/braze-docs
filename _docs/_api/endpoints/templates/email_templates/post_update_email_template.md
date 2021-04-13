@@ -26,7 +26,6 @@ Use the endpoints below to update email templates on the Braze dashboard. You ca
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/UpdateEmailTemplate {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#680315e8-32d4-4a3d-81b6-0085a91b9cdc {% endapiref %}
 
 ## Request Body
@@ -72,14 +71,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "email_template_id": "ab1cde55-fg47-4h3i-8297-158jk3l2466m",
+  "email_template_id": "email_template_id",
   "template_name": "Weekly Newsletter",
   "subject": "This Week'\''s Styles",
   "body": "Check out this week'\''s digital lookbook to inspire your outfits. Take a look at https://www.braze.com/",
   "plaintext_body": "This is the updated text within my email body and here is a link to https://www.braze.com/.",
   "preheader": "We want you to have the best looks this Summer",
-  "tags": ["Tag1", "Tag2"],
-  "should_inline_css": false
+  "tags": ["Tag1", "Tag2"]
 }'
 ```
 

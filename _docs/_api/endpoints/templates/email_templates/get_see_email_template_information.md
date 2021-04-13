@@ -28,7 +28,6 @@ Use the Template REST APIs to programmatically manage the email templates that y
 Templates built using the Drag & drop editor are not accepted
 {% endalert %}
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/SeeEmailTemplateInformation {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
 ## Request Parameters
@@ -41,19 +40,15 @@ Templates built using the Drag & drop editor are not accepted
 ### Request Components
 - [Template Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example URL
-`https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935`
-
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Successful Response Properties
 
 ```json
-GET https://YOUR_REST_API_URL/templates/email/info
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {

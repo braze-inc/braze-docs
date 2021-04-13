@@ -16,7 +16,6 @@ description: "This article outlines details about the Custom events List Endpoin
 
 This endpoint allows you to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
 ## Request Parameter
@@ -25,9 +24,6 @@ This endpoint allows you to export a list of custom events that have been record
 | -------- | -------- | --------- | ----------- |
 | `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Example URL
-`https://rest.iad-01.braze.com/events/list?page=3`
 
 ### Example Request
 ```

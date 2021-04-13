@@ -26,7 +26,6 @@ Users' email subscription status can be updated and retrieved via Braze using a 
 
 Use the endpoints below to create email templates on the Braze dashboard. These templates will be available on the Templates and Media page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/CreateEmailTemplate {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
 ## Request Body
@@ -72,8 +71,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
   "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
   "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
   "preheader": "My preheader is pretty cool.",
-  "tags": ["Tag1", "Tag2"],
-  "should_inline_css": false
+  "tags": ["Tag1", "Tag2"]
 }'
 ```
 

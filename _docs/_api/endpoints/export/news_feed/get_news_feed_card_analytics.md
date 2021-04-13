@@ -36,12 +36,9 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 <br><br>
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 
-### Example URL
-`https://rest.iad-01.braze.com/feed/data_series?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00`
-
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id={{card_identifier}}&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

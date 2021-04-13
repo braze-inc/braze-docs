@@ -60,9 +60,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "external_ids": ["user_id1", "user_id2"],
+  "external_ids": ["external_identifier1", "external_identifier2"],
   "user_aliases": ["user_alias1", "user_alias2"],
-  "braze_ids": ["braze_id1", "braze_id2"]
+  "braze_ids": ["braze_identifier1", "braze_identifier2"]
 }'
 ```
 

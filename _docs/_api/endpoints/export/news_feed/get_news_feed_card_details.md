@@ -24,7 +24,7 @@ This endpoint allows you to retrieve relevant information on the card, which can
 
 | Parameter | Required | Data Type | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` | Yes      | String    | Card API Identifier    |
+| `card_id` | Yes      | String    | Card API identifier    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -33,12 +33,9 @@ This endpoint allows you to retrieve relevant information on the card, which can
 <br><br>
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).
 
-### Example URL
-`https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
-
 ### Example Request
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/details?card_id={{card_identifier}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

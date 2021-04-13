@@ -25,12 +25,10 @@ Use the endpoints below to list and get the subscription groups of a certain use
 
 If you want to see examples or test this endpoint for __Email Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/GetUsersSubscriptionGroups {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d1c3b617-22f1-47bf-9ee8-499526824470 {% endapiref %}
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/GetUsersSubscriptionGroups {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
 ## Request Parameters
@@ -48,21 +46,18 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-### Example Request
-`https://rest.iad-03.braze.com/subscription/user/status?external_id=12345&email=foo@bar.com&limit=100&offset=1`
-
 ### Example Request for multiple users
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 
 ### Example Request for SMS
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id=123456789&limit=100&offset=0&phone=+11112223334' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ### Example Request for Email
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id=123456789&email=foo@bar.com&limit=100&offset=0' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 

@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
   "aliases_to_identify" : 
   [
     {
-      "external_id": "user_id",
+      "external_id": "external_identifier",
       "user_alias" : {
           "alias_name" : "example_alias",
           "alias_label" : "example_label"

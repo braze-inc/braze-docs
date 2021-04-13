@@ -17,7 +17,6 @@ description: "This article outlines details about and using the Segments List en
 
 This endpoint allows you to export a list of segments, each of which will include its name, Segment API Identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 
 ## Request Parameters
@@ -27,9 +26,6 @@ This endpoint allows you to export a list of segments, each of which will includ
 | `page` | No | Integer   | The page of segments to return, defaults to 0 (returns the first set of up to 100) |
 | `sort_direction` | No | String | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Example URL
-`https://rest.iad-01.braze.com/segments/list?page=1&sort_direction=desc`
 
 ### Example Request
 ```

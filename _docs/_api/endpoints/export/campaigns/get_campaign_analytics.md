@@ -15,16 +15,15 @@ description: "This article outlines details about the Campaign Analytics endpoin
 /campaigns/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of various stats for a campaign over time.
+This endpoint allows you to retrieve a daily series of various stats for a campaign over time. Data returned includes how many messages were sent, opened, clicked, converted, etc., broken down by message channel. 
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20analytics%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Yes | String | Campaign API Identifier |
+| `campaign_id` | Yes | String | Campaign API identifier |
 | `length` | Yes | Integer | Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -34,12 +33,9 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 <br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
-### Example URL
-`https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00`
-
 ### Example Request 
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
@@ -212,6 +208,5 @@ Possible message types are `email`, `in_app_message`, `webhook`, `android_push`,
 {% alert tip %}
 For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
-
 
 {% endapi %}
