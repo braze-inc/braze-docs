@@ -21,7 +21,6 @@ Use this endpoint to trigger API Triggered Canvases, which are created on the Da
 
 This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCanvasExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2806cc2f-1ddf-4b84-a4c2-34aa9a53986c {% endapiref %}
 
 ## Request Body
@@ -33,16 +32,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see Canvas Identifier,
+  "canvas_id": (required, string) see canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
-  "recipients": (optional, Array of Recipient Object),
+  "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
   // Recipient Object will be used
-  "audience": (optional, Connected Audience Object) see Connected Audience,
+  "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
-  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "canvas_entry_properties": (optional, object) personalization key value pairs for the first step for all users in this send; see Trigger Properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
@@ -56,12 +55,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See Canvas Identifier|
-|`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
-|`audience` | Optional | Connected Audience Object | See Connected Audience | 
-|`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `canvas_entry_properties` | Optional | Object | Personalization key value pairs for all users in this send; see Trigger Properties |
-| `schedule` | Required | Schedule Object | See Schedule Object |
+|`canvas_id`|Required|String| See canvas identifier|
+|`send_id` | Optional | String | See send identifier |
+|`recipients` | Optional | Array of recipient objects | See recipients object |
+|`audience` | Optional | Connected audience object | See connected audience |
+|`broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
+| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see trigger properties |
+| `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request Components
@@ -78,10 +78,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "canvas_id": "",
+  "canvas_id": "canvas_identifier",
   "recipients": [{
-    "user_alias": "",
-    "external_user_id": "",
+    "user_alias": "example_alias",
+    "external_user_id": "external_user_identifier",
     "trigger_properties": "",
     "canvas_entry_properties": {}
   }],
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     "at_optimal_time": false
   }
 }
-'
+ '
 ```
 
 {% endapi %}

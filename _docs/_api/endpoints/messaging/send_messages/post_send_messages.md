@@ -22,7 +22,6 @@ This endpoint allows you send your messages using our API. Be sure to include Me
 
 The send endpoint allows you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendMessageImmediatelyExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74fc3f0d-11f1-40f6-93f4-2eacb0ed459a {% endapiref %}
 
 ## Request Body
@@ -104,16 +103,14 @@ You can use these objects in the [request body](#request-body) above.
 ### Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "broadcast": "",
-  "external_user_ids": "",
+  "broadcast": "false",
+  "external_user_ids": "external_user_identifiers",
   "user_aliases": {
-    "alias_name": "",
-    "alias_label": ""
+    "alias_name": "example_name",
+    "alias_label": "example_label"
   },
-  "segment_id": "",
+  "segment_id": "segment_identifier",
   "audience": {
     "AND": [
       {
@@ -161,10 +158,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
       }
     ]
   },
-  "campaign_id": "",
-  "send_id": "",
-  "override_frequency_capping": "",
-  "recipient_subscription_state": "",
+  "campaign_id": "campaign_identifier",
+  "send_id": "send_identifier",
+  "override_frequency_capping": "false",
+  "recipient_subscription_state": "all",
   "messages": {
     "android_push": "(optional, Android Push Object)",
     "apple_push": "(optional, Apple Push Object)",
@@ -175,7 +172,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
     "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
     "windows_universal_push": "(optional, Windows Universal Push Object)"
   }
-}'
+}'\'''
 ```
 
 ## Response Details

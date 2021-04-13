@@ -20,7 +20,6 @@ description: "This article outlines details about the Update Scheduled Messages 
 
 The messages update schedule endpoint accepts updates to either the `schedule` or `messages` parameter or both. Your request must contain at least one of those two keys.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/UpdateScheduledMessageExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
 ## Request Body
@@ -46,8 +45,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`schedule_id`|Required|String| The schedule_id to update (obtained from the response to create schedule)|
-|`schedule` | Optional | Object | See Schedule Object |
-|`messages` | Optional | Object | See Available Message Object |
+|`schedule` | Optional | Object | See schedule object |
+|`messages` | Optional | Object | See available message object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request Components
@@ -72,7 +71,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "schedule_id": "schedule identifier",
+  "schedule_id": "schedule_identifier",
   "schedule": {
     "time": "2017-05-24T20:30:36Z"
    },
@@ -86,10 +85,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
        "alert": "Updated message!"
      },
      "sms": {  
-      	"subscription_group_id": "23894012",
-      	"message_variation_id": "3728490",
-      	"body": "This is my SMS body.",
-      	"app_id": "sdj23-234bd-23bdjask"
+        "subscription_group_id": "subscription_group_identifier",
+        "message_variation_id": "message_variation_identifier",
+        "body": "This is my SMS body.",
+        "app_id": "app_identifier"
       }
   }
 }'

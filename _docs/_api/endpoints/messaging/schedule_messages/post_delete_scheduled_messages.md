@@ -51,7 +51,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "schedule_id": "248762133332"
+  "schedule_id": "schedule_identifier"
 }
 '
 ```

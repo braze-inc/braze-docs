@@ -97,10 +97,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "segment_id" : "",
-    "callback_endpoint" : "",
-    "fields_to_export" : ["field1", "field2", "field3"],
-    "output_format" : ""
+    "segment_id" : "segment_identifier",
+    "callback_endpoint" : "example_endpoint",
+    "fields_to_export" : ["first_name", "email", "purchases"],
+    "output_format" : "zip"
 }'
 ```
 
