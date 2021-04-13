@@ -40,13 +40,15 @@ Templates built using the Drag & drop editor are not accepted
 ### Request Components
 - [Template Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example Request
+## Example Request
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-## Successful Response Properties
+## Response 
 
 ```json
 Content-Type: application/json

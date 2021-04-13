@@ -33,15 +33,17 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 <br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
-### Example Request 
+## Example Request 
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-### Responses
+## Response
 
-#### Multi-Channel Response
+### Multi-Channel Response
 
 ```json
 Content-Type: application/json
@@ -128,7 +130,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### Multivariate Response
+### Multivariate Response
 
 ```json
 Content-Type: application/json

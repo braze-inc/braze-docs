@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (required, array of external IDs to remove)
+  "external_ids" : (required, array of external identifiers to remove)
 }
 ```
 
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `external_ids` | Required | Array of strings | External identifiers for the users to remove |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Example
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \
@@ -62,7 +62,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 Only deprecated IDs can be removed; attempting to remove a primary external ID will result in an error.
 {% endalert %}
 
-## Response Body
+## Response 
 The response will confirm all successful removals, as well as unsuccessful removals with the associated errors. Error messages in the `removal_errors` field will reference the index in the array of the original request.
 
 ```

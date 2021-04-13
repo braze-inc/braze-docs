@@ -34,22 +34,22 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "campaign_id": (required, string) the campaign identifier,
-  "schedule_id": (required, string) the schedule_id to delete (obtained from the response to create schedule)
+  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id`|Required|String| See campaign identifier|
-| `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule) |
+| `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/delete' \
 --header 'Content-Type: application/json' \

@@ -51,13 +51,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`braze_id` | Optional | String | Braze identifier for a particular user |
 |`email_address` | Optional | String | Email address of user |
 |`phone` | Optional | String | Phone number of user |
-|`fields_to_export` | Optional | Array of Strings | Name of user data fields to export. Defaults to all if not provided |
+|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Component
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 }'
 ```
 
-### Fields to Export
+## Fields to Export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -118,7 +118,7 @@ Please be aware that the `/users/export/ids` endpoint will pull together the ent
 
 Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls. Documentation on that endpoint is below.
 
-### Response
+## Response
 
 ```json
 Content-Type: application/json

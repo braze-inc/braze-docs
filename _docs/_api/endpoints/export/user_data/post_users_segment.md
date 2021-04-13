@@ -91,7 +91,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 ### Request Components
 - [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
@@ -104,7 +104,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 }'
 ```
 
-### Fields to Export
+## Fields to Export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -142,7 +142,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-### Response
+## Response
 
 ```json
 Content-Type: application/json
@@ -156,7 +156,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
-### Sample User Export File Output
+## Sample User Export File Output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

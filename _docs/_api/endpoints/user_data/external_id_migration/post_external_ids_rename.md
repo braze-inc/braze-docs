@@ -38,16 +38,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+## Request Parameters
+
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_id_renames` | Required | Array of external ID rename objects | View request example and the following limitations for the structure of external ID rename object |
+| `external_id_renames` | Required | Array of external identifier rename objects | View request example and the following limitations for the structure of the external identifier rename object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 - The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
 - The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
 - The `current_external_id` and `new_external_id` cannot be the same
 
-### Request Example
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/rename' \
 --header 'Content-Type: application/json' \
@@ -63,7 +65,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 }'
 ```
 
-## Response Body
+## Response 
 The response will confirm all successful renames, as well as unsuccessful renames with any associated errors. Error messages in the `rename_errors` field will reference the index of the object in the array of the original request.
 
 ```

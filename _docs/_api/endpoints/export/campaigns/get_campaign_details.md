@@ -31,11 +31,15 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 <br><br>
 The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
-### Example Request 
+## Example Request 
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
+
+## Responses
 
 ### Campaign Details Endpoint API Response
 
@@ -66,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### Messages
+### Messages
 
 The `messages` response will contain information about each message. Example message responses for channels are below:
 
-##### Push Channels
+#### Push Channels
 
 ```json
 {
@@ -80,7 +84,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Email Channel
+#### Email Channel
 
 ```json
 {
@@ -94,7 +98,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Content Card Channel
+#### Content Card Channel
 
 ```json
 {
@@ -104,7 +108,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Webhook Channel
+#### Webhook Channel
 
 ```json
 {
@@ -117,7 +121,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### SMS Channel
+#### SMS Channel
 
 ```json
 {
@@ -128,7 +132,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Control Messages
+#### Control Messages
 
 ```json
 {
@@ -137,11 +141,11 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Conversion Behaviors
+### Conversion Behaviors
 
 The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. Example conversion event behavior responses for are below:
 
-##### Clicks Email
+#### Clicks Email
 
 ```json
 {
@@ -150,7 +154,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Opens Email
+#### Opens Email
 
 ```json
 {
@@ -159,7 +163,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Makes Purchase (any purchase)
+#### Makes Purchase (any purchase)
 
 ```json
 {
@@ -168,7 +172,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Makes Purchase (specific product)
+#### Makes Purchase (specific product)
 
 ```json
 {
@@ -178,7 +182,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Performs Custom Event
+#### Performs Custom Event
 
 ```json
 {
@@ -188,7 +192,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Upgrades App
+#### Upgrades App
 
 ```json
 {
@@ -198,7 +202,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Uses App
+#### Uses App
 
 ```json
 {

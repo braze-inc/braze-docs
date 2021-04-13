@@ -24,7 +24,7 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 | Parameter   | Required | Data Type | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id`   | Yes      | String    | Card API Identifier |
+| `card_id`   | Yes      | String    | Card API identifier |
 | `length`    | Yes      | Integer   | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
 | `unit`      | No       | String   | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
 | `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
@@ -36,11 +36,13 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 <br><br>
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 
-### Example Request
+## Example Request
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/data_series?card_id={{card_identifier}}&length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 

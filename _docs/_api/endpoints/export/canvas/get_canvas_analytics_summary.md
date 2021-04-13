@@ -23,9 +23,9 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Yes | String | Canvas API Identifier |
+| `canvas_id` | Yes | String | Canvas API identifier |
 | `ending_at` | Yes | DateTime (ISO 8601 string) | Date on which the data export should end - defaults to time of the request |
-| `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or starting_at required) |
+| `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or `starting_at` required) |
 | `length` | No | String | Max number of days before ending_at to include in the returned series - must be between 1 and 14 inclusive (either length or starting_at required) |
 | `include_variant_breakdown` | No | Boolean | Whether or not to include variant stats (defaults to false)  |
 | `include_step_breakdown`    | No | Boolean | Whether or not to include step stats (defaults to false) |
@@ -36,10 +36,12 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 

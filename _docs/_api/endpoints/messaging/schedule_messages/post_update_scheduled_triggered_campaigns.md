@@ -35,27 +35,27 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "campaign_id": (required, string) see campaign identifier,
-  "schedule_id": (required, string) the schedule_id to update (obtained from the response to create schedule),
+  "schedule_id": (required, string) the `schedule_id` to update (obtained from the response to create schedule),
   "schedule": {
     // required, see create schedule documentation
   }
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Required|String| See campaign identifier|
-|`schedule_id`| Optional | String | The schedule_id to update (obtained from the response to create schedule) |
+|`schedule_id`| Optional | String | The `schedule_id` to update (obtained from the response to create schedule) |
 |`schedule` | Required | Object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update' \
 --header 'Content-Type: application/json' \

@@ -53,7 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 <br><br>
 For more information on `alias_name` and `alias_label`, check out our [User Aliases documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
-###  Endpoint Request Body with New User Alias Object Specification
+### Endpoint Request Body with New User Alias Object Specification
 
 ```json
 {

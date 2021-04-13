@@ -36,9 +36,9 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `subscription_group_id`  | Yes | String | The `id` of your subscription group. |
-| `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). When both an external_id and email/phone are submitted, only the external_id(s) provided will be applied to the result query. |
+| `external_id`  |  Yes* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query. |
 | `email` | Yes* | String | The email address of the user. It can be passed as an array of string with a max of 50. Submitting both an email address and phone number (with no external_id) will result in an error |
-| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`. Submitting both an email address and phone number (with no external_id) will result in an error|
+| `phone` | No* | String | The phone number of the user. You must include _at least one_ phone number (if email is not included) and _at most 50 phone numbers_. The recommendation is to provide this in the `E.164 format`. Submitting both an email address and phone number (with no `external_id`) will result in an error|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 - One of `external_id` or `email` or `phone` is required for each user.
@@ -46,22 +46,28 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 - For EMAIL subscription groups, either `external_id` or `email` is required.  When both are submitted, only the external_id is used for the query and the email address is applied to that user.
 - Your request must include `phone` or `email` value, _but not both_
 
-### Example Request for multiple users
+## Example Request for multiple users
+{% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
+{% endraw %}
 
-### Example Request for SMS
+## Example Request for SMS
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-### Example Request for Email
+## Example Request for Email
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 

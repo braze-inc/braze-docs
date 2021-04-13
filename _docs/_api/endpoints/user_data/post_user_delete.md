@@ -66,7 +66,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 }'
 ```
 
-### Response
+## Response
 
 ```json
 Content-Type: application/json

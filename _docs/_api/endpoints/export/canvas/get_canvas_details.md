@@ -30,10 +30,12 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id={{canvas_identifier}}' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 

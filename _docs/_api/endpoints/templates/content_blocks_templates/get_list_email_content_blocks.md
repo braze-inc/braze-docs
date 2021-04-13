@@ -34,13 +34,13 @@ This endpoint will list you existing [Content Blocks]({{site.baseurl}}/user_guid
 | `offset`  |  No | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-### Successful Response Properties
+## Response
 
 ```json
 Content-Type: application/json

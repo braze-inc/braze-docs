@@ -29,17 +29,19 @@ This endpoint will call information for your existing [Email Content Blocks]({{s
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`  | Yes | String | The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.|
-| `include_inclusion_data`  | No | Boolean | When set to 'true', the API returns back the Message Variation API ID of Campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted Campaigns or Canvases. |
+| `content_block_id`  | Yes | String | The content block identifier. This can be found by either listing content block information through an API call or going to the Developer Console, then API settings, then scrolling to the bottom and searching for your content block API identifier.|
+| `include_inclusion_data`  | No | Boolean | When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this content block is included, to be used in subsequent calls.  The results exclude archived or deleted campaigns or Canvases. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/info?content_block_id={{content_block_id}}&include_inclusion_data=No' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-### Successful Response Properties
+## Response
 
 ```json
 Content-Type: application/json
@@ -59,7 +61,7 @@ Authorization: Bearer YOUR-API-KEY-HERE
 }
 ```
 
-## Possible Errors
+### Possible Errors
 - `Content Block ID cannot be blank.` - A Content Block has not been listed or is not encapsulated in quotes.
 
 - `Content Block ID is invalid for this App Group.` - This Content Block does not exist or is in a different company account or app group.

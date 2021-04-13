@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
-   "external_id": (required*, string) the external_id of the user,
+   "external_id": (required*, string) the `external_id` of the user,
    "email": (required*, array of string) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
    // Endpoint only accepts email or phone value, not both
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -68,7 +68,7 @@ This property should not be used for updating a user's profile information. Plea
 | `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Requests Email
+## Example Requests Email
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -82,7 +82,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### Example Requests SMS
+## Example Requests SMS
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -96,7 +96,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### Example Successful Response
+## Example Successful Response
 
 Response: (status 201)
 

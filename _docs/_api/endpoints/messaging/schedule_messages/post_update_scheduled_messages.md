@@ -31,7 +31,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "schedule_id": (required, string) the schedule_id to update (obtained from the response to create schedule),
+  "schedule_id": (required, string) the `schedule_id` to update (obtained from the response to create schedule),
   "schedule": {
     // optional, see create schedule documentation
   },
@@ -40,16 +40,16 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`schedule_id`|Required|String| The schedule_id to update (obtained from the response to create schedule)|
+|`schedule_id`|Required|String| The `schedule_id` to update (obtained from the response to create schedule)|
 |`schedule` | Optional | Object | See schedule object |
 |`messages` | Optional | Object | See available message object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ### Available Messaging Objects
@@ -65,7 +65,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-### Request Example
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update' \
 --header 'Content-Type: application/json' \

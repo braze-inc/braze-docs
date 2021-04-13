@@ -25,7 +25,7 @@ This endpoint allows you to export a list of custom events that have been record
 | `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

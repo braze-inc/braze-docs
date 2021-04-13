@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key value pairs for the first step for all users in this send; see Trigger Properties,
+  "canvas_entry_properties": (optional, object) personalization key value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/create' \
 --header 'Content-Type: application/json' \

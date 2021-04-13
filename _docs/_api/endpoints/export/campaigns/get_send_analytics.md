@@ -30,8 +30,8 @@ Campaign conversions will be attributed towards the most recent send id that a g
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | Yes | String | Campaign API Identifier. |
-| `send_id` | Yes | String | Send API Identifier. |
+| `campaign_id` | Yes | String | Campaign API identifier. |
+| `send_id` | Yes | String | Send API identifier. |
 | `length` | Yes | Integer | Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 inclusive. |
 | `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -41,12 +41,15 @@ Campaign conversions will be attributed towards the most recent send id that a g
 <br><br>
 The `send_id` is only generated for API campaign sends targeting segments, connected audiences or broadcasts. When relevant, the `send_id` is included in response for the `messages/send`, `messages/schedule`, `campaign/trigger/send` and campaign/trigger/schedule endpoints.
 
-### Example Request 
+## Example Request 
+{% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id={{campaign_identifier}}&send_id={{send_identifier}}&length=30&ending_at=2014-12-10T23:59:59-05:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
+## Response
 ### Send Analytics Endpoint API Response
 
 ```json

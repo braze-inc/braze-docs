@@ -38,7 +38,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \

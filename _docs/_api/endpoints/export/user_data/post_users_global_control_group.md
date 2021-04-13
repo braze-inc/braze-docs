@@ -78,7 +78,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 | `output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as ‘zip’ or ‘gzip’. Defaults to zip file format.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/global_control_group' \
 --header 'Content-Type: application/json' \
@@ -86,11 +86,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 --data-raw '{
     "callback_endpoint" : "",
     "fields_to_export" : ["email", "braze_id"],
-    "output_format" : ""
+    "output_format" : "zip"
 }'
 ```
 
-### Fields to Export
+## Fields to Export
 
 The following is a list of valid fields_to_export. Using fields_to_export to minimize the data returned can improve response time of this API endpoint:
 
@@ -122,7 +122,7 @@ The following is a list of valid fields_to_export. Using fields_to_export to min
 * `uninstalled_at`
 * `user_aliases`
 
-### Response
+## Response
 
 ```json
 Content-Type: application/json

@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
  }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -57,10 +57,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`plaintext_body`|Optional|String|A plaintext version of the email template body|
 |`preheader`|Optional|String|The email preheader used to generate previews in some clients|
 |`tags`|Optional|String|Tags must already exist|
-|`should_inline_css`|Optional|Boolean|Enables or disables the 'inline_css' feature per template.  If  not provided, Braze will use the default setting for the AppGroup.  One of 'true' or 'false' is expected|
+|`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template.  If  not provided, Braze will use the default setting for the AppGroup.  One of `true` or `false` is expected|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
@@ -75,7 +75,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 }'
 ```
 
-### Possible Errors
+## Possible Errors
 - `Template Name is required`
 
 - `Tags must be an array.`

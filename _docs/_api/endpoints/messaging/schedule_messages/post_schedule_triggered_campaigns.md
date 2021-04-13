@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \

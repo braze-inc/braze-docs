@@ -36,13 +36,13 @@ Use the Template REST APIs to programmatically manage the email templates that y
 | `offset` |  No | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=1&offset=0' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Successful Response Properties
+## Response 
 
 ```json
 Content-Type: application/json
@@ -60,5 +60,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert important %}
-Templates built using the Drag & drop editor are not provided in this response
+Templates built using the Drag & drop editor are not provided in this response.
 {% endalert %}

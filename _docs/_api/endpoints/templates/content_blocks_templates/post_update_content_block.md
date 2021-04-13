@@ -33,28 +33,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "content_block_id" : (required, string) Your Content Block's API Identifier.
+  "content_block_id" : (required, string) Content block's API identifier.
   "name": (required, string) Must be less than 100 characters,
   "description": (optional, string) The description of the content block. Must be less than 250 character,
-  "content": (required, string) HTML or text content within Content Block,
-  "state": (optional, string) Choose "active" or "draft". Defaults to `active` if not specified,
+  "content": (required, string) HTML or text content within content block,
+  "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
   "tags": (optional, array of strings) Tags must already exist
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `content_block_id`|	Yes |	String | Your Content Block's API Identifier.|
+| `content_block_id`|	Yes |	String | Your content block's API identifier.|
 | `name` | Yes | String | Must be less than 100 characters. |
 | `description` | No | String | The description of the content block. Must be less than 250 characters. |
-| `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | String | Choose "active" or "draft". Defaults to "active" if not specified. |
+| `content` | Yes | String | HTML or text content within content blocks.
+| `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
 | `tags` | No | Array of strings | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
@@ -69,7 +69,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 }'
 ```
 
-### Successful Response Properties
+## Response
 
 ```json
 Content-Type: application/json

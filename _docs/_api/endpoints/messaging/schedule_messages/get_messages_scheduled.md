@@ -1,6 +1,6 @@
 ---
 nav_title: "GET: List Upcoming Scheduled Campaigns and Canvases"
-page_order: 4
+page_order: 0
 
 layout: api_page
 
@@ -29,7 +29,7 @@ You can view a JSON list of upcoming and scheduled Campaigns and Canvases using 
 | `end_time` | Yes | String in ISO 8601 format | End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

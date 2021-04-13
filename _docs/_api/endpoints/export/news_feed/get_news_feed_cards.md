@@ -26,10 +26,10 @@ This endpoint allows you to export a list of News Feed cards, each of which will
 | --------- | -------- | --------- | ----------- |
 | `page` | No | Integer   | The page of cards to return, defaults to 0 (returns the first set of up to 100) |
 | `include_archived` | No | Boolean   | Whether or not to include archived cards, defaults to false |
-| `sort_direction`   | No | String    | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest. |
+| `sort_direction`   | No | String    | Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/feed/list?page=1&include_archived=true&sort_direction=desc' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

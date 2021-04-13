@@ -38,8 +38,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   // Including 'external_user_ids' and/or 'user_aliases' will send to those users
   // Including both a Segment and users will send to the provided users if they are in the segment
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if users are not specified,
-  "external_user_ids": (optional, array of strings) see External User ID,
-  "user_aliases": (optional, array of user alias object) see User Alias,
+  "external_user_ids": (optional, array of strings) see external user identifier,
+  "user_aliases": (optional, array of user alias object) see user alias,
   "audience": (optional, connected audience object) see connected audience,
   "segment_id": (optional, string) see segment identifier,
   "campaign_id": (optional, string) see campaign identifier,
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -106,7 +106,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --data-raw '{

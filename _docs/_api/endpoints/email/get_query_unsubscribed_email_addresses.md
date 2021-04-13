@@ -21,7 +21,6 @@ description: "This article outlines the usage of and parameters for using the Ge
 
 Use the /email/unsubscribes endpoint to return emails that have unsubscribed during the time period from `start_date` to `end_date`. You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Sync/QueryingAllEmailUnsubscribesExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
 ## Request Parameters
@@ -40,13 +39,13 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-### Example Request 
+## Example Request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 
-### Sample Response
+## Response
 
 Entries are listed in descending order.
 
@@ -56,15 +55,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
-      "email": "foo@braze.com",
+      "email": "example1@braze.com",
       "unsubscribed_at": "2016-08-25 15:24:32 +0000"
     },
     {
-      "email": "bar@braze.com",
+      "email": "example2@braze.com",
       "unsubscribed_at": "2016-08-24 17:41:58 +0000"
     },
     {
-      "email": "baz@braze.com",
+      "email": "example3@braze.com",
       "unsubscribed_at": "2016-08-24 12:01:13 +0000"
     }
   ],
