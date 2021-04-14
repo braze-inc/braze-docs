@@ -25,23 +25,17 @@ Use the endpoints below to batch update the subscription state of up to 50 users
 
 If you want to see examples or test this endpoint for __Email Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -61,7 +55,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 \* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
 \* Email subscription groups: Either `email` or `external_id` is required. 
 
-### Request Parameters
+This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
+
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -72,59 +68,35 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone` | Yes* | String in E.164 format | Tags must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-#### Using Email
-```json
-{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
-  "subscription_state": "unsubscribed",
-  "email": "your.user@email.com",
-}
-
-```
-
-This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
-
-#### Using Phone Number
-```json
-{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
-  "subscription_state": "unsubscribed",
-  "phone": "+12223334444",
-}
-
-```
-
-This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
-
-### Example Requests Email
+## Example Requests Email
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "user123",
-  "email": ["your.user@email.com", "your.user2@email.com"]
+  "external_id": "example-user",
+  "email": ["example1@email.com", "example2@email.com"]
 }
 '
 ```
 
-### Example Requests SMS
+## Example Requests SMS
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "user123",
-  "phone": ["+12223334444", "+13334445555"]
+  "external_id": "external_identifier",
+  "phone": ["+12223334444", "+11112223333"]
 }
 '
 ```
 
-### Example Successful Response
+## Example Successful Response
 
 Response: (status 201)
 

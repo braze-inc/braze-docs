@@ -161,7 +161,7 @@ API Triggered Delivery allows you to house message content inside of the Braze d
 ```
 POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "campaign_id": (required, string) see Campaign Identifier,
   "send_id": (optional, string) see Send Identifier,
@@ -186,7 +186,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 POST https://YOUR_REST_API_URL/canvas/trigger/send
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvas_id": (required, string) see Canvas Identifier,
   "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
@@ -230,7 +230,7 @@ This endpoint can be used to record custom events, user attributes, and purchase
 ```
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
    "attributes" : (optional, array of Attributes Object),
    "events" : (optional, array of Event Object),
