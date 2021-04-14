@@ -24,4 +24,6 @@ valid_partner_list:
     url: /docs/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/
   - name: Playable
     url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
+  - name: Phrasee
+    url: /docs/partners/channel_extensions/creative_and_personalization/language_optimization/phrasee/
 ---
