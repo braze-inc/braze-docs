@@ -15,7 +15,7 @@ You can now [blacklist]({{site.baseurl}}/api/endpoints/email/post_blacklist/) em
 
 As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys should be passed in as a request header. Examples can be found on individual endpoint pages under __Example Request__, as well as in the __API Key Explanation__ below.
 
-Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset (TBD). __Please update your API calls accordingly.__ These changes have been updated within [Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) and will soon be input into the Braze [Swagger UI](https://www.braze.com/docs/api/interactive). 
+Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset (TBD). __Please update your API calls accordingly.__ These changes have been updated within [Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro).
 {% details API Key Explanation %}
 {% tabs %}
 {% tab GET Request %}

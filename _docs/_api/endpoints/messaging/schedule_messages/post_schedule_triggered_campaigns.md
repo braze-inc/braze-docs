@@ -21,7 +21,7 @@ Use this endpoint to trigger API Triggered Campaigns, which are created on the D
 
 This endpoint allows you to send Campaign messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2608e4a6-24eb-4d24-88b2-86382e62d6dc {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
 ## Request Body
 

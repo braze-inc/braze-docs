@@ -26,7 +26,7 @@ Use the endpoints below to update email templates on the Braze dashboard. You ca
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#680315e8-32d4-4a3d-81b6-0085a91b9cdc {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
 ## Request Body
 

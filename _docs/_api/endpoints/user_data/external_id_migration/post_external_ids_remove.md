@@ -25,6 +25,8 @@ You can send up to 50 external IDs per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
+
 ## Request Body
 
 ```

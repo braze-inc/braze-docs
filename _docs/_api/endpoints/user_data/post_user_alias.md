@@ -63,7 +63,7 @@ For more information on `alias_name` and `alias_label`, check out our [User Alia
 }
 ```
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \

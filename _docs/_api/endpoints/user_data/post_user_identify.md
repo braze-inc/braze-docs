@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - [Alias to Identify Object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)
 - [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
-### Request Example
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
