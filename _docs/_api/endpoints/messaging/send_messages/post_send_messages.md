@@ -83,6 +83,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
 

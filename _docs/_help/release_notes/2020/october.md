@@ -19,6 +19,9 @@ The Android 11 guide describes relevant changes introduced in the Android 11 rel
 ## Attribution Partners - Click Tracking Guide
 Optional attribution partner click tracking documentation has now been added to each attribution partner page, this includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your [attribution partner]({{site.baseurl}}/partners/advertising_technologies/attribution/) page to read more. 
 
+## User Delete Updates
+Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2).
+
 ## New Description Field
 Users can now add descriptions to campaigns and Canvases! This new field can be found right under the campaign or Canvas name field when creating or editing an existing campaign or Canvas. 
 

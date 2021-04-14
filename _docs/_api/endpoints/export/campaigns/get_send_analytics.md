@@ -38,8 +38,7 @@ Campaign conversions will be attributed towards the most recent send id that a g
 
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `send_id` is only generated for API campaign sends targeting segments, connected audiences or broadcasts. When relevant, the `send_id` is included in response for the `messages/send`, `messages/schedule`, `campaign/trigger/send` and campaign/trigger/schedule endpoints.
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request 
 {% raw %}

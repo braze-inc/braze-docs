@@ -18,7 +18,7 @@ This endpoint allows you to export a list of custom events that have been record
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## Request Parameter
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |

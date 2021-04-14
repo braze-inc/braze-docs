@@ -63,7 +63,7 @@ You can use these objects in the [request body](#request-body) above.
 - [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
-- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
+- [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_object/)
 
 ## Request Example
 ```

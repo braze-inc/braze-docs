@@ -66,6 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Request Components
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)

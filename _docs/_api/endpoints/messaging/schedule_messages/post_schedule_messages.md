@@ -90,6 +90,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
 

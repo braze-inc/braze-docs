@@ -65,6 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)

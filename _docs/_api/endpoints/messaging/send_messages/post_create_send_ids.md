@@ -48,6 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
 ```
