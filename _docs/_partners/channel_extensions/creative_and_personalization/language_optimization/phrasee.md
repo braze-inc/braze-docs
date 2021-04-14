@@ -17,12 +17,12 @@ Braze customer engagement develops relationships through multichannel marketing.
 
 ## Requirements
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key. This can be created in the Developer Console -> API Settings -> **Create New API Key with Campaigns permissions**. | You can name this Phrasee App API Key |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][2] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
-| Phrasee Account | Phrasee | Contact Phrasee | Email: [awesome@phrasee.co][3] |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Origin | Description |
+|---|---|---|
+| Braze API Key | Braze | You will need to create a new API Key.<br>This can be created in the Developer Console -> API Settings -> **Create New API Key with Campaigns permissions**. | 
+| Braze REST Endpoint | Braze | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for [your instance][2]. |
+| Phrasee Account | Phrasee | Contact [Phrasee][3] to sign up. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Server to Server Integration
 
@@ -105,7 +105,7 @@ Launch your Campaign in Braze and Phrasee has it from here! When your Campaign t
 
 ### Push Campaign
 
-#### Step 1: Setup your Push Campaign in Phrasee to generate the variants of your split test
+#### Step 1: Set up your Push Campaign in Phrasee to generate the variants of your split test
 
 Setup your Phrasee push campaign as you normally would. Once you have approved your variants, you will then be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
