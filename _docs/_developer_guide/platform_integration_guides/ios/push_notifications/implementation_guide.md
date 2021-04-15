@@ -40,15 +40,13 @@ To set up a custom view in the dashboard you must toggle on notification buttons
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
 {% endalert %}
 
-In the content extension's _Info.plist_ file, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
-
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
-Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled in the .plist of your Notification Content Extension Target. 
+In the .plist of your Notification Content Extension, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
 ![Interactive Push Dashboard Example][14]{: style="max-width:50%;"}
 
 #### Other Use Cases
-Push content extensions are an exciting option for companies to introduce interactivity in their promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
+Push content extensions are an exciting option to introduce interactivity to your promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
 
 ##### Ready to log analytics? 
 Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
@@ -56,7 +54,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 ### Personalized Push Notifications
 ![Personalized Push Dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
-Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken.
+Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is detailed and user-specific and can be fired off as a session is completed or specific user action is taken. 
 
 #### Dashboard Configuration
 
@@ -129,7 +127,7 @@ To set up an information capture capable push in the dashboard, you must registe
 
 #### Handling Button Actions
 
-Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button. From here, on your backend, you should save this event and attribute, and lastly, dismiss the notification. 
+Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button.
 
 __Handling Push Notification Action Button Responses__<br>
 Push notification action buttons are uniquely identified to handle responses from button presses accordingly.
@@ -139,9 +137,9 @@ Push notification action buttons are uniquely identified to handle responses fro
 ``` swift 
 func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
   if response.actionIdentifier == "YOUR-REGISTER-IDENTIFIER" {
-    completion(.dismiss)
+    // do something
   } else {
-    completion(.doNotDismiss)
+    // do something else
   }
 }
 ```
@@ -190,7 +188,7 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 #### Code Snippets
 
-The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists additional helper files `UserAttributes` and `NSDictionary` that are used when sending and saving user attributes. All helper files can be found below.
+The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `NSDictionary` that are used when sending and saving user attributes. All helper files can be found below.
 
 {% tabs local %}
 {% tab Custom Events %}
@@ -204,7 +202,7 @@ To save custom events you must create the analytics from scratch. This is done b
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func saveCustomEvent(with properties: [String: Any]? = nil) {
@@ -259,7 +257,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 5. Log individual custom event 
 6. Remove all pending events from storage
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func logPendingCustomEventsIfNecessary() {
@@ -345,7 +343,7 @@ To save custom attributes you must create the analytics from scratch. This is do
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func saveCustomAttribute() {
@@ -398,7 +396,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Log individual custom attribute with corresponding key and value
 4. Remove all pending attributes from storage
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func logPendingCustomAttributesIfNecessary() {
@@ -462,7 +460,7 @@ When saving user attributes, it is recommended to create a custom object to deci
 3. If there is an existing array, append new data to the existing array and save
 4. If there is not an existing array, save the new array to userDefaults
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func saveUserAttribute() {
@@ -493,7 +491,7 @@ func saveUserAttribute() {
   NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
 
   if (error != nil) {
-  // log error
+    // log error
   }
   // 2  
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
@@ -521,7 +519,7 @@ After the SDK is initialized is the best time to log any saved analytics from a 
 3. Set specific user field based on the User Attribute type (email)
 4. Remove all pending user attributes from storage
 
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ``` swift 
 func logPendingUserAttributesIfNecessary() {
@@ -554,11 +552,12 @@ func logPendingUserAttributesIfNecessary() {
   for (NSData *attributeData in pendingAttributes) {
     NSError *error;
   
-  if (error != nil) {
-  // log error
-  }
   // 2 
     UserAttribute *userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
+
+    if (error != nil) {
+      // log error
+    }
     
   // 3  
     if (userAttribute) {
@@ -581,7 +580,7 @@ func logPendingUserAttributesIfNecessary() {
 ##### Helper Files
 
 {% details RemoteStorage Helper File %}
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ```swift
 enum RemoteStorageKey: String, CaseIterable {
@@ -700,7 +699,7 @@ class RemoteStorage: NSObject {
 {% enddetails %}
 
 {% details UserAttribute Helper File %}
-{% subtabs local %}
+{% subtabs global %}
 {% subtab Swift %}
 ```swift
 enum UserAttribute: Hashable {
