@@ -76,7 +76,7 @@ In this instance, this is why when setting the data structures, we recommend usi
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "purchases" : [
     {

@@ -21,7 +21,6 @@ description: "This article outlines details about the Users by Segment Braze end
 
 This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/User%20export%20%20segment%20id%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
@@ -61,7 +60,7 @@ Larger user bases will result in longer export times. For example, an app with 2
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -92,20 +91,20 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 ### Request Components
 - [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-    "segment_id" : "",
-    "callback_endpoint" : "",
-    "fields_to_export" : ["field1", "field2", "field3"],
-    "output_format" : ""
+    "segment_id" : "segment_identifier",
+    "callback_endpoint" : "example_endpoint",
+    "fields_to_export" : ["first_name", "email", "purchases"],
+    "output_format" : "zip"
 }'
 ```
 
-### Fields to Export
+## Fields to Export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -143,11 +142,11 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-### Response
+## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g. 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
@@ -157,7 +156,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
-### Sample User Export File Output
+## Sample User Export File Output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

@@ -12,7 +12,7 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 
 While SSL is not required, the reasons we recommend SSL to our clients are three-fold:
 1. __Required by some browsers__<br>HTTPS links have a certified SSL link certificate attached to them, making it more secure for your users. Authentications like this are quickly becoming the standard with big-name browsers like Google Chrome now requiring it. This means that newer versions of Chrome can no longer access HTTP links or images without the necessary SSL layer. <br><br>
-2. __HSTS domains require SSL__<br>Regardless of which browser your users may be accessing your emails, if you have an HTTP Strict Transport Security (HSTS) domain, you must set up SSL and configure a CDN to send the necessary security certificates. Failure to set up SSL will cause both image and web links to break.<br><br>
+2. __HSTS domains require SSL__<br>Regardless of which browsers your users may be accessing your emails from, if you have an HTTP Strict Transport Security (HSTS) domain, you must set up SSL and configure a CDN to send the necessary security certificates. Failure to set up SSL will cause both image and web links to break.<br><br>
 3. __General Best Practice__<br>Securing your website and links with SSL is a common practice even for companies that don't deal directly with sensitive customer information. Users are more trusting of links that are secured with SSL, and the additional layer of authentication helps protect your data.
 
 ## How do I get started?

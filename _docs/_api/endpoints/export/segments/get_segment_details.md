@@ -17,18 +17,13 @@ description: "This article outlines details about and using the Segments Details
 
 This endpoint allows you to retrieve relevant information on the segment, which can be identified by the `segment_id`.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Segment%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Parameters
 
 | Parameter    | Required | Data Type | Description            |
 | ------------ | -------- | --------- | ---------------------- |
-| `segment_id` | Yes      | String    | Segment API Identifier |
+| `segment_id` | Yes      | String    | Segment API identifier |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -36,20 +31,19 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 <br><br>
 The `segment_id` for a given segment can be found in your Developer Console within your Braze account or you can use the [Segment List Endpoint](#segment-list).
 
-## Example URL
-`https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
-
 ## Example Request
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/segments/details?segment_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/details?segment_id={{segment_identifier}}' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
       "created_at" : (string) date created as ISO 8601 date,
