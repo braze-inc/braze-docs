@@ -66,7 +66,7 @@ To set up a personalized push in the dashboard, you must register the specific c
 
 #### Handling Key-Value Pairs
 
-The method below, `didReceive` is called when the content extension has received a notification. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
+The method below, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
 
 __Parsing Key-Value Pairs from Push Notifications__<br>
 
@@ -190,7 +190,7 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 #### Code Snippets
 
-The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists an additional helper file `UserAttributes`that is used when sending and saving user attributes. Both helper files can be found below.
+The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exists additional helper files `UserAttributes` and `NSDictionary` that are used when sending and saving user attributes. All helper files can be found below.
 
 {% tabs local %}
 {% tab Custom Events %}
@@ -318,7 +318,7 @@ func logPendingCustomEventsIfNecessary() {
         }
       } else {
   // 4 
-        [properties setValue:[event objectForKey:key] forKey:key];
+        properties[key] = event[key];
       }
     }
   // 5  
@@ -491,7 +491,10 @@ func saveUserAttribute() {
    
   NSError *error;
   NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
-  
+
+  if (error != nil) {
+  // log error
+  }
   // 2  
   RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
   NSMutableArray *pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes] mutableCopy];
@@ -550,6 +553,10 @@ func logPendingUserAttributesIfNecessary() {
   // 1  
   for (NSData *attributeData in pendingAttributes) {
     NSError *error;
+  
+  if (error != nil) {
+  // log error
+  }
   // 2 
     UserAttribute *userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
     
@@ -755,6 +762,27 @@ extension UserAttribute: Codable {
 ```
 {% endsubtab %}
 {% endsubtabs %}
+{% enddetails %}
+{% details NSDictionary Helper File %}
+```objc
+#import "NSDictionary+Helper.h"
+
+@implementation NSDictionary (Helper)
+
+- (id)initWithEventName:(NSString *)eventName properties:(NSDictionary *)properties {
+  self = [self init];
+  if (self) {
+    dict[@"event_name"] = eventName;
+    
+    for(id key in properties) {
+      dict[key] = properties[key];
+    }
+  }
+  return self;
+}
+
+@end
+```
 {% enddetails %}
 <br>
 {% endtab %}
