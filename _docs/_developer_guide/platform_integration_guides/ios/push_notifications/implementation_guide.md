@@ -15,7 +15,7 @@ description: "This implementation guide covers how to leverage push notification
 
 Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is expanded, content notification extensions enable a custom view of the expanded push notification. 
 
-Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the right and selecting "View" 
+Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the left and selecting "View" 
 
 These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
 
@@ -40,7 +40,7 @@ To set up a custom view in the dashboard you must toggle on notification buttons
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
 {% endalert %}
 
-In the code, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
+In the content extension's _Info.plist_ file, the attribute `UNNotificationExtensionCategory` is set as a string "match_game". The value given here must match what is set in the Braze dashboard. 
 
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
 Lastly, you must also enable user interactions by toggling the `UNNotificationExtensionUserInteractionEnabled` attribute. After this, your touch is enabled in the .plist of your Notification Content Extension Target. 
@@ -89,7 +89,7 @@ func didReceive(_ notification: UNNotification) {
 - (void)didReceiveNotification:(nonnull UNNotification *)notification {
   NSDictionary *userInfo = notification.request.content.userInfo;
    
-  if ([userInfo objectForKey:@"YOUR-KEY-VALUE-PAIR"] && [userInfo objectForKey:@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
+  if (userInfo[@"YOUR-KEY-VALUE-PAIR"] && userInfo[@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
  
   ...
  
@@ -502,7 +502,7 @@ func saveUserAttribute() {
     [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
   } else {
   // 4 
-    [remoteStorage store:@[ data ] forKey:RemoteStorageKeyPendingUserAttributes];
+    [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
   }
 }
 ```
