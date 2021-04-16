@@ -28,12 +28,7 @@ Use the Template REST APIs to programmatically manage the email templates that y
 Templates built using the Drag & drop editor are not accepted
 {% endalert %}
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/SeeEmailTemplateInformation {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Parameters
 
@@ -45,21 +40,19 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 ### Request Components
 - [Template Identifier]({{site.baseurl}}/api/identifier_types/)
 
-### Example URL
-`https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935`
-
-### Example Request
+## Example Request
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id=759c2ad9-eefc-4af1-bde4-602630644935' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/info?email_template_id={{email_template_id}}' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-## Successful Response Properties
+## Response 
 
 ```json
-GET https://YOUR_REST_API_URL/templates/email/info
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "email_template_id": (string) your email template's API Identifier,
   "template_name": (string) the name of your email template,

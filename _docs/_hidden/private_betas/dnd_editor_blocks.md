@@ -19,9 +19,7 @@ To use them, just drag one inside a column, it will auto-adjust to the column wi
 | `Image` | Allows you to insert an image from the Media Library. | 
 | `Button` |  Add a standard button.  Properties for this block allow for editing and setting links easily.  | 
 | `Divider` |  Insert a solid, dotted, or dashed line to help with spacing.|
-| `Social` |  Quickly insert standard social icons.  Facebook, Twitter, Instagram, and LinkedIn are provided by default. | 
 | `HTML` |  Insert raw HTML.  Great for advanced liquid such as connected content or conditional statements. | 
-| `Video` |  The video block will automatically create a preview image for youtube or Vimeo URLs. | 
 | `Menu` |  Create a flexible menu for the message you're designing. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
@@ -86,14 +84,6 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`Align`| Moves the line to be either left, center, or right oriented |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Social
-
-| Properties | Description |
-|---|---|
-|`Select Icon Collection `| Predefined list of social icons.  The default list includes Facebook, Twitter, Instagram, and LinkedIn.  |
-|`Configure Icon Collection `| Configure the Title, URL, Alt Text  |
-{: .reset-td-br-1 .reset-td-br-2}
-
 ### HTML
 
 | Properties | Description |
@@ -101,12 +91,6 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`html editor`| Enter the raw HTML |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Video
-
-| Properties | Description |
-|---|---|
-|`Video URL `| Set the URL for your video.|
-{: .reset-td-br-1 .reset-td-br-2}
 
 ### Menu
 

@@ -7,14 +7,6 @@ page_order: 1
 ---
 # Push Notifications
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
-
-Sample push notification:
-
-![Sample Push][19]
-
-Check out [push troubleshooting documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/) for additional best practices.
-
 ## Step 1: Choose Automatic or Manual Push Integration
 
 Braze provides a native Unity solution for automating iOS push integrations.
@@ -47,16 +39,13 @@ Check "Enable Background Push" if you would like to enable `background mode` for
 
 #### (Optional): Disable Automatic Registration
 
-Users who have not yet opted-in to push notifications will automatically be provisionally authorized for push upon opening your application. To disable this feature and manually register users for push, check "Disable Automatic Push Registration".
+Users who have not yet opted-in to push notifications will automatically be authorized for push upon opening your application. To disable this feature and manually register users for push, check "Disable Automatic Push Registration".
+
+- If "Disable Provisional Authorization" is not checked, on iOS 12 and above, the user will be provisionally (silently) authorized to receive quiet push. If checked, the user will be shown the native push prompt.
+
+- If you need to configure exactly when the prompt is shown at runtime, disable automatic registration from the Braze configuration editor and use `AppboyBinding.PromptUserForPushPermissions()` instead.
 
 ![Disable Automatic Push Registration][28]
-
-#### Enable Push Capabilities
-
-Braze's automatic integration option currently requires one manual step in the generated XCode project.
-
-In your Xcode project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://developer.apple.com/documentation/xcode/adding_capabilities_to_your_app).
-
 
 ## Step 3: Set Push Listeners
 
@@ -64,9 +53,11 @@ If you would like to pass push notification payloads to Unity or take additional
 
 #### Push Received Listener
 
-The Push Received listener is fired when a user receives a push notification while they are actively using the application (i.e., the app is foregrounded). To send the push payload to Unity, set the name of your Game Object and Push Received listener callback method under the "Set Push Received Listener" foldout, like so:
+The Push Received listener is fired when a user receives a push notification while they are actively using the application (i.e., the app is foregrounded). Set the push received listener in the Braze configuration editor.
 
 ![Push Received Listener][30]
+
+- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_RECEIVED`.
 
 #### Push Opened Listener
 
@@ -74,9 +65,12 @@ The Push Opened listener is fired when a user launches the app by clicking on a 
 
 ![Push Opened Listener][31]
 
+
+- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_OPENED`.
+
 #### Push Listener Implementation Example
 
-The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback` respectively. These methods are implemented in a file called `MainMenu.cs` and is a script linked to that game object. Every script attached to the game object that has an `PushNotificationReceivedCallback` or `PushNotificationOpenedCallback` function will be called.
+The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback` respectively.
 
 ![Game Object Linking][32]
 
@@ -108,6 +102,12 @@ public class MainMenu : MonoBehaviour {
 
 ## Advanced Features
 
+#### Push Token Callback
+
+To receive a copy of device tokens that Braze receives from the OS, set a delegate using `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`.
+
+#### Other Features
+
 To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS Push instructions][8].
 
 [1]: #manual-push-integration
@@ -118,7 +118,6 @@ To implement advanced features such as deep links, badge counts, and custom soun
 [11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
 [12]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
 [15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/iOS/Roll-A-Ball-Ios/Classes/UnityAppController.mm "sample AppController.mm"
-[19]: {% image_buster /assets/img_archive/ios_push_sample.png %}
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
 [28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}

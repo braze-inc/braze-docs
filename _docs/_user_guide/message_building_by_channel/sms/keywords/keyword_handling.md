@@ -22,7 +22,7 @@ Are you currently a non-native SMS client? If so, please visit the [non-native S
 
 ## Two-Way Messaging (Custom Keyword Responses)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
+Two-way messaging allows you to send messages and process the responses to those messages. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
 
 ## Managing Keywords and Auto Responses
 
@@ -95,7 +95,7 @@ Keywords created in custom keyword categories adhere to all of the rules and val
 
 ### Lifecycle Specific Keywords
 
-If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g during their first initial onboarding) to receive a response, you can use the trigger "Send inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. 
+If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g during their first initial onboarding) to receive a response, you can use the trigger "Send inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. This trigger supports filtering on the specific inbound message using is/is not comparisions of the message, as well as matches/does not match regex rules to validate the user's input.
 
 #### Canvas
 

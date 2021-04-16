@@ -12,7 +12,7 @@ Alloys ISV partners are required to add their partner name to the `partner` fiel
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json

@@ -86,7 +86,7 @@ POST Request to the User Track Braze Endpoint (users/track)
   "req_endpoint_path": "users/track",
   "req_method": "POST",
   "req_headers": {
-    "Authorization": "{YOUR_REST_API_KEY}"
+    "Authorization": "{YOUR-REST-API-KEY}"
     "Content-Type": "application/json"
   },
   "req_body": {

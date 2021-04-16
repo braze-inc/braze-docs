@@ -373,6 +373,16 @@ $(document).ready(function() {
     }
   });
 
+  $('#doc_search_clear').on('click',function(e){
+    $('#search-form input').autocomplete('val', '');;
+  });
+
+  $('#doc_menu_search').on('focusin',function(e){
+    if (  $('#doc_menu_search').val().length ) {
+      $('#search-form input').autocomplete('open');
+    }
+  });
+
   var sf_style = $('#search-form').attr('style') ?  $('#search-form').attr('style') : '';
   var sfac_style = $('#search-form  .algolia-autocomplete').attr('style') ? $('#search-form  .algolia-autocomplete').attr('style') : '';
   var header_style = $('#header_menu').attr('style') ? $('#header_menu').attr('style') : '';
@@ -389,6 +399,13 @@ $(document).ready(function() {
       $('#search_clear i').removeClass('fa-times');
   //  }
   });
+
+  $('#doc_menu_search').on('focus',function(e){
+        $('#doc_search_clear i').addClass('fa-times');
+    }).on('blur',function(e){
+        $('#doc_search_clear i').removeClass('fa-times');
+    });
+
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;

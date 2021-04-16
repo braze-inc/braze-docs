@@ -17,19 +17,24 @@ At Braze, we aim to create strong bonds between you and your customers or users.
 doc_menu_list:
   - name: User Guide
     bg_color: '#3accdd'
-    image: /assets/img/lightbulb.png
+    image: /assets/img/new-icons/users.svg
     link: /docs/user_guide/introduction/
     description: "Learn how to use the Braze platform to foster a more impactful customer experience."
   - name: Developer Guide
     bg_color: '#f7918e'
-    image: /assets/img/head.png
+    image: /assets/img/new-icons/html-file.svg
     link: /docs/developer_guide/home/
     description: "Integrate and activate your app or site with the Braze SDK."
   - name: Technology Partners
     bg_color: '#ff9349'
-    image: /assets/img/gear.png
+    image: /assets/img/new-icons/gears.svg
     link: /docs/partners/home/
     description: "Our Technology Partners can help you customize your Braze experience and customer relationships."
+  - name: API Guide
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/api.svg
+    link: /docs/developer_guide/rest_api/basics/
+    description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:
   - name: "Canvas: The Basics"

@@ -41,7 +41,7 @@ Check out the chart below for actions that lead to push tokens changes or remova
 | ------ | ----------- |
 | `changeUser()` Method Called | The Braze `changeUser()` method switches the user ID that the SDKs are assigning user behavior data to. This method is usually called when a user logs into an application. When `changeUser()` is called with a different or new user ID on a specific device, that device's push token will be moved to the appropriate Braze profile with corresponding user ID. |
 | Push Error Occurs | Some common push errors that lead to token removal include `MismatchSenderId`, `InvalidRegistration`, and other types of push bounces. <br>Check out our full list of common [push errors][errors]. |
-| User Uninstalls | When a user uninstalls the application from a device, Braze will remove the user's push notification from the profile. |
+| User Uninstalls | When a user uninstalls the application from a device, Braze will remove the user's push token from the profile. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### What Does this Look Like on a Broader Scale?

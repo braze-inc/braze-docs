@@ -128,5 +128,7 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/support/zendesk/
 - name: Crowdin
   url: /docs/partners/channel_extensions/localization/crowdin/
+- name: Phrasee
+  url: /docs/partners/channel_extensions/creative_and_personalization/language_optimization/phrasee/
 
 ---

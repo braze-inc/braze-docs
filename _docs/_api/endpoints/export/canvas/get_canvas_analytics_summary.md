@@ -17,20 +17,15 @@ description: "This article outlines details about the Canvas Data Summary Analyt
 
 This endpoint allows you to export rollups of time series data for a Canvas, providing a concise summary of a Canvas' results.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Canvas%20export%20%20data%20summary%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Yes | String | Canvas API Identifier |
+| `canvas_id` | Yes | String | Canvas API identifier |
 | `ending_at` | Yes | DateTime (ISO 8601 string) | Date on which the data export should end - defaults to time of the request |
-| `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or starting_at required) |
+| `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or `starting_at` required) |
 | `length` | No | String | Max number of days before ending_at to include in the returned series - must be between 1 and 14 inclusive (either length or starting_at required) |
 | `include_variant_breakdown` | No | Boolean | Whether or not to include variant stats (defaults to false)  |
 | `include_step_breakdown`    | No | Boolean | Whether or not to include step stats (defaults to false) |
@@ -41,16 +36,18 @@ __Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed ho
 - [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&ending_at=2018-06-28T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) Canvas name,

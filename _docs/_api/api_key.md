@@ -35,6 +35,13 @@ Prior to April 2020, API keys would be included as a part of the API request bod
 
 While the old way of passing API keys continues to work, after a period of time this will be permenatly removed so we urge users to update API calls accordingly. 
 
+{% alert important %}
+__Looking for the `api_key` parameter in your Braze endpoints?__<br>
+As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see YOUR-REST-API-KEY within each endpoint Example Requests.
+
+Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
+
 ### REST API Key Permissions
 
 API key permissions are permissions you can assign a user or group to limit their access to certain API calls.
@@ -233,7 +240,7 @@ There are two ways to locate your `app_id`:
 
 ### Multiple App Identifier API keys
 
-During SDK set up, The most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
+During SDK set up, the most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
 To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 

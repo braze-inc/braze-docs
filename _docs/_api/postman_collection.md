@@ -20,13 +20,13 @@ platform:
 
 Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g. using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
-[See our Postman Documentation here.](https://documenter.getpostman.com/view/4689407/SVYrsdsG)
+[See our Postman Documentation here.](https://www.getpostman.com/collections/29baa41d7ba930673ef0)
 
 # Using Braze's Postman Collection
 
 If you have a Postman account (macOS, Windows, and Linux versions can be downloaded from their website located [here][1]), you can open our Postman documentation in your own Postman app (click the orange `Run in Postman` button below). You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available   `POST` and `GET` requests to suit your own needs. 
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0#?env%5BBraze%20REST%20API%20Environment%20Template%5D=W3sia2V5IjoiYXBpX2tleSIsInZhbHVlIjoiXCJZT1VSLUFQSS1LRVktSEVSRVwiIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJpbnN0YW5jZV91cmwiLCJ2YWx1ZSI6InJlc3QuaWFkLTAxLmJyYXplLmNvbSIsImVuYWJsZWQiOnRydWV9XQ==)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0?action=collection%2Fimport)
 
 ## Setting Up Your Postman Environment
 
