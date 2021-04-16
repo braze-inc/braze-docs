@@ -74,5 +74,5 @@ Analyze results in real-time to see the breakdown of each selected choice. If yo
 Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
 {% endalert %}
 
-![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:90%"}
+![Analytics]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:90%"}
 
