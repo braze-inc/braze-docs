@@ -43,7 +43,7 @@ When Custom Attribute collection is enabled, the Multiple Choice option will set
 
 ![Single Multiple Choice]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:70%"}
 
-### Collect Custom Attributes
+### Collect Custom Attributes {#custom-attributes}
 
 Enable Custom Attribute collection to collect attributes based on the user's submission. Use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
@@ -59,20 +59,20 @@ A confirmation page is a great place to thank users for their time or provide ad
 
 ![Confirmation Page]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:70%"}
 
-### Styling Your Message
+### Styling Your Message {#styling}
 
 Customize the font and accent color of the message using the Color Theme picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
-<!--
-## Analyzing Results
 
-Analyze results in real-time in your message's analytics report to see how many users selected each choice.
+## Analyzing Results {#analytics}
 
-**Note** When deleting a choice from the survey, its results will not be deleted from the analytics report.
+Analyze results in real-time to see the breakdown of each selected choice. If you've enabled [Custom Attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
+
+{% alert info %}
+Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
+{% endalert %}
 
 ![Analytics]({% image_buster /assets/img/iam/analytics.png %}){: style="max-width:90%"}
 
-
--->
