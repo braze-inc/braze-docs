@@ -66,11 +66,11 @@ Customize the font and accent color of the message using the Color Theme picker.
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 
-## Analyzing Results {#analytics}
+## Analyze Results {#analytics}
 
 Analyze results in real-time to see the breakdown of each selected choice. If you've enabled [Custom Attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
 
-{% alert info %}
+{% alert note %}
 Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
 {% endalert %}
 
