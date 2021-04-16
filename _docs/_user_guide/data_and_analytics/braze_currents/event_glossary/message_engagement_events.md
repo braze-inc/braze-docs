@@ -383,16 +383,59 @@ _Update noted in August 2019._
 
 {% api %}
 
-## Email Bounces Events
+## Email Bounce Event
 
 {% apitags %}
 Email, Bounce
 {% endapitags %}
 
-This event occurs when an Internet Service Provider returns a soft or hard bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. A hard bounce signifies a permanent deliverability failure.
+This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
 
 ```json
 // Email Bounce: users.messages.email.Bounce
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "email_address": (string) email address for this event,
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Deferrals, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "bounce_reason": (string) reason for bounce provided by server
+}
+```
+
+{% alert update %}
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
+{% endapi %}
+
+{% api %}
+
+## Email Soft Bounce Event
+
+{% apitags %}
+Email, Bounce
+{% endapitags %}
+
+This event occurs when an Internet Service Provider returns a soft bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure.
+
+```json
 // Email Soft Bounce: users.messages.email.SoftBounce
 {
   "id": (string) unique id of this event,
