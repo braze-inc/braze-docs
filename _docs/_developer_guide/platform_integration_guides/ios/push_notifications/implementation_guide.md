@@ -38,7 +38,7 @@ Objective-C<br>
 To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the `UNNotificationExtensionCategory` in the .plist of your Notification Content Extension Target. The value given here must match what is set in the Braze dashboard.
 
 ![Push Content Extension][16]{: style="max-width:75%;border:0;margin-top:10px"}
-![Push Content Extension][17]{: style="max-width:65%;border:0;margin-top:10px"}
+![Push Content Extension][17]{: style="max-width:75%;border:0;margin-top:10px"}
 
 {% alert tip %}
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
@@ -74,7 +74,7 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 ### Personalized Push Notifications
 ![Personalized Push Dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
-Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is by leveraging an API trigger. 
+Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
 #### Dashboard Configuration
 
