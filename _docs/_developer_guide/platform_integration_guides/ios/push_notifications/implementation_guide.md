@@ -208,8 +208,9 @@ It's also important to note that analytics are not sent to Braze until the mobil
 ![Push Logging][13]
 
 #### Step 1: Configure App Groups within Xcode
-Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
-__For more details, check out step 3 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/) documentation.__
+Add a Capability `App Groups`. If you haven’t had any app group in your app, go to the Capability of the main app target, turn on the `App Groups` and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+
+![Add App Groups][19]
 
 #### Step 2: Integrate Code Snippets
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
@@ -846,3 +847,4 @@ extension Dictionary where Key == String, Value == Any {
 [16]: {% image_buster /assets/img/push_implementation_guide/push16.png %}
 [17]: {% image_buster /assets/img/push_implementation_guide/push17.png %}
 [18]: {% image_buster /assets/img/push_implementation_guide/push18.png %}
+[19]: {% image_buster /assets/img_archive/add_app_groups.png %}
