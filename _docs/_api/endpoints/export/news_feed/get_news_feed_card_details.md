@@ -28,8 +28,8 @@ This endpoint allows you to retrieve relevant information on the card, which can
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
-- [Card ID](https://www.braze.com/docs/api/identifier_types/)
-- [News Feed List](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/)
+- [Card ID]({{site.baseurl}}/api/identifier_types/)
+- [News Feed List]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)
 <br><br>
 The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).
 

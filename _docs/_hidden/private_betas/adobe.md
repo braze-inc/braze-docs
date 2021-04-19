@@ -42,7 +42,7 @@ If a connection with Braze already exists, you will see an Activate button on th
 
 ### Step 2: Provide Braze Token
 ![Token][3]{: style="float:right;max-width:40%;margin-left:15px;"}
-In the account step, provide your Braze account token API key. For more information on how to obtain your API key in the Braze [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter this key and click __Connect to destination__.
+In the account step, provide your Braze account token API key. For more information on how to obtain your API key in the Braze [REST API Key Overview]({{site.baseurl}}/api/api_key/). Enter this key and click __Connect to destination__.
 
 ### Step 3: Authentication
 

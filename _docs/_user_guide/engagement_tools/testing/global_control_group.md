@@ -34,7 +34,7 @@ You can disable your global control group at any time, but keep in mind that doi
  
 ## Exporting your Control Group Members
  
-If you'd like to see which users are in your global control group, you can export your Group's members via CSV or API. To run a CSV export, navigate to the global control group set up page under Global Message Settings. To export via API, use the [global control group API endpoint]({{site.baseurl}}/docs/api/endpoints/export/user_data/post_users_global_control_group/).
+If you'd like to see which users are in your global control group, you can export your Group's members via CSV or API. To run a CSV export, navigate to the global control group set up page under Global Message Settings. To export via API, use the [global control group API endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 Historical control groups are not preserved, so you can only export the members of your current Group. Make sure to export any necessary information before disabling a control group.
 

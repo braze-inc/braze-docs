@@ -166,7 +166,7 @@ Launch your Campaign in Braze and Phrasee has it from here! When your Campaign t
 {% endtabs %}
 
 [1]: https://phrasee.co/
-[2]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints
+[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [3]: mailto:awesome@phrasee.co
 [4]: {% image_buster /assets/img/phrasee/1_Create_APIKey.png %}
 [5]: {% image_buster /assets/img/phrasee/2_CampaignAccess.png %}
