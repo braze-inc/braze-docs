@@ -18,23 +18,27 @@ channel:
 
 # MMS Message Sending
 
-> This page only contains information specific for MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
+> This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
 
 ## MMS Sending Basics
 
-Sending MMS with Braze
-1. Select your subscription group<br>
-   You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes)
-2. Input message body<br>
-   Input PNG, JPG, or GIF image types from the media library or specify a URL
-   Only 1 image supported
-3. Understand MMS Sending<br>
-   Not all cariiers can accept MMS. In these cases, Twilio will automatically convert the MMS too an image link the user can click.
-   MMS are billed at a different rate vs. text only SMS. 
+Sending MMS with Braze:
+- __Select your subscription group__
+  - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
+- __Input message body__
+  - Input PNG, JPG, GIF, and VCF image types from the media library or specify a URL.
+  - Only 1 image supported<br><br>
+- __Understand MMS Sending__
+  - MMS are billed at a different rate vs. text-only SMS.
+  - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
+
+#### vCard Contact Cards 
+
+vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. vCards can be created programmatically and assigned properties found [here](https://tools.ietf.org/html/rfc6350#section-6). Some common properties included are name, phone number, birthday, address, and email. For more information on how to create vCards, visit the [Twilio vCard documentation](https://www.twilio.com/blog/send-vcard-twilio-sms).
 
 ## Creating an MMS message
 
-Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS enabled Subscription Group, you will have the ability to either upload an image or reference an image URL.
+Creating an MMS message requires your Subscription Group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a Subscription Group. Upon selecting an MMS-enabled Subscription Group, you will have the ability to either upload an image or reference an image URL.
 
 ![picture][2]
 

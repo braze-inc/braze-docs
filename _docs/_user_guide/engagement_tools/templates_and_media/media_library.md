@@ -10,6 +10,7 @@ description: "The Media Library allows you to manage your assets in a single, ce
 The Library now allows you to:
 
 * Upload multiple images at one time
+* Upload Virtual Contact Files (.vcf)
 * Upload a folder with your images (max: 50 images)
 * Crop an existing image to create the right ratio for your messages
 * Add tags or teams to help further organize your images
