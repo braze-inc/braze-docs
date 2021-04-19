@@ -208,8 +208,8 @@ It's also important to note that analytics are not sent to Braze until the mobil
 ![Push Logging][13]
 
 #### Step 1: Configure App Groups within Xcode
-1. Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
-2. When updating the Braze integration in your main app, either set the App Group identifier in your runtime settings or info.plist file.<br>__For more details, check out step 3 and 8 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/).__
+Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+__For more details, check out step 3 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/) documentation.__
 
 #### Step 2: Integrate Code Snippets
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
