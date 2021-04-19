@@ -44,8 +44,8 @@ For more detail, check out the document on [Treasure Data Product Documentation]
 
 See the list of scopes in the Requirements section
 
-### Step 2: Create a new Connection In Treasure Data
-n Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you provide authentication to access the integration.
+### Step 2: Create a new Connection
+In Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you provide authentication to access the integration.
 
 1. Open TD Console.
 1. Navigate to Integrations Hub > Catalog.
