@@ -59,7 +59,7 @@ Push notifications can respond to user actions inside a content extension. For u
 
 #### Dashboard Configuration
 
-To set up a custom view in the dashboard, within the notifcation button settings enter the specific category you would like to display. Next, in the .plist of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
+To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the .plist of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
 
@@ -195,7 +195,18 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 ### Logging with the Braze API (Recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot above) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, you must first configure app groups within your main app target and then send the id and values you are trying to capture through key-value pairs within the dashboard. 
+
+#### Step 1: Configure App Groups within Xcode
+1. Toggle on `Background Fetch` and `Remote Notifcation` within the background mode settings of your main app target.
+2. Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+3. When updating the Braze integration in your main app, either set the App Group identifier in your runtime settings or info.plist file.<br>__For more details, check out step 3 and 8 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/).__
+
+#### Step 2: Send Values through KVP
+
+Lastly, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
+
+![Personalized Push Dashboard Example][18]{: style="max-width:80%;"}
 
 ### Logging Manually 
 
@@ -840,3 +851,4 @@ extension Dictionary where Key == String, Value == Any {
 [15]: {% image_buster /assets/img/push_implementation_guide/push15.png %}
 [16]: {% image_buster /assets/img/push_implementation_guide/push16.png %}
 [17]: {% image_buster /assets/img/push_implementation_guide/push17.png %}
+[18]: {% image_buster /assets/img/push_implementation_guide/push18.png %}
