@@ -9,7 +9,6 @@ alias: /partners/treasure_data_webhooks/
 page_type: partner
 hidden: false
 ---
-
-To set up Treasure Data webhooks to ingest Braze events into Treasure Data, visit [Treasure Data Document Page][1]
+Treasure Data users can ingest data through the public REST API. You can use Treasure Data to create custom webhooks into your data. To learn more, visit [Treasure Data Document Page][1]
 
 [1]: https://docs.treasuredata.com/display/public/PD/Postback+API
