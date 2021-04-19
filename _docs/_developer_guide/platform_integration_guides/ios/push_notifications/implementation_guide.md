@@ -41,7 +41,7 @@ To set up a custom view in the dashboard you must toggle on notification buttons
 ![Push Content Extension][17]{: style="max-width:75%;border:0;margin-top:10px"}
 
 {% alert tip %}
-Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to push your users to expand their push notifications.
+Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to nudge your users to expand their push notifications.
 {% endalert %}
 
 ## Use Case and Implementation Walkthrough
@@ -53,7 +53,7 @@ There are three push notification content extension types provided. Each type ha
 
 ### Interactive Push Notification
 
-Push notifications can respond to user actions inside a content extension. As of iOS 12, content extensions now have the option of being interactive! This interactivity offers many possibilities to get your users engaged in your push notification. This can be achieved by having your users expand the push notification they receive.
+Push notifications can respond to user actions inside a content extension. For users running iOS 12 or later, this means you can turn your push messages into fully interactive push notifications! This interactivity offers many possibilities to get your users engaged in your notifications. The example below shows a push where users are able to play a match game inside the expanded notification.
 
 ![Push Content Extension][12]{: style="border:0"}
 
@@ -130,10 +130,10 @@ Visit the [following section](#logging-analytics) to get a better understanding 
 
 Push notifications can capture user information inside a content extension, allowing you to push the limits of what is possible with a push. Examining the flow shown below, the view is able to respond to state changes. Those state change components are represented in each image. 
 
-1. User receives a push, and push is opened and prompts the user for information. 
-2. Information is given, if valid, the register button is shown.
-3. Confirmation view is displayed.
-4. Push is dismissed. 
+1. User receives a push notification.
+2. Push is opened and prompts the user for information.
+3. Information is provided and if valid, the register button is shown.
+3. Confirmation view is displayed, and push gets dismissed. 
 
 ![Information Capture Push Dashboard Example][8]{: style="border:0;"}
 
