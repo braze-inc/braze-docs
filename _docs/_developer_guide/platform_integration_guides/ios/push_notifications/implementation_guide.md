@@ -195,29 +195,23 @@ Visit the section below to get a better understanding of how the flow of data sh
 
 ### Logging with the Braze API (Recommended)
 
-Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, you must first configure app groups within your main app target and then send the id and values you are trying to capture through key-value pairs within the dashboard. 
-
-#### Step 1: Configure App Groups within Xcode
-1. Toggle on `Background Fetch` and `Remote Notifcation` within the background mode settings of your main app target.
-2. Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
-3. When updating the Braze integration in your main app, either set the App Group identifier in your runtime settings or info.plist file.<br>__For more details, check out step 3 and 8 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/).__
-
-#### Step 2: Send Values through KVP
-
-Lastly, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
 
 ![Personalized Push Dashboard Example][18]{: style="max-width:80%;"}
 
 ### Logging Manually 
 
-Logging manually will require you to create, save, and retrieve analytics, this requires some custom developer work on your end. The code snippets shown below will help address this. 
+Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The code snippets shown below will help address this. 
 
 It's also important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, users should consider the impact and if necessary, adjust their user journey to include opening the application to address this concern. 
 
 ![Push Logging][13]
 
-#### Code Snippets
+#### Step 1: Configure App Groups within Xcode
+1. Add a Capability `App Groups`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+2. When updating the Braze integration in your main app, either set the App Group identifier in your runtime settings or info.plist file.<br>__For more details, check out step 3 and 8 of the [Push Story integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_story/).__
 
+#### Step 2: Integrate Code Snippets
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
 
 {% tabs local %}
@@ -633,7 +627,7 @@ class RemoteStorage: NSObject {
     case .standard:
       return .standard
     case .suite:
-      return UserDefaults(suiteName: "YOUR-APP=GROUP")!
+      return UserDefaults(suiteName: "YOUR-DOMAIN-IDENTIFIER")!
     }
   }()
    
@@ -704,7 +698,7 @@ class RemoteStorage: NSObject {
         return [NSUserDefaults standardUserDefaults];
         break;
       case StorageTypeSuite:
-        return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-SUITE-NAME"];
+        return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
     }
   } else {
     return self.defaults;
