@@ -2,7 +2,7 @@
 nav_title: Treasure Data
 page_order: 4
 
-description: "Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale."
+description: "Connect your first party data from Treasure Data CDP directly to Braze"
 
 alias: /partners/treasure_data/
 
@@ -12,8 +12,9 @@ hidden: false
 
 # Treasure Data
 
-> Treasure Data is the only independent CDP with proven experience in solving the most complex data problems for the enterprise. We have 170+ connectors to work with any existing technology stack and are schema-flexible to ingest all types of data. We deliver enterprise-level security, scalability and continuity so you can unlock the power of customer data to deliver stellar brand experiences at scale. Visit [Treasure Data Website][4] for the full product overview.   
-Watch our video to learn why we are the industry’s best at transforming customer experiences, one brand at a time."
+> Treasure Data is the only enterprise Customer Data Platform (CDP) that drives relevant customer experiences by harmonizing Data, Insights and Engagement to work in perfect unison. Treasure Data empowers brands to give millions of their customers and potential customers the feeling that each one is the one and only. Armed with these actionable indicators, CX Teams, including Marketing, Sales and Customer Service can effectively optimize spend, and personalize omni-channel interactions across the entire customer journey. To learn more, visit [Treasure Data][4].
+
+Watch our video to learn why we are the industry’s best at transforming customer experiences, one brand at a time.
 
 {% include video.html id="Zqdm33TWr0E" %}
 
@@ -24,10 +25,10 @@ Treasure Data supports the Braze platform by allowing you to write job results f
 * Upload your own tracking of events, purchases, or custom profile attributes. This information can help you build precise customer segments that enhance the user experience for your campaigns.
 
 
-## Requirements or Pre-Requisites
+## Requirements and Pre-Requisites
 
-An account and Basic knowledge of Braze.
-An account and Basic Knowledge of Treasure Data.
+An account and basic knowledge of Braze.
+An account and basic Knowledge of Treasure Data.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
@@ -43,7 +44,7 @@ For more detail, check out the document on [Treasure Data Product Documentation]
 
 See the list of scopes in the Requirements section
 
-### Step 2: Create a new Connection
+### Step 2: Create a new Connection In Treasure Data
 n Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you provide authentication to access the integration.
 
 1. Open TD Console.
@@ -55,14 +56,14 @@ n Treasure Data, you must create and configure the data connection before runnin
 1. Select Done.
 
 ### Step 3: Define your Query
-1. Complete the instructions in Step 2
+1. Complete the instructions in Step 2.
 1. Navigate to Data Workbench > Queries.
 1. Select a query for which you would like to export data.
 1. Run the query to validate the result set.
 1. Select Export Results.
 1. Select an existing integration authentication.
 
-1. Define any additional Export Results details. In your export integration content review the integration parameters. For example, your Export Results screen might be different, or you might not have additional details to fill out:
+1. Define additional Export Results parameters as outlined under Customization.
 
 1. Select Done.
 1. Run your query.
