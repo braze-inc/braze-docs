@@ -84,7 +84,7 @@ Add the following call to notify Braze when a user grants the location permissio
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).requestLocationInitialization();
+Braze.getInstance(context).requestLocationInitialization();
 ```
 
 {% endtab %}
