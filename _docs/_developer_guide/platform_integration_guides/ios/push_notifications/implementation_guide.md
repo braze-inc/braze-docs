@@ -35,7 +35,7 @@ Objective-C<br>
 
 ### Custom Category Configuration
 
-To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the `UNNotificationExtensionCategory` in the .plist of your Notification Content Extension Target. The value given here must match what is set in the Braze dashboard.
+To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the `UNNotificationExtensionCategory` in the `.plist` of your Notification Content Extension Target. The value given here must match what is set in the Braze dashboard.
 
 ![Push Content Extension][16]{: style="max-width:75%;border:0;margin-top:10px"}
 ![Push Content Extension][17]{: style="max-width:75%;border:0;margin-top:10px"}
@@ -59,7 +59,7 @@ Push notifications can respond to user actions inside a content extension. For u
 
 #### Dashboard Configuration
 
-To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the .plist of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
+To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
 ![Interactive Push Dashboard Example][3]{: style="float:right;max-width:45%;"}
 
@@ -180,9 +180,9 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 Push notifications can be automatically dismissed from an action button press. There exist three pre-built push dismissal options that are recommended:
 
-1. completion(.dismiss) - Dismisses the notification
-2. completion(.doNotDismiss) - Notification stays open
-3. completion(.dismissAndForward) - Push dismisses and the user gets forwarded into the application.
+1. `completion(.dismiss)` - Dismisses the notification
+2. `completion(.doNotDismiss)` - Notification stays open
+3. `completion(.dismissAndForward)` - Push dismisses and the user gets forwarded into the application.
 
 #### Other Use Cases
 
@@ -208,7 +208,7 @@ It's also important to note that analytics are not sent to Braze until the mobil
 ![Push Logging][13]
 
 #### Step 1: Configure App Groups within Xcode
-Add a Capability `App Groups`. If you haven’t had any app group in your app, go to the Capability of the main app target, turn on the `App Groups` and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+Add a Capability `App Groups`. If you haven’t had any app group in your app, go to the Capability of the main app target, turn on the `App Groups`, and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![Add App Groups][19]
 
@@ -223,9 +223,9 @@ The following code snippets are a helpful reference on how to save and send cust
 To save custom events you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
 1. Initialize a dictionary with event metadata
-2. Initialize userDefaults to retrieve and store the event data
+2. Initialize `userDefaults` to retrieve and store the event data
 3. If there is an existing array, append new data to the existing array and save
-4. If there is not an existing array, save the new array to userDefaults
+4. If there is not an existing array, save the new array to `userDefaults`
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -276,9 +276,9 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
 
 1. Loop through the array of pending events
-2. Loop through each key-value pair in the pending event dictionary
+2. Loop through each key-value pair in the `pendingEvents` dictionary
 3. Explicitly checking key for “Event Name” to set the value accordingly
-4. Every other key-value will be added to the properties dictionary
+4. Every other key-value will be added to the `properties` dictionary
 5. Log individual custom event 
 6. Remove all pending events from storage
 
@@ -364,9 +364,9 @@ func logPendingCustomEventsIfNecessary() {
 To save custom attributes you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
 1. Initialize a dictionary with attribute metadata
-2. Initialize userDefaults to retrieve and store the attribute data
+2. Initialize `userDefaults` to retrieve and store the attribute data
 3. If there is an existing array, append new data to the existing array and save
-4. If there is not an existing array, save the new array to userDefaults
+4. If there is not an existing array, save the new array to `userDefaults`
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -417,7 +417,7 @@ func saveCustomAttribute() {
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
 1. Loop through the array of pending attributes
-2. Loop through each key-value pair in the pending attributes dictionary
+2. Loop through each key-value pair in the `pendingAttributes` dictionary
 3. Log individual custom attribute with corresponding key and value
 4. Remove all pending attributes from storage
 
@@ -478,12 +478,12 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 
 ##### Saving User Attributes
 
-When saving user attributes, it is recommended to create a custom object to decipher what type of attribute is being updated (email, first_name, phone_number, etc.). The object should be compatible with being stored/retrieved from UserDefaults. See the `UserAttribute` helper file for one example of how to accomplish this.
+When saving user attributes, it is recommended to create a custom object to decipher what type of attribute is being updated (`email`, `first_name`, `phone_number`, etc.). The object should be compatible with being stored/retrieved from `UserDefaults`. See the `UserAttribute` helper file for one example of how to accomplish this.
 
-1. Initialize an encoded UserAttribute object with the corresponding type
-2. Initialize userDefaults to retrieve and store the event data
+1. Initialize an encoded `UserAttribute` object with the corresponding type
+2. Initialize `userDefaults` to retrieve and store the event data
 3. If there is an existing array, append new data to the existing array and save
-4. If there is not an existing array, save the new array to userDefaults
+4. If there is not an existing array, save the new array to `userDefaults`
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -539,8 +539,8 @@ func saveUserAttribute() {
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
-1. Loop through the array of pending attribute data
-2. Initialize an encoded UserAttribute object from attribute data
+1. Loop through the array of `pendingAttributes` data
+2. Initialize an encoded `UserAttribute` object from attribute data
 3. Set specific user field based on the User Attribute type (email)
 4. Remove all pending user attributes from storage
 
