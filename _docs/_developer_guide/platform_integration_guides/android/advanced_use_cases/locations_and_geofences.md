@@ -155,7 +155,7 @@ object RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.")
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
-          Appboy.getInstance(context).requestLocationInitialization()
+          Braze.getInstance(context).requestLocationInitialization()
         } else {
           Log.i(TAG, "Required location permissions NOT granted.")
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
