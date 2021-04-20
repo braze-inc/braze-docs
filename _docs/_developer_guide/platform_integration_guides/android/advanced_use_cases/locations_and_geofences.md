@@ -91,7 +91,7 @@ Braze.getInstance(context).requestLocationInitialization();
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).requestLocationInitialization()
+Braze.getInstance(context).requestLocationInitialization()
 ```
 
 {% endtab %}
