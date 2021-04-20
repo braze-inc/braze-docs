@@ -78,7 +78,7 @@ For Android M and higher versions, you must request location permissions from th
 Add the following call to notify Braze when a user grants the location permission to your app:
 
 ```
-AppboyLocationService.requestInitialization(context);
+Appboy.getInstance(context).requestLocationInitialization();
 ```
 
 This will cause the SDK to request geofences from Braze's servers and initialize geofence tracking.
