@@ -66,6 +66,7 @@ If you access the global control report without having saved a global control gr
 #### Things to Watch Out For {#things-to-watch-for}
 - Your global control group is formed using Random Bucket Numbers, and thus if you are running any other tests using Random Bucket Numbers segment filters, keep in mind that there could be an overlap between those segments you create, and your global control group users.
 - __If two users who have different external user IDs have the same email address,__ and one of these users is in the control group and the other is not, then an email will still be sent to that email address whenever the non-control group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
+- It is possible to have a Global Control Group and also use a campaign-specific or Canvas-specific control group. Having a campaign-specific or Canvas-specific control group lets you measure the impact of a particular message. Users in your Global Control group are withheld from receiving any messages (other than those with tag exceptions), and if you add a control to a campiagn or Canvas, Braze will withhold a portion of your Global Treatment group from receiving that particular campaign or Canvas. That is, if a member of the Global Control Group is not eligible to receive a particular campaign/ Canvas, they will also not be present in the control group for that particular campaign/ Canvas.
 
 ## Testing Best Practices
 
