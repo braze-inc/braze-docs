@@ -544,13 +544,13 @@ $header_transition_time: 0.25s;
 .backdrop {
   position: fixed;
   display: none;
-  background: black;
+  background: #bfbfbf;
   left: 0;
   right: 0;
   bottom: 0;
   top: 96px;
   z-index: 1000;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .backdrop-show {

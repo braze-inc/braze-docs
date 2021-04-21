@@ -48,7 +48,7 @@
                 </g></svg></div>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdown-menu-link-product" id="main-header-dropdown">
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-row" id="dropdown-product">
                   <div>
                     <ul id="background-hover">
                       <h5>Product Overview</h5>
@@ -58,12 +58,31 @@
                     <hr class="bg-gradient">
                     <ul id="background-hover">
                       <h4>Engineered for any scale</h4>
-                      <li><a href="https://www.braze.com/product/data-and-analytics" target="_blank"><span>Data &amp; Analytics</span></a></li>
-                      <li><a href="https://www.braze.com/product/braze-canvas" target="_blank"><span>Intuitive Tools for Marketers</span></a></li>
-                      <li><a href="https://www.braze.com/product/optimization" target="_blank"><span>Optimization</span></a></li>
+                      <p>Braze enables world-class customer engagement powered by flexible APIs, supported by enterprise-grade security and compliance.</p>
+                      <li><a href="https://www.braze.com/braze-for-engineering" target="_blank"><span>See how we do it</span></a></li>
                     </ul>
                   </div>
-                  <ul class="col-5">
+                  <div class="col-4 product-opt">
+                    <ul id="background-hover">
+                      <a href="https://www.braze.com/product/data-and-analytics" target="_blank">
+                        <h5>Data &amp; Analytics</h5>
+                        <p>Live 360° customer profiles, actionable insights, data sharing and streaming</p>
+                      </a>
+                    </ul>
+                    <ul id="background-hover">
+                      <a href="https://www.braze.com/product/braze-canvas" target="_blank">
+                        <h5>Intuitive Tools for Marketers</h5>
+                        <p>Dynamic segmentation, customer journey building, and personalization</p>
+                      </a>
+                    </ul>
+                    <ul id="background-hover">
+                      <a href="https://www.braze.com/product/optimization" target="_blank">
+                        <h5>Optimization</h5>
+                        <p>Behavior-based automation, predictive tools, and A/B testing</p>
+                      </a>
+                    </ul>
+                </div>
+                  <ul class="col-4">
                     <h5>Integrated Cross-Channel Delivery</h5>
                     <li><a class="link" href="https://www.braze.com/product/in-app-in-browser-messages" target="_blank"><span>In-App &amp; In-Browser Messaging</span></a></li>
                     <li><a class="link" href="https://www.braze.com/product/content-cards" target="_blank"><span>Content Cards</span></a></li>
@@ -121,15 +140,42 @@
                 </g></svg></div>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdown-menu-link-customers" id="main-header-dropdown">
-                <div class="d-flex flex-row">
-                  <ul class="col-7" id="background-hover">
+                <div class="d-flex flex-row" id="dropdown-customers">
+                  <ul class="col-4" id="background-hover">
                     <h5>Case Studies</h5>
                     <li><a href="https://www.braze.com/customers" target="_blank"><span>See how leading brands worldwide use Braze to drive results</span></a></li>
                   </ul>
-                  <ul class="col-5">
-                    <li><a href="https://www.braze.com/customers/anthropologie-case-study" target="_blank"><span>Web Push</span></a></li>
-                    <li><a href="https://www.braze.com/customers/pomelo-case-study-boosts-conversions" target="_blank"><span>Cross-Channel</span></a></li>
-                    <li><a href="https://www.braze.com/customers/babylon-health-case-study" target="_blank"><span>Email</span></a></li>
+                  <ul class="col-8 cust-case-studies">
+                    <a href="https://www.braze.com/customers/pomelo-case-study-boosts-conversions">
+                      <div class="d-flex flex-row case-study">
+                        <img src="https://braze.imgix.net/production/hero/anthropologie_landing_featured_image_2021-02-24-175033.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=300&q=90&w=300&s=edf6f5e91b43654e1abcf0c2705bc4f4" width="120" height="120">
+                        <div class="d-flex flex-column">
+                            <h5>Web Push</h5>
+                            <span>Anthropologie Drives Higher Conversions With Web Push Notifications</span>
+                            <li><span>Read more</span></li>
+                          </div>
+                        </div>
+                      </a>         
+                      <a href="https://www.braze.com/customers/pomelo-case-study-boosts-conversions">
+                        <div class="d-flex flex-row case-study">
+                          <img src="https://braze.imgix.net/production/hero/800x800_Detail_CS_Pomelo_2021-02-25-165518.png?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=300&amp;q=90&amp;w=300&amp;s=2a423121c58662ccbf27113a97f72485" width="120" height="120">
+                          <div class="d-flex flex-column">
+                            <h5>Cross-Channel</h5>
+                            <span>Fashion Retailer Pomelo Boosts Conversions by 300% With Help From Braze and Friends</span>
+                            <li><span>Read more</span></li>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="https://www.braze.com/customers/pomelo-case-study-boosts-conversions">
+                        <div class="d-flex flex-row case-study">
+                          <img src="https://braze.imgix.net/production/hero/800x800_Detail_CS_Babylon.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=300&q=90&w=300&s=8ae39c1f0d07e4606290c19018122765" width="120" height="120">
+                          <div class="d-flex flex-column">
+                            <h5>Email</h5>
+                            <span>Babylon Pioneers AMP for Email to Achieve a 20% Increase in Engagement</span>
+                            <li><span>Read more</span></li>
+                          </div>
+                        </div>
+                      </a>
                   </ul>
                 </div>
               </div>
@@ -239,7 +285,7 @@
                 </div>
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdown-menu-link-company" id="main-header-dropdown">
-                <ul>
+                <ul id="dropdown-company">
                   <li><a href="https://www.braze.com/company"><span>About Us</span></a></li>
                   <li><a href="https://www.braze.com/company/careers"><span>Careers</span></a></li>
                   <li><a href="https://www.braze.com/company/news"><span>News</span></a></li>

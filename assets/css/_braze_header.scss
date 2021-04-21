@@ -51,7 +51,7 @@ $header_transition_time: 0.25s;
     flex-wrap: wrap;
     #main-header-dropdown {
       padding: 0;
-      width: max-content;
+      min-width: max-content;
       border-top: 1px solid #d3d3d354;
       border-bottom-left-radius: .5rem;
       border-bottom-right-radius: .5rem;
@@ -113,12 +113,67 @@ $header_transition_time: 0.25s;
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
       }
+      #dropdown-product {
+        max-width: 70vw;
+      }
+      .product-opt {
+        padding: 1.5rem;
+        ul {
+          padding: 1rem;
+        }
+      }
+      #dropdown-customers {
+        max-width: 55vw;
+      }
+      .cust-case-studies {
+        padding: 3rem;
+        background-color: #2e3c47;
+      }
+      .case-study {
+        padding: 1rem 0;
+        img {
+          border-radius: .5rem;
+        }
+        div {
+          margin-left: 1.5rem;
+        }
+        h5 {
+          color: #ee701b;
+          margin-top: 5px;
+        }
+        span {
+          color: #fff;
+          line-height: 1.5;
+        }
+        li span{
+          color: #a8b3b8;
+          line-height: 1.5;
+          background-repeat: repeat-x;
+          background-position: 0 1.2em;
+          background-size: 100% 3px;
+          position: relative;
+          padding-bottom: 3.5px;
+          font-weight: 700;
+          color: #a8b3b8;
+          background-image: -webkit-gradient(linear,left top,right top,from(#a8b3b8),to(rgba(168,179,184,.5)));
+          background-image: linear-gradient(90deg,#a8b3b8,rgba(168,179,184,.5));
+          &:hover, &:focus {
+            color: #3ed6e8;
+          }
+        }
+      }
+      #dropdown-company {
+        padding: 2.5rem 3.5rem;
+      }
     }
     .border-focus {
       color: black;
       border-bottom: 2px solid transparent;
       padding-bottom: 2rem;
       outline: none;
+      &:hover, &:focus {
+        color: #3accdd;
+      }
     }
     .border-focus-show {
       border-color: black;
