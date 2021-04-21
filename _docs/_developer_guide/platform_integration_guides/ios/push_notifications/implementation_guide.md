@@ -1,15 +1,19 @@
 ---
-nav_title: Implementation Guide (Advanced)
+nav_title: Advanced Implementation (Optional)
 platform: iOS
 page_order: 7
-description: "This advanced implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
+description: "This advanced implementation guide covers how to leverage push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 ---
+
+{% alert important %}
+Looking for the out-of-the-box Push developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+{% endalert %}
 
 # Push Notification Implementation Guide
 
-> This optional and advanced implementation guide covers ways to leverage push notification content extensions to get the most out of your push messages. Included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. 
+> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
-## Notification Content Extensions
+## Notification Content App Extensions
 
 ![Push Content Extension][1]{: style="max-width:65%;border:0;margin-top:10px"}
 
@@ -17,7 +21,7 @@ Push notifications while seemingly standard across different platforms, offer im
 
 Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the left and selecting "View" 
 
-These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for notification content extension can look like!
+These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for a notification content app extension can look like!
 
 #### Requirements:
 ![Push Content Extension][15]{: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
@@ -46,7 +50,7 @@ Since pushes with content extensions aren't always apparent, it is recommended t
 
 ## Use Case and Implementation Walkthrough
 
-There are three push notification content extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
+There are three push notification content app extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
 - [Interactive Push Notification](#interactive-push-notification)
 - [Personalized Push Notifications](#personalized-push-notifications)
 - [Information Capture Push Notifications](#information-capture-push-notification)
@@ -273,7 +277,7 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
 
 ##### Sending Custom Events to Braze
 
-After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
 
 1. Loop through the array of pending events
 2. Loop through each key-value pair in the `pendingEvents` dictionary
@@ -414,7 +418,7 @@ func saveCustomAttribute() {
 
 ##### Sending Custom Attributes to Braze
 
-After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
 1. Loop through the array of pending attributes
 2. Loop through each key-value pair in the `pendingAttributes` dictionary
@@ -537,7 +541,7 @@ func saveUserAttribute() {
 
 ##### Sending User Attributes to Braze
 
-After the SDK is initialized is the best time to log any saved analytics from a notification content extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
 1. Loop through the array of `pendingAttributes` data
 2. Initialize an encoded `UserAttribute` object from attribute data

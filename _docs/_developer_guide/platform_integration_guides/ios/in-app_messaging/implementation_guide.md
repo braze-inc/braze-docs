@@ -1,13 +1,17 @@
 ---
-nav_title: Implementation Guide (Advanced)
+nav_title: Advanced Implementation (Optional)
 platform: iOS
-page_order: 4.1
+page_order: 6
 description: "This advanced implementation guide covers in-app message code considerations, three use cases built by our team, and accompanying code snippets."
 ---
 
+{% alert important %}
+Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/).
+{% endalert %}
+
 # In-App Messaging Implementation Guide
 
-> This optional and advanced implementation guide covers in-app message code consideration, three use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
+> This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.  Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 
 ## Code Considerations
 
