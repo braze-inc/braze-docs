@@ -1,13 +1,13 @@
 ---
-nav_title: Implementation Guide
+nav_title: Implementation Guide (Advanced)
 platform: iOS
 page_order: 7
-description: "This implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
+description: "This advanced implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 ---
 
 # Push Notification Implementation Guide
 
-> This implementation guide covers how to leverage push notification content extensions to get the most out of your push messages. Included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers ways to leverage push notification content extensions to get the most out of your push messages. Included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested. 
 
 ## Notification Content Extensions
 
