@@ -144,43 +144,6 @@ If you have the Nested Event Property support enabled by your Customer Success M
 `{{event_properties.${line_items[0].title}}}`
 {% endraw %}
 
-### Dynamically Generating HTML Content via Liquid and Connected Content (Advanced)
-
-For either abandoned checkout or order confirmation use cases, you may be inclined to send out an email with an overview of the products within that order. Leveraging Braze's Connected Content functionality with Liquid templating, you can dynamically generate HTML content based on the number of items within each customer's order or cart. <br>
-![Shopify][22]{: style="float:right;max-width:30%;margin-left:15px;margin-top:15px;"}
-
-In this example, we'll be using [Braze's standard email HTML template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) for Order Confirmation and a [Liquid For Loop](https://shopify.github.io/liquid/tags/iteration/). In the standard Braze HTML Order Confirmation Template, there are pre-constructed HTML elements that are used to represent the products purchased:<br>
-![Shopify][23]{: style="max-width:30%;margin-top:15px;"}
-
-These HTML Elements can be included within a Liquid For Loop to dynamically generate based on the number of items left in the cart.
-
-{% raw %}
-```
-// save the products included within the event property to local variable
-{% assign items = {{event_properties.${line_items}}} %}
- 
-// iterate through the items, up to a limit of 3
-{% for item in items limit:3 %}
- 
-// retrieve product information by templating in the current iteration of the product id (Optional - if product info is not included in Event Properties
-{% connected_content https://shopify_URL_EXAMPLE/products.json?ids={{item.product_id}}
-:headers {
-"X-Shopify-Access-Token": "SHOPIFY_ACCESS_TOKEN" }
-:content_type application/json
-:save product_info %}
- 
-// generate your HTML content to display the results
-<<<< ALL HTML CONTENT HERE - THIS CONTENT GENERATES FOR EACH ITERATION OF THE LOOP >>>>
- 
-// the below shows an example of templating in the product url into an img element
-<td class="img" style="font-size:0pt; line-height:0pt; text-align:left"><a href="#" target="_blank"><img src={{product_info.products[0].image.src}} border="0" width="80" height="80" alt="" /></a><div style="font-size:0pt; line-height:0pt;" class="mobile-br-15"></div>
-</td>
- 
-// end the for loop
-{% endfor %}
-```
-{% endraw %}
-
 ## Troubleshooting
 
 #### Why is my Shopify app install still pending? 

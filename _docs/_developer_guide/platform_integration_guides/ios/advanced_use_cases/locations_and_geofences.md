@@ -24,7 +24,7 @@ To fully utilize our geofence syncing strategy you must have [Background Push][6
 
 ## Step 2: Enable Geofences
 
-By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`.
+By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
  You can also enable geofences at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
 
@@ -101,7 +101,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ## Disabling Automatic Geofence Requests
 
-Starting in iOS SDK version 3.21.3, you can disable geofences from being automatically requested. You can do this by using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `DisableAutomaticGeofenceRequests` boolean subentry and set the value to `YES`.
+Starting in iOS SDK version 3.21.3, you can disable geofences from being automatically requested. You can do this by using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `DisableAutomaticGeofenceRequests` boolean subentry and set the value to `YES`.
 
  You can also disable automatic geofence requests at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticGeofenceRequestsKey` to `YES`. For example:
 

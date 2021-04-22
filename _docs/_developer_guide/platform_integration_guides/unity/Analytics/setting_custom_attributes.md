@@ -26,7 +26,7 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 >  It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
 #### Gender
-`AppboyBinding.SetUserGender(Appboy.Models.Gender.Male or Appboy.Models.Gender.Female);`
+`AppboyBinding.SetUserGender(Appboy.Models.Gender);`
 
 #### Birth Date
 `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");`
@@ -38,19 +38,13 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 `AppboyBinding.SetUserHomeCity("city name");`
 
 #### User Email Subscription
-`AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN or AppboyNotificationSubscriptionType.SUBSCRIBED or AppboyNotificationSubscriptionType.UNSUBSCRIBED);`
-
->  `AppboyBinding.SetUserIsSubscribedToEmails()` has been deprecated. Please use `AppboyBinding.SetUserEmailNotificationSubscriptionType()` instead.
+`AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
 #### User Push Subscription
-`AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN or AppboyNotificationSubscriptionType.SUBSCRIBED or AppboyNotificationSubscriptionType.UNSUBSCRIBED);`
+`AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
 #### User Phone Number
-`AppboyBinding.SetUserPhoneNumber("phone number without hyphens");`
-
-#### User Avatar Image URL
-`AppboyBinding.SetUserAvatarImageURL("URL");`
-
+`AppboyBinding.SetUserPhoneNumber("phone number");`
 
 ### Assigning Custom User Attributes
 
@@ -76,10 +70,8 @@ AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 #### Custom Attribute with a Double Value
 
 ```csharp
-AppboyBinding.SetCustomUserAttribute("custom float attribute key", 'float value');
+AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
 ```
-
->  Braze treats FLOAT and DOUBLE values exactly the same within our database.
 
 #### Custom Attribute with a String Value
 

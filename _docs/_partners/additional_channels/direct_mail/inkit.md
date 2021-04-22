@@ -9,10 +9,9 @@ page_type: partner
 
 # Inkit Direct Mail Integration
 
-> [Inkit][1] enables you to save time and effort by automating your direct mail campaigns and bring offline customers back online.
+> [Inkit][1] enables you to reach and communicate with your customers by delivering automated and personalized direct mail campaigns, rendering paperless documents at scale, and validating customer mailing addresses. 
 
 You can access Inkit's services through Braze's webhook feature and send mail to your users.
-
 
 ## Requirements
 

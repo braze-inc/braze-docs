@@ -83,6 +83,15 @@ validurls['/docs/rest_api/#endpoints'] = '/docs/developer_guide/rest_api/basics/
 validurls['/docs/rest_apis/endpoints'] = '/docs/developer_guide/rest_api/basics/#endpoints';
 validurls['/docs/rest_api/#user-track-endpoint'] = '/docs/developer_guide/rest_api/user_data/#user-track-endpoint';
 validurls['/docs/rest_api/#users-by-segment-endpoint'] = '/docs/developer_guide/rest_api/export/#users-by-segment-endpoint';
+validurls['/docs/api/objects_filters/android_objects/'] = '/docs/api/objects_filters/messaging/android_object/';
+validurls['/docs/api/objects_filters/apple_objects/'] = '/docs/api/objects_filters/messaging/apple_object/';
+validurls['/docs/api/objects_filters/email_object/'] = '/docs/api/objects_filters/messaging/email_object/';
+validurls['/docs/api/objects_filters/kindle_and_fireos_object/'] = '/docs/api/objects_filters/messaging/kindle_and_fireos_object/';
+validurls['/docs/api/objects_filters/sms_object/'] = '/docs/api/objects_filters/messaging/sms_object/';
+validurls['/docs/api/objects_filters/web_objects/'] = '/docs/api/objects_filters/messaging/web_objects/';
+validurls['/docs/api/objects_filters/webhook_object/'] = '/docs/api/objects_filters/messaging/webhook_object/';
+validurls['/docs/api/objects_filters/windows_objects/'] = '/docs/api/objects_filters/messaging/windows_objects/';
+validurls['/docs/api/objects_filters/content_cards_object/'] = '/docs/api/objects_filters/messaging/content_cards_object/';
 
 validurls['/docs/rest_apis/'] = '/docs/developer_guide/rest_api/basics/';
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
@@ -251,6 +260,7 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] 
 validurls['/docs/developer_guide/rest_api/email_sync/#changing-email-subscription-status'] = '/docs/api/endpoints/email/post_email_subscription_status/#change-users-email-subscription-status';
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
+validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/engagement_tools/testing/global_control_group/';
 validurls['/docs/hidden/private_betas/canvas_in-app_messages/'] = '/docs/canvas_in-app_messages/';
 validurls['/docs/hidden/private_betas/predictive_churn/'] = '/docs/predictive_churn/';
 validurls['/docs/hidden/private_betas/decision_split/'] = '/docs/decision_split/';
@@ -276,4 +286,6 @@ validurls['/docs/report_by_variant/'] = '/docs/user_guide/engagement_tools/campa
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/beta-preview/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/preview/';
 
 validurls['/docs/services_handbook/'] = '/docs/handbooks/';
+
+validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
 

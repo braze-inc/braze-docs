@@ -21,34 +21,28 @@ API Triggered Delivery allows you to house message content inside of the Braze d
 
 This endpoint allows you to send Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendApiTriggeredDeliveryCanvasExample {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "canvas_id": (required, string) see Canvas Identifier,
+  "canvas_id": (required, string) see canvas identifier,
   "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
-  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
-  "audience": (optional, Connected Audience Object) see Connected Audience,
+  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas) [
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
-      "user_alias": (optional, User Alias Object) User Alias of user to receive message,
-      "external_user_id": (optional, string) External Id of user to receive message,
-      "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with canvas_entry_properties above)
+      "user_alias": (optional, user alias object) user alias of user to receive message,
+      "external_user_id": (optional, string) external identifier of user to receive message,
+      "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with `canvas_entry_properties` above)
       "send_to_existing_only": (optional, boolean) defaults to true,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     },
@@ -57,15 +51,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String|See Canvas Identifier|
+|`canvas_id`|Required|String|See canvas identifier|
 |`canvas_entry_properties`|Optional|Object|Personalization key value pairs that will apply to all users in this request|
-|`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
-|`audience`|Optional|Connected Audience Object|See Connected Audience|
-|`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas|
+|`broadcast`|Optional|Boolean|See broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted|
+|`audience`|Optional|Connected audience object|See connected audience|
+|`recipients`|Optional|Array|If not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the Canvas|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -88,14 +82,14 @@ Customers using the API for server-to-server calls may need to whitelist the app
 <br><br>
 If you include both specific users in your API call and a target segment in the dashboard, the message will send to specifically the user profiles that are in the API call *and* qualify for the segment filters.
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/send' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "canvas_id": "",
-  "canva_entry_properties": "",
+  "canvas_id": "canvas_identifier",
+  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99},
   "broadcast": false,
   "audience": {
     "AND": [
@@ -144,17 +138,19 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
       }
     ]
   },
-  "recipients": [{
+  "recipients": {
     "user_alias": {
-      "alias_name" : "",
-      "alias_label" : ""
+      "alias_name" : "example_name",
+      "alias_label" : "example_label"
     },
-    "external_user_id": "",
-    "trigger_properties": {},
-    "canvas_entry_properties": {},
+    "external_user_id": "user_identifier",
+    "trigger_properties": "",
+    "canvas_entry_properties": "",
     "send_to_existing_only": true,
-    "attributes": {}
-  }]
+    "attributes": {
+        "first_name" : "Alex"
+    }
+    }
 }'
 ```
 

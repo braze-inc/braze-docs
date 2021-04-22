@@ -22,9 +22,9 @@ __Note:__ If a session closes while the user has the app backgrounded, that data
 ### Customizing Session Timeout
 
 {% if include.platform == "iOS" %}
-Starting with Braze iOS SDK v3.14.1, you can set the session timeout using the Info.plist file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `SessionTimeout` number subentry and set the value to your custom session timeout.
+Starting with Braze iOS SDK v3.14.1, you can set the session timeout using the Info.plist file. Add the `Braze` dictionary to your Info.plist file. Inside the `Braze` dictionary, add the `SessionTimeout` number subentry and set the value to your custom session timeout. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
-To customize the session timeout in versions prior to v3.14.1, set the [`ABKSessionTimeoutKey`][session_tracking_2] so that the value is a number of seconds in the Braze initialization method [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][session_tracking_1].
+You may alternatively set the `ABKSessionTimeoutKey` key to the desired integer value in your `appboyOptions` object passed to [`startWithApiKey`][session_tracking_1].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -79,7 +79,6 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 ![test_session] [session_tracking_7]
 
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/#customizing-braze-on-startup
-[session_tracking_2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L101
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx

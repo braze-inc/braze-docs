@@ -130,4 +130,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/localization/crowdin/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
+- name: Phrasee
+  url: /docs/partners/channel_extensions/creative_and_personalization/language_optimization/phrasee/
 ---

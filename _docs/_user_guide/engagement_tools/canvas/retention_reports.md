@@ -46,7 +46,9 @@ The report will only show days down the left column on which the Canvas was send
 Our Retention Report offers both a Rolling Retention and Range Retention formula. To view your Canvas report with one of these retention types, select the __Rolling Retention__ or __Range Retention__ radio dial listed under the Type of Retention.
 
 ### Rolling Retention
-Rolling retention measures how many users come back and do the retention event __on or after any of the days listed__ across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the Canvas was sent on the date in the left column will be counted under the "30 days" column in that row.
+Rolling retention measures how many users come back and do the retention event __on or after any of the days listed__ across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the "3 days", "1 day", and "0 days" columns. Any user who is counted as retained after the 30-day mark from when the Canvas was sent on the date in the left column will be counted under the "30 days" column in that row. 
+
+Note that a user who completes the event multiple times during a window of 30+ days will be counted as part of multiple time frames. For instance, a user who completes a session after 1 day will be incremented in the columns for >0 and >1; if they then complete the event after 3 days, they will again be incremented in the prior columns (>0 and >1), which could result in the retention rate exceeding 100%.
 
 ### Range Retention
 Range retention measures how many users come back __in the range of days listed__ across the top of the report. So, if a user started a session between days 3 and 7 and then again on day 13, they would be counted as retained under both "Day 3-7" and "Day 7-14" ranges.
@@ -66,7 +68,8 @@ __Braze Retention Reports Components:__
 {% tab Range Report %}
 __How to Read a Range Retention Report__
 
-Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the image shown below, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range. 
+Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the image shown below, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range.
+
 
 ![Retention Report]({% image_buster /assets/img/range_retention.png %})
 
@@ -82,6 +85,8 @@ The way to read the retention report chart for a day 3 column would be Y% or Y n
 As another example, referring to the table above, on 25th of March, a total of 38 users performed the retention event. Day 0 retention was 68.42%, meaning that 68.42% of users performed the retention event 0 or more days (on Day 0 or later) after entering the Canvas. Day 7 retention was 57.89%, meaning 57.89% of users performed the event 7 or more days (on Day 7 or later) after entering the Canvas.
 
 This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage/number value in the day 30 column tells you the percentage of users who returned on day 30 or after. 
+
+Note that a user who completes the event multiple times during a window of 30+ days will be counted as part of multiple time frames, which could result in retention rates of greater than 100%. For instance, a user who completes a session after 1 day will be incremented in the columns for >0 and >1; if they then complete the event after 3 days, they will again be incremented in the prior columns (>0 and >1). This could lead to the retention rate exceeding 100%, particularly for the earlier time periods.
 
 {% endtab %}
 {% endtabs %}

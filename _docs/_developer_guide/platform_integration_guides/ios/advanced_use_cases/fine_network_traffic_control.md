@@ -144,4 +144,4 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
 [3]: #customizing-appboy-on-startup
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

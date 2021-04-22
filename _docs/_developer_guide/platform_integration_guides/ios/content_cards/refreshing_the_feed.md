@@ -28,4 +28,4 @@ Appboy.sharedInstance()?.requestContentCardsRefresh()
 {% endtab %}
 {% endtabs %}
 
-For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h).
+For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).

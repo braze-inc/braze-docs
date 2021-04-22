@@ -25,32 +25,37 @@ You can send up to 50 external IDs per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "external_ids" : (required, array of external IDs to remove)
+  "external_ids" : (required, array of external identifiers to remove)
 }
 ```
 
-### Request Example
+### Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `external_ids` | Required | Array of strings | External identifiers for the users to remove |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "external_ids" : 
     [
-      "your_existing_deprecated_external_id_string",
+      "existing_deprecated_external_id_string",
       ...
     ]
 }'
@@ -59,7 +64,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 Only deprecated IDs can be removed; attempting to remove a primary external ID will result in an error.
 {% endalert %}
 
-## Response Body
+## Response 
 The response will confirm all successful removals, as well as unsuccessful removals with the associated errors. Error messages in the `removal_errors` field will reference the index in the array of the original request.
 
 ```

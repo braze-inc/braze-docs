@@ -151,7 +151,7 @@ func application(_ application: UIApplication,
 
 Braze allows you to send custom-defined string key value pairs, known as extras, along with a push notification to your application. Extras can be defined via the dashboard or API and will be available as key value pairs within the notification dictionary passed to your push delegate implementations.
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
+[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKPushUtils.h
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
 [4]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
