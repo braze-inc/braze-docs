@@ -128,5 +128,6 @@ valid_partner_list:
   url: /docs/partners/channel_extensions/support/zendesk/
 - name: Crowdin
   url: /docs/partners/channel_extensions/localization/crowdin/
-
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 ---
