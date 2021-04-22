@@ -49,7 +49,55 @@ To view a reporting for your global control group, from the dashboard, navigate 
 The global control group report allows you to compare your group against a treatment sample.
 Your treatment sample is a random selection of con-control users, approximately the same number of users as your Control, generated using the Random Bucket Number method.
 
-This report takes the percentage of users in your control and treatment groups that have completed your selected event each day and averages this percentage out over the last 30 days. This calculates during this time period, on average, what percentage of Global Control and treatment group users would complete this event. The __Change from Control__ field indicates the percentage change between the two groups.
+When generating your report, you will choose an event - either sessions or any custom event - to compare across your treatment and control groups. You will also choose a time period for which to view data for. Keep in mind that if you’ve saved multiple control group experiments at different time periods, you should avoid including data from more than 1 experiment in your report.
+
+Tooltips within the product also contain information related to the descriptions of each report metric.
+
+### Report Metrics
+
+{% tabs %}
+{% tab Conversion Rate %}
+#### Conversion rate
+On average, the percentage of users in your control/ treatment group that complete your selected event each day during the chosen time period
+
+__Calculation__<br>
+Average (mean) of the percent of users that perform your selected event each day during the chosen time period
+{% endtab %}
+{% tab Total Number of Events%}
+#### Total Number of Events
+The total number of times the selected event occurred during the chosen time period - this is not unique (ie. if a user performs an event twice during time period, the event gets incremented twice)
+
+__Calculation__<br>
+Sum of the number of times event occurred each day during the chosen time period
+{% endtab %}
+{% tab Total Events Scaled to Population %}
+#### Total Events Scaled to Population
+An approximation of the number of times the selected event would’ve occurred had your control or treatment been applied to your entire user base. To calculate this, Braze will - for each day in your chosen time period - divide that day’s DAU by the size of your control/ treatment group; consider this a “factor” by which to use to scale up from your control/ treatment group size to your overall audience size. Then Braze takes the number of events on each day and multiplies it by this factor, to get the scaled number of events for each day. Then, to calculate total events scaled to the population for your chosen time period, Braze will add up the total events scaled to population from each day in the time period.
+
+__Calculation__<br>
+For chosen time period, sum of (total number of  events each day * (DAU that day ÷ control or treatment group size that day))
+{% endtab %}
+{% tab Change from Control %}
+#### Change from Control
+This calculates the uplift between the conversion rate for your treatment and control groups
+
+__Calculation__<br>
+((Treatment conversion rate - control conversion rate) ÷ control conversion rate) * 100
+{% endtab %}
+{% tab Incremental Lift %}
+#### Incremental Lift
+##### Incremental Lift (Number)
+The difference in total events scaled to the population between your treatment and control groups. This metric seeks to answer the question of “If we had applied the treatment to our entire user base, how many more events would we have expected compared to if we applied the control?”
+
+__Calculation__<br>
+Total events scaled to population for treatment - total events scaled to population for control
+##### Incremental Lift (Percentage)
+The percentage of your treatment’s total events that can be attributed to your treatment (versus natural user behavior) - this is calculated by dividing incremental uplift (number) by the total number of events scaled to population 
+
+__Calculation__<br>
+Incremental uplift (number) ÷ Total events scaled to population for treatment
+{% endtab %}
+{% endtabs  %}
 
 ## Potential Errors / Things to Watch For
 As you set up your global control groups and view reporting, here are errors you may run into:
@@ -66,6 +114,7 @@ If you access the global control report without having saved a global control gr
 #### Things to Watch Out For {#things-to-watch-for}
 - Your global control group is formed using Random Bucket Numbers, and thus if you are running any other tests using Random Bucket Numbers segment filters, keep in mind that there could be an overlap between those segments you create, and your global control group users.
 - __If two users who have different external user IDs have the same email address,__ and one of these users is in the control group and the other is not, then an email will still be sent to that email address whenever the non-control group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
+- It is possible to have a global control group and also use a campaign-specific or Canvas-specific control group. Having a campaign-specific or Canvas-specific control group lets you measure the impact of a particular message. Users in your global control group are withheld from receiving any messages (other than those with tag exceptions), and if you add a control to a campiagn or Canvas, Braze will withhold a portion of your Global Treatment group from receiving that particular campaign or Canvas. That is, if a member of the Global Control Group is not eligible to receive a particular campaign/Canvas, they will also not be present in the control group for that particular campaign/Canvas.
 
 ## Testing Best Practices
 
@@ -73,7 +122,7 @@ If you access the global control report without having saved a global control gr
 
 <br>__Two main rules to keep in mind are__:<br>- Your control group should be no smaller than 1000 users.<br>- Your control group should be no more than 10% of your entire audience.
 
-If you have a total audience that’s smaller than 10,000, you should increase your percentage in order to create a group of over 1000 users; in this case, you should not increase your percentage above 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
+If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage above 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
 - Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you’re using your campaigns to drive engagement and conversions.
 - The ideal percentage of your total audience will depend on how large your total audience is. The bigger your total audience is, the smaller your percentage can be. If you have a small audience, however, you will need a larger percentage for your control group.
 
