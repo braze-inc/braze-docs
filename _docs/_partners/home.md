@@ -34,6 +34,8 @@ valid_partner_list:
   url: /docs/partners/data_augmentation/contextual_location/foursquare/
 - name: Kochava
   url: /docs/partners/advertising_technologies/attribution/kochava/
+- name: Airbridge
+  url: /docs/partners/advertising_technologies/attribution/airbridge/
 - name: Appsflyer
   url: /docs/partners/advertising_technologies/attribution/appsflyer/
 - name: Adjust

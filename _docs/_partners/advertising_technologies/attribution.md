@@ -12,6 +12,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Attribution"
 
 valid_partner_list:
+- name: Airbridge
+  url: /docs/partners/advertising_technologies/attribution/airbridge/
 - name: Adjust
   url: /docs/partners/advertising_technologies/attribution/adjust/
 - name: AppsFlyer
