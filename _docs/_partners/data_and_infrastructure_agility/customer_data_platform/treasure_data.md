@@ -34,7 +34,7 @@ For more detail, check out the document on [Treasure Data Product Documentation]
 
 Obtain the required Braze endpoints and keys detailed in the previous requirements section. 
 
-### Step 2: Create a new Connection
+### Step 2: Create a New Connection
 In Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you must provide authentication to access the integration.
 
 1. First, open the Treasure Data console and navigate to the __Catalog__ under the __Integrations Hub__.
