@@ -21,6 +21,9 @@ No additional integration or SDK changes are required to use this feature. Devic
 - Unsupported devices or SDKs will fallback to the standard big image push notification.
 - Unlike regular Android push notifications, Inline Image push images are in a 3:2 aspect ratio.
 
+{% alert tip %}
+**Note**: Devices running Android 12 will render differently due to changes in custom push notification styles.
+{% endalert %}
 
 This feature is available in the **Notification Type** menu when creating an Android Push message.
 
