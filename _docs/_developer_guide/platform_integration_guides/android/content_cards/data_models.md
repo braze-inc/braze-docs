@@ -59,8 +59,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 |`getDescription()` | Returns the body text for the card.
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL.
 |`getDomain()` | Returns the link text for the property URL.
-|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short 
-News Card.
+|`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
