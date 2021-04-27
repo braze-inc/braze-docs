@@ -7,3 +7,7 @@ page_order: 0
 # Flutter SDK
 
 To learn more about integrating Braze's Flutter SDK, view our [`pub.dev` documentation](https://pub.dev/packages/braze_plugin).
+
+## SDK Requirements
+* Dark SDK 2.0.0
+* Flutter SDK 1.10.0
