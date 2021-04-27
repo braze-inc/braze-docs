@@ -79,6 +79,46 @@ When making use of Braze's Connected Content, you may find that certain APIs req
 ```
 {% endraw %}
 
+## Using Open Authentication (OAuth)
+
+Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
+
+#### Retrieve the Access Token
+The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+
+{% raw %}
+```
+{% connected_content
+     https://your_API_access_token_endpoint_here/
+     :method post
+     :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Authorization": "Bearer YOUR-APP-TOKEN"
+ 	}
+     :cache 900
+     :save token_response
+%}
+```
+{% endraw %}
+
+#### Authorize the API Using the Retrieved Access Token
+Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
+
+{% raw %}
+```
+{% connected_content
+     https://your_API_endpoint_here/
+     :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Authorization": "{{token_response}}"
+ 	}
+     :body key1=value1&key2=value2
+     :save response
+%}
+```
+{% endraw %}
+
+
 ## Connected Content IP Whitelisting
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers’ or third parties’ servers to pull back data.  
@@ -111,3 +151,4 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 [16]: [success@braze.com](mailto:success@braze.com)
 [34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
 [35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
+[36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching
