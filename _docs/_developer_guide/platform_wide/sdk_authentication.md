@@ -248,22 +248,18 @@ These callback methods are a great place to add your own monitoring or error-log
 import braze from "@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
   // TODO: optionally log to your error-reporting service
-  braze.getUser().getUserId((userId) => {
-  // don't renew the token if this failure was for a different user
-    if (userId === authFailure.userId) {
-      const updated_jwt = await getNewTokenSomehow(errorEvent);
-      appboy.setSdkAuthenticationSignature(updated_jwt);
-    }
-  });
+  // TODO: check if the errorEvent user matches the currently logged-in user
+  const updated_jwt = await getNewTokenSomehow(errorEvent);
+  appboy.setSdkAuthenticationSignature(updated_jwt);
 });
 ```
 {% endtab %}
 {% tab Java %}
 ```java
 Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+    // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
-    // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
 ```
@@ -271,9 +267,9 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 {% tab KOTLIN %}
 ```kotlin
 Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+    // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
-    // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
 ```
@@ -284,9 +280,9 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braz
 
 // Method to implement in delegate
 - (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
-  // TODO: check if the errorEvent's user matches the currently logged-in user
-  NSLog(@"Invalid SDK Authentication signature.");
   // TODO: optionally log to your error-reporting service
+  // TODO: check if the errorEvent user matches the currently logged-in user
+  NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(errorEvent);
   [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
 }
@@ -298,10 +294,10 @@ Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
 func handle(_ errorEvent: ABKSdkAuthenticationError?) {
-        // TODO: check if the errorEvent's user matches the currently logged-in user
+        // TODO: optionally log to your error-reporting service
+        // TODO: check if the errorEvent user matches the currently logged-in user
         print("Invalid SDK Authentication signature.")
         let newSignature = getNewSignatureSomehow(errorEvent)
-        // TODO: optionally log to your error-reporting service
         Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
     }
 ```
