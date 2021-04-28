@@ -32,7 +32,9 @@ guide_featured_list:
 - name: Advanced Settings
   link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/advanced_settings/
   fa_icon: fas fa-sliders-h
-
+- name: Implementation Guide
+  link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/
+  fa_icon: fas fa-user-check
 ---
 
 ## Sample
