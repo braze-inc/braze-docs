@@ -28,11 +28,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
-- name: Neura
-  title: Actions
-  url: /docs/partners/message_personalization/location/neura_actions/
-- name: Radar
-  url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
 - name: Segment
