@@ -34,7 +34,7 @@ Provide the Braze API Key created in step 1, and your Braze [endpoint location](
 
 ### Step 3: Import Cohorts to Braze
 1. __Create a Cohort in Kubit__<br>
-Create a Cohort in Kubit and define the criteria of yout target users.<br><br>![Create a Cohort]({% image_buster /assets/img/kubit/create_Cohort.png %}){: style="max-width:80%;"}<br><br>
+Create a Cohort in Kubit and define the criteria of yout target users.<br><br>![Create a Cohort]({% image_buster /assets/img/kubit/create_cohort.png %}){: style="max-width:80%;"}<br><br>
 2. __Import Users to Braze__<br>
 Once you have saved a Cohort in Kubit, you can import these users to Braze to be used in Braze Segments to send email or push notifications to through the use of campaigns or Canvases.<br><br>![Import to Braze]({% image_buster /assets/img/kubit/import_to_braze.png %}){: style="max-width:80%;"}<br><br>There are two import schedule modes:<br>- One-Time Import: Import once now.<br>- Scheduled Import: Import daily, weekly or monthly at a specific time. <br><br>![Import Schedule]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}<br><br>Note that each Cohort can only have one live import schedule.<br><br>
 3. __Verify Import Status__<br>
@@ -43,7 +43,7 @@ Once an import has been completed, an email notification will be sent to the rec
 ### Step 4: Create Braze Segments with Kubit Cohorts
 After Cohorts are imported to Braze, you can use them as filters to create Braze Segments and include them in Braze Campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
-![Segment with Kubit Cohorts]({% image_buster /assets/img/kubit/segment_with_kubit_Cohorts.png %}){: style="max-width:70%;"}
+![Segment with Kubit Cohorts]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ### Step 5: Analyze Braze Data in Kubit (Optional)
 You can also take advantage of [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) to share your Braze raw campaign and impression data with Kubit to incorporate them into Kubit’s Self-Service Analytics and provide you the full picture of users’ lifecycle, from attribution to behavior to engagement.  
