@@ -102,6 +102,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
   url: /docs/partners/channel_extensions/learning/edume/
+- name: Kubit
+  url: /docs/partners/insights/behavioral_analytics/kubit/
 - name: Playable
   url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
 - name: Zendesk
