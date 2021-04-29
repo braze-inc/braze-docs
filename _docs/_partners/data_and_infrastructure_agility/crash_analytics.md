@@ -13,7 +13,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Crash Analytics"
 
 valid_partner_list:
-  - name: Apteligent
-    url: /docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/
+- name: Apteligent
+  url: /docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/
 
 ---

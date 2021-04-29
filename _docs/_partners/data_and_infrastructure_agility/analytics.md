@@ -12,14 +12,14 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Behavioral Analytics"
 
 valid_partner_list:
-  - name: Amplitude
-    url: /docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
-  - name: Mixpanel
-    url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
-  - name: Looker
-    url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-  - name: Neura Insights
-    url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
+- name: Amplitude
+  url: /docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
+- name: Mixpanel
+  url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
+- name: Looker
+  url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
+- name: Neura Insights
+  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 
 
 ---

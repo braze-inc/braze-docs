@@ -12,8 +12,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Support"
 
 valid_partner_list:
-  - name: Zendesk
-    url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
-  - name: Pypestream
-    url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
+- name: Zendesk
+  url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
+- name: Pypestream
+  url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
 ---
