@@ -52,7 +52,7 @@ You should add all the schemes that the app needs to deep link to in a whitelist
 ```html
 <key>LSApplicationQueriesSchemes</key>
 <array>
-    <string>stopwatch</string>
+    <string>myapp</string>
     <string>facebook</string>
     <string>twitter</string>
 </array>
@@ -218,8 +218,6 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 }
 ```
 
-For an implementation example, take a look at `application:openURL:options:` method in the [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m) file of our Stopwatch sample application.
-
 {% endtab %}
 {% tab swift %}
 
@@ -281,8 +279,6 @@ func handleAppboyURL(_ url: URL, from channel: ABKChannel, withExtras extras: [A
 
 For more information, see [`ABKURLDelegate.h`][23].
 
-You can see an example implementation of `handleAppboyURL:fromChannel:withExtras:` in the [AppDelegate.m][9] of our Stopwatch sample application.
-
 ## Frequent Use Cases
 
 ### Deep Linking to App Settings
@@ -290,7 +286,7 @@ You can see an example implementation of `handleAppboyURL:fromChannel:withExtras
 iOS can take users from your app into its page in the iOS Settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages, and the News Feed.
 
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [Universal Links][27].
-2. Decide on a URI for deep linking to the Settings page (e.g., `stopwatch://settings` or `https://www.braze.com/settings`).
+2. Decide on a URI for deep linking to the Settings page (e.g., `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 
 {% tabs %}
@@ -326,12 +322,10 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtabs %}
 
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html#//apple_ref/doc/uid/TP40007072-CH6-SW10 "Apple's Documentation"
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m
-[6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKModalWebViewController.h
+[6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKModalWebViewController.h
 [8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
-[9]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
 [10]: {% image_buster /assets/img_archive/Open_Deep_Link.png %}
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
@@ -341,10 +335,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
 [17]: http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[20]: #customizing-link-handling
 [22]: #customizing-appboy-on-startup
-[23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKURLDelegate.h
-[24]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
+[23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKURLDelegate.h
 [25]: #deep-links
 [26]: #linking-customization
 [27]: #universal-links

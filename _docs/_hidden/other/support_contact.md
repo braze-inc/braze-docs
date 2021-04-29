@@ -605,7 +605,7 @@ var ticket_lookuptable = {
         'Creating Campaigns and Canvases' : {
           'ShowSubmit': true,
           'LinksTitle': ['Canvas','Importing users','LAB course: Canvas','Getting started guide','Scheduling and organizing campaigns'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/']
         },
         'Understanding reporting' : {
           'ShowSubmit': true,

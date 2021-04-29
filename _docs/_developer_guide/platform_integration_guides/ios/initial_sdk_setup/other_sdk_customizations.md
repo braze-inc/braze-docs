@@ -12,14 +12,14 @@ page_order: 3
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-To enable verbose logging for debugging, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary, add the `LogLevel` String subentry and set the value to `0`.
+To enable verbose logging for debugging, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary, add the `LogLevel` String subentry and set the value to `0`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
 
 Example `Info.plist` contents:
 
 ```
-<key>Appboy</key>
+<key>Braze</key>
 <dict>
 	<key>LogLevel</key>
 	<string>0</string>
@@ -46,7 +46,7 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 ### iOS 14 AppTrackingTransparency
 In the future, Apple will require a new permission prompt in order to collect IDFA. For now, prompting for IDFA permission with `AppTrackingTransparency` is not required, but you should be prepared for a future iOS release from Apple which will require user opt-in.
 
-When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12, and collecting IDFA will Xcode 11 is not possible in iOS 14.
+When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12.
 
 The prompt for App Tracking Transparency authorization also requires an `Info.plist` entry to explain your usage of the identifier:
 
@@ -61,7 +61,7 @@ Follow these steps to implement IDFA Collection:
 
 ##### Step 1: Implement ABKIDFADelegate
 
-Create a class that conforms to the [`ABKIDFADelegate`][29] protocol. For a contextual example, see [`IDFADelegate`][30].
+Create a class that conforms to the [`ABKIDFADelegate`][29] protocol.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -124,24 +124,6 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 > If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 
 
-[1]: http://cocoapods.org/
-[2]: https://www.ruby-lang.org/en/installation/
-[3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[4]: http://guides.cocoapods.org/syntax/podfile.html
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-integration
-[12]: #appboy-podfiles-for-non-64-bit-apps
-[13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
-[15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
 [21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
-[25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[28]: #apple-watch-sdk
-[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/Utils/IDFADelegate.m
+[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKIDFADelegate.h
 [31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

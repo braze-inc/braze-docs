@@ -20,9 +20,8 @@ resources_list:
   - name: Webinars
     link: /docs/help/webinars/overview/
     image: /assets/img/webinars.png
-  - name: GDPR
-    link: /docs/help/gdpr_compliance/
-    image: /assets/img/legal.png
+  - name: Data Protection Technical Assistance
+    link: /docs/help/dp-technical-assistance/
 
 
 

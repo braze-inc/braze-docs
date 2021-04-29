@@ -4,7 +4,7 @@ platform: iOS
 page_order: 1
 
 ---
-## Setting User IDs
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -64,11 +64,9 @@ Be sure to call this method in your application's main thread. Calling the metho
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
 Additionally, we recommend against changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
-**Implementation Example**
+**Additional Information**
 
-`changeUser` is utilized in [`UserAttributesViewController.m` file][3] of the Stopwatch sample app.
-
-- Also, see the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
+- See the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
 
 ## Automatic Preservation of Anonymous User History
 
@@ -95,7 +93,6 @@ Please note the following:
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/ViewControllers/User/Attributes/UserAttributesViewController.m
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

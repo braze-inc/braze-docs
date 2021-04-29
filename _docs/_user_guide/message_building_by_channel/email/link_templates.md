@@ -14,10 +14,6 @@ This can be ideally used for the following use cases:
 1. Appending Google Analytics query parameters to all links in a given Email message easily.
 2. Pre-appending a URL to all links in a given Email message
 
-{% alert important %}
-Note that if an Email link contains Liquid or personalization, Braze __cannot__ track clicks on those links in our dashboard. However, those clicks will still be tracked in [Currents]({{site.baseurl}}/partners/braze_currents/) as an event.
-{% endalert %}
-
 ## Creating a Link Template
 
 On the Braze dashboard, Link Templates are found in the Templates & Media section. Dashboard users can create an unlimited number of Link Templates to support their various needs. Note that when using Link Templates and [Liquid][4], Liquid code must only be added within the body tag to ensure consistent rendering. 

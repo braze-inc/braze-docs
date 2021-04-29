@@ -21,6 +21,8 @@ This feature allows you to:
 - Set Default Sending and Reply-To Address
 - Exclude Reply-To option and send replies to the "From" Address
 
+When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. marketing.yourdomain.com), failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
+
 ### BCC Addresses
 
 The BCC Address settings will allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to a email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. 
@@ -75,7 +77,7 @@ Learn more about best practices for email list management [here][7].
 
 ## Email Open Tracking Pixel
 
-Currently a Beta feature, the email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
+The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
 
 For more information regarding the email open tracking pixel, check out our short [LAB course][6].
 
@@ -92,7 +94,7 @@ Learn more about best practices for e-mail list management [here][8].
 
 ### Include a List-Unsubscribe Header
 
-![list_unsub_1][00]{: style="float:right;max-width:90%;margin-left:15px;"}
+![list_unsub_1][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
 

@@ -96,7 +96,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 {% endalert %}
 
 If given a pre-existing custom endpoint...
-- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Braze dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`). Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ### Runtime Endpoint Configuration
 
@@ -111,33 +111,4 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 To find out your specific cluster or custom endpoint, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-### Implementation Example
-
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_29] file{% endif %} in the Stopwatch sample app.
-
-[1]: http://cocoapods.org/
-[2]: https://www.ruby-lang.org/en/installation/
-[3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[4]: http://guides.cocoapods.org/syntax/podfile.html
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#manual-sdk-
 [9]: https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos
-[12]: #appboy-podfiles-for-non-64-bit-apps
-[13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
-[15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[21]: {{site.baseurl}}/partners/
-[25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
-[27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[28]: #apple-watch-sdk
-[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKIDFADelegate.h
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/IDFADelegate.m
-[31]: https://developer.apple.com/library/content/qa/qa1795/_index.html
-
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m

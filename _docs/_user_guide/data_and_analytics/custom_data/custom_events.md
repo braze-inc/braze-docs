@@ -26,12 +26,12 @@ Custom events are actions taken by, or updates about, your users; they're best s
 
 ## Custom Event Analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [custom events analytics page][7] you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [custom events analytics page][7] you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
 ![custom_event_analytics_example.png][8]
 
 {% alert tip %}
-[Incrementing Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+[Incrementing Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded via this method.
 {% endalert %}
 
 ### Custom Events Analytics Not Showing?
@@ -63,28 +63,20 @@ Triggered in-app messages with templated Custom event properties (for example, `
 You can change the data type of your Custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+Please note that when making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "` your users would be considered "not blank".
 {% endalert %}
 
 ## Custom Event Property Storage
-Custom event properties are designed to help you personalize your messaging or build granular Action-Based Delivery Campaigns. As such, Custom event properties are not stored long-term.
+Custom event properties are designed to help you increase targeting precision and make messages feel even more personalized. Custom event properties can be stored within Braze in both the short and long term.
 
-If you need to segment on the values of event properties, you have options:
-1. **Within 30 days:** Braze support personnel can enable segmentation on the frequency and recency of specific event property values over the past thirty (30) days. If you’d like to leverage event properties for Segmentation, please contact your Braze account executive or Customer Success Manager.
-2. **Beyond 30 days:** Since all other data types on the profile are stored indefinitely, you can segment on event property values long-term by copying them into Custom attributes. For example, in a streaming video scenario, you might copy the title of each show into an array of "shows watched" for long-term segmentation. The copying process can take place entirely within Braze in many scenarios.
+If you would like to segment on the values of event properties, you have options:
+1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, please contact your Braze account executive or Customer Success Manager. Note that this option will impact data usage.<br><br>
+2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
 
-Braze's Success and Support teams can help recommend the best approach depending on your specific needs. Please note these approaches may have additional data usage impact.
+Braze's Success and Support teams can help recommend the best approach depending on your specific needs. 
 
 [7]: https://dashboard-01.braze.com/dashboard/custom_events/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: http://www.regextester.com/pregsyntax.html
-[10]: #integers
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/
-[12]: #automatic-data-collection
-[13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging
-[14]: #taxiride-sharing-app-use-case
-[15]: #customeventproperties
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[17]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

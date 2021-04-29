@@ -33,10 +33,6 @@ glossaries:
     description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Timezone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
     tags:
       - Custom Data
-  - name: Date of Custom Attribute
-    description: Segments your users based upon the calendar date of custom attributes. (24-hour period) This filter looks for matches of an indicated day/month but ignores the year. As such, the filter works nicely for anniversary use cases. <br><br> Example:<br>Date of Subscription End Date More than 1 Day Ago = 24 hours ago and up<br><br>Timezone&#58;<br>Time attributes without a time zone will default to midnight UTC (and will be formatted on the dashboard as the equivalent of midnight UTC in company's timezone<br><br>Something to keep in mind with these filters is that the less than and more than both include the specific day in the filter.  For example&#58; less than 1 day ago is 24 hours and under, and more than 1 day ago is 24 hours and up.
-    tags:
-      - Custom Data
   - name: First Did Custom Event
     description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Timezone:<br>Company's Time Zone
     tags:
@@ -56,7 +52,7 @@ glossaries:
     description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Timezone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
     tags:
       - Custom Data
-  - name: Day of Recurring Event
+  - name: Date of Recurring Event
     description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Timezone&#58;<br>This filter adjusts for whatever timezones the user is in.
     tags:
       - Custom Data
@@ -141,7 +137,7 @@ glossaries:
     tags:
       - User Activity
   - name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app.
+    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
@@ -280,8 +276,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Cohorts
-    description: Clients who use Amplitude to supplement their segments may import and choose from those cohorts.
+  - name: Amplitude Extension
+    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
     tags:
       - User Attributes
   - name: Background Push Enabled
@@ -289,11 +285,11 @@ glossaries:
     tags:
       - User Attributes
   - name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
+    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.
     tags:
       - User Attributes
-  - name: Braze Segment Cohorts
-    description: After creating Segment Cohorts in the Braze Dashboard, you can choose to include/exclude those cohorts in your segment.
+  - name: Braze Segment Extension
+    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City
@@ -321,7 +317,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Email Available
-    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. If a user reports your emails as spam or if Braze receives a hard bounce response from this email address, the user will no longer appear in a segment that uses this filter with the value of "true".
+    description: Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user will not be included.
     tags:
       - User Attributes
   - name: Email Opt-In Date
@@ -349,7 +345,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Has App
-    description: Segments by whether or not a user has your app.
+    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. 
     tags:
       - User Attributes
   - name: Language

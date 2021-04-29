@@ -5,7 +5,9 @@ page_order: 5
 
 ---
 
-# Requesting Unread Content Card Counts
+# Badges
+
+## Requesting Unread Content Card Counts
 
 If you would like to display the number of unread content cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, the Braze SDK provides methods to query the following:
 
@@ -71,4 +73,4 @@ UIApplication.shared.applicationIconBadgeNumber =
 {% endtab %}
 {% endtabs %}
 
-For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h).
+For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).

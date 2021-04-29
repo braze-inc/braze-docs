@@ -117,7 +117,7 @@ Opera | macOS | N/A
 
 | **Browser** | **Platform** | **Maximum Title Length**  | **Maximum Message Body Length**
 | --- | --- | --- | ---
-Chrome | macOS | 28 | 27
+Chrome | macOS | 35 | 50
 Safari | macOS | 38 | 84
 Firefox | macOS | 38 | 42
 Opera | macOS | 38 | 42
@@ -137,6 +137,7 @@ Banner Card | 6:1 (600 pixels wide mimimum) | 500KB | 1MB | PNG, JPG, GIF
 ### MMS
 
 #### Images
+
 **Image Specifications** | **Recommended Properties**
 --- | ---
 Size | 5MB maximum

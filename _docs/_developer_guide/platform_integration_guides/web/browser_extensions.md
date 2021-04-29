@@ -40,7 +40,7 @@ However, if you use [Google Tag Manager][8], or reference Braze's SDK from an ex
 ## Getting Started
 
 {% alert tip %}
-Before you get started, make sure you've read through the Web SDK's [Initial SDK Setup Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK Reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html) for full details on all of the different SDK methods and configuration options.
+Before you get started, make sure you've read through the Web SDK's [Initial SDK Setup Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK Reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html) for full details on all of the different SDK methods and configuration options.
 {% endalert %}
 
 To integrate Braze's Web SDK you'll first need to download a copy of the latest Javascript library. This can be done using NPM, or download from [Braze's CDN directly][7].
@@ -113,11 +113,8 @@ Extension Popup dialogs don't allow for push prompts (they don't have the URL ba
 [1]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 [2]: https://developer.chrome.com/extensions/background_pages
 [3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-[4]: https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html
 [6]: https://developer.chrome.com/extensions/contentSecurityPolicy
 [7]: https://js.appboycdn.com/web-sdk/latest/appboy.min.js
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/
-[9]: https://www.braze.com/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze
 [10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initialize
 [11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain

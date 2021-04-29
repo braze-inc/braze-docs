@@ -100,6 +100,10 @@ With IP whitelisting, you can verify that Webhooks requests are actually coming 
 
 Braze will send Webhooks from the IP ranges below.
 
+{% alert important %}
+  If you’re making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
+{% endalert %}
+
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
 |---|
 | `127.0.0.1`
@@ -119,10 +123,6 @@ Braze will send Webhooks from the IP ranges below.
 | `52.29.193.121`
 | `35.158.29.228`
 
-{% alert important %}
-If you’re making Braze-to-Braze webhooks and using the IP whitelisting feature in the Braze dashboard, you only need to whitelist `127.0.0.1`.
-{% endalert %}
-
 # Utilizing Webhooks
 
 There are many ways to utilize webhooks, and with Braze's technology partners (Alloys) you can use webhooks to uplevel your communication directly with your customers and users.
@@ -140,35 +140,9 @@ Check out:
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[20]: https://www.twilio.com/docs/api/rest/sending-messages
 [21]: {% image_buster /assets/img/webhook_JSON1.jpg %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
-[28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
-[29]: {% image_buster /assets/img_archive/Webhook_Body.png %}
-[30]: {% image_buster /assets/img_archive/Webhook_Method.png %}
-[31]: {% image_buster /assets/img_archive/Webhook_Preview.png %}
-[32]: https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side
-[41]: https://en.wikipedia.org/wiki/JSON#Example
 [42]: https://dashboard-01.braze.com/app_settings/developer_console/
 [43]: {% image_buster /assets/img_archive/webhook-error.png %}
-[44]: {{site.baseurl}}/partners/additional_channels/instant_chat/messenger/
-[45]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup
-[46]: https://github.com/Appboy/appboy-fb-messenger-bot
-[47]: https://developers.facebook.com/docs/messenger-platform/product-overview/setup#page_access_token
-[48]: https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable
-[49]: https://developers.facebook.com/docs/messenger-platform/guidelines
-[50]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes
-[51]: https://developers.facebook.com/docs/messenger-platform/app-review
-[54]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/
-[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[59]: https://developers.facebook.com/docs/messenger-platform/send-api-reference
-[60]: {% image_buster /assets/img_archive/fbm-test.png %}
-[61]: {{site.baseurl}}/user_guide/data_and_analytics/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}
 [64]: {% image_buster /assets/img_archive/webhook_test_send.png %}
-[65]: https://www.remerge.io/
-[66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API
-[67]: {% image_buster /assets/img_archive/webhook_remerge_preview.png %}
-[68]: {% image_buster /assets/img_archive/httpmethod_remerge.png %}

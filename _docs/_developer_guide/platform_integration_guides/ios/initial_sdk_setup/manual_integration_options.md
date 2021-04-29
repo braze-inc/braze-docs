@@ -8,7 +8,7 @@ page_order: 2
 # Manual Integration
 
 {% alert tip %}
-We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions below.
+We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete the integration manually by following the instructions below.
 {% endalert %}
 
 ## Step 1: Downloading the Braze SDK
@@ -26,6 +26,7 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 3. Navigate to File > Add Files to “Project_Name”
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
 	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. Expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
+	- Delete the `AppboyKit/include` and `AppboyUI/include` directories
 5. (Optional) If you are one of the following:
   - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages or Content Cards)
   - You have custom UI for Braze's UI features and handle the image downloading yourself
@@ -101,8 +102,6 @@ Be sure to update `YOUR-API-KEY` with the correct value from your App Settings p
 Be sure to initialize Braze in your application's main thread.
 {% endalert %}
 
-See the [`AppDelegate.m` file](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) in the Stopwatch sample app.
-
 {% endtab %}
 {% tab swift %}
 
@@ -133,9 +132,4 @@ Braze should now be collecting data from your application and your basic integra
 
 [Full iOS class documentation][7] is available to provide additional guidance on any of the aforementioned methods.
 
-[1]: #clone-sdk
-[2]: #add-libs
-[3]: #configure
-[4]: #update-delegate
 [7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full ios class documentation"
-[10]: http://cocoapods.org/

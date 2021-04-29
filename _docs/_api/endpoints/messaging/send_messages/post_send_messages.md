@@ -22,18 +22,13 @@ This endpoint allows you send your messages using our API. Be sure to include Me
 
 The send endpoint allows you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/SendMessageImmediatelyExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74fc3f0d-11f1-40f6-93f4-2eacb0ed459a {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -42,44 +37,44 @@ Authorization: Bearer YOUR_REST_API_KEY
    // Including 'segment_id' will send to members of that segment
    // Including 'external_user_ids' and/or 'user_aliases' will send to those users
    // Including both will send to the provided users if they are in the segment
-   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if no external_user_ids or aliases are provided,
-   "external_user_ids": (optional, array of strings) see External User ID,
-   "user_aliases": (optional, array of User Alias Object) see User Alias,
-   "segment_id": (optional, string) see Segment Identifier,
-   "audience": (optional, Connected Audience Object) see Connected Audience,
-   "campaign_id": (optional*, string) *Required if you wish to track campaign states. see Campaign Identifier,
-   "send_id": (optional, string) see Send Identifier,
+   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if no external_user_ids or aliases are provided,
+   "external_user_ids": (optional, array of strings) see external user identifier,
+   "user_aliases": (optional, array of user alias object) see user alias,
+   "segment_id": (optional, string) see segment identifier,
+   "audience": (optional, connected audience object) see connected audience,
+   "campaign_id": (optional*, string) *required if you wish to track campaign states. see campaign identifier,
+   "send_id": (optional, string) see send identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
    "messages": {
-     "apple_push": (optional, Apple Push Object),
-     "android_push": (optional, Android Push Object),
-     "windows_phone8_push": (optional, Windows Phone 8 Push Object),
-     "windows_universal_push": (optional, Windows Universal Push Object),
-     "kindle_push": (optional, Kindle/FireOS Push Object),
-     "web_push": (optional, Web Push Object),
-     "email": (optional, Email Object),
-     "webhook": (optional, Webhook object),
-     "content_card": (optional, Content Card Object),
-     "sms": (optional, SMS Object)
+     "apple_push": (optional, apple push object),
+     "android_push": (optional, android push object),
+     "windows_phone8_push": (optional, windows phone 8 push object),
+     "windows_universal_push": (optional, windows universal push object),
+     "kindle_push": (optional, kindle/fireOS push object),
+     "web_push": (optional, web push object),
+     "email": (optional, email object),
+     "webhook": (optional, webhook object),
+     "content_card": (optional, content card object),
+     "sms": (optional, SMS object)
    }
  }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`|Optional|Boolean|See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
-|`external_user_ids` | Optional | Array of Strings | See External ID |
-|`user_aliases`|Optional|Array of User Alias Objects|See User Alias Object|
-|`segment_id `| Optional | String | See Segment Identifier |
-|`audience`|Optional|Connected Audience Object|See Connected Audience|
-|`campaign_id`|Optional*|String| *Required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc) on the Braze dashboard. <br>See Campaign Identifier for more information|
-|`send_id`| Optional | String | See Send Identifier |
+|`broadcast`|Optional|Boolean|See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
+|`external_user_ids` | Optional | Array of strings | See external identifier |
+|`user_aliases`|Optional|Array of user alias objects| See user alias object|
+|`segment_id `| Optional | String | See segment identifier |
+|`audience`|Optional|Connected audience object|See connected audience|
+|`campaign_id`|Optional*|String| *Required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc) on the Braze dashboard. <br>See campaign identifier for more information|
+|`send_id`| Optional | String | See send identifier |
 |`override_frequency_capping`|Optional|Boolean|Ignore frequency_capping for campaigns, defaults to false |
 |`recipient_subscription_state`|Optional|String|Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed'|
-|`messages`| Optional | Messaging Objects | See Available Messaging Objects|
+|`messages`| Optional | Messaging objects | See available messaging objects|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
@@ -88,6 +83,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 - [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [API Parameters]({{site.baseurl}}/api/parameters)
 
@@ -105,19 +101,17 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "broadcast": "",
-  "external_user_ids": "",
+  "broadcast": "false",
+  "external_user_ids": "external_user_identifiers",
   "user_aliases": {
-    "alias_name": "",
-    "alias_label": ""
+    "alias_name": "example_name",
+    "alias_label": "example_label"
   },
-  "segment_id": "",
+  "segment_id": "segment_identifier",
   "audience": {
     "AND": [
       {
@@ -165,10 +159,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
       }
     ]
   },
-  "campaign_id": "",
-  "send_id": "",
-  "override_frequency_capping": "",
-  "recipient_subscription_state": "",
+  "campaign_id": "campaign_identifier",
+  "send_id": "send_identifier",
+  "override_frequency_capping": "false",
+  "recipient_subscription_state": "all",
   "messages": {
     "android_push": "(optional, Android Push Object)",
     "apple_push": "(optional, Apple Push Object)",
@@ -179,7 +173,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
     "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
     "windows_universal_push": "(optional, Windows Universal Push Object)"
   }
-}'
+}'\'''
 ```
 
 ## Response Details

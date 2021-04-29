@@ -47,73 +47,43 @@ You also need to add Capability `App Groups`. If you haven't had any app group i
 
 ![Add App Groups][4]
 
-## Step 4: Updating the Podfile
+## Step 4: Adding the Push Story framework to your app
+
+### Swift Package Manager
+
+After following the [Swift Package Manager integration guide][5], simply add `AppboyPushStory` to your Notification Content Extension:
+
+![Add AppboyPushStory][6]
+
+![Add AppboyPushStory][7]
+
+### Cocoapods
 
 Add the following line to your Podfile:
 
 ```ruby
 target 'YourContentExtensionTarget' do
-  pod 'Appboy-Push-Story', '~>3.0'
+  pod 'Appboy-Push-Story'
 end
 ```
 
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`
 
-## Step 5: Link the Braze Push Story Framework
+### Manual Integration
 
-Under `Build Phases`, click on the `+` button and add `New Copy Files Phase`.  Inside the new phase, change the Destination to `Frameworks`. Add the `AppboyPushStory.framework` in the new phase (it can be found by clicking on `Add Other...` and navigating to the `Pods` folder).
+Download the latest `AppboyPushStory.zip` from the [Github release page][8], unzip it and add the following files to your project's Notification Content Extension:
+- `Resources/ABKPageView.nib`
+- `AppboyPushStory.xcframework`
+
+![Add AppboyPushStory.xcframework][9]
 
 {% alert important %}
-If you are using `use_frameworks!` in your Podfile and are on version 1.6.1+ on CocoaPods, __don't__ do this step of adding `AppboyPushStory.framework` to the `Copy Files` phase.
+Make sure that `Do Not Embed` is selected for `AppboyPushStory.xcframework` under the `Embed` column.
 {% endalert %}
 
-![New Copy File Phase][ios_pushstory_01]
+Add the `-ObjC` flag to your project's Notification Content Extension in _Build Settings->Other Linker Flags_.
 
-![Add Framework][ios_pushstory_02]
-
-To verify that this was successful, go to the `General` tab of the main application target. Under `Embedded Binaries` check that `AppboyPushStory.framework` has been added.
-
-![Embedded Binaries][ios_pushstory_05]
-
-Back in `Build Phases`, click on `+` button and add `New Run Script Phase`. Make sure the newly created `Run Script` section is the last step in the `Build Phases` list.  Add this text into the Script body:
-
-```shell
-APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
-
-find "$APP_PATH" -name 'AppboyPushStory.framework' -type d | while read -r FRAMEWORK
-do
-FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-
-FRAMEWORK_TMP_PATH="$FRAMEWORK_EXECUTABLE_PATH-tmp"
-
-case "${TARGET_BUILD_DIR}" in
-*"iphonesimulator")
-;;
-*)
-if $(lipo "$FRAMEWORK_EXECUTABLE_PATH" -verify_arch "i386") ; then
-lipo -output "$FRAMEWORK_TMP_PATH" -remove "i386" "$FRAMEWORK_EXECUTABLE_PATH"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_TMP_PATH" "$FRAMEWORK_EXECUTABLE_PATH"
-fi
-if $(lipo "$FRAMEWORK_EXECUTABLE_PATH" -verify_arch "x86_64") ; then
-lipo -output "$FRAMEWORK_TMP_PATH" -remove "x86_64" "$FRAMEWORK_EXECUTABLE_PATH"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_TMP_PATH" "$FRAMEWORK_EXECUTABLE_PATH"
-fi
-;;
-esac
-
-done
-```
-
-![Run Script][ios_pushstory_03]
-
-Go to the `General` tab of the Content Extension target and add `AppboyPushStory.framework` in the `Linked Frameworks and Libraries` section.
-
-![Linked Frameworks][ios_pushstory_04]
-
-## Step 6: Updating your Notification View Controller
+## Step 5: Updating your Notification View Controller
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -137,7 +107,7 @@ In your `NotificationViewController.m`, remove the default implementation and ad
 - (void)didReceiveNotification:(UNNotification *)notification {
   self.dataSource = [[ABKStoriesViewDataSource alloc] initWithNotification:notification
                                                                storiesView:self.storiesView
-                                                                  appGroup:@"YOUR-APP-GROUP"];
+                                                                  appGroup:@"YOUR-APP-GROUP-IDENTIFIER"];
 }
 
 - (void)didReceiveNotificationResponse:(UNNotificationResponse *)response
@@ -172,7 +142,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
   var dataSource: ABKStoriesViewDataSource?
     
   func didReceive(_ notification: UNNotification) {
-    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "group.Appboy.HelloSwift")
+    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "YOUR-APP-GROUP-IDENTIFIER")
   }
     
   func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
@@ -192,7 +162,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 {% endtab %}
 {% endtabs %}
 
-## Step 7: Set the Notification Content Extension Storyboard
+## Step 6: Set the Notification Content Extension Storyboard
 
 -		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the Notification View Controller's main view frame.
 
@@ -204,7 +174,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
 ![View Outlet][ios_pushstory_09]
 
-## Step 8: Set the Notification Content Extension Plist
+## Step 7: Set the Notification Content Extension Plist
 
 Open the Info.plist file of the Notification Content Extension and add/change following keys under `NSExtension \ NSExtensionAttributes`:
 
@@ -214,16 +184,18 @@ Open the Info.plist file of the Notification Content Extension and add/change fo
 
 ![Plist Settings][ios_pushstory_08]
 
-## Step 9: Updating the Braze Integration in Your Main App
+## Step 8: Updating the Braze Integration in Your Main App
 
-Add `ABKPushStoryAppGroupKey` in the `appboyOption` dictionary as following when you initialize Braze:
+##### Option 1: Runtime
+
+In the `appboyOptions` dictionary used to configure your Braze instance, add a `ABKPushStoryAppGroupKey` entry and set the value to your App Group identifier.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
-appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
+appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 [Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
@@ -235,7 +207,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR_APP_GROUP";
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
-  ABKPushStoryAppGroupKey : "YOUR_APP_GROUP"
+  ABKPushStoryAppGroupKey : "YOUR-APP-GROUP-IDENTIFIER"
 ]
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
@@ -243,16 +215,21 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
+##### Option 2: Info.plist
+
+Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}
 [3]: {% image_buster /assets/img_archive/enable_background_mode.png %}
 [4]: {% image_buster /assets/img_archive/add_app_groups.png %}
-[ios_pushstory_01]: {% image_buster /assets/img_archive/ios_pushstory_01.png %}
-[ios_pushstory_02]: {% image_buster /assets/img_archive/ios_pushstory_02.png %}
-[ios_pushstory_03]: {% image_buster /assets/img_archive/ios_pushstory_03.png %}
-[ios_pushstory_04]: {% image_buster /assets/img_archive/ios_pushstory_04.png %}
-[ios_pushstory_05]: {% image_buster /assets/img_archive/ios_pushstory_05.png %}
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/
+[6]: {% image_buster /assets/img/ios/push_story/spm1.png %}
+[7]: {% image_buster /assets/img/ios/push_story/spm2.png %}
+[8]: https://github.com/Appboy/appboy-ios-sdk/releases
+[9]: {% image_buster /assets/img/ios/push_story/manual1.png %}
 [ios_pushstory_06]: {% image_buster /assets/img_archive/ios_pushstory_06.png %}
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
+[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}

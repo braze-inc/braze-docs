@@ -103,7 +103,7 @@ glossaries:
       - Webhook
   - name: Total Opens
     description: The total number of messages that were opened.
-    calculation: (Opens) / (Deliveries) (for Email) or (Unique Opens) / (Deliveries) (for all Push)
+    calculation: (Opens) / (Deliveries) (for Email); (Direct Opens) / (Deliveries) (for Web Push); (Unique Opens) / (Deliveries) (for iOS Push, Android, Kindle)
     tags:
       - Email
       - iOS Push

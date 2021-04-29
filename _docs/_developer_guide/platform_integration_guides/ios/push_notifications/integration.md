@@ -86,7 +86,7 @@ In your project settings, ensure that under the `Capabilities` tab your `Push No
 
 ![enable push notification][24]
 
->  If you are using Xcode 8 and have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
+>  If you have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
 ![xcode 8 auto signing][34]
 
 ## Step 3: Register for Push Notifications
@@ -251,15 +251,21 @@ Next, add the following code to your app's `(void)userNotificationCenter:didRece
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler`:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
-         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  if (@available(iOS 14.0, *)) {
+    completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
+  } else {
+    completionHandler(UNNotificationPresentationOptionAlert);
+  }
+}
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% tab swift %}
@@ -282,18 +288,21 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler` in the appropriate view controller class:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
-                willPresent notification: UNNotification,
-      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    completionHandler([.alert, .badge, .sound])
+                              willPresent notification: UNNotification,
+                              withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+  if #available(iOS 14.0, *) {
+    completionHandler([.list, .banner]);
+  } else {
+    completionHandler([.alert]);
+  }
 }
-
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% endtabs %}
@@ -343,41 +352,14 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-## Step 6: Verify Code Modifications
-
-Verify the code modifications you made against this [sample AppDelegate.m file][7]. We also strongly advise looking through the below section on customization to determine if any additional changes need to be implemented.
-
-## Step 7: Deep Linking
+## Step 6: Deep Linking
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [Advanced Use Cases section on Deep Linking for iOS][10].
 
 
 [0]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/
-[1]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
-[2]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
-[3]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
-[4]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
-[5]: https://dashboard-01.braze.com/app_settings/app_settings
-[6]: {% image_buster /assets/img_archive/push_cert_upload.png %} "push upload example image"
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m "sample AppController.mm"
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
-[11]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3 "iOS Lifecycle Methods"
-[13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
-[17]: {{site.baseurl}}/assets/img_archive/push_example_category.png
-[18]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:
 [19]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[30]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
-[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L218-L223
-[33]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m#L245-L249
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: #push-action-buttons-integration
-[36]: #step-4-register-for-push-notifications
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
-[38]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
-[39]: https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate

@@ -234,13 +234,10 @@ You can also use our REST API to set user attributes. To do so refer to the [use
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-#### Implementation Example
-
-User Attributes are set within the [`UserAttributesViewController.m` file][4] within the Stopwatch sample application.
+#### Additional Information
 
 - More details can be found within the [`ABKUser.h` file][5].
 - Besides, you may refer to the [ABKUser documentation][6] for more information.
-- Additional examples of setting arrays as user attributes can be found within [`UserAttributesArrayViewController.m`][7] in the Stopwatch sample application.
 
 ## Setting Up User Subscriptions
 
@@ -300,10 +297,8 @@ For more information on implementing subscriptions, visit our page on [managing 
 [1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601
 [3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesViewController.m
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
-[7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesArrayViewController.m
 [8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

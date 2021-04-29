@@ -122,7 +122,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 
 |Default API Rate Limit | Value|
 |---|---|
-|Requests to the `/users/track` endpoint| For customers who onboarded prior to June 2, 2020: Unlimited. <br><br> For customers who onboarded after June 2, 2020: 50,000 requests per minute (see batching below). This limit can be increased upon request. Please reach out to your Customer Success Manager for more information.  |
+|Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for all customers. This limit can be increased upon request. Please reach out to your Customer Success Manager for more information. |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
@@ -135,7 +135,7 @@ API Rate Limits and their Values (limited or unlimited) are subject to change de
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- Each `/users/track` request can contain up to 75 Purchases, 75 Events, and 75 Attribute updates. These can belong to different users, that is, each of the 75 Events in a request can belong to 75 different users.
+- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request.
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`
@@ -145,7 +145,7 @@ The response headers for any valid request include the current rate limit status
 
 Header Name             | Description
 ----------------------- | -----------------------
-`X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per hour.
+`X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per day/hour/minute/second.
 `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.
 `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
 {: .reset-td-br-1 .reset-td-br-2}
@@ -164,7 +164,6 @@ Under normal conditions, the time for our data eventual-consistency to occur is 
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[18]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [support]: {{site.baseurl}}/support_contact/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

@@ -62,7 +62,7 @@ _Update noted in August 2019._
 
 In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
 
-The `dispatch_id` is the unique id generated for each transmission – or, dispatch – sent from the Braze platform.
+The `dispatch_id` is the unique out-of-the-box ID generated for each transmission – or, dispatch – sent from the Braze platform.
 
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
@@ -105,6 +105,5 @@ The Most Engaged Channel filter selects the portion of your audience for whom th
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[CCFeed]: {% image_buster /assets/img/cc-feed.png %}
 [cbm]: {% image_buster /assets/img/created_by_me2.png %}
 [plat_p]: {% image_buster /assets/img/iam_platforms.gif %}

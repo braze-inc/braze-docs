@@ -214,7 +214,6 @@ $(document).ready(function() {
     $('.tab_toggle_ul.ab-nav-tabs li.' + curtab).addClass('active');
     $('div.tab_toggle_div div.ab-tab-pane').removeClass('active');
     $('div.tab_toggle_div div.' + curtab + '_tab').addClass('active');
-
   });
   $('.tab_toggle_only').click(function(e){
     e.preventDefault();
@@ -228,10 +227,34 @@ $(document).ready(function() {
     $('#' + partab + ' div.ab-tab-pane').removeClass('active');
 
     $('#' + partab + ' div.' + curtab + '_tab').addClass('active');
-
   });
-  $('.ab-tab-content .ab-tab-pane:first-child').addClass('active')
+  $('.ab-tab-content .ab-tab-pane:first-child').addClass('active');
 
+  $('.sub_tab_toggle').click(function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var curtab = $this.attr('data-sub_tab');
+
+    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li').removeClass('sub_active');
+    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li.' + curtab).addClass('sub_active');
+    $('div.sub_tab_toggle_div div.ab-sub_tab-pane').removeClass('sub_active');
+    $('div.sub_tab_toggle_div div.' + curtab).addClass('sub_active');
+  });
+
+  $('.sub_tab_toggle_only').click(function(e){
+    e.preventDefault();
+
+    var $this = $(this);
+    var curtab = $this.attr('data-sub_tab');
+    var partab = $this.attr('data-sub_tab-target');
+
+    $('#' + partab + '_nav li').removeClass('sub_active');
+    $('#' + partab + '_nav li.' + curtab).addClass('sub_active');
+    $('#' + partab + ' div.ab-sub_tab-pane').removeClass('sub_active');
+
+    $('#' + partab + ' div.' + curtab).addClass('sub_active');
+  });
+  $('.ab-sub_tab-content .ab-sub_tab-pane:first-child').addClass('sub_active');
 
   String.prototype.upCaseWord = function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
@@ -350,6 +373,16 @@ $(document).ready(function() {
     }
   });
 
+  $('#doc_search_clear').on('click',function(e){
+    $('#search-form input').autocomplete('val', '');;
+  });
+
+  $('#doc_menu_search').on('focusin',function(e){
+    if (  $('#doc_menu_search').val().length ) {
+      $('#search-form input').autocomplete('open');
+    }
+  });
+
   var sf_style = $('#search-form').attr('style') ?  $('#search-form').attr('style') : '';
   var sfac_style = $('#search-form  .algolia-autocomplete').attr('style') ? $('#search-form  .algolia-autocomplete').attr('style') : '';
   var header_style = $('#header_menu').attr('style') ? $('#header_menu').attr('style') : '';
@@ -366,6 +399,13 @@ $(document).ready(function() {
       $('#search_clear i').removeClass('fa-times');
   //  }
   });
+
+  $('#doc_menu_search').on('focus',function(e){
+        $('#doc_search_clear i').addClass('fa-times');
+    }).on('blur',function(e){
+        $('#doc_search_clear i').removeClass('fa-times');
+    });
+
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;

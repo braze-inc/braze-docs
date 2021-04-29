@@ -16,16 +16,16 @@ Please contact your Account Manager or [open a support ticket][support] if you n
 
 {% details Explanation of Message Engagement Event Structure %}
 <br>
-This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics.
 
 ![image]({% image_buster /assets/img/message_engagement_event.png %})
 
-Message engagement events are comprised of __user specific__ properties, __campaign/canvas tracking__ properties and __event specific__ properties. 
+Message engagement events are comprised of __user specific__ properties, __campaign/canvas tracking__ properties and __event specific__ properties.
 
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/integration/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB.
 {% endalert %}
 
 {% api %}
@@ -58,7 +58,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
@@ -81,7 +81,7 @@ _Update noted in June 2020._
 Push, Opens
 {% endapitags %}
 
-This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of “influenced opens” as these are not attributed at the user level. 
+This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of “influenced opens” as these are not attributed at the user level.
 
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
@@ -105,7 +105,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
@@ -128,7 +128,7 @@ _Update noted in June 2020._
 Push, iOS, Sends
 {% endapitags %}
 
-This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10). 
+This event occurs if a push was sent while the iOS app was in the foreground. Whether the user sees the push when the app is in the foreground, is determined by how your developers have integrated the iOS SDK for foreground push handling detailed [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10).
 
 ```json
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
@@ -150,7 +150,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
@@ -194,7 +194,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
@@ -232,7 +232,7 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   // Event Specific Properties
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending
@@ -275,7 +275,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
@@ -300,7 +300,7 @@ _Update noted in August 2019._
 Email, Opens
 {% endapitags %}
 
-This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times. 
+This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
 
 ```json
 // Email Open: users.messages.email.Open
@@ -319,7 +319,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
@@ -364,7 +364,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
@@ -383,16 +383,59 @@ _Update noted in August 2019._
 
 {% api %}
 
-## Email Bounces Events
+## Email Bounce Event
 
 {% apitags %}
 Email, Bounce
 {% endapitags %}
 
-This event occurs when an Internet Service Provider returns a soft or hard bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure. A hard bounce signifies a permanent deliverability failure.
+This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
 
 ```json
 // Email Bounce: users.messages.email.Bounce
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "email_address": (string) email address for this event,
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Deferrals, Bounce, and SoftBounce events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "bounce_reason": (string) reason for bounce provided by server
+}
+```
+
+{% alert update %}
+The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
+{% endapi %}
+
+{% api %}
+
+## Email Soft Bounce Event
+
+{% apitags %}
+Email, Bounce
+{% endapitags %}
+
+This event occurs when an Internet Service Provider returns a soft bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure.
+
+```json
 // Email Soft Bounce: users.messages.email.SoftBounce
 {
   "id": (string) unique id of this event,
@@ -409,13 +452,12 @@ This event occurs when an Internet Service Provider returns a soft or hard bounc
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Deferrals, Bounce, and SoftBounce events only),
   "ip_pool": (string) IP pool used for message sending,
-  "bounce_reason": (string) reason for bounce provided by server,
-  "bounce_code": (string) code for bounce provided by server
+  "bounce_reason": (string) reason for bounce provided by server
 }
 ```
 
@@ -454,7 +496,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
@@ -502,7 +544,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending
@@ -525,7 +567,7 @@ _Update noted in August 2019._
 Subscription, Email, SMS
 {% endapitags %}
 
-This event occurs when the subscription state of a user in a subscription group changes. 
+This event occurs when the subscription state of a user in a subscription group changes.
 
 {% alert important %}
 Subscription groups are only available for email and SMS channels at this time.
@@ -549,7 +591,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "email_address": (string) email address for this user,
   "phone_number": (string) phone number of the user (presented in e.164 format),
   "subscription_group_id": (string) id of the subscription group,
@@ -587,7 +629,7 @@ This event occurs when a user views an in-app message.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "card_id": (string) API ID of the card this in app message comes from,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
@@ -626,7 +668,7 @@ This event occurs when a user clicks on an in-app message.
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA timezone of the user at the time of the event,
-  "button_id": (string) index of the button clicked, if it was a button that was clicked,
+  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
@@ -637,7 +679,7 @@ This event occurs when a user clicks on an in-app message.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "card_id": (string) API ID of the card this in app message comes from,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
@@ -685,7 +727,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 {% endapi %}
@@ -697,7 +739,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 Content Cards, Sends
 {% endapitags %}
 
-This event occurs when a content card gets sent to a user. 
+This event occurs when a content card gets sent to a user.
 
 ```json
 // Content Card Send: users.messages.contentcard.Send
@@ -717,7 +759,7 @@ This event occurs when a content card gets sent to a user.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "device_id": (string) id of the device on which the event occurred
 }
 ```
@@ -752,7 +794,7 @@ This event occurs when a user views a content card.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
@@ -799,7 +841,7 @@ This event occurs when a user clicks a content card.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
@@ -847,7 +889,7 @@ This event occurs when a user dismisses a content card.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
@@ -974,10 +1016,10 @@ This event occurs when a user sends an SMS.
 SMS, Delivery
 {% endapitags %}
 
-This event occurs when an SMS is sent to the carrier. 
+This event occurs when an SMS is sent to the carrier.
 
 ```json
-// SMS Delivery: users.messages.sms.SendToCarrier
+// SMS Delivery: users.messages.sms.CarrierSend
 {
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
@@ -1009,7 +1051,7 @@ This event occurs when an SMS is sent to the carrier.
 SMS, Delivery
 {% endapitags %}
 
-This event occurs when an SMS was successfully delivered to the users mobile phone. 
+This event occurs when an SMS was successfully delivered to the users mobile phone.
 
 ```json
 // SMS Delivery: users.messages.sms.Delivery
@@ -1130,7 +1172,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
   "inbound_phone_number": (string) the phone number the message was sent to,
-  "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),  
+  "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
   "message_body" : (string) the body of the message sent by the user
 }
 ```
@@ -1145,7 +1187,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
 Campaign, Conversion
 {% endapitags %}
 
-This event occurs when a user does an action that has been set as a conversion event in a campaign. 
+This event occurs when a user does an action that has been set as a conversion event in a campaign.
 
 {% alert important %}
 Please note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_index` field represents which conversion event. i.e., 0 = A, 1 = B, 2 = C, 3 = D.
@@ -1165,7 +1207,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
   "conversion_behavior_index": (int) index of the conversion behavior,
   "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
   "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 {% endapi %}
@@ -1215,7 +1257,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 Canvas, Entry
 {% endapitags %}
 
-This event occurs when a user enters into the canvas. This event tells you which variant the user entered into. 
+This event occurs when a user enters into the canvas. This event tells you which variant the user entered into.
 
 ```json
 // Canvas Entry Event: users.canvas.Entry
@@ -1229,7 +1271,7 @@ This event occurs when a user enters into the canvas. This event tells you which
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_name": (string) will always return 'null' for this engagement event, 
+  "canvas_step_name": (string) will always return 'null' for this engagement event,
   "canvas_step_id": (string) id of the step the user entered into,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
@@ -1258,7 +1300,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "campaign_id": (string) id of the campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 

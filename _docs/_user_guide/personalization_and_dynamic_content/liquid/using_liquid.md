@@ -82,7 +82,6 @@ The modal will insert Liquid with your specified default value at the point that
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: https://shopify.github.io/liquid/basics/introduction/
 [9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information

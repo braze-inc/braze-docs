@@ -35,7 +35,7 @@ This is where you can give more information about your endpoint request body, in
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json

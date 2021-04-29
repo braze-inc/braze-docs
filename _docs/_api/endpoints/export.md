@@ -65,6 +65,9 @@ guide_menu_list:
   - name: "POST: User Data by Segment"
     link: /docs/api/endpoints/export/user_data/post_users_segment/
     fa_icon: fas fa-user
+  - name: "POST: User Data by Global Control Group"
+    link: /docs/api/endpoints/export/user_data/post_users_global_control_group/
+    fa_icon: fas fa-user
   - name: "GET: Segment Analytics"
     link: /docs/api/endpoints/export/segments/get_segment_analytics/
     fa_icon: fas fa-users

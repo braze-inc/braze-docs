@@ -18,7 +18,7 @@ Geofence-triggered campaigns are available on iOS and Android. To support geofen
 3. For devices on iOS version 11 and up, the user must allow location access always for geofencing to work.
 
 {% alert important %}
-Starting with Braze SDK version 3.6.0 Braze location collection is disabled by default. To verify location collection is enabled on Android, ensure that `com_appboy_enable_location_collection` is set to `true` in your `appboy.xml`.
+Starting with Braze SDK version 3.6.0 Braze location collection is disabled by default. To verify location collection is enabled on Android, ensure that `com_appboy_enable_location_collection` is set to `true` in your `braze.xml`.
 {% endalert %}
 
 ## Geofence Configuration
@@ -61,7 +61,5 @@ Braze geofences use a combination of all location providers available to a devic
 
 Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
-[1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
-[2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

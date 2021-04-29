@@ -9,7 +9,7 @@ platform: Android
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 {% alert note %}
-For apps targeting Android 11 (API 30) be sure to view our [Android 11 Support](/docs/developer_guide/platform_integration_guides/android/android_11/) article
+For apps targeting Android 11 (API 30) be sure to view our [Android 11 Support]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) article
 {% endalert %}
 
 ## Android SDK Integration
@@ -65,15 +65,15 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 
 ![GradleSync][38]
 
-### Step 2: Configure the Braze SDK in appboy.xml
+### Step 2: Configure the Braze SDK in braze.xml
 
 {% alert note %}
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `appboy.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `appboy.xml` file as well. The contents of that file should resemble the following code snippet:
+Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need specify the [endpoint][67] in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute your [App Identifier API Key](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key) found within the App Settings page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
+>  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the App Settings page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -82,10 +82,6 @@ Now that the libraries have been integrated, you have to create an `appboy.xml` 
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
-
-**Implementation Example**
-
-See the [`appboy.xml`][6] in the Droidboy sample app for an implementation example.
 
 ### Step 3: Add Required Permissions to Android Manifest
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml`:
@@ -96,10 +92,6 @@ Now that you've added your API key, you need to add the following permissions to
 ```
 
 >  With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
-
-**Implementation Example**
-
-See the [`AndroidManifest.xml`][69] in the Droidboy sample app for an implementation example.
 
 ### Step 4: Tracking User Sessions in Android
 
@@ -151,7 +143,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-To update the default endpoint in your integration of the Braze SDKs please add the following code to your `appboy.xml`:
+To update the default endpoint in your integration of the Braze SDKs please add the following code to your `braze.xml`:
 
 ```xml
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
@@ -159,7 +151,7 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 
 ### Step 6: Enable Location Tracking
 
-If you would like to enable Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you would like to enable Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
@@ -177,40 +169,13 @@ Please see the following sections in order to enable [custom event tracking]({{s
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/customization/#news-feed-customization
 [2]: {{site.baseurl}}/user_guide/introduction/
-[3]: https://developer.android.com/studio/build/build-variants.html
-[4]: https://raw.github.com/appboy/appboy-android-sdk/master/android-sdk-ui/libs/appboy.jar
-[6]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
-[7]: http://developer.android.com/reference/android/app/Activity.html
-[8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
-[16]: {% image_buster /assets/img_archive/file_import.png %}
-[17]: {% image_buster /assets/img_archive/android_import.png %}
-[18]: {% image_buster /assets/img_archive/click_browse.png %}
-[19]: {% image_buster /assets/img_archive/select_project_android.png %}
-[22]: {% image_buster /assets/img_archive/click_properties.png %}
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
-[42]: https://developers.google.com/android/guides/setup
-[45]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/build.gradle#L4
 [46]: https://developer.android.com/training/permissions/index.html
-[47]: https://android.googlesource.com/platform/sdk/+/master/files/proguard-android.txt
-[50]: https://developer.android.com/tools/help/proguard.html
-[51]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#activity-lifecycle-callback-integration-api-14
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#step-4-tracking-user-sessions-in-android
-[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/#activity-lifecycle-callback-integration-api-14
-[54]: https://developer.android.com/reference/android/util/Log.html
-[55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#error-logging
-[57]: {% image_buster /assets/img_archive/android_device_data.png %}
-[59]: https://github.com/Appboy/appboy-android-sdk
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
-[61]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/manual-session-integration
 [63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[65]: https://developer.android.com/topic/libraries/support-library/setup.html#add-library
 [66]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/
 [67]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{site.baseurl}}/support_contact/
-[69]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
-[70]: https://developer.android.com/jetpack/androidx
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/appboy/android-sdk-ui/

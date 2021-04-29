@@ -1,19 +1,23 @@
 ---
-nav_title: Implementation Guide
+nav_title: Advanced Implementation (Optional)
 platform: iOS
 page_order: 7
-description: "This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
+description: "This advanced implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
 ---
+
+{% alert important %}
+Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+{% endalert %}
 
 # Content Card Implementation Guide
 
-> This implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Code Considerations
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should integrate them using a single `import Appboy-iOS-SDK` statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift).
+When building out Content Cards, you should integrate them using a single `import Appboy-iOS-SDK` statement and helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
 
 ### Content Cards as Custom Objects
 
@@ -512,7 +516,7 @@ The `ContentCardable` protocol handles the heavy lifting of calling the helper f
 {% tabs %}
 {% tab Swift %}
 __Call `ABKContentCard` Functions__<br>
-The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift#L144) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
 func logContentCardImpression(idString: String?) {
   guard let contentCard = getContentCard(forString: idString) else { return }
@@ -527,7 +531,7 @@ private func getContentCard(forString idString: String?) -> ABKContentCard? {
 {% endtab %}
 {% tab Objective-C %}
 __Call `ABKContentCard` Functions__<br>
-The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze%20Demo/AppboyManager.swift#L144) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
 - (void)logContentCardImpression:(NSString *)idString {
   ABKContentCard *contentCard = [self getContentCard:idString];

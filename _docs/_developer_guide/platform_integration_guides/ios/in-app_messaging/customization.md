@@ -425,12 +425,12 @@ if inAppMessage is ABKInAppMessageImmersive {
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
 
-To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
+To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 Example `Info.plist` contents:
 
 ```
-<key>Appboy</key>
+<key>Braze</key>
 <dict>
 	<key>DismissModalOnOutsideTap</key>
 	<boolean>YES</boolean>
@@ -549,37 +549,20 @@ For additional information see the following header files:
 
 See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageViewController.m`][19] in the in-app message sample app.
 
-[1]: #customize-inAppMessage-dashboard
-[2]: #customize-inAppMessage-code
-[3]: #set-delegate
-[4]: #customize-inAppMessage-display
-[5]: #before-display
-[6]: #manual-cue
-[7]: #situational-display
-[8]: #inAppMessage-click
-[9]: #custom-view
-[10]: #custom-inAppMessage
-[11]: #custom-complete
-[12]: #method-declarations
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
+[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
+[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageController.h
+[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
-[21]: {% image_buster /assets/img_archive/foodo-slideup.gif %}
 [23]: #setting-delegates
 [26]: http://fortawesome.github.io/Font-Awesome/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messages-triggered
-[29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
 [31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
-[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
+[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h#L52
 [33]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
 [36]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m
 [37]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKInAppMessage/ViewControllers
-[38]: #in-app-mssage-ui-delegate
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}

@@ -91,13 +91,11 @@ Initially, users are randomly assigned a particular variant before receiving a c
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
 [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}
 [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
-[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2b-build-additional-variants
-[10]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-2-create-your-campaign-variants
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduled-delivery
+[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/
 [12]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
 [16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
-[17]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
+[17]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/duplicating_segments_and_campaigns/#cloning-a-campaign
