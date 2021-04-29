@@ -15,6 +15,6 @@ valid_partner_list:
 - name: Fivetran
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/fivetran/
 - name: Zapier
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/zapier_integration/
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/zapier/
 
 ---

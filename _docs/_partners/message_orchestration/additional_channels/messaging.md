@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging
+nav_title: Instant Chat
 page_order: 2
 
 page_type: landing
@@ -14,4 +14,5 @@ partner_top_header: "Instant Chat"
 valid_partner_list:
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
+  
 ---

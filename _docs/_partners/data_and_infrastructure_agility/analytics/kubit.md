@@ -1,10 +1,8 @@
 ---
 nav_title: Kubit
 page_order: 1
-
 description: "This article outlines the partnership between Braze and Kubit, a No-Code and Self-Service analytics platform that delivers Instant Product Insights."
 alias: /partners/kubit/
-
 page_type: partner
 
 ---

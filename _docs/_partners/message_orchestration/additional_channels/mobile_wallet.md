@@ -13,5 +13,5 @@ partner_top_header: "Mobile Wallet"
 
 valid_partner_list:
 - name: Passkit
-  url: /docs/partners/email_orchestration/additional_channels/mobile_wallet/passkit/
+  url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 ---

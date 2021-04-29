@@ -13,8 +13,8 @@ partner_top_header: "Direct Mail"
 
 valid_partner_list:
 - name: Inkit
-  url: /docs/partners/email_orchestration/additional_channels/direct_mail/inkit/
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
 - name: Lob
-  url: /docs/partners/email_orchestration/additional_channels/direct_mail/lob/
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 
 ---

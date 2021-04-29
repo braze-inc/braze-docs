@@ -19,29 +19,29 @@ valid_partner_list:
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
 - name: Passkit
-  url: /docs/partners/email_orchestration/additional_channels/mobile_wallet/passkit/
+  url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
 - name: Inkit
-  url: /docs/partners/email_orchestration/additional_channels/direct_mail/inkit/
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
 - name: Lob
-  url: /docs/partners/email_orchestration/additional_channels/direct_mail/lob/
+  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
 - name: Rokt Calendar
-  url: /docs/partners/email_orchestration/additional_channels/calendar/rokt_calendar/
+  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
-- name: Branch for Attribution
-  url: /docs/partners/message_orchestration/attribution/branch_for_attribution/
-- name: Branch for Deep Linking
-  url: /docs/partners/message_orchestration/attribution/branch_for_deeplinking/
+- name: Branch
+  url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
 - name: Singular
   url: /docs/partners/message_orchestration/attribution/singular/
 - name: Vizbee
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
+- name: Airbridge
+  url: /docs/partners/message_orchestration/attribution/airbridge/
 - name: Dyspatch
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
 - name: Stensul

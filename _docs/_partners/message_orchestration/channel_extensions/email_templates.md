@@ -1,5 +1,5 @@
 ---
-nav_title: Email Templates
+nav_title: Email Orchestration
 page_order: 2
 
 page_type: landing
@@ -9,7 +9,7 @@ layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Email Templates"
+partner_top_header: "Email Orchestration"
 
 valid_partner_list:
 - name: Dyspatch

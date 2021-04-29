@@ -13,6 +13,6 @@ partner_top_header: "Surveys"
 
 valid_partner_list:
 - name: Iterate
-  url: /docs/partners/email_orchestration/channel_extensions/surveys/iterate/
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 
 ---
