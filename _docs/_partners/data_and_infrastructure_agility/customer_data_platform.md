@@ -12,6 +12,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Customer Data Platform"
 
 valid_partner_list:
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle

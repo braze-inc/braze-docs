@@ -13,6 +13,8 @@ partner_top_header: "Data & Infrastructure Agility"
 partner_top_text: "These partners allow you to send, store, and otherwise coordinate your data across different tools and providers."
 
 valid_partner_list:
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: Amplitude
   url: /docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
 - name: Mixpanel
@@ -55,5 +57,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/
 - name: Xamarin
   url: /docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/
+
 
 ---

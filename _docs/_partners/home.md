@@ -101,8 +101,16 @@ valid_partner_list:
 - name: Iterate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
-  url: /docs/partners/message_orchestration/learning/edume/
-
-
+  url: /docs/partners/channel_extensions/learning/edume/
+- name: Playable
+  url: /docs/partners/channel_extensions/creative_and_personalization/intelligent_content/playable/
+- name: Zendesk
+  url: /docs/partners/channel_extensions/support/zendesk/
+- name: Crowdin
+  url: /docs/partners/channel_extensions/localization/crowdin/
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
+- name: Phrasee
+  url: /docs/partners/channel_extensions/creative_and_personalization/language_optimization/phrasee/
 
 ---
