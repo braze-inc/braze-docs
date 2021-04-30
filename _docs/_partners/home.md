@@ -123,5 +123,7 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
+- name: NPAW
+  url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
 
 ---

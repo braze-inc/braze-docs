@@ -22,5 +22,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
+- name: NPAW
+  url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
+
 
 ---
