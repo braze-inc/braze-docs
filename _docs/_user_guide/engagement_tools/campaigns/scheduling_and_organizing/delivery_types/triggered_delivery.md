@@ -126,11 +126,15 @@ Any of these things will prevent a user who has completed the trigger event from
 - The user has already received the campaign, and users do not become re-eligible.
 - While users are re-eligible to receive the campaign, they can only re-trigger it after a certain period of time, and that period of time has not yet elapsed.
 
-[Segmenting]({{site.baseurl}}/user_guide/engagement_tools/segments/) a triggered campaign on user data recorded at the time of the event may cause a _race condition_. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time that segment membership is determined and the campaign is sent and can lead to the user not receiving the campaign.
+[Segmenting]({{site.baseurl}}/user_guide/engagement_tools/segments/) a triggered campaign on user data recorded at the time of the event may cause a _race condition_. This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration`, and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
 It is a best practice to make sure that the attribute on which the campaign is segmented is flushed to Braze's servers before the event. In cases where this is not possible, the best way to guarantee delivery is to use [Custom Event Properties][48] to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. In the example above, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need at the time your campaign is triggered.
+
+Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
+
+![reevaluate segment membership][51]
 
 [5]: #local-time-zone-campaigns
 [8]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
@@ -155,3 +159,4 @@ It is a best practice to make sure that the attribute on which the campaign is s
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
 [50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
+[51]: {% image_buster /assets/img_archive/reevaluate_segment_membership.png %}

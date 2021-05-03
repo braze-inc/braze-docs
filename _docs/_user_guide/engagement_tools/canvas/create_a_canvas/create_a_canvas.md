@@ -124,11 +124,11 @@ You can set the target audience for your Canvas here. Only the users who match y
 
 ![Canvas Target Audience][54]
 
-If you want to limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+If you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 ### Select Your Send Settings
 
-Click "Send Settings" to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
+Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
 
 ![Send Settings][55]
 
@@ -168,6 +168,8 @@ You can also apply Filters to each Step of a Canvas. Use this to add additional 
 
 ![Canvas Additional Engagement][15]
 
+{% alert note %} By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps](57), audience evaluation occurs right after receiving the previous step, or after a delay (depending on your configuration). {% endalert %}
+
 #### Messages in Canvas
 
 Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
@@ -177,11 +179,11 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
-Select desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+Select your desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 
 ![Canvas Advancement Behavior][20]
 
-Press the "Done" button once you've finished configuring your Step.
+Click **Done** once you've finished configuring your Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -268,3 +270,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
 [56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
+[57]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/
