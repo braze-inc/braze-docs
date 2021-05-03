@@ -369,7 +369,7 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   // Interface that must be implemented and provided as a public CREATOR
   // field that generates instances of your Parcelable class from a Parcel.
-  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
+  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
     override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
       return DefaultContentCardsViewBindingHandler()
     }
@@ -380,25 +380,27 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-   * A cache for the views used in binding the items in the [RecyclerView].
-   */
+    * A cache for the views used in binding the items in the [RecyclerView].
+    */
   private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
 
-  fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
+  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
     val cardType = CardType.fromValue(viewType)
     return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
   }
 
-  fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
+  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return
     }
     val cardAtPosition = cards[adapterPosition]
     val contentCardView = getContentCardsViewFromCache(context, cardAtPosition.cardType)
-    contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    if (viewHolder != null) {
+      contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    }
   }
 
-  fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
+  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return -1
     }
@@ -407,16 +409,15 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-   * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-   * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
-   * is created and added to the cache.
-   */
+    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
+    */
   @VisibleForTesting
-  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<*>? {
+  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
     if (!mContentCardViewCache.containsKey(cardType)) {
       // Create the view here
-      val contentCardView: BaseContentCardView<*>
-      contentCardView = when (cardType) {
+      val contentCardView: BaseContentCardView<*> = when (cardType) {
         CardType.BANNER -> BannerImageContentCardView(context)
         CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
         CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
@@ -425,16 +426,16 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
       }
       mContentCardViewCache[cardType] = contentCardView
     }
-    return mContentCardViewCache[cardType]
+    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
   }
 
   // Parcelable interface method
-  fun describeContents(): Int {
+  override fun describeContents(): Int {
     return 0
   }
 
   // Parcelable interface method
-  fun writeToParcel(dest: Parcel?, flags: Int) {
+  override fun writeToParcel(dest: Parcel?, flags: Int) {
     // Retaining views across a transition could lead to a
     // resource leak so the parcel is left unmodified
   }
