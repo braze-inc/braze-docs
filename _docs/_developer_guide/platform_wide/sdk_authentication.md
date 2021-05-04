@@ -93,9 +93,10 @@ Don't worry, initializing with this option alone won't impact data collection in
 
 {% tabs %}
 {% tab Javascript %}
-When calling `appboy.initialize`, set the optional `sdkAuthentication` property to `true`.
+When calling `initialize`, set the optional `sdkAuthentication` property to `true`.
 ```javascript
-appboy.initialize("YOUR-API-KEY-HERE", {
+import braze from "@braze/web-sdk";
+braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   sdkAuthentication: true,
 });
@@ -155,16 +156,18 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 
 {% tabs %}
 {% tab Javascript %}
-Supply the JWT Token when calling `appboy.changeUser`:
+Supply the JWT Token when calling `changeUser`:
 
 ```javascript
-appboy.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
+import braze from "@braze/web-sdk";
+braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```javascript
-appboy.setAuthenticationToken("NEW-JWT-TOKEN-FROM-SERVER");
+import braze from "@braze/web-sdk";
+braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
 {% tab Java %}
@@ -242,20 +245,21 @@ These callback methods are a great place to add your own monitoring or error-log
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-appboy.onSdkAuthenticationFailure(async (errorEvent) => {
+import braze from "@braze/web-sdk";
+braze.subscribeToSdkAuthenticationFailures((authFailure) => {
+  // TODO: optionally log to your error-reporting service
   // TODO: check if the errorEvent user matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(errorEvent);
-  // TODO: optionally log to your error-reporting service
-  appboy.setAuthenticationToken(updated_jwt);
+  appboy.setSdkAuthenticationSignature(updated_jwt);
 });
 ```
 {% endtab %}
 {% tab Java %}
 ```java
 Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+    // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
-    // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
 ```
@@ -263,9 +267,9 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 {% tab KOTLIN %}
 ```kotlin
 Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+    // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
-    // TODO: optionally log to your error-reporting service
     Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
 ```
@@ -276,9 +280,9 @@ Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braz
 
 // Method to implement in delegate
 - (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
-  // TODO: check if the errorEvent's user matches the currently logged-in user
-  NSLog(@"Invalid SDK Authentication signature.");
   // TODO: optionally log to your error-reporting service
+  // TODO: check if the errorEvent user matches the currently logged-in user
+  NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(errorEvent);
   [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
 }
@@ -290,10 +294,10 @@ Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
 // Method to implement in delegate
 func handle(_ errorEvent: ABKSdkAuthenticationError?) {
-        // TODO: check if the errorEvent's user matches the currently logged-in user
+        // TODO: optionally log to your error-reporting service
+        // TODO: check if the errorEvent user matches the currently logged-in user
         print("Invalid SDK Authentication signature.")
         let newSignature = getNewSignatureSomehow(errorEvent)
-        // TODO: optionally log to your error-reporting service
         Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
     }
 ```
