@@ -17,7 +17,7 @@ You can also request a CSV export from the main Segments page by clicking the ge
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by clicking the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
 {% alert important %} 
-Due to file size restrictions, your export may fail if your segment is too large (over 500,000 users). Consider using [random bucket numbers](3) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into 2 different segments, you can do so with the following filters:
+Due to file size restrictions, your export may fail if your segment is too large (over 500,000 users). Consider using [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into 2 different segments, you can do so with the following filters:
 
 - Segment 1: Random bucket number is less than 5000 (includes 0-4999)
 - Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
@@ -64,5 +64,4 @@ For help with CSV and API exports, visit our troubleshooting article [here]({{si
 
 [1]: {% image_buster /assets/img_archive/csvexport.png %}
 [2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute
 [26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration
