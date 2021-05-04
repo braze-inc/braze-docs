@@ -1,6 +1,6 @@
 ---
 nav_title: Customer Data Platform
-page_order: 1
+page_order: 5
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to sync data between applications to use in your messaging campaigns."

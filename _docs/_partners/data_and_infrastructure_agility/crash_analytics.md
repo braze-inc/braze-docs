@@ -1,7 +1,7 @@
 ---
 nav_title: Crash Analytics
-page_order: 3
 layout: partner_page
+page_order: 4
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you analyze crash data from your application."

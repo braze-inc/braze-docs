@@ -12,7 +12,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Message Personalization"
 
 valid_partner_list:
-- name: Amazon Personalize
+- name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
 - name: Certona
   url: /docs/partners/message_personalization/dynamic_content/certona/
@@ -33,8 +33,8 @@ valid_partner_list:
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
 - name: Neura
-  title: Actions
   url: /docs/partners/message_personalization/location/neura_actions/
+  title: Actions
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot

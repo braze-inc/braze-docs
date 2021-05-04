@@ -55,5 +55,10 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
+- name: Phrasee
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Neura
+  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
+  title: Insights
 
 ---

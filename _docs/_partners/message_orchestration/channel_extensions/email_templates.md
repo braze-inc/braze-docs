@@ -12,7 +12,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Email Orchestration"
 
 valid_partner_list:
-- name: Dyspatch
+- name: Dyspatch.io
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
 - name: Stensul
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stensul/
