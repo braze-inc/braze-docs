@@ -1,12 +1,17 @@
 ---
-nav_title: User Attribute CSV - Lambda Process
+nav_title: User Attribute CSV Lambda Process
 permalink: /user_csv_lambda/
+description: "The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze User Track endpoint."
 hidden: true
 ---
 
-# User Attribute CSV to Braze Ingestion
+{% alert important %}
+This application is built out and maintained by the Braze Growth department. If you would like to reach out to the creators of this application, please create a [github issue](https://github.com/braze-inc/growth-shares-lambda-user-csv-import/issues) for any feedback or issues that may arise. 
+{% endalert %}
 
-> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application can be found on our Github [here](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
+# User Attribute CSV to Braze Import
+
+> The following article references a serverless application that allows you to easily deploy a Lambda process that will post user attribute data from a CSV file directly to Braze through the Braze [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) API endpoint. This application integration was tested with our Amperity partner and can be found on our Github [here](https://github.com/braze-inc/growth-shares-lambda-user-csv-import).
 
 This process launches immediately upon uploading a CSV file to a configured AWS S3 bucket. It can handle large files and uploads, but due to Lambda's time limits, the function will stop execution after 10 minutes. This process will then launch another Lambda instance to finish processing the remaining part of the file. For more details about function timing, check out the [estimated execution times](#estimated-execution-times).
 
