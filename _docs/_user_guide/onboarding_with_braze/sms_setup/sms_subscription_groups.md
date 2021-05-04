@@ -37,7 +37,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 | State | Definition |
 | --------- | ---------- |
 | Subscribed | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS Subscription Group in order to receive an SMS |
-| Unsubscribed | User has explicitly opt-ed out of messaging from your SMS Subscription group and the sending-phone numbers inside the Subscription Group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API][4]. Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the Subscription Group.|
+| Unsubscribed | User has explicitly opt-ed out of messaging from your SMS Subscription group and the sending-phone numbers inside the Subscription Group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribe users through the [Braze subscription API][4]. Users unsubscribed from an SMS Subscription Group will no longer receive any SMS from sending phone numbers that belong to the Subscription Group.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### How Users' SMS Subscription Groups get Set:
@@ -45,7 +45,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 - __Automatically Handled Upon User Opt-In/Opt-Out__: By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
 
 ### How to Check a Users SMS Subscription Group:
-- __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
+- __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user's SMS subscription groups. 
 - __Rest API Get__: Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API. 
 
 ## Sending with a Subscription Group
@@ -54,7 +54,7 @@ To launch an SMS campaign through Braze, a Subscription Group must be selected i
 ![picture][6]
 
 ## Setup Process
-During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, please reach out to your Braze representative for support.  
+During your SMS onboarding process, a Braze onboarding manager will set up Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, please reach out to your Braze representative for support.  
 
 ## Subscription Group MMS Enablement
 In order to send an MMS message, at least one number within your Subscription Group has to be enabled to send MMS. This is indicated by a tag located next to the Subscription Group. 
