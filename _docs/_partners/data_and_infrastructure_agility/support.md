@@ -1,6 +1,6 @@
 ---
 nav_title: Support
-page_order: 9
+page_order: 7
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to integrate Braze with their customer support suites."

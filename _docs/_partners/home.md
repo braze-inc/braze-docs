@@ -29,7 +29,11 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
 - name: Branch
+  title: Deeplinking
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
+  alt:
+    - title: Attribution
+      url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
 - name: Singular
@@ -38,7 +42,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
 - name: Airbridge
   url: /docs/partners/message_orchestration/attribution/airbridge/
-- name: Dyspatch
+- name: Dyspatch.io
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
 - name: Stensul
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stensul/
@@ -80,8 +84,12 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura Insights
-  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
+- name: Neura
+  url: /docs/partners/message_personalization/location/neura_actions/
+  title: Actions
+  alt:
+    - title: Insights
+      url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
@@ -96,7 +104,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/census/
 - name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
-- name: Amazon Personalize
+- name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
 - name: Certona
   url: /docs/partners/message_personalization/dynamic_content/certona/
@@ -116,14 +124,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
-- name: Neura
-  title: Actions
-  url: /docs/partners/message_personalization/location/neura_actions/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
+- name: Phrasee
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
 
 ---

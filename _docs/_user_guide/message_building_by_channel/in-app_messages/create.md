@@ -264,6 +264,8 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 ![Target Page]({% image_buster /assets/img_archive/target_page.png %}){: style="max-width:50%"}
 
+{% alert note %} If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session. {% endalert %}
+
 {% endtab %}
 {% tab Conversion Events %}
 

@@ -3,6 +3,7 @@ nav_title: Shopify
 alias: /partners/shopify/
 description: ""
 page_type: partner
+hidden: true
 ---
 
 # Shopify
