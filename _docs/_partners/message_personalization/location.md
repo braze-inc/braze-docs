@@ -19,8 +19,8 @@ valid_partner_list:
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
 - name: Neura
-  title: Actions
   url: /docs/partners/message_personalization/location/neura_actions/
+  title: Actions
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot

@@ -1,6 +1,6 @@
 ---
 nav_title: Workflow Automation
-page_order: 7
+page_order: 8
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you automate workflows between services and applications."

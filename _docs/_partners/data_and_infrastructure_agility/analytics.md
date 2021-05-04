@@ -1,6 +1,6 @@
 ---
 nav_title: Analytics
-page_order: 1
+page_order: 2
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to gather behavioral and business insights on customer data."
@@ -24,6 +24,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
+- name: Neura
+  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
+  title: Insights
 
 
 ---

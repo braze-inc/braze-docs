@@ -42,7 +42,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
 - name: Airbridge
   url: /docs/partners/message_orchestration/attribution/airbridge/
-- name: Dyspatch
+- name: Dyspatch.io
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
 - name: Stensul
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/stensul/
