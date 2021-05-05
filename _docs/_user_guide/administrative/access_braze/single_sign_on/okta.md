@@ -45,7 +45,7 @@ Select `Save Changes` at the bottom of the page once completed.
 ## Step 2: Enable the IdP-initiated Flow
 
 Next, you must create your Braze API Key with `sso.saml.login` permission enabled.
-- If you do not already have such a Braze API Key, one can be created by going to the `Developer Console` in `App Settings`, then click `Create New API Key`.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then __save__ the API Key.<br>
+- If you do not already have such a Braze API Key, one can be created by going to the `Developer Console` in `Settings`, then click `Create New API Key`.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then __save__ the API Key.<br>
 
 ![SSO Set Up]({% image_buster /assets/img/sso2.png %}){: style="max-width:80%"}
 

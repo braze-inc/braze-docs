@@ -29,7 +29,7 @@ The Braze and Census integration allows you to use your product data to dynamica
 
 Braze allows you to create multiple API keys, each with its own set of permissions. In most cases, the recommended practice is to create a new API key for Census rather than reusing an existing one.
 
-1. Within Braze, navigate to __App Settings__ at the bottom of the left navigation bar and click __Developer Console__.
+1. Within Braze, navigate to __Settings__ at the bottom of the left navigation bar and click __Developer Console__.
 2. In the __API Settings__ tab, under __Rest API Keys__, click __+ Create New API Key__.
 3. Name this API key, and select all User Data permissions, except for `users.delete`. The permissions set may change as Census adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future. Next, select __Save API Key__.
 4. Lastly, copy API Key found under __Identifier__ to use when creating your Census connection. 

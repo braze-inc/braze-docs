@@ -236,7 +236,7 @@ There are two ways to locate your `app_id`:
 
 1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, under "Identifiers", you will be able to see every `app_id` that exists for your apps.
 
-2. From the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__". (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
+2. From the Braze Dashboard, open up "Manage Settings" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__". (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 

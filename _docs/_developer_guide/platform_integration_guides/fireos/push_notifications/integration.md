@@ -101,7 +101,7 @@ If you would like to custom handle deep links, you will need to create a `Broadc
 
 ### Step 5: Add Client Secret and Client ID to Braze Dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage App Group" page as pictured below:
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
 ![FireOS Dashboard][34]
 

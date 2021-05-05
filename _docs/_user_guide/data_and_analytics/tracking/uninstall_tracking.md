@@ -18,7 +18,7 @@ __You must opt-in to Uninstall Tracking on the dashboard. This feature is curren
 
 ## Implementation
 
-You can enable Uninstall Tracking in the App Settings section of the "Manage App Group" page. For each app you are interested in tracking, check the box in the uninstall tracking section.
+You can enable Uninstall Tracking in the Settings section of the "Manage Settings" page. For each app you are interested in tracking, check the box in the uninstall tracking section.
 
 ![Uninstall Tracking Checkbox][1]
 

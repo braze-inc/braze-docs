@@ -69,13 +69,13 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly Analytics Reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage App Group"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage Settings"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
 ### Additional Email Settings
 
-You also can access the [App Settings - Email Tab][8] to edit:
+You also can access the [Settings - Email Settings Tab][8] to edit:
 
 - The name which will be displayed by default on your emails
 - The default reply-to address for your emails

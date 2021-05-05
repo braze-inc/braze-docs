@@ -40,7 +40,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% raw %}
 ## Using Basic Authentication
 
-If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.
+If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage Settings, you can manage existing basic authentication credentials and add new ones.
 
 ![Basic Authentication Credential Management][34]
 

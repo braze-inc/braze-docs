@@ -29,7 +29,7 @@ The second integration method is to include the binding source found [here][3]. 
 ### Step 2: Configure the Braze SDK in braze.xml
 Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `Resources/values` folder. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located the [App Settings][4] page of the Braze dashboard.
+>  Be sure to substitute `REPLACE_WITH_YOUR_API_KEY` with the API key located the [Settings][4] page of the Braze dashboard.
 
 ```java
     <?xml version="1.0" encoding="utf-8"?>
@@ -62,7 +62,7 @@ You should now be able to launch your application and see sessions being logged 
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
-[4]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
+[4]: https://dashboard-01.braze.com/app_settings/app_settings/ "Settings"
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/

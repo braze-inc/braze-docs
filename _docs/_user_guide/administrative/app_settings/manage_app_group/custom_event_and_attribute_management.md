@@ -7,7 +7,7 @@ page_order: 1
 
 ## Adding Custom Attributes, Custom Events, Products, and Event Properties
 
-To add a Custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage App Groups” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
+To add a Custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage Settings” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
 
 ![customattributessearch1.png][71]
 

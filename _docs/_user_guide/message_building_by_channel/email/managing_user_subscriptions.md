@@ -109,7 +109,7 @@ You must insert a legally compliant footer with an unsubscribe link at the botto
 
 Braze provides the ability to set an app group-wide custom email footer which you can template into every email using the ``{{${email_footer}}}`` attribute. In this way, you do not have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in all new and existing email campaigns. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails. It is your responsibility to make sure that your custom footer meets those requirements.
 
-To create or edit your custom footer, go to the Manage App Group page under App Settings, and select the Email Settings tab.
+To create or edit your custom footer, go to the Manage Settings page under App Settings, and select the Email Settings tab.
 
 ![Email Settings][19]
 

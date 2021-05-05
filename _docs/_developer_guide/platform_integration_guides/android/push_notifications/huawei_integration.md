@@ -22,7 +22,7 @@ In the next step, you will enter these credentials in the Braze Dashboard which 
 
 ## 2. Create a new Huawei App in the Braze Dashboard
 
-In the Braze Dashboard, go to `Manage App Group` listed under the `App Settings` navigation.
+In the Braze Dashboard, go to `Manage Settings` listed under the `App Settings` navigation.
 
 Add a new App, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the Push Provider.
 
