@@ -383,21 +383,25 @@ If possible, you should push users to upgrade as you would for any other mandato
 
 We recommend using the higher value of: average session duration, session cookie/token expiration, or the frequency at which your application would otherwise refresh the current user's profile.
 
-#### What happens if a JWT expires in the middle of a user's session?
+#### What happens if a JWT expires in the middle of a user's session? {#faq-jwt-expiration}
 
 Should a user's token expire mid-session, the SDK has a [callback function][7] it will invoke to let your app know that a new JWT token is needed to continue sending data to Braze.
 
-#### What happens if my server-side integration breaks and I can no longer create a JWT?
+#### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
 If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze Dashboard.
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
-#### Why does this feature use Public/Private keys instead of Shared Secrets?
+#### Why does this feature use Public/Private keys instead of Shared Secrets? {#faq-shared-secrets}
 
 When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
 
 Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to your Private Keys.
+
+#### How will rejected requests be retried? {#faq-retry-logic}
+
+When a request is rejected, the SDKs will invoke a callback allowing you do refresh the user's JWT signature. Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
 [1]: #server-side-integration
 [2]: #sdk-integration
