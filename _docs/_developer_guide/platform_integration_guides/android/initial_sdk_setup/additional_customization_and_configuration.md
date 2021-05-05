@@ -1,7 +1,6 @@
 ---
 nav_title: Additional Customization & Configuration
 page_order: 3
-
 platform: Android
 ---
 
@@ -48,7 +47,7 @@ To know if your obtained logs are verbose, look for `V/Appboy` somewhere in your
 
 `2077-11-19 16:22:49.591 ? V/Appboy v9.0.01 .bo.app.d3: Request started`
 
-### Supressing Braze SDK Logging
+### Suppressing Braze SDK Logging
 
 The default Log Level for the Braze Android SDK is `INFO`.
 

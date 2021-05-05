@@ -1,7 +1,6 @@
 ---
 nav_title: Android SDK Accessibility
 page_order: 4
-
 platform: Android
 ---
 
