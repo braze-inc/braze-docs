@@ -81,7 +81,7 @@ To fully customize the network error behavior, you can extend the [AppboyContent
 
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
-### Setting A Custom Font {#setting-a-custom-font-for-android}
+### Custom Font {#setting-a-custom-font-for-android}
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -98,7 +98,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+### Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
@@ -474,7 +474,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-### Setting a Custom Content Cards Click Listener
+### Custom Content Cards Click Listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 

@@ -4,7 +4,7 @@ platform: Android
 page_order: 1
 
 ---
-## Setting User IDs
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -70,7 +70,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 Full class information can be found in the [javadocs][4].
 
-#### Automatic Preservation of Anonymous User History
+### Automatic Preservation of Anonymous User History
 
 | Identification Context | Preservation Behavior |
 | ---------------------- | -------------------------- |
@@ -78,7 +78,7 @@ Full class information can be found in the [javadocs][4].
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Additional Notes and Best Practices
+### Additional Notes and Best Practices
 Please note the following:
 
 - __If your app is used by multiple people, you can assign each user a unique identifier to track them.__
@@ -94,7 +94,29 @@ If you opt to use a hash of a unique identifier as your userID take care to ensu
 
 ## Aliasing Users
 
-{% include archive/aliasing.md platform="Android" %}
+An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
+
+* Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
+* Add the identifiers used by a third-party vendor to your Braze users in order to more easily reconcile your data externally.
+
+Each alias consists of two parts: a _name_ for the identifier itself, and a _label_ indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one name per label.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Appboy.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Appboy.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
+```
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/

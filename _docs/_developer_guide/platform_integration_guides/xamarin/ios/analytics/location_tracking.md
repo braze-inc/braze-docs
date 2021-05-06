@@ -4,7 +4,7 @@ platform: Xamarin
 subplatform: iOS
 page_order: 4
 ---
-## Location Tracking
+# Location Tracking
 
 See [Xamarin Walkthrough - Using Background Location][1] and [the iOS integration instructions][2] for information on how to support location tracking.
 

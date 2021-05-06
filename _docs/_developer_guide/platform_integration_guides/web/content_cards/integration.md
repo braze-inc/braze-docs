@@ -22,7 +22,7 @@ This method will toggle the visibility of the Content Cards. By default, if no a
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
-### Control Group 
+## Control Group 
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 

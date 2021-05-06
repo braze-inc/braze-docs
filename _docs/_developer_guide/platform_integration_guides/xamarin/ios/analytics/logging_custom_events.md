@@ -4,7 +4,7 @@ platform: Xamarin
 subplatform: iOS
 page_order: 1
 ---
-## Logging Custom Events
+# Logging Custom Events
 
 See [the iOS integration instructions][1] for in depth discussion of event tracking best practices and interfaces.
 

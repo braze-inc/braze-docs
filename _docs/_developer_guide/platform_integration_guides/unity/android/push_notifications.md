@@ -95,7 +95,7 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID:
 ![FirebaseServerKey][59]
 
-##### Implementation Example
+### Implementation Example
 
 The sample project in the [Braze Unity SDK repository][13] contains a full working sample app that includes FCM.
 

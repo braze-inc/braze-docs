@@ -1,7 +1,7 @@
 ---
 nav_title: Push Stories
 platform: Android
-page_order: 15
+page_order: 6.2
 
 ---
 

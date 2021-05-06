@@ -4,7 +4,7 @@ platform: Xamarin
 subplatform: Android and FireOS
 page_order: 4
 ---
-## Social Data Tracking
+# Social Data Tracking
 
 See [the Android integration instructions][1] for in depth discussion of social data best practices and interfaces.
 

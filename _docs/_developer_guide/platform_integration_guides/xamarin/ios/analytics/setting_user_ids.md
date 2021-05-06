@@ -4,7 +4,7 @@ platform: Xamarin
 subplatform: iOS
 page_order: 0
 ---
-## Setting User IDs
+# Setting User IDs
 
 See [the iOS integration instructions][1] for an in depth discussion of when and how to set and change a user ID.
 

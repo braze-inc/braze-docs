@@ -52,7 +52,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu App Name][26]
 
-- Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key.  Click on the cloud push link in the menu on the left hand side of the console.  On the following page, click 推送设置 (Set Up Push).
+- Upon setting up your application, you will be taken to a console that displays information about your app, including the API Key.  Click on the cloud push link in the menu on the left-hand side of the console.  On the following page, click 推送设置 (Set Up Push).
 
 ![Baidu App Console][14]
 
@@ -82,7 +82,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   ```
-- Baidu's library contains broadcast receivers which handle incoming push messages.  Declare the internal Baidu receivers in your application's `AndroidManifest.xml` inside the `<application>` element.
+- Baidu's library contains broadcast receivers that handle incoming push messages.  Declare the internal Baidu receivers in your application's `AndroidManifest.xml` inside the `<application>` element.
 
   ```xml
   <!-- 用于接收系统消息以保证 PushService 正常运行 -->
@@ -122,7 +122,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
       </service>
   ```
 
-- You will also need to create a broadcast receiver that listens for incoming push messages and notifications.  Declare your own receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.  See our sample app's [receiver][48] for a sample implementation.
+- You will also need to create a broadcast receiver that listens for incoming push messages and notifications.  Declare your receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.  See our sample app's [receiver][48] for a sample implementation.
 
   ```xml
       <receiver android:name=".MyPushMessageReceiver">
@@ -161,7 +161,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 
 ## Step 5: Registering Push Opens
 
-- Baidu supports sending extra key value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key value pairs:
+- Baidu supports sending extra key-value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message.  The parameter `customContentString` contains the extras in JSON format.  All messages from Braze will contain the following two key-value pairs:
 
   ```json
   {
@@ -194,7 +194,7 @@ AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
 
 ## Step 6: Extras
 
-- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key value pairs.  To extract your key value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
+- Aside from reserved keys used by Braze, the parameter `customContentString` will also contain all user-defined custom key-value pairs.  To extract your key-value pairs, wrap `customContentString` in a JSONObject and retrieve your extras.
 
 {% tabs %}
 {% tab JAVA %}

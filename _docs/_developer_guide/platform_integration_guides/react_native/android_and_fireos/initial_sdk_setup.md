@@ -6,7 +6,7 @@ page_order: 0
 ---
 # Initial SDK Setup
 
-#### Using react-native link
+### Using react-native link
 
 1. `npm install react-native-appboy-sdk@latest --save`
 2. `react-native link`
@@ -21,7 +21,7 @@ allprojects {
 }
 ```
 
-#### Without react-native link
+### Without react-native link
 
 1. `npm install react-native-appboy-sdk@latest --save`
 2. Link the project by adding the following:

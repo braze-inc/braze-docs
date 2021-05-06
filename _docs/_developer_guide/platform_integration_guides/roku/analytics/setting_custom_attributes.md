@@ -3,7 +3,7 @@ nav_title: Setting Custom Attributes
 platform: Roku
 page_order: 4
 ---
-## Setting Custom Attributes
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -28,41 +28,42 @@ User attributes will be assigned to the currently active user. The following def
 m.Braze.setFirstName("User's First Name")
 ```
 
-### Assigning Custom User Attributes
+## Assigning Custom User Attributes
 
 Beyond the default attributes above, Braze also allows you to define Custom attributes using several different data types.
 For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
-#### Custom Attribute with a Boolean Value
+### Settings Custom Attribute Values
+{% tabs %}
+{% tab Boolean %}
 ```
 m.Braze.setCustomAttribute("boolAttribute", true)
 ```
-
-#### Custom Attribute with an Integer Value
+{% endtab %}
+{% tab Integer %}
 ```
 m.Braze.setCustomAttribute("intAttribute", 5)
 ```
-
-#### Custom Attribute with a Float Value
+{% endtab %}
+{% tab Float/Double %}
 ```
 m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
->  Braze treats FLOAT and DOUBLE values exactly the same within our database.
-
-#### Custom Attribute with a String Value
+Braze treats FLOAT and DOUBLE values exactly the same within our database.
+{% endtab %}
+{% tab String %}
 ```
 m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
-
-#### Custom Attribute with a Date Value
+{% endtab %}
+{% tab Date %}
 ```
 dateAttribute = CreateObject("roDateTime")
 dateAttribute.fromISO8601String("1992-11-29 00:00:00.000")
 m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
-
-#### Setting a Custom Attribute with an Array Value
-
+{% endtab %}
+{% tab Array %}
 ```
 stringArray = createObject("roArray", 3, true)
 stringArray.Push("string1")
@@ -70,8 +71,10 @@ stringArray.Push("string2")
 stringArray.Push("string3")
 m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 ```
+{% endtab %}
+{% endtabs %}
 
-#### Incrementing/Decrementing Custom Attributes
+### Incrementing/Decrementing Custom Attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
@@ -79,7 +82,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
-#### Unsetting a Custom Attribute
+### Unsetting a Custom Attribute
 
 Custom atributes can also be unset using the following method:
 
@@ -87,15 +90,15 @@ Custom atributes can also be unset using the following method:
 m.Braze.unsetCustomAttribute("attributeName")
 ```
 
-#### Setting a Custom Attribute via the REST API
+### Setting a Custom Attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
 
-#### Custom Attribute Value Limits
+### Custom Attribute Value Limits
 
 Custom attribute values have a maximum length of 255 characters.
 
-### Managing Email Subscription Status
+## Managing Email Subscription Status
 
 You can set the following email subscription statuses for your users programmatically through the SDK.
 

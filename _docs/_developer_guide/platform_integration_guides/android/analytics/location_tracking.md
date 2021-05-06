@@ -4,7 +4,7 @@ platform: Android
 page_order: 6
 
 ---
-## Location Tracking
+# Location Tracking
 
 Add at least one of the following the following permission to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
 
@@ -23,7 +23,7 @@ Or:
 
 `ACCESS_FINE_LOCATION` includes GPS data in reporting user location while `ACCESS_COARSE_LOCATION` includes data from the most battery-efficient non-GPS provider available (e.g. the network). Coarse location will likely be sufficient for the majority of location data use-cases; however, under the runtime permissions model, receiving location permission from the user implicitly authorizes the collection of fine location data. You can read more about the differences between these location permissions and how you ought to utilize them [here][1].
 
-### Disabling Automatic Location Tracking
+## Disabling Automatic Location Tracking
 
 To disable automatic location tracking, set `com_appboy_enable_location_collection` to false in `braze.xml`:
 

@@ -5,7 +5,7 @@ page_order: 4
 platform: Web
 ---
 
-### Requesting Unviewed Content Card Count for Web
+# Requesting Unviewed Content Card Count for Web
 
 You can request the number of unread cards at any time by calling:
 

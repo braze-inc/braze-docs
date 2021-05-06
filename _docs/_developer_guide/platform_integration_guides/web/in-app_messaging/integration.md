@@ -4,7 +4,7 @@ platform: Web
 page_order: 1
 
 ---
-## Integration
+# Integration
 
 By default, in-app messages are automatically displayed as part of our [recommended integration instructions][1]. Additional customization can be done by following the steps in this guide.
 

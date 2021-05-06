@@ -4,7 +4,7 @@ platform: Windows_Universal
 page_order: 6
 ---
 
-## Location Tracking
+# Location Tracking
 
 1. Ensure that within your `Package.appxmanifest` file the following option is checked:
   - Location

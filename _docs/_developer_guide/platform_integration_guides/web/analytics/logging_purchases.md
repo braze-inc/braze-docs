@@ -4,7 +4,7 @@ platform: Web
 page_order: 4
 
 ---
-## Logging Purchases
+# Logging Purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
@@ -20,7 +20,7 @@ appboy.logPurchase(productId, price, "USD", quantity);
 
 See the [JSdocs][8] for more information. Quantity must be less than or equal to 100.
 
-### Adding Properties
+## Adding Properties
 
 You can add metadata about purchases by passing an object of key value pairs with your purchase information. Keys are `string` objects and values can be `string`, `numeric`, `boolean`, or `Date` objects.
 
@@ -30,7 +30,7 @@ appboy.logPurchase(productId, price, "USD", quantity, {key: "value"});
 
 See the [Jsdocs][8] for more information.
 
-### REST API
+## REST API
 
 You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
 

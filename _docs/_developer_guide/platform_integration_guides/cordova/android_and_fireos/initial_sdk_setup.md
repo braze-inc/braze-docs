@@ -4,7 +4,7 @@ platform: Cordova
 subplatform: Android and FireOS
 page_order: 0
 ---
-## Initial SDK Setup
+# Initial SDK Setup
 
 Download the SDK from [Github][1] and run the following from the root your project:
 

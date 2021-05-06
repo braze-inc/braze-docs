@@ -4,7 +4,7 @@ platform: Web
 page_order: 3
 
 ---
-## Setting Custom Attributes
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -25,21 +25,21 @@ Braze provides predefined methods for setting the following user attributes with
 - Home City
 - Phone Number
 
-### Implementation Examples
+## Implementation Examples
 
-#### Setting a first name
+### Setting a first name
 
 ```javascript
 appboy.getUser().setFirstName("SomeFirstName");
 ```
 
-#### Setting a gender
+### Setting a gender
 
 ```javascript
 appboy.getUser().setGender(appboy.User.Genders.FEMALE);
 ```
 
-#### Setting a date of birth
+### Setting a date of birth
 
 ```javascript
 appboy.getUser().setDateOfBirth(2000, 12, 25);

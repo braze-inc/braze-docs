@@ -4,7 +4,7 @@ platform: React Native
 subplatform: iOS
 page_order: 2
 ---
-## Setting Custom Attributes
+# Setting Custom Attributes
 
 See [the iOS integration instructions][1] for in depth discussion of attribute tracking best practices and interfaces.
 

@@ -19,7 +19,6 @@ The Braze Web SDK is built to provide you with maximum flexibility, legal compli
 
 When Braze creates cookies, they are stored with a 1 year expiration that automatically renews on new sessions.
 
-
 ### Disabling Cookies {#disable-cookies}
 
 To disable all cookies, use the [`noCookies`][6] option when initializing the Web SDK. 
@@ -45,7 +44,6 @@ To stop Braze tracking in general, or to clear _all_ stored browser data, please
 |`ab.optOut`|Used to store a user's opt-out preference|
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|
 {: .reset-td-br-1 .reset-td-br-2 }
-
 
 ## Device Properties
 
