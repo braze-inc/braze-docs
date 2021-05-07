@@ -83,7 +83,7 @@ If you want to guide users to another page of your app or website, change the bu
 
 ### Step 5: Stylize Your Message (Optional) {#styling}
 
-You can customize the font and accent color of the message using the **Color Theme** picker.
+You can customize the font color and accent color of the message using the **Color Theme** picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
