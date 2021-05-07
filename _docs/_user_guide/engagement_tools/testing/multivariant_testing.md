@@ -1,6 +1,6 @@
 ---
 nav_title: Multivariate & A/B Testing
-page_order: 9
+page_order: 2
 description: "An A/B test is an experiment that compares users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style."
 ---
 # Multivariate & A/B Testing
