@@ -36,7 +36,7 @@ Below is an example of tags an eCommerce app might find useful:
 
 ![Potential Tags][I11]
 
-You can use the same tags across segments, campaigns, and News Feed cards. To efficiently rename or remove tags across your dashboard, use the Tags tab in the Manage App Group page.
+You can use the same tags across segments, campaigns, and News Feed cards. To efficiently rename or remove tags across your dashboard, use the Tags tab in the Manage Settings page.
 
 ![tags view][I12]
 

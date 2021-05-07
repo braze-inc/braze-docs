@@ -268,7 +268,7 @@ To ensure that you input your Braze SDK Endpoint correctly, the proper format mu
 
 > ‘App Identifier’ vs. ‘REST API Key’
 
-The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+The ‘App Identifier’ is the App API Key found in the `Manage Settings` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
 
 {% enddetails %}
 

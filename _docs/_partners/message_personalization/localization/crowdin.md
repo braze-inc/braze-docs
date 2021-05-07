@@ -25,7 +25,7 @@ To connect your Braze account with Crowdin, you need to provide two authorizatio
 
 To create a new Braze REST API Key in your Braze account, follow these steps:
 
-1. In your Braze Dashboard, navigate to __Developer Console__ under __App Settings__.
+1. In your Braze Dashboard, navigate to __Developer Console__ under __Settings__.
 2. Click __Create New API Key__ in the REST API Keys section.
 3. Specify your API Key Name and select the following permissions:
 - Templates

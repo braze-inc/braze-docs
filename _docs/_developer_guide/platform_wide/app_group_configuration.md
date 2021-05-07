@@ -14,9 +14,9 @@ Braze organizes your apps via "App Groups." Think of each of these app groups as
 
 Type the name of your app group into the form.
 
-Once you have created your app group, you will be taken to the app settings page. Generally, you can access this page by navigating to the Apps tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
+Once you have created your app group, you will be taken to the settings page. Generally, you can access this page by navigating to the Apps tab at the top of the page and pressing the <i class='icon-cog'></i> icon on the sidebar.
 
-![Braze App Settings][4]
+![Braze Settings][4]
 
 ### Step 2: Add Your Apps
 
@@ -32,5 +32,5 @@ Using the form at the top right of your screen, select your platform, type in th
 Braze recommends that you create a "Testing App Group" for integration and campaign testing. The App Group feature can also be utilized for app testing by completely sandboxing certain users from your production instance. Simply create a new app group and remember to switch your API codes so your production environments are not corrupted with false data. When you publish your application, be sure to change the API key that Braze is using to match that of your "Production App Group" rather than your "Testing App Group"
 
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
-[4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze App Settings"
+[4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze Settings"
 [5]: {% image_buster /assets/img_archive/App_Setup_API.png %} "Braze API Input"
