@@ -63,7 +63,7 @@ For example, in a notification preferences survey, you might make each choice a 
 
 You can then create a segment for users with `Promotions_Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
-{% alert important %} When Custom Attribute collection is enabled, adding multiple-choice responses will require you to set a designated Custom Attribute for each choice. So be sure to use a unique Custom Attribute name for each choice to prevent choices from overwriting each other! {% endalert %}
+{% alert important %} When Custom Attribute collection is enabled, choices that share the same Custom Attribute Name will be combined into an Array.{% endalert %}
 
 ### Step 4: Choose Submission Behavior
 
