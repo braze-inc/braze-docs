@@ -103,3 +103,4 @@ Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
+[5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/
