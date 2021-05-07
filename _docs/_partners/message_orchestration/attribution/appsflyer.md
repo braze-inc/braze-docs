@@ -29,7 +29,9 @@ As of March 4, 2019, AppsFlyer requires that the Activate Partner toggle be swit
 {% tabs local %}
 {% tab Android %}
 
-If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to AppsFlyer. For most setups, this code should be included alongside all calls to `AppsFlyerLib.setAppsFlyerKey`, typically in an activity's `onCreate` callback.
+If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to AppsFlyer. For most 
+
+ups, this code should be included alongside all calls to `AppsFlyerLib.Instance.StartTracking`, typically in an activity's `onCreate` callback.
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
