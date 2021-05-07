@@ -173,16 +173,7 @@ Under the Manage Users page, there will be an additional column that indicates w
 [62]: https://api.slack.com/incoming-webhooks
 [63]: {% image_buster /assets/img_archive/slack_f.png %}
 [64]: {% image_buster /assets/img_archive/copy_url.png %}
-[65]: {% image_buster /assets/img_archive/click_edit_f.gif %}
+[65]: {% image_buster /assets/img_archive/click_edit_f.png %}
 [67]: https://my.slack.com/services/new/incoming-webhook/
-
-
-
-
-
-
-
-
-
 [83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632

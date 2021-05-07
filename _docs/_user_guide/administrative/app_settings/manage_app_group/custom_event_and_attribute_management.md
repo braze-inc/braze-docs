@@ -70,8 +70,8 @@ Please note that data sent to Braze is immutable and cannot be deleted or modifi
 
 [43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[71]: {% image_buster /assets/img_archive/customattributessearch1.png %}
-[72]: {% image_buster /assets/img_archive/customeventsview1.png %}
+[71]: {% image_buster /assets/img_archive/customattributessearch1.jpeg %}
+[72]: {% image_buster /assets/img_archive/customeventsview1.jpeg %}
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
 [88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection
