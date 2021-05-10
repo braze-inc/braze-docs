@@ -135,7 +135,7 @@ API Rate Limits and their Values (limited or unlimited) are subject to change de
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Requests made to this endpoint will generally begin process in this order: attributes, events, and purchases. <br><br>
+- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Requests made to this endpoint will generally begin processing in this order: attributes, events, and purchases. <br><br>
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`
