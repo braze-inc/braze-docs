@@ -116,7 +116,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 - [Setting User IDs - Android][10]
 - [Setting User IDs - Windows Universal][13]
 
-##  API Limits
+## API Limits
 
 The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
@@ -135,7 +135,7 @@ API Rate Limits and their Values (limited or unlimited) are subject to change de
 
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
 
-- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request.
+- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Requests made to this endpoint will generally begin process in this order: attributes, events, and purchases. <br><br>
 - A single request to the Messaging endpoints can reach any one of the following:
   - Up to 50 specific `external_ids`, each with individual message parameters
   - A segment of any size created in the Braze dashboard, specified by its `segment_id`
@@ -156,7 +156,7 @@ If you have questions about API limits please contact your Customer Success Mana
 
 Understanding Optimal Delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our New User Alias endpoint, and then hitting that alias to send a custom event via our Usertrack endpoint, how long should you wait?
 
-Under normal conditions, the time for our data eventual-consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5 minute delay__ between making subsequent calls to minimize the probability of error.
+Under normal conditions, the time for our data eventual consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5-minute delay__ between making subsequent calls to minimize the probability of error.
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
