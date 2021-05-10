@@ -49,7 +49,7 @@ For example, if a user reports a problem and you are not sure what device and op
 You can use the Engagement Tab to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment and whether a user is opted in to push and/ or e-mail. This information is useful to have for troubleshooting purposes. For example, you'd want to check this information if a user does not receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
 [7]: {% image_buster /assets/img_archive/user_search2.png %}
-[8]: {% image_buster /assets/img_archive/User_Profile2.png %}
+[8]: {% image_buster /assets/img_archive/user_profile2.png %}
 [9]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
 [11]: {% image_buster /assets/img_archive/User_Profile_Social.png %}
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/

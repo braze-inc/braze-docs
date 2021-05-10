@@ -9,4 +9,4 @@ To reset your password, click the **Forgot your password?** link on the dashboar
 
 ![Reset Password Button][45]
 
-[45]: {% image_buster /assets/img_archive/Enable_reset.png %}
+[45]: {% image_buster /assets/img_archive/enable_reset.png %}
