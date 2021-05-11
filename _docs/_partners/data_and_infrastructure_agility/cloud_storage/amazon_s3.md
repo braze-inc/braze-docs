@@ -109,6 +109,10 @@ Navigate to the "Currents" page on the Braze Dashboard under the "Integrations" 
 
 Give your Current a name. Then, in the **Credentials** section, make sure the "AWS Secret Access Key" radio button is selected, then input your **AWS Access ID**, **AWS Secret Access Key**, and **AWS S3 Bucket Name** in the designated fields.
 
+{% alert important %}
+It's important to keep your AWS Access Key ID and AWS Secret Access Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 You can also add the following customizations, based on your needs:
 
 -   Folder Path (defaults to `currents`) 
