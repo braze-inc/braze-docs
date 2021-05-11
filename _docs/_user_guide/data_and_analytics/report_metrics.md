@@ -135,7 +135,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Unique Clicks
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
+    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
     calculation: (Unique Clicks) / (Deliveries) (for Email) or (Unique Clicks) / (Unique Impressions) (for Content Cards)
     tags:
       - Email
