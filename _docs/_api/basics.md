@@ -2,21 +2,21 @@
 nav_title: Overview
 page_order: 0
 
-description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits." 
+description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits."
 page_type: reference
-tool: 
+tool:
   - Dashboard
   - Docs
-platform: 
+platform:
   - APIs
 ---
 # API Overview
 
-> Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This reference article covers what a REST API is, the terminology, a brief overview of API keys, and API limits. 
+> Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This reference article covers what a REST API is, the terminology, a brief overview of API keys, and API limits.
 
 ## What is a REST API?
 
-A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data. 
+A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
 {% alert note %}
 Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
@@ -36,6 +36,7 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
 |US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
 |US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
+|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
 |US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
 |US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
