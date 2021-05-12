@@ -146,6 +146,8 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 
 | For Instance `US-08`: |
 |---|
+| `52.151.246.51`
+| `52.170.163.182`
 | `40.76.166.157`
 | `40.76.166.170`
 | `40.76.166.167`
@@ -153,6 +155,8 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `40.76.166.156`
 | `40.76.166.166`
 | `40.76.166.160`
+| `40.88.51.74`
+| `52.154.67.17`
 | `40.76.166.80`
 | `40.76.166.84`
 | `40.76.166.85`
