@@ -15,8 +15,7 @@ Experiment Step will randomly assign users to the different paths (or optional c
 
 ![Experiment Step ][0]{: style="max-width:60%"}
 
-## Create an Experiment Step,
-
+## Create an Experiment Step
 
 To create an Experiment Step, add a step to your Canvas. Then, using the drop-down at the top of the new step, select `Experiment`.
 
@@ -28,7 +27,7 @@ In the default Experiment Step shown to the right, there are already two default
 
 You can add up to 4 paths by clicking `Add Path` and an optional control group by checking the box labeled `Add a Control Group`. Using the input boxes above each path, you can input the percentage of the audience that should go to each path as well as the control group. Naturally, the percentages must add up to 100% to proceed. The 'Distribute Paths Evenly' button allows you to quickly set all the available paths (and control) to the same percentage.
 
-> Note: If Canvas reeligibility is enabled, users who enter the canvas and go down a randomly chosen path will go down the same path thereafter if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
+> Note: If Canvas re-eligibility is enabled, users who enter the canvas and go down a randomly chosen path will go down the same path thereafter if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
 
 Optionally, you can add a Description as a note to yourself or others to explain what this Experiment Step intends to test or whatever else that might be convenient for you.
 
