@@ -1,6 +1,6 @@
 ---
 nav_title: Experiment Step
-title: Audience Path Step
+title: Experment Step
 alias: /audience_paths/
 description: "Experiment Steps allow you to test multiple possible Canvas paths against each other and a control group at any point in the user journey."
 page_order: 6
@@ -28,7 +28,7 @@ In the default Experiment Step shown to the right, there are already two default
 
 You can add up to 4 paths by clicking `Add Path` and an optional control group by checking the box labeled `Add a Control Group`. Using the input boxes above each path, you can input the percentage of the audience that should go to each path as well as the control group. Naturally, the percentages must add up to 100% to proceed. The 'Distribute Paths Evenly' button allows you to quickly set all the available paths (and control) to the same percentage.
 
-> Note: If Canvas reeligibility is enabled, users who enter the canvas and go down a randomly chosen path will go down the same path thereafter if they become re-eligible and re-enter the Canvas.
+> Note: If Canvas reeligibility is enabled, users who enter the canvas and go down a randomly chosen path will go down the same path thereafter if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
 
 Optionally, you can add a Description as a note to yourself or others to explain what this Experiment Step intends to test or whatever else that might be convenient for you.
 
