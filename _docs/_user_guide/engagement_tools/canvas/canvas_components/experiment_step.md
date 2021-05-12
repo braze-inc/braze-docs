@@ -37,7 +37,7 @@ The Experiment Step will keep its own record of users who enter each step and co
 
 ### 3. Create Paths
 
-Now it's time to build your downstream paths! Select `Done` and return to the Canvas builder.  Click the `+` under each Path to begin creating journeys using all the usual tools of Canvas as you see fit, and launch the Canvas when you are ready. Keep in mind that once created, Paths and their downstream steps cannot be removed from a Canvas.
+Now it's time to build your downstream paths! Select `Done` and return to the Canvas builder.  Click the `+` under each Path to begin creating journeys using all the usual tools of Canvas as you see fit, and launch the Canvas when you are ready. Keep in mind that once created, Paths and their downstream steps cannot be removed from a Canvas. However, once launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one Path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your need, you can continue sending users down multiple paths.
 
 ## Tracking Performance
 
