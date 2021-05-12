@@ -42,7 +42,7 @@ To increase targeting precision, select the “Add Property Filters” checkbox.
 
 ![Event Property][15]{: style="max-width:85%;"}
 
-{% alert note %} Leveraging Event Properties with Segment Extentions does not impact data point usage.  {% endalert %}
+{% alert note %} Using Event Properties within Segment Extentions does not impact data point usage.  {% endalert %}
 
 ### Extension Regeneration
 
