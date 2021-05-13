@@ -58,9 +58,9 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 
 {% endraw %}
 
-## Using Token Authentication 
+## Using Token Authentication
 
-When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of. 
+When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of.
 
 {% raw %}
 ```
@@ -127,7 +127,7 @@ With IP whitelisting, you can verify that Connected Content requests are actuall
 
 Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests.
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`
@@ -144,7 +144,26 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `52.29.193.121`
 | `35.158.29.228`
 
-
+| For Instance `US-08`: |
+|---|
+| `52.151.246.51`
+| `52.170.163.182`
+| `40.76.166.157`
+| `40.76.166.170`
+| `40.76.166.167`
+| `40.76.166.161`
+| `40.76.166.156`
+| `40.76.166.166`
+| `40.76.166.160`
+| `40.88.51.74`
+| `52.154.67.17`
+| `40.76.166.80`
+| `40.76.166.84`
+| `40.76.166.85`
+| `40.76.166.81`
+| `40.76.166.71`
+| `40.76.166.144`
+| `40.76.166.145`
 
 [1]: #aborting-connected-content
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

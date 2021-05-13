@@ -104,7 +104,7 @@ Braze will send Webhooks from the IP ranges below.
   If you’re making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |
 |---|
 | `127.0.0.1`
 | `23.21.118.191`
@@ -122,6 +122,27 @@ Braze will send Webhooks from the IP ranges below.
 | `52.58.142.242`
 | `52.29.193.121`
 | `35.158.29.228`
+
+| For Instance `US-08`: |
+|---|
+| `52.151.246.51`
+| `52.170.163.182`
+| `40.76.166.157`
+| `40.76.166.170`
+| `40.76.166.167`
+| `40.76.166.161`
+| `40.76.166.156`
+| `40.76.166.166`
+| `40.76.166.160`
+| `40.88.51.74`
+| `52.154.67.17`
+| `40.76.166.80`
+| `40.76.166.84`
+| `40.76.166.85`
+| `40.76.166.81`
+| `40.76.166.71`
+| `40.76.166.144`
+| `40.76.166.145`
 
 # Utilizing Webhooks
 
