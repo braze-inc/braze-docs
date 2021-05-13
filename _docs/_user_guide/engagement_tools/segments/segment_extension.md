@@ -42,6 +42,8 @@ To increase targeting precision, select the “Add Property Filters” checkbox.
 
 ![Event Property][15]{: style="max-width:85%;"}
 
+{% alert note %} Using Event Properties within Segment Extentions does not impact data point usage.  {% endalert %}
+
 ### Extension Regeneration
 
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the “Regenerate Extension Daily” checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.

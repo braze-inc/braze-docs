@@ -62,7 +62,7 @@ Local time zone delivery allows you to deliver messaging campaigns to a segment 
 {% enddetails %}
 
 {% details How does Braze recognize a user’s time zone? %}
-Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a timezone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. To check your company’s timezone, look at your company settings on the dashboard. Click on your name in the top toolbar and then click on “Company Settings.”
+Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a timezone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. To check your company’s timezone, look at your <a href='/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/'>Company Settings</a> on the dashboard. Click on your name in the top toolbar and then click on **Company Settings**.
 {% enddetails %}
 
 {% details How does local time zone delivery work? %}
@@ -71,8 +71,8 @@ Braze will begin delivering a campaign when the first time zone in the world rea
 
 {% details How do I schedule a local time zone campaign? %}
 When scheduling a campaign, you need to choose to send it at a designated time, and then check the box next to “Send campaign to users in their local time zone.”
-Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you do have the ability to schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that has missed the send time by more than 1 hour. For example, if it is 1pm and you schedule a local time zone campaign for 3pm, then the campaign will immediately send to all users whose local time is 3-4pm, but not to users whose local time is 5pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
-Editing a local time zone campaign that is scheduled less than 24 hours in advance will alter the message’s schedule for certain users. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will send to all segment members at the earlier time (4pm). If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
+<br> <br>Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you do have the ability to schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that has missed the send time by more than 1 hour. For example, if it is 1pm and you schedule a local time zone campaign for 3pm, then the campaign will immediately send to all users whose local time is 3-4pm, but not to users whose local time is 5pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
+<br> <br>Editing a local time zone campaign that is scheduled less than 24 hours in advance will alter the message’s schedule for certain users. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will send to all segment members at the earlier time (4pm). If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
 {% enddetails %}
 
 {% details When do changes to local time zone campaigns take effect? %}
@@ -84,10 +84,12 @@ Target segments for local time zone campaigns should include at least a 48-hour 
 
 {% details What changes can I make to scheduled campaigns ahead of launch? %}
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send.
-As per all campaigns, you can’t edit conversion events after it is launched.<br>
+As per all campaigns, you can’t edit conversion events after it is launched.<br> <br>
 For Canvas entries, refer to above.<br>
 
-For Canvas steps: <br>- Scheduled changes will only apply to users who are not already waiting to receive the step. <br>- Audience changes default to apply to everyone unless you’ve selected Evaluate At Enqueue Time, in which case it’s similar behavior to above.
+For Canvas steps:
+- Scheduled changes will only apply to users who are not already waiting to receive the step. 
+- Audience changes default to apply to everyone unless you’ve selected **Evaluate At Enqueue Time**, in which case it’s similar behavior to above.
 {% enddetails %}
 
 {% details What is the “safe zone” before messages on a scheduled campaign are enqueued? %}
@@ -98,21 +100,24 @@ __Optimal Send Time campaigns__ - can be edited up to 24 hours prior to the day 
 
 What if I make an edit within the “safe zone?”
 
-Changing the send time on campaigns within this time can lead to undesired behavior, for example:<br>- Braze will not send messages to any users that have missed the send time by more than 1 hour.<br>- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
+Changing the send time on campaigns within this time can lead to undesired behavior, for example:
+- Braze will not send messages to any users that have missed the send time by more than 1 hour.
+- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
 {% enddetails %}
 
 {% details What should I do if the “safe zone” has already passed? %}
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
-Please ensure you re-adjust campaign schedule times to allow for timezone sending.
+<br> <br>Please ensure you re-adjust campaign schedule times to allow for timezone sending.
 {% enddetails %}
 
 {% details Can I create single-user segments? %}
-Yes. You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID. The segmentation stats or preview may not show this individual user though because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click on “Calculate Exact Statistics” on the segment page. This will calculate the exact number of users in your segment, without any rounding.
-Braze has testing filters to target specific users by user ID or email address.
+Yes. You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID. 
+<br> <br>However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the segment page. This will calculate the exact number of users in your segment, without any rounding.
+<br> <br>Braze has testing filters to target specific users by user ID or email address.
 {% enddetails %}
 
 {% details Can I send myself test messages? %}
-Yes. Check out our section on sending test messages here within the troubleshooting section.
+Yes. Check out our article on <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/#sending-test-messages'>sending test messages</a> for more info.
 {% enddetails %}
 
 {% details What’s the default APNs expiration date? %}
@@ -142,9 +147,9 @@ No data is uploaded after a session is closed.
 {% enddetails %}
 
 {% details What does it actually mean to “warm up” an IP address? %}
-IP warming is designed to ensure that you establish a positive email reputation with ISPs (Internet Service Providers) so that your messages are not filtered to spam. If you send email from a new or “cold” IP address, ISPs closely monitor the amount of email you are sending and how often your users are labeling your email as SPAM. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to SPAM automatically.
-Abrupt, high volume email campaigns are regarded with the most skepticism by ISPs. Given that, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe.
-This process doesn’t guarantee that your emails won’t be filtered to spam. It is also important that you send engaging content, and send emails consistently to users who want to receive it.
+<a href='/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/'>IP Warming</a> is designed to ensure that you establish a positive email reputation with ISPs (Internet Service Providers) so that your messages are not filtered to spam. If you send email from a new or “cold” IP address, ISPs closely monitor the amount of email you are sending and how often your users are labeling your email as SPAM. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to SPAM automatically.
+<br> <br>Abrupt, high volume email campaigns are regarded with the most skepticism by ISPs. Given that, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe.
+<br> <br>This process doesn’t guarantee that your emails won’t be filtered to spam. It is also important that you send engaging content, and send emails consistently to users who want to receive it.
 {% enddetails %}
 
 {% details Why don’t I see “Braze Is Working” anymore with a debug API key? %}
@@ -153,11 +158,11 @@ The production key should be used with production provisioning profiles and apps
 {% enddetails %}
 
 {% details How does rate-limiting work? %}
-Braze affords you control over marketing pressure by allowing you to limit the rate at which your users are messaged both globally and on a per-channel basis using the following filters.
+Braze affords you control over marketing pressure by allowing you to limit the rate at which your users are messaged both globally and on a per-channel basis using the following filters:
 * Last Received Any Message
 * Last Received Email Campaign
 * Last Received Push Campaign
-If your push campaign fails to reach the intended user we still mark that user has having received a push campaign on that day. We record the campaign receipt at the time of delivery because push token invalidation notifications from iOS and FCM are not synchronous.
+<br> <br>If your push campaign fails to reach the intended user we still mark that user has having received a push campaign on that day. We record the campaign receipt at the time of delivery because push token invalidation notifications from iOS and FCM are not synchronous.
 {% enddetails %}
 
 {% details Can I target users who have downloaded but not opened my app? %}
@@ -172,7 +177,7 @@ Yes. The Braze iOS SDK fully supports RubyMotion Apps.
 FCM Registration IDs are created when the app is installed and registers for push notifications. Google will not change this registration ID except in the following cases:
 * Client App Update
 * Backup and Restore
-Braze automatically handles the deletion of the old token, and the addition of the new token to a user’s profile so long as our SDK is instrumented properly as outlined in our Android Push Documentation.
+<br> <br>Braze automatically handles the deletion of the old token, and the addition of the new token to a user’s profile so long as our SDK is instrumented properly as outlined in our Android Push Documentation.
 {% enddetails %}
 
 {% details What is Deep Linking? %}
@@ -181,28 +186,28 @@ There are three parts to this:
 * Identify which app to launch
 * Instruct the app which action to perform
 * Provide the action with any additional data it will need
-“Deep Links” contain all of these things. The key is defining a custom scheme. “http:” is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs, and dots. Practically speaking, there is no central registry to prevent conflicts, so it is a Best Current Practice to include your domain name in the scheme.
-Everything after the colon within a “Deep Link” is free-form text. It is up to you to define its structure and interpretation, however, a common convention is to model it after “http:” URLs, including a leading “//” (or “///”, leaving a null string where the hostname would normally appear) and query parameters (e.g. ?foo=1&bar=2). Following this approach, the action would be specified by the path and the additional data would be either in the path or in a query string. e.g. “/user/johndoe” or “/show?user=johndoe”.
-These “Deep Links” are a powerful tool when used in tandem with the Braze News Feed. “Providing “Deep Links” as the URL within News Feed items allows you to utilize the News Feed as an individualized navigation tool to direct users to content inside or outside of your app.
+<br> <br>“Deep Links” contain all of these things. The key is defining a custom scheme. “http:” is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs, and dots. Practically speaking, there is no central registry to prevent conflicts, so it is a Best Current Practice to include your domain name in the scheme.
+<br> <br>Everything after the colon within a “Deep Link” is free-form text. It is up to you to define its structure and interpretation, however, a common convention is to model it after “http:” URLs, including a leading “//” (or “///”, leaving a null string where the hostname would normally appear) and query parameters (e.g. ?foo=1&bar=2). Following this approach, the action would be specified by the path and the additional data would be either in the path or in a query string. e.g. “/user/johndoe” or “/show?user=johndoe”.
+<br> <br>These “Deep Links” are a powerful tool when used in tandem with the Braze News Feed. “Providing “Deep Links” as the URL within News Feed items allows you to utilize the News Feed as an individualized navigation tool to direct users to content inside or outside of your app.
 With iOS, it’s also possible to deep-link into your application’s settings within the iOS Settings App where a user can define their preferences for Location, Notifications, Background App Refresh, etc. This can be useful if trying to re-prime users for push who have denied your initial prompt. Type “app-settings://” for your deep-link within your campaign to achieve this.
 {% enddetails %}
 
 {% details When should I put multiple apps in the same app group? %}
 The draw to have multiple apps under one App group can be enticing as it can lead to the ability to rate limit messaging across your entire app portfolio. However, as a best practice, we suggest only putting different versions of the same or very similar apps together under one app group. For example, your iOS and Android versions of the same app or your free and premium versions of the same app.
-Whichever apps you choose to have in one app group will have their data aggregated which will have a notable impact on filters in Braze:
+<br> <br>Whichever apps you choose to have in one app group will have their data aggregated which will have a notable impact on filters in Braze:
 * Last Used App
 * First Used App
 * Session Count
 * Money Spent In-App
 * Push subscription (this becomes an all or none situation, in other words, if your users unsubscribe from one app they will be unsubscribed from all of your apps under the app group)
 * Email subscription (this becomes an all or none situation - and can leave you open to compliance issues)
-This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.
+<br> <br>This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.
 {% enddetails %}
 
 {% details If I’m relaunching a new version of my app, should I make a new app group? %}
 If users will simply have to update the app and it’s not a new app being released to the app store, you should not create a new app group if you plan to still message users on the older version.
-By creating a new app group, all of the historical data and profiles from the older version of your app will not exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created that does not contain any of the behavioral data from the old app. Additionally, this user will exist on both the old app group and the new app group and can potentially have the same push token. If this happens, it can lead to users receiving an “upgrade now” marketing message intended for only old app group users, even if they’ve already upgraded.
-The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can select the old app and filter the previous app version.
+<br> <br>By creating a new app group, all of the historical data and profiles from the older version of your app will not exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created that does not contain any of the behavioral data from the old app. Additionally, this user will exist on both the old app group and the new app group and can potentially have the same push token. If this happens, it can lead to users receiving an “upgrade now” marketing message intended for only old app group users, even if they’ve already upgraded.
+<br> <br>The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can select the old app and filter the previous app version.
 {% enddetails %}
 
 {% details When does Braze collect location? %}
@@ -221,5 +226,27 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 Braze Firebrands is our customer engagement community. We're building a community of movers and shakers using Braze to modernize their customer experience and marketing. Interested in learning more? <a href='https://brazefirebrands.splashthat.com/'>Join now</a>.
 {% enddetails %}
 
+{% details Can I add a "view this email in a browser" link to my emails? %}
+No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
+<br> <br> **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
+{% enddetails %}
+
+{% details What happens when an email is sent out and multiple profiles have the same email address? %}
+If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn't hit the same email multiple times.
+<br> <br> Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are **not** deduped by email on canvas entry, so it's possible that users are not deduped beyond the first step of a canvas if they are progressing at slightly different times due to rate limited entry.
+<br> <br> When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the e-mail will have a timestamp set for the "received_email" field in the associated campaign summary; other users won't have this field, just "date".
+<br> <br> **Exception: API Triggered Campaigns**
+<br> API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API triggered campaigns:
+
+- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API triggered campaign, only one of the profiles will get the email.
+- **Scenario 2: Duplicate emails in different `user_ids` within recipients object (DUPE SENDS):** If the same email appears within multiple `External_user_IDs` referenced by the "recipients" object, the email will be sent twice.
+- **Scenario 3: Duplicate emails due to duplicate `user_ids` within recipients object (DEDUPED):** If you try to add the same user profile twice, only one of the profiles will get the email.
+{% enddetails %}
+
+{% details What is a "good" email deliverability rate? %}
+Typically, the "magic number" is around 95% messages delivered, with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
+<br> <br>However, a rate can be above 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
+<br> <br>Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.<br> <br> Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly transactional emails should expect to see a better rate than someone sending many marketing messages.
+{% enddetails %}
 
 [support]: {{site.baseurl}}/support_contact/

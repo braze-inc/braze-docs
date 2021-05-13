@@ -17,7 +17,9 @@ A Software Development Kit (SDK) is a set of tools that can be used to develop s
 |US-02 | sdk.iad-02.braze.com |
 |US-03 | sdk.iad-03.braze.com |
 |US-04 | sdk.iad-04.braze.com |
+|US-05 | sdk.iad-05.braze.com |
 |US-06 | sdk.iad-06.braze.com |
+|US-08 | sdk.iad-08.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
 {: .reset-td-br-1 .reset-td-br-2}
 
