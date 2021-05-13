@@ -97,6 +97,14 @@ Here are some details you should know if you aren't using our most up to date An
 - The previous version of the Android SDK does not detect that a user has disabled push and so the user's push enabled state remains enabled. When you attempt to send to a device in this state the push is 'sent' and the device receives the payload but is suppressed by the device so it is not displayed to a user. Braze refers to this as ‘silently failing’.
 - The previous version of the Android SDK does not have the `notifications_enabled` parameter and will not return a value for it if user data is called using the Braze REST API.
 
+## Frequently Asked Questions
+
+#### What does the lifecycle of a user opted-in for push look like upon deletion, and then redownload of the app?
+1. A user opts-in for push, receives some push messaging, and then later deletes the app; this will remove the push consent at the device level. 
+2. From here, depending on if the user uninstalls right after a push, and the subsequent push is sent less than 24 hours later, or if the user doesn't have uninstall tracking enabled, then Braze will receive a bounce, and those users will be opted-out of future push messaging.
+3. After this, if a user were to reinstall the app but not launch it, Braze will be unable to send a push to the user because push tokens have not been re-granted for your app.
+4. If a user were to then re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push.
+
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
 [2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/

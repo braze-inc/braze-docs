@@ -57,6 +57,14 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 | 1. Customer (device) registers to push provider<br>2. Provider generates and delivers push token<br>3. Flush tokens in Braze |1. Braze sends push payload to provider<br>2. Provider delivers the push payload to the device<br>3. SDK passes messaging stats to Braze |
 {: .reset-td-br-1 .reset-td-br-2}
 
+## Frequently Asked Questions
+
+#### What does the lifecycle of a user opted-in for push look like upon deletion, and then redownload of the app?
+1. A user opts-in for push, receives some push messaging, and then later deletes the app; this will remove the push consent at the device level. 
+2. From here, depending on if the user uninstalls right after a push, and the subsequent push is sent less than 24 hours later, or if the user doesn't have uninstall tracking enabled, then Braze will receive a bounce, and those users will be opted-out of future push messaging.
+3. After this, if a user were to reinstall the app but not launch it, Braze will be unable to send a push to the user because push tokens have not been re-granted for your app.
+4. If a user were to then re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push.
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#before-android-sdk
 [errors]: {{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
