@@ -7,6 +7,10 @@ page_order: 6
 hidden: true
 ---
 
+{% alert note %}
+Canvas Experiment Steps are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+{% endalert %}
+
 # Experiment Step
 
 > Experiment Steps allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. These steps will enable you to track path performance to make informed decisions about your Canvas journey.
