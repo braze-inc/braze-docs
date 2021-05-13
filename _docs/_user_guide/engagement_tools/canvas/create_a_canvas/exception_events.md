@@ -1,7 +1,10 @@
 ---
 nav_title: Exception Events 
-description: "This article covers how to add exception events to your Canvas steps."
 page_order: 2.1
+
+page_type: reference
+description: "This reference article describes exception events and how they impact your Canvas steps."
+tool: Canvas
 ---
 
 # Canvas Exception Events

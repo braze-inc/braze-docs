@@ -4,9 +4,12 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 6
 
-tools: campaigns
 page_type: reference
 description: "This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind."
+tool: Campaigns
+channel:
+- email
+- webhooks
 ---
 # Campaign Alerts
 

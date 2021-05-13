@@ -1,8 +1,12 @@
 ---
 nav_title: Decision Split Step
+title: Decision Split Step
 alias: /decision_split/
-description: "This reference article covers how to create and implement decision split steps within your Canvas."
 page_order: 0
+
+page_type: reference
+description: "This reference article covers how to create and implement decision split steps within your Canvas."
+tool: Canvas
 ---
 
 # Decision Split Step for Canvas

@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Testing and More
 page_order: 6
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference page breaks down the components of the campaign calendar."
 ---
@@ -19,7 +19,7 @@ The Campaign Calendar can be found by navigating to the Braze Dashboard and sele
 ![Full Page][4]
 
 {% alert note %}
-Note that only Scheduled Campaigns are displayed in the Campaign Calendar. Canvas Steps, Triggered Campaigns, and API campaigns will not be displayed here.
+Only Scheduled Campaigns are displayed in the Campaign Calendar. Canvas Steps, Triggered Campaigns, and API campaigns will not be displayed here.
 {% endalert %}
 
 ## Future Send Calendar

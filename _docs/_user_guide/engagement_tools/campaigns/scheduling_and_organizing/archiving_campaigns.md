@@ -4,9 +4,12 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 2
 
-tools: campaigns
 page_type: reference
-description: "This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed."
+description: "This reference article goes over how to archive a pre-existing campaign, the effects of archiving a 
+campaign, and how to resume that campaign if needed."
+tool:
+- Campaigns
+- Segments
 ---
 # Archiving Campaigns
 

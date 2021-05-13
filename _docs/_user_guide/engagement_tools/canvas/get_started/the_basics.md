@@ -1,18 +1,21 @@
 ---
 nav_title: The Basics
 page_order: 1
+
+page_type: reference
 description: "This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas."
+tool: Canvas
 ---
 {% comment %}
 Separate "The Basics" section into "Find Your Strategy" and "Building Your Customer Journey" and "Anatomy of a Canvas" - move Anatomy of a Canvas to Create a Canvas and put it 1st.
-Also, create a real form for them to download - need to write in where this information will become useful. Maybe not call it a form... Makes it sound like there's an output...
+Also, create a real form for them to download - need to write in where this information will become useful.
 {% endcomment %}
 
 # Canvas: The Basics
 
 ## Find Your Strategy with the Five W's of Visualization
 
-Fill in the form below to get started:
+Answer the questions below to get started:
 
 * __What__ am I trying to help the customer do or understand?_________________________
     (Canvas Name)

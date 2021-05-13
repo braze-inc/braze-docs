@@ -4,9 +4,15 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
 
-tools: campaigns
 page_type: reference
 description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
+tool: Campaigns
+platform: 
+- iOS
+- Android
+channel:
+- in-app messages
+- content cards
 ---
 # Feature Awareness and New App Version
 

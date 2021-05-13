@@ -4,9 +4,12 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 4
 
-tools: campaigns
 page_type: reference
 description: "This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse."
+tool: 
+- Campaigns
+- Canvas
+- Segments
 ---
 # Duplicating Segments, Campaigns, and Canvases
 
