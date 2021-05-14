@@ -6,7 +6,7 @@ glossary_top_header: "Segmentation Filters"
 glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
-tool: segments
+tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category

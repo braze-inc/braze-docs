@@ -3,9 +3,10 @@ nav_title: Segment Insights
 page_order: 4
 
 page_type: tutorial
-tool: segments
-
-description: "This how-to article will walk you through how to use, interpret and share Segment Insights."
+tool: 
+- Segments
+- Reports
+description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
 # Segment Insights
 

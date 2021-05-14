@@ -3,8 +3,9 @@ nav_title: Using User Search
 page_order: 5
 
 page_type: reference
-tool: segments
-
+tool: 
+- Segments
+- Dashboard
 description: "This reference article will go through how to use User Search in the Dashboard and showcases some User Search use cases."
 ---
 # Using User Search

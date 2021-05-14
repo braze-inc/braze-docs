@@ -1,7 +1,12 @@
 ---
 nav_title: Duplicate Templates
 page_order: 3
-description: "Duplicating a template can save a lot of time. You can duplicate a single template or multiple in the Templates & Media section of the Braze Dashboard."
+
+page_type: reference
+description: "This reference article describes how to duplicate templates in the Templates & Media section of the Braze Dashboard."
+tool:
+- Templates
+- Media
 ---
 # How to Duplicate Templates in Templates & Media
 

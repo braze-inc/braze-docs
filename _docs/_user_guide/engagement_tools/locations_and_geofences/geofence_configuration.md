@@ -1,8 +1,10 @@
 ---
 nav_title: Geofence Configuration
 page_order: 3
-description: "This reference article covers various GeoFence configurations."
 
+page_type: reference
+description: "This reference article covers various Geofence configurations."
+tool: Location
 ---
 
 # Geofence Configuration

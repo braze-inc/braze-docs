@@ -4,7 +4,10 @@ layout: dev_guide
 page_order: 3
 guide_top_header: "Canvas"
 guide_top_text: "Marketing is a science — one that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer. <br> <br> Canvas is a single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey and then compare and optimize those experiences using comprehensive analytics for the full user experience. <br> <br> The articles below will walk you through setting up a Canvas and up-level your strategies as you build customer experiences. You can also check out our <a href='http://lab.braze.com/canvas-course'>LAB course on Canvas</a>!"
-description: "Marketing is a science — one that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer."
+
+page_type: landing
+tool: Canvas
+description: "This landing page is home to Canvas articles. Here you can find resources to create, personalize, and test a Canvas."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

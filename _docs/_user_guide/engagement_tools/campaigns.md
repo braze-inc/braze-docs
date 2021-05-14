@@ -5,7 +5,7 @@ layout: dev_guide
 guide_top_header: "Campaigns"
 guide_top_text: "If you want to engage with your users with a single message step, you can send them a Campaign using any supported <a href='/docs/user_guide/message_building_by_channel/'>Messaging Channels</a>. Most multi-step user journeys are better created as <a href='/docs/user_guide/engagement_tools/canvas/'>Canvases</a>.<br> <br> Select any of the following topics to see articles you may be interested in."
 
-tools: campaigns
+tool: Campaigns
 page_type: landing
 description: "This landing page is home to Braze's Dashboard Campaigns. Here you can find resources to create, set up, and personalize a campaign."
 
