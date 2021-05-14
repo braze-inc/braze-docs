@@ -5,6 +5,8 @@ layout: featured
 guide_top_header: "Content Cards"
 guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. Note that Content Cards are __not__ available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Account Manager or Customer Success Manager for more information."
 description: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience."
+channel:
+  - content cards
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
