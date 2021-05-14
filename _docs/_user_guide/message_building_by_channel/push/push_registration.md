@@ -59,10 +59,7 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 
 ## Frequently Asked Questions
 {% details What does the lifecycle of an opted-in push user look like upon deletion and then redownload of the app? %}
-1. A user opts-in for push, receives some push messaging, and then later deletes the app; this will remove the push consent at the device level. 
-2. From here, the first bounced push after the uninstall will result in that user being opted-out of future push messaging. 
-3. After this, if a user were to reinstall the app but not launch it, Braze will be unable to send a push to the user because push tokens have not been re-granted for your app.
-4. If a user were to re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push messaging.
+Suppose a user opts-in for push, receives some push messaging, and then later deletes the app; this will remove the push consent at the device level. From here, the first bounced push after the uninstall will result in that user being opted-out of future push messaging. After this, if a user were to reinstall the app but not launch it, Braze will be unable to send a push to the user because push tokens have not been re-granted for your app. Additionally, if a user were to re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push messaging.
 {% enddetails %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#before-android-sdk
