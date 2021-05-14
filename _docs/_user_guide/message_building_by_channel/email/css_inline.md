@@ -3,7 +3,14 @@ nav_title: CSS Inlining
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 3
-description: "This reference article covers CSS inling, how to use it, and best practices."
+description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
+
+tool:
+  - Dashboard
+
+channel:
+  - email
+
 ---
 # CSS Inlining
 

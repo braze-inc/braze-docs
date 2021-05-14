@@ -3,14 +3,6 @@ nav_title: SMS FAQs
 page_order: 8
 description: "This reference article addresses some of the most frequently asked questions that arise when setting up SMS campaigns."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

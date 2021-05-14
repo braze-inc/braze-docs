@@ -1,16 +1,8 @@
 ---
 nav_title: Handling Unknown Phone Numbers
 page_order: 1
-description: "This reference article covers how Braze processes unknown phone numbers from new users."
+description: "This refernence article covers how Braze will go about handling unknown phone numbers for non-native SMS users."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS
