@@ -47,7 +47,7 @@ Use the Single vs. Multiple Choice option to control whether a user can select o
 
 ![Single Multiple Choice]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:70%"}
 
-{% alert tip %} Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many options they can select. {% endalert %}
+{% alert tip %} Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. {% endalert %}
 
 ### Step 3: Collect Custom Attributes {#custom-attributes}
 
@@ -57,11 +57,11 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 To add a Custom Attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new Custom Attribute in your [Settings Page][5].
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" option, that will update their [User Profile][3] with the Custom Attribute `Promotions_Topic = true`. If they leave the option unchecked, that same attribute will instead be marked as `false`.
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the Custom Attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 ![Choice Custom Attributes]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:70%"}
 
-You can then create a segment for users with `Promotions_Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
+You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
 {% alert important %} When Custom Attribute collection is enabled, choices that share the same Custom Attribute Name will be combined into an Array.{% endalert %}
 
