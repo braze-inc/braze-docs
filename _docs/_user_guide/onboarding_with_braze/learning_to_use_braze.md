@@ -1,7 +1,9 @@
 ---
 nav_title: Learning to Use Braze
 page_order: 2
-description: "Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage."
+
+page_type: landing
+description: "This page includes several reading paths that will enable you to best utilize our platform to your advantage."
 ---
 
 # Learning to Use Braze

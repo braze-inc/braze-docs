@@ -1,7 +1,12 @@
 ---
 nav_title: Pre-Populating Custom Data
 page_order: 0.2
-description: "Braze allows you to pre-populate Custom events and attributes on the dashboard before these pieces of data start tracking, so that these events and attributes are available for use in dropdowns, and as part of the campaign creation process."
+
+page_type: reference
+description: "This reference article describes the process to pre-populate your campaigns and segments with custom data."
+tool:
+- Segments
+- Campaigns
 ---
 
 # Pre-Populating Custom Data

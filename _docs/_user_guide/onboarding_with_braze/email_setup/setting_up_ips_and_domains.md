@@ -3,7 +3,7 @@ nav_title: Setting Up IPs & Domains
 page_order: 0
 
 page_type: tutorial
-channel: Email
+channel: email
 
 description: "This how-to article will walk you through how to set up your IPs and Domains for sending emails through Braze."
 ---

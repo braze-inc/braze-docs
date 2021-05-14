@@ -1,7 +1,10 @@
 ---
 nav_title: Creating a Formula
 page_order: 1.2
-description: "Braze's analytics views now allow you to combine several data points together to provide valuable insights into your user data. Formulas will allow you to normalize your time series data based on your total number of MAU/DAU as well as to easily understand complex relationships that exist in your data."
+
+page_type: reference
+description: "This reference article covers creating and managing formulas, which help you easily understand complex relationships that exist in your data."
+tool: Reports
 ---
 # Creating a Formula
 

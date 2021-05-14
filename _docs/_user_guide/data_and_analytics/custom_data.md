@@ -4,7 +4,9 @@ page_order: 4
 layout: dev_guide
 guide_top_header: "Custom Data"
 guide_top_text: "One of the best parts about Braze is its flexibility - you can set up custom data in your app and have it and metrics associated with it sent to Braze. Check out how with our articles below!"
-description: "One of the best parts about Braze is its flexibility - you can set up custom data in your app and have it and metrics associated with it sent to Braze."
+
+page_type: landing
+description: "This landing page is home to articles on custom data. Here you can find resources related to custom events and custom attributes."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

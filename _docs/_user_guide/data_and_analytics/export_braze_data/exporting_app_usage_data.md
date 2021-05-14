@@ -1,8 +1,12 @@
 ---
 nav_title: Export App Usage Data
 page_order: 3
-description: "This reference article covers how to export app usage data."
 
+page_type: reference
+description: "This reference article covers how to export app usage data."
+tool: 
+- Dashboard
+- Reports
 ---
 
 # Exporting App Usage Data

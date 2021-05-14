@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Events
 page_order: 1
-description: "Custom events are actions taken by, or updates about, your users; they're best suited for tracking high-value user interactions with your application."
+
+page_type: reference
+description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
 ---
 
 # Custom Events

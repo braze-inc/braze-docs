@@ -1,8 +1,10 @@
 ---
 nav_title: Authentication
 page_order: 1
+
 page_type: reference
-description: "Email authentication, or validation, is a collection of techniques aimed at equipping your email with verifiable information about its origin."
+description: "This reference article covers email authentication, a collection of techniques aimed at equipping your email with verifiable information about its origin."
+channel: email
 ---
 
 # Authentication

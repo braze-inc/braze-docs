@@ -7,9 +7,9 @@ page_order: 4
 excerpt_separator: ""
 page_type: glossary
 
-description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."
 
-tool: currents
+tool: Currents
 ---
 
 Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).

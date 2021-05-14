@@ -4,7 +4,10 @@ page_order: 6
 layout: dev_guide
 guide_top_header: "Exporting Braze Data"
 guide_top_text: "Braze provides CSV exports of Braze dashboard data, allowing you to analyze them with a variety of tools. Below are the different types of data you can export from the Dashboard, as well as tips for opening the data in Excel and performing exports with our API."
-description: "Braze provides CSV exports of Braze dashboard data, allowing you to analyze them with a variety of tools. Listed are the different types of data you can export from the Dashboard, as well as tips for opening the data in Excel and performing exports with our API."
+
+page_type: landing
+description: "This landing page is home to resources on exporting Braze data, such as reports and graphs."
+tool: Reports
 
 guide_featured_title: "Popular Articles"
 

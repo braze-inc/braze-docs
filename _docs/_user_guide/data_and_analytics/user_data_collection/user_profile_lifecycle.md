@@ -1,7 +1,10 @@
 ---
 nav_title: User Profile Lifecycle
 page_order: 2
-description: "All persistent data associated with a user will be stored against a user profile. Once a user profile is created, either following a user being recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile to identify or reference that user."
+
+page_type: reference
+description: "This reference article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced."
+tool: Dashboard
 ---
 
 # User Profile Lifecycle
