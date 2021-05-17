@@ -94,7 +94,7 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 #### Button Click Tracking
 
 {% alert warning %}
-The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information
+The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information.
 {% endalert %}
 
 To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
