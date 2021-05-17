@@ -8,7 +8,7 @@ description: "Your data means a lot to you, so we have the capability of several
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: App Usage Data
+  - name: Overview Data
     link: /docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
     fa_icon: fas fa-mobile
   - name: Segment Data

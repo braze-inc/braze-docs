@@ -239,7 +239,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 ![Canvas Analytics][19]
 
 
-[1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
+[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
