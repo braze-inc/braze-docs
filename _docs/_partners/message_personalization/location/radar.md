@@ -20,7 +20,7 @@ Whenever Radar events are generated, Radar will send __custom events__ and __use
 ## Integration Details
 In order to properly map data between the Braze and Radar SDKs, you will need to set the same user ID in both systems, using the `changeUser` method in the Braze SDK and the `setUserId` method in the Radar SDK.
 
-To enable the integration, go to the Braze `Developer Console` page and copy your group identifier. Then, on the Braze `Manage App Group` page, copy your iOS API keys and Android API keys.
+To enable the integration, go to the Braze `Developer Console` page and copy your group identifier. Then, on the Braze `Manage Settings` page, copy your iOS API keys and Android API keys.
 
 Finally, on the Radar [Integrations page](https://www.onradar.com/integrations) under Braze:
 

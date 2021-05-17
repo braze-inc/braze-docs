@@ -21,16 +21,16 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
-  - name: Exporting App Usage Data
+  - name: Exporting Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
     fa_icon: far fa-dot-circle
-  - name: Revenue Data
+  - name: Exporting Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     fa_icon: fas fa-hand-holding-usd
-  - name: News Feed Data
+  - name: Exporting News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
     fa_icon: fas fa-newspaper
-  - name: Custom Event Data
+  - name: Exporting Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     fa_icon: fas fa-cog
   - name: Export APIs

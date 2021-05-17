@@ -17,16 +17,16 @@ We offer [both](#integration-options) a side-by-side SDK integration for your An
 
 If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
-## Set Up Overview
+## Setup Overview
 
-To get going with your Segment/Braze integration,
+To get going with your Segment/Braze integration:
 1. Take note of and prepare for your integration by [adhering to the requirements and pre-requisites](#pre-requisites).
 2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
 3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
 4. Set up [mappings](#methods) for your integration.
 5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Segment.
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -204,11 +204,11 @@ The [page](https://segment.com/docs/spec/page/){:target="_blank"} call lets you 
 
 ## Step 3: Test Your Integration
 
-Most of your [app usage dashboard][27] (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions, and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
+Most of your [Overview][27] metrics (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions, and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
-You can view your data in the [custom event dashboard][22], the [revenue dashboard][28] or by [creating a segment][23]. The custom event dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
+You can view your data in the [Custom Events][22] or [Revenue][28] pages, or by [creating a segment][23]. The **Custom Events** page of the dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
@@ -268,7 +268,7 @@ To ensure that you input your Braze SDK Endpoint correctly, the proper format mu
 
 > ‘App Identifier’ vs. ‘REST API Key’
 
-The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+The ‘App Identifier’ is the App API Key found in the `Manage Settings` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
 
 {% enddetails %}
 
@@ -307,7 +307,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

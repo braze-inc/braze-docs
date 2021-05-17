@@ -45,11 +45,11 @@ You can manage user permissions by group or on an individual basis using the Use
 |View Billing Details| Allows user to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under Technology Partners and the ability to sync Braze with other platforms.|
-|Manage Apps| Allows user to edit app settings (under Manage App Group).|
-|Manage Teams|Allows user to manage teams which is under "Manage App Group". The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under manage app group).|
-|Manage Tags|Allows users to edit or delete tags (under manage app group). You do not need this permission to add tags to campaigns or segments.|
-|Manage Email Settings|Allows user to save email configuration changes (email settings tab under "manage app group").|
+|Manage Apps| Allows user to edit settings (under Manage Settings).|
+|Manage Teams|Allows user to manage teams which is under "Manage Settings". The ability to select this permission depends on your contract with Braze.|
+|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under Manage Settings).|
+|Manage Tags|Allows users to edit or delete tags (under Manage Settings). You do not need this permission to add tags to campaigns or segments.|
+|Manage Email Settings|Allows user to save email configuration changes (email settings tab under "Manage Settings").|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
 {: .reset-td-br-1 .reset-td-br-2}
 

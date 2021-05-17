@@ -127,7 +127,7 @@ Braze will show you the number of messages sent and opened over time for each pu
 
 For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened and directly opened.
 
-[1]: {% image_buster /assets/img_archive/newcampaign.png %}
+[1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [2]: {% image_buster /assets/img_archive/push2.png %}
 [3]: {% image_buster /assets/img_archive/schedule.png %}
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}

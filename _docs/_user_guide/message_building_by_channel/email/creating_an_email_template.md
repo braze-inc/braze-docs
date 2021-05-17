@@ -23,7 +23,7 @@ Now, you can create a new template, or edit an existing template (plain or [mobi
 
 You can write your message within the rich-text editor or optionally flip over to our HTML editor to customize your content.
 
-Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can customize this footer in the Email Settings tab of the Manage App Group page. For more information, please read our [custom footer documentation][cf].
+Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our [custom footer documentation][cf].
 
 If you want to see how your email looks before sending it out to your users, you can send a test email to an address of your choosing through the Settings tab in the top right corner.
 

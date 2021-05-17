@@ -92,11 +92,11 @@ For uploading these kinds of values, please use Braze’s [User/Track REST API](
 
 ### Importing a CSV
 
-To import your CSV file, navigate to the User Import page under the Users section on the left-hand toolbar. In the lower text box, “Recent Imports”, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+To import your CSV file, navigate to the **User Import** page under the Users section on the left-hand toolbar. In the lower text box, **Recent Imports**, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
 [Download a CSV Import Template here.][template]
 
-The upper box, “Import CSV”, will contain importing directions and a button to begin your import. Press the “Select CSV File” button and select your file of interest, then press “Start Upload.” Braze will upload your file and check the column headers as well as the data types of each column.
+The upper box, **Import CSV**, will contain importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest, then click **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column.
 
 ![CSV Import][3]
 
