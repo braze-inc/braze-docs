@@ -104,7 +104,7 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the Engagement tab. From here, you can choose:
+Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
 - How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.

@@ -52,14 +52,14 @@ To successfully run this Lambda function, you will need:
 You can find your API URL, or REST endpoint, in the Braze API documentation and through the dashboard.
 
 - __API Documentation__<br>Per the [API documentation]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), simply match your Braze instance URL to the REST endpoint URL. For example, if your dashboard shows `dashboard-01.braze.com/` URL, your REST endpoint would be `https://rest.iad-01.braze.com`. <br><br>
-- __Dashboard__<br>From the left navigation panel, scroll down and select **Manage App Group**. There, you can find your `SDK Endpoint`. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
+- __Dashboard__<br>From the left navigation panel, scroll down and select **Manage Settings**. There, you can find your `SDK Endpoint`. Replace `sdk` with `rest` to get your REST Endpoint. For example, if you see `sdk.iad-01.braze.com`, your API URL would be `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}
 
 To connect with the Braze servers, you will need an API key. This unique identifier allows Braze to verify your identity and upload your data. 
 
-To get your API key, open the Dashboard and scroll down the left navigation section. Select **Developer Console** under _App Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
+To get your API key, open the Dashboard and scroll down the left navigation section. Select **Developer Console** under _Settings_. You will need an API key that has permission to post to `users.track` API endpoint. If you know one of your API keys supports that endpoint, you can use that key. 
 
 To create a new one, click on `Create New API Key` on the right side of your screen. Next, name your API Key and select `users.track` under the _User Data_ endpoints group. Scroll down and click on **Save API Key**.
 

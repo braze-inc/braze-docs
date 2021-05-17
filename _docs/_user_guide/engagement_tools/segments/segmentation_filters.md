@@ -100,7 +100,7 @@ glossaries:
     description: Segments your users by the median length of their sessions in your app.
     tags:
       - User Activity
-  - name: Money Spent In-App
+  - name: Money Spent
     description: Segments your users by the amount of money that they have spent in your app.
     tags:
       - User Activity
@@ -373,7 +373,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device.
+    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
     tags:
       - User Attributes
   - name: Push Opt-In Date

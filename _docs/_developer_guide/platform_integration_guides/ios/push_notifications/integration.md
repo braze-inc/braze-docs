@@ -40,7 +40,7 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
 
 >  When you download the key, it is saved as a text file with a .p8 file extension. Save the file in a secure place because the key is **not saved in your developer account and you won’t be able to download it again**.
 
-6. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
+6. Navigate to the [Settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
 7. When prompted, also enter your [app's Bundle Id](https://developer.apple.com/account/ios/identifier/bundle/), the [Key Id](https://developer.apple.com/account/ios/authkey), and your [Team Id](https://developer.apple.com/account/#/membership). Click `Save`.
 
   {% endtab %}

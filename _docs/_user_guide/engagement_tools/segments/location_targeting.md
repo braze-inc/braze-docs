@@ -37,7 +37,7 @@ For polygonal regions, you can more specifically designate which areas you wish 
 
 ![Polygonal Region 1][4]
 
-[1]: {% image_buster /assets/img_archive/CreateSegment2.png %}
+[1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/Polygon2.png %}
 [3]: {% image_buster /assets/img_archive/Location_Circle.png %}
 [4]: {% image_buster /assets/img_archive/Create_Polygon.png %}

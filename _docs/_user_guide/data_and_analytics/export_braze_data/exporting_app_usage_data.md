@@ -1,5 +1,5 @@
 ---
-nav_title: Export App Usage Data
+nav_title: Export Overview Data
 page_order: 3
 
 page_type: reference
@@ -9,9 +9,9 @@ tool:
 - Reports
 ---
 
-# Exporting App Usage Data
+# Exporting Overview Data
 
-The App Usage page of the Dashboard contains high-level data, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
+The **Overview** page of the Dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
 
 ![App usage graph][27]
 
