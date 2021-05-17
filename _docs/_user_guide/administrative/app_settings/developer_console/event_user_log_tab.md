@@ -1,7 +1,10 @@
 ---
 nav_title: Event User Log Tab
 page_order: 2
-description: "The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. "
+
+page_type: reference
+description: "This reference article covers the Event User Log, which can help you debug or troubleshoot issues in your Braze Integration."
+tool: Dashboard
 ---
 
 # Event User Log Tab

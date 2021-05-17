@@ -1,7 +1,10 @@
 ---
 nav_title: Teams
 page_order: 4
-description: "Braze Admins can divide subsets of their Dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes such that members and non-members have different access to messaging features and customer data."
+
+page_type: reference
+description: "This reference article covers various aspects of Teams in your Braze Dashboard, such as creating and archiving teams, or assigning roles."
+tool: Dashboard
 ---
 
 # Teams

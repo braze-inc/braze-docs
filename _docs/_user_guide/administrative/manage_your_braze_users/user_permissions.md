@@ -1,7 +1,10 @@
 ---
 nav_title: Braze Account User Permissions
 page_order: 2
-description: "Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permission."
+
+page_type: reference
+description: "This reference article covers user permissions in Braze, such as choosing who can access your apps on the Braze Dashboard."
+tool: Dashboard
 ---
 
 # Setting User Permissions

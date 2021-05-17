@@ -1,6 +1,10 @@
 ---
 nav_title: App Group Management
 page_order: 0
+
+page_type: reference
+description: "This reference article covers managing app groups in your Braze Dashboard. "
+tool: Dashboard
 ---
 
 # App Group Management
