@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
-description: "Custom attributes are best for storing attributes about your users, or information about low-value actions within your application."
+
+page_type: reference
+description: "This reference article describes custom attributes, and explains the various custom attribute data types."
 ---
 
 # Custom Attributes

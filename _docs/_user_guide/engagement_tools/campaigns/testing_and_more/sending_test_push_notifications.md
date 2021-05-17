@@ -4,7 +4,9 @@ platform: Campaigns
 subplatform: Testing and More
 page_order: 3
 
-tools: campaigns
+tool: 
+- Campaigns
+- Segments
 page_type: reference
 description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
 ---

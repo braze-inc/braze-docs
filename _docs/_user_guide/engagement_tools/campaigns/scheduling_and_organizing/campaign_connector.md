@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 5
 
-tools: campaigns
+tool: Campaigns
 page_type: tutorial
 description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 ---

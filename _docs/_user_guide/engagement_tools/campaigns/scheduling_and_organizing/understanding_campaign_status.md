@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 3
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
 ---

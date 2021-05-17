@@ -1,7 +1,10 @@
 ---
 nav_title: Company Wide Settings
 page_order: 5
-description: "The Company Settings Page allows you to change the name of your company, set your timezone and request to delete your company."
+
+page_type: reference
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your timezone, and requesting to delete your company."
+tool: Dashboard
 ---
 
 # Company Wide Settings Management

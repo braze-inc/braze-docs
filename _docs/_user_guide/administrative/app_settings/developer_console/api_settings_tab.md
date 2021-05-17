@@ -1,7 +1,10 @@
 ---
 nav_title: API Settings
 page_order: 0
-description: "The API Settings page displays API identifications for your app group."
+
+page_type: reference
+description: "This reference article covers the API Settings page, which displays API identifications for your app group."
+tool: Dashboard
 ---
 
 # API Settings Tab

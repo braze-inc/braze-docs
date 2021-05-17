@@ -6,7 +6,7 @@ platform:
   - Web
 subplatform: Testing and More
 page_order: 1
-tools:
+tool:
   - Campaigns
   - Canvas
   - Segments

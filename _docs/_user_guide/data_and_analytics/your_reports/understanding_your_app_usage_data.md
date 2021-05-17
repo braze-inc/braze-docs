@@ -1,7 +1,12 @@
 ---
 nav_title: Understanding Your Overview Data
 page_order: 3
-description: "The Overview page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase."
+page_type: reference
+description: "This reference article describes the Overview page, and provides definitions for statistics available on this page."
+tool: 
+- Dashboard
+- Reports
+
 ---
 # Understanding Your Overview Data
 

@@ -1,11 +1,18 @@
 ---
 nav_title: Segment Analytics Tracking
 page_order: 8
-description: "When you turn analytics tracking on for a segment, Braze will let you view sessions, custom events, and revenue over time by this segment."
+
+page_type: reference
+description: "This reference article explains Segment Analytics tracking."
+tool: 
+- Segments
+- Reports
 ---
 
 # Segment Analytics Tracking
-<br>
+
+When you turn analytics tracking on for a segment, Braze will let you view sessions, custom events, and revenue over time by this segment.
+
 ![Analytics tracking][16]
 
 On the **Revenue** page of the Dashboard, you'll be able to view data on [revenue and purchases over time for this segment][14]. By adding or removing segments from the graph, you can visually compare segment data for any custom time range.

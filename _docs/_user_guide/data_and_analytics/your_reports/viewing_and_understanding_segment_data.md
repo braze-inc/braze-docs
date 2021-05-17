@@ -1,7 +1,12 @@
 ---
 nav_title: Viewing and Understanding Segment Data
 page_order: 4
-description: "The Segments section of your Braze Dashboard contains a summary of all of your segments and allows you to examine detailed data for each one."
+
+page_type: reference
+description: "This reference article explains the Segments section of your Braze Dashboard, and includes a summary the statistics provided."
+tool: 
+- Segments
+- Reports
 ---
 # Viewing and Understanding Segment Data
 

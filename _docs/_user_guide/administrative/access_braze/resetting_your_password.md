@@ -1,6 +1,9 @@
 ---
 nav_title: Resetting Your Password
 page_order: 4
+
+page_type: reference
+description: "This article describes how to go about resetting your Braze password."
 ---
 
 # Resetting Your Password

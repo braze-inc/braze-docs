@@ -5,9 +5,11 @@ subplatform: Scheduling and Organizing
 page_order: 1
 alias: /attribute_triggers/
 
-tools: campaigns
 page_type: reference
 description: "This reference article gives an overview of attribute triggers and how you can use them to send action-based messages to users."
+tool:
+- Campaigns
+- Canvas
 ---
 
 # Attribute Triggers Overview

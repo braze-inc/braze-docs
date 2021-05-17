@@ -1,8 +1,11 @@
 ---
 nav_title: Export APIs
 page_order: 8
-description: "Braze's export APIs allow you to programmatically export a JSON file of Dashboard data."
 
+page_type: reference
+description: "This reference article describes why you might programmatically export a JSON file of Dashboard data, over exporting a CSV directly from the Dashboard."
+tool: Dashboard
+platform: API
 ---
 
 # Export APIs

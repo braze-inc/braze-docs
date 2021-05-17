@@ -4,9 +4,11 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 0
 
-tools: campaigns
 page_type: tutorial
-description: "This how-to article will discuss Active User Campaigns within the Braze dashboard and the steps to create and set-up one."
+description: "This how-to article describes Active User Campaigns within the Braze dashboard and the steps to create and set up one."
+tool: 
+- Segments
+- Campaigns
 ---
 # Active User Campaigns
 
