@@ -38,6 +38,8 @@ Two-factor authentication adds a second level of identity verification to an acc
 
 When two-factor authentication is enabled, in addition to entering a password, users will be required to enter a verification code sent to their mobile device when logging in to their Braze account.
 
+{% alert tip %} Braze recommends setting up two-factor authentication via the Authy app rather than just SMS, in case you experience any issues receiving SMS in the future. {% endalert %}
+
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also have the option to set up two-factor authentication on their own, even if not required by the administrator.
 
 ### __Remember Me__

@@ -46,7 +46,12 @@ You can quickly infer effective variants and identify the right cadences, conten
 
 User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the Canvas Analytics page. For more information on how to read and interpret your retention report, visit our Canvas [Retention Report][1] page.
 
+## Funnel Report
+
+Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, visit our Canvas [Funnel Report][2] page.
+
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
 [24]:{% image_buster /assets/img_archive/Journey_5.png %}
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
 [26]:{% image_buster /assets/img/canvas_var_analysis.png %}

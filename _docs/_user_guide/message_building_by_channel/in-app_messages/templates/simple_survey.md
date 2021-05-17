@@ -13,7 +13,7 @@ This feature is in a closed _Early Access_ period. To request access, please sub
 
 # Simple Survey In-App Message
 
-Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy.
+Use the new **Simple Survey** In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy.
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
@@ -27,48 +27,69 @@ This in-app message will only be delivered to devices that use at least the [SDK
 
 ## Creating a Survey {#create}
 
-When creating an in-app message, select the "Simple Survey" option located under "Message Type".
+When creating an [in-app message][1], select **Simple Survey** for your **Message Type**.
 
 ![Simple Survey Message Type]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
 
-This Survey template is supported for both mobile apps and web browsers. Remember to be sure that your SDKs are on the [minimum versions](#supported-sdk-versions) required for this feature.
+This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum versions](#supported-sdk-versions) required for this feature.
 
-### Single vs. Multiple Choice Survey {#single-multiple-choice}
+### Step 1: Add Your Survey Question
 
-Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices.
+To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear below your survey question.
 
-When Custom Attribute collection is enabled, the Multiple Choice option will set each choice's designated custom attribute. So, be sure to use a unique Custom Attribute name for each choice to prevent choices from overwriting each other.
+![Simple Survey Question]({% image_buster /assets/img/iam/iam-survey2.png %})
 
-**Note**: Up to 12 choices are allowed in the survey.
+{% alert tip %} These fields can include both Liquid and emojis, so get fancy! {% endalert %}
+
+### Step 2: Choose Between Single or Multiple-choice {#single-multiple-choice}
+
+Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
 
 ![Single Multiple Choice]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:70%"}
 
-### Collect Custom Attributes {#custom-attributes}
+{% alert tip %} Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. {% endalert %}
 
-Enable Custom Attribute collection to collect attributes based on the user's submission. Use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
+### Step 3: Collect Custom Attributes {#custom-attributes}
+
+Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
 ![Custom Attributes]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
 
-### Confirmation Page (Optional)
+To add a Custom Attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new Custom Attribute in your [Settings Page][5].
 
-Once a user submits their response, you can optionally show a confirmation page, or, simply close the message.
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the Custom Attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+
+![Choice Custom Attributes]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:70%"}
+
+You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
+
+{% alert important %} When Custom Attribute collection is enabled, choices that share the same Custom Attribute Name will be combined into an Array.{% endalert %}
+
+### Step 4: Choose Submission Behavior
+
+Once a user submits their response, you can optionally show a confirmation page, or simply close the message.
 
 A confirmation page is a great place to thank users for their time or provide additional information. You can customize the Call To Action on this page to guide users to another page of your app or website.
 
+Edit your button text and on-click behavior in the **Submit Button** section at the bottom of the **Survey** tab:
+
 ![Confirmation Option]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:70%"}
+
+If you elect to add a confirmation page, switch to the **Confirmation Page** tab to customize your message:
 
 ![Confirmation Page]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:70%"}
 
-### Styling Your Message {#styling}
+If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
 
-Customize the font and accent color of the message using the Color Theme picker.
+### Step 5: Stylize Your Message (Optional) {#styling}
+
+You can customize the font color and accent color of the message using the **Color Theme** picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
-
 ## Analyze Results {#analytics}
 
-Analyze results in real-time to see the breakdown of each selected choice. If you've enabled [Custom Attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
+Once your campaign has launched, you can analyze results in real-time to see the breakdown of each selected choice. If you've enabled [Custom Attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
 
 {% alert note %}
 Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
@@ -76,3 +97,10 @@ Deleted survey choices will still appear in analytics, but will not be shown as 
 
 ![Analytics]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:90%"}
 
+Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
+[3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
+[5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/

@@ -292,6 +292,12 @@ Setting a large notification icon is optional but recommended.
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
 ```
 
+You may also optionally use a color reference, see:
+
+```xml
+<color name="com_appboy_default_notification_accent_color">@color/my_color_here</color>
+```
+
 ### Step 4: Add Deep Links
 
 ##### Enabling Automatic Deep Link Opening
