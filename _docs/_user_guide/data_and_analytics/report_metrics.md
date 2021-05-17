@@ -157,7 +157,7 @@ glossaries:
     tags:
       - In-App Message
   - name: Body Click
-    description: Push Story Notifications record a body click when the message is clicked. It will not included a message being expanded, or action button clicks. Non-HTML In App Messages will record a Body Click when the close button is clicked.
+    description: Push Story Notifications record a body click when the message is clicked. It will not be recorded when a message is expanded, or action button clicks. Non-HTML In App Messages will record a Body Click when the close button is clicked.
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message
