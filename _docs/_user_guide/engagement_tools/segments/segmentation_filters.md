@@ -373,7 +373,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device.
+    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
     tags:
       - User Attributes
   - name: Push Opt-In Date
