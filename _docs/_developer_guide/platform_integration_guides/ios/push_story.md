@@ -45,6 +45,10 @@ The Background Mode in the Capabilities section of the main app target is requir
 
 You also need to add Capability `App Groups`. If you haven't had any app group in your app, go to the Capability of the main app target, turn on the `App Groups` and click the "+". Use your App's bundle ID to create the App Group. For example, if your app's bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app target and the content extension target.
 
+{% alert important %}
+The exact format is documented in Apple's [_App Groups Entitlement_](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups)
+{% endalert %}
+
 ![Add App Groups][4]
 
 ## Step 4: Adding the Push Story framework to your app
