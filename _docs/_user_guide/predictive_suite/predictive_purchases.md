@@ -6,6 +6,7 @@ alias: /predictive_purchases/
 hidden: true
 guide_top_header: "Predictive Purchases"
 guide_top_text: "Knowing which of your users is likely to make a purchase is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Purchase, a machine learning model that makes it easy for marketing teams to understand future purchasing behavior and focus their resources on revenue-maximizing campaigns."
+description: "Predictive Purchase gives marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. "
 
 guide_featured_title: "Topics"
 guide_featured_list:
@@ -18,6 +19,10 @@ guide_featured_list:
 - name: Messaging Users
   link: /docs/user_guide/predictive_suite/predictive_purchases/messaging_users/
   fa_icon: fas fa-arrow-right
+
+Tool:
+  - Dashboard
+
 ---
 
 ## Overview

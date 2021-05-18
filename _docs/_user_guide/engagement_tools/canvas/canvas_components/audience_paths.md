@@ -2,8 +2,11 @@
 nav_title: Audience Paths Step
 title: Audience Path Step
 alias: /audience_paths/
-description: "Canvas Audience Paths allows you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. This new Canvas step replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full steps into one!"
 page_order: 5
+
+description: "This reference article describes how to use Audience Paths in your Canvas to intuitively filter and segment users on a large scale with strategic priority-based user-groupings."
+page_type: reference
+tool: Canvas
 ---
 
 # Audience Paths Step

@@ -17,7 +17,7 @@ guide_featured_list:
 - name: Manage Your Braze Users
   link: /docs/user_guide/administrative/manage_your_braze_users/
   fa_icon: fas fa-street-view
-- name: App Settings
+- name: Settings
   link: /docs/user_guide/administrative/app_settings/
   fa_icon: fas fa-mobile
 ---

@@ -5,7 +5,6 @@ description: "This reference article covers general use cases of the SMS channel
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
 
 platform:

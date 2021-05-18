@@ -1,8 +1,11 @@
 ---
 nav_title: Product Portal
-description: "This reference article covers how to access and use the Braze Product Portal from the dashboard."
 page_order: 6
 alias: /product_portal/
+
+page_type: reference
+description: "This reference article covers how to access and use the Braze Product Portal from the dashboard."
+tool: Dashboard
 ---
 
 # Product Portal ![Portal][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}

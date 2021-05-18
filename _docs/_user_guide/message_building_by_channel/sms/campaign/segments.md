@@ -1,16 +1,12 @@
 ---
 nav_title: Message Copy and Segment Calculator
 page_order: 5
-description: "This reference article covers SMS message segments."
+description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS message copy."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
+  - Testing Tools
   - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

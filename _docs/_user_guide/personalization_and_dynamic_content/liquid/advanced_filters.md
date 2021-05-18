@@ -1,7 +1,7 @@
 ---
 nav_title: Advanced Filters
 page_order: 4
-description: "This reference article lists advanced filters and how they can be used in your campaign."
+description: "This reference article lists advanced filters, examples, and how they can be used in your campaign."
 ---
 
 # Advanced Filters

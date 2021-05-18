@@ -7,9 +7,7 @@ hide_toc: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
-
 <style type="text/css">
-
 
 #main-container {
   margin-top: 20px;
@@ -847,7 +845,6 @@ $( document ).ready(function() {
 
   }
 
-
   function type_change(e) {
     reset_page(3);
     var topic_selected =  $('#ticket_topic option:selected').val();
@@ -859,7 +856,6 @@ $( document ).ready(function() {
     if (subtype_options && ('Label' in subtype_options)){
       $('#ticket_type_label').html(subtype_options['Label']);
     }
-
 
     if (subtype_selected && 'SelectOption' in subtype_options) {
       hide_page(4);
@@ -878,7 +874,6 @@ $( document ).ready(function() {
       //showlinks(subtype_options);
     }
     showlinks(subtype_options);
-
   }
 
   function category_change(e) {
@@ -906,10 +901,7 @@ $( document ).ready(function() {
       hide_page(2);
     }
     showlinks(type_options);
-
-   }
-
-
+  }
 
   function topic_change(e) {
     reset_page(1);
@@ -926,7 +918,7 @@ $( document ).ready(function() {
       $.each(category_options['SelectOption'],function(category) {
         category_menu.append($('<option>',{value: category}).html(category));
       });
-//      showlinks(category_options);
+      // showlinks(category_options);
     }
     else {
       hide_page(1);
@@ -938,10 +930,8 @@ $( document ).ready(function() {
   var tmenu = $('#ticket_menu');
   var topic_menu = $('#ticket_topic');
   var subtype_menu = $('#ticket_type');
-   var type_menu = $('#ticket_subcategory');
+  var type_menu = $('#ticket_subcategory');
   var category_menu = $('#ticket_category');
-
-
 
   function settopic(){
     reset_page(0);
@@ -1008,7 +998,6 @@ $( document ).ready(function() {
     e.preventDefault();
 
     var mform = $(this);
-    //console.log(mform.serialize());
     var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
     var sels = mform.find('select');
     var user_name = $('#ticket_name').val();
@@ -1117,26 +1106,26 @@ $( document ).ready(function() {
              var platform = '';
              var subname = ''
 
-             //console.log(hit)
              if ('nav_title' in suggestion) {
-               title = suggestion.nav_title.replace('%20', ' ').replace('_', ' ');
+               title = suggestion.nav_title.replace(/\%20/g, ' ').replace(/\_/g, ' ');
              }
              else {
-               title = suggestion.title.replace('%20', ' ').replace('_', ' ');
+               if ('title' in suggestion) {
+                 title = suggestion.title.replace(/\%20/g, ' ').replace(/\_/g, ' ');
+               }
              }
              if ('platform' in suggestion) {
-               platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
-             }
-             else {
-               platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
+               if (Array.isArray(suggestion.platform)){
+                 platform = suggestion.platform.join(',').replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+               }
+               else {
+                 platform = suggestion.platform.replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+               }
              }
 
-
-             var resulttemplate = '<a href="' + base_url + suggestion.url + '"><div class="title"> * ' + platform + ' > ' +
+             var resulttemplate = '<a href="' + base_url + suggestion.url + '"><div class="title"> * ' + platform  +
                title + '</div></a>';
              return resulttemplate;
-             //
-             //return  suggestion._highlightResult.title.value;
            },
            empty: '<div class="no_results">No results were found with your current search. Try to change the search query.</div><hr />',
            footer: ''

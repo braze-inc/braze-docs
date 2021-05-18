@@ -2,9 +2,10 @@
 nav_title: API Triggered Delivery
 page_order: 2
 
-tools: campaigns
 page_type: reference
-description: "This reference article gives an overview of different ways to go about scheduling a campaign."
+description: "This reference article describes how to schedule an API-triggered campaign."
+tool: Campaigns
+platform: API
 ---
 
 # API Triggered Campaigns (Server Triggered Campaigns)

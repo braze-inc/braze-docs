@@ -1,7 +1,10 @@
 ---
 nav_title: Your Account
 page_order: 2
+
+page_type: reference
 description: "This article covers how to get your account and how to go about logging in once granted access."
+tool: Dashboard
 ---
 
 # Getting Your Account

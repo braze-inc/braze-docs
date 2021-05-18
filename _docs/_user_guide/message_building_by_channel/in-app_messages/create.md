@@ -3,7 +3,13 @@ nav_title: Create an In-App Message
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 0
-description: "You can create an in-app message using the Braze platform using Campaigns, Canvas, or as an API campaign."
+description: "You can create an in-app message using the Braze platform using Campaigns, Canvas, or as an API campaign. This article will guide you through this process."
+channel:
+  - in-app messages
+tool:
+  - Dashboard
+  - Campaigns
+
 ---
 
 # Creating an In-App Message

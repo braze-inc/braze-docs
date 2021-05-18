@@ -4,6 +4,8 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 2
 description: "In addition to the out-of-the-box In-App Message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
+channel:
+  - in-app messages
 ---
 
 # Customization
@@ -92,6 +94,10 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all **case sensitive**.
 
 #### Button Click Tracking
+
+{% alert warning %}
+The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information.
+{% endalert %}
 
 To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
 

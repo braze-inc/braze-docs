@@ -5,12 +5,7 @@ description: "This reference article covers how users can retarget their message
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

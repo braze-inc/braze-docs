@@ -30,7 +30,7 @@ There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage App Group" page.<br><br>
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage Settings" page.<br><br>
 4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze Dashboard on an app-by-app basis.
 
 ## Server-Side Integration {#server-side-integration}
@@ -316,7 +316,7 @@ The `errorEvent` argument passed to this callback will contain the following inf
 
 ## Adding Public Keys {#key-management}
 
-In the "Manage App Group" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
 1. Choose the app in the left-hand side menu
@@ -336,7 +336,7 @@ Should anything go wrong with your integration (i.e. your app is incorrectly pas
 
 ### Enforcement Options {#enforcement-options}
 
-In the Dashboard `App Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
+In the Dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
 
 | Setting| Description|
 | ------ | ---------- |

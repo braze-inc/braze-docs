@@ -1,7 +1,10 @@
 ---
 nav_title: Company Wide Settings
 page_order: 5
-description: "The Company Settings Page allows you to change the name of your company, set your timezone and request to delete your company."
+
+page_type: reference
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your timezone, and requesting to delete your company."
+tool: Dashboard
 ---
 
 # Company Wide Settings Management
@@ -69,13 +72,13 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly Analytics Reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage App Group"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage Settings"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
 ### Additional Email Settings
 
-You also can access the [App Settings - Email Tab][8] to edit:
+You also can access the [Settings - Email Settings Tab][8] to edit:
 
 - The name which will be displayed by default on your emails
 - The default reply-to address for your emails
@@ -173,16 +176,7 @@ Under the Manage Users page, there will be an additional column that indicates w
 [62]: https://api.slack.com/incoming-webhooks
 [63]: {% image_buster /assets/img_archive/slack_f.png %}
 [64]: {% image_buster /assets/img_archive/copy_url.png %}
-[65]: {% image_buster /assets/img_archive/click_edit_f.gif %}
+[65]: {% image_buster /assets/img_archive/click_edit_f.png %}
 [67]: https://my.slack.com/services/new/incoming-webhook/
-
-
-
-
-
-
-
-
-
 [83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632

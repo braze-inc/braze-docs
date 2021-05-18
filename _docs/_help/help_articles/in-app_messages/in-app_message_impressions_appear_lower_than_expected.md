@@ -29,8 +29,7 @@ A quick way to identify any obvious issues is to clone the Campaign and target y
 
 ## Event Triggers
 
-If the campaign is triggered by a Session Start or a Custom Event, you will want to ensure that this event or session is happening frequently enough to actually trigger the message. You can check this data on the App Usage (for session data) or Custom Events pages:
-
+If the campaign is triggered by a Session Start or a Custom Event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble5][11]
 
@@ -44,7 +43,8 @@ You can read more about this:
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
-
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [10]: {% image_buster /assets/img_archive/trouble4.png %}
 [11]: {% image_buster /assets/img_archive/trouble5.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks

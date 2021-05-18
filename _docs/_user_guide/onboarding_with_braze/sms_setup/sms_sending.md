@@ -1,11 +1,10 @@
 ---
 nav_title: "SMS Message Sending"
 page_order: 4
-description: ""
+description: "This reference article covers the basics and best practices of SMS sending."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
 
 platform:

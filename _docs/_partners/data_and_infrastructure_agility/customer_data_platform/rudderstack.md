@@ -82,8 +82,8 @@ Once you've decided on the integration mode and successfully set up the source a
 
 | Name | Description |
 |---|---|
-| App Key | Can be found in the [Developer Console][13] under <b>App Settings</b> - <b>Manage App Group</b> |
-| REST API Key | This needs to be created in the Braze dashboard under <b>App Settings</b> - [Developer Console][13] - <b>API Settings</b>. You can find the detailed instructions [here][14]. |
+| App Key | Can be found in the [Dashboard][13] under <b> Settings</b> - <b>Manage Settings</b> |
+| REST API Key | This needs to be created in the Braze dashboard under <b>Settings</b> - [Developer Console][13] - <b>API Settings</b>. You can find the detailed instructions [here][14]. |
 | Data Center | You will need to enter the Data Center details as provided by Braze. It is of the format `INSTANCE`, as explained in the [Braze Instances guide][15]. |
 | Native SDK | You can enable or disable this option to use the Braze native SDK to send the events (use the Device Mode). |
 {: .reset-td-br-1 .reset-td-br-2}

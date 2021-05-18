@@ -3,14 +3,6 @@ nav_title: "MMS FAQs"
 page_order: 3
 description: "This reference article covers some of the most common MMS FAQs."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - MMS

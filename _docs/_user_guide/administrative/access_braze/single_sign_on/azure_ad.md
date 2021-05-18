@@ -9,6 +9,8 @@ description: "This article will walk you through how to set up Azure AD sign on 
 
 # Azure Active Directory
 
+> This article will walk you through how to set up Azure AD sign on capabilities with Braze.
+
 [Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft’s cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
 
 ## Requirements
@@ -93,7 +95,7 @@ Go to the `Set up Braze` section and copy the appropriate URLs for use in the [B
 
 ### Step 3: Configure Azure AD within Braze
 
-Once you have setup Braze within your Azure AD, they will provide a Target URL (Login URL) and `x.509` certificate which you will input into your Braze account.
+Once you have set up Braze within your Azure AD, they will provide a Target URL (Login URL) and `x.509` certificate which you will input into your Braze account.
 
 After your Account Manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
 

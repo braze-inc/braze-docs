@@ -13,7 +13,7 @@ Braze's test application within the [Android SDK github repository][3] is called
 
 - Create a new ["App Group"][25] and note the Braze API key.
 - Copy your FCM Sender ID and Braze API key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named "com_appboy_push_fcm_sender_id" and "com_appboy_api_key", respectively).
-- Copy your FCM API Key into your "App Settings" page.
+- Copy your FCM API Key into your **Settings** page.
 - To assemble the Droidboy APK run the following command within the SDK directory:
 
 ```
@@ -30,7 +30,7 @@ Braze's test application within the [Android SDK github repository][3] is called
 ## Building the Hello Appboy Test Application
 The Hello Appboy test application shows a minimal use case of the Braze SDK, and additionally shows how to easily integrate the Braze SDK into a gradle project.
 
-1. Copy your API key from your "App Settings" page into your `braze.xml` file in the `res/values` folder.
+1. Copy your API key from your **Settings** page into your `braze.xml` file in the `res/values` folder.
 ![HelloBraze][34]
 
 2. To install the sample app to a device or emulator, run the following command within the SDK directory:

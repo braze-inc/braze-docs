@@ -1,7 +1,10 @@
 ---
 nav_title: Importing Your Email List into Braze
 page_order: 4
-description: "An important step in setting yourself as a successful email sender is ensuring that you have a high quality email list. Proper email list management can improve your deliverability, and will also give you more accurate and clean campaign results."
+
+page_type: reference
+description: "This reference article covers best practices for importing your email list into Braze."
+channel: email
 ---
 
 # Importing Your Email List into Braze {#importing-email-lists}

@@ -1,7 +1,10 @@
 ---
 nav_title: Creating a Formula
 page_order: 1.2
-description: "Braze's analytics views now allow you to combine several data points together to provide valuable insights into your user data. Formulas will allow you to normalize your time series data based on your total number of MAU/DAU as well as to easily understand complex relationships that exist in your data."
+
+page_type: reference
+description: "This reference article covers creating and managing formulas, which help you easily understand complex relationships that exist in your data."
+tool: Reports
 ---
 # Creating a Formula
 
@@ -11,13 +14,13 @@ Braze's analytics views now allow you to combine several data points together to
 
 ## Where to Access Your Formulas
 
-Formulas can be accessed in the "Detailed Statistics" panels on the [App Usage][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. Change the "View Statistics for" dropdown from the relevant analytics to "KPI Formulas."
+Formulas can be accessed in the "Detailed Statistics" panels on the [Overview][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to "KPI Formulas".
 
 ![select formula][16]
 
 ## How to Create a New Formula
 
-To create a new formula, navigate to the appropriate dashboard (App Usage, Revenue or Custom events) and click on the "Manage Formulas" button in the detailed statistics section. From there, enter a name for your formula and select the relevant numerators and denominators. Save your formula.
+To create a new formula, navigate to the appropriate dashboard (Overview, Revenue, or Custom Events) and click **Manage Formulas** in the detailed statistics section. From there, enter a name for your formula and select the relevant numerators and denominators. Save your formula.
 
 ![create formula][15]
 
@@ -67,6 +70,6 @@ Formulas, especially when combined with custom events, allow you to better under
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[15]: {% image_buster /assets/img_archive/KPI_formulas.png %}
-[16]: {% image_buster /assets/img_archive/KPI_Forms.png %}
+[15]: {% image_buster /assets/img_archive/kpi_formulas.gif %}
+[16]: {% image_buster /assets/img_archive/kpi_forms.png %}
 [17]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

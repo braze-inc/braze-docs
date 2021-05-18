@@ -1,11 +1,19 @@
 ---
 nav_title: Email Analytics Glossary
 page_order: 20
-
-
 layout: glossary_page
 glossary_top_header: "Email Analytics Glossary"
 glossary_top_text: "These are terms you'll find in the analytics section of your Email Campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+
+description: "This glossary includes the terms you will find in the analytics section of your email campaign or canvas, post-launch. This glossary does not include Currents metrics."
+
+tool:
+  - Campaign
+  - Canvas
+  - Dashboard
+
+channel:
+  - email
 
 glossaries:
   - name: Variation

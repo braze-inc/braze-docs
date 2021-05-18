@@ -227,7 +227,7 @@ try {
 
 You need to input your Baidu API Key and Baidu Secret Key into the Braze dashboard.  Both keys are available from the [Baidu application console][52].
 
-On the "App Settings Page" (where your API keys are located), select your Android China app. Enter your Baidu API Key and Baidu Secret Key in their respective fields in the Push Notifications section.
+On the **Settings** page (where your API keys are located), select your Android China app. Enter your Baidu API Key and Baidu Secret Key in their respective fields in the Push Notifications section.
 
 ![APIKey][19]
 
