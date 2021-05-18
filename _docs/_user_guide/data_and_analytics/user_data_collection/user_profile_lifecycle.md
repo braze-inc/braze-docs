@@ -28,10 +28,10 @@ The `braze_id` is automatically assigned by Braze, cannot be edited and will be 
 Once a user is recognizable in your app (by providing a form of user ID or email address) we suggest [assigning an external_id][23] to that user's profile. The purpose of this is to recognize the same user across multiple devices to a single user profile.
 
 {% alert warning %}
-Do not assign an `external_id` to a user profile before you are able to uniquely identify them.
+Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
 {% endalert %} 
 
-Setting an `external_id` will merge any relevant user profile data from the anonymous user profile with the existing identified user profile data and orphan/remove the remaining, irrelevant parts of the previously anonymous profile data from our database. This method can prevent an orphaned user from receiving a campaign that has already been received or opened by your identified user or prevent various errors that can occur when there are duplicates of your users in Braze.
+Setting an `external_id` will merge any relevant user profile data from the anonymous user profile with the existing identified user profile data and orphan/remove the remaining, irrelevant parts of the previously anonymous profile data from our database. This method can prevent an orphaned user from receiving a campaign that has already been received or opened by your identified user or prevent various errors that can occur when there are duplicates of your users in Braze. These orphaned users are not considered in your user counts and will not be messaged.
 
 On the first instance of assigning an `external_id` to an unknown user profile all, existing user profile data will be migrated to the new user profile.
 
@@ -63,9 +63,11 @@ For information on how to set a user alias please see our [documentation][25] fo
 
 ## Advanced Use Case Information
 
-For existing identified user profiles you are able to set a new user alias via the SDK and [the API][27]. User aliases cannot be set via the API on an unknown user profile.  For more information on how to reference a user via the API please refer to our documentation.
+You can set a new user alias for existing identified user profiles via the SDK and [the API][27]. User aliases cannot be set via the API on an unknown user profile.  For more information on how to reference a user via the API please refer to our documentation.
 
 If you attempt to set a pre-existing `external_id` on an anonymous user profile which share a matching alias name but with different labels, only the alias label on the pre-existing known user profile will be maintained.
+
+Uninstalling and reinstalling an app will cause a new anonymous user ID to be generated for that user.
 
 ## How to Troubleshoot with Braze's IDs
 
