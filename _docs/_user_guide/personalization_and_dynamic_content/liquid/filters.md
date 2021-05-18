@@ -1,7 +1,7 @@
 ---
 nav_title: Filters
 page_order: 3
-description: "Filters can be used to reformat static or dynamic content. This reference article covers the filters supported by Liquid."
+description: "Filters can be used to reformat static or dynamic content. This reference article covers the Liquid filters supported by Braze."
 ---
 
 # Filters
