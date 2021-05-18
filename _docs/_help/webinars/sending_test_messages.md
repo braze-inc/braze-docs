@@ -1,6 +1,9 @@
 ---
 nav_title: Sending Test Messages
 page_order: 9
+
+page_type: reference
+description: "This article contains an archived webinar that covers sending test messages, and why test messages are important."
 ---
 
 # Sending Test Messages

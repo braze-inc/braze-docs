@@ -5,6 +5,9 @@ layout: dev_guide
 guide_top_header: "Best Practices"
 guide_top_text: "Each channel and tool has its own set of best practices that can help you uplevel your campaign or Canvas. If you have a suggestion for a new best practices article, leave feedback at the bottom of this or any page. Or, you can write an article yourself by going to <a href='https://github.com/Appboy/braze-docs'>our Docs Repo</a>. <br> <br>  Choose from the popular topics below or see other articles listed in the navigation panel to your left."
 
+page_type: landing
+description: "This landing page is home to resources on best practices for your marketing communications using Braze."
+
 guide_menu_title: "Popular Topics"
 guide_menu_list:
 - name: Customer Examples Library

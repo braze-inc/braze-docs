@@ -1,6 +1,9 @@
 ---
 nav_title: Personalization and Liquid
 page_order: 8
+
+page_type: reference
+description: "This page contains an archived webinar that covers personalization opportunities within Braze, and how to apply Liquid fundamentals."
 ---
 
 # Personalization and Liquid

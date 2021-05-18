@@ -1,6 +1,9 @@
 ---
 nav_title: January - May
 page_order: 8
+
+page_type: update
+description: "This article contains release notes prior to June 2016."
 ---
 
 # Changes Prior to June 2016

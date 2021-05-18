@@ -1,6 +1,9 @@
 ---
 nav_title: October
 page_order: 3
+
+page_type: update
+description: "This article contains release notes for October 2020."
 ---
 
 # October 2020
