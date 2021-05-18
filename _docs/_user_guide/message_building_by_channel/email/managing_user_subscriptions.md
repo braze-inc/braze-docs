@@ -43,7 +43,7 @@ Use the [Subscription Group REST APIs][25] to programmatically manage the subscr
 
 #### Create a Group
 
-Create a Subscription Group by going to __Subscription Groups__ in the left navigation, then clicking the `+ Create Subscription Group` button. Then, name and describe your group.
+Create a Subscription Group by going to __Subscription Groups__ in the left navigation, then clicking the `+ Create Email Subscription Group` button. Then, name and describe your group.
 
 ![Create a Subscription Group][26]{: height="50%" width="50%"}
 
