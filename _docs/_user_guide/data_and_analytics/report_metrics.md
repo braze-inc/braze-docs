@@ -159,6 +159,12 @@ glossaries:
     calculation: (Button 2 Clicks) / (Impressions)
     tags:
       - In-App Message
+  - name: Body Click
+    description: Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
+    calculation: (Body Clicks) / (Impressions)
+    tags:
+      - iOS Push
+      - Android Push
   - name: Unsubscribes
     description: The number of recipients whose subscription state changed to unsubscribed as a result of clicking the Braze provided unsubscribe URL.
     calculation: (Unsubscribes) / (Deliveries)
