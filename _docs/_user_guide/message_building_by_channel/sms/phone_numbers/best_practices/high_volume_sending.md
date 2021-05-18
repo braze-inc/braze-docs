@@ -1,16 +1,8 @@
 ---
 nav_title: High-Volume Sending
 page_order: 4
-description: "This reference article covers high-volume sending best practices."
+description: "This reference article covers high-volume sending best practices for SMS messaging."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

@@ -1,10 +1,14 @@
 ---
-nav_title: Simple Survey
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+nav_title: "Simple Survey"
 page_order: 1.5
+page_type: reference
 hidden: true
-description: "Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys."
+description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the new in-app message surveys."
+channel:
+  - in-app messages
+tool:
+  - Media
+  - Templates
 ---
 <br>
 {% alert important %}

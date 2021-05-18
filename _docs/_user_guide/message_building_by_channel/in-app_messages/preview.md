@@ -4,6 +4,10 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
 description: "This reference article covers the new in-app messaging HTML Preview feature."
+channel:
+  - in-app messages
+tool:
+  - Dashboard
 ---
 
 # In-App Messages HTML Preview

@@ -1,16 +1,11 @@
 ---
 nav_title: Creating an MMS Campaign
 page_order: 2
-description: "This reference article covers the steps involved in creating and sending an MMS message."
+description: "This reference article covers the steps involved in creating, sending, and previewing an MMS message."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - MMS

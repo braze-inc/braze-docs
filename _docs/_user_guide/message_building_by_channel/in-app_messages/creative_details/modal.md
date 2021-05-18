@@ -3,6 +3,12 @@ nav_title: Modal
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 1
+channel:
+  - in-app messages
+tool:
+  - Media
+description: "This reference article covers the message and design requirements of modal in-app messages."
+
 ---
 # Modal In-App Messages
 

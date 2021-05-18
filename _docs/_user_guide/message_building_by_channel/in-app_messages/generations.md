@@ -2,6 +2,9 @@
 nav_title: Generations
 hidden: true
 description: "This reference article covers in-app messaging generation support."
+channel:
+  - in-app messages
+  
 ---
 
 # In-App Messages Generations

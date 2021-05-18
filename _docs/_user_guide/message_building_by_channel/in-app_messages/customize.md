@@ -4,6 +4,8 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 2
 description: "In addition to the out-of-the-box In-App Message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
+channel:
+  - in-app messages
 ---
 
 # Customization

@@ -4,6 +4,15 @@ platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 5
 description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
+
+tool:
+  - Dashboard
+  - Campaign
+  - Canvas
+
+channel:
+  - email
+
 ---
 
 # Inbox Vision
@@ -12,9 +21,9 @@ Inbox Vision allows marketers to view their emails from the perspective of vario
 
 ## Test Your Email
 
-To test your email message in Inbox Vision, click `Preview and Test` within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
+To test your email message in Inbox Vision, click `Preview and Test` within the email composer. Braze then sends an HTML version of your email to various email clients used worldwide, which may take between two and ten minutes to complete.
 
-Braze will then display screenshots of a sample, rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable, to allow for better viewing.
+Braze will then display screenshots of a sample rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable to allow for better viewing.
 
 If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
 
@@ -26,24 +35,23 @@ Once you make changes to a template, you will need to re-run the test to see the
 
 ## Code Analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
 ![inboxvision2][2]
 ![inboxvision3][3]
 
-
 ## Spam Testing
 
-[Spam testing][4] attempts to predict whether your email will land in spam folders or in your customers' inboxes.  Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major ISP filters such as Gmail.com and Outlook.com.
+[Spam testing][4] attempts to predict whether your email will land in spam folders or your customers' inboxes.  Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major ISP filters such as Gmail.com and Outlook.com.
 
-### FAQ
+## FAQ
 
 {% details What does the reprocess screenshot button do? %}
 Very rarely, you will encounter that some screenshots for certain email clients are not clear.  The reprocess screenshot button will create another screenshot.
 {% enddetails %}
 
-{% details Why does the email preview not appear but my code analysis does for the same client? %}
-Taking a screenshot takes longer than code analysis since we wait till the email arrives in the inbox before taking the screenshot. As a result, sometimes the code analysis will show up faster than the preview for a particular email client.
+{% details Why does the email preview not appear, but my code analysis does for the same client? %}
+Taking a screenshot takes longer than code analysis since we wait till the email arrives in the inbox before taking the screenshot. As a result, sometimes, the code analysis will show up faster than the preview for a particular email client.
 {% enddetails %}
 
 {% details Can I trust the accuracy of your email test results? %}

@@ -6,11 +6,10 @@ description: "This reference article briefly covers how to use, setup and implem
 
 platform: iOS
 channel:
-  - Push
+  - push
 tool:
-  - Docs
   - Dashboard
-  - Campaigns
+
 ---
 
 # iOS Push Message Titles
