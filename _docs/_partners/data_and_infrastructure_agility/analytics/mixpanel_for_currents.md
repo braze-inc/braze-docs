@@ -129,6 +129,15 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
+### Uninstall Events
+
+```json
+// Uninstall
+{
+  "app_id": (string) id for the app on which the user action occurred
+}
+```
+
 ## Message Engagement Events
 
 ### Push Notification Events
@@ -430,15 +439,6 @@ _Update noted in August 2019._
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
-}
-```
-
-### Uninstall Events
-
-```json
-// Uninstall
-{
-  "app_id": (string) id for the app on which the user action occurred
 }
 ```
 
