@@ -6,6 +6,10 @@ page_type: reference
 page_order: 2.5
 ---
 
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
+
 # Braze Data Retention Information
 
 (Last revised in December 2020)
