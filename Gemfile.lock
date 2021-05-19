@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/zzhaobraze/html-extractor
-  revision: 7a53d233228302fd0b1ac4e0bd66a774f4eb8fe5
+  revision: 1128ad10aef449318890a732e2f99075985ca305
   branch: master
   specs:
-    algolia_html_extractor (2.6.1a)
+    algolia_html_extractor (2.6.1b)
       json (~> 2.0)
-      nokogiri (~> 1.11.1)
+      nokogiri (~> 1.11.4)
 
 GIT
   remote: https://github.com/zzhaobraze/jekyll-algolia
-  revision: ae825fcb66a2a9fec605e6d3c1dff7c9aee742d5
+  revision: 5af8bd04396d8c44dccb2c37abedcc97fb21e21a
   branch: master
   specs:
     jekyll-algolia (1.6.0)
@@ -17,7 +17,7 @@ GIT
       filesize (~> 0.1)
       jekyll (>= 3.6, < 5.0)
       json (~> 2.0)
-      nokogiri (~> 1.11.1)
+      nokogiri (~> 1.11.4)
       progressbar (~> 1.9)
       verbal_expressions (~> 0.1.5)
 
@@ -76,7 +76,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.1)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -84,7 +84,7 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.7)
-    nokogiri (1.11.3)
+    nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     pathutil (0.16.2)
@@ -107,7 +107,7 @@ GEM
       rack-proxy (~> 0.6, >= 0.6.1)
     rack-rewrite (1.5.1)
     rake (13.0.3)
-    rb-fsevent (0.10.4)
+    rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
