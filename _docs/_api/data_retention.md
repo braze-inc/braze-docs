@@ -52,4 +52,19 @@ Braze has instituted processes to enable a custom retention policy scheduled to 
 
 When data is deleted from a Customer’s production instance, the data remains in Braze’s back-up servers for 6 months and is then deleted according to our internal processes.
 
+## 3. Data retention handled by Braze for specific features of the Braze Services
+ 
+#### Campaign Interactions Data 
+ 
+<br>**What is it?** Campaign Interactions are data related to End Users’ interactions with a Campaign. They are used for retargeting filters and to determine Campaign re-eligibility.
+ 
+**When is it deleted?** Braze automatically deletes from the Customer’s App Groups the Campaign Interactions for Campaigns that have not sent any messages in 25 calendar months and are not used for retargeting in any Campaigns, Canvases, or Cards in an active status. 
+ 
+**What happens after deletion?**
+ - Campaigns with no Campaign Interactions cannot be used in retargeting filters for Campaigns, Canvases, and Segments.
+ - Any active Campaign that has not sent any messages in 25 months, and is not being used for retargeting in any active Campaigns, Canvases, or Cards, will be stopped because Campaign eligibility resets. Customer may re-launch the Campaign after reviewing the re-eligibility setting.
+ 
+**How to reset the clock to avoid deletion?** To retain Campaign Interactions for a particular Campaign, customers can send a message using that Campaign at least once within the 25 months since the last message was sent or use that Campaign in a retargeting filter in any active Campaign, Canvas, or Card.
+ 
+Customers may request a shorter data retention than 25 months via their CSM.
 
