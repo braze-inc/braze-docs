@@ -3,6 +3,10 @@ nav_title: Security Qualifications
 page_order: 3
 ---
 
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
+
 # Security Qualifications
 
 Braze takes data privacy and security for our organization, our customers, and our customer's customers seriously.
