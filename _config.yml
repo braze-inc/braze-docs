@@ -221,7 +221,7 @@ algolia:
       - content
       - url
       - search_rank
-      - collection, tags
+      - collection,tags
       - platform
       - channel
     customRanking:

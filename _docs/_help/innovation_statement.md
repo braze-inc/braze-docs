@@ -3,6 +3,10 @@ nav_title: Innovation Statement
 page_order: 9
 ---
 
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
+
 # Braze Innovation Statement
 
 {% tabs %}

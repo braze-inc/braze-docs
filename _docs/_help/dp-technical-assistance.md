@@ -3,6 +3,10 @@ nav_title: Data Protection Technical Assistance
 page_order: 8
 ---
 
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
+
 # Data Protection Technical Assistance
 
 In recent years there has been a range of new data protection laws that regulate what organizations can do with personal data (__Data Protection Laws__), including the European Union General Data Protection Regulation (__GDPR__), the California Consumer Privacy Act (__CCPA__) along with more established laws like the Health Insurance Portability and Accountability Act (__HIPAA__). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.

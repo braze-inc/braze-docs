@@ -42,6 +42,12 @@ Example output: `42`
 
 Additionally, the property accessor filter allows you to template a custom attribute into a hash key to access a particular hash value.
 
+{% endraw %}
+
+{% alert note %} There is no way to instantiate a hash as a variable (i.e. expression) in Liquid within Braze. {% endalert %}
+
+{% raw %}
+
 ## Number formatting filters
 
 | filter name | filter description | example input | example output |
