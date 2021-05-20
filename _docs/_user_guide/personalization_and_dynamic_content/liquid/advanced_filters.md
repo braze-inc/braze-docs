@@ -44,7 +44,7 @@ Additionally, the property accessor filter allows you to template a custom attri
 
 {% endraw %}
 
-{% alert note %} There is no way to write a hash as an expression. Hashing with Liquid only works within a single message composer and does not persist into other composers within the same message or across campaigns and Canvases. {% endalert %}
+{% alert note %} There is no way to instantiate a hash as a variable (i.e. expression) in Liquid within Braze. {% endalert %}
 
 {% raw %}
 
