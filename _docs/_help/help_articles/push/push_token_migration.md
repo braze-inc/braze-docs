@@ -1,6 +1,10 @@
 ---
 nav_title: Push Token Migration
 page_order: 1
+
+page_type: solution
+description: "This article covers how to migrate push tokens so you can continue sending push messages to your users after switching to Braze."
+channel: push
 ---
 
 # Push Token Migration
