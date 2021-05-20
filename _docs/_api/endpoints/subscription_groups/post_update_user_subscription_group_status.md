@@ -65,7 +65,7 @@ This property should not be used for updating a user's profile information. Plea
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | Array of strings | The external_id of the user or users, may include up to 50 ids. |
 | `email` | Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
-| `phone` | Yes* | String in E.164 format | Tags must already exist. |
+| `phone` | Yes* | String in E.164 format | Phone number must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Requests Email
