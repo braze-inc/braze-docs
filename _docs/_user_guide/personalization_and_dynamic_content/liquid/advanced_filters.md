@@ -42,6 +42,12 @@ Example output: `42`
 
 Additionally, the property accessor filter allows you to template a custom attribute into a hash key to access a particular hash value.
 
+{% endraw %}
+
+{% alert note %} There is no way to write a hash as an expression. Hashing with Liquid only works within a single message composer and does not persist into other composers within the same message or across campaigns and Canvases. {% endalert %}
+
+{% raw %}
+
 ## Number formatting filters
 
 | filter name | filter description | example input | example output |
