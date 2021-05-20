@@ -1,6 +1,8 @@
 ---
 nav_title: Where is my Location Data?
 page_order: 2
+
+page_type: 
 ---
 
 # Where Is My Location Data?
