@@ -57,6 +57,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
+{% alert important %}
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
+{% endalert %}
+
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
