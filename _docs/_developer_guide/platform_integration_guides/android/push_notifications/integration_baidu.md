@@ -6,7 +6,7 @@ page_order: 9
 ---
 # Baidu Integration
 
-Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].  Our Baidu push sample app, `China Push Sample`, provides a full implementation example.
+Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].
 
 >  Using Baidu Cloud Push __does not__ require you to distribute your apps via the Baidu App Store.
 
@@ -68,9 +68,9 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 
 ![Baidu SDK Portal][41]
 
-- Inside the SDK, you will find the push service jar and platform-specific native libraries.  Integrate these into your project.  There is also a Baidu demo push application that can be used as a reference along with our [sample Baidu push application][50].  Make sure your app targets the highest SDK version currently supported by Baidu.  This documentation is current for Baidu Cloud Push Android SDK version `4.6.2.38`.
+- Inside the SDK, you will find the push service jar and platform-specific native libraries.  Integrate these into your project. Make sure your app targets the highest SDK version currently supported by Baidu.  This documentation is current for Baidu Cloud Push Android SDK version `4.6.2.38`.
 
-- Add the following required Baidu permissions to your application's `AndroidManifest.xml`.  See our sample app's [AndroidManifest.xml][49] for a sample implementation.
+- Add the following required Baidu permissions to your application's `AndroidManifest.xml`.
 
   ```xml
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -122,7 +122,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
       </service>
   ```
 
-- You will also need to create a broadcast receiver that listens for incoming push messages and notifications.  Declare your own receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.  See our sample app's [receiver][48] for a sample implementation.
+- You will also need to create a broadcast receiver that listens for incoming push messages and notifications.  Declare your own receiver in your application's `AndroidManifest.xml`, inside the `<application>` element.  This receiver will need to extend `com.baidu.android.pushservice.PushMessageReceiver` and implement methods that receive event updates from the Baidu push service.
 
   ```xml
       <receiver android:name=".MyPushMessageReceiver">
@@ -140,7 +140,7 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
 ```
 
-- Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Appboy.registerAppboyPushMessages(channelId)`.  See our sample app's [main activity][47] for a sample implementation.
+- Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Appboy.registerAppboyPushMessages(channelId)`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -169,7 +169,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
     "cid": "your-campaign-Id"
   }
   ```
-- Whenever `onNotificationClicked` is called your Baidu receiver, your receiver should send an [Intent][44] to your application containing `customContentString`.  Your application will log the click to Braze using the `customContentString`.  See our sample app's [main activity][47] for a sample implementation.
+- Whenever `onNotificationClicked` is called your Baidu receiver, your receiver should send an [Intent][44] to your application containing `customContentString`.  Your application will log the click to Braze using the `customContentString`.
 
 - The following sample code passes `customContentString` to Braze and logs a click.
 
@@ -259,7 +259,3 @@ On the **Settings** page (where your API keys are located), select your Android 
 [41]: {% image_buster /assets/img_archive/baidu_sdk.png %}
 [43]: http://developer.baidu.com/wiki/index.php?title=docs/frontia/guide-android/overview
 [44]: http://developer.android.com/reference/android/content/Intent.html
-[47]: https://github.com/Appboy/appboy-android-sdk/blob/master/china-push-sample/src/main/java/com/appboy/chinapush/ChinaPushActivity.java
-[48]: https://github.com/Appboy/appboy-android-sdk/blob/master/china-push-sample/src/main/java/com/appboy/chinapush/ChinaPushMessageReceiver.java
-[49]: https://github.com/Appboy/appboy-android-sdk/blob/master/china-push-sample/src/main/AndroidManifest.xml
-[50]: https://github.com/Appboy/appboy-android-sdk/tree/master/china-push-sample
