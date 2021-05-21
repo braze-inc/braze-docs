@@ -11,7 +11,7 @@ tool:
   - Campaigns
   - Segment
 
-description: "This article outlines details about the Users in Gloabl Control Groups Braze endpoint."
+description: "This article outlines details about the Users in Global Control Groups Braze endpoint."
 ---
 {% api %}
 # Users by Global Control Group

@@ -9,7 +9,7 @@ platform: API
 tool:
   - Canvas
 
-description: "This article outlines details about the Update Scheduled Canvases Braze endpoint."
+description: "This article outlines details about the Schedule API Triggered Canvases Braze endpoint."
 ---
 {% api %}
 # Schedule API Triggered Canvases

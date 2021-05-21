@@ -1,6 +1,10 @@
 ---
 nav_title: For iOS
 page_order: 1
+
+page_type: reference
+description: "This article describes extra iOS implementation steps customers on the EU-01 instance will need to take."
+platform: iOS
 ---
 
 # For iOS
