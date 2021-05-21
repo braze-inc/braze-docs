@@ -1,7 +1,7 @@
 ---
 nav_title: Census
 page_order: 9
-description: "Use the Braze and Census integration to dynamically create targeted user segments with data from your cloud warehouse."
+description: "This article outlines the partnership between Braze and Census, a data intgration platform that allows you to dynamically create targeted user segments with data from your cloud warehouse."
 alias: /partners/census/
 page_type: partner
 ---
