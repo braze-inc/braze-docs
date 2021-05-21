@@ -1,6 +1,9 @@
 ---
 nav_title: Change Custom Attribute or Event Data Type
 page_order: 0
+
+page_type: solution
+description: "This help article walks you through how to change the data type of a custom attribute or custom event, and the implications of doing so."
 ---
 
 # Changing the Data Type of a Custom Attribute or Event

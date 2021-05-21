@@ -1,6 +1,12 @@
 ---
 nav_title: Why are my conversions low?
 page_order: 1
+
+page_type: solution
+description: "This help article walks you through troubleshooting campaigns or Canvases with lower than expected conversion rates."
+tool:
+- Canvas
+- Campaigns
 ---
 
 # Why Are My Conversions Low?

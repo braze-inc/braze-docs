@@ -1,6 +1,10 @@
 ---
 nav_title: In-App Message Impressions Appear Lower Than Expected
 page_order: 1
+
+page_type: solution
+description: "This help article covers actions you can take if your in-app message impressions are lower than you'd like them to be."
+channel: in-app messages
 ---
 # In-App Message Impressions Appear Lower Than Expected
 

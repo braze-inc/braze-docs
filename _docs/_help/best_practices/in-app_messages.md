@@ -5,6 +5,10 @@ layout: dev_guide
 guide_top_header: "In-App Messages"
 guide_top_text: ""
 
+page_type: landing
+description: "This landing page is home to best practices for building and sending in-app messages."
+channel: in-app messages
+
 guide_featured_title: "Popular Articles"
 guide_featured_list:
 - name: Prep Guide

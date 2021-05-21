@@ -1,6 +1,10 @@
 ---
 nav_title: Why isn’t my Canvas sending?
 page_order: 0
+
+page_type: solution
+description: "This help article walks you through troubleshooting delivery issues with your Canvas."
+tool: Canvas
 ---
 
 # My Canvas Isn't Sending

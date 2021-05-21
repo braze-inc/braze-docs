@@ -1,6 +1,10 @@
 ---
 nav_title: Image and Text Specifications
 page_order: 7
+
+page_type: reference
+description: "This article includes tips and tricks for ensuring your images and text are rendered just right."
+tool: Media
 ---
 # Image and Text Specifications
 

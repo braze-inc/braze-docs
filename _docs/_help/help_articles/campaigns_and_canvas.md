@@ -4,6 +4,12 @@ nav_title: Campaigns & Canvas
 layout: dev_guide
 guide_top_header: "Campaigns & Canvas Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles related to common issues with your campaigns or Canvases."
+tool:
+- Campaigns
+- Canvas
+
 guide_featured_title: "Popular Topics"
 guide_featured_list:
   - name: Why isn’t my Canvas sending?

@@ -1,6 +1,13 @@
 ---
 nav_title: Utilizing Badge Count
 page_order: 8
+
+page_type: reference
+description: "This article covers using the iOS badge count to re-engage users who didn't notice a push, or who have disabled foreground push notifications."
+platform: iOS
+channel: 
+- push
+- in-app messages
 ---
 # Utilizing Badge Count
 

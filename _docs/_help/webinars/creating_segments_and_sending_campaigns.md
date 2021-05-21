@@ -1,6 +1,12 @@
 ---
 nav_title: Creating Segments and Sending Campaigns
 page_order: 4
+
+page_type: reference
+description: "This page contains an archived webinar on creating segments and sending targeted multichannel campaigns."
+tool: 
+- Segments
+- Campaigns
 ---
 
 # Creating Segments and Sending Campaigns

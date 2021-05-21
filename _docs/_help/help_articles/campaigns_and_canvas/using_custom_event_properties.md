@@ -1,6 +1,12 @@
 ---
 nav_title: Using Custom Event Properties
 page_order: 5
+
+page_type: solution
+description: "This help article walks you through three important checks to ensure your custom events are being logged as you expect."
+tool: 
+- Campaigns
+- Canvas
 ---
 
 # Are My Custom Event Properties Being Logged?

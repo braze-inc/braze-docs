@@ -5,6 +5,9 @@ layout: featured
 guide_top_header: "Webinars"
 guide_top_text: "These webinars are considered archived and not kept up to date, but can still provide educational content. For the most up-to-date educational content, check out <a href='https://lab.braze.com/'>LAB (Learning at Braze)</a>!"
 
+page_type: landing
+description: "This landing page is home to archived Braze webinars. These webinars are not kept up to date, but can still provide educational content."
+
 guide_featured_title: "Webinars"
 guide_featured_list:
   - name: "A/B and Multivariate Testing"

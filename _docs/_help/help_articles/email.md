@@ -4,6 +4,10 @@ nav_title: Email
 layout: dev_guide
 guide_top_header: "Email Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles related to common email issues."
+channel: email
+
 guide_menu_title: ""
 guide_menu_list:
   - name: Email HTML Looks Strange 

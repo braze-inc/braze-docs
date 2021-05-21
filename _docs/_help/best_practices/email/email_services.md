@@ -1,6 +1,10 @@
 ---
 nav_title: Email Services
 page_order: 3
+
+page_type: reference
+description: "This article covers the types of email support available through Braze."
+channel: email
 ---
 
 # Email Services {#email-services}

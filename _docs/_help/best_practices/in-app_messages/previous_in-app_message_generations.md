@@ -1,6 +1,10 @@
 ---
 nav_title: Previous Generations
 page_order: 20
+
+page_type: reference
+description: "This article reviews prevous information around in-app messages in Braze."
+channel: in-app messages
 ---
 
 # Message Type Details

@@ -1,6 +1,10 @@
 ---
 nav_title: Where is my Location Data?
 page_order: 2
+
+page_type: solution
+description: "This help article walks you through quick checks that may assist you if no users have available locations."
+tool: Location
 ---
 
 # Where Is My Location Data?

@@ -1,6 +1,10 @@
 ---
 nav_title: Prep Guide
 page_order: 0.5
+
+page_type: reference
+description: "This article covers some questions and best practices you should consider before building your in-app messages."
+channel: in-app messages
 ---
 
 # Prep Guide

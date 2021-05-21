@@ -4,6 +4,9 @@ nav_title: Docs
 layout: dev_guide
 guide_top_header: "Docs Help Articles"
 
+page_type: landing
+description: "This landing page includes resources related to the Braze Documentation site—such as how to contribute to Braze's open source docs."
+
 guide_menu_title: ""
 guide_menu_list:
   - name: Contribute to Braze Docs
