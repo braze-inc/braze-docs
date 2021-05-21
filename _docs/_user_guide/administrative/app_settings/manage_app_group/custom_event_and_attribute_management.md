@@ -62,7 +62,6 @@ If you elect to force the data type for an attribute, any data that comes in tha
 | Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
 | Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
 | Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
-| Array | Comma separated list of values, with or without square brackets (i.e.`[first, second, third]`, or `first,second,third`) will be stored as an Array |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more information on specific filter options exposed by different data type comparisons please see [Configuring Reporting article][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
