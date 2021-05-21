@@ -13,7 +13,7 @@ Not sure where to start with analyzing your campaigns? You're in the right place
 
 ## Which Variant Won?
 
-{% tabs %}
+{% tabs local %}
 {% tab Campaign Analytics %}
 **Campaign Analytics**
 
@@ -76,11 +76,11 @@ More questions you can answer with this feature:
 
 ## Which Variant Impacted Retention the Most?
 
-{% tabs %}
+{% tabs local %}
 {% tab Retention Reports %}
 **Retention Reports**
 
-Use [Retention Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) to measure retention for users who have performed a selected event in a specific campaign.
+Use Retention Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/) to measure retention for users who have performed a selected event in a specific campaign.
 
 Check out this report to:
 
@@ -99,7 +99,7 @@ More questions you can answer with this report:
 {% tab Funnel Report %}
 **Funnel Report**
 
-Use [Funnel Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use Funnel Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
@@ -117,7 +117,7 @@ More questions you can answer with this report:
 
 ## How Engaged Are My Users?
 
-{% tabs %}
+{% tabs local %}
 {% tab Report Builder %}
 **Report Builder**
 
@@ -188,7 +188,7 @@ More questions you can answer with this report:
 
 ## How Do User Behaviors Differ by Segment?
 
-{% tabs %}
+{% tabs local %}
 {% tab Segment Data %}
 **Segment Data**
 
@@ -240,7 +240,7 @@ Check out this page to:
 
 ## Did My Campaign Provide a Return on Investment?
 
-{% tabs %}
+{% tabs local %}
 {% tab Revenue Data %}
 **Revenue Data**
 
@@ -265,9 +265,9 @@ After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engag
 
 Check out this page to:
 
-- Easily measure the impact and incremental uplift of campaigns and Canvases on sessions and custom events
-- Automatically randomize and exclude control group members from receiving messages
-- Export control group members for further analysis
+- Easily measure the impact and incremental uplift of campaigns and Canvases on sessions and custom events.
+- Automatically randomize and exclude control group members from receiving messages.
+- Export control group members for further analysis.
 
 More questions you can answer with report:
 
@@ -279,11 +279,11 @@ More questions you can answer with report:
 
 ## What Campaigns Should I Run Next?
 
-{% tabs %}
+{% tabs local %}
 {% tab Funnel Report %}
 **Funnel Report**
 
-Use [Funnel Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use Funnel Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
