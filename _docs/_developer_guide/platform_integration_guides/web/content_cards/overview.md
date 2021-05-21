@@ -2,7 +2,10 @@
 nav_title: Overview
 page_order: 0
 platform: Web
+
 page_type: reference
+description: "This article provides an overview of content cards, including use cases and important considerations."
+channel: content cards
 ---
 
 # Content Cards 

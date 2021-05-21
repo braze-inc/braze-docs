@@ -3,6 +3,8 @@ nav_title: Setting User IDs
 platform: Web
 page_order: 1
 
+page_type: reference
+description: "This article describes how to set user IDs for each of your users, including best practices and important points to consider before making any changes."
 ---
 ## Setting User IDs
 

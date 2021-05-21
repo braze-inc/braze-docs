@@ -3,6 +3,8 @@ nav_title: Logging Purchases
 platform: Web
 page_order: 4
 
+page_type: reference
+description: "This article describes how to log purchases via the Braze SDK."
 ---
 ## Logging Purchases
 

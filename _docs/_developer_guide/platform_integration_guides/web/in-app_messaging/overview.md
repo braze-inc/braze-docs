@@ -3,6 +3,9 @@ nav_title: Overview
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This reference article provides an overview of in-app messages, including best practices and use cases."
+channel: in-app messages
 ---
 # In-App Messages
 

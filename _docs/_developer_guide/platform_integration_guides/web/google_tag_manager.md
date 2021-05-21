@@ -2,7 +2,7 @@
 nav_title: Google Tag Manager
 platform: Web
 page_order: 20
-description: Use Google Tag Manager to deploy Braze to your website
+description: "This article covers how to use Google Tag Manager to deploy Braze to your website."
 ---
 
 # Google Tag Manager
