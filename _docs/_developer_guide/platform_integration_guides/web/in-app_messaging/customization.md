@@ -28,6 +28,20 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 });
 ```
 
+### In-App Message Default z-index
+
+By default, In-App Messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
+
+**Note**: This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded in order to use this option.
+
+```javascript
+import braze from "@braze/web-sdk";
+braze.initialize("YOUR-API-KEY", {
+    baseUrl: "YOUR-API-ENDPOINT",
+    inAppMessageZIndex: 9001
+});
+```
+
 ### Custom Styling
 
 Braze UI elements come with a default look and feel that create a neutral in-app message experience and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
@@ -52,3 +66,4 @@ appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
 
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/ab.InAppMessage.html
 [15]: https://fontawesome.com/?from=io
+[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#initializationoptions
