@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Attribute
 page_order: 3
-description: "Liquid use cases based on custom attributes."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on custom attributes."
 ---
 
 # Custom Attribute

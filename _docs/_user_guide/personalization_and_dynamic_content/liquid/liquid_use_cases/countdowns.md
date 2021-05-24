@@ -1,7 +1,9 @@
 ---
 nav_title: Countdowns
 page_order: 5
-description: "Liquid use cases based on countdowns, or to calculate the difference in time."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on countdowns, or to calculate the difference in time."
 ---
 
 # Countdowns

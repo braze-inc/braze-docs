@@ -1,7 +1,9 @@
 ---
 nav_title: Platform Targeting
 page_order: 8
-description: "Liquid use cases based on platform, such as Web, iOS, Android, or device version."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on platform, such as Web, iOS, Android, or device version."
 ---
 
 # Platform Targeting

@@ -1,7 +1,9 @@
 ---
 nav_title: Miscellaneous
 page_order: 7
-description: "Liquid use cases based on data types and other miscellaneous goals."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on data types and other miscellaneous goals."
 ---
 
 # Miscellaneous

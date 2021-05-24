@@ -1,6 +1,8 @@
 ---
 nav_title: Time Zones
 page_order: 9
+
+page_type: reference
 description: "Liquid use cases based on time zones and timestamps."
 ---
 

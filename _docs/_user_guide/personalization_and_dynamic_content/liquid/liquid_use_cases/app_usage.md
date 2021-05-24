@@ -1,7 +1,9 @@
 ---
 nav_title: App Usage
 page_order: 2
-description: "Liquid use cases for a user's app usage and app habits."
+
+page_type: reference
+description: "This reference article lists Liquid use cases for a user's app usage and app habits."
 ---
 
 # App Usage

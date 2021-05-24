@@ -1,7 +1,9 @@
 ---
 nav_title: Language
 page_order: 6
-description: "Liquid use cases based on a user's defined language."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on a user's defined language."
 ---
 
 # Language

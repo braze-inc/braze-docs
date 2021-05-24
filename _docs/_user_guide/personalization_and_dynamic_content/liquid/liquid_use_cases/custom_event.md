@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Event
 page_order: 4
-description: "Liquid use cases based on custom events."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on custom events."
 ---
 
 # Custom Event

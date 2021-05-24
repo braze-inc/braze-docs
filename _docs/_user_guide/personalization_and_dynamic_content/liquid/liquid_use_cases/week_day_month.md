@@ -1,7 +1,9 @@
 ---
 nav_title: Week/Day/Month
 page_order: 10
-description: "Liquid use cases based on the week, day, or month."
+
+page_type: reference
+description: "This reference article lists Liquid use cases based on the week, day, or month."
 ---
 
 # Week/Day/Month
