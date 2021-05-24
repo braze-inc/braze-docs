@@ -401,7 +401,9 @@ Instead, we use Public/Private Keys so that not even Braze Employees (let alone 
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 
-When a request is rejected, the SDKs will invoke a callback allowing you do refresh the user's JWT signature. Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
+When a request is rejected because of an authentication error, the SDKs will invoke a your callback used to refresh the user's JWT signature. 
+
+Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
 [1]: #server-side-integration
 [2]: #sdk-integration
