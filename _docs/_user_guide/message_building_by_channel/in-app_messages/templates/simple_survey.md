@@ -25,7 +25,7 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 ## SDK Requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that use at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
