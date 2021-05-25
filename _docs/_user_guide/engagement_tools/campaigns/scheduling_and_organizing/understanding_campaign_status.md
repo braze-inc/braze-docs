@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 3
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
 ---
@@ -15,7 +15,7 @@ description: "This reference article gives an overview of the various statuses a
 On your Braze Dashboard, your campaigns are grouped by their status. Below are the different statuses your campaigns could have and descriptions on what they mean:
 
 - __Draft__
-	- Campaigns that are saved and never launched. Clicking on them allows you to continue editing and begin sending.
+	- Campaigns that are saved but not launched. Clicking on them allows you to continue editing and begin sending.
 
 
 - __Active__
@@ -26,13 +26,13 @@ On your Braze Dashboard, your campaigns are grouped by their status. Below are t
 
 
 - __Archived__
-	- Campaigns that are no longer sending and are cleared from the "All Active" tab on the Dashboard, as well as the Detailed Statics graphs on the App Usage and Revenue pages.
-	- To [archive campaigns][2] click on the gear icon to the right of the campaign, or simply check it off and select the "Archive Selected" button that appears above.
+	- Campaigns that are no longer sending and are cleared from the "All Active" tab on the Dashboard, as well as the Detailed Statics graphs on the **Overview** and **Revenue** pages.
+	- To [archive campaigns][2] click on the gear icon to the right of the campaign, or simply check it off and select **Archive Selected**.
 	- You cannot edit an archived campaign, and would therefore need to unarchive it to do so.
 
 
 - __Inactive__
-	- Campaigns that have been paused but are still rendered editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting "Resume."
+	- Campaigns that have been paused but are still rendered editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting **Resume**.
 
 
 - __Multivariate Testing in Progress__

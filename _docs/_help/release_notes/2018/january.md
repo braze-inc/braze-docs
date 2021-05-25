@@ -1,6 +1,9 @@
 ---
 nav_title: January
 page_order: 12
+
+page_type: update
+description: "This article contains release notes for January 2018."
 ---
 # January 2018
 

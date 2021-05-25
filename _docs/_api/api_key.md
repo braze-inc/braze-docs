@@ -27,7 +27,7 @@ We refer to both the REST API Key and App Group API Key as the `api_key`. The `a
 
 ### Where can I find it?
 
-Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
+Your API keys can always be found in the Braze Dashboard in the **Developer Console** under **Settings**. At the top of this new page, you will find the **REST API Keys** section. Here you can view all of your available REST API/App Group API Keys, and create new API keys.
 
 ### How can I use it?
 
@@ -234,9 +234,9 @@ Sometimes, you may find you are prompted for an `app_id` but you are not working
 ### Where can I find it?
 There are two ways to locate your `app_id`:
 
-1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, under "Identifiers", you will be able to see every `app_id` that exists for your apps.
+1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
 
-2. From the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__". (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
+2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 

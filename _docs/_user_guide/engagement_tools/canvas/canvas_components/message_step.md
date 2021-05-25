@@ -1,8 +1,12 @@
 ---
 nav_title: Message Step
+title: Message Step
 alias: "/message_step/"
-description: "This reference article covers how to create a stand-alone message using the Canvas messaging step."
 page_order: 2
+
+page_type: reference
+description: "This reference article covers how to create a stand-alone message using the Canvas messaging step."
+tool: Canvas
 ---
 
 {% alert important %}

@@ -2,7 +2,10 @@
 nav_title: Email Validation 
 alias: "/email_validation/"
 page_order: 4.5
-description: "This article covers local and host part validation rules for email addresses"
+
+page_type: reference
+description: "This reference article covers local and host part validation rules for email addresses"
+channel: email
 ---
 
 # Email Technical Guidelines & Notes

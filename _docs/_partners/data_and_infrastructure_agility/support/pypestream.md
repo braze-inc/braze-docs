@@ -1,7 +1,7 @@
 ---
 nav_title: Pypestream
 page_order: 5
-description: "Enhance digital engagement with your brand by combining immersive conversational AI from Pypestream with dynamic omnichannel marketing from Braze."
+description: "This article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform allowing you to enhance digital engagement with your Brand."
 alias: /partners/pypestream/
 page_type: partner
 ---

@@ -5,7 +5,7 @@ nav_title: Currents
 layout: featured
 
 page_type: landing
-description: "This page will tell you more about and guide you to articles related to the Braze data product called Currents."
+description: "This landing page will tell you more about and guide you to articles related to the Braze data product called Currents."
 tool: currents
 
 guide_top_header: "Braze Currents"

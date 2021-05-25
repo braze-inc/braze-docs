@@ -2,6 +2,10 @@
 page_order: 6
 nav_title: FAQs
 hide_toc: true
+
+page_type: reference
+description: "This page is home to frequently asked questions about the Braze Dashboard and its features."
+
 ---
 # Frequently Asked Questions
 
@@ -153,7 +157,7 @@ No data is uploaded after a session is closed.
 {% enddetails %}
 
 {% details Why don’t I see “Braze Is Working” anymore with a debug API key? %}
-Braze deprecated the Debug API keys in August 2014. As a result, you will no longer see “Braze is Working” when using any legacy debug API keys you may have. You should migrate your application to the API key on your “App Settings” page in order to test messaging and recording functionality.
+Braze deprecated the Debug API keys in August 2014. As a result, you will no longer see “Braze is Working” when using any legacy debug API keys you may have. You should migrate your application to the API key on your “Settings” page in order to test messaging and recording functionality.
 The production key should be used with production provisioning profiles and apps that are live in the app store.
 {% enddetails %}
 
@@ -198,7 +202,7 @@ The draw to have multiple apps under one App group can be enticing as it can lea
 * Last Used App
 * First Used App
 * Session Count
-* Money Spent In-App
+* Money Spent
 * Push subscription (this becomes an all or none situation, in other words, if your users unsubscribe from one app they will be unsubscribed from all of your apps under the app group)
 * Email subscription (this becomes an all or none situation - and can leave you open to compliance issues)
 <br> <br>This is not an exhaustive list. The aggregation of the data across dissimilar apps in filters like those listed above is why we do not recommend housing substantially different apps within the same app group.

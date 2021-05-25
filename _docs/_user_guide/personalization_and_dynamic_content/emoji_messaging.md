@@ -1,7 +1,7 @@
 ---
 nav_title: Emoji Messaging
 page_order: 4
-description: "Spice up your push notifications and emails with Emojis."
+description: "This reference article covers how to use Emojis in your email and push messaging for different types of platforms."
 ---
 # Emoji Messaging
 

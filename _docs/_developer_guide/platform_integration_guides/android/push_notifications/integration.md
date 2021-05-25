@@ -147,9 +147,9 @@ If migrating from using GCM to using Firebase with Braze, visit the [GCM Migrati
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
-* On the app settings page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
+* On the **Settings** page (where your API keys are located), select your Android app.
+* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
 
 ![fcmimg][16]
 
@@ -159,7 +159,7 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 
 2. Select your Firebase project
 
-3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID:
+3. Go to **Settings** > **Cloud Messaging** and copy the Server Key and Sender ID:
   ![FirebaseServerKey][59]
 
 #### Step 5: Remove Old Permissions
@@ -290,6 +290,12 @@ Setting a large notification icon is optional but recommended.
 
 ```xml
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
+```
+
+You may also optionally use a color reference, see:
+
+```xml
+<color name="com_appboy_default_notification_accent_color">@color/my_color_here</color>
 ```
 
 ### Step 4: Add Deep Links

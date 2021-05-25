@@ -48,16 +48,18 @@ Please ensure that your Liquid matches the proper custom attributes associated w
 {
   "api_token": "INKIT_API_TOKEN",
   "template_id": "INKIT_TEMPLATE_ID",
-  "company (optional)": "{{custom_attribute.${company_name}}}",
-  "email": "{{${email_address}}}",
   "first_name": "{{${first_name}}}",
   "last_name": "{{${last_name}}}",
-  "street": "{{custom_attribute.${address}}}",
-  "unit (optional)": "{{custom_attribute.${address2}}}",
-  "city": "{{${city}}}",
-  "state": "{{custom_attribute.${state}}}",
-  "zip": "{{custom_attribute.${zip}}}",
-  "country": "{{${country}}}"
+  "email": "{{${email_address}}}",
+  "company": "{{custom_attribute.${company_name}}}",
+  "phone" : "{{${phone_number}}}",
+  "address_line_1": "{{custom_attribute.${address}}}",
+  "address_line_2": "{{custom_attribute.${address2}}}",
+  "address_city": "{{${city}}}",
+  "address_state": "{{custom_attribute.${state}}}",
+  "address_zip": "{{custom_attribute.${zip}}}",
+  "address_country": "{{${country}}}",
+  "source" : "Braze"
 }
 {% endraw %}
 ```

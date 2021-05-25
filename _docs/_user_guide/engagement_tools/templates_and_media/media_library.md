@@ -1,13 +1,16 @@
 ---
 nav_title: Media Library
 page_order: 0
-description: "The Media Library allows you to manage your assets in a single, centralized location."
+
+page_type: reference
+description: "This reference article describes how to use the Media Library to manage your assets in a single, centralized location."
+tool: Media
 ---
 # Media Library
 
-> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the "Media Library" tab in the [Templates & Media][4] section of your dashboard.
+> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
 
-The Library now allows you to:
+You can use the **Media Library** to:
 
 * Upload multiple images at one time
 * Upload Virtual Contact Files (.vcf)

@@ -3,7 +3,7 @@ nav_title: Public APIs
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 4
-description: "A list of publicly available APIs that can be used with Connected Content."
+description: "This articles covers a list of publicly available APIs that can be used with Connected Content."
 ---
 
 # Public APIs

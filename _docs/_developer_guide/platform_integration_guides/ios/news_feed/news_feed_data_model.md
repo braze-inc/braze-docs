@@ -113,31 +113,6 @@ In addition to the base card properties:
 - `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
-## Cross Promotion (Small) Properties
-In addition to the base card properties:
-
-- `mediaType` - The type of iTunes media
-    - `ItunesAlbum`
-    - `ItunesAudiobook`
-    - `ItunesCompilation`
-    - `ItunesEbook`
-    - `ItunesFeatureMovie`
-    - `ItunesPodcast`
-    - `ItunesSoftware`
-    - `ItunesSong`
-    - `ItunesTvEpisode`
-    - `ItunesTvSeason`
-- `title` - The title text for the card. This will be the promoted item's name.
-- `subtitle` - The text of the category of the promoted item
-- `image` - This property is the URL of the card's image.
-- `iTunesId` - The iTunes ID number of the promoted item
-- `rating` (required for mediaType ItunesSoftware, optional otherwise) - The rating of the promoted app. This property will be 0.0 unless the promoted item is an app, and the rating will be in the range of [0.0, 5.0];
-- `price` - The number of reviews of the promoted app. This property will be 0 unless the promoted item is an app.
-- `reviews` - This property is the text that will be displayed in the tag on the top of the small cross-promotion card.
-- `caption` - The iTunes URL of the promoted item which leads to the item's App Store page.
-- `url` - The iTunes URL of the promoted item which leads to the item's App Store page.
-- `universal` (optional) - This property indicates if the promoted item is universal or not.
-
 ## Card Methods:
 
 - `logCardImpression` - Manually log an impression to Braze for a particular card.

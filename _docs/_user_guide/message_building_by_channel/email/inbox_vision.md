@@ -4,6 +4,15 @@ platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 5
 description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
+
+tool:
+  - Dashboard
+  - Campaign
+  - Canvas
+
+channel:
+  - email
+
 ---
 
 # Inbox Vision
@@ -26,7 +35,7 @@ Once you make changes to a template, you will need to click **Re-Run Test** to s
 
 ## Code Analysis
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
+Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
 ![inboxvision2][2]
 ![inboxvision3][3]
@@ -35,7 +44,7 @@ Code analysis is a way for Braze to highlight issues that may exist with your HT
 
 ## Spam Testing
 
-[Spam testing][4] attempts to predict whether your email will land in spam folders or in your customers' inboxes.  Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major ISP filters such as Gmail.com and Outlook.com.
+[Spam testing][4] attempts to predict whether your email will land in spam folders or your customers' inboxes.  Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major ISP filters such as Gmail.com and Outlook.com.
 
 ## Test Accuracy
 

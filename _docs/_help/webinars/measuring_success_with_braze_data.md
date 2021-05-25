@@ -1,6 +1,9 @@
 ---
 nav_title: Measuring Success with Braze Data
 page_order: 7
+
+page_type: reference
+description: "This article contains an archived webinar on tips to better understand how to measure the success of your marketing efforts using Braze data."
 ---
 
 # Measuring Success with Braze Data

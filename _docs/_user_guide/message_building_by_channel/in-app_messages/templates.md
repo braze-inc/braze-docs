@@ -5,11 +5,11 @@ layout: featured
 hidden: true
 
 page_type: landing
-channel: In-App Messages
-platform:
-  - android
-  - iOS
-  - web
+channel:
+  - in-app messages
+tool:
+  - Templates
+
 description: "Use new In-App Message Templates to deliver rich in-app and in-browser messages without any code"
 
 guide_top_header: "In-App Message Templates"

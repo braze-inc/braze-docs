@@ -2,9 +2,9 @@
 nav_title: Scheduled Delivery
 page_order: 0
 
-tools: campaigns
 page_type: reference
-description: "This reference article gives an overview of different ways to go about scheduling a campaign."
+description: "This reference article describes the differences between time-based scheduling options for campaign delivery."
+tool: Campaigns
 ---
 
 # Scheduled Delivery

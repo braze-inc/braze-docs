@@ -2,9 +2,11 @@
 nav_title: Re-eligibility with Campaign and Canvas
 page_order: 3
 
-tools: campaigns
 page_type: reference
-description: "This reference article gives an overview of different ways to go about scheduling a campaign."
+description: "This reference article gives an overview of what it means to allow users to become re-eligible to receive or re-enter a campaign or Canvas."
+tool:
+- Campaigns
+- Canvas
 ---
 
 # Re-eligibility with Campaigns and Canvas

@@ -2,12 +2,11 @@
 nav_title: "Create a Push Primer Campaign"
 page_order: 5
 page_type: tutorial
-description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages."
+description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages by sending out a push primer."
 
 channel:
   - Push
 tool:
-  - Docs
   - Dashboard
   - Campaigns
 ---
@@ -18,7 +17,7 @@ Push Primer campaigns require backend set up from your developers. <br>Check out
 
 # Create a Push Primer Campaign
 
-> This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help!
+> This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help!
 
 ![push_primer_example_3][push_primer5]{: style="float:right;max-width:30%;margin-left:15px;"} 
 
@@ -26,7 +25,7 @@ Push Primer campaigns are useful because they address the issue of the dreaded i
 
 To address this, Braze offers steps on how to set up Push Primer Campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message as well as offer re-deliverability, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers should provide users valuable information on why notifications for your application are important.
 
-For a user to qualify to receive your Push Messages, they must enable Push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
+For a user to qualify to receive your Push Messages, they must enable push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
 - [Android Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 - [iOS Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 
@@ -48,7 +47,7 @@ From the Campaigns pane within the Dashboard, select In-App Messaging as the mes
 
 ![push_primer_message_type][push_primer7]
 
-Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your Push Primer to send to, select the message type, and pick the layout type. For your basic Push Primer campaign message type, we suggest either a full screen or modal message. Note that for a full screen in-app message, an image is required.
+Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your Push Primer to send to, select the message type, and pick the layout type. For your basic Push Primer campaign message type, we suggest either a full screen or modal message. Note that for a full-screen in-app message, an image is required.
 
 ## Step 4: Customize your Message
 
@@ -65,7 +64,7 @@ Here are some example Push Primer Messages:
 
 ![push_primer_example_1][push_primer3]{: height="225px"} ![push_primer_example_2][push_primer4]{: height="225px"} ![push_primer_example_3][push_primer5]{: height="225px"}
 
-If you would like even further customization options, you can also set the message type to Custom code, and provide the full HTML for your in-app message.
+If you would like even further customization options, you can also set the message type to Custom code and provide the full HTML for your in-app message.
 
 ### Button Set-Up
 
@@ -83,11 +82,11 @@ Documentation for this can be found here: [Push Primer Integrations][integration
 
 ## Step 5: Selecting the Delivery Method
 
-To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer Campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward you allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, will trigger the push primer in-app message. 
+To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer Campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward your allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, it will trigger the push primer in-app message. 
 
 ## Step 6: Targeting Users
 
-Generally, for Push Primer Campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users Options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming a push enabled user.
+Generally, for Push Primer Campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users Options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
 
 If you are not sure the best way to segment, you may also select All Users. This option will send your push primer to any iOS device that has not yet opted in or out of push. 
 

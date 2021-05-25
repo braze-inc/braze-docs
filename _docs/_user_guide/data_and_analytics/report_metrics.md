@@ -4,7 +4,10 @@ nav_title: Report Metrics Glossary
 layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
-description: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
+
+page_type: glossary
+description: "This glossary defines terms you'll find in your reports in your Braze account."
+tool: Reports
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select Channels below to narrow the glossary:"
@@ -156,6 +159,12 @@ glossaries:
     calculation: (Button 2 Clicks) / (Impressions)
     tags:
       - In-App Message
+  - name: Body Click
+    description: Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
+    calculation: (Body Clicks) / (Impressions)
+    tags:
+      - iOS Push
+      - Android Push
   - name: Unsubscribes
     description: The number of recipients whose subscription state changed to unsubscribed as a result of clicking the Braze provided unsubscribe URL.
     calculation: (Unsubscribes) / (Deliveries)

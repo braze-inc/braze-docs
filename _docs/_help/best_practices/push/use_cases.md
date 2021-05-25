@@ -1,6 +1,10 @@
 ---
 nav_title: Use Cases
 page_order: 6
+
+page_type: reference
+description: "This article provides sample use cases for push messaging, such as attracting new users and re-engagement campaigns."
+channel: push
 ---
 
 # Use Cases {#push-use-cases}

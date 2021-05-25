@@ -1,7 +1,11 @@
 ---
 nav_title: News Feed Categories
 page_order: 9
-description: "News Feed Categories make it possible to integrate multiple instances of the news feed into your application."
+
+page_type: reference
+description: "This reference article describes News Feed Categories, which make it possible to integrate multiple instances of the news feed into your application."
+tool: Dashboard
+channel: news feed
 ---
 # News Feed Categories
 

@@ -2,13 +2,11 @@
 nav_title: "Push Stories"
 page_order: 2
 page_type: reference
-description: "This reference article covers what Push stories are, how to create one as well as some frequently asked questions."
+description: "This reference article covers what Push stories are, how to create one, as well as some frequently asked questions."
 
 channel:
-  - Push
+  - push
 tool:
-  - Docs
-  - Dashboard
   - Campaigns
 ---
 
@@ -55,16 +53,13 @@ If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guid
 
 The analytics will look very similar to the current analytics section for Push Notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
 
-
 ## FAQs
 
 ### Can I target users who clicked a particular page in the Push Story?
 Push Story Segmentation is now available! When you create a Campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the Campaign and the page you want to use to target your users.
 
-
 ###  I sent myself a Push Story on iOS but did not receive the notification - what happened?
 Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors - this includes evaluating the customers' data plan, notification size and/or the customers' storage capacity.  As a result, sometimes no notification will be sent to your customers. These are limitations imposed by Apple that should be considered when designing your Push Story.
-
 
 ### I sent myself a Push Story on iOS but saw the condensed view instead - what happened?
 In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.

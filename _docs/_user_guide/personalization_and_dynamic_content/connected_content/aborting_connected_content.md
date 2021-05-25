@@ -3,7 +3,7 @@ nav_title: Aborting Connected Content
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 2
-description: "Using Liquid templating, you have the option to abort messages with conditionals."
+description: "Using Liquid templating, you have the option to abort messages with conditionals. This reference article covers some message aborting best practices."
 ---
 # Aborting Messages {#aborting-connected-content}
 Using Liquid templating, you have the option to abort messages with conditionals. For example:

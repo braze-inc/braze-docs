@@ -37,6 +37,10 @@ Add this information to the mParticle integration page on the dashboard, and pre
 
 ![mParticle]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
+{% alert important %}
+It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 All events sent to mParticle will include the user's `external_user_id` as the `customerid`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
 ### Integration Details

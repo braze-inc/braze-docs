@@ -3,7 +3,14 @@ nav_title: CSS Inlining
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 3
-description: "This reference article covers CSS inling, how to use it, and best practices."
+description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
+
+tool:
+  - Dashboard
+
+channel:
+  - email
+
 ---
 # CSS Inlining
 
@@ -21,7 +28,7 @@ You can control whether CSS Inlining is turned on or off for any email message t
 
 ![css-inline2][2]
 
-Additionally, a default on or off state can be set globally from Manage App Group > Email Settings > Inline CSS. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
+Additionally, a default on or off state can be set globally from Manage Settings > Email Settings > Inline CSS. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
 ![css-inline1][1]
 

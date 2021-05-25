@@ -4,7 +4,7 @@ page_order: 2
 layout: featured
 guide_top_header: "Customize Your Content Cards"
 guide_top_text: "Customizing Content Cards and the feed they'll sit in cannot be done during the campaign creation process - you must work with your engineers and developers to build and customize your cards. It's easy and completely customizable this way!"
-description: "Customizing Content Cards and the feed they'll sit in cannot be done during the campaign creation process - you must work with your engineers and developers to build and customize your cards. It's easy and completely customizable this way!"
+description: "Customizing Content Cards and the feed they'll sit in must be done with your engineers and developers. This article will cover where this information can be found in the Braze docs."
 
 guide_featured_title: "Customize Content Cards for..."
 guide_featured_list:
@@ -17,6 +17,10 @@ guide_featured_list:
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/
   fa_icon: fas fa-globe
+
+channel:
+  - content cards
+  
 ---
 <br>
 
@@ -33,3 +37,5 @@ You can change the language that appears automatically in empty Content Card fee
 {% alert note %}
 If you want to update it for different languages, find the corresponding language in [the Resources folder structure](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) with the same string `Appboy.content-cards.no-card.text`.
 {% endalert %}
+
+<br>

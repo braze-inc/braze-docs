@@ -12,12 +12,13 @@ hidden: true
 
 Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client’s company instance is hosted on:
 
-| INSTANCE | REST ENDPOINT | 
+| INSTANCE | REST ENDPOINT |
 | ----- | ------------------------------- |
 | US-01 | `https://rest.iad-01.braze.com` |
 | US-02 | `https://rest.iad-02.braze.com` |
 | US-03 | `https://rest.iad-03.braze.com` |
 | US-04 | `https://rest.iad-04.braze.com` |
+| US-05 | `https://rest.iad-05.braze.com` |
 | US-06 | `https://rest.iad-06.braze.com` |
 | US-08 | `https://rest.iad-08.braze.com` |
 | EU-01 | `https://rest.fra-01.braze.eu`  |

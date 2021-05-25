@@ -2,6 +2,11 @@
 nav_title: Promotion Codes
 page_order: 5
 alias: "/promotion_codes/"
+description: "This reference article covers how to create promotion code lists and add them into your Campaigns and Camvases."
+Tool:
+  - Dashboard
+  - Campaigns
+  - Canvas
 ---
 
 # Promotion Codes

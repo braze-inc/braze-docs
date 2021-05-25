@@ -8,8 +8,6 @@ platform: Android
 channel:
   - Push
 tool:
-  - Docs
-  - Dashboard
   - Campaigns
 ---
 

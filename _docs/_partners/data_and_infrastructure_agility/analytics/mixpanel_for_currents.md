@@ -20,7 +20,11 @@ To get started, find the following information from your Mixpanel dashboard unde
 
 Add this information to the Mixpanel Currents integration page on the dashboard, and press save.
 
-![Amplitude]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+![Mixpanel]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+
+{% alert important %}
+It's important to keep your Mixpanel API Secret and Mixpanel Token up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
 
 ## Integration Details
 
@@ -122,6 +126,15 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 // Install Attribution
 {
   "source": (string) the source of the attribution
+}
+```
+
+### Uninstall Events
+
+```json
+// Uninstall
+{
+  "app_id": (string) id for the app on which the user action occurred
 }
 ```
 
@@ -426,15 +439,6 @@ _Update noted in August 2019._
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
-}
-```
-
-### Uninstall Events
-
-```json
-// Uninstall
-{
-  "app_id": (string) id for the app on which the user action occurred
 }
 ```
 

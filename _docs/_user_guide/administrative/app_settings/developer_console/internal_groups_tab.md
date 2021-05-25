@@ -1,7 +1,10 @@
 ---
 nav_title: Internal Groups Log Tab
 page_order: 3
-description: "Internal Groups are a great way to build and organize internal or 3rd party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing."
+
+page_type: reference
+description: "This reference article covers Internal Groups, a great way to get insight into your test device's SDK or API logs when testing SDK integration."
+tool: Dashboard
 ---
 
 # Internal Groups Tab

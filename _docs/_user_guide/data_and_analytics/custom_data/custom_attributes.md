@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
-description: "Custom attributes are best for storing attributes about your users, or information about low-value actions within your application."
+
+page_type: reference
+description: "This reference article describes custom attributes, and explains the various custom attribute data types."
 ---
 
 # Custom Attributes
@@ -32,7 +34,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
 
 {% alert tip %}
-Money spent in-app should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
+Money spent should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |

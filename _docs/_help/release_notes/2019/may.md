@@ -1,6 +1,9 @@
 ---
 nav_title: May
 page_order: 8
+
+page_type: update
+description: "This article contains release notes for May 2019."
 ---
 
 # May 2019

@@ -3,9 +3,8 @@ nav_title: Creating a Segment
 page_order: 1
 
 page_type: tutorial
-channel:
-
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
+tool: Segments
 ---
 # Creating a Segment
 

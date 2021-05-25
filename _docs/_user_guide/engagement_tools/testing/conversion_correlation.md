@@ -1,9 +1,13 @@
 ---
 nav_title: Conversion Correlation
 alias: /conversion_correlation/
-description: "This article explains the Conversion Correlation analysis on the Campaign Analytics page."
-page_type: reference
 page_order: 3
+
+page_type: reference
+description: "This reference article explains the Conversion Correlation analysis on the Campaign Analytics page."
+tool: 
+- Campaigns
+- Reports
 ---
 
 # Conversion Correlation

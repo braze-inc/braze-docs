@@ -4,9 +4,9 @@ platform: Campaigns
 subplatform: Testing and More
 page_order: 0
 
-tools: campaigns
 page_type: tutorial
-description: "This how-to article gives an overview of attribute triggers and how you can use them to send action-based messages to users"
+description: "This how-to article goes over what conversion events are, how to use them and define your success metrics within Braze, and how to use these tools to see how engaged your users are"
+tool: Campaigns
 ---
 # Conversion Events
 

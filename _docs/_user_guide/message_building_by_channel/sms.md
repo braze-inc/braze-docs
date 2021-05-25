@@ -2,6 +2,9 @@
 nav_title: SMS & MMS
 page_order: 4
 layout: dev_guide
+channel:
+  - SMS
+  - MMS
 
 guide_top_header: "SMS & MMS"
 guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Note that SMS & MMS are __not__ available out-of-the-box and must be purchased. Check out the topics below to get started with Braze SMS or MMS!"

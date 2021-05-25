@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "cards" : [
         {
             "id" : (string) Card API Identifier,
-            "type" : (string) type of the card - NewsItem (classic cards), CaptionedImage, Banner or DevPick (cross-promotional cards),
+            "type" : (string) type of the card - NewsItem (classic cards), CaptionedImage, Banner
             "title" : (string) title of the card,
             "tags" : (array) tag names associated with the card
         },

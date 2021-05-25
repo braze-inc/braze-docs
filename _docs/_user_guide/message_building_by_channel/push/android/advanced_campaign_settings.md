@@ -6,10 +6,8 @@ description: "This reference article covers some Advanced Push Campaign settings
 
 platform: Android
 channel:
-  - Push
+  - push
 tool:
-  - Docs
-  - Dashboard
   - Campaigns
 ---
 
@@ -21,13 +19,13 @@ tool:
 
 ## Notification Priority
 
-The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life whereas high priority messages are always sent immediately.
+The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life, whereas high priority messages are always sent immediately.
 
-This feature is useful for differentiating your messages based on how critical or time-sensitive they are. For example, a notification about dangerous road conditions would be a good candidate to receive a high priority, while a notification about an ongoing sale should receive a lower priority. You should consider whether or not using a disruptive priority is actually necessary for the notification that you are sending as constantly taking the top spot in your users' inbox or interrupting their other activities may have a negative impact.
+This feature is useful for differentiating your messages based on how critical or time-sensitive they are. For example, a notification about dangerous road conditions would be a good candidate to receive a high priority, while a notification about an ongoing sale should receive a lower priority. You should consider whether or not using a disruptive priority is actually necessary for the notification that you are sending, as constantly taking the top spot in your users' inbox or interrupting their other activities may have a negative impact.
 
-In Android O, notification priority became a property of notification channels. You will need to work with your developer to define the priority for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notification sounds. For devices running versions of Android before O, specifying a priority level for Android and Fire OS notifications is possible via the Braze dashboard and Messaging API. 
+In Android O, notification priority became a property of notification channels. You will need to work with your developer to define the priority for a channel during its configuration and then use the dashboard to select the proper channel when sending your notification sounds. For devices running versions of Android before O, specifying a priority level for Android and Fire OS notifications is possible via the Braze dashboard and Messaging API. 
 
-To message your full userbase with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration][17] (to target O+ devices) *and* send the individual priority from the dashboard (to target <O devices).
+To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration][17] (to target O+ devices) *and* send the individual priority from the dashboard (to target <O devices).
 
 The priority levels that you can set on Android or Fire OS push notifications are:
 
@@ -36,7 +34,7 @@ The priority levels that you can set on Android or Fire OS push notifications ar
 | Max      | Urgent or time-critical messages | `2` |
 | High     | Important communication, such as a new message from a friend    | `1` |
 | Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0` |
-| Low      | Information that you want users to know about, but does not require immediate action                   | `-1`|
+| Low      | Information that you want users to know about but does not require immediate action                   | `-1`|
 | Min      | Contextual or background information.                                                                  | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -45,12 +43,12 @@ For more information, please consult [Google's documentation on Android notifica
 
 ## Delivery Options
 
-Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
+Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate with your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
 
-For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing team's score, for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
+For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing team's scores for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive ten redundant notifications. We have a couple of options available to solve this problem.
 
 - A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones. However, if the phone correctly receives the original push notifications, then the Notification ID will not replace the already delivered notification(s).<br><br>
-- The __"Time to Live"__ field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
+- The __"Time to Live"__ field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are four weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device four weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
 > FCM has a limit of 4 Notification IDs per app. If you use more than 4 Notification IDs, FCM does not make any guarantees as to which ones will be respected. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional Notification IDs for Android messages.
 
@@ -58,7 +56,7 @@ For more information on these delivery options, please see the [Firebase Cloud M
 
 ## Summary Text
 
-Summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
+The summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
 
 ![Summary Text Example][9]
 
@@ -78,15 +76,15 @@ The __"Custom URL"__ feature allows you to specify a Web URL or an Android resou
 
 ## Sounds
 
-In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notifications.
+In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
 
-For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g. `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g., `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
 ![Sounds][11]
 
 Enter the full sound resource URI (e.g. `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
-To message your full userbase with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) *and* send the individual sound from the dashboard (to target <O devices).
+To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) *and* send the individual sound from the dashboard (to target <O devices).
 
 [1]: {% image_buster /assets/img_archive/android_advanced_settings.png %}
 [2]: http://developer.android.com/design/patterns/notifications.html

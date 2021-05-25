@@ -1,16 +1,10 @@
 ---
 nav_title: "User Data Migration"
 page_order: 4
-description: "This reference article runs through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze."
+description: "This reference article runs through all the considerations a non-native SMS user should keep in mind when migrating user data to Braze."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

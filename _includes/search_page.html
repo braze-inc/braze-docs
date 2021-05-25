@@ -65,8 +65,7 @@
 
       if ($.urlParam(k)) {
         for (var i = 0; i < v.length; i++) {
-          $(v[i]).val($.urlParam(k).replace(/\+/g, ' ').replace(/\%20/g, ' '));
-
+          $(v[i]).val($.urlParam(k).replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\%2F/g,'/'));
         }
       };
       {% if include.urlsearch %}
