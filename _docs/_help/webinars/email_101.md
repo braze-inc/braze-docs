@@ -1,6 +1,10 @@
 ---
 nav_title: Email 101
 page_order: 5
+
+page_type: reference
+description: "This article contains an archived webinar that covers how Braze can properly ramp up your campaigns and ensure emails are successfully delivered to the right users."
+channel: email
 ---
 
 # Email 101

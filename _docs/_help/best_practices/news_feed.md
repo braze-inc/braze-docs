@@ -1,6 +1,10 @@
 ---
 nav_title: News Feed
 page_order: 3
+
+page_type: reference
+description: "This article provides best practices for designing and customizing News Feed cards."
+channel: news feed
 ---
 # News Feed
 

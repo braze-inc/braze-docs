@@ -2,6 +2,10 @@
 page_order: 6
 nav_title: FAQs
 hide_toc: true
+
+page_type: reference
+description: "This page is home to frequently asked questions about the Braze Dashboard and its features."
+
 ---
 # Frequently Asked Questions
 

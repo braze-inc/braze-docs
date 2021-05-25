@@ -1,6 +1,10 @@
 ---
 nav_title: Canvas Entry Steps and Conditions
 page_order: 2
+
+page_type: reference
+description: "This page contains an archived webinar on entry steps and conditions for Canvas."
+tool: Canvas
 ---
 
 # Canvas: Entry Steps and Conditions

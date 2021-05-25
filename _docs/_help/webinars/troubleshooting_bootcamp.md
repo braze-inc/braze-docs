@@ -1,6 +1,9 @@
 ---
 nav_title: Troubleshooting Bootcamp
 page_order: 10
+
+page_type: reference
+description: "This article contains an archived webinar that provides tips for maintaining a robust implementation, and an overview of the tools and resources at your disposal."
 ---
 
 # Troubleshooting Bootcamp

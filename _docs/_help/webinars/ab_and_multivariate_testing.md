@@ -1,6 +1,9 @@
 ---
 nav_title: A/B and Multivariate Testing
 page_order: 0
+
+page_type: reference
+description: "This page contains an archived webinar on A/B and Multivariate Testing."
 ---
 
 # A/B and Multivariate Testing

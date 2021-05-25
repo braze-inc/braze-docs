@@ -1,6 +1,10 @@
 ---
 nav_title: Content-Specific Email Tips & Tricks
 page_order: 1
+
+page_type: reference
+description: "This article covers content-specific tips and tricks for various email use cases, such as onboarding, retention, and more."
+channel: email
 ---
 
 # Content-Specific Email Tips & Tricks

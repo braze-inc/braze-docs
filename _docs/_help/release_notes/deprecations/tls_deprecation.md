@@ -1,6 +1,9 @@
 ---
 nav_title: TLS 1.0 & 1.1 Deprecation
 page_order: 2
+
+page_type: update
+description: "This article describes Braze's deprecation of TLS 1.0 and TLS 1.1, completed in May 2018."
 ---
 # TLS 1.0 & 1.1 Deprecation
 

@@ -1,9 +1,13 @@
 ---
 nav_title: Audience Sync to Facebook
 title: Audience Sync to Facebook
-description: ""
+description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation and more."
 page_order: 4
 alias: "/audience_sync_facebook/"
+
+Tool:
+  - Dashboard
+
 ---
 
 # Audience Sync to Facebook
