@@ -71,10 +71,11 @@ Additionally, for multivariate messages, you can see the number of conversions a
 
 ### Email Messages
 
-For email messages that are a part of multichannel or multivariate campaigns, Braze provides two additional conversion metrics that attribute conversion actions to message interaction:
+For email messages that are a part of multichannel or multivariate campaigns, Braze provides three additional conversion metrics that attribute conversion actions to message interaction:
 
-- **Open Conversion:** The number and percentage of unique email recipients who have, within the selected conversion window, opened the email and then converted.
-- **Click Conversion:** The number and percentage of unique email recipients who have, within the selected conversion window, clicked the email and then converted.
+- **Received and Converted:** The number and percentage of unique email recipients who have, within the selected conversion window, received the email and then converted.
+- **Opened and Converted:** The number and percentage of unique email recipients who have, within the selected conversion window, opened the email and then converted.
+- **Clicked and Converted:** The number and percentage of unique email recipients who have, within the selected conversion window, clicked the email and then converted.
 
 {% alert note %}
 In multivariate campaigns, these metrics will be broken out separately for each variant, allowing you to compare attributed conversions for each version of your test.
