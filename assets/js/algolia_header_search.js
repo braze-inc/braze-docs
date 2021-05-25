@@ -48,7 +48,6 @@ $(document).ready(function () {
              return createElement("div", {
                dangerouslySetInnerHTML: {
                  __html: '<div class="no_results">No results were found with your current search. Try to change the search query.</div>',
-                 __id: 'abc'
                  },
                })
           },
