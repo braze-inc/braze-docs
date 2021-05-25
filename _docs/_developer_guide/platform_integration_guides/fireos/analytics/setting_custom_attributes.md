@@ -3,6 +3,8 @@ nav_title: Setting Custom Attributes
 platform: FireOS
 page_order: 3
 
+page_type: reference
+description: "This article covers methods for assigning custom attributes to users."
 ---
 ## Setting Custom Attributes
 

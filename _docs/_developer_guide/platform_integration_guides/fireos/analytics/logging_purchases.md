@@ -3,6 +3,8 @@ nav_title: Logging Purchases
 platform: FireOS
 page_order: 4
 
+page_type: reference
+description: "This page describes how to record in-app purchases for your FireOS app."
 ---
 ## Logging Purchases
 
