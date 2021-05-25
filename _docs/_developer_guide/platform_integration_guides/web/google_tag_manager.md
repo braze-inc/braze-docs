@@ -29,11 +29,11 @@ Search for "Braze" in the Community Template Gallery, and choose the Braze Initi
 
 ![Initialization Tag Template][4]
 
-#### 2. Configure App Settings
+#### 2. Configure Settings
 
-Enter your Braze SDK API Key and SDK Endpoint, which can be found in your Dashboard's [App Settings][6].
+Enter your Braze SDK API Key and SDK Endpoint, which can be found in your Dashboard's [Settings][6] page.
 
-#### 3. Initialization Options
+#### 3. Choose Initialization Options
 
 Choose from the optional set of additional initialization options as described in the [Initial Setup][7] guide.
 

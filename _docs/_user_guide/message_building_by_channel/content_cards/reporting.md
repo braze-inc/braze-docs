@@ -1,7 +1,14 @@
 ---
 nav_title: Reporting & Analytics
 page_order: 4
-description: "This reference article covers Content Card reporting and analytics."
+description: "This reference article covers the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
+
+channel:
+  - content cards
+tool:
+  - Dashboard
+  - Campaigns
+  - Reports
 ---
 
 # Reporting & Analytics
@@ -10,7 +17,7 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 
 ## Content Card Metrics
 
-- **Recipients**: The number of users who have received a Content Card which received at least one impression.
+- **Recipients**: The number of users who have received a Content Card that received at least one impression.
 - **Impressions**: The number of times a Content Card was visible and on-screen.
 - **Clicks**: The number of times a user has clicked the CTA Link of a Content Card.
 - **Dismissals**: The number of times a user has swiped away or clicked to dismiss a Content Card.
@@ -27,7 +34,7 @@ If you have a customized feed, be sure to log impressions for control cards to i
 
 ## Reporting in Campaigns
 
-Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has their own useful purpose.
+Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has its own useful purpose.
 
 {% tabs %}
 

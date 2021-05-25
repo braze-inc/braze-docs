@@ -33,7 +33,7 @@ guide_featured_list:
   link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/advanced_settings/
   fa_icon: fas fa-sliders-h
 - name: Implementation Guide
-  link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/
+  link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/
   fa_icon: fas fa-user-check
 ---
 

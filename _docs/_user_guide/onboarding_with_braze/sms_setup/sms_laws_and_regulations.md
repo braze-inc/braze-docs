@@ -5,7 +5,6 @@ description: "This reference article covers laws and regulations surrounding SMS
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
 
 platform:

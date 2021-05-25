@@ -153,7 +153,7 @@ Please see the following sections in order to enable [custom event tracking]({{s
 ## Test Your Basic Integration
 
 ### Confirm Session Tracking Is Working
-At this point, you should have session tracking working in your Braze integration.  To test this, go to the `App Usage` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`.  Then open your app and refresh the page - your main metrics should all have increased by 1.
+At this point, you should have session tracking working in your Braze integration.  To test this, go to **Overview**, select your application from the selected app name dropdown (defaulted to "All Apps"), and set **Display Data For** to "Today". Then open your app and refresh the page - your main metrics should all have increased by 1.
 
 ![Sessions working][55]
 

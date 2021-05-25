@@ -1,7 +1,12 @@
 ---
 nav_title: Web SDK
 page_order: 3
-description: "With Braze’s Web SDK, you can collect session data, identify users (with the same set of attributes that we support across our other platforms), and record purchases and custom events via a web/mobile browser. Implementing Braze's Web SDK enables you to create a more complete view of your users across web and mobile channels."
+
+page_type: reference
+description: "This reference article covers implementing Braze's Web SDK."
+channel: 
+- in-app messages
+- push
 ---
 # Web SDK
 
@@ -46,7 +51,7 @@ You can create a segment of your web users by selecting only your website’s ap
 This will allow you to target users based on their behavior on the web only. If you wanted to target web users to encourage them to download your mobile app, you’d create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website’s icon in your segment.
 
 [1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility
-[2]: https://developer.microsoft.com/en-us/microsoft-edge/platform/status/pushapi/
+[2]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/
 [3]: https://developer.apple.com/notifications/safari-push-notifications/
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [7]: {% image_buster /assets/img_archive/web-app-group.png %}

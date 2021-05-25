@@ -98,7 +98,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-##### Enable geofences from the App Settings page:
+##### Enable geofences from the Settings page:
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 

@@ -10,8 +10,9 @@ guide_top_text: "The ubiquity and flexibility of mobile technology allows market
 - When a user opens your app, <strong>location tracking</strong> captures their most recent locations using GPS location data. This allows you to see where your users have been and segment this data.<br>
 - <strong>Geofences</strong> are defined virtual geographic areas. If a user has enabled background location tracking, you can use geofences to trigger campaigns in real-time when a user is in a geofence. Geofences are only available in select Braze packages. For access, please reach out to your Braze representative."
 
-
-description: "Using the Braze platform, you can create and enhance relationships with your users based upon their location in the real world, unlocking a powerful set of deeply connected interactions."
+page_type: landing
+tool: Location
+description: "This landing page is home to articles on Locations and Geofences. Here you can find resources on location tracking, creating geofences, mobile integrations, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

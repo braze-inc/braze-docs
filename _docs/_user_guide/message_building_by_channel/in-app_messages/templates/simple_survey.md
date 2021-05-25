@@ -1,10 +1,14 @@
 ---
-nav_title: Simple Survey
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+nav_title: "Simple Survey"
 page_order: 1.5
+page_type: reference
 hidden: true
-description: "Collect user attributes, insights, and preferences to power your campaign strategy using new In-App Message Surveys."
+description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the new in-app message surveys."
+channel:
+  - in-app messages
+tool:
+  - Media
+  - Templates
 ---
 <br>
 {% alert important %}
@@ -21,7 +25,7 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 ## SDK Requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that use at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 

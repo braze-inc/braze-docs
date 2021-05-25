@@ -31,7 +31,7 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
         <ApiKey>YOUR_API_KEY_HERE</ApiKey>
     </AppboyConfig>
 ```
->  Be sure to update `YOUR_API_KEY_HERE` with your API key which can found on the [App Settings][1] page within the Braze Dashboard.
+>  Be sure to update `YOUR_API_KEY_HERE` with your API key which can found on the [Settings][1] page within the Braze Dashboard.
 
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 
@@ -71,6 +71,6 @@ Braze should now be collecting data from your application. Please see the follow
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as “AppboyPlatform.Universal.Appboy”
 
-[1]: https://dashboard-01.braze.com/app_settings/app_settings "App Settings"
+[1]: https://dashboard-01.braze.com/app_settings/app_settings "Settings"
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

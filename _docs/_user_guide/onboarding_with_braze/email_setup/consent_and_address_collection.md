@@ -1,7 +1,10 @@
 ---
 nav_title: Consent & Address Collection
 page_order: 2
-description: "Before sending out your initial emails, it's important to get permission from your customers first. It's a common courtesy and does wonders for your open rates!"
+
+page_type: reference
+description: "This reference article covers best practices for gathering consent and user email addresses, and defines the different possible user subscriber states."
+channel: email
 ---
 
 # Consent

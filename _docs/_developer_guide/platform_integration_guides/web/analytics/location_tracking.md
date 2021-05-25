@@ -8,25 +8,48 @@ description: "This article covers how to enable location tracking via the Braze 
 ---
 ## Location Tracking
 
-To enable location tracking via the Braze Web SDK, call
+To set a user's current location, use the [`getCurrentPosition()`][0] method of the Geolocation API and log the location data to Braze.
 
+```javascript
+function success(position) {
+  var coords = position.coords;
+  appboy.getUser().setLastKnownLocation(
+    coords.latitude,
+    coords.longitude,
+    coords.accuracy,
+    coords.altitude,
+    coords.altitudeAccuracy
+  );
+}
+
+navigator.geolocation.getCurrentPosition(success);
 ```
-appboy.trackLocation();
-```
 
-This will cause the Braze Web SDK to continuously collect the user's location (in browsers that support it), whenever your site is visible in the foreground of the user's browser. This location collection will continue for the duration of the page load (you should call this method for each page on which you want the location to be tracked). Note that calling this will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs][0] for more information.
-
-### Logging A Single Location
-
-To manually set a user's last known location yourself, you can use
-
-```
-appboy.getUser().setLastKnownLocation(latitude, longitude, accuracy, altitude, altitudeAccuracy);
-```
-
-See the [JSDocs][1] for more information.
+Note that calling `navigator.geolocation.getCurrentPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs][1] for more information on setting the user's last known location.
 
 Additionally, when the Web SDK sends data to Braze servers, the user's country will be automatically detected from their IP Address if it has not been manually set by your application.
 
-[0]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.trackLocation
+### Continuous Tracking
+
+If you'd like to continuously track a user's location during a page load, use the `watchPosition()` method of the Geolocation API. This method will invoke the success callback each time the user's location is updated.
+
+```javascript
+function success(position) {
+  var coords = position.coords;
+  appboy.getUser().setLastKnownLocation(
+    coords.latitude,
+    coords.longitude,
+    coords.accuracy,
+    coords.altitude,
+    coords.altitudeAccuracy
+  );
+}
+
+navigator.geolocation.watchPosition(success);
+```
+
+Calling `navigator.geolocation.watchPosition()` will immediately request permission from the user unless they have already granted or denied permission. For information about configuring and stopping the location tracking, see the [Mozilla developer docs][2].
+
+[0]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html#setLastKnownLocation
+[2]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition

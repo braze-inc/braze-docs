@@ -4,10 +4,11 @@ platform: Campaigns
 subplatform: Testing and More
 page_order: 4
 
-
-tools: campaigns
+tool: 
+- Campaigns
+- Reports
 page_type: reference
-description: "This reference goes over how to measure user retention for users who performed a selected retention event in a specific campaign."
+description: "This reference article goes over how to measure user retention for users who performed a selected retention event in a specific campaign."
 ---
 
 # Retention Report

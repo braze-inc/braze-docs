@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: .9
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference article covers time-based functionalities for Campaigns."
 ---

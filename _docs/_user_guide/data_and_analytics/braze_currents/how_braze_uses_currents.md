@@ -3,8 +3,8 @@ nav_title: How Braze Uses Currents
 page_order: 6
 
 page_type: tutorial
-description: "This Currents article will walk you through the basic process for setting up proper intakes for event data, as well as moving it into a database and BI tool."
-tool: currents
+description: "This Currents how-to article will walk you through the basic process for setting up proper intakes for event data, as well as moving it into a database and BI tool."
+tool: Currents
 ---
 
 # How Braze Uses Currents

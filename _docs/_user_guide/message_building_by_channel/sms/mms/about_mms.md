@@ -1,16 +1,8 @@
 ---
 nav_title: "About MMS"
 page_order: 0
-description: "This reference article covers general use cases of the MMS channel."
+description: "This reference article covers what MMS message are and general use cases of the MMS channel."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - MMS

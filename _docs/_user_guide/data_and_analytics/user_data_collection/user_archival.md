@@ -1,7 +1,10 @@
 ---
 nav_title: User Archival Definitions
 page_order: 0
+
+page_type: reference
 description: "This reference article covers user archival definitions."
+tool: Dashboard
 ---
 # User Archival Definitions
 Each week, Braze runs a process to remove Inactive Users and Dormant Users from the Braze Services.

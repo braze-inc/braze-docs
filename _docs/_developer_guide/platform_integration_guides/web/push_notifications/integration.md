@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "This article describes how to integrate Braze Web Push via the Braze SDK."
 ---
-## Integration
+# Integration
 
 A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site.
 
@@ -15,11 +15,11 @@ Visit our [documentation][7] for additional best practices.
 
 Web push notifications are implemented using the [W3C Push standard][1], which browsers are in the process of supporting. Currently, the browsers which support web push include most versions of Chrome, Firefox, and Opera. Web Push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple Push Notification Services; Braze supports these Safari notifications as well.
 
-### HTTPS Requirement
+## HTTPS Requirement
 
 Web standards require that the domain requesting push notification permission be secure.
 
-#### What defines a secure site?
+### What defines a secure site?
 
 A site is deemed secure if it matches one of the following secure origin patterns:
 
@@ -34,11 +34,11 @@ A site is deemed secure if it matches one of the following secure origin pattern
 
 This is a security requirement in the open standards specification that Braze Web Push is built on, and prevents man-in-the-middle attacks.
 
-#### What if a secure site is not available?
+### What if a secure site is not available?
 
 While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate Push Domain][28] or view a working demo [here][4].
 
-### Step 1: Configure your Site's Service Worker
+## Step 1: Configure your Site's Service Worker
 
 - If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.
 
@@ -47,14 +47,14 @@ While industry best practice is to make your whole site secure, customers who ca
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 
-#### What if I can't register a Service Worker in the root directory?
+### What if I can't register a Service Worker in the root directory?
 
 By default, a Service Worker can only be used within the same directory it is registered in. For example, if your Service Worker file exists in `/assets/service-worker.js`, then it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the Service Worker in the root directory (i.e. `https://example.com/service-worker.js`).
 
 If you are unable to register a Service Worker in your root domain, an alternative approach is to use the [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) HTTP Header when serving your Service Worker file. By configuring your server to return `Service-Worker-Allowed: /` in the response for the Service Worker, this will instruct the browser to broaden the scope and allow it to be used from within a different directory, like the homepage-even when the file exists in a deeper directory.
 
 
-### Step 2: Browser Registration
+## Step 2: Browser Registration
 
 In order for a browser to receive push notifications, you must register it for push by calling ```appboy.registerAppboyPushMessages()```. This will immediately request push permission from the user. 
 
@@ -66,13 +66,13 @@ If you wish to unsubscribe a user, you can do so by calling ```appboy.unregister
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g. from a button click handler or soft push prompt). This is also consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
-### Step 3: Configure Safari Push
+## Step 3: Configure Safari Push
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
 * [Generate a Safari Push Certificate following these "Registering with Apple" instructions][3]
-* In the Braze dashboard, on the App Settings page (where your API keys are located), select your Web app. Click "Configure Safari Push" and follow the instructions, uploading the push certificate you just generated.
-* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate, for example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
+* In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
+* When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
 ### Common Issues
 

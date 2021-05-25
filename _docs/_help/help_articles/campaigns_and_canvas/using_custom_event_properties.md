@@ -36,7 +36,7 @@ For further information see:
 
 ### Verify Log
 
-To confirm that the event properties are successfully tracked, you can view all event properties by going to the Manage App Groups page, clicking on the Custom Events tab, then clicking on Manage Properties. This will show you the names of all of the properties associated with an event.
+To confirm that the event properties are successfully tracked, you can view all event properties by going to the Manage Settings page, clicking on the Custom Events tab, then clicking on Manage Properties. This will show you the names of all of the properties associated with an event.
 
 ### Verify Values
 

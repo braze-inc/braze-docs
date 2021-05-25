@@ -1,6 +1,9 @@
 ---
 nav_title: SDK Endpoints
 page_order: 1
+
+page_type: reference
+description: "This reference article covers Braze's SDK Endpoints and their use."
 ---
 
 # SDK Endpoints

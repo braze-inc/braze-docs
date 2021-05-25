@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 1.9
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."
 ---

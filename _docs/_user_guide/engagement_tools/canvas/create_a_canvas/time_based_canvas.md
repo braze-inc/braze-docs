@@ -6,11 +6,11 @@ page_order: .9
 
 tools: campaigns
 page_type: reference
-description: "This reference article covers time-based functionalities for Canvas."
+description: "This reference article covers definitions, time zones, and examples of time-based functionalities for Canvas."
 ---
 # Time-Based Functionalities for Canvas
 
-> This document serves to inform you of the nuances of any time-related capabilities in Braze relating to Canvas to assist with customer questions/strategies, as well as with troubleshooting. It outlines the definition of that term or capability, the time zone it pertains to if any, an example for clarity, and other additional caveats and notes.
+> This reference article covers time-based functionalities for Canvas to assist with customer questions, strategies, and troubleshooting. For each term or capability, it outlines the definition, the time zone it pertains to (if any), an example for clarity, and other additional notes.
 
 ### Schedule Delay - Send "in x day(s) at y am/pm"
 

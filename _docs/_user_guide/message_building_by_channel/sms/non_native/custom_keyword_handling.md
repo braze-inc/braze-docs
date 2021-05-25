@@ -1,16 +1,10 @@
 ---
 nav_title: Custom Keyword Handling
 page_order: 1.5
-description: "This reference article covers how Braze processes custom keywords."
+description: "This reference article covers how Braze processes custom keywords for non-native SMS users."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

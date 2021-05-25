@@ -4,9 +4,12 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 2
 
-tools: campaigns
 page_type: reference
 description: "This reference article goes over how and why you should consider retargeting campaigns based on messages your users receive."
+tool:
+- Campaigns
+- Canvas
+- Segments
 ---
 # Retargeting Campaigns
 

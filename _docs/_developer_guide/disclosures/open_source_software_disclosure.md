@@ -6,6 +6,10 @@ page_type: reference
 description: "This page is home to the open source software disclosure for the Braze Services."
 ---
 
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
+
 # Open Source Software Disclosure for the Braze Services
 
 _(effective as of August 29, 2018; subject to change)_

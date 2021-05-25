@@ -4,7 +4,9 @@ platform: Canvas
 subplatform: Testing and More
 page_order: 3
 
-tools: canvas
+tool: 
+- Canvas
+- Reports
 page_type: reference
 description: "This reference goes over how to measure user retention for users who performed a selected retention event in a specific canvas."
 ---

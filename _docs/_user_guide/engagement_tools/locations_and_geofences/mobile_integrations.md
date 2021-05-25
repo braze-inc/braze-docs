@@ -1,8 +1,10 @@
 ---
 nav_title: Mobile Integrations
 page_order: 2
-description: "This reference article covers the neccesary mobile integrations involved in using GeoFences."
 
+page_type: reference
+description: "This reference article covers the neccesary mobile integrations involved in using Geofences."
+tool: Location
 ---
 
 # Mobile Integrations

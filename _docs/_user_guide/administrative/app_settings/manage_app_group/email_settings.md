@@ -2,11 +2,14 @@
 nav_title: Email Settings
 page_type: reference
 page_order: 3
+
+description: "This reference article covers email settings in the Braze Dashboard."
+tool: Dashboard
 ---
 
 # Email Settings
 
-Email settings can be found within the Manage App Group page of the Dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
+Email settings can be found within the Manage Settings page of the Dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
 
 ## Outbound Email Settings
 
