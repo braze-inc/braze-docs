@@ -219,5 +219,12 @@ glossaries:
       - iOS Push
       - Android Push
       - SMS
-
+  - name: Open Conversion Rate
+    description: The percentage of unique email recipients who have, within the selected conversion window, opened the email and then converted.
+    tags:
+      - Email
+  - name: Click Conversion Rate
+    description: The percentage of unique email recipients who have, within the selected conversion window, clicked the email and then converted.
+    tags: 
+      - Email
 ---
