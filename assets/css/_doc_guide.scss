@@ -2,7 +2,13 @@ $doc_transition_time : 0.25s;
 .doc-container {
   position: absolute;
   top: 60px;
-  width: inherit;
+  max-width: calc(100% - 30px);
+  @media (min-width: $window-medium-px) {
+    max-width: calc(100% - 45px);
+  }
+  @media (min-width: $window-xxlarge-px) {
+    max-width: 100%;
+  }
   margin-top: 20px;
   z-index: 10;
   .doc-row {

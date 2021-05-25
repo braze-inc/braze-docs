@@ -1,7 +1,4 @@
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch-theme-algolia.min.css" />
 
 {% css_asset_tag search %}
 - /assets/css/search_page.scss
@@ -15,19 +12,18 @@
         {%- unless include.urlsearch -%}
         <h1 style="padding-top:40px;color: #212123;">Advanced Search </h1>
         {%- endunless -%}
-
-      <form id="search_form">
-        <input type="text" id="search_box" value="" name="search_box" style="width: 100%;"/>
+        <div id="search_box" value="" name="search_box" style="width: 100%;"> </div>
         <div id="search_stats"></div>
-
-      </form>
     </div>
   </div>
   <div class="row flex-xl-nowrap">
     <div class="col-12 col-md-4">
+      <div> <div class="search_refinement_title">Type</div>
      <div id="search_type"></div>
+     </div>
+     <div><div class="search_refinement_title">Category</div>
      <div id="search_category"></div>
-
+     </div>
     <div id="clear-all"></div>
 
 
@@ -105,7 +101,12 @@
     Array.prototype.upCaseWord = function() {
       return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
     };
-
+    function adjustlabel(data) {
+      return data.map(d => {
+        d.highlighted = d.highlighted.replace(/\_/g,' ').replaceUnder().upCaseWord().mapReplace(wordmap)
+        return d;
+      });
+    }
     function hitTemplate(hit) {
       var content = '';
       var title = '';
@@ -197,21 +198,16 @@
       'GPDR' : 'GPDR',
       'mParticle' : 'mParticle'
     }
-
+    const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
     var instant_search = instantsearch({
-      appId: "{{ site.algolia.application_id }}",
-      apiKey: "{{ site.algolia.algolia_api_key }}",
       indexName: "{{ site.algolia.index_name }}",
-      searchParameters: {
-        hitsPerPage: 10,
-        attributesToSnippet: ["description:24"],
-        snippetEllipsisText: " [...]"
-      },
+      searchClient,
       routing: {
         stateMapping: {
-          stateToRoute(uiState) {
+          stateToRoute(uiIState) {
+            const uiState = uiIState['DocSearch'];
             return {
-              query: uiState.query,
+              query: uiState.query || $.urlParam('q '),
               // we use the character ~ as it is one that is rarely present in data and renders well in urls
               types: uiState.refinementList && uiState.refinementList.type && uiState.refinementList.type.join('~'),
               categories: uiState.refinementList && uiState.refinementList.category && uiState.refinementList.category.join('~'),
@@ -220,119 +216,81 @@
           },
           routeToState(routeState) {
             return {
-              query: routeState.query,
-              refinementList: {
-                type: routeState.types && routeState.types.split('~'),
-                category: routeState.categorys && routeState.categories.split('~')
-
-              },
-              page: routeState.page
+              "DocSearch" : {
+                query: routeState.query || $.urlParam('q'),
+                refinementList: {
+                  type: routeState.types && routeState.types.split('~'),
+                  category: routeState.categories && routeState.categories.split('~')
+                },
+                page: routeState.page
+              }
             };
           }
         }
       },
-      searchFunction: function(helper) {
-        if (helper.state.query === '') {
-          if ($(searchbox).val()) {
-            helper.clearRefinements().search();
-          }
-          return;
-        }
-
-        helper.search();
-      }
     });
 
-    instant_search.addWidget(
-      instantsearch.widgets.hits({
-        container: "#search_hits",
-        templates: {
-          empty: "No results.",
-          item: function(hit) {
-            return hitTemplate(hit);
-          }
-        }
-      })
-    );
-
-    instant_search.addWidget(
+    instant_search.addWidgets([
       instantsearch.widgets.searchBox({
         container: searchbox,
-        placeholder: "Search...",
-        autofocus: false
-      })
-    );
-
-    instant_search.addWidget(
+      }),
+      instantsearch.widgets.configure({
+        hitsPerPage: 10,
+      }),
+      instantsearch.widgets.clearRefinements({
+        container: '#clear-all',
+        templates: {
+          resetLabel: 'Reset Filters',
+        },
+      }),
+      instantsearch.widgets.refinementList({
+        container: '#search_category',
+        limit: 20,
+        attribute: 'category',
+        templates: {
+          label: '<div>Category</div>',
+        },
+        transformItems(items) {
+          return adjustlabel(items)
+        }
+      }),
+      instantsearch.widgets.hits({
+        container: '#search_hits',
+        attributesToSnippet: ["description:24"],
+        snippetEllipsisText: " [...]",
+        templates: {
+          item: function(hit) {
+            return hitTemplate(hit);
+          },
+        },
+      }),
       instantsearch.widgets.stats({
         container: "#search_stats",
         templates: {
-          body(hit) {
-            var cleanedquery = hit.query.sanitize();
-            return `⚡️ <strong>${hit.nbHits}</strong> results found ${
-           hit.query != "" ? `for <strong>"${ cleanedquery }"</strong>` : ``
-         } in <strong>${hit.processingTimeMS}ms</strong>`;
+          text: function(hit) {
+              var cleanedquery = hit.query.sanitize();
+              return `⚡️ <strong>${hit.nbHits}</strong> results found ${
+             hit.query != "" ? `for <strong>"${ cleanedquery }"</strong>` : ``
+           } in <strong>${hit.processingTimeMS}ms</strong>`;
           }
         }
-      })
-    );
-    function adjustlabel(data) {
-      data.highlighted = data.label.replace(/\_/g,' ').replaceUnder().upCaseWord().mapReplace(wordmap);
-      return data;
-    }
-
-    instant_search.addWidget(
+      }),
       instantsearch.widgets.refinementList({
         container: "#search_type",
-        attributeName: "type",
+        attribute: "type",
         sortBy: ['name:asc'],
-        autoHideContainer: false,
         templates: {
           header: "Section"
         },
-        transformData: {
-          item: adjustlabel
+        transformItems(items) {
+          return adjustlabel(items)
         }
-      })
-    );
-
-    instant_search.addWidget(
-      instantsearch.widgets.refinementList({
-        container: "#search_category",
-        attributeName: "category",
-        limit: 20,
-        // searchForFacetValues: {
-        //   placeholder: 'Filter for category...'
-        // },
-        autoHideContainer: false,
-        templates: {
-          header: "Category"
-        },
-        transformData: {
-          item: adjustlabel
-        }
-      })
-    );
-    instant_search.addWidget(
-      instantsearch.widgets.clearAll({
-        container: '#clear-all',
-        templates: {
-          link: 'Reset'
-        },
-        autoHideContainer: false,
-        clearsQuery: true
-      })
-    );
-    instant_search.addWidget(
+      }),
       instantsearch.widgets.pagination({
-        container: "#search_pagination"
-      })
-    );
-    $(searchbox).keypress(function(event) {
-      if (event.keyCode === 10 || event.keyCode === 13) {
-        event.preventDefault();
-      }
-    });
+        container: '#search_pagination',
+      }),
+    ]);
+
     instant_search.start();
   });
 </script>
