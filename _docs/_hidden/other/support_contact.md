@@ -1124,7 +1124,7 @@ $( document ).ready(function() {
   autocomplete({
     container: "#support-search-div",
     panelContainer: "#support-search-panel",
-    debug: algolia_debug,
+    debug: true,
     placeholder: "Search",
     detachedMediaQuery: 'none',
     onSubmit(e){
