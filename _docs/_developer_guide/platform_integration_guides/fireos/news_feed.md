@@ -3,6 +3,9 @@ nav_title: News Feed
 platform: FireOS
 page_order: 3
 
+page_type: reference
+description: "This reference article provides an overview of the News Feed and how to integrate it in your FireOS app."
+channel: news feed
 ---
 # News Feed
 
