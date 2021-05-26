@@ -3,6 +3,9 @@ nav_title: Initial SDK Setup
 platform: React Native
 subplatform: iOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for iOS apps using React Native."
 ---
 # Initial SDK Setup
 
