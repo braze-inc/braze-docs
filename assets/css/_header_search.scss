@@ -85,7 +85,7 @@ $search_offset: 65px;
       }
       box-shadow: none;
       font-size: $base_font_size;
-
+      width: 106px;
       &:focus {
         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
           color: $grey-ghost;
