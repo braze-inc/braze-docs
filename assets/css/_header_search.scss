@@ -71,9 +71,10 @@ $search_offset: 65px;
       background-repeat: no-repeat;
       background-color: transparent;
       color: $navy-cove;
-      padding-left: 0px;
+      padding-left: 40px;
       padding-right: 0px;
       margin-right: 10px;
+      margin-left: -40px;
       //padding-right: 30px;
       border-width: 1px;
       border-color: transparent;
@@ -471,6 +472,8 @@ $search_offset: 65px;
     .aa-Input {
       box-shadow: none;
       margin-bottom: 0px !important;
+      padding-left: 0px !important;
+      margin-left: 0px !important;
     }
 
     .navbar-toggler {
