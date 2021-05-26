@@ -2,7 +2,7 @@
 nav_title: SDK Authentication
 page_order: 5
 hidden: true
-description: "Verify the identity of SDK requests"
+description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - ios
   - android

@@ -3,6 +3,8 @@ nav_title: Test Your Basic Integration
 page_order: 1
 
 platform: Android
+description: "This article covers how to test your basic integration for your Android application."
+
 ---
 
 # Test your Basic Integration

@@ -3,6 +3,7 @@ nav_title: Card Types
 page_order: 5
 
 platform: Android
+description: "This article covers different News Feed card types and the different card-specific properties available."
 ---
 
 # Card Types

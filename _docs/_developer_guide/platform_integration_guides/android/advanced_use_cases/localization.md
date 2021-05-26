@@ -2,6 +2,7 @@
 nav_title: Localization
 platform: Android
 page_order: 1
+description: "This refernece article covers localization, listing all the current languages supported by Braze."
 
 ---
 ## Localization

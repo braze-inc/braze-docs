@@ -2,6 +2,7 @@
 nav_title: Uninstall Tracking
 platform: Android
 page_order: 7
+description: "This article covers how to configure uninstall tracking for your Android application."
 
 ---
 ## Uninstall Tracking

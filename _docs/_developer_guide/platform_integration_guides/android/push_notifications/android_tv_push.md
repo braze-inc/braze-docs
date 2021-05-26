@@ -2,7 +2,7 @@
 nav_title: Android TV Push Implementation
 platform: Android
 page_order: 8
-
+description: "This article shows how to implement and test Android TV Push."
 ---
 # Android TV Push Implementation
 ![TV icon][12]{: style="float:right;max-width:25%;margin-bottom:15px; border: 0"}

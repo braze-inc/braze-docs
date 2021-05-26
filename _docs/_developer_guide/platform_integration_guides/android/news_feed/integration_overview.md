@@ -3,6 +3,7 @@ nav_title: Integration Overview
 page_order: 1
 
 platform: Android
+description: "This article covers an overview of how to integrate the News Feed into your Android application."
 ---
 
 # News Feed Integration Overview

@@ -2,6 +2,7 @@
 nav_title: Font Customization
 platform: Android
 page_order: 7
+description: "This reference article covers font customization options such as defining a font family and shows how to reference it throughout your application."
 
 ---
 

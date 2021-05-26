@@ -2,6 +2,7 @@
 nav_title: Integration
 platform: Android
 page_order: 0
+description: "This article covers how to integrate push notifications in your Android application."
 
 ---
 # Overview

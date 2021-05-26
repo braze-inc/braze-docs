@@ -2,6 +2,7 @@
 nav_title: Runtime Configuration
 platform: Android
 page_order: 4
+description: "This reference article covers how to set up runtime configuration for your Android application."
 
 ---
 ## Runtime Configuration
