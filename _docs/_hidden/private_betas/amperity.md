@@ -31,7 +31,7 @@ Amperity supports the Braze platform by providing a unified view of your custome
 
 To upload Amperity user data to Braze, you must first create a segment of existing Amperity users.
 1. Navigate to the __Segments__ tab within the Amperity dashboard.<br>![Amperity Segments Overview][2]<br><br>
-2. Select __Create__ to filter and define a segment of users to capture. Under the __Summary__ tab you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![Amperity Segment Builder][3] <br><br>
+2. Select __Create__ to filter and define a segment of users to capture. Under the __Summary__ tab, you can view valuable insights like historical revenue and predicted revenue for the coming year based on the given user segment. <br>![Amperity Segment Builder][3] <br><br>
 3. Select the __Customers__ tab, and choose which user fields you would like to include using the __Show Columns__ selector on the right.<br>![Amperity Segment Builder][4]<br><br>
 4. Next, click __Run Segment__.
 
@@ -47,10 +47,40 @@ __Once the segment has run, you can either:__
 
 #### Set Braze Destination
 
-First, you must activate the segment and set up the Braze destination workflow.<br>
-Amperity documentation on this topic can be found [here](https://docs.amperity.com/configure/destination_amazon_s3.html).
+##### Activate Segment
+![Segment 1][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-![Segment 1][6]{: style="max-width:30%;"} ![Segment 2][7]{: style="max-width:30%;"} ![Destination Configuration][8]{: style="max-width:37%;"}
+First, you must activate the segment by selecting __Activate Segment__ in the upper right corner of the page. 
+
+In the window that opens:
+- Name your destination __Braze__
+- Set the Data Template to __Default__
+- Enter your S3 bucket
+- Enter your S3 region
+- Set a file name template
+- Set the workflow query frequency
+
+Select __Activate__ 
+
+##### Set Up Destination
+
+![Destination Configuration][8]{: style="float:right;max-width:37%;margin-left:15px;"}
+
+Next, you must set up the Braze destination workflow by selecting the __Destination__ tab and clicking __Add Destination__.
+
+In the window that opens:
+- Name your destination __Braze__ and add an optional description
+- Select the __Amazon S3__ plugin
+- Set the credential type to __iam-credential__
+- Name and configure the credential based on your Amazon S3 settings
+- Enter your S3 bucket
+- Enter your S3 region
+- Set encoding to __None__
+- Include header row in output files
+
+Select __Save__
+
+Additional Amperity documentation on configuring Amazon S3 can be found [here](https://docs.amperity.com/configure/destination_amazon_s3.html).
 
 #### Send Data via AWS S3 Bucket
 
@@ -140,7 +170,6 @@ To read more about different aspects of the Lambda function such as monitoring a
 2. Upload the CSV file downloaded from Amperity.
 3. Once uploaded, confirm the default and custom attributes, assign an import name, and optionally create a group within the Braze platform from the uploaded Amperity segment. 
 4. Select __Start Import__.
-
 
 [2]: {% image_buster /assets/img/amperity/amperity2.png %} 
 [3]: {% image_buster /assets/img/amperity/amperity3.png %} 
