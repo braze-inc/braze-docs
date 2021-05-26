@@ -2,7 +2,7 @@
 nav_title: Disabling Android SDK Tracking
 platform: Android
 page_order: 8
-description: "This article shows how to diable data collection for your Android application."
+description: "This article shows how to disable data collection for your Android application."
 
 ---
 
