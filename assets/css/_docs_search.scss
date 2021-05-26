@@ -9,7 +9,7 @@ $search_transition_time: 0.25s;
 $search_footer_height: 50px;
 $search_offset: 65px;
 
-#doc-search-form_div {
+#doc-search-form_div, .algolia_overlay {
   justify-content: center;
   display: flex;
   margin: auto;

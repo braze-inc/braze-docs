@@ -19,6 +19,10 @@ $(document).ready(function () {
       var query = e.state.query;
       window.location = base_url + '/search/?query=' + encodeURIComponent(query);
     },
+    classNames: {
+      detachedContainer: 'algolia_detached',
+      detachedOverlay: 'algolia_overlay'
+    },
     getSources() {
       return [{
           sourceId: "querySuggestions",
