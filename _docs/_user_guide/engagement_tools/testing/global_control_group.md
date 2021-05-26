@@ -68,6 +68,13 @@ On average, the percentage of users in your control/ treatment group that comple
 __Calculation__<br>
 Average (mean) of the percent of users that perform your selected event each day during the chosen time period
 {% endtab %}
+{% tab Estimated Group Size%}
+#### Estimated Group Size
+The estimated number of users in your control and treatment groups during selected time period
+
+__Calculation__<br>
+The maximum membership size your control and treatment groups reached during the time period you chose for "Show Data For"
+{% endtab %}
 {% tab Total Number of Events%}
 #### Total Number of Events
 The total number of times the selected event occurred during the chosen time period - this is not unique (ie. if a user performs an event twice during time period, the event gets incremented twice)
@@ -75,12 +82,12 @@ The total number of times the selected event occurred during the chosen time per
 __Calculation__<br>
 Sum of the number of times event occurred each day during the chosen time period
 {% endtab %}
-{% tab Total Events Scaled to Population %}
-#### Total Events Scaled to Population
-An approximation of the number of times the selected event would’ve occurred had your control or treatment been applied to your entire user base. To calculate this, Braze will - for each day in your chosen time period - divide that day’s DAU by the size of your control/ treatment group; consider this a “factor” by which to use to scale up from your control/ treatment group size to your overall audience size. Then Braze takes the number of events on each day and multiplies it by this factor, to get the scaled number of events for each day. Then, to calculate total events scaled to the population for your chosen time period, Braze will add up the total events scaled to population from each day in the time period.
+{% tab Events Per User %}
+#### Events Per User
+The estimated average number of times users in each group completed your conversion events during the selected time period
 
 __Calculation__<br>
-For chosen time period, sum of (total number of  events each day * (DAU that day ÷ control or treatment group size that day))
+Total events ÷ estimated group size
 {% endtab %}
 {% tab Change from Control %}
 #### Change from Control
@@ -92,15 +99,15 @@ __Calculation__<br>
 {% tab Incremental Lift %}
 #### Incremental Lift
 ##### Incremental Lift (Number)
-The difference in total events scaled to the population between your treatment and control groups. This metric seeks to answer the question of “If we had applied the treatment to our entire user base, how many more events would we have expected compared to if we applied the control?”
+The difference in total events between your treatment and control groups. This metric seeks to answer the question of “How many more conversion events did the treatment group achieve?”
 
 __Calculation__<br>
-Total events scaled to population for treatment - total events scaled to population for control
+Total events for treatment - total events for control
 ##### Incremental Lift (Percentage)
-The percentage of your treatment’s total events that can be attributed to your treatment (versus natural user behavior) - this is calculated by dividing incremental uplift (number) by the total number of events scaled to population 
+The percentage of your treatment’s total events that can be attributed to your treatment (versus natural user behavior) - this is calculated by dividing incremental uplift (number) by the total number of events for your treatment group 
 
 __Calculation__<br>
-Incremental uplift (number) ÷ Total events scaled to population for treatment
+Incremental uplift (number) ÷ Total events for treatment group
 {% endtab %}
 {% endtabs  %}
 
