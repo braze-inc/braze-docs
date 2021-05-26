@@ -94,12 +94,10 @@ $(document).ready(function () {
               }
               subname += category.upCaseWord() + ")";
             }
-            if ("content" in item._highlightResult) {
-              if ("value" in item._highlightResult.content) {
-                content = item._highlightResult.content.value
-                  .replaceUnder()
-                  .replace(/<(.|\n)*?>/g, "");
-              }
+            if ("content" in item) {
+              content = item.content
+                .replaceUnder()
+                .replace(/<(.|\n)*?>/g, "");
             }
 
             if (content.length > 400) {
