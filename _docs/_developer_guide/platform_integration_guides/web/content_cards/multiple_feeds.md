@@ -3,6 +3,9 @@ nav_title: Multiple Feeds
 page_order: 5
 
 platform: Web
+page_type: reference
+description: "This article describes how to set up and use multiple content card feeds."
+channel: content cards
 ---
 
 # Using Multiple Content Card Feeds

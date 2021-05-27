@@ -3,6 +3,8 @@ nav_title: Tracking Custom Events
 platform: Web
 page_order: 2
 
+page_type: reference
+description: "This article covers how to track custom events via the Braze SDK."
 ---
 ## Tracking Custom Events
 

@@ -12,7 +12,7 @@ tool:
   - Campaigns
   - Canvas
 
-description: "This article lists and explains the different Apple objects used at Braze."
+description: "This article lists and explains the different Android objects used at Braze."
 ---
 # Android Objects
 

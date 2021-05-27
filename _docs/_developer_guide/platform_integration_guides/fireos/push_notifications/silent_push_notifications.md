@@ -3,6 +3,9 @@ nav_title: Silent Push Notifications
 platform: FireOS
 page_order: 3
 
+page_type: reference
+description: "This article describes how to send silent push notifications, and potential use cases for when silent push notifications may be preferable."
+channel: push
 ---
 ## Silent Push Notifications
 

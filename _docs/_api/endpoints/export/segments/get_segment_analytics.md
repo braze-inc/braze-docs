@@ -11,7 +11,7 @@ tool:
   - Canvas
   - Campaigns
 
-description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+description: "This article outlines details about and using the Get Segment Analytics endpoint."
 ---
 {% api %}
 # Segment Analytics Endpoint

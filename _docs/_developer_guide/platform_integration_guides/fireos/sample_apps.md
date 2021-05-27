@@ -3,6 +3,8 @@ nav_title: Sample Apps
 platform: FireOS
 page_order: 7
 
+page_type: reference
+description: "This page describes the sample apps provided within Braze's SDK repository."
 ---
 # Sample Apps
 

@@ -3,6 +3,8 @@ nav_title: Disabling Web SDK Tracking
 platform: Web
 page_order: 6
 
+page_type: reference
+description: "This article covers disabling Web SDK tracking, including why, how, and the implications of doing so."
 ---
 
 # Disabling Data Collection

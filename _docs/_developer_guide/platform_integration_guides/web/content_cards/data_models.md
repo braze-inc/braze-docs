@@ -3,6 +3,9 @@ nav_title: Data Models
 page_order: 5
 
 platform: Web
+page_type: reference
+description: "This article covers the content card types for Web, including how to request the number of unread content cards."
+channel: content cards
 ---
 
 # Content Card Types for Web

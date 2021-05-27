@@ -3,6 +3,9 @@ nav_title: Location Tracking
 platform: FireOS
 page_order: 6
 
+page_type: reference
+description: "This article covers enabling and disabling location tracking on your FireOS app."
+tool: Location
 ---
 ## Location Tracking
 

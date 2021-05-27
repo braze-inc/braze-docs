@@ -2,7 +2,10 @@
 nav_title: Locations & Geofences Integration for Android
 platform: FireOS
 page_order: 6
+tool: Location
 
+page_type: reference
+description: "This article covers how to enable Geofences for your Android app."
 ---
 
 ## Locations & Geofences

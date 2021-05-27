@@ -3,6 +3,9 @@ nav_title: Integration
 platform: FireOS
 page_order: 1
 
+page_type: reference
+description: "This article describes integrating Braze's in-app message display."
+channel: in-app messages
 ---
 ## Integration {#in-app-messaging-integration}
 
