@@ -23,7 +23,7 @@ These campaigns will have to be configured with proper key value pairs to ensure
 
 Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
-The `app_id` required can be found in the "Developer Console", under the "API Settings" tab in the "Identification" section. Each app (iOS, Android, Web, etc.) has its own `app_id` - be sure to use the correct platform's `app_id`.
+The `app_id` required can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Each app (iOS, Android, Web, etc.) has its own `app_id` - be sure to use the correct platform's `app_id`.
 
 #### Migration if External ID is Present
 ```json
