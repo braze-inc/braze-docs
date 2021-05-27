@@ -2,6 +2,7 @@
 nav_title: Tracking Custom Events
 platform: iOS
 page_order: 2
+description: "This reference article covers how to add and track custom events for your iOS application."
 
 ---
 # Tracking Custom Events

@@ -1,8 +1,11 @@
 ---
 nav_title: Overview
 page_order: 0
-
 platform: Android
+description: "This article gives an overview of the Braze News Feed including examples."
+channel:
+  - news feed
+
 ---
 # News Feed
 

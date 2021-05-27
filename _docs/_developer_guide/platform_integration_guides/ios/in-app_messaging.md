@@ -5,6 +5,10 @@ layout: featured
 
 guide_top_header: "In-App Messages"
 guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
+description: "This landing page covers iOS in-app message topics such as integration instructions, an advanced implementation guide, delivery settings, and more."
+channel:
+  - in-app messages
+
 
 guide_featured_title: "Integrate & Customize"
 guide_featured_list:

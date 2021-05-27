@@ -3,6 +3,9 @@ nav_title: Customization
 platform: iOS
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
+description: "This reference article covers iOS push notification customization options, such as badge count, actions buttons, and more."
+channel:
+  - push
 
 ---
 # Customization {#push-customization}

@@ -2,6 +2,9 @@
 nav_title: Badges
 platform: iOS
 page_order: 5
+description: "This article covers how to add badges to your Content Cards in your iOS application."
+channel:
+  - content cards
 
 ---
 

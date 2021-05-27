@@ -2,6 +2,9 @@
 nav_title: Troubleshooting
 platform: Android
 page_order: 2
+description: "This article covers potential troubleshooting topics for your Android push implementation."
+channel:
+  - push
 
 ---
 # Troubleshooting

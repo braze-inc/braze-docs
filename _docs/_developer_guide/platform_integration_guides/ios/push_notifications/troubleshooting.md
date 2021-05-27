@@ -2,6 +2,9 @@
 nav_title: Troubleshooting
 platform: iOS
 page_order: 3
+description: "This article covers potential troubleshooting topics for your iOS push implementation."
+channel:
+  - push
 
 ---
 # Troubleshooting {#push-troubleshooting}

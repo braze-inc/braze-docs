@@ -2,6 +2,10 @@
 nav_title: HTML Push Notifications
 platform: Android
 page_order: 6
+description: "This article covers hwo to implement HTML push notifications in your Android application."
+channel:
+  - push
+
 
 ---
 # HTML Push Notifications

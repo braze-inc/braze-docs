@@ -2,6 +2,7 @@
 nav_title: Carthage Integration
 platform: iOS
 page_order: 0
+description: "This reference article shows how to integrate the Braze SDK using Carthage for iOS."
 
 ---
 

@@ -3,6 +3,7 @@ nav_title: Android SDK Integration
 page_order: 0
 
 platform: Android
+description: "This reference article covers how to integrate the Android SDK into your Android application."
 ---
 # Initial SDK Setup
 

@@ -1,8 +1,11 @@
 ---
 nav_title: Overview
 page_order: 0
-
 platform: Android
+description: "This reference article gives an overview of Content Cards, when to use them, as well as several great use cases."
+channel:
+  - content cards
+
 ---
 
 # Content Cards 

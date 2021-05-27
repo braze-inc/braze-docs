@@ -2,6 +2,9 @@
 nav_title: Customization
 platform: iOS
 page_order: 1
+description: "This reference article covers in-app messaging customization options for your iOS application."
+channel:
+  - in-app messages
 
 ---
 

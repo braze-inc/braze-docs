@@ -2,6 +2,9 @@
 nav_title: Locations & Geofences
 platform: Android
 page_order: 6
+description: "This reference article covers how to implement locations and geofences in your Android application."
+Tool:
+  - Location
 
 ---
 # Locations & Geofences
