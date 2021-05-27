@@ -27,6 +27,9 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
+{% alert important %} If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to an [edge case]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#important-edge-case). 
+{% endalert %}
+
 ## Action-Based Canvas Step
 
 When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an Action-based or API-triggered Canvas:
