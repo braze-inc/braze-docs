@@ -1,8 +1,11 @@
 ---
 nav_title: Key Value Pairs
 page_order: 8
-
 platform: Android
+description: "This reference article covers how to use key-value pairs in your News Feed for your Android application."
+channel:
+  - news feed
+
 ---
 
 # Key Value Pairs

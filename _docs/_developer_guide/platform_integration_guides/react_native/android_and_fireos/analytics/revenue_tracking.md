@@ -1,8 +1,13 @@
 ---
 nav_title: Logging Purchases
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 3
+
+page_type: reference
+description: "This page provides resources and methods for logging purchases for your Android or FireOS app running React Native."
 ---
 ## Logging Purchases
 

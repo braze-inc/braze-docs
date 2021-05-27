@@ -7,7 +7,7 @@ platform: API
 tool:
   - Campaigns
 hidden: true
-description: "This article outlines details about the Send Transactional Email message via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Transactional Email Messages via API Triggered Delivery Braze endpoint."
 ---
 
 {% api %}

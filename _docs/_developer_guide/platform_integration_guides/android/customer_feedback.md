@@ -4,6 +4,8 @@ platform: Android
 page_order: 7
 
 hidden: true
+description: "This article covers the deprecated customer feedback module."
+
 ---
 
 {% alert Update %}

@@ -2,6 +2,7 @@
 nav_title: Google Advertising ID
 platform: Android
 page_order: 9
+description: "This article covers Google advertising IDs and how to pass this advertising information to Braze."
 
 ---
 

@@ -3,6 +3,9 @@ nav_title: Initial SDK Setup
 platform: Cordova
 subplatform: Android and FireOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
 ---
 ## Initial SDK Setup
 

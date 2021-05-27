@@ -2,7 +2,9 @@
 nav_title: Alternate Web Push Domain
 platform: Web
 page_order: 20
-description: Integrating Braze Web Push on an alternate domain
+
+page_type: reference
+description: "This article covers how to integrate Braze Web Push on an alternate domain."
 ---
 
 # Alternate Web Push Domain

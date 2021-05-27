@@ -3,6 +3,8 @@ nav_title: Overview
 page_order: 0
 
 platform: Cordova
+page_type: reference
+description: "This page provides an overview of Content Cards. Review this page before you begin integrating Content Cards into your Cordova app."
 ---
 
 # Content Cards 

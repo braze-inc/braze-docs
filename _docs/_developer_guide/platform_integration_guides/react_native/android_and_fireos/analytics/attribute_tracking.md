@@ -1,8 +1,13 @@
 ---
 nav_title: Setting Custom Attributes
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 2
+
+page_type: reference
+description: "This page provides resources and methods to set custom attributes for your Android or FireOS app running React Native."
 ---
 ## Setting Custom Attributes
 

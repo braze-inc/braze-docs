@@ -2,6 +2,8 @@
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This article describes how to integrate Braze Web Push via the Braze SDK."
 ---
 # Integration
 

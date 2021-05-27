@@ -2,6 +2,9 @@
 nav_title: Advanced Settings
 platform: iOS
 page_order: 5
+description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more."
+channel:
+  - push
 
 ---
 # Advanced Settings

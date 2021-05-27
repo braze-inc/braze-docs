@@ -2,7 +2,10 @@
 nav_title: Locations & Geofences Integration for Android
 platform: FireOS
 page_order: 6
+tool: Location
 
+page_type: reference
+description: "This article covers how to enable Geofences for your Android app."
 ---
 
 ## Locations & Geofences
@@ -78,7 +81,7 @@ For Android M and higher versions, you must request location permissions from th
 Add the following call to notify Braze when a user grants the location permission to your app:
 
 ```
-AppboyLocationService.requestInitialization(context);
+Braze.getInstance(context).requestLocationInitialization();
 ```
 
 This will cause the SDK to request geofences from Braze's servers and initialize geofence tracking.

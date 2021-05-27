@@ -1,14 +1,14 @@
 ---
-nav_title: Frequently Asked Questions
-title: Frequently Asked Questions
-description: "This reference article covers some frequently asked questions customers have while using predictive churn."
+nav_title: Troubleshooting
+title: Troubleshooting
+description: "This reference article covers some troubleshooting steps and considerations to keep in mind while using predictive churn."
 page_order: 3
 
 Tool:
   - Dashboard
 ---
 
-# Frequently Asked Questions
+# Troubleshooting
 
 > Predictive Churn, and any machine learning model, is only as good as the data available to the model. It also is highly dependent on having certain volumes of data to work with. This means that users may encounter some error messages, or low Prediction Quality, as they're getting to know this new feature. 
 

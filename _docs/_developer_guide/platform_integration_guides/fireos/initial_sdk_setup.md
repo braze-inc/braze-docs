@@ -3,6 +3,8 @@ nav_title: Initial SDK Setup
 platform: FireOS
 page_order: 0
 
+page_type: reference
+description: "This article walks you through how to install the Braze Android SDK."
 ---
 # Initial SDK Setup
 

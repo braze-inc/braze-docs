@@ -2,6 +2,7 @@
 nav_title: iOS 14 Upgrade Guide
 page_order: 10
 platform: iOS
+description: "This reference article covers the iOS 14 SDK update, highlighting changes such as geofences, location targeting, IDFA, and more."
 ---
 
 # iOS 14 SDK Upgrade Guide
@@ -138,18 +139,6 @@ Note that this is not an exhaustive list. If you manually collect other informat
 {% endalert %}
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
-
-### App Clips {#app-clips}
-
-![App Clip]({% image_buster /assets/img/ios/ios14-app-clips.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0"}
-
-An _App clip_ is a small part of your app that can be quickly accessed without installation by visiting a URL or scanning a QR code.
-
-This feature gives users quicker access to sample your app, with an opportunity to either upgrade to the full app experience or auto-delete after a period of inactivity.
-
-To learn more about App Clips, see [Apple's App Clip Documentation](https://developer.apple.com/app-clips/)
-
-If you're interested in using Braze within App Clips, please submit feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues

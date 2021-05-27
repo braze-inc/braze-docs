@@ -7,6 +7,7 @@ layout: dev_guide
 
 guide_top_header: "Analytics"
 guide_top_text: ""
+description: "This landing page covers iOS analytics topic such as purchase logging, session tracking, setting user IDs, and more."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

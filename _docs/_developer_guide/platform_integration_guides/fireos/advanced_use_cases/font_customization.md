@@ -3,6 +3,8 @@ nav_title: Font Customization
 platform: FireOS
 page_order: 7
 
+page_type: reference
+description: "This page covers how to use a custom font with the Braze SDK."
 ---
 
 ## Font Customization

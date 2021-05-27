@@ -2,6 +2,10 @@
 nav_title: Data Model
 platform: iOS
 page_order: 1
+description: "This article covers the different Content Card data models in addition to the card-specific properties available for your iOS application."
+channel:
+  - content cards
+
 
 ---
 

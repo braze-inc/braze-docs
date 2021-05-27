@@ -3,6 +3,9 @@ nav_title: Setting Custom Attributes
 platform: React Native
 subplatform: iOS
 page_order: 2
+
+page_type: reference
+description: "This page provides resources and methods to set custom attributes for your iOS app running React Native."
 ---
 ## Setting Custom Attributes
 

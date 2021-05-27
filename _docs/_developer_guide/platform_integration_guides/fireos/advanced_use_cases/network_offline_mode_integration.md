@@ -3,6 +3,8 @@ nav_title: Network Offline Mode
 platform: FireOS
 page_order: 3
 
+page_type: reference
+description: "This article describes Network Offline Mode and its usage."
 ---
 ## Network Offline Mode
 

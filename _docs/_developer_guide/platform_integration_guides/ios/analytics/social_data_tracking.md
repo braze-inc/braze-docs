@@ -2,6 +2,7 @@
 nav_title: Social Data Tracking
 platform: iOS
 page_order: 5
+description: "This reference article shows how to implement social data tracking for your iOS application."
 
 ---
 # Social Data Tracking

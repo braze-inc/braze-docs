@@ -1,6 +1,10 @@
 ---
 nav_title: For Web
 page_order: 2
+
+page_type: reference
+description: "This article describes extra Web implementation steps customers on the EU-01 instance will need to take."
+platform: Web
 ---
 
 # For Web

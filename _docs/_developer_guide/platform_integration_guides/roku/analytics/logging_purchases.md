@@ -2,6 +2,9 @@
 nav_title: Logging Purchases
 platform: Roku
 page_order: 3
+
+page_type: reference
+description: "This page provides methods to log purchase events via the Braze SDK."
 ---
 ## Logging Purchases
 

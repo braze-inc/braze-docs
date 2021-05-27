@@ -2,6 +2,9 @@
 nav_title: Integration
 platform: iOS
 page_order: 0
+description: "This article covers how to integrate push notifications in your iOS application."
+channel:
+  - push
 
 
 local_redirect:

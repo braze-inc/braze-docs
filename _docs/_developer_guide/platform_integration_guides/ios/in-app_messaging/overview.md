@@ -2,6 +2,9 @@
 nav_title: Overview
 platform: iOS
 page_order: 0
+description: "This article covers iOS in-app messaging, when to best use it, in addition to several great use cases."
+channel:
+  - in-app messages
 
 ---
 

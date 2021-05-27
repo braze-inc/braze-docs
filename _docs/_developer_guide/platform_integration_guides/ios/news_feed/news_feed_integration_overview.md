@@ -2,6 +2,9 @@
 nav_title: News Feed Integration Overview
 platform: iOS
 page_order: 1
+description: "This article covers an overview of how to integrate the News Feed into your iOS application."
+channel:
+  - news feed
 
 ---
 

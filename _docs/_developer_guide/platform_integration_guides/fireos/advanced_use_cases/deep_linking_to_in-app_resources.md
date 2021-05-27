@@ -3,6 +3,8 @@ nav_title: Deep Linking to In-App Resources
 platform: FireOS
 page_order: 0
 
+page_type: reference
+description: "This article covers deep linking to the Braze News Feed from a push notification."
 ---
 ## Deep Linking to the News Feed {#Android_Deep_Advance}
 

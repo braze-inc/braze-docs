@@ -3,6 +3,8 @@ nav_title: Beacon Integration
 platform: FireOS
 page_order: 2
 
+page_type: reference
+description: "This article walks you through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging"
 ---
 ## Beacon Integration
 

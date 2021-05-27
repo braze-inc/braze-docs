@@ -2,6 +2,9 @@
 nav_title: Huawei Integration
 platform: Android
 page_order: 9
+description: "This article covers how to set up a Huawei Android integration."
+channel:
+  - push
 
 ---
 # Huawei Integration

@@ -5,6 +5,7 @@ layout: featured
 
 guide_top_header: "Advanced Use Cases"
 guide_top_text: "If you wish to do some custom work on your iOS integration, look no further!"
+description: "This landing page covers advanced use case optionts for your iOS integration."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

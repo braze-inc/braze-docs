@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Campaign Details endpoint."
+description: "This article outlines details about the Get Campaign Details endpoint."
 ---
 {% api %}
 # Campaign Details Endpoint

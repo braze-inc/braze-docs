@@ -1,7 +1,7 @@
 ---
 nav_title: Other SDK Customizations
 platform: iOS
-description: "This document covers Log Level, IDFA Collection, and other customizations"
+description: "This document covers SDK customizations such as Log Level, IDFA Collection, and other customizations."
 page_order: 3
 
 ---
