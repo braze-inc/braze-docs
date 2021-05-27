@@ -59,6 +59,8 @@ glossaries:
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
     description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/overview/#news-feed">Android</a>.
+  - name: New User
+    description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
   - name: Push Messages
     description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push</a> notification or push message is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
   - name: Push Token
