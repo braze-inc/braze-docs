@@ -1,9 +1,11 @@
 ---
 nav_title: Data Models
 page_order: 6
-
 platform: Android
 description: "This article covers the different Content Card data models in addition to the card-specific properties available for your Android application."
+channel:
+  - content cards
+
 ---
 
 # Content Cards Data Model

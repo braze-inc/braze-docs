@@ -1,9 +1,11 @@
 ---
 nav_title: Refreshing the Feed
 page_order: 7
-
 platform: Android
 description: "This reference article shows how to refresh the News Feed in your Android application."
+channel:
+  - news feed
+
 ---
 
 # Refreshing the Feed

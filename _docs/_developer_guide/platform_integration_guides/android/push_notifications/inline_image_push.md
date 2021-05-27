@@ -2,7 +2,9 @@
 nav_title: Inline Image Push
 platform: Android
 page_order: 14
-description: "This appication covers how to implement inline image push in your Android applciation."
+description: "This appication covers how to implement inline image push in your Android application."
+channel:
+  - push
 
 ---
 

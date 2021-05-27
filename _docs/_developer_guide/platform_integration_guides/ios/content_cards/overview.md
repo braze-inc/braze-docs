@@ -2,6 +2,10 @@
 nav_title: Overview
 platform: iOS
 page_order: 0
+description: "This reference article gives an overview of Content Cards, when to use them, as well as several great use cases."
+channel:
+  - content cards
+
 
 ---
 

@@ -6,6 +6,10 @@ layout: featured
 
 guide_top_header: "News Feed"
 guide_top_text: "The News Feed is a fully customizable in-app content feed for your users. Our targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user. Depending on their position in the user life cycle and the nature of your app, this could be an on-boarding content server, an advertisement center, an achievement center, or a generic news center. The News Feed supports GIF display."
+description: "This landing page covers iOS News Feed integration topic such as defining News Feed categories, customization, and more."
+channel:
+  - news feed
+
 
 guide_featured_title: "Integrate & Customize"
 guide_featured_list:

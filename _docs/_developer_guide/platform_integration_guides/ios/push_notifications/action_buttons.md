@@ -2,6 +2,9 @@
 nav_title: Action Buttons
 platform: iOS
 page_order: 0.2
+description: "This article covers how to implement action buttons in your iOS push notifications."
+channel:
+  - push
 
 ---
 

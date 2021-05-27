@@ -1,9 +1,11 @@
 ---
 nav_title: Overview
 page_order: 0
-
 platform: Android
-description: "This article covers in-app messaging, when to best use it, in addition to several great use cases."
+description: "This article covers Android in-app messaging, when to best use it, in addition to several great use cases."
+channel:
+  - in-app messages
+
 ---
 # In-App Messages
 

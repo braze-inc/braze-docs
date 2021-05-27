@@ -3,6 +3,8 @@ nav_title: Baidu Integration
 platform: Android
 page_order: 9
 description: "This article shows how to set up a Baidu Android integration."
+channel:
+  - push
 
 ---
 # Baidu Integration

@@ -2,6 +2,7 @@
 nav_title: Manual Integration Options
 platform: iOS
 page_order: 2
+description: "This reference article shows how to manually integrate the Braze SDK for iOS."
 
 ---
 
