@@ -117,6 +117,8 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
 {% endtabs %}
 
+<a id="important-edge-case"></a>
+
 {% alert important %}
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% endalert %}
