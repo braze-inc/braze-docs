@@ -87,14 +87,14 @@ Add the following call to notify Braze when a user grants the location permissio
 {% tab JAVA %}
 
 ```java
-AppboyLocationService.requestInitialization(context);
+Braze.getInstance(context).requestLocationInitialization();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyLocationService.requestInitialization(context)
+Braze.getInstance(context).requestLocationInitialization()
 ```
 
 {% endtab %}
@@ -120,7 +120,7 @@ public class RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.");
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
-          AppboyLocationService.requestInitialization(context);
+          Braze.getInstance(context).requestLocationInitialization();
         } else {
           Log.i(TAG, "Required location permissions NOT granted.");
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show();
@@ -158,7 +158,7 @@ object RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.")
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
-          AppboyLocationService.requestInitialization(context)
+          Braze.getInstance(context).requestLocationInitialization()
         } else {
           Log.i(TAG, "Required location permissions NOT granted.")
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
