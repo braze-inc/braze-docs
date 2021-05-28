@@ -237,7 +237,7 @@ The example to the left shows a `UICollectionView` with a hybrid list of items -
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `home_tile.`, a variable that must remain consistent.
+This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `home_tile`, a variable that must remain consistent.
 
 ![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
@@ -388,7 +388,6 @@ __Webview Message__<br>
 The key-value pairs for this use case include `message_header` set as `HTML`, `class_type` set as `message_webview`, and `message_title`. This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
 
 ![Message Center JPG2][5]{: style="max-width:60%;"} 
-
 
 #### Backend Explanation
 
