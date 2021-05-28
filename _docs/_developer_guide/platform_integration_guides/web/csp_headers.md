@@ -42,13 +42,7 @@ braze.initialize(apiKey, {
 
 ## Font Awesome
 
-If you use Font Awesome icons within your dashboard campaigns, the following CSP directives are required:
-
-- `style-src https://use.fontawesome.com`
-- `style-src 'nonce-...'` or `style-src 'unsafe-inline'` are also required.
-- `font-src https://use.fontawesome.com`
-
-Alternatively, you can disable the loading of Font Awesome resources using the `doNotLoadFontAwesome` initialization option:
+To disable the automatic inclusion of Font Awesome, use the `doNotLoadFontAwesome` initialization option:
 
 ```javascript
 import braze from "@braze/web-sdk";
@@ -58,3 +52,9 @@ braze.initialize(apiKey, {
   doNotLoadFontAwesome: true,
 });
 ```
+
+If you choose to use the Font Awesome, the following CSP directives are required:
+
+- `style-src https://use.fontawesome.com`
+- `style-src 'nonce-...'` or `style-src 'unsafe-inline'` are also required.
+- `font-src https://use.fontawesome.com`
