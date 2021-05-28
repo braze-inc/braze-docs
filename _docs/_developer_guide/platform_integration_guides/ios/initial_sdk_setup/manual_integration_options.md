@@ -59,14 +59,10 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 
 ### SDWebImage Integration
 
-1. Inside of your project folder, clone SDWebImage repository recursively:
-```
-git clone --recursive https://github.com/SDWebImage/SDWebImage.git
-```
-2. Drag-n-drop `SDWebImage/SDWebImage.xcodeproj` into your application Xcode project.
-3. In your project application’s target settings, open the "General" tab, click the "+" button under the "Frameworks, Libraries, and Embedded Content" block and add `ImageIO.framework`. In the same place, also add `SDWebImage.framework`.
-4. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
-5. In your project application's target settings, open the "Build Settings" tab. In the "Search Paths" section, locate "Header Search Paths" and add `$(SRCROOT)/SDWebImage` with "recursive" turned on.
+1. Follow the SDWebImage Installation Guide's [instructions for manually using SDWebImage as a Sub-Project in Xcode](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#using-sdwebimage-as-sub-xcode-project).
+2. In your project application's target settings, open the "General" tab, click the "+" button under the "Frameworks, Libraries, and Embedded Content" block and add `ImageIO.framework`.
+3. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
+4. In your project application's target settings, open the "Build Settings" tab. In the "Search Paths" section, locate "Header Search Paths" and add `$(SRCROOT)/Vendor/SDWebImage` (the relative path to your SDWebImage project folder) with "recursive" turned on.
 
 ### Optional Location Tracking
 
