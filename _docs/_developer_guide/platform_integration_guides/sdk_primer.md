@@ -7,6 +7,12 @@ page_order: 0
 
 Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions.
 
+## App Performance
+
+Braze should have no negative impact on your app’s performance.
+
+The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
+
 ## Feature Set Defaults
 
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
@@ -72,6 +78,21 @@ These properties are collected by the iOS SDK upon proper integration.
 {% endtab %}
 {% endtabs %}
 
+## Data Upload and Download
+
+The Braze SDK caches data (sessions, custom events, etc) and uploads it periodically. Only after the data has been uploaded will the values be updated on the dashboard. The upload interval takes into account the state of the device and is governed by the quality of the network connection:
+
+|Network Connection Quality |    Data Flush Interval|
+|---|---|
+|Great    |10 Seconds|
+|Good    |30 Seconds|
+|Poor    |60 Seconds|
+{: .reset-td-br-1 .reset-td-br-2}
+
+If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
+
+Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The news feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
+
 ## Blocking Data Collection
 
 It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As we stated above, not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
@@ -101,3 +122,9 @@ To specify allowlisted device fields, assign the bitwise OR of desired fields to
 {% alert important %}
 By default, all fields are collected by the Braze iOS SDK.
 {% endalert %}
+
+## SDK Compatibility
+
+We have done internal testing and verified that our SDK is compatible with Urban Airship, Flurry, and Crittercism. That's not to say that we are not compatible with more, but that is what we have tested so far. If you are experiencing any issues you think might be due to incompatibility, feel free to contact your Customer Success Manager.
+
+Additionally, the Braze iOS SDK fully supports RubyMotion apps.
