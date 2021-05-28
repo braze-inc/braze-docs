@@ -31,8 +31,8 @@ braze.initialize(apiKey, {
 
 ### connect-src
 
-- `connect-src https://sdk.iad-01.braze.com` - allows the SDK to communicate with Braze APIs
-  - This should be the same endpoint set in the `baseUrl` initialization option, as found [here](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/).
+- `connect-src https://sdk.iad-01.braze.com` - allows the SDK to communicate with Braze APIs.
+  - Change this URL to match your `baseUrl` initialization option's API Endpoint, as found [here](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### script-src
 
@@ -48,6 +48,13 @@ If you use Font Awesome icons within your dashboard campaigns, the following CSP
 - `style-src 'unsafe-inline'` or `style-src 'nonce-...'` are also required.
 - `font-src https://use.fontawesome.com`
 
-{% alert tip %}
-Note: The use of Font Awesome can be disabled using the `doNotLoadFontAwesome: true` initialization option.
-{% endalert %}
+Alternatively, you can disable the loading of Font Awesome resources using the `doNotLoadFontAwesome` initialization option:
+
+```javascript
+import braze from "@braze/web-sdk";
+
+braze.initialize(apiKey, {
+  baseUrl: baseUrl,
+  doNotLoadFontAwesome: true,
+});
+```
