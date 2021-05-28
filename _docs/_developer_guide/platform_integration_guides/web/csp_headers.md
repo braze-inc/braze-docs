@@ -38,7 +38,7 @@ braze.initialize(apiKey, {
 
 - `script-src https://js.appboycdn.com` - required when using the CDN-hosted integration.
 - `script-src 'unsafe-eval'` - required only when using the integration snippet which contains reference to `appboyQueue`
-  - To avoid using this directive, integrate using NPM or reference the `appboy.min.js` library directly via `<script src="path/to/appboy.min.js"></script>` without the `appboyQueue` logic.
+  - To avoid using this directive, integrate using NPM instead.
 
 ## Font Awesome
 
