@@ -13,8 +13,7 @@ We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapo
 
 ## Step 1: Downloading the Braze SDK
 
-1. Download the relevant files from the [release page](https://github.com/appboy/appboy-ios-sdk/releases) under `Appboy_iOS_SDK.zip`.
-
+1. Download `Appboy_iOS_SDK.zip` from the [release page](https://github.com/appboy/appboy-ios-sdk/releases).
 If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
 
 ```bash
