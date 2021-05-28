@@ -21,11 +21,11 @@ When building out Content Cards, it is recommended to integrate them using a sin
 
 ### Content Cards as Custom Objects
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data.
+Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
 
-The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if the objects were instantiated from JSON or any other source. 
 
-{% include video.html id="55KTZqYAl7Y" align="center" %}
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
 {% tabs %}
 {% tab Swift %}
@@ -237,15 +237,15 @@ The example to the left shows a `UICollectionView` with a hybrid list of items -
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to what user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `tile_card.` These other key-value pairs are optional and can highlight custom values but the `class_type` must remain consistent.
+This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `home_tile.`, a variable that must remain consistent.
 
 ![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
 #### Backend Explanation
 
-Because we are working with data from different sources, data must be harmoniously fetched to display on screen without disrupting the user experience. This can be done with `OperationQueues`, where each operation is its own queue. Shown below, we have one queue for loading local data and one for loading content cards. We also have a `BarrierBlock` that initiates the callback after both operations have been completed. 
+Because this use case includes data from different sources, data must be harmoniously fetched to display on screen without disrupting the user experience. This can be done with `OperationQueues`, where each operation is its own queue. As shown below, there is one queue for loading local data and one for loading Content Cards. There also exists a `BarrierBlock` that initiates the callback after both operations have been completed. 
 
-Because we are requesting Content Cards, we have to wait for the notification callback from the SDK. A semaphore has been implemented to wait until the SDK posts the notification callback, so the barrier block knows when the content card operation is completed. Note that we are returning custom objects and not Content Cards. Both the local data and the Content Card payload data are returned in the same array to be populated on-screen.
+Requesting Content Cards requires you to wait for the notification callback from the SDK. A semaphore has been implemented here to wait until the SDK posts the notification callback so the barrier block knows when the Content Card operation is completed. Note that custom objects will be returned and not Content Cards. Both the local data and the Content Card payload data are returned in the same array to be populated on-screen.
 
 #### __Load Content Cards Alongside Existing Content__<br><br>
 
@@ -373,11 +373,11 @@ A semaphore is used to signal when the task is executed due to the notification 
 
 ![Message Center GIF][3]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a content card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that is displaying custom HTML.
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 #### Dashboard Configuration
 
-For the following message types, key-value pairs exist denoting the `class_type` and `message_header`. The names assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
+For the following message types, key-value pairs `class_type` and `message_header` should be added to your dashboard configuration. The names assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
 
 __Arbitrary Custom View Message__<br>
 The key-value pairs for this use case include `message_header` set as `Full Page` and `class_type` set as `message_full_page`.
@@ -392,7 +392,7 @@ The key-value pairs for this use case include `message_header` set as `HTML`, `c
 
 #### Backend Explanation
 
-The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView()` function, we are able to both filter and identify these class types.
+The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView()` function, you are able to both filter and identify these class types.
 
 {% tabs %}
 {% tab Swift %}
@@ -435,19 +435,19 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 
 ![Interactive Content GIF][6]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
-Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions.  
+Content Cards can be leveraged to create interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions.  
 
 #### Dashboard Configuration
 
-The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how we filter for this specific type of Content Card on the checkout screen.
+The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
 ![Interactive Content JPG][7]{: style="max-width:70%;"} 
 
 #### Backend Explanation
 
-In the code, we use the `loadContentCard()` function to request Content Cards, and the `contentCardsUpdated()` function to query an array of type-specific Content Cards set via the `class_type` filter in the dashboard key-value pairs. This will render the object into a view to display on-screen.
+The `loadContentCard()` method is used to request Content Cards, and the `contentCardsUpdated()` method is used to query an array of type-specific Content Cards set via the `class_type` filter in the dashboard key-value pairs. This will render the object into a view to display on-screen.
 
-Next, to display the object on screen, we use the `configureView()` function and provide it a String type used to render the image. Notice the view itself is source-independent, meaning we are able to configure the view with non-Braze types.
+To display the object on screen, use the `configureView()` function and provide it a String type to render the image. Notice the view itself is source-independent, meaning the view can be configured with non-Braze types.
 
 #### Interactable View<br><br>
 
@@ -507,7 +507,7 @@ After extending your own custom objects to function as Content Cards, logging va
 
 #### Backend Explanation 
 
-The `logContentCardImpression()` method can only be called from an `ABKContentCard`, so this needs to be handled if we are working with our own custom objects. In the `ContentCardable` protocol, there exists a reference to the Content Card ID. The protocol has a `logContentCardImpression()` method that calls into the `BrazeManager.swift` helper file which only exposes an `idString` parameter. Once we pass this off to the helper file, the Braze SDK has a public variable, `ContentCards`, that we can query to get the Content Card from its own identifier that we have passed in. Once we get the Content Card, we can log impressions, click, and dismissals, successfully working with ABK objects only at the moment we need to.
+The `logContentCardImpression()` method can only be called from an `ABKContentCard`.To handle this, in the `ContentCardable` protocol, there exists a reference to the Content Card ID. The protocol has a `logContentCardImpression()` method that calls into the `BrazeManager.swift` helper file which only exposes an `idString` parameter. Once passed this off to the helper file, the Braze SDK has a public variable, `ContentCards`, that can be queried to get the Content Card from its own identifier that has been passed in. Once the Content Card has been obtained, impressions, click, and dismissals can be logged, all while successfully working with ABK objects only at the moment required.
 
 #### __Implementation Components__<br><br>
 
