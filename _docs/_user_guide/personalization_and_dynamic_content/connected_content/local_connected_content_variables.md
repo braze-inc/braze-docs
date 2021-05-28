@@ -68,7 +68,7 @@ The following image illustrates the type of syntax highlighting you should see i
 
 ![Connected Content Syntax Example][6]
 
-If the API responded with `{{localweather.consolidated_weather[0].weather_state_name}}` returning `Rain`, the user would then receive this push.
+If the API responded with {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, the user would then receive this push.
 
 ![Connected Content Push Example][17]
 
@@ -91,6 +91,44 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 {% connected_content https://post.example.com/someEndpoint :method post :body key1=value1&key2=value2 %}
 ```
 {% endraw %}
+
+{% details Query String Serialization Example %}
+
+##### Example POST Body
+```json
+{
+  "sorts": [
+    {
+      "field": "startdate",
+      "direction": "asc"
+    }
+  ],
+  "filters": [
+    {
+      "field": "startdate",
+      "type": "range",
+      "rangeFilters": {
+        "time_zone": "-07:00",
+        "gte": "now+1d/d",
+        "lt": "now+2d/d"
+      }
+    }
+  ]
+}
+```
+##### Example POST Body Formatting
+{% raw %}
+```json
+{% connected_content https://example.com/api
+  :method post
+    :headers {
+      "Content-Type": "application/json"
+    }  
+  :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d&filters[0][rangeFilters][lt]=now+2d/d
+  :save result %}
+```
+{% endraw %}
+{% enddetails %}
 
 ### HTTP Status Codes
 
