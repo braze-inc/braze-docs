@@ -23,7 +23,7 @@ import braze from "@braze/web-sdk";
 
 braze.initialize(apiKey, {
   baseUrl: baseUrl,
-  contentSecurityNonce: "YWJjMTIz", // assumes a "nonce-YWJjMTIz" CSP value
+  contentSecurityNonce: "YOUR-NONCE-HERE", // assumes a "nonce-YOUR-NONCE-HERE" CSP value
 });
 ```
 
