@@ -50,6 +50,13 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
+FCM Registration IDs are created when the app is installed and registers for push notifications. Google will not change this registration ID except in the following cases:
+
+- Client App Update
+- Backup and Restore
+
+Braze automatically handles the deletion of the old token, and the addition of the new token to a user’s profile so long as our SDK is instrumented properly.
+
 ##### Option 1: Automatic Registration
 
 To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
