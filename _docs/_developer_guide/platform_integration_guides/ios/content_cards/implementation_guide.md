@@ -32,37 +32,42 @@ The initializer also includes a `ContentCardClassType` enum. Through the use of 
 __No `ABKContentCard` Dependencies__<br>
 `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
+__ContentCardable Protocol__
 ```swift
 protocol ContentCardable {
   var contentCardData: ContentCardData? { get }
   init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType)
 }
-
+ 
 extension ContentCardable {
   var isContentCard: Bool {
     return contentCardData != nil
   }
-  
+   
   func logContentCardClicked() {
     BrazeManager.shared.logContentCardClicked(idString: contentCardData?.contentCardId)
   }
-  
+   
   func logContentCardDismissed() {
     BrazeManager.shared.logContentCardDismissed(idString: contentCardData?.contentCardId)
   }
-  
+   
   func logContentCardImpression() {
     BrazeManager.shared.logContentCardImpression(idString: contentCardData?.contentCardId)
   }
 }
-
+```
+__Content Card Data Struct__
+```swift
 struct ContentCardData: Hashable {
   let contentCardId: String
   let contentCardClassType: ContentCardClassType
   let createdAt: Double
   let isDismissable: Bool
+  ...
+  // other Content Card properties such as expiresAt, pinned, etc.
 }
-
+ 
 extension ContentCardData: Equatable {
   static func ==(lhs: ContentCardData, rhs: ContentCardData) -> Bool {
     return lhs.contentCardId == rhs.contentCardId
@@ -75,34 +80,38 @@ extension ContentCardData: Equatable {
 __No `ABKContentCard` Dependencies__<br>
 `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
+__ContentCardable Protocol__
 ```objc
-// Header File
+@protocol ContentCardable <NSObject>
+ 
+@property (nonatomic, strong) ContentCardData *contentCardData;
+- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData
+                                  classType:(enum ContentCardClassType)classType;
+ 
+- (BOOL)isContentCard;
+- (void)logContentCardImpression;
+- (void)logContentCardClicked;
+- (void)logContentCardDismissed;
+ 
+@end
+```
+__Content Card Data Struct__
+```objc
 @interface ContentCardData : NSObject
-
+ 
 + (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
-
-- (instancetype)initWithIdString:(NSString *)idString 
+ 
+- (instancetype)initWithIdString:(NSString *)idString
                        classType:(ContentCardClassType)classType
-                       createdAt:(double)createdAt isDismissable:(BOOL)isDismissable;
-
+                       createdAt:(double)createdAt isDismissible:(BOOL)isDismissible;
+ 
 @property (nonatomic, readonly) NSString *contentCardId;
 @property (nonatomic) ContentCardClassType classType;
 @property (nonatomic, readonly) double *createdAt;
-@property (nonatomic, readonly) BOOL isDismissable;
-
-@end
-
-@protocol ContentCardable <NSObject>
-
-@property (nonatomic, strong) ContentCardData *contentCardData;
-- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData 
-                                  classType:(enum ContentCardClassType)classType;
-
-- (BOOL)isContentCard;
-- (void)logContentCardImpression;
-- (void)logContentCardClick;
-- (void)logContentCardDismissal;
-
+@property (nonatomic, readonly) BOOL isDismissible;
+...
+// other Content Card properties such as expiresAt, pinned, etc.    
+ 
 @end
 ```
 {% endtab %}
@@ -113,24 +122,18 @@ __Custom Object Initializer__<br>
 MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the "extras" dictionary.
 
 ```swift
-extension Tile: ContentCardable {
+extension CustomObject: ContentCardable {
   init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType) {
     guard let idString = metaData[.idString] as? String,
       let createdAt = metaData[.created] as? Double,
       let isDismissable = metaData[.dismissable] as? Bool,
       let extras = metaData[.extras] as? [AnyHashable: Any],
-      let tileIdString = extras["tile_id"] as? String,
-      let tileId = Int(tilleIdString),  
-      let title  = extras["tile_title"] as? String,
-      let priceString = extras["tile_price"] as? String,
-      let price = Decimal(string: priceString),
-      let imageUrl = extras["tile_image"] as? String
       else { return nil }
-    
-    let tags = extras[ContentCardKey.tags.rawValue] as? String ?? ""
+ 
     let contentCardData = ContentCardData(contentCardId: idString, contentCardClassType: contentCardClassType, createdAt: createdAt, isDismissable: isDismissable)
-    
-    self.init(contentCardData: contentCardData, id: tileId, title: title, price: price, tags: tags.separatedByCommaSpaceValue, imageUrl: imageUrl)
+    let customObjectProperty = extras["YOUR-CUSTOM-OBJECT-PROPERTY"] as? String
+           
+    self.init(contentCardData: contentCardData, property: customObjectProperty)
   }
 }
 ```
@@ -143,21 +146,18 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
 - (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {
   self = [super init];
   if (self) {
-    if (metaData[@"idString"] != nil && metaData[@"created"] != nil && metaData[@"dismissable"] != nil && metaData[@"extras"] != nil) {
-      NSDictionary  *extras = metaData[@"extras"];
-      NSString *idString = metaData[@"idString"];
-      double createdAt = [metaData[@"createdAt"] doubleValue];
-      BOOL isDismissable = metaData[@"isDimissable"];
-      if (extras[@"tile_id"] != nil && extras[@"tile_title"] != nil && extras[@"tile_price"] != nil && extras[@"tile_image"] !=  nil) {
-        NSString *tagsString = extras[@"tile_tags"];
-        _idString = [extras[@"tile_id"] integerValue];
-        _title = extras[@"tile_title"];
-        _tags = [tagsString componentsSeparatedByString:@", "];
-        _imageUrl = extras[@"tile_image"];
-        self.price = [NSDecimalNumber decimalNumberWithString:extras[@"tile_price"]];
-        self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt:createdAt isDismissable:isDismissable];
-        return self;
-      }
+    if ([metaData objectForKey:ContentCardKeyIdString] && [metaData objectForKey:ContentCardKeyCreated] && [metaData objectForKey:ContentCardKeyDismissible] && [metaData objectForKey:ContentCardKeyExtras]) {
+      NSDictionary  *extras = metaData[ContentCardKeyExtras];
+      NSString *idString = metaData[ContentCardKeyIdString];
+      double createdAt = [metaData[ContentCardKeyCreated] doubleValue];
+      BOOL isDismissible = metaData[ContentCardKeyDismissible];
+ 
+      if ([extras objectForKey: @"YOUR-CUSTOM-PROPERTY")
+        _customObjectProperty = extras[@"YOUR-CUSTOM-OBJECT-PROPERTY"];
+ 
+      self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt:createdAt isDismissible:isDismissible];
+ 
+      return self;
     }
   }
   return nil;
@@ -168,37 +168,22 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
 {% tabs %}
 {% tab Swift %}
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
 ```swift
 enum ContentCardClassType: Hashable {
-  case ad
-  case coupon
-  case item(ItemType)
-  case message(MessageCenterViewType)
+  case yourValue
+  case yourOtherValue
+  ...
   case none
-  
-  enum ItemType {
-    case tile
-  }
-  
-  enum MessageCenterViewType {
-    case fullPage
-    case webView
-  }
-
+ 
   init(rawType: String?) {
     switch rawType?.lowercased() {
-    case "coupon_code":
-      self = .coupon
-    case "home_tile":
-      self = .item(.tile)
-    case "message_full_page":
-      self = .message(.fullPage)
-    case "message_webview":
-      self = .message(.webView)
-    case "ad_banner":
-      self = .ad
+    case "your_value":
+      self = .yourValue
+    case "your_other_value":
+      self = .yourOtherValue
+    ...
     default:
       self = .none
     }
@@ -208,21 +193,21 @@ enum ContentCardClassType: Hashable {
 {% endtab %}
 {% tab Objective-C %}
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard.
+The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
+
 
 ```objc
 typedef NS_ENUM(NSInteger, ContentCardClassType) {
   ContentCardClassTypeNone = 0,
-  ContentCardClassTypeAdBanner,
-  ContentCardClassTypeCoupon,
-  ContentCardClassTypeHomeTile,
-  ContentCardClassTypeMessageFullPage,
-  ContentCardClassTypeMessageWebview,
+  ContentCardClassTypeYourValue,
+  ContentCardClassTypeYourOtherValue,
+  ...
 };
-
+ 
 + (NSArray *)contentCardClassTypeArray {
-  return @[ @"", @"ad_banner", @"coupon_code", @"home_tile", @"message_full_page", @"message_webview" ];
+  return @[ @"", @"your_value", @"your_other_value" ];
 }
+ 
 + (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue {
   if ([[self contentCardClassTypeArray] indexOfObject:rawValue] == NSNotFound) {
     return ContentCardClassTypeNone;
@@ -230,7 +215,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
     NSInteger value = [[self contentCardClassTypeArray] indexOfObject:rawValue];
     return (ContentCardClassType) value;
   }
-} 
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -244,13 +229,17 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 ### Content Cards as Supplemental Content
 
+![Supplementary Content GIF][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
 The example to the left shows a `UICollectionView` with a hybrid list of items - items that are populated via local data and also Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content. Please visit our [repo](https://github.com/braze-inc/braze-growth-shares-ios-demo-app) to see examples of how to handle different types of Content Cards in the same feed.
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to what user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `home_card.` These other key-value pairs are optional and can highlight custom values but the `class_type` must remain consistent.
+This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to what user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `tile_card.` These other key-value pairs are optional and can highlight custom values but the `class_type` must remain consistent.
+
+![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
 #### Backend Explanation
 
@@ -381,6 +370,9 @@ A semaphore is used to signal when the task is executed due to the notification 
 {% endtabs %}
 
 ### Content Cards in a Message Center
+
+![Message Center GIF][3]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a content card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that is displaying custom HTML.
 
 #### Dashboard Configuration
@@ -390,8 +382,13 @@ For the following message types, key-value pairs exist denoting the `class_type`
 __Arbitrary Custom View Message__<br>
 The key-value pairs for this use case include `message_header` set as `Full Page` and `class_type` set as `message_full_page`.
 
+![Message Center JPG1][4]{: style="max-width:60%;"} 
+
 __Webview Message__<br>
 The key-value pairs for this use case include `message_header` set as `HTML`, `class_type` set as `message_webview`, and `message_title`. This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
+
+![Message Center JPG2][5]{: style="max-width:60%;"} 
+
 
 #### Backend Explanation
 
@@ -435,11 +432,16 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 {% endtabs %}
 
 ### Interactive Content Cards
+
+![Interactive Content GIF][6]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+
 Content Cards can be leveraged to create interactive experiences for your users. In the demo below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions.  
 
 #### Dashboard Configuration
 
-The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how we filter for this specific type of Content Card on the checkout screen. 
+The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how we filter for this specific type of Content Card on the checkout screen.
+
+![Interactive Content JPG][7]{: style="max-width:70%;"} 
 
 #### Backend Explanation
 
@@ -456,8 +458,8 @@ As long as the observer is still retained in memory, a notification callback fro
 
 ```swift
 func loadContentCards() {
-    BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
-    BrazeManager.shared.requestContentCardsRefresh()
+  BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
+  BrazeManager.shared.requestContentCardsRefresh()
 }
 ```
 {% endtab %}
@@ -479,7 +481,9 @@ __Getting Type-Specific Content Cards__<br>
 The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 ```swift
 @objc func contentCardsUpdated(_ notification: Notification) {
-    guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.coupon]) as? [Coupon], !contentCards.isEmpty else { return }
+  guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.yourValue]) as? [CustomObject],!contentCards.isEmpty else { return }
+ 
+ // do something with your array of custom objects
 }
 ```
 {% endtab %}
@@ -488,8 +492,10 @@ __Getting Type-Specific Content Cards__<br>
 The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 ```objc
 - (void)contentCardsUpdated:(NSNotification *)notification {
-  NSArray *classTypes = @[@(ContentCardClassTypeCouponCode)];
+  NSArray *classTypes = @[@(ContentCardClassTypeYourValue)];
   NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
+ 
+  // do something with your array of custom objects
 }
 ```
 {% endtab %}
@@ -554,14 +560,16 @@ The `ContentCardable` protocol handles the heavy lifting of calling the helper f
 __Call `ABKContentCard` Functions__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
-func logContentCardImpression(idString: String?) {
-  guard let contentCard = getContentCard(forString: idString) else { return }
-
-  contentCard.logContentCardImpression()
-}
-  
-private func getContentCard(forString idString: String?) -> ABKContentCard? {
-  return contentCards?.first(where: { $0.idString == idString })
+extension BrazeManager {
+  func logContentCardImpression(idString: String?) {
+    guard let contentCard = getContentCard(forString: idString) else { return }
+ 
+    contentCard.logContentCardImpression()
+  }
+   
+  private func getContentCard(forString idString: String?) -> ABKContentCard? {
+    return contentCards?.first(where: { $0.idString == idString })
+  }
 }
 ```
 {% endtab %}
@@ -573,9 +581,11 @@ The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/
   ABKContentCard *contentCard = [self getContentCard:idString];
   [contentCard logContentCardImpression];
 }
+ 
 - (ABKContentCard *)getContentCard:(NSString *)idString {
   NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
   NSArray *filteredArray = [self.contentCards filteredArrayUsingPredicate:predicate];
+ 
   return filteredArray.firstObject;
 }
 ```
@@ -585,3 +595,11 @@ The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/
 {% alert important %}
 For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
+
+[1]: {% image_buster /assets/img/cc_implementation/supplementary_content.gif %}
+[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
+[3]: {% image_buster /assets/img/cc_implementation/message_center.gif %}
+[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
+[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
+[6]: {% image_buster /assets/img/cc_implementation/coupon.gif %}
+[7]: {% image_buster /assets/img/cc_implementation/discount.png %}
