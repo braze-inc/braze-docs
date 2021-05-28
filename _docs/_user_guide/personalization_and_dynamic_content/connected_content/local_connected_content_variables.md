@@ -119,13 +119,15 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ##### Example POST Body Formatting
 {% raw %}
 ```json
-{% connected_content https://example.com/api
-  :method post
-    :headers {
-      "Content-Type": "application/json"
-    }  
-  :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d&filters[0][rangeFilters][lt]=now+2d/d
-  :save result %}
+{% connected_content 
+     https://example.com/api
+     :method post
+     :headers {
+       "Content-Type": "application/json"
+  }  
+     :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d&filters[0][rangeFilters][lt]=now+2d/d
+     :save result 
+%}
 ```
 {% endraw %}
 {% enddetails %}
