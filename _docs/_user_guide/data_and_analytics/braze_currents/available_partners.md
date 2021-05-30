@@ -30,6 +30,7 @@ These customer data platforms collect and route information from multiple source
 
 * [Segment][7]
 
+* [Tealium][8]
 
 ## Behavioral Analytics
 
@@ -38,6 +39,13 @@ These partners specialize in product analytics and business intelligence and can
 * [Amplitude][4]
 
 * [Mixpanel][5]
+
+## Integration Platforms
+
+These partners facilitate transforming data and coordinating between
+multiple systems
+
+* [AWS EventBridge][9]
 
 
 
@@ -48,3 +56,5 @@ These partners specialize in product analytics and business intelligence and can
 [5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
 [6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
+[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
+[9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/integration_platforms/eventbridge/
