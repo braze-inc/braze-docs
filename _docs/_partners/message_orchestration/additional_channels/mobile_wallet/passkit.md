@@ -17,7 +17,7 @@ This partnership is in early access beta. All features may not perform as exactl
 
 Deliver seamless, connected online to offline customer experiences with Braze and PassKit. Increase and measure the engagement of your online campaigns by instantly delivering Apple Wallet and Google Pay passes. Analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet.
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
