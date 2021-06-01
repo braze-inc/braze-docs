@@ -5,6 +5,7 @@ page_order: 20
 
 page_type: reference
 description: "This article covers how to integrate Braze Web Push on an alternate domain."
+
 ---
 
 # Alternate Web Push Domain

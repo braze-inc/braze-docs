@@ -7,6 +7,7 @@ channel:
   - push
 
 ---
+
 # Overview
 
 ![Android Inline Image Push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
@@ -23,17 +24,13 @@ For devices without Google services installed, Braze offers the option to send p
 
 ## Registering for Push
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push.
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase Push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
 
 {% alert update %}
 Automatic GCM registration is unavailable through the Braze SDK as a result of Google's removal of support for GCM on May 29, 2019. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
 {% endalert %}
 
-### Firebase Integration
-
-For a full sample of using Firebase with the Braze Android SDK, see our [Firebase Push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
-
-#### Step 1: Enable Firebase
+### Step 1: Enable Firebase
 
 To get started, follow the instructions at [Add Firebase to Your Android Project][49].
 
@@ -44,7 +41,7 @@ implementation "com.google.firebase:firebase-core:${FIREBASE_CORE_VERSION}"
 implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING_VERSION}"
 ```
 
-#### Step 2: Configure Token Registration
+### Step 2: Configure Token Registration
 
 Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
 
@@ -90,7 +87,7 @@ Appboy.configure(this, appboyConfig)
 
 If using a Firebase automatic registration, you can skip the manual options below.
 
-##### Option 2: Manual Registration
+#### Option 2: Manual Registration
 
 We recommended you call [`Appboy.registerAppboyPushMessages()`][35] from within your application [`onCreate()`][67] method to ensure that push tokens are reliably delivered to Braze.
 
@@ -142,11 +139,11 @@ class MyApplication: Application() {
 
 > While we highly recommend you register your FCM registration token in your application [`onCreate()`][67], the token can be registered anywhere in your code.
 
-#### Step 3: Migrate from GCM (Optional)
+### Step 3: Migrate from GCM (Optional)
 
 If migrating from using GCM to using Firebase with Braze, visit the [GCM Migration Guide][48] for instructions on how to properly switch to using Firebase in your app.
 
-#### Step 4: Set Your Firebase Credentials
+### Step 4: Set Your Firebase Credentials
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
@@ -158,14 +155,14 @@ You need to input your Firebase Server Key and Sender ID into the Braze dashboar
 
 If you're not familiar with the location of your Firebase Server Key and Sender ID, follow these steps:
 
-1. Login to the [Firebase Developers Console][58]
+1. Log in to the [Firebase Developers Console][58]
 
 2. Select your Firebase project
 
 3. Go to **Settings** > **Cloud Messaging** and copy the Server Key and Sender ID:
   ![FirebaseServerKey][59]
 
-#### Step 5: Remove Old Permissions
+### Step 5: Remove Old Permissions
 - Braze no longer requires the following permissions if using Firebase:
 
   ```xml
@@ -176,7 +173,7 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
-#### Step 6: Remove Automatic Actions from your Application Class
+### Step 6: Remove Automatic Actions from your Application Class
 
 If you have a custom [Application][76] subclass, ensure you do not have automatic logic that pings your servers in your class's `Application.onCreate()` lifecycle method. This will ensure that silent push notifications from Braze don't cause unnecessary requests to your servers.
 
@@ -196,7 +193,7 @@ Braze includes a service to handle push receipt and open intents. Our `AppboyFir
 </service>
 ```
 
-Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` in order for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately in order to render notifications sent from other FCM services.
+Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services.
 
 {% alert important %}
 If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
@@ -258,10 +255,10 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 For general information about Android notification icons, please see the [Notifications Overview documentation][37].
 
-Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha/transparency channels in action icons and in the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome with the exception of the transparent regions.
+Starting in Android N, you should update or remove small notification icon assets that involve color. The Android system (not the Braze SDK) ignores all non-alpha/transparency channels in action icons and the notification small icon. In other words, Android will convert all parts of your notification small icon to monochrome except for transparent regions.
 
 To properly create a notification small icon asset:
-- Remove all color from the image except for white.
+- Remove all colors from the image except for white.
 - All other non-white regions of the asset should be transparent. 
 
 {% alert note %}
@@ -274,7 +271,7 @@ The icons pictured below are examples of properly designed icons:
 
 ### Step 3: Configure Notification Icons
 
-##### Specifying Icons in braze.xml
+#### Specifying Icons in braze.xml
 
 - Braze allows you to configure your notification icons by specifying drawable resources in your `braze.xml`:
 
@@ -287,7 +284,7 @@ Setting a small notification icon is required. __If you do not set one, Braze wi
 
 Setting a large notification icon is optional but recommended.
 
-##### Specifying Icon Background Color
+#### Specifying Icon Background Color
 
 - The notification icon background color can be overriden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
 
@@ -303,7 +300,7 @@ You may also optionally use a color reference, see:
 
 ### Step 4: Add Deep Links
 
-##### Enabling Automatic Deep Link Opening
+#### Enabling Automatic Deep Link Opening
 
 To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to its default setting,`true`, in your `braze.xml`:
 
@@ -338,17 +335,17 @@ Appboy.configure(this, appboyConfig)
 
 If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] for more information.
 
-##### Creating Custom Deep Links
+#### Creating Custom Deep Links
 
 Please follow the instructions found within the [Android Developer Documentation on Deep Linking][40] if you have not already added deep links to your app. For information regarding what a deep link is, please see our [FAQ Section][42].
 
-##### Adding Deep Links
+#### Adding Deep Links
 
 The Braze dashboard supports setting deep links or web URLs on push notifications that will be opened when the notification is clicked.
 
 ![Deep_Link_Dash_Example][41]
 
-##### Customizing Back Stack Behavior
+#### Customizing Back Stack Behavior
 
 The Android SDK by default will place your host app's main launcher activity in the back stack when following push deep links. Braze allows you to set a custom activity to open in the back stack in place of your main launcher activity or to disable the back stack altogether.
 
@@ -437,7 +434,7 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
 
-If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key value pairs sent either via the dashboard or the messaging APIs:
+If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 
 Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
 
@@ -504,7 +501,7 @@ setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificatio
 The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
-Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
+Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
 {% endalert %}
 
 To unset your custom [`IAppboyNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
@@ -527,9 +524,9 @@ setCustomAppboyNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-### Custom Handling For Push Receipts, Opens, Dismissals, and Key Value Pairs
+### Custom Handling For Push Receipts, Opens, Dismissals, and Key-Value Pairs
 
-Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
+Braze broadcasts custom intents when push notifications are received, opened, or dismissed. If you have a specific use case for these scenarios (such as the need to listen for custom key-value pairs or proprietary handling of deep links), you will need to listen for these intents by creating a custom `BroadcastReceiver`.
 
 #### Step 1: Register your BroadcastReceiver
 
@@ -628,12 +625,12 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 {% endtabs %}
 
 {% alert tip %}
-With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
+With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep-link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-#### Step 3: Access Custom Key Value Pairs
+#### Step 3: Access Custom Key-Value Pairs
 
-Custom key value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
+Custom key-value pairs sent either via the dashboard or the messaging APIs will be accessible in your custom broadcast receiver for whatever purpose you choose:
 
 {% tabs %}
 {% tab JAVA %}
@@ -642,7 +639,7 @@ Custom key value pairs sent either via the dashboard or the messaging APIs will 
 // intent is the Braze push intent received by your custom broadcast receiver.
 String deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY);
 
-// The extras bundle extracted from the intent contains all custom key value pairs.
+// The extras bundle extracted from the intent contains all custom key-value pairs.
 Bundle extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY);
 
 // example of getting specific key-value pair from the extras bundle.
@@ -656,7 +653,7 @@ String myExtra = extras.getString("my_key");
 // intent is the Braze push intent received by your custom broadcast receiver.
 val deepLink = intent.getStringExtra(Constants.APPBOY_PUSH_DEEP_LINK_KEY)
 
-// The extras bundle extracted from the intent contains all custom key value pairs.
+// The extras bundle extracted from the intent contains all custom key-value pairs.
 val extras = intent.getBundleExtra(Constants.APPBOY_PUSH_EXTRAS_KEY)
 
 // example of getting specific key-value pair from the extras bundle.

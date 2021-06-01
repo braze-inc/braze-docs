@@ -1,16 +1,17 @@
 ---
 nav_title: Troubleshooting
 platform: Android
-page_order: 2
+page_order: 16
 description: "This article covers potential troubleshooting topics for your Android push implementation."
 channel:
   - push
 
 ---
+
 # Troubleshooting
 
 ## Understanding the Braze Workflow
-The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze is able to send push notifications to them:
+The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 
 ### Step 1: Configuring Your Google Cloud API Key
 In the development of your app, you'll need to provide the Braze Android SDK with your Firebase Sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key when we attempt to send messages to your devices. You will need to ensure that FCM service is enabled in Google Developer's console as well. __Note__: A common mistake in this step is using an API key for Android applications. This is a different, incompatible API key for the type of access Braze needs.
@@ -24,7 +25,7 @@ When a push campaign is launched, Braze will make requests to FCM to deliver you
 ### Step 4: Removing Invalid Tokens
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If that user has no other push tokens, they will no longer show up as "Push Registered" under the Segments page.
 
-Google has more details about FCM in their [Developers page][6].
+Google has more details about FCM on their [Developers page][6].
 
 ## Utilizing the Push Error Logs
 Braze provides a log of Push Notification Errors within the "Message Activity Log". This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected.  Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
@@ -37,11 +38,11 @@ Braze provides a log of Push Notification Errors within the "Message Activity Lo
 
 Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
 
-#### 1. Incorrect Sender Id
+#### Incorrect Sender Id
 
 Ensure that the correct FCM Sender ID is included in the `braze.xml` file. An incorrect Sender ID will lead to `MismatchSenderID` errors reported in the dashboard's Message Activity Log.
 
-#### 2. Braze Registration Not Occurring
+#### Braze Registration Not Occurring
 
 Since FCM registration is handled outside of Braze, failure to register can only occur in two places:
 
@@ -50,13 +51,13 @@ Since FCM registration is handled outside of Braze, failure to register can only
 
 We recommend setting a breakpoint or logging to ensure that the FCM-generated push token is being sent to Braze. If a token is not being generated correctly or at all, we recommend consulting the [FCM documentation][1].
 
-#### 3. Google Play Services not present
+#### Google Play Services not present
 
 For FCM push to work, Google Play Services must be present on the device. If Google Play Services isn't on a device, push registration will not occur.
 
 __Note:__ Google Play Services is not installed on Genymotion emulators or Android emulators without Google APIs installed.
 
-#### 4. Device not connected to internet
+#### Device not connected to the internet
 
 Ensure your device has good internet connectivity and that it isn't sending network traffic through a proxy.
 
@@ -84,11 +85,11 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 There are a few reasons why this could be occurring:
 
-#### 1. Application was Force Quit
+#### Application was Force Quit
 
 If you force-quit your application through your system settings, your push notifications will not be sent. Launching the app again will re-enable your device to receive push notifications.
 
-#### 2. AppboyFirebaseMessagingService Not Registered
+#### AppboyFirebaseMessagingService Not Registered
 
 The AppboyFirebaseMessagingService must be properly registered in `AndroidManifest.xml` for push notifications to appear:
 
@@ -101,11 +102,11 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
 </service>
 ```
 
-#### 3. Firewall is Blocking Push
+#### Firewall is Blocking Push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229 and 5230 are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in [Google's ASN of 15169] [14].
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229, and 5230 are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in [Google's ASN of 15169] [14].
 
-#### 4. Custom Notification Factory Returning Null
+#### Custom Notification Factory Returning Null
 
 If you have implemented a [custom notification factory][16], ensure that it is not returning `null`. This will cause notifications not to be displayed.
 
@@ -113,11 +114,11 @@ If you have implemented a [custom notification factory][16], ensure that it is n
 
 There are a few reasons why this could be happening:
 
-#### 1. Application was Uninstalled
+#### Application was Uninstalled
 
 Users have uninstalled the application. This will invalidate their FCM push token.
 
-#### 2. Invalid Firebase Cloud Messaging Server Key
+#### Invalid Firebase Cloud Messaging Server Key
 
 The Firebase Cloud Messaging Server Key provided in the Braze dashboard is invalid. The Sender ID provided should match the one referenced in your app's `braze.xml` file. The Server key and Sender ID are found here in your Firebase Console:
 
@@ -131,7 +132,7 @@ If push clicks are not being logged, it is possible that push click data has not
 
 ### Deep Links Not Working
 
-#### 1. Verify Deep Link configuration
+#### Verify Deep Link configuration
 
 Deep links can be [tested with ADB][17]. We recommend testing your deep link with the following command:
 
@@ -139,7 +140,7 @@ Deep links can be [tested with ADB][17]. We recommend testing your deep link wit
 
 If the deep link fails to work, the deep link may be misconfigured. A misconfigured deep link will not work when sent through Braze push.
 
-#### 2. Verify Custom Handling Logic
+#### Verify Custom Handling Logic
 
 If the deep link [works correctly with ADB][17] but fails to work from Braze push, check whether any [custom push open handling][18] has been implemented. If so, verify that the custom handling code is properly handling the incoming deep link.
 

@@ -20,5 +20,7 @@ guide_featured_list:
 - name: Testing & More
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
   fa_icon: fas fa-vials
-
+- name: Frequently Asked Questions
+  link: /docs/user_guide/engagement_tools/campaigns/faq/
+  fa_icon: fas fa-question
 ---

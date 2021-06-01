@@ -1,10 +1,11 @@
 ---
 nav_title: Sample Apps
 platform: Android
-page_order: 9
+page_order: 10
 description: "This article covers Android sample apps."
 
 ---
+
 # Sample Apps
 
 Braze's SDKs each come with a sample application within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.

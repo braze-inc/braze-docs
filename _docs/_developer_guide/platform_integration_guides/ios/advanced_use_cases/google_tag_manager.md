@@ -3,7 +3,9 @@ nav_title: Google Tag Manager
 platform: iOS
 page_order: 7
 description: "This article covers how to initalize, configure, and implement the Google Tag manager into your iOS app."
+
 ---
+
 # Google Tag Manager for iOS
 
 ## Initializing the SDK {#initializing-ios-google-tag-provider}

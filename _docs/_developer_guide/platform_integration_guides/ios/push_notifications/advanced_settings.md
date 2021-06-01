@@ -7,6 +7,7 @@ channel:
   - push
 
 ---
+
 # Advanced Settings
 
 When creating push engagement, on the "Compose" step, you can select the "gear" icon to view the Advanced Settings available.

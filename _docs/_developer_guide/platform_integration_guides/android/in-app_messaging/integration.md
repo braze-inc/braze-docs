@@ -23,10 +23,10 @@ The [Activity Lifecycle Callback Integration][59] handles in-app message registr
 A manual in-app message registration requires 3 steps.
 
 {% alert warning %}
-  If you did the activity lifecycle integration, then you should *not* do a manual in-app message integration.
+If you did the activity lifecycle integration, then you should *not* do a manual in-app message integration.
 {% endalert %}
 
-* In your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEvents()`][69].
+In your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEvents()`][69].
 
 {% tabs %}
 {% tab JAVA %}
@@ -45,7 +45,7 @@ AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(con
 {% endtab %}
 {% endtabs %}
 
-* In every activity where in-app messages can be shown, [`registerInAppMessageManager()`][80] should be called in that activity's `onResume()`.
+In every activity where in-app messages can be shown, [`registerInAppMessageManager()`][80] should be called in that activity's `onResume()`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -75,7 +75,7 @@ public override fun onResume() {
 {% endtab %}
 {% endtabs %}
 
-* In every activity where [`registerInAppMessageManager()`][80] was called, [`unregisterInAppMessageManager()`][81] should be called in that activity's `onPause()`.
+In every activity where [`registerInAppMessageManager()`][80] was called, [`unregisterInAppMessageManager()`][81] should be called in that activity's `onPause()`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -146,7 +146,7 @@ class MyApplication : Application() {
 > See the [`AppboyLifecycleCallbackListener`][83] constructor javadocs for more information.
 
 [34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html
-[59]: {{ site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
+[59]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
 [69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
 [81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-

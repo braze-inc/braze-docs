@@ -10,6 +10,14 @@ tool: Location
 
 # Locations & Geofences FAQs
 
+## Locations
+
+### When does Braze collect location data?
+
+Braze only collects location when the application is in the foreground. As a result, our last known location filters target users based upon where they last opened the application.
+
+## Geofences
+
 ### Can I store more than X geofences?
 
 Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.

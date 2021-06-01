@@ -5,8 +5,10 @@ page_order: 0
 
 page_type: reference
 description: "This page covers methods to identify users, as well as best practices and important considerations."
+
 ---
-## Setting User IDs
+
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -44,9 +46,9 @@ Providing this information to others may allow people outside your organization 
 | Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
 | k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
 
-### User ID Integration Best Practices & Notes
+## User ID Integration Best Practices & Notes
 
-#### Automatic Preservation of Anonymous User History
+### Automatic Preservation of Anonymous User History
 
 | Identification Context | Preservation Behavior |
 | ---------------------- | -------------------------- |
@@ -54,7 +56,7 @@ Providing this information to others may allow people outside your organization 
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Additional Notes and Best Practices
+### Additional Notes and Best Practices
 
 Please note the following:
 

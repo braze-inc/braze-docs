@@ -7,16 +7,12 @@ channel:
   - in-app messages
 
 ---
+
 # In-App Messages
 
 __In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Client Integration Gallery][83].
-
-{% comment %}
-Embed video on the right. Demos all of the topics mentioned on this page.
-{% endcomment %}
-
 
 ## When to Use In-App Messages
 
@@ -24,7 +20,7 @@ In-app messages are good for a lot of things. They can be used in web apps, Andr
 
 In-app messages don't deliver outside of the user's app and won't intrude on their home screen like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
 
-### Great Use Cases
+#### Great Use Cases
 
 - New App Features
 - App Management
@@ -38,11 +34,11 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 
 ## In-App Message Types
 
-Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling and color schemes.  The currently available types are `Slideup`, `Modal`, `Full`, and `HTML Full`.  It is also possible to [define your own custom in-app message view][12].
+Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling and color schemes. The currently available types are `Slideup`, `Modal`, `Full`, and `HTML Full`. It is also possible to [define your own custom in-app message view][12].
 
-All in-app messages implement the [`IInAppMessage`][3] interface, which defines basic behavior and traits for all in-app messages.  [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation.  All in-app message classes are subclasses of `InAppMessageBase`.
+All in-app messages implement the [`IInAppMessage`][3] interface, which defines basic behavior and traits for all in-app messages. [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation. All in-app message classes are subclasses of `InAppMessageBase`.
 
-In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button.  [`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation.  `Modal` and `Full` in-app messages are subclasses of `InAppMessageImmersiveBase`.
+In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button. [`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` and `Full` in-app messages are subclasses of `InAppMessageImmersiveBase`.
 
 HTML Full in-app messages are [`InAppMessageHtmlFull`][51] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 
@@ -99,7 +95,7 @@ Please note that we currently do not support display of custom HTML in-app messa
 
 #### In-Depth: Defining Custom In-App Message Types
 
-Braze's `slideup` in-app message object extends [`InAppMessageBase`][27].  Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28].  Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
+Braze's `slideup` in-app message object extends [`InAppMessageBase`][27]. Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28]. Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
 
 [3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessage.html
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageImmersive.html

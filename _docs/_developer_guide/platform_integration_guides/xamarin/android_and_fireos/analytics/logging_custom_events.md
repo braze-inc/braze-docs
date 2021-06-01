@@ -3,8 +3,10 @@ nav_title: Logging Custom Events
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 1
+
 ---
-## Logging Custom Events
+
+# Logging Custom Events
 
 See [the Android integration instructions][1] for in depth discussion of event tracking best practices and interfaces.
 

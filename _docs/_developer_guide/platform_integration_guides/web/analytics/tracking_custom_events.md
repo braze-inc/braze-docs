@@ -5,8 +5,10 @@ page_order: 2
 
 page_type: reference
 description: "This article covers how to track custom events via the Braze SDK."
+
 ---
-## Tracking Custom Events
+
+# Tracking Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
@@ -18,7 +20,7 @@ appboy.logCustomEvent(YOUR_EVENT_NAME);
 
 See the [logCustomEvent documentation][1] for more information.
 
-### Adding Properties {#properties-events}
+## Adding Properties {#properties-events}
 
 You can optionally add metadata about custom events by passing a properties object with your custom event.
 

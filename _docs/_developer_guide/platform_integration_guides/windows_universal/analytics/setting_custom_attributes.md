@@ -2,8 +2,10 @@
 nav_title: Setting Custom Attributes
 platform: Windows_Universal
 page_order: 3
+
 ---
-## Setting Custom Attributes
+
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -30,45 +32,47 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 ```
 
-### Assigning Custom User Attributes
+## Assigning Custom User Attributes
 
 Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
 For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
-#### Custom Attribute with a Boolean Value
+### Setting Custom Attribute Values
+
+{% tabs %}
+{% tab Boolean %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 ```
-
-#### Custom Attribute with an Integer Value
+{% endtab %}
+{% tab Integer %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
-
-#### Custom Attribute with a Double Value
+{% endtab %}
+{% tab Double/Float %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
->  Braze treats FLOAT and DOUBLE values exactly the same within our database.
-
-#### Custom Attribute with a String Value
+Braze treats FLOAT and DOUBLE values exactly the same within our database.
+{% endtab %}
+{% tab String %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "STRING_VALUE");
 ```
-
-#### Custom Attribute with a Long Value
+{% endtab %}
+{% tab Long %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```
-
-#### Custom Attribute with a Date Value
+{% endtab %}
+{% tab Date %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
 >  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
-
-#### Setting a Custom Attribute with an Array Value
-
+{% endtab %}
+{% tab Array %}
 ```csharp
 // Setting a custom attribute with an array value
 Appboy.SharedInstance.EventLogger.SetCustomAttributeArray("custom_attribute_array_test", testSetArray);
@@ -77,8 +81,10 @@ Appboy.SharedInstance.EventLogger.AddToCustomAttributeArray("custom_attribute_ar
 // Removing a value from an array type custom attribute
 Appboy.SharedInstance.EventLogger.RemoveFromCustomAttributeArray("custom_attribute_array_test", testRemString);
 ```
+{% endtab %}
+{% endtabs %}
 
-#### Incrementing/Decrementing Custom Attributes
+### Incrementing/Decrementing Custom Attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
@@ -86,7 +92,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 bool IncrementCustomAttribute(STRING_KEY, INCREMENT_INTEGER_VALUE);
 ```
 
-#### Unsetting a Custom Attribute
+### Unsetting a Custom Attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -94,15 +100,15 @@ Custom attributes can also be unset using the following method:
 bool UnsetCustomAttribute(STRING_KEY);
 ```
 
-#### Setting a Custom Attribute via the REST API
+### Setting a Custom Attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
 
-#### Custom Attribute Value Limits
+### Custom Attribute Value Limits
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-### Managing Notification Subscription Statuses
+## Managing Notification Subscription Statuses
 
 To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both Email and Push:
 

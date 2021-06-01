@@ -3,8 +3,10 @@ nav_title: Logging Purchases
 platform: Xamarin
 subplatform: iOS
 page_order: 3
+
 ---
-## Logging Purchases
+
+# Logging Purchases
 
 See [the iOS integration instructions][1] for in depth discussion of revenue tracking best practices and interfaces.
 

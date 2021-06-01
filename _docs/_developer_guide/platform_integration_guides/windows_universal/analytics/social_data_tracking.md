@@ -2,8 +2,10 @@
 nav_title: Social Data Tracking
 platform: Windows_Universal
 page_order: 5
+
 ---
-## Social Data Tracking
+
+# Social Data Tracking
 
 Unlike the Braze iOS SDK, the Braze Windows SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Windows SDK as well:
 
@@ -11,7 +13,7 @@ Unlike the Braze iOS SDK, the Braze Windows SDK does not automatically collect F
     - [Facebook Documentation][1] // [Twitter Documentation][2]
 - Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
 
-### Social Network Data Constructors
+## Social Network Data Constructors
 
 ```
 FacebookUser(
@@ -54,7 +56,7 @@ TwitterUser(
 
 To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method Appboy.SharedInstance.AppboyUser.SetFacebookData()/Appboy.SharedInstance.AppboyUser.SetTwitterData(). For example:
 
-#### Twitter
+### Twitter
 
 ```
 var twitterUser = new TwitterUser {
@@ -71,7 +73,7 @@ var twitterUser = new TwitterUser {
 Appboy.SharedInstance.AppboyUser.SetTwitterData(twitterUser);
 ```
 
-#### Facebook
+### Facebook
 
 ```
 // Build a list of pages the user likes.

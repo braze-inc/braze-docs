@@ -21,6 +21,14 @@ Reaching out to already active users of your app can be a powerful tool in helpi
 
 You can also check out [our LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
 
+## Understanding Active Users
+
+Braze defines an "active user" for a given period of time as any user who has a session in that time period.
+
+If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active—registered or unregistered.
+
+If you set User IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
+
 ## Step 1: Identifying Your Top Users
 
 Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. A sample segment to define your top users is shown below.

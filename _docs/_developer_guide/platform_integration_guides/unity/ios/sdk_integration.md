@@ -3,10 +3,10 @@ nav_title: SDK Integration
 platform: Unity
 subplatform: iOS
 page_order: 0
----
-# SDK Integration
 
-## Initial SDK Setup
+---
+
+# SDK Integration
 
 Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
@@ -29,7 +29,7 @@ Alternatively, follow the Unity instructions for [Importing Asset packages][41] 
 If you only wish to import the iOS plugin, deselect the `Plugins/Android` subdirectory when importing the Braze `.unitypackage`.
 {% endalert %}
 
-### Step 3: Set Your API Key
+## Step 3: Set Your API Key
 
 Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`][6] and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 
@@ -41,7 +41,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 
 >  If your application is already using another `UnityAppController` subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
 
-### Step 4: Basic SDK Integration Complete
+## Step 4: Basic SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete.
 

@@ -34,7 +34,7 @@ Braze UI elements come with a default look and feel that matches the Android sta
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-### Correct Style Override
+#### Correct Style Override
 
 ```xml
 <style name="Appboy.Feed.List">
@@ -48,7 +48,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-### Incorrect Style Override
+#### Incorrect Style Override
 
 ```xml
 <style name="Appboy.Feed.List">
@@ -61,10 +61,10 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 Below is a description of the themable Braze UI elements and their names for styling purposes:
 
-![Android Feed][18]
-![Android Cards][19]
-![Android Empty][20]
-![Android Network Error][21]
+{% gallery %}{% image_buster /assets/img_archive/Image27Theming.png %}
+{% image_buster /assets/img_archive/Image28Theming.png %}
+{% image_buster /assets/img_archive/Image29Theming.png %}
+{% image_buster /assets/img_archive/Image30Theming.png %}{% endgallery %}
 
 ## Setting A Custom Font
 

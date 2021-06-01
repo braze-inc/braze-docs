@@ -2,8 +2,10 @@
 nav_title: Logging Custom Events
 platform: Windows_Universal
 page_order: 2
+
 ---
-## Logging Custom Events
+
+# Logging Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 

@@ -5,8 +5,10 @@ page_order: 5
 
 page_type: reference
 description: "This article covers how to enable location tracking via the Braze Web SDK."
+
 ---
-## Location Tracking
+
+# Location Tracking
 
 To set a user's current location, use the [`getCurrentPosition()`][0] method of the Geolocation API and log the location data to Braze.
 
@@ -26,6 +28,9 @@ navigator.geolocation.getCurrentPosition(success);
 ```
 
 Note that calling `navigator.geolocation.getCurrentPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs][1] for more information on setting the user's last known location.
+
+
+## Logging A Single Location
 
 Additionally, when the Web SDK sends data to Braze servers, the user's country will be automatically detected from their IP Address if it has not been manually set by your application.
 

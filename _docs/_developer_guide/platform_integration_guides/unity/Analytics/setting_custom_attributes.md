@@ -2,63 +2,64 @@
 nav_title: Setting Custom Attributes
 platform: Unity
 page_order: 2
+
 ---
-## Setting Custom Attributes
+
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][1].
 
-
-### Assigning Standard User Attributes
+## Assigning Standard User Attributes
 
 To assign user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
 
-#### First Name
+### First Name
 `AppboyBinding.SetUserFirstName("first name");`
 
-#### Last Name
+### Last Name
 `AppboyBinding.SetUserLastName("last name");`
 
-#### User Email
+### User Email
 `AppboyBinding.SetUserEmail("email@email.com");`
 
 >  It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
-#### Gender
+### Gender
 `AppboyBinding.SetUserGender(Appboy.Models.Gender);`
 
-#### Birth Date
+### Birth Date
 `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");`
 
-#### User Country
+### User Country
 `AppboyBinding.SetUserCountry("country name");`
 
-#### User Home City
+### User Home City
 `AppboyBinding.SetUserHomeCity("city name");`
 
-#### User Email Subscription
+### User Email Subscription
 `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
-#### User Push Subscription
+### User Push Subscription
 `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
-#### User Phone Number
+### User Phone Number
 `AppboyBinding.SetUserPhoneNumber("phone number");`
 
-### Assigning Custom User Attributes
+## Assigning Custom User Attributes
 
 Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
 
-#### Custom Attribute with a Boolean Value
+### Custom Attribute with a Boolean Value
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 
-#### Custom Attribute with an Integer Value
+### Custom Attribute with an Integer Value
 
 ```csharp
 // Set Integer Attribute
@@ -67,19 +68,19 @@ AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value'
 AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 
-#### Custom Attribute with a Double Value
+### Custom Attribute with a Double Value
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
 ```
 
-#### Custom Attribute with a String Value
+### Custom Attribute with a String Value
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
 ```
 
-#### Custom Attribute with a Date Value
+### Custom Attribute with a Date Value
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -89,7 +90,7 @@ AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
 ```
 
-#### Custom Attribute with an Array Value
+### Custom Attribute with an Array Value
 
 ```csharp
 // Setting An Array
@@ -102,7 +103,7 @@ AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 
 >  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
-#### Unsetting a Custom Attribute
+### Unsetting a Custom Attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -110,13 +111,13 @@ Custom attributes can also be unset using the following method:
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 ```
 
-### Setting a Custom Attribute via the REST API
+## Setting a Custom Attribute via the REST API
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
 
-### Custom Attribute Value Limits
+## Custom Attribute Value Limits
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-### Setting Up User Subscriptions
+## Setting Up User Subscriptions
 
 To set up a subscription for your users (either email or push), call the functions     
 `AppboyBinding.SetUserEmailNotificationSubscriptionType()` or `AppboyBinding.SetPushNotificationSubscriptionType()`, respectively. Both of these functions take the parameters `Appboy.Models.AppboyNotificationSubscriptionType` as arguments. This type has three different states:
@@ -137,15 +138,15 @@ To set up a subscription for your users (either email or push), call the functio
 
 >  These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
 
-### Sample Code
+## Sample Code
 
-#### Email Subscription:
+### Email Subscription:
 
 ```csharp
 AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
 ```
 
-#### Push Notification Subscription:
+### Push Notification Subscription:
 
 ```csharp
 AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);

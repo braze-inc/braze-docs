@@ -7,7 +7,8 @@ page_order: 0
 page_type: reference
 description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
 ---
-## Initial SDK Setup
+
+# Initial SDK Setup
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
